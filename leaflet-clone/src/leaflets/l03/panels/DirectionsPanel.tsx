@@ -15,14 +15,14 @@ export function DirectionsPanel() {
       </Placed>
       <Placed x={89} y={338} className="flex flex-col gap-[42px]">
         {directions.blocks.map((b) => (
-          <LineBlock key={b[0]} lines={b} className="text-[22.5px] leading-[34px] tracking-[0.01em] text-white" />
+          <LineBlock key={b[0]} lines={b} className="text-[22px] leading-[34px] tracking-[0.01em] text-white" />
         ))}
       </Placed>
       <Placed x={0} y={683} width={466}>
         <LineBlock lines={directions.sns} className="text-center text-[28px] leading-[40px] text-white" />
       </Placed>
-      <Placed x={51} y={812} width={362} height={91} className="flex items-center justify-center rounded-[50%]" style={{ background: theme.cream }}>
-        <LineBlock lines={directions.account} className="text-center text-[24.5px] leading-[34px] text-[#1b1b1b]" />
+      <Placed x={51} y={812} width={362} height={91} className="flex items-center justify-center rounded-[46px]" style={{ background: theme.cream }}>
+        <LineBlock lines={directions.account} className="text-center text-[23.5px] leading-[34px] text-[#1b1b1b]" />
       </Placed>
     </Panel>
   )

@@ -17,7 +17,7 @@ export function InfoPanel() {
         {guide.heading}
       </SectionHeading>
       <TextLines
-        className="absolute font-noto-sans text-[14px] font-light"
+        className="absolute font-noto-sans text-[16px] font-light"
         style={{ left: X + 5, top: 145 }}
         lines={guide.steps.map((s, i) => `${i + 1}. ${s}`)}
         lineClassName="leading-[25px]"
@@ -26,14 +26,14 @@ export function InfoPanel() {
         {contact.heading}
       </SectionHeading>
       <TextLines
-        className="absolute font-noto-sans text-[15px] font-light"
+        className="absolute font-noto-sans text-[16px] font-light"
         style={{ left: X, top: 338 }}
         lines={contact.lines}
         lineClassName="leading-[29px]"
       />
       <ImagePlaceholder label="QR code" className="absolute" style={{ left: X, top: 480, width: 78, height: 78 }} />
       <TextLines
-        className="absolute font-noto-sans text-[15px] font-bold"
+        className="absolute font-noto-sans text-[16px] font-bold"
         style={{ left: 147, top: 475 }}
         lines={qrCaption}
         lineClassName="leading-[26px]"
@@ -47,7 +47,7 @@ export function InfoPanel() {
           columns={fares.columns}
           inlineType
           widths={[124, 91, 87, 107]}
-          className="font-noto-sans text-[14px]"
+          className="font-noto-sans text-[15px]"
           headCellClassName="h-[40px] font-bold border-l-2 first:border-l-0 border-white/90"
           rowClassName="border-t-2 border-white/90"
           cellClassName="h-[45px] font-light border-l-2 first:border-l-0 border-white/90"

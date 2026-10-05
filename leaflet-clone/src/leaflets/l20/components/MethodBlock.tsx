@@ -17,7 +17,7 @@ export function MethodBlock({ method, className }: MethodBlockProps) {
         <span className="text-[27px] font-bold leading-none tracking-[-0.02em] text-[#3b5c80]">{method.title}</span>
       </div>
       <div
-        className="flex flex-col items-center text-[18px] font-semibold leading-[30px] tracking-[-0.03em] text-[#5a5e64]"
+        className="flex flex-col items-center text-[18.5px] font-semibold leading-[30px] tracking-[-0.03em] text-[#5a5e64]"
         style={{ marginTop: method.notesGap }}
       >
         {method.notes.map((n) => (
@@ -28,8 +28,8 @@ export function MethodBlock({ method, className }: MethodBlockProps) {
         {method.highlight}
       </div>
       {method.qrCaption && (
-        <div className="mt-[2px] flex items-start justify-between pl-[85px] pr-[58px]">
-          <span className="mt-[4px] text-[17px] font-semibold tracking-[-0.03em] text-[#5a5e64]">{method.qrCaption}</span>
+        <div className="mt-[8px] flex items-start justify-between pl-[85px] pr-[58px]">
+          <span className="mt-[2px] text-[17px] font-semibold tracking-[-0.03em] text-[#5a5e64]">{method.qrCaption}</span>
           <QrIconBox size={54} />
         </div>
       )}

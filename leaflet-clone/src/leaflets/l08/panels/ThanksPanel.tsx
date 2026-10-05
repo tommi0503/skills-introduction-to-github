@@ -22,7 +22,7 @@ export function ThanksPanel() {
       <Placed x={29} y={418} width={428}>
         <Divider color={theme.rule} thickness={2} />
       </Placed>
-      <Placed x={42} y={462} width={430}>
+      <Placed x={42} y={458} width={430}>
         <InfoList rows={d.info} />
       </Placed>
       <RoundCard x={30} y={657} width={168} height={168} className="flex items-center justify-center">

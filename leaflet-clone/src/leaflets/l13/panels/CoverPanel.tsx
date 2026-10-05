@@ -7,18 +7,18 @@ import { cover as d } from '../data'
 export function CoverPanel() {
   return (
     <Panel background={t.cream}>
-      <Placed x={0} y={46} width={440} className="text-right font-noto-sans">
-        <div className="text-[72px] font-semibold leading-[78px] tracking-[0.01em]" style={{ color: t.teal }}>
+      <Placed x={0} y={50} width={440} className="text-right font-nanum-gothic">
+        <div className="text-[69px] font-bold leading-[82px] tracking-[0.01em]" style={{ color: t.teal }}>
           {d.year}
         </div>
-        <div className="text-[62px] font-semibold leading-[72px]" style={{ color: '#454545' }}>
+        <div className="text-[62px] font-extrabold leading-[72px]" style={{ color: '#454545' }}>
           {d.titleLines.map((l) => (
             <div key={l}>{l}</div>
           ))}
         </div>
       </Placed>
 
-      <Placed x={37} y={333} className="font-noto-sans text-[19px] font-semibold leading-[33px]" style={{ color: '#454545' }}>
+      <Placed x={37} y={333} className="font-nanum-gothic text-[19px] font-bold leading-[33px] tracking-[0.03em]" style={{ color: '#454545' }}>
         {d.details.map((l) => (
           <div key={l}>{l}</div>
         ))}

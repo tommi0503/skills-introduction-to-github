@@ -15,15 +15,15 @@ export function CoverPanel() {
     <Panel>
       <CardSheet insets={cards[2]} />
       <CenteredRow top={78}>
-        <span className="flex h-[46px] w-[182px] items-center justify-center rounded-full bg-[#d2e2f1] font-jua text-[25px] leading-none text-[#2f5378]">
+        <span className="flex h-[46px] w-[182px] items-center justify-center rounded-full bg-[#d2e2f1] font-jua text-[27px] leading-none text-[#2f5378]">
           {c.kicker}
         </span>
       </CenteredRow>
-      <CenteredRow top={142}>
-        <span className={cn(DISPLAY, 'text-[64px] leading-none tracking-[-0.01em] text-[#3a6ea8]')}>{c.title}</span>
+      <CenteredRow top={150}>
+        <span className={cn(DISPLAY, 'text-[64px] leading-none tracking-[0.015em] text-[#3a6ea8]')}>{c.title}</span>
       </CenteredRow>
-      <CenteredRow top={216}>
-        <span className={cn(DISPLAY, 'text-[64px] leading-none tracking-[-0.01em] text-[#d0647a]')}>{c.subtitle}</span>
+      <CenteredRow top={224}>
+        <span className={cn(DISPLAY, 'text-[64px] leading-none tracking-[0.015em] text-[#d0647a]')}>{c.subtitle}</span>
       </CenteredRow>
       <CenteredRow top={296}>
         <span className="text-[21px] font-bold tracking-[-0.03em] text-[#4a79a6]">{c.tagline}</span>

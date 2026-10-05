@@ -1,0 +1,17 @@
+export const theme = {
+  cream: '#ebe5dc',
+  coverCream: '#e8e2d8',
+  green: '#56736e',
+  title: '#4b7759',
+  onGreen: '#eef0e6',
+  ink: '#3a3a38',
+  smile: '#8eaba6',
+  highlight: '#cfe1e4',
+  route: '#a9a8a2',
+  pinGreen: '#5e7a74',
+  pinRed: '#c8584a',
+  boxBorder: '#8d9c97',
+  boxFill: '#ebebe7',
+  muted: '#5b5b58',
+  boxTint: '#e2e3d5',
+} as const

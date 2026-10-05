@@ -12,7 +12,7 @@ const stripeLayers = [
   { color: t.stripe.outline, width: 3 },
 ]
 
-const headingClass = 'font-noto-sans text-[42px] font-medium leading-none tracking-[0.02em]'
+const headingClass = 'font-nanum-gothic text-[43px] font-semibold leading-none tracking-[0.03em]'
 
 /** Left outer panel: stripes ornament, sign-up with QR code, contacts. */
 export function ParticipationPanel() {
@@ -31,8 +31,8 @@ export function ParticipationPanel() {
       </Placed>
 
       <Placed x={41} y={476}>
-        <div className="font-noto-sans text-[18px] font-bold leading-none">{d.apply.title}</div>
-        <div className="mt-[22px] font-noto-sans text-[17px] leading-[27px]" style={{ color: t.onSlateMuted }}>
+        <div className="font-nanum-gothic text-[18px] font-bold leading-none">{d.apply.title}</div>
+        <div className="mt-[20px] font-nanum-gothic text-[19.5px] leading-[28px]" style={{ color: t.onSlateMuted }}>
           {d.apply.lines.map((l) => (
             <div key={l}>{l}</div>
           ))}
@@ -47,10 +47,10 @@ export function ParticipationPanel() {
         <KeyValueList
           items={d.contacts.map((c) => ({ key: c.label, label: c.label, value: c.value }))}
           labelWidth={90}
-          className="gap-[11px] font-noto-sans"
+          className="gap-[11px] font-nanum-gothic"
           rowClassName="items-baseline leading-[28px]"
           labelClassName="text-[18px] font-bold"
-          valueClassName="text-[19px] tracking-[0.02em]"
+          valueClassName="text-[19.5px] tracking-[0.03em]"
         />
       </Placed>
     </Panel>

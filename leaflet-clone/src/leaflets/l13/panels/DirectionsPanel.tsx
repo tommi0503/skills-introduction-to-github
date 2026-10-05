@@ -9,10 +9,10 @@ export function DirectionsPanel() {
   return (
     <Panel background={t.cream}>
       {/* map artwork, cropped to a circle */}
-      <ImagePlaceholder className="absolute rounded-full" style={{ left: 136, top: -66, width: 354, height: 354 }} label="map" />
+      <ImagePlaceholder className="absolute" style={{ left: 137, top: -200, width: 360, height: 487, borderRadius: '0 0 180px 180px' }} label="map" />
 
       <Placed x={50} y={48}>
-        <VerticalText className="font-noto-sans text-[35px] font-medium leading-none tracking-[0.2em]" >
+        <VerticalText className="font-nanum-gothic text-[35px] font-bold leading-none tracking-[0.2em]" >
           <span style={{ color: t.ink }}>{d.title.replace(/ /g, '')}</span>
         </VerticalText>
       </Placed>
@@ -22,9 +22,9 @@ export function DirectionsPanel() {
           items={d.routes}
           titleGap={12}
           itemGap={18}
-          className="font-noto-sans"
+          className="font-nanum-gothic"
           titleClassName="text-[19px] font-bold leading-[28px] text-[#467379]"
-          bodyClassName="text-[19px] leading-[28px] text-[#6b6b6b]"
+          bodyClassName="text-[19px] leading-[28px] text-[#626262]"
         />
       </Placed>
 
@@ -33,9 +33,9 @@ export function DirectionsPanel() {
           items={d.credits}
           titleGap={2}
           itemGap={30}
-          className="font-noto-sans"
+          className="font-nanum-gothic"
           titleClassName="text-[18px] font-bold leading-[28px] text-[#467379]"
-          bodyClassName="text-[18px] font-medium leading-[28px] text-[#454545]"
+          bodyClassName="text-[18px] font-bold leading-[28px] text-[#454545]"
         />
       </Placed>
 

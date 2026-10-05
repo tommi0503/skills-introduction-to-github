@@ -1,11 +1,11 @@
 import { Leaflet, Panel, type LeafletDefinition } from '../../ui'
-const fonts = ['font-pretendard','font-noto-sans','font-gothic-a1','font-nanum-gothic','font-plex-kr','font-sunflower','font-dohyeon','font-gowun-dodum','font-blackhan','font-jua']
+const lines = ['2056','도서관','책축제']
 function T() {
   return (
     <Leaflet panels={3}>
       <Panel>
-        {fonts.map((f) => (
-          <p key={f} className={`${f} m-0 text-[20px] leading-[40px] font-medium`}><span data-f={f}>개막식 및 북마켓 오픈</span></p>
+        {lines.map((f) => (
+          <p key={f} className="font-blackhan m-0 text-[100px] leading-[200px]">{f}</p>
         ))}
       </Panel>
       <Panel />

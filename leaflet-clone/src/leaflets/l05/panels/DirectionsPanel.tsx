@@ -19,13 +19,13 @@ export function DirectionsPanel() {
         {directions.pier}
       </Placed>
       <TextLines
-        className="absolute font-noto-sans text-[16px]"
+        className="absolute font-noto-sans text-[17px]"
         style={{ left: X, top: 864, color: theme.muted }}
         lines={[directions.address]}
         lineClassName="leading-[28px]"
       />
       <TextLines
-        className="absolute font-noto-sans text-[16px]"
+        className="absolute font-noto-sans text-[17px]"
         style={{ left: X, top: 914, color: theme.muted }}
         lines={directions.transit}
         lineClassName="leading-[27px]"

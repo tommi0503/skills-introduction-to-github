@@ -29,13 +29,13 @@ export function SectionTab({ title, geo }: SectionTabProps) {
         y={y}
         width={width}
         height={height}
-        className="flex items-center justify-center rounded-t-[12px] font-dohyeon text-[19px] leading-none text-white"
-        style={{ background: library.navy, paddingLeft: 22, paddingTop: 2 }}
+        className="flex items-center justify-center rounded-t-[12px] font-dohyeon text-[20px] leading-none tracking-[-0.02em] text-white"
+        style={{ background: library.navy, paddingLeft: 26, paddingTop: 2 }}
       >
         {title}
       </Placed>
       <Placed x={x + 8} y={y - 13} className="leading-none" style={{ color: library.ink }}>
-        <Pencil size={44} strokeWidth={1.6} fill="#f2cd5c" />
+        <Pencil size={46} strokeWidth={1.8} fill="#f2cd5c" />
       </Placed>
     </>
   )

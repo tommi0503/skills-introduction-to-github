@@ -18,11 +18,11 @@ export function ChecklistPanel() {
       <Placed x={340} y={278}>
         <Paperclip size={92} strokeWidth={1.6} style={{ color: theme.clip }} className="-rotate-[40deg]" />
       </Placed>
-      <Placed x={60} y={366} className="flex flex-col gap-[30px]">
-        {checklist.items.map((lines) => (
-          <CheckItem key={lines[0]} lines={lines} />
-        ))}
-      </Placed>
+      {checklist.items.map((item) => (
+        <Placed key={item.lines[0]} x={60} y={item.y}>
+          <CheckItem lines={item.lines} textOffset={item.textOffset} />
+        </Placed>
+      ))}
       <Placed x={232} y={760} width={218} height={176}>
         <ImagePlaceholder label="dog illustration" className="h-full w-full" style={{ borderRadius: '45% 40% 30% 30%' }} />
       </Placed>

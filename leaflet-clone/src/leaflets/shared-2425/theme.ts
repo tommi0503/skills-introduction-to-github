@@ -1,7 +1,7 @@
 /** Design tokens shared by the library programme leaflets 24 and 25. */
 export const library = {
   paper: '#f6f6f1',
-  cream: '#f4efe1',
+  cream: '#f2ecdc',
   navy: '#50547c',
   ink: '#3e4166',
   deep: '#383c60',

@@ -15,13 +15,13 @@ export function CoverPanel() {
         <TextLines className="font-noto-sans text-[20px] font-semibold" lines={brand} lineClassName="leading-[29px]" />
       </Placed>
       <TextLines
-        className="absolute font-noto-sans text-[64px] font-normal"
-        style={{ left: X, top: 622 }}
+        className="absolute font-noto-sans text-[68px] font-normal"
+        style={{ left: X, top: 625 }}
         lines={[...content.title, content.subtitle]}
-        lineClassName="leading-[94px] tracking-[0.01em]"
+        lineClassName="leading-[87px] tracking-[0.01em]"
       />
       <div className="absolute right-0" style={{ left: X, top: 905, height: 2, background: theme.muted }} />
-      <Placed x={X} y={936} className="whitespace-nowrap font-noto-sans text-[19px] leading-[30px]">
+      <Placed x={X} y={936} className="whitespace-nowrap font-noto-sans text-[21px] leading-[30px]" style={{ color: theme.muted }}>
         {content.tagline}
       </Placed>
     </Panel>

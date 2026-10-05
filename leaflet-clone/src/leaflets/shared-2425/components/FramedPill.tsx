@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
-import { Pill, cn } from '../../../ui'
+import { cn } from '../../../ui'
 import { library } from '../theme'
 
 interface FramedPillProps {
@@ -7,21 +7,21 @@ interface FramedPillProps {
   width?: number
   height?: number
   borderWidth?: number
+  /** Corner radius; defaults to a full capsule. */
+  radius?: number
   className?: string
   style?: CSSProperties
   children: ReactNode
 }
 
-/** Capsule label with the navy outline used throughout the library leaflets. */
-export function FramedPill({ fill, width, height, borderWidth = 2, className, style, children }: FramedPillProps) {
+/** Capsule / rounded label with the navy outline used throughout the library leaflets. */
+export function FramedPill({ fill, width, height, borderWidth = 2, radius = 999, className, style, children }: FramedPillProps) {
   return (
-    <Pill className={cn('box-border', className)}>
-      <span
-        className="box-border inline-flex items-center justify-center rounded-[inherit]"
-        style={{ width, height, background: fill, border: `${borderWidth}px solid ${library.ink}`, ...style }}
-      >
-        {children}
-      </span>
-    </Pill>
+    <span
+      className={cn('box-border inline-flex shrink-0 items-center justify-center whitespace-nowrap', className)}
+      style={{ width, height, background: fill, border: `${borderWidth}px solid ${library.ink}`, borderRadius: radius, ...style }}
+    >
+      {children}
+    </span>
   )
 }

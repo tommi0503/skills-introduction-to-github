@@ -1,6 +1,17 @@
+export interface ChecklistItem {
+  lines: string[]
+  y: number
+  textOffset?: number
+}
+
 export const checklist = {
   title: ['플리마켓 방문 시', '체크리스트!'],
-  items: [['일회용품을 쓰지 않아요'], ['장바구니를 챙겨주세요'], ['애견과 방문 시 목줄을', '꼭 챙겨주세요']],
+  /** y = icon top (panel px); textOffset = first-line drop for multi-line items. */
+  items: [
+    { lines: ['일회용품을 쓰지 않아요'], y: 378 },
+    { lines: ['장바구니를 챙겨주세요'], y: 482 },
+    { lines: ['애견과 방문 시 목줄을', '꼭 챙겨주세요'], y: 578, textOffset: 32 },
+  ] as ChecklistItem[],
 }
 
 export const directions = {

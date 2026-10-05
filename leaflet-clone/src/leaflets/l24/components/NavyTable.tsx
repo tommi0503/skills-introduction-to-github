@@ -27,8 +27,8 @@ interface NavyTableProps {
 
 const BORDER = 2.5
 /** Light separators between cells (literal class strings so Tailwind picks them up). */
-const COL_SEP = 'border-l border-l-[#e3dece]'
-const ROW_SEP = '[&>td]:border-t [&>td]:border-t-[#e3dece]'
+const COL_SEP = 'border-l border-l-[#ddd6c2]'
+const ROW_SEP = '[&>td]:border-t [&>td]:border-t-[#ddd6c2]'
 
 /** Navy-framed rounded table: navy header strip, cream body with rounded inner corners. */
 export function NavyTable({ columns, rows, geo }: NavyTableProps) {
@@ -62,9 +62,9 @@ export function NavyTable({ columns, rows, geo }: NavyTableProps) {
         columns={cols}
         rows={rows}
         className="table-fixed !border-separate border-spacing-0"
-        headCellClassName="p-0 text-[12.5px] font-medium text-white"
+        headCellClassName="p-0 text-[13px] font-semibold text-white"
         rowClassName={(_, i) => (i > 0 ? ROW_SEP : '')}
-        cellClassName="p-0 align-middle text-[12.5px] leading-[22px] tracking-[-0.02em] text-[var(--ink)]"
+        cellClassName="p-0 align-middle text-[13px] font-semibold leading-[22px] tracking-[-0.01em] text-[var(--ink)]"
       />
     </div>
   )

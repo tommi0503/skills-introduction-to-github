@@ -1,3 +1,4 @@
+import type { DisplayLineSpec } from '../shared-1718/components/DisplayLine'
 import { festival, type LabeledValue } from '../shared-1718/data'
 
 export interface TimetableEntry {
@@ -25,7 +26,11 @@ export const timetable = {
 }
 
 export const cover = {
-  title: festival.name,
+  title: [
+    { text: festival.name[0], x: 103, y: 60, size: 119, scaleY: 1.29 },
+    { text: festival.name[1], x: 74, y: 202, size: 137, scaleY: 1.03 },
+    { text: festival.name[2], x: 77, y: 328, size: 131, scaleY: 1.1 },
+  ] as DisplayLineSpec[],
   tagline: festival.tagline,
   date: festival.date,
   footer: [
