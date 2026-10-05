@@ -1,0 +1,18 @@
+export const sp = {
+  bg: '#121212',
+  card: '#242424',
+  tile: '#2a2a2a',
+  chip: '#2a2a2a',
+  green: '#1ed760',
+  white: '#ffffff',
+  muted: '#b3b3b3',
+  dim: '#a7a7a7',
+  pink: '#ffd2d7',
+  pinkText: '#f8c4cf',
+  lilac: '#d7c5f5',
+  miniPlayer: '#0e2335',
+  lyrics: '#5c7d99',
+  canvasTone: '#6a4b50',
+  heroTone: '#4a4744',
+  blue: '#3d91f4',
+}
