@@ -11,7 +11,7 @@ export function SpeechBubble({ words, speaker }: { words: PromptWord[]; speaker:
         style={{ borderLeft: `2px solid ${c.line}`, borderBottom: `2px solid ${c.line}` }}
       />
       {speaker && <Volume2 size={22} strokeWidth={2.4} color={c.blue} fill={c.blue} className="mr-[13px]" />}
-      <span className="flex gap-[5px] text-[16.5px] font-medium" style={{ color: c.text }}>
+      <span className="flex gap-[5px] text-[16.5px]" style={{ color: c.text }}>
         {words.map((w, i) => (
           <span
             key={w.text}

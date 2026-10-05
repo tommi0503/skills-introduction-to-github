@@ -8,7 +8,7 @@ export const rv = {
   key: '#6b6b6d',
   shield: '#6f93f5',
   caret: '#6f8ff0',
-  txCard: 'rgba(30, 32, 56, 0.92)',
+  txCard: 'rgba(34, 36, 64, 0.94)',
   /** Plain two-stop UI backgrounds (not imagery). */
   cardGradient: 'linear-gradient(180deg, #232a8f 0%, #10164f 30%, #000 48%, #000 100%)',
   homeGradient: 'linear-gradient(180deg, #5466f2 0%, #3238e6 22%, #1a1ab8 38%, #05052e 52%, #000 62%)',

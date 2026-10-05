@@ -55,7 +55,7 @@ export const exercises: Exercise[] = [
       [{ word: 'bread' }, { word: 'French' }, { word: 'fun' }, { word: 'is' }, { word: 'lives' }],
       [{ word: 'park' }, { word: 'small' }, { word: 'The', used: true }],
     ],
-    layout: { badgeY: 128, titleY: 172 },
+    layout: { badgeY: 128, titleY: 171 },
   },
   {
     id: 'hard',
@@ -81,7 +81,7 @@ export const exercises: Exercise[] = [
         { word: 'petits', used: true },
       ],
     ],
-    layout: { badgeY: 124, titleY: 164 },
+    layout: { badgeY: 124, titleY: 163 },
   },
 ]
 
