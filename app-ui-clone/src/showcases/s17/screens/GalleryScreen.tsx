@@ -1,5 +1,5 @@
 import { Bell, ChevronRight, Search, TextAlignStart } from 'lucide-react'
-import { Avatar } from '../../../ui'
+import { Avatar, ImagePlaceholder } from '../../../ui'
 import { ArtworkCard } from '../components/ArtworkCard'
 import { BlobNav } from '../components/BlobNav'
 import { FadeText } from '../components/FadeText'
@@ -62,7 +62,7 @@ export function GalleryScreen() {
       <div className="absolute top-[726px] left-[18px] flex gap-[19px]">
         {d.artworks.map((a) => (
           <div key={a.key} className="h-[120px] w-[233px] shrink-0 px-[26.5px] pt-[26.5px]" style={{ background: theme.card }}>
-            <div className="h-full w-[179px] bg-placeholder" />
+            <ImagePlaceholder className="h-full w-[179px]" label={`${a.title} category`} />
           </div>
         ))}
       </div>

@@ -38,9 +38,9 @@ export interface WalletCard {
 }
 
 export const walletCards: WalletCard[] = [
-  { top: 329, badge: '신한 5699', tone: '#d4d6db', badgeTop: 20 },
-  { top: 486.5, badge: '비씨 7892', tone: '#e5e7eb', badgeTop: 20 },
-  { top: 641.5, badge: '국민 2095', tone: '#dcdee3', badgeTop: 20 },
+  { top: 329, badge: '신한 5699', tone: '#d4d6db', badgeTop: 21.5 },
+  { top: 482.5, badge: '비씨 7892', tone: '#e5e7eb', badgeTop: 21.5 },
+  { top: 637.5, badge: '국민 2095', tone: '#dcdee3', badgeTop: 21.5 },
 ]
 
 export interface NavItem {

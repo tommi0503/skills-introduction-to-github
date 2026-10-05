@@ -26,6 +26,11 @@ function NavIcon({ kind }: { kind: NavItem['icon'] }) {
   return (
     <span className="relative flex items-center justify-center">
       <House {...common} />
+      <span className="absolute grid grid-cols-2" style={{ top: 11, gap: 1.6 }}>
+        {[0, 1, 2, 3].map((i) => (
+          <span key={i} style={{ width: 2.6, height: 2.6, borderRadius: 0.6, background: '#222' }} />
+        ))}
+      </span>
     </span>
   )
 }
@@ -34,7 +39,7 @@ function CameraFab() {
   return (
     <div
       className="absolute flex items-center justify-center rounded-full"
-      style={{ left: 195.5 - 30, top: -11.5, width: 60, height: 60, background: '#fff' }}
+      style={{ left: 195.5 - 29, top: -9.5, width: 58, height: 58, background: '#fff' }}
     >
       <div className="flex items-center justify-center rounded-full" style={{ width: 50, height: 50, background: '#00df55' }}>
         <div className="relative flex items-center justify-center" style={{ width: 26.5, height: 26.5, borderRadius: 7, background: '#050505' }}>
@@ -56,7 +61,7 @@ export function BottomNav({ items, top = 757.5 }: { items: NavItem[]; top?: numb
           <div className="flex items-center justify-center" style={{ height: 24 }}>
             <NavIcon kind={it.icon} />
           </div>
-          <span style={{ marginTop: 8, fontSize: 11, color: '#333', letterSpacing: -0.3, fontWeight: 500 }}>{it.label}</span>
+          <span style={{ marginTop: 3.5, fontSize: 11, color: '#333', letterSpacing: -0.3, fontWeight: 500 }}>{it.label}</span>
         </div>
       ))}
       <HomeIndicator width={138} bottom={7.5} className="!h-[4.5px]" />

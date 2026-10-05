@@ -1,4 +1,4 @@
-import { Apple, Bell, BookOpen, SportShoe, House, Salad, Shirt, FileText, User, type LucideIcon } from 'lucide-react'
+import { Apple, BookOpen, SportShoe, Salad, Shirt, FileText, type LucideIcon } from 'lucide-react'
 
 export type StepState = 'done' | 'current' | 'pending'
 
@@ -103,4 +103,3 @@ export const discoverScreen = {
   trending: { title: 'ID: P1873h563830', subtitle: 'JBL Speaker', status: 'On process' },
 }
 
-export const navIcons = { House, Bell, User }
