@@ -51,7 +51,7 @@ export function PayCodeScreen({ time, front, events = eventsA, withNav = false, 
       {scrollIndicator && (
         <span className="absolute rounded-full" style={{ left: 383, top: 134, width: 2.6, height: 166, background: '#2a3038' }} />
       )}
-      {withNav && <BottomNav items={navItems} />}
+      {withNav && <BottomNav items={navItems} fabColor={t19.pointGreen} indicatorColor="#585858" />}
       {overlay}
     </div>
   )

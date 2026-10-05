@@ -1,5 +1,4 @@
 import { ChartSpline, Folder, House } from 'lucide-react'
-import { HomeIndicator } from '../../../ui'
 import type { NavItem } from '../data'
 
 const ICON = 24
@@ -71,7 +70,7 @@ export function BottomNav({ items, top = 757.5, fabColor = '#00df55', indicatorC
           <span style={{ marginTop: 3.5, fontSize: 11, color: '#333', letterSpacing: -0.3, fontWeight: 500 }}>{it.label}</span>
         </div>
       ))}
-      <HomeIndicator width={138} bottom={7.5} className="!h-[4.5px]" style={{ background: indicatorColor }} />
+      <span className="absolute left-1/2 -translate-x-1/2 rounded-full" style={{ width: 138, height: 4.5, bottom: 7.5, background: indicatorColor }} />
     </div>
   )
 }
