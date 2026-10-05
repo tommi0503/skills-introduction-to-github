@@ -91,7 +91,7 @@ export interface KeyDef {
 }
 
 export const keypad: KeyDef[] = [
-  { key: '1', digit: '1' },
+  { key: '1', digit: '1', letters: '\u00a0' },
   { key: '2', digit: '2', letters: 'ABC' },
   { key: '3', digit: '3', letters: 'DEF' },
   { key: '4', digit: '4', letters: 'GHI' },

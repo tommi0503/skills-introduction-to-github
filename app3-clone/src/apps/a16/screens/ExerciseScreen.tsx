@@ -1,4 +1,4 @@
-import { AppScreen, HomeIndicator, ImagePlaceholder, StatusBar, cn } from '../../../ui'
+import { AppScreen, ImagePlaceholder, StatusBar, cn } from '../../../ui'
 import { checkLabel, type Exercise } from '../data'
 import { CheckButton } from '../components/CheckButton'
 import { ExerciseBadge } from '../components/ExerciseBadge'
@@ -52,7 +52,6 @@ export function ExerciseScreen({ exercise: e }: { exercise: Exercise }) {
         ))}
       </div>
       <CheckButton label={checkLabel} className="absolute top-[747px] right-[18px] left-[16px]" />
-      <HomeIndicator width={138} bottom={6} />
     </AppScreen>
   )
 }

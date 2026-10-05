@@ -26,8 +26,8 @@ export function Home() {
       <div className="mt-[80px] flex flex-col items-center text-white">
         <span className="text-[13px] text-white/85">{home.account}</span>
         <div className="mt-[4px] flex items-baseline font-bold">
-          <span className="text-[40px] leading-[46px] tracking-[-0.5px]">{home.balanceMajor}</span>
-          <span className="text-[20px]">{home.balanceMinor}</span>
+          <span className="text-[44px] leading-[48px] tracking-[-0.5px]">{home.balanceMajor}</span>
+          <span className="text-[21px]">{home.balanceMinor}</span>
         </div>
         <span className="mt-[11px] flex h-[36px] items-center rounded-full bg-white/25 px-[16px] text-[13px] font-medium">{home.accounts}</span>
         <div className="mt-[64px] flex gap-[3px]">

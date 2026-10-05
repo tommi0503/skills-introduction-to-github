@@ -7,7 +7,7 @@ export function WordChip({ token, className }: { token: Token; className?: strin
   if (token.used)
     return (
       <span
-        className={cn('flex h-[40px] items-center rounded-[12px] px-[16px] text-[16px] text-transparent', className)}
+        className={cn('flex h-[40px] items-center rounded-[12px] px-[16px] text-[16.5px] font-medium text-transparent', className)}
         style={{ background: c.used }}
       >
         {token.word}
@@ -15,7 +15,7 @@ export function WordChip({ token, className }: { token: Token; className?: strin
     )
   return (
     <span
-      className={cn('flex h-[41px] items-center rounded-[12px] bg-white px-[12px] pb-[2px] text-[16px]', className)}
+      className={cn('flex h-[41px] items-center rounded-[12px] bg-white px-[12px] pb-[2px] text-[16.5px] font-medium', className)}
       style={{ color: c.text, border: `2px solid ${c.line}`, borderBottomWidth: 4 }}
     >
       {token.word}

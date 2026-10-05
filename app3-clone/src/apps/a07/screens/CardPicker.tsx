@@ -17,11 +17,11 @@ export function CardPicker() {
       </div>
       <ImagePlaceholder tone="#8a8a8e" className="absolute top-[137px] left-[80px] h-[364px] w-[230px] rounded-[12px]" label="Revolut card" />
       <ImagePlaceholder tone="#cfcfd3" className="absolute top-[140px] left-[378px] h-[360px] w-[40px] rounded-[10px]" label="next card" />
-      <div className="absolute inset-x-[24px] top-[541px] text-center text-white">
+      <div className="absolute inset-x-[30px] top-[541px] text-center text-white">
         <div className="text-[13.5px] font-semibold">{cardPicker.title}</div>
-        <p className="mt-[10px] text-[11.5px] leading-[18px] text-white/65">{cardPicker.body}</p>
+        <p className="mt-[10px] text-[12px] leading-[18px] text-white/65">{cardPicker.body}</p>
       </div>
-      <div className="absolute top-[650px] left-[173px] flex items-center gap-[22px]">
+      <div className="absolute top-[650px] left-[173px] flex items-center gap-[19px]">
         {cardPicker.swatches.map((s) => {
           const on = s.key === cardPicker.selected
           return (
