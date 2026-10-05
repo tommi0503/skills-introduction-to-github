@@ -1,9 +1,17 @@
-import { Atom, ChartNoAxesColumn, Inbox, Search, SquareActivity, type LucideIcon } from 'lucide-react'
+import { Activity, Atom, ChartNoAxesColumn, Inbox, Search, type LucideIcon } from 'lucide-react'
 import { TabBar } from '../../../ui'
 import { navItems, type NavKey } from '../data'
 
-const icons: Record<NavKey, LucideIcon> = {
-  portfolio: SquareActivity,
+/** Portfolio glyph: white pulse line inside a solid rounded square. */
+function PortfolioGlyph() {
+  return (
+    <span className="flex h-[19px] w-[19px] items-center justify-center rounded-[4px] bg-[#111] text-white">
+      <Activity size={12} strokeWidth={2.6} />
+    </span>
+  )
+}
+
+const icons: Record<Exclude<NavKey, 'portfolio'>, LucideIcon> = {
   markets: ChartNoAxesColumn,
   search: Search,
   inbox: Inbox,
@@ -22,14 +30,15 @@ export function FloatingNav({ active, top = 766 }: { active: NavKey; top?: numbe
         activeKey={active}
         className="h-full px-[4px]"
         renderItem={(item, on) => {
-          const Icon = icons[item.key as NavKey]
+          const key = item.key as NavKey
+          const Icon = key === 'portfolio' ? null : icons[key]
           return (
             <div
-              className="flex h-[52px] flex-1 flex-col items-center justify-center gap-[4px] rounded-full"
+              className="flex h-[52px] flex-1 flex-col items-center justify-center gap-[5px] rounded-full"
               style={{ background: on ? '#ececee' : undefined }}
             >
-              <Icon size={20} strokeWidth={2.1} />
-              <span className="text-[10.5px] leading-none font-medium">{item.label}</span>
+              <span className="flex h-[21px] items-center">{Icon ? <Icon size={21} strokeWidth={2.4} /> : <PortfolioGlyph />}</span>
+              <span className="text-[10.5px] leading-none font-semibold">{item.label}</span>
             </div>
           )
         }}

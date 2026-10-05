@@ -18,19 +18,19 @@ export function PortfolioScreen() {
         <Menu size={18} strokeWidth={2} />
         {p.account}
       </FloatingPill>
-      <FloatingPill right={17} top={59} height={44} width={44}>
+      <FloatingPill right={17} top={59} height={44} width={44} className="justify-center">
         <Sun size={17} strokeWidth={2.2} />
       </FloatingPill>
       <TopBar />
-      <div className="absolute text-[31px] font-semibold tracking-[-0.5px]" style={{ left: 14, top: 128 }}>
+      <div className="absolute text-[29px] font-semibold tracking-[-0.4px]" style={{ left: 15, top: 129 }}>
         {p.value}
       </div>
       <div className="absolute inset-x-[10px] flex border-b border-[#e9e9eb] text-[15px]" style={{ top: 189, height: 31 }}>
         {p.tabs.map((t, i) => (
           <span
             key={t}
-            className="relative px-[5px] pr-[19px]"
-            style={{ color: i === 0 ? theme.ink : '#8f8f94', fontWeight: i === 0 ? 500 : 400 }}
+            className="relative px-[5px] pr-[15px]"
+            style={{ color: i === 0 ? theme.ink : '#77777c', fontWeight: i === 0 ? 500 : 400 }}
           >
             {t}
             {i === 0 && <span className="absolute -bottom-px left-0 right-[10px] h-[2px] bg-[#333]" />}
@@ -52,7 +52,7 @@ export function PortfolioScreen() {
       <div className="absolute overflow-hidden rounded-[10px]" style={{ left: 15, right: 18, top: 642, height: 105 }}>
         <ImagePlaceholder tone="#151a33" className="absolute inset-0" label="promo gradient" />
         <div className="absolute inset-0 px-[12px] pt-[11px] text-white">
-          <div className="text-[16px] font-semibold">{p.promo.title}</div>
+          <div className="text-[15.5px] font-semibold">{p.promo.title}</div>
           <p className="mt-[3px] text-[12px] leading-[14.5px] text-[#c9cad3]">{p.promo.body}</p>
           <div className="mt-[11px] flex items-center gap-[5px] text-[15px] font-semibold">
             {p.promo.cta}

@@ -11,18 +11,18 @@ export function OptionsScreen() {
     <AppScreen className="font-inter">
       <div className="absolute inset-x-0 top-0 border-b border-[#e4e4e6] bg-[#f5f5f6]" style={{ height: 155 }} />
       <TopBar />
-      <FloatingPill left={14} top={58} height={44} width={44}>
+      <FloatingPill left={14} top={58} height={44} width={44} className="justify-center">
         <ChevronLeft size={20} strokeWidth={2.2} />
       </FloatingPill>
-      <div className="absolute flex items-center gap-[6px] rounded-full bg-[#141414] pl-[17px] text-[15px] font-semibold text-white" style={{ left: 71, top: 59, width: 151, height: 42 }}>
+      <div className="absolute flex items-center gap-[6px] rounded-full bg-[#141414] pl-[17px] text-[14.5px] font-semibold text-white" style={{ left: 71, top: 59, width: 151, height: 42 }}>
         <Search size={14} strokeWidth={2.6} />
         {o.search}
       </div>
-      <FloatingPill left={279} top={59} height={42} width={94} className="justify-between px-[15px]">
+      <FloatingPill left={279} top={59} height={42} width={94} className="justify-between pr-[18px] pl-[16px]">
         <Tag size={17} strokeWidth={2.2} fill="#111" color="#111" />
         <span className="text-[18px] font-semibold">?</span>
       </FloatingPill>
-      <div className="absolute flex gap-[22px] text-[15px] whitespace-nowrap" style={{ left: 15, top: 125 }}>
+      <div className="absolute flex gap-[20.5px] text-[14.5px] whitespace-nowrap" style={{ left: 15, top: 125 }}>
         {o.tabs.map((t) => {
           const on = t === o.activeTab
           return (

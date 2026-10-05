@@ -18,7 +18,7 @@ export function AssetHeader({ ticker, name, quote, starred }: AssetHeaderProps) 
     <>
       <ImagePlaceholder className="absolute inset-x-0 top-0 h-[239px] border-b border-[#e3e3e5]" label="circuit artwork" />
       <TopBar />
-      <FloatingPill left={14} top={58} height={44} width={44}>
+      <FloatingPill left={14} top={58} height={44} width={44} className="justify-center">
         <ChevronLeft size={20} strokeWidth={2.2} />
       </FloatingPill>
       <span className="absolute text-[14px] font-semibold" style={{ left: 78, top: 72 }}>
@@ -40,7 +40,7 @@ export function AssetHeader({ ticker, name, quote, starred }: AssetHeaderProps) 
       <span className="absolute flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#e8e8ea] text-[#9a9aa0]" style={{ left: 341, top: 256 }}>
         <Maximize2 size={13} strokeWidth={1.8} />
       </span>
-      <ChangeLine value={quote.change} top={294} className="[&>span:last-of-type]:text-[#111]" />
+      <ChangeLine value={quote.change} top={294} todayColor="#111" />
     </>
   )
 }

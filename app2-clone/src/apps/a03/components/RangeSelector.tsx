@@ -20,14 +20,14 @@ export function RangeSelector({ ranges, active, top, trailing, fadedFrom }: Rang
           return (
             <span
               key={r}
-              className="flex h-[30px] items-center justify-center rounded-[5px] text-[13px] font-medium"
+              className="flex h-[30px] items-center justify-center rounded-[5px] text-[12.5px] font-medium"
               style={{
                 minWidth: on ? 31 : undefined,
                 padding: on ? '0 9px' : undefined,
                 marginRight: on ? -6 : undefined,
                 background: on ? theme.greenSoft : undefined,
                 boxShadow: on ? `inset 0 0 0 1px ${theme.greenBorder}` : undefined,
-                color: on ? theme.green : '#9a9aa0',
+                color: on ? theme.green : '#8e8e93',
                 opacity: fadedFrom !== undefined && i >= fadedFrom ? 0.35 : 1,
               }}
             >

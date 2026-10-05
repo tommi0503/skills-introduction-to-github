@@ -13,7 +13,7 @@ export function FloatingPill({ left, right, top = 59, height = 42, width, classN
 }) {
   return (
     <div
-      className={cn('absolute flex items-center justify-center rounded-full bg-white shadow-[0_2px_14px_rgba(0,0,0,0.07)]', className)}
+      className={cn('absolute flex items-center rounded-full bg-white shadow-[0_2px_14px_rgba(0,0,0,0.07)]', className)}
       style={{ left, right, top, height, width }}
     >
       {children}

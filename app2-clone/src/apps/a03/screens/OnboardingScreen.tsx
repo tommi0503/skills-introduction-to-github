@@ -5,17 +5,17 @@ import { onboarding } from '../data'
 export function OnboardingScreen() {
   return (
     <AppScreen className="font-inter" background="#000">
-      <ImagePlaceholder tone="#0e1428" className="absolute inset-x-0 top-0 h-[560px]" label="gradient artwork" />
+      <ImagePlaceholder tone="#0b0f1d" className="absolute inset-0" label="gradient artwork" />
       <TopBar color="#fff" />
       <ImagePlaceholder tone="#4a5163" className="absolute rounded-[4px]" style={{ left: 30, top: 71, width: 80, height: 25 }} label="public logo" />
-      <h1 className="absolute font-times text-[36px] leading-[47px] tracking-[-0.9px] text-white" style={{ left: 30, top: 211 }}>
+      <h1 className="absolute font-times text-[40px] leading-[48px] tracking-[-0.6px] text-white" style={{ left: 30, top: 211 }}>
         {onboarding.headline.map((l) => (
           <span key={l} className="block">
             {l}
           </span>
         ))}
       </h1>
-      <ul className="absolute flex flex-col gap-[9.5px]" style={{ left: 31, top: 334 }}>
+      <ul className="absolute flex flex-col gap-[9.5px]" style={{ left: 31, top: 336 }}>
         {onboarding.features.map(({ key, icon: Icon, label }) => (
           <li key={key} className="flex items-center gap-[8px]">
             <span className="flex h-[31.5px] w-[31.5px] items-center justify-center rounded-[4px] bg-[#3a3d46] text-white">

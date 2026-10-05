@@ -10,7 +10,7 @@ export interface LineChartProps {
 }
 
 /** Full-screen-width SVG overlay drawing a price line and its dashed baseline. */
-export function LineChart({ points, baselineY, baselineX = [15, 375], color, endDot, strokeWidth = 1.6 }: LineChartProps) {
+export function LineChart({ points, baselineY, baselineX = [15, 375], color, endDot, strokeWidth = 1.5 }: LineChartProps) {
   const d = points.map(([x, y], i) => `${i ? 'L' : 'M'}${x} ${y}`).join(' ')
   const last = points[points.length - 1]
   return (

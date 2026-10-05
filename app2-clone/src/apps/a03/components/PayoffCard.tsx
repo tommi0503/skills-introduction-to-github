@@ -20,8 +20,8 @@ export function PayoffCard({ strategy, zeroY }: { strategy: Strategy; zeroY: num
         <polyline points={line} fill="none" stroke={theme.payoffLine} strokeWidth={1.6} />
         <circle cx={strategy.dot[0]} cy={strategy.dot[1]} r={4} fill={theme.payoffLine} />
       </svg>
-      <div className="px-[12px] pt-[16px]">
-        <div className="text-[15px] leading-[18px] font-medium">{strategy.name}</div>
+      <div className="px-[12px] pt-[14px]">
+        <div className="text-[14.5px] leading-[18px] font-medium">{strategy.name}</div>
         <div className="mt-[3px] flex items-center gap-[3px] text-[12.5px] font-semibold" style={{ color: bullish ? theme.green : theme.red }}>
           {strategy.sentiment}
           <Arrow size={13} strokeWidth={2.4} />
