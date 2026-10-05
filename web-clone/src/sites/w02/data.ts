@@ -108,7 +108,7 @@ export const benchmark = {
     { name: 'ChatGPT Atlas', score: 70.0 },
   ],
   /** Bar scale: score → width fraction of the 610px track. */
-  scale: { min: 67.8, max: 99.0 },
+  scale: { min: 66.1, max: 99.0 },
   tabs: ['Online-Mind2Web', 'BU Bench v1', 'Odyssey'],
   activeTab: 0,
 }
