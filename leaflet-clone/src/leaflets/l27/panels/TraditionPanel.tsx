@@ -10,7 +10,7 @@ export function TraditionPanel() {
   return (
     <Panel background={seoul.paper}>
       <Placed x={0} y={88} width={486}>
-        <SectionNumber number={tradition.number} title={tradition.title} layout="stacked" align="center" className="gap-[34px]" />
+        <SectionNumber number={tradition.number} title={tradition.title} layout="stacked" align="center" className="gap-[46px]" />
       </Placed>
       <Paragraphs items={tradition.texts} />
       {tradition.photos.map((p) => (

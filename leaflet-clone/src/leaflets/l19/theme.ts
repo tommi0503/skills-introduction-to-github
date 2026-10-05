@@ -6,7 +6,7 @@ export const palette = {
   card: '#f2f2f2',
   ink: '#222222',
   inkSoft: '#333333',
-  onDark: '#ffffff',
+  onDark: '#f7f7f7',
   onDarkSoft: '#d4d4d4',
   photoTone: '#c9ccd1',
 } as const

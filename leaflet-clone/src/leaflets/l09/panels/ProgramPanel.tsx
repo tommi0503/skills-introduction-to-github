@@ -6,7 +6,7 @@ import { programPanel as d } from '../data'
 export function ProgramPanel() {
   return (
     <Panel>
-      <Placed x={30} y={50} width={330} className="flex flex-col gap-[29px]">
+      <Placed x={30} y={50} width={330} className="flex flex-col gap-[33px]">
         {d.items.map((item) => (
           <ProgramItem key={item.title} item={item} />
         ))}

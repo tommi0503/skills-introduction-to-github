@@ -24,7 +24,7 @@ export function SectionNumber({ number, title, layout, align = 'left', className
       <span className="font-montserrat text-[58px] font-semibold leading-[44px] tracking-[-0.01em]" style={{ color: seoul.sky }}>
         {number}
       </span>
-      <span className="whitespace-nowrap font-nanum-gothic text-[24px] font-extrabold leading-none tracking-[-0.02em]" style={{ color: seoul.slate }}>
+      <span className="whitespace-nowrap font-nanum-gothic text-[24px] font-bold leading-none tracking-[-0.02em]" style={{ color: seoul.slate }}>
         {title}
       </span>
     </div>
