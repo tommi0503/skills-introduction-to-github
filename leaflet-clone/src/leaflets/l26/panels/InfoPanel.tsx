@@ -7,10 +7,10 @@ import { information } from '../data'
 export function InfoPanel() {
   return (
     <Panel background={seoul.paper}>
-      <Placed x={0} y={120} width={480} className="text-center font-montserrat text-[96px] font-extrabold leading-none" style={{ color: seoul.sky }}>
+      <Placed x={0} y={75} width={480} className="text-center font-montserrat text-[120px] font-extrabold leading-none" style={{ color: seoul.sky }}>
         ,
       </Placed>
-      <Placed x={0} y={221} width={480} className="text-center text-[16.5px] font-semibold leading-[27px] tracking-[-0.02em]" style={{ color: seoul.sky }}>
+      <Placed x={0} y={221} width={480} className="text-center font-nanum-gothic text-[18px] font-bold leading-[27px] tracking-[-0.03em]" style={{ color: seoul.sky }}>
         {information.quote.map((q) => (
           <p key={q} className="m-0">
             {q}
@@ -21,7 +21,7 @@ export function InfoPanel() {
         {information.heading}
       </Placed>
       <Photo box={information.photo} />
-      <Placed x={0} y={890} width={480} className="text-center text-[14px] font-medium leading-[22px]" style={{ color: seoul.muted }}>
+      <Placed x={0} y={890} width={480} className="text-center font-nanum-gothic text-[14px] font-bold leading-[22px]" style={{ color: seoul.muted }}>
         {information.contacts.map((c) => (
           <p key={c} className="m-0">
             {c}
