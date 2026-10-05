@@ -13,7 +13,7 @@ export function DraftScreen() {
   return (
     <div className="absolute inset-0 bg-white font-inter">
       <ScreenTitle title={draft.title} className="absolute left-[18px] right-[17px] top-[66px]" trailing={<SoftIconButton icon={TextAlignStart} />} />
-      <p className="absolute left-[18px] top-[138px] text-[14px] text-[#7a7a7a]">{draft.subtitle}</p>
+      <p className="absolute left-[18px] top-[137px] text-[14.5px] text-[#6a6a6a]">{draft.subtitle}</p>
 
       <div className="absolute left-[42px] top-[177px]">
         <ScoreRing value={draft.score} label={draft.scoreLabel} />
