@@ -1,5 +1,5 @@
 import { ArrowUpRight, Bell, Map, MapPin, TextAlignStart } from 'lucide-react'
-import { SearchField } from '../../../ui'
+import { ImagePlaceholder, SearchField } from '../../../ui'
 import { BottomNav } from '../components/BottomNav'
 import { CategoryTile } from '../components/CategoryTile'
 import { GlassButton } from '../components/GlassButton'
@@ -9,10 +9,9 @@ import { fonts, theme } from '../theme'
 
 function PromoHeader() {
   return (
-    <div
-      className="absolute inset-x-0 top-0 h-[322px] overflow-hidden rounded-b-[30px]"
-      style={{ background: `radial-gradient(ellipse 70% 60% at 50% 45%, #2a2b2d 0%, ${theme.headerDark} 60%, #1a1a1b 100%)` }}
-    >
+    <div className="absolute inset-x-0 top-0 h-[322px] overflow-hidden rounded-b-[30px]">
+      {/* Bakery photo backdrop → flat placeholder (mid-light tone keeps the white copy legible) */}
+      <ImagePlaceholder label="bakery photo header" tone="#b9bcc2" className="absolute inset-0" />
       <GlassButton icon={TextAlignStart} className="absolute left-[16px] top-[51px] bg-white/20" />
       <GlassButton icon={Bell} className="absolute right-[19px] top-[51px] bg-white/20" />
 
