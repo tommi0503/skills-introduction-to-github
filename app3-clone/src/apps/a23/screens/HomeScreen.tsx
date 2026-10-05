@@ -7,9 +7,11 @@ import { WeekStrip } from '../components/WeekStrip'
 import { home } from '../data'
 import { theme } from '../theme'
 
+const TAB_X = [55, 145, 243]
+
 export function HomeScreen() {
   return (
-    <AppScreen background="linear-gradient(180deg,#ebebeb 0%,#f3f3f3 35%,#fafafa 60%,#fff 100%)" className="font-dm text-[#111]">
+    <AppScreen background="linear-gradient(180deg,#e9e9e9 0%,#f1f1f1 30%,#fcfcfc 55%,#fff 100%)" className="font-dm text-[#111]">
       <StatusBar paddingTop={16} paddingX={54} fontSize={15.5} />
       <div className="absolute left-[32px] top-[81px] flex items-center gap-[3px]">
         <Apple size={24} fill={theme.ink} strokeWidth={1.5} />
@@ -54,9 +56,9 @@ export function HomeScreen() {
         {home.tabs.map((t, i) => {
           const Icon = t.icon
           return (
-            <div key={t.label} className="absolute flex w-[60px] -translate-x-1/2 flex-col items-center" style={{ left: 55 + i * 94, top: 15 }}>
-              <Icon size={21} strokeWidth={1.6} color={t.active ? theme.ink : '#bdbdbd'} />
-              <span className="mt-[6px] text-[10.5px]" style={{ color: t.active ? theme.ink : '#a8a8a8', fontWeight: t.active ? 600 : 400 }}>
+            <div key={t.label} className="absolute flex w-[60px] -translate-x-1/2 flex-col items-center" style={{ left: TAB_X[i], top: 15 }}>
+              <Icon size={24} strokeWidth={1.6} color={t.active ? theme.ink : '#bdbdbd'} />
+              <span className="mt-[5px] text-[11px]" style={{ color: t.active ? theme.ink : '#a8a8a8', fontWeight: t.active ? 600 : 400 }}>
                 {t.label}
               </span>
             </div>

@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
-import { ChartColumnBig, Droplets, Drumstick, House, Settings, Wheat } from 'lucide-react'
+import { ChartNoAxesColumn, Droplets, Drumstick, House, Settings, Wheat } from 'lucide-react'
 import { theme } from './theme'
 
 export interface WeekDay {
@@ -50,7 +50,7 @@ export const home = {
   },
   tabs: [
     { label: 'Home', icon: House, active: true },
-    { label: 'Progress', icon: ChartColumnBig },
+    { label: 'Progress', icon: ChartNoAxesColumn },
     { label: 'Settings', icon: Settings },
   ] as Tab[],
 }
