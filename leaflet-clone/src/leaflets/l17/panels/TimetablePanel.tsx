@@ -9,7 +9,7 @@ export function TimetablePanel() {
   return (
     <Panel background={c.cream}>
       <RoundedBox x={54} y={74} width={375} height={842} radius={12} background={c.card} borderColor={c.cardBorder}>
-        <p className="absolute left-0 right-0 m-0 text-center text-[21px] font-bold" style={{ top: 45, color: c.accent }}>
+        <p className="absolute left-0 right-0 m-0 text-center text-[22px] font-bold" style={{ top: 45, color: c.accent }}>
           {timetable.title}
         </p>
         <div className="absolute flex flex-col" style={{ left: 21, right: 21, top: 122 }}>
@@ -18,8 +18,8 @@ export function TimetablePanel() {
               {i > 0 && <Divider color={c.rule} className="mb-[19px] mt-[17px]" />}
               <TimetableItem
                 entry={entry}
-                titleClassName="text-[16.5px] font-semibold leading-[30px] mb-[5px]"
-                lineClassName="text-[13.5px] leading-[22px]"
+                titleClassName="text-[17px] font-bold leading-[30px] mb-[5px]"
+                lineClassName="text-[15px] leading-[22px]"
                 titleColor={c.ink}
                 lineColor={c.inkSoft}
               />

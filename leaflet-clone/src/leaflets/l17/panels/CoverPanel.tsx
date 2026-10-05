@@ -16,14 +16,14 @@ export function CoverPanel() {
       </div>
       <ImagePlaceholder label="sparkle" className="absolute" style={{ left: 395, top: 150, width: 42, height: 48 }} />
       <Placed x={0} y={469} width={480} className="text-center" style={{ color: c.onPeriwinkle }}>
-        <p className="m-0 text-[21px] font-semibold leading-[30px]">{cover.tagline}</p>
-        <p className="m-0 text-[16.5px] leading-[30px]" style={{ color: c.onPeriwinkleSoft }}>
+        <p className="m-0 text-[23px] font-bold leading-[30px]">{cover.tagline}</p>
+        <p className="m-0 text-[19px] leading-[30px]" style={{ color: c.onPeriwinkleSoft }}>
           {cover.date}
         </p>
       </Placed>
       <ImagePlaceholder label="reading children illustration" className="absolute" style={{ left: 58, top: 655, width: 282, height: 270 }} />
       <Placed x={0} y={946} width={480} style={{ color: c.onPeriwinkleSoft }}>
-        <LabeledLine items={cover.footer} gap={22} className="justify-center text-[14px]" labelClassName="font-bold" />
+        <LabeledLine items={cover.footer} gap={22} className="justify-center text-[15px]" labelClassName="font-bold" />
       </Placed>
     </Panel>
   )

@@ -10,7 +10,7 @@ const X = 55
 export function DirectionsPanel() {
   const { directions } = content
   return (
-    <Panel background={theme.paper} style={{ color: theme.ink }}>
+    <Panel style={{ color: theme.ink }}>
       <SectionHeading x={X} y={603} className="font-normal">
         {directions.heading}
       </SectionHeading>

@@ -16,7 +16,7 @@ export function InvitationPanel() {
       <RoundedBox x={51} y={318} width={389} height={600} radius={11} background={c.periwinkleSoft}>
         <div className="absolute left-0 right-0 flex flex-col items-center gap-[30px] text-center" style={{ top: 47, color: c.onPeriwinkle }}>
           {invitation.message.map((para) => (
-            <div key={para[0]} className="text-[20px] font-medium leading-[32px]">
+            <div key={para[0]} className="text-[21px] font-medium leading-[32px]">
               {para.map((line) => (
                 <p key={line} className="m-0">
                   {line}
@@ -30,7 +30,7 @@ export function InvitationPanel() {
       <Placed x={0} y={945} width={480} style={{ color: c.inkMuted }}>
         <LabeledLine
           items={invitation.footer}
-          className="justify-center text-[15px]"
+          className="justify-center text-[16px]"
           labelClassName="font-bold"
           valueClassName="font-normal"
         />

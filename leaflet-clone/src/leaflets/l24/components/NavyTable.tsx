@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { DataTable, type DataColumn } from '../../../ui'
 import { library } from '../../shared-2425/theme'
 
@@ -7,17 +8,31 @@ export interface TableColumn {
   width: number
 }
 
-interface NavyTableProps {
-  columns: TableColumn[]
-  rows: Record<string, string[]>[]
+/** A row maps column key -> printed lines of that cell. */
+export type TableRow = Record<string, string[]>
+
+export interface TableGeometry {
+  x: number
+  y: number
+  width: number
   headerHeight: number
   rowHeight: number
-  width: number
 }
 
-/** Navy-headed rounded table on a cream body (어린이 배움 특강 …). Cells hold one or more lines. */
-export function NavyTable({ columns, rows, headerHeight, rowHeight, width }: NavyTableProps) {
-  const cols: DataColumn<Record<string, string[]>>[] = columns.map((c, ci) => ({
+interface NavyTableProps {
+  columns: TableColumn[]
+  rows: TableRow[]
+  geo: Pick<TableGeometry, 'width' | 'headerHeight' | 'rowHeight'>
+}
+
+const BORDER = 2.5
+/** Light separators between cells (literal class strings so Tailwind picks them up). */
+const COL_SEP = 'border-l border-l-[#e3dece]'
+const ROW_SEP = '[&>td]:border-t [&>td]:border-t-[#e3dece]'
+
+/** Navy-framed rounded table: navy header strip, cream body with rounded inner corners. */
+export function NavyTable({ columns, rows, geo }: NavyTableProps) {
+  const cols: DataColumn<TableRow>[] = columns.map((c, ci) => ({
     key: c.key,
     header: c.header,
     width: c.width,
@@ -27,23 +42,30 @@ export function NavyTable({ columns, rows, headerHeight, rowHeight, width }: Nav
           {line}
         </span>
       )),
-    cellClassName: ci > 0 ? 'border-l border-l-[#e2ddcd]' : undefined,
+    cellClassName: ci > 0 ? COL_SEP : undefined,
   }))
+  const vars = {
+    width: geo.width,
+    background: library.navy,
+    padding: `0 ${BORDER}px ${BORDER}px`,
+    '--hh': `${geo.headerHeight}px`,
+    '--rh': `${geo.rowHeight}px`,
+    '--cream': library.cream,
+    '--ink': library.ink,
+  } as CSSProperties
   return (
-    <div className="box-border overflow-hidden rounded-[16px]" style={{ width, background: library.cream, border: `2.5px solid ${library.navy}` }}>
+    <div
+      className="box-border rounded-[16px] [&_tbody_td]:h-[var(--rh)] [&_tbody_td]:bg-[var(--cream)] [&_tbody_tr:first-child_td:first-child]:rounded-tl-[13px] [&_tbody_tr:first-child_td:last-child]:rounded-tr-[13px] [&_tbody_tr:last-child_td:first-child]:rounded-bl-[13px] [&_tbody_tr:last-child_td:last-child]:rounded-br-[13px] [&_thead_th]:h-[var(--hh)]"
+      style={vars}
+    >
       <DataTable
         columns={cols}
         rows={rows}
-        className="table-fixed"
-        headCellClassName="font-medium text-[12.5px] text-white"
-        headClassName="[&_th]:h-[var(--hh)]"
-        rowClassName={(_, i) => (i > 0 ? 'border-t border-t-[#e2ddcd]' : '')}
-        cellClassName="align-middle px-1 text-[12.5px] leading-[22px] tracking-[-0.01em]"
-        // header / row heights are injected as CSS variables
+        className="table-fixed !border-separate border-spacing-0"
+        headCellClassName="p-0 text-[12.5px] font-medium text-white"
+        rowClassName={(_, i) => (i > 0 ? ROW_SEP : '')}
+        cellClassName="p-0 align-middle text-[12.5px] leading-[22px] tracking-[-0.02em] text-[var(--ink)]"
       />
-      <style>{`.l24-hh{}`}</style>
-      <span className="hidden" style={{ ['--hh' as string]: `${headerHeight}px` }} />
-      <span className="hidden">{rowHeight}</span>
     </div>
   )
 }

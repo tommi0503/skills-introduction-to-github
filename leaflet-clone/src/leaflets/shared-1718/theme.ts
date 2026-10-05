@@ -51,6 +51,6 @@ export const insidePalette: FestivalPalette = {
 }
 
 export const fonts = {
-  body: 'font-pretendard',
+  body: 'font-gothic-a1',
   display: 'font-blackhan',
 } as const

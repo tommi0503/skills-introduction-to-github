@@ -1,11 +1,12 @@
 import { Leaflet, type LeafletDefinition } from '../../ui'
+import { fonts } from '../shared-1718/theme'
 import { CoverPanel } from './panels/CoverPanel'
 import { InvitationPanel } from './panels/InvitationPanel'
 import { TimetablePanel } from './panels/TimetablePanel'
 
 function Leaflet17() {
   return (
-    <Leaflet panels={3}>
+    <Leaflet panels={3} className={fonts.body}>
       <InvitationPanel />
       <TimetablePanel />
       <CoverPanel />

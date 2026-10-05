@@ -9,7 +9,7 @@ const X = 42
 /** Front cover: brand lockup over the photo, big title, rule and tagline. */
 export function CoverPanel() {
   return (
-    <Panel background={theme.paper} style={{ color: theme.ink }}>
+    <Panel style={{ color: theme.ink }}>
       <Placed x={207} y={42} className="z-10 flex items-center gap-[6px]">
         <Ship size={48} strokeWidth={2.4} />
         <TextLines className="font-noto-sans text-[20px] font-semibold" lines={brand} lineClassName="leading-[29px]" />
