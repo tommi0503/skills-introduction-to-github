@@ -10,7 +10,7 @@ export interface MapPinProps {
 
 /** Teardrop location marker with a white disc holding a number. */
 export function MapPin({ color, label = '1', size = 46, className }: MapPinProps) {
-  const disc = Math.round(size * 0.6)
+  const disc = Math.round(size * 0.64)
   return (
     <div className={cn('relative', className)} style={{ width: size, height: size * 1.38 }}>
       <div

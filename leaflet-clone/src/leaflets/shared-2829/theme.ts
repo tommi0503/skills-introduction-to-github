@@ -19,7 +19,7 @@ export const autumn = {
   tableHead: '#e6d6c2',
   tableLine: '#d8cdbf',
   tableBody: '#f4f4f3',
-  tableText: '#8a8784',
+  tableText: '#7e7a76',
   footer: '#a77d42',
   legendText: '#5a5552',
   legendRed: '#bf3f3f',

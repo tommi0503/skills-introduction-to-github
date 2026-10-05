@@ -40,12 +40,12 @@ export interface Booth {
 export const boothMap = {
   title: '부스 배치도',
   booths: [
-    { label: '무대', x: 95, y: 37, w: 162, h: 58, fill: '#ecd377', text: '#4d3b2c', size: 21 },
-    { label: '전시부스', x: 22, y: 114, w: 78, h: 54, fill: '#e2dcab', text: '#3f3a2e', size: 16 },
-    { label: '전시부스', x: 22, y: 189, w: 78, h: 54, fill: '#e2dcab', text: '#3f3a2e', size: 16 },
+    { label: '무대', x: 95, y: 37, w: 162, h: 58, fill: '#ecd377', text: '#4d3b2c', size: 20 },
+    { label: '전시부스', x: 22, y: 114, w: 78, h: 54, fill: '#e2dcab', text: '#3f3a2e', size: 15 },
+    { label: '전시부스', x: 22, y: 189, w: 78, h: 54, fill: '#e2dcab', text: '#3f3a2e', size: 15 },
     { label: '관람객석', x: 120, y: 112, w: 115, h: 130, fill: '#eec7c1', text: '#4c3f63', size: 22 },
-    { label: '푸드트럭', x: 253, y: 114, w: 78, h: 54, fill: '#eea547', text: '#5a3a1e', size: 16 },
-    { label: '운영본부', x: 253, y: 189, w: 78, h: 54, fill: '#56a062', text: '#ffffff', size: 16 },
+    { label: '푸드트럭', x: 253, y: 114, w: 78, h: 54, fill: '#eea547', text: '#5a3a1e', size: 15 },
+    { label: '운영본부', x: 253, y: 189, w: 78, h: 54, fill: '#56a062', text: '#ffffff', size: 15 },
   ] satisfies Booth[],
 }
 

@@ -14,6 +14,7 @@ export const palette = {
 export const fonts = {
   headline: 'font-anton',
   body: 'font-nanum-gothic',
+  paragraph: 'font-gothic-a1',
   contact: 'font-poppins',
   url: 'font-noto-serif',
   quote: 'font-noto-serif',

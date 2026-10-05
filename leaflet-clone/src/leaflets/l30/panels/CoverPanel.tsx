@@ -9,14 +9,14 @@ export function CoverPanel() {
   return (
     <Panel background={growth.navyDeep}>
       <Placed x={122} y={117} width={239} height={40}>
-        <Pill className={`h-full w-full bg-[#f2f3f4] text-[17.5px] ${fonts.display}`}>
+        <Pill className={`h-full w-full bg-[#f2f3f4] text-[20px] ${fonts.display}`}>
           <span style={{ color: growth.navyDeep }}>{cover.badge}</span>
         </Pill>
       </Placed>
       <Placed x={0} y={203} width={483}>
         <DisplayTitle lines={cover.title} color="#fff" lineColors={[growth.sky, '#f4f4f4']} className="text-[66px] leading-[82px] tracking-[3px]" />
       </Placed>
-      <Placed x={0} y={413} width={483} className="text-center text-[13.5px] leading-[21px] tracking-[-0.2px]" style={{ color: growth.paleText }}>
+      <Placed x={0} y={413} width={483} className="text-center text-[15px] leading-[21px] tracking-[-0.3px]" style={{ color: growth.paleText }}>
         {cover.intro.map((l) => (
           <p key={l} className="m-0">
             {l}
