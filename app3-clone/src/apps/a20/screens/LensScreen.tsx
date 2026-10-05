@@ -13,10 +13,10 @@ const hotspots = [
 export function LensScreen() {
   return (
     <AppScreen background={theme.lensBg} className="font-pretendard">
-      <PhoneStatus color="#fff" />
-      <ChevronLeft size={26} strokeWidth={1.6} color="#fff" className="absolute top-[56px] left-[13px]" />
-      <span className="absolute inset-x-0 top-[58px] text-center text-[15px] font-semibold text-white">직잭 렌즈</span>
-      <Camera size={23} strokeWidth={1.7} color="#fff" className="absolute top-[57px] right-[17px]" />
+      <PhoneStatus color="#8a8a8a" />
+      <ChevronLeft size={26} strokeWidth={1.6} color="#dcdcdc" className="absolute top-[56px] left-[13px]" />
+      <span className="absolute inset-x-0 top-[59px] text-center text-[15px] font-semibold text-[#dcdcdc]">직잭 렌즈</span>
+      <Camera size={23} strokeWidth={1.7} color="#dcdcdc" className="absolute top-[57px] right-[17px]" />
       <ImagePlaceholder tone="#7c7c7c" label="flat-lay outfit photo" className="absolute top-[98px] left-[84px] h-[391px] w-[220px]" />
       <div className="absolute top-[221px] left-[95px] h-[190px] w-[98px] rounded-[8px] border-[3px] border-white">
         <ImagePlaceholder label="selected skirt" className="h-full w-full rounded-[5px]" />

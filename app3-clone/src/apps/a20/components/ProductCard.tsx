@@ -41,14 +41,14 @@ export function ProductCard({ product: p, width, imageHeight, size = 'compact', 
           {p.ad && <span className="rounded-[3px] border border-[#e5e5e5] px-[3px] text-[8.5px] leading-[12px] text-[#bbb]">AD</span>}
         </div>
         <div className={cn('truncate text-[#444]', big ? 'mt-[5px] text-[13.5px] leading-[18px]' : 'mt-[4px] text-[12.5px] leading-[17px]')}>{p.name}</div>
-        <div className={cn('flex items-baseline gap-[4px] font-bold whitespace-nowrap', big ? 'mt-[3px] text-[17px] leading-[24px]' : 'mt-[2px] text-[15.5px] leading-[22px]')}>
+        <div className={cn('flex items-baseline gap-[4px] font-bold whitespace-nowrap', big ? 'mt-[3px] text-[17px] leading-[24px]' : 'mt-[2px] text-[15px] leading-[22px]')}>
           {p.discount && <span style={{ color: theme.pink }}>{p.discount}</span>}
           <span className="text-[#111]">{p.price}</span>
         </div>
         {p.tags && (
           <div className={cn('flex gap-[4px]', big ? 'mt-[5px]' : 'mt-[3px]')}>
             {p.tags.map((t) => (
-              <TagPill key={t.label} tag={t} />
+              <TagPill key={t.label} tag={t} compact={!big} />
             ))}
           </div>
         )}

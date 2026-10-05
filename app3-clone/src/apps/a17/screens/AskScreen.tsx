@@ -19,7 +19,7 @@ export function AskScreen() {
         <br />
         past Beside conversations.
       </p>
-      <div className="absolute top-[273px] left-[10px] flex flex-col gap-[9px]">
+      <div className="absolute top-[272px] left-[10px] flex flex-col gap-[8px]">
         {suggestionRows.map((row, i) => (
           <div key={i} className="flex gap-[12px]">
             {row.map((s) => (
