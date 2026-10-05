@@ -1,0 +1,16 @@
+export const theme = {
+  ink: '#111',
+  ringTrack: '#ececf0',
+  protein: '#d8665f',
+  carbs: '#e0a060',
+  fat: '#6f9ae0',
+  flame: '#f39b3a',
+  muted: '#9b9b9b',
+  card: '#fff',
+  foodCard: '#f4f4f6',
+  sand: '#f4f2ee',
+  sheet: '#fbfaf9',
+  orange: '#e8541e',
+  green: '#6cc68a',
+  peach: '#f8d9cb',
+} as const

@@ -1,0 +1,16 @@
+export const theme = {
+  photoTone: '#5a5c60',
+  paywallBg: '#1e1e23',
+  planRow: '#47474d',
+  includedBg: '#35363c',
+  chip: '#43444a',
+  badge: '#7a4cf0',
+  accent: '#eeb558',
+  homeBg: '#18181c',
+  weekCard: '#1d2029',
+  pill: '#232428',
+  eventCard: '#5546c4',
+  tabBar: '#2c2d32',
+  articleBg: '#232429',
+  softBtn: '#f0f0f0',
+} as const
