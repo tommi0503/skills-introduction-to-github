@@ -17,11 +17,11 @@ export function TideTabBar({ active, className }: { active: TabKey; className?: 
           <div
             className={cn(
               'flex h-[52px] flex-1 flex-col items-center justify-center rounded-full',
-              on ? 'bg-white/25 text-[#8ad3ff]' : 'text-white',
+              on ? 'bg-[#8ab8f0]/45 text-[#9be0ff]' : 'text-white',
             )}
           >
             <Icon size={24} strokeWidth={1.8} fill={item.key === 'solunar' ? '#fff' : 'none'} />
-            <span className="mt-[3px] text-[10.5px] leading-[12px] font-semibold">{item.label}</span>
+            <span className="mt-[3px] text-[10px] leading-[12px] font-semibold">{item.label}</span>
           </div>
         )
       }}

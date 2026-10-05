@@ -155,7 +155,7 @@ export const fallingTide = {
     { rising: false, time: '21:54', height: '1.4m' },
   ],
   curve: [{ hour: -4.4, height: 1.2 }, ex('01:59', 2.5), ex('08:28', 0.3), ex('15:32', 3.5), ex('21:54', 1.4)] as Extreme[],
-  scrub: { hour: 14.9, value: '3.4m', time: '14:55', day: 'Today' },
+  scrub: { hour: 14.7, value: '3.4m', time: '14:55', day: 'Today' },
 }
 
 export type TabKey = 'today' | 'charts' | 'tables' | 'solunar'

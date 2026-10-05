@@ -12,7 +12,7 @@ const PX_PER_HOUR = 25.6
 export function FallingTideScreen() {
   const scrubX = X0 + fallingTide.scrub.hour * PX_PER_HOUR
   return (
-    <AppScreen background="linear-gradient(#2e4272 0%, #3c5283 40%, #4a6a9a 75%, #5078a8 100%)" className="font-inter text-white">
+    <AppScreen background="linear-gradient(#2e4272 0%, #44568a 45%, #4e5f8e 65%, #4f6b9c 100%)" className="font-inter text-white">
       <StatusOverlay chipClassName="bg-[#4f5f84]!" />
       <StationTopBar station={currentStation} conditions={tideConditions} />
       <TideSummary />
@@ -29,7 +29,7 @@ export function FallingTideScreen() {
         strokeWidth={4}
         futureColor="#3a8ae0"
         pastColor="#f2f4f8"
-        fillTop="rgba(60,120,200,0.55)"
+        fillTop="rgba(60,120,190,0.5)"
         fillBottom="rgba(80,130,190,0.45)"
         labels={{ timeSize: 17, heightSize: 14, timeGap: 17, heightGap: 17, unit: 'm', heightColor: 'rgba(255,255,255,0.6)' }}
         dotRadius={3.5}
