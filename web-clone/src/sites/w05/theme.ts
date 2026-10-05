@@ -6,7 +6,7 @@ export const theme = {
   page: '#121212',
   frame: '#282828',
   panel: '#363535',
-  feature: '#343333',
+  feature: 'linear-gradient(to bottom, #353434 0px, #2e2e2e 400px, #282828 700px, #262626 1600px, #242424 2214px)',
   ink: '#f2f0ed',
   text82: 'rgba(255,255,255,0.82)',
   text68: 'rgba(255,255,255,0.68)',

@@ -15,7 +15,7 @@ function Steps() {
         return (
           <div key={label} className="relative flex items-center border-t" style={{ height: ROW, borderColor: theme.color.rule }}>
             {active && <span className="absolute -top-px left-0 h-px w-[21px] bg-white/50" />}
-            <span className={`w-[34px] text-[9.5px] ${theme.font.mono}`} style={{ color: active ? '#fff' : 'rgba(232,237,239,0.45)' }}>
+            <span className={`w-[34px] text-[9px] ${theme.font.mono}`} style={{ color: active ? '#fff' : 'rgba(232,237,239,0.45)' }}>
               {String(i + 1).padStart(2, '0')}
             </span>
             <span className="text-[14.5px]" style={{ color: active ? '#fff' : 'rgba(232,237,239,0.6)' }}>
@@ -55,7 +55,7 @@ function Message({ item }: { item: ChatItem }) {
         </span>
         {item.detail && <span className="block text-white/85">{item.detail}</span>}
       </div>
-      <p className="mt-[9px] text-[14.5px] leading-[22.5px]" style={{ color: 'rgba(242,241,236,0.92)' }}>
+      <p className="mt-[9px] text-[14px] leading-[22.5px]" style={{ color: 'rgba(242,241,236,0.92)' }}>
         {item.text.map((t) => (
           <span key={t} className="block whitespace-nowrap">
             {t}
@@ -100,7 +100,7 @@ function ChatPanel() {
 export function Agents() {
   return (
     <section className={theme.font.sans}>
-      <PixelText lines={s.title} size={52.63} lineHeight={57} className="absolute left-[169px] top-[2624px]" style={{ color: theme.color.text, letterSpacing: '-0.6px' }} />
+      <PixelText lines={s.title} size={52.63} lineHeight={57} className="absolute left-[169px] top-[2624px]" style={{ color: theme.color.textHeading }} />
       <p className="absolute left-[169px] top-[2768px] text-[17px] leading-[25px]" style={{ color: theme.color.textDim }}>
         {s.body.map((t) => (
           <span key={t} className="block">

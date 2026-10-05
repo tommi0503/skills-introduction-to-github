@@ -17,7 +17,7 @@ export function DownloadButton({ children, variant = 'light', size = 'sm', class
   const light = variant === 'light'
   return (
     <span
-      className={cn('inline-flex items-center font-medium', lg ? 'h-16 gap-[12px] rounded-[8px] px-[24px] text-[18px]' : 'h-11 gap-[10px] rounded-[9px] px-[17px] text-[14px]', className)}
+      className={cn('inline-flex items-center whitespace-nowrap font-medium', lg ? 'h-16 gap-[12px] rounded-[8px] px-[24px] text-[18px]' : 'h-11 gap-[10px] rounded-[9px] px-[17px] text-[14px]', className)}
       style={{
         background: light ? `linear-gradient(to bottom, ${theme.cream}, #d9d6cf)` : '#2a2a2a',
         color: light ? theme.buttonInk : '#fff',
@@ -25,7 +25,7 @@ export function DownloadButton({ children, variant = 'light', size = 'sm', class
         ...style,
       }}
     >
-      <Apple size={lg ? 16 : 14} fill="currentColor" strokeWidth={0} />
+      <Apple size={lg ? 16 : 14} fill="currentColor" strokeWidth={1.5} />
       {children}
     </span>
   )

@@ -20,7 +20,7 @@ export function System({ height }: { height: number }) {
             <Text role="h3" as="h3" className="mt-[16px] w-[224px]">
               {c.title}
             </Text>
-            <Text role="body" className="mt-[10px] w-[224px]">
+            <Text role="body" className="mt-[10px] w-[219.6px]">
               {c.text}
             </Text>
             <Chip className="absolute bottom-[22px] left-[23px]">{c.chip}</Chip>

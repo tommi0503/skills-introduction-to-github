@@ -6,7 +6,7 @@ export function Eyebrow({ label, className, color = '#fff' }: { label: string; c
   return (
     <div className={cn('absolute flex items-center gap-[8px]', theme.font.mono, className)}>
       <span className="h-[7px] w-[7px]" style={{ background: theme.color.orange }} />
-      <span className="text-[10.5px] font-medium uppercase leading-[14px]" style={{ color }}>
+      <span className="text-[11px] font-medium uppercase leading-[14px]" style={{ color }}>
         {label}
       </span>
     </div>

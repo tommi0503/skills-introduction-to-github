@@ -6,6 +6,8 @@ export const theme = {
     display: 'font-inter',
   },
   /** Stand-in for Geist Pixel Line (thin monospace display face). */
+  /** Inter at display optical size, used for the large card headline. */
+  display: { fontFamily: "'Giga Inter Display', 'Inter Variable', sans-serif", fontVariationSettings: "'opsz' 32" } as const,
   pixel: { fontFamily: "'IBM Plex Mono', monospace", fontWeight: 200 } as const,
   color: {
     page: '#000000',
@@ -18,6 +20,7 @@ export const theme = {
     ink: '#1f1d1b',
     text: 'rgb(232, 237, 239)',
     textDim: 'rgba(232, 237, 239, 0.74)',
+    textHeading: 'rgba(232, 237, 239, 0.8)',
     panelDark: '#050506',
     panelLight: '#d8d3ce',
     panelLine: '#c4c0bc',

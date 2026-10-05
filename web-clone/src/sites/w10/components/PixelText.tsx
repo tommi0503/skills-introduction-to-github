@@ -14,7 +14,7 @@ export interface PixelTextProps {
 /** Thin monospace display text (stand-in for the Geist Pixel Line face). */
 export function PixelText({ lines, size, lineHeight, as: Tag = 'h2', className, style }: PixelTextProps) {
   return (
-    <Tag className={cn('whitespace-pre', className)} style={{ ...theme.pixel, fontSize: size, lineHeight: `${lineHeight}px`, ...style }}>
+    <Tag className={cn('whitespace-pre', className)} style={{ ...theme.pixel, fontSize: size, lineHeight: `${lineHeight}px`, letterSpacing: '-0.1em', ...style }}>
       {lines.map((l) => (
         <span key={l} className="block">
           {l}

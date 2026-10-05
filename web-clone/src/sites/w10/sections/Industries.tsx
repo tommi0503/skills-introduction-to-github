@@ -24,7 +24,7 @@ export function Industries() {
   return (
     <section className={theme.font.sans}>
       <Eyebrow label={s.eyebrow} className="left-[169px] top-[1779px]" color="rgba(255,255,255,0.88)" />
-      <PixelText lines={[s.title]} size={52.63} lineHeight={63} className="absolute left-[169px] top-[1805px]" style={{ color: theme.color.text, letterSpacing: '-0.6px' }} />
+      <PixelText lines={[s.title]} size={52.63} lineHeight={63} className="absolute left-[169px] top-[1805px]" style={{ color: theme.color.textHeading, letterSpacing: '-0.13em' }} />
       <p className="absolute left-[169px] top-[1885px] text-[18px] leading-[27px]" style={{ color: theme.color.textDim }}>
         {s.body}
       </p>
@@ -37,7 +37,7 @@ export function Industries() {
 
       <div className="absolute left-[166px] top-[1972px] h-[438px] w-[1108px] rounded-[6px]" style={{ background: '#101112' }} />
       <div className="absolute left-[169px] w-[602px] rounded-l-[4px]" style={{ top: CARD.top, height: CARD.h, background: theme.color.card }}>
-        <h3 className="absolute left-[25px] top-[24px] w-[540px] font-inter text-[34px] leading-[39.44px] tracking-[-0.68px]">
+        <h3 className="absolute left-[25px] top-[24px] w-[540px] text-[34px] leading-[39.44px] tracking-[-0.68px]" style={theme.display}>
           <span style={{ color: 'rgb(236,235,231)' }}>{s.cardLead} </span>
           <span style={{ color: 'rgba(232,237,239,0.62)' }}>{s.cardRest}</span>
         </h3>

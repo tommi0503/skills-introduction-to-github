@@ -71,12 +71,12 @@ export type TextRole = 'h1' | 'h2' | 'h2lg' | 'h3' | 'lead' | 'body' | 'card'
 
 const textRole: Record<TextRole, string> = {
   h1: 'text-[45px] leading-[45px] tracking-[-0.7px] font-[560]',
-  h2lg: 'text-[38px] leading-[38px] tracking-[-0.76px] font-[560]',
+  h2lg: 'text-[38px] leading-[38px] tracking-[-0.4px] font-[560]',
   h2: 'text-[32px] leading-[38.4px] tracking-[-0.64px] font-[560]',
   h3: 'text-[20px] leading-[26px] tracking-[-0.4px] font-semibold',
   lead: 'text-[18px] leading-[28.8px] tracking-[-0.18px] font-medium',
-  body: 'text-[16px] leading-[24px] font-normal',
-  card: 'text-[24px] leading-[28.8px] tracking-[-0.48px] font-semibold',
+  body: 'text-[16px] leading-[24px] font-[450]',
+  card: 'text-[24px] leading-[28.8px] tracking-[-0.48px] font-[500]',
 }
 
 const roleColor: Record<TextRole, string> = {

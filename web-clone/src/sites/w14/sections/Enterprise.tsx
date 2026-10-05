@@ -13,7 +13,7 @@ function FeatureColumn({ items }: { items: Array<{ icon: LucideIcon; title: stri
           <Text role="h3" as="h5" className="mt-[10px]">
             {f.title}
           </Text>
-          <Text role="body" className="mt-[12px]">
+          <Text role="body" className="mt-[12px] w-[225px]">
             {f.text}
           </Text>
         </div>

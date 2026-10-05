@@ -11,7 +11,7 @@ export function Hero() {
     <section className={`absolute left-0 top-0 h-[900px] w-[1440px] text-white ${theme.font.sans}`}>
       <ImagePlaceholder label="gradient artwork" tone={theme.color.heroArt} className="absolute inset-0" />
       <Eyebrow label={hero.eyebrow} className="left-[170px] top-[133px]" />
-      <PixelText as="h1" lines={hero.title} size={72} lineHeight={64} className="absolute left-[170px] top-[168px]" style={{ letterSpacing: '-0.6px' }} />
+      <PixelText as="h1" lines={hero.title} size={72} lineHeight={64} className="absolute left-[170px] top-[168px]" />
       <p className="absolute left-[867px] top-[184px] w-[403px] text-[19px] leading-[27.55px]">{hero.body}</p>
       <DemoWidget />
     </section>

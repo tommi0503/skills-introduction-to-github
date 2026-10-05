@@ -202,8 +202,15 @@ export const system = {
 
 /* ---------- Testimonial ---------- */
 export const testimonial = {
-  quote:
-    '“After we started using GitBook, life became completely different. Here at bunq, our goal is to make life easy — and we don\'t only want that for our users, but for ourselves too. GitBook did exactly that for us. It made writing our public API documentation so much easier.”',
+  /** Quote lines, broken as in the reference. */
+  quote: [
+    '“After we started using GitBook, life became',
+    'completely different. Here at bunq, our goal is to',
+    "make life easy — and we don't only want that for our",
+    'users, but for ourselves too. GitBook did exactly',
+    'that for us. It made writing our public API',
+    'documentation so much easier.”',
+  ],
   author: 'Emily Durães',
   role: 'Product Owner - Public API',
   company: 'bunq',
