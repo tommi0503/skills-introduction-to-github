@@ -1,4 +1,5 @@
 import {
+  ArrowDownUp, RotateCw, Zap,
   ClipboardList, Heart, House, ShoppingBag, Smile, type LucideIcon,
 } from 'lucide-react'
 
@@ -181,4 +182,18 @@ export const shops: ShopBlock[] = [
     discount: '1,000원 즉시할인', eta: '약 31분', distance: '1.6km', minOrder: '15,000원',
     tags: [],
   },
+]
+
+export interface FilterChipData {
+  key: string
+  label: string
+  icon?: LucideIcon
+  club?: boolean
+  active?: boolean
+}
+export const categoryFilters: FilterChipData[] = [
+  { key: 'sort', label: '주문 많은 순', icon: ArrowDownUp },
+  { key: 'reset', label: '초기화', icon: RotateCw },
+  { key: 'club', label: '배민클럽', club: true, active: true },
+  { key: 'instant', label: '즉시할인·쿠폰', icon: Zap },
 ]

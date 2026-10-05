@@ -14,7 +14,7 @@ export function TideCard({ station }: { station: StationCard }) {
     >
       <div className="absolute inset-x-0 top-[9.5px] flex items-center pr-[12px] pl-[16px] text-white">
         <span className="min-w-0 flex-1 truncate pr-[14px] text-[13px] leading-[20px] font-semibold">{station.name}</span>
-        <span className="text-[16.5px] font-bold">{station.level}</span>
+        <span className="text-[15px] font-bold">{station.level}</span>
         <LevelBadge rising={station.rising} className="ml-[6px]" />
       </div>
       <TideCurve

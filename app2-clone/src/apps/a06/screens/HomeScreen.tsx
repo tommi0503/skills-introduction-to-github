@@ -22,10 +22,10 @@ export function HomeScreen() {
         <ShoppingCart size={24} strokeWidth={1.9} />
       </div>
       <div className="absolute left-[16px] right-[17px] top-[98px] flex h-[40px] items-center justify-between rounded-full border-[1.5px] border-[#1d1d1d] bg-white pl-[16px] pr-[14px]">
-        <span className="text-[13.5px] tracking-[-0.3px] text-[#8b8e93]">{home.searchPlaceholder}</span>
+        <span className="text-[13.5px] text-[#8b8e93]">{home.searchPlaceholder}</span>
         <Search size={19} strokeWidth={2.2} />
       </div>
-      <div className="absolute left-[17px] top-[153px] text-[15px] font-bold leading-[24px] tracking-[-0.4px] text-[#111]">
+      <div className="absolute left-[17px] top-[153px] text-[15.5px] font-bold leading-[24px] text-[#111]">
         {home.promo.lines.map((l) => (
           <p key={l}>{l}</p>
         ))}
@@ -61,7 +61,7 @@ export function HomeScreen() {
           <Info size={15} strokeWidth={1.6} color="#aaa" />
         </p>
         {[16, 214].map((x) => (
-          <div key={x} className="absolute top-[475px] h-[130px] w-[188px] overflow-hidden rounded-[8px]" style={{ left: x }}>
+          <div key={x} className="absolute top-[475px] h-[122px] w-[188px] overflow-hidden rounded-[8px]" style={{ left: x }}>
             <ImagePlaceholder label="store photo" className="h-full w-full" />
             <DiscountBar label="2,000원 즉시할인" size="md" className="absolute inset-x-0 bottom-0 h-[20px]" />
           </div>

@@ -1,23 +1,17 @@
-import { ArrowDownUp, ArrowLeft, ChevronDown, Info, MapPin, RotateCw, Search, Star, Utensils, Zap } from 'lucide-react'
+import { ArrowLeft, ChevronDown, Info, MapPin, Search, Star, Utensils } from 'lucide-react'
 import { AppScreen, ImagePlaceholder } from '../../../ui'
-import { category, navItems, shops } from '../data'
+import { category, categoryFilters, navItems, shops } from '../data'
 import { theme } from '../theme'
 import { BottomNav } from '../components/BottomNav'
 import { CartButton } from '../components/CartButton'
 import { Chrome } from '../components/Chrome'
 import { ClubBadge } from '../components/ClubBadge'
 import { DeliveryInfo } from '../components/DeliveryInfo'
-import { FilterChips, type FilterChipData } from '../components/FilterChips'
+import { FilterChips } from '../components/FilterChips'
 import { MenuStrip } from '../components/MenuStrip'
 import { Tag } from '../components/Tag'
 import { UnderlineTabs } from '../components/UnderlineTabs'
 
-const filters: FilterChipData[] = [
-  { key: 'sort', label: '주문 많은 순', icon: ArrowDownUp },
-  { key: 'reset', label: '초기화', icon: RotateCw },
-  { key: 'club', label: '배민클럽', club: true, active: true },
-  { key: 'instant', label: '즉시할인·쿠폰', icon: Zap },
-]
 
 export function CategoryScreen() {
   const [first, second] = shops
@@ -45,7 +39,7 @@ export function CategoryScreen() {
       <span className="absolute left-[350px] top-[115px] flex h-[32px] w-[32px] items-center justify-center rounded-full border border-[#e2e4e7] bg-white">
         <ChevronDown size={18} strokeWidth={2} />
       </span>
-      <FilterChips items={filters} className="absolute left-[-5px] top-[163px]" />
+      <FilterChips items={categoryFilters} className="absolute left-[0px] top-[163px]" />
       <p className="absolute left-[15px] top-[218px] flex items-center gap-[3px] text-[12px] font-medium text-[#333]">
         {category.sortLabel}
         <Info size={12} strokeWidth={1.6} color="#999" />

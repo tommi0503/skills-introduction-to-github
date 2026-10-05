@@ -25,7 +25,7 @@ export function TideList() {
         textClassName="text-[16.5px] text-[#9a9aa0]"
       />
       <div className="absolute top-[771px] left-[314px] flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#1c1c1e]">
-        <Map size={21} strokeWidth={2} fill="#fff" stroke="#1c1c1e" />
+        <Map size={24} strokeWidth={1.6} fill="#fff" stroke="#1c1c1e" />
       </div>
     </AppScreen>
   )

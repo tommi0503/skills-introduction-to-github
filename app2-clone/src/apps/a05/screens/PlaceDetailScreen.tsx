@@ -19,7 +19,7 @@ export function PlaceDetailScreen() {
         <PlaceHeader />
         <PhotoStrip widths={[141, 153, 80]} height={190} className="absolute left-[7px] top-[136px]" />
         <Sticker lines={place.sticker} className="left-[298px] top-[257px] h-[78px] w-[90px]" />
-        <p className="absolute left-[7px] right-[14px] top-[343px] text-[14.6px] leading-[23px] text-[#3c3c40]">
+        <p className="absolute left-[7px] right-[14px] top-[343px] text-[14.6px] leading-[23px] tracking-[0.2px] text-[#3c3c40]">
           {place.about.meta.map((m) => (
             <span key={m} className="text-[#86868a]">
               {m} <span className="text-[#c4c4c8]">•</span>{' '}

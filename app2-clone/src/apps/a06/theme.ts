@@ -16,5 +16,5 @@ export const theme = {
   tagMintText: '#0f4d45',
   star: '#ffc21a',
   pink: '#e5559f',
-  navGlass: 'rgba(250,247,244,0.86)',
+  navGlass: 'rgba(250,247,244,0.78)',
 } as const

@@ -20,8 +20,8 @@ export function SavedByCard({ className }: { className?: string }) {
   return (
     <div className={cn('overflow-hidden rounded-[8px] border-[1.5px] border-[#3b3b3d] bg-white/60', className)}>
       <div className="flex items-center justify-between pl-[12px] pr-[12px] pt-[10px]">
-        <span className="a05-wide text-[12.5px] font-extrabold tracking-[-0.5px] text-[#111]">SAVED BY</span>
-        <div className="flex items-center gap-[10px] text-[14px] text-[#444]">
+        <span className="a05-wide text-[12px] font-extrabold tracking-[-0.6px] text-[#111]">SAVED BY</span>
+        <div className="flex items-center gap-[17px] text-[15px] tracking-[0.3px] text-[#444]">
           {saveStats.map((s) => (
             <span key={s.key} className="flex items-center gap-[4px]">
               <s.icon size={11} fill={s.color} color={s.color} strokeWidth={1.4} />
@@ -35,7 +35,7 @@ export function SavedByCard({ className }: { className?: string }) {
           </span>
         </div>
       </div>
-      <div className="mt-[6px] flex gap-[18px] pl-[10px]">
+      <div className="mt-[3px] flex gap-[18px] pl-[10px]">
         {savers.map((s) => (
           <div key={s.key} className="flex w-[63px] shrink-0 flex-col items-center">
             <OvalPhoto className="h-[76px] w-[63px]" badge={s.badge && <SaverBadge kind={s.badge} />} />
