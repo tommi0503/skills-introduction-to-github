@@ -9,18 +9,28 @@ export interface FloatingNavProps {
 }
 
 const ACTIVE = '#2fc163'
+const INK = '#2b2b2b'
 
-/** Active glyph: the icon's silhouette filled green with a white detail on top. */
-function ActiveGlyph({ item }: { item: NavEntry }) {
-  const Icon = item.icon
-  const Detail = item.activeDetail
+/** Icon with an optional centred detail; active = filled green silhouette with a white detail. */
+function NavGlyph({ entry, active }: { entry: NavEntry; active: boolean }) {
+  const { icon: Icon, detail: Detail, detailSize = 10 } = entry
   return (
     <span className="relative flex h-[22px] w-[22px] items-center justify-center">
-      <Icon size={22} strokeWidth={1.8} color={ACTIVE} fill={ACTIVE} className="absolute inset-0" />
-      {Detail ? (
-        <Detail size={13} strokeWidth={2.2} color="#fff" className="relative" />
-      ) : (
-        <span className="relative h-[7px] w-[7px] rounded-full bg-white" />
+      <Icon
+        size={22}
+        strokeWidth={active ? 2 : 1.6}
+        color={active ? ACTIVE : INK}
+        fill={active ? ACTIVE : 'none'}
+        className="absolute inset-0"
+      />
+      {Detail && (
+        <Detail
+          size={detailSize}
+          strokeWidth={active ? 2.6 : 2.2}
+          color={active ? '#fff' : INK}
+          fill={active && detailSize < 10 ? '#fff' : 'none'}
+          className="relative"
+        />
       )}
     </span>
   )
@@ -31,21 +41,20 @@ export function FloatingNav({ items, activeKey, className }: FloatingNavProps) {
   return (
     <div className={cn('rounded-full', className)} style={{ background: theme.navPill, boxShadow: '0 4px 14px rgba(0,0,0,0.06)' }}>
       <TabBar
-        className="h-[76px] w-[292px] justify-between px-[6px]"
+        className="h-[76px] w-[292px] justify-between px-[4px]"
         items={items}
         activeKey={activeKey}
         renderItem={(item, active) => {
           const entry = items.find((i) => i.key === item.key)!
-          const Icon = entry.icon
           return (
             <span
-              className="flex h-[64px] w-[64px] items-center justify-center rounded-full"
+              className="flex h-[68px] w-[68px] items-center justify-center rounded-full"
               style={{
                 background: active ? '#d9ece0' : '#fbfbfb',
                 boxShadow: active ? 'none' : '0 2px 6px rgba(0,0,0,0.05)',
               }}
             >
-              {active ? <ActiveGlyph item={entry} /> : <Icon size={21} strokeWidth={1.6} color="#2b2b2b" />}
+              <NavGlyph entry={entry} active={active} />
             </span>
           )
         }}

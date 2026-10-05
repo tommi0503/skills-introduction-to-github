@@ -14,7 +14,7 @@ export function FleetPhone({ children }: { children?: ReactNode }) {
       screenBackground={theme.screen}
     >
       <div className="absolute inset-x-0 top-0 z-40">
-        <StatusBar color="#111" paddingX={30} paddingTop={20} fontSize={15} className="font-inter" />
+        <StatusBar color="#111" paddingX={30} paddingTop={21} fontSize={13.5} className="font-inter" timeClassName="!font-medium" battery={{ size: 0.85 }} />
       </div>
       <DynamicIsland width={125} height={37} top={10} />
       {children}

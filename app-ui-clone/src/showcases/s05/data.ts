@@ -1,4 +1,4 @@
-import { ChartColumn, ChartColumnBig, Hexagon, House, Van, type LucideIcon } from 'lucide-react'
+import { ChartNoAxesColumn, Circle, Hexagon, House, Square, Van, type LucideIcon } from 'lucide-react'
 
 export interface StatCardData {
   key: string
@@ -28,8 +28,9 @@ export interface ScheduleEvent {
 export interface NavEntry {
   key: string
   icon: LucideIcon
-  /** White detail drawn over the filled icon when active (defaults to a dot). */
-  activeDetail?: LucideIcon
+  /** Smaller glyph centred inside the main icon (e.g. the bars inside a square). */
+  detail?: LucideIcon
+  detailSize?: number
 }
 
 export interface Metric {
@@ -70,8 +71,8 @@ export const events: ScheduleEvent[] = [
 export const navEntries: NavEntry[] = [
   { key: 'home', icon: House },
   { key: 'fleet', icon: Van },
-  { key: 'service', icon: Hexagon },
-  { key: 'analytics', icon: ChartColumnBig, activeDetail: ChartColumn },
+  { key: 'service', icon: Hexagon, detail: Circle, detailSize: 8 },
+  { key: 'analytics', icon: Square, detail: ChartNoAxesColumn, detailSize: 12 },
 ]
 
 export const analytics = {

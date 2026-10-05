@@ -18,7 +18,7 @@ export function WeekTracker({ title, count, days, height, headerTop, labelsTop }
   return (
     <SoftCard className="relative" style={{ height }}>
       <div className="absolute inset-x-[17px]" style={{ top: headerTop }}>
-        <SectionHeader title={title} aside={count} titleClassName="text-[12.5px]" />
+        <SectionHeader title={title} aside={count} titleClassName="text-[12.5px] font-bold" />
       </div>
       <div className="absolute inset-x-[13px] grid grid-cols-7 justify-items-center" style={{ top: labelsTop }}>
         {days.map((d, i) => (

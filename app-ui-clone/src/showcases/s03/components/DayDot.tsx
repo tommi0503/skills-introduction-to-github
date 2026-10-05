@@ -12,7 +12,7 @@ const fills: Record<DayStatus, string> = {
 export function DayDot({ status }: { status: DayStatus }) {
   return (
     <span className={`flex h-[29px] w-[29px] items-center justify-center rounded-full ${fills[status]}`}>
-      {status === 'done' && <Check size={12} strokeWidth={2.6} />}
+      {status === 'done' && <Check size={13} strokeWidth={3.2} />}
     </span>
   )
 }

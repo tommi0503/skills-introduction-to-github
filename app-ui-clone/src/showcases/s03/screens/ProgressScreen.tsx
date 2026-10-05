@@ -20,7 +20,7 @@ export function ProgressScreen() {
   return (
     <div className="relative h-full w-full">
       <div className="absolute left-[19px] top-[57.5px]">
-        <CircleButton icon={ChevronLeft} size={42} iconSize={16} />
+        <CircleButton icon={ChevronLeft} size={42} iconSize={17} />
       </div>
       <div className="absolute inset-x-0 top-[69px] text-center text-[14.5px] leading-[19px] font-semibold">{progress.title}</div>
 
@@ -28,10 +28,10 @@ export function ProgressScreen() {
         {trio.map(({ spec, x, y }, i) => (
           <Mascot key={i} spec={spec} style={{ position: 'absolute', left: x, top: y }} />
         ))}
-        <div className="absolute inset-x-0 top-[95.5px] text-center">
+        <div className="absolute inset-x-0 top-[93px] text-center">
           <div className="text-[62px] leading-[62px] font-bold tracking-[-1px]">{progress.streak}</div>
-          <div className="mt-[8px] text-[15px] leading-[18px] font-bold tracking-[-0.2px]">{progress.streakLabel}</div>
-          <div className="mt-[8px] text-[11.5px] leading-[17px] font-medium text-[#55555b]">
+          <div className="mt-[10.5px] text-[15px] leading-[18px] font-bold tracking-[-0.2px]">{progress.streakLabel}</div>
+          <div className="mt-[7.5px] text-[11.8px] leading-[17px] font-medium text-[#3f3f45]">
             {progress.streakNote.map((l) => (
               <div key={l}>{l}</div>
             ))}
@@ -40,7 +40,7 @@ export function ProgressScreen() {
       </GradientCard>
 
       <div className="absolute left-[20px] top-[371px] w-[336px]">
-        <WeekTracker title={progress.weekTitle} count={progress.weekCount} days={last7} height={108} headerTop={13.5} labelsTop={42.5} />
+        <WeekTracker title={progress.weekTitle} count={progress.weekCount} days={last7} height={110} headerTop={13.5} labelsTop={42.5} />
       </div>
 
       <div className="absolute left-[20px] top-[495px] grid w-[336px] grid-cols-2 gap-x-[15px] gap-y-[16.5px]">

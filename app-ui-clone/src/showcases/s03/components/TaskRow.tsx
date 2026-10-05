@@ -12,13 +12,13 @@ export function TaskRow({ task, divider }: { task: Task; divider: boolean }) {
           task.done ? 'bg-[#18171c] text-white' : 'border border-[#dcdcdf]',
         )}
       >
-        {task.done && <Check size={11} strokeWidth={2.8} />}
+        {task.done && <Check size={12} strokeWidth={3.2} />}
       </span>
       <div className="ml-[13.5px] flex-1">
-        <div className={cn('text-[14px] font-semibold tracking-[-0.1px]', task.done && 'text-[#b3b3b8] line-through')}>{task.title}</div>
-        <div className="mt-[2px] text-[11px] font-medium text-[#9c9ca1]">{task.meta}</div>
+        <div className={cn('text-[14.7px] font-semibold tracking-[-0.1px]', task.done && 'text-[#b3b3b8] line-through')}>{task.title}</div>
+        <div className="mt-[1px] text-[12px] font-medium text-[#8e8e93]">{task.meta}</div>
       </div>
-      {!task.done && <ChevronRight size={14} strokeWidth={1.8} className="text-[#b8b8bd]" />}
+      {!task.done && <ChevronRight size={14} strokeWidth={1.8} className="text-[#a5a5aa]" />}
       {divider && <span className="absolute right-0 bottom-0 left-[55px] h-px bg-[#ececee]" />}
     </div>
   )

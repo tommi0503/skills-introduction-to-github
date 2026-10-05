@@ -11,14 +11,15 @@ const metaRows = [
 export function EventRow({ event }: { event: ScheduleEvent }) {
   return (
     <div className="relative flex h-[96px]">
-      <span className="w-[99px] pt-[-2px] pl-[5px] text-[14.5px] leading-[18px] tracking-[-0.3px] text-[#1a1a1a]">{event.time}</span>
-      <div className="flex h-[80px] w-[256px] items-center rounded-[14px] bg-[#fdfdfd] pl-[7px]">
+      <span className="absolute top-[24px] left-[27px] h-[58px] w-[2px] rounded-full bg-[#ececec]" />
+      <span className="w-[67px] pl-[9px] text-[14.5px] leading-[18px] tracking-[-0.3px] text-[#1a1a1a]">{event.time}</span>
+      <div className="flex -mt-[6px] h-[83px] w-[276px] items-center rounded-[14px] bg-[#fdfdfd] pl-[18px]">
         <ImagePlaceholder label={`${event.title} vehicle`} className="h-[18px] w-[34px] rounded-[4px]" />
-        <div className="ml-[17px]">
-          <p className="text-[15px] leading-[18px] tracking-[-0.4px] text-[#1a1a1a]">{event.title}</p>
+        <div className="mt-[8px] ml-[21px]">
+          <p className="-mt-[2px] mb-[9px] text-[15px] leading-[18px] tracking-[-0.4px] text-[#1a1a1a]">{event.title}</p>
           {metaRows.map(({ key, icon: Icon }) => (
-            <p key={key} className="mt-[6px] flex items-center gap-[6px] text-[10.5px] leading-[13px] text-[#777]">
-              <Icon size={11} strokeWidth={1.6} />
+            <p key={key} className="mt-[6px] flex items-center gap-[6px] text-[11px] leading-[13px] tracking-[-0.2px] text-[#666]">
+              <Icon size={12} strokeWidth={1.6} />
               {event[key]}
             </p>
           ))}

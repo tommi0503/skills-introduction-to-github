@@ -41,7 +41,7 @@ export function PortfolioScreen() {
         {p.tooltip}
       </span>
 
-      <div className="absolute left-[0px] right-[0px] top-[580px] grid grid-cols-6 text-center text-[14px] text-[#48484d]">
+      <div className="absolute left-[0px] right-[0px] top-[576px] grid grid-cols-6 text-center text-[14px] text-[#48484d]">
         {p.months.map((m) => (
           <span key={m} className={cn(m === p.activeMonth && 'font-bold text-[#5c4f00]')}>
             {m}

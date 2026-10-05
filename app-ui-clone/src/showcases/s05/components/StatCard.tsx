@@ -10,20 +10,20 @@ const tones = {
 export function StatCard({ data }: { data: StatCardData }) {
   const tone = tones[data.tone]
   return (
-    <div className="h-[162px] w-[182px] shrink-0 rounded-[22px] px-[19px] pt-[18px]" style={{ background: theme.card, boxShadow: cardShadow }}>
-      <p className="text-[13px] tracking-[-0.2px]" style={{ color: '#555' }}>
+    <div className="h-[160px] w-[174px] shrink-0 rounded-[22px] px-[17px] pt-[15px]" style={{ background: theme.card, boxShadow: cardShadow }}>
+      <p className="text-[14px] tracking-[-0.4px]" style={{ color: '#3a3a3a' }}>
         {data.title}
       </p>
-      <div className="mt-[14px] flex items-center gap-[11px]">
+      <div className="mt-[11px] flex items-center gap-[9px]">
         <span className="text-[31px] leading-[34px] font-light tracking-[-1px]" style={{ color: theme.ink }}>
           {data.value}
         </span>
-        <span className="rounded-full px-[7px] py-[3px] text-[10px] tracking-[-0.2px]" style={{ background: tone.badge, color: tone.text }}>
+        <span className="rounded-full px-[8px] py-[5px] text-[11px] tracking-[-0.2px]" style={{ background: tone.badge, color: tone.text }}>
           {data.delta}
         </span>
       </div>
-      <div className="mt-[13px]">
-        <MiniBars heights={data.bars} highlight={data.highlight} color={tone.bar} base={theme.bar} />
+      <div className="mt-[10px]">
+        <MiniBars barWidth={19} gap={3.5} heights={data.bars} highlight={data.highlight} color={tone.bar} base={theme.bar} />
       </div>
     </div>
   )

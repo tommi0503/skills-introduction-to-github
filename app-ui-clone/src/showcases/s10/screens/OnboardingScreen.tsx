@@ -1,5 +1,5 @@
 import { Heart, ShoppingCart } from 'lucide-react'
-import { HomeIndicator, Placed } from '../../../ui'
+import { Placed } from '../../../ui'
 import { AppStatusBar } from '../components/AppStatusBar'
 import { CurvedArrow } from '../components/CurvedArrow'
 import { FloatingIcon } from '../components/FloatingIcon'
@@ -68,7 +68,6 @@ export function OnboardingScreen() {
           {onboarding.cta}
         </button>
       </Placed>
-      <HomeIndicator className="hidden" />
     </div>
   )
 }

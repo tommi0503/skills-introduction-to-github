@@ -19,7 +19,7 @@ export interface NaverStatusBarProps {
 
 function TimeAddon({ glyph }: { glyph: TimeGlyph }) {
   if (glyph === 'location')
-    return <Navigation size={13} strokeWidth={0} fill="currentColor" style={{ transform: 'rotate(0deg)', marginLeft: 3 }} />
+    return <Navigation size={14} strokeWidth={2.6} fill="currentColor" strokeLinejoin="round" style={{ marginLeft: 3 }} />
   if (glyph === 'silent') return <BellOff size={14} strokeWidth={2.4} fill="currentColor" style={{ marginLeft: 3 }} />
   return null
 }
@@ -29,9 +29,8 @@ function BatteryGlyph({ charging, level, color }: { charging: boolean; level: nu
     <div className="relative flex items-center" style={{ width: 27, height: 13 }}>
       <div
         className="relative"
-        style={{ width: 24, height: 12.5, borderRadius: 4, border: `1.2px solid ${color}`, opacity: 1, padding: 1.6 }}
+        style={{ width: 25, height: 12.5, borderRadius: 4, border: `1.1px solid color-mix(in srgb, ${color} 40%, transparent)`, padding: 1.3 }}
       >
-        <div className="absolute inset-0" style={{ borderRadius: 4, border: `1.2px solid ${color}`, opacity: 0 }} />
         <div
           style={{
             width: `${level * 100}%`,
@@ -76,7 +75,7 @@ export function NaverStatusBar({
         <TimeAddon glyph={glyph} />
       </div>
       <div className="absolute flex items-center" style={{ right: 32, top: centerY - 7, height: 14, gap: 7 }}>
-        <SignalBars size={1.03} />
+        <SignalBars size={1.08} />
         <Wifi size={17} strokeWidth={2.9} />
         <BatteryGlyph charging={charging} level={level} color={charging ? color : color} />
       </div>

@@ -11,9 +11,9 @@ export function PrimaryButton({ label, icon }: PrimaryButtonProps) {
   return (
     <Button
       trailingIcon={icon}
-      iconSize={14}
+      iconSize={16}
       iconStrokeWidth={2.2}
-      className="h-[55px] w-full gap-[15px] rounded-full bg-[#18171c] text-[14.5px] font-semibold text-white"
+      className="h-[55px] w-full gap-[15px] rounded-full bg-[#18171c] text-[15.5px] font-semibold text-white"
     >
       {label}
     </Button>

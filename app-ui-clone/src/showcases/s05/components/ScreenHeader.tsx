@@ -18,7 +18,7 @@ export function ScreenHeader({ title, subtitle, action: Icon, dot, className }: 
         <h1 className="text-[24px] leading-[30px] tracking-[-0.6px]" style={{ color: theme.ink }}>
           {title}
         </h1>
-        <p className="mt-[5px] text-[11.5px] tracking-[-0.1px]" style={{ color: theme.muted }}>
+        <p className="mt-[2px] text-[11.5px] tracking-[-0.1px]" style={{ color: theme.muted }}>
           {subtitle}
         </p>
       </div>
