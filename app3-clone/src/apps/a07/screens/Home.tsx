@@ -18,26 +18,26 @@ export function Home() {
         </div>
         {[ChartNoAxesColumn, CreditCard].map((Icon, i) => (
           <span key={i} className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-white/20">
-            <Icon size={17} strokeWidth={2.4} />
+            <Icon size={17} strokeWidth={3} />
           </span>
         ))}
       </div>
 
-      <div className="mt-[80px] flex flex-col items-center text-white">
+      <div className="mt-[84px] flex flex-col items-center text-white">
         <span className="text-[13px] text-white/85">{home.account}</span>
         <div className="mt-[4px] flex items-baseline font-bold">
           <span className="text-[44px] leading-[48px] tracking-[-0.5px]">{home.balanceMajor}</span>
           <span className="text-[21px]">{home.balanceMinor}</span>
         </div>
         <span className="mt-[11px] flex h-[36px] items-center rounded-full bg-white/25 px-[16px] text-[13px] font-medium">{home.accounts}</span>
-        <div className="mt-[64px] flex gap-[3px]">
+        <div className="mt-[69px] flex gap-[3px]">
           {Array.from({ length: home.pages }, (_, i) => (
             <span key={i} className="h-[4px] w-[4px] rounded-full" style={{ background: i === home.page ? '#fff' : 'rgba(255,255,255,0.45)' }} />
           ))}
         </div>
       </div>
 
-      <div className="mt-[39px] flex justify-between px-[15px]">
+      <div className="mt-[32px] flex justify-between px-[15px]">
         {home.actions.map((a) => (
           <CircleAction key={a.key} icon={a.icon} label={a.label} />
         ))}

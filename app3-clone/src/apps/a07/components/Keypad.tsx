@@ -35,7 +35,7 @@ export function Keypad({
           ) : (
             <>
               <span className={cn('leading-[24px]', k.kind === 'decimal' ? 'text-[18px]' : 'text-[24px]')}>{k.digit}</span>
-              {k.letters && <span className="text-[8.5px] leading-[10px] font-bold tracking-[1.5px]">{k.letters}</span>}
+              {k.letters && <span className="text-[8.5px] leading-[11px] font-semibold tracking-[2.2px]">{k.letters}</span>}
             </>
           )}
         </div>

@@ -30,9 +30,9 @@ export function ExerciseScreen({ exercise: e }: { exercise: Exercise }) {
       <div className="absolute left-[150px]" style={{ top: e.bubble.y }}>
         <SpeechBubble words={e.bubble.words} speaker={e.bubble.speaker} />
       </div>
-      <div className="absolute flex gap-[8px] pl-[16px]" style={{ top: e.answerTop - 46 }}>
+      <div className="absolute flex gap-[8px] pl-[16px]" style={{ top: e.answerTop - 45 }}>
         {e.answer.map((t) => (
-          <WordChip key={t.word} token={t} />
+          <WordChip key={t.word} token={t} padX={13} />
         ))}
       </div>
       {[0, 1].map((i) => (
@@ -42,11 +42,11 @@ export function ExerciseScreen({ exercise: e }: { exercise: Exercise }) {
           style={{ top: e.answerTop + i * ANSWER_LINE_GAP, background: c.line }}
         />
       ))}
-      <div className="absolute inset-x-0 flex flex-col items-center gap-[10px]" style={{ top: e.bankTop }}>
+      <div className="absolute inset-x-0 flex flex-col items-center gap-[11px]" style={{ top: e.bankTop }}>
         {e.bank.map((row, r) => (
           <div key={r} className="flex gap-[8px]">
             {row.map((t) => (
-              <WordChip key={t.word} token={t} />
+              <WordChip key={t.word} token={t} padX={11} />
             ))}
           </div>
         ))}

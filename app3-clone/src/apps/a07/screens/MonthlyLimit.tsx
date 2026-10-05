@@ -22,7 +22,7 @@ export function MonthlyLimit() {
         <p className="mt-[3px] text-center text-[11.5px]" style={{ color: rv.muted }}>
           {limit.spent}
         </p>
-        <div className="mx-[16px] mt-[128px]">
+        <div className="mx-[16px] mt-[123px]">
           <PillButton>{limit.cta}</PillButton>
         </div>
         <div className="absolute inset-x-0 top-[438px] bottom-0" style={{ background: rv.keypadBg }}>

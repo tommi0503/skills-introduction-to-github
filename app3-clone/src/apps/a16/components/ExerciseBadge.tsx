@@ -7,7 +7,7 @@ export function ExerciseBadge({ badge }: { badge: Badge }) {
     <div className="flex items-center gap-[10px]">
       {Icon ? (
         <span className="flex h-[23px] w-[23px] items-center justify-center rounded-full" style={{ background: badge.color }}>
-          <Icon size={13} strokeWidth={2.6} color="#fff" className="-rotate-45" />
+          <Icon size={13} strokeWidth={2.6} color="#fff" />
         </span>
       ) : (
         <ImagePlaceholder className="rounded-[4px]" style={{ width: 22, height: 21 }} label="badge icon" />
