@@ -20,6 +20,7 @@ export interface PayCodeScreenProps {
   overlay?: ReactNode
   statusColor?: string
   scrollIndicator?: boolean
+  eventsLeft?: number
 }
 
 const CARD_EDGES_BEHIND_CREDIT: CardEdge[] = [
@@ -29,7 +30,7 @@ const CARD_EDGES_BEHIND_CREDIT: CardEdge[] = [
 ]
 
 /** 현장결제 tab: payment code card with the selected payment means. */
-export function PayCodeScreen({ time, front, events = eventsA, withNav = false, overlay, statusColor = '#fff', scrollIndicator = false }: PayCodeScreenProps) {
+export function PayCodeScreen({ time, front, events = eventsA, withNav = false, overlay, statusColor = '#fff', scrollIndicator = false, eventsLeft }: PayCodeScreenProps) {
   return (
     <div className="absolute inset-0" style={{ background: t19.screen }}>
       <NaverStatusBar time={time} color={statusColor} charging className="!z-40" />
@@ -46,7 +47,7 @@ export function PayCodeScreen({ time, front, events = eventsA, withNav = false, 
           )}
         </PayCodeCard>
       </div>
-      <EventStrip events={events} top={642} />
+      <EventStrip events={events} top={642} cardsLeft={eventsLeft} />
       {scrollIndicator && (
         <span className="absolute rounded-full" style={{ left: 383, top: 134, width: 2.6, height: 166, background: '#2a3038' }} />
       )}

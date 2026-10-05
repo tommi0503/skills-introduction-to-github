@@ -28,7 +28,7 @@ export function PointMoneyCard({ style }: { style?: React.CSSProperties }) {
         <span style={{ fontSize: 15.5, fontWeight: 600, color: '#0b0b0b', letterSpacing: -0.3 }}>{pointMoney.balanceLabel}</span>
         <span className="flex items-center" style={{ fontSize: 21.5, fontWeight: 700, color: '#0b0b0b', letterSpacing: -0.2 }}>
           {pointMoney.balance}
-          <ChevronRight size={16} strokeWidth={2.4} style={{ marginLeft: 1, marginRight: -4 }} />
+          <ChevronRight size={16} strokeWidth={2.4} style={{ marginLeft: -0.5, marginRight: -5.5 }} />
         </span>
       </div>
       <div className="absolute inset-x-0" style={{ top: 136.5, height: 1, background: t19.pointLine }} />

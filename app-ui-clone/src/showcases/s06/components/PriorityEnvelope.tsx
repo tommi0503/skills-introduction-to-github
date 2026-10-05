@@ -20,16 +20,22 @@ export function PriorityEnvelope({ label, count, countLabel }: PriorityEnvelopeP
           className="absolute inset-0"
           style={{ background: 'rgba(30,80,140,0.10)', clipPath: 'polygon(0 22%, 50% 92%, 100% 22%, 100% 100%, 0 100%)' }}
         />
-        <p className="absolute inset-x-0 top-[22px] text-center text-[14px] text-white">{label}</p>
+        <p className="absolute inset-x-0 top-[18px] text-center text-[14.5px] text-white">{label}</p>
         <span className="absolute left-[121px] top-[50px] flex h-[50px] w-[49px] items-center justify-center rounded-[12px] bg-white">
           <Sparkles size={18} strokeWidth={1.7} color={theme.blue} />
         </span>
       </div>
       <div
-        className="absolute left-[20px] top-[140px] h-[105px] w-[300px] rounded-[30px] blur-[9px]"
-        style={{ background: 'linear-gradient(90deg, #8cc8dc 0%, #78b4e2 50%, #6aa2ec 100%)' }}
+        className="absolute left-0 top-[144px] h-[110px] w-[340px]"
+        style={{
+          background: 'linear-gradient(90deg, rgba(150,206,224,0.95) 0%, rgba(120,180,226,0.95) 50%, rgba(104,160,236,0.95) 100%)',
+          WebkitMaskImage:
+            'linear-gradient(90deg, transparent 0%, #000 22%, #000 78%, transparent 100%), linear-gradient(180deg, #000 55%, transparent 100%)',
+          WebkitMaskComposite: 'source-in',
+          maskComposite: 'intersect',
+        }}
       />
-      <div className="absolute inset-x-0 top-[180px] flex items-center justify-center gap-[13px] text-white">
+      <div className="absolute inset-x-0 top-[169px] flex items-center justify-center gap-[13px] pl-[8px] text-white">
         <span className="text-[42px] leading-none font-semibold tracking-[-1px]">{count}</span>
         <span className="text-[18px] font-medium">{countLabel}</span>
       </div>

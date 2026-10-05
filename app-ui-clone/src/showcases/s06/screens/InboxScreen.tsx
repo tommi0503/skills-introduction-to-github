@@ -16,7 +16,7 @@ export function InboxScreen() {
         className="absolute left-[18px] right-[17px] top-[66px]"
         trailing={
           <>
-            <SoftIconButton icon={TextAlignStart} size={40} />
+            <SoftIconButton icon={TextAlignStart} />
             <ImagePlaceholder label="profile photo" className="h-[48px] w-[49px] rounded-[10px]" />
           </>
         }

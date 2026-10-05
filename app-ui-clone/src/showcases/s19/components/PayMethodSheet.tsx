@@ -1,9 +1,9 @@
 import { Check } from 'lucide-react'
-import { ImagePlaceholder } from '../../../ui'
+import { HomeIndicator, ImagePlaceholder } from '../../../ui'
 import { BottomSheet } from '../../shared-naver'
 import type { PayMethod } from '../data'
 
-const ROW = 69.3
+const ROW = 71.3
 
 function MethodRow({ m, divider }: { m: PayMethod; divider: boolean }) {
   return (
@@ -35,12 +35,13 @@ function MethodRow({ m, divider }: { m: PayMethod; divider: boolean }) {
 /** "결제 방법 선택" sheet listing the payment schemes. */
 export function PayMethodSheet({ methods, top }: { methods: PayMethod[]; top: number }) {
   return (
-    <BottomSheet top={top} title="결제 방법 선택" titleTop={21.5} titleSize={18.5} closeSize={30} closeTop={9} closeRight={8.6} radius={22}>
-      <div className="absolute inset-x-0" style={{ top: 50.5 }}>
+    <BottomSheet top={top} title="결제 방법 선택" titleTop={23} titleSize={20} closeSize={30} closeTop={9} closeRight={8.6} radius={22}>
+      <div className="absolute inset-x-0" style={{ top: 47.5 }}>
         {methods.map((m, i) => (
           <MethodRow key={m.name} m={m} divider={i < methods.length - 1} />
         ))}
       </div>
+      <HomeIndicator width={138} bottom={6.5} className="!h-[4.5px]" />
     </BottomSheet>
   )
 }

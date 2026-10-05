@@ -1,4 +1,4 @@
-import { Briefcase, CalendarClock, Send, type LucideIcon } from 'lucide-react'
+import { Briefcase, CalendarClock, Heart, Send, type LucideIcon } from 'lucide-react'
 
 export interface QuickStartItem {
   key: string
@@ -31,6 +31,7 @@ export const quickStart: QuickStartItem[] = [
   { key: 'meeting', title: 'Meeting', subtitle: 'Meetings, organized by AI.', icon: CalendarClock },
   { key: 'proposal', title: 'Proposal', subtitle: 'Prepared by AI.', icon: Briefcase },
   { key: 'followup', title: 'Follow- up', subtitle: 'Send a quick follow-up.', icon: Send },
+  { key: 'thanks', title: 'Thank you', subtitle: 'Say thanks in seconds.', icon: Heart },
 ]
 
 export const draft = {

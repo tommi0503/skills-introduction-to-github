@@ -9,7 +9,7 @@ import { t19 } from './theme'
 const phones = [
   { x: 7, y: 18, screen: <PayCodeScreen time="1:33" front="point" scrollIndicator /> },
   { x: 427, y: 18, screen: <PointHomeScreen /> },
-  { x: 847, y: 18, screen: <PayCodeScreen time="1:31" front="card" events={eventsB} withNav statusColor="#2b3037" /> },
+  { x: 847, y: 18, screen: <PayCodeScreen time="1:31" front="card" events={eventsB} withNav statusColor="#2b3037" eventsLeft={8.3} /> },
   { x: 1267, y: 7, screen: <MethodSheetScreen /> },
 ]
 
