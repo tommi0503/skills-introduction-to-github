@@ -13,7 +13,7 @@ export function PillButton({ label, icon: Icon, className, iconClassName }: Pill
   return (
     <div className={cn('relative flex h-[56px] items-center justify-center rounded-full', className)}>
       <Icon className={cn('absolute left-[40px]', iconClassName)} size={21} strokeWidth={1.8} />
-      <span>{label}</span>
+      <span className="pl-[24px]">{label}</span>
     </div>
   )
 }

@@ -36,10 +36,10 @@ export function WelcomeScreen() {
         <PillButton
           label={welcome.primaryCta}
           icon={Mail}
-          className="bg-[#f6d8ce] text-[17.5px] font-medium text-[#2a1a17]"
+          className="bg-[#f6d8ce] text-[16.5px] font-medium text-[#2a1a17]"
           iconClassName="text-[#2a1a17]"
         />
-        <PillButton label={welcome.secondaryCta} icon={Truck} className="border-[1.5px] border-[#f3a28f] text-[17.5px] font-medium text-white" />
+        <PillButton label={welcome.secondaryCta} icon={Truck} className="border-[1.5px] border-[#f3a28f] text-[16.5px] font-medium text-white" />
       </div>
 
       <p className="absolute inset-x-[22px] top-[722px] text-center text-[12.6px] leading-[16.6px]" style={{ color: '#f4a594' }}>

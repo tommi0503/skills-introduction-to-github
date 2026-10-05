@@ -37,7 +37,7 @@ export function CreateScreen() {
         </div>
       </div>
 
-      <div className="absolute inset-x-0 top-[668px] h-[140px] bg-gradient-to-b from-white/0 via-white to-white" />
+      <div className="absolute inset-x-0 top-[662px] h-[146px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0px,#fff_16px)]" />
       <PrimaryButton label={create.cta} icon={Sparkles} className="absolute left-[18px] top-[706px] w-[340px]" />
     </div>
   )

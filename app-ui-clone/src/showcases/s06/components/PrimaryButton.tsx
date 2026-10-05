@@ -15,7 +15,7 @@ export function PrimaryButton({ label, icon: Icon, className }: PrimaryButtonPro
       className={cn('flex h-[58px] items-center justify-center gap-[12px] rounded-[16px] text-[16px] font-medium text-white', className)}
       style={{
         background: theme.blue,
-        boxShadow: '0 0 6px 2px rgba(62,142,254,0.45), inset 0 0 8px rgba(255,255,255,0.25)',
+        boxShadow: 'inset 0 0 7px 2px rgba(255,255,255,0.32), 0 2px 8px rgba(62,142,254,0.3)',
       }}
     >
       <Icon size={19} strokeWidth={1.8} />
