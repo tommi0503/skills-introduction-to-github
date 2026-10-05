@@ -18,7 +18,7 @@ export function FiverrTabBar({ active, showBadges = false }: { active: string; s
           const badge = showBadges ? tabs.find((t) => t.key === item.key)?.badge : undefined
           return (
             <span className={cn('relative flex h-[54px] w-[71px] items-center justify-center rounded-full', isActive && 'bg-[#efefef]')}>
-              <Icon size={24} strokeWidth={isActive ? 2.6 : 1.9} fill={isActive && item.key === 'home' ? 'currentColor' : 'none'} className="text-[#1b1b1b]" />
+              <Icon size={24} strokeWidth={isActive ? 2.6 : 2.1} fill={isActive && item.key === 'home' ? 'currentColor' : 'none'} className="text-[#1b1b1b]" />
               {badge && (
                 <span
                   className="absolute top-[2px] right-[8px] flex h-[16px] w-[16px] items-center justify-center rounded-full text-[10px] text-white"

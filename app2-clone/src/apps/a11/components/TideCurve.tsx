@@ -90,7 +90,7 @@ export function TideCurve({
   return (
     <svg width={width} height={height} className={className} style={{ overflow: 'visible' }}>
       <defs>
-        <linearGradient id={gid} x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+        <linearGradient id={gid} x1="0" y1="0" x2="0" y2={height} gradientUnits="userSpaceOnUse">
           <stop offset={yHigh / height} stopColor={fillTop} />
           <stop offset="1" stopColor={fillBottom} />
         </linearGradient>

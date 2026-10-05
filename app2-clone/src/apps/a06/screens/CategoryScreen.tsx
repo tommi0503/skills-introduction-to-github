@@ -1,4 +1,4 @@
-import { ArrowDownUp, ArrowLeft, ChevronDown, Info, MapPin, RotateCw, Search, Star, UtensilsCrossed, Zap } from 'lucide-react'
+import { ArrowDownUp, ArrowLeft, ChevronDown, Info, MapPin, RotateCw, Search, Star, Utensils, Zap } from 'lucide-react'
 import { AppScreen, ImagePlaceholder } from '../../../ui'
 import { category, navItems, shops } from '../data'
 import { theme } from '../theme'
@@ -26,7 +26,7 @@ export function CategoryScreen() {
       <ArrowLeft size={24} strokeWidth={1.9} className="absolute left-[25px] top-[70px]" />
       <p className="absolute left-[72px] top-[69px] flex items-center gap-[3px] text-[20px] font-extrabold tracking-[-0.6px] text-[#111]">
         {category.title}
-        <UtensilsCrossed size={18} color="#2ec9b6" strokeWidth={2.6} />
+        <Utensils size={18} color="#2ec9b6" strokeWidth={2.6} />
       </p>
       <div className="absolute right-[26px] top-[70px] flex items-center gap-[16px]">
         <ClubBadge />
@@ -36,7 +36,7 @@ export function CategoryScreen() {
       <UnderlineTabs
         items={category.tabs}
         active={category.active}
-        gap={21}
+        gap={19}
         className="absolute inset-x-0 top-[112px] h-[39px] pl-[21px]"
         itemClassName="text-[16px] tracking-[-0.3px]"
         activeClassName="font-bold text-[#111]"
@@ -45,7 +45,7 @@ export function CategoryScreen() {
       <span className="absolute left-[350px] top-[115px] flex h-[32px] w-[32px] items-center justify-center rounded-full border border-[#e2e4e7] bg-white">
         <ChevronDown size={18} strokeWidth={2} />
       </span>
-      <FilterChips items={filters} className="absolute left-[-13px] top-[163px]" />
+      <FilterChips items={filters} className="absolute left-[-5px] top-[163px]" />
       <p className="absolute left-[15px] top-[218px] flex items-center gap-[3px] text-[12px] font-medium text-[#333]">
         {category.sortLabel}
         <Info size={12} strokeWidth={1.6} color="#999" />
