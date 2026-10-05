@@ -16,7 +16,7 @@ export function LibraryScreen() {
           <PhotoTile key={p.key} photo={p} />
         ))}
       </div>
-      <span className="absolute top-[128px] left-[137px] flex h-[36px] w-[114px] items-center justify-center rounded-full bg-white text-[15px] text-[#1f1f1f] shadow-[0_1px_6px_rgba(0,0,0,0.15)]">
+      <span className="absolute top-[128px] left-[137px] flex h-[36px] w-[114px] items-center justify-center rounded-full bg-white text-[14px] text-[#1f1f1f] shadow-[0_1px_6px_rgba(0,0,0,0.15)]">
         {library.dateChip}
       </span>
       <span className="absolute top-[126px] left-[341px] flex size-[40px] items-center justify-center rounded-full bg-white/90 text-[#1f1f1f] shadow-[0_1px_6px_rgba(0,0,0,0.12)]">

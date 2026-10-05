@@ -26,11 +26,11 @@ export function OfferCard({ offer }: { offer: Offer }) {
           <p className="mt-[7px] pr-[10px] text-[14px] leading-[17px] text-[#404145]">{offer.title}</p>
         </div>
       </div>
-      <p className="mt-[10px] text-[14px] leading-[20px] text-[#62646a]">
+      <p className="mt-[7px] text-[14px] leading-[20px] text-[#62646a]">
         {offer.price} • {offer.delivery}
       </p>
-      <p className="mt-[5px] text-[14px] leading-[20px] text-[#62646a]">{offer.expires}</p>
-      <div className="mt-[6px] flex gap-[10px]">
+      <p className="mt-[4px] text-[14px] leading-[20px] text-[#62646a]">{offer.expires}</p>
+      <div className="mt-[5px] flex gap-[10px]">
         <FvButton className="h-[40px] flex-1">Open in Chat</FvButton>
         <FvButton variant="solid" className="h-[40px] flex-1">
           Review

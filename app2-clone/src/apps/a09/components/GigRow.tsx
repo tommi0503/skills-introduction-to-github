@@ -20,7 +20,7 @@ export function GigRow({ gig }: { gig: Gig }) {
           <span className="text-[13px] font-normal text-[#95979d]">{gig.reviews}</span>
         </div>
         <Heart size={21} strokeWidth={1.4} className="absolute top-[8px] right-[9px] text-[#b5b6ba]" />
-        <p className="mt-[5px] pr-[14px] text-[14px] leading-[17px] text-[#404145]">{gig.title}</p>
+        <p className="mt-[2px] pr-[2px] text-[13.5px] leading-[17.3px] text-[#404145]">{gig.title}</p>
         <div className="mt-auto mb-[8px] self-end text-[12px] text-[#74767e]">
           From <span className="text-[16px] font-semibold text-[#222325]">{gig.price}</span>
         </div>

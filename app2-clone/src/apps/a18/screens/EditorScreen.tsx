@@ -14,7 +14,7 @@ export function EditorScreen() {
       <X size={21} strokeWidth={1.6} className="absolute top-[86px] left-[27px] text-[#e3e3e3]" />
       <Ellipsis size={20} strokeWidth={2} className="absolute top-[86px] left-[341px] text-[#e3e3e3]" />
       <span className="absolute top-[139px] left-[19px] flex size-[35px] items-center justify-center rounded-full bg-[#262626] text-[#e3e3e3]">
-        <Ruler size={17} strokeWidth={1.7} />
+        <Ruler size={18} strokeWidth={1.7} className="-rotate-45" />
       </span>
       <span className="absolute top-[139px] left-[225px] flex h-[35px] items-center gap-[4px] rounded-full bg-[#262626] pr-[11px] pl-[12px] text-[15px] text-[#e3e3e3]">
         {editor.aspect}

@@ -18,7 +18,7 @@ export function FloatingTabBar({ items, activeKey, className }: { items: IconIte
               active && 'bg-[#ececee]/90',
             )}
           >
-            <Icon size={22} strokeWidth={filled ? 2 : 1.8} fill={filled ? 'currentColor' : 'none'} />
+            <Icon size={filled ? 24 : 22} strokeWidth={filled ? 1.6 : 1.8} fill={filled ? 'currentColor' : 'none'} stroke={filled ? '#fff' : 'currentColor'} />
             <span className="text-[10.5px] font-medium">{item.label}</span>
           </div>
         )

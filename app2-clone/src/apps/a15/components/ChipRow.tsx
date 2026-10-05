@@ -17,7 +17,7 @@ export function ChipRow({ items, className, height }: { items: Chip[]; className
             className="flex items-center gap-[5px] rounded-full pr-[16px] pl-[16px] text-[14px] font-medium"
             style={{ background: lyft.chip, height }}
           >
-            <Icon size={15} strokeWidth={2.2} fill={c.icon === 'calendar' ? 'currentColor' : 'none'} />
+            <Icon size={15} strokeWidth={2.4} />
             {c.label}
           </div>
         )

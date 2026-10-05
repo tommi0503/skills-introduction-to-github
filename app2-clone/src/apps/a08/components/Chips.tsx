@@ -16,9 +16,9 @@ export function StateChip({ label, color = gh.purple, className }: { label: stri
 }
 
 /** Grey progress capsule with a purple check (e.g. "1 of 1"). */
-export function ProgressChip({ label, className }: { label: string; className?: string }) {
+export function ProgressChip({ label, height = 24, className }: { label: string; height?: number; className?: string }) {
   return (
-    <span className={cn('inline-flex h-[24px] items-center gap-[4px] rounded-full bg-[#f1f1f3] px-[9px] text-[12.5px] text-[#6b7079]', className)}>
+    <span className={cn('inline-flex items-center gap-[4px] rounded-full bg-[#f1f1f3] px-[9px] text-[12.5px] text-[#6b7079]', className)} style={{ height }}>
       <CircleCheck size={15} strokeWidth={1.8} style={{ color: gh.purple }} />
       {label}
     </span>

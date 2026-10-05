@@ -92,7 +92,7 @@ export const home = {
   title: 'Home',
   filters: [
     { key: 'foryou', label: 'For you', icon: LibraryBig },
-    { key: 'following', label: 'Following', icon: UserCheck, filled: true },
+    { key: 'following', label: 'Following', icon: UserCheck },
     { key: 'recents', label: 'Recents', icon: Clock3, filled: true },
   ] satisfies IconItem[],
   activeFilter: 'foryou',

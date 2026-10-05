@@ -8,9 +8,12 @@ export interface UnderlineTabsProps {
   className?: string
   itemClassName?: string
   barClassName?: string
+  /** How far the active bar extends past the label cell (px) and sits below it. */
+  barOverhang?: number
+  barDrop?: number
 }
 
-export function UnderlineTabs({ items, active, equal, className, itemClassName, barClassName }: UnderlineTabsProps) {
+export function UnderlineTabs({ items, active, equal, className, itemClassName, barClassName, barOverhang = 0, barDrop = 0 }: UnderlineTabsProps) {
   return (
     <div className={cn('flex', className)}>
       {items.map((t, i) => (
@@ -20,7 +23,12 @@ export function UnderlineTabs({ items, active, equal, className, itemClassName, 
           style={{ color: i === active ? '#222325' : '#95979d', fontWeight: i === active ? 600 : 500 }}
         >
           {t}
-          {i === active && <span className={cn('absolute inset-x-0 bottom-0 h-[3px] bg-[#111]', barClassName)} />}
+          {i === active && (
+            <span
+              className={cn('absolute bg-[#111]', barClassName ?? 'h-[3px]')}
+              style={{ left: -barOverhang, right: -barOverhang, bottom: -barDrop }}
+            />
+          )}
         </div>
       ))}
     </div>

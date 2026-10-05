@@ -9,9 +9,9 @@ import { bitcoin } from '../data'
 import { bitcoinMenuSeries, bitcoinSeries } from '../series'
 import { theme } from '../theme'
 
-/** Left part of the line (under the menu) reuses the detail series, shifted to this quote's level. */
+/** Left part of the line (under the menu) reuses the detail series, shifted to this quote's level (hidden behind the frosted menu). */
 const series: [number, number][] = [
-  ...bitcoinSeries.filter(([x]) => x < 205).map(([x, y]): [number, number] => [x, y - 20]),
+  ...bitcoinSeries.filter(([x]) => x < 205).map(([x, y]): [number, number] => [x, y + 4]),
   ...bitcoinMenuSeries,
 ]
 

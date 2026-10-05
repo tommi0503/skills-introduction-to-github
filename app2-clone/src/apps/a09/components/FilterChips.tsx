@@ -4,7 +4,7 @@ import type { FilterChip } from '../data'
 
 export function FilterChips({ items, className }: { items: FilterChip[]; className?: string }) {
   return (
-    <div className={cn('flex gap-[11px] whitespace-nowrap', className)}>
+    <div className={cn('flex gap-[10px] whitespace-nowrap', className)}>
       {items.map((c) => (
         <span
           key={c.label}

@@ -31,7 +31,7 @@ export function IssueScreen() {
         <h1 className="mt-[12px] text-[21px] leading-[26px] font-semibold text-[#1f2328]">{issue.title}</h1>
         <div className="mt-[12px] flex items-center gap-[9px]">
           <StateChip label={issue.state} />
-          <ProgressChip label={issue.progress} className="h-[26px]" />
+          <ProgressChip label={issue.progress} height={26} />
         </div>
       </div>
       <div className="absolute inset-x-0 top-[247px] h-[8px] bg-[#f4f4f6]" />

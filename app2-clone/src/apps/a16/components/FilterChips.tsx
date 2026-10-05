@@ -11,12 +11,12 @@ export function FilterChips({ items, activeKey }: { items: IconItem[]; activeKey
         key,
         label: (
           <>
-            <Icon size={17} strokeWidth={2.4} fill={filled ? 'currentColor' : 'none'} />
+            <Icon size={filled ? 18 : 17} strokeWidth={filled ? 1.8 : 2.4} fill={filled ? 'currentColor' : 'none'} stroke={filled ? '#f2f2f3' : 'currentColor'} />
             {label}
           </>
         ),
       }))}
-      chipClassName="h-[35px] gap-[6px] rounded-full px-[17px] text-[16px]"
+      chipClassName="h-[35px] gap-[6px] rounded-full px-[16px] text-[15.5px]"
       activeClassName="bg-[#1d1d1f] text-white"
       inactiveClassName="bg-[#f2f2f3] text-[#111]"
     />

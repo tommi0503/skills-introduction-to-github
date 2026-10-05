@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
-import { Images, LayoutGrid, Plus, Search, Share, SlidersHorizontal, Trash2 } from 'lucide-react'
+import { Images, LayoutGrid, Plus, Search, Settings2, Share, Trash2 } from 'lucide-react'
 
 export interface GridPhoto {
   key: string
@@ -38,7 +38,7 @@ export const viewer = {
   time: '4:51 AM',
   actions: [
     { key: 'share', label: 'Share', icon: Share },
-    { key: 'edit', label: 'Edit', icon: SlidersHorizontal },
+    { key: 'edit', label: 'Edit', icon: Settings2 },
     { key: 'add', label: 'Add to', icon: Plus },
     { key: 'trash', label: 'Trash', icon: Trash2 },
   ] satisfies NavItem[],

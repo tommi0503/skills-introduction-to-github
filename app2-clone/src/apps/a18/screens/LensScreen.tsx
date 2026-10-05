@@ -11,7 +11,7 @@ export function LensScreen() {
       <Chrome color="#fff" chipClassName="bg-[#5e5e5e]/95!" />
       <div className="absolute inset-x-0 top-[62px] flex h-[36px] items-center px-[17px] text-white">
         <ChevronLeft size={26} strokeWidth={2} />
-        <h1 className="flex-1 text-center font-outfit text-[23px] tracking-[-0.2px]">{lens.title}</h1>
+        <h1 className="flex-1 text-center font-outfit text-[24px] tracking-[-0.2px]">{lens.title}</h1>
         <Ellipsis size={20} strokeWidth={2.2} />
       </div>
       {/* dimmed full-bleed photo with the highlighted selection */}
@@ -41,12 +41,12 @@ export function LensScreen() {
         <div className="absolute top-[138px] left-[200px] h-[120px] w-[172px] rounded-[16px] bg-[#f2f2f2]">
           <ImagePlaceholder label="related result" className="absolute inset-x-[16px] top-[16px] bottom-0 rounded-[8px]" />
         </div>
-        <div className="absolute inset-x-0 bottom-0 flex h-[80px] items-start justify-center gap-[14px] bg-[#f2f2f2] pt-[10px] pr-[30px]">
+        <div className="absolute inset-x-0 bottom-0 flex h-[80px] items-start gap-[7px] bg-[#f2f2f2] pt-[10px] pl-[67px]">
           {lens.modes.map((m) => (
             <span
               key={m}
               className={cn(
-                'flex h-[31px] items-center rounded-full px-[14px] text-[14.5px]',
+                'flex h-[31px] items-center rounded-full px-[12px] text-[14px]',
                 m === lens.activeMode ? 'bg-[#1a5ad8] text-white' : 'text-[#1f1f1f]',
               )}
             >

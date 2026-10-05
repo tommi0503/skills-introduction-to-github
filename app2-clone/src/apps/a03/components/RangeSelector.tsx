@@ -14,7 +14,7 @@ export interface RangeSelectorProps {
 export function RangeSelector({ ranges, active, top, trailing, fadedFrom }: RangeSelectorProps) {
   return (
     <div className="absolute flex items-center" style={{ left: 15, right: 15, top, height: 30 }}>
-      <div className="flex flex-1 items-center gap-[19px] overflow-hidden">
+      <div className="flex flex-1 items-center gap-[23px] overflow-hidden">
         {ranges.map((r, i) => {
           const on = r === active
           return (
@@ -24,7 +24,7 @@ export function RangeSelector({ ranges, active, top, trailing, fadedFrom }: Rang
               style={{
                 minWidth: on ? 31 : undefined,
                 padding: on ? '0 9px' : undefined,
-                marginRight: on ? -6 : undefined,
+                marginRight: on ? -10 : undefined,
                 background: on ? theme.greenSoft : undefined,
                 boxShadow: on ? `inset 0 0 0 1px ${theme.greenBorder}` : undefined,
                 color: on ? theme.green : '#8e8e93',

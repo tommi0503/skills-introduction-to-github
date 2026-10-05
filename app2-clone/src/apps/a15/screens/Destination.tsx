@@ -1,7 +1,8 @@
-import { MapPin, Plus, X } from 'lucide-react'
+import { Plus, X } from 'lucide-react'
 import { AppScreen } from '../../../ui'
 import { ChipRow } from '../components/ChipRow'
 import { IconRow } from '../components/IconRow'
+import { PlacePin } from '../components/PlacePin'
 import { StatusRow } from '../components/StatusRow'
 import { chips, destination as d } from '../data'
 import { fonts, lyft } from '../theme'
@@ -63,7 +64,11 @@ export function Destination() {
             key={p.key}
             className="h-[64px]"
             textLeft={39}
-            icon={<MapPin size={20} strokeWidth={3} style={{ color: lyft.magenta }} />}
+            icon={
+              <span className="ml-[3px] pt-[5px]">
+                <PlacePin color={lyft.magenta} size={14} />
+              </span>
+            }
             title={p.title}
             sub={p.address}
             titleClassName="text-[15.5px] leading-[20px] font-medium"

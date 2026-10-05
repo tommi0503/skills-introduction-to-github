@@ -13,10 +13,10 @@ export function GigScreen() {
     <AppScreen className="font-figtree">
       <ImagePlaceholder label="gig photo" className="absolute inset-x-0 top-0 h-[327px]" />
       <FvStatusBar color="#fff" />
-      <RoundButton icon={ChevronLeft} size={40} iconSize={24} strokeWidth={1.8} className="absolute top-[58px] left-[8px] bg-white/85" />
+      <RoundButton icon={ChevronLeft} surface="rgba(255,255,255,0.85)" size={40} iconSize={24} strokeWidth={1.8} className="absolute top-[58px] left-[8px]" />
       <div className="absolute top-[58px] right-[15px] flex gap-[9px]">
-        <RoundButton icon={Heart} size={40} iconSize={21} strokeWidth={1.8} className="bg-white/85" />
-        <RoundButton icon={MoreHorizontal} size={40} iconSize={20} className="bg-white/85" />
+        <RoundButton icon={Heart} surface="rgba(255,255,255,0.85)" size={40} iconSize={21} strokeWidth={1.8} />
+        <RoundButton icon={MoreHorizontal} surface="rgba(255,255,255,0.85)" size={40} iconSize={20} />
       </div>
       <span className="absolute top-[296px] left-[328px] rounded-full bg-[#2d2d2d]/85 px-[9px] py-[3px] text-[12.5px] text-white">
         {gig.imageCounter}
@@ -30,17 +30,17 @@ export function GigScreen() {
 
       <div className="absolute inset-x-0 top-[411px] px-[22px]">
         <h1 className="text-[26px] leading-[32px] font-semibold tracking-[-0.2px] text-[#222325]">{gig.title}</h1>
-        <ReadMore text={gig.description} more={gig.more} className="mt-[17px] text-[14.5px] leading-[19px] text-[#404145]" />
+        <ReadMore text={gig.description} more={gig.more} className="mt-[17px] text-[14.5px] leading-[19px] tracking-[0.2px] text-[#404145]" />
       </div>
       <div className="absolute inset-x-0 top-[577px] h-px bg-[#f0f0f0]" />
-      <div className="absolute inset-x-[15px] top-[583px] border-b-2 border-[#ececec]">
+      <div className="absolute inset-x-[15px] top-[580px] border-b-2 border-[#ececec]">
         <UnderlineTabs
           items={gig.packages}
           active={gig.activePackage}
           equal
-          className="h-[48px]"
+          className="h-[50px]"
           itemClassName="text-[18px]"
-          barClassName="-bottom-[2px] inset-x-0"
+          barDrop={2}
         />
       </div>
       <div className="absolute inset-x-0 top-[644px] pr-[18px] pl-[20px] text-[#404145]">

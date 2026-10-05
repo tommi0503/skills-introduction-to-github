@@ -8,7 +8,7 @@ export function SearchPill({ label, className }: { label: string; className?: st
       iconSize={17}
       iconStrokeWidth={1.6}
       className={cn('absolute h-[46px] rounded-full border border-[#ececee] bg-white pl-[15px] text-[#6a6a6f]', className)}
-      textClassName="ml-[2px] text-[13.5px] text-[#68686d]"
+      textClassName="ml-[2px] text-[13px] text-[#77777c]"
     />
   )
 }

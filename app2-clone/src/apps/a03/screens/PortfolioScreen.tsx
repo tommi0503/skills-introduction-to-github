@@ -38,7 +38,7 @@ export function PortfolioScreen() {
         ))}
       </div>
       <ChangeLine value={p.change} top={247} info />
-      <LineChart points={portfolioSeries} baselineY={437} color={theme.green} endDot />
+      <LineChart points={portfolioSeries} baselineY={437} color={theme.green} endDot strokeWidth={1.4} />
       <RangeSelector ranges={p.ranges} active="1D" top={514} trailing={[Settings, PictureInPicture2, SquareArrowOutUpRight]} />
       <div className="absolute inset-x-[15px] border-y border-[#e6e6e8]" style={{ top: 567, height: 51 }}>
         <div className="flex h-full items-center justify-between text-[14.5px]">
@@ -52,9 +52,9 @@ export function PortfolioScreen() {
       <div className="absolute overflow-hidden rounded-[10px]" style={{ left: 15, right: 18, top: 642, height: 105 }}>
         <ImagePlaceholder tone="#151a33" className="absolute inset-0" label="promo gradient" />
         <div className="absolute inset-0 px-[12px] pt-[11px] text-white">
-          <div className="text-[15.5px] font-semibold">{p.promo.title}</div>
+          <div className="text-[14.5px] font-semibold">{p.promo.title}</div>
           <p className="mt-[3px] text-[12px] leading-[14.5px] text-[#c9cad3]">{p.promo.body}</p>
-          <div className="mt-[11px] flex items-center gap-[5px] text-[15px] font-semibold">
+          <div className="mt-[11px] flex items-center gap-[5px] text-[14.5px] font-semibold">
             {p.promo.cta}
             <ChevronRight size={15} strokeWidth={2.2} />
           </div>

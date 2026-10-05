@@ -47,7 +47,7 @@ export function HomeScreen() {
           <p className="mt-[8px] text-[14px] leading-[17px] text-[#62646a]">{order.title}</p>
         </div>
       </div>
-      <FiverrTabBar active="home" />
+      <FiverrTabBar active="home" showBadges />
     </AppScreen>
   )
 }
