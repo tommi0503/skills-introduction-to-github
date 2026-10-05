@@ -9,8 +9,8 @@ export function AboutPanel() {
   return (
     <Panel background={palette.charcoal}>
       <ImagePlaceholder label="team photo" className="absolute" style={{ left: 0, top: 0, width: 480, height: 490 }} tone={palette.photoTone} />
-      <Placed x={40} y={585}>
-        <Headline size={66} color={palette.onDark}>
+      <Placed x={40} y={591}>
+        <Headline size={57} color={palette.onDark}>
           {about.title}
         </Headline>
       </Placed>

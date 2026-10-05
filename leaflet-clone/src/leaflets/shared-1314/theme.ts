@@ -3,7 +3,7 @@ export const fairTheme = {
   slate: '#74838a',
   cream: '#f3f0e6',
   ink: '#3f4345',
-  body: '#6b6b6b',
+  body: '#626262',
   teal: '#467379',
   onSlate: '#f1eee5',
   onSlateMuted: '#e0e2df',

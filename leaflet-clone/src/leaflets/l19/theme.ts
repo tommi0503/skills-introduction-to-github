@@ -13,7 +13,8 @@ export const palette = {
 
 export const fonts = {
   headline: 'font-anton',
-  body: 'font-gowun-dodum',
-  contact: 'font-dm',
+  body: 'font-nanum-gothic',
+  contact: 'font-poppins',
   url: 'font-noto-serif',
+  quote: 'font-noto-serif',
 } as const

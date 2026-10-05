@@ -12,7 +12,7 @@ export function DirectionsPanel() {
       <ImagePlaceholder className="absolute" style={{ left: 137, top: -200, width: 360, height: 487, borderRadius: '0 0 180px 180px' }} label="map" />
 
       <Placed x={50} y={48}>
-        <VerticalText className="font-nanum-gothic text-[35px] font-bold leading-none tracking-[0.2em]" >
+        <VerticalText className="font-nanum-gothic text-[35px] font-bold leading-none tracking-[0.2em]">
           <span style={{ color: t.ink }}>{d.title.replace(/ /g, '')}</span>
         </VerticalText>
       </Placed>
@@ -23,8 +23,10 @@ export function DirectionsPanel() {
           titleGap={12}
           itemGap={18}
           className="font-nanum-gothic"
-          titleClassName="text-[19px] font-bold leading-[28px] text-[#467379]"
-          bodyClassName="text-[19px] leading-[28px] text-[#626262]"
+          titleClassName="text-[19px] font-bold leading-[28px]"
+          bodyClassName="text-[19px] leading-[28px]"
+          titleStyle={{ color: t.teal }}
+          bodyStyle={{ color: t.body }}
         />
       </Placed>
 
@@ -34,8 +36,10 @@ export function DirectionsPanel() {
           titleGap={2}
           itemGap={30}
           className="font-nanum-gothic"
-          titleClassName="text-[18px] font-bold leading-[28px] text-[#467379]"
-          bodyClassName="text-[18px] font-bold leading-[28px] text-[#454545]"
+          titleClassName="text-[18px] font-bold leading-[28px]"
+          bodyClassName="text-[18px] font-bold leading-[28px]"
+          titleStyle={{ color: t.teal }}
+          bodyStyle={{ color: t.ink }}
         />
       </Placed>
 

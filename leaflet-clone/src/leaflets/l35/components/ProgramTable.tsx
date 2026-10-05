@@ -11,7 +11,7 @@ export interface ProgramTableProps {
 /** Blue-headed 3-column checkup table; the last column may carry a smaller sub line. */
 export function ProgramTable({ headers, rows, className }: ProgramTableProps) {
   const columns: DataColumn<ProgramRow>[] = [
-    { key: 'program', header: headers.program, width: 132, render: (r) => <span className="font-bold">{r.program}</span> },
+    { key: 'program', header: headers.program, width: 132, render: (r) => <span className="font-bold" style={{ color: larana.ink }}>{r.program}</span> },
     { key: 'target', header: headers.target, width: 115, render: (r) => r.target },
     {
       key: 'main',
@@ -25,13 +25,13 @@ export function ProgramTable({ headers, rows, className }: ProgramTableProps) {
     },
   ]
   return (
-    <div className={className} style={{ background: '#f5f6f9' }}>
+    <div className={className} style={{ background: '#f5f6f9', color: larana.inkSoft }}>
       <DataTable
         columns={columns}
         rows={rows}
         className="text-[14.5px] leading-[22px]"
         headClassName="text-white"
-        headCellClassName="h-[48px] p-0 text-[15px] font-bold bg-[#4a7de8]"
+        headCellClassName="h-[48px] p-0 text-[16px] font-bold bg-[#4a7de8]"
         rowClassName="border-t border-[#e2e5ec] first:border-t-0"
         cellClassName="h-[66.5px] p-0"
       />
