@@ -17,13 +17,23 @@ export const layout = {
 
 /** Illustrations standing on / near the ground band, sheet px. */
 export const art: ArtShape[] = [
-  { key: 'buildings-left', x: 40, y: 838, w: 390, h: 106 },
+  { key: 'building-1', x: 42, y: 838, w: 63, h: 106 },
+  { key: 'building-2', x: 105, y: 876, w: 27, h: 68 },
+  { key: 'building-3', x: 132, y: 868, w: 75, h: 76 },
+  { key: 'building-3-roof', x: 140, y: 853, w: 45, h: 15 },
+  { key: 'building-4', x: 213, y: 912, w: 42, h: 32 },
+  { key: 'building-5', x: 255, y: 845, w: 76, h: 99, radius: '0 60px 0 0' },
+  { key: 'building-6', x: 336, y: 873, w: 80, h: 71 },
   { key: 'hill-1', x: 0, y: 882, w: 62, h: 62, radius: '0 34px 0 0' },
   { key: 'hill-2', x: 430, y: 893, w: 140, h: 51, radius: '40px 46px 0 0' },
   { key: 'building-mid', x: 902, y: 846, w: 90, h: 98 },
   { key: 'cloud-left', x: 960, y: 600, w: 55, h: 95, radius: '0 40px 40px 0' },
   { key: 'cloud-right', x: 1388, y: 490, w: 52, h: 80, radius: '40px 0 0 40px' },
-  { key: 'computer-book', x: 1015, y: 550, w: 370, h: 394, radius: '14px 14px 0 0' },
-  { key: 'buildings-left-3', x: 960, y: 830, w: 85, h: 114 },
-  { key: 'buildings-right-3', x: 1355, y: 805, w: 85, h: 139 },
+  { key: 'open-book', x: 1058, y: 548, w: 284, h: 252, radius: '6px' },
+  { key: 'monitor', x: 1015, y: 598, w: 370, h: 264, radius: '16px' },
+  { key: 'monitor-stand', x: 1135, y: 862, w: 145, h: 82 },
+  { key: 'buildings-left-3', x: 960, y: 845, w: 85, h: 99 },
+  { key: 'bush-left-3', x: 1018, y: 866, w: 125, h: 78, radius: '50px 50px 0 0' },
+  { key: 'bush-right-3', x: 1262, y: 884, w: 125, h: 60, radius: '50px 50px 0 0' },
+  { key: 'buildings-right-3', x: 1355, y: 808, w: 85, h: 136 },
 ]

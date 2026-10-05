@@ -53,8 +53,8 @@ export function ApplyPanel() {
               iconSize={26}
               gap={19}
               circleClassName="bg-[#3c3f62]"
-              titleClassName="mb-[4px] text-[17px] font-bold leading-[24px] tracking-[-0.02em] text-[#34385c]"
-              lineClassName="text-[13.5px] font-semibold leading-[22px] text-[#4b4f72]"
+              titleClassName="mb-[4px] font-dohyeon text-[20px] leading-[24px] text-[#34385c] [-webkit-text-stroke:0.4px_currentColor]"
+              lineClassName="text-[14.5px] font-semibold leading-[22px] tracking-[0.03em] text-[#5a5d78]"
             />
           </Placed>
           <Aside aside={s.aside} top={L.stepYs[i]} />

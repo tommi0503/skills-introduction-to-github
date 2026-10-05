@@ -14,10 +14,10 @@ interface ProgramRowProps {
 export function ProgramRow({ item, pillW, pillH, descX }: ProgramRowProps) {
   return (
     <div className="relative flex items-center" style={{ height: pillH }}>
-      <FramedPill fill={library.yellow} width={pillW} height={pillH} radius={11} className="font-dohyeon text-[16px]" style={{ color: library.title }}>
+      <FramedPill fill={library.yellow} width={pillW} height={pillH} radius={11} className="font-dohyeon text-[16px] [-webkit-text-stroke:0.4px_currentColor]" style={{ color: library.title }}>
         {item.label}
       </FramedPill>
-      <div className="absolute text-[13px] font-semibold leading-[20px] tracking-[0.01em]" style={{ left: descX, color: '#4b4f72' }}>
+      <div className="absolute text-[13.5px] font-bold leading-[20px] tracking-[0.045em]" style={{ left: descX, color: '#4b4f72' }}>
         {item.desc.map((d) => (
           <p key={d} className="m-0 whitespace-nowrap">
             {d}

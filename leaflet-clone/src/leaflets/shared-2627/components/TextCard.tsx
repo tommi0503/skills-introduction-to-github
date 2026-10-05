@@ -14,7 +14,7 @@ interface TextCardProps {
 export function TextCard({ lines, card = true, className, style }: TextCardProps) {
   return (
     <div
-      className={cn('absolute box-border px-[16px] font-nanum-gothic text-[15.2px] font-bold leading-[27.5px] tracking-[-0.01em]', className)}
+      className={cn('absolute box-border px-[16px] font-nanum-gothic text-[15.6px] font-bold leading-[27.5px] tracking-[-0.01em]', className)}
       style={{ background: card ? seoul.card : undefined, color: seoul.body, ...style }}
     >
       {lines.map((l) => (

@@ -18,7 +18,7 @@ export function NoticeBox({ title, items, style }: NoticeBoxProps) {
       <ImagePlaceholder label="monitor illustration" className="absolute right-[30px] top-[22px] h-[47px] w-[55px] rounded-[4px]" />
       <BulletList
         items={items}
-        className="absolute left-[27px] top-[75px] gap-[6px] text-[11.5px] font-semibold leading-[17.5px] tracking-[-0.01em] text-[#45496b]"
+        className="absolute left-[27px] top-[75px] gap-[6px] text-[11.5px] font-bold leading-[17.5px] tracking-[-0.01em] text-[#45496b]"
         marker="•"
         markerClassName="w-[14px]"
       />
