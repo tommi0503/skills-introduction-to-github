@@ -46,14 +46,14 @@ export function ProductCard({ product: p, width, imageHeight, size = 'compact', 
           <span className="text-[#111]">{p.price}</span>
         </div>
         {p.tags && (
-          <div className={cn('flex gap-[4px]', big ? 'mt-[7px]' : 'mt-[3px]')}>
+          <div className={cn('flex gap-[4px]', big ? 'mt-[5px]' : 'mt-[3px]')}>
             {p.tags.map((t) => (
               <TagPill key={t.label} tag={t} />
             ))}
           </div>
         )}
         {p.colors && (
-          <div className="mt-[9px] flex items-center gap-[4px]">
+          <div className="mt-[7px] flex items-center gap-[4px]">
             {p.colors.map((c) => (
               <span key={c} className="h-[8px] w-[8px] rounded-full border border-[#e5e5e5]" style={{ background: c }} />
             ))}

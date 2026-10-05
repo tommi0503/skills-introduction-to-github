@@ -54,7 +54,7 @@ export function SearchScreen() {
         ))}
       </div>
       <SectionLabel top={340} right="오후 5:00 업데이트">급상승 검색어</SectionLabel>
-      <div className="absolute top-[374px] left-[-34px] flex gap-[6px]">
+      <div className="absolute top-[374px] left-[-44px] flex gap-[6px]">
         {ages.map((a) => (
           <span
             key={a}
@@ -67,7 +67,7 @@ export function SearchScreen() {
           </span>
         ))}
       </div>
-      <div className="absolute top-[430px] left-[17px] flex gap-[39px]">
+      <div className="absolute top-[420px] left-[17px] flex gap-[39px]">
         {cols.map((col, i) => (
           <div key={i} className="flex w-[157px] flex-col">
             {col.map((r) => (
