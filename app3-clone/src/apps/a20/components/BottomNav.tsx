@@ -1,4 +1,4 @@
-import { cn } from '../../../ui'
+import { ImagePlaceholder, cn } from '../../../ui'
 import type { NavTab } from '../data'
 import { theme } from '../theme'
 
@@ -16,7 +16,7 @@ export function BottomNav({ tabs, active }: { tabs: NavTab[]; active: string }) 
             {Icon ? (
               <Icon size={22} strokeWidth={1.6} color="#c5c5c9" fill={t.key === 'like' || t.key === 'my' ? '#c5c5c9' : 'none'} />
             ) : (
-              <span className="flex h-[22px] w-[22px] items-center justify-center rounded-[4px] bg-[#111] text-[13px] leading-none font-black text-white">Z</span>
+              <ImagePlaceholder tone="#111" label="ZIGZAG home mark" className="h-[22px] w-[22px] rounded-[4px]" />
             )}
             {t.dot && <span className="absolute top-[-2px] right-[24px] h-[5px] w-[5px] rounded-full" style={{ background: theme.pink }} />}
             <span className={cn('text-[10.5px]', on ? 'font-semibold text-[#111]' : 'text-[#bdbdc1]')}>{t.label}</span>
