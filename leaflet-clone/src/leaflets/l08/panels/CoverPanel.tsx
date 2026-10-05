@@ -12,8 +12,8 @@ export function CoverPanel() {
           {d.handle}
         </Pill>
       </Placed>
-      <Placed x={155} y={172}>
-        <ArcText text={d.arc} width={170} height={44} radius={88} className="text-[16px] font-extrabold" color={theme.ink} />
+      <Placed x={155} y={177}>
+        <ArcText text={d.arc} width={170} height={44} radius={82} className="text-[18.5px] font-extrabold" color={theme.ink} />
       </Placed>
       <Placed x={0} y={224} width={480} className="text-center font-jua tracking-[9px] pl-[9px]" style={{ WebkitTextStroke: '3px currentColor' }}>
         <div className="text-[92px] leading-[100px]" style={{ color: theme.orange }}>

@@ -13,7 +13,7 @@ export function NightPanel() {
         <Photo key={p.label} box={p} />
       ))}
       <Placed x={33} y={408}>
-        <SectionNumber number={night.number} title={night.title} layout="inline" className="gap-[20px]" />
+        <SectionNumber number={night.number} title={night.title} layout="inline" inlineAlign="center" className="gap-[20px]" />
       </Placed>
       <Paragraphs items={night.texts} />
     </Panel>
