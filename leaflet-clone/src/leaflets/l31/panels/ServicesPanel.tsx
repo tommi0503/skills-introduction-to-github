@@ -9,10 +9,10 @@ export function ServicesPanel() {
   return (
     <Panel>
       <Placed x={0} y={103} width={470}>
-        <DisplayTitle lines={services.title} color={growth.ink} className="text-[33px] leading-[48px] tracking-[2.5px]" />
+        <DisplayTitle lines={services.title} color={growth.ink} className="text-[33px] leading-[50px] tracking-[2.5px]" />
       </Placed>
       <Placed x={80} y={255}>
-        <RichLines lines={services.lead} className="text-[18.5px] font-medium leading-[24.5px] tracking-[-0.4px]" strongClassName="font-bold text-[var(--ink)]" />
+        <RichLines lines={services.lead} className="text-[17.5px] font-medium leading-[24.5px] tracking-[-0.4px]" strongClassName="font-bold text-[var(--ink)]" />
       </Placed>
     </Panel>
   )

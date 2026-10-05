@@ -10,7 +10,7 @@ export function IntroPanel() {
   return (
     <Panel>
       <Placed x={0} y={103} width={476}>
-        <DisplayTitle lines={intro.title} color={growth.ink} className="text-[33px] leading-[48px] tracking-[2.5px]" />
+        <DisplayTitle lines={intro.title} color={growth.ink} className="text-[33px] leading-[50px] tracking-[2.5px]" />
       </Placed>
       <Placed x={74} y={253} className="flex flex-col gap-[24px]">
         {intro.paragraphs.map((p, i) => (

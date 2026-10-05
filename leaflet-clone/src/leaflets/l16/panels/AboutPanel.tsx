@@ -16,7 +16,7 @@ export function AboutPanel() {
           {d.lead}
         </div>
         <div className="mt-[6px] text-[13.5px] leading-[20px]">{d.sub}</div>
-        <div className="mt-[44px] flex flex-col gap-[43px]">
+        <div className="mt-[41px] flex flex-col gap-[42px]">
           {d.paragraphs.map((p) => (
             <Lines key={p[0]} lines={p} className="text-[14px] leading-[24px] tracking-[-0.005em]" />
           ))}

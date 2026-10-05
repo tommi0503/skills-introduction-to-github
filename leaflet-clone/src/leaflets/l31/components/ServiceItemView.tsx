@@ -14,7 +14,7 @@ export function ServiceItemView({ item, circle, textOffset }: ServiceItemViewPro
     <div className="relative" style={{ width: circle, height: circle }}>
       <ImagePlaceholder label={`${item.key} illustration`} className="h-full w-full rounded-full" />
       <div className="absolute top-0" style={{ left: textOffset.x, top: textOffset.y }}>
-        <h3 className="m-0 whitespace-nowrap text-[16px] font-bold leading-[25px] tracking-[-0.3px]" style={{ color: growth.ink }}>
+        <h3 className="m-0 whitespace-nowrap text-[18.5px] font-bold leading-[25px] tracking-[-0.3px]" style={{ color: growth.ink }}>
           {item.heading.map((h) => (
             <span key={h} className="block">
               {h}
@@ -23,9 +23,9 @@ export function ServiceItemView({ item, circle, textOffset }: ServiceItemViewPro
         </h3>
         <BulletList
           items={item.bullets}
-          className="mt-[11px] whitespace-nowrap text-[13px] leading-[21px] tracking-[-0.2px]"
-          marker={<span className="mt-[8px] block h-[5px] w-[5px] rounded-full" style={{ background: growth.ink }} />}
-          markerClassName="w-[18px] pl-[3px]"
+          className="mt-[14px] whitespace-nowrap text-[15.5px] font-medium leading-[21px] tracking-[-0.2px]"
+          marker={<span className="mt-[8px] block h-[6px] w-[6px] rounded-full" style={{ background: growth.ink }} />}
+          markerClassName="w-[24px] pl-[8px]"
           itemClassName=""
         />
       </div>

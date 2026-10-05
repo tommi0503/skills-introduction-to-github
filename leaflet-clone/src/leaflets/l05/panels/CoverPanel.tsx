@@ -21,7 +21,7 @@ export function CoverPanel() {
         lineClassName="leading-[87px] tracking-[0.01em]"
       />
       <div className="absolute right-0" style={{ left: X, top: 905, height: 2, background: theme.muted }} />
-      <Placed x={X} y={936} className="whitespace-nowrap font-noto-sans text-[21px] leading-[30px]" style={{ color: theme.muted }}>
+      <Placed x={X} y={936} className="whitespace-nowrap font-noto-sans text-[22px] leading-[30px] tracking-[0.01em]" style={{ color: theme.muted }}>
         {content.tagline}
       </Placed>
     </Panel>

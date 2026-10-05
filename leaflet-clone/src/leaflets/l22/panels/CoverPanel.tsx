@@ -8,8 +8,8 @@ import { coverPanel as d } from '../data'
 export function CoverPanel() {
   return (
     <Panel>
-      <Placed x={78} y={62}>
-        <ArcText text={d.kicker} width={340} height={80} rise={38} fontSize={28} color="#e6ec96" />
+      <Placed x={66} y={72}>
+        <ArcText text={d.kicker} width={362} height={80} rise={40} fontSize={28} color="#e6ec96" />
       </Placed>
       <SectionTitle top={150} centerX={245} className="text-[92px] tracking-[0.01em] text-[#eef08f]">
         {d.title}

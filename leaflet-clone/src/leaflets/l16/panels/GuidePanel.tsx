@@ -19,7 +19,7 @@ export function GuidePanel() {
           <div
             key={item.title}
             className="flex items-center"
-            style={{ paddingTop: i === 0 ? 30 : 30, paddingBottom: 34, borderTop: i ? `2px solid ${t.rule}` : undefined }}
+            style={{ paddingTop: 30, paddingBottom: 33, borderTop: i ? `2px solid ${t.rule}` : undefined }}
           >
             <div className="mr-[4px] flex w-[96px] shrink-0 items-center justify-center">
               <GuideIcon item={item} size={50} />
@@ -28,7 +28,7 @@ export function GuidePanel() {
               <div className="text-[16px] font-bold leading-[24px]" style={{ color: t.ink }}>
                 {item.title}
               </div>
-              <Lines lines={item.lines} className="mt-[5px] text-[13.5px] leading-[21px]" />
+              <Lines lines={item.lines} className="mt-[2px] text-[13.5px] leading-[21px]" />
             </div>
           </div>
         ))}

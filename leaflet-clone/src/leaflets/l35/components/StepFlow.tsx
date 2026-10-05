@@ -15,16 +15,16 @@ export function StepFlow({ steps, className }: StepFlowProps) {
         <Fragment key={s}>
           {i > 0 && <ChevronDown size={22} strokeWidth={2.4} className="my-[10px]" color={larana.blue} />}
           <li
-            className="flex h-[64px] w-full items-center justify-center gap-[12px] rounded-full"
-            style={{ border: `2px solid ${larana.cardLine}`, background: '#eef2f9' }}
+            className="flex h-[64px] w-full items-center gap-[12px] rounded-full pl-[108px]"
+            style={{ border: `2px solid ${larana.cardLine}` }}
           >
             <span
-              className="flex h-[20px] w-[32px] items-center justify-center rounded-full text-[13px] font-bold text-white"
+              className="flex h-[21px] w-[33px] items-center justify-center rounded-full text-[13px] font-semibold text-white"
               style={{ background: larana.blue }}
             >
               {String(i + 1).padStart(2, '0')}
             </span>
-            <span className="text-[16.5px] font-bold" style={{ color: larana.ink }}>
+            <span className="text-[16.5px] font-semibold" style={{ color: larana.ink }}>
               {s}
             </span>
           </li>

@@ -20,11 +20,11 @@ export function SpotCard({ spot }: { spot: Spot }) {
         >
           {spot.tag}
         </div>
-        <div className="absolute left-[30px] top-[288px] text-[21px] leading-[30px] font-medium">{spot.desc}</div>
+        <div className="absolute left-[30px] top-[288px] text-[22.5px] leading-[30px] text-[#4d4d38]">{spot.desc}</div>
         <ImagePlaceholder className="absolute left-[28px] top-[422px] h-[75px] w-[60px] rounded-[45%]" label="clover mascot" />
-        <div className="absolute left-[105px] top-[419px] text-[21px] leading-[32px] font-medium">
+        <div className="absolute left-[105px] top-[419px] text-[22px] leading-[32px] text-[#4d4d38]">
           <Lines lines={spot.info} />
-          <Lines lines={spot.address} className="mt-[20px] font-[Calibri,Carlito,"Noto_Sans_KR"] tracking-[-0.5px] text-[22px]" />
+          <Lines lines={spot.address} className="mt-[20px] tracking-[-0.6px]" />
         </div>
       </Placed>
     </>
