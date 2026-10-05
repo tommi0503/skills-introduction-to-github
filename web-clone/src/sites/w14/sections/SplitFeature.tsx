@@ -2,7 +2,7 @@ import { Grip } from 'lucide-react'
 import { ImagePlaceholder } from '../../../ui'
 import type { SplitFeature as SplitFeatureData } from '../data'
 import { colors, fonts } from '../theme'
-import { Text } from '../components/primitives'
+import { Lines, Text } from '../components/primitives'
 
 export interface SplitFeatureProps {
   data: SplitFeatureData
@@ -26,7 +26,7 @@ export function SplitFeature({ data, height, mediaTop, textTop }: SplitFeaturePr
       <div className="absolute w-[529px]" style={{ top: textTop, left: mediaLeft ? 140 : 771 }}>
         {data.badge && (
           <div
-            className="mb-[16px] ml-[7px] inline-flex h-[32px] items-center rounded-full border pl-[4px] pr-[8px]"
+            className="mb-[16px] inline-flex h-[32px] items-center rounded-full border pl-[4px] pr-[8px]"
             style={{ background: colors.subtle, borderColor: '#f2f2f1' }}
           >
             <span className="rounded-full px-[7px] text-[12px] leading-[19.2px] font-semibold text-white" style={{ background: colors.orange }}>
@@ -38,8 +38,8 @@ export function SplitFeature({ data, height, mediaTop, textTop }: SplitFeaturePr
             <Grip className="ml-[4px]" size={10} color="#e0a582" />
           </div>
         )}
-        <Text role="h2" as="h2" className={data.badge ? '' : 'pr-[10px]'}>
-          {data.title}
+        <Text role="h2" as="h2">
+          <Lines lines={data.title} />
         </Text>
         <Text role="lead" className="mt-[16px] pr-[10px]">
           {data.text}

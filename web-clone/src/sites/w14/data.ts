@@ -148,21 +148,22 @@ export const getStarted = {
 /* ---------- Split features ---------- */
 export interface SplitFeature {
   badge?: { label: string; value: string }
-  title: string
+  /** Headline lines, broken as in the reference. */
+  title: string[]
   text: string
-  /** Media rectangle relative to the section box. */
+  /** Which column holds the illustration. */
   mediaSide: 'left' | 'right'
 }
 
 export const splits: SplitFeature[] = [
   {
     badge: { label: 'Agent traffic tracker', value: '56.003%' },
-    title: 'Agents turn small docs errors into big problems',
+    title: ['Agents turn small docs', 'errors into big problems'],
     text: 'When your product changes, your docs don’t automatically update with it. GitBook spots what’s drifted and queues it for review before the wrong answer appears everywhere.',
     mediaSide: 'right',
   },
   {
-    title: 'Readable to an agent isn’t the same as useful to a user',
+    title: ['Readable to an agent isn’t the same', 'as useful to a user'],
     text: 'Most docs tools focus on making your docs readable by agents. That’s the easy part. GitBook makes sure what they find is reliable. So when a human or agent follows the instructions, they get the right answer.',
     mediaSide: 'left',
   },
