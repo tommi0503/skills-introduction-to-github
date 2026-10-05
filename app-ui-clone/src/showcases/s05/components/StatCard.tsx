@@ -10,7 +10,7 @@ const tones = {
 export function StatCard({ data }: { data: StatCardData }) {
   const tone = tones[data.tone]
   return (
-    <div className="h-[160px] w-[174px] shrink-0 rounded-[22px] px-[17px] pt-[15px]" style={{ background: theme.card, boxShadow: cardShadow }}>
+    <div className="h-[160px] w-[174px] shrink-0 rounded-[22px] px-[17px] pt-[14px]" style={{ background: theme.card, boxShadow: cardShadow }}>
       <p className="text-[14px] tracking-[-0.4px]" style={{ color: '#3a3a3a' }}>
         {data.title}
       </p>
@@ -22,8 +22,8 @@ export function StatCard({ data }: { data: StatCardData }) {
           {data.delta}
         </span>
       </div>
-      <div className="mt-[10px]">
-        <MiniBars barWidth={19} gap={3.5} heights={data.bars} highlight={data.highlight} color={tone.bar} base={theme.bar} />
+      <div className="mt-[13px]">
+        <MiniBars barWidth={20.5} gap={4} heights={data.bars} highlight={data.highlight} color={tone.bar} base={theme.bar} />
       </div>
     </div>
   )

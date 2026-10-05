@@ -22,7 +22,7 @@ export function ProductScreen() {
         </p>
       </div>
 
-      <div className="absolute grid grid-cols-2" style={{ left: 16.6, right: 16, top: 644 }}>
+      <div className="absolute grid grid-cols-2" style={{ left: 16.6, right: 16, top: 642 }}>
         {product.methods.map((m) => (
           <span key={m} className="flex items-center gap-[6px] text-[12.5px] text-[#333]">
             <span className="h-[3px] w-[3px] rounded-full bg-[#333]" />
@@ -31,9 +31,9 @@ export function ProductScreen() {
         ))}
       </div>
 
-      <div className="absolute inset-x-0 h-[16px] bg-[#f7f7f7]" style={{ top: 695 }} />
+      <div className="absolute inset-x-0 h-[16px] bg-[#f7f7f7]" style={{ top: 692.5 }} />
 
-      <CtaButton className="absolute" style={{ left: 16, right: 15, top: 754.8 }}>
+      <CtaButton className="absolute" style={{ left: 16, right: 15, top: 751.5 }}>
         {product.cta}
       </CtaButton>
     </div>
