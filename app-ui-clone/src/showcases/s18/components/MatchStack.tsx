@@ -18,17 +18,17 @@ function ScoreChip({ score, className }: { score: string; className?: string }) 
   )
 }
 
-function BackCard({ tone, className }: { tone: CardTone; className: string }) {
-  return <div className={cn('absolute h-[200px] w-[150px] rounded-[22px]', className)} style={{ background: cardTones[tone] }} />
+function BackCard({ tone, height, className }: { tone: CardTone; height: number; className: string }) {
+  return <div className={cn('absolute w-[150px] rounded-[22px]', className)} style={{ height, background: cardTones[tone] }} />
 }
 
 /** Fanned stack of matched dishes with a pager. */
 export function MatchStack({ name, note, score, pages }: MatchStackProps) {
   return (
     <div className="relative h-[275px] w-[390px]">
-      <BackCard tone="yellow" className="top-[17px] left-[69px]" />
-      <BackCard tone="pink" className="top-[29px] left-[165px]" />
-      <ScoreChip score={score} className="absolute top-[38px] left-[244px] w-[70px] justify-end" />
+      <BackCard tone="yellow" height={201} className="top-[17px] left-[69px]" />
+      <BackCard tone="pink" height={181} className="top-[29px] left-[165px]" />
+      <ScoreChip score={score} className="absolute top-[40px] left-[238px] w-[70px] justify-end" />
       <div
         className="absolute top-0 left-[109px] h-[227px] w-[169px] rounded-[22px] bg-[#c4d7f8]"
         style={{ boxShadow: '0 14px 26px rgba(30,40,80,0.13)' }}

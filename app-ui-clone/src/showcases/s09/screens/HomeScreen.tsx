@@ -24,20 +24,20 @@ export function HomeScreen() {
         </Box>
       </DarkHeader>
       <Box rect={{ x: 0, y: 150, w: 375, h: 178 }} className="rounded-b-[22px] bg-white" />
-      <Box rect={{ x: 23, y: 192, w: 331, h: 130 }}>
+      <Box rect={{ x: 23, y: 194.7, w: 331, h: 130 }}>
         <QuickActionList items={quickActions} rowHeight={43} />
       </Box>
 
       <Box rect={{ x: 23, y: 353, w: 332, h: 22 }}>
         <SectionTitle title="Top Categories" />
       </Box>
-      <Box rect={{ x: 23, y: 394.6, w: 360, h: 40 }} className="flex gap-[14.5px]">
+      <Box rect={{ x: 23, y: 396.6, w: 360, h: 40 }} className="flex gap-[14.5px]">
         {categories.map((c) => (
           <TagChip key={c.key} tag={c} className="bg-white" />
         ))}
       </Box>
 
-      <Box rect={{ x: 23, y: 470.5, w: 332, h: 22 }}>
+      <Box rect={{ x: 23, y: 469, w: 332, h: 22 }}>
         <SectionTitle title="Recommended for you" />
       </Box>
       <Box rect={{ x: 23, y: 509, w: 331, h: 420 }} className="grid grid-cols-2 gap-x-[15px] gap-y-[15px]">

@@ -13,27 +13,27 @@ export function MapScreen() {
     <div className="absolute inset-0">
       <ImagePlaceholder label="delivery route map" className="absolute inset-0" />
       <KitchenStatusBar tone="dark" />
-      <Box rect={{ x: 17.3, y: 54, w: 83, h: 34 }}>
-        <div className="flex h-full items-center justify-center gap-[7px] rounded-[7px] font-poppins text-[14px] font-medium text-white" style={{ background: theme.dark }}>
+      <Box rect={{ x: 19.5, y: 54, w: 83, h: 34 }}>
+        <div className="flex h-full items-center justify-center gap-[7px] rounded-[7px] font-poppins text-[14.5px] font-semibold text-white" style={{ background: theme.dark }}>
           <ArrowLeft size={17} strokeWidth={2.2} />
           Back
         </div>
       </Box>
 
       <div className="absolute inset-x-0 bottom-0 rounded-t-[22px]" style={{ top: 538, background: theme.dark }}>
-        <div className="pt-[18px] text-center font-poppins">
+        <div className="pt-[21.5px] text-center font-poppins">
           <div className="text-[13.5px] leading-[20px] font-semibold text-white">{delivery.title}</div>
-          <div className="mt-[5px] text-[13px] leading-[20px] text-[#9b9b9b]">{delivery.subtitle}</div>
+          <div className="mt-[5px] text-[13px] leading-[20px] text-[#b5b5b5]">{delivery.subtitle}</div>
         </div>
         <div className="absolute inset-x-0 top-[85.6px] border-t border-[#353535]" />
-        <div className="absolute top-[112px] right-[47px] left-[40px]">
+        <div className="absolute top-[106px] right-[45px] left-[41px]">
           <DeliveryTracker steps={delivery.steps} />
         </div>
         <div className="absolute inset-x-0 top-[162px] border-t border-[#353535]" />
-        <div className="absolute top-[176px] right-[21px] left-[18px] flex items-center">
+        <div className="absolute top-[179px] right-[21px] left-[18px] flex items-center">
           <Avatar size={57} tone="#d6d6d6" />
           <div className="ml-[11px] flex-1 font-poppins">
-            <div className="text-[14px] leading-[20px] font-semibold text-white">{delivery.courier.name}</div>
+            <div className="text-[15px] leading-[21px] font-semibold text-white">{delivery.courier.name}</div>
             <div className="text-[13px] leading-[20px] text-[#9b9b9b]">{delivery.courier.role}</div>
           </div>
           <div className="flex gap-[12px]">

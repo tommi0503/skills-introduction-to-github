@@ -15,9 +15,9 @@ export function DeliveryDetailsScreen() {
       </div>
 
       {/* Place card */}
-      <Panel className="absolute top-[100px] right-0 left-0 h-[338px] px-[12px] pt-[10px]">
+      <Panel className="absolute top-[100px] right-0 left-0 h-[339px] px-[12px] pt-[10px]">
         <ImagePlaceholder className="h-[172px] w-full rounded-[11px]" label="isometric delivery map" />
-        <div className="mt-[12px] flex items-center">
+        <div className="mt-[13px] flex items-center">
           <span className="flex h-[41px] w-[41px] items-center justify-center rounded-full bg-[#f3f3f3]">
             <Bookmark size={18} strokeWidth={2} fill="currentColor" />
           </span>
@@ -26,10 +26,10 @@ export function DeliveryDetailsScreen() {
             {d.place.action}
           </span>
         </div>
-        <div className="mt-[18px] text-[11.2px] tracking-[-0.2px]" style={{ color: '#8c8c8c' }}>
+        <div className="mt-[16px] text-[11.7px] tracking-[-0.2px]" style={{ color: '#8c8c8c' }}>
           {d.place.address}
         </div>
-        <div className="mt-[12px] flex h-[42px] items-center justify-center gap-[6px] rounded-full bg-[#f4f4f4] text-[12px] tracking-[-0.15px]">
+        <div className="mt-[16px] flex h-[42px] items-center justify-center gap-[6px] rounded-full bg-[#f4f4f4] text-[12.5px] tracking-[-0.15px]">
           <MapPinned size={16} strokeWidth={1.7} />
           {d.helpCta}
         </div>

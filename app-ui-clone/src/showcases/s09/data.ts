@@ -113,16 +113,17 @@ export interface DeliveryStep {
   key: string
   icon: LucideIcon
   done: boolean
+  size: number
 }
 
 export const delivery = {
   title: 'Estimated delivery time is 6:18 PM',
   subtitle: 'Your order is already on its way to you!',
   steps: [
-    { key: 'order', icon: Receipt, done: true },
-    { key: 'cook', icon: Soup, done: true },
-    { key: 'ride', icon: Bike, done: true },
-    { key: 'arrived', icon: CircleCheck, done: false },
+    { key: 'order', icon: Receipt, done: true, size: 25 },
+    { key: 'cook', icon: Soup, done: true, size: 28 },
+    { key: 'ride', icon: Bike, done: true, size: 31 },
+    { key: 'arrived', icon: CircleCheck, done: false, size: 24 },
   ] as DeliveryStep[],
   courier: { name: 'Sheri Turner Jr.', role: 'Courier' },
 }
@@ -149,4 +150,4 @@ export const cart = {
   cta: 'Checkout',
 }
 
-export const quiz = { title: 'Question 1/8', progress: 1 / 8 }
+export const quiz = { title: 'Question 1/8', progress: 0.1 }

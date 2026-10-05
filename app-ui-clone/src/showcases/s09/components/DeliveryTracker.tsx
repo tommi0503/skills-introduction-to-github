@@ -10,16 +10,16 @@ export function DeliveryTracker({ steps }: { steps: DeliveryStep[] }) {
         return (
           <div key={s.key} className="flex flex-1 items-center last:flex-none">
             {s.done ? (
-              <Icon size={24} strokeWidth={2.2} color={theme.lime} />
+              <Icon size={s.size} strokeWidth={2.3} color={theme.lime} />
             ) : (
-              <Icon size={23} strokeWidth={2} color={theme.dark} fill="#8a8a8a" />
+              <Icon size={s.size} strokeWidth={2} color={theme.dark} fill="#8a8a8a" />
             )}
             {i < steps.length - 1 && (
               <span
-                className="mx-[8px] h-[3px] flex-1"
+                className="mx-[6px] h-[3.5px] flex-1"
                 style={{
-                  backgroundImage: `radial-gradient(circle, ${steps[i + 1].done ? theme.lime : '#9a9a9a'} 1.3px, transparent 1.5px)`,
-                  backgroundSize: '5.5px 3px',
+                  backgroundImage: `radial-gradient(circle, ${steps[i + 1].done ? theme.lime : '#9a9a9a'} 1.6px, transparent 1.8px)`,
+                  backgroundSize: '5.5px 3.5px',
                 }}
               />
             )}

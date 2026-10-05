@@ -1,5 +1,4 @@
-import { NaverStatusBar, PrimaryButton, WebToolbar } from '../../shared-naver'
-import { BottomSheet } from '../components/BottomSheet'
+import { BottomSheet, DimOverlay, NaverStatusBar, PrimaryButton, WebToolbar } from '../../shared-naver'
 import { DateWheel } from '../components/DateWheel'
 import { IncomeForm } from '../components/IncomeForm'
 import { joinDateWheel } from '../data'
@@ -11,7 +10,7 @@ export function JoinDateSheetScreen() {
     <>
       <NaverStatusBar time="2:39" level={0.85} />
       <IncomeForm joinDate="2025년 2월 13일" dateConfirmed={false} />
-      <div className="absolute inset-x-0 bottom-0 z-10" style={{ top: 58.5, background: 'rgba(0,0,0,0.5)' }} />
+      <DimOverlay top={58.5} />
       <BottomSheet top={414.5} title="입사일">
         <div className="absolute inset-x-0" style={{ top: 60 }}>
           <DateWheel columns={joinDateWheel} />

@@ -18,13 +18,13 @@ export function ExploreScreen() {
         className="absolute top-[146px] right-[15.5px] left-[16px] h-[53px] gap-[10px] rounded-full bg-[#f3f3f5] pl-[15px] text-[#444]"
         textClassName="text-[12.5px] text-[#9a9aa2]"
       />
-      <div className="absolute top-[225px] left-[15px] font-condensed text-[18px] font-bold text-[#111]">{d.askTitle}</div>
-      <div className="absolute top-[263px] right-[15.5px] left-[16px]">
+      <div className="absolute top-[222px] left-[15px] font-condensed text-[17.2px] font-bold text-[#111]">{d.askTitle}</div>
+      <div className="absolute top-[262px] right-[15.5px] left-[16px]">
         <AskAiCard thumbs={d.askThumbs} text={d.askText} placeholder={d.askPlaceholder} />
       </div>
 
-      <div className="absolute top-[541px] right-[15.5px] left-[16px] flex items-center justify-between">
-        <span className="font-condensed text-[18px] font-bold text-[#111]">{d.trendingTitle}</span>
+      <div className="absolute top-[537px] right-[15.5px] left-[16px] flex items-center justify-between">
+        <span className="font-condensed text-[17px] font-bold text-[#111]">{d.trendingTitle}</span>
         <span className="text-[13.5px]" style={{ color: theme.muted }}>
           {d.trendingAction}
         </span>
@@ -35,8 +35,8 @@ export function ExploreScreen() {
         ))}
       </div>
 
-      <div className="absolute right-0 bottom-0 left-0 h-[135px]" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0), #fff 25%)' }} />
-      <FoodTabBar activeKey="explore" top={750} />
+      <div className="absolute right-0 bottom-0 left-0 h-[100px]" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0), #fff 14%)' }} />
+      <FoodTabBar activeKey="explore" top={749} />
     </div>
   )
 }

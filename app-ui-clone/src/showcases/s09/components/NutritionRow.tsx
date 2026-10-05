@@ -12,7 +12,7 @@ export function NutritionRow({ items }: { items: Nutrient[] }) {
           <div className="font-poppins text-[16px] leading-[22px] font-semibold" style={{ color: theme.ink }}>
             {n.value}
           </div>
-          <div className="font-poppins text-[11px] leading-[16px]" style={{ color: theme.muted }}>
+          <div className="font-poppins text-[11.8px] leading-[16px]" style={{ color: theme.muted }}>
             {n.label}
           </div>
         </div>

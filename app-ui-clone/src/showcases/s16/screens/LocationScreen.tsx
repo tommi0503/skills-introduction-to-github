@@ -52,7 +52,7 @@ export function LocationScreen() {
           gap={0}
           chipClassName="h-full rounded-full text-[13px] tracking-[-0.1px]"
           activeClassName="mr-[3px] w-[97px] bg-[#232323] text-white"
-          inactiveClassName="px-[19.5px] text-[#3a3a3a]"
+          inactiveClassName="px-[18px] text-[#3a3a3a]"
         />
       </div>
 

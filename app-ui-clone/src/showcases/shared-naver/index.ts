@@ -6,3 +6,5 @@ export { BackTitleHeader, CloseButton, type BackTitleHeaderProps } from './NavHe
 export { PrimaryButton, type PrimaryButtonProps } from './PrimaryButton'
 export { OptionGrid, type OptionGridProps } from './OptionGrid'
 export { LabeledToggle, type LabeledToggleProps } from './LabeledToggle'
+export { DimOverlay, type DimOverlayProps } from './DimOverlay'
+export { BottomSheet, type BottomSheetProps } from './BottomSheet'

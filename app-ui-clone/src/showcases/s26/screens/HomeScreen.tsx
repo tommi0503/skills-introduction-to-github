@@ -1,4 +1,4 @@
-import { Bell, ChevronRight, Handbag } from 'lucide-react'
+import { Bell, ChevronRight, ShoppingBag } from 'lucide-react'
 import { ImagePlaceholder } from '../../../ui'
 import { CuTabBar } from '../components/CuTabBar'
 import { HighlightStatusBar } from '../components/HighlightStatusBar'
@@ -54,7 +54,7 @@ export function HomeScreen() {
       <div className="absolute flex items-center gap-[14px]" style={{ left: 264, top: 68 }}>
         <BenefitBadge label={homeHeader.benefitBadge} />
         <Bell size={27} strokeWidth={1.4} className="text-[#222]" />
-        <Handbag size={28} strokeWidth={1.4} className="text-[#222]" />
+        <ShoppingBag size={28} strokeWidth={1.4} className="text-[#222]" />
       </div>
       <div className="absolute text-[20px] leading-[29px] font-semibold text-[#2a2a2a]" style={{ left: 25, top: 99.5, letterSpacing: -0.3 }}>
         <p>{homeHeader.promoTitle}</p>

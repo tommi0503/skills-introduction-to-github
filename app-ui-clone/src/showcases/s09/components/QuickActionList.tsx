@@ -10,7 +10,7 @@ export function QuickActionList({ items, rowHeight }: { items: QuickAction[]; ro
         return (
           <div
             key={a.key}
-            className="flex items-center gap-[12px] font-poppins text-[13.5px] font-semibold"
+            className="flex items-center gap-[12px] pb-[5.4px] font-poppins text-[13.5px] font-medium"
             style={{ height: rowHeight, color: theme.ink, borderTop: i ? `1px solid ${theme.hairline}` : undefined }}
           >
             <span className="flex w-[18px] justify-center">

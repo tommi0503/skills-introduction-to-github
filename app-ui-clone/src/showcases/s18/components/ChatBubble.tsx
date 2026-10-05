@@ -10,7 +10,7 @@ export interface ChatBubbleProps {
 /** One chat line: grey bubble with the speaker's avatar on its side. */
 export function ChatBubble({ from, lines }: ChatBubbleProps) {
   const bubble = (
-    <div className="rounded-full px-[19px] py-[9.5px] text-[13.5px] leading-[17.5px]" style={{ background: theme.soft, color: '#555' }}>
+    <div className="rounded-full px-[19px] py-[9.5px] text-[13.1px] leading-[17.5px]" style={{ background: theme.soft, color: '#4a4a4a' }}>
       {lines.map((l) => (
         <div key={l}>{l}</div>
       ))}
@@ -26,7 +26,7 @@ export function ChatBubble({ from, lines }: ChatBubbleProps) {
   return (
     <div className="flex items-center">
       <span className="flex h-[45px] w-[45px] items-center justify-center rounded-full" style={{ background: theme.botSoft }}>
-        <BotGlyph size={19} color={theme.bot} />
+        <BotGlyph size={22} color={theme.bot} />
       </span>
       <span className="h-[1.5px] w-[10px]" style={{ background: theme.botSoft }} />
       {bubble}

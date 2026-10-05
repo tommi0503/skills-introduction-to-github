@@ -29,14 +29,14 @@ export function HomeScreen() {
         <Avatar size={52} tone="#cddff8" />
       </div>
 
-      <div className="absolute top-[142px] left-[16px] font-condensed text-[28px] leading-[34px] font-bold text-[#111]">
+      <div className="absolute top-[142px] left-[16px] font-condensed text-[27px] leading-[34px] font-bold tracking-[-0.2px] text-[#111]">
         {d.headline.map((l) => (
           <div key={l}>{l}</div>
         ))}
       </div>
 
-      <div className="absolute top-[233px] left-[162px]">
-        <FoodFan angles={d.fan} width={66} height={92} />
+      <div className="absolute top-[233px] -left-[5px]">
+        <FoodFan cards={d.fan} />
       </div>
       <div className="absolute top-[315px] right-[15px] left-[16px] z-20">
         <HintBox text={d.hint} />

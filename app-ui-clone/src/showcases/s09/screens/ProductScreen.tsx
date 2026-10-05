@@ -21,19 +21,19 @@ export interface ProductScreenProps {
 const section = 'border-t px-[21px]'
 
 /** Product detail sheet with sticky footer. Reused scrolled for the cropped right-hand phone. */
-export function ProductScreen({ product, sheetTop = 118.7, scroll = 0, footerBottom = 29 }: ProductScreenProps) {
+export function ProductScreen({ product, sheetTop = 118.7, scroll = 0, footerBottom = 31.5 }: ProductScreenProps) {
   return (
     <div className="absolute inset-0 bg-white">
       <DarkHeader height={150} cartCount={product.cartCount} rounded={false} />
       <div className="absolute inset-x-0 bottom-0 z-20 overflow-hidden rounded-t-[22px]" style={{ top: sheetTop, background: theme.canvas }}>
         <div style={{ transform: `translateY(${-scroll}px)` }}>
-          <div className="relative" style={{ height: 495 - 118.7 }}>
+          <div className="relative" style={{ height: 372 }}>
             <span className="absolute top-[11px] left-1/2 h-[3px] w-[60px] -translate-x-1/2 rounded-full bg-[#a9a9a9]" />
             <ImagePlaceholder label="quinoa bowl" className="absolute top-[35.3px] left-[21px] h-[318px] w-[318px] rounded-full" />
           </div>
           <div className="bg-white pb-[200px]" style={{ color: theme.ink }}>
             <div className="px-[21px] pt-[25.6px] pb-[19px]">
-              <div className="font-poppins text-[26px] leading-[32px] font-medium tracking-[-0.01em]">{product.name}</div>
+              <div className="font-poppins text-[27px] leading-[32px] font-medium tracking-[0.025em]">{product.name}</div>
               <div className="mt-[2.4px] font-poppins text-[16.5px] leading-[22px]" style={{ color: theme.muted }}>
                 {product.weight}
               </div>
@@ -44,17 +44,17 @@ export function ProductScreen({ product, sheetTop = 118.7, scroll = 0, footerBot
               </div>
             </div>
             <div className={`${section} pt-[16px] pb-[15.5px]`} style={{ borderColor: theme.hairline }}>
-              <div className="font-poppins text-[13px] leading-[20px]" style={{ color: theme.muted }}>
+              <div className="font-poppins text-[14px] leading-[20px]" style={{ color: theme.muted }}>
                 {product.nutritionTitle}
               </div>
               <div className="mt-[10px]">
                 <NutritionRow items={product.nutrients} />
               </div>
             </div>
-            <div className={`${section} pt-[17.5px] pb-[18px]`} style={{ borderColor: theme.hairline }}>
+            <div className={`${section} pt-[17.5px] pb-[16.5px]`} style={{ borderColor: theme.hairline }}>
               <TextBlock title="Ingredients" lines={product.ingredients} />
             </div>
-            <div className={`${section} pt-[18.3px]`} style={{ borderColor: theme.hairline }}>
+            <div className={`${section} pt-[17px]`} style={{ borderColor: theme.hairline }}>
               <TextBlock title="Terms and conditions of storage" lines={product.storage} />
             </div>
           </div>
@@ -70,7 +70,7 @@ export function ProductScreen({ product, sheetTop = 118.7, scroll = 0, footerBot
           <span className="text-[16px]">{product.price}</span>
         </DarkButton>
       </div>
-      <HomeIndicator width={116} bottom={6} className="z-40" />
+      <HomeIndicator width={116} bottom={8} className="z-40" />
     </div>
   )
 }

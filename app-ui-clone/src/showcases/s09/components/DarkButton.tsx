@@ -6,7 +6,7 @@ import { theme } from '../theme'
 export function DarkButton({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={cn('flex h-full w-full items-center rounded-[10px] font-poppins text-[13px] font-semibold text-white', className)}
+      className={cn('flex h-full w-full items-center rounded-[10px] font-poppins leading-none text-[13.5px] font-semibold text-white', className)}
       style={{ background: theme.dark }}
     >
       {children}

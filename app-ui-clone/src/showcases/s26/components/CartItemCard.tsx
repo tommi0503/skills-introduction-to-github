@@ -11,7 +11,7 @@ export interface CartItemRowProps {
 /** One selectable product row: check · thumbnail · name/stock · remove, then stepper + price. */
 export function CartItemRow({ item }: CartItemRowProps) {
   return (
-    <div className="relative pt-[17px] pr-[17px] pl-[14.5px]">
+    <div className="relative pt-[19.5px] pr-[17px] pl-[14.5px]">
       <div className="flex items-start">
         <CheckDot />
         <div className="ml-[8px] flex h-[77px] w-[77px] items-center justify-center rounded-[12px] border border-[#ededed] bg-white">
@@ -37,7 +37,7 @@ export function CartItemRow({ item }: CartItemRowProps) {
 export function GiftSummary({ caption, order, keep }: { caption: string; order: number; keep: number }) {
   const num = (n: number): ReactNode => <span className="font-semibold text-[#5fd34b]">{n}</span>
   return (
-    <div className="mx-[18px] mt-[15px] flex items-center justify-between border-t border-[#f0f0f0] pt-[14px] pb-[14px] text-[12.5px] text-[#666]">
+    <div className="mx-[18px] mt-[12.5px] flex items-center justify-between border-t border-[#f0f0f0] pt-[14px] pb-[14px] text-[12.5px] text-[#666]">
       <span>{caption}</span>
       <span className="flex items-center gap-[3px]">
         주문 {num(order)} · 키핑 {num(keep)}

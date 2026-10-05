@@ -14,6 +14,14 @@ export const tabs: TabEntry[] = [
   { key: 'profile', icon: UserRound },
 ]
 
+export interface FanCard {
+  dx: number
+  top: number
+  w: number
+  h: number
+  rotate: number
+}
+
 export interface Pick {
   key: string
   tone: CardTone
@@ -27,7 +35,14 @@ export const homeScreen = {
   greeting: 'Good Morning',
   name: 'Juliette Amara',
   headline: ['Personalized to your', 'taste & weather'],
-  fan: [-18, -9, 0, 9, 18],
+  /** Fanned dish photos: horizontal offset from centre, top, size and tilt (logical pt / deg). */
+  fan: [
+    { dx: -113, top: 40, w: 58, h: 72, rotate: -22 },
+    { dx: -64, top: 14, w: 62, h: 86, rotate: -8 },
+    { dx: 67, top: 14, w: 62, h: 86, rotate: 8 },
+    { dx: 126, top: 40, w: 58, h: 72, rotate: 22 },
+    { dx: 0, top: 0, w: 66, h: 92, rotate: 0 },
+  ] satisfies FanCard[],
   hint: "It's warm today, so I picked something light and refreshing",
   picks: [
     { key: 'left', tone: 'pink', badge: 'AI pick for you', title: 'Spicy Ramen Bowl', price: '$14.99', cta: 'Add to order' },

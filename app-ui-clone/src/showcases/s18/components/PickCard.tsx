@@ -15,9 +15,9 @@ export function PickCard({ pick }: { pick: Pick }) {
         <Heart size={18} fill={theme.heart} color={theme.heart} />
       </span>
       <ImagePlaceholder className="absolute top-[44px] left-[66px] h-[152px] w-[152px] rounded-full" label={pick.title} />
-      <div className="absolute top-[212px] right-[11px] left-[9px] flex items-center justify-between font-condensed font-bold text-[#111]">
-        <span className="text-[20px]">{pick.title}</span>
-        <span className="text-[23px]">{pick.price}</span>
+      <div className="absolute top-[208px] right-[11px] left-[9px] flex items-center justify-between font-condensed font-bold text-[#111]">
+        <span className="text-[17.5px]">{pick.title}</span>
+        <span className="text-[20px]">{pick.price}</span>
       </div>
       <div className="absolute top-[250px] right-[11px] left-[9px] flex h-[47px] items-center justify-center rounded-full bg-black text-[14.5px] text-white">
         {pick.cta}
