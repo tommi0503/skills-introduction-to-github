@@ -57,12 +57,12 @@ function ChargeRow({ charge }: { charge: CardCharge }) {
   )
 }
 
-function DayGroup({ day }: { day: BillingDay }) {
+function DayGroup({ day, gap }: { day: BillingDay; gap: number }) {
   return (
     <div style={{ padding: '0 21px 0 20.5px' }}>
       <div
         className="flex items-center justify-between"
-        style={{ height: 38, fontSize: 16.5, fontWeight: 700, color: '#111', letterSpacing: -0.4, marginTop: 9 }}
+        style={{ height: 38, fontSize: 16.5, fontWeight: 700, color: '#111', letterSpacing: -0.4, marginTop: gap }}
       >
         <span>{day.date}</span>
         <span>{day.total}</span>
@@ -75,12 +75,12 @@ function DayGroup({ day }: { day: BillingDay }) {
 }
 
 /** A month header bar followed by the per-day charges. */
-export function BillingSection({ month }: { month: BillingMonth }) {
+export function BillingSection({ month, dayGap = 9 }: { month: BillingMonth; dayGap?: number }) {
   return (
     <div>
       <MonthBar month={month.month} total={month.total} tone={month.tone} />
       {month.days.map((d) => (
-        <DayGroup key={d.date} day={d} />
+        <DayGroup key={d.date} day={d} gap={dayGap} />
       ))}
     </div>
   )

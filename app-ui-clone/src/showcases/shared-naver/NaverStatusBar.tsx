@@ -69,13 +69,13 @@ export function NaverStatusBar({
     <div className={cn('pointer-events-none absolute inset-x-0 top-0 z-40', className)} style={{ height: 50, color }}>
       <div
         className="absolute flex items-center font-inter font-semibold"
-        style={{ left: 45.5, top: centerY - 10, height: 20, fontSize: 17, letterSpacing: -0.3 }}
+        style={{ left: 44.8, top: centerY - 10, height: 20, fontSize: 17, letterSpacing: -0.6 }}
       >
         <span>{time}</span>
         <TimeAddon glyph={glyph} />
       </div>
       <div className="absolute flex items-center" style={{ right: 32, top: centerY - 7, height: 14, gap: 7 }}>
-        <SignalBars size={1.08} />
+        <SignalBars size={1.12} />
         <Wifi size={17} strokeWidth={2.9} />
         <BatteryGlyph charging={charging} level={level} color={charging ? color : color} />
       </div>

@@ -48,11 +48,11 @@ export function CardPaymentsScreen() {
       </div>
       <div className="absolute inset-x-0" style={{ top: 258.5 }}>
         {upcomingBilling.map((m, i) => (
-          <div key={m.month} style={{ marginTop: i ? 11 : 0 }}>
+          <div key={m.month} style={{ marginTop: i ? 13 : 0 }}>
             <BillingSection month={m} />
           </div>
         ))}
-        <div style={{ margin: '6.5px 21px 0 20.5px', borderTop: '1px solid #ececee' }} />
+        <div style={{ margin: '4.5px 21px 0 20.5px', borderTop: '1px solid #ececee' }} />
         <p style={{ margin: '24px 20.5px 0', fontSize: 14, color: '#86868a', letterSpacing: -0.4 }}>
           결제일이 주말/공휴일인 경우 다음 영업일에 출금됩니다.
         </p>
@@ -60,9 +60,9 @@ export function CardPaymentsScreen() {
         <p style={{ margin: '22px 20.5px 0', fontSize: 16.5, color: '#1b1b1d', letterSpacing: -0.4 }}>
           이전 청구서 <span style={{ fontSize: 13, color: '#55555a' }}>(2025.2.16 기준)</span>
         </p>
-        <div style={{ marginTop: 16 }}>
+        <div style={{ marginTop: 14 }}>
           {pastBilling.map((m) => (
-            <BillingSection key={m.month} month={m} />
+            <BillingSection key={m.month} month={m} dayGap={13} />
           ))}
         </div>
       </div>
