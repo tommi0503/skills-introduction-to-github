@@ -10,11 +10,11 @@ export function QuickActionList({ items, rowHeight }: { items: QuickAction[]; ro
         return (
           <div
             key={a.key}
-            className="flex items-center gap-[12px] font-poppins text-[13.5px] font-medium"
+            className="flex items-center gap-[12px] font-poppins text-[13.5px] font-semibold"
             style={{ height: rowHeight, color: theme.ink, borderTop: i ? `1px solid ${theme.hairline}` : undefined }}
           >
             <span className="flex w-[18px] justify-center">
-              {Icon ? <Icon size={17} strokeWidth={2.4} /> : <span className="text-[17px] leading-none font-bold">{a.glyph}</span>}
+              {Icon ? <Icon size={18} strokeWidth={2.6} fill={a.filled ? "currentColor" : "none"} /> : <span className="text-[17px] leading-none font-bold">{a.glyph}</span>}
             </span>
             {a.label}
           </div>

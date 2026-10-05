@@ -17,14 +17,14 @@ export function HomeScreen() {
         <Box rect={{ x: 23, y: 118, w: 331, h: 40 }}>
           <SearchField
             placeholder="Search for something tasty..."
-            iconSize={18}
-            className="h-full gap-[9px] rounded-[10px] bg-[#3d3d3d] px-[12px] text-[#8e8e8e]"
-            textClassName="font-poppins text-[13px]"
+            iconSize={20}
+            className="h-full gap-[9px] rounded-[10px] bg-[#454545] px-[12px] text-[#9d9d9d]"
+            textClassName="font-poppins text-[13.5px]"
           />
         </Box>
       </DarkHeader>
       <Box rect={{ x: 0, y: 150, w: 375, h: 178 }} className="rounded-b-[22px] bg-white" />
-      <Box rect={{ x: 23, y: 190, w: 331, h: 130 }}>
+      <Box rect={{ x: 23, y: 192, w: 331, h: 130 }}>
         <QuickActionList items={quickActions} rowHeight={43} />
       </Box>
 

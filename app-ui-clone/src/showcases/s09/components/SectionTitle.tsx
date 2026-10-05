@@ -8,7 +8,7 @@ export function SectionTitle({ title, action = 'View all' }: { title: string; ac
       <span className="font-poppins text-[17px] leading-[22px] font-semibold" style={{ color: theme.ink }}>
         {title}
       </span>
-      <span className="flex items-center gap-[6px] font-poppins text-[13px]" style={{ color: '#8d8d8d' }}>
+      <span className="flex items-center gap-[6px] font-poppins text-[13px]" style={{ color: '#7d7d7d' }}>
         {action}
         <ArrowRight size={15} strokeWidth={2} />
       </span>

@@ -20,12 +20,13 @@ export interface QuickAction {
   label: string
   icon?: LucideIcon
   glyph?: string
+  filled?: boolean
 }
 
 export const quickActions: QuickAction[] = [
   { key: 'repeat', label: 'Repeat last order', icon: RefreshCcw },
   { key: 'help', label: 'Help me choose', glyph: '?' },
-  { key: 'surprise', label: 'Surprise me', icon: ConciergeBell },
+  { key: 'surprise', label: 'Surprise me', icon: ConciergeBell, filled: true },
 ]
 
 export interface Tag {

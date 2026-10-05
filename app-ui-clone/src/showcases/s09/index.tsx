@@ -24,8 +24,8 @@ interface PhoneSlot {
 /** Board layout: a staggered wall of phones, several cropped by the canvas edge. */
 const slots: PhoneSlot[] = [
   { key: 'cart', x: -108, y: 154, Screen: CartScreen },
-  { key: 'home', x: 91.5, y: 102.5, Screen: HomeScreen },
-  { key: 'quiz', x: 91.5, y: 502, Screen: QuizScreen },
+  { key: 'home', x: 91, y: 102.5, Screen: HomeScreen },
+  { key: 'quiz', x: 91, y: 502, Screen: QuizScreen },
   { key: 'product', x: 290, y: 48, height: 496, Screen: ProductMain },
   { key: 'map', x: 489, y: 102.5, Screen: MapScreen },
   { key: 'home-2', x: 489, y: 502, Screen: HomeScreen },
