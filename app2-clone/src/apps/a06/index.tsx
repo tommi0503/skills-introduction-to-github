@@ -1,13 +1,14 @@
 import { ScreenBoard, type AppDefinition } from '../../ui'
 import { HomeScreen } from './screens/HomeScreen'
 import { SearchScreen } from './screens/SearchScreen'
+import { CategoryScreen } from './screens/CategoryScreen'
 
 function Baemin() {
   return (
     <ScreenBoard>
       <HomeScreen />
       <SearchScreen />
-      <HomeScreen />
+      <CategoryScreen />
     </ScreenBoard>
   )
 }

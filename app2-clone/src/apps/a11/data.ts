@@ -136,7 +136,7 @@ export const currentStation = 'Bahia Los Angeles'
 
 export const wind = { speed: '7', direction: 'W', gusts: 'Gusts: 15 km/h', badge: '7', swell: '0.2m' }
 
-export const windDayCurve: Extreme[] = [ex('08:28', 0.3), ex('15:32', 2.7), ex('21:54', 0.6), { hour: 28.3, height: 3.3 }]
+export const windDayCurve: Extreme[] = [{ hour: 10.5, height: 0 }, ex('15:32', 2.7), ex('21:54', 0.6), { hour: 29.5, height: 1.9 }]
 
 export const fallingTide = {
   level: '0.7m',

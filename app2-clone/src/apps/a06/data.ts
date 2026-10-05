@@ -116,7 +116,7 @@ export const results: ResultData[] = [
   },
   {
     key: 'r3', name: '영원김치찜',
-    desc: [{ text: '[]신선 한돈[]양많은 1인 한돈 고기가득 ' }, hit('김치찜')],
+    desc: [{ text: '[]신선 한돈[]양많은 1인 한돈 고기가득 ' }, hit('김치찜'), { text: ' 정식' }],
     rating: '5.0', reviews: '(521)', minOrder: '5,000원', eta: '약 17분', etaIcon: 'teal',
     thumb: { caption: '[]신선 한돈[]양많은 1인', price: '17,900원', discount: '3,000원 즉시할인' },
     tags: [[fest, club]], ad: true,

@@ -18,7 +18,7 @@ export function ResultItem({ item, className }: { item: ResultData; className?: 
         </div>
         <DiscountBar label={item.thumb.discount} className="absolute inset-x-0 bottom-0 h-[18px]" />
       </div>
-      <div className="min-w-0 flex-1 pr-[12px] tracking-[-0.3px]">
+      <div className="min-w-0 flex-1 pr-[17px] tracking-[-0.3px]">
         <p className="text-[16px] font-bold leading-[20px] text-[#111]">{item.name}</p>
         <p className="mt-[2px] truncate text-[13px] leading-[20px] text-[#8a8d92]">
           {item.desc.map((r, i) => (
