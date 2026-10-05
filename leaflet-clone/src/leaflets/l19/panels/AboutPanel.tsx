@@ -15,7 +15,7 @@ export function AboutPanel() {
         </Headline>
       </Placed>
       <Placed x={40} y={669} width={398} style={{ color: palette.onDarkSoft }}>
-        <LineStack lines={about.lines} justify className={`${fonts.paragraph} text-[19.5px] font-medium leading-[34.5px]`} />
+        <LineStack lines={about.lines} justify className={`${fonts.paragraph} text-[21px] font-medium leading-[34.5px]`} />
       </Placed>
     </Panel>
   )
