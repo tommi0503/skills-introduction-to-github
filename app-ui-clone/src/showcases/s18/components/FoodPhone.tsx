@@ -12,6 +12,7 @@ export function FoodPhone({ homeIndicator = true, children }: { homeIndicator?: 
       screenRadius={phone.radius}
       screenBackground={theme.screen}
       className="font-inter"
+      screenClassName="[&>div]:[will-change:transform]"
       style={{ boxShadow: '0 1px 2px rgba(0,0,0,0.04)' }}
     >
       <StatusBar color="#111" paddingX={40} paddingTop={18} fontSize={16.5} timeClassName="pl-[18px]" />

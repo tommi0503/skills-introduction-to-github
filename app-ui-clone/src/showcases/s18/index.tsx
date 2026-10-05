@@ -15,7 +15,7 @@ function Showcase18() {
   return (
     <Stage width={752} height={564} background={theme.stage}>
       {phones.map(({ key, x, y, rotate, Screen, homeIndicator }) => (
-        <Placed key={key} x={x} y={y} rotate={rotate}>
+        <Placed key={key} x={x} y={y} style={{ rotate: `${rotate}deg` }}>
           <FoodPhone homeIndicator={homeIndicator}>
             <Screen />
           </FoodPhone>

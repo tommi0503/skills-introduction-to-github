@@ -17,7 +17,7 @@ export function NavBar({ title, actions = [], className }: NavBarProps) {
   return (
     <div className={cn('absolute inset-x-0 flex h-[30px] items-center pr-[18px] pl-[14px]', className)} style={{ top: 73 }}>
       <ChevronLeft size={26} strokeWidth={1.6} className="text-[#222]" />
-      {title && <span className="ml-[6px] text-[19px] font-bold text-[#1a1a1a]">{title}</span>}
+      {title && <span className="ml-[6px] text-[17.5px] font-bold text-[#1a1a1a]">{title}</span>}
       <div className="ml-auto flex items-center gap-[18px]">
         {actions.map((Icon, i) => (
           <Icon key={i} size={25} strokeWidth={1.5} className="text-[#222]" />

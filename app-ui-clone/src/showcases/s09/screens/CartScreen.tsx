@@ -26,19 +26,20 @@ export function CartScreen() {
       </Box>
 
       <Box rect={{ x: 21, y: 541, w: 333, h: 48 }} className="rounded-[12px] bg-white p-[7px]">
-        <div className="flex h-full items-center justify-center rounded-[8px] font-poppins text-[13px] font-semibold" style={{ background: theme.lime, color: theme.ink }}>
-          {cart.promo}
+        <div className="flex h-full items-center justify-between rounded-[8px] px-[13px] font-poppins text-[13px] font-semibold" style={{ background: theme.lime, color: theme.ink }}>
+          <span>{cart.code}</span>
+          <span>{cart.promo}</span>
         </div>
       </Box>
 
-      <Box rect={{ x: 21, y: 604, w: 327, h: 110 }} className="font-poppins">
+      <Box rect={{ x: 21, y: 599, w: 327, h: 120 }} className="font-poppins">
         {cart.summary.map((s) => (
           <div key={s.label} className="flex h-[40px] items-center justify-between border-b text-[13px]" style={{ color: '#b0b0b0', borderColor: theme.hairline }}>
             <span>{s.label}</span>
             <span>{s.value}</span>
           </div>
         ))}
-        <div className="flex h-[30px] items-end justify-between text-[18px] font-semibold" style={{ color: theme.ink }}>
+        <div className="flex h-[38px] items-end justify-between text-[17px] font-semibold" style={{ color: theme.ink }}>
           <span>{cart.total.label}</span>
           <span>{cart.total.value}</span>
         </div>

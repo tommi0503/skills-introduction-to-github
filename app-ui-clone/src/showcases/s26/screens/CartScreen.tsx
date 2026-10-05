@@ -11,18 +11,18 @@ const card = 'mx-[17.5px] overflow-hidden rounded-[16px] bg-white'
 function DeliveryPanel() {
   return (
     <div className="absolute inset-x-0 bg-white" style={{ top: 156, height: 100 }}>
-      <div className="flex items-center pr-[25px] pl-[23.7px]" style={{ marginTop: 21 }}>
-        <span className="text-[17px] font-bold text-[#1a1a1a]">{cart.address.name}</span>
-        <span className="ml-[5px] text-[13.5px] text-[#666]">{cart.address.detail}</span>
-        <span className="ml-auto flex items-center text-[13.5px] text-[#888]">
+      <div className="flex items-center pr-[25px] pl-[23.7px]" style={{ marginTop: 19.5 }}>
+        <span className="text-[15.6px] font-bold text-[#1a1a1a]">{cart.address.name}</span>
+        <span className="ml-[5px] text-[12.6px] text-[#666]">{cart.address.detail}</span>
+        <span className="ml-auto flex items-center text-[12.6px] text-[#888]">
           {cart.address.action}
           <ChevronRight size={14} strokeWidth={1.5} className="ml-[2px] text-[#bbb]" />
         </span>
       </div>
-      <div className="flex items-center pr-[23.5px] pl-[23.7px]" style={{ marginTop: 13 }}>
-        <span className="text-[13.5px] text-[#6a5cf0] underline underline-offset-[3px]">{cart.store.name}</span>
-        <span className="text-[13.5px] text-[#777]">{cart.store.suffix}</span>
-        <span className="ml-auto text-[15px] font-bold text-[#5a6ef0]">
+      <div className="flex items-center pr-[23.5px] pl-[23.7px]" style={{ marginTop: 9 }}>
+        <span className="text-[12.6px] text-[#6a5cf0] underline underline-offset-[3px]">{cart.store.name}</span>
+        <span className="ml-[4px] text-[12.6px] text-[#777]">{cart.store.suffix.trim()}</span>
+        <span className="ml-auto text-[13px] font-bold text-[#5a6ef0]">
           {cart.store.autoMatch}
           <sup className="text-[9px]">✦</sup>
         </span>
@@ -50,27 +50,27 @@ export function CartScreen() {
 
       <DeliveryPanel />
 
-      <div className="absolute inset-x-0" style={{ top: 272 }}>
+      <div className="absolute inset-x-0" style={{ top: 270 }}>
         <div className="flex items-center pr-[24px] pl-[23.7px]">
           <CheckDot />
-          <span className="ml-[7px] text-[17px] text-[#222]">{cart.selectAll}</span>
-          <span className="ml-auto flex items-center gap-[9px] text-[13.5px] text-[#999]">
+          <span className="ml-[7px] text-[15.6px] text-[#222]">{cart.selectAll}</span>
+          <span className="ml-auto flex items-center gap-[9px] text-[12.5px] text-[#999]">
             {cart.bulkActions[0]}
             <span className="h-[10px] w-px bg-[#ddd]" />
             {cart.bulkActions[1]}
           </span>
         </div>
 
-        <div className={`${card} mt-[11px] flex h-[57px] items-center pl-[18px]`}>
+        <div className={`${card} mt-[8px] flex h-[57px] items-center pl-[18px]`}>
           <ImagePlaceholder label="coupon emblem" tone="#ece8fb" className="h-[28px] w-[28px] rounded-full" />
           <div className="ml-[11px]">
-            <p className="text-[13px] leading-[18px] font-semibold text-[#222]">{cart.coupon.title}</p>
+            <p className="text-[12.3px] leading-[18px] font-semibold text-[#222]">{cart.coupon.title}</p>
             <p className="text-[10.5px] leading-[15px] text-[#b5b5b5]">{cart.coupon.caption}</p>
           </div>
         </div>
 
         <div className={`${card} mt-[13.5px]`}>
-          <div className="flex h-[50px] items-center gap-[6px] bg-[#f4fbf3] pl-[15px] text-[13.5px] text-[#444]">
+          <div className="flex h-[50px] items-center gap-[6px] bg-[#f4fbf3] pl-[15px] text-[12.1px] text-[#444]">
             <span className="text-[17px]">{cart.promo.emoji}</span>
             <span>
               <b className="font-bold" style={{ color: cu.check }}>

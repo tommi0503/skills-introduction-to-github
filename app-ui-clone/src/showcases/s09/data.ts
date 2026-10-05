@@ -138,6 +138,7 @@ export const cart = {
     { key: 'bread', name: 'Garlic Bread', price: '$8' },
     { key: 'asparagus', name: 'TheKitchen~ Asparagus', price: '$18' },
   ] as CartLine[],
+  code: 'KITCHEN6',
   promo: 'Promocode Confirmed',
   summary: [
     { label: 'Subtotal', value: '$46.00' },
