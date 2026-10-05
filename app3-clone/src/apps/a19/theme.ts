@@ -1,0 +1,16 @@
+export const theme = {
+  ink: '#1e2035',
+  sheetBackdrop: '#c9c9c9',
+  card: '#f3f4f8',
+  mlb: '#2a3f9a',
+  nba: '#e5672d',
+  nowLine: '#4a7de8',
+  navyTop: '#0c163a',
+  navyBottom: '#070c29',
+  freeCol: '#1c2242',
+  matchTop: '#26398c',
+  matchBottom: '#2d45a6',
+  lightBlue: '#a8bcf8',
+  badge: '#2c4bd6',
+  stars: '#f5c518',
+} as const

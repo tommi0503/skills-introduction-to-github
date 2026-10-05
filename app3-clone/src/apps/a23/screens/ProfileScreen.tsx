@@ -9,7 +9,7 @@ export function ProfileScreen() {
   const { activity, reviews, trial } = profile
   return (
     <AppScreen background="#000" className="font-inter text-[#141414]">
-      <StatusBar color="#fff" paddingTop={16} paddingX={54} fontSize={15.5} />
+      <StatusBar color="#fff" paddingTop={20} paddingX={54} fontSize={15.5} className="pr-[35px]!" />
       <div className="absolute left-[16px] right-[17px] top-[58px] h-[30px] rounded-t-[12px] bg-[#e9e8e6]" />
       <div className="absolute inset-x-0 bottom-0 top-[68px] rounded-t-[14px]" style={{ background: theme.sheet }}>
         <Settings className="absolute left-[16px] top-[17px]" size={22} strokeWidth={1.6} />

@@ -1,0 +1,16 @@
+export const theme = {
+  cream: '#f8f5f0',
+  scrim: '#b3b0ac',
+  scrimCard: '#c2bfbb',
+  blue: '#3a8ddb',
+  ringGreen: '#3c5e50',
+  dotRed: '#c9493b',
+  muted: '#b4b4b4',
+  purple: '#7b83eb',
+  rose: '#a87b76',
+  roseLight: '#d6a29d',
+  roseText: '#d39a96',
+  markBlue: '#6a86b0',
+  violet: '#7b5fd0',
+  sheetDark: '#333333',
+} as const

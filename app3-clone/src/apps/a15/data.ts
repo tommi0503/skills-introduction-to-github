@@ -56,7 +56,7 @@ export const feed = {
       title: 'Popular homes in Philadelphia',
       stays: [
         { id: 'a', title: 'Apartment in Center City', price: '$228 for 2 nights', rating: '4.97', guestFavorite: true },
-        { id: 'b', title: 'Place to stay in Strawberry Mansion', price: '$122 for 2 nights', rating: '4.8', guestFavorite: false },
+        { id: 'b', title: 'Place to stay in\nStrawberry Mansion', price: '$122 for 2 nights', rating: '4.8', guestFavorite: false },
         { id: 'c', title: 'Apartment in Fishtown', price: '$240 for 2 nights', rating: '4.9', guestFavorite: false },
       ],
     },

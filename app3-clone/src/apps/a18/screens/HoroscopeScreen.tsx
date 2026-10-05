@@ -23,7 +23,7 @@ export function HoroscopeScreen() {
       <h1 className="absolute top-[422px] left-[24px] w-[322px] font-playfair text-[29px] leading-[43px] font-black tracking-[0.2px] text-white">
         {horoscope.focus}
       </h1>
-      <p className="absolute top-[587px] left-[24px] w-[342px] font-jakarta text-[21.3px] leading-[30.5px] font-medium tracking-[-0.2px] text-white">{horoscope.body}</p>
+      <p className="absolute top-[587px] left-[24px] w-[328px] font-jakarta text-[21.3px] leading-[30.5px] font-medium tracking-[-0.1px] text-white">{horoscope.body}</p>
       <div className="absolute top-[739px] left-[219px] flex gap-[8px]">
         {shareActions.map((a) => (
           <RoundAction key={a.key} action={a} size={44} iconSize={16} className="bg-white text-black" markTone="#3a3a3a" />

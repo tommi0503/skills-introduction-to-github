@@ -12,10 +12,10 @@ const TAB_X = [55, 145, 243]
 export function HomeScreen() {
   return (
     <AppScreen background="linear-gradient(180deg,#e9e9e9 0%,#f1f1f1 30%,#fcfcfc 55%,#fff 100%)" className="font-dm text-[#111]">
-      <StatusBar paddingTop={16} paddingX={54} fontSize={15.5} />
+      <StatusBar paddingTop={20} paddingX={54} fontSize={15.5} className="pr-[35px]!" />
       <div className="absolute left-[32px] top-[81px] flex items-center gap-[3px]">
-        <Apple size={24} fill={theme.ink} strokeWidth={1.5} />
-        <span className="text-[23px] font-bold tracking-[-0.6px]">{home.brand}</span>
+        <Apple size={26} fill={theme.ink} strokeWidth={1.5} />
+        <span className="text-[26px] font-bold tracking-[-0.8px]">{home.brand}</span>
       </div>
       <div className="absolute left-[298px] top-[79px] flex h-[29px] w-[62px] items-center justify-center gap-[3px] rounded-full bg-white text-[13px] font-medium">
         <Flame size={14} color={theme.flame} fill={theme.flame} />
@@ -29,10 +29,10 @@ export function HomeScreen() {
         style={{ boxShadow: '0 2px 12px rgba(0,0,0,.05)' }}
       >
         <div>
-          <div className="text-[41px] font-bold leading-none tracking-[-1px]">{home.calories.value}</div>
-          <div className="mt-[10px] text-[11px] leading-none text-[#333]">{home.calories.label}</div>
+          <div className="text-[44px] font-bold leading-none tracking-[-1px]">{home.calories.value}</div>
+          <div className="mt-[8px] text-[11px] leading-none text-[#333]">{home.calories.label}</div>
         </div>
-        <Ring size={108} stroke={7} progress={home.calories.progress} color={theme.ink} track={theme.ringTrack}>
+        <Ring size={108} stroke={8} progress={home.calories.progress} color={theme.ink} track={theme.ringTrack}>
           <span className="flex size-[38px] items-center justify-center rounded-full bg-[#f4f4f6]">
             <Flame size={15} fill={theme.ink} />
           </span>

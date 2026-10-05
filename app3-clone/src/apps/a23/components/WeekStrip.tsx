@@ -23,7 +23,7 @@ export function WeekStrip({ days }: { days: WeekDay[] }) {
       {days.map((d, i) => (
         <div key={i} className="flex w-[31px] flex-col items-center gap-[6px]">
           <Letter d={d} />
-          <span className="text-[14px]" style={{ color: d.state === 'future' ? '#a5a5a5' : '#333' }}>{d.day}</span>
+          <span className="text-[15px] font-medium" style={{ color: d.state === 'future' ? '#a5a5a5' : '#333' }}>{d.day}</span>
         </div>
       ))}
     </div>

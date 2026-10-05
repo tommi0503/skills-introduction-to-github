@@ -34,7 +34,7 @@ export const home = {
     { letter: 'M', day: 1, state: 'today' },
     { letter: 'T', day: 2, state: 'future' },
   ] as WeekDay[],
-  calories: { value: 1505, label: 'Calories left', progress: 0.55 },
+  calories: { value: 1505, label: 'Calories left', progress: 0.42 },
   macros: [
     { amount: '129g', name: 'Protein', color: theme.protein, progress: 0.3, icon: Drumstick },
     { amount: '247g', name: 'Carbs', color: theme.carbs, progress: 0.2, icon: Wheat },
