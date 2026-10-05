@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowBigRight } from 'lucide-react'
 
 export interface ArrowBadgeProps {
   size: number
@@ -6,11 +6,11 @@ export interface ArrowBadgeProps {
   color: string
 }
 
-/** Filled circle with a bold right arrow. */
+/** Filled circle with a solid block arrow. */
 export function ArrowBadge({ size, background, color }: ArrowBadgeProps) {
   return (
     <span className="inline-flex shrink-0 items-center justify-center rounded-full" style={{ width: size, height: size, background }}>
-      <ArrowRight size={size * 0.62} strokeWidth={3.4} color={color} />
+      <ArrowBigRight size={size * 0.62} strokeWidth={1} color={color} fill={color} />
     </span>
   )
 }
