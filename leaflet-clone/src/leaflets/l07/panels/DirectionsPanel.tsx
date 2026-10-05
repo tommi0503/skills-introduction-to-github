@@ -27,7 +27,7 @@ export function DirectionsPanel() {
       <TextLines className="absolute font-pretendard text-[17px] tracking-[0.01em]" style={{ left: X, top: 468 }} lines={[directions.address]} lineClassName="leading-[26px]" />
       <TextLines className="absolute font-pretendard text-[17px] tracking-[0.01em]" style={{ left: X, top: 515 }} lines={directions.transit} lineClassName="leading-[24px]" />
       <TextLines
-        className="absolute text-right font-pretendard text-[24px] font-black"
+        className="absolute text-right font-pretendard text-[26px] font-black"
         style={{ right: RIGHT, top: 738 }}
         lines={[reservation.heading]}
         lineClassName="leading-[34px]"

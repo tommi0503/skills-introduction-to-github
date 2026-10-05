@@ -18,9 +18,13 @@ export function ProgramBlock({ program, palette, className }: ProgramBlockProps)
         </h3>
         <span className="h-[2px] flex-1" style={{ background: palette.rule }} />
       </header>
-      <p className="m-0 mt-[11px] break-all text-[14.8px] leading-[25px]" style={{ color: palette.inkMuted }}>
-        {program.description}
-      </p>
+      <div className="mt-[11px] text-[14.8px] leading-[25px]" style={{ color: palette.inkMuted }}>
+        {program.description.map((line) => (
+          <p key={line} className="m-0 whitespace-nowrap">
+            {line}
+          </p>
+        ))}
+      </div>
       <div className="mt-[10px]" style={{ color: palette.inkSoft }}>
         <BulletList
           items={program.bullets}

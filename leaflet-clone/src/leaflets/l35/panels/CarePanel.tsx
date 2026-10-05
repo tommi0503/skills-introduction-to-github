@@ -24,7 +24,8 @@ export function CarePanel() {
         <SubHeading>{care.symptomsTitle}</SubHeading>
         <CheckList
           items={care.symptoms}
-          className="mt-[28px] gap-y-[20px] text-[16px] font-medium leading-[24px]"
+          className="mt-[28px] gap-y-[19px] text-[17px] font-medium leading-[24px]"
+          style={{ color: larana.inkSoft }}
         />
       </Placed>
       <ContactBand name={clinic.name} phone={clinic.phone} height={63} />

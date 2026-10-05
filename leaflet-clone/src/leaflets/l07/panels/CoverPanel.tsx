@@ -16,7 +16,7 @@ export function CoverPanel() {
       ))}
       <TextLines className={titleClass} style={{ left: 48, top: 726, color: theme.onField }} lines={cover.columns.light} lineClassName="leading-[78px]" />
       <TextLines className={titleClass} style={{ left: 136, top: 726 }} lines={cover.columns.dark} lineClassName="leading-[78px]" />
-      <TextLines className="absolute font-pretendard text-[16px] font-extrabold" style={{ left: 262, top: 872 }} lines={cover.hours} lineClassName="leading-[28px]" />
+      <TextLines className="absolute font-pretendard text-[17px] font-extrabold" style={{ left: 262, top: 871 }} lines={cover.hours} lineClassName="leading-[28px]" />
     </Panel>
   )
 }
