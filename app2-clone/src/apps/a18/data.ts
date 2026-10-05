@@ -23,6 +23,8 @@ export const library = {
     { key: 'create', label: 'Create', icon: Plus },
   ] satisfies NavItem[],
   activeNav: 'photos',
+  /** Cell widths so labels sit where the reference places them. */
+  navWidths: { photos: 89, collections: 106, create: 64 } as Record<string, number>,
 }
 
 export interface NavItem {

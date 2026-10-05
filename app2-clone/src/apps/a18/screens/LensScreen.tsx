@@ -7,7 +7,7 @@ import { theme } from '../theme'
 
 export function LensScreen() {
   return (
-    <AppScreen background={theme.dark}>
+    <AppScreen background={theme.dark} className="font-dm">
       <Chrome color="#fff" chipClassName="bg-[#5e5e5e]/95!" />
       <div className="absolute inset-x-0 top-[62px] flex h-[36px] items-center px-[17px] text-white">
         <ChevronLeft size={26} strokeWidth={2} />

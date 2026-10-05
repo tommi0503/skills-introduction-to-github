@@ -9,7 +9,7 @@ import { theme } from '../theme'
 
 export function EditorScreen() {
   return (
-    <AppScreen background={theme.dark}>
+    <AppScreen background={theme.dark} className="font-dm">
       <Chrome color="#fff" chipClassName="bg-[#5e5e5e]/95!" />
       <X size={21} strokeWidth={1.6} className="absolute top-[86px] left-[27px] text-[#e3e3e3]" />
       <Ellipsis size={20} strokeWidth={2} className="absolute top-[86px] left-[341px] text-[#e3e3e3]" />

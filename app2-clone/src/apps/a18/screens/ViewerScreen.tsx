@@ -6,7 +6,7 @@ import { viewer } from '../data'
 
 export function ViewerScreen() {
   return (
-    <AppScreen>
+    <AppScreen className="font-dm">
       <Chrome />
       <div className="absolute inset-x-0 top-[66px] flex h-[44px] items-center px-[16px] text-[#1f1f1f]">
         <ChevronLeft size={26} strokeWidth={1.8} />

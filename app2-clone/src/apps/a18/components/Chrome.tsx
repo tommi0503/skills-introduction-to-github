@@ -13,7 +13,7 @@ export function Chrome({ color = '#000', chipClassName }: ChromeProps) {
       <div className="absolute inset-x-0 top-0 z-40">
         <StatusBar
           color={color}
-          paddingTop={17}
+          paddingTop={21}
           paddingX={41}
           right={
             <div className="flex items-center gap-[6px]">

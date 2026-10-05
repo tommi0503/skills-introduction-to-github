@@ -8,7 +8,7 @@ import { library } from '../data'
 
 export function LibraryScreen() {
   return (
-    <AppScreen>
+    <AppScreen className="font-dm">
       <Chrome />
       <LibraryHeader initial={library.avatarInitial} />
       <div className="absolute inset-x-0 top-[130px] grid grid-cols-3 gap-[2px]">
@@ -22,7 +22,7 @@ export function LibraryScreen() {
       <span className="absolute top-[126px] left-[341px] flex size-[40px] items-center justify-center rounded-full bg-white/90 text-[#1f1f1f] shadow-[0_1px_6px_rgba(0,0,0,0.12)]">
         <Ellipsis size={18} strokeWidth={2} />
       </span>
-      <FloatingNav items={library.nav} activeKey={library.activeNav} />
+      <FloatingNav items={library.nav} activeKey={library.activeNav} widths={library.navWidths} />
     </AppScreen>
   )
 }
