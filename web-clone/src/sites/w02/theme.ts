@@ -6,7 +6,7 @@ export const theme = {
   faint: '#d0d6d8',
   link: '#0084d1',
   rule: '#f0f0f0',
-  sky: '#a7e9f7',
+  sky: '#e5e7eb',
   barActive: '#1f6fff',
   barIdle: '#e5e5e5',
   column: { left: 96, width: 1248 },
