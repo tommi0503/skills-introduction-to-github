@@ -6,7 +6,7 @@ import { Chip, IconTile, Lines, Text } from '../components/primitives'
 /** Section heading, platform diagram (placeholder) and four capability cards. */
 export function System({ height }: { height: number }) {
   return (
-    <section className={`relative flex flex-col items-center pt-[63px] ${fonts.sans}`} style={{ height }}>
+    <section className={`relative flex flex-col items-center pt-[61px] ${fonts.sans}`} style={{ height }}>
       <Text role="h2lg" as="h2" className="text-center">
         <Lines lines={system.title} />
       </Text>
