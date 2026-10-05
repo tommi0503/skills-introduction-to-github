@@ -41,7 +41,7 @@ export function HomeScreen() {
         <UnderlineTabs
           items={home.tabs}
           active={home.tabs[0]}
-          gap={15}
+          gap={16}
           className="h-[50px] pl-[17px]"
           itemClassName="text-[17px] tracking-[-0.4px]"
           activeClassName="font-bold text-[#111]"

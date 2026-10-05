@@ -8,7 +8,7 @@ export function TideList() {
   return (
     <AppScreen background="#000" className="font-inter text-white">
       <StatusOverlay />
-      <h1 className="absolute top-[60px] left-[16px] text-[34px] leading-[40px] font-bold tracking-[-0.5px]">Tide Guide</h1>
+      <h1 className="absolute top-[60px] left-[16px] text-[33px] leading-[40px] font-bold tracking-[-0.5px]">Tide Guide</h1>
       <div className="absolute top-[58px] right-[16px] flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#1c1c1e]">
         <Settings size={22} strokeWidth={1.8} />
       </div>

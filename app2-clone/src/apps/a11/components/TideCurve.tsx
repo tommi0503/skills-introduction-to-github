@@ -139,7 +139,7 @@ export function TideCurve({
         )
       })}
       {nowHour !== undefined && (
-        <circle cx={x(nowHour)} cy={y(level(nowHour))} r={dotRadius + 2.5} fill="#e5413a" stroke="#fff" strokeWidth={1.8} />
+        <circle cx={x(nowHour)} cy={y(level(nowHour))} r={dotRadius + 1.2} fill="#e5413a" stroke="#fff" strokeWidth={1.6} />
       )}
     </svg>
   )
