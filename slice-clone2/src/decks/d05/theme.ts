@@ -1,0 +1,20 @@
+/** d05 — sky-blue & grey binder/folder education deck. */
+export const t = {
+  bg: '#f3f3f3',
+  folder: '#a3bfca',
+  edge: '#325d7c',
+  teal: '#a0bfc7',
+  deep: '#236278',
+  slate: '#658294',
+  slateLight: '#8ea3b3',
+  head: '#f3f3f5',
+  card: '#f3f3f5',
+  after: '#d3e2e6',
+  before: '#ebebed',
+  ink: '#333',
+  text: '#555',
+  muted: '#9a9a9a',
+  icon: '#4d6f86',
+  sans: 'font-gothica1',
+  display: 'font-gothica1 font-black tracking-[-0.05em]',
+} as const
