@@ -1,0 +1,1 @@
+export const theme = { green: '#0f8a68', mid: '#5fbf8a', light: '#eaf6e0', cover: '#eef7df', beige: '#f5f1e8', band: '#90cca0', teal: '#55a899', orange: '#e8923a', ink: '#222', sub: '#666', panel: '#f6faf3' }
