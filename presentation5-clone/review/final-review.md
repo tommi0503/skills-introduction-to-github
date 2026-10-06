@@ -15,3 +15,5 @@
 자동 검사: verification.json / 최종 소스 스냅샷: final-build-state.json
 개별 비교: visual-review.json / 주 에이전트: root-review-journal.json
 ZIP 수량·크기·SHA·CRC: archive-integrity.json 및 저장소 루트 downloads JSON
+
+GitHub 재다운로드 검증도 통과했다. 실제 원격 ZIP 5개에서 CRC·SHA, PNG 1,057장의 크기·SHA 및 참고/비교 수량이 일치했다. 상세 기록은 github-download-verification.json 및 .md에 있다.
