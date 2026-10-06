@@ -10,7 +10,7 @@ function Conclusion() {
       <Abs x={50} y={36} className={`${theme.serif} text-[14px] font-bold`}>{header.left}</Abs>
       <Abs x={1230} y={36} className={`${theme.serif} text-[14px] font-bold whitespace-nowrap`} style={{ transform: 'translateX(-100%)' }}>{header.right}</Abs>
       <HLine y={25} />
-      <Abs x={50} y={110} className={`${theme.serif} text-[62px] font-bold leading-none`}>{title}</Abs>
+      <Abs x={50} y={96} className={`${theme.serif} text-[62px] font-bold leading-none`}>{title}</Abs>
       <HLine y={62} />
       {[420, 825].map((x) => <Abs key={x} x={x} y={185} w={2} h={455} style={{ background: '#d4d4d2' }} />)}
       {findings.map((f, i) => <FindingColumn key={i} f={f} x={xs[i]} />)}
