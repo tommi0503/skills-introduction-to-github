@@ -2,6 +2,7 @@ import * as Icons from 'lucide-react'
 import type { CSSProperties, ComponentType } from 'react'
 import {useId,useEffect,useState} from 'react'
 import type { Element, Slide, Deck } from './model'
+import {SvgGraphic} from './graphics'
 
 const colorAt = (e:Element,i:number) => e.colors?.[i % e.colors.length] ?? e.fill ?? '#3478f6'
 const fontAliases:Record<string,string>={'Inter':'Inter Variable','Manrope':'Manrope Variable','DM Sans':'DM Sans Variable','Archivo':'Archivo Variable','Playfair Display':'Playfair Display Variable','Pretendard':'Pretendard Variable','Bodoni Moda':'Bodoni Moda Variable','Pixelify Sans':'Pixelify Sans Variable','Roboto Condensed':'Roboto Condensed Variable','Noto Sans KR':'Noto Sans KR','Noto Serif KR':'Noto Serif KR'}
@@ -65,7 +66,8 @@ function ChipLabel({element:e}:{element:Element}) {
  return <span data-chip-label data-optical-x={shift.x} data-optical-y={shift.y} style={{transform:`translate(${shift.x}px,${shift.y}px)`}}>{e.text}</span>
 }
 function ElementView({element:e,index}:{element:Element;index:number;sourceAspect?:number}) {
-  const style:CSSProperties={left:`${e.x}%`,top:`${e.y}%`,width:`${e.w}%`,height:`${e.h}%`,color:e.color??'#171717',fontSize:e.size??32,fontWeight:e.weight??(e.kind==='chip'?500:400),fontStyle:e.fontStyle,fontVariantNumeric:e.fontVariantNumeric,fontFamily:resolveFont(e.font??'Inter, Pretendard, sans-serif'),textAlign:e.align??'left',lineHeight:e.lineHeight??1.12,letterSpacing:e.letterSpacing??0,opacity:e.opacity??1,borderRadius:e.radius??0,clipPath:e.clipPath,WebkitTextStroke:e.textStroke}
+  const style:CSSProperties={left:`${e.x}%`,top:`${e.y}%`,width:`${e.w}%`,height:`${e.h}%`,color:e.color??'#171717',fontSize:e.size??32,fontWeight:e.weight??(e.kind==='chip'?500:400),fontStyle:e.fontStyle,fontVariantNumeric:e.fontVariantNumeric,fontFamily:resolveFont(e.font??'Inter, Pretendard, sans-serif'),textAlign:e.align??'left',lineHeight:e.lineHeight??1.12,letterSpacing:e.letterSpacing??0,opacity:e.opacity??1,borderRadius:e.radius??0,clipPath:e.clipPath,WebkitTextStroke:e.textStroke,maskImage:e.mask,WebkitMaskImage:e.mask,filter:e.filter,mixBlendMode:e.blendMode}
+  if(e.kind!=='text'&&e.rotate){style.transform=`rotate(${e.rotate}deg)`;style.transformOrigin='center'}
   let content
   if(e.kind==='text') {
     const stretch=e.scaleX??1
@@ -86,6 +88,7 @@ function ElementView({element:e,index}:{element:Element;index:number;sourceAspec
   if(e.kind==='donut') content=<Donut element={e}/>
   if(e.kind==='table') content=<table className="data-table"><tbody>{e.rows?.map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j} style={{borderColor:e.border??'#ddd',background:i===0?e.fill:undefined}}>{cell}</td>)}</tr>)}</tbody></table>
   if(e.kind==='path')content=<VectorPath element={e}/>
+  if(e.kind==='graphic')content=<SvgGraphic element={e}/>
   return <div className={`element element-${e.kind}`} style={style} data-element-index={index} data-element-kind={e.kind} data-allow-clip={e.allowClip?'true':undefined} data-clip-reason={e.clipReason} role={e.kind==='image'?'img':undefined} aria-label={e.kind==='image'?(e.text??'Image placeholder'):undefined}>{content}</div>
 }
 export function sourceVisibility(deck:Deck,index:number) {

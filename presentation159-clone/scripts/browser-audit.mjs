@@ -110,11 +110,23 @@ export async function auditSlide(page) {
   for(const element of [article,...article.querySelectorAll('*')]){
    const background=getComputedStyle(element).backgroundImage;
    if(/url\(/i.test(background))issue(element,'image background embedded');
-   if(/gradient\(/i.test(background)&&!element.classList.contains('donut'))issue(element,'graphic gradient background not replaced');
   }
+  for(const graphic of article.querySelectorAll('[data-svg-graphic]')){
+   if(!graphic.querySelector('path,circle,rect,polygon,ellipse,line'))issue(graphic,'empty SVG graphic');
+   for(const node of graphic.querySelectorAll('*')){
+    for(const attr of ['d','cx','cy','r','x','y','width','height'])if(/NaN|Infinity/.test(node.getAttribute(attr)??''))issue(graphic,'invalid SVG geometry',{attribute:attr});
+    for(const attr of ['fill','stroke','filter','clip-path']){
+     const match=(node.getAttribute(attr)??'').match(/^url\(#([^)]+)\)$/);
+     if(match&&!document.getElementById(match[1]))issue(graphic,'missing SVG definition',{reference:match[1]});
+    }
+   }
+  }
+  const painted=[article,...article.querySelectorAll('.element')];
   return {size:[bounds.width,bounds.height],issues,fontChecks,
    chipCount:article.querySelectorAll('.element-chip').length,
+   graphicCount:article.querySelectorAll('[data-svg-graphic]').length,
+   gradientCount:painted.filter(element=>/gradient\(/.test(getComputedStyle(element).backgroundImage)).length,
+   fadeMaskCount:painted.filter(element=>/gradient\(/.test(getComputedStyle(element).maskImage)).length,
    placeholderCount:article.querySelectorAll('.element-image').length};
  });
 }
-

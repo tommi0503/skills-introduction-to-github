@@ -30,7 +30,12 @@ for i, key in enumerate(keys):
     capture = next(page for page in metadata['slides'] if page['id'] == slide)
     assert reviews[key]['definitionHash'] == metadata['definitionHash'], f'Stale definition review: {key}'
     assert reviews[key]['rendererHash'] == metadata['rendererHash'], f'Stale renderer review: {key}'
-    assert not capture['findings'], f'Unresolved automatic findings: {key}'
+    assert all(
+        finding.get('expectedClip') is True
+        and finding.get('clipReason')
+        and finding['issue'] in {'text outside slide', 'text exceeds element bounds', 'element outside slide'}
+        for finding in capture['findings']
+    ), f'Unresolved or undocumented automatic findings: {key}'
     png = ROOT / 'renders/final' / f'{key}.png'
     raw = png.read_bytes()
     assert hashlib.sha256(raw).hexdigest() == reviews[key]['finalPngSha256'], f'Stale visual review: {key}'

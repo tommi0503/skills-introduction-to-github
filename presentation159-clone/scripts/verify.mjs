@@ -8,7 +8,7 @@ import {auditSlide} from './browser-audit.mjs'
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 process.chdir(root)
 const hash=value=>createHash('sha256').update(value).digest('hex')
-const rendererFiles=['src/ui.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts','scripts/browser-audit.mjs']
+const rendererFiles=['src/ui.tsx','src/graphics.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts','scripts/browser-audit.mjs']
 const rendererHash=hash((await Promise.all(rendererFiles.map(file=>readFile(file,'utf8')))).join('\n'))
 const manifest=JSON.parse(await readFile('public/reference/manifest.json','utf8'))
 const inventory=JSON.parse(await readFile('provenance/input-inventory.json','utf8'))
@@ -31,7 +31,7 @@ try{
  await page.goto('http://127.0.0.1:'+server.httpServer.address().port,{waitUntil:'networkidle'})
  const decks=await page.evaluate(async()=>{const module=await import('/src/registry.ts');return module.decks})
  if(decks.length!==53||decks.reduce((sum,deck)=>sum+deck.slides.length,0)!==159)throw Error('Incomplete source data')
- let chips=0,placeholders=0
+ let chips=0,placeholders=0,graphics=0,gradients=0,fadeMasks=0
  for(const original of manifest){
   const deck=decks.find(item=>item.id===original.id)
   if(!deck||JSON.stringify(deck.slides.map(s=>s.id))!==JSON.stringify(original.slides.map(s=>s.id)))throw Error('Source order mismatch '+original.id)
@@ -42,6 +42,7 @@ try{
    if(slide.pngSha256!==hash(await readFile(slide.file)))throw Error('Final PNG bytes changed')
    if(slide.referenceHash!==hash(await readFile(slide.reference)))throw Error('Reference changed')
    chips+=slide.chipCount;placeholders+=slide.placeholderCount
+   graphics+=slide.graphicCount??0;gradients+=slide.gradientCount??0;fadeMasks+=slide.fadeMaskCount??0
    findings.push(...slide.findings.map(f=>({...f,deck:deck.id,slide:slide.id,phase:'final capture'})))
   }
  }
@@ -70,7 +71,7 @@ try{
   decks:53,slides:159,canvas:[1280,720],sourceImages:159,sourceBytesPreserved:true,
   latestDefinitionHashesMatch:true,latestSharedRendererHash:rendererHash,
   pngHashesMatch:true,productionGallery:true,productionComparisonNavigation:true,
-  productionPagesValidated:productionPages.length,chipCount:chips,placeholderCount:placeholders,
+  productionPagesValidated:productionPages.length,chipCount:chips,placeholderCount:placeholders,svgGraphicCount:graphics,gradientCount:gradients,fadeMaskCount:fadeMasks,
   unexpectedFindings:unexpected,expectedClipping:findings.filter(f=>f.expectedClip),pageErrors:errors,
   failedAssets,fontChecks,productionPages,checkedAt:new Date().toISOString()}
  await writeFile('review/verification.json',JSON.stringify(report,null,2)+'\n')
@@ -81,4 +82,3 @@ try{
  await server.close()
  await new Promise(resolve=>production.httpServer.close(resolve))
 }
-

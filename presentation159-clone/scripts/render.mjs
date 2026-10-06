@@ -10,7 +10,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const args=process.argv.slice(2),round=args.find(a=>a.startsWith('--round='))?.slice(8)??'final',ids=args.filter(a=>!a.startsWith('--'))
 if(!/^[a-z0-9-]+$/.test(round))throw Error('Invalid round')
 const hash=value=>createHash('sha256').update(value).digest('hex')
-const rendererFiles=['src/ui.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts','scripts/browser-audit.mjs']
+const rendererFiles=['src/ui.tsx','src/graphics.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts','scripts/browser-audit.mjs']
 const rendererHash=hash((await Promise.all(rendererFiles.map(file=>readFile(path.join(root,file),'utf8')))).join('\n'))
 await mkdir(path.join(root,'renders',round),{recursive:true})
 await mkdir(path.join(root,'comparisons',round),{recursive:true})
@@ -51,7 +51,7 @@ try{
    if(referenceHash!==original.slides[index].sha256)throw Error('Reference bytes changed')
    meta.slides.push({id:slide.id,title:slide.title,file,reference,referenceHash,
     pngSha256:hash(await readFile(path.join(root,file))),elementCount:slide.elements.length,
-    chipCount:audit.chipCount,placeholderCount:audit.placeholderCount,fontChecks:audit.fontChecks,findings:audit.issues})
+    chipCount:audit.chipCount,placeholderCount:audit.placeholderCount,graphicCount:audit.graphicCount,gradientCount:audit.gradientCount,fadeMaskCount:audit.fadeMaskCount,fontChecks:audit.fontChecks,findings:audit.issues})
   }
   if(errors.length)throw Error(errors.join('\n'))
   await writeFile(path.join(root,'comparisons',round,deck.id+'.json'),JSON.stringify(meta,null,2)+'\n')
@@ -62,4 +62,3 @@ try{
  if(browser)await browser.close()
  await server.close()
 }
-

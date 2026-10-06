@@ -1,4 +1,20 @@
-export type Kind = 'text' | 'box' | 'image' | 'icon' | 'line' | 'bars' | 'donut' | 'table' | 'path' | 'chip'
+export type Kind = 'text' | 'box' | 'image' | 'icon' | 'line' | 'bars' | 'donut' | 'table' | 'path' | 'chip' | 'graphic'
+export interface SvgShape {
+ d?:string; x?:number; y?:number; width?:number; height?:number; rx?:number; ry?:number;
+ cx?:number; cy?:number; r?:number; x1?:number; y1?:number; x2?:number; y2?:number;
+ fill?:string; stroke?:string; strokeWidth?:number; opacity?:number; transform?:string;
+ strokeLinecap?:'round'|'butt'|'square'; strokeLinejoin?:'round'|'miter'|'bevel'; strokeDasharray?:string;
+}
+export interface SvgGradient {
+ id:string; type?:'linear'|'radial'; x1?:string; y1?:string; x2?:string; y2?:string;
+ cx?:string; cy?:string; r?:string; stops:{offset:number|string;color:string;opacity?:number}[];
+}
+export interface GraphicOptions {
+ color?:string; accent?:string; background?:string; spacing?:number; stroke?:number;
+ seed?:number; variant?:string; viewBox?:string; direction?:string; density?:number;
+ paths?:SvgShape[]; circles?:SvgShape[]; rects?:SvgShape[]; lines?:SvgShape[]; gradients?:SvgGradient[];
+ [key:string]:unknown;
+}
 export interface TextRun { text:string; color?:string; weight?:number; font?:string; fontStyle?:'normal'|'italic' }
 export interface Point { x:number; y:number }
 export interface Element {
@@ -12,6 +28,8 @@ export interface Element {
   points?: Point[]; curved?: boolean; closed?: boolean; cyclic?:boolean; dashed?: boolean; arrow?: boolean;
   labelSize?:number; valueSize?:number; showValues?:boolean; max?:number;
   clipPath?:string; valign?:'top'|'middle'|'bottom'; padding?:number; shadow?:string; allowClip?:boolean; clipReason?:string;
+  mask?:string; filter?:string; blendMode?:'normal'|'multiply'|'screen'|'overlay'|'soft-light'|'hard-light';
+  graphic?:string; graphicOptions?:GraphicOptions;
 }
 export interface Slide { id: string; title: string; background: string; elements: Element[]; sourceAspect?:number }
 export interface Region { x: number; y: number; w: number; h: number }
