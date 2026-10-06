@@ -11,10 +11,16 @@ export function SystemCard({ label, x }: { label: string; x: number }) {
   )
 }
 
+/**
+ * Horizontal bar with a right-aligned value. The label is drawn once over the whole row with
+ * mix-blend "difference", so it stays legible (white on the bar, black on the track) even when the
+ * value is wider than a short bar.
+ */
 export function BarRow({ value, w, y }: { value: string; w: number; y: number }) {
   return (
-    <Abs x={33} y={y} w={821} h={70} className="bg-white">
-      <div className="absolute right-0 top-0 flex h-full items-center justify-end bg-black pr-1 text-[60px] font-light leading-none text-white" style={{ width: w, letterSpacing: '-0.02em' }}>{value}</div>
+    <Abs x={33} y={y} w={821} h={70} className="isolate bg-white">
+      <div className="absolute right-0 top-0 h-full bg-black" style={{ width: w }} />
+      <div className="absolute inset-0 flex items-center justify-end pr-1 text-[60px] font-light leading-none text-white mix-blend-difference" style={{ letterSpacing: '-0.02em' }}>{value}</div>
     </Abs>
   )
 }

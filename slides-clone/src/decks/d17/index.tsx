@@ -35,7 +35,7 @@ const Ideas = () => (
     <Glow x={-80} y={-60} w={420} h={180} c="#1a1440" />
     <Crystal x={790} y={0} w={490} h={530} />
     <Logo x={52} y={100} size={30} />
-    <Abs x={55} y={330} className="text-[82px] font-medium leading-[70px] tracking-[-0.02em]">
+    <Abs x={55} y={300} className="text-[82px] font-medium leading-[84px] tracking-[-0.02em]">
       <div>{ideas.lines[0]}</div><div className="text-[#9a9a9f]">{ideas.lines[1]}</div>
       <div><span className="text-[#9a9a9f]">to </span>Completion</div>
     </Abs>
@@ -50,7 +50,7 @@ const Stat = () => (
     <Abs x={30} y={100} className="text-[200px] font-medium leading-[240px] tracking-[-0.05em]">
       {stat.value[0]}<span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(90deg,#c9b8ff,#7646ff)' }}>{stat.value[1]}</span>
     </Abs>
-    <Abs x={320} y={316} className="text-[11px] text-white/50">{stat.caption}</Abs>
+    <Abs x={320} y={350} className="text-[11px] text-white/50">{stat.caption}</Abs>
     <Abs x={702} y={385} className="text-[14px]">{stat.head}</Abs>
     <Abs x={702} y={440} w={540} className="text-[30px] leading-[37px] tracking-[-0.01em]">{stat.body}</Abs>
   </Slide>
@@ -114,8 +114,8 @@ const Prompt = () => (
 
 const Layers_ = () => (
   <Slide background="#f1f1f2" className="font-manrope">
-    <Logo x={5} y={28} size={14} color="#050507" />
-    <Abs x={-25} y={420} className="text-[34px] font-medium leading-[43px]">
+    <Logo x={52} y={28} size={14} color="#050507" />
+    <Abs x={52} y={420} className="text-[34px] font-medium leading-[43px]">
       <div className="text-[#9a9a9f]">{layers.title[0]}</div><div className="text-[#9a9a9f]">{layers.title[1]}</div>
       <div>{layers.title[2]}</div><div className="font-semibold">{layers.title[3]}</div>
     </Abs>
@@ -133,8 +133,8 @@ const Layers_ = () => (
 
 const Signals = () => (
   <Slide background={brand.ink} className="font-manrope text-white">
-    <Logo x={5} y={28} size={14} />
-    <Abs x={-60} y={110} className="text-[30px] leading-[43px] tracking-[-0.01em]">
+    <Logo x={52} y={28} size={14} />
+    <Abs x={52} y={110} className="text-[30px] leading-[43px] tracking-[-0.01em]">
       <div>{signals.title[0]}</div><div className="text-white/70">{signals.title[1]}</div>
     </Abs>
     {signals.boxes.map((b, i) => (

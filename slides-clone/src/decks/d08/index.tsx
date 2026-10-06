@@ -59,7 +59,7 @@ function Market() {
           <T x={22} y={36 + i * 24} className="text-[4px] text-gray-500">{m.value}</T>
         </div>
       ))}
-      <T x={10} y={142} w={125} h={32} className="rounded-[3px] bg-[#eef2fb] p-[4px]">
+      <T x={10} y={140} w={125} className="rounded-[3px] bg-[#eef2fb] p-[4px]">
         <div className="text-[9px] font-bold text-[#2f6df6]">2M+ 32B companies annually</div>
         <div className="text-[3.6px] text-gray-500">looking for clients and learning to sell through MVP platforms like Lovable</div>
       </T>

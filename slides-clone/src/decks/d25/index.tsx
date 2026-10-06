@@ -45,12 +45,12 @@ function Insight() {
     <Slide background={theme.cream} className="font-dm">
       <Meta page="004" />
       <Abs x={0} y={0} w={1280} h={560} className="bg-white" />
-      <Abs x={359} y={30} className="text-[120px] font-bold leading-none" style={{ color: theme.lime }}>“</Abs>
+      <Abs x={420} y={22} className="text-[120px] font-bold leading-none" style={{ color: theme.lime }}>“</Abs>
       <Abs x={54} y={48} className="text-[40px] leading-[56px]" style={{ color: theme.ink }}>{insight.quote.map((l) => <div key={l}>{l}</div>)}</Abs>
       <ImagePlaceholder className="absolute rounded-full" style={{ left: 54, top: 372, width: 44, height: 44 }} />
       <Abs x={112} y={380} className="text-[22px]" style={{ color: theme.ink }}>{insight.author}</Abs>
       <Abs x={715} y={100} className="font-spacemono text-[135px] font-bold leading-none" style={{ color: theme.ink }}>{insight.big}</Abs>
-      <ImagePlaceholder className="absolute" style={{ left: 0, top: 400, width: 1280, height: 220 }} />
+      <ImagePlaceholder className="absolute" style={{ left: 0, top: 440, width: 1280, height: 181 }} />
       <Abs x={0} y={621} w={1280} h={2} style={{ background: theme.dark }} />
       {insight.months.map(([m, x]) => <Abs key={m} x={x - 60} y={642} w={120} className="text-center text-[22px]" style={{ color: theme.ink }}>{m}</Abs>)}
     </Slide>
@@ -63,7 +63,7 @@ function Impact() {
       <Abs x={0} y={0} w={1280} h={513} style={{ background: theme.lime }} />
       <Meta page="009" />
       {[524, 969].map((x) => <Abs key={x} x={x} y={0} w={1} h={513} style={{ background: theme.dark, opacity: 0.5 }} />)}
-      <Abs x={54} y={72} className="whitespace-nowrap font-spacemono text-[160px] leading-[157px]" style={{ color: theme.ink }}>
+      <Abs x={54} y={72} className="whitespace-nowrap font-spacemono text-[160px] leading-[172px]" style={{ color: theme.ink }}>
         <div>{impact.title[0]}</div><div className="text-right" style={{ width: 1161 }}>{impact.title[1]}</div>
       </Abs>
       <Abs x={1015} y={136} w={200} className="text-right text-[24px]" style={{ color: theme.ink }}>{impact.year}</Abs>
