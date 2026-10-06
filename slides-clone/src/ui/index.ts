@@ -1,0 +1,7 @@
+export { cn } from './core/cn'
+export { SLIDE, BOARD, boardSize } from './core/geometry'
+export type { DeckDefinition } from './core/deck'
+export { Slide, type SlideProps } from './core/Slide'
+export { Board } from './core/Board'
+export { Abs, type AbsProps } from './core/Abs'
+export { ImagePlaceholder, type ImagePlaceholderProps } from './media/ImagePlaceholder'
