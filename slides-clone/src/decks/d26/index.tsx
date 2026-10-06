@@ -28,7 +28,7 @@ function Analysis() {
     <Slide background="#fff" className="font-geist">
       <Abs x={0} y={0} w={872} h={720} style={{ background: theme.mid }} />
       {analysis.rows.map(([v, w], i) => <BarRow key={v} value={v} w={w} y={33 + i * 83} />)}
-      <Abs x={1053} y={355} w={190} className="text-[12px] leading-[15px]">
+      <Abs x={1053} y={300} w={190} className="text-[11px] leading-[14px]">
         <div className="mb-3 text-[13px] font-semibold">{analysis.heading}</div>
         {analysis.paras.map((p) => <p key={p} className="mb-3" style={{ color: '#444' }}>{p}</p>)}
       </Abs>

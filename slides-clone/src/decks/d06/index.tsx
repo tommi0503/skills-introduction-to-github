@@ -43,7 +43,7 @@ function About() {
       <Nav y={11} color="#fff" xs={[270, 0]} page={{ x: 342, t: 'About Us' }} />
       <T x={502} y={11} className="text-[4px] text-white">02</T>
       <Ph x={16} y={55} w={160} h={226} r={3} tone="#252725" />
-      <T x={205} y={54} className="whitespace-nowrap text-[10.5px] font-medium leading-[15px] text-white">{lines.map((l) => <div key={l}>{l}</div>)}</T>
+      <T x={205} y={54} w={310} className="text-[10.5px] font-medium leading-[15px] text-white">{lines.join(' ')}</T>
       <div className="absolute rounded-full" style={{ left: 205, top: 162, width: 303, height: 45, background: theme.card }} />
       {Array.from({ length: total }, (_, i) => (
         <div key={i} className="absolute rounded-full" style={{ left: 212 + i * 24.4, top: 169, width: 17, height: 31, background: i < filled ? theme.lime : theme.grey }} />

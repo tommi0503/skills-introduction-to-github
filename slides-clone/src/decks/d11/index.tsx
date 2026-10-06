@@ -15,7 +15,7 @@ function Cover() {
       <T x={243} y={17} className="text-[5px]">{cover.header[1]}</T>
       <T x={420} y={17} className="text-[5px]">{cover.header[2]}</T>
       <Ph x={37} y={151} w={65} h={83} radius="8px" tone="#d1d5db" />
-      <Pixel x={133} y={125} size={40} lh={40}>{cover.title.map((l) => <div key={l}>{l}</div>)}<div style={{ color: theme.sky }}>{cover.accent}</div></Pixel>
+      <Pixel x={133} y={128} size={37} lh={40}>{cover.title.map((l) => <div key={l}>{l}</div>)}<div style={{ color: theme.sky }}>{cover.accent}</div></Pixel>
     </Frame>
   )
 }

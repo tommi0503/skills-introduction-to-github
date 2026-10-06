@@ -1,9 +1,9 @@
 export const brand = { name: 'YARD', tagline: 'CREATIVE GATHERING PLACE', url: 'YARD.COM', left: 'YARD © 2026', right: '@YARD.CREATIVE' }
 export const whoWeAre = ['We support, develop, and collaborate with', 'creators while helping brands connect', 'with audiences through social platforms']
 export const stats = [
-  { value: '10B+', label: 'TOTAL VIEWS GENERATED IN 2021', x: 5, y: 112, lx: 5, ly: 170 },
-  { value: '100M+', label: 'GEN Z AUDIENCE REACH', x: 270, y: 112, lx: 270, ly: 176 },
-  { value: '1B', label: 'AUDIENCE INTERACTIONS IN 2021', x: 155, y: 188, lx: 154, ly: 238 },
+  { value: '10B+', label: 'TOTAL VIEWS GENERATED IN 2021', x: 5, y: 106, lx: 5, ly: 171 },
+  { value: '100M+', label: 'GEN Z AUDIENCE REACH', x: 270, y: 106, lx: 270, ly: 176 },
+  { value: '1B', label: 'AUDIENCE INTERACTIONS IN 2021', x: 155, y: 170, lx: 154, ly: 248 },
 ]
 export const founders = {
   heading: ['LEADERSHIP WITH PROVEN', 'EXPERIENCED FOUNDERS WITH A', 'BACKGROUND IN TECHNOLOGY AND', 'THE CREATOR ECONOMY'],

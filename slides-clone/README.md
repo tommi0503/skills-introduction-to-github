@@ -10,4 +10,5 @@
 ```bash
 cd slides-clone && npm install && npm run dev      # #/ 갤러리, #/NN 덱 보드
 node scripts/screenshot.mjs [NN] && python3 scripts/view.py NN   # 렌더 + 레퍼런스 비교
+node scripts/audit.mjs [NN]   # 레이아웃 검수: 슬라이드 밖으로 나간 텍스트·박스 넘침·텍스트 겹침·잘림 자동 검출
 ```

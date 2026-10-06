@@ -2,7 +2,9 @@ import { Abs, ImagePlaceholder, Slide, type DeckDefinition } from '../../ui'
 import { GradText, SynthHeader } from '../d12/shared'
 import { roadmap as R } from './data'
 
-const OFFSET = 1255 // slide width + visual gap: the title runs across both slides
+// The title runs across both slides; slide 2 continues it after the 1280px slide plus the
+// ~66px gap that separates the two slides in the reference (letters falling in the gap are hidden).
+const OFFSET = 1280 + 66
 
 function Title({ dx, dark }: { dx: number; dark?: boolean }) {
   return (

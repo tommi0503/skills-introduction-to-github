@@ -9,8 +9,8 @@ function Title() {
     <Frame>
       <Header left={brand.left} num="01" right={brand.right} />
       <T x={234} y={96} className="font-archivo text-[34px] font-black leading-none" style={{ transform: 'translateX(-50%) scaleX(1.25)' }}>{brand.name}</T>
-      <Cond x={34} y={128} w={400} s={0.63} size={36} lh={30} align="center">{brand.tagline}</Cond>
-      <T x={234} y={179} className="font-archivo text-[4.5px] font-bold" style={{ transform: 'translateX(-50%)' }}>● {brand.url}</T>
+      <Cond x={34} y={132} w={400} s={0.63} size={36} lh={34} align="center">{brand.tagline}</Cond>
+      <T x={234} y={182} className="font-archivo text-[4.5px] font-bold" style={{ transform: 'translateX(-50%)' }}>● {brand.url}</T>
       {[0, 1, 2, 3].map((i) => <Ph key={i} x={165 + i * 35} y={219} w={34} h={34} />)}
     </Frame>
   )
@@ -19,8 +19,8 @@ function Founders() {
   return (
     <Frame>
       <Header left="FOUNDERS" num="03" />
-      <T x={205} y={34} className="font-archivo text-[11.5px] font-extrabold leading-[13px]" style={{ transform: 'translateX(-50%)', textAlign: 'center' }}>{founders.heading.map((l) => <div key={l}>{l}</div>)}</T>
-      <Cond x={0} y={82} w={316} s={0.62} size={25} lh={20} align="right">{founders.sub.map((l) => <div key={l}>{l}</div>)}</Cond>
+      <T x={150} y={30} w={270} className="font-archivo text-[11.5px] font-extrabold leading-[13px]" style={{ textAlign: 'right' }}>{founders.heading.map((l) => <div key={l}>{l}</div>)}</T>
+      <Cond x={104} y={86} w={316} s={0.62} size={25} lh={21} align="right">{founders.sub.map((l) => <div key={l}>{l}</div>)}</Cond>
       {founders.people.map((p) => (
         <div key={p.name}>
           <Ph x={p.x} y={134} w={58} h={65} />
@@ -52,7 +52,7 @@ function Build() {
     <Frame>
       <Header left="WHAT WE'VE BUILD" num="04" />
       <T x={5} y={46} className="font-archivo text-[9px] font-extrabold leading-[10px]" style={{ transform: 'scaleX(1.1)', transformOrigin: 'left' }}>{build.heading.map((l) => <div key={l}>{l}</div>)}</T>
-      <Cond x={5} y={69} w={330} s={0.7} size={25} lh={20.5}>{build.copy.map((l) => <div key={l}>{l}</div>)}</Cond>
+      <Cond x={5} y={72} w={330} s={0.7} size={25} lh={20.5}>{build.copy.map((l) => <div key={l}>{l}</div>)}</Cond>
       {build.cards.map((c, i) => (
         <div key={c.title}>
           <Ph x={5 + i * 116} y={163} w={113} h={93} />
