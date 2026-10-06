@@ -1,0 +1,26 @@
+# c01–c06 visual review
+
+63 originals (1600×900) individually inspected before implementation. Each source has one complete slide; adapter renders every slide at1280×720. Reusable frame/card/header/cover/chart helpers hold common UI, with slide data providing actual content. No reference screenshot embedded in output. Forbidden slides-clone untouched.
+
+Two comparison rounds per deck, with every individual original/render pair inspected in both rounds: c01 s01–s10, c02 s01–s13, c03 s01–s10, c04 s01–s10, c05 s01–s10, c06 s01–s10. Failed Vite font access capture occurred before comparison and was retried after root fixed font asset permissions. Review-2 capture reported zero overflow findings for all six decks. Late second-pass edits are checked by TypeScript; parent final render is the reserved third QA pass.
+
+## c01 (10 slides)
+First pass: rounded Jua font differed from angular source lettering; source heading glyphs were narrow and undersized in replacement font. Switched to Do Hyeon. Second pass: increased cover font156→168native pixels, adjusted cover y195→186/leading1.08→1.03/width factor.98; header78→84. Shared chip centering retained. Remaining: original irregular custom Korean lettering has no exact installed match, so shape/weight differ. Photographs and illustrated/background areas are gray per user rule; sticker icon outlines approximate with lucide.
+
+## c02 (13 slides)
+First pass: s05 image placeholder was layered above readable heading; moved placeholder before header. Header width factor1.075, y128→123; cover headline width1.08. s03 bullet offset74→57 preserves original vertical separation. Second pass verified all13 pairs including s09 problem/goal columns, s10–11 step staggering, s12 blue bars/axis values and +142%/+50%, and s13 contact content. Remaining: original gradient decorations become gray; condensed label and body font metric differences remain a few pixels. Steps and chart remain editable primitives.
+
+## c03 (10 slides)
+First pass: manually broken source paragraphs wrapped again, disrupting s03/s05/s06/s08 spacing. Kept source explicit breaks with nowrap and widthfactor.94. Measured independent subtitle starts for each header rather than guessed title length. Cover date23px and280px box prevent accidental second line. s04 large numbers61px and small units26px now separate; late second pass shifted units10–11px right to remove collision. Replaced colored emoji checks with monochrome check glyphs. Verified s07 curves/points, s08 all target-table rows and s09 captions individually. Remaining: all gradient header/cover background areas gray; source white titles intentionally remain white and consequently have reduced contrast. Lucide summary pictograms have simpler forms than originals.
+
+## c04 (10 slides)
+First pass: s07 body extra wraps reached checklist; source manual breaks preserved with widthfactor.94. Cover headline y302→287,widthfactor1.07. Inspected all second pairs including s04 four process panels, s06 testimonials, s07 five-point curved chart and source checklist, s09 Q&A. Remaining: gradient chips/background gray as required, making their original white labels low-contrast. Icons use lucide instead of exact source custom stroke drawings; photo shapes retain geometry but are gray. Body font shapes differ subtly from original narrow Korean face.
+
+## c05 (10 slides)
+First pass: s03 quote collided with wrapping paragraph, s06 content gained lines, s08 SWOT panels gained wraps and s09 single-line descriptions wrapped. Kept source23px manual line breaks, widthfactor.94. Header y193→187; cover font111→104 and y348→337; English label41→39. Second pass verified all panels, source 'Contests' spelling, all roadmap2030/2032/2035/2038/2040 entries, SWOT four descriptions and contact strip. Late pass replaces source filled blue circle/white-check badges with real vector geometry. Remaining: gradient background/3D folders/glass illustrations gray; lucide arrows and font metrics differ slightly. Foreground cards, labels and graph remain real primitives.
+
+## c06 (10 slides)
+First pass: extra wrapping changed card heights/body spacing; kept22/23/25px explicit lines with widthfactor.93. Replaced overly short square lucide paperclip with tall simple native39×138 vector. Second pass inspected all10 pairs: s02 indices, s03 three labels, s04 conclusion strip, s05 four circleicons, s06 four usage cards, s07 conceptual rows, s08 line graph and conclusion, s09 effects and s10 contacts. Late pass s06 body widthfactor.85 restores two source lines inside card; filled source check badges now filled blue circle/white vector checks. Remaining: paperclip deliberately upright to comply with no tilt; source clip is slightly tilted. Lucide pictograms approximate originals, and some bold title baselines differ slightly. Grid, borders, chips, graph and all paragraph content are real editable elements.
+
+## Verification scope
+TypeScript no-emit check passes after final edits. Both capture rounds retained under comparisons/review-1 and comparisons/review-2. Every slide manually compared individually; zero automated findings does not imply pixel identity. Remaining visual differences above are explicitly documented, principally required placeholder substitutions and unavailable exact source fonts. Parent owns final output capture and third QA.
