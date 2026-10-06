@@ -1,0 +1,1 @@
+export const theme = { k: 1280 / 315, blue: '#2f64e8', navy: '#1a2340', soft: '#eef3fe', line: '#d5def4', grey: '#6b7280', footer: 'Proprietary & Confidential | All Rights Reserved. Cycode Ltd. 2024' }
