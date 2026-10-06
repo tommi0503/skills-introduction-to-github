@@ -3,8 +3,10 @@ from PIL import Image,ImageDraw,ImageOps
 root=pathlib.Path(__file__).resolve().parents[1]
 out=pathlib.Path('/workspace/shared/downloads');out.mkdir(parents=True,exist_ok=True)
 decks=[json.loads(p.read_text()) for p in sorted((root/'comparisons/final').glob('p??.json'))]
-assert len(decks)==36
-assert sum(len(d['slides']) for d in decks)==36
+sources=json.loads((root/'public/reference/manifest.json').read_text())
+assert [d['id'] for d in decks]==[d['id'] for d in sources]
+slide_count=sum(len(d['slides']) for d in decks)
+assert slide_count==sum(len(d['slides']) for d in sources)
 verification=json.loads((root/'review/verification.json').read_text());assert verification['status']=='passed'
 preview=Image.new('RGB',(1600,((len(decks)+3)//4)*270),'#e9ecf0');draw=ImageDraw.Draw(preview)
 source_manifest={d['id']:d for d in json.loads((root/'public/reference/manifest.json').read_text())}
@@ -29,11 +31,11 @@ with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
  z.write(out/'presentation3-clone-preview.jpg','preview.jpg')
  z.write(root/'NEXT_SESSION_PROMPT.md','NEXT_SESSION_PROMPT.md')
  z.writestr('manifest.json',json.dumps(manifest,ensure_ascii=False,indent=2))
- z.writestr('README.txt','''Presentation 3 Clone — 36개 화면
+ z.writestr('README.txt',f'''Presentation 3 Clone — {len(decks)}개 화면
 
-slides/: 동일한1280×720크기의 개별 PNG36개
-templates/: 템플릿별 전체 슬라이드 모음36개
-comparisons/: 원본과 구현을 나란히 대조한 이미지36개
+slides/: 동일한1280×720크기의 개별 PNG{slide_count}개
+templates/: 템플릿별 전체 슬라이드 모음{len(decks)}개
+comparisons/: 원본과 구현을 나란히 대조한 이미지{slide_count}개
 review/: 템플릿별 비교·수정 기록 및 최종 검증
 preview.jpg: 전체 템플릿 표지 모음
 manifest.json: 슬라이드 이름, 크기와 렌더·소스 해시
@@ -45,4 +47,4 @@ manifest.json: 슬라이드 이름, 크기와 렌더·소스 해시
 남은 차이와 검수 결과는 review/에서 확인할 수 있습니다.
 ''')
 with zipfile.ZipFile(archive) as z:assert z.testzip() is None
-print(json.dumps({'archive':str(archive),'bytes':archive.stat().st_size,'slides':36,'screens':36,'comparisons':36,'sha256':hashlib.sha256(archive.read_bytes()).hexdigest()},indent=2))
+print(json.dumps({'archive':str(archive),'bytes':archive.stat().st_size,'slides':slide_count,'screens':len(decks),'comparisons':slide_count,'sha256':hashlib.sha256(archive.read_bytes()).hexdigest()},indent=2))

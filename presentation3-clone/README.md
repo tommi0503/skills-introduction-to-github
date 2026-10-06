@@ -1,13 +1,13 @@
 # Presentation 3 Clone
 
-첨부 `presentation3.zip`의 이미지 36개를 바탕으로 만든 독립적인 UI 구현입니다. 이전 Canva 작업의 공통 데이터 모델·렌더러를 확장했습니다. 기존 프로젝트는 변경하지 않습니다.
+첨부 `presentation3.zip`의 이미지 중 지정한 20개를 바탕으로 만든 독립적인 UI 구현입니다. 이전 Canva 작업의 공통 데이터 모델·렌더러를 확장했습니다. 기존 프로젝트는 변경하지 않습니다.
 
 ```bash
 npm ci --cache /workspace/.npm-cache
 npm run dev -- --host 127.0.0.1 --port 5296 --strictPort
 ```
 
-갤러리와 `#/slide/p01/s01`, `#/deck/p01`, `#/compare/p01`에서 각각 단일 화면·전체 모음·원본 대조를 확인할 수 있습니다. 모든 화면은 기울이지 않은 1280×720입니다. 4:3 원본은 비율을 유지하고 여백을 더해 같은 캔버스 안에 배치합니다. 배치는 `public/reference/manifest.json`에 기록했습니다.
+갤러리와 `#/slide/p01/s01`, `#/deck/p01`, `#/compare/p01`에서 각각 단일 화면·전체 모음·원본 대조를 확인할 수 있습니다. 모든 화면은 기울이지 않은 1280×720입니다. 선택한 화면의 원본 좌표와 비율을 유지합니다. 배치는 `public/reference/manifest.json`에 기록했습니다.
 
 `src/model.ts`는 데이터 계약, `src/primitives.ts`는 정규화한 1600×900 좌표와 1280×720 출력 사이의 변환, `src/ui.tsx`는 공통 컴포넌트입니다. 화면별 데이터는 `src/decks/group-*.ts`에 있으며 반복 카드·행·목차·표는 재사용 함수로 구성합니다. 칩은 실제 글자 경계를 기준으로 중심을 보정합니다. 글꼴, 실제 굵기, 자간, 행간은 각 요소에서 지정합니다.
 
@@ -21,3 +21,7 @@ python3 scripts/package.py
 ```
 
 렌더와 검증은 Chromium(`/usr/bin/chromium`), 비교·패키징은 Python Pillow를 사용합니다. 각 화면은 담당 에이전트의 두 차례 비교·수정과 주 에이전트의 마지막 통합 검토까지 세 차례 범위에서 검수합니다. ZIP은 `/workspace/shared/downloads/presentation3-clone-renders.zip`에 생성하며 개별 PNG, 비교 이미지, 전체 미리보기와 검수 기록을 포함합니다.
+
+현재 포함 화면: p01, p02, p03, p04, p05, p06, p07, p08, p11, p12, p13, p14, p15, p16, p17, p18, p25, p26, p27, p28. 나머지 화면의 데이터·원본·렌더·비교 이미지는 제거했습니다.
+
+프로젝트 폴더 ZIP: `python3 scripts/archive-project.py`. 소스·선택된 원본·최종 렌더·비교·검수 기록을 포함하며 node_modules와 dist는 제외합니다.

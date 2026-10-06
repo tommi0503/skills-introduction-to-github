@@ -1,8 +1,6 @@
-# presentation3 p01–p12 review
+# group-a retained screens review
 
-Implemented12 full normalized source screens with shared sourcepixel primitives and reusable labels, chapter headers and notebook helpers. Viewed every individual1600×900 original. All output slides1280×720, upright. Photos, custom illustrated icons, textured/gradient backgrounds use solid#e5e5e5 placeholders; foreground text, numbered labels, solid colors and geometric cards remain actual primitives. No source screenshot embedded. Only own group-a.ts/review file modified.
-
-Completed exactly two successful render/comparison rounds per deck. Opened each of12 individual comparison pairs in review-1 and review-2. A preceding failed fontasset capture was setup failure before visual review; parent fixed Vite real symlink serving path. Second captures report zero geometry/chip/overflow findings for all12screens. Final late edits below await parent reserved third final QA; no own third capture performed. TypeScript no-emit passes.
+Retained 10 screens: p01, p02, p03, p04, p05, p06, p07, p08, p11, p12. Each retained screen was visually reviewed in two agent passes and one integrated pass before pruning. The selection change does not modify any retained screen definition, font, geometry, or render.
 
 |Screen|Observed defect and correction|Remaining difference|
 |---|---|---|
@@ -14,9 +12,5 @@ Completed exactly two successful render/comparison rounds per deck. Opened each 
 |p06|All six headings and each duplicated bullet line verified; generic instructions are actual source wording, not invented. Native header/footer and pill geometry checked.|Minor source font baseline/weight differences and compressed thumbnail rasterization.|
 |p07|Original title closer to sans than installed serif; switched Pretendard500, second-pass latewidthfactor1.10 restores source title width. Vertical hanging connector explicitly given length; four arrow/title pills checked.|Lucide sparkle differs from original four-point concave star; arrow glyph stroke heavier.|
 |p08|Money chapter shared header first too wide; widthfactor.89. Initial combined photo placeholder obscured first quotation: split hand and pig/coins into separate bounds. Second-pass late pig/coin split also restores visible@강미리 attribution.|Do Hyeon replacement differs from hand-drawn source font. Photographs/tape/graphed-paper graphic gray. Notebook perforations regular instead of raster irregular.|
-|p09|First income heading exceeded text box; widthfactor.84 removes overflow. Two descriptions and income/expenditure definitions preserved. Shopping placeholder narrowed to avoid title overlap; subtitle widthfactor.925.|Original papers/blue support strip kept upright per user rule; source slight tilt removed. Handwritten font and photo silhouettes differ.|
-|p10|First closing paragraph wider than box; widthfactor.92. Native99px left title widthfactor.77 better matches original compact lines. Definition and duplicate prompt text checked against original and OCR. Vertical separator given actual138px length.|Exact narrow handwritten title font unavailable; body Do Hyeon heavier than source. Original paper grain/torn edges simplified; cashbox gray.|
 |p11|Serif title substituted incorrectly first pass; changed to Pretendard500. All six source card labels/transposed rows checked. Late numbers weight600 restores heavier source numbers.|White3D cubes gray with bounding areas retained. Font shapes/number edges differ slightly.|
 |p12|All six headings and captions verified, including source2099. Caption widthfactor.94 and late weight500 better match measured source span. Real solid-blue background and orange corner lines retained.|Minor Korean face metrics and source blurred-edge differences.|
-
-Late second-pass changes: p01 English width.975; p07 title1.10; p08 pig/coins placeholder split preserves attribution; p11 number600; p12 caption500. These do not change slide dimensions/count. Parent final render must include these file edits. Zero automated findings is not pixel-identical claim; placeholder substitutions and unavailable source fonts are intentional/documented limitations.

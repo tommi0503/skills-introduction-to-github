@@ -1,6 +1,6 @@
-# p13–p24 visual review
+# group-b retained screens review
 
-12 normalized 1600×900 references were opened individually. All 12 individual source/render pairs were opened in review-1 and again in review-2: exactly two comparison passes per deck. Every output is one upright 1280×720 canvas. TypeScript check passes after the final data corrections. Parent final export is reserved for the third pass.
+Retained 6 screens: p13, p14, p15, p16, p17, p18. Each retained screen was visually reviewed in two agent passes and one integrated pass before pruning. The selection change does not modify any retained screen definition, font, geometry, or render.
 
 | Deck | Concrete corrections | Remaining limitations |
 | --- | --- | --- |
@@ -10,11 +10,3 @@
 | p16 | Corrected right After card from purple fill to source white; kept left purple; retained full readable bullets and two-line caps. | Chevron shape is Lucide approximation. |
 | p17 | Four As-is steps and three To-be steps use actual centered reusable chips, rules and arrows; reproduced both full summary captions. | Arrow proportions slightly differ from source; Korean font close, not identical. |
 | p18 | Reduced oversized Scalable/B2B2C title 87→80; six service labels 25→22 with no wrapping; kept actual icon circles and headline color changes. | Source icon designs approximated with Lucide; not all exact silhouettes. |
-| p19 | Rebuilt each visible mini-slide separately, including revenue line chart, layered service cards, testimonial, stats; normalized 4:3 side margins preserved. Late testimonial text widened and reduced 15→14 to prevent extra wrapping. | Original tilted collage panels are upright by requirement, so edge geometry differs; portraits/3D objects gray; tiny partially cropped copy only included where discernible, font sizes approximate. |
-| p20 | Reconstructed all editorial panels, ticks, percentages, blue bars and readable headings. 63% reduced to 107 to fit; CON intentionally clipped at source edge; late TRILLION TRANSACTIONS 20→17/nowrap to restore one line. Removed unverified small body phrases. | Source bottom crops 357K, 99% and SYSTEM UPTIME intentionally; cropped CON edge is source limitation. Architectural graphic and portrait gray. Omitted unverifiable fine print. |
-| p21 | Actual 3×3 contents cards, numbered chips, separators/intersection dots and exact Korean topics; maintained 234×187 native grid geometry. | 3D decorations/person/logo represented by gray rectangles, not reproduced. |
-| p22 | Corrected Portfolio overflow using native 1400 text box and .91 scaleX; moved heading down 14 native pixels. Actual stacked folder geometry/rule/contact copy preserved. | Bodoni Moda has heavier/differently shaped serifs than source; folder tab bottom borders differ slightly. |
-| p23 | Corrected stacked bar tops/segments from oversized initial chart to measured y396/424/447. Retained real bar charts, pipeline chips and percentages; removed unverified fine print. Late quote changed to condensed face with explicit three lines to prevent five-line wrapping. | Complex funnel/rings/spheres/photos/gradient backgrounds gray; original italic display words not exact; tiny source paragraphs intentionally omitted if unreadable. |
-| p24 | Separated info icon and optically centered PRESENTATION text; Noto Sans KR replaced initial smaller Pretendard appearance. Late source-size correction: first line 128→142/y269, second 139→151/y425. Browser frame/menu/status dots and arrow reproduced. | Last typography adjustments await parent final screenshot; no claim of exact font match. |
-
-Late data changes following second-pass observation are included in the frozen module and have passed typecheck, but have not received a third agent screenshot: p14 heading width; p15 heading face; p19 testimonial wrapping; p20 caption/unsupported small-copy omission; p23 quote wrapping; p24 title sizes/positions. Parent final should inspect these explicitly. No reference screenshots are embedded in slide output.

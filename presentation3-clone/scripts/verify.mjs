@@ -1,11 +1,16 @@
 import {createServer,preview} from 'vite'
 import {chromium} from 'playwright-core'
-import {readFile,writeFile} from 'node:fs/promises'
+import {readFile,writeFile,readdir} from 'node:fs/promises'
 import {createHash} from 'node:crypto'
 const hash=s=>createHash('sha256').update(s).digest('hex')
 const files=['src/ui.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts']
 const rendererHash=hash((await Promise.all(files.map(f=>readFile(f,'utf8')))).join('\n'))
 const manifest=JSON.parse(await readFile('public/reference/manifest.json','utf8'))
+const retainedIds=[1,2,3,4,5,6,7,8,11,12,13,14,15,16,17,18,25,26,27,28].map(n=>`p${String(n).padStart(2,'0')}`)
+const sameIds=ids=>JSON.stringify(ids.slice().sort())===JSON.stringify(retainedIds)
+if(!sameIds(manifest.map(d=>d.id)))throw Error('Source manifest does not match the requested selection')
+if(!sameIds((await readdir('public/reference')).filter(n=>/^p\d{2}$/.test(n))))throw Error('Removed reference assets remain')
+if(!sameIds((await readdir('comparisons/final')).filter(n=>/^p\d{2}\.json$/.test(n)).map(n=>n.slice(0,3))))throw Error('Removed final captures remain')
 const server=await createServer({server:{host:'127.0.0.1',port:0},logLevel:'error'});await server.listen()
 const production=await preview({preview:{host:'127.0.0.1',port:0}})
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']})
@@ -14,6 +19,7 @@ try{
  page.on('pageerror',e=>errors.push(e.message))
  await page.goto(`http://127.0.0.1:${server.httpServer.address().port}`,{waitUntil:'networkidle'})
  const decks=await page.evaluate(async()=>{const m=await import('/src/registry.ts');return m.decks})
+ if(!sameIds(decks.map(d=>d.id)))throw Error('Removed screen definitions remain')
  if(decks.length!==manifest.length||decks.reduce((n,d)=>n+d.slides.length,0)!==manifest.reduce((n,d)=>n+d.slides.length,0))throw Error('Missing templates or pages')
  let chips=0,findings=[]
  for(const original of manifest){
@@ -29,6 +35,13 @@ try{
  const url=`http://127.0.0.1:${production.httpServer.address().port}`
  await page.goto(url,{waitUntil:'networkidle'})
  if(await page.locator('.deck-card').count()!==manifest.length)throw Error('Incomplete production gallery')
+ const galleryIds=await page.locator('.deck-card').evaluateAll(els=>els.map(el=>el.getAttribute('href').split('/').at(-1)))
+ if(!sameIds(galleryIds))throw Error('Production gallery selection mismatch')
+ for(const n of [9,10,19,20,21,22,23,24,29,30,31,32,33,34,35,36]){
+  await page.goto(`${url}/#/slide/p${String(n).padStart(2,'0')}/s01`,{waitUntil:'networkidle'})
+  if(await page.locator('.slide-view').count())throw Error('Removed screen still reachable')
+ }
+ await page.goto(url,{waitUntil:'networkidle'})
  await page.locator('.deck-card').first().click();await page.locator('.deck-board [data-slide]').first().waitFor()
  await page.getByRole('link',{name:'원본 비교'}).click();await page.locator('.compare-row img').first().waitFor()
  await page.waitForFunction(()=>[...document.querySelectorAll('.compare-row img')].every(img=>img.complete&&img.naturalWidth===1600))
