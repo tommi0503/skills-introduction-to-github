@@ -3,7 +3,7 @@ import {chromium} from 'playwright-core'
 import {readFile,readdir,writeFile} from 'node:fs/promises'
 import {createHash} from 'node:crypto'
 const hash=s=>createHash('sha256').update(s).digest('hex')
-const rendererFiles=['src/ui.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts']
+const rendererFiles=['src/ui.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts','src/fonts.ts']
 const rendererHash=hash((await Promise.all(rendererFiles.map(f=>readFile(f,'utf8')))).join('\n'))
 const manifest=JSON.parse(await readFile('public/reference/manifest.json','utf8'))
 const ids=Array.from({length:72},(_,i)=>`l${String(i+1).padStart(2,'0')}`)
@@ -18,6 +18,8 @@ try{
  page.on('pageerror',e=>errors.push(e.message))
  await page.goto(`http://127.0.0.1:${server.httpServer.address().port}`,{waitUntil:'networkidle'})
  const brochures=await page.evaluate(async()=>{const m=await import('/src/registry.ts');return m.brochures})
+ const fontAudit=JSON.parse(await readFile('review/font-verification.json','utf8'))
+ if(fontAudit.status!=='passed'||fontAudit.definitionHash!==hash(JSON.stringify(brochures))||fontAudit.rendererHash!==rendererHash)throw Error('Missing, stale or failed complete font audit')
  if(brochures.length!==72||brochures.reduce((n,b)=>n+b.panels.length,0)!==432)throw Error('Incomplete independent pages')
  let chips=0,replacements=0,findings=[],uniform=true
  for(const b of brochures){
@@ -27,6 +29,7 @@ try{
   for(const p of meta.panels){chips+=p.chipCount;replacements+=p.replacementCount;findings.push(...p.findings.map(f=>({...f,brochure:b.id,page:p.id})))}
   for(const side of meta.sides)findings.push(...side.findings.map(f=>({...f,brochure:b.id,page:side.id})))
   for(const side of b.sides){
+   for(const e of side.elements)for(const key of ['x','y','w','h','size','weight','lineHeight','letterSpacing','rotate','opacity','strokeWidth'])if(e[key]!==undefined&&!Number.isFinite(e[key]))throw Error(`Invalid geometry ${b.id}/${side.id}: ${key} in ${e.text??e.kind}`)
    const panels=b.panels.filter(p=>p.sideId===side.id)
    if(panels.reduce((n,p)=>n+p.size[0],0)!==side.size[0]||panels.some(p=>p.size[1]!==side.size[1]))throw Error('Fold boundaries distort source proportions')
   }
@@ -50,6 +53,6 @@ try{
  if(!actualFonts)throw Error('Actual declared font files missing')
  const gray=await page.locator('.element-image').evaluateAll(els=>els.every(el=>getComputedStyle(el).backgroundColor==='rgb(229, 229, 229)'))
  if(!gray||errors.length)throw Error('Placeholder or browser verification failed')
- const report={status:'passed',brochures:72,sourceSheets:144,pages:432,unfoldedSheets:144,canvas:[1280,720],uniformScale:true,sixIndependentPages:true,exactSourceFoldWidths:true,sourceAndRendererHashesMatch:true,productionGallery:true,productionNavigation:true,referenceImagesLoad:true,actualFontFiles:true,chipCount:chips,chipCenterIssues:0,replacementCount:replacements,grayPlaceholders:true,noEmbeddedSourceScreenshots:true,layoutFindings:findings,pageErrors:errors}
+ const report={status:'passed',brochures:72,sourceSheets:144,pages:432,unfoldedSheets:144,canvas:[1280,720],uniformScale:true,sixIndependentPages:true,exactSourceFoldWidths:true,sourceAndRendererHashesMatch:true,productionGallery:true,productionNavigation:true,referenceImagesLoad:true,actualFontFiles:true,allFontGlyphRequests:fontAudit.requests,allRequestedFacesAndWeights:true,finiteElementGeometry:true,chipCount:chips,chipCenterIssues:0,replacementCount:replacements,grayPlaceholders:true,noEmbeddedSourceScreenshots:true,layoutFindings:findings,pageErrors:errors}
  await writeFile('review/verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2))
 }finally{await browser.close();await server.close();await new Promise(r=>production.httpServer.close(r))}

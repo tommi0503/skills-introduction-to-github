@@ -16,10 +16,14 @@ npm run dev -- --host 127.0.0.1 --port 5297 --strictPort
 ```bash
 npm run build
 npm run render -- --round=final
+node scripts/font-audit.mjs
 node scripts/verify.mjs
+python3 scripts/before-after.py
 python3 scripts/package.py
 ```
 
 렌더에는 `/usr/bin/chromium`, 비교·패키징에는 Python Pillow가 필요합니다. `extract-layout.py`는 참고 자료 분석을 위한 선택적 도구로 SciPy, NumPy, 한국어 Tesseract 데이터가 필요하며 일반 실행·빌드에는 필요하지 않습니다. 추출 결과는 참고 초안이며 담당자가 원본을 읽어 제목·본문·카드·표를 복원하고 검수합니다.
 
 PNG 576장과 검수 기록은 `/workspace/shared/downloads/leaflet-renders.zip`, 원본·구현 접지면 비교 모음 72장은 `leaflet-review.zip`에 별도로 패키징합니다. 제출본은 저장소 루트의 같은 파일명으로 제공합니다. 의존성·빌드 산출물·중간 렌더는 Git에서 제외합니다.
+
+품질 개선 기록은 `review/revision-a~f.md`와 `review/revision-integration.md`에 있습니다. 실제 글리프별 폰트·굵기·스타일 검사는 `review/font-verification.json`입니다. 원본 / 이전 제출 / 개선본 3열 비교는 저장소 루트의 `leaflet-before-after-1.jpg`, `leaflet-before-after-2.jpg`로 제공합니다. 이전 제출 렌더는 비교용이며 구현 화면에 삽입하지 않습니다.

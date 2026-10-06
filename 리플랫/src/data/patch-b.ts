@@ -1,5 +1,5 @@
 import type {SidePatch,Element,ImageRegion,Region} from '../model'
-import {T,B,C,L,IC,P} from '../primitives'
+import {T,B,C,L,IC,P,VP} from '../primitives'
 const patches:Record<string,SidePatch>={};
 const R=(x:number,y:number,w:number,h:number):Region=>({x,y,w,h});
 const im=(x:number,y:number,w:number,h:number,dropText=true,radius?:number|string):ImageRegion=>({x,y,w,h,dropText,radius});
@@ -196,3 +196,376 @@ export default patches;
 // Final visual review removes two extraction artifacts behind ordinary text.
 patches['l34/s01'].removeShapes=[...(patches['l34/s01'].removeShapes??[]),R(95,163,213,18)]
 patches['l29/s01'].removeShapes=[...(patches['l29/s01'].removeShapes??[]),R(46,52,185,28)]
+
+// Revision B: rebuild source typography and elementary geometry from the full sheets.
+const rev=(id:number,s:number)=>patches[`l${id}/s0${s}`];
+const add=(id:number,s:number,...els:Element[])=>{rev(id,s).elements?.push(...els)};
+const edit=(id:number,s:number,test:(e:Element)=>boolean,changes:Partial<Element>)=>{for(const e of rev(id,s).elements??[])if(test(e))Object.assign(e,changes)};
+const discard=(id:number,s:number,test:(e:Element)=>boolean)=>{rev(id,s).elements=rev(id,s).elements?.filter(e=>!test(e))};
+const ring=(x:number,y:number,w:number,h:number,c:string,stroke=1)=>B(x,y,w,h,'transparent',{radius:'50%',border:`${stroke}px solid ${c}`});
+const dashed=(x:number,y:number,w:number,c:string)=>B(x,y,w,1,'transparent',{border:`0.8px dotted ${c}`});
+const star=(cx:number,cy:number,r:number,c:string,n=12,inner=.17)=>P(Array.from({length:n*2},(_,j)=>{const a=j*Math.PI/n-Math.PI/2,d=j%2?r*inner:r;return[cx+Math.cos(a)*d,cy+Math.sin(a)*d]}),c,.7,c);
+// Remove automatic OCR shape fragments. Every retained solid area is declared below.
+for(let id=25;id<=36;id++)for(const s of [1,2])rev(id,s).clearShapes=true;
+for(const p of Object.values(patches))for(const e of p.elements??[]){
+ if(e.font==='Pretendard')e.font='Pretendard Variable';
+ if(e.font==='Do Hyeon')e.weight=400;
+ if(e.font==='Tinos'&&e.weight!==400&&e.weight!==700)e.weight=e.weight&&e.weight>=600?700:400;
+}
+// 25: faithful thin serif menu, exact names and original line lengths.
+rev(25,1).background='#871428';
+edit(25,1,e=>e.text==='SWEET CAKE',{size:31,font:'Bodoni Moda',weight:400,y:76});
+edit(25,1,e=>e.text==='GOOD COFFEE',{size:31,font:'Bodoni Moda',weight:400,y:232});
+edit(25,1,e=>!!e.text?.startsWith('천연재료로'),{text:'천연재료로 엄선하여 설탕대신 단맛을 대체할\n사탕수수를 이용하여 건강하고 맛있는 케이크를\n매일매일 만듭니다.',size:17,lineHeight:1.3,w:333,h:70});
+edit(25,1,e=>!!e.text?.startsWith('매일매일 로스팅한'),{text:'매일매일 로스팅한 케냐산 원두로 전문 바리스타가\n정성껏 내린 풍미 깊은 커피를 선사합니다.\n진한 커피향에 마음의 진정을\n느끼실 수 있습니다.',size:17,lineHeight:1.3,w:343,h:95});
+edit(25,1,e=>e.text==='SWEET\nCAFE',{font:'Bodoni Moda',weight:400,lineHeight:.98});
+rev(25,2).elements=rev(25,2).elements?.map(e=>e.kind==='text'?{...e,font:e.font===eng?'Bodoni Moda':'Pretendard Variable',weight:e.size===18&&e.x<400?500:400}:e);
+edit(25,2,e=>e.text==='스트로베리 케이크',{text:'스트로베리 케이크'});
+edit(25,2,e=>e.text==='진한치즈 케이크',{text:'진한치즈 케이크'});
+edit(25,2,e=>e.text==='벨기에치즈 케이크',{text:'벨기에치즈 케이크'});
+edit(25,2,e=>e.text==='베리베리생크림 케이크',{text:'베리베리생크림 케이크'});
+edit(25,2,e=>e.text==='요거트 케이크',{text:'요거트 케이크'});
+edit(25,2,e=>!!e.text?.startsWith('한가득 가득'),{text:'한가득 가득 올린 딸기와 달콤한 초콜릿이 매력적'});
+edit(25,2,e=>!!e.text?.startsWith('벨기에 크림'),{text:'벨기에 크림치즈를 사용하여 고소함이 두배'});
+// 26: actual border nesting, ornaments as vector linework, corrected serif measures.
+rev(26,1).images=rev(26,1).images?.filter(r=>!(r.w<150&&r.h<30));
+rev(26,2).images=rev(26,2).images?.filter(r=>!(r.w<150&&r.h<30));
+const ornament=(x:number,y:number,w:number,c='#bfa67d'):Element[]=>{
+ const cy=y+10;return [P([[x,cy],[x+w*.2,cy-6],[x+w*.37,cy+4],[x+w*.5,cy],[x+w*.63,cy+4],[x+w*.8,cy-6],[x+w,cy]],c,.9),P([[x,cy],[x+w*.2,cy+6],[x+w*.37,cy-4],[x+w*.5,cy],[x+w*.63,cy-4],[x+w*.8,cy+6],[x+w,cy]],c,.9),ring(x+w*.21,y+4,w*.12,11,c,.8),ring(x+w*.67,y+4,w*.12,11,c,.8),P([[x+w*.5,cy-8],[x+w*.56,cy],[x+w*.5,cy+8],[x+w*.44,cy],[x+w*.5,cy-8]],c,.8),star(x+w*.5,cy,3,c,4,.4)];
+};
+const diamondRule=(x:number,y:number,w:number,c='#bfa67d')=>[L(x,y+5,w,0.6,c),P([[x+w/2-11,y+5],[x+w/2,y],[x+w/2+11,y+5],[x+w/2,y+10],[x+w/2-11,y+5]],c,.8),star(x+w/2,y+5,4,c,4,.5)];
+add(26,1,box(42,50,360,807,'transparent',14,'0.7px solid #9c8b64'),...ornament(153,88,139),star(222,184,6,'#d1b78a',4,.35),...diamondRule(986,695,146));
+edit(26,1,e=>e.text==='GREETING',{font:'Tinos',weight:700,size:38,x:70,w:304});
+edit(26,1,e=>e.text===greetings,{size:18,y:214,h:324,lineHeight:1.65,font:'Noto Serif KR',weight:300});
+edit(26,1,e=>e.text==='2090 비즈홀 오케스트라 정기연주회'&&e.x===554,{size:17,w:267});
+edit(26,1,e=>e.text==='ORCHESTRA\nCONCERT',{font:'Tinos',weight:400,size:61,y:558,lineHeight:1});
+edit(26,1,e=>e.text==='비즈 심포니 오케스트라',{y:567,size:17});
+add(26,2,box(454,54,369,802,'transparent',14,'0.6px solid #bfa67d'),box(66,250,307,363,'transparent',10,'0.6px solid #bfa67d'),box(884,655,346,173,'transparent',0,'0.6px dotted #bfa67d'),...ornament(151,74,138),...ornament(992,74,134),...ornament(151,818,138),...diamondRule(565,210,146),...diamondRule(565,553,146),IC(618,70,42,26,'Crown','#ba9a63',{strokeWidth:1.2}));
+edit(26,2,e=>['CONDUCTOR','ORCHESTRA','PROGRAM'].includes(e.text??''),{font:'Tinos',weight:400,size:38});
+edit(26,2,e=>e.text==='CONDUCTOR',{x:87,w:282,align:'center'});
+edit(26,2,e=>!!e.text?.startsWith('비즈 심포니 오케스트라는'),{x:468,w:340,y:580,h:260,font:'Noto Serif KR',weight:400,size:16,lineHeight:1.65,text:'비즈 심포니 오케스트라는\n클래식 음악의 아름다움과 감동을\n관객과 함께 나누는 전문 연주단체입니다.\n\n정기연주회와 기획공연, 교육 프로그램을 통해\n다양한 레퍼토리를 선보이며\n지역 문화예술 발전에 기여하고 있습니다.\n\n섬세한 앙상블과 풍부한 사운드로\n매 공연 깊이 있는 음악과 감동을 전합니다.'});
+edit(26,2,e=>e.text==='I',{x:885,y:203,size:71,h:89});edit(26,2,e=>e.text==='II',{x:885,y:449,size:71,h:89});
+edit(26,2,e=>!!e.text?.includes('Tchaikovsky'),{x:954});edit(26,2,e=>e.text==='A. Dvořák',{text:'L.A. Dvořák',x:954});
+// 27: tall original display type, bilingual green accents, dotted ruled boxes.
+for(const s of [1,2]){
+ for(const e of rev(27,s).elements??[])if(e.kind==='text'){
+  if(e.font==='Do Hyeon'){e.weight=400;}
+  else{e.font='Pretendard Variable';e.weight=400;}
+ }
+ discard(27,s,e=>e.kind==='box'&&e.h===1);
+}
+edit(27,1,e=>e.text==='어떻게 진행되나요?',{x:120,y:62,w:190,h:32,size:38,inkFit:true});
+edit(27,1,e=>e.text==='상담 신청 안내',{x:566,y:62,w:149,h:32,size:38,inkFit:true});
+edit(27,2,e=>e.text==='어떤 기술을 컨설팅하나요?',{x:87,y:62,w:254,h:32,size:38,inkFit:true});
+edit(27,2,e=>e.text==='이런 분께 추천합니다',{x:539,y:62,w:205,h:32,size:38,inkFit:true});
+edit(27,2,e=>e.text==='컨설팅 프로그램 안내',{x:965,y:62,w:205,h:32,size:38,inkFit:true});
+edit(27,1,e=>e.text==='농업에 스마트를 더하다!',{x:929,y:156,w:273,h:40,size:45,inkFit:true});
+edit(27,1,e=>e.text==='스마트팜 첫걸음',{x:934,y:214,w:269,h:58,size:67,inkFit:true});
+edit(27,1,e=>e.text==='스마트팜·친환경 농업 기술 컨설팅 프로그램',{size:26,font:'Do Hyeon',weight:400,inkFit:true});
+edit(27,1,e=>!!e.text?.startsWith('농장에 맞는 기술 도입'),{text:'농장에 맞는 기술 도입 방향이 궁금하다면',x:485,y:173,w:240,h:20,size:22,font:'Do Hyeon',inkFit:true});
+add(27,1,T(485,199,220,21,'지금 상담으로 먼저 확인해보세요.',23,{font:'Do Hyeon',color:'#49ba82',weight:400,inkFit:true}),B(949,95,8,35,'#fff',{radius:4,border:'1.5px solid #454545'}),B(1183,95,8,35,'#fff',{radius:4,border:'1.5px solid #454545'}));
+for(let j=0;j<5;j++){
+ discard(27,1,e=>e.text===`${j+1}단계  ${agriSteps[j]}`);
+ add(27,1,T(139,222+j*96,35,22,`${j+1}단계`,23,{font:'Do Hyeon',weight:400,color:'#49ba82',inkFit:true}),T(181,222+j*96,180,28,agriSteps[j],23,{font:'Do Hyeon',weight:400,color:'#454545'}));
+ if(j<4)add(27,1,dashed(48,293+j*97,326,'#777'));
+}
+edit(27,1,e=>e.text?.startsWith('🌱 ')??false,{text:''});
+for(let j=0;j<3;j++)add(27,1,IC(53,770+j*33,21,19,'Sprout','#71bb7b',{strokeWidth:1.3}),T(80,773+j*33,301,23,['농장 운영 방향이 더 명확해집니다.','기술 도입 우선순위를 정리할 수 있습니다.','친환경·스마트농업 운영 이해도를 높일 수 있습니다.'][j],14,{color:'#555'}),dashed(48,795+j*33,326,'#777'));
+for(let j=0;j<4;j++)add(27,1,dashed(480,603+j*44,318,'#777'));
+edit(27,1,e=>e.text==='상담 신청 바로가기',{x:568,y:801,w:171,h:29,size:29,inkFit:true});
+for(const s of [1,2])for(const e of rev(27,s).elements??[])if(e.chip&&e.font==='Do Hyeon')e.size=27;
+edit(27,2,e=>Boolean(e.chip)&&e.x===1028,{size:24,w:163,inkFit:true});
+edit(27,2,e=>!!e.text?.startsWith('농장에 꼭 맞는 기술'),{x:970,y:812,w:238,h:59,size:26,inkFit:true,lineHeight:1.05});
+for(let j=0;j<3;j++){
+ for(let k=0;k<3;k++)add(27,2,L(1028,302+j*196+k*36,199,1,'#ddd'));
+ if(j<2)add(27,2,L(902,393+j*196,329,1,'#888'));
+}
+for(let j=0;j<3;j++)for(const y of [408,784])add(27,2,L(53,y+j*38,323,1,'#ddd'));
+// 28: remove OCR fragments; restore tab geometry, background hues and small partner labels.
+rev(28,1).background='#fff4ce';rev(28,2).background='#fff4ce';
+for(const s of [1,2])edit(28,s,e=>['PROGRAM','INFORMATION','ABOUT','PROGRAM DETAILS','EVENT TIMETABLE'].includes(e.text??''),{font:'Pretendard Variable',weight:400,size:39,y:60});
+for(let j=0;j<3;j++)edit(28,1,e=>e.text===['공연 프로그램','체험 프로그램','나눔 프로그램'][j],{fill:'#d17b54',radius:'0 0 15px 15px',weight:600,y:214+j*222});
+add(28,1,L(458,831,363,1,'#ad775c'),T(458,849,35,23,'주최',14,{color:'#a3664c',weight:600}),IC(493,849,20,19,'Users','#86cdbc'),T(517,849,123,23,'미리문화센터',15,{weight:600}),T(641,849,35,23,'후원',14,{color:'#a3664c',weight:600}),IC(680,849,17,20,'Flower2','#6476ad'),T(702,849,74,23,'비즈시청',15,{weight:600}),IC(786,849,17,20,'House','#75be9a'),T(807,849,30,23,'',14));
+rev(28,1).images=rev(28,1).images?.filter(r=>r.y!==848);
+add(28,2,B(459,134,362,41,'#ed8f60'),B(459,384,362,41,'#bd914a'),B(459,634,362,41,'#98c261'));
+edit(28,2,e=>e.text==='먹거리',{text:'먹거리',weight:600});
+for(const s of [1,2])edit(28,s,e=>e.text==='함께 만드는 희망, 함께 누리는 행복',{size:20,letterSpacing:3,x:907,w:346});
+// 29: source's true white/magenta fields, full-width fine stripes and star accents.
+rev(29,1).elements=[B(426,0,854,388,'#e10062'),B(426,795,854,115,'#e10062'),...(rev(29,1).elements??[])];
+rev(29,2).elements=[B(850,0,430,767,'#e10062'),...(rev(29,2).elements??[])];
+rev(29,1).underTextElements=Array.from({length:8},(_,j)=>L(426,708+[0,8,18,30,44,60,78,85][j],854,[2,3,4,5,7,18,1,1][j],'#e10062'));
+rev(29,2).underTextElements=[...Array.from({length:8},(_,j)=>L(0,795+[0,7,15,24,35,47,61,84][j],850,[1,2,3,4,5,10,20,30][j],'#fbe5ee'))];
+discard(29,1,e=>e.kind==='box'&&e.x===426&&e.y>=708&&e.y<=790);
+edit(29,1,e=>e.text==='비즈홀\n오케스트라\n정기연주회',{x:879,y:91,size:66,h:212,font:'Pretendard Variable',weight:300,lineHeight:1.12});
+edit(29,1,e=>e.text==='O R C H E S T R A   C O N C E R T',{x:882,y:341,w:368,size:12,letterSpacing:3.8});
+add(29,1,L(882,43,264,1,'#f7adcd'),T(1165,38,84,20,'BIZ ORCHESTRA',10,{color:'#fff'}),star(60,383,12,pink),star(488,461,31,pink),star(1091,475,24,pink),star(1236,391,27,pink),star(529,665,25,pink),star(849,632,25,pink),star(1193,642,26,pink));
+for(const s of [1,2])edit(29,s,e=>e.font==='Montserrat',{font:'Montserrat',weight:500});
+edit(29,1,e=>e.text==='GREETING',{size:33,weight:500});
+edit(29,2,e=>['Conductor','Orchestra','Program'].includes(e.text??''),{size:33,weight:500});
+add(29,2,T(48,238,62,21,'01.',10,{font:'Montserrat',color:pink}),T(469,238,62,21,'02.',10,{font:'Montserrat',color:pink}),star(372,68,30,'#f2cfdc'),star(794,68,30,'#f2cfdc'),star(1214,68,30,'#e967a0'),star(903,545,14,'#fff'));
+edit(29,2,e=>e.text===orchDesc,{size:12,y:204,lineHeight:1.7,w:220,h:238});
+edit(29,2,e=>!!e.text?.startsWith('W. A.'),{text:'W. A.\nMozart\n\nL. van\nBeethoven',size:17,lineHeight:1.12,h:145});
+edit(29,2,e=>!!e.text?.startsWith('Overture to'),{text:'Overture to The Marriage of Figaro\nSymphony No. 40 in G minor, K. 550\n\nSymphony No. 5 in C minor, Op.67\nI. Allegro con brio',size:17,lineHeight:1.12,h:149,w:250});
+edit(29,2,e=>!!e.text?.startsWith('P. I.'),{text:'P. I.\nTCHAIKOVSKY\n\nA.\nDVOŘÁK',size:17,lineHeight:1.12,h:144});
+edit(29,2,e=>!!e.text?.startsWith('Swan Lake'),{size:17,lineHeight:1.12,h:145,w:250});
+// 30: rounded media silhouettes, correct dotted table, decorative headers and magic geometry.
+rev(30,1).background='#5a00cd';rev(30,2).background='#fff';
+rev(30,2).elements=[B(426,0,424,910,'#5a00cd'),...(rev(30,2).elements??[])];
+for(const s of [1,2])for(const e of rev(30,s).elements??[])if(e.kind==='text'){e.font=e.text==='MAGIC SHOW'?'Pretendard Variable':'Gothic A1';if(e.weight&&e.weight>=700)e.weight=800;}
+edit(30,1,e=>e.text==='김미리 MAGIC SHOW',{text:'김미리 MAGIC SHOW',font:'Gothic A1',weight:800,size:34,x:479,y:104,w:338});
+edit(30,1,e=>e.text==='MAGIC SHOW',{font:'Pretendard Variable',weight:400,size:64,x:870,y:49,w:390,h:77});
+edit(30,1,e=>e.text==='김미리의\n환상의 마술쇼쇼쇼',{font:'Gothic A1',weight:800,size:52,x:866,y:645,w:388,h:127,lineHeight:1.29,inkFit:true});
+edit(30,1,e=>!!e.text?.startsWith('공연일   '),{text:'공연일    2096 10월부터 11월간 매주 토요일!\n공연장    미리문화예술회관 미리홀',size:18,lineHeight:1.9,h:75});
+edit(30,1,e=>e.text==='예약\n안내',{x:284,y:613});
+add(30,1,B(334,607,53,53,'#e5e5e5'),dashed(258,602,1,'#7d49a6'),L(876,327,2,282,'#fff'),L(1245,133,2,281,'#fff'),T(865,135,20,178,'MAGIC · ILLUSION · WONDER',14,{font:'Roboto Condensed',color:'#fff',rotate:-90}),T(1238,438,20,172,'MAGIC · ILLUSION · WONDER',14,{font:'Roboto Condensed',color:'#fff',rotate:90}),star(638,72,24,'#fff',16,.5),star(899,676,25,'#fff',16,.48),star(1222,676,25,'#fff',16,.48));
+for(const r of rev(30,1).images??[])if(r.y===390||r.y===598||r.y===753)r.radius=14;
+for(const r of rev(30,2).images??[])if(r.x>=455&&r.y>=223&&r.y<740)r.radius=r.x>=850?38:22;
+// Elementary concentric circles and spokes remain editable; patterned background stays a placeholder.
+rev(30,2).images=rev(30,2).images?.filter(r=>!(r.x===43&&r.y===170));
+rev(30,2).images?.push(im(39,192,85,85,true,'50%'),im(158,257,116,116,true,'50%'),im(309,354,85,85,true,'50%'));
+rev(30,2).underTextElements=[...(rev(30,2).underTextElements??[]),...Array.from({length:3},(_,j)=>ring(77+j*7,170+j*7,279-j*14,290-j*14,'#8f53b5',.8)),ring(135,196,57,56,'#8f53b5',.8),ring(230,378,57,57,'#8f53b5',.8),...Array.from({length:20},(_,j)=>{const a=j*Math.PI/10;return P([[217,315],[217+Math.cos(a)*133,315+Math.sin(a)*137]],'#8f53b5',.6)}),star(217,315,127,'#8f53b5',12,.25),star(216,502,17,'#8f53b5',16,.5),...Array.from({length:4},(_,j)=>B(35+j*95,720,85,140,'transparent',{radius:43,border:'1px solid #8f53b5'}))];
+discard(30,2,e=>e.kind==='box'&&e.y>=263&&e.y<507&&e.h===1);
+add(30,2,...Array.from({length:6},(_,j)=>dashed(456,263+j*40.5,364,'#ac74ea')),B(498,224,1,281,'transparent',{border:'0.8px dotted #ac74ea'}),B(752,224,1,281,'transparent',{border:'0.8px dotted #ac74ea'}),B(1060,744,1,109,'transparent',{border:'0.8px dotted #9b78b9'}),dashed(880,802,362,'#9b78b9'));
+edit(30,2,e=>e.text==='공연 종료 후\n마술사와 기념촬영',{x:527,y:808,w:190,size:20,font:'Gothic A1',weight:700,h:57});
+// 31: deliberately light Korean type and exact eight-line introduction; left programme titles vary in source weight.
+rev(31,1).elements=[B(426,0,424,910,'#b78e73'),...(rev(31,1).elements??[])];
+edit(31,1,e=>e.text?.startsWith('전통음악의 정신')??false,{font:'Noto Sans KR',weight:300,size:17,lineHeight:1.6,h:232,text:'전통음악의 정신을 올곧게 지키며 한길을\n걸어온 명인 16인의 미숙한 선율로 채워집니다.\n각자의 개성이 담긴 고유의 음색에 자유자재로\n넘나드는 가락은 국악 인생의 희로애락을\n고스란히 담아낸 시간의 맛을 공유하는\n무대로 꾸며집니다. 가야금병창과 산조,\n시나위로 빚어낸 오늘의 풍류를 즐기면서\n가을의 운치를 마음껏 느껴보시길 바랍니다.'});
+for(const e of rev(31,1).elements??[])if(e.font===ser){e.font='Nanum Myeongjo';e.weight=400;}
+edit(31,1,e=>e.text==='국   악\n연주회'&&e.x===548,{x:549,y:245,w:195,h:143,size:62,lineHeight:1.2});
+edit(31,1,e=>e.text==='국   악\n연주회'&&e.x===981,{x:981,y:267,w:175,h:146,size:58,lineHeight:1.3});
+edit(31,1,e=>e.text==='TRADITIONAL\nKOREAN MUSIC',{size:22,font:'Noto Sans KR',weight:300});
+edit(31,1,e=>e.text==='CONTACT\nartschool@naver.com\n02.1234.5678',{text:'artschool@naver.com\n02.1234.5678',y:805,font:'Tinos',size:25,h:56,lineHeight:1.1});
+add(31,1,T(508,778,277,30,'CONTACT',23,{font:'Roboto Condensed',color:'#fff',weight:500,align:'center'}));
+edit(31,2,e=>e.text==='곡순서'||e.text==='대표 연주자 4인',{font:'Nanum Myeongjo',weight:700,size:28});
+for(const e of rev(31,2).elements??[])if(e.x<430&&e.kind==='text'&&e.text&&e.text!=='곡순서'){
+ if(/^\d$/.test(e.text)){e.size=32;e.font='Tinos';e.fontStyle='italic';}
+ else if(e.y%134===195%134){e.font='Noto Sans KR';e.weight=300;e.size=14;e.h=26;}
+ else{e.font='Nanum Myeongjo';e.weight=700;e.size=20;e.h=58;}
+}
+edit(31,2,e=>e.text===songs[0][1],{text:'국악관현악 “달항아리” 작곡 강인성',size:20,w:376,x:32});
+for(const e of rev(31,2).elements??[])if(e.x>=630&&e.kind==='text'){
+ if((e.size??0)>=20){e.font='Nanum Myeongjo';e.weight=700;}
+ else{e.font='Noto Sans KR';e.weight=300;e.size=15;e.lineHeight=1.6;e.h=Math.max(e.h,80);}
+}
+// 32: correct narrow Korean body, cursive English captions and transparent quote glyphs.
+rev(32,1).elements=[B(427,0,423,910,'#4f95ba'),B(463,525,352,201,'#66a0c1'),...(rev(32,1).elements??[])];
+rev(32,2).elements=[B(0,0,431,910,'#fff'),...(rev(32,2).elements??[])];
+for(const s of [1,2])for(const e of rev(32,s).elements??[])if(e.kind==='text'&&e.text){
+ if(e.text.includes('사랑이야기')){e.font='Roboto Condensed';e.size=19;e.lineHeight=1.4;}
+ else if(e.font==='Do Hyeon'){e.font='Noto Sans KR';e.weight=800;}
+ else if(e.x<430&&e.text.length>65){e.font='Roboto Condensed';e.size=16;e.lineHeight=1.57;}
+}
+edit(32,1,e=>e.text==='그대 나를\n바라 본다면',{font:'Noto Sans KR',weight:800,size:52,x:901,y:629,w:350,h:128,lineHeight:1.25,inkFit:true});
+const script=(x:number,y:number,w:number,t:string,c:string,size=45)=>T(x,y,w,69,t,size,{font:'Nanum Pen Script',color:c,align:'center',weight:400,fontStyle:'normal',lineHeight:1});
+add(32,1,script(90,82,250,'information','#8db2c3',52),script(524,83,230,'information','#78adc4',51),script(557,473,166,'location','#78adc4',50),script(861,742,410,'if you love me','#eff5f4',62),T(1207,213,32,34,'“',39,{font:'Tinos',color:'#6997a7',weight:700}),T(1208,307,32,34,'”',39,{font:'Tinos',color:'#6997a7',weight:700}));
+add(32,2,script(105,90,217,'Introducing','#9cb8b3',55),script(137,565,175,'Synopsis','#9cb8b3',53),script(580,97,122,'Cast','#9cb8b3',55),script(1008,97,112,'Staff','#9cb8b3',55),T(1205,638,35,42,'“',50,{font:'Tinos',color:'#6997a7',weight:700}),T(1205,801,35,42,'”',50,{font:'Tinos',color:'#6997a7',weight:700}));
+// Korean glyphs must not fall back from a Latin-only face.
+for(const s of [1,2])for(const e of rev(32,s).elements??[])if(e.font==='Roboto Condensed'&&/[가-힣]/.test(e.text??''))e.font='Gothic A1';
+// 33: ribbon/bookmark, ring silhouettes, original mixed-weight headline and precise separators.
+const bookmark=(x:number,y:number)=>[P([[x,y],[x+41,y],[x+41,y+69],[x+20.5,y+48],[x,y+69],[x,y]],'#806a31',0,'#806a31'),IC(x+7,y+13,27,31,'Lightbulb','#e3d5b5',{strokeWidth:1})];
+for(const s of [1,2])rev(33,s).images=rev(33,s).images?.filter(r=>!((r.x===61||r.x===60||r.x===902)&&r.y<100));
+add(33,1,...bookmark(61,51),B(919,119,13,75,'#42321b'),B(1207,119,13,75,'#42321b'),B(611,418,58,58,'#42321b',{radius:'50%'}),IC(624,431,32,31,'House','#fff',{strokeWidth:2}));
+rev(33,1).images=rev(33,1).images?.filter(r=>!(r.x===611&&r.y===418));
+edit(33,1,e=>e.text==='대학입시 설명회\n비즈스쿨입시학원',{text:'대학입시 설명회',font:'Noto Sans KR',weight:300,x:942,y:113,w:261,h:42,size:39,align:'center',inkFit:true});
+add(33,1,T(942,155,262,44,'비즈스쿨입시학원',38,{font:'Gothic A1',weight:800,color:academyBrown,align:'center',inkFit:true}));
+for(const s of [1,2])edit(33,s,e=>e.font==='Do Hyeon',{font:'Gothic A1',weight:800});
+edit(33,1,e=>e.text==='능률을 최적화하는\n체계적인 학습 프로그램!',{size:29,lineHeight:1.08,w:298,h:70,inkFit:true});
+for(let j=0;j<3;j++)edit(33,1,e=>e.text===['자신감 및 긍정적 사고','몰입도 향상(과제집착력)','빠른 입시정보와 높은 진학률을\n자랑하는 최적의 입시지도'][j],{y:[420,509,600][j],size:19,lineHeight:1.2,h:j===2?50:29,weight:700});
+for(const e of rev(33,1).elements??[])if(e.text===teacher){e.y=e.y===475?449:e.y===563?536:655;e.size=12;e.h=38;e.lineHeight=1.4;e.text='국내외 유명 우수 대학에서 학위를 취득하고 수년간의 현장 경험을\n쌓은 우수한 강사진 최고를 기본으로 시스템을 갖추고 있습니다.';}
+discard(33,1,e=>e.kind==='box'&&(e.y===494||e.y===584));add(33,1,dashed(63,494,308,'#777'),dashed(63,584,308,'#777'));
+add(33,2,...bookmark(61,51),...bookmark(902,51),P([[505,51],[777,51],[766,68],[777,85],[505,85],[516,68],[505,51]],'#806a31',0,'#806a31'));
+edit(33,2,e=>e.text==='2039 대학입시 설명회',{fill:'transparent',font:'Gothic A1',weight:800,size:25,y:51,h:34});
+edit(33,2,e=>e.text==='최상위 학생들이 선택한\n비즈스쿨은 이렇게 다릅니다!',{font:'Gothic A1',weight:800,size:28,inkFit:true,h:71});
+edit(33,2,e=>e.text==='논술입시수업 내용 및 교재',{font:'Gothic A1',weight:800,size:27,inkFit:true,w:286});
+rev(33,2).underTextElements=[...(rev(33,2).underTextElements??[]),ring(15,192,406,379,'#ded6bc',12),ring(449,412,383,366,'#ded6bc',12),ring(875,190,382,380,'#ded6bc',12)];
+for(let j=0;j<2;j++)add(33,2,dashed(62,670+j*87,307,'#777'));
+edit(33,2,e=>e.text==='전략을\n세워야\n합격이\n보인다!',{font:'Gothic A1',weight:400,size:33,y:526,h:139,lineHeight:1.05});
+// 34–35: separate headline lines, natural serif glyphs, menu star markers and smaller price columns.
+for(const id of [34,35]){
+ discard(id,1,e=>e.text===(id===34?'CAFE\nMIRIDANG':'YOUR\nBRAND NAME'));
+ for(const x of [426,850])add(id,1,T(x+10,73,404,40,id===34?'CAFE':'YOUR',31,{font:'Tinos',weight:id===35?700:400,align:'center',letterSpacing:id===35?8:2}),T(x+6,111,412,54,id===34?'MIRIDANG':'BRAND NAME',id===34?47:44,{font:'Tinos',weight:id===35?700:400,align:'center',letterSpacing:id===35?7:2,inkFit:true}));
+ add(id,1,T(1003,794,96,25,'ℓℓℓ',22,{font:'Tinos',align:'center'}));
+}
+edit(34,1,e=>e.text==='ROASTERY\nCAFE',{font:'Tinos',size:32,y:71,h:74,lineHeight:1.25});
+edit(34,1,e=>e.text==='COFFEE & TEA & DESSERT',{size:17,y:163});
+edit(34,1,e=>e.text==='‘요리는 마음을 비추는 거울’',{font:'Nanum Myeongjo',size:21,weight:700,y:597,h:37});
+edit(34,1,e=>e.text==='카페미리당의 모토입니다.\n매일 정성을 담아 준비합니다.',{font:'Nanum Myeongjo',size:16,weight:400,lineHeight:1.15,h:50});
+for(const e of rev(34,1).elements??[])if(e.font===ser){e.font='Nanum Myeongjo';e.weight=400;}
+for(const e of rev(34,2).elements??[])if(e.kind==='text'){
+ if(e.size===27){e.font='Tinos';e.weight=400;}
+ else if(e.size===15){e.font='Nanum Myeongjo';e.weight=400;}
+ else if(e.text?.endsWith('won')){e.font='Tinos';e.size=21;e.x-=13;e.w-=12;}
+}
+add(34,2,T(52,593,14,22,'★',12),T(52,722,14,22,'★',12),T(481,593,14,22,'★',12),T(481,683,14,22,'★',12),T(915,681,14,22,'★',12),T(915,723,14,22,'★',12));
+edit(35,1,e=>e.text==='‘텍스트를 써주세요’',{text:'‘텍스트를 써주세요\n요’',x:546,y:584,w:190,h:69,font:'Nanum Myeongjo',weight:800,size:22,lineHeight:1.2,letterSpacing:3});
+edit(35,1,e=>e.text==='브랜드 슬로건을 써주세요',{text:'브랜드 슬로건을 써주세\n요',x:957,y:824,w:229,h:49,font:'Nanum Myeongjo',weight:400,size:20,lineHeight:1.3,letterSpacing:4});
+edit(35,1,e=>e.text==='서브텍스트를 써주세요.\n서브텍스트를 입력해주세요.',{font:'Nanum Myeongjo',size:16,lineHeight:1.5});
+edit(35,1,e=>e.text==='OPEN\n09:00 - 22:00',{font:'Tinos',weight:700,size:25,lineHeight:1.3});
+edit(35,1,e=>e.kind==='box'&&e.x===596&&e.y===754,{x:632,w:19});
+for(const e of rev(35,2).elements??[])if(e.kind==='text'){
+ if(e.text?.startsWith('MENU -')){e.letterSpacing=3;e.size=27;e.weight=700;}
+ else if(e.text==='★ 메뉴이름'){e.text='메뉴이름';e.x+=17;e.y-=1;e.size=16;e.font='Nanum Myeongjo';e.letterSpacing=3;}
+ else if(e.text==='MENU NAME'){e.y-=7;e.size=11;e.letterSpacing=2;}
+ else if(e.text?.endsWith('won')){e.size=17;e.x-=26;e.w-=9;}
+}
+for(const [x,y,count] of [[70,597,4],[490,597,4],[912,152,11]])for(let j=0;j<count;j++)add(35,2,T(x,y+2+j*63,15,20,'★',12));
+// 36: source fine dotted separators, small numbered event circles, programme section rules.
+for(const s of [1,2])for(const e of rev(36,s).elements??[])if(e.kind==='text'){
+ if(e.font==='Montserrat'){e.font='Montserrat';e.weight=400;}
+ else if((e.size??0)>=21){e.font='Pretendard Variable';e.weight=400;}
+}
+edit(36,1,e=>e.text==='희망나눔\n축제',{font:'Pretendard Variable',weight:300,size:84,y:129,h:175,lineHeight:1.03});
+edit(36,1,e=>e.text==='2099.10.18 - 10.19\n미리문화광장',{text:'2099. 10.18 - 10.19\n미리문화광장',font:'Montserrat',size:24,lineHeight:1.25,w:296,x:928,y:326,h:68});
+// Only the English date uses Montserrat; Korean venue gets an explicit loaded Korean face.
+edit(36,1,e=>e.text==='2099. 10.18 - 10.19\n미리문화광장',{text:'2099. 10.18 - 10.19',h:34});
+add(36,1,T(948,354,259,30,'미리문화광장',24,{font:'Pretendard Variable',align:'center'}));
+discard(36,1,e=>e.kind==='box'&&[370,617,687].includes(e.y)&&e.h===1);
+add(36,1,dashed(55,370,323,'#777'),dashed(55,617,323,'#777'),dashed(477,687,321,'#888'));
+for(let j=0;j<3;j++)edit(36,1,e=>e.text===['① 공연프로그램','② 체험 프로그램','③ 나눔 프로그램'][j],{text:['① 공연프로그램','② 체험 프로그램','③ 나눔 프로그램'][j],size:22,font:'Pretendard Variable',weight:400});
+for(let j=0;j<3;j++)add(36,2,dashed(476,158+j*240,73,'#777'),dashed(727,158+j*240,73,'#777'));
+add(36,2,dashed(53,481,58,'#777'),dashed(319,481,58,'#777'));
+for(let j=0;j<4;j++)add(36,2,C(123+(j%2)*166,508+Math.floor(j/2)*170,21,21,['①','②','③','④'][j],21,j%2?'#ffe8f0':'#fffde6',{color:'#333',weight:400,radius:'50%',border:'0.6px solid #777'}));
+// Cards 3/4 begin at 688 in the source, with captions at 810, not at 839.
+for(const e of rev(36,2).elements??[])if(e.x<420&&e.y>=519&&e.y<850){
+ if(e.kind==='box'&&e.y===689){e.y=688;e.h=146;}
+ if(e.kind==='text'&&e.y===809)e.y=807;
+}
+discard(36,2,e=>e.kind==='box'&&e.x>=905&&e.x<=1218&&e.y>=157&&e.y<=637);
+add(36,2,L(905,157,313,1,'#888'),B(905,158,313,52,'#fffde6'),...Array.from({length:9},(_,j)=>dashed(905,210+j*53.3,313,'#999')),B(964,157,1,480,'transparent',{border:'0.8px dotted #999'}),B(1114,157,1,480,'transparent',{border:'0.8px dotted #999'}));
+edit(36,2,e=>e.text==='함께 나누는\n오늘,\n희망을 심어요',{x:905,y:755,size:28,font:'Pretendard Variable',weight:300,w:175,h:102,lineHeight:1.12});
+rev(36,2).images=rev(36,2).images?.filter(r=>!(r.x===904&&r.y===677));
+add(36,2,IC(905,679,48,48,'Heart','#c38da4',{strokeWidth:1.3}));
+// Prevent accidental fallback and synthetic weights in all newly specified Korean copy.
+for(const p of Object.values(patches))for(const e of p.elements??[]){
+ if(e.kind!=='text'||!e.text)continue;
+ if(/[가-힣]/.test(e.text)&&['Roboto Condensed','Montserrat','Tinos','Bodoni Moda'].includes(e.font??''))e.font='Pretendard Variable';
+ if(e.font==='Nanum Myeongjo'&&![400,700,800].includes(e.weight??400))e.weight=400;
+}
+// Native cubic paths for the elementary scalloped label shapes.
+const scallop=(x:number,y:number,w:number,h:number,fill:string):Element=>{
+ const n=12,step=w/n;
+ let d='M 10 0';
+ for(let j=0;j<n;j++){const a=10+j*(w-20)/n,b=10+(j+1)*(w-20)/n;d+=` C ${a+(b-a)*.33} -7 ${a+(b-a)*.66} 7 ${b} 0`;}
+ d+=` Q ${w+6} 0 ${w} 15 Q ${w-7} 25 ${w} 35 Q ${w+6} 45 ${w} ${h-10} Q ${w} ${h+2} ${w-10} ${h}`;
+ for(let j=n-1;j>=0;j--){const a=10+(j+1)*(w-20)/n,b=10+j*(w-20)/n;d+=` C ${a-(a-b)*.33} ${h+7} ${a-(a-b)*.66} ${h-7} ${b} ${h}`;}
+ d+=` Q -5 ${h+2} 0 ${h-15} Q 7 ${h-25} 0 ${h-35} Q -5 10 0 10 Q 0 -2 10 0 Z`;
+ return VP(x,y,w,h,d,{fill,color:fill,strokeWidth:.1});
+};
+for(const s of [1,2])for(const e of rev(30,s).elements??[])if(e.chip&&e.y===54||e.chip&&e.y===55){e.fill='transparent';e.radius=0;e.weight=800;e.font='Gothic A1';e.size=31;}
+add(30,1,scallop(35,55,364,79,'#5a00cd'));
+add(30,2,scallop(35,55,363,79,'#5a00cd'),scallop(455,55,363,79,'#faf7fe'),scallop(880,55,363,79,'#5a00cd'));
+// Smaller curling gold ornaments use cubic curves instead of photos or gray boxes.
+const goldCurl=(x:number,y:number,w:number,c:string)=>VP(x,y,w,22,'M 0 12 C 0 2 19 2 32 9 C 45 15 54 18 62 13 C 74 4 62 1 56 6 C 49 12 62 16 68 11 C 77 4 84 14 91 12 C 99 9 103 4 109 8 C 118 17 136 18 140 11 C 143 4 130 3 128 9 C 127 15 141 14 151 9 C 166 3 185 4 180 13 M 0 12 C 15 12 27 14 40 18 C 56 22 74 11 90 9 C 106 7 113 21 130 18 C 147 15 161 12 180 13 M 90 0 L 96 8 L 90 15 L 84 8 Z',{color:c,strokeWidth:.75});
+// Replace the first revision's angular ornamental approximation.
+for(const [s,x,y,w] of [[1,153,88,139],[2,151,74,138],[2,992,74,134],[2,151,818,138]]){
+ discard(26,s,e=>e.kind==='path'&&e.x>=x&&e.x<=x+w&&e.y>=y&&e.y<=y+22);
+ discard(26,s,e=>e.kind==='box'&&e.radius==='50%'&&e.x>=x&&e.x<=x+w&&e.y>=y&&e.y<=y+22);
+ add(26,s,goldCurl(x,y,w,'#ad986e'));
+}
+// Second comparison corrections: measured ink boxes and body widths avoid accidental wrapping.
+edit(26,1,e=>e.text===greetings,{x:56,w:334,size:16,y:214,h:330,lineHeight:1.85});
+edit(27,1,e=>e.text==='스마트팜·친환경 농업 기술 컨설팅 프로그램',{size:21.5,inkFit:false});
+edit(27,2,e=>e.text==='청년 농부·귀농 준비자',{inkFit:false,size:23,w:219,h:37});
+edit(27,2,e=>Boolean(e.chip)&&e.x===1028,{size:21.5,inkFit:false});
+edit(27,2,e=>e.text==='농장에 꼭 맞는 기술 도입과 운영을\n단계별로 함께합니다.',{text:'농장에 꼭 맞는 기술 도입과 운영을\n단계별로 함께합니다.',size:21,lineHeight:1.2,h:55,inkFit:false,w:260});
+// Glyph-height fitting is used only with measured single-line boxes.
+for(const id of [34,35])for(const e of rev(id,1).elements??[]){
+ if(e.text==='MIRIDANG'){e.x=e.x<850?509:931;e.y=117;e.w=260;e.h=33;e.inkFit=true;}
+ if(e.text==='BRAND NAME'){e.x=e.x<850?450:882;e.y=114;e.w=382;e.h=30;e.inkFit=true;}
+ if(e.text==='YOUR'){e.x=e.x<850?584:1016;e.y=77;e.w=103;e.h=23;e.size=30;e.letterSpacing=7;}
+ if(e.text==='CAFE'){e.y=77;e.size=31;e.h=35;}
+}
+edit(35,1,e=>e.text==='‘텍스트를 써주세요\n요’',{text:'‘텍스트를 써주세\n요’',x:540,w:203,size:20,letterSpacing:3,h:70,lineHeight:1.35});
+edit(35,1,e=>e.text==='브랜드 슬로건을 써주세\n요',{x:942,w:253,size:18,letterSpacing:4,h:52,lineHeight:1.4});
+edit(29,2,e=>e.text?.startsWith('P. I.')??false,{size:16,w:103});
+edit(29,2,e=>e.text?.startsWith('Swan Lake')??false,{size:16,w:255,lineHeight:1.25});
+// Lift the source stars over the large photo placeholder.
+for(const s of [1,2]){
+ const p=rev(29,s),stars=(p.elements??[]).filter(e=>e.kind==='path'&&!!e.fill);
+ p.elements=p.elements?.filter(e=>!stars.includes(e));p.underTextElements=[...(p.underTextElements??[]),...stars];
+}
+for(const s of [1,2])for(const e of rev(30,s).elements??[])if(e.kind==='text'){
+ if(e.font==='Gothic A1'&&e.text&&/[가-힣]/.test(e.text)){e.font='Pretendard Variable';if(e.weight&&e.weight>=700)e.weight=700;}
+ if(e.h<35&&e.text&&e.text.length>5)e.h=35;
+}
+edit(30,1,e=>e.text==='MAGIC SHOW',{x:870,y:54,w:382,h:47,size:64,inkFit:true});
+edit(30,1,e=>e.text==='김미리 MAGIC SHOW',{x:480,y:105,w:317,h:29,inkFit:true});
+edit(30,1,e=>e.text==='함께하는 이벤트',{x:455,y:342,w:112,h:27,size:19});
+edit(30,1,e=>e.text==='신비로운 마술의 세계로 여러분을 초대합니다',{x:39,y:704,w:354,h:23,inkFit:true});
+edit(30,1,e=>e.text==='눈앞에서 펼쳐지는 신비로운 마법의 순간',{x:873,y:789,w:377,h:26,size:25,inkFit:true});
+discard(30,1,e=>e.text==='김미리의\n환상의 마술쇼쇼쇼');
+add(30,1,T(971,649,184,49,'김미리의',52,{font:'Noto Sans KR',weight:800,color:'#fff',inkFit:true}),T(873,718,377,49,'환상의 마술쇼쇼쇼',52,{font:'Noto Sans KR',weight:800,color:'#fff',inkFit:true}));
+discard(30,1,e=>e.text==='MAGIC · ILLUSION · WONDER');
+add(30,1,T(871,306,173,19,'MAGIC · ILLUSION · WONDER',14,{font:'Roboto Condensed',color:'#fff',rotate:-90,lineHeight:1}),T(1253,436,173,19,'MAGIC · ILLUSION · WONDER',14,{font:'Roboto Condensed',color:'#fff',rotate:90,lineHeight:1}));
+for(const e of rev(30,1).elements??[])if(e.kind==='path'&&e.fill&&e.w<60){e.fill=undefined;}
+for(const e of rev(30,2).underTextElements??[])if(e.kind==='path'&&e.fill)e.fill=undefined;
+rev(30,2).underTextElements?.push(B(39,192,85,85,'#e5e5e5',{radius:'50%'}),B(158,257,116,116,'#e5e5e5',{radius:'50%'}),B(309,354,85,85,'#e5e5e5',{radius:'50%'}));
+for(const r of rev(30,2).images??[])if(r.y===729){r.w=68;r.h=68;r.x=r.x===135?139:r.x===228?234:r.x===322?329:r.x;}
+edit(30,2,e=>e.text?.startsWith('현실을 넘어서는')??false,{font:'Pretendard Variable',x:85,w:267,size:15,lineHeight:1.45,h:116});
+edit(30,2,e=>e.text==='체험 프로그램',{w:129,size:19});
+edit(30,2,e=>e.text==='음악과 함께하는 퍼포먼스',{size:15,w:183,x:1063});
+edit(31,1,e=>e.text==='국   악\n연주회'&&e.x===549,{font:'Noto Serif KR',weight:500,size:58,h:148,lineHeight:1.25});
+edit(31,1,e=>e.text==='국   악\n연주회'&&e.x===981,{font:'Noto Serif KR',weight:500,size:53,h:145,lineHeight:1.4});
+// Repeated recommendations keep exactly three lines plus signature in the source.
+edit(32,1,e=>e.text===rec,{font:'Pretendard Variable',weight:400,size:18,x:52,w:323,h:132,lineHeight:1.4});
+for(const s of [1,2])for(const e of rev(32,s).elements??[])if(e.kind==='text'&&e.text&&e.x<430&&e.text.length>65){e.font='Pretendard Variable';e.size=s===2?16:18;e.lineHeight=s===2?1.56:1.4;}
+for(const s of [1,2])for(const e of rev(32,s).elements??[])if(e.font==='Nanum Pen Script'){
+ e.font='Bodoni Moda';e.fontStyle='italic';e.size=e.text==='if you love me'?48:43;e.opacity=.4;e.h=72;
+}
+// Academy headlines are separate measured lines; their second line must never wrap.
+discard(33,1,e=>e.text==='능률을 최적화하는\n체계적인 학습 프로그램!');
+add(33,1,T(113,54,190,26,'능률을 최적화하는',29,{font:'Noto Sans KR',weight:900,color:academyBrown,inkFit:true}),T(113,85,251,26,'체계적인 학습 프로그램!',29,{font:'Noto Sans KR',weight:900,color:academyBrown,inkFit:true}));
+discard(33,2,e=>e.text==='최상위 학생들이 선택한\n비즈스쿨은 이렇게 다릅니다!');
+add(33,2,T(113,54,245,26,'최상위 학생들이 선택한',29,{font:'Noto Sans KR',weight:900,color:academyBrown,inkFit:true}),T(113,85,292,26,'비즈스쿨은 이렇게 다릅니다!',29,{font:'Noto Sans KR',weight:900,color:academyBrown,inkFit:true}));
+rev(33,1).underTextElements?.push(B(611,418,58,58,'#42321b',{radius:'50%'}));
+rev(33,2).underTextElements=rev(33,2).underTextElements?.filter(e=>e.kind!=='box'||e.radius!=='50%'||!e.border);
+rev(33,2).underTextElements?.push(VP(0,176,431,395,'M 14 200 A 201 186 0 0 1 417 200',{color:'#fff',strokeWidth:28}),VP(0,176,431,395,'M 24 200 A 191 186 0 0 0 407 200',{color:'#ded6bc',strokeWidth:14}),VP(439,390,403,392,'M 7 204 A 194 196 0 0 1 396 204',{color:'#ded6bc',strokeWidth:15}),VP(853,176,427,395,'M 14 200 A 199 187 0 0 1 413 200',{color:'#fff',strokeWidth:28}),VP(853,176,427,395,'M 24 200 A 189 186 0 0 0 403 200',{color:'#ded6bc',strokeWidth:14}));
+// Tighten the small publisher line to the native centre panel width.
+rev(28,1).elements=rev(28,1).elements?.filter(e=>!(e.y===849&&e.x>=458));
+add(28,1,T(458,849,363,25,'주최  미리문화센터    후원  비즈시청  미리문화광장',14,{color:'#42321b',weight:600}));
+// Second visual review repairs: retain decorations above the media layer and remove OCR residue.
+for(const s of [1,2])rev(26,s).removeText=[R(0,0,1280,910)];
+for(const s of [1,2])for(const e of rev(26,s).elements??[])if(e.kind==='path'&&e.d?.startsWith('M 0 12')){
+ let coordinate=0;e.d=e.d.replace(/-?\d+(?:\.\d+)?/g,n=>String(++coordinate%2?Number(n)*e.w/180:Number(n)));
+}
+edit(35,1,e=>e.text==='YOUR',{inkFit:true});
+for(const s of [1,2])edit(35,s,e=>e.text==='메뉴이름'||e.text==='메뉴이름 100g',{font:'Nanum Myeongjo',weight:700,letterSpacing:s===1?3:3});
+edit(30,1,e=>e.text==='함께하는 이벤트',{inkFit:true,h:20});
+for(const s of [1,2]){
+ const p=rev(30,s),headers=(p.elements??[]).filter(e=>e.kind==='path'&&e.d?.startsWith('M 10 0'));
+ p.elements=p.elements?.filter(e=>!headers.includes(e));
+ p.underTextElements=[...(p.underTextElements??[]),...headers];
+}
+rev(30,1).underTextElements?.push(B(334,607,53,53,'#e5e5e5'),B(258,607,1,53,'transparent',{border:'0.8px dotted #ad80cf'}));
+// This empty chip is a background, so its fill must precede the QR and separator.
+const contactBackground=rev(30,1).elements?.find(e=>e.chip&&e.x===34&&e.y===596&&e.text==='');
+if(contactBackground){
+ rev(30,1).elements=rev(30,1).elements?.filter(e=>e!==contactBackground);
+ rev(30,1).underTextElements=[{...contactBackground,kind:'box',chip:false},...(rev(30,1).underTextElements??[])];
+}
+rev(30,2).underTextElements?.push(ring(39,192,85,85,'#8f53b5',.7),ring(158,257,116,116,'#8f53b5',.7),ring(309,354,85,85,'#8f53b5',.7),...Array.from({length:4},(_,j)=>ring([44,139,234,329][j],729,68,68,'#8f53b5',.7)));
+const timetableElements=rev(36,2).elements??[],tableStart=timetableElements.findIndex(e=>e.x===905&&e.y===157&&e.h===1);
+if(tableStart>=0)timetableElements.splice(tableStart,0,...[1,3,5,7].map(j=>B(905,210+j*53.3,313,53.3,'#f8f8f8')));
+add(36,1,...[[880,22,22,4,-45,'#d8efeb'],[1037,22,26,5,-15,'#f8f8af'],[1214,31,26,5,-47,'#f8dce5'],[1246,130,24,4,47,'#d8efeb'],[869,247,23,4,-46,'#f8dce5'],[1234,258,26,5,-17,'#f8f8af'],[921,272,22,4,48,'#d8efeb']].map(([x,y,w,h,r,c])=>B(Number(x),Number(y),Number(w),Number(h),String(c),{rotate:Number(r)})));
+// The festival cover flower is elementary geometry, rather than a media placeholder.
+rev(28,1).images=rev(28,1).images?.filter(r=>!(r.x===915&&r.y===538));
+const festivalPetal='M 0 0 L 75 0 C 132 0 151 27 168 70 L 168 169 L 70 169 C 28 153 0 130 0 75 Z';
+for(const [flipX,flipY] of [[false,false],[true,false],[false,true],[true,true]]){
+ let coordinate=0;
+ const d=festivalPetal.replace(/\d+(?:\.\d+)?/g,n=>{const x=coordinate++%2===0;return String(x?(flipX?336-Number(n):Number(n)):(flipY?338-Number(n):Number(n)))});
+ add(28,1,VP(915,538,336,338,d,{fill:'#fecd4a',color:'#fecd4a',strokeWidth:0}));
+}
+add(28,1,star(1083,707,93,'#a1664c',20,.28));
+edit(29,1,e=>e.text==='비즈홀\n오케스트라\n정기연주회',{weight:400});
+// Use the same real connected script as l42 while retaining the previous visible ink bounds.
+const romanticScriptBounds:[number,string,number,number,number,number,number][]=[
+ [1,'information',90,105.242,87,218.962,43],
+ [1,'information',524,529.242,88,218.962,43],
+ [1,'location',557,566.997,478,145.454,32],
+ [1,'if you love me',861,923,746.5,285.847,49],
+ [2,'Introducing',105,101.527,95,221.576,43],
+ [2,'Synopsis',137,140.208,570,165.867,43],
+ [2,'Cast',580,600.914,102,82.155,32],
+ [2,'Staff',1008,1017.635,102,96.49,43],
+];
+for(const [s,text,matchX,x,y,w,h] of romanticScriptBounds)edit(32,s,e=>e.text===text&&e.x===matchX,{x,y,w,h,font:'Allura',weight:400,fontStyle:'normal',inkFit:true,align:'left',letterSpacing:0,...(s===1&&matchX===90?{text:'recommendation'}:{})});

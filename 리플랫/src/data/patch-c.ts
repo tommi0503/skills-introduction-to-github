@@ -1,5 +1,5 @@
 import type {SidePatch,Region} from '../model'
-import {T,C,B,L,IC,P} from '../primitives'
+import {T,C,B,L,IC,P,VP} from '../primitives'
 const R=(x:number,y:number,w:number,h:number):Region=>({x,y,w,h})
 const img=(x:number,y:number,w:number,h:number,dropText=true,radius?:number|string)=>({x,y,w,h,dropText,radius})
 const heading=(x:number,y:number,w:number,h:number,text:string,size:number,color='#111',font='Pretendard')=>T(x,y,w,h,text,size,{weight:700,color,font,align:'center',lineHeight:1.1})
@@ -456,3 +456,290 @@ for(const e of p['l56/s02'].elements??[]){
  if(e.text==='Special'){e.w=174;e.h=67}
  if(e.text==='Guest')e.x=1091;
 }
+
+// Revision C: retain simple source geometry while replacing only pictorial content.
+const removeImages=(key:string,test:(r:Region)=>boolean)=>{p[key].images=p[key].images?.filter(r=>!test(r))}
+const octagon=(x:number,y:number,w:number,h:number,inset:number,color:string,width=1,fill?:string)=>({...P([[x+inset,y],[x+w-inset,y],[x+w,y+inset],[x+w,y+h-inset],[x+w-inset,y+h],[x+inset,y+h],[x,y+h-inset],[x,y+inset]],color,width,fill),closed:true})
+const diamond=(x:number,y:number,size:number,color:string)=>P([[x,y-size],[x+size,y],[x,y+size],[x-size,y]],color,1,color)
+const nativeFonts:Record<string,string>={'Figtree':'Figtree Variable','Geist':'Geist Variable','Outfit':'Outfit Variable'}
+for(const patch of Object.values(p))for(const e of patch.elements??[])if(e.font&&nativeFonts[e.font])e.font=nativeFonts[e.font];
+
+// l49: these circles and farming symbols are geometric icons, not image placeholders.
+removeImages('l49/s01',r=>r.w<80&&r.y<700||r.w<40)
+add('l49/s01',[
+ ...['ClipboardPen','FlaskConical','ChartNoAxesCombined','UsersRound','Sprout'].flatMap((icon,i)=>[B(53,180+i*102,69,69,green,{radius:'50%'}),IC(68,194+i*102,40,42,icon,'#fff',{strokeWidth:1.6})]),
+ ...['Warehouse','Sprout','Smartphone'].flatMap((icon,i)=>[B(494+i*106,191,69,69,green,{radius:'50%'}),IC(510+i*106,207,38,39,icon,'#fff',{strokeWidth:1.7})]),
+ IC(624,762,31,26,'Globe','#111'),IC(1212,834,31,24,'Globe','#111')
+]);
+removeImages('l49/s02',r=>r.w<90||r.x===1080)
+add('l49/s02',[
+ IC(65,420,83,66,'Sprout','#111',{strokeWidth:1.4}),IC(62,778,83,53,'Tractor','#111',{strokeWidth:1.4}),
+ ...['ClipboardPen','Sprout','Tractor'].flatMap((icon,i)=>[B(1080,246+i*190,67,68,green,{radius:'50%'}),IC(1094,260+i*190,39,40,icon,'#fff')]),
+ IC(900,756,41,81,'Smartphone','#fff',{strokeWidth:1.8})
+]);
+// Thin table borders remain continuous around the colored header bars.
+add('l49/s01',[L(21,106,395,1,'#555'),L(21,150,395,1,'#555'),L(442,106,395,1,'#555'),L(442,150,395,1,'#555'),L(442,350,395,1,'#555'),L(442,395,395,1,'#555'),L(21,695,395,1,'#555'),L(21,740,395,1,'#555')]);
+
+// l50: bounded scenes and plain speech tails retain their original silhouette.
+for(const r of p['l50/s01'].images??[])if(r.x===878){r.radius='42px 42px 0 0';r.x=885;r.y=465;r.w=361;r.h=361}
+for(const r of p['l50/s02'].images??[])if(r.x===70)r.radius='0 0 16px 16px';
+add('l50/s01',[B(480,694,34,34,'#fff',{radius:'50%'}),IC(487,700,21,21,'Phone',lime),P([[1043,267],[1060,267],[1051,278]],forest,0,forest)]);
+for(const e of p['l50/s01'].elements??[]){
+ if(e.text==='청년인데 농업을\n시작하고싶어요!')e.text='청년인데 농업을\n시작하고싶어요!';
+ if(e.text==='www.mirismartagri.co.kr'||e.text==='smartfarm@miriagri.co.kr'){e.font='Montserrat';e.size=13.2;e.letterSpacing=.15}
+ if(e.text==='현재 시설과\n재배 흐름을\n점검하고 싶어요')e.text='현재 시설과\n재배 흐름을\n점검하고 싶어요';
+}
+for(const e of p['l50/s02'].elements??[])if(e.chip&&e.text?.match(/^[123]  /)){e.text=e.text.replace(/^[123]  /,'');e.x=552;e.w=181}
+add('l50/s02',[0,1,2].map(i=>C(548,299+i*196,24,24,String(i===2?2:i+1),16,forest,{color:'#fff',radius:'50%',weight:400})));
+
+// l51: typographic ornaments and true horizontal rules are independent of photos.
+add('l51/s02',[T(878,178,73,108,'“',180,{font:'Tinos',color:'#f0eef4'}),T(1130,353,73,90,'”',180,{font:'Tinos',color:'#f0eef4'}),IC(628,98,29,29,'Feather',purple,{strokeWidth:1.8})]);
+p['l51/s02'].underTextElements=[T(878,178,73,108,'“',180,{font:'Tinos',color:'#f0eef4'}),T(1130,353,73,90,'”',180,{font:'Tinos',color:'#f0eef4'})];
+p['l51/s02'].elements=p['l51/s02'].elements!.filter(e=>!['“','”'].includes(e.text??''));
+for(const e of p['l51/s02'].elements??[]){
+ if(e.text?.startsWith('고요한 도시의 끝자락')){e.text=e.text.replace('오랜날','오랜날');e.size=13;e.lineHeight=1.97}
+ if(e.text==='&'){e.x=324;e.y=130;e.font='Tinos';e.weight=400}
+ if(e.text==='제작참여'){e.fontStyle='italic';e.weight=700}
+}
+for(const e of p['l51/s01'].elements??[])if(e.text?.startsWith('문의처  '))e.text='문의처  01) 1234-5678   연주  비즈 챔버앙상블';
+add('l51/s01',[B(488,832,52,19,'#7e759a'),B(660,832,51,19,'#7e759a')]);
+
+// l52: a flat brown panel and cream paper retain the source's legible white copy.
+removeImages('l52/s01',r=>r.x===0||r.x===1040)
+p['l52/s01'].elements!.unshift(B(0,0,427,754,'#8d6846'));
+p['l52/s02'].background='#f0e7d4';
+for(const e of p['l52/s02'].elements??[])if(e.kind==='box'&&e.x===430&&e.h===909)e.fill='#c4b298';
+add('l52/s01',[
+ ...[0,1,2,3].map(i=>octagon(82+i%2*157,150+Math.floor(i/2)*222,108,108,30,'#876240',1)),
+ B(1022,0,87,94,brown,{radius:'0 0 44px 44px'}),IC(1046,30,43,43,'Grid3X3','#f8e6c6'),
+ diamond(218,590,6,'#d9c3a0'),diamond(639,408,6,'#d7bf98'),
+ ...[0,1,2,3].flatMap(i=>[B(581,523+i*88,4,4,'#d1bb96',{radius:'50%'}),B(694,523+i*88,4,4,'#d1bb96',{radius:'50%'})])
+]);
+for(const e of p['l52/s01'].elements??[]){
+ if(e.text==='1588-1234'&&e.x<427){e.font='Tinos';e.size=24;e.w=145}
+ if(e.text==='www.bizhangwa.com'&&e.x<427){e.font='Tinos';e.size=24}
+ if(e.text==='비즈한과'){e.letterSpacing=4;e.w=225;e.x=528}
+ if(e.text==='전통의 맛,\n정성을 담다'){e.y=204;e.size=54;e.lineHeight=1.23;e.weight=600;e.h=149}
+}
+for(const r of p['l52/s02'].images??[])if(r.x===89){r.x=89;r.w=250;r.h=249}
+p['l52/s02'].underTextElements!.push(octagon(88,199,251,250,35,'#6d573c',2));
+add('l52/s02',[
+ ...[0,1,2].flatMap(i=>{const y=120+i*238;return [B(466,y+6,347,214,'transparent',{border:'1px solid #dfcfb1'}),...[[473,y+12,1,16],[473,y+12,16,1],[792,y+12,16,1],[807,y+12,1,16],[473,y+198,1,16],[473,y+213,16,1],[792,y+213,16,1],[807,y+198,1,16]].map(([x,yy,w,h])=>L(x,yy,w,h,'#c8b087'))]}),
+ ...[0,1,2,3,4,5].map(i=>IC(1017,322+i*96,20,22,'Flower2',brown))
+]);
+for(const e of p['l52/s02'].elements??[]){
+ if(e.text?.match(/^(39|59|89),000원/)){e.size=19.5;e.letterSpacing=0;e.w=158;e.h=30;e.text=e.text.replace(' | ',' | ')}
+ if(e.text?.startsWith('※ 기업·단체')){e.size=14.5;e.x=481;e.w=334;e.weight=600}
+}
+
+// l53: rounded photo crops and geometric leaf/emblem accents.
+for(const r of p['l53/s01'].images??[])if(r.x===55)r.radius='0 0 10px 10px';
+for(const r of p['l53/s02'].images??[])if(r.x===480)r.radius=9;
+add('l53/s01',[IC(1150,653,39,40,'Leaf','#6f9437',{strokeWidth:1.8}),IC(919,858,24,25,'Sprout','#333')]);
+for(const e of p['l53/s01'].elements??[]){
+ if(e.chip&&['상담 신청 안내','상담 가능 분야'].includes(e.text??''))e.radius=0;
+ if(e.text==='미리스마트농업연구소'&&e.y===839){e.radius='20px 20px 0 0';e.x=883;e.w=367;e.h=70;e.y=839}
+ if(e.text?.startsWith('친환경 농업 방식'))e.text='친환경 농업 방식에 대한 컨설팅을 진행합니다.\n이곳에 해당 컨설팅 내용에 대해 짧게 설명해주세요.';
+}
+for(const e of p['l53/s02'].elements??[])if(e.chip&&e.y===634)e.weight=600;
+
+// l54: restore mint icon cards and circle backgrounds instead of graying their geometry.
+removeImages('l54/s01',r=>r.w<80)
+removeImages('l54/s02',r=>r.x===44)
+add('l54/s01',['Warehouse','Leaf','UserRound'].flatMap((icon,i)=>[B(478+i*128,358,61,61,'#b1dfc6',{radius:'50%'}),IC(490+i*128,369,36,39,icon,'#e9f6ef',{strokeWidth:1.3})]));
+add('l54/s02',['Trees','Sprout','UserRound','Warehouse'].flatMap((icon,i)=>[B(44,238+i*174,92,91,'#c5e5d4',{radius:9}),IC(64,257+i*174,52,54,icon,seaGreen,{strokeWidth:1.3})]));
+for(const key of ['l54/s01','l54/s02'])for(const e of p[key].elements??[]){
+ if(e.color==='#888'){e.color='#8a8e8b';e.weight=400;e.lineHeight=1.55}
+ if(e.text==='기관정보 및 문의처'||e.text==='상담 가능 분야'){e.weight=700;e.size=20}
+ if(e.text?.includes('www.mirismartagri')){e.size=15.4;e.w=242}
+ if(e.text?.includes('현장 또는 비대면 방식으로')){e.text='현장 또는 비대면 방식으로\n솔루션 안내';e.lineHeight=1.45}
+}
+for(const e of p['l54/s02'].elements??[]){
+ if(e.text==='청년 농부·귀농 준비자'){e.y=583;e.h=33;e.size=21}
+ if(e.text==='기술 기반 농업 운영 방향을\n배우고 싶은 경우'){e.y=622;e.lineHeight=1.45}
+ if(e.text==='현재 시설과 재배 흐름을\n점검하고 싶은 경우')e.y=829;
+ if(e.text==='기초 진단 컨설팅'||e.text==='맞춤 설계 컨설팅'||e.text==='현장 적용 컨설팅')e.weight=700;
+}
+
+// l55: source badge rotations, continuous map roads and filled locator.
+for(const e of p['l55/s01'].elements??[]){
+ if(e.text==='시니어를 위한'){e.rotate=-6;e.x=937;e.y=109}
+ if(e.text==='무료교육'){e.rotate=5;e.x=908;e.y=263}
+ if(e.text?.includes('&미리 종합복지관'))e.text='• 미리구청 2층 평생교육과\n• 미리 종합복지관 1층 접수대\n• 내용을 입력해 주세요.';
+ if(e.kind==='box'&&e.x===573&&e.y===224){e.x=570;e.w=21;e.h=187}
+ if(e.kind==='box'&&e.x===697&&e.y===336){e.x=689;e.w=9;e.h=75}
+}
+add('l55/s01',[IC(627,306,31,42,'MapPin','#f16d76',{strokeWidth:3}),P([[888,534],[900,563],[914,561]],cyan,0,cyan),IC(895,531,44,30,'Wifi','#fff')]);
+for(const e of p['l55/s02'].elements??[])if(e.text==='시니어를 위한\n맞춤형 디지털 교육'){e.align='left';e.x=49;e.w=370;e.size=45}
+
+// l56: use the loaded family name; the old 'Figtree' silently used a fallback.
+for(const key of ['l56/s01','l56/s02'])for(const e of p[key].elements??[]){
+ if(e.font==='Figtree Variable'){e.font='Figtree Variable';e.letterSpacing=-.55}
+ if(e.text==='Autumn'){e.weight=400;e.size=key.endsWith('s01')&&e.x>850?70:53}
+ if(e.text==='Music')e.weight=400;
+ if(e.text==='Festival')e.weight=700;
+ if(e.text==='Contact')e.weight=600;
+ if(e.text==='Event')e.weight=700;
+ if(e.color==='#7d7055'){e.weight=e.size&&e.size>20?500:400}
+ if(e.text?.startsWith('행운 가득'))e.text='작은 기쁨 럭키드로우에 참여하고\n푸짐한 경품의 주인공이 되어보세요';
+ if(e.text?.startsWith('축제의 즐거운 순간'))e.text='축제의 즐거운 순간을 사진으로 남기고\n인증하면 특별한 선물을 받아보세요';
+}
+for(const e of p['l56/s01'].elements??[]){
+ if(e.text==='2096.10.17 SAT'){e.font='Figtree Variable';e.weight=700;e.letterSpacing=-.4}
+ if(e.text==='⚠ Notice'){e.text='Notice';e.weight=600;e.x=595;e.w=119}
+ if(e.text?.startsWith('주차장이 혼잡')){e.weight=400;e.size=14.5;e.color='#df9d80'}
+}
+add('l56/s01',[IC(568,819,26,28,'TriangleAlert','#ffcf62'),IC(370,47,20,35,'Music',orange),IC(66,42,26,34,'Leaf',orange),IC(492,46,27,35,'Music','#ffcf62')]);
+add('l56/s02',[IC(51,45,23,35,'Leaf',orange),IC(380,46,22,35,'Music',orange),IC(462,46,22,35,'Music','#ffcf62'),IC(1185,43,24,35,'Music',orange)]);
+
+// l57: ordinary native-size numbers preserve width and stroke, without ink fitting.
+for(const e of p['l57/s01'].elements??[]){
+ if(e.text==='02-000-0000'){e.inkFit=false;e.x=596;e.y=675;e.w=215;e.h=45;e.size=33;e.weight=700;e.font='Pretendard';e.letterSpacing=0}
+ if(e.text==='월~금 09:00~18:00'){e.inkFit=false;e.x=610;e.y=789;e.w=208;e.h=33;e.size=22;e.weight=600}
+ if(e.text==='무료교육 안내'){e.inkFit=false;e.x=893;e.y=675;e.w=350;e.h=78;e.size=61;e.font='Black Han Sans';e.weight=400;e.letterSpacing=-1.7}
+ if(e.text==='edu@miri.go.kr'){e.x=654;e.y=733;e.size=22;e.w=160;e.h=33;e.weight=700}
+ if(e.kind==='box'&&e.x===479&&e.y===138)e.fill='#fff';
+ if(e.kind==='box'&&e.x===479&&e.y===182){e.rotate=-7;e.h=33}
+ if(e.kind==='box'&&e.x===595&&e.y===114){e.rotate=-7;e.h=193}
+}
+add('l57/s01',[P([[489,224],[531,298]],'#e5e5e5',6),P([[489,254],[591,243]],'#e5e5e5',6),P([[204,116],[224,116],[214,124]],bright,0,bright),P([[625,116],[644,116],[635,124]],blue,0,blue),P([[1063,116],[1082,116],[1072,124]],bright,0,bright)]);
+for(const r of p['l57/s01'].images??[])if(r.radius==='50%')r.radius='50%';
+p['l57/s01'].underTextElements=[B(276,146,106,106,'transparent',{radius:'50%',border:'2px solid #69c4d5'}),B(276,371,106,106,'transparent',{radius:'50%',border:'2px solid #69c4d5'})];
+// The inner page retains the clipped rounded tabs visible at the very top.
+add('l57/s02',[B(18,-45,381,68,bright,{radius:45}),B(457,-45,375,68,'#fff',{radius:45}),B(874,-45,383,68,blue,{radius:45}),L(898,723,336,1,'#b2e1e9'),L(898,766,336,1,'#b2e1e9')]);
+
+// l58: dates are a bold sans line, and work titles must not collide with translations.
+for(const key of ['l58/s01','l58/s02'])for(const e of p[key].elements??[]){
+ if(e.text==='2099.10.18–11.16'||e.text==='2099. 10. 18 – 11. 16'){e.inkFit=false;e.text='2099. 10. 18 – 11. 16';e.x=513;e.w=213;e.h=32;e.size=23;e.font='Pretendard';e.weight=700;e.letterSpacing=-.1}
+ if(e.text==='“익숙한 풍경을 오래 바라보면\n그 안에서 낯선 순간을 발견하게 됩니다.”'){e.fontStyle='italic';e.weight=600}
+}
+for(const e of p['l58/s02'].elements??[])if(['Afternoon Window','Light That Stays','Quiet Garden'].includes(e.text??'')){e.x=1061;e.size=12.7;e.w=175}
+for(const key of ['l58/s01','l58/s02'])for(const e of p[key].elements??[])if(e.kind==='box'&&e.h===1&&e.fill==='#999')e.fill='transparent';
+add('l58/s02',[...dots(888,694,365),...dots(888,793,365)]);
+
+// l59: editable house roof and accurately filled source bullet symbols.
+add('l59/s01',[P([[1071,188],[1105,167],[1195,238]],sun,4),P([[466,94],[524,78],[535,83]],'#fff',3),L(526,74,4,13,'#fff')]);
+for(const e of p['l59/s01'].elements??[]){
+ if(e.text==='미리요양원'){e.font='Pretendard';e.weight=800;e.letterSpacing=-1}
+ if(e.text?.startsWith('어르신을 가족처럼'))e.text='어르신을 가족처럼 모시는 미리요양원입니다.\n신체 기능과 건강 상태는 물론 정서적 안정과 일상의\n즐거움까지 세심하게 살피며, 보호자께서도 안심하실\n수 있는 돌봄 환경을 만들어갑니다.';
+}
+for(const e of p['l59/s02'].elements??[]){
+ if(e.text==='양원 입소 상담\n및 계약')e.text='양원 입소 상담\n및 계약';
+ if(e.text==='장기요양 인정 신청'||e.text==='입소 절차'||e.text==='입소 시 준비서류'){e.size=25;e.weight=700}
+ if(e.text==='쾌적하고 안전한 생활환경'){e.text='쾌적하고 안전한 생활환경';e.size=24}
+}
+add('l59/s02',[IC(60,447,21,25,'ArrowRight','#fff'),IC(59,701,22,27,'FileText','#fff'),IC(455,149,19,21,'House','#fff'),IC(455,642,21,24,'Accessibility','#fff')]);
+
+// l60: source display face has straight compact strokes, unlike Single Day.
+for(const key of ['l60/s01','l60/s02'])for(const e of p[key].elements??[]){
+ if(e.font==='Single Day'){e.font='Do Hyeon';e.weight=400;e.letterSpacing=0}
+ if(e.text==='주거지원')e.text='주거지원';
+ if(e.text==='자립지원')e.text='자립지원';
+}
+removeImages('l60/s01',r=>r.x===620||r.x===54)
+add('l60/s01',[IC(620,308,43,49,'Lightbulb','#b4b300'),IC(54,105,78,68,'HandHeart','#ffe88d',{strokeWidth:1.4}),P([[888,161],[898,161]],'#111',1)]);
+for(const e of p['l60/s01'].elements??[]){
+ if(e.text==='✦ 핵심가치 ✦'){e.text='✦ 핵심가치 ✦';e.size=43;e.y=116;e.font='Do Hyeon'}
+ if(e.text==='꿈꾸고 도전하며\n스스로 일어서다.'){e.font='Do Hyeon';e.weight=400;e.lineHeight=1.27;e.size=e.x>850?61:34;e.y=e.x>850?157:375;e.h=e.x>850?149:89}
+ if(e.text==='비즈청소년재단')e.font='Do Hyeon';
+ if(e.text==='청소년의 건강한 자립을 위해\n당신의 후원을 기다립니다.'){e.size=23;e.weight=600;e.y=321}
+}
+for(const e of p['l60/s02'].elements??[]){
+ if(e.text==='   주거지원'||e.text==='주거지원')e.text='주거지원';
+ if(e.text?.trim()==='자립지원')e.text='자립지원';
+ if(e.text==='주거 관련 정보 제공'){e.text='주거 관련 정보 제공';e.size=16.5}
+ if(e.text==='지원 서비스'||e.text==='함께해주세요'){e.size=45;e.font='Do Hyeon'}
+ if(e.text==='후원이 만드는 변화'){e.size=42;e.font='Do Hyeon'}
+ if(e.kind==='text'&&e.w===169&&e.h===64){e.size=11;e.letterSpacing=-.35;e.w=170;e.h=69;e.lineHeight=1.45}
+ if(e.chip&&['정기후원','일시후원','물품후원'].includes(e.text??'')){e.size=23;e.font='Do Hyeon';e.weight=400}
+ if(e.text?.startsWith('자립준비청년(또는'))e.text='자립준비청년(또는 청년·취약계층)이 사회에 안착하고 스스로\n삶을 일구어 갈 수 있도록 주거·생계·진로 등 생활 전반을 통합\n적으로 보살피는 맞춤형 종합 지원 체계입니다.';
+}
+// Header plaques retain their offset inner outline and small hanging dots.
+add('l60/s02',[64,459,886].map(x=>B(x+7,94,334,58,'transparent',{border:'1px solid #d8ded8',radius:45})));
+// Only one weight exists for these loaded display faces.
+for(const patch of Object.values(p))for(const e of patch.elements??[])if(['Jua','Do Hyeon','Black Han Sans','Single Day','Lilita One','Archivo Black','Nanum Pen Script'].includes(e.font??''))e.weight=400;
+
+// Korean sweets: curved double scalloped frame and matching small plaques.
+const sweetFrame='M 184 0 C 132 0 94 12 76 50 C 28 58 14 89 18 129 C 6 133 0 145 0 159 L 0 755 C 0 774 9 785 23 789 L 23 814 C 23 848 48 860 80 860 L 288 860 C 320 860 345 848 345 814 L 345 789 C 359 785 368 774 368 755 L 368 159 C 368 145 362 133 350 129 C 354 89 340 58 292 50 C 274 12 236 0 184 0 Z';
+p['l52/s01'].elements=p['l52/s01'].elements!.filter(e=>!(e.kind==='box'&&e.x===454&&e.w===368));
+let frameIndex=0;
+const innerSweetFrame=sweetFrame.replace(/\d+(?:\.\d+)?/g,n=>String(Number(n)*(frameIndex++%2?848/860:356/368)));
+p['l52/s01'].elements=[B(427,0,423,909,'#fff'),VP(454,22,368,860,sweetFrame,{fill:'#fff',color:'#d5bf99',strokeWidth:3}),VP(460,28,356,848,innerSweetFrame,{color:'#dccaa9',strokeWidth:2}),...p['l52/s01'].elements!.filter(e=>!(e.kind==='box'&&e.x===427&&e.w===423))];
+const smallPlaque='M 20 0 L 108 0 Q 120 0 120 8 Q 127 10 128 19 Q 127 28 120 30 Q 120 38 108 38 L 20 38 Q 8 38 8 30 Q 1 28 0 19 Q 1 10 8 8 Q 8 0 20 0 Z';
+for(const e of p['l52/s01'].elements??[])if(e.chip&&['주소','대표번호','홈페이지','Instagram','문의'].includes(e.text??'')){const {x,y,w,h}=e;e.fill='transparent';e.border=undefined;add('l52/s01',[VP(x,y,w,h,smallPlaque,{fill:paper,color:'#cbb28b',strokeWidth:2})])}
+// Rounded top corners step outward in the story card, matching its ornamental edge.
+p['l52/s02'].elements=p['l52/s02'].elements!.filter(e=>!(e.kind==='box'&&e.x===31&&e.w===368&&e.h===854));
+add('l52/s02',[VP(31,28,368,854,'M 37 0 L 331 0 Q 347 0 349 17 Q 368 22 368 45 L 368 811 Q 368 835 346 841 Q 341 854 325 854 L 43 854 Q 27 854 22 841 Q 0 835 0 811 L 0 45 Q 0 22 19 17 Q 21 0 37 0 Z',{fill:paper,color:'#d8c29f',strokeWidth:2})]);
+
+// Second visual review: front badges, fit-free phone line, true Sunflower face.
+p['l49/s02'].underTextElements=[...[0,1,2].map(i=>B(1080,246+i*190,67,68,green,{radius:'50%'}))];
+for(const e of p['l50/s02'].elements??[])if(e.chip&&['기초 진단 컨설팅','맞춤 설계 컨설팅','현장 적용 컨설팅'].includes(e.text??'')){e.x=538;e.w=204;e.text='　'+e.text;e.size=21}
+for(const e of p['l57/s01'].elements??[])if(e.text==='02-000-0000'){e.size=29.2;e.x=594;e.w=220;e.h=37;e.lineHeight=1.1;e.y=677}
+for(const e of p['l51/s02'].underTextElements??[]){e.w=90;e.h=126;e.y-=51}
+for(const key of ['l60/s01','l60/s02'])for(const e of p[key].elements??[])if(e.font==='Do Hyeon'){e.font='Sunflower';e.weight=500;e.letterSpacing=-.45;if(e.text==='꿈꾸고 도전하며\n스스로 일어서다.')e.size=e.x>850?56:32}
+for(const e of p['l55/s01'].elements??[])if(e.kind==='icon'&&e.icon==='Wifi'&&e.x===906){e.x=900;e.y=530;e.w=43;e.h=34}
+p['l55/s01'].elements=p['l55/s01'].elements!.filter(e=>!(e.kind==='icon'&&e.icon==='Wifi'&&e.x===895));
+const burst=(x:number,y:number,r:number,fill:string)=>P(Array.from({length:24},(_,i)=>{const a=i*Math.PI/12,d=i%2?r*.42:r;return [x+Math.cos(a)*d,y+Math.sin(a)*d]}),fill,0,fill);
+add('l58/s02',[burst(374,56,22,'#f5df79'),burst(374,102,22,'#76cbd8'),...[0,1,2].map(i=>VP(772,39+i*25,48,25,'M 0 25 A 24 25 0 0 1 48 25 Z',{fill:'#ddbadf',strokeWidth:0}))]);
+for(const e of p['l58/s02'].elements??[])if(['Afternoon Window','Light That Stays','Quiet Garden'].includes(e.text??'')){e.x=1048;e.w=171}
+for(const e of p['l58/s01'].elements??[])if(e.text==='※ 주말 일요일 휴관'||e.text==='매주 월요일 휴관')e.x+=14;
+
+// The loaded Sunflower face closely matches the source's condensed stems and
+// mixed weights; the prior Figtree fallback visibly differed in stroke shape.
+for(const key of ['l56/s01','l56/s02'])for(const e of p[key].elements??[])if(e.font==='Figtree Variable'){
+ e.font='Sunflower';e.weight=['Contact','Event','Stage','Time','Special','Notice'].includes(e.text??'')?500:300;e.letterSpacing=-.35;
+}
+p['l56/s01'].elements=p['l56/s01'].elements!.filter(e=>!['Information','Autumn','Festival'].includes(e.text??''));
+add('l56/s01',[
+ T(80,38,89,63,'Info',50,{font:'Sunflower',weight:300,color:orange}),T(169,38,187,63,'rmation',50,{font:'Sunflower',weight:500,color:orange}),
+ ...[[549,160,53],[921,196,70]].flatMap(([x,y,size])=>[T(x,y,size*.57,size*1.3,'A',size,{font:'Sunflower',weight:300,color:orange}),T(x+size*.57,y,size*3.35,size*1.3,'utumn',size,{font:'Sunflower',weight:500,color:orange})]),
+ ...[[548,266,53],[921,352,70]].flatMap(([x,y,size])=>[T(x,y,size*2.22,size*1.3,'Festi',size,{font:'Sunflower',weight:500,color:olive}),T(x+size*2.22,y,size*1.57,size*1.3,'val',size,{font:'Sunflower',weight:300,color:olive})])
+]);
+for(const e of p['l56/s01'].elements??[]){
+ if(e.text==='2096.10.17 SAT'){e.font='Sunflower';e.weight=500;e.size=26}
+ if(e.text==='Music'&&e.x>850){e.x=966;e.y=274;e.w=251;e.size=70}
+ if(e.text==='Music'&&e.x<850){e.x=569;e.y=213;e.w=181;e.size=53}
+}
+for(const e of p['l56/s02'].elements??[])if(e.text==='Festival Zone'){e.font='Sunflower';e.weight=300;e.x=473;e.w=335;e.size=50}
+// Arc copy is a set of actual editable letters following the source semicircle.
+p['l54/s01'].elements=p['l54/s01'].elements!.filter(e=>e.text!=='· WELCOME TO ·');
+add('l54/s01',Array.from('· WELCOME TO ·').map((ch,i)=>{const a=(-115+50*i/12)*Math.PI/180;return T(1074+245*Math.cos(a),300+245*Math.sin(a),23,31,ch,23,{font:'Montserrat Alternates',weight:600,color:seaGreen,rotate:a*180/Math.PI+90})}));
+const whiteGrid=(x:number,y:number)=>Array.from({length:9},(_,i)=>B(x+i%3*11,y+Math.floor(i/3)*11,4,4,'#fff'));
+add('l55/s01',[...whiteGrid(361,29),...whiteGrid(893,415),...whiteGrid(1225,66),IC(24,72,25,24,'Sparkle',charcoal),IC(330,244,22,24,'Sparkle',charcoal),IC(1170,533,24,27,'Sparkle',charcoal)]);
+add('l55/s02',[...whiteGrid(864,48),...whiteGrid(1230,704)]);
+// Clean dots avoid a duplicate locator glyph; the geometric marker remains editable.
+p['l55/s01'].elements=p['l55/s01'].elements!.filter(e=>!(e.kind==='icon'&&e.icon==='MapPin'&&e.x===627&&e.y===312));
+
+// Correct natural glyph widths discovered by the second actual-size comparison.
+for(const e of p['l60/s01'].elements??[]){
+ if(e.text==='✦ 핵심가치 ✦'){e.text='핵심가치';e.x=165;e.w=162;e.size=38;e.h=51;e.y=116}
+ if(e.text==='꿈꾸고 도전하며\n스스로 일어서다.'&&e.x>850){e.size=52;e.letterSpacing=-2.3;e.w=386;e.h=151;e.y=157}
+}
+add('l60/s01',[IC(133,125,24,31,'Sparkle','#111'),IC(320,125,24,31,'Sparkle','#111')]);
+for(const e of p['l60/s02'].elements??[])if(['상담 및 지원계획 수립','홀로서기, 그리고 동행'].includes(e.text??'')){e.size=17;e.letterSpacing=-.5;e.w=177;e.x-=2;e.h=32}
+// Letter advances, rather than equal angular steps, keep the curved greeting readable.
+p['l54/s01'].elements=p['l54/s01'].elements!.filter(e=>!(e.kind==='text'&&e.text?.length===1&&e.rotate!==undefined));
+const greetingChars=Array.from('· WELCOME TO ·'),greetingAdvances=[6,7,23,14,13,16,17,21,14,7,14,17,7,6],greetingTotal=greetingAdvances.reduce((a,b)=>a+b,0);let greetingAt=-greetingTotal/2;
+add('l54/s01',greetingChars.map((ch,i)=>{const advance=greetingAdvances[i],a=-Math.PI/2+(greetingAt+advance/2)/200;greetingAt+=advance;return T(1076+200*Math.cos(a)-advance/2,255+200*Math.sin(a),31,32,ch,21,{font:'Montserrat Alternates',weight:600,color:seaGreen,rotate:a*180/Math.PI+90})}));
+for(const e of p['l56/s01'].elements??[]){
+ if(e.text==='Info'){e.size=53;e.w=90}
+ if(e.text==='rmation'){e.x=167;e.size=53;e.w=185}
+ if(e.text==='Festi'){e.w=e.size!*2.2}
+ if(e.text==='val'){e.x-=e.size!*.11}
+}
+// Source sampled flat fills: avoid the earlier muted cyan substitutions.
+const recolor=(keys:string[],from:string,to:string)=>{for(const key of keys){if(p[key].background===from)p[key].background=to;for(const e of [...p[key].elements??[],...p[key].underTextElements??[]]){if(e.fill===from)e.fill=to;if(e.color===from)e.color=to;if(e.border)e.border=e.border.replace(from,to)}}};
+recolor(['l55/s01','l55/s02'],'#43c6f1','#46c8fe');
+recolor(['l57/s01','l57/s02'],'#00b8e9','#00bcff');
+recolor(['l53/s01','l53/s02'],'#f3f4dc','#f0efd8');
+recolor(['l53/s01','l53/s02'],'#d4e0a7','#cfe0a3');
+recolor(['l51/s01'],'#16112a','#18142f');recolor(['l51/s01'],'#0b041b','#09001c');
+recolor(['l56/s01','l56/s02'],'#ffd277','#ffd06d');
+recolor(['l60/s01','l60/s02'],'#ffd346','#ffcf4a');
+// These Korean families provide upright faces only; never request synthetic italics.
+for(const e of p['l51/s02'].elements??[])if(e.text==='제작참여')e.fontStyle='normal';
+for(const e of p['l58/s02'].elements??[])if(e.text?.startsWith('“익숙한 풍경'))e.fontStyle='normal';
+for(const e of p['l60/s01'].elements??[])if(e.chip&&['자립','성장','동행'].includes(e.text??'')){e.border=undefined;e.radius=0}
+for(const key of ['l58/s01','l58/s02'])for(const e of p[key].elements??[])if(e.kind==='box'&&e.fill==='#aaa'&&e.h===1){e.fill='#666';e.h=1.5}
+p['l52/s02'].elements=p['l52/s02'].elements!.filter(e=>!(e.kind==='icon'&&e.icon==='ShieldCheck'&&e.x===915));
+add('l52/s02',[heading(903,510,80,22,'HACCP',16,brown),heading(911,534,65,12,'인증시설',7,brown)]);

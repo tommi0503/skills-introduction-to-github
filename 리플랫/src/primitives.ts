@@ -9,3 +9,5 @@ export const IC=(x:number,y:number,w:number,h:number,icon:string,color='#111',ex
 export const P=(points:number[][],color:string,strokeWidth=1,fill?:string):Element=>{const xs=points.map(p=>p[0]),ys=points.map(p=>p[1]),x=Math.min(...xs),y=Math.min(...ys);return {kind:'path',x,y,w:Math.max(...xs)-x||1,h:Math.max(...ys)-y||1,points:points.map(p=>[p[0]-x,p[1]-y]),color,strokeWidth,fill,closed:!!fill}}
 
 export const DN=(x:number,y:number,w:number,h:number,values:number[],colors:string[],hole=.7):Element=>({kind:'donut',x,y,w,h,values,colors,hole})
+// Local SVG coordinates permit simple curved borders without raster artwork.
+export const VP=(x:number,y:number,w:number,h:number,d:string,extra:Partial<Element>={}):Element=>({kind:'path',x,y,w,h,d,color:'#111',strokeWidth:1,...extra})

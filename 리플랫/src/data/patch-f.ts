@@ -1,5 +1,5 @@
 import type {Element,SidePatch,Region} from '../model'
-import {B,T,C,IC,P,DN} from '../primitives'
+import {B,T,C,IC,P,DN,VP} from '../primitives'
 const blue='#029fe0',navy='#064c77',purple='#471183',green='#76b236',gray='#e5e5e5'
 const r=(x:number,y:number,w:number,h:number,dropText=true,radius:number|string=0)=>({x,y,w,h,dropText,radius,layer:dropText?'foreground' as const:'background' as const})
 const title=(x:number,y:number,w:number,h:number,text:string,size:number,color:string,weight=800)=>T(x,y,w,h,text,size,{color,weight,lineHeight:1.15})
@@ -258,3 +258,253 @@ patches['l64/s01'].elements?.filter(e=>e.kind==='text'&&e.x>=595&&e.y>=411&&e.y<
 patches['l63/s01'].images?.filter(e=>e.x===854&&e.y===356).forEach(e=>e.radius='140px 140px 0 0')
 patches['l68/s01'].images=patches['l68/s01'].images?.filter(e=>!((e.x===84||e.x===248)&&e.y===240))
 patches['l70/s01'].elements=patches['l70/s01'].elements?.filter(e=>!(e.kind==='box'&&e.x===977&&e.y===297&&e.fill===gray));patches['l70/s01'].elements?.push(P(Array.from({length:50},(_,i)=>{const a=i*270/49*Math.PI/180;return[969+95*Math.cos(a),419+95*Math.sin(a)]}),'#abcd33',49))
+
+// Revision: compare every unfolded side at source resolution, then reconstruct
+// the source-specific roads, simple curves and typographic hierarchy.
+const add=(key:string,...els:Element[])=>patches[key].elements?.push(...els)
+const edit=(key:string,match:(e:Element)=>boolean,change:Partial<Element>|((e:Element)=>Partial<Element>))=>patches[key].elements?.filter(match).forEach(e=>Object.assign(e,typeof change==='function'?change(e):change))
+const textIs=(s:string)=>(e:Element)=>e.kind==='text'&&e.text===s
+const inRect=(e:Region,x:number,y:number,w:number,h:number)=>e.x>=x&&e.y>=y&&e.x+e.w<=x+w+1&&e.y+e.h<=y+h+1
+const replaceMap=(key:string,x:number,y:number,w:number,h:number,els:Element[])=>{
+ patches[key].elements=patches[key].elements?.filter(e=>!inRect(e,x,y,w,h))
+ patches[key].images=patches[key].images?.filter(e=>!inRect(e,x,y,w,h))
+ add(key,...els)
+}
+const road=(points:number[][],color:string,width=4)=>P(points,color,width)
+const dot=(x:number,y:number,size:number,fill:string)=>B(x,y,size,size,fill,{radius:'50%'})
+const marker=(x:number,y:number,label:string,color:string,size=20):Element[]=>[IC(x,y,size,size*1.3,'MapPin',color,{strokeWidth:2.4}),tx(x-25,y+size*1.2,75,label,11,color,700,20,'center')]
+
+// l61: the white cover silhouette and lower waves are simple Bézier shapes.
+patches['l61/s01'].images=patches['l61/s01'].images?.filter(v=>!(v.x===852&&v.y===0))
+patches['l61/s01'].elements=patches['l61/s01'].elements?.filter(e=>!(e.kind==='box'&&e.x===0&&e.y===685))
+add('l61/s01',VP(851,0,428,603,'M 52 0 L 116 0 L 116 103 C 116 172 133 184 169 161 C 240 117 314 126 361 174 C 429 247 430 356 378 431 C 344 476 306 489 268 514 C 160 585 74 635 0 548 L 0 411 C 127 403 161 300 89 249 C 50 222 52 183 52 123 Z',{fill:'#fff',strokeWidth:0}),VP(851,457,428,147,'M 0 51 C 63 25 81 -24 148 16 C 205 82 237 61 269 32 C 327 -27 360 0 378 14 C 291 133 102 198 0 91 Z',{fill:'#2178b6',strokeWidth:0}),VP(0,678,427,231,'M 0 54 C 89 47 102 -31 186 17 C 256 57 337 60 427 54 L 427 231 L 0 231 Z',{fill:'#0081d7',strokeWidth:0}),...[[68,731,9],[134,698,17],[163,709,10],[937,485,10],[957,477,17],[1055,528,10],[1151,478,10]].map(([x,y,s])=>dot(x,y,s,'#fff')))
+edit('l61/s01',textIs('내과 진료부터 건강검진까지'),{x:1017,y:222,w:232,color:'#777',size:21})
+edit('l61/s01',textIs('미리'),{x:1106,y:266,w:150,size:73,font:'Black Han Sans',weight:400})
+edit('l61/s01',textIs('내과의원'),{x:975,y:341,w:290,size:72,font:'Black Han Sans',weight:400})
+edit('l61/s01',textIs('MIRI Internal Medicine'),{x:1046,y:424,w:213,size:21})
+replaceMap('l61/s01',461,359,354,189,[road([[466,394],[813,394]],'#fff',10),road([[466,511],[813,511]],'#fff',10),road([[516,365],[516,546]],'#fff',9),road([[588,368],[588,511]],'#fff',6),road([[750,364],[750,546]],'#fff',8),road([[516,457],[588,457]],'#fff',3),road([[488,511],[516,483],[543,511],[516,540],[488,511]],'#fff',4),road([[730,394],[750,368],[770,394],[750,420],[730,394]],'#fff',4),C(568,374,39,39,'2',25,'#d4f4fb',{color:blue,radius:'50%',border:'5px solid #fff'}),IC(652,468,25,35,'MapPin','#fff',{strokeWidth:3})])
+add('l61/s01',B(468,602,348,1,'#fff'),B(468,632,348,1,'#fff'),IC(563,829,30,30,'Plus',blue,{strokeWidth:5}))
+for(const [x,y,w,h] of [[1100,81,22,30],[1145,85,13,27],[1175,101,29,15]])add('l61/s01',VP(x,y,w,h,'M 4 4 L 15 22',{color:'#fff',strokeWidth:9}))
+add('l61/s02',tx(452,47,74,'MIRI',14,'#fff',800,20),B(501,59,592,1,'#a4ddef'),tx(1110,47,153,'Internal Medicine',14,'#fff',650,20),...[[454,183],[454,387],[454,594],[647,594],[57,475]].flatMap(([x,y])=>[dot(x,y,27,blue),IC(x+5,y+5,17,17,'Plus','#fff',{strokeWidth:4})]))
+for(const [x,y,icon] of [[914,735,'Armchair'],[1015,735,'Stethoscope'],[1117,735,'ClipboardCheck']] as const)add('l61/s02',IC(x,y,39,35,icon,'#fff',{strokeWidth:1.2}))
+edit('l61/s02',e=>e.kind==='text'&&['편안한\n진료실','체계적인\n검사 환경','쾌적한\n원내 공간'].includes(e.text??''),{h:65,y:776,size:16})
+
+// l62: timeline dots, card borders and staggered handwriting callouts.
+add('l62/s01',...[[516,419],[639,419],[762,419],[578,547],[701,547]].map(([x,y])=>dot(x-7,y-7,14,'#23a8ef')))
+edit('l62/s01',e=>e.kind==='box'&&e.x===62&&e.w===334,{border:'1px solid #e0e4ea'})
+edit('l62/s01',textIs('WORD · 말씀'),{size:16})
+edit('l62/s01',textIs('미리유년부를'),{font:'Noto Sans KR',weight:500,size:48})
+edit('l62/s01',textIs('소개합니다'),{font:'Noto Sans KR',weight:600,size:48})
+add('l62/s02',IC(62,260,47,25,'Send','#0da3db',{strokeWidth:2}),...Array.from({length:4},(_,i)=>dot(453,663+i*47,14,'#0eb0e8')))
+for(const [i,x,y] of [[0,892,667],[1,1060,713],[2,892,759],[3,1060,805]]){
+ const labels=['여름성경학교','새친구 초청주일','가을 야외예배','추수감사 사랑나눔']
+ edit('l62/s02',textIs(labels[i]),{x,y,w:160,h:38,font:'Nanum Pen Script',weight:400,size:24})
+ const descriptions=['찬양, 말씀, 공동체 놀이','특별예배, 게임, 간식','야외예배, 자연체험','감사카드, 기부물품']
+ edit('l62/s02',textIs(descriptions[i]),{x:i%2===0?1064:887,y:y+5,w:165,size:22,font:'Nanum Pen Script',h:38})
+ add('l62/s02',road(i%2===0?[[1047,y+18],[1060,y+13],[1053,y+10]]:[[1054,y+18],[1041,y+11],[1048,y+8]],'#2799cb',1.6))
+}
+
+// l63: rounded source cards, fine rules, star accents and warm ring tracks.
+for(const y of [208,392,681])add('l63/s01',B(521,y,241,1,'#ffe7d7'))
+for(const [x,y,s,color] of [[209,77,16,'#fff'],[633,62,16,'#fff'],[176,833,17,'#fa6543'],[883,665,28,'#fa6543'],[932,150,8,'#fff']] as const)add(x===883?'l63/s02':'l63/s01',P([[x+s/2,y],[x+s*.63,y+s*.36],[x+s,y+s/2],[x+s*.63,y+s*.64],[x+s/2,y+s],[x+s*.36,y+s*.64],[x,y+s/2],[x+s*.36,y+s*.36]],color,0,color))
+edit('l63/s01',e=>e.kind==='box'&&e.w===313&&e.x===484,{border:'1px solid #ffab94',radius:9})
+edit('l63/s01',e=>e.kind==='box'&&e.x===50||e.kind==='box'&&e.x===223,{radius:10})
+edit('l63/s01',e=>e.kind==='box'&&e.border?.includes('solid #ddd')===true,{border:'8px solid #ffdac9'})
+edit('l63/s02',textIs('홍길동 대표원장'),{w:205,size:24})
+add('l63/s02',B(46,191,5,141,'#ff9577'),IC(923,728,15,15,'CircleCheck','#ff775c'),IC(1083,728,15,15,'CircleCheck','#ff775c'),IC(923,768,15,15,'CircleCheck','#ff775c'),IC(1083,768,15,15,'CircleCheck','#ff775c'))
+edit('l63/s02',textIs('재방문률\n85%'),{color:'#333',h:49,size:18})
+edit('l63/s02',textIs('지속관리\n70%'),{color:'#333',h:49,size:18})
+
+// l64: source chart grid, process spine, rounded tables and labelled streets.
+add('l64/s01',...Array.from({length:5},(_,i)=>B(122+i*65,610,1,182,'#e8d7be')),B(49,612,1,171,'#e6ba83'),...Array.from({length:6},(_,i)=>dot(45,615+i*32,8,'#fff0df')))
+replaceMap('l64/s01',466,590,348,177,[B(466,590,348,177,'#fff',{radius:7,border:'2px solid #e7be8b'}),road([[474,643],[803,643]],'#ffdbb6',4),road([[474,709],[803,709]],'#ffdbb6',4),road([[562,597],[562,759]],'#ffdbb6',4),road([[687,597],[687,759]],'#ffdbb6',4),tx(577,612,114,'● 비즈중학교',13,'#c79863',600,25),tx(700,612,110,'● 비즈시립도서관',12,'#c79863',600,25),tx(697,685,112,'● 비즈중학교',12,'#c79863',600,25),tx(582,742,109,'비즈2차 APT ●',12,'#c79863',600,22),...marker(553,673,'', '#ff9224',19),C(527,704,76,20,'비즈요양병원',10,'#ff9820',{color:'#fff',radius:0})])
+add('l64/s01',IC(465,847,29,29,'Phone','#ee912a',{strokeWidth:2.5}),IC(634,847,29,29,'Printer','#ee912a',{strokeWidth:2.5}))
+edit('l64/s01',textIs('063)224-0081      063)221-0081'),{x:499,w:325,size:15})
+for(const [x,y] of [[39,98],[466,146],[466,411]])add('l64/s01',B(x,y,x===39?348:348,x===39?308:y===146?204:124,'transparent',{radius:7,border:'1px solid #e8bc80'}))
+add('l64/s02',...Array.from({length:4},(_,i)=>B(977+i*59,547,1,112,'#edc69b')))
+edit('l64/s02',e=>e.kind==='text'&&!e.chip&&e.size===29,{weight:700})
+
+// l65: rectilinear/diagonal industrial map, fine typography and table hierarchy.
+replaceMap('l65/s01',472,242,334,179,[B(472,242,334,179,'#e2e9ee',{border:'5px solid #b4c7d2'}),road([[480,305],[800,276]],'#fff',24),road([[480,378],[800,357]],'#fff',31),road([[603,246],[628,417]],'#fff',28),road([[754,246],[758,417]],'#fff',14),road([[479,329],[517,417]],'#fff',9),tx(510,341,94,'● 미리역',12,navy,600,24),...marker(630,283,'미리공장',navy,25)])
+edit('l65/s01',e=>e.kind==='text'&&e.chip===true&&['Basic\nCare','Standard\nCare'].includes(e.text??''),e=>({fill:e.text==='Basic\nCare'?'#376e9c':'#285a83',color:'#fff'}))
+add('l65/s01',P([[853,837],[1046,799],[1046,816],[853,855]],'#83a9bd',0,'#83a9bd'))
+for(const key of ['l65/s01','l65/s02'])edit(key,e=>e.kind==='text'&&!e.chip&&(e.size??0)>=28,{font:'Noto Sans KR',weight:700,letterSpacing:-.5})
+edit('l65/s01',textIs('MIRI\nLASER'),{font:'Pretendard',weight:700,size:76,letterSpacing:-1})
+edit('l65/s02',e=>e.kind==='text'&&e.chip===true&&e.text?.startsWith('ML-CUT\n')===true,e=>({fill:e.text?.includes('1500')?'#376e9c':e.text?.includes('6000')?'#285a83':navy,color:'#fff'}))
+
+// l66: clipboard divider/checks, diagonal map roads and centered dental headings.
+edit('l66/s01',textIs('이런 증상,\n방치하고 계신가요?'),{x:51,w:323,align:'center',font:'Noto Sans KR',weight:600,size:40})
+edit('l66/s01',textIs('병원정보'),{x:488,w:305,align:'center',font:'Noto Sans KR',weight:500,size:49})
+add('l66/s01',B(215,278,1,382,'#d2d2d2'),B(59,469,314,1,'#d2d2d2'),B(157,240,117,27,'transparent',{radius:6,border:'2px solid #b9b9b9'}),B(160,243,111,20,'transparent',{radius:4,border:'1px solid #eee'}),...[[74,299],[246,299],[74,504],[246,504]].flatMap(([x,y])=>[dot(x,y,25,'#ed6479'),IC(x+5,y+5,15,15,'Check','#fff',{strokeWidth:3})]),B(874,789,379,1,'#cce5ff'))
+replaceMap('l66/s01',487,575,306,165,[B(487,575,306,165,'#f8f8f8'),road([[536,619],[738,619]],'#cdd0d3',6),road([[536,697],[738,697]],'#cdd0d3',6),road([[597,588],[549,727]],'#cdd0d3',6),road([[692,588],[646,727]],'#cdd0d3',6),...marker(615,644,'비즈치과','#0d8fd4',22),tx(524,630,40,'비즈로',11,'#777',400,20),tx(687,641,58,'비즈역',11,'#777',400,20),tx(724,676,58,'미리로',11,'#777',400,20),tx(557,708,93,'● 비즈우체국',11,'#777',400,20),tx(662,708,93,'● 비즈공원',11,'#777',400,20)])
+for(const s of ['올바른 칫솔질\n5단계','나의 구강관리\n실천 달력','나에게 맞는\n관리용품은?'])edit('l66/s02',textIs(s),{x:s.startsWith('올바른')?59:s.startsWith('나의')?473:902,w:s.startsWith('올바른')?329:327,align:'center',size:49,font:'Noto Sans KR',weight:s.startsWith('올바른')?600:400})
+edit('l66/s02',e=>e.kind==='box'&&e.x===477&&e.y===347,{radius:17})
+
+// l67: source pin, broad map roads, card clipping and journey chevrons.
+replaceMap('l67/s01',492,467,287,205,[B(492,467,287,205,'#fff'),road([[503,494],[773,494]],'#ccc',8),road([[503,641],[773,641]],'#ccc',8),road([[529,475],[529,662]],'#ccc',8),road([[752,475],[752,662]],'#ccc',8),road([[604,475],[604,662]],'#ccc',8),road([[673,475],[673,662]],'#ccc',8),...marker(629,519,'비즈청소년\n재단','#168edb',22),tx(621,474,81,'비즈로',11,'#888',400,20),tx(506,558,25,'비\n즈\n길',11,'#888',400,49),tx(612,618,64,'● 비즈역',11,'#888',400,20),tx(696,618,73,'비즈공원 ●',11,'#888',400,20)])
+edit('l67/s01',textIs('"작은 나눔이 청소년들의 더 나은 내일을 만듭니다."'),{text:'"작은 나눔이 청소년들의 더 나은 내일을 만듭니다."',size:14.5,w:309,letterSpacing:-.35})
+for(const key of ['l67/s01','l67/s02'])edit(key,e=>e.kind==='text'&&!e.chip&&e.size===47,e=>({align:'center',x:e.x<427?57:e.x<853?450:888,w:365}))
+for(const image of patches['l67/s02'].images??[])if(image.y===169||image.y===405)image.radius='20px 20px 0 0'
+add('l67/s02',...Array.from({length:3},(_,i)=>P([[623,333+i*105],[655,333+i*105],[639,348+i*105]],'#e3f3ff',0,'#e3f3ff')))
+edit('l67/s02',e=>e.kind==='box'&&e.y===560&&e.w===99,{x:908,w:99})
+patches['l67/s02'].elements?.forEach((e,i,els)=>{if(e.kind==='box'&&e.y===560&&e.w===99)e.x=908+108*els.slice(0,i).filter(v=>v.kind==='box'&&v.y===560&&v.w===99).length})
+
+// l68: clinical icons, roadmap folded tabs, chart axes and fine map labels.
+patches['l68/s02'].images=patches['l68/s02'].images?.filter(e=>!(e.y===667&&e.w===58))
+add('l68/s01',road([[188,829],[242,829]],'#7787cc',2),road([[232,822],[242,829],[232,836]],'#7787cc',2),IC(483,781,28,28,'Phone','#5162df',{strokeWidth:2}),IC(483,815,28,28,'House','#5162df',{strokeWidth:2}))
+replaceMap('l68/s01',482,488,312,208,[B(482,488,312,208,'#f6f5ff'),B(482,479,312,7,'#5362df'),road([[485,537],[793,537]],'#fff',11),road([[485,588],[793,588]],'#fff',11),road([[485,646],[793,646]],'#fff',13),road([[508,492],[555,694]],'#fff',13),road([[703,492],[703,694]],'#fff',11),...marker(685,555,'','#5162df',19),tx(625,566,86,'비즈클리닉',13,'#5162df',700,20),tx(496,506,93,'▦ 비즈타워',11,'#bcb7e5',400,20),tx(714,506,76,'▦ 비즈카페',11,'#bcb7e5',400,20),tx(587,605,85,'▦ 4번 출구',11,'#bcb7e5',400,20),tx(711,605,76,'▦ 미리약국',11,'#bcb7e5',400,20),C(549,639,62,18,'● 비즈역',9,'#5362df',{color:'#fff',radius:0}),tx(492,668,68,'은행로',10,'#bcb7e5',400,18),tx(735,671,66,'세림거리',10,'#bcb7e5',400,18)])
+add('l68/s02',...Array.from({length:4},(_,i)=>[P([[482,331+i*109],[567,331+i*109],[567,348+i*109]],'#343888',0,'#343888'),B(790,250+i*109,4,81,'#9594ed')]).flat(),B(924,257,1,128,'#c5c5df'),B(924,382,126,1,'#c5c5df'),...['0%','20%','40%','60%','80%','100%'].map((s,i)=>tx(907,378-i*24,38,s,11,'#384179',400,20)),...Array.from({length:5},(_,i)=>B(925,260+i*24,122,1,'#e5e5f0')))
+
+// l69: precise decorative rules, clipped arrow steps and handwritten specialties.
+for(const [key,xs] of [['l69/s01',[34]],['l69/s02',[34,459,886]]] as const)for(const x of xs)add(key,B(x+4,55,128,1,'#0c3a5b'),B(x+137,57,214,1,'#0c3a5b'),B(x-4,93,1,43,'#0c3a5b'),B(x+351,63,1,73,'#0c3a5b'),B(x+4,141,65,1,'#0c3a5b'),B(x+140,144,212,1,'#0c3a5b'))
+add('l69/s01',tx(109,481,33,'1',18,'#0c3a5b',400,27),tx(207,640,33,'9',18,'#0c3a5b',400,27),B(233,390,157,42,'#b9d7db'),B(204,670,187,43,'#b9d7db'),road([[553,137],[768,137]],'#dbeff0',3),road([[553,526],[768,526]],'#dbeff0',3))
+for(const y of [173,420,657])edit('l69/s02',e=>e.kind==='text'&&e.y===y+80,{font:'Nanum Pen Script',weight:400,size:24})
+for(const [i,fill] of ['#b2cfd5','#8fbbc4','#578f9c','#075769'].entries())add('l69/s02',P([[534,170+i*75],[551,170+i*75],[551,237+i*75],[534,237+i*75],[550,203+i*75]],fill,0,fill))
+add('l69/s02',B(38,391,350,1,'#aac5cb'),B(38,636,350,1,'#aac5cb'),B(886,623,356,1,'#aac5cb'),B(886,739,356,1,'#aac5cb'))
+
+// l70: preserve the familiar hospital mark; rebuild the angled local map.
+edit('l70/s01',textIs('1년에 한 번,\n건강을 선물하세요'),{size:42,letterSpacing:-.8})
+replaceMap('l70/s01',466,428,349,157,[B(466,428,349,157,'#cbe5fb',{radius:13}),road([[488,509],[786,509]],'#fff',5),road([[499,523],[786,529]],'#fff',5),road([[531,440],[540,571]],'#fff',4),road([[687,440],[700,571]],'#fff',5),road([[720,526],[727,573]],'#fff',3),road([[731,526],[737,560]],'#fff',3),...marker(608,495,'','#23314e',23),C(591,531,61,22,'비즈병원',11,'#23314e',{color:'#fff',radius:0}),tx(505,526,88,'● 비즈시청',11,'#23314e',400,20),tx(700,477,87,'● 비즈역',11,'#23314e',400,20)])
+add('l70/s01',B(468,358,347,1,'#b2ccdf'),B(468,650,347,1,'#b2ccdf'))
+for(const key of ['l70/s01','l70/s02'])edit(key,e=>e.kind==='text'&&!e.chip&&e.size===32,{font:'Noto Sans KR',weight:600})
+edit('l70/s02',textIs('수검 결과 추가 치료가 필요할 경우,\n비즈 병원 28개 진료과로\n우선 예약·최대 30% 할인 혜택이 제공'),{size:16,lineHeight:1.25})
+add('l70/s02',B(985,791,220,18,'#c3e6fb'))
+
+// l71: separated tall headings, actual burst/arrow geometry and hexagon steps.
+edit('l71/s01',textIs('데이터로\n증명하는 결과'),{font:'Do Hyeon',weight:400,size:47,w:240,h:116})
+edit('l71/s01',textIs('시설안내 및\n오시는 길'),{x:538,w:273,align:'center',font:'Do Hyeon',weight:400,size:49})
+edit('l71/s01',e=>e.kind==='text'&&['효과적','도식화!','비즈'].includes(e.text??''),{font:'Do Hyeon',weight:400,size:84,w:242})
+patches['l71/s01'].images=patches['l71/s01'].images?.filter(e=>!(e.x===854&&e.y===387))
+patches['l71/s01'].images?.filter(e=>e.x===994&&e.y===44).forEach(e=>{e.x=1104;e.w=176;e.layer='background'})
+add('l71/s01',B(69,411,291,1,'#ccc'),P([[178,377],[220,351],[253,299],[281,260],[294,322],[279,314],[255,364],[217,380]],'#fff1a4',0,'#fff1a4'),P([[122,615],[301,615],[261,681],[287,681],[212,717],[157,681],[180,681]],'#fff1a4',0,'#fff1a4'))
+edit('l71/s01',textIs('합격률\n91.2%'),{fill:'transparent',x:899,y:342,w:120,h:97,radius:0,size:33})
+add('l71/s01',P(Array.from({length:80},(_,i)=>{const a=(i*4.5-90)*Math.PI/180,r=i%2?66:72;return[958+r*Math.cos(a),394+r*Math.sin(a)]}),'#fff1a4',0,'#fff1a4'),...Array.from({length:3},(_,i)=>C(906+i*131,663,68,42,`0${i+1}`,18,'#fff1a4',{color:purple,radius:'0 0 35px 35px'})),IC(475,635,24,24,'MapPin',purple,{strokeWidth:2.4}),IC(475,664,24,24,'SquareParking',purple,{strokeWidth:2.4}))
+edit('l71/s01',textIs('91% 달성!'),{text:'91% 달성!',font:'Do Hyeon',weight:400,size:65,y:779})
+patches['l71/s02'].images?.filter(e=>e.x===44).forEach(e=>e.radius=10)
+for(let i=0;i<4;i++){
+ patches['l71/s02'].elements=patches['l71/s02'].elements?.filter(e=>!(e.kind==='box'&&e.x===455&&e.y===145+i*108))
+ add('l71/s02',P([[465,151+i*108],[499,133+i*108],[532,151+i*108],[532,186+i*108],[499,206+i*108],[465,187+i*108]],'#fff2a5',0,'#fff2a5'),dot(554,180+i*108,8,'#cabf76'))
+}
+for(const [x,y,icon] of [[1086,563,'Smartphone'],[974,696,'FileCheck2'],[1129,696,'MessagesSquare']] as const)add('l71/s02',IC(x,y,29,33,icon,'#6a1e91',{strokeWidth:1.7}))
+edit('l71/s02',textIs('김비즈'),{w:61})
+edit('l71/s02',textIs('이비즈'),{w:61})
+edit('l71/s02',textIs('박비즈'),{w:61})
+
+// l72: rounded ink-centered captions and the original notebook spiral rings.
+for(const [key,labels] of [['l72/s01',['미리유년부 비전','미리유년부 사역 목표','처음 오셨나요?','오시는 길']],['l72/s02',['유년부 예배 및 프로그램 안내','학년별 반 안내','미리유년부 연간 사역','예배 속 네 가지 경험','SPECIAL PROGRAM']]] as const){
+ for(const label of labels){
+  const surfaces=(patches[key].elements??[]).filter(e=>e.kind==='box'&&e.h===35&&e.w>150)
+  const el=patches[key].elements?.find(e=>e.kind==='text'&&e.text===label)
+  if(el){const surface=surfaces.find(e=>Math.abs(e.y-el.y)<14);if(surface)Object.assign(el,{x:surface.x,y:surface.y,w:surface.w,h:surface.h,chip:true,align:'center',font:'Jua',weight:400,size:label==='SPECIAL PROGRAM'?28:label==='유년부 예배 및 프로그램 안내'?27:30,fill:'transparent',lineHeight:1})}
+ }
+}
+add('l72/s01',B(37,222,369,163,'#fffdf4',{radius:9,border:'1px dashed #d5ddb6'}),...Array.from({length:14},(_,i)=>[dot(488+i*22,294,12,'#83ab4b'),B(491+i*22,283,6,17,'#babbb1',{radius:3})]).flat(),...Array.from({length:4},(_,i)=>C(48+(i%2)*189,465+Math.floor(i/2)*201,30,36,`0${i+1}`,24,green,{color:'#fff',font:'Jua',weight:400,radius:8})))
+edit('l72/s01',textIs('미리유년부를\n소개합니다'),{size:70,x:883,w:378,lineHeight:1.03,color:'#ffc900'})
+patches['l72/s01'].elements?.filter(textIs('미리유년부를\n소개합니다')).forEach(e=>{e.text='미리유년부를';e.h=76;e.y=220})
+add('l72/s01',j(910,285,350,'소개합니다',74,'#ff9700',88))
+replaceMap('l72/s01',469,645,207,146,[road([[473,669],[675,669]],green,1.5),road([[473,749],[675,749]],green,1.5),road([[475,647],[475,786]],green,1.5),road([[559,647],[559,786]],green,1.5),road([[685,645],[602,786]],green,1.5),...[[475,669],[559,669],[559,749],[622,749]].map(([x,y])=>dot(x-4,y-4,8,green)),tx(480,678,70,'미리타워',11,green,400,20),tx(564,651,90,'비즈로31길',11,green,400,20),tx(503,732,87,'비즈사거리',11,green,400,20),tx(625,758,55,'미리역\n2번 출구',12,green,400,30),tx(571,701,104,'● 미리교회',13,green,700,22)])
+add('l72/s01',IC(698,654,13,15,'Bus',green),IC(698,699,13,15,'TrainFront',green),IC(698,744,13,15,'CarFront',green),IC(461,811,18,18,'Phone','#fff8c9'),IC(461,841,18,18,'Printer','#fff8c9'))
+edit('l72/s01',textIs('TEL 02-345-6789     www.mirichurch.kr\nFAX 02-2233-4456    @miri church'),{x:481,size:13,lineHeight:2.3,w:290})
+add('l72/s02',...Array.from({length:15},(_,i)=>[dot(66+i*21,228,12,'#83ab4b'),B(69+i*21,217,6,17,'#babbb1',{radius:3}),dot(911+i*21,228,12,'#83ab4b'),B(914+i*21,217,6,17,'#babbb1',{radius:3})]).flat(),...Array.from({length:3},(_,i)=>B(451,318+i*88,375,1,'#e4e3d5')))
+edit('l72/s02',textIs('PRAISE'),{size:19,w:95})
+edit('l72/s02',textIs('MESSAGE'),{size:19,w:95})
+edit('l72/s02',textIs('SHARING'),{size:19,w:95})
+edit('l72/s02',textIs('ACTIVITY'),{size:19,w:95})
+
+// Second visual pass repairs true glyph wrapping and source surface alignment.
+edit('l61/s01',textIs('MIRI Internal Medicine'),{x:1049,y:425,w:211,h:20,inkFit:true,size:18})
+patches['l61/s01'].elements?.filter(textIs('미리내과의원')).forEach((e,i)=>Object.assign(e,i===0?{x:603,y:831,w:229}:{x:917,y:818,w:181}))
+edit('l61/s02',textIs('01'),{x:454,w:47,size:40})
+edit('l61/s02',textIs('02'),{x:876,w:52,size:40})
+edit('l61/s02',e=>e.kind==='text'&&['편안한\n진료실','체계적인\n검사 환경','쾌적한\n원내 공간'].includes(e.text??''),{text:'',y:708,h:130})
+add('l61/s02',...['편안한\n진료실','체계적인\n검사 환경','쾌적한\n원내 공간'].map((s,i)=>tx(885+i*101,778,130,s,16,'#fff',750,55,'center')))
+add('l61/s01',VP(0,44,111,100,'M 47 1 C 23 9 4 31 1 64 C -3 97 34 109 49 90 C 68 65 42 43 17 47 C 25 27 35 14 47 9 M 111 1 C 87 9 67 31 65 64 C 60 97 98 109 113 90 C 130 65 106 43 81 47 C 89 27 99 14 111 9',{fill:'#57bce7',strokeWidth:0}),VP(279,518,124,98,'M 48 97 C 72 86 89 61 84 33 C 79 0 43 -9 23 7 C 3 28 17 63 48 57 C 53 71 46 84 40 91 M 110 97 C 134 86 151 61 146 33 C 141 0 105 -9 85 7 C 65 28 79 63 110 57 C 115 71 108 84 102 91',{fill:'#57bce7',strokeWidth:0}))
+edit('l66/s01',textIs('이런 증상,\n방치하고 계신가요?'),{font:'Pretendard',size:39,x:38,w:350,lineHeight:1.2,h:101,weight:600})
+for(const image of patches['l66/s01'].images??[])if(image.x===458&&image.y===175)image.radius='28px 28px 0 0'
+add('l66/s01',...[[74,299],[246,299],[74,504],[246,504]].map(([x,y])=>C(x,y,25,25,'✓',22,'#ed6479',{color:'#fff',radius:'50%',weight:600})))
+edit('l67/s01',textIs('비즈청소년\n재단'),{h:32,size:10,lineHeight:1.2})
+edit('l67/s01',textIs('비즈역'),{text:'비즈우체국'})
+edit('l69/s02',e=>e.kind==='text'&&['고난도 비문학 및\n수능 문학 정복','킬러 문항 타파 및\n최상위권 수리 논술','절대평가 1등급 전략 및\n수능 어법 마스터'].includes(e.text??''),{font:'Nanum Pen Script',weight:400,size:22,lineHeight:1.1,h:50})
+add('l69/s01',B(390,390,1,42,'#0c5b6c'),B(391,670,1,43,'#0c5b6c'))
+for(const name of ['김비즈','이비즈','박비즈'])edit('l71/s02',textIs(name),{w:92,size:24})
+for(const role of ['대표강사','원장','수석강사'])edit('l71/s02',textIs(role),{x:313,w:100,size:12})
+edit('l71/s02',e=>e.kind==='icon'&&e.y===158,{y:156})
+edit('l71/s01',textIs('비즈역 3번 출구 바로 앞, 비즈타워 5~7층 (도보 1분)\n건물 내 대형 주차장 완비 (상담 시 무료 주차권 제공)'),{x:497,size:14.3,lineHeight:1.65})
+const fixedChips:[string,string,number,number,number,number,number][]=[
+ ['l72/s01','미리유년부 비전',95,177,237,35,30],['l72/s01','미리유년부 사역 목표',67,402,292,34,30],['l72/s01','처음 오셨나요?',522,177,264,35,30],['l72/s01','오시는 길',550,574,176,35,30],
+ ['l72/s02','유년부 예배 및 프로그램 안내',45,177,348,35,27],['l72/s02','학년별 반 안내',537,177,241,35,30],['l72/s02','미리유년부 연간 사역',944,177,275,35,29],['l72/s02','예배 속 네 가지 경험',90,555,248,35,28],['l72/s02','SPECIAL PROGRAM',935,620,263,35,28]
+]
+for(const [key,label,x,y,w,h,size] of fixedChips)edit(key,textIs(label),{x,y,w,h,size,chip:true,align:'center',fill:'transparent',font:'Jua',weight:400,lineHeight:1})
+for(const image of patches['l72/s01'].images??[])if(image.y===458||image.y===658)image.radius=13
+// Source table colouring is semantic: the step-name column is emphasized.
+edit('l64/s01',e=>e.kind==='box'&&e.x===39&&e.y>98&&e.y<405,{fill:'#fff'})
+edit('l64/s01',e=>e.kind==='box'&&Math.abs(e.x-80.76)<.1&&e.y>98&&e.y<405,{fill:'#fff8f1'})
+edit('l64/s01',e=>e.kind==='text'&&e.x>80&&e.x<85&&e.y>98&&e.y<405,{color:'#dc8a48',weight:650})
+edit('l64/s01',e=>e.kind==='text'&&e.x===42&&e.y>98&&e.y<405,{color:'#333'})
+edit('l64/s01',e=>e.kind==='text'&&e.x>553&&e.x<557&&e.y===148,{color:'#c77b39',weight:500})
+edit('l64/s01',e=>e.kind==='box'&&e.x===553&&e.y===146,{fill:'#ffdab1'})
+replaceMap('l63/s01',521,410,240,139,[B(521,410,240,139,'#ff775b',{border:'1px solid #ff9d80'}),road([[534,500],[746,500]],'#fff1e9',2),road([[573,443],[702,443]],'#fff1e9',2),road([[542,464],[542,535]],'#fff1e9',2),road([[593,443],[593,535]],'#fff1e9',2),road([[640,443],[651,496],[688,421],[711,421]],'#fff1e9',2),...[[558,500],[640,500],[669,443]].map(([x,y])=>dot(x-4,y-4,8,'#fff')),tx(547,513,44,'미리역\n4번출구',10,'#fff',400,29,'center'),tx(631,518,58,'미리공원',10,'#fff',400,20,'center'),tx(648,452,75,'비즈중학교',10,'#fff',400,20,'center'),tx(602,478,70,'미리은행',10,'#fff',400,20,'center')])
+for(const [key,x,w] of [['l65/s01',44,341],['l65/s02',470,340]] as const){
+ edit(key,e=>e.kind==='box'&&e.x>=x&&e.x<x+w&&e.y>=300&&e.y<857,{border:undefined})
+ add(key,...Array.from({length:7},(_,i)=>B(x,300+i*92.8,w,1,'#d4e0e6')))
+}
+edit('l65/s01',e=>e.kind==='text'&&e.chip===true&&e.x>293&&e.y>=300&&e.y<857,{weight:650})
+patches['l70/s01'].elements=patches['l70/s01'].elements?.filter(e=>!textIs('1년에 한 번,\n건강을 선물하세요')(e))
+add('l70/s01',tb(896,136,348,'1년에 한 번,',42,'#23314e',55),T(896,187,80,36,'건강',42,{color:'#94b729',weight:800,inkFit:true}),T(977,187,269,36,'을 선물하세요',42,{color:'#23314e',weight:800,inkFit:true}))
+const arcText=(key:string,text:string,cx:number,cy:number,radius:number,span:number,color:string,size:number)=>{
+ const start=-90-span/2
+ add(key,...[...text].map((s,i)=>{const a=start+i*span/Math.max(1,text.length-1),r=a*Math.PI/180;return T(cx+radius*Math.cos(r)-size*.25,cy+radius*Math.sin(r)-size*.45,size*.9,size*1.3,s,size,{color,font:'Jua',weight:400,lineHeight:1,rotate:a+90})}))
+}
+arcText('l72/s01','OUR VISION',213,119,66,73,green,14)
+arcText('l72/s01','WELCOME TO MIRI KIDS',640,138,82,120,'#fff5aa',13)
+arcText('l72/s01','MIRI KIDS MINISTRY',1062,196,107,132,'#f8ca00',20)
+arcText('l72/s02','SUNDAY WORSHIP',214,125,75,112,'#fff5aa',14)
+arcText('l72/s02','OUR FRIENDS',640,119,68,94,green,14)
+arcText('l72/s02','YEARLY PROGRAM',1065,125,75,115,'#fff5aa',14)
+for(const key of ['l72/s01','l72/s02'])for(const image of patches[key].images??[])if(image.y<50&&image.x<853||image.y===42){image.y=76;image.h=88;image.radius='50%'}
+edit('l63/s01',textIs('미리역\n4번출구'),{text:'비즈역\n5번출구'})
+edit('l63/s01',textIs('미리공원'),{text:'비즈시청'})
+edit('l63/s01',textIs('비즈중학교'),{text:'비즈스토어'})
+edit('l63/s01',textIs('미리은행'),{text:'비즈클리닉',x:612,y:475,w:66,size:10})
+edit('l68/s01',textIs('은행로'),{text:'반포 IC'})
+edit('l68/s01',textIs('세림거리'),{text:'서울사거리'})
+edit('l68/s01',textIs('● 비즈역'),{text:'❾ 비즈역'})
+edit('l64/s01',textIs('● 비즈중학교'),{text:'● 비즈중학교'})
+// Ascending arrows and wreaths are modest vector geometry, not photo regions.
+add('l69/s01',VP(150,176,138,120,'M 0 113 C 71 102 80 61 93 37 L 77 33 L 115 0 L 132 51 L 115 44 C 87 105 42 118 0 113 Z',{fill:'#9fc8d0',strokeWidth:0,opacity:.75}),road([[130,497],[136,497],[140,510]],'#0c3a5b',1),road([[183,641],[188,650],[197,650]],'#0c3a5b',1),...[[557,171,575,172],[698,171,715,172],[557,563,575,562],[699,563,715,562]].map(([x,y,x2,y2])=>road([[x,y+18],[x2,y-18]],'#90c0cb',2)))
+const wreath=(key:string,cx:number,cy:number,rx:number,ry:number,color:string)=>{
+ for(const side of [-1,1]){
+  add(key,VP(cx-rx,cy-ry,rx*2,ry*2,side<0?`M ${rx*.4} 0 Q ${-rx*.55} ${ry} ${rx*.45} ${ry*2}`:`M ${rx*1.6} 0 Q ${rx*2.55} ${ry} ${rx*1.55} ${ry*2}`,{color,strokeWidth:1.3}))
+  for(let i=0;i<9;i++){const a=(-70+i*17)*Math.PI/180,x=cx+side*(rx*Math.cos(a)),y=cy+ry*Math.sin(a);add(key,B(x,y,ry*.27,ry*.12,color,{radius:'100% 0 100% 0',rotate:side<0?110-i*10:70+i*10,opacity:.65}))}
+ }
+}
+wreath('l69/s01',306,816,72,38,'#82aeb5')
+wreath('l71/s01',1066,570,115,64,'#78528f')
+for(const [key,ox,oy,columns,rows,color] of [['l66/s01',0,0,10,17,'#89bada'],['l66/s01',1146,737,11,13,'#9ddcfb'],['l66/s02',0,793,7,8,'#79d4f7']] as const){
+ add(key,...Array.from({length:columns*rows},(_,i)=>{const col=i%columns,row=Math.floor(i/columns);return B(ox+col*13,oy+row*13,4,4,color,{radius:'50%',opacity:Math.max(.1,.7-(col+row)*.025)})}))
+}
+// Visible subtitle ink must remain on the white portion of the cover curve.
+edit('l61/s01',textIs('MIRI Internal Medicine'),{x:1049,y:426,w:168,h:16,size:17,inkFit:true})
+edit('l61/s02',e=>e.kind==='text'&&['01','02'].includes(e.text??''),{w:42,h:35,inkFit:true})
+// Filled header labels must not obscure the diagonal cut underneath them.
+edit('l65/s01',textIs('Repair service'),{fill:'transparent'})
+patches['l65/s01'].underTextElements=[B(0,0,427,67,navy),P([[386,67],[427,0],[427,67]],'#fff',0,'#fff')]
+edit('l65/s02',e=>e.kind==='text'&&e.text==='Product details'&&e.x===853,{fill:'transparent'})
+patches['l65/s02'].underTextElements=[B(853,0,427,67,navy),P([[1240,67],[1280,0],[1280,67]],'#fff',0,'#fff')]
+edit('l63/s01',e=>e.kind==='text'&&e.text==='98%'&&e.chip===true,{y:461})
+edit('l63/s01',e=>e.kind==='text'&&e.text==='90%'&&e.chip===true,{y:660})
+edit('l68/s01',e=>e.kind==='path'&&e.x>=188&&e.x<=242&&e.y>=820&&e.y<=829,e=>({y:e.y-11}))
+edit('l71/s02',textIs('빈틈없는 비즈만의\n촘촘한 밀착 케어'),{text:'빈틈없는 비즈만의',h:46})
+add('l71/s02',T(975,100,120,37,'촘촘한',41,{color:'#fff1a4',weight:800,inkFit:true}),T(1102,100,148,37,'밀착 케어',41,{color:'#fff',weight:800,inkFit:true}))
+add('l70/s01',B(187,67,51,2,'#fff'))
+add('l70/s02',...[187,615,1042].map(x=>B(x,67,51,2,'#fff')))
+
+// The clinical timing table has a colored label column, with white values in every row.
+edit('l68/s02',e=>e.kind==='box'&&e.y===473&&e.x>1026&&e.x<1027,{fill:'#fff'})
+edit('l68/s02',textIs('붓기 완화 / 초기 변화'),{color:'#384179',weight:400})
+
+// Keep the cover paragraph on blue, with the gray illustration block beside its ink.
+patches['l61/s01'].images?.filter(e=>e.x===1058&&e.y===647).forEach(e=>Object.assign(e,{x:1110,y:650,w:128,h:259}))
+
+// Leave the source callout's two lines on blue beside the gray youth illustration.
+patches['l67/s02'].images?.filter(e=>e.x===0&&e.y===646&&e.w===326).forEach(e=>e.w=208)

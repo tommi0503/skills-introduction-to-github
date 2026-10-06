@@ -9,7 +9,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const args=process.argv.slice(2),round=args.find(a=>a.startsWith('--round='))?.slice(8)??'final',ids=args.filter(a=>!a.startsWith('--'))
 if(!/^[a-z0-9-]+$/.test(round))throw Error('Invalid round')
 const hash=s=>createHash('sha256').update(s).digest('hex')
-const rendererFiles=['src/ui.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts']
+const rendererFiles=['src/ui.tsx','src/model.ts','src/primitives.ts','src/index.css','src/App.tsx','src/registry.ts','src/fonts.ts']
 const rendererHash=hash((await Promise.all(rendererFiles.map(f=>readFile(path.join(root,f),'utf8')))).join('\n'))
 await mkdir(path.join(root,'renders',round),{recursive:true});await mkdir(path.join(root,'comparisons',round),{recursive:true})
 const server=await createServer({root,server:{host:'127.0.0.1',port:0},logLevel:'error'});await server.listen()
@@ -18,6 +18,7 @@ const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['-
 try{
  const page=await browser.newPage({viewport:{width:1280,height:720}}),errors=[],fontErrors=[]
  page.on('pageerror',e=>errors.push(e.message))
+ page.on('console',msg=>{if(msg.type()==='error')errors.push(msg.text())})
  page.on('requestfailed',r=>{if(/\.woff2?(?:\?|$)/.test(r.url()))fontErrors.push(r.url())})
  page.on('response',r=>{if(r.status()>=400&&/\.woff2?(?:\?|$)/.test(r.url()))fontErrors.push(r.url())})
  await page.goto(url,{waitUntil:'networkidle'})
@@ -40,12 +41,15 @@ try{
     const ctx=document.createElement('canvas').getContext('2d')
     const declaredText=elements.filter(e=>e.kind==='text')
     for(const [i,el] of [...paper.querySelectorAll('.element-text')].entries()){
+     const originalTransform=el.style.transform
+     // Measure a decorative rotated label in its own coordinates. Restore it before capture.
+     if(declaredText[i]?.rotate)el.style.transform=originalTransform.replace(/rotate\([^)]*\)\s*/g,'')
      const b=el.getBoundingClientRect(),s=getComputedStyle(el),range=document.createRange();range.selectNodeContents(el);const r=range.getBoundingClientRect()
      const record={text:el.textContent.slice(0,100),elementId:el.dataset.elementId}
      ctx.font=`${s.fontStyle} ${s.fontWeight} ${s.fontSize} ${s.fontFamily}`;ctx.letterSpacing=s.letterSpacing==='normal'?'0px':s.letterSpacing
      const bottomMetrics=ctx.measureText(el.textContent.split('\n').at(-1))
      // An ink-fitted title uses the visible glyph bounds, while a DOM Range includes side bearings.
-     const width=el.style.transform.startsWith('scaleX(')&&!el.textContent.includes('\n')
+     const width=el.style.transform.includes('scaleX(')&&!el.textContent.includes('\n')
       ?r.width*(bottomMetrics.actualBoundingBoxLeft+bottomMetrics.actualBoundingBoxRight)/Math.max(1,bottomMetrics.width):r.width
      if(width>b.width+3*scale)result.push({...record,issue:'text wider than box',excess:(width-b.width)/scale})
      const paintedBottom=r.bottom-(bottomMetrics.fontBoundingBoxDescent-bottomMetrics.actualBoundingBoxDescent)*scale
@@ -60,6 +64,7 @@ try{
       if(Math.abs(x)>1.2||Math.abs(y)>1.2)result.push({...record,issue:'chip ink not centered',offset:[x,y]})
       if(l.width>b.width+scale||l.height>b.height+scale)result.push({...record,issue:'chip label exceeds bounds'})
      }
+     el.style.transform=originalTransform
     }
     return result
    },sheet.elements)

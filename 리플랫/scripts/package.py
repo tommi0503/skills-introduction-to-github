@@ -27,6 +27,7 @@ with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
     for p in (root/'review').iterdir():
         if p.is_file():z.write(p,'review/'+p.name)
     for p in out.glob('leaflet-preview*.jpg'):z.write(p,p.name)
+    for p in out.glob('leaflet-before-after-*.jpg'):z.write(p,p.name)
     z.writestr('manifest.json',json.dumps(manifest,ensure_ascii=False,indent=2))
     z.writestr('README.txt','''리플랫 — 3단 브로셔 72종, 접지면 432페이지
 
@@ -42,6 +43,7 @@ review/: 수정 사항, 폰트·문구 대체 내역, 최종 검증입니다.
 with zipfile.ZipFile(archive) as z:assert z.testzip() is None
 with zipfile.ZipFile(out/'leaflet-review.zip','w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
     for d in metas:z.write(root/'comparisons/final'/f'{d["id"]}-contact.jpg',f'brochures/{d["id"]}.jpg')
+    for p in out.glob('leaflet-before-after-*.jpg'):z.write(p,p.name)
     for p in (root/'review').iterdir():
         if p.is_file():z.write(p,'review/'+p.name)
 with zipfile.ZipFile(out/'leaflet-review.zip') as z:assert z.testzip() is None

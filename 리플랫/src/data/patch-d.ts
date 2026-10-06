@@ -1,5 +1,5 @@
 import type {SidePatch,Element} from '../model'
-import {T,B,I,C,L,IC,P} from '../primitives'
+import {T,B,I,C,L,IC,P,VP} from '../primitives'
 const patches:Record<string,SidePatch>={}
 const r=(x:number,y:number,w:number,h:number,radius?:number|string,dropText=true)=>({x,y,w,h,radius,dropText,...(!dropText?{layer:'background' as const}:{})})
 const serif={font:'Noto Serif KR'}, eng={font:'Bodoni Moda'}, italic={font:'Bodoni Moda',fontStyle:'italic'}
@@ -353,3 +353,226 @@ export default patches
 
 // Root final audit: visible Hahmlet title ink extends 4px beyond its hit boxes.
 for(const e of patches['l17/s01'].elements??[])if(e.kind==='text'&&['미리','뮤지컬'].includes(e.text??'')){e.weight=400;e.h=100}
+
+// Revision D: preserve source geometry, editable text and the original hierarchy.
+const revise=(key:string,text:string,changes:Partial<Element>)=>{for(const e of patches[key].elements??[])if(e.kind==='text'&&e.text===text)Object.assign(e,changes)}
+const omit=(key:string,predicate:(e:Element)=>boolean)=>{patches[key].elements=patches[key].elements!.filter(e=>!predicate(e))}
+const dash=(x:number,y:number,w:number,color:string)=>Array.from({length:Math.floor(w/5)},(_,i)=>L(x+i*5,y,2,1,color))
+const filledCheck=(x:number,y:number,d:number,color:string)=>[circle(x,y,d,color),IC(x+3,y+3,d-6,d-6,'Check','#fff',{strokeWidth:3})]
+
+// The temple directions are a plain road diagram, not a photograph.
+patches['l13/s01'].images=patches['l13/s01'].images!.filter(e=>e.x!==506)
+add('l13/s01',B(509,329,259,12,'#fff',{radius:6}),B(551,288,12,115,'#fff',{radius:6}),B(688,334,12,69,'#fff',{radius:6}),B(643,363,123,8,'#fff',{radius:4}),P([[642,339],[693,366]],'#fff',8),IC(698,284,20,23,'MapPin','#fff',{strokeWidth:3}),T(690,312,40,22,'미리사',12,{color:mint,align:'center'}))
+revise('l13/s01','당신의 무거운 짐,',{y:73,size:27});revise('l13/s01','잠시 여기에\n내려놓으십시오',{y:108,size:27,lineHeight:1.4})
+revise('l13/s01','천년사찰 미리사는\n당신을 기다립니다',{y:123,size:24,lineHeight:1.45})
+revise('l13/s01','주소   (12345) 미리남도 미리시 미리구 미리로 123\n전화   012-3456-7890 (대표)\n        012-3456-7890 (템플스테이)',{y:457,lineHeight:1.95})
+for(const e of patches['l13/s02'].elements??[])if(e.kind==='text'&&e.text?.includes('동참금:')){e.y-=13;e.color='#a2a2a2'}
+seasons.forEach(([,b],i)=>{const y=[163,305,449,590,732][i];const widths=[235,240,286,257,256];tx('l13/s02',78+widths[i],y+2,104,17,b,9,'#999','Noto Sans KR',400)})
+
+// Solid checks, circular icon disks and the source table rules are actual UI.
+for(const key of ['l14/s01','l14/s02']){
+ const checks=patches[key].elements!.filter(e=>e.kind==='icon'&&e.icon==='CircleCheck');omit(key,e=>e.kind==='icon'&&e.icon==='CircleCheck');for(const e of checks)add(key,...filledCheck(e.x,e.y,e.w,blue))
+}
+const hydroIconDisks=[[67,617],[67,705],[67,792]]
+add('l14/s01',...hydroIconDisks.map(([x,y])=>circle(x,y,62,'#fff')),...dash(83,683,306,'#aeb1b7'),...dash(83,771,306,'#aeb1b7'),...Array.from({length:6},(_,i)=>rule(452,[151,215,252,288,321,349][i],376,'#f1edf3')))
+revise('l14/s01','청정에너지로\n더 푸른 미래를 만듭니다',{text:'청정에너지로',y:561,h:33,size:24,weight:400})
+hd('l14/s01',466,594,352,'더 푸른 미래를 만듭니다',24,blue,'Noto Sans KR',700,'center')
+omit('l14/s01',e=>e.kind==='text'&&!!e.text?.startsWith('양수발전은 남는 전기를'))
+tx('l14/s01',54,463,353,26,'양수발전은 남는 전기를 물의 형태로 저장해 두었다가',14,'#333','Pretendard',400,'center',1.5)
+tx('l14/s01',62,488,149,25,'필요할 때 다시 꺼내 쓰는',14,'#333','Pretendard');tx('l14/s01',214,488,195,25,'거대한 친환경 배터리입니다.',14,blue,'Pretendard',700)
+for(const e of patches['l14/s01'].elements!)if(e.kind==='text'&&e.text?.startsWith('발전소는 국가 중요 시설')){e.weight=600;e.lineHeight=1.55;e.y=371;e.h=135}
+for(const e of patches['l14/s02'].elements!)if(e.kind==='text'&&/^201[78]|^202[35]/.test(e.text??'')){e.weight=600;e.color='#333';e.size=13.5}
+add('l14/s01',IC(377,44,37,51,'MessageCircleQuestion','#fff',{opacity:.15}),IC(772,44,47,48,'Megaphone','#fff',{opacity:.15}),IC(891,58,30,29,'Flower2','#fff',{strokeWidth:3}))
+add('l14/s02',IC(359,47,40,46,'Droplets','#fff',{opacity:.15}),IC(773,47,46,46,'Settings','#fff',{opacity:.15}),IC(1187,47,47,47,'Leaf','#fff',{opacity:.15}))
+
+// Wine typography: actual loaded serif weights and source ink proportions.
+for(const key of ['l15/s01','l15/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&e.font==='Bodoni Moda'&&['Wine Class','Special Day','Cost-effective','WINE'].includes(e.text??'')){e.inkFit=true;e.h=e.text==='WINE'?72:43}
+revise('l15/s01','Mirihouse',{font:'Tinos',fontStyle:'italic',size:43});revise('l15/s02','with wine',{font:'Tinos',fontStyle:'italic',size:32,color:gold,y:119});revise('l15/s02','house wine',{font:'Tinos',fontStyle:'italic',size:32,color:gold,y:119})
+revise('l15/s02','소중한 사람과\n행복을 나누는\n프리미엄 와인',{text:'소중한사람과\n행복을나누는\n프리미엄와인',x:103,y:123,size:39,lineHeight:1.36})
+add('l15/s02',rule(104,306,61,gold))
+for(const e of patches['l15/s02'].elements!)if(e.kind==='text'&&e.text?.startsWith('₩')){e.text=e.text.replace('₩','');e.size=23;e.y-=1}
+revise('l15/s02','라인업 하나하나에서 고심의 흔적이\n느껴지고, 구매를 후회한 적 없습니다.',{y:537,size:18})
+revise('l15/s02','미래전자 홍경철 회장',{y:821})
+
+// Autumn book festival: rule rhythm, bordered badges and single schedule labels.
+for(const key of ['l16/s01','l16/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&e.font==='IBM Plex Mono'){e.weight=400;e.letterSpacing=2.2;e.size=21}
+for(const [key,ys] of [['l16/s01',[272,367]],['l16/s02',[350,503]]] as [string,number[]][])for(const y of ys)add(key,...dash(key==='l16/s01'?464:470,y,345,'#d9b784'))
+for(const key of ['l16/s01','l16/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&['체험 프로그램','행사 안내','축제 소개','특별 프로그램','행사 일정'].includes(e.text??'')){e.y=63;e.h=54;e.inkFit=true;e.w=key==='l16/s01'&&e.text==='체험 프로그램'?299:260;e.x=key==='l16/s01'&&e.text==='체험 프로그램'?63:e.x+(350-e.w)/2}
+revise('l16/s01','책과 함께,',{x:905,y:279,w:329,h:77,inkFit:true});revise('l16/s01','가을을 읽다',{x:888,y:373,w:350,h:78,inkFit:true});revise('l16/s01','가을',{x:888,y:373,w:142,h:78,inkFit:true})
+omit('l16/s01',e=>e.kind==='icon'&&e.icon==='CircleCheck')
+for(const y of [708,743,778,813])add('l16/s01',...filledCheck(67,y,22,'#bb5630'))
+for(const y of [737,772,807,842])add('l16/s01',rule(98,y,205,'#d5c6af'))
+// The source book stacks are rectangles, rounded spines and ruled pages.
+patches['l16/s01'].images=patches['l16/s01'].images!.filter(e=>![889,882,881].includes(e.x))
+add('l16/s01',B(920,52,323,79,'#ff9044',{radius:'0 39px 39px 0'}),B(920,52,238,79,'#fffbef',{radius:'0 39px 39px 0'}),B(881,132,350,11,'#ba5d3c'),B(891,143,328,63,'#fffbef'),B(881,206,350,11,'#ba5d3c'),B(1060,157,27,18,'#ff9044'),B(1122,181,28,18,'#ff9044'),...Array.from({length:5},(_,i)=>rule(933,65+i*14,193,'#bf9c8a')),...Array.from({length:4},(_,i)=>rule(905,156+i*12,298,'#bf9c8a')))
+add('l16/s01',B(897,630,344,79,'#ba5d3c',{radius:'0 39px 39px 0'}),B(897,630,166,79,'#fffbef',{radius:'0 39px 39px 0'}),B(881,710,362,80,'#ff9044',{radius:'40px 0 0 40px'}),B(1028,710,215,80,'#fffbef',{radius:'40px 0 0 40px'}),B(881,790,342,66,'#ba5d3c',{radius:'33px 0 0 33px'}),B(971,790,252,66,'#fffbef',{radius:'33px 0 0 33px'}),B(903,814,50,20,'#fffbef',{radius:10}),...Array.from({length:5},(_,i)=>rule(1058,722+i*14,177,'#bf9c8a')))
+add('l16/s01',P([[1122,737],[1149,737],[1149,786],[1135,777],[1122,786]],'#ba5d3c',1,'#ba5d3c'),P([[1170,753],[1197,753],[1197,786],[1183,777],[1170,786]],'#ff9044',1,'#ff9044'))
+for(const x of [1074,1136,1198])add('l16/s01',P(Array.from({length:13},(_,i)=>[x+16*Math.sin(Math.PI*i/12),637+65*i/12]),'#fffbef',1.5))
+revise('l16/s01','10.17 SAT\n10.18 SUN',{x:915,y:638,w:145,h:63,size:27,lineHeight:1.4});revise('l16/s01','미리시 중앙도서관',{x:994,y:807,w:230,size:31})
+omit('l16/s02',e=>e.kind==='text'&&/^\d{2}:\d{2}$/.test(e.text??'')&&e.x===922)
+
+// Musical tickets and information retain their olive stock and rotated labels.
+patches['l17/s01'].images=patches['l17/s01'].images!.filter(e=>e.x!==0)
+patches['l17/s02'].images=patches['l17/s02'].images!.filter(e=>e.x!==853)
+for(const key of ['l17/s01','l17/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&['CHARACTER','TICKET','ABOUT','STORY','INFO','CAST'].includes(e.text??'')){e.font='DM Serif Display';e.weight=400;e.inkFit=true;e.h=e.text==='CAST'?35:52;e.w=e.text==='CHARACTER'?286:e.text==='TICKET'?179:e.text==='ABOUT'?171:e.text==='STORY'?159:e.text==='INFO'?111:e.w;e.x=e.text==='CHARACTER'?70:e.text==='TICKET'?553:e.text==='ABOUT'?128:e.text==='STORY'?557:e.text==='INFO'?1018:e.x}
+for(const e of patches['l17/s01'].elements!)if(e.kind==='text'&&['V\nI\nP','R','S','A'].includes(e.text??'')){e.text=e.text==='V\nI\nP'?'VIP':e.text;e.rotate=-90;e.x=522;e.y+=36;e.w=e.text==='VIP'?58:28;e.h=28;e.size=20;e.lineHeight=1;e.weight=400}
+for(const y of [179,278,377,476])add('l17/s01',...Array.from({length:15},(_,i)=>L(559,y+5+5.5*i,1,2,'#d5d5a2')))
+revise('l17/s02','주의사항',{color:olive,fill:'#a7ac31',x:1037,y:740,w:87,size:18});add('l17/s02',IC(1016,744,19,20,'TriangleAlert',olive,{strokeWidth:2}))
+
+// Comic titles have their full black contour; thumbtacks belong inside each card.
+for(const key of ['l18/s01','l18/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&(e.font==='Lilita One'||e.font==='Black Han Sans'))e.textStroke=e.inkFit?'7px #000':'4px #000'
+omit('l18/s01',e=>e.kind==='box'&&e.radius==='50%'&&e.fill==='#f9ff50')
+for(const y of [260,391,523,653])add('l18/s01',circle(373,y,10,'#000'),circle(376,y+2,5,'#f9ff50'))
+add('l18/s01',...dash(460,210,362,'#000'));add('l18/s02',rule(0,33,1280,'#000'),...dash(27,240,364,'#000'),...dash(462,753,364,'#000'),...dash(908,327,316,'#000'),...dash(908,652,316,'#000'))
+for(const key of ['l18/s01','l18/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&e.font==='Lilita One'){e.font='Archivo Black';e.weight=400;e.inkFit=true}
+for(const y of [533,608,682,756,830])add('l18/s02',circle(373,y,10,'#000'),circle(376,y+2,5,'#f9ff50'))
+for(const [x,y] of [[613,258],[804,258],[613,495],[804,495]])add('l18/s02',circle(x,y,10,'#000'),circle(x+3,y+2,5,'#f9ff50'))
+for(const e of patches['l18/s01'].elements!)if(e.kind==='text'&&e.text==='2099 가을 책축제'&&e.x===885){e.inkFit=true;e.x=882;e.y=758;e.w=326;e.h=35;e.textStroke='5px #000'}
+
+// A cream photo field stops at the curved green cover footer.
+add('l19/s01',P([[849,724],[885,745],[925,760],[964,771],[1009,776],[1052,776],[1097,771],[1144,759],[1189,744],[1235,725],[1280,708],[1280,910],[849,910]],green,1,green))
+patches['l19/s01'].images![2].h=779
+for(const x of [59,215])add('l19/s01',circle(x-9,237,41,green))
+for(const e of patches['l19/s01'].elements!)if(e.kind==='icon'&&['CalendarDays','Truck'].includes(e.icon??'')&&e.y===240){e.x-=2;e.y+=4;e.w=25;e.h=25}
+for(const x of [51,118,185,252,319])add('l19/s01',card(x,387,56,58,'#fcf7ec',4))
+revise('l19/s01','마음을 전하는\n명품한우\n선물세트',{text:'마음을 전하는',x:922,y:186,w:306,h:30,size:22});tx('l19/s01',933,228,280,75,'명품한우\n선물세트',40,'#51442e','Noto Serif KR',500,'center',1.12)
+add('l19/s01',rule(950,363,242,'#cdbd99'),IC(1064,355,16,16,'Flower2','#bca778'))
+for(const y of [352,453,554])add('l19/s02',rule(40,y,345,'#dccbb7'))
+
+// Remove a falsely grey whole header: its ornament is a small editable flower.
+patches['l20/s01'].images=patches['l20/s01'].images!.filter(e=>e.x!==865&&e.x!==443)
+add('l20/s01',IC(1048,57,36,36,'Flower2',gold),IC(442,750,25,25,'Beef','#111'),IC(83,796,25,27,'Flower2',gold))
+for(const x of [214,638,1058])add('l20/s01',IC(x,149,16,16,'Flower2',gold))
+add('l20/s01',B(464,579,348,145,'transparent',{border:'1px solid #b79c63'}),IC(551,589,20,20,'ShieldCheck','#b49155'))
+for(const e of patches['l20/s02'].elements!)if(e.kind==='text'&&e.y===172+66+214){e.y+=15}
+for(const e of patches['l20/s02'].elements!)if(e.kind==='text'&&['불고기','국거리','장조림'].includes(e.text??'')){e.y=796;e.size=15}
+for(const e of patches['l20/s02'].elements!)if(e.kind==='text'&&['센 불에 빠르게\n볶아 부드럽게','찬물부터 천천히\n끓여 깊고 진하게','결 반대 방향으로\n썰어 더욱 부드럽게'].includes(e.text??'')){e.y=824;e.size=10.5}
+patches['l20/s02'].images!.forEach(e=>{if(e.y===719)e.y=690})
+
+// Squared academy display lettering and the 28만원 price fill the source ink box.
+for(const e of patches['l21/s01'].elements!)if(e.kind==='text'&&e.text==='SINEDU'){e.font='Archivo';e.weight=900;e.inkFit=true;e.h=e.x===490?49:61;e.y=e.x===490?401:e.x===52?71:69;e.w=e.x===490?273:e.x===52?315:361}
+for(const e of patches['l21/s01'].elements!)if(e.kind==='text'&&/^0[1-4]$/.test(e.text??'')){e.font='Archivo';e.weight=900;e.inkFit=true;e.h=44;e.w=76}
+revise('l21/s01','수능특강',{font:'Black Han Sans',inkFit:true,w:368,h:78,y:200})
+add('l21/s01',rule(499,484,48,'#fff'),rule(722,484,49,'#fff'),rule(502,770,291,'#c8dad4'),IC(54,661,26,41,'Pencil','#111'))
+revise('l21/s01','씨네에듀는 다릅니다!',{x:85,w:319})
+revise('l21/s02','28만원',{font:'Black Han Sans',weight:400,inkFit:true,x:913,y:643,w:309,h:89})
+revise('l21/s02','지금 이 시기,\n가장 필요한 강좌\n가장 합리적 으로\n선택하세요!',{text:'지금 이 시기,',x:486,y:64,w:309,h:50,size:40})
+tx('l21/s02',486,117,121,52,'가장',40,teal,'Pretendard',700);tx('l21/s02',569,122,190,45,'필요한 강좌',40,'#fff','Pretendard',700,'left',1);add('l21/s02',B(568,121,194,45,'#111'))
+tx('l21/s02',486,170,87,52,'가장',40,teal,'Pretendard',700);tx('l21/s02',569,174,112,47,'합리적',40,'#111','Pretendard',700);tx('l21/s02',683,174,86,47,'으로',40,teal,'Pretendard',700);tx('l21/s02',486,227,311,52,'선택하세요!',40,teal,'Pretendard',700)
+
+// Neon guides are plain lines. Large grey rectangles previously hid blue headings.
+patches['l22/s01'].images=patches['l22/s01'].images!.filter(e=>e.x===184)
+patches['l22/s02'].images=[]
+add('l22/s01',P([[460,0],[460,49],[712,49],[761,0]],'#0646e7',5),P([[426,123],[563,123],[703,0]],'#0646e7',5),P([[1049,0],[1049,126],[1280,355]],'#0646e7',5),P([[1122,0],[1122,291],[1280,448]],'#0646e7',5),P([[1280,575],[1141,575],[1141,669],[1280,818]],'#0646e7',5))
+add('l22/s02',P([[0,78],[381,78],[530,0]],'#0646e7',5),P([[0,243],[725,243],[892,167]],'#0646e7',5),P([[1110,63],[1230,0]],'#0646e7',5))
+revise('l22/s02','Global\nInnovation\nSeminar',{x:61,y:72,w:370,h:183,size:58,font:'Inter',weight:800,lineHeight:1.08})
+for(const e of patches['l22/s02'].elements!)if(e.kind==='text'&&e.text?.startsWith('고객 또는 조직전간')){e.text='고객 또는 조직간의 원활한 소통\n으로 고객불만 및 내부불만을 효율\n적으로 처리합니다.'}
+revise('l22/s02','고객 중심의 가치있는 서비스를 통해\n고객의 만족과 성공을 지원합니다.',{weight:400})
+
+// Spa product lists: narrower, firmer ingredients and delicately spaced subheads.
+for(const e of patches['l23/s02'].elements!)if(e.kind==='text'&&e.fontStyle==='italic'&&e.y===741){e.font='Tinos';e.weight=700;e.size=20;e.lineHeight=1.13;e.y=740}
+for(const key of ['l23/s01'])for(const e of patches[key].elements!)if(e.kind==='text'&&e.text==='for space'){e.font='Tinos';e.fontStyle='italic';e.size=27}
+revise('l23/s01','특별한 공간에서 맞이하는\n바디의 편안함 다른 날, 다른 곳에서도\n그 공간의 기억이 피부에 가득합니다.\n저희 RE 에스테틱에서 직접 개발한\n제품을 통해 당신의 피부에게\n편안함을 선사하세요.',{text:'특별한 공간에서 맞이하는\n바디의 편안함 다른 날, 다른 곳에서도\n그 공간의 기억이 피부에 가득합니다.\n저희 RE 에스테틱에서 직접 개발한\n제품을 통해 당신의 피부에게\n편안함을 선사하세요.',y:375,size:16.5,lineHeight:1.85})
+for(const e of patches['l23/s02'].elements!)if(e.kind==='text'&&e.text==='MATERIAL'){e.weight=650;e.size=23}
+
+// Airline school: script wordmarks, correct display font and source table/card curves.
+patches['l24/s01'].images=patches['l24/s01'].images!.filter(e=>e.x!==910&&e.x!==479)
+tx('l24/s01',899,68,286,73,'Skynara',60,'#f1d37c','Tinos',400);revise('l24/s01','Skynara',{fontStyle:'italic'})
+tx('l24/s01',479,392,302,100,'Skynara',66,'#39729a','Tinos',400);for(const e of patches['l24/s01'].elements!)if(e.kind==='text'&&e.text==='Skynara'){e.fontStyle='italic';if(e.x===479)e.opacity=.55}
+revise('l24/s01','스카이나라',{x:986,y:119,w:284,h:60,font:'Noto Sans KR',weight:700,size:52});revise('l24/s01','승무원학원',{x:986,y:185,w:284,h:60,font:'Noto Sans KR',weight:300,size:52})
+revise('l24/s01','스카이나라승무원학원은\n4가지 약속을 합니다',{font:'Noto Sans KR',weight:300,x:54,y:356,size:25,lineHeight:1.4})
+for(const e of patches['l24/s01'].elements!)if(e.kind==='text'&&e.text?.match(/^(첫째|둘째|셋째|넷째)\./)){e.font='Noto Sans KR';e.weight=300;e.size=14;e.lineHeight=1.75}
+for(const e of patches['l24/s02'].elements!)if(e.kind==='box'&&e.border==='2px solid #0c3a6f'){e.radius=15;e.border='2px solid #234f6b'}
+for(const e of patches['l24/s02'].elements!)if(e.kind==='text'&&/^0[1-4]$/.test(e.text??'')){e.font='Roboto Condensed';e.weight=300;e.size=43;e.y=255}
+revise('l24/s02','활짝피는 꽃처럼 아름다운 그녀가\n꿈의 비행을 시작합니다.',{text:'활짝피는 꽃처럼 아름다운 그녀가\n꿈의 비행을 시작합니다.',x:460,y:512,size:30,lineHeight:1.5})
+omit('l24/s02',e=>e.kind==='text'&&!!e.text?.startsWith('활짝피는 꽃처럼'))
+tx('l24/s02',460,512,214,45,'활짝피는 꽃처럼',30,'#111','Pretendard',700);tx('l24/s02',676,512,209,45,'아름다운 그녀가',30,'#111','Pretendard',400)
+tx('l24/s02',460,557,181,45,'꿈의 비행을',30,'#111','Pretendard',700);tx('l24/s02',642,557,187,45,'시작합니다.',30,'#111','Pretendard',400)
+revise('l24/s02','국내·외항공사 스튜어디스 정규취업반 취업과정',{x:461,y:465,w:325,size:24})
+for(const e of patches['l24/s02'].elements!)if(e.kind==='text'&&e.text?.startsWith('외항사 승무원 면접준비')){e.y=613;e.font='Noto Sans KR';e.weight=300;e.size=11.5}
+revise('l24/s02','20명 내외 선착순 모집 마감주의!',{text:'20명 내외 선착순 모집 마감주의!',y:694});revise('l24/s02','전공자 또는 비전공자로 승무원을 준비하시는 모든 분들',{y:750})
+
+// A double curved stock edge has no relationship to a simple ellipse stuck on a card.
+const stockFrame=(key:string,x:number,y:number,w:number,h:number)=>{
+ const a=w/2;const edge=`M0 20 H${a-60} Q${a-50} 20 ${a-48} 10 Q${a-35} 22 ${a-25} 10 Q${a} -7 ${a+25} 10 Q${a+35} 22 ${a+48} 10 Q${a+50} 20 ${a+60} 20 H${w} V${h-20} H${a+60} Q${a+50} ${h-20} ${a+48} ${h-10} Q${a+35} ${h-22} ${a+25} ${h-10} Q${a} ${h+7} ${a-25} ${h-10} Q${a-35} ${h-22} ${a-48} ${h-10} Q${a-50} ${h-20} ${a-60} ${h-20} H0 Z`
+ add(key,VP(x,y,w,h,edge,{fill:cream,color:cream,strokeWidth:1}),VP(x+3,y+3,w-6,h-6,edge,{fill:'none',color:'#a5a869',strokeWidth:1}))
+}
+omit('l17/s01',e=>e.kind==='box'&&e.fill===cream&&((e.x===32&&e.y===158)||e.radius==='50%'))
+omit('l17/s02',e=>e.kind==='box'&&e.fill===cream&&((e.x===892&&(e.y===158||e.y===447))||e.radius==='50%'))
+stockFrame('l17/s01',32,138,362,724);stockFrame('l17/s02',892,138,362,267);stockFrame('l17/s02',892,427,362,283)
+for(const key of ['l17/s01','l17/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&['CHARACTER','TICKET','ABOUT','STORY','INFO','CAST'].includes(e.text??'')){e.font='Noto Sans KR';e.weight=400;e.size=48}
+// Original orange activity disks have a scalloped outside border.
+for(const [key,centers] of [['l16/s01',[[94,177],[249,177],[94,331],[249,331],[94,485],[249,485]]],['l16/s02',[[470,228],[470,381],[470,534]]]] as [string,number[][]][]){
+ for(const [x,y] of centers){
+  omit(key,e=>e.kind==='box'&&e.x===x&&e.y===y&&e.fill==='#ff9044')
+  const points=Array.from({length:64},(_,i)=>{const angle=i*Math.PI/32,rad=i%4<2?43:40;return `${i?'L':'M'}${43+Math.cos(angle)*rad} ${43+Math.sin(angle)*rad}`}).join(' ')+' Z'
+  add(key,VP(x,y,86,86,points,{fill:'#ff9044',color:'#ff9044',strokeWidth:1}))
+ }
+}
+
+// Second visual pass: exact title ink boxes and segmented emphasis must also agree.
+revise('l15/s01','Wine Class',{x:110,y:158,w:213,h:36,inkFit:true})
+for(const e of patches['l15/s01'].elements!)if(e.kind==='text'&&e.text==='Mirihouse'){e.font='Bodoni Moda';e.fontStyle='italic';e.weight=400;e.inkFit=true;e.h=e.x===940?32:37;e.w=e.x===940?153:176;e.x=e.x===940?1000:552;e.y=e.x===1000?174:239}
+revise('l15/s01','WINE',{x:938,y:214,w:234,h:65,inkFit:true})
+revise('l15/s02','Special Day',{x:537,y:76,w:201,h:42,inkFit:true});revise('l15/s02','Cost-effective',{x:955,y:76,w:236,h:42,inkFit:true})
+revise('l15/s02','with wine',{x:561,y:120,w:170,h:27,font:'Bodoni Moda',fontStyle:'italic',inkFit:true,color:gold})
+revise('l15/s02','house wine',{x:995,y:121,w:177,h:27,font:'Bodoni Moda',fontStyle:'italic',inkFit:true,color:gold})
+patches['l15/s01'].images![0].radius=0
+patches['l15/s01'].underTextElements=[...[[48,331],[376,331],[48,509],[376,509]].map(([x,y])=>circle(x-7,y-7,20,'#000'))]
+const autumnBounds:Record<string,Record<string,number[]>>={'l16/s01':{'체험 프로그램':[120,65,189,36],'행사 안내':[574,65,131,36]},'l16/s02':{'축제 소개':[159,65,126,36],'특별 프로그램':[546,65,195,36],'행사 일정':[992,65,125,36]}}
+for(const [key,titles] of Object.entries(autumnBounds))for(const e of patches[key].elements!)if(e.kind==='text'&&titles[e.text??'']&&e.x<1000){[e.x,e.y,e.w,e.h]=titles[e.text!];e.inkFit=true}
+// Restore schedule labels sharing the same words as a title.
+let restoredActivity=0
+for(const e of patches['l16/s02'].elements!)if(e.kind==='text'&&e.text==='체험 프로그램'&&e.x>900){Object.assign(e,{x:1030,y:restoredActivity++?513:315,w:169,h:24,size:16,font:'Do Hyeon',weight:400,inkFit:false})}
+for(const e of patches['l16/s02'].elements!)if(e.kind==='text'&&e.text==='행사 일정'){[e.x,e.y,e.w,e.h]=[992,65,125,36];e.inkFit=true}
+omit('l16/s01',e=>e.kind==='text'&&['가을을 읽다','가을'].includes(e.text??''))
+add('l16/s01',T(888,373,142,78,'가을',81,{font:'Do Hyeon',color:'#f27b32',inkFit:true}),T(1030,373,208,78,'을 읽다',81,{font:'Do Hyeon',color:brown,inkFit:true}))
+for(const [key,centers] of [['l16/s01',[[94,177],[249,177],[94,331],[249,331],[94,485],[249,485]]],['l16/s02',[[470,228],[470,381],[470,534]]]] as [string,number[][]][])for(const [x,y] of centers)add(key,B(x+7,y+7,72,72,'transparent',{radius:'50%',border:'1px solid #fff'}))
+for(const key of ['l17/s01','l17/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&['CHARACTER','TICKET','ABOUT','STORY','INFO'].includes(e.text??'')){e.h=42;e.y=67}
+revise('l17/s02','CAST',{x:32,y:375,w:363,h:47,size:37,inkFit:false,font:'Noto Sans KR',weight:400})
+for(const e of patches['l18/s02'].elements!)if(e.kind==='text'&&['10.17','10.18'].includes(e.text??'')){e.font='Lilita One';e.weight=400;e.inkFit=true;e.x=913;e.y+=4;e.w=119;e.h=43;e.textStroke='5px #000'}
+revise('l19/s01','명품한우\n선물세트',{h:98});revise('l19/s01','마음을 전하는',{y:185})
+// Close the natural spaces between different weights on the source headline.
+revise('l24/s02','활짝피는 꽃처럼',{w:209,size:29});revise('l24/s02','아름다운 그녀가',{x:669,w:210,size:29})
+revise('l24/s02','꿈의 비행을',{w:169,size:29});revise('l24/s02','시작합니다.',{x:624,w:181,size:29})
+for(const e of patches['l16/s01'].elements!)if(e.kind==='text'&&e.text==='참가 안내'){e.font='Do Hyeon';e.weight=400;e.size=25;e.letterSpacing=0}
+for(const e of patches['l21/s01'].elements!)if(e.kind==='text'&&(e.text==='SINEDU'||/^0[1-4]$/.test(e.text??''))){e.font='Russo One';e.weight=400}
+revise('l21/s02','28만원',{text:'만원',x:1057,y:643,w:168,h:89,inkFit:true,font:'Black Han Sans',weight:400})
+add('l21/s02',T(913,643,140,89,'28',100,{font:'Russo One',weight:400,color:teal,inkFit:true}))
+for(const key of ['l17/s01','l17/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&['CHARACTER','TICKET','ABOUT','STORY','CAST'].includes(e.text??'')){e.font='Bodoni Moda';e.weight=e.text==='CAST'?500:650}
+for(const e of patches['l14/s01'].elements!)if(e.kind==='box'&&e.x===0&&e.y===126&&e.fill==='#fff')e.radius='0 24px 0 0'
+revise('l14/s01','필요할 때 다시 꺼내 쓰는',{x:62,w:158});revise('l14/s01','거대한 친환경 배터리입니다.',{x:219,w:188,size:14})
+history.forEach(([a,b],i)=>{const y=570+i*59;revise('l14/s02',`${a} ${b}`,{text:b,x:149,w:248,size:13.5,color:'#333',weight:600});tx('l14/s02',78,y,71,24,a,13.5,blue,'Pretendard',700)})
+revise('l15/s02','숙련된 소믈리에가 고민해\n고민을 더해 고객에게 전하는\n최상급의 프리미엄 와인입니다.',{text:'숙련된 소믈리에가 고민에\n고민을 더해 고객에게 전하는\n최상급의 프리미엄 와인입니다.'})
+// Special-program badges are round; only the six activity badges have scallops.
+omit('l16/s02',e=>e.kind==='path'&&e.x===470&&[228,381,534].includes(e.y))
+for(const y of [228,381,534])add('l16/s02',circle(470,y,88,'#ff9044'),B(475,y+5,78,78,'transparent',{radius:'50%',border:'1px solid #fff'}))
+add('l16/s01',IC(480,713,21,21,'TrainFront','#ff9044'),IC(480,760,21,21,'BusFront','#ff9044'),IC(480,807,21,21,'CarFront','#ff9044'))
+omit('l19/s01',e=>e.kind==='path'&&e.x===849&&e.fill===green)
+add('l19/s01',VP(849,708,431,202,'M0 16 C126 86 239 89 431 0 V202 H0 Z',{fill:green,color:green,strokeWidth:1}))
+
+// A street map made from rectangles, streets and Lucide markers is fully editable.
+patches['l16/s01'].images=patches['l16/s01'].images!.filter(e=>e.x!==465)
+add('l16/s01',B(465,537,348,153,'#fffbef',{radius:9}),B(527,537,17,153,'#fff3d4'),B(465,604,348,13,'#fff3d4'),B(660,537,14,153,'#fff3d4'),B(739,537,15,153,'#fff3d4'))
+add('l16/s01',IC(472,539,13,21,'TrainFront','#af903e'),IC(493,593,24,27,'BusFront','#ba5d3c'),IC(474,637,32,30,'BusFront','#ba5d3c'),IC(549,541,37,34,'Landmark','#db9e45'),IC(692,536,32,37,'MapPin','#ff9044'),IC(686,625,33,30,'CarFront','#ba5d3c'),IC(686,659,33,30,'CarFront','#ba5d3c'),IC(553,647,44,42,'Trees','#ff9044'),IC(760,647,38,42,'Trees','#ff9044'))
+tx('l16/s01',485,550,42,34,'비즈역\n1번출구',11,brown,'Do Hyeon',400,'left',1.1);tx('l16/s01',546,579,108,21,'중앙도서관',14,brown,'Do Hyeon',400,'center');tx('l16/s01',675,574,62,35,'미리\n문화광장',17,'#ff9044','Do Hyeon',400,'center',1.05)
+add('l16/s01',B(551,593,18,22,'#ba5d3c'));tx('l16/s01',554,594,15,20,'P',17,'#fff','Pretendard',700);tx('l16/s01',471,668,49,24,'셔틀버스\n정거장',12,brown,'Do Hyeon',400,'center',1.05);tx('l16/s01',579,633,76,21,'공용주차장',13,brown,'Do Hyeon',400,'center')
+omit('l16/s01',e=>e.kind==='text'&&e.chip===true&&e.text?.includes('이용 시')===true)
+for(const [i,a,b] of [['지하철 이용 시','지하철 비즈역 1번 출구'],['버스 이용 시','비즈역 앞 셔틀버스 운행'],['자가용 이용 시','공용주차장 이용 가능']].map((v,i)=>[i,...v] as [number,string,string])){add('l16/s01',B(468,709+i*47,341,34,'#fff2d1',{radius:17}));tx('l16/s01',515,715+i*47,112,24,a,18,'#e78a39','Do Hyeon');tx('l16/s01',629,715+i*47,173,24,b,16,brown,'Do Hyeon')}
+const lotus=(x:number,y:number,w:number,h:number)=>VP(x,y,w,h,'M21 31 Q15 17 21 0 Q27 17 21 31 M21 31 Q8 21 11 5 Q22 12 21 31 M21 31 Q34 21 31 5 Q20 12 21 31 M21 31 Q3 31 0 11 Q15 15 21 31 M21 31 Q39 31 42 11 Q27 15 21 31',{color:mint,strokeWidth:1})
+omit('l13/s01',e=>e.kind==='icon'&&e.icon==='Flower2');add('l13/s01',lotus(618,67,43,31),lotus(462,241,18,16),lotus(462,576,18,16))
+for(const e of patches['l13/s02'].elements!)if(e.kind==='icon'&&e.icon==='Flower2'){add('l13/s02',lotus(e.x,e.y,e.w,e.h))}
+omit('l13/s02',e=>e.kind==='icon'&&e.icon==='Flower2')
+patches['l22/s01'].images=[]
+add('l22/s01',P([[186,575],[228,595],[228,613],[186,594],[186,613],[228,633],[228,651],[186,651],[186,633],[228,633]],'#fff',5))
+// The two plain cloud silhouettes above the book cover heading are simple shapes.
+add('l16/s01',VP(923,226,117,36,'M0 31 L7 31 Q10 19 22 20 Q26 4 41 4 Q55 4 61 20 Q73 16 83 26 L96 26 L96 35 L0 35 Z',{fill:'#fffbef',color:'#fffbef'}),VP(1134,234,78,28,'M0 22 L8 22 Q13 10 25 14 Q30 0 42 0 Q56 0 62 16 L74 16 L74 26 L0 26 Z',{fill:'#fffbef',color:'#fffbef'}))
+for(const key of ['l16/s01','l16/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&e.font==='IBM Plex Mono'){e.font='Tinos';e.weight=700;e.size=e.text==='BOOK FESTIVAL'?29:21;e.letterSpacing=3;e.h=e.text==='BOOK FESTIVAL'?34:e.h;e.y=e.text==='BOOK FESTIVAL'?472:e.y}
+// Pinyon's connected, strongly slanted signature matches the four original labels.
+for(const key of ['l15/s01','l15/s02'])for(const e of patches[key].elements!)if(e.kind==='text'&&['Mirihouse','with wine','house wine'].includes(e.text??'')){e.font='Pinyon Script';e.fontStyle='normal';e.weight=400;if(e.text!=='Mirihouse')e.color='#d2d0c7'}
+patches['l13/s01'].notes=['단순 도로 지도와 연꽃 선 아이콘은 벡터로 구현. 처마와 연꽃 사진만 #e5e5e5 이미지 영역. 원문 교통 안내와 제목은 실제 폰트.']
+patches['l16/s01'].notes=['책 표지·책등·페이지선·지도 거리와 교통 아이콘·프로그램 배지는 실제 도형/Lucide. 잎과 장식 일러스트만 #e5e5e5. 제목의 가을/을 읽다 색과 단어별 위치를 분리 구현.']
+patches['l17/s01'].notes=['올리브 지면 유지, 인물 사진·커버 사진·QR만 회색. 제목은 serif, 티켓 등급은 원본처럼 회전한 실제 문자. 크림 카드의 이중 곡선 가장자리를 SVG로 구현. 장식 점 texture는 제외.']
+patches['l17/s02'].notes=['INFO의 올리브 바탕 유지, INFO만 sans-serif, ABOUT/STORY/CAST는 serif. 사진은 회색. 공연 정보·시간표와 크림 카드의 곡선 가장자리는 실제 UI. 장식 점 texture는 제외.']
+patches['l21/s01'].notes=['SINEDU와 01–04는 실제 Russo One400을 로드해 각진 디스플레이 서체 구현. 그라데이션 BST/ES/T 커버 그래픽만 회색.']
+patches['l22/s01'].notes=['단순 파란 선, 흰 종이 접기 심볼, polygon, 막대 차트와 텍스트는 실제 벡터/폰트 구현. 헤더를 가리던 회색 사각형 제거.']

@@ -1,0 +1,26 @@
+# Revision A — l01–l12 원본 대조 검수
+
+수정 파일: `src/data/patch-a.ts`. 다른 CSS/UI/model/package는 수정하지 않았습니다. 기존 T/B/C/L/IC/P와 root가 추가한 VP만 사용했습니다.
+
+원본 `public/reference/l01–l12/s01.webp,s02.webp` 전부와 기존 final fullside 24쌍을 view_image로 확인했습니다. revision-a fullside 24쌍과 contact12를 실제 확인하고, 발견된 표 머리/행 위치, 제목 줄넘침, 작은 문단 충돌/강조색 누락을 같은 회차 안에서 고쳤습니다. 각 접지 6페이지, 합계 72페이지 및 펼침면24장을 1280×720 비율보존으로 렌더했습니다.
+
+`npm run typecheck` 통과. 최종 담당 JSON 합계: panels 72 / sides 24 / text/chip overflow findings 0. render 스크립트의 원본 img DOM 금지 검사·font 요청 실패 검사·canvas 크기 검사가 통과했습니다. 전체 registry 좌표 x/y/w/h finite audit 결과 `[]`. 이 검출값은 시각 유사도 점수가 아닙니다.
+
+정적 서체는 실제400으로 통일했으며, 실제 loaded weight가 있는 Pretendard/Noto families만 다른 weight를 사용했습니다. Allura400, Bodoni Moda400 italic은 root가 실제 fontsource를 로드한 서체입니다.
+
+모든 수정 element에 `lNN-s0N-rev-NNN` ID가 부여되어 DOM과 QA JSON에서 추적할 수 있습니다. 최종 전 범위 renderer hash 동기화 출력은 root 담당입니다.
+
+| 접지 | 원본 대비 구체 변경 | 남는 차이 | 검수 이미지 |
+|---|---|---|---|
+| l01 | 커버의 cyan/deep-blue 제목 분할, 1단계 실제 세무 문구, 3단계 카드 화살표와 분리된 구분선 복원. 체크리스트·Contact 원문 재대조. | 사진·계산기·저금통은 규칙에 따라 회색. 서비스 아이콘은 Lucide 대체라 원본 채움 스타일과 차이. | [앞면](../comparisons/revision-a/l01-s01.jpg) · [뒷면](../comparisons/revision-a/l01-s02.jpg) · [6p](../comparisons/revision-a/l01-contact.jpg) |
+| l02 | 체크리스트 circle-check, 전화·웹 아이콘, 연청/진청 커버 2색 제목, 법인 대상 경력 문구/줄바꿈. 표를 원본 90px 헤더와 4개 행으로 재작성. | 원본 그라데이션/3D 캐릭터·아이콘은 회색. 은행 심볼은 텍스트 대체이고 미세한 글자폭 차이. | [앞면](../comparisons/revision-a/l02-s01.jpg) · [뒷면](../comparisons/revision-a/l02-s02.jpg) · [6p](../comparisons/revision-a/l02-contact.jpg) |
+| l03 | TIP 소형 red 라벨/본문 분리, 제목 옆 3개 금융 아이콘, 화살표 삼각형. red 세무표 57px 머리글·4행·세로선·하단선 재구축. 투자 2/3번 실제 문구와 경력 줄바꿈 복원. | 캐릭터/사진은 회색. Senior Private Banker의 원본 곡선 텍스트는 직선으로 남아 있고 Lucide 획 스타일 차이. | [앞면](../comparisons/revision-a/l03-s01.jpg) · [뒷면](../comparisons/revision-a/l03-s02.jpg) · [6p](../comparisons/revision-a/l03-contact.jpg) |
+| l04 | 표의 두번째 머리글 회색 복구, dotted 행 구분선, 단계별 본문 원문 줄바꿈. 은행 원형 줄무늬 로고를 기본 도형으로 복원. | 인물·상품/단계 사진은 회색. 은행 로고와 일부 서비스 아이콘의 세부 획은 근사. | [앞면](../comparisons/revision-a/l04-s01.jpg) · [뒷면](../comparisons/revision-a/l04-s02.jpg) · [6p](../comparisons/revision-a/l04-contact.jpg) |
+| l05 | 실제400 Jua로 제목 굵기 유지. 예수 그리스도/제자훈련/다음세대/의료·구호/현지지도자/동역 강조색 복원. church/send/heart-plus 아이콘·지도 길/marker·연락 행 복원. 선교사 본문 폰트 과축소 수정. | 원본 손글씨와 Jua의 글자 모양 차이. 성경/캐릭터/활동 사진은 회색, 배경 지도·실루엣 등 작은 장식 일부 생략. | [앞면](../comparisons/revision-a/l05-s01.jpg) · [뒷면](../comparisons/revision-a/l05-s02.jpg) · [6p](../comparisons/revision-a/l05-contact.jpg) |
+| l06 | 이중 arch 외곽선·360도 금색 방사 장식. 프로그램 노트 원문/본문 크기/위치 복구, 원본에 없는 footer 구분선 제거. 원문 Symphony 서명을 실제 Allura400 서명체로 구현. | 사진과 커버 그래픽 배경은 회색. 금색 장식 세부 패턴 및 서명 획은 원본과 차이. | [앞면](../comparisons/revision-a/l06-s01.jpg) · [뒷면](../comparisons/revision-a/l06-s02.jpg) · [6p](../comparisons/revision-a/l06-contact.jpg) |
+| l07 | 앞뒤 전체 재측정. 예약 01/02 이중 숫자원, 배송/포장/문의 3행의 원형 icon·세로/가로 divider·모든 bullet 복원. 브랜드 본문 원문·줄바꿈, 베지어 이중 모서리 프레임·5꽃잎·매듭·기하 border. 제품 원문/가격의 원 글자·할인 3카드·혜택 footer 재구축. | 제품/포장 사진은 회색. 원본 옅은 전통 배경 무늬 일부 생략, 예약 배지 상단 곡선/서체 미세차이. | [앞면](../comparisons/revision-a/l07-s01.jpg) · [뒷면](../comparisons/revision-a/l07-s02.jpg) · [6p](../comparisons/revision-a/l07-contact.jpg) |
+| l08 | 배우/인물 설명을 읽힌 원문으로 교체, 원본 작은 이름 chip/행 구분선. 관람권 가격 열 정렬, 커버 Miri와 하단 로고. 커버 제목 줄넘침 제거. 3개 act를 VP 반원/원문으로 재작성, 공연시간 badge/주의사항 원문·배치 복구. MIRI MUSICAL은 실제 Bodoni Moda italic 사용. 소개 문단의 y562 위치와 짧은 yellow 구분선 복구. | 인물/QR/기기 collage는 회색. 원본 극단적으로 좁은 명조 제목과 현재 Nanum Myeongjo의 형태 차이. | [앞면](../comparisons/revision-a/l08-s01.jpg) · [뒷면](../comparisons/revision-a/l08-s02.jpg) · [6p](../comparisons/revision-a/l08-contact.jpg) |
+| l09 | 회색으로 뭉친 작은 약도를 도로·라운드어바웃·병원/빌딩/미리역/마트/문화광장 지명으로 구현. 체험/콘서트/먹거리/바자회·하단3칸 영역 정확한 배치. 사선 제목 label, QR card/contact, 실제 bullet·제목 우측정렬·곡선 leader·gift/heart. 시간표의 cream 머리·dotted 8행·숫자 크기/줄바꿈 복원. | 사진·QR·커버 인물 일러스트는 회색. gift는 Lucide라 손그림 느낌 차이, 프로그램별 작은 복합 그림 일부 생략. | [앞면](../comparisons/revision-a/l09-s01.jpg) · [뒷면](../comparisons/revision-a/l09-s02.jpg) · [6p](../comparisons/revision-a/l09-contact.jpg) |
+| l10 | 오시는 길 4개 원형 교통 icon/주소·교통·셔틀·주차 원문/점선 복원. 안내/전화 실제 행 복구. 10개 map legend를 3열 색깔 icon 배치. 타임라인 pale 세로축·점선·orange circle·시간chip·alternate 본문 원문으로 재구축. 사진 공모전 3chip·시상 항목과 현장 이벤트 이름 badge 복구. 표지 제목 아래~brown 날짜 footer 위의 어린이/가을 복합 일러스트 영역을 명시적 회색 placeholder로 보정. | 복잡한 행사장 그림/캐릭터/사진/QR은 회색. 원본 title/label의 불규칙 외곽 곡선과 손그림 기기 아이콘 차이. | [앞면](../comparisons/revision-a/l10-s01.jpg) · [뒷면](../comparisons/revision-a/l10-s02.jpg) · [6p](../comparisons/revision-a/l10-contact.jpg) |
+| l11 | 앞뒤 전체 재측정. native 지도/역 badge/센터 speech badge, 버스/지하철/상담·운영·주소 card 행 및 로고 복원. 헤더 아이콘, 짧은 blue divider와 pale선, 상담 mini badge, 모든 clinical 원문·2줄 본문·점선 복원. 검사 4단계를 숫자 대신 원형 icon·연결축·STEP/실제 본문으로 재구축. | 배경 gradient/인물/사진은 회색. Lucide는 원본 filled icon과 획 차이, 로고 꽃잎은 단순기하 근사. | [앞면](../comparisons/revision-a/l11-s01.jpg) · [뒷면](../comparisons/revision-a/l11-s02.jpg) · [6p](../comparisons/revision-a/l11-contact.jpg) |
+| l12 | 인사말 전체 읽힌 문구를 복원하고 원본 문단/줄수/크기 유지. 2개 serif 제목과 약도/전화/서울·부산 경로·시외버스/기차/QR 행 모두 원문. native 도로와 卍 marker. 뒷면 5계절/3법회/불교대학/3템플스테이/3후원/Q&A 전체 원문/규칙선/밀도 복구. 미리사 brush 글자와 작은 인장/수직 문구 재조정. | 사진/roof/회화 배경/QR은 회색. Nanum Pen Script의 획은 원본 붓글씨와 차이, 조밀한 소형본문의 미세한 줄폭 차이. | [앞면](../comparisons/revision-a/l12-s01.jpg) · [뒷면](../comparisons/revision-a/l12-s02.jpg) · [6p](../comparisons/revision-a/l12-contact.jpg) |

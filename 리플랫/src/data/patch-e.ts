@@ -283,7 +283,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 26.4,
+        "size": 25,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -319,7 +319,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 26.4,
+        "size": 25,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -355,7 +355,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 26.4,
+        "size": 25,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -391,7 +391,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 26.4,
+        "size": 25,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -424,7 +424,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 14.399999999999999,
+        "size": 22,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -437,7 +437,7 @@ const patches:Record<string,SidePatch>={
         "h": 32,
         "icon": "ArrowDown",
         "color": "#defe51",
-        "strokeWidth": 1.5
+        "strokeWidth": 5
       },
       {
         "kind": "icon",
@@ -447,7 +447,7 @@ const patches:Record<string,SidePatch>={
         "h": 32,
         "icon": "ArrowDown",
         "color": "#defe51",
-        "strokeWidth": 1.5
+        "strokeWidth": 5
       },
       {
         "kind": "icon",
@@ -457,7 +457,7 @@ const patches:Record<string,SidePatch>={
         "h": 32,
         "icon": "ArrowDown",
         "color": "#defe51",
-        "strokeWidth": 1.5
+        "strokeWidth": 5
       },
       {
         "kind": "text",
@@ -472,7 +472,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 13.2,
+        "size": 16,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -506,21 +506,6 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.2,
         "size": 15.332424623747922
-      },
-      {
-        "kind": "text",
-        "x": 909,
-        "y": 550,
-        "w": 321,
-        "h": 238.18756103515628,
-        "text": "MIRI\nMUSICAL\n미리뮤지컬",
-        "font": "Jua",
-        "weight": 400,
-        "color": "#defe51",
-        "align": "center",
-        "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 69.75308641975309
       },
       {
         "kind": "text",
@@ -568,7 +553,8 @@ const patches:Record<string,SidePatch>={
         "size": 19,
         "chip": true,
         "fill": "#defe51",
-        "radius": 0
+        "radius": 0,
+        "rotate": -15
       },
       {
         "kind": "text",
@@ -601,7 +587,8 @@ const patches:Record<string,SidePatch>={
         "size": 19,
         "chip": true,
         "fill": "#defe51",
-        "radius": 0
+        "radius": 0,
+        "rotate": -15
       },
       {
         "kind": "text",
@@ -634,7 +621,8 @@ const patches:Record<string,SidePatch>={
         "size": 19,
         "chip": true,
         "fill": "#defe51",
-        "radius": 0
+        "radius": 0,
+        "rotate": -15
       },
       {
         "kind": "text",
@@ -667,7 +655,8 @@ const patches:Record<string,SidePatch>={
         "size": 19,
         "chip": true,
         "fill": "#defe51",
-        "radius": 0
+        "radius": 0,
+        "rotate": -15
       },
       {
         "kind": "text",
@@ -700,7 +689,8 @@ const patches:Record<string,SidePatch>={
         "size": 19,
         "chip": true,
         "fill": "#defe51",
-        "radius": 0
+        "radius": 0,
+        "rotate": -15
       },
       {
         "kind": "text",
@@ -733,7 +723,8 @@ const patches:Record<string,SidePatch>={
         "size": 19,
         "chip": true,
         "fill": "#defe51",
-        "radius": 0
+        "radius": 0,
+        "rotate": -15
       },
       {
         "kind": "text",
@@ -766,7 +757,8 @@ const patches:Record<string,SidePatch>={
         "size": 17.4,
         "chip": true,
         "fill": "#defe51",
-        "radius": 0
+        "radius": 0,
+        "rotate": -15
       },
       {
         "kind": "text",
@@ -781,10 +773,11 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20,
+        "size": 23,
         "chip": true,
         "fill": "#1f1f1f",
-        "radius": 0
+        "radius": 0,
+        "rotate": -14
       },
       {
         "kind": "text",
@@ -799,10 +792,441 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20,
+        "size": 23,
         "chip": true,
         "fill": "#1f1f1f",
-        "radius": 0
+        "radius": 0,
+        "rotate": -14
+      },
+      {
+        "kind": "text",
+        "x": 1020,
+        "y": 576,
+        "w": 175,
+        "h": 54,
+        "text": "MIRI",
+        "size": 55,
+        "font": "Lilita One",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#defe51",
+        "rotate": -12
+      },
+      {
+        "kind": "text",
+        "x": 905,
+        "y": 668,
+        "w": 312,
+        "h": 58,
+        "text": "MUSICAL",
+        "size": 55,
+        "font": "Lilita One",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#defe51",
+        "rotate": -12
+      },
+      {
+        "kind": "text",
+        "x": 954,
+        "y": 752,
+        "w": 278,
+        "h": 55,
+        "text": "미리뮤지컬",
+        "size": 55,
+        "font": "Jua",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#defe51",
+        "rotate": -12
+      },
+      {
+        "kind": "path",
+        "x": 850,
+        "y": 46,
+        "w": 102,
+        "h": 130,
+        "points": [
+          [
+            102.0,
+            65.0
+          ],
+          [
+            72.67421383271478,
+            76.44223462771619
+          ],
+          [
+            87.06244584051392,
+            110.96194077712559
+          ],
+          [
+            59.97775332328501,
+            92.62399802208748
+          ],
+          [
+            51.0,
+            130.0
+          ],
+          [
+            42.02224667671499,
+            92.62399802208748
+          ],
+          [
+            14.93755415948608,
+            110.96194077712559
+          ],
+          [
+            29.325786167285216,
+            76.44223462771619
+          ],
+          [
+            0.0,
+            65.00000000000001
+          ],
+          [
+            29.32578616728521,
+            53.55776537228382
+          ],
+          [
+            14.937554159486067,
+            19.038059222874416
+          ],
+          [
+            42.02224667671498,
+            37.37600197791253
+          ],
+          [
+            50.999999999999986,
+            0.0
+          ],
+          [
+            59.977753323285015,
+            37.37600197791253
+          ],
+          [
+            87.06244584051392,
+            19.038059222874402
+          ],
+          [
+            72.67421383271478,
+            53.5577653722838
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
+      },
+      {
+        "kind": "path",
+        "x": 1167,
+        "y": 305,
+        "w": 110,
+        "h": 128,
+        "points": [
+          [
+            110.0,
+            64.0
+          ],
+          [
+            78.37415217253556,
+            75.26620024882824
+          ],
+          [
+            93.89087296526012,
+            109.25483399593904
+          ],
+          [
+            64.68189083883676,
+            91.19901343713228
+          ],
+          [
+            55.0,
+            128.0
+          ],
+          [
+            45.31810916116323,
+            91.19901343713228
+          ],
+          [
+            16.10912703473989,
+            109.25483399593904
+          ],
+          [
+            31.625847827464447,
+            75.26620024882824
+          ],
+          [
+            0.0,
+            64.00000000000001
+          ],
+          [
+            31.62584782746444,
+            52.73379975117176
+          ],
+          [
+            16.109127034739878,
+            18.745166004060962
+          ],
+          [
+            45.318109161163214,
+            36.80098656286772
+          ],
+          [
+            54.999999999999986,
+            0.0
+          ],
+          [
+            64.68189083883678,
+            36.80098656286772
+          ],
+          [
+            93.89087296526012,
+            18.74516600406095
+          ],
+          [
+            78.37415217253556,
+            52.73379975117174
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
+      },
+      {
+        "kind": "path",
+        "x": 872,
+        "y": 502,
+        "w": 132,
+        "h": 135,
+        "points": [
+          [
+            132.0,
+            67.5
+          ],
+          [
+            94.04898260704266,
+            79.38232057493603
+          ],
+          [
+            112.66904755831213,
+            115.22970773009196
+          ],
+          [
+            77.61826900660412,
+            96.18645948447545
+          ],
+          [
+            66.0,
+            135.0
+          ],
+          [
+            54.38173099339588,
+            96.18645948447545
+          ],
+          [
+            19.330952441687867,
+            115.22970773009196
+          ],
+          [
+            37.95101739295734,
+            79.38232057493603
+          ],
+          [
+            0.0,
+            67.50000000000001
+          ],
+          [
+            37.95101739295733,
+            55.61767942506396
+          ],
+          [
+            19.330952441687852,
+            19.770292269908047
+          ],
+          [
+            54.381730993395855,
+            38.81354051552455
+          ],
+          [
+            65.99999999999999,
+            0.0
+          ],
+          [
+            77.61826900660414,
+            38.81354051552455
+          ],
+          [
+            112.66904755831213,
+            19.77029226990803
+          ],
+          [
+            94.04898260704266,
+            55.61767942506394
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
+      },
+      {
+        "kind": "path",
+        "x": 102,
+        "y": 152,
+        "w": 54,
+        "h": 67,
+        "points": [
+          [
+            54.0,
+            33.5
+          ],
+          [
+            38.47458379379018,
+            39.397151692746036
+          ],
+          [
+            46.09188309203678,
+            57.18807716974934
+          ],
+          [
+            31.752928229974415,
+            47.73698359599893
+          ],
+          [
+            27.0,
+            67.0
+          ],
+          [
+            22.247071770025585,
+            47.73698359599893
+          ],
+          [
+            7.908116907963219,
+            57.18807716974934
+          ],
+          [
+            15.525416206209819,
+            39.397151692746036
+          ],
+          [
+            0.0,
+            33.50000000000001
+          ],
+          [
+            15.525416206209817,
+            27.602848307253968
+          ],
+          [
+            7.908116907963213,
+            9.81192283025066
+          ],
+          [
+            22.247071770025578,
+            19.26301640400107
+          ],
+          [
+            26.999999999999993,
+            0.0
+          ],
+          [
+            31.75292822997442,
+            19.26301640400107
+          ],
+          [
+            46.09188309203678,
+            9.811922830250653
+          ],
+          [
+            38.47458379379018,
+            27.602848307253957
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
+      },
+      {
+        "kind": "path",
+        "x": 307,
+        "y": 210,
+        "w": 22,
+        "h": 27,
+        "points": [
+          [
+            22.0,
+            13.5
+          ],
+          [
+            15.674830434507111,
+            15.876464114987208
+          ],
+          [
+            18.77817459305202,
+            23.04594154601839
+          ],
+          [
+            12.936378167767353,
+            19.23729189689509
+          ],
+          [
+            11.0,
+            27.0
+          ],
+          [
+            9.063621832232647,
+            19.23729189689509
+          ],
+          [
+            3.221825406947978,
+            23.04594154601839
+          ],
+          [
+            6.32516956549289,
+            15.876464114987208
+          ],
+          [
+            0.0,
+            13.500000000000004
+          ],
+          [
+            6.325169565492888,
+            11.123535885012792
+          ],
+          [
+            3.2218254069479757,
+            3.9540584539816095
+          ],
+          [
+            9.063621832232643,
+            7.762708103104909
+          ],
+          [
+            10.999999999999998,
+            0.0
+          ],
+          [
+            12.936378167767357,
+            7.762708103104909
+          ],
+          [
+            18.77817459305202,
+            3.9540584539816064
+          ],
+          [
+            15.674830434507111,
+            11.123535885012789
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
       }
     ],
     "removeText": [
@@ -834,7 +1258,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -1169,14 +1594,14 @@ const patches:Record<string,SidePatch>={
         "x": 515,
         "y": 141,
         "w": 261,
-        "h": 64,
+        "h": 76,
         "text": "무대 위에서\n꿈을 이루고 싶은 청춘들",
         "font": "Jua",
         "weight": 400,
         "color": "#defe51",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
+        "lineHeight": 1.3,
         "size": 28.828335771197512
       },
       {
@@ -1237,7 +1662,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 7.5,
+        "size": 13,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -1390,7 +1815,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1405,7 +1830,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1420,7 +1845,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1435,7 +1860,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1570,7 +1995,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1585,7 +2010,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1600,7 +2025,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1615,7 +2040,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 16.894229522368704
+        "size": 16
       },
       {
         "kind": "text",
@@ -1630,7 +2055,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 16
       },
       {
         "kind": "text",
@@ -1645,10 +2070,11 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 18,
+        "size": 22,
         "chip": true,
         "fill": "#defe51",
-        "radius": 20
+        "radius": 0,
+        "rotate": -12
       },
       {
         "kind": "text",
@@ -1663,10 +2089,258 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 21.599999999999998,
+        "size": 22,
         "chip": true,
         "fill": "#defe51",
-        "radius": 20
+        "radius": 0,
+        "rotate": -12
+      },
+      {
+        "kind": "box",
+        "x": 66,
+        "y": 587,
+        "w": 122,
+        "h": 2,
+        "fill": "#defe51"
+      },
+      {
+        "kind": "box",
+        "x": 263,
+        "y": 587,
+        "w": 122,
+        "h": 2,
+        "fill": "#defe51"
+      },
+      {
+        "kind": "path",
+        "x": 644,
+        "y": 449,
+        "w": 28,
+        "h": 35,
+        "points": [
+          [
+            28.0,
+            17.5
+          ],
+          [
+            19.949784189372686,
+            20.580601630538972
+          ],
+          [
+            23.899494936611664,
+            29.874368670764582
+          ],
+          [
+            16.464481304431178,
+            24.93723023671586
+          ],
+          [
+            14.0,
+            35.0
+          ],
+          [
+            11.535518695568822,
+            24.93723023671586
+          ],
+          [
+            4.1005050633883355,
+            29.874368670764582
+          ],
+          [
+            8.050215810627314,
+            20.580601630538972
+          ],
+          [
+            0.0,
+            17.500000000000004
+          ],
+          [
+            8.050215810627313,
+            14.419398369461028
+          ],
+          [
+            4.100505063388333,
+            5.12563132923542
+          ],
+          [
+            11.535518695568818,
+            10.062769763284143
+          ],
+          [
+            13.999999999999996,
+            0.0
+          ],
+          [
+            16.46448130443118,
+            10.062769763284143
+          ],
+          [
+            23.899494936611664,
+            5.125631329235415
+          ],
+          [
+            19.949784189372686,
+            14.419398369461023
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
+      },
+      {
+        "kind": "path",
+        "x": 783,
+        "y": 660,
+        "w": 29,
+        "h": 35,
+        "points": [
+          [
+            29.0,
+            17.5
+          ],
+          [
+            20.66227648185028,
+            20.580601630538972
+          ],
+          [
+            24.753048327204937,
+            29.874368670764582
+          ],
+          [
+            17.05249849387515,
+            24.93723023671586
+          ],
+          [
+            14.5,
+            35.0
+          ],
+          [
+            11.947501506124851,
+            24.93723023671586
+          ],
+          [
+            4.246951672795062,
+            29.874368670764582
+          ],
+          [
+            8.337723518149717,
+            20.580601630538972
+          ],
+          [
+            0.0,
+            17.500000000000004
+          ],
+          [
+            8.337723518149716,
+            14.419398369461028
+          ],
+          [
+            4.246951672795059,
+            5.12563132923542
+          ],
+          [
+            11.947501506124846,
+            10.062769763284143
+          ],
+          [
+            14.499999999999996,
+            0.0
+          ],
+          [
+            17.052498493875152,
+            10.062769763284143
+          ],
+          [
+            24.753048327204937,
+            5.125631329235415
+          ],
+          [
+            20.66227648185028,
+            14.419398369461023
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
+      },
+      {
+        "kind": "path",
+        "x": 453,
+        "y": 800,
+        "w": 30,
+        "h": 34,
+        "points": [
+          [
+            30.0,
+            17.0
+          ],
+          [
+            21.37476877432788,
+            19.992584441095
+          ],
+          [
+            25.606601717798213,
+            29.020815280171306
+          ],
+          [
+            17.64051568331912,
+            24.22473794423826
+          ],
+          [
+            15.0,
+            34.0
+          ],
+          [
+            12.35948431668088,
+            24.22473794423826
+          ],
+          [
+            4.3933982822017885,
+            29.020815280171306
+          ],
+          [
+            8.625231225672122,
+            19.992584441095
+          ],
+          [
+            0.0,
+            17.000000000000004
+          ],
+          [
+            8.62523122567212,
+            14.007415558904999
+          ],
+          [
+            4.393398282201785,
+            4.979184719828693
+          ],
+          [
+            12.359484316680875,
+            9.775262055761738
+          ],
+          [
+            14.999999999999996,
+            0.0
+          ],
+          [
+            17.640515683319123,
+            9.775262055761738
+          ],
+          [
+            25.606601717798213,
+            4.979184719828689
+          ],
+          [
+            21.37476877432788,
+            14.007415558904993
+          ]
+        ],
+        "fill": "#defe51",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
       }
     ],
     "removeText": [
@@ -1692,7 +2366,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -1735,14 +2410,6 @@ const patches:Record<string,SidePatch>={
     "clearShapes": true,
     "images": [
       {
-        "x": 112,
-        "y": 227,
-        "w": 212,
-        "h": 156,
-        "radius": 0,
-        "dropText": true
-      },
-      {
         "x": 469,
         "y": 252,
         "w": 338,
@@ -1751,18 +2418,18 @@ const patches:Record<string,SidePatch>={
         "dropText": true
       },
       {
-        "x": 888,
-        "y": 390,
-        "w": 347,
-        "h": 349,
-        "radius": 0,
-        "dropText": true
-      },
-      {
         "x": 595,
         "y": 732,
         "w": 85,
         "h": 85,
+        "radius": 0,
+        "dropText": true
+      },
+      {
+        "x": 888,
+        "y": 390,
+        "w": 347,
+        "h": 349,
         "radius": 0,
         "dropText": true
       }
@@ -1827,37 +2494,41 @@ const patches:Record<string,SidePatch>={
         "x": 4,
         "y": 112,
         "w": 420,
-        "h": 1,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#d36b5a"
+        "fill": "transparent",
+        "border": "1px dotted #d36b5a"
       },
       {
         "x": 35,
         "y": 400,
         "w": 370,
-        "h": 1,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#d36b5a"
+        "fill": "transparent",
+        "border": "1px dotted #d36b5a"
       },
       {
         "x": 35,
         "y": 550,
         "w": 370,
-        "h": 1,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#d36b5a"
+        "fill": "transparent",
+        "border": "1px dotted #d36b5a"
       },
       {
         "x": 35,
         "y": 676,
         "w": 370,
-        "h": 1,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#d36b5a"
+        "fill": "transparent",
+        "border": "1px dotted #d36b5a"
       },
       {
         "x": 41,
@@ -1896,28 +2567,14 @@ const patches:Record<string,SidePatch>={
         "w": 174,
         "h": 31,
         "text": "행사장 정보",
-        "font": "Jua",
+        "font": "Black Han Sans",
         "weight": 400,
         "color": "#d36b5a",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 36.58
-      },
-      {
-        "kind": "text",
-        "x": 495,
-        "y": 69,
-        "w": 283,
-        "h": 98.34373817443849,
-        "text": "Autumn\nin Biz Park",
-        "font": "Montserrat Alternates",
-        "weight": 600,
-        "color": "#fff6ec",
-        "align": "center",
-        "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 44.554455445544555
+        "size": 38.7748,
+        "letterSpacing": -0.5
       },
       {
         "kind": "text",
@@ -1936,40 +2593,26 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 889,
-        "y": 155,
-        "w": 343,
-        "h": 204,
-        "text": "Autumn\nColors\nFestival",
-        "font": "Lilita One",
-        "weight": 400,
-        "color": "#d36b5a",
-        "align": "center",
-        "inkFit": false,
-        "lineHeight": 0.84,
-        "size": 80
-      },
-      {
-        "kind": "text",
-        "x": 952,
-        "y": 82,
-        "w": 232,
-        "h": 40,
+        "x": 923,
+        "y": 79,
+        "w": 282,
+        "h": 46,
         "text": "비즈 가을빛 축제",
-        "font": "Jua",
+        "font": "Black Han Sans",
         "weight": 400,
         "color": "#d36b5a",
         "align": "center",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 36.59039705902297
+        "size": 34,
+        "letterSpacing": 1
       },
       {
         "kind": "text",
         "x": 888,
-        "y": 776,
+        "y": 775,
         "w": 349,
-        "h": 24,
+        "h": 32,
         "text": "가을을 걷고 추억을 담다",
         "font": "Pretendard",
         "weight": 600,
@@ -1977,7 +2620,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 24
       },
       {
         "kind": "text",
@@ -2269,9 +2912,9 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 89,
+        "x": 84,
         "y": 832,
-        "w": 308,
+        "w": 315,
         "h": 24,
         "text": "비즈구청 문화관광과    ☎ 02-1234-5678",
         "font": "Pretendard",
@@ -2280,7 +2923,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 12,
+        "size": 18,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -2329,6 +2972,234 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.2,
         "size": 18
+      },
+      {
+        "kind": "text",
+        "x": 529,
+        "y": 70,
+        "w": 218,
+        "h": 43,
+        "text": "Autumn",
+        "size": 60,
+        "font": "Dela Gothic One",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#fff6ec"
+      },
+      {
+        "kind": "text",
+        "x": 493,
+        "y": 122,
+        "w": 289,
+        "h": 37,
+        "text": "in Biz Park",
+        "size": 60,
+        "font": "Dela Gothic One",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#fff6ec"
+      },
+      {
+        "kind": "text",
+        "x": 892,
+        "y": 156,
+        "w": 330,
+        "h": 57,
+        "text": "Autumn",
+        "size": 60,
+        "font": "Dela Gothic One",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#d36b5a"
+      },
+      {
+        "kind": "text",
+        "x": 920,
+        "y": 223,
+        "w": 282,
+        "h": 55,
+        "text": "Colors",
+        "size": 60,
+        "font": "Dela Gothic One",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#d36b5a"
+      },
+      {
+        "kind": "text",
+        "x": 888,
+        "y": 289,
+        "w": 346,
+        "h": 55,
+        "text": "Festival",
+        "size": 60,
+        "font": "Dela Gothic One",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#d36b5a"
+      },
+      {
+        "kind": "box",
+        "x": 141,
+        "y": 226,
+        "w": 26,
+        "h": 156,
+        "fill": "#f8eae5",
+        "radius": 13
+      },
+      {
+        "kind": "box",
+        "x": 275,
+        "y": 226,
+        "w": 26,
+        "h": 156,
+        "fill": "#f8eae5",
+        "radius": 13
+      },
+      {
+        "kind": "box",
+        "x": 112,
+        "y": 264,
+        "w": 211,
+        "h": 18,
+        "fill": "#f8eae5",
+        "radius": 9
+      },
+      {
+        "kind": "box",
+        "x": 112,
+        "y": 329,
+        "w": 211,
+        "h": 18,
+        "fill": "#f8eae5",
+        "radius": 9
+      },
+      {
+        "kind": "text",
+        "x": 161,
+        "y": 231,
+        "w": 70,
+        "h": 18,
+        "text": "▼ 미리마트",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 230,
+        "y": 247,
+        "w": 57,
+        "h": 18,
+        "text": "미리역 ▼",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 81,
+        "y": 291,
+        "w": 63,
+        "h": 18,
+        "text": "비즈호텔 ▲",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 166,
+        "y": 309,
+        "w": 51,
+        "h": 18,
+        "text": "비즈역",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 207,
+        "y": 354,
+        "w": 70,
+        "h": 18,
+        "text": "비즈중학교 ▲",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 225,
+        "y": 281,
+        "w": 82,
+        "h": 24,
+        "text": "비즈공원",
+        "size": 20,
+        "font": "Pretendard",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "color": "#d36b5a"
+      },
+      {
+        "kind": "icon",
+        "x": 203,
+        "y": 284,
+        "w": 20,
+        "h": 20,
+        "icon": "MapPin",
+        "color": "#d36b5a",
+        "strokeWidth": 2.4
+      },
+      {
+        "kind": "box",
+        "x": 888,
+        "y": 811,
+        "w": 346,
+        "h": 0,
+        "fill": "transparent",
+        "border": "1px dotted #d36b5a"
+      },
+      {
+        "kind": "path",
+        "x": 44,
+        "y": 51,
+        "w": 43,
+        "h": 41,
+        "d": "M21 40 C17 26 5 26 2 17 C-2 7 12 5 16 9 C14 -2 30 0 30 10 C39 -1 47 6 43 15 C46 23 29 25 23 39 Z",
+        "fill": "#d36b5a",
+        "color": "none",
+        "strokeWidth": 0
+      },
+      {
+        "kind": "text",
+        "x": 52,
+        "y": 62,
+        "w": 28,
+        "h": 24,
+        "text": "4",
+        "size": 19,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "center"
       }
     ],
     "removeText": [
@@ -2360,7 +3231,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -2705,46 +3577,49 @@ const patches:Record<string,SidePatch>={
         "kind": "text",
         "x": 92,
         "y": 57,
-        "w": 252,
-        "h": 29,
+        "w": 209,
+        "h": 31,
         "text": "즐길거리 안내",
-        "font": "Jua",
+        "font": "Black Han Sans",
         "weight": 400,
         "color": "#d36b5a",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 34.22
+        "size": 36.2732,
+        "letterSpacing": -0.5
       },
       {
         "kind": "text",
         "x": 492,
         "y": 57,
-        "w": 252,
-        "h": 29,
+        "w": 139,
+        "h": 31,
         "text": "행사 일정",
-        "font": "Jua",
+        "font": "Black Han Sans",
         "weight": 400,
         "color": "#d36b5a",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 34.22
+        "size": 36.2732,
+        "letterSpacing": -0.5
       },
       {
         "kind": "text",
         "x": 916,
         "y": 57,
-        "w": 252,
-        "h": 29,
+        "w": 204,
+        "h": 31,
         "text": "특별 프로그램",
-        "font": "Jua",
+        "font": "Black Han Sans",
         "weight": 400,
         "color": "#d36b5a",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 34.22
+        "size": 36.2732,
+        "letterSpacing": -0.5
       },
       {
         "kind": "text",
@@ -2808,7 +3683,7 @@ const patches:Record<string,SidePatch>={
         "h": 16,
         "icon": "Leaf",
         "color": "#d36b5a",
-        "strokeWidth": 1.5
+        "strokeWidth": 2.4
       },
       {
         "kind": "text",
@@ -2837,8 +3712,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 15.378982628088016
+        "lineHeight": 1.4,
+        "size": 14.4
       },
       {
         "kind": "icon",
@@ -2848,7 +3723,7 @@ const patches:Record<string,SidePatch>={
         "h": 16,
         "icon": "Music",
         "color": "#d36b5a",
-        "strokeWidth": 1.5
+        "strokeWidth": 2.4
       },
       {
         "kind": "text",
@@ -2877,8 +3752,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 17.04035874439462
+        "lineHeight": 1.4,
+        "size": 15
       },
       {
         "kind": "icon",
@@ -2888,7 +3763,7 @@ const patches:Record<string,SidePatch>={
         "h": 16,
         "icon": "Coffee",
         "color": "#e49a12",
-        "strokeWidth": 1.5
+        "strokeWidth": 2.4
       },
       {
         "kind": "text",
@@ -2917,8 +3792,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 17.04035874439462
+        "lineHeight": 1.4,
+        "size": 15
       },
       {
         "kind": "icon",
@@ -2928,7 +3803,7 @@ const patches:Record<string,SidePatch>={
         "h": 16,
         "icon": "Camera",
         "color": "#e49a12",
-        "strokeWidth": 1.5
+        "strokeWidth": 2.4
       },
       {
         "kind": "text",
@@ -2957,8 +3832,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 17.04035874439462
+        "lineHeight": 1.4,
+        "size": 15
       },
       {
         "kind": "icon",
@@ -2968,7 +3843,7 @@ const patches:Record<string,SidePatch>={
         "h": 16,
         "icon": "Tent",
         "color": "#879a67",
-        "strokeWidth": 1.5
+        "strokeWidth": 2.4
       },
       {
         "kind": "text",
@@ -2997,8 +3872,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 17.04035874439462
+        "lineHeight": 1.4,
+        "size": 15
       },
       {
         "kind": "icon",
@@ -3008,7 +3883,7 @@ const patches:Record<string,SidePatch>={
         "h": 16,
         "icon": "Gift",
         "color": "#879a67",
-        "strokeWidth": 1.5
+        "strokeWidth": 2.4
       },
       {
         "kind": "text",
@@ -3037,8 +3912,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 17.04035874439462
+        "lineHeight": 1.4,
+        "size": 15
       },
       {
         "kind": "text",
@@ -3159,7 +4034,8 @@ const patches:Record<string,SidePatch>={
         "chip": true,
         "fill": "#fff8eb",
         "radius": 20,
-        "border": "1px solid #d9b49b"
+        "border": "1px solid #d9b49b",
+        "rotate": -13
       },
       {
         "kind": "text",
@@ -3193,7 +4069,8 @@ const patches:Record<string,SidePatch>={
         "chip": true,
         "fill": "#fff8eb",
         "radius": 20,
-        "border": "1px solid #d9b49b"
+        "border": "1px solid #d9b49b",
+        "rotate": 14
       },
       {
         "kind": "text",
@@ -3247,7 +4124,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 479,
-        "y": 712,
+        "y": 792,
         "w": 72,
         "h": 28,
         "text": "17:00",
@@ -3471,8 +4348,9 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 16,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#fff",
+        "radius": 0,
+        "border": "1px solid #d7ded9"
       },
       {
         "kind": "text",
@@ -3489,8 +4367,9 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 16,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#fff",
+        "radius": 0,
+        "border": "1px solid #d7ded9"
       },
       {
         "kind": "text",
@@ -3507,8 +4386,9 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 16,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#fff",
+        "radius": 0,
+        "border": "1px solid #d7ded9"
       },
       {
         "kind": "text",
@@ -3525,8 +4405,108 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 16,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#fff",
+        "radius": 0,
+        "border": "1px solid #d7ded9"
+      },
+      {
+        "kind": "box",
+        "x": 476,
+        "y": 320,
+        "w": 1,
+        "h": 73,
+        "fill": "#d36b5a"
+      },
+      {
+        "kind": "box",
+        "x": 476,
+        "y": 509,
+        "w": 1,
+        "h": 73,
+        "fill": "#d36b5a"
+      },
+      {
+        "kind": "box",
+        "x": 476,
+        "y": 690,
+        "w": 1,
+        "h": 73,
+        "fill": "#d36b5a"
+      },
+      {
+        "kind": "path",
+        "x": 44,
+        "y": 51,
+        "w": 43,
+        "h": 41,
+        "d": "M21 40 C17 26 5 26 2 17 C-2 7 12 5 16 9 C14 -2 30 0 30 10 C39 -1 47 6 43 15 C46 23 29 25 23 39 Z",
+        "fill": "#d36b5a",
+        "color": "none",
+        "strokeWidth": 0
+      },
+      {
+        "kind": "text",
+        "x": 52,
+        "y": 62,
+        "w": 28,
+        "h": 24,
+        "text": "1",
+        "size": 19,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "center"
+      },
+      {
+        "kind": "path",
+        "x": 441,
+        "y": 51,
+        "w": 43,
+        "h": 41,
+        "d": "M21 40 C17 26 5 26 2 17 C-2 7 12 5 16 9 C14 -2 30 0 30 10 C39 -1 47 6 43 15 C46 23 29 25 23 39 Z",
+        "fill": "#d36b5a",
+        "color": "none",
+        "strokeWidth": 0
+      },
+      {
+        "kind": "text",
+        "x": 449,
+        "y": 62,
+        "w": 28,
+        "h": 24,
+        "text": "2",
+        "size": 19,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "center"
+      },
+      {
+        "kind": "path",
+        "x": 865,
+        "y": 51,
+        "w": 43,
+        "h": 41,
+        "d": "M21 40 C17 26 5 26 2 17 C-2 7 12 5 16 9 C14 -2 30 0 30 10 C39 -1 47 6 43 15 C46 23 29 25 23 39 Z",
+        "fill": "#d36b5a",
+        "color": "none",
+        "strokeWidth": 0
+      },
+      {
+        "kind": "text",
+        "x": 873,
+        "y": 62,
+        "w": 28,
+        "h": 24,
+        "text": "3",
+        "size": 19,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "center"
       }
     ],
     "removeText": [
@@ -3540,7 +4520,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -3554,7 +4535,7 @@ const patches:Record<string,SidePatch>={
     ]
   },
   "l39/s01": {
-    "background": "#e5e5e5",
+    "background": "#f6efe7",
     "clearShapes": true,
     "images": [
       {
@@ -3608,6 +4589,14 @@ const patches:Record<string,SidePatch>={
     ],
     "elements": [
       {
+        "kind": "box",
+        "x": 426,
+        "y": 0,
+        "w": 854,
+        "h": 696,
+        "fill": "#28633d"
+      },
+      {
         "x": 25,
         "y": 31,
         "w": 376,
@@ -3624,16 +4613,6 @@ const patches:Record<string,SidePatch>={
         "radius": "190px 190px 0 0",
         "kind": "box",
         "fill": "#fefcfb"
-      },
-      {
-        "x": 884,
-        "y": 86,
-        "w": 362,
-        "h": 220,
-        "radius": 12,
-        "kind": "box",
-        "fill": "#f8f2ed",
-        "border": "1px solid #73462b"
       },
       {
         "x": 55,
@@ -3720,7 +4699,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 35.18788354139913
+        "size": 34.13224703515716
       },
       {
         "kind": "text",
@@ -3765,7 +4744,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 36.58
+        "size": 35.4826
       },
       {
         "kind": "text",
@@ -4080,7 +5059,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.54199498844628
+        "size": 17
       },
       {
         "kind": "text",
@@ -4095,7 +5074,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20.687170096574135
+        "size": 17
       },
       {
         "kind": "text",
@@ -4110,14 +5089,14 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 19.865137554234646
+        "size": 17
       },
       {
         "kind": "text",
         "x": 217,
         "y": 533,
         "w": 155,
-        "h": 18,
+        "h": 26,
         "text": "믿을 수 있는 정량 구성",
         "font": "Noto Serif KR",
         "weight": 600,
@@ -4125,14 +5104,14 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 15.379265812420162
+        "size": 15.4
       },
       {
         "kind": "text",
         "x": 153,
-        "y": 607,
+        "y": 604,
         "w": 178,
-        "h": 29.99999732971191,
+        "h": 24,
         "text": "품질보증 안내",
         "font": "Noto Serif KR",
         "weight": 600,
@@ -4140,7 +5119,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 25
+        "size": 20
       },
       {
         "kind": "text",
@@ -4181,7 +5160,7 @@ const patches:Record<string,SidePatch>={
         "text": "PREMIUM KOREAN BEEF GIFT",
         "font": "Tinos",
         "weight": 400,
-        "color": "#ab9e88",
+        "color": "#c9b887",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
@@ -4200,7 +5179,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.463759874977473
+        "size": 25
       },
       {
         "kind": "text",
@@ -4211,7 +5190,7 @@ const patches:Record<string,SidePatch>={
         "text": "2096 한가위 특별 기획",
         "font": "Noto Serif KR",
         "weight": 600,
-        "color": "#73462b",
+        "color": "#c9b887",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
@@ -4226,7 +5205,7 @@ const patches:Record<string,SidePatch>={
         "text": "사전예약 특별 혜택\n예약 구매 시 최대 10% 할인",
         "font": "Noto Serif KR",
         "weight": 400,
-        "color": "#73462b",
+        "color": "#c9b887",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
@@ -4260,7 +5239,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 24.812022499489746
+        "size": 24.067661824505052
       },
       {
         "kind": "text",
@@ -4275,7 +5254,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 26.001640016588567
+        "size": 25.22159081609091
       },
       {
         "kind": "text",
@@ -4350,14 +5329,106 @@ const patches:Record<string,SidePatch>={
         "radius": 20
       },
       {
-        "kind": "icon",
-        "x": 82,
-        "y": 621,
-        "w": 44,
-        "h": 50,
-        "icon": "Award",
-        "color": "#73462b",
-        "strokeWidth": 1.5
+        "kind": "box",
+        "x": 56,
+        "y": 575,
+        "w": 314,
+        "h": 164,
+        "fill": "transparent",
+        "border": "3px double #d9cdbd",
+        "radius": 5
+      },
+      {
+        "kind": "path",
+        "x": 79,
+        "y": 658,
+        "w": 52,
+        "h": 40,
+        "d": "M8 0 L21 5 L10 37 L6 24 L0 28 Z M30 3 L44 0 L52 28 L45 24 L42 37 Z",
+        "fill": "#544f3f",
+        "color": "none",
+        "strokeWidth": 0
+      },
+      {
+        "kind": "box",
+        "x": 80,
+        "y": 624,
+        "w": 49,
+        "h": 49,
+        "fill": "#dcc873",
+        "radius": "50%",
+        "border": "4px double #6b5c28"
+      },
+      {
+        "kind": "text",
+        "x": 83,
+        "y": 641,
+        "w": 43,
+        "h": 22,
+        "text": "PREMIUM\nQUALITY",
+        "size": 7,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#6b5c28"
+      },
+      {
+        "kind": "box",
+        "x": 30,
+        "y": 844,
+        "w": 370,
+        "h": 2,
+        "fill": "#a69483"
+      },
+      {
+        "kind": "path",
+        "x": 884,
+        "y": 86,
+        "w": 362,
+        "h": 220,
+        "d": "M16 0 L346 0 Q346 16 362 16 L362 204 Q346 204 346 220 L16 220 Q16 204 0 204 L0 16 Q16 16 16 0 Z",
+        "fill": "#f8f2ed",
+        "color": "#d4bca4",
+        "strokeWidth": 2
+      },
+      {
+        "kind": "box",
+        "x": 688,
+        "y": 733,
+        "w": 95,
+        "h": 20,
+        "fill": "#bca895",
+        "radius": 12
+      },
+      {
+        "kind": "text",
+        "x": 688,
+        "y": 733,
+        "w": 95,
+        "h": 20,
+        "text": "온라인 주문 및 상담",
+        "font": "Pretendard",
+        "size": 11,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "chip": true,
+        "align": "center"
+      },
+      {
+        "kind": "text",
+        "x": 697,
+        "y": 779,
+        "w": 48,
+        "h": 28,
+        "text": "온라인 주문\n바로가기",
+        "font": "Pretendard",
+        "size": 10,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#73523a",
+        "align": "center"
       }
     ],
     "removeText": [
@@ -4407,7 +5478,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -4460,7 +5532,7 @@ const patches:Record<string,SidePatch>={
     ]
   },
   "l39/s02": {
-    "background": "#e5e5e5",
+    "background": "#f6efe7",
     "clearShapes": true,
     "images": [
       {
@@ -4914,16 +5986,16 @@ const patches:Record<string,SidePatch>={
         "kind": "text",
         "x": 164,
         "y": 816,
-        "w": 214,
-        "h": 33,
-        "text": "등급·부위·중량·이력 정보를 담은\n품질보증서를 함께 제공해드립니다.",
+        "w": 230,
+        "h": 34,
+        "text": "외부 온도로부터 상품을 보호할 수 있\n도록 보냉 박스를 사용해 포장합니다.",
         "font": "Noto Serif KR",
         "weight": 400,
         "color": "#444",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 13.758255449516364
+        "lineHeight": 1.4,
+        "size": 11.5
       },
       {
         "kind": "icon",
@@ -4948,7 +6020,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 27,
+        "size": 22,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -5011,7 +6083,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20
+        "size": 17
       },
       {
         "kind": "text",
@@ -5028,8 +6100,8 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 14,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#eee6dc",
+        "radius": 13
       },
       {
         "kind": "text",
@@ -5044,7 +6116,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 27,
+        "size": 22,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -5107,7 +6179,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20
+        "size": 17
       },
       {
         "kind": "text",
@@ -5124,8 +6196,8 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 14,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#eee6dc",
+        "radius": 13
       },
       {
         "kind": "text",
@@ -5140,7 +6212,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 27,
+        "size": 22,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -5203,7 +6275,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 19.516087454074565
+        "size": 17
       },
       {
         "kind": "text",
@@ -5220,8 +6292,8 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 14,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#eee6dc",
+        "radius": 13
       },
       {
         "kind": "text",
@@ -5236,7 +6308,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 27,
+        "size": 22,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -5299,7 +6371,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20
+        "size": 17
       },
       {
         "kind": "text",
@@ -5316,8 +6388,8 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "size": 14,
         "chip": true,
-        "fill": "transparent",
-        "radius": 20
+        "fill": "#eee6dc",
+        "radius": 13
       },
       {
         "kind": "text",
@@ -5394,9 +6466,9 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 577,
-        "y": 47,
+        "y": 42,
         "w": 126,
-        "h": 14,
+        "h": 22,
         "text": "Best Hanwoo Set",
         "font": "Tinos",
         "weight": 400,
@@ -5404,14 +6476,17 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 17.5
+        "size": 14.3,
+        "fill": "#e9dfd1",
+        "chip": true,
+        "radius": 15
       },
       {
         "kind": "text",
         "x": 992,
-        "y": 47,
+        "y": 42,
         "w": 145,
-        "h": 14,
+        "h": 22,
         "text": "Premium Hanwoo Set",
         "font": "Tinos",
         "weight": 400,
@@ -5419,7 +6494,10 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 16.17035767593565
+        "size": 14.3,
+        "fill": "#e9dfd1",
+        "chip": true,
+        "radius": 15
       },
       {
         "kind": "text",
@@ -5553,7 +6631,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -5578,14 +6657,6 @@ const patches:Record<string,SidePatch>={
         "h": 556,
         "radius": 0,
         "dropText": true
-      },
-      {
-        "x": 499,
-        "y": 375,
-        "w": 283,
-        "h": 139,
-        "radius": 30,
-        "dropText": true
       }
     ],
     "elements": [
@@ -5608,13 +6679,15 @@ const patches:Record<string,SidePatch>={
         "fill": "#d16735"
       },
       {
+        "kind": "path",
         "x": 460,
         "y": 302,
         "w": 359,
         "h": 558,
-        "radius": 62,
-        "kind": "box",
-        "fill": "#fff"
+        "d": "M30 8 C80 -8 120 16 167 4 C214 -8 258 8 305 3 Q357 0 358 54 C346 160 347 398 357 509 Q359 556 318 555 C259 561 210 541 140 555 C80 565 24 554 19 549 Q0 538 3 487 C20 382 -4 167 9 55 Q10 20 30 8 Z",
+        "fill": "#fff",
+        "color": "none",
+        "strokeWidth": 0
       },
       {
         "x": 155,
@@ -5656,28 +6729,31 @@ const patches:Record<string,SidePatch>={
         "x": 63,
         "y": 335,
         "w": 305,
-        "h": 2,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#baa68a"
+        "fill": "transparent",
+        "border": "2px dotted #baa68a"
       },
       {
         "x": 63,
         "y": 515,
         "w": 305,
-        "h": 2,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#baa68a"
+        "fill": "transparent",
+        "border": "2px dotted #baa68a"
       },
       {
         "x": 63,
         "y": 696,
         "w": 305,
-        "h": 2,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#baa68a"
+        "fill": "transparent",
+        "border": "2px dotted #baa68a"
       },
       {
         "x": 490,
@@ -5860,13 +6936,13 @@ const patches:Record<string,SidePatch>={
         "w": 227,
         "h": 52.375037384033256,
         "text": "비즈공원 주차장 이용 가능\n최초 1시간 무료",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 23.26732673267327
+        "size": 20
       },
       {
         "kind": "text",
@@ -5895,23 +6971,8 @@ const patches:Record<string,SidePatch>={
         "color": "#fff0da",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 31.732772467709253
-      },
-      {
-        "kind": "text",
-        "x": 546,
-        "y": 77,
-        "w": 190,
-        "h": 29,
-        "text": "가을을 만나요!",
-        "font": "Jua",
-        "weight": 400,
-        "color": "#d16735",
-        "align": "center",
-        "inkFit": false,
-        "lineHeight": 1.2,
-        "size": 34.22
+        "lineHeight": 1.3,
+        "size": 31
       },
       {
         "kind": "text",
@@ -5971,7 +7032,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 26.666666666666668,
+        "size": 18,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -5989,7 +7050,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 26.666666666666668,
+        "size": 18,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -6007,7 +7068,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 36,
+        "size": 18,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -6025,7 +7086,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 36,
+        "size": 18,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -6043,7 +7104,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 27.267487628110704,
+        "size": 18,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -6061,7 +7122,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 17.11003231168657,
+        "size": 11,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -6079,7 +7140,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 17.562407402639217,
+        "size": 11,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -6097,25 +7158,10 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 17.172454239897395,
+        "size": 11,
         "chip": true,
         "fill": "transparent",
         "radius": 20
-      },
-      {
-        "kind": "text",
-        "x": 899,
-        "y": 596,
-        "w": 329,
-        "h": 196.31250457763664,
-        "text": "비즈\n단풍축제",
-        "font": "Jua",
-        "weight": 400,
-        "color": "#86513b",
-        "align": "center",
-        "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 89.6039603960396
       },
       {
         "kind": "text",
@@ -6179,6 +7225,179 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.2,
         "size": 14.95
+      },
+      {
+        "kind": "box",
+        "x": 499,
+        "y": 375,
+        "w": 283,
+        "h": 139,
+        "fill": "#eee",
+        "radius": 18
+      },
+      {
+        "kind": "box",
+        "x": 579,
+        "y": 379,
+        "w": 3,
+        "h": 132,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 645,
+        "y": 379,
+        "w": 3,
+        "h": 132,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 499,
+        "y": 429,
+        "w": 283,
+        "h": 3,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 681,
+        "y": 379,
+        "w": 3,
+        "h": 132,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 650,
+        "y": 417,
+        "w": 36,
+        "h": 36,
+        "fill": "#fff",
+        "radius": "50%",
+        "border": "1px solid #c7c4b1"
+      },
+      {
+        "kind": "text",
+        "x": 565,
+        "y": 442,
+        "w": 75,
+        "h": 20,
+        "text": "• 비즈공원",
+        "size": 12,
+        "font": "Pretendard",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "color": "#bf7a3f"
+      },
+      {
+        "kind": "text",
+        "x": 692,
+        "y": 483,
+        "w": 50,
+        "h": 20,
+        "text": "• 비즈",
+        "size": 10,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 572,
+        "y": 397,
+        "w": 50,
+        "h": 20,
+        "text": "• 비즈빌딩",
+        "size": 10,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 696,
+        "y": 397,
+        "w": 55,
+        "h": 20,
+        "text": "• 미리역",
+        "size": 10,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 1090,
+        "y": 591,
+        "w": 135,
+        "h": 28,
+        "text": "MAPLE",
+        "size": 18,
+        "font": "Montserrat",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "rotate": -15,
+        "color": "#86513b"
+      },
+      {
+        "kind": "text",
+        "x": 1125,
+        "y": 627,
+        "w": 125,
+        "h": 28,
+        "text": "FESTIVAL",
+        "size": 18,
+        "font": "Montserrat",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "rotate": -28,
+        "color": "#86513b"
+      },
+      {
+        "kind": "text",
+        "x": 899,
+        "y": 596,
+        "w": 175,
+        "h": 76,
+        "text": "비즈",
+        "font": "Jua",
+        "size": 16,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#86513b"
+      },
+      {
+        "kind": "text",
+        "x": 899,
+        "y": 694,
+        "w": 169,
+        "h": 78,
+        "text": "단풍",
+        "font": "Jua",
+        "size": 16,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#b74820"
+      },
+      {
+        "kind": "text",
+        "x": 1073,
+        "y": 694,
+        "w": 157,
+        "h": 78,
+        "text": "축제",
+        "font": "Jua",
+        "size": 16,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#86513b"
       }
     ],
     "removeText": [
@@ -6204,7 +7423,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -6290,67 +7510,77 @@ const patches:Record<string,SidePatch>={
         "fill": "#d16735"
       },
       {
+        "kind": "path",
         "x": 460,
         "y": 184,
         "w": 359,
         "h": 664,
-        "radius": 64,
-        "kind": "box",
-        "fill": "#fff"
+        "d": "M30 8 C80 -8 120 16 167 4 C214 -8 258 8 305 3 Q357 0 358 54 C346 160 347 504 357 615 Q359 662 318 661 C259 667 210 647 140 661 C80 671 24 660 19 655 Q0 644 3 593 C20 488 -4 167 9 55 Q10 20 30 8 Z",
+        "fill": "#fff",
+        "color": "none",
+        "strokeWidth": 0
       },
       {
+        "kind": "path",
         "x": 897,
         "y": 181,
         "w": 335,
         "h": 323,
-        "radius": 40,
-        "kind": "box",
-        "fill": "#a4a550"
+        "d": "M30 8 C80 -8 120 16 167 4 C214 -8 258 8 305 3 Q333 0 334 54 C322 160 323 163 333 274 Q335 321 294 320 C235 326 210 306 140 320 C80 330 24 319 19 314 Q0 303 3 252 C20 147 -4 167 9 55 Q10 20 30 8 Z",
+        "fill": "#a4a550",
+        "color": "none",
+        "strokeWidth": 0
       },
       {
+        "kind": "path",
         "x": 892,
         "y": 527,
         "w": 339,
         "h": 320,
-        "radius": 40,
-        "kind": "box",
-        "fill": "#f3b642"
+        "d": "M30 8 C80 -8 120 16 167 4 C214 -8 258 8 305 3 Q337 0 338 54 C326 160 327 160 337 271 Q339 318 298 317 C239 323 210 303 140 317 C80 327 24 316 19 311 Q0 300 3 249 C20 144 -4 167 9 55 Q10 20 30 8 Z",
+        "fill": "#f3b642",
+        "color": "none",
+        "strokeWidth": 0
       },
       {
         "x": 60,
         "y": 292,
         "w": 336,
-        "h": 2,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#b99b7b"
+        "fill": "transparent",
+        "border": "2px dotted #b99b7b"
       },
       {
         "x": 60,
         "y": 438,
         "w": 336,
-        "h": 2,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#b99b7b"
+        "fill": "transparent",
+        "border": "2px dotted #b99b7b"
       },
       {
         "x": 60,
         "y": 584,
         "w": 336,
-        "h": 2,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#b99b7b"
+        "fill": "transparent",
+        "border": "2px dotted #b99b7b"
       },
       {
         "x": 60,
         "y": 729,
         "w": 336,
-        "h": 2,
+        "h": 0,
         "radius": 0,
         "kind": "box",
-        "fill": "#b99b7b"
+        "fill": "transparent",
+        "border": "2px dotted #b99b7b"
       },
       {
         "x": 919,
@@ -6482,13 +7712,13 @@ const patches:Record<string,SidePatch>={
         "w": 154,
         "h": 50,
         "text": "• 단풍 압화 만들기\n• 낙엽 공예",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 21.396772701302915
+        "lineHeight": 1.35,
+        "size": 17
       },
       {
         "kind": "text",
@@ -6512,13 +7742,13 @@ const patches:Record<string,SidePatch>={
         "w": 154,
         "h": 54.18751945495605,
         "text": "• 제철 먹거리\n   푸드트럭",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 24.752475247524753
+        "lineHeight": 1.35,
+        "size": 17
       },
       {
         "kind": "text",
@@ -6542,13 +7772,13 @@ const patches:Record<string,SidePatch>={
         "w": 154,
         "h": 55.18748092651365,
         "text": "• 버스킹\n• 시민 공연",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 24.752475247524753
+        "lineHeight": 1.35,
+        "size": 17
       },
       {
         "kind": "text",
@@ -6572,13 +7802,13 @@ const patches:Record<string,SidePatch>={
         "w": 154,
         "h": 55.18748092651372,
         "text": "• 자연 놀이\n• 보물찾기",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 24.752475247524753
+        "lineHeight": 1.35,
+        "size": 17
       },
       {
         "kind": "text",
@@ -6602,13 +7832,13 @@ const patches:Record<string,SidePatch>={
         "w": 154,
         "h": 50,
         "text": "• 핸드메이드 작품 판매\n• 가을 굿즈 판매",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 17.68930532661265
+        "lineHeight": 1.35,
+        "size": 17
       },
       {
         "kind": "text",
@@ -6632,13 +7862,13 @@ const patches:Record<string,SidePatch>={
         "w": 185,
         "h": 45,
         "text": "단풍 축제 개막식",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 28.755747976348413
+        "size": 20
       },
       {
         "kind": "text",
@@ -6662,13 +7892,13 @@ const patches:Record<string,SidePatch>={
         "w": 185,
         "h": 45,
         "text": "시민 공연 1부",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 30
+        "size": 20
       },
       {
         "kind": "text",
@@ -6692,13 +7922,13 @@ const patches:Record<string,SidePatch>={
         "w": 185,
         "h": 45,
         "text": "체험 프로그램 운영",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 25.654679123285757
+        "size": 20
       },
       {
         "kind": "text",
@@ -6722,13 +7952,13 @@ const patches:Record<string,SidePatch>={
         "w": 185,
         "h": 45,
         "text": "시민 공연 2부",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 30
+        "size": 20
       },
       {
         "kind": "text",
@@ -6752,13 +7982,13 @@ const patches:Record<string,SidePatch>={
         "w": 185,
         "h": 49.17187118530271,
         "text": "단풍 사진 콘테스트\n결과 발표",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 22.277227722772277
+        "size": 20
       },
       {
         "kind": "text",
@@ -6782,13 +8012,13 @@ const patches:Record<string,SidePatch>={
         "w": 185,
         "h": 45,
         "text": "경품 추첨 이벤트",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.348554509530672
+        "size": 20
       },
       {
         "kind": "text",
@@ -6812,13 +8042,13 @@ const patches:Record<string,SidePatch>={
         "w": 185,
         "h": 45,
         "text": "단풍 축제 폐막",
-        "font": "Jua",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#86513b",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 30
+        "size": 20
       },
       {
         "kind": "text",
@@ -6906,7 +8136,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -6954,24 +8185,24 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 70,
-        "y": 49,
+        "y": 45,
         "w": 112,
-        "h": 39,
+        "h": 46,
         "text": "ROASTERY\nCAFE",
         "font": "Tinos",
         "weight": 400,
         "color": "#222",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 19.306930693069308
+        "lineHeight": 1.3,
+        "size": 19.3
       },
       {
         "kind": "text",
-        "x": 60,
-        "y": 103,
-        "w": 133,
-        "h": 9,
+        "x": 57,
+        "y": 101,
+        "w": 139,
+        "h": 12,
         "text": "COFFEE & TEA & DESSERT",
         "font": "Tinos",
         "weight": 400,
@@ -6979,12 +8210,12 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 10.483266518188568
+        "size": 9.1
       },
       {
         "kind": "text",
         "x": 316,
-        "y": 49,
+        "y": 45,
         "w": 166,
         "h": 22,
         "text": "CAFE",
@@ -6994,12 +8225,12 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 22
+        "size": 20
       },
       {
         "kind": "text",
         "x": 582,
-        "y": 49,
+        "y": 45,
         "w": 168,
         "h": 22,
         "text": "CAFE",
@@ -7009,37 +8240,37 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 22
+        "size": 20
       },
       {
         "kind": "text",
-        "x": 323,
+        "x": 320,
         "y": 374,
-        "w": 151,
+        "w": 160,
         "h": 16.000001144409186,
-        "text": "요리는 마음을 비추는 거울",
-        "font": "Noto Serif KR",
+        "text": "‘요리는 마음을 비추는 거울’",
+        "font": "Pretendard",
         "weight": 600,
         "color": "#222",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.06404203322796
+        "size": 12.1
       },
       {
         "kind": "text",
-        "x": 370,
+        "x": 351,
         "y": 408,
-        "w": 119,
+        "w": 105,
         "h": 23.281262207031208,
         "text": "카페미리당의 모토입니다.\n매일 정성을 담아 준비합니다.",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 9.254078295783682
+        "size": 8.513752032120987
       },
       {
         "kind": "text",
@@ -7063,13 +8294,13 @@ const patches:Record<string,SidePatch>={
         "w": 138,
         "h": 15.000032806396485,
         "text": "매일, 정성을 담아 만듭니다",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.597092526804916
+        "size": 10.669325124660523
       },
       {
         "kind": "text",
@@ -7078,13 +8309,13 @@ const patches:Record<string,SidePatch>={
         "w": 126,
         "h": 17.99999732971192,
         "text": "원두판매",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 600,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 15
+        "size": 13.8
       },
       {
         "kind": "text",
@@ -7093,13 +8324,13 @@ const patches:Record<string,SidePatch>={
         "w": 139,
         "h": 14.999980926513672,
         "text": "시그니처베이직 100g",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 600,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7129,7 +8360,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.5
+        "size": 11.6
       },
       {
         "kind": "text",
@@ -7138,13 +8369,13 @@ const patches:Record<string,SidePatch>={
         "w": 202,
         "h": 25.078134918212896,
         "text": "부드럽게 즐기는 데일리 블렌드 커피입니다.\n고소한 향과 은은한 단맛을 함께 느껴보세요.",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 9.900990099009901
+        "size": 9.10891089108911
       },
       {
         "kind": "text",
@@ -7153,13 +8384,13 @@ const patches:Record<string,SidePatch>={
         "w": 139,
         "h": 14.999980926513672,
         "text": "시그니처미리당 100g",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 600,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7189,7 +8420,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.5
+        "size": 11.6
       },
       {
         "kind": "text",
@@ -7198,13 +8429,13 @@ const patches:Record<string,SidePatch>={
         "w": 202,
         "h": 25.07813491821285,
         "text": "신선한 원두의 풍부한 향과 깔끔한 맛으로\n바쁜 일상 속 편안한 휴식의 시간을 드립니다.",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 9.900990099009901
+        "size": 9.10891089108911
       },
       {
         "kind": "text",
@@ -7213,13 +8444,13 @@ const patches:Record<string,SidePatch>={
         "w": 139,
         "h": 14.999980926513672,
         "text": "싱글오리진 100g",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 600,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7258,27 +8489,27 @@ const patches:Record<string,SidePatch>={
         "w": 202,
         "h": 20,
         "text": "향기로운 커피 한 잔으로 하루를 시작해 보세요.\n깊은 풍미와 부드러운 여운이 오래 남습니다.",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 9.694732795078815
+        "size": 8.91915417147251
       },
       {
         "kind": "text",
         "x": 316,
         "y": 74,
         "w": 166,
-        "h": 30,
+        "h": 24,
         "text": "MIRIDANG",
         "font": "Tinos",
         "size": 32,
         "weight": 400,
         "color": "#111",
         "align": "center",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2
       },
       {
@@ -7286,14 +8517,14 @@ const patches:Record<string,SidePatch>={
         "x": 582,
         "y": 74,
         "w": 168,
-        "h": 30,
+        "h": 24,
         "text": "MIRIDANG",
         "font": "Tinos",
         "size": 32,
         "weight": 400,
         "color": "#111",
         "align": "center",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2
       },
       {
@@ -7303,6 +8534,19 @@ const patches:Record<string,SidePatch>={
         "w": 12,
         "h": 1,
         "fill": "#333"
+      },
+      {
+        "kind": "text",
+        "x": 651,
+        "y": 501,
+        "w": 29,
+        "h": 8,
+        "text": "ΩΩ",
+        "font": "Tinos",
+        "size": 9,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "align": "center"
       }
     ],
     "removeText": [
@@ -7316,7 +8560,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -7363,7 +8608,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 43,
-        "y": 334,
+        "y": 330,
         "w": 206,
         "h": 16,
         "text": "DESSERT",
@@ -7373,7 +8618,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20
+        "size": 18
       },
       {
         "kind": "text",
@@ -7382,13 +8627,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513675,
         "text": "치즈케이크",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7418,7 +8663,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7427,13 +8672,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513631,
         "text": "가토 오 쇼콜라",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7463,7 +8708,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7472,13 +8717,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513631,
         "text": "클래식 마카롱",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7508,7 +8753,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7517,13 +8762,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 14.000028991699178,
         "text": "홈메이드 스콘",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7553,12 +8798,12 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
         "x": 308,
-        "y": 334,
+        "y": 330,
         "w": 206,
         "h": 16,
         "text": "TEA",
@@ -7568,7 +8813,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20
+        "size": 18
       },
       {
         "kind": "text",
@@ -7577,13 +8822,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513675,
         "text": "제주녹차라떼",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7613,7 +8858,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7622,13 +8867,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513631,
         "text": "얼그레이밀크티",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7658,7 +8903,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7667,13 +8912,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513631,
         "text": "흑당 밀크티",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7703,7 +8948,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7712,13 +8957,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 14.000028991699178,
         "text": "유자 에이드",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7748,12 +8993,12 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
         "x": 582,
-        "y": 334,
+        "y": 330,
         "w": 206,
         "h": 16,
         "text": "COFFEE",
@@ -7763,7 +9008,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 20
+        "size": 18
       },
       {
         "kind": "text",
@@ -7772,13 +9017,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513675,
         "text": "아메리카노",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7808,7 +9053,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7817,13 +9062,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513631,
         "text": "카페라떼",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7853,7 +9098,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7862,13 +9107,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 13.999980926513631,
         "text": "드립커피",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7898,7 +9143,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
       },
       {
         "kind": "text",
@@ -7907,13 +9152,13 @@ const patches:Record<string,SidePatch>={
         "w": 153,
         "h": 14.000028991699178,
         "text": "더치커피",
-        "font": "Noto Serif KR",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.25
+        "size": 10.35
       },
       {
         "kind": "text",
@@ -7943,7 +9188,85 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.15079532882606
+        "size": 11.4
+      },
+      {
+        "kind": "text",
+        "x": 33,
+        "y": 375,
+        "w": 8,
+        "h": 14,
+        "text": "•",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#111"
+      },
+      {
+        "kind": "text",
+        "x": 33,
+        "y": 454,
+        "w": 8,
+        "h": 14,
+        "text": "•",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#111"
+      },
+      {
+        "kind": "text",
+        "x": 298,
+        "y": 375,
+        "w": 8,
+        "h": 14,
+        "text": "•",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#111"
+      },
+      {
+        "kind": "text",
+        "x": 298,
+        "y": 414,
+        "w": 8,
+        "h": 14,
+        "text": "•",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#111"
+      },
+      {
+        "kind": "text",
+        "x": 572,
+        "y": 414,
+        "w": 8,
+        "h": 14,
+        "text": "•",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#111"
+      },
+      {
+        "kind": "text",
+        "x": 572,
+        "y": 454,
+        "w": 8,
+        "h": 14,
+        "text": "•",
+        "size": 11,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#111"
       }
     ],
     "removeText": [
@@ -7957,7 +9280,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -7981,7 +9305,8 @@ const patches:Record<string,SidePatch>={
         "w": 426,
         "h": 909,
         "radius": 0,
-        "dropText": true
+        "dropText": true,
+        "layer": "background"
       },
       {
         "x": 850,
@@ -8060,7 +9385,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.5
+        "size": 27
       },
       {
         "kind": "text",
@@ -8075,7 +9400,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.5
+        "size": 27
       },
       {
         "kind": "text",
@@ -8090,7 +9415,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.5
+        "size": 27
       },
       {
         "kind": "text",
@@ -8184,22 +9509,22 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 945,
-        "y": 637,
-        "w": 230,
-        "h": 112,
+        "x": 906,
+        "y": 630,
+        "w": 316,
+        "h": 124,
         "text": "그대 나를\n바라 본다면",
         "font": "Pretendard",
         "weight": 800,
         "color": "#03789e",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 49.8433649283332
+        "lineHeight": 1.12,
+        "size": 56
       },
       {
         "kind": "text",
-        "x": 916,
+        "x": 915,
         "y": 814,
         "w": 325,
         "h": 31,
@@ -8512,45 +9837,51 @@ const patches:Record<string,SidePatch>={
         "x": 101,
         "y": 80,
         "w": 226,
-        "h": 40,
+        "h": 32,
         "text": "recommendation",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
-        "color": "#96bec5",
+        "color": "#aec8c4",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 39.14365338275835
+        "size": 39,
+        "fontStyle": "normal",
+        "letterSpacing": 0
       },
       {
         "kind": "text",
         "x": 536,
         "y": 77,
         "w": 234,
-        "h": 40,
+        "h": 30,
         "text": "information",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
-        "color": "#94b8c9",
+        "color": "#aec8c4",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 46
+        "size": 39,
+        "fontStyle": "normal",
+        "letterSpacing": 0
       },
       {
         "kind": "text",
         "x": 572,
         "y": 472,
         "w": 165,
-        "h": 40,
+        "h": 30,
         "text": "location",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
-        "color": "#94b8c9",
+        "color": "#aec8c4",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 46
+        "size": 39,
+        "fontStyle": "normal",
+        "letterSpacing": 0
       },
       {
         "kind": "text",
@@ -8580,7 +9911,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 36.25
+        "size": 27
       },
       {
         "kind": "text",
@@ -8595,7 +9926,25 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 36.25
+        "size": 27
+      },
+      {
+        "kind": "box",
+        "x": 0,
+        "y": 0,
+        "w": 426,
+        "h": 909,
+        "fill": "#c5e2ed",
+        "opacity": 0.32
+      },
+      {
+        "kind": "box",
+        "x": 676,
+        "y": 634,
+        "w": 15,
+        "h": 15,
+        "fill": "#fff",
+        "radius": "50%"
       }
     ],
     "removeText": [
@@ -8645,7 +9994,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -8814,7 +10164,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.5
+        "size": 27
       },
       {
         "kind": "text",
@@ -8829,7 +10179,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.5
+        "size": 27
       },
       {
         "kind": "text",
@@ -8844,7 +10194,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.5
+        "size": 27
       },
       {
         "kind": "text",
@@ -8859,7 +10209,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 29.5
+        "size": 27
       },
       {
         "kind": "text",
@@ -9151,60 +10501,68 @@ const patches:Record<string,SidePatch>={
         "x": 100,
         "y": 89,
         "w": 229,
-        "h": 48.99999942779541,
+        "h": 30,
         "text": "Introducing",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
-        "color": "#9abaaf",
+        "color": "#aec8c4",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 46
+        "size": 39,
+        "fontStyle": "normal",
+        "letterSpacing": 0
       },
       {
         "kind": "text",
         "x": 586,
         "y": 91,
         "w": 117,
-        "h": 40,
+        "h": 30,
         "text": "Cast",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
-        "color": "#9abaaf",
+        "color": "#aec8c4",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 46
+        "size": 39,
+        "fontStyle": "normal",
+        "letterSpacing": 0
       },
       {
         "kind": "text",
         "x": 1000,
         "y": 87,
         "w": 145,
-        "h": 40,
+        "h": 30,
         "text": "Staff",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
-        "color": "#9abaaf",
+        "color": "#aec8c4",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 46
+        "size": 39,
+        "fontStyle": "normal",
+        "letterSpacing": 0
       },
       {
         "kind": "text",
         "x": 128,
         "y": 568,
         "w": 184,
-        "h": 49.999980163574236,
+        "h": 30,
         "text": "Synopsis",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
-        "color": "#9abaaf",
+        "color": "#aec8c4",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 46
+        "size": 39,
+        "fontStyle": "normal",
+        "letterSpacing": 0
       },
       {
         "kind": "text",
@@ -9284,7 +10642,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -9438,7 +10797,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 31,
-        "y": 64,
+        "y": 60,
         "w": 155,
         "h": 49.99999914169312,
         "text": "System",
@@ -9448,12 +10807,12 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 42.5
+        "size": 36
       },
       {
         "kind": "text",
         "x": 555,
-        "y": 111,
+        "y": 107,
         "w": 173,
         "h": 36.0000012397766,
         "text": "Contact Us",
@@ -9463,27 +10822,12 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 38.10760428041057
-      },
-      {
-        "kind": "text",
-        "x": 897,
-        "y": 174,
-        "w": 329,
-        "h": 126.32813720703126,
-        "text": "Miri Design\nPortfolio —",
-        "font": "Tinos",
-        "weight": 700,
-        "color": "#111",
-        "align": "left",
-        "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 57.66336633663367
+        "size": 36
       },
       {
         "kind": "text",
         "x": 977,
-        "y": 114,
+        "y": 112,
         "w": 184,
         "h": 22,
         "text": "Premium Interior",
@@ -9493,7 +10837,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 26.209541025278916
+        "size": 24
       },
       {
         "kind": "text",
@@ -9533,12 +10877,12 @@ const patches:Record<string,SidePatch>={
         "h": 18,
         "text": "Quality Assurance System",
         "font": "Tinos",
-        "weight": 400,
+        "weight": 700,
         "color": "#222",
         "align": "right",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 19.125537555228274,
+        "size": 19,
         "fontStyle": "italic"
       },
       {
@@ -9629,16 +10973,6 @@ const patches:Record<string,SidePatch>={
         "radius": 20
       },
       {
-        "kind": "icon",
-        "x": 625,
-        "y": 267,
-        "w": 27,
-        "h": 27,
-        "icon": "Phone",
-        "color": "#8d8978",
-        "strokeWidth": 1.5
-      },
-      {
         "kind": "text",
         "x": 540,
         "y": 326,
@@ -9651,7 +10985,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 23.75
+        "size": 20.1875
       },
       {
         "kind": "text",
@@ -9666,17 +11000,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.75
-      },
-      {
-        "kind": "icon",
-        "x": 625,
-        "y": 390,
-        "w": 27,
-        "h": 27,
-        "icon": "House",
-        "color": "#8d8978",
-        "strokeWidth": 1.5
+        "size": 15.9375
       },
       {
         "kind": "text",
@@ -9685,13 +11009,13 @@ const patches:Record<string,SidePatch>={
         "w": 202,
         "h": 25.999968719482457,
         "text": "미리시 미리빌딩 3F",
-        "font": "Tinos",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 23.75
+        "size": 18
       },
       {
         "kind": "text",
@@ -9709,16 +11033,6 @@ const patches:Record<string,SidePatch>={
         "size": 18.75
       },
       {
-        "kind": "icon",
-        "x": 625,
-        "y": 520,
-        "w": 27,
-        "h": 27,
-        "icon": "MessagesSquare",
-        "color": "#8d8978",
-        "strokeWidth": 1.5
-      },
-      {
         "kind": "text",
         "x": 540,
         "y": 579,
@@ -9731,7 +11045,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 23.75
+        "size": 20.1875
       },
       {
         "kind": "text",
@@ -9740,28 +11054,28 @@ const patches:Record<string,SidePatch>={
         "w": 245,
         "h": 19.99999580383304,
         "text": "카카오톡 '미리디자인' 1:1 상담",
-        "font": "Tinos",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.75
+        "size": 14
       },
       {
         "kind": "text",
-        "x": 1102,
-        "y": 800,
-        "w": 136,
-        "h": 42,
-        "text": "공간의 본질\n디자인으로 답하다",
+        "x": 1065,
+        "y": 797,
+        "w": 173,
+        "h": 48,
+        "text": "공간의 本質\n디자인으로 답하다",
         "font": "Noto Serif KR",
         "weight": 400,
         "color": "#222",
         "align": "right",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 16.787271598841247
+        "lineHeight": 1.4,
+        "size": 18
       },
       {
         "kind": "text",
@@ -9810,6 +11124,160 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.2,
         "size": 17.955318202047174
+      },
+      {
+        "kind": "text",
+        "x": 898,
+        "y": 173,
+        "w": 336,
+        "h": 58,
+        "text": "Miri Design",
+        "size": 60,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "inkFit": true
+      },
+      {
+        "kind": "text",
+        "x": 898,
+        "y": 234,
+        "w": 248,
+        "h": 54,
+        "text": "Portfolio",
+        "size": 60,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "inkFit": true
+      },
+      {
+        "kind": "box",
+        "x": 1164,
+        "y": 263,
+        "w": 63,
+        "h": 1,
+        "fill": "#333"
+      },
+      {
+        "kind": "box",
+        "x": 479,
+        "y": 798,
+        "w": 42,
+        "h": 42,
+        "fill": "#e5e5e5"
+      },
+      {
+        "kind": "box",
+        "x": 688,
+        "y": 739,
+        "w": 38,
+        "h": 38,
+        "fill": "#fff",
+        "border": "2px solid #c8c7bb",
+        "radius": "50%"
+      },
+      {
+        "kind": "text",
+        "x": 691,
+        "y": 746,
+        "w": 32,
+        "h": 24,
+        "text": "2",
+        "size": 20,
+        "font": "Tinos",
+        "weight": 700,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#8d8978"
+      },
+      {
+        "kind": "box",
+        "x": 707,
+        "y": 789,
+        "w": 71,
+        "h": 5,
+        "fill": "#c8c7bb"
+      },
+      {
+        "kind": "box",
+        "x": 718,
+        "y": 794,
+        "w": 3,
+        "h": 28,
+        "fill": "#c8c7bb"
+      },
+      {
+        "kind": "text",
+        "x": 622,
+        "y": 263,
+        "w": 33,
+        "h": 35,
+        "text": "☎",
+        "size": 29,
+        "font": "Tinos",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#8d8978"
+      },
+      {
+        "kind": "path",
+        "x": 624,
+        "y": 390,
+        "w": 29,
+        "h": 27,
+        "d": "M0 12 L14 0 L29 12 L25 12 L25 26 L17 26 L17 17 L11 17 L11 26 L4 26 L4 12 Z",
+        "fill": "#8d8978",
+        "color": "none",
+        "strokeWidth": 0
+      },
+      {
+        "kind": "box",
+        "x": 628,
+        "y": 525,
+        "w": 21,
+        "h": 14,
+        "fill": "#8d8978",
+        "radius": 7
+      },
+      {
+        "kind": "path",
+        "x": 629,
+        "y": 536,
+        "w": 13,
+        "h": 8,
+        "d": "M0 0 L9 0 L13 8 Z",
+        "fill": "#8d8978",
+        "color": "none",
+        "strokeWidth": 0
+      },
+      {
+        "kind": "box",
+        "x": 631,
+        "y": 529,
+        "w": 3,
+        "h": 3,
+        "fill": "#fff",
+        "radius": "50%"
+      },
+      {
+        "kind": "box",
+        "x": 637,
+        "y": 529,
+        "w": 3,
+        "h": 3,
+        "fill": "#fff",
+        "radius": "50%"
+      },
+      {
+        "kind": "box",
+        "x": 643,
+        "y": 529,
+        "w": 3,
+        "h": 3,
+        "fill": "#fff",
+        "radius": "50%"
       }
     ],
     "removeText": [
@@ -9829,7 +11297,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -10078,7 +11547,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 31,
-        "y": 64,
+        "y": 60,
         "w": 327,
         "h": 49.99999914169312,
         "text": "Philosophy & Data",
@@ -10088,12 +11557,12 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 42.5
+        "size": 36
       },
       {
         "kind": "text",
         "x": 451,
-        "y": 64,
+        "y": 60,
         "w": 331,
         "h": 40.99999914169311,
         "text": "Residential",
@@ -10103,12 +11572,12 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 42.5
+        "size": 36
       },
       {
         "kind": "text",
         "x": 875,
-        "y": 64,
+        "y": 60,
         "w": 329,
         "h": 40.99999914169311,
         "text": "Commercial",
@@ -10118,7 +11587,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 42.5
+        "size": 36
       },
       {
         "kind": "text",
@@ -10183,17 +11652,17 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 129,
-        "y": 278,
+        "y": 276,
         "w": 272,
         "h": 27.000007247924806,
         "text": "Design Philosophy",
         "font": "Tinos",
-        "weight": 400,
+        "weight": 700,
         "color": "#fff",
         "align": "right",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 22.5,
+        "size": 19,
         "fontStyle": "italic"
       },
       {
@@ -10214,17 +11683,17 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 565,
-        "y": 278,
+        "y": 276,
         "w": 272,
         "h": 27.000007247924806,
         "text": "Residential Project",
         "font": "Tinos",
-        "weight": 400,
+        "weight": 700,
         "color": "#111",
         "align": "right",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 22.5,
+        "size": 19,
         "fontStyle": "italic"
       },
       {
@@ -10245,17 +11714,17 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 976,
-        "y": 278,
+        "y": 276,
         "w": 272,
         "h": 27.000007247924806,
         "text": "Business Space Strategy",
         "font": "Tinos",
-        "weight": 400,
+        "weight": 700,
         "color": "#111",
         "align": "right",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 22.5,
+        "size": 19,
         "fontStyle": "italic"
       },
       {
@@ -10305,21 +11774,6 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 40,
-        "y": 701,
-        "w": 166,
-        "h": 30,
-        "text": "10 년",
-        "font": "Tinos",
-        "weight": 400,
-        "color": "#fff",
-        "align": "right",
-        "inkFit": false,
-        "lineHeight": 1.2,
-        "size": 31.875
-      },
-      {
-        "kind": "text",
         "x": 228,
         "y": 641,
         "w": 167,
@@ -10332,21 +11786,6 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.22,
         "size": 16.831683168316832
-      },
-      {
-        "kind": "text",
-        "x": 228,
-        "y": 701,
-        "w": 166,
-        "h": 30,
-        "text": "550 건+",
-        "font": "Tinos",
-        "weight": 400,
-        "color": "#fff",
-        "align": "right",
-        "inkFit": false,
-        "lineHeight": 1.2,
-        "size": 31.875
       },
       {
         "kind": "text",
@@ -10365,21 +11804,6 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 40,
-        "y": 822,
-        "w": 166,
-        "h": 30,
-        "text": "24 개월",
-        "font": "Tinos",
-        "weight": 400,
-        "color": "#fff",
-        "align": "right",
-        "inkFit": false,
-        "lineHeight": 1.2,
-        "size": 31.875
-      },
-      {
-        "kind": "text",
         "x": 228,
         "y": 762,
         "w": 167,
@@ -10392,21 +11816,6 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.22,
         "size": 16.831683168316832
-      },
-      {
-        "kind": "text",
-        "x": 228,
-        "y": 822,
-        "w": 166,
-        "h": 30,
-        "text": "E0 등급",
-        "font": "Tinos",
-        "weight": 400,
-        "color": "#fff",
-        "align": "right",
-        "inkFit": false,
-        "lineHeight": 1.2,
-        "size": 31.875
       },
       {
         "kind": "text",
@@ -10724,6 +12133,130 @@ const patches:Record<string,SidePatch>={
         "h": 25,
         "fill": "#8d8978",
         "radius": "50%"
+      },
+      {
+        "kind": "box",
+        "x": 213,
+        "y": 627,
+        "w": 1,
+        "h": 229,
+        "fill": "#aaa797"
+      },
+      {
+        "kind": "box",
+        "x": 30,
+        "y": 745,
+        "w": 372,
+        "h": 1,
+        "fill": "#aaa797"
+      },
+      {
+        "kind": "text",
+        "x": 112,
+        "y": 701,
+        "w": 50,
+        "h": 34,
+        "text": "10",
+        "font": "Tinos",
+        "size": 32,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "right"
+      },
+      {
+        "kind": "text",
+        "x": 166,
+        "y": 713,
+        "w": 36,
+        "h": 17,
+        "text": "년",
+        "font": "Pretendard",
+        "size": 12,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff"
+      },
+      {
+        "kind": "text",
+        "x": 300,
+        "y": 701,
+        "w": 64,
+        "h": 34,
+        "text": "550",
+        "font": "Tinos",
+        "size": 32,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "right"
+      },
+      {
+        "kind": "text",
+        "x": 368,
+        "y": 713,
+        "w": 36,
+        "h": 17,
+        "text": "건+",
+        "font": "Pretendard",
+        "size": 12,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff"
+      },
+      {
+        "kind": "text",
+        "x": 112,
+        "y": 822,
+        "w": 50,
+        "h": 34,
+        "text": "24",
+        "font": "Tinos",
+        "size": 32,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "right"
+      },
+      {
+        "kind": "text",
+        "x": 166,
+        "y": 834,
+        "w": 36,
+        "h": 17,
+        "text": "개월",
+        "font": "Pretendard",
+        "size": 12,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff"
+      },
+      {
+        "kind": "text",
+        "x": 300,
+        "y": 822,
+        "w": 50,
+        "h": 34,
+        "text": "E0",
+        "font": "Tinos",
+        "size": 32,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff",
+        "align": "right"
+      },
+      {
+        "kind": "text",
+        "x": 354,
+        "y": 834,
+        "w": 36,
+        "h": 17,
+        "text": "등급",
+        "font": "Pretendard",
+        "size": 12,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#fff"
       }
     ],
     "removeText": [
@@ -10737,7 +12270,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -10926,7 +12460,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 25.959999999999997
+        "size": 24
       },
       {
         "kind": "text",
@@ -10986,7 +12520,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 27.599999999999998
+        "size": 21
       },
       {
         "kind": "text",
@@ -11000,23 +12534,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 16.666666666666664
-      },
-      {
-        "kind": "text",
-        "x": 881,
-        "y": 315,
-        "w": 325,
-        "h": 146.687483215332,
-        "text": "MIRI\nBUSINESS\nCENTER",
-        "font": "Montserrat",
-        "weight": 500,
-        "color": "#747474",
-        "align": "left",
-        "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 42.901234567901234
+        "lineHeight": 1.65,
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -11091,7 +12610,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 14.588743718067564
+        "size": 13.4
       },
       {
         "kind": "text",
@@ -11121,7 +12640,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.841584158415841
+        "size": 13.4
       },
       {
         "kind": "text",
@@ -11151,7 +12670,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 14.879719209211485
+        "size": 13.4
       },
       {
         "kind": "text",
@@ -11181,7 +12700,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.841584158415841
+        "size": 13.4
       },
       {
         "kind": "text",
@@ -11211,7 +12730,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.316988588670128
+        "size": 13.4
       },
       {
         "kind": "text",
@@ -11414,6 +12933,67 @@ const patches:Record<string,SidePatch>={
         "letterSpacing": 4,
         "rotate": -90,
         "align": "center"
+      },
+      {
+        "kind": "box",
+        "x": 640,
+        "y": 505,
+        "w": 37,
+        "h": 28,
+        "fill": "#747e86"
+      },
+      {
+        "kind": "path",
+        "x": 640,
+        "y": 491,
+        "w": 37,
+        "h": 16,
+        "points": [
+          [
+            0,
+            15
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            37,
+            15
+          ]
+        ],
+        "fill": "#939aa0",
+        "color": "none",
+        "strokeWidth": 0,
+        "closed": true
+      },
+      {
+        "kind": "text",
+        "x": 904,
+        "y": 315,
+        "w": 133,
+        "h": 43,
+        "text": "MIRI",
+        "font": "Montserrat",
+        "size": 43,
+        "weight": 600,
+        "lineHeight": 1.2,
+        "letterSpacing": 4,
+        "color": "#679bc0"
+      },
+      {
+        "kind": "text",
+        "x": 904,
+        "y": 368,
+        "w": 341,
+        "h": 101,
+        "text": "BUSINESS\nCENTER",
+        "font": "Montserrat",
+        "size": 43,
+        "weight": 500,
+        "lineHeight": 1.24,
+        "letterSpacing": 4,
+        "color": "#686e6d"
       }
     ],
     "removeText": [
@@ -11481,7 +13061,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -11654,7 +13235,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 24
       },
       {
         "kind": "text",
@@ -11669,7 +13250,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.841584158415841
+        "size": 13
       },
       {
         "kind": "text",
@@ -11699,7 +13280,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 24
       },
       {
         "kind": "text",
@@ -11714,7 +13295,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.841584158415841
+        "size": 13
       },
       {
         "kind": "text",
@@ -11744,7 +13325,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 24
       },
       {
         "kind": "text",
@@ -11759,7 +13340,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.841584158415841
+        "size": 13
       },
       {
         "kind": "text",
@@ -12048,7 +13629,7 @@ const patches:Record<string,SidePatch>={
         "h": 40,
         "text": "구분",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
@@ -12066,7 +13647,7 @@ const patches:Record<string,SidePatch>={
         "h": 40,
         "text": "Economy",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
@@ -12084,7 +13665,7 @@ const patches:Record<string,SidePatch>={
         "h": 40,
         "text": "Standard",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
@@ -12102,7 +13683,7 @@ const patches:Record<string,SidePatch>={
         "h": 40,
         "text": "Premium",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
@@ -12120,7 +13701,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "대상",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12138,7 +13719,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "사업자 등록이\n급한 분",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12156,7 +13737,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "우편물이 잦은\n사업자",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12174,7 +13755,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "미팅과 실사가\n중요한 분",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12192,7 +13773,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "사업자\n등록",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12210,7 +13791,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "개인/법인\n가능",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12228,7 +13809,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "개인/법인\n가능",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12246,7 +13827,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "개인/법인\n가능",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12264,7 +13845,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "우편물\n서비스",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12282,7 +13863,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "월 1회\n모아택배",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12300,7 +13881,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "실시간\n알림/스캔",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12318,7 +13899,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "즉시\n회송/보관",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12336,7 +13917,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "공용 공간",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12354,7 +13935,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "라운지 이용",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12372,7 +13953,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "라운지 이용",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12390,7 +13971,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "회의실\n월 10시간 무료",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12408,7 +13989,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "실사 지원",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12426,7 +14007,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "기본 대응",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12444,7 +14025,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "상시 대응",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12462,7 +14043,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "전담 매니저\n밀착 대응",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12480,7 +14061,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "월 이용료",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12498,7 +14079,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "10만원",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12516,7 +14097,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "15만원",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12534,7 +14115,7 @@ const patches:Record<string,SidePatch>={
         "h": 64,
         "text": "20만원",
         "font": "Pretendard",
-        "weight": 600,
+        "weight": 400,
         "color": "#777",
         "align": "center",
         "inkFit": false,
@@ -12856,7 +14437,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -12901,14 +14483,6 @@ const patches:Record<string,SidePatch>={
         "y": 318,
         "w": 148,
         "h": 155,
-        "radius": 0,
-        "dropText": true
-      },
-      {
-        "x": 453,
-        "y": 663,
-        "w": 371,
-        "h": 188,
         "radius": 0,
         "dropText": true
       },
@@ -13096,7 +14670,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 453,
-        "y": 458,
+        "y": 452,
         "w": 338,
         "h": 42.00000877380372,
         "text": "Contact Us",
@@ -13106,7 +14680,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 43.75
+        "size": 38.5
       },
       {
         "kind": "text",
@@ -13135,8 +14709,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 17.901234567901234
+        "lineHeight": 1.45,
+        "size": 14.2
       },
       {
         "kind": "text",
@@ -13367,6 +14941,134 @@ const patches:Record<string,SidePatch>={
         "lineHeight": 1,
         "rotate": 90,
         "align": "center"
+      },
+      {
+        "kind": "box",
+        "x": 453,
+        "y": 663,
+        "w": 371,
+        "h": 188,
+        "fill": "#f0f0f0"
+      },
+      {
+        "kind": "box",
+        "x": 453,
+        "y": 727,
+        "w": 371,
+        "h": 9,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 675,
+        "y": 663,
+        "w": 10,
+        "h": 188,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 453,
+        "y": 783,
+        "w": 371,
+        "h": 9,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 517,
+        "y": 670,
+        "w": 10,
+        "h": 180,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 727,
+        "y": 732,
+        "w": 9,
+        "h": 112,
+        "fill": "#fff"
+      },
+      {
+        "kind": "path",
+        "x": 687,
+        "y": 732,
+        "w": 50,
+        "h": 57,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            50,
+            57
+          ]
+        ],
+        "fill": "none",
+        "color": "#fff",
+        "strokeWidth": 8,
+        "closed": false
+      },
+      {
+        "kind": "box",
+        "x": 657,
+        "y": 713,
+        "w": 53,
+        "h": 53,
+        "fill": "#fff",
+        "radius": "50%",
+        "border": "2px solid #d1d1d1"
+      },
+      {
+        "kind": "text",
+        "x": 670,
+        "y": 724,
+        "w": 31,
+        "h": 32,
+        "text": "7",
+        "size": 30,
+        "font": "Tinos",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#999"
+      },
+      {
+        "kind": "text",
+        "x": 730,
+        "y": 711,
+        "w": 61,
+        "h": 19,
+        "text": "미리역",
+        "size": 12,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "text",
+        "x": 539,
+        "y": 779,
+        "w": 97,
+        "h": 24,
+        "text": "미리비즈니스 센터",
+        "size": 12,
+        "font": "Pretendard",
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#777"
+      },
+      {
+        "kind": "box",
+        "x": 617,
+        "y": 761,
+        "w": 8,
+        "h": 8,
+        "fill": "#777",
+        "radius": "50%"
       }
     ],
     "removeText": [
@@ -13380,7 +15082,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -13733,13 +15436,13 @@ const patches:Record<string,SidePatch>={
         "w": 145,
         "h": 55,
         "text": "01. 압도적 신뢰도",
-        "font": "Tinos",
-        "weight": 400,
+        "font": "Pretendard",
+        "weight": 700,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 14,
+        "size": 12,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13766,13 +15469,13 @@ const patches:Record<string,SidePatch>={
         "w": 145,
         "h": 55,
         "text": "02. 합법적 안정성",
-        "font": "Tinos",
-        "weight": 400,
+        "font": "Pretendard",
+        "weight": 700,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 14,
+        "size": 12,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13799,13 +15502,13 @@ const patches:Record<string,SidePatch>={
         "w": 145,
         "h": 55,
         "text": "03. 철저한 관리",
-        "font": "Tinos",
-        "weight": 400,
+        "font": "Pretendard",
+        "weight": 700,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 14,
+        "size": 12,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13832,13 +15535,13 @@ const patches:Record<string,SidePatch>={
         "w": 145,
         "h": 55,
         "text": "04. 스마트 워크",
-        "font": "Tinos",
-        "weight": 400,
+        "font": "Pretendard",
+        "weight": 700,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 14,
+        "size": 12,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13865,13 +15568,13 @@ const patches:Record<string,SidePatch>={
         "w": 145,
         "h": 55,
         "text": "05. 관공서 실사 완벽 대응",
-        "font": "Tinos",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 13.563674227980464,
+        "size": 12,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13898,13 +15601,13 @@ const patches:Record<string,SidePatch>={
         "w": 145,
         "h": 55,
         "text": "06. 철저한 보안 시스템",
-        "font": "Tinos",
+        "font": "Pretendard",
         "weight": 400,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 14,
+        "size": 12,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13937,7 +15640,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 13,
+        "size": 13.0,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13955,7 +15658,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 13,
+        "size": 13.0,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13973,7 +15676,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 13,
+        "size": 13.0,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -13991,7 +15694,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 13,
+        "size": 13.0,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -14441,7 +16144,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.75
+        "size": 16.875
       },
       {
         "kind": "text",
@@ -14456,7 +16159,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 16.8
+        "size": 15.120000000000001
       },
       {
         "kind": "text",
@@ -14471,7 +16174,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 13.96577892528564
+        "size": 12.569201032757077
       },
       {
         "kind": "text",
@@ -14486,7 +16189,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.75
+        "size": 16.875
       },
       {
         "kind": "text",
@@ -14501,7 +16204,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 16.8
+        "size": 15.120000000000001
       },
       {
         "kind": "text",
@@ -14516,7 +16219,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 13.96577892528564
+        "size": 12.569201032757077
       },
       {
         "kind": "text",
@@ -14531,7 +16234,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.75
+        "size": 16.875
       },
       {
         "kind": "text",
@@ -14546,7 +16249,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 16.8
+        "size": 15.120000000000001
       },
       {
         "kind": "text",
@@ -14561,7 +16264,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 14.9863505708871
+        "size": 13.48771551379839
       },
       {
         "kind": "text",
@@ -14576,7 +16279,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.75
+        "size": 16.875
       },
       {
         "kind": "text",
@@ -14591,7 +16294,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 16.8
+        "size": 15.120000000000001
       },
       {
         "kind": "text",
@@ -14606,7 +16309,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 13.676005853640865
+        "size": 12.308405268276779
       },
       {
         "kind": "box",
@@ -14716,7 +16419,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -14730,7 +16434,7 @@ const patches:Record<string,SidePatch>={
     ]
   },
   "l46/s01": {
-    "background": "#e5e5e5",
+    "background": "#fd6630",
     "clearShapes": true,
     "images": [
       {
@@ -14775,6 +16479,22 @@ const patches:Record<string,SidePatch>={
       }
     ],
     "elements": [
+      {
+        "kind": "box",
+        "x": 0,
+        "y": 0,
+        "w": 429,
+        "h": 909,
+        "fill": "#fd6630"
+      },
+      {
+        "kind": "box",
+        "x": 854,
+        "y": 0,
+        "w": 426,
+        "h": 840,
+        "fill": "#ff7e30"
+      },
       {
         "x": 429,
         "y": 0,
@@ -14913,7 +16633,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 39,
-        "y": 131,
+        "y": 130,
         "w": 220,
         "h": 87.07812519073487,
         "text": "Wealth\nCheck-up",
@@ -14922,8 +16642,8 @@ const patches:Record<string,SidePatch>={
         "color": "#fff",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 36.13861386138614
+        "lineHeight": 1.12,
+        "size": 38
       },
       {
         "kind": "text",
@@ -15085,7 +16805,7 @@ const patches:Record<string,SidePatch>={
         "x": 52,
         "y": 721,
         "w": 327,
-        "h": 39,
+        "h": 42,
         "text": "위 5가지 항목 중 하나라도 준비되지 않았다면,\n지금 바로 미리은행 PB의 전문적인 처방이 필요합니다.",
         "font": "Pretendard",
         "weight": 400,
@@ -15093,7 +16813,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.249406354780824
+        "size": 14.6
       },
       {
         "kind": "text",
@@ -15108,7 +16828,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 17
       },
       {
         "kind": "text",
@@ -15153,7 +16873,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18
+        "size": 26
       },
       {
         "kind": "text",
@@ -15182,8 +16902,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 10.866971345064291
+        "lineHeight": 1.55,
+        "size": 10.9
       },
       {
         "kind": "text",
@@ -15213,7 +16933,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.346534653465346
+        "size": 12.3
       },
       {
         "kind": "text",
@@ -15232,18 +16952,18 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 945,
-        "y": 133,
-        "w": 293,
-        "h": 133.64061908721925,
+        "x": 888,
+        "y": 131,
+        "w": 370,
+        "h": 146,
         "text": "Private\nSignature",
         "font": "Montserrat",
         "weight": 800,
         "color": "#fff",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 55.45441605588539
+        "lineHeight": 1.05,
+        "size": 66
       },
       {
         "kind": "text",
@@ -15291,7 +17011,8 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.4
+        "size": 18,
+        "letterSpacing": 1.8
       },
       {
         "kind": "text",
@@ -15306,7 +17027,8 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 18.4
+        "size": 18,
+        "letterSpacing": 1.8
       },
       {
         "kind": "text",
@@ -15343,7 +17065,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -15357,7 +17080,7 @@ const patches:Record<string,SidePatch>={
     ]
   },
   "l46/s02": {
-    "background": "#e5e5e5",
+    "background": "#fd6630",
     "clearShapes": true,
     "images": [
       {
@@ -15642,8 +17365,8 @@ const patches:Record<string,SidePatch>={
         "color": "#fff",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 30.693069306930692
+        "lineHeight": 1.1,
+        "size": 32
       },
       {
         "kind": "text",
@@ -15672,8 +17395,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 30.693069306930692
+        "lineHeight": 1.1,
+        "size": 32
       },
       {
         "kind": "text",
@@ -15702,8 +17425,8 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "center",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 30.693069306930692
+        "lineHeight": 1.1,
+        "size": 32
       },
       {
         "kind": "text",
@@ -15778,7 +17501,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 12.5,
+        "size": 17,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -15811,7 +17534,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 12.5,
+        "size": 17,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -15844,7 +17567,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 12.5,
+        "size": 17,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -15877,7 +17600,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 12.5,
+        "size": 17,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -16124,7 +17847,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 19.40026966977894
+        "size": 15.4
       },
       {
         "kind": "text",
@@ -16234,7 +17957,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -16408,7 +18132,7 @@ const patches:Record<string,SidePatch>={
         "x": 86,
         "y": 90,
         "w": 257,
-        "h": 23,
+        "h": 34,
         "text": "WEALTH CHECK-UP",
         "font": "Roboto Condensed",
         "weight": 700,
@@ -16416,7 +18140,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 26.45
+        "size": 29.888499999999997
       },
       {
         "kind": "text",
@@ -16646,7 +18370,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 17.104623010955407
+        "size": 14
       },
       {
         "kind": "icon",
@@ -16786,7 +18510,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 18,
+        "size": 14,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -16809,9 +18533,9 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 897,
-        "y": 138,
+        "y": 135,
         "w": 211,
-        "h": 74.00001392364501,
+        "h": 85,
         "text": "VVIP",
         "font": "Roboto Condensed",
         "weight": 700,
@@ -16819,7 +18543,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 77.88
+        "size": 92
       },
       {
         "kind": "text",
@@ -16973,6 +18697,1746 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.2,
         "size": 13.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 61,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 75,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 89,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 103,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 117,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 131,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 145,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 159,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 429,
+        "y": 173,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 61,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 75,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 89,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 103,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 117,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 131,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 145,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 159,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 443,
+        "y": 173,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 61,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 75,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 89,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 103,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 117,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 131,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 145,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 159,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 457,
+        "y": 173,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 61,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 75,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 89,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 103,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 117,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 131,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 145,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 159,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 471,
+        "y": 173,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 225,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 239,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 253,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 267,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 281,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 295,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 309,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 323,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 337,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 351,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 365,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 379,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 393,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1180,
+        "y": 407,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 225,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 239,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 253,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 267,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 281,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 295,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 309,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 323,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 337,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 351,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 365,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 379,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 393,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1194,
+        "y": 407,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 225,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 239,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 253,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 267,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 281,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 295,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 309,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 323,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 337,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 351,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 365,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 379,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 393,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1208,
+        "y": 407,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 225,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 239,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 253,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 267,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 281,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 295,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 309,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 323,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 337,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 351,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 365,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 379,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 393,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1222,
+        "y": 407,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 225,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 239,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 253,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 267,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 281,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 295,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 309,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 323,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 337,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 351,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 365,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 379,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 393,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1236,
+        "y": 407,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 225,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 239,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 253,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 267,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 281,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 295,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 309,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 323,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 337,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 351,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 365,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 379,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 393,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1250,
+        "y": 407,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 225,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 239,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 253,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 267,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 281,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 295,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 309,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 323,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 337,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 351,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 365,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 379,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 393,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 1264,
+        "y": 407,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 450,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 464,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 478,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 492,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 506,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 520,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 534,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 878,
+        "y": 548,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 450,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 464,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 478,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 492,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 506,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 520,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 534,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 892,
+        "y": 548,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 450,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 464,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 478,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 492,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 506,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 520,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 534,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 906,
+        "y": 548,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 450,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 464,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 478,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 492,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 506,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 520,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 534,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 920,
+        "y": 548,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 450,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 464,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 478,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 492,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 506,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 520,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 534,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
+      },
+      {
+        "kind": "box",
+        "x": 934,
+        "y": 548,
+        "w": 3,
+        "h": 3,
+        "fill": "#92c9be",
+        "radius": "50%",
+        "opacity": 0.65
       }
     ],
     "removeText": [
@@ -16998,7 +20462,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -17232,7 +20697,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 55,
-        "y": 110,
+        "y": 109,
         "w": 344,
         "h": 76.89062080383302,
         "text": "INVESTMENT\nSTRATEGY",
@@ -17241,8 +20706,8 @@ const patches:Record<string,SidePatch>={
         "color": "#03a190",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 35.148514851485146
+        "lineHeight": 1.05,
+        "size": 40
       },
       {
         "kind": "text",
@@ -17262,7 +20727,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 473,
-        "y": 110,
+        "y": 109,
         "w": 344,
         "h": 76.89062080383302,
         "text": "TAX & LEGAL\nADVISORY",
@@ -17271,8 +20736,8 @@ const patches:Record<string,SidePatch>={
         "color": "#03a190",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 35.148514851485146
+        "lineHeight": 1.05,
+        "size": 40
       },
       {
         "kind": "text",
@@ -17292,7 +20757,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 892,
-        "y": 110,
+        "y": 109,
         "w": 344,
         "h": 76.89062080383302,
         "text": "THE WEALTH\nCYCLE",
@@ -17301,8 +20766,8 @@ const patches:Record<string,SidePatch>={
         "color": "#03a190",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 35.148514851485146
+        "lineHeight": 1.05,
+        "size": 40
       },
       {
         "kind": "text",
@@ -17380,14 +20845,14 @@ const patches:Record<string,SidePatch>={
         "y": 384,
         "w": 211,
         "h": 53.37498321533205,
-        "text": "고객의 위험 성향과 목표\n수익률을 반영한 개인화\n포트폴리오 구축",
+        "text": "고객의 위험 성향과 목표 수익률을\n반영한 개인화 포트폴리오 구축.",
         "font": "Pretendard",
         "weight": 400,
         "color": "#888",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.3,
-        "size": 14
+        "lineHeight": 1.4,
+        "size": 13
       },
       {
         "kind": "icon",
@@ -17420,14 +20885,14 @@ const patches:Record<string,SidePatch>={
         "y": 514,
         "w": 211,
         "h": 53.37502174377443,
-        "text": "국내외 주식, 채권은 물론\n달러 자산 및 해외 우량 자산\n분산 투자",
+        "text": "국내외 주식, 채권은 물론 달러 자산\n및 해외 우량 자산 분산 투자.",
         "font": "Pretendard",
         "weight": 400,
         "color": "#888",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.3,
-        "size": 14
+        "lineHeight": 1.4,
+        "size": 13
       },
       {
         "kind": "icon",
@@ -17460,14 +20925,14 @@ const patches:Record<string,SidePatch>={
         "y": 644,
         "w": 211,
         "h": 53.37498321533205,
-        "text": "리츠(REITs), 사모펀드(PEF),\n헤지펀드 등 일반 창구에서 접할\n수 없는 PB 전용 상품 매칭",
+        "text": "리츠, 사모펀드 등 일반 창구에서 접\n할 수 없는 PB 전용 상품 매칭.",
         "font": "Pretendard",
         "weight": 400,
         "color": "#888",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.3,
-        "size": 14
+        "lineHeight": 1.4,
+        "size": 13
       },
       {
         "kind": "icon",
@@ -17500,14 +20965,14 @@ const patches:Record<string,SidePatch>={
         "y": 774,
         "w": 211,
         "h": 53.375060272216814,
-        "text": "전담 PB가 시장 변화를 실시간\n모니터링하여 최적의 시점에\n포트폴리오 조정",
+        "text": "시장 변화를 실시간 모니터링하여\n최적의 시점에 포트폴리오 조정.",
         "font": "Pretendard",
         "weight": 400,
         "color": "#888",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.3,
-        "size": 14
+        "lineHeight": 1.4,
+        "size": 13
       },
       {
         "kind": "text",
@@ -17522,7 +20987,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 18,
+        "size": 13,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -17558,7 +21023,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 18,
+        "size": 13,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -17576,7 +21041,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 17.680180129327567
+        "size": 14
       },
       {
         "kind": "text",
@@ -17591,7 +21056,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 18,
+        "size": 13,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -17609,7 +21074,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 17.819808050073902
+        "size": 14
       },
       {
         "kind": "text",
@@ -17624,7 +21089,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 18,
+        "size": 13,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -17642,7 +21107,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 15.760916594867734
+        "size": 14
       },
       {
         "kind": "text",
@@ -17657,7 +21122,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1,
-        "size": 18,
+        "size": 13,
         "chip": true,
         "fill": "transparent",
         "radius": 20
@@ -17675,7 +21140,7 @@ const patches:Record<string,SidePatch>={
         "align": "center",
         "inkFit": false,
         "lineHeight": 1.22,
-        "size": 17.393179835217687
+        "size": 14
       },
       {
         "kind": "text",
@@ -17865,6 +21330,70 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.2,
         "size": 16.8
+      },
+      {
+        "kind": "box",
+        "x": 70,
+        "y": 446,
+        "w": 302,
+        "h": 1,
+        "fill": "#eeeeee"
+      },
+      {
+        "kind": "box",
+        "x": 70,
+        "y": 576,
+        "w": 302,
+        "h": 1,
+        "fill": "#eeeeee"
+      },
+      {
+        "kind": "box",
+        "x": 70,
+        "y": 706,
+        "w": 302,
+        "h": 1,
+        "fill": "#eeeeee"
+      },
+      {
+        "kind": "box",
+        "x": 460,
+        "y": 361,
+        "w": 360,
+        "h": 1,
+        "fill": "#f0f0f0"
+      },
+      {
+        "kind": "box",
+        "x": 460,
+        "y": 447,
+        "w": 360,
+        "h": 1,
+        "fill": "#f0f0f0"
+      },
+      {
+        "kind": "box",
+        "x": 460,
+        "y": 533,
+        "w": 360,
+        "h": 1,
+        "fill": "#f0f0f0"
+      },
+      {
+        "kind": "box",
+        "x": 460,
+        "y": 619,
+        "w": 360,
+        "h": 1,
+        "fill": "#f0f0f0"
+      },
+      {
+        "kind": "box",
+        "x": 460,
+        "y": 705,
+        "w": 360,
+        "h": 1,
+        "fill": "#f0f0f0"
       }
     ],
     "removeText": [
@@ -17890,7 +21419,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -17920,30 +21450,6 @@ const patches:Record<string,SidePatch>={
         "y": 0,
         "w": 424,
         "h": 236,
-        "radius": 0,
-        "dropText": true
-      },
-      {
-        "x": 301,
-        "y": 0,
-        "w": 89,
-        "h": 166,
-        "radius": 0,
-        "dropText": true
-      },
-      {
-        "x": 890,
-        "y": 75,
-        "w": 211,
-        "h": 184,
-        "radius": 0,
-        "dropText": true
-      },
-      {
-        "x": 1034,
-        "y": 565,
-        "w": 198,
-        "h": 207,
         "radius": 0,
         "dropText": true
       }
@@ -18115,16 +21621,16 @@ const patches:Record<string,SidePatch>={
         "kind": "text",
         "x": 63,
         "y": 84,
-        "w": 247,
-        "h": 59.00000038146972,
+        "w": 194,
+        "h": 43,
         "text": "Greeting",
         "font": "Bodoni Moda",
         "weight": 700,
         "color": "#e8f4f2",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 48.75
+        "size": 53
       },
       {
         "kind": "text",
@@ -18158,18 +21664,19 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 247,
+        "x": 244,
         "y": 492,
-        "w": 132,
-        "h": 42,
+        "w": 154,
+        "h": 43,
         "text": "Kim MiRe",
-        "font": "Nanum Pen Script",
+        "font": "Allura",
         "weight": 400,
         "color": "#fff",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 40.156974460028586
+        "size": 34,
+        "fontStyle": "normal"
       },
       {
         "kind": "text",
@@ -18479,48 +21986,33 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 962,
-        "y": 209,
+        "x": 960,
+        "y": 208,
         "w": 269,
-        "h": 192.2500114440918,
+        "h": 195,
         "text": "2090\n오케스트라\n정기연주회",
         "font": "Noto Serif KR",
         "weight": 700,
         "color": "#caaa80",
         "align": "right",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 53.395061728395056
-      },
-      {
-        "kind": "text",
-        "x": 884,
-        "y": 422,
-        "w": 345,
-        "h": 105.57811393737789,
-        "text": "ORCHESTRA\nCONCERT",
-        "font": "Bodoni Moda",
-        "weight": 700,
-        "color": "#caaa80",
-        "align": "center",
-        "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 48.01980198019802
+        "lineHeight": 1.11,
+        "size": 55
       },
       {
         "kind": "text",
         "x": 884,
         "y": 566,
         "w": 202,
-        "h": 82.71877250671393,
+        "h": 91,
         "text": "2090.7.12(토)\n오후 5:00\n비즈홀 콘서트홀",
         "font": "Noto Serif KR",
         "weight": 400,
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 22.839506172839506
+        "lineHeight": 1.3,
+        "size": 23
       },
       {
         "kind": "text",
@@ -18581,6 +22073,848 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.22,
         "size": 14
+      },
+      {
+        "kind": "box",
+        "x": 327.8957432466893,
+        "y": 2,
+        "w": 24.20851350662147,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 319.57247076572196,
+        "y": 6,
+        "w": 40.85505846855608,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 314.34105722545706,
+        "y": 10,
+        "w": 51.31788554908592,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 310.5075397326702,
+        "y": 14,
+        "w": 58.98492053465961,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 307.5723026479592,
+        "y": 18,
+        "w": 64.85539470408165,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 305.3065946740039,
+        "y": 22,
+        "w": 69.3868106519922,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 303.58522737548776,
+        "y": 26,
+        "w": 72.82954524902445,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 302.3334972143847,
+        "y": 30,
+        "w": 75.33300557123061,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 301.50556308340936,
+        "y": 34,
+        "w": 76.9888738331813,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 301.0743736135851,
+        "y": 38,
+        "w": 77.8512527728298,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 301.026758150663,
+        "y": 42,
+        "w": 77.94648369867402,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 301.3612986043548,
+        "y": 46,
+        "w": 77.2774027912905,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 302.08811023623946,
+        "y": 50,
+        "w": 75.82377952752114,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 303.2304473782995,
+        "y": 54,
+        "w": 73.53910524340094,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 304.82877469914877,
+        "y": 58,
+        "w": 70.34245060170245,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 306.94918075222273,
+        "y": 62,
+        "w": 66.10163849555457,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 309.70107771952894,
+        "y": 66,
+        "w": 60.59784456094209,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 313.2788622175332,
+        "y": 70,
+        "w": 53.442275564933595,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 318.08333528923947,
+        "y": 74,
+        "w": 43.83332942152106,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 325.2694991829542,
+        "y": 78,
+        "w": 29.461001634091637,
+        "h": 2,
+        "fill": "#d4e9e1"
+      },
+      {
+        "kind": "box",
+        "x": 331.9906633030732,
+        "y": 82,
+        "w": 25.018673393853597,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 323.3553617335215,
+        "y": 86,
+        "w": 42.28927653295702,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 317.89358031573283,
+        "y": 90,
+        "w": 53.21283936853434,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 313.8585080718566,
+        "y": 94,
+        "w": 61.2829838562868,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 310.73472042287256,
+        "y": 98,
+        "w": 67.53055915425487,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 308.2856271567121,
+        "y": 102,
+        "w": 72.42874568657575,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 306.3809612645369,
+        "y": 106,
+        "w": 76.23807747092624,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 304.9420040197839,
+        "y": 110,
+        "w": 79.11599196043224,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 303.9191843847633,
+        "y": 114,
+        "w": 81.16163123047335,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 303.28151186425123,
+        "y": 118,
+        "w": 82.43697627149757,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 303.01122380007007,
+        "y": 122,
+        "w": 82.97755239985992,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 303.1011237457963,
+        "y": 126,
+        "w": 82.7977525084074,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 303.5535840661743,
+        "y": 130,
+        "w": 81.89283186765132,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 304.38086966654413,
+        "y": 134,
+        "w": 80.23826066691171,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 305.60689164168326,
+        "y": 138,
+        "w": 77.7862167166335,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 307.2710226436086,
+        "y": 142,
+        "w": 74.45795471278281,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 309.43558427115,
+        "y": 146,
+        "w": 70.12883145770004,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 312.2010315338008,
+        "y": 150,
+        "w": 64.5979369323984,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 315.7401826200614,
+        "y": 154,
+        "w": 57.51963475987727,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 320.3914030759504,
+        "y": 158,
+        "w": 48.21719384809926,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 327.02100077987427,
+        "y": 162,
+        "w": 34.95799844025143,
+        "h": 2,
+        "fill": "#f1f3df"
+      },
+      {
+        "kind": "box",
+        "x": 965.6953926662352,
+        "y": 78,
+        "w": 39.609214667529706,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 944.3039265967388,
+        "y": 85,
+        "w": 82.39214680652229,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 931.6816750697434,
+        "y": 92,
+        "w": 107.63664986051316,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 922.3326874483329,
+        "y": 99,
+        "w": 126.3346251033342,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 914.9435807743133,
+        "y": 106,
+        "w": 141.1128384513734,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 908.9447333284559,
+        "y": 113,
+        "w": 153.11053334308818,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 904.0284647339874,
+        "y": 120,
+        "w": 162.94307053202522,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 900.0078079337032,
+        "y": 127,
+        "w": 170.98438413259342,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 896.7609421266513,
+        "y": 134,
+        "w": 177.47811574669737,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 894.2052711135631,
+        "y": 141,
+        "w": 182.58945777287377,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 892.2839268425448,
+        "y": 148,
+        "w": 186.43214631491028,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 890.9582277001665,
+        "y": 155,
+        "w": 189.08354459966708,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 890.2033118805242,
+        "y": 162,
+        "w": 190.59337623895163,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 890.005641707286,
+        "y": 169,
+        "w": 190.98871658542805,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 890.3617437242864,
+        "y": 176,
+        "w": 190.27651255142726,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 891.277896484535,
+        "y": 183,
+        "w": 188.44420703093016,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 892.7706981756888,
+        "y": 190,
+        "w": 185.4586036486223,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 894.8686385128254,
+        "y": 197,
+        "w": 181.26272297434906,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 897.6150434063762,
+        "y": 204,
+        "w": 175.7699131872476,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 901.0731728171851,
+        "y": 211,
+        "w": 168.8536543656299,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 905.3350803462001,
+        "y": 218,
+        "w": 160.32983930759974,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 910.5377349575601,
+        "y": 225,
+        "w": 149.9245300848798,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 916.8948277479361,
+        "y": 232,
+        "w": 137.21034450412768,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 924.7678027614081,
+        "y": 239,
+        "w": 121.46439447718367,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 934.8587959723644,
+        "y": 246,
+        "w": 101.28240805527126,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 948.9614593674085,
+        "y": 253,
+        "w": 73.07708126518317,
+        "h": 2,
+        "fill": "#d1e9e3"
+      },
+      {
+        "kind": "box",
+        "x": 1113.6319109526537,
+        "y": 567,
+        "w": 38.73617809469259,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1092.62163824152,
+        "y": 574,
+        "w": 80.75672351695995,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1080.1224262358478,
+        "y": 581,
+        "w": 105.75514752830456,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1070.7746032555838,
+        "y": 588,
+        "w": 124.45079348883236,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1063.2985030523118,
+        "y": 595,
+        "w": 139.4029938953763,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1057.1387197746499,
+        "y": 602,
+        "w": 151.72256045070043,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1051.9944107975161,
+        "y": 609,
+        "w": 162.01117840496795,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1047.6816924066939,
+        "y": 616,
+        "w": 170.6366151866124,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1044.0794836774865,
+        "y": 623,
+        "w": 177.84103264502693,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1041.1041931344487,
+        "y": 630,
+        "w": 183.79161373110253,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1038.696464012154,
+        "y": 637,
+        "w": 188.60707197569198,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1036.8136653984404,
+        "y": 644,
+        "w": 192.37266920311916,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1035.425405395219,
+        "y": 651,
+        "w": 195.14918920956177,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1034.510769398764,
+        "y": 658,
+        "w": 196.978461202472,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1034.0566219472394,
+        "y": 665,
+        "w": 197.88675610552107,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1034.0566219472394,
+        "y": 672,
+        "w": 197.88675610552107,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1034.510769398764,
+        "y": 679,
+        "w": 196.978461202472,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1035.425405395219,
+        "y": 686,
+        "w": 195.14918920956177,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1036.8136653984404,
+        "y": 693,
+        "w": 192.37266920311916,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1038.696464012154,
+        "y": 700,
+        "w": 188.60707197569198,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1041.1041931344487,
+        "y": 707,
+        "w": 183.79161373110253,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1044.0794836774865,
+        "y": 714,
+        "w": 177.84103264502693,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1047.6816924066939,
+        "y": 721,
+        "w": 170.6366151866124,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1051.9944107975161,
+        "y": 728,
+        "w": 162.01117840496795,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1057.1387197746499,
+        "y": 735,
+        "w": 151.72256045070043,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1063.2985030523118,
+        "y": 742,
+        "w": 139.4029938953763,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1070.7746032555838,
+        "y": 749,
+        "w": 124.45079348883236,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1080.1224262358478,
+        "y": 756,
+        "w": 105.75514752830456,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1092.62163824152,
+        "y": 763,
+        "w": 80.75672351695995,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 1113.6319109526537,
+        "y": 770,
+        "w": 38.73617809469259,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "path",
+        "x": 535,
+        "y": 674,
+        "w": 47,
+        "h": 90,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            47,
+            90
+          ]
+        ],
+        "fill": "none",
+        "color": "#fff",
+        "strokeWidth": 6,
+        "closed": false
+      },
+      {
+        "kind": "box",
+        "x": 537,
+        "y": 657,
+        "w": 210,
+        "h": 1,
+        "fill": "#fff"
+      },
+      {
+        "kind": "box",
+        "x": 684,
+        "y": 700,
+        "w": 10,
+        "h": 10,
+        "fill": "#fff",
+        "radius": "50%"
+      },
+      {
+        "kind": "text",
+        "x": 884,
+        "y": 422,
+        "w": 345,
+        "h": 52,
+        "text": "ORCHESTRA",
+        "font": "Bodoni Moda",
+        "size": 16,
+        "weight": 700,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#bda378"
+      },
+      {
+        "kind": "text",
+        "x": 945,
+        "y": 478,
+        "w": 284,
+        "h": 49,
+        "text": "CONCERT",
+        "font": "Bodoni Moda",
+        "size": 16,
+        "weight": 700,
+        "lineHeight": 1.2,
+        "inkFit": true,
+        "color": "#c3b58c"
       }
     ],
     "removeText": [
@@ -18612,7 +22946,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
@@ -18872,47 +23207,47 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 57,
-        "y": 85,
-        "w": 337,
-        "h": 46.000004291534424,
+        "y": 81,
+        "w": 239,
+        "h": 41,
         "text": "Conductor",
         "font": "Bodoni Moda",
         "weight": 700,
         "color": "#caaa80",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 47.5
+        "size": 51
       },
       {
         "kind": "text",
         "x": 459,
-        "y": 85,
-        "w": 364,
-        "h": 46.000004291534424,
+        "y": 81,
+        "w": 224,
+        "h": 42,
         "text": "Orchestra",
         "font": "Bodoni Moda",
         "weight": 700,
         "color": "#699e93",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 47.5
+        "size": 51
       },
       {
         "kind": "text",
         "x": 884,
-        "y": 85,
-        "w": 337,
-        "h": 58.00000429153442,
+        "y": 81,
+        "w": 194,
+        "h": 42,
         "text": "Program",
         "font": "Bodoni Moda",
         "weight": 700,
         "color": "#699e93",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 47.5
+        "size": 51
       },
       {
         "kind": "text",
@@ -18941,13 +23276,13 @@ const patches:Record<string,SidePatch>={
         "color": "#222",
         "align": "left",
         "inkFit": false,
-        "lineHeight": 1.22,
-        "size": 18.661971830985916
+        "lineHeight": 1.45,
+        "size": 15.5
       },
       {
         "kind": "text",
         "x": 57,
-        "y": 563,
+        "y": 565,
         "w": 338,
         "h": 48.00001029968264,
         "text": "filmography",
@@ -18957,7 +23292,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 38.75
+        "size": 31
       },
       {
         "kind": "text",
@@ -18972,7 +23307,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 11.721579903622485
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -18987,7 +23322,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.087522470730683
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19002,7 +23337,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.65
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19017,7 +23352,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.65
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19032,7 +23367,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.708312946119479
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19047,7 +23382,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.321437029328584
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19062,7 +23397,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 12.910202765935207
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19077,7 +23412,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.65
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19092,7 +23427,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.344293443632406
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19107,7 +23442,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 13.010202470062183
+        "size": 11.5
       },
       {
         "kind": "text",
@@ -19127,7 +23462,7 @@ const patches:Record<string,SidePatch>={
       {
         "kind": "text",
         "x": 459,
-        "y": 372,
+        "y": 370,
         "w": 175,
         "h": 35.00003738403317,
         "text": "Cast",
@@ -19137,7 +23472,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 36.25
+        "size": 34
       },
       {
         "kind": "text",
@@ -19152,7 +23487,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 17.85
+        "size": 15.8
       },
       {
         "kind": "text",
@@ -19182,7 +23517,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 17.85
+        "size": 15.8
       },
       {
         "kind": "text",
@@ -19212,7 +23547,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 17.85
+        "size": 15.8
       },
       {
         "kind": "text",
@@ -19242,7 +23577,7 @@ const patches:Record<string,SidePatch>={
         "align": "left",
         "inkFit": false,
         "lineHeight": 1.2,
-        "size": 17.85
+        "size": 15.8
       },
       {
         "kind": "text",
@@ -19495,18 +23830,18 @@ const patches:Record<string,SidePatch>={
       },
       {
         "kind": "text",
-        "x": 884,
-        "y": 695,
-        "w": 338,
-        "h": 38,
+        "x": 899,
+        "y": 691,
+        "w": 235,
+        "h": 26,
         "text": "Program Note",
         "font": "Bodoni Moda",
         "weight": 600,
         "color": "#699e93",
         "align": "left",
-        "inkFit": false,
+        "inkFit": true,
         "lineHeight": 1.2,
-        "size": 32
+        "size": 34
       },
       {
         "kind": "text",
@@ -19522,6 +23857,374 @@ const patches:Record<string,SidePatch>={
         "inkFit": false,
         "lineHeight": 1.5,
         "size": 11.47281963409946
+      },
+      {
+        "kind": "box",
+        "x": 773.7651515265192,
+        "y": 305,
+        "w": 17.469696946961772,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 768.0014617130986,
+        "y": 309,
+        "w": 28.99707657380291,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 764.6337146488383,
+        "y": 313,
+        "w": 35.73257070232339,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 762.4179882175158,
+        "y": 317,
+        "w": 40.16402356496838,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 760.9951924583165,
+        "y": 321,
+        "w": 43.00961508336685,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 760.2129453994439,
+        "y": 325,
+        "w": 44.57410920111207,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 760.004325675326,
+        "y": 329,
+        "w": 44.991348649348105,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 760.3531169446862,
+        "y": 333,
+        "w": 44.29376611062753,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 761.2867965644036,
+        "y": 337,
+        "w": 42.42640687119285,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 762.8887257903887,
+        "y": 341,
+        "w": 39.22254841922271,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 765.3450981512733,
+        "y": 345,
+        "w": 34.309803697453376,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 769.1184550987325,
+        "y": 349,
+        "w": 26.763089802534882,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 776.2608225189422,
+        "y": 353,
+        "w": 12.478354962115542,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 786.5191345934684,
+        "y": 357,
+        "w": 16.96173081306322,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 780.8087978478787,
+        "y": 361,
+        "w": 28.382404304242627,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 777.3456708371747,
+        "y": 365,
+        "w": 35.308658325650725,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 774.9306094500918,
+        "y": 369,
+        "w": 40.13878109981643,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 773.2122622769492,
+        "y": 373,
+        "w": 43.575475446101535,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 772.0337079109296,
+        "y": 377,
+        "w": 45.93258417814088,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 771.3142319368593,
+        "y": 381,
+        "w": 47.371536126281356,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 771.0124902428444,
+        "y": 385,
+        "w": 47.97501951431123,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 771.1126472972261,
+        "y": 389,
+        "w": 47.77470540554791,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 771.6198675552906,
+        "y": 393,
+        "w": 46.760264889418835,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 772.5617392317067,
+        "y": 397,
+        "w": 44.876521536586644,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 773.9966555361282,
+        "y": 401,
+        "w": 42.006688927743596,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 776.0362084429689,
+        "y": 405,
+        "w": 37.92758311406212,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 778.9086892716182,
+        "y": 409,
+        "w": 32.182621456763655,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 783.2078351909204,
+        "y": 413,
+        "w": 23.584329618159202,
+        "h": 2,
+        "fill": "#faf7ea"
+      },
+      {
+        "kind": "box",
+        "x": 367.60675184044175,
+        "y": 528,
+        "w": 9.786496319116544,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 365.2231321214104,
+        "y": 531,
+        "w": 14.553735757179181,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 363.9166749224001,
+        "y": 534,
+        "w": 17.166650155199775,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 363.2206752752725,
+        "y": 537,
+        "w": 18.558649449454965,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 363.0,
+        "y": 540,
+        "w": 19.0,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 363.2206752752725,
+        "y": 543,
+        "w": 18.558649449454965,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 363.9166749224001,
+        "y": 546,
+        "w": 17.166650155199775,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 365.2231321214104,
+        "y": 549,
+        "w": 14.553735757179181,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 367.60675184044175,
+        "y": 552,
+        "w": 9.786496319116544,
+        "h": 2,
+        "fill": "#cce1d9"
+      },
+      {
+        "kind": "box",
+        "x": 377.42529920607967,
+        "y": 557,
+        "w": 11.149401587840677,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 374.6897267137147,
+        "y": 560,
+        "w": 16.620546572570557,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 373.167152043795,
+        "y": 563,
+        "w": 19.665695912410058,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 372.3252606845398,
+        "y": 566,
+        "w": 21.349478630920437,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 372.0065417787528,
+        "y": 569,
+        "w": 21.98691644249432,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 372.1647292808315,
+        "y": 572,
+        "w": 21.670541438336926,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 372.8220354127596,
+        "y": 575,
+        "w": 20.355929174480842,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 374.08822473316013,
+        "y": 578,
+        "w": 17.82355053367973,
+        "h": 2,
+        "fill": "#d6c3a0"
+      },
+      {
+        "kind": "box",
+        "x": 376.3000434807168,
+        "y": 581,
+        "w": 13.399913038566385,
+        "h": 2,
+        "fill": "#d6c3a0"
       }
     ],
     "removeText": [
@@ -19535,7 +24238,8 @@ const patches:Record<string,SidePatch>={
     "defaultFont": "Pretendard",
     "notes": [
       "24개 원본 개별 분석, 사진과 복잡 그래픽은 #e5e5e5 placeholder.",
-      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체."
+      "작은 문구는 판독 가능한 내용을 직접 입력하고 판독 불가 부분은 자연스러운 문장으로 대체.",
+      "revision-e: 원본 전개면 실대조 후 타이포그래피·단색 바탕·지도·기하 장식·카드 간격을 벡터 요소로 재교정. 사진/복잡 삽화만 회색 placeholder 유지."
     ],
     "textStyles": [
       {
