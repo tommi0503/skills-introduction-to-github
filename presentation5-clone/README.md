@@ -1,5 +1,11 @@
 # Presentation 5 Clone — Envato 참고 시트 분할
 
+## 이미지 없는 소스 ZIP
+
+최신 경량 소스는 [presentation5-clone-source.zip](../presentation5-clone-source.zip)입니다. 이미지·원본 시트·렌더·비교 JPG·설치 의존성을 제외하고 47개 덱, 1,057페이지의 코드와 SVG 컴포넌트를 포함합니다. 외부 브랜드 표기를 중립 문구로 정리했으며, ZIP 안의 앱은 이미지 비교 메뉴 없이 실행됩니다. 설치·빌드·전체 페이지 검사는 압축 해제본에서 별도로 수행합니다.
+
+현재 소스 변경 및 이미지 없는 ZIP의 검사 기록은 `review/source-cleanup.json`, `review/source-only-verification.json`, `review/source-zip-verification.json`, `review/source-zip-github-verification.json`에 저장합니다. 아래의 이미지 포함 렌더와 개별 원본 비교 기록은 이전 제출본의 기록입니다.
+
 두 첨부 ZIP의 **47개 덱·117개 참고 이미지**를 **1,057개 독립 슬라이드 페이지**로 구현하는 프로젝트입니다. 모든 결과 캔버스는 **1280×720**입니다. `presentation3-clone`의 공통 모델/렌더러 구조와 `presentation4-clone`의 실제 브라우저 검수 도구를 바탕으로 새 폴더에서 작업합니다. 기존 프로젝트를 보존했고 `slides-clone`은 확인하지 않았습니다.
 
 ```bash

@@ -398,7 +398,7 @@ for pv,items in [(2,fund2),(3,fund3)]:
   if pv==3 and n==4:arr += [title('$7B+',72,20,26,76,'Anton',align='center'),title('$5B+',44,50,27,76,'Anton',align='center'),title('$5B+',72,77,27,52,'Anton',align='center'),tx('Data-Driven &\nStraightforward',8,55,31,37,color='#fff')]
   if pv==3 and n==5:
    for i,t in enumerate(['Maintain Consistent, On-Brand Content','Save Time & Resources','Engage Their Online Presence']):arr += [tx(f'STEP {i+1}',52,35+i*19,13,29,'Anton',align='center'),tx(t,65,33+i*19,31,17,weight=700),para(65,40+i*19,31,15,lines=2)]
-  if pv==3 and n==6:arr += [tx('Not Just a Tool—A Solution',56,53,41,26),tx('+ Canva-based Instagram template packs\n+ Custom brand kits (logos, typography, palettes)\n+ Social media content calendars\n+ Easy-to-edit assets for non-designers',56,65,41,22,leading=1.7)]
+  if pv==3 and n==6:arr += [tx('Not Just a Tool—A Solution',56,53,41,26),tx('+ Slide-based Instagram template packs\n+ Custom brand kits (logos, typography, palettes)\n+ Social media content calendars\n+ Easy-to-edit assets for non-designers',56,65,41,22,leading=1.7)]
   if pv==3 and n==7:
    for i,t in enumerate(['Purpose-Driven','Integrity','Creativity','Growth-Oriented']):arr += [tx('• '+t,69,17+i*22,29,21,weight=700),para(69,24+i*22,28,16,lines=2)]
   if pv==3 and n==8:

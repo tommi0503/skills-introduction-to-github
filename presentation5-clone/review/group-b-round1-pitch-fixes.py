@@ -57,7 +57,7 @@ for k,s in d.items():
   s['background']=N;e=[h('SOLUTION.',w=58,c=W),tx('●  HOW WE SOLVE IT',76,12,23,23,weight=700,color=W)];g=[ph(-2,27,58,64)]
   for i,(t,c) in enumerate([('Maintain Consistency, On-Brand Content',V),('Save Time & Resources',C),('Elevate Their Online Presence',L)]):y=31+i*20;g += [circle(51,y-1,9,c),b(62,y,32,16,c)];e += [chip(f'STEP {i+1}',51,y,9,14,29,c,N,font='Anton',radius='50%'),small(t,65,y+3,28),para(65,y+7,28,15,lines=2)]
  elif sid=='s03-06':
-  g=[circle(-29,-14,59,V),circle(81,-35,38,L),ph(6,22,41,56)];e=[h('PRODUCT\nOVERVIEW.',56,17,41,86),chip('Not Just a Tool—A Solution',56,52,28,6,18,C,N,weight=700,radius=30),tx('→ Canva-based Instagram template packs\n→ Custom brand kits (logos, typography, palettes)\n→ Social media content calendars\n→ Easy-to-edit assets for non-designers',56,65,41,21,leading=1.7)]
+  g=[circle(-29,-14,59,V),circle(81,-35,38,L),ph(6,22,41,56)];e=[h('PRODUCT\nOVERVIEW.',56,17,41,86),chip('Not Just a Tool—A Solution',56,52,28,6,18,C,N,weight=700,radius=30),tx('→ Slide-based Instagram template packs\n→ Custom brand kits (logos, typography, palettes)\n→ Social media content calendars\n→ Easy-to-edit assets for non-designers',56,65,41,21,leading=1.7)]
  elif sid=='s03-07':
   e=[h('CORE VALUES.',w=40),para(42,12,20,16,lines=3)];g=[ph(5.5,25,56,68)]
   for i,(t,c) in enumerate([('Purpose-Driven',V),('Integrity',C),('Creativity',L),('Growth-Oriented','#ddd')]):y=8+i*22;g += [b(66,y,29.5,19,c)];e += [tx('• '+t,68,y+4,26,23,weight=700),para(68,y+10,26,15,lines=2)]
