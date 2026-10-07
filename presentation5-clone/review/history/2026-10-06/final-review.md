@@ -1,0 +1,19 @@
+# 최종 통합 검수 결과
+
+- 참고 이미지 117개·47개 덱·독립 페이지 1,057장. 결과 PNG 모두 1280×720.
+- 실제 production 브라우저에서 모든 페이지를 렌더하고 전수 자동 검사했다. 빌드와 typecheck 성공.
+- 담당 6명이 모든 페이지를 원본과 개별 비교했다. 주 에이전트는 47개 덱의 242개 독립 비교와 보고한 수정 페이지를 마지막 PNG에서 확인했다.
+- 1·2차 담당 비교 뒤 같은 3차 통합에서 보정 및 마지막 수정 검증을 수행했다. 연락처 시트만으로 완료하지 않았다.
+- 글자 영역·폰트·chip 중앙·placeholder·비율·페이지 크기·유효 Lucide·갤러리 이동 검사에서 예상 밖 오류 0. 실제 텍스트 chip 1442개에서 중앙 정렬 오류 0.
+- 원본이 의도적으로 잘라낸 p127의 CONTENTS/AaBb 두 표현은 사유를 기록한 예상 잘림이다. 그 외 잘림 오류가 남지 않았다.
+- 실제 폰트 family/weight 조합 68개 모두 로드. 페이지/폰트 요청 실패와 JavaScript 오류 0.
+- 최종 소스·렌더러·PNG·원본 및 실제 개별 열람 파일 SHA 대조 통과. 이전에 실제 열람한 PNG가 byte 단위로 동일한 128개 비교 증빙은 원래 JPG와 독립 픽셀 검증을 함께 보존했다.
+- 71개 부분 타일 및 세로형 타임라인 1장의 비율을 보존했다. 판독 불가 대체 문구·복원 가정·폰트 근사·이미지 placeholder 차이는 inventory와 담당별 기록에 명시했다.
+
+검증 시각: 2026-10-06T18:04:45.736306+00:00
+
+자동 검사: verification.json / 최종 소스 스냅샷: final-build-state.json
+개별 비교: visual-review.json / 주 에이전트: root-review-journal.json
+ZIP 수량·크기·SHA·CRC: archive-integrity.json 및 저장소 루트 downloads JSON
+
+GitHub 재다운로드 검증도 통과했다. 실제 원격 ZIP 5개에서 CRC·SHA, PNG 1,057장의 크기·SHA 및 참고/비교 수량이 일치했다. 상세 기록은 github-download-verification.json 및 .md에 있다.

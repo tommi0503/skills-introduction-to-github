@@ -1,13 +1,19 @@
 """Package every independent slide plus source, excluding dependency caches."""
-import hashlib, html, json, pathlib, zipfile
+import argparse, hashlib, html, json, pathlib, zipfile
 from PIL import Image, ImageDraw
 root = pathlib.Path(__file__).resolve().parents[1]
 out = root.parent
+parser=argparse.ArgumentParser()
+parser.add_argument('--prefix',default='presentation5-clone-quality-v2')
+args=parser.parse_args()
+assert args.prefix.replace('-','').replace('_','').isalnum()
+prefix=args.prefix
 verification = json.loads((root/'review/verification.json').read_text())
 visual = json.loads((root/'review/visual-review.json').read_text())
 source = json.loads((root/'public/reference/manifest.json').read_text())
 assert verification['status']=='passed' and verification['slides']==1057 and verification['decks']==47
 assert visual['allIndividuallyViewed'] and len(visual['slides'])==1057
+assert visual.get('freshReviewAfterUserFeedback') and visual.get('qualityRevision')=='2026-10-07-v2'
 decks = [json.loads((root/'comparisons/final'/f'{d["id"]}.json').read_text()) for d in source]
 slides = [(d,s) for d in decks for s in d['slides']]
 assert len(slides)==1057
@@ -36,7 +42,7 @@ for i,(deck,slide) in enumerate(slides):
         'sheet':original['originalPath'],'sheetSize':original['sheetSize'],'crop':original['crop'],
         'visibleCrop':original.get('visibleCrop'),'incompleteReference':original.get('incomplete',False),
         'pngSha256':sha,'definitionSha256':deck['definitionHash'],'rendererSha256':deck['rendererHash']})
-overview_path=out/'presentation5-clone-preview.jpg';overview.save(overview_path,quality=94)
+overview_path=out/f'{prefix}-preview.jpg';overview.save(overview_path,quality=94)
 for page,im in pages.items():im.save(preview_dir/f'{page+1:02d}.jpg',quality=94)
 (root/'review/delivery-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 cards=''.join(f'<article><h2>{html.escape(s["deck"]+"/"+s["slide"]+" · "+s["title"])}</h2>'
@@ -58,7 +64,9 @@ for p in sorted(root.rglob('*')):
     if not p.is_file():continue
     rel=p.relative_to(root)
     if excluded.intersection(rel.parts) or 'round1' in rel.parts or 'round2' in rel.parts:continue
-    if p.suffix=='.log' or p.name=='archive-integrity.json' or p.name.endswith('-seed.json'):continue
+    if rel.parts[0] in {'renders','comparisons'} and len(rel.parts)>1 and rel.parts[1]!='final':continue
+    if rel.parts[:2]==('review','carried-comparisons'):continue
+    if p.suffix=='.log' or p.name in {'archive-integrity.json','github-download-verification.json','github-download-verification.md'} or p.name.endswith('-seed.json'):continue
     files.append((p,'presentation5-clone/'+str(rel)))
 files.append((overview_path,overview_path.name))
 assert len([p for p,n in files if '/renders/final/' in n and p.suffix=='.png'])==1057
@@ -83,7 +91,7 @@ def finish():
 for p,name in files:
     if current is not None and current.fp.tell()+p.stat().st_size+reserve>limit:finish()
     if current is None:
-        archive=out/f'presentation5-clone-part-{len(archives)+1:02d}.zip'
+        archive=out/f'{prefix}-part-{len(archives)+1:02d}.zip'
         current=zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6)
         current.writestr('DELIVERY.txt',note)
     current.write(p,name);names.append(name)
@@ -102,7 +110,7 @@ for archive in archives:
             checked.add(name)
 assert len(checked)==1057
 report={'archives':archives,'decks':47,'sourceSheets':117,'pngCount':1057,'allPngSize':[1280,720],
-    'zipCrcPassed':True,'allRenderHeadersAndHashesVerified':True,'extractAllPartsToSameDirectory':True}
+    'qualityRevision':'2026-10-07-v2','zipCrcPassed':True,'allRenderHeadersAndHashesVerified':True,'extractAllPartsToSameDirectory':True}
 (root/'review/archive-integrity.json').write_text(json.dumps(report,indent=2)+'\n')
-(out/'presentation5-clone-downloads.json').write_text(json.dumps(report,indent=2)+'\n')
+(out/f'{prefix}-downloads.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

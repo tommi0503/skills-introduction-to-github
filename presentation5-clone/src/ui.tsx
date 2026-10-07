@@ -2,10 +2,12 @@ import * as Icons from 'lucide-react'
 import type { CSSProperties, ComponentType } from 'react'
 import {useId,useEffect,useState} from 'react'
 import type { Element, Slide, Deck } from './model'
+import {Graphic} from './graphics'
 
 const colorAt = (e:Element,i:number) => e.colors?.[i % e.colors.length] ?? e.fill ?? '#3478f6'
 const fontAliases:Record<string,string>={'Roboto':'Roboto Variable','Josefin Sans':'Josefin Sans Variable','Open Sans':'Open Sans Variable','Raleway':'Raleway Variable','Inter':'Inter Variable','Manrope':'Manrope Variable','DM Sans':'DM Sans Variable','Archivo':'Archivo Variable','Playfair Display':'Playfair Display Variable','Pretendard':'Pretendard Variable','Bodoni Moda':'Bodoni Moda Variable','Pixelify Sans':'Pixelify Sans Variable','Roboto Condensed':'Roboto Condensed Variable','Noto Sans KR':'Noto Sans KR','Noto Serif KR':'Noto Serif KR'}
-for(const name of ['Figtree','Geist','Instrument Sans','Montserrat','Onest','Outfit','Plus Jakarta Sans','Sora','Space Grotesk','Urbanist'])fontAliases[name]=name+' Variable'
+for(const name of ['Figtree','Geist','Instrument Sans','Montserrat','Onest','Outfit','Plus Jakarta Sans','Quicksand','Sora','Space Grotesk','Urbanist'])fontAliases[name]=name+' Variable'
+fontAliases['Roboto Slab']='Roboto Slab Variable'
 const resolveFont=(font:string)=>font.split(',').map(part=>{const name=part.trim().replace(/^["']|["']$/g,'');return fontAliases[name]?`"${fontAliases[name]}"`:part}).join(',')
 function Bars({element:e}:{element:Element}) {
   const values=e.values??[],max=e.max??Math.max(...values,1)
@@ -21,7 +23,8 @@ function Donut({element:e}:{element:Element}) {
   const values=e.values??[75,25],sum=values.reduce((a,b)=>a+b,0)
   let position=0
   const segments=values.map((v,i)=>{const start=position;position+=v/sum*100;return `${colorAt(e,i)} ${start}% ${position}%`})
-  return <div className="donut" style={{background:`conic-gradient(${segments.join(',')})`}}><div style={{background:e.border??'#fff',color:e.color}}>{e.text}</div></div>
+  const size=e.valueSize??e.size??40,inner=(e.innerRatio??.75)*100
+  return <div className="donut" style={{background:`conic-gradient(${segments.join(',')})`}}><div style={{background:e.border??'#fff',color:e.color,width:`${inner}%`,height:`${inner}%`,fontSize:size,fontWeight:e.weight??400,lineHeight:e.lineHeight??1.12}}><ChipLabel element={{...e,align:'center',size,weight:e.weight??400}}/></div></div>
 }
 function VectorPath({element:e}:{element:Element}) {
  const markerId=useId().replace(/:/g,'')
@@ -51,17 +54,18 @@ function ChipLabel({element:e}:{element:Element}) {
  useEffect(()=>{let active=true;document.fonts.ready.then(()=>{
   if(!active)return
   const context=document.createElement('canvas').getContext('2d')!
-  context.font=`${e.fontStyle??'normal'} ${e.weight??500} ${e.size??32}px ${resolveFont(e.font??'Pretendard')}`
+  context.font=`${e.fontStyle??'normal'} ${e.weight??400} ${e.size??32}px ${resolveFont(e.font??'Inter, Pretendard, sans-serif')}`
   context.letterSpacing=`${e.letterSpacing??0}px`
+  context.wordSpacing=`${e.wordSpacing??0}px`
   const m=context.measureText(e.text??'')
   const y=(m.actualBoundingBoxAscent-m.actualBoundingBoxDescent-m.fontBoundingBoxAscent+m.fontBoundingBoxDescent)/2
   const x=e.align==='left'||e.align==='right'?0:(m.width-m.actualBoundingBoxRight+m.actualBoundingBoxLeft)/2
   setShift({x,y})
- });return()=>{active=false}},[e.text,e.size,e.weight,e.font,e.fontStyle,e.align,e.letterSpacing])
+ });return()=>{active=false}},[e.text,e.size,e.weight,e.font,e.fontStyle,e.align,e.letterSpacing,e.wordSpacing])
  return <span data-chip-label data-optical-x={shift.x} data-optical-y={shift.y} style={{transform:`translate(${shift.x}px,${shift.y}px)`}}>{e.text}</span>
 }
 function ElementView({element:e,sourceAspect}:{element:Element;sourceAspect?:number}) {
-  const style:CSSProperties={left:`${e.x}%`,top:`${e.y}%`,width:`${e.w}%`,height:`${e.h}%`,color:e.color??'#171717',fontSize:e.size??32,fontWeight:e.weight??400,fontStyle:e.fontStyle,fontFamily:resolveFont(e.font??'Inter, Pretendard, sans-serif'),textAlign:e.align??'left',lineHeight:e.lineHeight??1.12,letterSpacing:e.letterSpacing??0,opacity:e.opacity??1,borderRadius:e.radius??0,clipPath:e.clipPath,WebkitTextStroke:e.textStroke}
+  const style:CSSProperties={left:`${e.x}%`,top:`${e.y}%`,width:`${e.w}%`,height:`${e.h}%`,color:e.color??'#171717',fontSize:e.size??32,fontWeight:e.weight??400,fontStyle:e.fontStyle,fontFamily:resolveFont(e.font??'Inter, Pretendard, sans-serif'),textAlign:e.align??'left',lineHeight:e.lineHeight??1.12,letterSpacing:e.letterSpacing??0,wordSpacing:e.wordSpacing??0,opacity:e.opacity??1,borderRadius:e.radius??0,clipPath:e.clipPath,WebkitTextStroke:e.textStroke}
   let content
   // Only reference elements such as stickers rotate; the 1280×720 stage stays flat.
   if(e.kind!=='text'&&e.rotate){style.transform=`rotate(${e.rotate}deg)`;style.transformOrigin='center'}
@@ -84,7 +88,8 @@ function ElementView({element:e,sourceAspect}:{element:Element;sourceAspect?:num
   if(e.kind==='donut') content=<Donut element={e}/>
   if(e.kind==='table') content=<table className="data-table"><tbody>{e.rows?.map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j} style={{borderColor:e.border??'#ddd',background:i===0?e.fill:undefined}}>{cell}</td>)}</tr>)}</tbody></table>
   if(e.kind==='path')content=<VectorPath element={e}/>
-  return <div className={`element element-${e.kind}`} style={style} data-allow-clip={e.allowClip?'true':undefined} data-clip-reason={e.clipReason} role={e.kind==='image'?'img':undefined} aria-label={e.kind==='image'?(e.text??'Image placeholder'):undefined}>{content}</div>
+  if(e.kind==='graphic')content=<Graphic name={e.graphic!} colors={e.colors} variant={e.variant}/>
+  return <div className={`element element-${e.kind}`} style={style} data-graphic-name={e.graphic} data-graphic-variant={e.variant} data-allow-clip={e.allowClip?'true':undefined} data-clip-reason={e.clipReason} role={e.kind==='image'?'img':undefined} aria-label={e.kind==='image'?(e.text??'Image placeholder'):undefined}>{content}</div>
 }
 export function sourceVisibility(deck:Deck,index:number) {
  const r=deck.referenceRegions[index]

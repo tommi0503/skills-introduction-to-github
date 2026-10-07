@@ -1,17 +1,19 @@
-export type Kind = 'text' | 'box' | 'image' | 'icon' | 'line' | 'bars' | 'donut' | 'table' | 'path' | 'chip'
+export type Kind = 'text' | 'box' | 'image' | 'icon' | 'line' | 'bars' | 'donut' | 'table' | 'path' | 'chip' | 'graphic'
 export interface TextRun { text:string; color?:string; weight?:number; font?:string; fontStyle?:'normal'|'italic' }
 export interface Point { x:number; y:number }
 export interface Element {
   kind: Kind; x: number; y: number; w: number; h: number;
   text?: string; size?: number; color?: string; fill?: string; weight?: number;
-  font?: string; fontStyle?:'normal'|'italic'; align?: 'left' | 'center' | 'right'; lineHeight?: number;
+  font?: string; fontStyle?:'normal'|'italic'; align?: 'left' | 'center' | 'right' | 'justify'; lineHeight?: number;
   radius?: number|string; border?: string; opacity?: number; icon?: string;
   values?: number[]; labels?: string[]; colors?: string[]; rows?: string[][];
-  vertical?: boolean; letterSpacing?: number; strokeWidth?: number;
+  vertical?: boolean; letterSpacing?: number; wordSpacing?:number; strokeWidth?: number;
   textStroke?:string; rotate?:number; scaleX?: number; nowrap?: boolean; runs?: TextRun[];
   points?: Point[]; curved?: boolean; closed?: boolean; dashed?: boolean; arrow?: boolean; dashPattern?:string; lineCap?:'round'|'butt'|'square';
   labelSize?:number; valueSize?:number; showValues?:boolean; max?:number;
+  innerRatio?:number;
   clipPath?:string; valign?:'top'|'middle'|'bottom'; padding?:number; shadow?:string; allowClip?:boolean; clipReason?:string;
+  graphic?:string; variant?:string;
 }
 export interface Slide { id: string; title: string; background: string; elements: Element[]; sourceAspect?:number }
 export interface Region { x: number; y: number; w: number; h: number }
