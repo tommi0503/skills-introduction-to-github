@@ -1,0 +1,1 @@
+A data first bar chart with visible values, subtle grid rules and a single cobalt focal bar. Vertical and horizontal orientations share a precise baseline and restrained sage bars. The chart uses actual numeric custom properties rather than pictorial assets.

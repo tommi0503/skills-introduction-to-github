@@ -1,0 +1,1 @@
+A clear organizational tree with a cobalt leadership node, sage functional groups and white subordinate units. Fine orthogonal connectors sit above each branch and adapt to two, three or four departments.

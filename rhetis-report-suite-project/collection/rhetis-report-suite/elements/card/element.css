@@ -1,0 +1,24 @@
+:is(.card[data-el="rhetis-report-suite-card"]) {min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);}
+:is(.card[data-el="rhetis-report-suite-card"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.card[data-el="rhetis-report-suite-card"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink-2);}
+:is(.card[data-el="rhetis-report-suite-card"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--mute);}
+
+:is(.card[data-el="rhetis-report-suite-card"]) {display:flex;border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface);padding:var(--pad);}
+:is(.card[data-el="rhetis-report-suite-card"]) .parts {display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:var(--gap-sm);width:100%;min-width:0;}
+:is(.card[data-el="rhetis-report-suite-card"]) .fig {font-size:var(--type-84);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.card[data-el="rhetis-report-suite-card"]) .fig small {font-size:var(--type-28);font-weight:var(--name-weight);letter-spacing:var(--name-track);}
+:is(.card[data-el="rhetis-report-suite-card"]) .mark {display:grid;place-items:center;width:44px;height:44px;background:var(--accent-soft);color:var(--accent);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);font-size:var(--type-24);font-weight:var(--name-weight);}
+:is(.card[data-el="rhetis-report-suite-card"]).on {background:var(--accent);border-color:var(--accent);color:var(--accent-ink);}
+:is(.card[data-el="rhetis-report-suite-card"]).on :is(.name,.note,.kick,.fig) {color:var(--accent-ink);}
+:is(.card[data-el="rhetis-report-suite-card"]).quiet {background:var(--surface-2);border-color:var(--surface-2);}
+:is(.card[data-el="rhetis-report-suite-card"]).line {background:var(--page);border-color:var(--ink);}
+:is(.card[data-el="rhetis-report-suite-card"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink);border-color:var(--line);} :is(.card[data-el="rhetis-report-suite-card"]).tone-1 :is(.name,.note,.kick) {color:var(--tone-1-ink);}
+:is(.card[data-el="rhetis-report-suite-card"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink);border-color:var(--line);} :is(.card[data-el="rhetis-report-suite-card"]).tone-2 :is(.name,.note,.kick) {color:var(--tone-2-ink);}
+:is(.card[data-el="rhetis-report-suite-card"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink);border-color:var(--line);} :is(.card[data-el="rhetis-report-suite-card"]).tone-3 :is(.name,.note,.kick) {color:var(--tone-3-ink);}
+:is(.card[data-el="rhetis-report-suite-card"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink);border-color:var(--line);} :is(.card[data-el="rhetis-report-suite-card"]).tone-4 :is(.name,.note,.kick) {color:var(--tone-4-ink);}
+:is(.card[data-el="rhetis-report-suite-card"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink);border-color:var(--line);} :is(.card[data-el="rhetis-report-suite-card"]).tone-5 :is(.name,.note,.kick) {color:var(--tone-5-ink);}
+
+@container (max-width:600px) or (max-height:300px) {:is(.card[data-el="rhetis-report-suite-card"]) .fig {font-size:var(--type-52);} :is(.card[data-el="rhetis-report-suite-card"]) .fig small {font-size:var(--type-20);} :is(.card[data-el="rhetis-report-suite-card"]) .parts {gap:var(--gap-sm);}}
+@container (max-width:330px) or (max-height:180px) {:is(.card[data-el="rhetis-report-suite-card"]) {padding:var(--gap-sm);} :is(.card[data-el="rhetis-report-suite-card"]) .fig {font-size:var(--type-36);} :is(.card[data-el="rhetis-report-suite-card"]) .fig small {font-size:var(--type-16);} :is(.card[data-el="rhetis-report-suite-card"]) .mark {width:28px;height:28px;font-size:var(--type-16);}}
+@container (max-width:600px) or (max-height:300px) {:is(.card[data-el="rhetis-report-suite-card"]) .name {font-size:var(--type-18);} :is(.card[data-el="rhetis-report-suite-card"]) .note {font-size:var(--type-14);} :is(.card[data-el="rhetis-report-suite-card"]) .kick {font-size:var(--type-12);}}
+@container (max-width:330px) or (max-height:150px) {:is(.card[data-el="rhetis-report-suite-card"]) .name {font-size:var(--type-16);} :is(.card[data-el="rhetis-report-suite-card"]) .note {font-size:var(--type-12);} :is(.card[data-el="rhetis-report-suite-card"]) .kick {display:none;}}

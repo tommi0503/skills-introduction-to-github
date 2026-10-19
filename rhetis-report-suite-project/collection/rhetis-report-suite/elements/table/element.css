@@ -1,0 +1,11 @@
+:is(.tablebox[data-el="rhetis-report-suite-table"]) {display:flex;align-items:center;min-width:0;min-height:0;container-type:size;}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) .table {border-collapse:collapse;width:100%;table-layout:fixed;font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) th,:is(.tablebox[data-el="rhetis-report-suite-table"]) td {padding:var(--gap-sm) var(--gap);border-bottom:var(--stroke) solid var(--line);text-align:left;overflow-wrap:anywhere;vertical-align:middle;}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) th {background:var(--accent);color:var(--accent-ink);font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) tbody tr:nth-child(even) {background:var(--surface-2);}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) td:first-child {font-weight:var(--name-weight);}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) .num {text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) td.pick {background:var(--tone-2);color:var(--tone-2-ink);font-weight:var(--name-weight);}
+:is(.tablebox[data-el="rhetis-report-suite-table"]) th.pick {background:var(--tone-5);color:var(--tone-5-ink);}
+@container (max-width:700px) or (max-height:350px) {:is(.tablebox[data-el="rhetis-report-suite-table"]) .table {font-size:var(--type-16);} :is(.tablebox[data-el="rhetis-report-suite-table"]) th {font-size:var(--type-14);} :is(.tablebox[data-el="rhetis-report-suite-table"]) th,:is(.tablebox[data-el="rhetis-report-suite-table"]) td {padding:var(--gap-sm);}}
+@container (max-width:420px) or (max-height:240px) {:is(.tablebox[data-el="rhetis-report-suite-table"]) .table,:is(.tablebox[data-el="rhetis-report-suite-table"]) th {font-size:var(--type-12);} :is(.tablebox[data-el="rhetis-report-suite-table"]) th,:is(.tablebox[data-el="rhetis-report-suite-table"]) td {padding:calc(var(--gap-sm)/2);}}

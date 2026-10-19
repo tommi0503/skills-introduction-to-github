@@ -1,0 +1,2 @@
+import {readdir,readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';
+export async function sourceState(){const files=[];async function walk(p){for(const f of await readdir(p,{withFileTypes:true})){if(f.isDirectory())await walk(p+'/'+f.name);else files.push(p+'/'+f.name)}}for(const p of ['src','collection'])await walk(p);files.push('package.json','package-lock.json','index.html');const h=createHash('sha256');for(const f of files.sort()){h.update(f);h.update(await readFile(f))}return {hash:h.digest('hex'),files:files.length}}

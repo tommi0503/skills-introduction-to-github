@@ -1,0 +1,1 @@
+A cyclical operating model arranged around a pale yellow core. The fine cobalt orbit and directional marker connect compact outlined nodes, with member counts from three to six adapting to balanced radial positions.

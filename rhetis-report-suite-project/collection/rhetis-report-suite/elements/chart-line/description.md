@@ -1,0 +1,1 @@
+A fine cobalt line joins explicit numerical points across equal reporting periods. Labels stay readable below a ruled plot, and small filled points make each observation unambiguous. CSS anchor positioning connects the actual rendered values.

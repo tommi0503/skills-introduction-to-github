@@ -1,0 +1,1 @@
+An open report timeline with fine rules and small circular milestones. Lime selects the current milestone; the optional alternating arrangement adds rhythm while a vertical variant serves narrow slots.

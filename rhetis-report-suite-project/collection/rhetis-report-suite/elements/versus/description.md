@@ -1,0 +1,1 @@
+Two symmetrical report panels contrast existing and proposed approaches. The recommended side uses a pale cobalt surface and a cobalt title, while a compact central VS retains a calm editorial balance.

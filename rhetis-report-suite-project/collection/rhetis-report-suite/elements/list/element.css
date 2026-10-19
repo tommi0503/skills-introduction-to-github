@@ -1,0 +1,20 @@
+:is(.list[data-el="rhetis-report-suite-list"]) {min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);}
+:is(.list[data-el="rhetis-report-suite-list"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.list[data-el="rhetis-report-suite-list"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink-2);}
+:is(.list[data-el="rhetis-report-suite-list"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--mute);}
+
+:is(.list[data-el="rhetis-report-suite-list"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:report-item;}
+:is(.list[data-el="rhetis-report-suite-list"]) .item {position:relative;padding-left:var(--gap-lg);counter-increment:report-item;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2);min-width:0;}
+:is(.list[data-el="rhetis-report-suite-list"]) .item::before {content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;background:var(--accent);border-radius:50%;}
+:is(.list[data-el="rhetis-report-suite-list"]).check .item::before {content:"✓";top:0;width:24px;height:24px;background:var(--accent-soft);color:var(--accent);border-radius:var(--radius-sm);display:grid;place-items:center;font-size:var(--type-16);font-weight:var(--name-weight);}
+:is(.list[data-el="rhetis-report-suite-list"]).num .item::before {content:counter(report-item,decimal-leading-zero);top:0;width:24px;height:24px;background:none;color:var(--accent);font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--label-line);border-radius:0;}
+:is(.list[data-el="rhetis-report-suite-list"]).divided .item {padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--line);}
+:is(.list[data-el="rhetis-report-suite-list"]):has(> .item:nth-child(3)) {gap:var(--gap-sm);}
+:is(.list[data-el="rhetis-report-suite-list"]):has(> .item:nth-child(3)) .item {gap:calc(var(--gap-sm)/4);padding-bottom:calc(var(--gap-sm)/2);}
+:is(.list[data-el="rhetis-report-suite-list"]):has(> .item:nth-child(3)) .name {font-size:var(--type-18);}
+:is(.list[data-el="rhetis-report-suite-list"]):has(> .item:nth-child(3)) .note {font-size:var(--type-14);}
+:is(.list[data-el="rhetis-report-suite-list"]) .mark {color:var(--accent);font-size:var(--type-18);}
+@container (max-height:450px) {:is(.list[data-el="rhetis-report-suite-list"]) {gap:var(--gap-sm);} :is(.list[data-el="rhetis-report-suite-list"]) .name {font-size:var(--type-18);} :is(.list[data-el="rhetis-report-suite-list"]) .note {font-size:var(--type-14);}}
+@container (max-height:260px) {:is(.list[data-el="rhetis-report-suite-list"]) .item {gap:0;} :is(.list[data-el="rhetis-report-suite-list"]) .name {font-size:var(--type-16);} :is(.list[data-el="rhetis-report-suite-list"]) .note {font-size:var(--type-12);}}
+@container (max-width:600px) or (max-height:300px) {:is(.list[data-el="rhetis-report-suite-list"]) .name {font-size:var(--type-18);} :is(.list[data-el="rhetis-report-suite-list"]) .note {font-size:var(--type-14);} :is(.list[data-el="rhetis-report-suite-list"]) .kick {font-size:var(--type-12);}}
+@container (max-width:330px) or (max-height:150px) {:is(.list[data-el="rhetis-report-suite-list"]) .name {font-size:var(--type-16);} :is(.list[data-el="rhetis-report-suite-list"]) .note {font-size:var(--type-12);} :is(.list[data-el="rhetis-report-suite-list"]) .kick {display:none;}}

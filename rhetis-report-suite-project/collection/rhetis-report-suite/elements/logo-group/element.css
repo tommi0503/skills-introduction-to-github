@@ -1,0 +1,5 @@
+:is(.logos[data-el="rhetis-report-suite-logo-group"]) {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);align-content:center;container-type:size;}
+:is(.logos[data-el="rhetis-report-suite-logo-group"]) .seat.logo {aspect-ratio:2.5;border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);background:var(--surface-2);min-height:70px;}
+:is(.logos[data-el="rhetis-report-suite-logo-group"]):has(> :nth-child(7)) {grid-template-columns:repeat(4,minmax(0,1fr));}
+@container (max-width:700px) {:is(.logos[data-el="rhetis-report-suite-logo-group"]) {gap:var(--gap-sm);} :is(.logos[data-el="rhetis-report-suite-logo-group"]):has(> :nth-child(7)) {grid-template-columns:repeat(3,minmax(0,1fr));}}
+@container (max-width:400px) {:is(.logos[data-el="rhetis-report-suite-logo-group"]),:is(.logos[data-el="rhetis-report-suite-logo-group"]):has(> :nth-child(7)) {grid-template-columns:repeat(2,minmax(0,1fr));} :is(.logos[data-el="rhetis-report-suite-logo-group"]) .seat.logo {min-height:44px;}}

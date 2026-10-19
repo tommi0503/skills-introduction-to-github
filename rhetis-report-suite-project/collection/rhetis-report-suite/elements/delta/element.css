@@ -1,0 +1,7 @@
+:is(.delta[data-el="rhetis-report-suite-delta"]) {display:flex;align-items:center;justify-content:center;gap:var(--gap-lg);color:var(--ink);container-type:size;}
+:is(.delta[data-el="rhetis-report-suite-delta"]) .from,:is(.delta[data-el="rhetis-report-suite-delta"]) .to {font-size:var(--type-72);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.delta[data-el="rhetis-report-suite-delta"]) .from {color:var(--mute);}
+:is(.delta[data-el="rhetis-report-suite-delta"]) .to {color:var(--accent);}
+:is(.delta[data-el="rhetis-report-suite-delta"]) .from::after {content:"→";margin-left:var(--gap-lg);color:var(--ink);font-size:var(--type-44);font-weight:var(--lead-weight);}
+@container (max-width:750px) {:is(.delta[data-el="rhetis-report-suite-delta"]) .from,:is(.delta[data-el="rhetis-report-suite-delta"]) .to {font-size:var(--type-44);} :is(.delta[data-el="rhetis-report-suite-delta"]) .from::after {font-size:var(--type-32);margin-left:var(--gap);} :is(.delta[data-el="rhetis-report-suite-delta"]) {gap:var(--gap);}}
+@container (max-width:450px) or (max-height:150px) {:is(.delta[data-el="rhetis-report-suite-delta"]) .from,:is(.delta[data-el="rhetis-report-suite-delta"]) .to {font-size:var(--type-28);} :is(.delta[data-el="rhetis-report-suite-delta"]) .from::after {font-size:var(--type-24);margin-left:var(--gap-sm);} :is(.delta[data-el="rhetis-report-suite-delta"]) {gap:var(--gap-sm);}}

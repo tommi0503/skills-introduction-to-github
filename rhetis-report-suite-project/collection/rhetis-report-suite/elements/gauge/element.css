@@ -1,0 +1,7 @@
+:is(.meter[data-el="rhetis-report-suite-gauge"]) {display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 18px;align-content:center;align-items:center;gap:var(--gap-sm);position:relative;container-type:size;}
+:is(.meter[data-el="rhetis-report-suite-gauge"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.meter[data-el="rhetis-report-suite-gauge"]) .fig {font-size:var(--type-32);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--accent);}
+:is(.meter[data-el="rhetis-report-suite-gauge"])::before,:is(.meter[data-el="rhetis-report-suite-gauge"])::after {content:"";grid-area:2/1/3/3;height:18px;border-radius:999px;}
+:is(.meter[data-el="rhetis-report-suite-gauge"])::before {background:var(--surface-2);border:var(--stroke) solid var(--line);}
+:is(.meter[data-el="rhetis-report-suite-gauge"])::after {background:var(--accent);width:calc(var(--v)*1%);}
+@container (max-width:500px) or (max-height:150px) {:is(.meter[data-el="rhetis-report-suite-gauge"]) .name {font-size:var(--type-18);} :is(.meter[data-el="rhetis-report-suite-gauge"]) .fig {font-size:var(--type-24);} :is(.meter[data-el="rhetis-report-suite-gauge"]) {grid-template-rows:auto 12px;} :is(.meter[data-el="rhetis-report-suite-gauge"])::before,:is(.meter[data-el="rhetis-report-suite-gauge"])::after {height:12px;}}

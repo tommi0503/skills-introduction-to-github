@@ -1,0 +1,11 @@
+export const T=(x,y,w,h,text,size=24,extra={})=>({kind:'text',x,y,w,h,text,size,...extra});
+export const R=(x,y,w,h,fill='#fff',extra={})=>({kind:'rect',x,y,w,h,fill,...extra});
+export const C=(x,y,w,h,fill='#fff',extra={})=>({kind:'ellipse',x,y,w,h,fill,...extra});
+export const L=(x,y,x2,y2,color='#ccc',width=1,extra={})=>({kind:'line',x,y,w:x2-x,h:y2-y,color,strokeWidth:width,...extra});
+export const P=(x,y,w,h,label='사진 영역',extra={})=>({kind:'placeholder',x,y,w,h,fill:'#e5e5e5',label,...extra});
+export const I=(x,y,w,h,icon='Circle',color='#222',extra={})=>({kind:'icon',x,y,w,h,icon,color,...extra});
+export const Path=(x,y,w,h,d,extra={})=>({kind:'path',x,y,w,h,d,...extra});
+export const Chip=(x,y,w,h,text,fill='#eee',extra={})=>({kind:'chip',x,y,w,h,text,fill,size:18,...extra});
+export const Table=(x,y,w,h,rows,extra={})=>({kind:'table',x,y,w,h,rows,size:18,...extra});
+export const Bars=(x,y,w,h,values,labels,extra={})=>({kind:'bars',x,y,w,h,values,labels,...extra});
+export const Donut=(x,y,w,h,value,extra={})=>({kind:'donut',x,y,w,h,value,...extra});

@@ -1,0 +1,1 @@
+A composed team profile with a generous neutral portrait seat, a strong name and compact role copy. Thin card outlines and restrained spacing allow both a single expert profile and balanced teams of up to six people.

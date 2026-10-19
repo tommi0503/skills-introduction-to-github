@@ -1,0 +1,17 @@
+:is(.venn[data-el="rhetis-report-suite-venn"]) {min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink-2);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--mute);}
+
+:is(.venn[data-el="rhetis-report-suite-venn"]) {position:relative;display:flex;align-items:center;justify-content:center;padding:var(--gap);isolation:isolate;}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .set {width:320px;height:320px;flex:none;border-radius:50%;border:var(--stroke) solid var(--ink);background:color-mix(in srgb,var(--tone-1) 72%,transparent);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--gap-lg);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .set {color:var(--tone-1-ink);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .set + .set {color:var(--tone-3-ink);margin-left:calc(var(--gap-lg)*-2);background:color-mix(in srgb,var(--tone-3) 72%,transparent);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .set.on {color:var(--tone-2-ink);background:color-mix(in srgb,var(--tone-2) 76%,transparent);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .set:nth-child(3) {color:var(--tone-4-ink);background:color-mix(in srgb,var(--tone-4) 72%,transparent);}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .set .name {max-width:70%;}
+:is(.venn[data-el="rhetis-report-suite-venn"]) .core {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;min-width:80px;min-height:80px;padding:var(--gap-sm);border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center;}
+:is(.venn[data-el="rhetis-report-suite-venn"]):has(> .set:nth-child(3)) .set {width:280px;height:280px;}
+:is(.venn[data-el="rhetis-report-suite-venn"]):has(> .set:nth-child(3)) .set:nth-child(2) .name {transform:translateY(calc(var(--gap-lg)*-1.7));}
+@container (max-width:750px) {:is(.venn[data-el="rhetis-report-suite-venn"]) .set,:is(.venn[data-el="rhetis-report-suite-venn"]):has(> .set:nth-child(3)) .set {width:220px;height:220px;} :is(.venn[data-el="rhetis-report-suite-venn"]) .set + .set {margin-left:calc(var(--gap-lg)*-1.5);} :is(.venn[data-el="rhetis-report-suite-venn"]) .name {font-size:var(--type-18);} :is(.venn[data-el="rhetis-report-suite-venn"]) .core {min-width:64px;min-height:64px;font-size:var(--type-14);}}
+@container (max-width:450px) or (max-height:250px) {:is(.venn[data-el="rhetis-report-suite-venn"]) .set,:is(.venn[data-el="rhetis-report-suite-venn"]):has(> .set:nth-child(3)) .set {width:150px;height:150px;padding:var(--gap-sm);} :is(.venn[data-el="rhetis-report-suite-venn"]) .set + .set {margin-left:calc(var(--gap-lg)*-1.2);} :is(.venn[data-el="rhetis-report-suite-venn"]) .name {font-size:var(--type-14);} :is(.venn[data-el="rhetis-report-suite-venn"]) .core {min-width:50px;min-height:50px;font-size:var(--type-12);}}

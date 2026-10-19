@@ -1,0 +1,1 @@
+An editorial list with precise cobalt markers, generous line spacing and optional dividing rules. Tick and automatic numbering variants keep markers consistent while allowing the content to remain semantic.

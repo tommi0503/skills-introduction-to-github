@@ -1,0 +1,1 @@
+A layered service architecture with a strong cobalt experience layer and a sage shared foundation. Small centered component chips sit beside each layer name, supported by precise outlines and generous alignment.

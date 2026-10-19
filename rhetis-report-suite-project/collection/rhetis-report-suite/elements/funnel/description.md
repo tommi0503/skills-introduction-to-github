@@ -1,0 +1,1 @@
+A centered stepped funnel with measured widths and a consistent fine outline. Sage and pale blue lead into a cobalt final stage, making conversion and prioritization explicit without decorative effects.

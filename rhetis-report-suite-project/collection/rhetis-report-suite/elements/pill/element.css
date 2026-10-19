@@ -1,0 +1,17 @@
+:is(.pill[data-el="rhetis-report-suite-pill"]) {min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);}
+:is(.pill[data-el="rhetis-report-suite-pill"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.pill[data-el="rhetis-report-suite-pill"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink-2);}
+:is(.pill[data-el="rhetis-report-suite-pill"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--mute);}
+
+:is(.pill[data-el="rhetis-report-suite-pill"]) {display:flex;align-items:center;justify-content:center;align-self:center;justify-self:center;max-width:100%;background:var(--surface);border:var(--stroke) solid var(--line);border-radius:999px;padding:var(--gap-sm) var(--gap);}
+:is(.pill[data-el="rhetis-report-suite-pill"]) {container-type:normal;}
+:is(.pill[data-el="rhetis-report-suite-pill"]) .parts {display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);min-width:0;}
+:is(.pill[data-el="rhetis-report-suite-pill"]) .mark {display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:var(--type-14);font-weight:var(--label-weight);flex:none;}
+:is(.pill[data-el="rhetis-report-suite-pill"]) .name {font-size:var(--type-18);white-space:nowrap;}
+:is(.pill[data-el="rhetis-report-suite-pill"]) .note {font-size:var(--type-14);white-space:nowrap;}
+:is(.pill[data-el="rhetis-report-suite-pill"]).on {background:var(--accent);border-color:var(--accent);color:var(--accent-ink);}
+:is(.pill[data-el="rhetis-report-suite-pill"]).on :is(.name,.note) {color:var(--accent-ink);}
+:is(.pill[data-el="rhetis-report-suite-pill"]).quiet {background:var(--surface-2);border-color:var(--surface-2);}
+:is(.pill[data-el="rhetis-report-suite-pill"]).line {background:var(--page);border-color:var(--ink);}
+@container (max-width:500px) {:is(.pill[data-el="rhetis-report-suite-pill"]) .name {font-size:var(--type-16);} :is(.pill[data-el="rhetis-report-suite-pill"]) .note {font-size:var(--type-12);}}
+@container (max-width:300px) {:is(.pill[data-el="rhetis-report-suite-pill"]) .note {display:none;} :is(.pill[data-el="rhetis-report-suite-pill"]) .parts {gap:var(--gap-sm);}}

@@ -1,0 +1,1 @@
+Restrained pricing panels emphasize clear plan names, large cobalt prices and carefully aligned feature lists. A pale cobalt recommended plan is highlighted by its outline rather than a decorative badge.

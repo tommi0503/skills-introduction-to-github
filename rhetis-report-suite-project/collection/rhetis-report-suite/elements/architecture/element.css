@@ -1,0 +1,14 @@
+:is(.arch[data-el="rhetis-report-suite-architecture"]) {min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink-2);}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--mute);}
+
+:is(.arch[data-el="rhetis-report-suite-architecture"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .layer {display:flex;align-items:center;gap:var(--gap-sm);padding:var(--gap);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);background:var(--surface);flex:1;max-height:130px;min-height:0;}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .layer > .name {flex:1;min-width:0;}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .chip {display:flex;align-items:center;justify-content:center;text-align:center;min-width:14%;padding:var(--gap-sm);background:var(--surface-2);color:var(--ink);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .layer:first-child {background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .layer:first-child .chip {background:var(--accent-soft);color:var(--ink);}
+:is(.arch[data-el="rhetis-report-suite-architecture"]) .layer:last-child {background:var(--tone-3);color:var(--tone-3-ink);}
+@container (max-width:700px) or (max-height:350px) {:is(.arch[data-el="rhetis-report-suite-architecture"]) .layer {padding:var(--gap-sm);} :is(.arch[data-el="rhetis-report-suite-architecture"]) .name {font-size:var(--type-18);} :is(.arch[data-el="rhetis-report-suite-architecture"]) .chip {font-size:var(--type-14);padding:calc(var(--gap-sm)/2);}}
+@container (max-width:420px) {:is(.arch[data-el="rhetis-report-suite-architecture"]) .layer {flex-wrap:wrap;gap:calc(var(--gap-sm)/2);} :is(.arch[data-el="rhetis-report-suite-architecture"]) .layer > .name {flex-basis:100%;font-size:var(--type-14);} :is(.arch[data-el="rhetis-report-suite-architecture"]) .chip {font-size:var(--type-12);}}

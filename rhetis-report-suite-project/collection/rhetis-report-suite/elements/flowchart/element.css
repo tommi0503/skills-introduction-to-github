@@ -1,0 +1,21 @@
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) {min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink-2);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--mute);}
+
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:var(--gap);position:relative;padding:var(--gap);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node {position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--surface);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);padding:var(--gap-sm);font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);min-width:0;}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.start,:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.end {background:var(--accent);color:var(--accent-ink);border-color:var(--accent);border-radius:999px;}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.ask {background:var(--tone-2);color:var(--tone-2-ink);border-style:dashed;}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-r::after,:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-l::after {position:absolute;content:"";top:50%;height:var(--stroke);width:calc(100% + var(--gap)*2);background:var(--line);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-r::after {left:100%;clip-path:polygon(0 0,calc(100% - 6px) 0,calc(100% - 6px) -5px,100% 50%,calc(100% - 6px) 6px,calc(100% - 6px) 100%,0 100%);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-l::after {right:100%;}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-d::after,:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-u::after {position:absolute;content:"";left:50%;width:var(--stroke);height:calc(100% + var(--gap)*2);background:var(--line);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-d::after {top:100%;} :is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-u::after {bottom:100%;}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-r::before,:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-l::before,:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-d::before,:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-u::before {content:"";position:absolute;width:8px;height:8px;border-right:var(--stroke) solid var(--line);border-bottom:var(--stroke) solid var(--line);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-r::before {left:calc(200% + var(--gap)*2 - 8px);top:calc(50% - 4px);transform:rotate(-45deg);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-l::before {right:calc(200% + var(--gap)*2 - 8px);top:calc(50% - 4px);transform:rotate(135deg);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-d::before {top:calc(200% + var(--gap)*2 - 8px);left:calc(50% - 4px);transform:rotate(45deg);}
+:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node.to-u::before {bottom:calc(200% + var(--gap)*2 - 8px);left:calc(50% - 4px);transform:rotate(225deg);}
+@container (max-width:700px) or (max-height:350px) {:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) {gap:var(--gap-sm);padding:var(--gap-sm);} :is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node {font-size:var(--type-16);}}
+@container (max-width:450px) {:is(.flowchart[data-el="rhetis-report-suite-flowchart"]) .node {font-size:var(--type-12);padding:calc(var(--gap-sm)/2);}}

@@ -1,0 +1,10 @@
+:is(.legend[data-el="rhetis-report-suite-legend"]) {display:flex;align-items:center;justify-content:center;gap:var(--gap);flex-wrap:wrap;container-type:size;}
+:is(.legend[data-el="rhetis-report-suite-legend"]) .key {display:flex;align-items:center;gap:var(--gap-sm);font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--ink-2);}
+:is(.legend[data-el="rhetis-report-suite-legend"]) .key::before {content:"";display:block;width:16px;height:16px;border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);flex:none;}
+:is(.legend[data-el="rhetis-report-suite-legend"]) .key.tone-1::before {background:var(--tone-1);}
+:is(.legend[data-el="rhetis-report-suite-legend"]) .key.tone-2::before {background:var(--tone-2);}
+:is(.legend[data-el="rhetis-report-suite-legend"]) .key.tone-3::before {background:var(--tone-3);}
+:is(.legend[data-el="rhetis-report-suite-legend"]) .key.tone-4::before {background:var(--tone-4);}
+:is(.legend[data-el="rhetis-report-suite-legend"]) .key.tone-5::before {background:var(--tone-5);}
+
+@container (max-width:550px) {:is(.legend[data-el="rhetis-report-suite-legend"]) {gap:var(--gap-sm);} :is(.legend[data-el="rhetis-report-suite-legend"]) .key {font-size:var(--type-14);} :is(.legend[data-el="rhetis-report-suite-legend"]) .key::before {width:12px;height:12px;}}

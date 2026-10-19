@@ -1,0 +1,1 @@
+A fine outlined report card with strong numerical hierarchy, a compact section label and an optional square mark. Cobalt emphasis and five controlled palette surfaces provide useful variation without changing the card geometry.

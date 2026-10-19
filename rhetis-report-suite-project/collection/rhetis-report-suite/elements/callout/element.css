@@ -1,0 +1,6 @@
+:is(.callout[data-el="rhetis-report-suite-callout"]) {display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);border-top:var(--stroke) solid var(--ink);border-bottom:var(--stroke) solid var(--ink);background:var(--tone-2);color:var(--tone-2-ink);container-type:size;text-align:center;}
+:is(.callout[data-el="rhetis-report-suite-callout"]) p {font-size:var(--type-32);line-height:var(--lead-line);font-weight:var(--lead-weight);letter-spacing:var(--lead-track);max-width:90%;}
+:is(.callout[data-el="rhetis-report-suite-callout"]) b {font-weight:var(--title-weight);text-decoration:underline;text-decoration-thickness:var(--stroke);text-underline-offset:.2em;}
+:is(.callout[data-el="rhetis-report-suite-callout"]) .icon {display:grid;place-items:center;flex:none;width:44px;height:44px;border:var(--stroke) solid currentColor;border-radius:50%;font-size:var(--type-24);}
+@container (max-width:650px) or (max-height:220px) {:is(.callout[data-el="rhetis-report-suite-callout"]) p {font-size:var(--type-22);} :is(.callout[data-el="rhetis-report-suite-callout"]) {gap:var(--gap-sm);padding:var(--gap-sm);}}
+@container (max-width:350px) {:is(.callout[data-el="rhetis-report-suite-callout"]) p {font-size:var(--type-16);} :is(.callout[data-el="rhetis-report-suite-callout"]) .icon {width:28px;height:28px;font-size:var(--type-16);}}

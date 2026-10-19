@@ -1,0 +1,13 @@
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) {min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink-2);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--mute);}
+
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) {display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .stage {width:calc(var(--v)*1%);min-width:26%;flex:1;max-height:100px;display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);padding:var(--gap-sm) var(--gap);background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .stage:nth-child(even) {background:var(--tone-1);color:var(--tone-1-ink);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .stage:last-child {background:var(--accent);color:var(--accent-ink);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .stage:last-child .name {color:var(--accent-ink);}
+:is(.funnel[data-el="rhetis-report-suite-funnel"]) .fig {font-size:var(--type-32);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap;}
+@container (max-width:700px) or (max-height:350px) {:is(.funnel[data-el="rhetis-report-suite-funnel"]) .stage {padding:var(--gap-sm);} :is(.funnel[data-el="rhetis-report-suite-funnel"]) .name {font-size:var(--type-18);} :is(.funnel[data-el="rhetis-report-suite-funnel"]) .fig {font-size:var(--type-24);}}
+@container (max-width:420px) {:is(.funnel[data-el="rhetis-report-suite-funnel"]) .name {font-size:var(--type-14);} :is(.funnel[data-el="rhetis-report-suite-funnel"]) .fig {font-size:var(--type-18);} :is(.funnel[data-el="rhetis-report-suite-funnel"]) .stage {min-width:38%;}}

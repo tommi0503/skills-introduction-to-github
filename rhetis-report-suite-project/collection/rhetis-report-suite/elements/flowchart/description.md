@@ -1,0 +1,1 @@
+A grid aligned operational flow with slim connectors, rounded cobalt start and end points and pale yellow decision nodes. Neutral process rectangles keep branching logic explicit and usable in business reports.

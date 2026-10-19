@@ -1,0 +1,1 @@
+A clean report table with a cobalt header, subtle alternating rows and an optional pale yellow focus column. Numeric cells align consistently and fine horizontal rules keep dense information readable.
