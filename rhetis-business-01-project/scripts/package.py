@@ -27,7 +27,8 @@ summary=[];summary.append(zip_files(out/'rhetis-business-01.zip',[(p,p.relative_
 render_files=[]
 for folder in ['renders/final','comparisons/final','review/collection']:
  render_files.extend((p,p.relative_to(P).as_posix()) for p in sorted((P/folder).rglob('*')) if p.is_file())
-for p in sorted((P/'review').rglob('*.json')):render_files.append((p,p.relative_to(P).as_posix()))
+for p in sorted((P/'review').rglob('*.json')):
+ if p.name!='github-download-verification.json':render_files.append((p,p.relative_to(P).as_posix()))
 render_files.append((P/'review/input-inventory.csv','review/input-inventory.csv'))
 for p in sorted(out.glob('*.jpg')):render_files.append((p,p.name))
 for p in sorted(out.glob('*.pdf')):render_files.append((p,p.name))
@@ -38,6 +39,9 @@ summary.append(zip_files(out/'rhetis-business-01-renders.zip',render_files))
 source_files=[]
 for folder in ['src','scripts','contract','tools','public','rhetis-business-01']:
  source_files.extend((p,'rhetis-business-01-project/'+p.relative_to(P).as_posix()) for p in sorted((P/folder).rglob('*')) if p.is_file())
+for p in sorted((P/'review').glob('*')):
+ if p.is_file() and p.suffix in ('.json','.md','.csv') and p.name!='github-download-verification.json':source_files.append((p,'rhetis-business-01-project/'+p.relative_to(P).as_posix()))
+for p in sorted((P/'review/final').glob('*.json')):source_files.append((p,'rhetis-business-01-project/'+p.relative_to(P).as_posix()))
 for name in ['.gitignore','index.html','package.json','package-lock.json','README.md','light.html','dark.html']:
  p=P/name;source_files.append((p,'rhetis-business-01-project/'+name))
 summary.append(zip_files(out/'rhetis-business-01-source.zip',source_files))
