@@ -1,0 +1,3 @@
+import {renderSlide} from './ui/renderer.js';
+const q=new URLSearchParams(location.search),deck=q.get('deck')||'048',mode=q.get('mode')||'direct';
+try {if(mode==='assembled'){const css=await(await fetch('./library.css')).text();const st=document.createElement('style');st.textContent=css;document.head.insertBefore(st,document.querySelector('link'));}const {slides}=await import(`./decks/d${deck}.js`);const wanted=q.get('slide');const chosen=wanted?slides.filter(s=>s.id===wanted||s.id===`${deck}-${wanted.padStart(2,'0')}`):slides;document.querySelector('#app').innerHTML=chosen.map(s=>renderSlide(s,mode)).join('');window.__slides=slides;window.__ready=true;document.body.dataset.ready='true';}catch(e){document.body.textContent=e.stack;window.__error=e.stack;}

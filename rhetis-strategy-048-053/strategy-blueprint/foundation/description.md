@@ -1,0 +1,1 @@
+A 12 by 6 analytical page with a fine headline rule, generous breathing space, restrained navy page furniture and pale blue seats. Optional vertical chapter rail and minimal geometric cover carry the identity without photographic assets.
