@@ -1,0 +1,64 @@
+:is(.hub[data-el="studio-spectrum-hub"]) { container-type:size; min-width:0; min-height:0; }
+:is(.hub[data-el="studio-spectrum-hub"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.hub[data-el="studio-spectrum-hub"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.hub[data-el="studio-spectrum-hub"]) :is(.name,.note) { margin:0; }
+
+:is(.hub[data-el="studio-spectrum-hub"]) { position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap); padding:var(--gap); }
+:is(.hub[data-el="studio-spectrum-hub"]) > .core { grid-column:2; grid-row:2; display:flex; align-items:center; justify-content:center; text-align:center; border-radius:50%; border:var(--stroke) solid var(--accent); color:var(--accent); background:var(--accent-soft); padding:var(--gap-sm); font-size:var(--type-24); font-weight:var(--name-weight); z-index:2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:calc(var(--gap-sm)/2); background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); padding:var(--gap-sm); font-size:var(--type-22); z-index:1; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(2) { grid-area:1/2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(3) { grid-area:1/3; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(4) { grid-area:3/3; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(5) { grid-area:3/2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(6) { grid-area:3/1; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(7) { grid-area:1/1; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .mark { font-size:var(--type-14); color:var(--accent); }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .name { font-size:var(--type-20); }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .note { font-size:var(--type-14); }
+@container (max-width:650px) { :is(.hub[data-el="studio-spectrum-hub"]) > .core { font-size:var(--type-18); } :is(.hub[data-el="studio-spectrum-hub"]) > .spoke, :is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .name { font-size:var(--type-16); } :is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .note { font-size:var(--type-12); } }
+@container (max-width:420px) { :is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .note { display:none; } }
+
+:is(.hub[data-el="studio-spectrum-hub"])::before { content:""; position:absolute; top:17%; bottom:17%; left:50%; width:var(--stroke); background:var(--line); }
+:is(.hub[data-el="studio-spectrum-hub"])::after { content:""; position:absolute; inset:17% 17%; background:linear-gradient(to bottom right,var(--page) calc(50% - 1px),var(--line) 50%,var(--page) calc(50% + 1px)); }
+
+:is(.hub[data-el="studio-spectrum-hub"]) > .core { position:absolute; grid-area:auto; left:38%; top:37%; width:24%; height:26%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(n) { position:absolute; grid-area:auto; width:26%; height:26%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(2) { left:37%; top:0; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(3) { left:74%; top:37%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(4) { left:37%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(5) { left:0; top:37%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(3) { left:68%; top:70%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(4) { left:6%; top:70%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(3) { left:74%; top:24%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(4) { left:61%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(5) { left:13%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(6) { left:0; top:24%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(2) { left:16%; top:0; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(3) { left:58%; top:0; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(4) { left:74%; top:37%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(5) { left:58%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(6) { left:16%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(7) { left:0; top:37%; }
+
+:is(.hub[data-el="studio-spectrum-hub"]) { padding:0; }
+:is(.hub[data-el="studio-spectrum-hub"])::before, :is(.hub[data-el="studio-spectrum-hub"])::after { content:none; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke::before { content:""; position:absolute; left:50%; top:50%; width:hypot(calc((50 - var(--studio-spectrum-x))*1cqw),calc((50 - var(--studio-spectrum-y))*1cqh)); height:var(--stroke); background:var(--line); transform-origin:0 0; transform:rotate(atan2(calc((50 - var(--studio-spectrum-y))*1cqh),calc((50 - var(--studio-spectrum-x))*1cqw))); z-index:-2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke::after { content:""; position:absolute; inset:0; background:var(--surface); border-radius:var(--radius); z-index:-1; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:50; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:81; --studio-spectrum-y:83; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:19; --studio-spectrum-y:83; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:50; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:87; --studio-spectrum-y:50; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:50; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(5) { --studio-spectrum-x:13; --studio-spectrum-y:50; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:50; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:87; --studio-spectrum-y:37; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:74; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(5) { --studio-spectrum-x:26; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(6) { --studio-spectrum-x:13; --studio-spectrum-y:37; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:29; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:71; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:87; --studio-spectrum-y:50; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(5) { --studio-spectrum-x:71; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(6) { --studio-spectrum-x:29; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(7) { --studio-spectrum-x:13; --studio-spectrum-y:50; }

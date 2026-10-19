@@ -1,0 +1,13 @@
+:is(.funnel[data-el="studio-spectrum-funnel"]) { container-type:size; min-width:0; min-height:0; }
+:is(.funnel[data-el="studio-spectrum-funnel"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.funnel[data-el="studio-spectrum-funnel"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) :is(.fig,.name) { margin:0; }
+
+:is(.funnel[data-el="studio-spectrum-funnel"]) { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:var(--gap-sm); padding:var(--gap); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage { display:flex; justify-content:space-between; align-items:center; gap:var(--gap-sm); min-width:24%; width:calc(var(--v)*1%); flex:1; max-height:calc(var(--gap-lg)*2); padding:var(--gap-sm) var(--pad); background:var(--accent-soft); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage:last-child { background:var(--accent); color:var(--accent-ink); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .fig { font-size:var(--type-28); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .name { font-size:var(--type-22); }
+@container (max-width:650px) { :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .name { font-size:var(--type-18); } :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .fig { font-size:var(--type-22); } }
+@container (max-width:420px) { :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .name { font-size:var(--type-14); } :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .fig { font-size:var(--type-18); } }

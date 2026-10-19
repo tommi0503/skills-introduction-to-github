@@ -1,0 +1,12 @@
+:is(.versus[data-el="studio-spectrum-versus"]) { container-type:size; min-width:0; min-height:0; }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.versus[data-el="studio-spectrum-versus"]) :is(.name) { margin:0; }
+
+:is(.versus[data-el="studio-spectrum-versus"]) { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:stretch; gap:var(--gap); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side { padding:var(--pad); border-top:var(--stroke) solid var(--line); background:var(--surface); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side.on { background:var(--accent-soft); border-top-color:var(--accent); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-32); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side > .list { flex:1; min-height:0; }
+:is(.versus[data-el="studio-spectrum-versus"]) > .vs { align-self:center; font-size:var(--type-18); font-weight:var(--label-weight); color:var(--mute); }
+@container (max-width:700px) { :is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-24); } }
+@container (max-width:450px) { :is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-18); } }

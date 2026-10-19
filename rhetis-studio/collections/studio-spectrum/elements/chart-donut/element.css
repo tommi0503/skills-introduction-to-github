@@ -1,0 +1,15 @@
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) { container-type:size; min-width:0; min-height:0; }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) :is(.fig,.name) { margin:0; }
+
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--gap-sm); min-height:0; padding:var(--gap); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut::before { content:""; position:absolute; width:min(74%,340px); aspect-ratio:1; border-radius:50%; background:conic-gradient(var(--accent) calc(var(--v)*1%),var(--surface-2) 0);  }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut::after { content:""; position:absolute; width:min(54%,248px); aspect-ratio:1; border-radius:50%; background:var(--page); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .fig { z-index:1; font-size:var(--type-64); color:var(--accent); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .name { z-index:1; font-size:var(--type-18); text-align:center; max-width:60%; }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donuts { display:flex; gap:var(--gap); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donuts > .donut { flex:1; min-width:0; }
+@container (max-width:420px) { :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .fig { font-size:var(--type-40); } :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .name { font-size:var(--type-14); } }
+@container (max-width:250px) { :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .fig { font-size:var(--type-28); } :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .name { font-size:var(--type-12); } }

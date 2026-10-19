@@ -1,0 +1,24 @@
+:is(.lines[data-el="studio-spectrum-chart-line"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.lines[data-el="studio-spectrum-chart-line"]) { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr) auto; padding:var(--gap-lg) var(--gap) var(--gap); position:relative; isolation:isolate; anchor-scope:all; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt { display:contents; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > b { position:relative; grid-row:1; align-self:end; height:calc((100% - var(--gap-lg))*var(--v)/var(--max)); display:flex; justify-content:center; align-items:flex-start; anchor-name:var(--studio-spectrum-self); font-size:var(--type-22); font-weight:var(--figure-weight); line-height:var(--figure-line); color:var(--accent); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > b::after { content:""; position:absolute; top:calc(var(--gap-sm)*2); width:8px; height:8px; border-radius:50%; background:var(--accent); border:var(--stroke) solid var(--page); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > span { grid-row:2; border-top:var(--stroke) solid var(--line); padding-top:var(--gap-sm); font-size:var(--type-16); color:var(--mute); text-align:center; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::before, :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::after { content:""; position:absolute; left:anchor(var(--studio-spectrum-prev) center); right:anchor(var(--studio-spectrum-self) center); pointer-events:none; z-index:-1; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::before { top:calc(anchor(var(--studio-spectrum-prev) top) + var(--gap-sm)*2 + 3px); bottom:calc(anchor(var(--studio-spectrum-self) top) - var(--gap-sm)*2 - 5px); background:linear-gradient(to top right, var(--page) calc(50% - 1px), var(--accent) 50%, var(--page) calc(50% + 1px)); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::after { top:calc(anchor(var(--studio-spectrum-self) top) + var(--gap-sm)*2 + 3px); bottom:calc(anchor(var(--studio-spectrum-prev) top) - var(--gap-sm)*2 - 5px); background:linear-gradient(to bottom right, var(--page) calc(50% - 1px), var(--accent) 50%, var(--page) calc(50% + 1px)); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:first-child::before, :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:first-child::after { content:none; }
+@container (max-width:600px) { :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > b { font-size:var(--type-16); } :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > span { font-size:var(--type-12); } }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(1) { --studio-spectrum-self:--spectrum-point-1; --studio-spectrum-prev:--spectrum-point-1; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(2) { --studio-spectrum-self:--spectrum-point-2; --studio-spectrum-prev:--spectrum-point-1; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(3) { --studio-spectrum-self:--spectrum-point-3; --studio-spectrum-prev:--spectrum-point-2; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(4) { --studio-spectrum-self:--spectrum-point-4; --studio-spectrum-prev:--spectrum-point-3; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(5) { --studio-spectrum-self:--spectrum-point-5; --studio-spectrum-prev:--spectrum-point-4; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(6) { --studio-spectrum-self:--spectrum-point-6; --studio-spectrum-prev:--spectrum-point-5; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(7) { --studio-spectrum-self:--spectrum-point-7; --studio-spectrum-prev:--spectrum-point-6; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(8) { --studio-spectrum-self:--spectrum-point-8; --studio-spectrum-prev:--spectrum-point-7; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(9) { --studio-spectrum-self:--spectrum-point-9; --studio-spectrum-prev:--spectrum-point-8; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(10) { --studio-spectrum-self:--spectrum-point-10; --studio-spectrum-prev:--spectrum-point-9; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(11) { --studio-spectrum-self:--spectrum-point-11; --studio-spectrum-prev:--spectrum-point-10; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(12) { --studio-spectrum-self:--spectrum-point-12; --studio-spectrum-prev:--spectrum-point-11; }

@@ -1,0 +1,19 @@
+:is(.bars[data-el="studio-spectrum-chart-bar"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.bars[data-el="studio-spectrum-chart-bar"]) { display:flex; align-items:stretch; justify-content:space-around; gap:var(--gap); padding:var(--gap-lg) var(--gap) var(--gap); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar { position:relative; flex:1; min-width:0; border-bottom:var(--stroke) solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:var(--gap-lg); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar::before { content:""; position:absolute; width:64%; height:calc((100% - var(--gap-lg)*2)*var(--v)/var(--max)); bottom:var(--gap-lg); background:var(--accent-soft); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.on::before, :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-1::before { background:var(--tone-1); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-2::before { background:var(--tone-2); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-3::before { background:var(--tone-3); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-4::before { background:var(--tone-4); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-5::before { background:var(--tone-5); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > b { position:absolute; bottom:calc(var(--gap-lg) + (100% - var(--gap-lg)*2)*var(--v)/var(--max)); padding-bottom:var(--gap-sm); font-size:var(--type-24); font-weight:var(--figure-weight); line-height:var(--figure-line); white-space:nowrap; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > span { position:absolute; bottom:calc(var(--gap-sm)/2); font-size:var(--type-16); color:var(--mute); line-height:var(--label-line); text-align:center; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h { flex-direction:column; padding:var(--gap); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar { border-bottom:none; padding:0; min-height:var(--gap-lg); align-items:flex-start; justify-content:center; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar::before { left:calc(var(--gap-lg)*3); bottom:20%; height:60%; width:calc((100% - var(--gap-lg)*5)*var(--v)/var(--max)); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar > span { position:relative; bottom:auto; max-width:calc(var(--gap-lg)*2.5); text-align:left; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar > b { bottom:auto; left:calc(var(--gap-lg)*3.2 + (100% - var(--gap-lg)*5)*var(--v)/var(--max)); padding:0; }
+@container (max-width:600px) { :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > b { font-size:var(--type-18); } :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > span { font-size:var(--type-14); } }
+@container (max-width:360px) { :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > b { font-size:var(--type-14); } :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > span { font-size:var(--type-12); } }

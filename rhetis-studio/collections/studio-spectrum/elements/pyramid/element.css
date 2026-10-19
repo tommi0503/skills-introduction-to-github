@@ -1,0 +1,16 @@
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) { container-type:size; min-width:0; min-height:0; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) :is(.name,.note) { margin:0; }
+
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:calc(var(--gap-sm)/2); padding:var(--gap); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level { width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:calc(var(--gap-sm)/2); flex:1; max-height:calc(var(--gap-lg)*2.5); background:var(--surface); border-bottom:var(--stroke) solid var(--line); padding:var(--gap-sm) var(--pad); text-align:center; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(1) { width:38%; background:var(--accent); color:var(--accent-ink); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(1) > .note { color:var(--accent-ink); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(2) { width:54%; background:var(--accent-soft); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(3) { width:70%; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(4) { width:86%; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .name { font-size:var(--type-22); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .note { font-size:var(--type-16); }
+@container (max-width:650px) { :is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .name { font-size:var(--type-18); } :is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .note { font-size:var(--type-14); } }
+@container (max-height:300px) { :is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .note { display:none; } }

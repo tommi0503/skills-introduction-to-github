@@ -1,0 +1,24 @@
+:is(.card[data-el="studio-spectrum-card"]) { container-type:size; min-width:0; min-height:0; }
+:is(.card[data-el="studio-spectrum-card"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="studio-spectrum-card"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.card[data-el="studio-spectrum-card"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.card[data-el="studio-spectrum-card"]) .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.card[data-el="studio-spectrum-card"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.card[data-el="studio-spectrum-card"]) :is(.fig,.kick,.name,.note) { margin:0; }
+
+:is(.card[data-el="studio-spectrum-card"]) { display:flex; background:var(--surface); border-radius:var(--radius); border-top:2px solid var(--accent); padding:var(--pad); }
+:is(.card[data-el="studio-spectrum-card"]) > .parts { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); width:100%; }
+:is(.card[data-el="studio-spectrum-card"]) > .parts > .mark { align-self:flex-end; color:var(--accent); font-size:var(--type-30); }
+:is(.card[data-el="studio-spectrum-card"]) > .parts > .fig { margin-top:auto; font-size:var(--type-80); }
+:is(.card[data-el="studio-spectrum-card"]).on { background:var(--accent); color:var(--accent-ink); }
+:is(.card[data-el="studio-spectrum-card"]).on :is(.kick,.note,.mark) { color:var(--accent-ink); }
+:is(.card[data-el="studio-spectrum-card"]).quiet { background:var(--page); border-top-color:var(--line); }
+:is(.card[data-el="studio-spectrum-card"]).line { background:var(--page); border:var(--stroke) solid var(--line); }
+:is(.card[data-el="studio-spectrum-card"]).tone-1 { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-2 { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-3 { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-4 { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-5 { background:var(--tone-5); color:var(--tone-5-ink); }
+:is(.card[data-el="studio-spectrum-card"]):is(.tone-1,.tone-2,.tone-3,.tone-4,.tone-5) :is(.kick,.note,.mark) { color:inherit; }
+@container (max-width:560px) { :is(.card[data-el="studio-spectrum-card"]) > .parts > .fig { font-size:var(--type-52); } :is(.card[data-el="studio-spectrum-card"]) > .parts > .name { font-size:var(--type-22); } }
+@container (max-height:220px) { :is(.card[data-el="studio-spectrum-card"]) > .parts { gap:calc(var(--gap-sm)/2); } :is(.card[data-el="studio-spectrum-card"]) > .parts > .fig { font-size:var(--type-40); } :is(.card[data-el="studio-spectrum-card"]) > .parts > .mark { display:none; } }
