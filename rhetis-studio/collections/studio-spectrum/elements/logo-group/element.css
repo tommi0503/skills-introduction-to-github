@@ -1,0 +1,6 @@
+:is(.logos[data-el="studio-spectrum-logo-group"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.logos[data-el="studio-spectrum-logo-group"]) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-content:center; gap:var(--gap-lg); padding:var(--pad); border-top:var(--stroke) solid var(--line); border-bottom:var(--stroke) solid var(--line); }
+:is(.logos[data-el="studio-spectrum-logo-group"]):has(> :nth-child(7)) { grid-template-columns:repeat(4,minmax(0,1fr)); }
+:is(.logos[data-el="studio-spectrum-logo-group"]) > .seat.logo { width:100%; aspect-ratio:3/1; background:var(--surface); }
+@container (max-width:650px) { :is(.logos[data-el="studio-spectrum-logo-group"]) > .seat.logo { aspect-ratio:2/1; } }

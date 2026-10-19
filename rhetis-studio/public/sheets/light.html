@@ -1,0 +1,776 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>Studio Spectrum sheet</title><style>/* foundation */
+.slide, .slide * { box-sizing: border-box; }
+.slide { position:relative; width:1280px; height:720px; overflow:hidden; background:var(--page); color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); word-break:keep-all; overflow-wrap:anywhere; -webkit-font-smoothing:antialiased; }
+.slide :is(h1,h2,h3,h4,p,blockquote,ul,ol) { margin:0; }
+.slide > .page { position:absolute; inset:var(--margin-y) var(--margin-x); display:flex; flex-direction:column; gap:var(--gap-lg); }
+.slide:has(> .top) > .page { top:calc(var(--furn-edge) + var(--top-h) + var(--furn-gap)); }
+.slide:has(> .foot) > .page { bottom:calc(var(--furn-edge) + var(--foot-h) + var(--furn-gap)); }
+.slide:has(> .rail) > .page { left:calc(var(--rail-w) + var(--rail-gap)); }
+.slide .head { display:flex; flex-direction:column; gap:var(--gap-sm); flex:none; }
+.slide .head.center { align-items:center; text-align:center; }
+.slide .kicker { color:var(--accent); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track-latin); }
+.slide .title { font-family:var(--font-display); font-size:var(--type-48); font-weight:var(--title-weight); line-height:var(--title-line); letter-spacing:var(--title-track); }
+.slide .lead { font-size:var(--type-20); font-weight:var(--lead-weight); line-height:var(--lead-line); letter-spacing:var(--lead-track); color:var(--ink-2); }
+.slide .body { flex:1; min-height:0; display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(6,minmax(0,1fr)); gap:var(--gap); }
+.slide :is(.body,.group,.stack,.split) > * { min-width:0; min-height:0; }
+.slide .group { display:flex; gap:var(--gap); }
+.slide .group > * { flex:1 1 0; }
+.slide .group.col { flex-direction:column; }
+.slide .group.two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.slide .group.three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.slide .stack { display:flex; flex-direction:column; gap:var(--gap-sm); }
+.slide .split { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:var(--gap); }
+.slide .split.wide-left { grid-template-columns:minmax(0,7fr) minmax(0,5fr); }
+.slide .icon { display:inline-flex; width:1em; height:1em; flex:none; align-items:center; justify-content:center; }
+.slide .icon svg { width:100%; height:100%; display:block; }
+.slide > :is(.top,.foot,.rail) { position:absolute; color:var(--mute); font-size:var(--type-12); font-weight:var(--label-weight); letter-spacing:var(--label-track); line-height:var(--label-line); }
+.slide > :is(.top,.foot) { left:var(--margin-x); right:var(--margin-x); display:flex; align-items:center; gap:var(--gap); }
+.slide > .top { top:var(--furn-edge); height:var(--top-h); border-bottom:var(--stroke) solid var(--line); }
+.slide > .foot { bottom:var(--furn-edge); height:var(--foot-h); border-top:var(--stroke) solid var(--line); }
+.slide > :is(.top,.foot) > :is(.sec,.src) { margin-left:auto; }
+.slide > .foot > .no { color:var(--ink); font-variant-numeric:tabular-nums; }
+.slide > .rail { inset:0 auto 0 0; width:var(--rail-w); border-right:var(--stroke) solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--gap); }
+.slide > .rail > .on { color:var(--accent); }
+.slide > .rail > .label { writing-mode:vertical-rl; }
+.slide.cover > .page { display:grid; grid-template:1fr/1fr; }
+.slide.cover .page > * { grid-area:1/1; min-width:0; }
+.slide.cover .lockup { z-index:2; align-self:center; justify-self:start; display:flex; flex-direction:column; gap:var(--gap); max-width:74%; }
+.slide.cover .lockup.at-center { justify-self:center; text-align:center; align-items:center; }
+.slide.cover .lockup.at-top-left { align-self:start; }
+.slide.cover .lockup.at-bottom-left { align-self:end; }
+.slide.cover .lockup .title { font-size:var(--type-92); }
+.slide.cover .lockup .lead { max-width:36em; }
+.slide.cover .meta { z-index:2; align-self:end; font-size:var(--type-14); color:var(--mute); }
+.slide.cover:has(.at-bottom-left) .meta { align-self:start; }
+.slide.cover .deco { width:440px; height:440px; border-radius:50% 0 0 0; border:var(--stroke) solid var(--line); background:radial-gradient(ellipse at 82% 24%,var(--tone-4) 0,var(--accent-soft) 46%,var(--page) 88%); justify-self:end; align-self:end; }
+.slide .seat { display:flex; align-items:center; justify-content:center; min-width:0; min-height:0; background:var(--surface-2); color:var(--mute); border-radius:var(--radius-sm); overflow:hidden; }
+.slide .seat[data-ph]::after { content:attr(data-ph); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.slide .body > .seat { width:100%; height:100%; }
+.slide .seat.avatar { aspect-ratio:1; border-radius:50%; }
+.slide .seat.portrait { aspect-ratio:4/5; }
+.slide .seat.logo { aspect-ratio:3/1; }
+.slide .seat.back { position:absolute; inset:0; z-index:0; }
+/* agenda */
+:is(.agenda[data-el="studio-spectrum-agenda"]) { container-type:size; min-width:0; min-height:0; }
+:is(.agenda[data-el="studio-spectrum-agenda"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.agenda[data-el="studio-spectrum-agenda"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.agenda[data-el="studio-spectrum-agenda"]) :is(.name,.note) { margin:0; }
+
+:is(.agenda[data-el="studio-spectrum-agenda"]) { display:flex; flex-direction:column; justify-content:center; }
+:is(.agenda[data-el="studio-spectrum-agenda"]) > .entry { display:grid; grid-template-columns:var(--gap-lg) minmax(0,1fr) minmax(0,1fr); gap:var(--gap); align-items:center; border-top:var(--stroke) solid var(--line); padding:var(--gap) var(--gap-sm); }
+:is(.agenda[data-el="studio-spectrum-agenda"]) > .entry:last-child { border-bottom:var(--stroke) solid var(--line); }
+:is(.agenda[data-el="studio-spectrum-agenda"]):has(> .entry:nth-child(8)) > .entry { padding:var(--gap-sm); }
+:is(.agenda[data-el="studio-spectrum-agenda"]):has(> .entry:nth-child(8)) > .entry > .name { font-size:var(--type-20); }
+:is(.agenda[data-el="studio-spectrum-agenda"]):has(> .entry:nth-child(8)) > .entry > .note { font-size:var(--type-14); }
+:is(.agenda[data-el="studio-spectrum-agenda"]) > .entry.on { background:var(--accent-soft); color:var(--accent); }
+:is(.agenda[data-el="studio-spectrum-agenda"]) > .entry > .mark { font-size:var(--type-16); color:var(--mute); font-weight:var(--label-weight); }
+:is(.agenda[data-el="studio-spectrum-agenda"]) > .entry > .name { font-size:var(--type-26); }
+:is(.agenda[data-el="studio-spectrum-agenda"]) > .entry > .note { font-size:var(--type-16); }
+@container (max-width:700px) { :is(.agenda[data-el="studio-spectrum-agenda"]) > .entry > .name { font-size:var(--type-20); } :is(.agenda[data-el="studio-spectrum-agenda"]) > .entry > .note { font-size:var(--type-14); } }
+@container (max-width:400px) { :is(.agenda[data-el="studio-spectrum-agenda"]) > .entry > .note { display:none; } }
+@container (max-height:420px) { :is(.agenda[data-el="studio-spectrum-agenda"]) > .entry { padding:var(--gap-sm); } :is(.agenda[data-el="studio-spectrum-agenda"]) > .entry > .name { font-size:var(--type-20); } }
+/* architecture */
+:is(.arch[data-el="studio-spectrum-architecture"]) { container-type:size; min-width:0; min-height:0; }
+:is(.arch[data-el="studio-spectrum-architecture"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.arch[data-el="studio-spectrum-architecture"]) :is(.name) { margin:0; }
+
+:is(.arch[data-el="studio-spectrum-architecture"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); }
+:is(.arch[data-el="studio-spectrum-architecture"]) > .layer { display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; gap:var(--gap-sm); padding:var(--gap); background:var(--surface); border-left:2px solid var(--accent); border-bottom:var(--stroke) solid var(--line); }
+:is(.arch[data-el="studio-spectrum-architecture"]) > .layer > .name { flex:0 0 22%; font-size:var(--type-22); }
+:is(.arch[data-el="studio-spectrum-architecture"]) > .layer > .chip { display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--gap-sm) var(--gap); background:var(--page); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); font-size:var(--type-16); line-height:var(--label-line); }
+@container (max-width:700px) { :is(.arch[data-el="studio-spectrum-architecture"]) > .layer { padding:var(--gap-sm); } :is(.arch[data-el="studio-spectrum-architecture"]) > .layer > .name { font-size:var(--type-18); flex-basis:100%; } :is(.arch[data-el="studio-spectrum-architecture"]) > .layer > .chip { font-size:var(--type-14); padding:calc(var(--gap-sm)/2) var(--gap-sm); } }
+@container (max-height:300px) { :is(.arch[data-el="studio-spectrum-architecture"]) > .layer { padding:var(--gap-sm); } :is(.arch[data-el="studio-spectrum-architecture"]) > .layer > .chip { padding:calc(var(--gap-sm)/2) var(--gap-sm); } }
+/* callout */
+:is(.callout[data-el="studio-spectrum-callout"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.callout[data-el="studio-spectrum-callout"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap); padding:var(--pad); background:var(--accent-soft); border-left:2px solid var(--accent); border-radius:var(--radius-sm); }
+:is(.callout[data-el="studio-spectrum-callout"]) > p { max-width:34em; font-size:var(--type-32); line-height:var(--lead-line); letter-spacing:var(--lead-track); }
+:is(.callout[data-el="studio-spectrum-callout"]) > p b { color:var(--accent); font-weight:var(--name-weight); }
+:is(.callout[data-el="studio-spectrum-callout"]) > .icon { font-size:var(--type-40); color:var(--accent); }
+@container (max-width:600px) { :is(.callout[data-el="studio-spectrum-callout"]) > p { font-size:var(--type-24); } :is(.callout[data-el="studio-spectrum-callout"]) > .icon { font-size:var(--type-28); } }
+@container (max-width:360px) { :is(.callout[data-el="studio-spectrum-callout"]) > p { font-size:var(--type-20); } }
+/* card */
+:is(.card[data-el="studio-spectrum-card"]) { container-type:size; min-width:0; min-height:0; }
+:is(.card[data-el="studio-spectrum-card"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="studio-spectrum-card"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.card[data-el="studio-spectrum-card"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.card[data-el="studio-spectrum-card"]) .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.card[data-el="studio-spectrum-card"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.card[data-el="studio-spectrum-card"]) :is(.fig,.kick,.name,.note) { margin:0; }
+
+:is(.card[data-el="studio-spectrum-card"]) { display:flex; background:var(--surface); border-radius:var(--radius); border-top:2px solid var(--accent); padding:var(--pad); }
+:is(.card[data-el="studio-spectrum-card"]) > .parts { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); width:100%; }
+:is(.card[data-el="studio-spectrum-card"]) > .parts > .mark { align-self:flex-end; color:var(--accent); font-size:var(--type-30); }
+:is(.card[data-el="studio-spectrum-card"]) > .parts > .fig { margin-top:auto; font-size:var(--type-80); }
+:is(.card[data-el="studio-spectrum-card"]).on { background:var(--accent); color:var(--accent-ink); }
+:is(.card[data-el="studio-spectrum-card"]).on :is(.kick,.note,.mark) { color:var(--accent-ink); }
+:is(.card[data-el="studio-spectrum-card"]).quiet { background:var(--page); border-top-color:var(--line); }
+:is(.card[data-el="studio-spectrum-card"]).line { background:var(--page); border:var(--stroke) solid var(--line); }
+:is(.card[data-el="studio-spectrum-card"]).tone-1 { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-2 { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-3 { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-4 { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.card[data-el="studio-spectrum-card"]).tone-5 { background:var(--tone-5); color:var(--tone-5-ink); }
+:is(.card[data-el="studio-spectrum-card"]):is(.tone-1,.tone-2,.tone-3,.tone-4,.tone-5) :is(.kick,.note,.mark) { color:inherit; }
+@container (max-width:560px) { :is(.card[data-el="studio-spectrum-card"]) > .parts > .fig { font-size:var(--type-52); } :is(.card[data-el="studio-spectrum-card"]) > .parts > .name { font-size:var(--type-22); } }
+@container (max-height:220px) { :is(.card[data-el="studio-spectrum-card"]) > .parts { gap:calc(var(--gap-sm)/2); } :is(.card[data-el="studio-spectrum-card"]) > .parts > .fig { font-size:var(--type-40); } :is(.card[data-el="studio-spectrum-card"]) > .parts > .mark { display:none; } }
+/* chart-bar */
+:is(.bars[data-el="studio-spectrum-chart-bar"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.bars[data-el="studio-spectrum-chart-bar"]) { display:flex; align-items:stretch; justify-content:space-around; gap:var(--gap); padding:var(--gap-lg) var(--gap) var(--gap); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar { position:relative; flex:1; min-width:0; border-bottom:var(--stroke) solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:var(--gap-lg); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar::before { content:""; position:absolute; width:64%; height:calc((100% - var(--gap-lg)*2)*var(--v)/var(--max)); bottom:var(--gap-lg); background:var(--accent-soft); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.on::before, :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-1::before { background:var(--tone-1); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-2::before { background:var(--tone-2); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-3::before { background:var(--tone-3); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-4::before { background:var(--tone-4); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar.tone-5::before { background:var(--tone-5); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > b { position:absolute; bottom:calc(var(--gap-lg) + (100% - var(--gap-lg)*2)*var(--v)/var(--max)); padding-bottom:var(--gap-sm); font-size:var(--type-24); font-weight:var(--figure-weight); line-height:var(--figure-line); white-space:nowrap; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > span { position:absolute; bottom:calc(var(--gap-sm)/2); font-size:var(--type-16); color:var(--mute); line-height:var(--label-line); text-align:center; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h { flex-direction:column; padding:var(--gap); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar { border-bottom:none; padding:0; min-height:var(--gap-lg); align-items:flex-start; justify-content:center; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar::before { left:calc(var(--gap-lg)*3); bottom:20%; height:60%; width:calc((100% - var(--gap-lg)*5)*var(--v)/var(--max)); }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar > span { position:relative; bottom:auto; max-width:calc(var(--gap-lg)*2.5); text-align:left; }
+:is(.bars[data-el="studio-spectrum-chart-bar"]).h > .bar > b { bottom:auto; left:calc(var(--gap-lg)*3.2 + (100% - var(--gap-lg)*5)*var(--v)/var(--max)); padding:0; }
+@container (max-width:600px) { :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > b { font-size:var(--type-18); } :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > span { font-size:var(--type-14); } }
+@container (max-width:360px) { :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > b { font-size:var(--type-14); } :is(.bars[data-el="studio-spectrum-chart-bar"]) > .bar > span { font-size:var(--type-12); } }
+/* chart-donut */
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) { container-type:size; min-width:0; min-height:0; }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]) :is(.fig,.name) { margin:0; }
+
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--gap-sm); min-height:0; padding:var(--gap); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut::before { content:""; position:absolute; width:min(74%,340px); aspect-ratio:1; border-radius:50%; background:conic-gradient(var(--accent) calc(var(--v)*1%),var(--surface-2) 0);  }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut::after { content:""; position:absolute; width:min(54%,248px); aspect-ratio:1; border-radius:50%; background:var(--page); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .fig { z-index:1; font-size:var(--type-64); color:var(--accent); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .name { z-index:1; font-size:var(--type-18); text-align:center; max-width:60%; }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donuts { display:flex; gap:var(--gap); }
+:is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donuts > .donut { flex:1; min-width:0; }
+@container (max-width:420px) { :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .fig { font-size:var(--type-40); } :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .name { font-size:var(--type-14); } }
+@container (max-width:250px) { :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .fig { font-size:var(--type-28); } :is(.donut[data-el="studio-spectrum-chart-donut"], .donuts[data-el="studio-spectrum-chart-donut"]).donut > .name { font-size:var(--type-12); } }
+/* chart-line */
+:is(.lines[data-el="studio-spectrum-chart-line"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.lines[data-el="studio-spectrum-chart-line"]) { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr) auto; padding:var(--gap-lg) var(--gap) var(--gap); position:relative; isolation:isolate; anchor-scope:all; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt { display:contents; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > b { position:relative; grid-row:1; align-self:end; height:calc((100% - var(--gap-lg))*var(--v)/var(--max)); display:flex; justify-content:center; align-items:flex-start; anchor-name:var(--studio-spectrum-self); font-size:var(--type-22); font-weight:var(--figure-weight); line-height:var(--figure-line); color:var(--accent); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > b::after { content:""; position:absolute; top:calc(var(--gap-sm)*2); width:8px; height:8px; border-radius:50%; background:var(--accent); border:var(--stroke) solid var(--page); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > span { grid-row:2; border-top:var(--stroke) solid var(--line); padding-top:var(--gap-sm); font-size:var(--type-16); color:var(--mute); text-align:center; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::before, :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::after { content:""; position:absolute; left:anchor(var(--studio-spectrum-prev) center); right:anchor(var(--studio-spectrum-self) center); pointer-events:none; z-index:-1; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::before { top:calc(anchor(var(--studio-spectrum-prev) top) + var(--gap-sm)*2 + 3px); bottom:calc(anchor(var(--studio-spectrum-self) top) - var(--gap-sm)*2 - 5px); background:linear-gradient(to top right, var(--page) calc(50% - 1px), var(--accent) 50%, var(--page) calc(50% + 1px)); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt::after { top:calc(anchor(var(--studio-spectrum-self) top) + var(--gap-sm)*2 + 3px); bottom:calc(anchor(var(--studio-spectrum-prev) top) - var(--gap-sm)*2 - 5px); background:linear-gradient(to bottom right, var(--page) calc(50% - 1px), var(--accent) 50%, var(--page) calc(50% + 1px)); }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:first-child::before, :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:first-child::after { content:none; }
+@container (max-width:600px) { :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > b { font-size:var(--type-16); } :is(.lines[data-el="studio-spectrum-chart-line"]) > .pt > span { font-size:var(--type-12); } }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(1) { --studio-spectrum-self:--spectrum-point-1; --studio-spectrum-prev:--spectrum-point-1; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(2) { --studio-spectrum-self:--spectrum-point-2; --studio-spectrum-prev:--spectrum-point-1; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(3) { --studio-spectrum-self:--spectrum-point-3; --studio-spectrum-prev:--spectrum-point-2; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(4) { --studio-spectrum-self:--spectrum-point-4; --studio-spectrum-prev:--spectrum-point-3; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(5) { --studio-spectrum-self:--spectrum-point-5; --studio-spectrum-prev:--spectrum-point-4; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(6) { --studio-spectrum-self:--spectrum-point-6; --studio-spectrum-prev:--spectrum-point-5; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(7) { --studio-spectrum-self:--spectrum-point-7; --studio-spectrum-prev:--spectrum-point-6; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(8) { --studio-spectrum-self:--spectrum-point-8; --studio-spectrum-prev:--spectrum-point-7; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(9) { --studio-spectrum-self:--spectrum-point-9; --studio-spectrum-prev:--spectrum-point-8; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(10) { --studio-spectrum-self:--spectrum-point-10; --studio-spectrum-prev:--spectrum-point-9; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(11) { --studio-spectrum-self:--spectrum-point-11; --studio-spectrum-prev:--spectrum-point-10; }
+:is(.lines[data-el="studio-spectrum-chart-line"]) > .pt:nth-child(12) { --studio-spectrum-self:--spectrum-point-12; --studio-spectrum-prev:--spectrum-point-11; }
+/* cycle */
+:is(.cycle[data-el="studio-spectrum-cycle"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.cycle[data-el="studio-spectrum-cycle"]) { position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap); padding:var(--gap); }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .core { grid-column:2; grid-row:2; display:flex; align-items:center; justify-content:center; text-align:center; border-radius:50%; border:var(--stroke) solid var(--accent); color:var(--accent); background:var(--accent-soft); padding:var(--gap-sm); font-size:var(--type-24); font-weight:var(--name-weight); z-index:2; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:calc(var(--gap-sm)/2); background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); padding:var(--gap-sm); font-size:var(--type-22); z-index:1; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(2) { grid-area:1/2; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(3) { grid-area:1/3; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(4) { grid-area:3/3; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(5) { grid-area:3/2; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(6) { grid-area:3/1; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(7) { grid-area:1/1; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node > .mark { font-size:var(--type-14); color:var(--accent); }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node > .name { font-size:var(--type-20); }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node > .note { font-size:var(--type-14); }
+@container (max-width:650px) { :is(.cycle[data-el="studio-spectrum-cycle"]) > .core { font-size:var(--type-18); } :is(.cycle[data-el="studio-spectrum-cycle"]) > .node, :is(.cycle[data-el="studio-spectrum-cycle"]) > .node > .name { font-size:var(--type-16); } :is(.cycle[data-el="studio-spectrum-cycle"]) > .node > .note { font-size:var(--type-12); } }
+@container (max-width:420px) { :is(.cycle[data-el="studio-spectrum-cycle"]) > .node > .note { display:none; } }
+
+:is(.cycle[data-el="studio-spectrum-cycle"])::before { content:""; position:absolute; inset:17% 19%; border:var(--stroke) solid var(--line); border-radius:50%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node::after { content:"→"; position:absolute; right:calc(var(--gap)*-1); color:var(--accent); font-size:var(--type-24); }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(n+5)::after { content:"←"; right:auto; left:calc(var(--gap)*-1); }
+
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .core { position:absolute; grid-area:auto; left:38%; top:37%; width:24%; height:26%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(n) { position:absolute; grid-area:auto; width:26%; height:26%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(2) { left:37%; top:0; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(3) { left:74%; top:37%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(4) { left:37%; top:74%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]) > .node:nth-child(5) { left:0; top:37%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(4):last-child) > .node:nth-child(3) { left:68%; top:70%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(4):last-child) > .node:nth-child(4) { left:6%; top:70%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(6):last-child) > .node:nth-child(3) { left:74%; top:24%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(6):last-child) > .node:nth-child(4) { left:61%; top:74%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(6):last-child) > .node:nth-child(5) { left:13%; top:74%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(6):last-child) > .node:nth-child(6) { left:0; top:24%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(7):last-child) > .node:nth-child(2) { left:16%; top:0; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(7):last-child) > .node:nth-child(3) { left:58%; top:0; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(7):last-child) > .node:nth-child(4) { left:74%; top:37%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(7):last-child) > .node:nth-child(5) { left:58%; top:74%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(7):last-child) > .node:nth-child(6) { left:16%; top:74%; }
+:is(.cycle[data-el="studio-spectrum-cycle"]):has(> .node:nth-child(7):last-child) > .node:nth-child(7) { left:0; top:37%; }
+/* delta */
+:is(.delta[data-el="studio-spectrum-delta"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.delta[data-el="studio-spectrum-delta"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap-lg); font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); }
+:is(.delta[data-el="studio-spectrum-delta"]) > .from { color:var(--mute); }
+:is(.delta[data-el="studio-spectrum-delta"]) > .to { color:var(--accent); display:flex; align-items:center; gap:var(--gap-lg); }
+:is(.delta[data-el="studio-spectrum-delta"]) > .to::before { content:"→"; font-size:var(--type-40); font-weight:var(--body-weight); }
+@container (max-width:650px) { :is(.delta[data-el="studio-spectrum-delta"]) > :is(.from,.to) { font-size:var(--type-40); } :is(.delta[data-el="studio-spectrum-delta"]) > .to { gap:var(--gap); } }
+@container (max-width:380px) { :is(.delta[data-el="studio-spectrum-delta"]) > :is(.from,.to) { font-size:var(--type-28); } :is(.delta[data-el="studio-spectrum-delta"]) > .to::before { font-size:var(--type-24); } }
+/* flowchart */
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-template-rows:repeat(5,minmax(0,1fr)); gap:var(--gap); padding:var(--gap); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node { position:relative; display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--gap-sm); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); background:var(--surface); font-size:var(--type-20); font-weight:var(--name-weight); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.start, :is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.end { border-radius:999px; background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.ask { background:var(--accent-soft); color:var(--accent); border-color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-r::after { content:"→"; position:absolute; left:100%; width:var(--gap); text-align:center; color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-l::after { content:"←"; position:absolute; right:100%; width:var(--gap); text-align:center; color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-d::before { content:"↓"; position:absolute; top:100%; height:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-u::before { content:"↑"; position:absolute; bottom:100%; height:var(--gap); color:var(--accent); }
+@container (max-width:700px) { :is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node { font-size:var(--type-16); } }
+@container (max-width:450px) { :is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node { font-size:var(--type-12); } }
+/* funnel */
+:is(.funnel[data-el="studio-spectrum-funnel"]) { container-type:size; min-width:0; min-height:0; }
+:is(.funnel[data-el="studio-spectrum-funnel"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.funnel[data-el="studio-spectrum-funnel"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) :is(.fig,.name) { margin:0; }
+
+:is(.funnel[data-el="studio-spectrum-funnel"]) { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:var(--gap-sm); padding:var(--gap); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage { display:flex; justify-content:space-between; align-items:center; gap:var(--gap-sm); min-width:24%; width:calc(var(--v)*1%); flex:1; max-height:calc(var(--gap-lg)*2); padding:var(--gap-sm) var(--pad); background:var(--accent-soft); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage:last-child { background:var(--accent); color:var(--accent-ink); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .fig { font-size:var(--type-28); }
+:is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .name { font-size:var(--type-22); }
+@container (max-width:650px) { :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .name { font-size:var(--type-18); } :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .fig { font-size:var(--type-22); } }
+@container (max-width:420px) { :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .name { font-size:var(--type-14); } :is(.funnel[data-el="studio-spectrum-funnel"]) > .stage > .fig { font-size:var(--type-18); } }
+/* gauge */
+:is(.meter[data-el="studio-spectrum-gauge"]) { container-type:size; min-width:0; min-height:0; }
+:is(.meter[data-el="studio-spectrum-gauge"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.meter[data-el="studio-spectrum-gauge"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.meter[data-el="studio-spectrum-gauge"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.meter[data-el="studio-spectrum-gauge"]) :is(.fig,.name) { margin:0; }
+
+:is(.meter[data-el="studio-spectrum-gauge"]) { display:grid; grid-template-columns:1fr auto; grid-template-rows:auto 10px; align-content:center; gap:var(--gap-sm) var(--gap); }
+:is(.meter[data-el="studio-spectrum-gauge"])::before, :is(.meter[data-el="studio-spectrum-gauge"])::after { content:""; grid-column:1/-1; grid-row:2; border-radius:999px; }
+:is(.meter[data-el="studio-spectrum-gauge"])::before { background:var(--surface-2); }
+:is(.meter[data-el="studio-spectrum-gauge"])::after { width:calc(var(--v)*1%); background:var(--accent); }
+:is(.meter[data-el="studio-spectrum-gauge"]) > .name { grid-column:1; grid-row:1; font-size:var(--type-24); }
+:is(.meter[data-el="studio-spectrum-gauge"]) > .fig { grid-column:2; grid-row:1; font-size:var(--type-30); color:var(--accent); }
+@container (max-width:550px) { :is(.meter[data-el="studio-spectrum-gauge"]) > .name { font-size:var(--type-18); } :is(.meter[data-el="studio-spectrum-gauge"]) > .fig { font-size:var(--type-22); } }
+@container (max-width:320px) { :is(.meter[data-el="studio-spectrum-gauge"]) > .name { font-size:var(--type-14); } :is(.meter[data-el="studio-spectrum-gauge"]) > .fig { font-size:var(--type-18); } }
+/* hierarchy */
+:is(.org[data-el="studio-spectrum-hierarchy"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.org[data-el="studio-spectrum-hierarchy"]) { position:relative; display:grid; grid-auto-columns:minmax(0,1fr); grid-auto-flow:column; grid-template-rows:auto 1fr; gap:var(--gap-lg) var(--gap); padding:var(--gap); }
+:is(.org[data-el="studio-spectrum-hierarchy"]) { grid-template-columns:repeat(4,minmax(0,1fr)); }
+:is(.org[data-el="studio-spectrum-hierarchy"]):has(> .branch:nth-child(3):last-child) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+:is(.org[data-el="studio-spectrum-hierarchy"]):has(> .branch:nth-child(4):last-child) { grid-template-columns:repeat(3,minmax(0,1fr)); }
+:is(.org[data-el="studio-spectrum-hierarchy"]) > .root { grid-column:1/-1; justify-self:center; background:var(--accent); color:var(--accent-ink); padding:var(--gap-sm) var(--gap-lg); border-radius:var(--radius-sm); font-size:var(--type-28); font-weight:var(--name-weight); }
+:is(.org[data-el="studio-spectrum-hierarchy"]) > .root { position:relative; }
+:is(.org[data-el="studio-spectrum-hierarchy"]) > .root::after { content:""; position:absolute; top:100%; left:50%; width:var(--stroke); height:var(--gap-lg); background:var(--line); }
+:is(.org[data-el="studio-spectrum-hierarchy"]) > .branch { grid-row:2; display:flex; flex-direction:column; align-items:stretch; gap:var(--gap-sm); border-top:var(--stroke) solid var(--line); padding-top:var(--gap); position:relative; }
+:is(.org[data-el="studio-spectrum-hierarchy"]) > .branch::before { content:""; position:absolute; top:calc(var(--gap-lg)*-1); height:var(--gap-lg); width:var(--stroke); background:var(--line); left:50%; }
+:is(.org[data-el="studio-spectrum-hierarchy"]) > .branch > .node { background:var(--accent-soft); color:var(--accent); padding:var(--gap-sm); text-align:center; font-size:var(--type-22); font-weight:var(--name-weight); }
+:is(.org[data-el="studio-spectrum-hierarchy"]) > .branch > .leaf { border-bottom:var(--stroke) solid var(--line); padding:var(--gap-sm); text-align:center; font-size:var(--type-18); }
+@container (max-width:650px) { :is(.org[data-el="studio-spectrum-hierarchy"]) > .root { font-size:var(--type-22); } :is(.org[data-el="studio-spectrum-hierarchy"]) > .branch > .node { font-size:var(--type-18); } :is(.org[data-el="studio-spectrum-hierarchy"]) > .branch > .leaf { font-size:var(--type-14); } }
+/* hub */
+:is(.hub[data-el="studio-spectrum-hub"]) { container-type:size; min-width:0; min-height:0; }
+:is(.hub[data-el="studio-spectrum-hub"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.hub[data-el="studio-spectrum-hub"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.hub[data-el="studio-spectrum-hub"]) :is(.name,.note) { margin:0; }
+
+:is(.hub[data-el="studio-spectrum-hub"]) { position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap); padding:var(--gap); }
+:is(.hub[data-el="studio-spectrum-hub"]) > .core { grid-column:2; grid-row:2; display:flex; align-items:center; justify-content:center; text-align:center; border-radius:50%; border:var(--stroke) solid var(--accent); color:var(--accent); background:var(--accent-soft); padding:var(--gap-sm); font-size:var(--type-24); font-weight:var(--name-weight); z-index:2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:calc(var(--gap-sm)/2); background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); padding:var(--gap-sm); font-size:var(--type-22); z-index:1; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(2) { grid-area:1/2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(3) { grid-area:1/3; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(4) { grid-area:3/3; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(5) { grid-area:3/2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(6) { grid-area:3/1; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(7) { grid-area:1/1; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .mark { font-size:var(--type-14); color:var(--accent); }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .name { font-size:var(--type-20); }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .note { font-size:var(--type-14); }
+@container (max-width:650px) { :is(.hub[data-el="studio-spectrum-hub"]) > .core { font-size:var(--type-18); } :is(.hub[data-el="studio-spectrum-hub"]) > .spoke, :is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .name { font-size:var(--type-16); } :is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .note { font-size:var(--type-12); } }
+@container (max-width:420px) { :is(.hub[data-el="studio-spectrum-hub"]) > .spoke > .note { display:none; } }
+
+:is(.hub[data-el="studio-spectrum-hub"])::before { content:""; position:absolute; top:17%; bottom:17%; left:50%; width:var(--stroke); background:var(--line); }
+:is(.hub[data-el="studio-spectrum-hub"])::after { content:""; position:absolute; inset:17% 17%; background:linear-gradient(to bottom right,var(--page) calc(50% - 1px),var(--line) 50%,var(--page) calc(50% + 1px)); }
+
+:is(.hub[data-el="studio-spectrum-hub"]) > .core { position:absolute; grid-area:auto; left:38%; top:37%; width:24%; height:26%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(n) { position:absolute; grid-area:auto; width:26%; height:26%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(2) { left:37%; top:0; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(3) { left:74%; top:37%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(4) { left:37%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke:nth-child(5) { left:0; top:37%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(3) { left:68%; top:70%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(4) { left:6%; top:70%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(3) { left:74%; top:24%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(4) { left:61%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(5) { left:13%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(6) { left:0; top:24%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(2) { left:16%; top:0; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(3) { left:58%; top:0; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(4) { left:74%; top:37%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(5) { left:58%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(6) { left:16%; top:74%; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(7) { left:0; top:37%; }
+
+:is(.hub[data-el="studio-spectrum-hub"]) { padding:0; }
+:is(.hub[data-el="studio-spectrum-hub"])::before, :is(.hub[data-el="studio-spectrum-hub"])::after { content:none; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke::before { content:""; position:absolute; left:50%; top:50%; width:hypot(calc((50 - var(--studio-spectrum-x))*1cqw),calc((50 - var(--studio-spectrum-y))*1cqh)); height:var(--stroke); background:var(--line); transform-origin:0 0; transform:rotate(atan2(calc((50 - var(--studio-spectrum-y))*1cqh),calc((50 - var(--studio-spectrum-x))*1cqw))); z-index:-2; }
+:is(.hub[data-el="studio-spectrum-hub"]) > .spoke::after { content:""; position:absolute; inset:0; background:var(--surface); border-radius:var(--radius); z-index:-1; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:50; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:81; --studio-spectrum-y:83; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:19; --studio-spectrum-y:83; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:50; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:87; --studio-spectrum-y:50; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:50; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(5) { --studio-spectrum-x:13; --studio-spectrum-y:50; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:50; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:87; --studio-spectrum-y:37; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:74; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(5) { --studio-spectrum-x:26; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(6) { --studio-spectrum-x:13; --studio-spectrum-y:37; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(2) { --studio-spectrum-x:29; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(3) { --studio-spectrum-x:71; --studio-spectrum-y:13; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(4) { --studio-spectrum-x:87; --studio-spectrum-y:50; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(5) { --studio-spectrum-x:71; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(6) { --studio-spectrum-x:29; --studio-spectrum-y:87; }
+:is(.hub[data-el="studio-spectrum-hub"]):has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(7) { --studio-spectrum-x:13; --studio-spectrum-y:50; }
+/* image-frame */
+:is(.frame[data-el="studio-spectrum-image-frame"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.frame[data-el="studio-spectrum-image-frame"]) { display:flex; padding:var(--gap-sm); border:var(--stroke) solid var(--line); background:var(--page); border-radius:var(--radius-sm); }
+:is(.frame[data-el="studio-spectrum-image-frame"]) > .seat { width:100%; height:100%; background:var(--surface-2); }
+@container (max-width:400px) { :is(.frame[data-el="studio-spectrum-image-frame"]) > .seat { border-radius:var(--radius-sm); } }
+/* legend */
+:is(.legend[data-el="studio-spectrum-legend"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.legend[data-el="studio-spectrum-legend"]) { display:flex; flex-wrap:wrap; align-content:center; align-items:center; justify-content:center; gap:var(--gap) var(--gap-lg); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key { display:flex; align-items:center; gap:var(--gap-sm); color:var(--ink-2); font-size:var(--type-18); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key::before { content:""; width:12px; height:12px; background:var(--tone-1); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-2::before { background:var(--tone-2); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-3::before { background:var(--tone-3); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-4::before { background:var(--tone-4); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-5::before { background:var(--tone-5); }
+@container (max-width:500px) { :is(.legend[data-el="studio-spectrum-legend"]) > .key { font-size:var(--type-14); } }
+/* list */
+:is(.list[data-el="studio-spectrum-list"]) { container-type:size; min-width:0; min-height:0; }
+:is(.list[data-el="studio-spectrum-list"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.list[data-el="studio-spectrum-list"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.list[data-el="studio-spectrum-list"]) :is(.name,.note) { margin:0; }
+
+:is(.list[data-el="studio-spectrum-list"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); counter-reset:entry; padding:var(--gap-sm) 0; }
+:is(.list[data-el="studio-spectrum-list"]) > .item { position:relative; padding-left:var(--gap-lg); counter-increment:entry; }
+:is(.list[data-el="studio-spectrum-list"]) > .item::before { content:""; position:absolute; left:0; top:calc(var(--gap-sm)*.8); width:7px; height:7px; border-radius:50%; background:var(--accent); }
+:is(.list[data-el="studio-spectrum-list"]).check > .item::before { content:"✓"; width:auto; height:auto; background:none; color:var(--accent); top:0; font-size:var(--type-22); font-weight:var(--label-weight); }
+:is(.list[data-el="studio-spectrum-list"]).num > .item::before { content:counter(entry,decimal-leading-zero); width:auto; height:auto; border-radius:0; background:none; color:var(--accent); top:0; font-size:var(--type-20); font-weight:var(--label-weight); }
+:is(.list[data-el="studio-spectrum-list"]).divided > .item { padding-top:var(--gap-sm); border-top:var(--stroke) solid var(--line); }
+:is(.list[data-el="studio-spectrum-list"]).divided > .item::before { top:calc(var(--gap-sm)*1.8); }
+:is(.list[data-el="studio-spectrum-list"]) > .item > .note { margin-top:calc(var(--gap-sm)/2); }
+:is(.list[data-el="studio-spectrum-list"]):has(> .item:nth-child(5)) { gap:var(--gap-sm); }
+:is(.list[data-el="studio-spectrum-list"]):has(> .item:nth-child(5)) > .item > .name { font-size:var(--type-20); }
+:is(.list[data-el="studio-spectrum-list"]):has(> .item:nth-child(5)) > .item > .note { font-size:var(--type-16); }
+:is(.list[data-el="studio-spectrum-list"]):has(> .item:nth-child(8)) > .item > .name { font-size:var(--type-18); }
+:is(.list[data-el="studio-spectrum-list"]):has(> .item:nth-child(8)) > .item > .note { font-size:var(--type-14); }
+@container (max-height:460px) { :is(.list[data-el="studio-spectrum-list"]):has(> .item:nth-child(8)) > .item > .note { display:none; } }
+@container (max-width:420px) { :is(.list[data-el="studio-spectrum-list"]) > .item > .name { font-size:var(--type-18); } :is(.list[data-el="studio-spectrum-list"]):has(> .item:nth-child(5)) > .item > .note { display:none; } }
+@container (max-height:300px) { :is(.list[data-el="studio-spectrum-list"]) > .item > .name { font-size:var(--type-18); } :is(.list[data-el="studio-spectrum-list"]) > .item > .note { font-size:var(--type-14); } }
+@container (max-height:180px) { :is(.list[data-el="studio-spectrum-list"]) > .item > .note { display:none; } }
+/* logo-group */
+:is(.logos[data-el="studio-spectrum-logo-group"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.logos[data-el="studio-spectrum-logo-group"]) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-content:center; gap:var(--gap-lg); padding:var(--pad); border-top:var(--stroke) solid var(--line); border-bottom:var(--stroke) solid var(--line); }
+:is(.logos[data-el="studio-spectrum-logo-group"]):has(> :nth-child(7)) { grid-template-columns:repeat(4,minmax(0,1fr)); }
+:is(.logos[data-el="studio-spectrum-logo-group"]) > .seat.logo { width:100%; aspect-ratio:3/1; background:var(--surface); }
+@container (max-width:650px) { :is(.logos[data-el="studio-spectrum-logo-group"]) > .seat.logo { aspect-ratio:2/1; } }
+/* matrix */
+:is(.matrix[data-el="studio-spectrum-matrix"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.matrix[data-el="studio-spectrum-matrix"]) { position:relative; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(0,1fr)); gap:var(--gap-sm); padding:var(--gap-lg); }
+:is(.matrix[data-el="studio-spectrum-matrix"]) > .cell { padding:var(--pad); background:var(--surface); display:flex; align-items:center; justify-content:center; text-align:center; font-size:var(--type-28); font-weight:var(--name-weight); border:var(--stroke) solid var(--line); }
+:is(.matrix[data-el="studio-spectrum-matrix"]) > .cell.on { background:var(--accent-soft); color:var(--accent); border-color:var(--accent); }
+:is(.matrix[data-el="studio-spectrum-matrix"]) > .axis-x { position:absolute; bottom:0; left:var(--gap-lg); right:var(--gap-lg); display:flex; justify-content:space-between; font-size:var(--type-14); color:var(--mute); }
+:is(.matrix[data-el="studio-spectrum-matrix"]) > .axis-y { position:absolute; top:var(--gap-lg); bottom:var(--gap-lg); left:0; display:flex; flex-direction:column; justify-content:space-between; font-size:var(--type-14); color:var(--mute); }
+@container (max-width:650px) { :is(.matrix[data-el="studio-spectrum-matrix"]) > .cell { font-size:var(--type-22); } }
+@container (max-width:420px) { :is(.matrix[data-el="studio-spectrum-matrix"]) > .cell { font-size:var(--type-16); } }
+/* metric */
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) { container-type:size; min-width:0; min-height:0; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) :is(.fig,.name,.note) { margin:0; }
+
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat { display:flex; align-items:center; padding:var(--gap); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat > .parts { display:flex; flex-direction:column; gap:var(--gap-sm); width:100%; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-92); color:var(--accent); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stats { display:flex; align-items:stretch; gap:var(--gap); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stats > .stat { flex:1; min-width:0; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stats > .stat + .stat { border-left:var(--stroke) solid var(--line); }
+@container (max-width:620px) { :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-56); } :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .name { font-size:var(--type-20); } }
+@container (max-width:340px) { :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-40); } :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .note { font-size:var(--type-14); } }
+@container (max-height:180px) { :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-36); } :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .note { display:none; } }
+/* person */
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]) { container-type:size; min-width:0; min-height:0; }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]) :is(.name,.note) { margin:0; }
+
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).people { display:flex; align-items:stretch; gap:var(--gap); }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).people > .person { flex:1; min-width:0; }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:var(--gap-sm); }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .seat { width:100%; max-height:68%; flex:1; }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .seat.avatar { width:min(100%,240px); flex:none; align-self:center; }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .name { font-size:var(--type-26); }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .note { font-size:var(--type-18); }
+:is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .list { flex:1; }
+@container (max-width:400px) { :is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .name { font-size:var(--type-20); } :is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .note { font-size:var(--type-14); } }
+@container (max-width:220px) { :is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .name { font-size:var(--type-16); } :is(.person[data-el="studio-spectrum-person"], .people[data-el="studio-spectrum-person"]).person > .note { font-size:var(--type-12); } }
+/* pill */
+:is(.pill[data-el="studio-spectrum-pill"]) { container-type:size; min-width:0; min-height:0; }
+:is(.pill[data-el="studio-spectrum-pill"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pill[data-el="studio-spectrum-pill"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pill[data-el="studio-spectrum-pill"]) :is(.name,.note) { margin:0; }
+
+:is(.pill[data-el="studio-spectrum-pill"]) { display:flex; align-items:center; justify-content:center; }
+:is(.pill[data-el="studio-spectrum-pill"]) > .parts { display:flex; align-items:center; justify-content:center; gap:var(--gap-sm); background:var(--accent-soft); color:var(--accent); border:var(--stroke) solid var(--accent-soft); border-radius:999px; padding:var(--gap-sm) var(--pad); max-width:100%; }
+:is(.pill[data-el="studio-spectrum-pill"]) > .parts > .name { font-size:var(--type-22); }
+:is(.pill[data-el="studio-spectrum-pill"]) > .parts > .note { font-size:var(--type-16); color:inherit; }
+:is(.pill[data-el="studio-spectrum-pill"]) > .parts > .mark { font-size:var(--type-24); line-height:var(--label-line); }
+:is(.pill[data-el="studio-spectrum-pill"]).on > .parts { background:var(--accent); color:var(--accent-ink); }
+:is(.pill[data-el="studio-spectrum-pill"]).quiet > .parts { background:var(--surface); color:var(--ink-2); }
+:is(.pill[data-el="studio-spectrum-pill"]).line > .parts { background:var(--page); border-color:var(--line); color:var(--ink); }
+@container (max-width:560px) { :is(.pill[data-el="studio-spectrum-pill"]) > .parts > .name { font-size:var(--type-18); } :is(.pill[data-el="studio-spectrum-pill"]) > .parts > .note { font-size:var(--type-14); } }
+@container (max-width:340px) { :is(.pill[data-el="studio-spectrum-pill"]) > .parts > .note { display:none; } }
+/* pricing */
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]) { container-type:size; min-width:0; min-height:0; }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]) :is(.fig,.name) { margin:0; }
+
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plans { display:flex; align-items:stretch; gap:var(--gap); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plans > .plan { flex:1; min-width:0; }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); padding:var(--pad); background:var(--surface); border-top:2px solid var(--line); border-radius:var(--radius); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan.on { background:var(--accent-soft); border-top-color:var(--accent); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .name { font-size:var(--type-26); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .price { display:flex; align-items:baseline; gap:var(--gap-sm); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .price > .fig { font-size:var(--type-64); color:var(--accent); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .price > small { font-size:var(--type-16); color:var(--mute); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .list { flex:1; }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .list .name { font-size:var(--type-18); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .list .note { font-size:var(--type-14); }
+:is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .tag { align-self:flex-start; }
+@container (max-width:430px) { :is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .price > .fig { font-size:var(--type-40); } :is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .name { font-size:var(--type-22); } :is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .list .name { font-size:var(--type-16); } :is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .list .note { display:none; } }
+@container (max-height:300px) { :is(.plan[data-el="studio-spectrum-pricing"], .plans[data-el="studio-spectrum-pricing"]).plan > .list .note { display:none; } }
+/* pyramid */
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) { container-type:size; min-width:0; min-height:0; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) :is(.name,.note) { margin:0; }
+
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:calc(var(--gap-sm)/2); padding:var(--gap); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level { width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:calc(var(--gap-sm)/2); flex:1; max-height:calc(var(--gap-lg)*2.5); background:var(--surface); border-bottom:var(--stroke) solid var(--line); padding:var(--gap-sm) var(--pad); text-align:center; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(1) { width:38%; background:var(--accent); color:var(--accent-ink); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(1) > .note { color:var(--accent-ink); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(2) { width:54%; background:var(--accent-soft); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(3) { width:70%; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level:nth-child(4) { width:86%; }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .name { font-size:var(--type-22); }
+:is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .note { font-size:var(--type-16); }
+@container (max-width:650px) { :is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .name { font-size:var(--type-18); } :is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .note { font-size:var(--type-14); } }
+@container (max-height:300px) { :is(.pyramid[data-el="studio-spectrum-pyramid"]) > .level > .note { display:none; } }
+/* quote */
+:is(.quote[data-el="studio-spectrum-quote"]) { container-type:size; min-width:0; min-height:0; }
+:is(.quote[data-el="studio-spectrum-quote"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.quote[data-el="studio-spectrum-quote"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.quote[data-el="studio-spectrum-quote"]) :is(.name,.note) { margin:0; }
+
+:is(.quote[data-el="studio-spectrum-quote"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-lg); padding:var(--pad); border-top:var(--stroke) solid var(--line); }
+:is(.quote[data-el="studio-spectrum-quote"]) > blockquote { position:relative; padding-top:var(--gap-lg); font-size:var(--type-36); line-height:var(--lead-line); font-weight:var(--lead-weight); letter-spacing:var(--lead-track); }
+:is(.quote[data-el="studio-spectrum-quote"]) > blockquote::before { content:"“"; position:absolute; top:calc(var(--gap-sm)*-2); left:0; color:var(--accent); font-size:var(--type-80); font-weight:var(--title-weight); line-height:var(--figure-line); }
+:is(.quote[data-el="studio-spectrum-quote"]).big > blockquote { font-size:var(--type-48); }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by { display:grid; grid-template-columns:auto 1fr; gap:calc(var(--gap-sm)/2) var(--gap-sm); align-items:center; }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by > .seat { width:56px; grid-row:span 2; }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by > .name { align-self:end; font-size:var(--type-18); }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by > .note { align-self:start; font-size:var(--type-14); }
+@container (max-width:600px) { :is(.quote[data-el="studio-spectrum-quote"]) > blockquote, :is(.quote[data-el="studio-spectrum-quote"]).big > blockquote { font-size:var(--type-26); } }
+@container (max-height:250px) { :is(.quote[data-el="studio-spectrum-quote"]) > blockquote, :is(.quote[data-el="studio-spectrum-quote"]).big > blockquote { font-size:var(--type-22); } :is(.quote[data-el="studio-spectrum-quote"]) > .by > .seat { width:40px; } }
+/* steps */
+:is(.steps[data-el="studio-spectrum-steps"]) { container-type:size; min-width:0; min-height:0; }
+:is(.steps[data-el="studio-spectrum-steps"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="studio-spectrum-steps"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.steps[data-el="studio-spectrum-steps"]) :is(.name,.note) { margin:0; }
+
+:is(.steps[data-el="studio-spectrum-steps"]) { display:flex; align-items:center; gap:var(--gap); }
+:is(.steps[data-el="studio-spectrum-steps"]) > .step { position:relative; flex:1; align-self:stretch; display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); padding-top:var(--gap); min-width:0; }
+:is(.steps[data-el="studio-spectrum-steps"]) > .step > .mark { width:48px; height:48px; display:flex; align-items:center; justify-content:center; border:var(--stroke) solid var(--line); border-radius:50%; background:var(--page); color:var(--accent); font-size:var(--type-18); font-weight:var(--label-weight); z-index:1; }
+:is(.steps[data-el="studio-spectrum-steps"]) > .step:not(:last-child)::before { content:""; position:absolute; left:48px; right:calc(var(--gap)*-1); top:calc(50% - var(--gap-lg)*1.15); height:var(--stroke); background:var(--line); }
+:is(.steps[data-el="studio-spectrum-steps"]).col { flex-direction:column; align-items:stretch; gap:var(--gap-sm); }
+:is(.steps[data-el="studio-spectrum-steps"]).col > .step { display:grid; grid-template-columns:48px 1fr; gap:calc(var(--gap-sm)/2) var(--gap); padding:0; align-content:center; }
+:is(.steps[data-el="studio-spectrum-steps"]).col > .step > .mark { grid-row:span 2; }
+:is(.steps[data-el="studio-spectrum-steps"]).col > .step:not(:last-child)::before { left:24px; right:auto; top:50%; bottom:calc(var(--gap)*-1); width:var(--stroke); height:auto; }
+@container (max-width:650px) { :is(.steps[data-el="studio-spectrum-steps"]) > .step > .name { font-size:var(--type-20); } :is(.steps[data-el="studio-spectrum-steps"]) > .step > .note { font-size:var(--type-14); } }
+@container (max-height:240px) { :is(.steps[data-el="studio-spectrum-steps"]) > .step > .note { display:none; } }
+/* table */
+:is(.tablebox[data-el="studio-spectrum-table"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.tablebox[data-el="studio-spectrum-table"]) { display:flex; align-items:center; }
+:is(.tablebox[data-el="studio-spectrum-table"]) > .table { border-collapse:collapse; width:100%; table-layout:fixed; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); }
+:is(.tablebox[data-el="studio-spectrum-table"]) :is(th,td) { padding:var(--gap-sm) var(--gap); text-align:left; border-bottom:var(--stroke) solid var(--line); overflow-wrap:anywhere; }
+:is(.tablebox[data-el="studio-spectrum-table"]) th { border-top:var(--stroke) solid var(--ink); color:var(--ink-2); font-size:var(--type-16); font-weight:var(--label-weight); }
+:is(.tablebox[data-el="studio-spectrum-table"]) .num { text-align:right; font-variant-numeric:tabular-nums; }
+:is(.tablebox[data-el="studio-spectrum-table"]) .pick { background:var(--accent-soft); color:var(--accent); font-weight:var(--name-weight); }
+@container (max-width:700px) { :is(.tablebox[data-el="studio-spectrum-table"]) > .table { font-size:var(--type-14); } :is(.tablebox[data-el="studio-spectrum-table"]) th { font-size:var(--type-14); } :is(.tablebox[data-el="studio-spectrum-table"]) :is(th,td) { padding:var(--gap-sm); } }
+@container (max-height:260px) { :is(.tablebox[data-el="studio-spectrum-table"]) :is(th,td) { padding:calc(var(--gap-sm)/2) var(--gap-sm); } }
+/* tag */
+:is(.tag[data-el="studio-spectrum-tag"], .hl[data-el="studio-spectrum-tag"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.tag[data-el="studio-spectrum-tag"], .hl[data-el="studio-spectrum-tag"]) { container-type:normal; width:max-content; max-width:100%; }
+:is(.tag[data-el="studio-spectrum-tag"], .hl[data-el="studio-spectrum-tag"]).tag { display:flex; align-items:center; justify-content:center; align-self:center; justify-self:center; background:var(--accent-soft); color:var(--accent); border:var(--stroke) solid var(--line); border-radius:999px; padding:calc(var(--gap-sm)/2) var(--gap-sm); font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.tag[data-el="studio-spectrum-tag"], .hl[data-el="studio-spectrum-tag"]).hl { align-self:center; justify-self:center; background:var(--tone-3); color:var(--tone-3-ink); padding:calc(var(--gap-sm)/3) calc(var(--gap-sm)/2); font-size:var(--type-28); line-height:var(--lead-line); font-weight:var(--name-weight); }
+@container (max-width:460px) { :is(.tag[data-el="studio-spectrum-tag"], .hl[data-el="studio-spectrum-tag"]).tag { font-size:var(--type-14); } :is(.tag[data-el="studio-spectrum-tag"], .hl[data-el="studio-spectrum-tag"]).hl { font-size:var(--type-20); } }
+/* timeline */
+:is(.track[data-el="studio-spectrum-timeline"]) { container-type:size; min-width:0; min-height:0; }
+:is(.track[data-el="studio-spectrum-timeline"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.track[data-el="studio-spectrum-timeline"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.track[data-el="studio-spectrum-timeline"]) .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.track[data-el="studio-spectrum-timeline"]) :is(.kick,.name,.note) { margin:0; }
+
+:is(.track[data-el="studio-spectrum-timeline"]) { display:flex; align-items:center; gap:var(--gap); }
+:is(.track[data-el="studio-spectrum-timeline"]) > .stop { position:relative; flex:1; min-width:0; padding-top:var(--gap-lg); border-top:var(--stroke) solid var(--line); }
+:is(.track[data-el="studio-spectrum-timeline"]) > .stop::before { content:""; position:absolute; left:0; top:-5px; width:9px; height:9px; background:var(--page); border:var(--stroke) solid var(--accent); border-radius:50%; }
+:is(.track[data-el="studio-spectrum-timeline"]) > .stop.on::before { background:var(--accent); }
+:is(.track[data-el="studio-spectrum-timeline"]) > .stop > .kick { margin-bottom:var(--gap-sm); }
+:is(.track[data-el="studio-spectrum-timeline"]) > .stop > .note { margin-top:var(--gap-sm); }
+:is(.track[data-el="studio-spectrum-timeline"]).alt > .stop:nth-child(even) { transform:translateY(-40%); }
+:is(.track[data-el="studio-spectrum-timeline"]).col { flex-direction:column; align-items:stretch; gap:0; }
+:is(.track[data-el="studio-spectrum-timeline"]).col > .stop { padding:var(--gap-sm) var(--gap-lg); border-top:none; border-left:var(--stroke) solid var(--line); }
+:is(.track[data-el="studio-spectrum-timeline"]).col > .stop::before { top:var(--gap); left:-5px; }
+@container (max-height:450px) { :is(.track[data-el="studio-spectrum-timeline"]).col > .stop { padding:calc(var(--gap-sm)/2) var(--gap-lg); } :is(.track[data-el="studio-spectrum-timeline"]).col > .stop > .note { display:none; } :is(.track[data-el="studio-spectrum-timeline"]).col > .stop > .name { font-size:var(--type-20); } :is(.track[data-el="studio-spectrum-timeline"]).col > .stop > .kick { font-size:var(--type-12); } }
+@container (max-width:700px) { :is(.track[data-el="studio-spectrum-timeline"]) > .stop > .name { font-size:var(--type-20); } :is(.track[data-el="studio-spectrum-timeline"]) > .stop > .note { font-size:var(--type-14); } }
+@container (max-height:260px) { :is(.track[data-el="studio-spectrum-timeline"]) > .stop > .note { display:none; } }
+/* venn */
+:is(.venn[data-el="studio-spectrum-venn"]) { container-type:size; min-width:0; min-height:0; }
+:is(.venn[data-el="studio-spectrum-venn"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.venn[data-el="studio-spectrum-venn"]) :is(.name) { margin:0; }
+
+:is(.venn[data-el="studio-spectrum-venn"]) { position:relative; display:flex; align-items:center; justify-content:center; padding:var(--gap-lg); }
+:is(.venn[data-el="studio-spectrum-venn"]) > .set { width:44%; aspect-ratio:1; max-height:90%; border-radius:50%; border:var(--stroke) solid var(--accent); background:var(--accent-soft); display:flex; align-items:center; justify-content:center; padding:var(--gap); margin:0 calc(var(--gap-lg)*-.5); }
+:is(.venn[data-el="studio-spectrum-venn"]) > .set.on { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.venn[data-el="studio-spectrum-venn"]) > .set > .name { font-size:var(--type-28); text-align:center; }
+:is(.venn[data-el="studio-spectrum-venn"]) > .core { position:absolute; left:40%; right:40%; text-align:center; font-size:var(--type-20); font-weight:var(--name-weight); color:var(--accent); background:var(--page); border:var(--stroke) solid var(--line); border-radius:var(--radius); padding:var(--gap-sm); z-index:2; }
+@container (max-width:650px) { :is(.venn[data-el="studio-spectrum-venn"]) > .set > .name { font-size:var(--type-20); } :is(.venn[data-el="studio-spectrum-venn"]) > .core { font-size:var(--type-16); } }
+@container (max-width:420px) { :is(.venn[data-el="studio-spectrum-venn"]) > .set > .name { font-size:var(--type-14); } :is(.venn[data-el="studio-spectrum-venn"]) > .core { font-size:var(--type-12); } }
+/* versus */
+:is(.versus[data-el="studio-spectrum-versus"]) { container-type:size; min-width:0; min-height:0; }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.versus[data-el="studio-spectrum-versus"]) :is(.name) { margin:0; }
+
+:is(.versus[data-el="studio-spectrum-versus"]) { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:stretch; gap:var(--gap); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side { padding:var(--pad); border-top:var(--stroke) solid var(--line); background:var(--surface); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side.on { background:var(--accent-soft); border-top-color:var(--accent); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-32); }
+:is(.versus[data-el="studio-spectrum-versus"]) > .side > .list { flex:1; min-height:0; }
+:is(.versus[data-el="studio-spectrum-versus"]) > .vs { align-self:center; font-size:var(--type-18); font-weight:var(--label-weight); color:var(--mute); }
+@container (max-width:700px) { :is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-24); } }
+@container (max-width:450px) { :is(.versus[data-el="studio-spectrum-versus"]) > .side > .name { font-size:var(--type-18); } }
+.slide {
+  --page: #ffffff;
+  --surface: #f5f6f7;
+  --surface-2: #e9edf1;
+  --ink: #17202e;
+  --ink-2: #343e4b;
+  --mute: #58616d;
+  --line: #c8cdd4;
+  --accent: #304577;
+  --accent-ink: #ffffff;
+  --accent-soft: #eef1fa;
+  --tone-1: #304577;
+  --tone-1-ink: #ffffff;
+  --tone-2: #a63d41;
+  --tone-2-ink: #ffffff;
+  --tone-3: #d8fa8a;
+  --tone-3-ink: #223017;
+  --tone-4: #c2e6bf;
+  --tone-4-ink: #163b26;
+  --tone-5: #f4e6b6;
+  --tone-5-ink: #493b1b;
+  --good: #236240;
+  --warn: #805b18;
+  --bad: #a12e3b;
+  --font-display: "Pretendard", sans-serif;
+  --font-body: "Pretendard", sans-serif;
+  --weight-display: 700;
+  --weight-body: 400;
+  --tracking-display: -0.045em;
+  --radius: 4px;
+  --radius-sm: 2px;
+  --stroke: 1px;
+  --text-min: 12px;
+  --margin-x: 64px;
+  --margin-y: 48px;
+  --gap: 24px;
+  --gap-sm: 12px;
+  --gap-lg: 40px;
+  --pad: 28px;
+  --furn-edge: 24px;
+  --top-h: 28px;
+  --foot-h: 28px;
+  --furn-gap: 24px;
+  --rail-w: 56px;
+  --rail-gap: 32px;
+  --title-weight: 700;
+  --title-line: 1.12;
+  --title-track: -0.045em;
+  --lead-weight: 400;
+  --lead-line: 1.45;
+  --lead-track: -0.018em;
+  --figure-weight: 600;
+  --figure-line: 1.05;
+  --figure-track: -0.045em;
+  --name-weight: 600;
+  --name-line: 1.3;
+  --name-track: -0.025em;
+  --body-weight: 400;
+  --body-line: 1.55;
+  --body-track: -0.012em;
+  --label-weight: 600;
+  --label-line: 1.2;
+  --label-track: -0.005em;
+  --label-track-latin: 0.065em;
+}
+.slide.dark {
+  --page: #111a2b;
+  --surface: #1c2840;
+  --surface-2: #2b3850;
+  --ink: #f6f7fa;
+  --ink-2: #d4dce8;
+  --mute: #adb9cc;
+  --line: #526079;
+  --accent: #a8bbf2;
+  --accent-ink: #14213b;
+  --accent-soft: #253656;
+  --tone-1: #a8bbf2;
+  --tone-1-ink: #14213b;
+  --tone-2: #efadb0;
+  --tone-2-ink: #4b1b24;
+  --tone-3: #d8fa8a;
+  --tone-3-ink: #223017;
+  --tone-4: #b3d9ba;
+  --tone-4-ink: #163b26;
+  --tone-5: #eddaa1;
+  --tone-5-ink: #493b1b;
+  --good: #a7d9b7;
+  --warn: #eed69a;
+  --bad: #f1afb7;
+}
+.slide { --type-8: 8px; --type-10: 10px; --type-12: 12px; --type-14: 14px; --type-16: 16px; --type-18: 18px; --type-20: 20px; --type-22: 22px; --type-24: 24px; --type-26: 26px; --type-28: 28px; --type-30: 30px; --type-32: 32px; --type-36: 36px; --type-40: 40px; --type-44: 44px; --type-48: 48px; --type-52: 52px; --type-56: 56px; --type-60: 60px; --type-64: 64px; --type-68: 68px; --type-72: 72px; --type-76: 76px; --type-80: 80px; --type-84: 84px; --type-88: 88px; --type-92: 92px; --type-96: 96px; --type-100: 100px; --type-104: 104px; --type-108: 108px; --type-112: 112px; --type-116: 116px; --type-120: 120px; --type-124: 124px; --type-128: 128px; --radius-lg: var(--radius); }
+</style><style>body{margin:0;padding:24px;background:#e8e8ec;font:14px system-ui;display:grid;gap:24px;grid-template-columns:repeat(auto-fill,640px)}h2{font-size:13px;font-weight:500;margin:0 0 8px}small{color:#777;margin-left:8px}.frame{width:640px;height:360px;overflow:hidden;border-radius:6px;background:#fff}.frame>.slide{width:1280px;height:720px;transform:scale(.5);transform-origin:0 0;position:relative}</style><style>@font-face{font-family:Pretendard;src:url(../fonts/PretendardVariable.woff2);font-weight:45 920;font-display:swap}</style></head><body><article><h2>foundation / cover <small>min 12x6</small></h2><div class="frame"><section class="slide cover"><div class="page"><div class="lockup at-left"><p class="kicker">2026 · STRATEGY &amp; PERFORMANCE</p><h1 class="title">다음 성장을<br>설계합니다.</h1><p class="lead">성과의 기록에서 실행의 방향으로, 더 분명한 비즈니스 이야기.</p></div><div class="deco"></div><p class="meta">STUDIO SPECTRUM · 전략기획팀 · 2026.10</p></div></section>
+</div></article><article><h2>foundation / seat <small>min 12x6</small></h2><div class="frame"><section class="slide"><div class="top"><span class="deck">STUDIO SPECTRUM</span><span class="sec">2026 성과 보고</span></div><div class="page"><header class="head"><p class="kicker">BUSINESS REVIEW</p><h1 class="title">성장의 근거를 명확하게</h1><p class="lead">데이터와 실행 계획을 한 화면의 질서로 연결합니다.</p></header><div class="body"><div class="seat" data-ph="1" style="grid-column:1 / span 7; grid-row:1 / span 6"></div><div class="seat portrait" data-ph="2" style="grid-column:9 / span 4; grid-row:1 / span 6"></div></div></div><div class="foot"><span class="deck">기획전략팀</span><span class="src">2026년 3분기 내부 집계</span><span class="no">03</span></div></section>
+</div></article><article><h2>agenda / entries-3 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="agenda" data-el="studio-spectrum-agenda"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="entry"><span class="mark">01</span><p class="name">시장과 고객</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry on"><span class="mark">02</span><p class="name">핵심 성과</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">03</span><p class="name">성장의 기회</p><p class="note">성과의 배경과 다음 실행 방향</p></div></div>
+</div></div></section></div></article><article><h2>agenda / entries-5 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="agenda" data-el="studio-spectrum-agenda"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="entry"><span class="mark">01</span><p class="name">시장과 고객</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry on"><span class="mark">02</span><p class="name">핵심 성과</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">03</span><p class="name">성장의 기회</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">04</span><p class="name">전략적 우선순위</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">05</span><p class="name">실행 로드맵</p><p class="note">성과의 배경과 다음 실행 방향</p></div></div>
+</div></div></section></div></article><article><h2>agenda / entries-8 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="agenda" data-el="studio-spectrum-agenda"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="entry"><span class="mark">01</span><p class="name">시장과 고객</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry on"><span class="mark">02</span><p class="name">핵심 성과</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">03</span><p class="name">성장의 기회</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">04</span><p class="name">전략적 우선순위</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">05</span><p class="name">실행 로드맵</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">06</span><p class="name">협업 및 자원</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">07</span><p class="name">측정 기준</p><p class="note">성과의 배경과 다음 실행 방향</p></div><div class="entry"><span class="mark">08</span><p class="name">다음 단계</p><p class="note">성과의 배경과 다음 실행 방향</p></div></div>
+</div></div></section></div></article><article><h2>architecture / layers-3 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" data-el="studio-spectrum-architecture"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="layer"><p class="name">경험 계층</p><span class="chip">고객 포털</span><span class="chip">브랜드 웹사이트</span><span class="chip">공통 운영 기준</span></div><div class="layer"><p class="name">서비스 계층</p><span class="chip">고객 관리</span><span class="chip">프로젝트 관리</span><span class="chip">공통 운영 기준</span></div><div class="layer"><p class="name">데이터 계층</p><span class="chip">분석 저장소</span><span class="chip">실시간 지표</span><span class="chip">공통 운영 기준</span></div></div>
+</div></div></section></div></article><article><h2>architecture / layers-5 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" data-el="studio-spectrum-architecture"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="layer"><p class="name">경험 계층</p><span class="chip">고객 포털</span><span class="chip">브랜드 웹사이트</span><span class="chip">공통 운영 기준</span></div><div class="layer"><p class="name">서비스 계층</p><span class="chip">고객 관리</span><span class="chip">프로젝트 관리</span><span class="chip">공통 운영 기준</span></div><div class="layer"><p class="name">데이터 계층</p><span class="chip">분석 저장소</span><span class="chip">실시간 지표</span><span class="chip">공통 운영 기준</span></div><div class="layer"><p class="name">연결 계층</p><span class="chip">파트너 API</span><span class="chip">이벤트 허브</span><span class="chip">공통 운영 기준</span></div><div class="layer"><p class="name">운영 계층</p><span class="chip">권한 관리</span><span class="chip">품질 모니터링</span><span class="chip">공통 운영 기준</span></div></div>
+</div></div></section></div></article><article><h2>callout / conclusion <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="callout" data-el="studio-spectrum-callout"  style="grid-column:1 / span 12; grid-row:1 / span 6"><p>성장의 다음 단계는 <b>고객 경험의 일관성</b>에서 시작합니다.</p></div>
+</div></div></section></div></article><article><h2>callout / with-icon <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="callout" data-el="studio-spectrum-callout"  style="grid-column:1 / span 12; grid-row:1 / span 6"><span class="icon">↗</span><p>핵심 고객의 재구매율을 높여 <b>지속 가능한 매출 구조</b>를 만듭니다.</p></div>
+</div></div></section></div></article><article><h2>card / default <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card " data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / line <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card line" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / on <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card on" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / quiet <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card quiet" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / tone-1 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card tone-1" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / tone-2 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card tone-2" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / tone-3 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card tone-3" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / tone-4 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card tone-4" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>card / tone-5 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card tone-5" data-el="studio-spectrum-card"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="kick">성장 지표</span><span class="mark">↗</span><p class="fig">150<small>억</small></p><h3 class="name">고객과 함께 만드는 성과</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>chart-bar / h-5 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars h" data-el="studio-spectrum-chart-bar" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100"><div class="bar tone-1" style="--v:42"><b>42억</b><span>1분기</span></div><div class="bar tone-2" style="--v:58"><b>58억</b><span>2분기</span></div><div class="bar tone-3" style="--v:74"><b>74억</b><span>3분기</span></div><div class="bar tone-4" style="--v:92"><b>92억</b><span>4분기</span></div><div class="bar tone-5" style="--v:85"><b>85억</b><span>5분기</span></div></div>
+</div></div></section></div></article><article><h2>chart-bar / vertical-4 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars " data-el="studio-spectrum-chart-bar" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100"><div class="bar tone-1" style="--v:42"><b>42억</b><span>1분기</span></div><div class="bar tone-2" style="--v:58"><b>58억</b><span>2분기</span></div><div class="bar tone-3" style="--v:74"><b>74억</b><span>3분기</span></div><div class="bar tone-4" style="--v:92"><b>92억</b><span>4분기</span></div></div>
+</div></div></section></div></article><article><h2>chart-bar / vertical-8 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars " data-el="studio-spectrum-chart-bar" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100"><div class="bar tone-1" style="--v:42"><b>42억</b><span>1분기</span></div><div class="bar tone-2" style="--v:58"><b>58억</b><span>2분기</span></div><div class="bar tone-3" style="--v:74"><b>74억</b><span>3분기</span></div><div class="bar tone-4" style="--v:92"><b>92억</b><span>4분기</span></div><div class="bar tone-5" style="--v:85"><b>85억</b><span>5분기</span></div><div class="bar tone-1" style="--v:67"><b>67억</b><span>6분기</span></div><div class="bar tone-2" style="--v:80"><b>80억</b><span>7분기</span></div><div class="bar tone-3" style="--v:95"><b>95억</b><span>8분기</span></div></div>
+</div></div></section></div></article><article><h2>chart-donut / row-2 <small>min 12x4 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donuts" data-el="studio-spectrum-chart-donut"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:65"><p class="fig">65<small>%</small></p><p class="name">온라인 매출</p></div><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:35"><p class="fig">35<small>%</small></p><p class="name">오프라인 매출</p></div></div>
+</div></div></section></div></article><article><h2>chart-donut / row-3 <small>min 12x4 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donuts" data-el="studio-spectrum-chart-donut"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:65"><p class="fig">65<small>%</small></p><p class="name">온라인 매출</p></div><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:35"><p class="fig">35<small>%</small></p><p class="name">오프라인 매출</p></div><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:48"><p class="fig">48<small>%</small></p><p class="name">신규 고객</p></div></div>
+</div></div></section></div></article><article><h2>chart-donut / row-4 <small>min 12x4 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donuts" data-el="studio-spectrum-chart-donut"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:65"><p class="fig">65<small>%</small></p><p class="name">온라인 매출</p></div><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:35"><p class="fig">35<small>%</small></p><p class="name">오프라인 매출</p></div><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:48"><p class="fig">48<small>%</small></p><p class="name">신규 고객</p></div><div class="donut" data-el="studio-spectrum-chart-donut" style="--v:72"><p class="fig">72<small>%</small></p><p class="name">고객 만족도</p></div></div>
+</div></div></section></div></article><article><h2>chart-donut / single <small>min 4x4 | 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donut" data-el="studio-spectrum-chart-donut" style="grid-column:1 / span 12; grid-row:1 / span 6; --v:65"><p class="fig">65<small>%</small></p><p class="name">온라인 매출 비중</p></div>
+</div></div></section></div></article><article><h2>chart-line / trend-4 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="lines" data-el="studio-spectrum-chart-line" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100"><div class="pt" style="--v:18"><b>18</b><span>1월</span></div><div class="pt" style="--v:43"><b>43</b><span>2월</span></div><div class="pt" style="--v:39"><b>39</b><span>3월</span></div><div class="pt" style="--v:82"><b>82</b><span>4월</span></div></div>
+</div></div></section></div></article><article><h2>chart-line / trend-6 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="lines" data-el="studio-spectrum-chart-line" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100"><div class="pt" style="--v:18"><b>18</b><span>1월</span></div><div class="pt" style="--v:29"><b>29</b><span>2월</span></div><div class="pt" style="--v:25"><b>25</b><span>3월</span></div><div class="pt" style="--v:54"><b>54</b><span>4월</span></div><div class="pt" style="--v:72"><b>72</b><span>5월</span></div><div class="pt" style="--v:92"><b>92</b><span>6월</span></div></div>
+</div></div></section></div></article><article><h2>cycle / nodes-3 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" data-el="studio-spectrum-cycle"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="node">고객 이해</div><div class="node">전략 설계</div><div class="node">실행 관리</div></div>
+</div></div></section></div></article><article><h2>cycle / nodes-4 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" data-el="studio-spectrum-cycle"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="node">고객 이해</div><div class="node">전략 설계</div><div class="node">실행 관리</div><div class="node">성과 분석</div></div>
+</div></div></section></div></article><article><h2>cycle / nodes-5 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" data-el="studio-spectrum-cycle"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="node">고객 이해</div><div class="node">전략 설계</div><div class="node">실행 관리</div><div class="node">성과 분석</div><div class="node">경험 개선</div></div>
+</div></div></section></div></article><article><h2>cycle / nodes-6 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" data-el="studio-spectrum-cycle"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="node">고객 이해</div><div class="node">전략 설계</div><div class="node">실행 관리</div><div class="node">성과 분석</div><div class="node">경험 개선</div><div class="node">가치 확장</div></div>
+</div></div></section></div></article><article><h2>delta / conversion <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="delta" data-el="studio-spectrum-delta"  style="grid-column:1 / span 12; grid-row:1 / span 6"><span class="from">3.8%</span><span class="to">5.2%</span></div>
+</div></div></section></div></article><article><h2>delta / revenue <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="delta" data-el="studio-spectrum-delta"  style="grid-column:1 / span 12; grid-row:1 / span 6"><span class="from">12.1억</span><span class="to">15.6억</span></div>
+</div></div></section></div></article><article><h2>flowchart / decision <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="flowchart" data-el="studio-spectrum-flowchart"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="node start to-d" style="grid-column:3;grid-row:1">고객 요청</div><div class="node ask to-r to-d" style="grid-column:3;grid-row:2">기준 충족?</div><div class="node to-d" style="grid-column:4;grid-row:2">보완 요청</div><div class="node to-d" style="grid-column:3;grid-row:3">검토 승인</div><div class="node end" style="grid-column:3;grid-row:4">처리 완료</div></div>
+</div></div></section></div></article><article><h2>flowchart / linear <small>min 10x4 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="flowchart" data-el="studio-spectrum-flowchart"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="node start to-r" style="grid-column:1;grid-row:3">목표 수립</div><div class="node to-r" style="grid-column:2;grid-row:3">고객 분석</div><div class="node ask to-r" style="grid-column:3;grid-row:3">가설 검증</div><div class="node to-r" style="grid-column:4;grid-row:3">전략 실행</div><div class="node end" style="grid-column:5;grid-row:3">성과 확인</div></div>
+</div></div></section></div></article><article><h2>funnel / stages-3 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" data-el="studio-spectrum-funnel"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stage" style="--v:100"><span class="name">유입</span><span class="fig">100%</span></div><div class="stage" style="--v:90"><span class="name">탐색</span><span class="fig">87%</span></div><div class="stage" style="--v:80"><span class="name">관심</span><span class="fig">74%</span></div></div>
+</div></div></section></div></article><article><h2>funnel / stages-4 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" data-el="studio-spectrum-funnel"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stage" style="--v:100"><span class="name">유입</span><span class="fig">100%</span></div><div class="stage" style="--v:90"><span class="name">탐색</span><span class="fig">87%</span></div><div class="stage" style="--v:80"><span class="name">관심</span><span class="fig">74%</span></div><div class="stage" style="--v:70"><span class="name">상담</span><span class="fig">61%</span></div></div>
+</div></div></section></div></article><article><h2>funnel / stages-6 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" data-el="studio-spectrum-funnel"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stage" style="--v:100"><span class="name">유입</span><span class="fig">100%</span></div><div class="stage" style="--v:90"><span class="name">탐색</span><span class="fig">87%</span></div><div class="stage" style="--v:80"><span class="name">관심</span><span class="fig">74%</span></div><div class="stage" style="--v:70"><span class="name">상담</span><span class="fig">61%</span></div><div class="stage" style="--v:60"><span class="name">전환</span><span class="fig">48%</span></div><div class="stage" style="--v:50"><span class="name">재구매</span><span class="fig">35%</span></div></div>
+</div></div></section></div></article><article><h2>gauge / progress-67 <small>min 6x2 | 3x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="meter" data-el="studio-spectrum-gauge" style="grid-column:1 / span 12; grid-row:1 / span 6; --v:67"><p class="name">신규 캠페인 제작 및 운영</p><p class="fig">67%</p></div>
+</div></div></section></div></article><article><h2>gauge / progress-90 <small>min 6x2 | 3x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="meter" data-el="studio-spectrum-gauge" style="grid-column:1 / span 12; grid-row:1 / span 6; --v:90"><p class="name">브랜드 개편 프로젝트</p><p class="fig">90%</p></div>
+</div></div></section></div></article><article><h2>hierarchy / branches-2 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" data-el="studio-spectrum-hierarchy"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="root">성장전략 본부</div><div class="branch"><div class="node">고객전략팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div><div class="branch"><div class="node">브랜드팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div></div>
+</div></div></section></div></article><article><h2>hierarchy / branches-3 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" data-el="studio-spectrum-hierarchy"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="root">성장전략 본부</div><div class="branch"><div class="node">고객전략팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div><div class="branch"><div class="node">브랜드팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div><div class="branch"><div class="node">제품성장팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div></div>
+</div></div></section></div></article><article><h2>hierarchy / branches-4 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" data-el="studio-spectrum-hierarchy"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="root">성장전략 본부</div><div class="branch"><div class="node">고객전략팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div><div class="branch"><div class="node">브랜드팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div><div class="branch"><div class="node">제품성장팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div><div class="branch"><div class="node">파트너팀</div><div class="leaf">기획 및 운영</div><div class="leaf">분석 및 개선</div></div></div>
+</div></div></section></div></article><article><h2>hub / nodes-3 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" data-el="studio-spectrum-hub"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="spoke"><span class="mark">01</span><p class="name">고객 이해</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">02</span><p class="name">전략 설계</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">03</span><p class="name">실행 관리</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div></div>
+</div></div></section></div></article><article><h2>hub / nodes-4 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" data-el="studio-spectrum-hub"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="spoke"><span class="mark">01</span><p class="name">고객 이해</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">02</span><p class="name">전략 설계</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">03</span><p class="name">실행 관리</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">04</span><p class="name">성과 분석</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div></div>
+</div></div></section></div></article><article><h2>hub / nodes-5 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" data-el="studio-spectrum-hub"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="spoke"><span class="mark">01</span><p class="name">고객 이해</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">02</span><p class="name">전략 설계</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">03</span><p class="name">실행 관리</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">04</span><p class="name">성과 분석</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">05</span><p class="name">경험 개선</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div></div>
+</div></div></section></div></article><article><h2>hub / nodes-6 <small>min 8x6 | 12x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" data-el="studio-spectrum-hub"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="core">지속 가능한 성장</div><div class="spoke"><span class="mark">01</span><p class="name">고객 이해</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">02</span><p class="name">전략 설계</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">03</span><p class="name">실행 관리</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">04</span><p class="name">성과 분석</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">05</span><p class="name">경험 개선</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div><div class="spoke"><span class="mark">06</span><p class="name">가치 확장</p><p class="note">연결된 실행으로 가치를 높입니다.</p></div></div>
+</div></div></section></div></article><article><h2>image-frame / landscape <small>min 6x3 | 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="frame" data-el="studio-spectrum-image-frame"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="seat" data-ph="1"></div></div>
+</div></div></section></div></article><article><h2>image-frame / portrait <small>min 4x6 | 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="frame" data-el="studio-spectrum-image-frame"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="seat portrait" data-ph="2"></div></div>
+</div></div></section></div></article><article><h2>legend / keys-3 <small>min 6x2 | 3x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="legend" data-el="studio-spectrum-legend"  style="grid-column:1 / span 12; grid-row:1 / span 6"><span class="key tone-1">온라인 사업</span><span class="key tone-2">오프라인 사업</span><span class="key tone-3">파트너 채널</span></div>
+</div></div></section></div></article><article><h2>legend / keys-5 <small>min 6x2 | 3x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="legend" data-el="studio-spectrum-legend"  style="grid-column:1 / span 12; grid-row:1 / span 6"><span class="key tone-1">온라인 사업</span><span class="key tone-2">오프라인 사업</span><span class="key tone-3">파트너 채널</span><span class="key tone-4">기업 고객</span><span class="key tone-5">신규 사업</span></div>
+</div></div></section></div></article><article><h2>list / check-4 <small>min 6x4 | 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list check" data-el="studio-spectrum-list"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div><div class="item"><p class="name">실행 가능한 변화에 집중합니다</p><p class="note">작은 실험을 반복하고 검증된 방법을 확장합니다.</p></div><div class="item"><p class="name">부서 간 실행 기준을 맞춥니다</p><p class="note">담당과 일정을 명확하게 공유합니다.</p></div></div>
+</div></div></section></div></article><article><h2>list / check-divided-8 <small>min 6x4 | 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list check divided" data-el="studio-spectrum-list"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div><div class="item"><p class="name">실행 가능한 변화에 집중합니다</p><p class="note">작은 실험을 반복하고 검증된 방법을 확장합니다.</p></div><div class="item"><p class="name">부서 간 실행 기준을 맞춥니다</p><p class="note">담당과 일정을 명확하게 공유합니다.</p></div><div class="item"><p class="name">고객의 목소리를 수집합니다</p><p class="note">정성적인 피드백을 지표와 함께 해석합니다.</p></div><div class="item"><p class="name">다음 분기 과제를 정리합니다</p><p class="note">배운 내용을 기록하고 실행 계획에 반영합니다.</p></div><div class="item"><p class="name">좋은 경험을 확산합니다</p><p class="note">팀별 사례를 공유하고 공통 기준을 고도화합니다.</p></div><div class="item"><p class="name">정기적으로 전략을 점검합니다</p><p class="note">환경 변화에 맞춰 가설과 목표를 조정합니다.</p></div></div>
+</div></div></section></div></article><article><h2>list / default-3 <small>min 6x4 | 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list " data-el="studio-spectrum-list"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div><div class="item"><p class="name">실행 가능한 변화에 집중합니다</p><p class="note">작은 실험을 반복하고 검증된 방법을 확장합니다.</p></div></div>
+</div></div></section></div></article><article><h2>list / divided-3 <small>min 6x4 | 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list divided" data-el="studio-spectrum-list"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div><div class="item"><p class="name">실행 가능한 변화에 집중합니다</p><p class="note">작은 실험을 반복하고 검증된 방법을 확장합니다.</p></div></div>
+</div></div></section></div></article><article><h2>list / num-5 <small>min 6x4 | 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list num" data-el="studio-spectrum-list"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div><div class="item"><p class="name">실행 가능한 변화에 집중합니다</p><p class="note">작은 실험을 반복하고 검증된 방법을 확장합니다.</p></div><div class="item"><p class="name">부서 간 실행 기준을 맞춥니다</p><p class="note">담당과 일정을 명확하게 공유합니다.</p></div><div class="item"><p class="name">고객의 목소리를 수집합니다</p><p class="note">정성적인 피드백을 지표와 함께 해석합니다.</p></div></div>
+</div></div></section></div></article><article><h2>logo-group / logos-12 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="logos" data-el="studio-spectrum-logo-group"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="seat logo" data-ph="1"></div><div class="seat logo" data-ph="2"></div><div class="seat logo" data-ph="3"></div><div class="seat logo" data-ph="4"></div><div class="seat logo" data-ph="5"></div><div class="seat logo" data-ph="6"></div><div class="seat logo" data-ph="7"></div><div class="seat logo" data-ph="8"></div><div class="seat logo" data-ph="9"></div><div class="seat logo" data-ph="10"></div><div class="seat logo" data-ph="11"></div><div class="seat logo" data-ph="12"></div></div>
+</div></div></section></div></article><article><h2>logo-group / logos-3 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="logos" data-el="studio-spectrum-logo-group"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="seat logo" data-ph="1"></div><div class="seat logo" data-ph="2"></div><div class="seat logo" data-ph="3"></div></div>
+</div></div></section></div></article><article><h2>logo-group / logos-6 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="logos" data-el="studio-spectrum-logo-group"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="seat logo" data-ph="1"></div><div class="seat logo" data-ph="2"></div><div class="seat logo" data-ph="3"></div><div class="seat logo" data-ph="4"></div><div class="seat logo" data-ph="5"></div><div class="seat logo" data-ph="6"></div></div>
+</div></div></section></div></article><article><h2>matrix / priority-1 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="matrix" data-el="studio-spectrum-matrix"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="axis-x"><span>낮은 실행 난이도</span><span>높은 실행 난이도</span></div><div class="axis-y"><span>높은 효과</span><span>낮은 효과</span></div><div class="cell on">즉시 실행</div><div class="cell">전략 과제</div><div class="cell">운영 개선</div><div class="cell">선택적 검토</div></div>
+</div></div></section></div></article><article><h2>matrix / priority-4 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="matrix" data-el="studio-spectrum-matrix"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="axis-x"><span>낮은 실행 난이도</span><span>높은 실행 난이도</span></div><div class="axis-y"><span>높은 효과</span><span>낮은 효과</span></div><div class="cell">즉시 실행</div><div class="cell">전략 과제</div><div class="cell">운영 개선</div><div class="cell on">선택적 검토</div></div>
+</div></div></section></div></article><article><h2>metric / row-2 <small>min 12x3 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stats" data-el="studio-spectrum-metric"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">25<small>%</small></p><h3 class="name">신규 고객 증가</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">38<small>%</small></p><h3 class="name">고객 유지율 개선</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div></div>
+</div></div></section></div></article><article><h2>metric / row-3 <small>min 12x3 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stats" data-el="studio-spectrum-metric"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">25<small>%</small></p><h3 class="name">신규 고객 증가</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">38<small>%</small></p><h3 class="name">고객 유지율 개선</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">51<small>%</small></p><h3 class="name">운영 비용 절감</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div></div>
+</div></div></section></div></article><article><h2>metric / row-6 <small>min 12x3 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stats" data-el="studio-spectrum-metric"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">25<small>%</small></p><h3 class="name">신규 고객 증가</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">38<small>%</small></p><h3 class="name">고객 유지율 개선</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">51<small>%</small></p><h3 class="name">운영 비용 절감</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">64<small>%</small></p><h3 class="name">신규 고객 증가</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">77<small>%</small></p><h3 class="name">고객 유지율 개선</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div><div class="stat" data-el="studio-spectrum-metric" ><div class="parts"><p class="fig">90<small>%</small></p><h3 class="name">운영 비용 절감</h3><p class="note">전년 동기 대비 개선되었습니다.</p></div></div></div>
+</div></div></section></div></article><article><h2>metric / single <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stat" data-el="studio-spectrum-metric"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><p class="fig">150<small>억</small></p><h3 class="name">분기 누적 매출</h3><p class="note">핵심 고객의 사용 경험을 개선하고, 지속 가능한 매출 기반을 넓혔습니다.</p></div></div>
+</div></div></section></div></article><article><h2>person / people-3 <small>min 12x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="people" data-el="studio-spectrum-person"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="1"></div><p class="name">김지은</p><p class="note">사업전략 리드</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="2"></div><p class="name">박서준</p><p class="note">고객경험 디자이너</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="3"></div><p class="name">이민지</p><p class="note">데이터 분석가</p></div></div>
+</div></div></section></div></article><article><h2>person / people-5 <small>min 12x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="people" data-el="studio-spectrum-person"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="1"></div><p class="name">김지은</p><p class="note">사업전략 리드</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="2"></div><p class="name">박서준</p><p class="note">고객경험 디자이너</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="3"></div><p class="name">이민지</p><p class="note">데이터 분석가</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="4"></div><p class="name">정도윤</p><p class="note">브랜드 매니저</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="5"></div><p class="name">최하린</p><p class="note">프로젝트 매니저</p></div></div>
+</div></div></section></div></article><article><h2>person / people-6 <small>min 12x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="people" data-el="studio-spectrum-person"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="1"></div><p class="name">김지은</p><p class="note">사업전략 리드</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="2"></div><p class="name">박서준</p><p class="note">고객경험 디자이너</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="3"></div><p class="name">이민지</p><p class="note">데이터 분석가</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="4"></div><p class="name">정도윤</p><p class="note">브랜드 매니저</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="5"></div><p class="name">최하린</p><p class="note">프로젝트 매니저</p></div><div class="person" data-el="studio-spectrum-person" ><div class="seat portrait" data-ph="6"></div><p class="name">윤서진</p><p class="note">파트너십 리드</p></div></div>
+</div></div></section></div></article><article><h2>person / single-avatar <small>min 4x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="person" data-el="studio-spectrum-person"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="seat avatar" data-ph="2"></div><p class="name">박서준</p><p class="note">고객경험 디자이너</p></div>
+</div></div></section></div></article><article><h2>person / single-portrait <small>min 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="person" data-el="studio-spectrum-person"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="seat portrait" data-ph="1"></div><p class="name">김지은</p><p class="note">사업전략 리드</p></div>
+</div></div></section></div></article><article><h2>pill / default <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pill " data-el="studio-spectrum-pill"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="mark">✓</span><span class="name">분기 목표 달성</span><span class="note">전년 대비 24% 성장</span></div></div>
+</div></div></section></div></article><article><h2>pill / line <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pill line" data-el="studio-spectrum-pill"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="mark">✓</span><span class="name">분기 목표 달성</span><span class="note">전년 대비 24% 성장</span></div></div>
+</div></div></section></div></article><article><h2>pill / on <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pill on" data-el="studio-spectrum-pill"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="mark">✓</span><span class="name">분기 목표 달성</span><span class="note">전년 대비 24% 성장</span></div></div>
+</div></div></section></div></article><article><h2>pill / quiet <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pill quiet" data-el="studio-spectrum-pill"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="parts"><span class="mark">✓</span><span class="name">분기 목표 달성</span><span class="note">전년 대비 24% 성장</span></div></div>
+</div></div></section></div></article><article><h2>pricing / plans-2 <small>min 12x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plans" data-el="studio-spectrum-pricing"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="plan" data-el="studio-spectrum-pricing" ><p class="name">스타터</p><div class="price"><span class="fig">29만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div><div class="plan on" data-el="studio-spectrum-pricing" ><p class="name">비즈니스</p><div class="price"><span class="fig">59만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div><div class="tag" data-el="studio-spectrum-tag" >가장 많이 선택한 플랜</div></div></div>
+</div></div></section></div></article><article><h2>pricing / plans-3 <small>min 12x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plans" data-el="studio-spectrum-pricing"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="plan" data-el="studio-spectrum-pricing" ><p class="name">스타터</p><div class="price"><span class="fig">29만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div><div class="plan on" data-el="studio-spectrum-pricing" ><p class="name">비즈니스</p><div class="price"><span class="fig">59만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div><div class="tag" data-el="studio-spectrum-tag" >가장 많이 선택한 플랜</div></div><div class="plan" data-el="studio-spectrum-pricing" ><p class="name">엔터프라이즈</p><div class="price"><span class="fig">99만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div></div>
+</div></div></section></div></article><article><h2>pricing / plans-4 <small>min 12x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plans" data-el="studio-spectrum-pricing"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="plan" data-el="studio-spectrum-pricing" ><p class="name">스타터</p><div class="price"><span class="fig">29만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div><div class="plan on" data-el="studio-spectrum-pricing" ><p class="name">비즈니스</p><div class="price"><span class="fig">59만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div><div class="tag" data-el="studio-spectrum-tag" >가장 많이 선택한 플랜</div></div><div class="plan" data-el="studio-spectrum-pricing" ><p class="name">엔터프라이즈</p><div class="price"><span class="fig">99만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div><div class="plan" data-el="studio-spectrum-pricing" ><p class="name">파트너</p><div class="price"><span class="fig">149만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div></div>
+</div></div></section></div></article><article><h2>pricing / single <small>min 4x6 | 6x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plan on" data-el="studio-spectrum-pricing"  style="grid-column:1 / span 12; grid-row:1 / span 6"><p class="name">비즈니스</p><div class="price"><span class="fig">59만</span><small>원 / 월</small></div><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div><div class="tag" data-el="studio-spectrum-tag" >가장 많이 선택한 플랜</div></div>
+</div></div></section></div></article><article><h2>pyramid / levels-3 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" data-el="studio-spectrum-pyramid"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="level"><p class="name">고객 가치</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">핵심 전략</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">실행 체계</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div></div>
+</div></div></section></div></article><article><h2>pyramid / levels-4 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" data-el="studio-spectrum-pyramid"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="level"><p class="name">고객 가치</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">핵심 전략</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">실행 체계</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">협업 구조</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div></div>
+</div></div></section></div></article><article><h2>pyramid / levels-5 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" data-el="studio-spectrum-pyramid"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="level"><p class="name">고객 가치</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">핵심 전략</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">실행 체계</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">협업 구조</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div><div class="level"><p class="name">데이터 기반</p><p class="note">공유된 실행 기준으로 성장을 만듭니다.</p></div></div>
+</div></div></section></div></article><article><h2>quote / big <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="quote big" data-el="studio-spectrum-quote"  style="grid-column:1 / span 12; grid-row:1 / span 6"><blockquote>복잡한 의사결정이 명확해졌습니다.<br>우리 팀이 같은 방향을 바라보게 된 변화입니다.</blockquote><div class="by"><div class="seat avatar" data-ph="1"></div><p class="name">김지은 · 사업전략 리드</p><p class="note">에버그린 파트너스, 2026년 고객 인터뷰</p></div></div>
+</div></div></section></div></article><article><h2>quote / default <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="quote " data-el="studio-spectrum-quote"  style="grid-column:1 / span 12; grid-row:1 / span 6"><blockquote>복잡한 의사결정이 명확해졌습니다.<br>우리 팀이 같은 방향을 바라보게 된 변화입니다.</blockquote><div class="by"><div class="seat avatar" data-ph="1"></div><p class="name">김지은 · 사업전략 리드</p><p class="note">에버그린 파트너스, 2026년 고객 인터뷰</p></div></div>
+</div></div></section></div></article><article><h2>steps / col-4 <small>min 4x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps col" data-el="studio-spectrum-steps"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="step"><span class="mark">01</span><p class="name">목표 정의</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">02</span><p class="name">고객 이해</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">03</span><p class="name">전략 수립</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">04</span><p class="name">실행 검증</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div></div>
+</div></div></section></div></article><article><h2>steps / row-3 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps " data-el="studio-spectrum-steps"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="step"><span class="mark">01</span><p class="name">목표 정의</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">02</span><p class="name">고객 이해</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">03</span><p class="name">전략 수립</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div></div>
+</div></div></section></div></article><article><h2>steps / row-5 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps " data-el="studio-spectrum-steps"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="step"><span class="mark">01</span><p class="name">목표 정의</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">02</span><p class="name">고객 이해</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">03</span><p class="name">전략 수립</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">04</span><p class="name">실행 검증</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="step"><span class="mark">05</span><p class="name">성과 확장</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div></div>
+</div></div></section></div></article><article><h2>table / performance-3 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" data-el="studio-spectrum-table"  style="grid-column:1 / span 12; grid-row:1 / span 6"><table class="table"><thead><tr><th>사업 부문</th><th class="num">전년 실적</th><th class="num pick">올해 실적</th><th class="num">달성률</th></tr></thead><tbody><tr><td>온라인 사업</td><td class="num">40억</td><td class="num pick">52억</td><td class="num">112%</td></tr><tr><td>파트너 사업</td><td class="num">51억</td><td class="num pick">64억</td><td class="num">116%</td></tr><tr><td>기업 솔루션</td><td class="num">62억</td><td class="num pick">76억</td><td class="num">120%</td></tr></tbody></table></div>
+</div></div></section></div></article><article><h2>table / performance-5 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" data-el="studio-spectrum-table"  style="grid-column:1 / span 12; grid-row:1 / span 6"><table class="table"><thead><tr><th>사업 부문</th><th class="num">전년 실적</th><th class="num pick">올해 실적</th><th class="num">달성률</th></tr></thead><tbody><tr><td>온라인 사업</td><td class="num">40억</td><td class="num pick">52억</td><td class="num">112%</td></tr><tr><td>파트너 사업</td><td class="num">51억</td><td class="num pick">64억</td><td class="num">116%</td></tr><tr><td>기업 솔루션</td><td class="num">62억</td><td class="num pick">76억</td><td class="num">120%</td></tr><tr><td>신규 시장 개발</td><td class="num">73억</td><td class="num pick">88억</td><td class="num">124%</td></tr><tr><td>브랜드 캠페인</td><td class="num">84억</td><td class="num pick">100억</td><td class="num">128%</td></tr></tbody></table></div>
+</div></div></section></div></article><article><h2>tag / highlight <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hl" data-el="studio-spectrum-tag"  style="grid-column:1 / span 12; grid-row:1 / span 6">전략의 중심은 고객입니다</div>
+</div></div></section></div></article><article><h2>tag / label <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tag" data-el="studio-spectrum-tag"  style="grid-column:1 / span 12; grid-row:1 / span 6">검증된 고객 인사이트</div>
+</div></div></section></div></article><article><h2>timeline / alt-3 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="track alt" data-el="studio-spectrum-timeline"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stop"><p class="kick">2026.01</p><p class="name">목표 정의</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop on"><p class="kick">2026.02</p><p class="name">고객 이해</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop"><p class="kick">2026.03</p><p class="name">전략 수립</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div></div>
+</div></div></section></div></article><article><h2>timeline / col-5 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="track col" data-el="studio-spectrum-timeline"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stop"><p class="kick">2026.01</p><p class="name">목표 정의</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop on"><p class="kick">2026.02</p><p class="name">고객 이해</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop"><p class="kick">2026.03</p><p class="name">전략 수립</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop"><p class="kick">2026.04</p><p class="name">실행 검증</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop"><p class="kick">2026.05</p><p class="name">성과 확장</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div></div>
+</div></div></section></div></article><article><h2>timeline / row-4 <small>min 8x4 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="track " data-el="studio-spectrum-timeline"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="stop"><p class="kick">2026.01</p><p class="name">목표 정의</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop on"><p class="kick">2026.02</p><p class="name">고객 이해</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop"><p class="kick">2026.03</p><p class="name">전략 수립</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div><div class="stop"><p class="kick">2026.04</p><p class="name">실행 검증</p><p class="note">고객의 요구를 확인하고 실행 기준을 구체화합니다.</p></div></div>
+</div></div></section></div></article><article><h2>venn / sets-2 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="venn" data-el="studio-spectrum-venn"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="set"><p class="name">고객 경험</p></div><div class="set on"><p class="name">비즈니스 가치</p></div><div class="core">지속 성장</div></div>
+</div></div></section></div></article><article><h2>venn / sets-3 <small>min 8x5 | 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="venn" data-el="studio-spectrum-venn"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="set"><p class="name">고객 경험</p></div><div class="set on"><p class="name">비즈니스 가치</p></div><div class="set"><p class="name">실행 역량</p></div><div class="core">지속 성장</div></div>
+</div></div></section></div></article><article><h2>versus / comparison-2 <small>min 10x5 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="versus" data-el="studio-spectrum-versus"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="side"><p class="name">기존 운영 방식</p><div class="list" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div><b class="vs">VS</b><div class="side on"><p class="name">통합 성장 전략</p><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div></div></div></div>
+</div></div></section></div></article><article><h2>versus / comparison-3 <small>min 10x5 | 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="versus" data-el="studio-spectrum-versus"  style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="side"><p class="name">기존 운영 방식</p><div class="list" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div><div class="item"><p class="name">실행 가능한 변화에 집중합니다</p><p class="note">작은 실험을 반복하고 검증된 방법을 확장합니다.</p></div></div></div><b class="vs">VS</b><div class="side on"><p class="name">통합 성장 전략</p><div class="list check" data-el="studio-spectrum-list" ><div class="item"><p class="name">고객 경험을 일관되게 설계합니다</p><p class="note">핵심 여정을 분석하고 접점마다 같은 품질을 제공합니다.</p></div><div class="item"><p class="name">성과를 데이터로 설명합니다</p><p class="note">채널별 지표를 연결해 개선의 우선순위를 정합니다.</p></div><div class="item"><p class="name">실행 가능한 변화에 집중합니다</p><p class="note">작은 실험을 반복하고 검증된 방법을 확장합니다.</p></div></div></div></div>
+</div></div></section></div></article></body></html>

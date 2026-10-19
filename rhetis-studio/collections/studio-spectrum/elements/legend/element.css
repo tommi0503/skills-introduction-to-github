@@ -1,0 +1,10 @@
+:is(.legend[data-el="studio-spectrum-legend"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.legend[data-el="studio-spectrum-legend"]) { display:flex; flex-wrap:wrap; align-content:center; align-items:center; justify-content:center; gap:var(--gap) var(--gap-lg); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key { display:flex; align-items:center; gap:var(--gap-sm); color:var(--ink-2); font-size:var(--type-18); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key::before { content:""; width:12px; height:12px; background:var(--tone-1); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-2::before { background:var(--tone-2); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-3::before { background:var(--tone-3); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-4::before { background:var(--tone-4); }
+:is(.legend[data-el="studio-spectrum-legend"]) > .key.tone-5::before { background:var(--tone-5); }
+@container (max-width:500px) { :is(.legend[data-el="studio-spectrum-legend"]) > .key { font-size:var(--type-14); } }

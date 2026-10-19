@@ -1,0 +1,12 @@
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-template-rows:repeat(5,minmax(0,1fr)); gap:var(--gap); padding:var(--gap); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node { position:relative; display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--gap-sm); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); background:var(--surface); font-size:var(--type-20); font-weight:var(--name-weight); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.start, :is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.end { border-radius:999px; background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.ask { background:var(--accent-soft); color:var(--accent); border-color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-r::after { content:"→"; position:absolute; left:100%; width:var(--gap); text-align:center; color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-l::after { content:"←"; position:absolute; right:100%; width:var(--gap); text-align:center; color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-d::before { content:"↓"; position:absolute; top:100%; height:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node.to-u::before { content:"↑"; position:absolute; bottom:100%; height:var(--gap); color:var(--accent); }
+@container (max-width:700px) { :is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node { font-size:var(--type-16); } }
+@container (max-width:450px) { :is(.flowchart[data-el="studio-spectrum-flowchart"]) > .node { font-size:var(--type-12); } }

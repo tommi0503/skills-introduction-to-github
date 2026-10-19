@@ -1,0 +1,16 @@
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) { container-type:size; min-width:0; min-height:0; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .fig { font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) .fig small { font-size:var(--type-22); font-weight:var(--body-weight); color:inherit; margin-left:calc(var(--gap-sm)/3); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]) :is(.fig,.name,.note) { margin:0; }
+
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat { display:flex; align-items:center; padding:var(--gap); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat > .parts { display:flex; flex-direction:column; gap:var(--gap-sm); width:100%; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-92); color:var(--accent); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stats { display:flex; align-items:stretch; gap:var(--gap); }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stats > .stat { flex:1; min-width:0; }
+:is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stats > .stat + .stat { border-left:var(--stroke) solid var(--line); }
+@container (max-width:620px) { :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-56); } :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .name { font-size:var(--type-20); } }
+@container (max-width:340px) { :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-40); } :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .note { font-size:var(--type-14); } }
+@container (max-height:180px) { :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .fig { font-size:var(--type-36); } :is(.stat[data-el="studio-spectrum-metric"], .stats[data-el="studio-spectrum-metric"]).stat .note { display:none; } }

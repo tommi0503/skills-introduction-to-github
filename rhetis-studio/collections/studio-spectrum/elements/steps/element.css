@@ -1,0 +1,15 @@
+:is(.steps[data-el="studio-spectrum-steps"]) { container-type:size; min-width:0; min-height:0; }
+:is(.steps[data-el="studio-spectrum-steps"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="studio-spectrum-steps"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.steps[data-el="studio-spectrum-steps"]) :is(.name,.note) { margin:0; }
+
+:is(.steps[data-el="studio-spectrum-steps"]) { display:flex; align-items:center; gap:var(--gap); }
+:is(.steps[data-el="studio-spectrum-steps"]) > .step { position:relative; flex:1; align-self:stretch; display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); padding-top:var(--gap); min-width:0; }
+:is(.steps[data-el="studio-spectrum-steps"]) > .step > .mark { width:48px; height:48px; display:flex; align-items:center; justify-content:center; border:var(--stroke) solid var(--line); border-radius:50%; background:var(--page); color:var(--accent); font-size:var(--type-18); font-weight:var(--label-weight); z-index:1; }
+:is(.steps[data-el="studio-spectrum-steps"]) > .step:not(:last-child)::before { content:""; position:absolute; left:48px; right:calc(var(--gap)*-1); top:calc(50% - var(--gap-lg)*1.15); height:var(--stroke); background:var(--line); }
+:is(.steps[data-el="studio-spectrum-steps"]).col { flex-direction:column; align-items:stretch; gap:var(--gap-sm); }
+:is(.steps[data-el="studio-spectrum-steps"]).col > .step { display:grid; grid-template-columns:48px 1fr; gap:calc(var(--gap-sm)/2) var(--gap); padding:0; align-content:center; }
+:is(.steps[data-el="studio-spectrum-steps"]).col > .step > .mark { grid-row:span 2; }
+:is(.steps[data-el="studio-spectrum-steps"]).col > .step:not(:last-child)::before { left:24px; right:auto; top:50%; bottom:calc(var(--gap)*-1); width:var(--stroke); height:auto; }
+@container (max-width:650px) { :is(.steps[data-el="studio-spectrum-steps"]) > .step > .name { font-size:var(--type-20); } :is(.steps[data-el="studio-spectrum-steps"]) > .step > .note { font-size:var(--type-14); } }
+@container (max-height:240px) { :is(.steps[data-el="studio-spectrum-steps"]) > .step > .note { display:none; } }

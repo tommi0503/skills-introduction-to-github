@@ -1,0 +1,10 @@
+:is(.tablebox[data-el="studio-spectrum-table"]) { container-type:size; min-width:0; min-height:0; }
+
+:is(.tablebox[data-el="studio-spectrum-table"]) { display:flex; align-items:center; }
+:is(.tablebox[data-el="studio-spectrum-table"]) > .table { border-collapse:collapse; width:100%; table-layout:fixed; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); }
+:is(.tablebox[data-el="studio-spectrum-table"]) :is(th,td) { padding:var(--gap-sm) var(--gap); text-align:left; border-bottom:var(--stroke) solid var(--line); overflow-wrap:anywhere; }
+:is(.tablebox[data-el="studio-spectrum-table"]) th { border-top:var(--stroke) solid var(--ink); color:var(--ink-2); font-size:var(--type-16); font-weight:var(--label-weight); }
+:is(.tablebox[data-el="studio-spectrum-table"]) .num { text-align:right; font-variant-numeric:tabular-nums; }
+:is(.tablebox[data-el="studio-spectrum-table"]) .pick { background:var(--accent-soft); color:var(--accent); font-weight:var(--name-weight); }
+@container (max-width:700px) { :is(.tablebox[data-el="studio-spectrum-table"]) > .table { font-size:var(--type-14); } :is(.tablebox[data-el="studio-spectrum-table"]) th { font-size:var(--type-14); } :is(.tablebox[data-el="studio-spectrum-table"]) :is(th,td) { padding:var(--gap-sm); } }
+@container (max-height:260px) { :is(.tablebox[data-el="studio-spectrum-table"]) :is(th,td) { padding:calc(var(--gap-sm)/2) var(--gap-sm); } }

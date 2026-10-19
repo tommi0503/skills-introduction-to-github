@@ -1,0 +1,15 @@
+:is(.quote[data-el="studio-spectrum-quote"]) { container-type:size; min-width:0; min-height:0; }
+:is(.quote[data-el="studio-spectrum-quote"]) .name { font-size:var(--type-26); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.quote[data-el="studio-spectrum-quote"]) .note { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.quote[data-el="studio-spectrum-quote"]) :is(.name,.note) { margin:0; }
+
+:is(.quote[data-el="studio-spectrum-quote"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-lg); padding:var(--pad); border-top:var(--stroke) solid var(--line); }
+:is(.quote[data-el="studio-spectrum-quote"]) > blockquote { position:relative; padding-top:var(--gap-lg); font-size:var(--type-36); line-height:var(--lead-line); font-weight:var(--lead-weight); letter-spacing:var(--lead-track); }
+:is(.quote[data-el="studio-spectrum-quote"]) > blockquote::before { content:"“"; position:absolute; top:calc(var(--gap-sm)*-2); left:0; color:var(--accent); font-size:var(--type-80); font-weight:var(--title-weight); line-height:var(--figure-line); }
+:is(.quote[data-el="studio-spectrum-quote"]).big > blockquote { font-size:var(--type-48); }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by { display:grid; grid-template-columns:auto 1fr; gap:calc(var(--gap-sm)/2) var(--gap-sm); align-items:center; }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by > .seat { width:56px; grid-row:span 2; }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by > .name { align-self:end; font-size:var(--type-18); }
+:is(.quote[data-el="studio-spectrum-quote"]) > .by > .note { align-self:start; font-size:var(--type-14); }
+@container (max-width:600px) { :is(.quote[data-el="studio-spectrum-quote"]) > blockquote, :is(.quote[data-el="studio-spectrum-quote"]).big > blockquote { font-size:var(--type-26); } }
+@container (max-height:250px) { :is(.quote[data-el="studio-spectrum-quote"]) > blockquote, :is(.quote[data-el="studio-spectrum-quote"]).big > blockquote { font-size:var(--type-22); } :is(.quote[data-el="studio-spectrum-quote"]) > .by > .seat { width:40px; } }
