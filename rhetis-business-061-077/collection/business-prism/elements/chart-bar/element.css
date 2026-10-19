@@ -1,0 +1,20 @@
+.bars[data-el="business-prism-chart-bar"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.bars[data-el="business-prism-chart-bar"] { display:flex; align-items:stretch; gap:var(--gap); padding:var(--pad); border-bottom:var(--stroke) solid var(--line); background:repeating-linear-gradient(to top,var(--line) 0 1px,transparent 1px 25%); }
+.bars[data-el="business-prism-chart-bar"] .bar { flex:1; min-width:0; position:relative; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; padding-bottom:var(--gap-lg); }
+.bars[data-el="business-prism-chart-bar"] .bar::before { content:""; position:absolute; bottom:var(--gap-lg); width:64%; height:calc((100% - var(--gap-lg) - var(--gap-lg)) * var(--v) / var(--max)); background:var(--tone-4); }
+.bars[data-el="business-prism-chart-bar"] .bar.on::before { background:var(--accent); }
+.bars[data-el="business-prism-chart-bar"] .bar > b { position:absolute; bottom:calc(var(--gap-lg) + (100% - var(--gap-lg) - var(--gap-lg)) * var(--v) / var(--max)); padding-bottom:var(--gap-sm); color:var(--ink-2); font-size:var(--type-20); line-height:var(--label-line); font-weight:var(--figure-weight); }
+.bars[data-el="business-prism-chart-bar"] .bar > span { position:absolute; bottom:0; font-size:var(--type-16); line-height:var(--label-line); color:var(--mute); }
+.bars[data-el="business-prism-chart-bar"].h { flex-direction:column; background:none; border:0; gap:var(--gap); }
+.bars[data-el="business-prism-chart-bar"].h .bar { display:grid; grid-template-columns:100px 1fr; padding:0; align-items:center; }
+.bars[data-el="business-prism-chart-bar"].h .bar::before { top:var(--gap-sm); bottom:var(--gap-sm); left:120px; width:calc((100% - 180px) * var(--v) / var(--max)); height:auto; }
+.bars[data-el="business-prism-chart-bar"].h .bar > span { position:static; grid-column:1; font-size:var(--type-18); color:var(--ink-2); }
+.bars[data-el="business-prism-chart-bar"].h .bar > b { bottom:auto; left:calc(120px + (100% - 180px) * var(--v) / var(--max)); padding:0 0 0 var(--gap-sm); }
+@container (max-width:650px) or (max-height:300px) { .bars[data-el="business-prism-chart-bar"] { gap:var(--gap-sm); padding:var(--gap); } .bars[data-el="business-prism-chart-bar"] .bar > b { font-size:var(--type-14); } .bars[data-el="business-prism-chart-bar"] .bar > span { font-size:var(--type-12); } }
+
+.bars[data-el="business-prism-chart-bar"] .bar.tone-1::before { background:var(--tone-1); }
+.bars[data-el="business-prism-chart-bar"] .bar.tone-2::before { background:var(--tone-2); }
+.bars[data-el="business-prism-chart-bar"] .bar.tone-3::before { background:var(--tone-3); }
+.bars[data-el="business-prism-chart-bar"] .bar.tone-4::before { background:var(--tone-4); }
+.bars[data-el="business-prism-chart-bar"] .bar.tone-5::before { background:var(--tone-5); }

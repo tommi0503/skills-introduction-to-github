@@ -1,0 +1,30 @@
+.funnel[data-el="business-prism-funnel"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.funnel[data-el="business-prism-funnel"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.funnel[data-el="business-prism-funnel"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.funnel[data-el="business-prism-funnel"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.funnel[data-el="business-prism-funnel"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.funnel[data-el="business-prism-funnel"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.funnel[data-el="business-prism-funnel"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.funnel[data-el="business-prism-funnel"] .name { font-size:var(--type-18); }
+.funnel[data-el="business-prism-funnel"] .note { font-size:var(--type-14); }
+.funnel[data-el="business-prism-funnel"] .kick { font-size:var(--type-12); }
+.funnel[data-el="business-prism-funnel"] .fig { font-size:var(--type-40); }
+.funnel[data-el="business-prism-funnel"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.funnel[data-el="business-prism-funnel"] .name { font-size:var(--type-16); }
+.funnel[data-el="business-prism-funnel"] .note { font-size:var(--type-12); }
+.funnel[data-el="business-prism-funnel"] .kick { display:none; }
+.funnel[data-el="business-prism-funnel"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .funnel[data-el="business-prism-funnel"] .note { display:none; } }
+
+.funnel[data-el="business-prism-funnel"] { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--gap-sm); }
+.funnel[data-el="business-prism-funnel"] .stage { width:calc(var(--v) * 1%); min-width:28%; flex:1; max-height:100px; display:flex; align-items:center; justify-content:space-between; gap:var(--gap); padding:var(--gap) var(--pad); background:var(--accent-soft); border-left:4px solid var(--accent); }
+.funnel[data-el="business-prism-funnel"] .stage:nth-child(even) { background:var(--surface); }
+.funnel[data-el="business-prism-funnel"] .stage:last-child { background:var(--accent); color:var(--accent-ink); }
+.funnel[data-el="business-prism-funnel"] .stage:last-child :is(.name,.fig) { color:var(--accent-ink); }
+.funnel[data-el="business-prism-funnel"] .fig { font-size:var(--type-32); }
+@container (max-height:350px) or (max-width:600px) { .funnel[data-el="business-prism-funnel"] .stage { padding:var(--gap-sm); } .funnel[data-el="business-prism-funnel"] .fig { font-size:var(--type-24); } .funnel[data-el="business-prism-funnel"] .name { font-size:var(--type-16); } }

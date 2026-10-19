@@ -1,0 +1,11 @@
+.tablebox[data-el="business-prism-table"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.tablebox[data-el="business-prism-table"] { display:flex; align-items:center; }
+.tablebox[data-el="business-prism-table"] .table { width:100%; border-collapse:collapse; font-size:var(--type-20); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.tablebox[data-el="business-prism-table"] :is(th,td) { padding:var(--gap) var(--pad); text-align:left; border-bottom:var(--stroke) solid var(--line); font-weight:var(--body-weight); }
+.tablebox[data-el="business-prism-table"] thead th { background:var(--tone-1); color:var(--tone-1-ink); font-weight:var(--label-weight); }
+.tablebox[data-el="business-prism-table"] tbody th { background:var(--surface); font-weight:var(--name-weight); }
+.tablebox[data-el="business-prism-table"] .num { text-align:right; font-variant-numeric:tabular-nums; }
+.tablebox[data-el="business-prism-table"] tbody .pick { background:var(--accent-soft); color:var(--accent); font-weight:var(--name-weight); }
+.tablebox[data-el="business-prism-table"] thead .pick { background:var(--accent); color:var(--accent-ink); }
+@container (max-width:700px) or (max-height:320px) { .tablebox[data-el="business-prism-table"] .table { font-size:var(--type-14); } .tablebox[data-el="business-prism-table"] :is(th,td) { padding:var(--gap-sm); } }

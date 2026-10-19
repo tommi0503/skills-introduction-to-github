@@ -1,0 +1,7 @@
+.delta[data-el="business-prism-delta"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.delta[data-el="business-prism-delta"] { display:flex; align-items:center; justify-content:center; gap:var(--gap-lg); font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.delta[data-el="business-prism-delta"] .from { color:var(--mute); }
+.delta[data-el="business-prism-delta"] .to { color:var(--accent); }
+.delta[data-el="business-prism-delta"] .to::before { content:"→"; color:var(--tone-3); display:inline-block; margin-right:var(--gap-lg); }
+@container (max-width:600px) or (max-height:180px) { .delta[data-el="business-prism-delta"] { font-size:var(--type-32); gap:var(--gap); } .delta[data-el="business-prism-delta"] .to::before { margin-right:var(--gap); } }

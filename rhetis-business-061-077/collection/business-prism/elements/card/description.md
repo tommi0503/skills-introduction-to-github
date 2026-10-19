@@ -1,0 +1,1 @@
+A nearly square evidence panel with a fine perimeter, ordered label, figure, title and supporting sentence. Solid blue and five tonal variants extend the corporate report palette; outlined and quiet variants reduce emphasis.

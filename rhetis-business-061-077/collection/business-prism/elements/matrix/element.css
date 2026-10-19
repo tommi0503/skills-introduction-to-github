@@ -1,0 +1,33 @@
+.matrix[data-el="business-prism-matrix"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.matrix[data-el="business-prism-matrix"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.matrix[data-el="business-prism-matrix"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.matrix[data-el="business-prism-matrix"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.matrix[data-el="business-prism-matrix"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.matrix[data-el="business-prism-matrix"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.matrix[data-el="business-prism-matrix"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.matrix[data-el="business-prism-matrix"] .name { font-size:var(--type-18); }
+.matrix[data-el="business-prism-matrix"] .note { font-size:var(--type-14); }
+.matrix[data-el="business-prism-matrix"] .kick { font-size:var(--type-12); }
+.matrix[data-el="business-prism-matrix"] .fig { font-size:var(--type-40); }
+.matrix[data-el="business-prism-matrix"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.matrix[data-el="business-prism-matrix"] .name { font-size:var(--type-16); }
+.matrix[data-el="business-prism-matrix"] .note { font-size:var(--type-12); }
+.matrix[data-el="business-prism-matrix"] .kick { display:none; }
+.matrix[data-el="business-prism-matrix"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .matrix[data-el="business-prism-matrix"] .note { display:none; } }
+
+.matrix[data-el="business-prism-matrix"] { display:grid; grid-template-columns:var(--gap-lg) repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(0,1fr)) var(--gap-lg); gap:var(--gap-sm); }
+.matrix[data-el="business-prism-matrix"] .axis-x { grid-column:2 / span 2; grid-row:3; display:flex; justify-content:space-between; color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.matrix[data-el="business-prism-matrix"] .axis-y { grid-column:1; grid-row:1 / span 2; display:flex; flex-direction:column; justify-content:space-between; color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); writing-mode:vertical-rl; align-items:center; }
+.matrix[data-el="business-prism-matrix"] .cell { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:var(--gap); padding:var(--pad); background:var(--surface); border:var(--stroke) solid var(--line); }
+.matrix[data-el="business-prism-matrix"] .cell:nth-of-type(3) { grid-column:2; grid-row:1; } .matrix[data-el="business-prism-matrix"] .cell:nth-of-type(4) { grid-column:3; grid-row:1; } .matrix[data-el="business-prism-matrix"] .cell:nth-of-type(5) { grid-column:2; grid-row:2; } .matrix[data-el="business-prism-matrix"] .cell:nth-of-type(6) { grid-column:3; grid-row:2; }
+.matrix[data-el="business-prism-matrix"] .cell.on { background:var(--accent-soft); border-color:var(--accent); }
+.matrix[data-el="business-prism-matrix"] .cell.on .name { color:var(--accent); }
+@container (max-width:650px) or (max-height:350px) { .matrix[data-el="business-prism-matrix"] .cell { padding:var(--gap-sm); gap:var(--gap-sm); } }
+
+.matrix[data-el="business-prism-matrix"] .axis-y > span { white-space:nowrap; }

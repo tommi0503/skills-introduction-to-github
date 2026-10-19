@@ -1,0 +1,33 @@
+.steps[data-el="business-prism-steps"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.steps[data-el="business-prism-steps"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.steps[data-el="business-prism-steps"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.steps[data-el="business-prism-steps"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.steps[data-el="business-prism-steps"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.steps[data-el="business-prism-steps"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.steps[data-el="business-prism-steps"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.steps[data-el="business-prism-steps"] .name { font-size:var(--type-18); }
+.steps[data-el="business-prism-steps"] .note { font-size:var(--type-14); }
+.steps[data-el="business-prism-steps"] .kick { font-size:var(--type-12); }
+.steps[data-el="business-prism-steps"] .fig { font-size:var(--type-40); }
+.steps[data-el="business-prism-steps"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.steps[data-el="business-prism-steps"] .name { font-size:var(--type-16); }
+.steps[data-el="business-prism-steps"] .note { font-size:var(--type-12); }
+.steps[data-el="business-prism-steps"] .kick { display:none; }
+.steps[data-el="business-prism-steps"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .steps[data-el="business-prism-steps"] .note { display:none; } }
+
+.steps[data-el="business-prism-steps"] { display:flex; align-items:stretch; gap:var(--gap-lg); }
+.steps[data-el="business-prism-steps"] .step { flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:var(--gap); padding:var(--gap); position:relative; }
+.steps[data-el="business-prism-steps"] .mark { background:var(--accent); color:var(--accent-ink); border-radius:50%; width:60px; height:60px; }
+.steps[data-el="business-prism-steps"] .kick { display:none; }
+.steps[data-el="business-prism-steps"] .step:not(:last-child)::after { content:"→"; position:absolute; right:calc(var(--gap-lg) * -1); top:50%; transform:translateY(-50%); color:var(--accent); font-size:var(--type-28); }
+.steps[data-el="business-prism-steps"].col { flex-direction:column; gap:var(--gap); }
+.steps[data-el="business-prism-steps"].col .step { display:grid; grid-template-columns:60px minmax(0,1fr); text-align:left; align-content:center; gap:var(--gap-sm) var(--gap); }
+.steps[data-el="business-prism-steps"].col .mark { grid-row:1 / span 2; }
+.steps[data-el="business-prism-steps"].col .step:not(:last-child)::after { content:"↓"; left:var(--gap); right:auto; top:100%; font-size:var(--type-20); }
+@container (max-width:700px) or (max-height:300px) { .steps[data-el="business-prism-steps"] .mark { width:40px; height:40px; font-size:var(--type-18); } .steps[data-el="business-prism-steps"] .step { gap:var(--gap-sm); padding:var(--gap-sm); } .steps[data-el="business-prism-steps"] .name { font-size:var(--type-16); } .steps[data-el="business-prism-steps"] .note { font-size:var(--type-12); } }

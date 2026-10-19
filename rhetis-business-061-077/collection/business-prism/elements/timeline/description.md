@@ -1,0 +1,1 @@
+A thin timeline supports rectangular milestone notes with a blue top rule and small date labels. Alternating and vertical tracks support distinct reporting rhythms while keeping the same precise panel language.

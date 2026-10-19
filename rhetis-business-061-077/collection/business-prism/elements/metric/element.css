@@ -1,0 +1,37 @@
+.stats[data-el="business-prism-metric"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.stats[data-el="business-prism-metric"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.stats[data-el="business-prism-metric"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.stats[data-el="business-prism-metric"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.stats[data-el="business-prism-metric"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.stats[data-el="business-prism-metric"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.stats[data-el="business-prism-metric"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.stats[data-el="business-prism-metric"] .name { font-size:var(--type-18); }
+.stats[data-el="business-prism-metric"] .note { font-size:var(--type-14); }
+.stats[data-el="business-prism-metric"] .kick { font-size:var(--type-12); }
+.stats[data-el="business-prism-metric"] .fig { font-size:var(--type-40); }
+.stats[data-el="business-prism-metric"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.stats[data-el="business-prism-metric"] .name { font-size:var(--type-16); }
+.stats[data-el="business-prism-metric"] .note { font-size:var(--type-12); }
+.stats[data-el="business-prism-metric"] .kick { display:none; }
+.stats[data-el="business-prism-metric"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .stats[data-el="business-prism-metric"] .note { display:none; } }
+
+.stats[data-el="business-prism-metric"] { display:flex; align-items:stretch; justify-content:center; }
+.stats[data-el="business-prism-metric"] > .stat { flex:1; padding:var(--pad); text-align:center; }
+.stats[data-el="business-prism-metric"] > .stat + .stat { border-left:var(--stroke) solid var(--line); }
+.stat[data-el="business-prism-metric"] { min-width:0; min-height:0; display:flex; align-items:center; justify-content:center; container-type:size; }
+.stat[data-el="business-prism-metric"] > .parts { display:flex; flex-direction:column; align-items:center; gap:var(--gap); }
+.stat[data-el="business-prism-metric"] .fig { font-size:var(--type-64); line-height:var(--figure-line); font-weight:var(--figure-weight); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.stat[data-el="business-prism-metric"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.stat[data-el="business-prism-metric"] .name { font-size:var(--type-22); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.stat[data-el="business-prism-metric"] .note { color:var(--mute); font-size:var(--type-16); line-height:var(--body-line); font-weight:var(--body-weight); letter-spacing:var(--body-track); }
+@container (max-width:300px) { .stat[data-el="business-prism-metric"] .fig { font-size:var(--type-36); } .stat[data-el="business-prism-metric"] .name { font-size:var(--type-16); } .stat[data-el="business-prism-metric"] .note { font-size:var(--type-12); } .stats[data-el="business-prism-metric"] > .stat { padding:var(--gap-sm); } }
+
+.stats[data-el="business-prism-metric"] > .stat { height:100%; }
+
+.stat[data-el="business-prism-metric"] .fig small { color:inherit; }

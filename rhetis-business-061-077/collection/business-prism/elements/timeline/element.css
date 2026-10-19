@@ -1,0 +1,37 @@
+.track[data-el="business-prism-timeline"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.track[data-el="business-prism-timeline"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.track[data-el="business-prism-timeline"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.track[data-el="business-prism-timeline"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.track[data-el="business-prism-timeline"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.track[data-el="business-prism-timeline"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.track[data-el="business-prism-timeline"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.track[data-el="business-prism-timeline"] .name { font-size:var(--type-18); }
+.track[data-el="business-prism-timeline"] .note { font-size:var(--type-14); }
+.track[data-el="business-prism-timeline"] .kick { font-size:var(--type-12); }
+.track[data-el="business-prism-timeline"] .fig { font-size:var(--type-40); }
+.track[data-el="business-prism-timeline"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.track[data-el="business-prism-timeline"] .name { font-size:var(--type-16); }
+.track[data-el="business-prism-timeline"] .note { font-size:var(--type-12); }
+.track[data-el="business-prism-timeline"] .kick { display:none; }
+.track[data-el="business-prism-timeline"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .track[data-el="business-prism-timeline"] .note { display:none; } }
+
+.track[data-el="business-prism-timeline"] { display:flex; gap:var(--gap); align-items:center; }
+.track[data-el="business-prism-timeline"]::before { content:""; position:absolute; left:0; right:0; top:50%; height:var(--stroke); background:var(--line); }
+.track[data-el="business-prism-timeline"] .stop { flex:1; min-width:0; position:relative; display:flex; flex-direction:column; gap:var(--gap-sm); padding:var(--gap) var(--gap-sm); background:var(--surface); border-top:3px solid var(--tone-4); }
+.track[data-el="business-prism-timeline"] .stop.on { background:var(--accent-soft); border-color:var(--accent); }
+.track[data-el="business-prism-timeline"] .stop::before { content:""; position:absolute; width:8px; height:8px; border-radius:50%; background:var(--accent); top:-6px; left:var(--gap); }
+.track[data-el="business-prism-timeline"] .stop .mark { display:none; }
+.track[data-el="business-prism-timeline"].alt .stop:nth-child(even) { transform:translateY(45%); }
+.track[data-el="business-prism-timeline"].alt .stop:nth-child(odd) { transform:translateY(-45%); }
+.track[data-el="business-prism-timeline"].col { flex-direction:column; align-items:stretch; justify-content:center; }
+.track[data-el="business-prism-timeline"].col::before { top:0; bottom:0; left:var(--gap); right:auto; width:var(--stroke); height:auto; }
+.track[data-el="business-prism-timeline"].col .stop { flex:0; margin-left:var(--gap-lg); border-top:0; border-left:3px solid var(--tone-4); }
+.track[data-el="business-prism-timeline"].col .stop.on { border-color:var(--accent); }
+.track[data-el="business-prism-timeline"].col .stop::before { left:calc(var(--gap) * -1); top:50%; }
+@container (max-width:700px) or (max-height:340px) { .track[data-el="business-prism-timeline"] .name { font-size:var(--type-16); } .track[data-el="business-prism-timeline"] .note { font-size:var(--type-12); } .track[data-el="business-prism-timeline"] .stop { padding:var(--gap-sm); } }

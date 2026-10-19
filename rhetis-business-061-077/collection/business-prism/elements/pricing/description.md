@@ -1,0 +1,1 @@
+Structured commercial plans use a thin perimeter and a strong top rule, with a clear price, checked features and a centered recommendation tag. The selected plan receives a pale blue field, preserving readable contrast.

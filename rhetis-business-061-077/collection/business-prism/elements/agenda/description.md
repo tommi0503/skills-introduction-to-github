@@ -1,0 +1,1 @@
+A highly ordered contents list uses generated-looking explicit section marks, fine full-width rules and clear two-column text. The selected section gains a pale blue band and a solid blue number tile.

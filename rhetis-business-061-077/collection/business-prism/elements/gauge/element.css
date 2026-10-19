@@ -1,0 +1,28 @@
+.meter[data-el="business-prism-gauge"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.meter[data-el="business-prism-gauge"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.meter[data-el="business-prism-gauge"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.meter[data-el="business-prism-gauge"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.meter[data-el="business-prism-gauge"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.meter[data-el="business-prism-gauge"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.meter[data-el="business-prism-gauge"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.meter[data-el="business-prism-gauge"] .name { font-size:var(--type-18); }
+.meter[data-el="business-prism-gauge"] .note { font-size:var(--type-14); }
+.meter[data-el="business-prism-gauge"] .kick { font-size:var(--type-12); }
+.meter[data-el="business-prism-gauge"] .fig { font-size:var(--type-40); }
+.meter[data-el="business-prism-gauge"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.meter[data-el="business-prism-gauge"] .name { font-size:var(--type-16); }
+.meter[data-el="business-prism-gauge"] .note { font-size:var(--type-12); }
+.meter[data-el="business-prism-gauge"] .kick { display:none; }
+.meter[data-el="business-prism-gauge"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .meter[data-el="business-prism-gauge"] .note { display:none; } }
+
+.meter[data-el="business-prism-gauge"] { display:grid; grid-template-columns:minmax(0,1fr) auto; align-content:center; align-items:center; gap:var(--gap); padding-bottom:var(--gap-lg); }
+.meter[data-el="business-prism-gauge"]::before { content:""; position:absolute; left:0; right:0; height:10px; top:calc(50% + var(--gap)); background:var(--surface-2); border-radius:999px; }
+.meter[data-el="business-prism-gauge"]::after { content:""; position:absolute; left:0; width:calc(var(--v) * 1%); height:10px; top:calc(50% + var(--gap)); background:var(--accent); border-radius:999px; }
+.meter[data-el="business-prism-gauge"] .fig { font-size:var(--type-36); }
+@container (max-height:180px) { .meter[data-el="business-prism-gauge"] .fig { font-size:var(--type-24); } .meter[data-el="business-prism-gauge"] .name { font-size:var(--type-18); } }

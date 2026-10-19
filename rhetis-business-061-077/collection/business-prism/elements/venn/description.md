@@ -1,0 +1,1 @@
+Overlapping outlined circles identify shared business value using translucent cyan-blue surfaces and a precise blue center label. Two and three set arrangements preserve generous, readable intersections.

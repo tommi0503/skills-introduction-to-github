@@ -1,0 +1,1 @@
+A stepped conversion funnel uses proportional horizontal panels, alternating quiet surfaces, and a strong blue final outcome. Left-aligned labels and right-aligned figures favor business readability over decorative distortion.

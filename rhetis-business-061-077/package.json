@@ -1,0 +1,16 @@
+{
+  "name": "rhetis-business-061-077",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "render": "python tools/render.py",
+    "verify": "python tools/verify.py",
+    "package": "python tools/package.py",
+    "qa:library": "python tools/check-library.py && node tools/library-minima.mjs && node tools/library-contrast.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

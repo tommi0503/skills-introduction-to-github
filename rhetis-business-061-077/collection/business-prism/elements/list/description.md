@@ -1,0 +1,1 @@
+An orderly list with small blue square bullets, generated check marks, or generated sequence numbers. Divided lists add fine gray rules, keeping long business explanations aligned to one clear text axis.

@@ -1,0 +1,32 @@
+.agenda[data-el="business-prism-agenda"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.agenda[data-el="business-prism-agenda"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.agenda[data-el="business-prism-agenda"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.agenda[data-el="business-prism-agenda"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.agenda[data-el="business-prism-agenda"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.agenda[data-el="business-prism-agenda"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.agenda[data-el="business-prism-agenda"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.agenda[data-el="business-prism-agenda"] .name { font-size:var(--type-18); }
+.agenda[data-el="business-prism-agenda"] .note { font-size:var(--type-14); }
+.agenda[data-el="business-prism-agenda"] .kick { font-size:var(--type-12); }
+.agenda[data-el="business-prism-agenda"] .fig { font-size:var(--type-40); }
+.agenda[data-el="business-prism-agenda"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.agenda[data-el="business-prism-agenda"] .name { font-size:var(--type-16); }
+.agenda[data-el="business-prism-agenda"] .note { font-size:var(--type-12); }
+.agenda[data-el="business-prism-agenda"] .kick { display:none; }
+.agenda[data-el="business-prism-agenda"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .agenda[data-el="business-prism-agenda"] .note { display:none; } }
+
+.agenda[data-el="business-prism-agenda"] { display:flex; flex-direction:column; justify-content:center; }
+.agenda[data-el="business-prism-agenda"] .entry { flex:1; min-height:0; display:grid; grid-template-columns:60px minmax(0,1fr) minmax(0,1fr); align-items:center; gap:var(--gap); padding:var(--gap); border-bottom:var(--stroke) solid var(--line); }
+.agenda[data-el="business-prism-agenda"] .entry:first-child { border-top:var(--stroke) solid var(--line); }
+.agenda[data-el="business-prism-agenda"] .entry .mark { width:40px; height:40px; background:var(--accent-soft); font-size:var(--type-18); }
+.agenda[data-el="business-prism-agenda"] .entry.on { background:var(--accent-soft); }
+.agenda[data-el="business-prism-agenda"] .entry.on .name { color:var(--accent); }
+.agenda[data-el="business-prism-agenda"] .entry.on .mark { background:var(--accent); color:var(--accent-ink); }
+.agenda[data-el="business-prism-agenda"] .entry .kick { display:none; }
+@container (max-width:700px) or (max-height:350px) { .agenda[data-el="business-prism-agenda"] .entry { grid-template-columns:36px minmax(0,1fr) minmax(0,1fr); gap:var(--gap-sm); padding:var(--gap-sm); } .agenda[data-el="business-prism-agenda"] .entry .mark { width:28px; height:28px; font-size:var(--type-14); } .agenda[data-el="business-prism-agenda"] .name { font-size:var(--type-16); } .agenda[data-el="business-prism-agenda"] .note { font-size:var(--type-12); } }

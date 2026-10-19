@@ -1,0 +1,1 @@
+A precise bar chart built from numeric custom properties, with generous spacing, quiet grid rules, desaturated supporting bars and a clear blue focus. Horizontal bars align business labels at the left. Value and label text remain HTML, not embedded artwork.

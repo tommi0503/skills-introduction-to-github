@@ -1,0 +1,31 @@
+.versus[data-el="business-prism-versus"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.versus[data-el="business-prism-versus"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.versus[data-el="business-prism-versus"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.versus[data-el="business-prism-versus"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.versus[data-el="business-prism-versus"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.versus[data-el="business-prism-versus"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.versus[data-el="business-prism-versus"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.versus[data-el="business-prism-versus"] .name { font-size:var(--type-18); }
+.versus[data-el="business-prism-versus"] .note { font-size:var(--type-14); }
+.versus[data-el="business-prism-versus"] .kick { font-size:var(--type-12); }
+.versus[data-el="business-prism-versus"] .fig { font-size:var(--type-40); }
+.versus[data-el="business-prism-versus"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.versus[data-el="business-prism-versus"] .name { font-size:var(--type-16); }
+.versus[data-el="business-prism-versus"] .note { font-size:var(--type-12); }
+.versus[data-el="business-prism-versus"] .kick { display:none; }
+.versus[data-el="business-prism-versus"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .versus[data-el="business-prism-versus"] .note { display:none; } }
+
+.versus[data-el="business-prism-versus"] { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:stretch; gap:var(--gap); }
+.versus[data-el="business-prism-versus"] .side { min-width:0; display:flex; flex-direction:column; gap:var(--gap); padding:var(--pad); background:var(--surface); border:var(--stroke) solid var(--line); }
+.versus[data-el="business-prism-versus"] .side > .name { padding-bottom:var(--gap); border-bottom:var(--stroke) solid var(--line); }
+.versus[data-el="business-prism-versus"] .side.on { background:var(--accent-soft); border-color:var(--accent); }
+.versus[data-el="business-prism-versus"] .side.on > .name { color:var(--accent); }
+.versus[data-el="business-prism-versus"] .side > .list { flex:1; }
+.versus[data-el="business-prism-versus"] .vs { align-self:center; width:48px; height:48px; border-radius:50%; background:var(--tone-1); color:var(--tone-1-ink); display:flex; align-items:center; justify-content:center; font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); }
+@container (max-width:700px) or (max-height:350px) { .versus[data-el="business-prism-versus"] .side { padding:var(--gap); } .versus[data-el="business-prism-versus"] .side > .name { font-size:var(--type-18); } .versus[data-el="business-prism-versus"] .vs { width:32px; height:32px; font-size:var(--type-12); } }

@@ -1,0 +1,1 @@
+A slender blue line with small round data markers and directly readable values. Fine horizontal guide rules and an open field echo the source decks’ restrained growth charts. Native CSS anchors connect numeric HTML data points.

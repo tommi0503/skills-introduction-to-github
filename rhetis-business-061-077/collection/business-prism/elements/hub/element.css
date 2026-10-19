@@ -1,0 +1,49 @@
+.hub[data-el="business-prism-hub"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.hub[data-el="business-prism-hub"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.hub[data-el="business-prism-hub"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.hub[data-el="business-prism-hub"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.hub[data-el="business-prism-hub"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.hub[data-el="business-prism-hub"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.hub[data-el="business-prism-hub"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.hub[data-el="business-prism-hub"] .name { font-size:var(--type-18); }
+.hub[data-el="business-prism-hub"] .note { font-size:var(--type-14); }
+.hub[data-el="business-prism-hub"] .kick { font-size:var(--type-12); }
+.hub[data-el="business-prism-hub"] .fig { font-size:var(--type-40); }
+.hub[data-el="business-prism-hub"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.hub[data-el="business-prism-hub"] .name { font-size:var(--type-16); }
+.hub[data-el="business-prism-hub"] .note { font-size:var(--type-12); }
+.hub[data-el="business-prism-hub"] .kick { display:none; }
+.hub[data-el="business-prism-hub"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .hub[data-el="business-prism-hub"] .note { display:none; } }
+
+.hub[data-el="business-prism-hub"] { isolation:isolate; }
+.hub[data-el="business-prism-hub"] .core { position:absolute; left:50%; top:50%; width:min(24cqw,30cqh); height:min(24cqw,30cqh); transform:translate(-50%,-50%); display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--gap); border-radius:50%; background:var(--tone-1); color:var(--tone-1-ink); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.hub[data-el="business-prism-hub"] > .spoke { position:absolute; width:26%; min-height:18%; left:calc(50% + cos(var(--business-prism-angle)) * 35%); top:calc(50% + sin(var(--business-prism-angle)) * 35%); transform:translate(-50%,-50%); padding:var(--gap-sm); display:flex; flex-direction:column; gap:var(--gap-sm); align-items:center; justify-content:center; text-align:center; background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); }
+.hub[data-el="business-prism-hub"] > .spoke .name { font-size:var(--type-20); }
+.hub[data-el="business-prism-hub"] > .spoke .note { font-size:var(--type-14); }
+.hub[data-el="business-prism-hub"] > .spoke .mark { width:32px; height:32px; font-size:var(--type-18); background:var(--accent-soft); border-radius:50%; }
+@container (max-width:650px) or (max-height:350px) { .hub[data-el="business-prism-hub"] .core { font-size:var(--type-18); } .hub[data-el="business-prism-hub"] > .spoke .name { font-size:var(--type-16); } .hub[data-el="business-prism-hub"] > .spoke .note { font-size:var(--type-12); } .hub[data-el="business-prism-hub"] > .spoke { padding:var(--gap-sm); gap:0; } .hub[data-el="business-prism-hub"] > .spoke .mark { display:none; } }
+
+.hub[data-el="business-prism-hub"]:has(> .spoke:nth-of-type(4):last-child) { --business-prism-count:3; }
+.hub[data-el="business-prism-hub"]:has(> .spoke:nth-of-type(5):last-child) { --business-prism-count:4; }
+.hub[data-el="business-prism-hub"]:has(> .spoke:nth-of-type(6):last-child) { --business-prism-count:5; }
+.hub[data-el="business-prism-hub"]:has(> .spoke:nth-of-type(7):last-child) { --business-prism-count:6; }
+.hub[data-el="business-prism-hub"] > .spoke:nth-child(2) { --business-prism-angle:calc(-90deg + (2 - 2) * 360deg / var(--business-prism-count)); }
+.hub[data-el="business-prism-hub"] > .spoke:nth-child(3) { --business-prism-angle:calc(-90deg + (3 - 2) * 360deg / var(--business-prism-count)); }
+.hub[data-el="business-prism-hub"] > .spoke:nth-child(4) { --business-prism-angle:calc(-90deg + (4 - 2) * 360deg / var(--business-prism-count)); }
+.hub[data-el="business-prism-hub"] > .spoke:nth-child(5) { --business-prism-angle:calc(-90deg + (5 - 2) * 360deg / var(--business-prism-count)); }
+.hub[data-el="business-prism-hub"] > .spoke:nth-child(6) { --business-prism-angle:calc(-90deg + (6 - 2) * 360deg / var(--business-prism-count)); }
+.hub[data-el="business-prism-hub"] > .spoke:nth-child(7) { --business-prism-angle:calc(-90deg + (7 - 2) * 360deg / var(--business-prism-count)); }
+.hub[data-el="business-prism-hub"]::before { content:""; position:absolute; inset:15%; background:linear-gradient(var(--line),var(--line)) center / 1px 100% no-repeat,linear-gradient(90deg,var(--line),var(--line)) center / 100% 1px no-repeat; z-index:-1; }
+.hub[data-el="business-prism-hub"] > .spoke::before { content:""; position:absolute; left:50%; top:50%; width:35cqw; height:var(--stroke); background:var(--line); transform-origin:0 0; transform:rotate(calc(var(--business-prism-angle) + 180deg)); z-index:-1; }
+
+.hub[data-el="business-prism-hub"] > .core { z-index:2; }
+.hub[data-el="business-prism-hub"]::before { content:none; }
+.hub[data-el="business-prism-hub"] > .spoke::before { width:hypot(calc(cos(var(--business-prism-angle)) * 35cqw),calc(sin(var(--business-prism-angle)) * 35cqh)); transform:rotate(atan2(calc(sin(var(--business-prism-angle)) * -35cqh),calc(cos(var(--business-prism-angle)) * -35cqw))); }
+
+.hub[data-el="business-prism-hub"] > .spoke::before { clip-path:inset(0 0 0 min(calc(13cqw / max(abs(cos(atan2(calc(sin(var(--business-prism-angle)) * -35cqh),calc(cos(var(--business-prism-angle)) * -35cqw)))), .001)),calc(10cqh / max(abs(sin(atan2(calc(sin(var(--business-prism-angle)) * -35cqh),calc(cos(var(--business-prism-angle)) * -35cqw)))), .001)))); }

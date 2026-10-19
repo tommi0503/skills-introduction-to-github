@@ -1,0 +1,235 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>판매 활성화 사업 제안서 — 시장 환경 분석</title><style>@font-face{font-family:"Roboto Condensed";src:url("../../../assets/fonts/RobotoCondensed-Variable.woff2");font-weight:100 900;font-display:block}@font-face{font-family:Montserrat;src:url('../../../assets/fonts/Montserrat-Variable.woff2');font-weight:100 900;font-display:block}@font-face{font-family:'Gmarket Sans';src:url('../../../assets/fonts/GmarketSansLight.woff');font-weight:300;font-display:block}@font-face{font-family:'Gmarket Sans';src:url('../../../assets/fonts/GmarketSansMedium.woff');font-weight:500;font-display:block}@font-face{font-family:'Gmarket Sans';src:url('../../../assets/fonts/GmarketSansBold.woff');font-weight:700;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:block}
+.slide {
+  --page: #ffffff;
+  --surface: #f3f6f8;
+  --surface-2: #e8eef3;
+  --ink: #202b38;
+  --ink-2: #425568;
+  --mute: #5c6c7d;
+  --line: #c8d4df;
+  --accent: #1268bb;
+  --accent-ink: #ffffff;
+  --accent-soft: #e7f4fc;
+  --tone-1: #173a73;
+  --tone-1-ink: #ffffff;
+  --tone-2: #27b6c6;
+  --tone-2-ink: #073b42;
+  --tone-3: #f47a4e;
+  --tone-3-ink: #32190e;
+  --tone-4: #89b4cf;
+  --tone-4-ink: #153343;
+  --tone-5: #545b63;
+  --tone-5-ink: #ffffff;
+  --good: #16745b;
+  --warn: #9b5716;
+  --bad: #bc3945;
+  --font-display: "Gmarket Sans", "Pretendard", sans-serif;
+  --font-body: "Pretendard", sans-serif;
+  --weight-display: 700;
+  --weight-body: 400;
+  --tracking-display: -.035em;
+  --radius: 4px;
+  --radius-sm: 2px;
+  --stroke: 1px;
+  --text-min: 12px;
+  --margin-x: 60px;
+  --margin-y: 48px;
+  --gap: 20px;
+  --gap-sm: 10px;
+  --gap-lg: 32px;
+  --pad: 28px;
+  --furn-edge: 20px;
+  --top-h: 24px;
+  --foot-h: 24px;
+  --furn-gap: 20px;
+  --rail-w: 72px;
+  --rail-gap: 28px;
+  --title-weight: 700;
+  --title-line: 1.25;
+  --title-track: -.04em;
+  --lead-weight: 400;
+  --lead-line: 1.5;
+  --lead-track: -.02em;
+  --figure-weight: 700;
+  --figure-line: 1.1;
+  --figure-track: -.035em;
+  --name-weight: 700;
+  --name-line: 1.4;
+  --name-track: -.025em;
+  --body-weight: 400;
+  --body-line: 1.55;
+  --body-track: -.015em;
+  --label-weight: 600;
+  --label-line: 1.3;
+  --label-track: 0em;
+  --label-track-latin: .08em;
+}
+.slide.dark {
+  --page: #13212e;
+  --surface: #1c3042;
+  --surface-2: #263d51;
+  --ink: #f3f7fb;
+  --ink-2: #d0dde9;
+  --mute: #adc0d1;
+  --line: #4c657b;
+  --accent: #59b5f4;
+  --accent-ink: #0e283d;
+  --accent-soft: #223f56;
+  --tone-1: #8fbbf5;
+  --tone-1-ink: #112d50;
+  --tone-2: #61cfdb;
+  --tone-2-ink: #0a3038;
+  --tone-3: #ffad87;
+  --tone-3-ink: #3c2012;
+  --tone-4: #a4c8df;
+  --tone-4-ink: #173749;
+  --tone-5: #9caab7;
+  --tone-5-ink: #152332;
+  --good: #78d7b8;
+  --warn: #efbd79;
+  --bad: #ff9ba5;
+}
+
+.slide { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--page); color: var(--ink); font-family: var(--font-body); font-size: var(--type-20); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: anywhere; }
+.slide, .slide * { box-sizing: border-box; }
+.slide :is(h1,h2,h3,p,blockquote) { margin: 0; }
+.slide > .page { position: absolute; inset: var(--margin-y) var(--margin-x); display: flex; flex-direction: column; gap: var(--gap-lg); }
+.slide:has(> .top) > .page { top: calc(var(--furn-edge) + var(--top-h) + var(--furn-gap)); }
+.slide:has(> .foot) > .page { bottom: calc(var(--furn-edge) + var(--foot-h) + var(--furn-gap)); }
+.slide:has(> .rail) > .page { left: calc(var(--rail-w) + var(--rail-gap)); }
+.slide .head { flex: none; display: flex; flex-direction: column; gap: var(--gap-sm); padding-bottom: var(--gap); border-bottom: var(--stroke) solid var(--line); }
+.slide .head.center { text-align: center; align-items: center; }
+.slide .kicker { color: var(--accent); font-size: var(--type-14); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track-latin); }
+.slide .title { font-family: var(--font-display); font-size: var(--type-40); font-weight: var(--title-weight); line-height: var(--title-line); letter-spacing: var(--title-track); }
+.slide .lead { color: var(--ink-2); font-size: var(--type-18); font-weight: var(--lead-weight); line-height: var(--lead-line); letter-spacing: var(--lead-track); }
+.slide .body { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); grid-template-rows: repeat(6,minmax(0,1fr)); gap: var(--gap); }
+.slide .body > * { min-width: 0; min-height: 0; }
+.slide .group { display: flex; gap: var(--gap); min-width: 0; min-height: 0; }
+.slide .group.col { flex-direction: column; }
+.slide .group > * { flex: 1; min-width: 0; min-height: 0; }
+.slide .group.two, .slide .group.three { display: grid; grid-auto-rows: minmax(0,1fr); }
+.slide .group.two { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.slide .group.three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.slide .stack { display: flex; flex-direction: column; gap: var(--gap-sm); min-width: 0; min-height: 0; }
+.slide .split { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: var(--gap); min-width: 0; min-height: 0; }
+.slide .split.wide-left { grid-template-columns: minmax(0,7fr) minmax(0,5fr); }
+.slide .split > * { min-width: 0; min-height: 0; }
+.slide .icon { width: 1.2em; height: 1.2em; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.slide .icon > svg { width: 100%; height: 100%; }
+.slide > :is(.top,.foot) { position: absolute; left: var(--margin-x); right: var(--margin-x); display: flex; align-items: center; gap: var(--gap); color: var(--mute); font-size: var(--type-12); font-weight: var(--label-weight); line-height: var(--label-line); }
+.slide > .top { top: var(--furn-edge); height: var(--top-h); border-bottom: var(--stroke) solid var(--line); }
+.slide > .foot { bottom: var(--furn-edge); height: var(--foot-h); border-top: var(--stroke) solid var(--line); }
+.slide > :is(.top,.foot) > .sec { color: var(--accent); }
+.slide > :is(.top,.foot) > :is(.src,.no) { margin-left: auto; }
+.slide > .foot > .src + .no { margin-left: var(--gap); }
+.slide > .rail { position: absolute; inset: 0 auto 0 0; width: var(--rail-w); background: var(--tone-1); color: var(--tone-1-ink); display: flex; flex-direction: column; align-items: center; gap: var(--gap); padding: var(--margin-y) var(--gap-sm); font-size: var(--type-16); font-weight: var(--label-weight); line-height: var(--label-line); }
+.slide > .rail .on { color: var(--tone-1-ink); border-bottom: 2px solid currentColor; }
+.slide > .rail .label { writing-mode: vertical-rl; margin-top: var(--gap); }
+.slide.cover > .page { display: grid; grid-template: minmax(0,1fr) / minmax(0,1fr); }
+.slide.cover > .page > * { grid-area: 1/1; }
+.slide.cover .lockup { z-index: 2; display: flex; flex-direction: column; gap: var(--gap); align-self: center; justify-self: start; max-width: 68%; }
+.slide.cover .lockup.at-center { justify-self: center; text-align: center; max-width: 85%; }
+.slide.cover .lockup.at-bottom-left { align-self: end; }
+.slide.cover .lockup.at-top-left { align-self: start; }
+.slide.cover .title { font-size: var(--type-64); }
+.slide.cover .lead { font-size: var(--type-24); }
+.slide.cover .meta { align-self: end; justify-self: start; z-index: 2; font-size: var(--type-14); color: var(--mute); }
+.slide.cover:has(.at-bottom-left) .meta { align-self: start; }
+.slide.cover .deco { align-self: stretch; justify-self: end; width: 48%; position: relative; background: var(--accent-soft); clip-path: polygon(60% 0,100% 0,100% 100%,0 100%); }
+.slide.cover .deco::before { content: ""; position: absolute; inset: 0 0 34% 20%; background: var(--tone-1); clip-path: polygon(70% 0,100% 0,100% 100%,0 100%); }
+.slide.cover .deco::after { content: ""; position: absolute; inset: 64% 0 0 4%; background: var(--tone-2); clip-path: polygon(30% 0,100% 0,100% 100%,0 100%); }
+.slide .seat { display: flex; align-items: center; justify-content: center; position: relative; min-width: 0; min-height: 0; overflow: hidden; background: var(--surface-2); border-radius: var(--radius-sm); color: var(--mute); }
+.slide .seat[data-ph]::after { content: attr(data-ph); font-size: var(--type-14); font-weight: var(--label-weight); line-height: var(--label-line); }
+.slide .seat.avatar { aspect-ratio: 1; border-radius: 50%; }
+.slide .seat.portrait { aspect-ratio: 4/5; }
+.slide .seat.logo { min-height: 40px; }
+.slide .seat.icon { aspect-ratio: 1; }
+.slide .seat.back { position: absolute; inset: 0; }
+
+.card[data-el="business-prism-card"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.card[data-el="business-prism-card"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.card[data-el="business-prism-card"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.card[data-el="business-prism-card"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.card[data-el="business-prism-card"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.card[data-el="business-prism-card"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.card[data-el="business-prism-card"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.card[data-el="business-prism-card"] .name { font-size:var(--type-18); }
+.card[data-el="business-prism-card"] .note { font-size:var(--type-14); }
+.card[data-el="business-prism-card"] .kick { font-size:var(--type-12); }
+.card[data-el="business-prism-card"] .fig { font-size:var(--type-40); }
+.card[data-el="business-prism-card"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.card[data-el="business-prism-card"] .name { font-size:var(--type-16); }
+.card[data-el="business-prism-card"] .note { font-size:var(--type-12); }
+.card[data-el="business-prism-card"] .kick { display:none; }
+.card[data-el="business-prism-card"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .card[data-el="business-prism-card"] .note { display:none; } }
+
+.card[data-el="business-prism-card"] { background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); padding:var(--pad); display:flex; }
+.card[data-el="business-prism-card"] > .parts { width:100%; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:var(--gap); }
+.card[data-el="business-prism-card"] .mark { width:48px; height:48px; background:var(--accent-soft); border-radius:var(--radius-sm); }
+.card[data-el="business-prism-card"].on { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+.card[data-el="business-prism-card"].on :is(.name,.note,.fig,.kick) { color:var(--accent-ink); }
+.card[data-el="business-prism-card"].quiet { background:var(--surface-2); border-color:var(--surface-2); }
+.card[data-el="business-prism-card"].line { background:var(--page); border-color:var(--accent); }
+@container (max-height:260px) { .card[data-el="business-prism-card"] > .parts { gap:var(--gap-sm); } .card[data-el="business-prism-card"] .mark { display:none; } }
+
+.card[data-el="business-prism-card"].tone-1 { background:var(--tone-1); color:var(--tone-1-ink); border-color:var(--tone-1); }
+.card[data-el="business-prism-card"].tone-1 :is(.name,.note,.fig,.kick) { color:var(--tone-1-ink); }
+.card[data-el="business-prism-card"].tone-2 { background:var(--tone-2); color:var(--tone-2-ink); border-color:var(--tone-2); }
+.card[data-el="business-prism-card"].tone-2 :is(.name,.note,.fig,.kick) { color:var(--tone-2-ink); }
+.card[data-el="business-prism-card"].tone-3 { background:var(--tone-3); color:var(--tone-3-ink); border-color:var(--tone-3); }
+.card[data-el="business-prism-card"].tone-3 :is(.name,.note,.fig,.kick) { color:var(--tone-3-ink); }
+.card[data-el="business-prism-card"].tone-4 { background:var(--tone-4); color:var(--tone-4-ink); border-color:var(--tone-4); }
+.card[data-el="business-prism-card"].tone-4 :is(.name,.note,.fig,.kick) { color:var(--tone-4-ink); }
+.card[data-el="business-prism-card"].tone-5 { background:var(--tone-5); color:var(--tone-5-ink); border-color:var(--tone-5); }
+.card[data-el="business-prism-card"].tone-5 :is(.name,.note,.fig,.kick) { color:var(--tone-5-ink); }
+
+.card[data-el="business-prism-card"] .fig small { color:inherit; }
+
+.pill[data-el="business-prism-pill"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.pill[data-el="business-prism-pill"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.pill[data-el="business-prism-pill"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.pill[data-el="business-prism-pill"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.pill[data-el="business-prism-pill"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.pill[data-el="business-prism-pill"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.pill[data-el="business-prism-pill"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.pill[data-el="business-prism-pill"] .name { font-size:var(--type-18); }
+.pill[data-el="business-prism-pill"] .note { font-size:var(--type-14); }
+.pill[data-el="business-prism-pill"] .kick { font-size:var(--type-12); }
+.pill[data-el="business-prism-pill"] .fig { font-size:var(--type-40); }
+.pill[data-el="business-prism-pill"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.pill[data-el="business-prism-pill"] .name { font-size:var(--type-16); }
+.pill[data-el="business-prism-pill"] .note { font-size:var(--type-12); }
+.pill[data-el="business-prism-pill"] .kick { display:none; }
+.pill[data-el="business-prism-pill"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .pill[data-el="business-prism-pill"] .note { display:none; } }
+
+.pill[data-el="business-prism-pill"] { display:flex; align-items:center; justify-content:center; background:var(--surface); border:var(--stroke) solid var(--line); border-radius:999px; padding:var(--gap-sm) var(--gap); }
+.pill[data-el="business-prism-pill"] > .parts { display:flex; align-items:center; justify-content:center; gap:var(--gap); }
+.pill[data-el="business-prism-pill"] .name { white-space:nowrap; }
+.pill[data-el="business-prism-pill"] .note { white-space:nowrap; }
+.pill[data-el="business-prism-pill"].on { background:var(--accent); border-color:var(--accent); }
+.pill[data-el="business-prism-pill"].on :is(.mark,.name,.note) { color:var(--accent-ink); }
+.pill[data-el="business-prism-pill"].quiet { border-color:var(--surface-2); background:var(--surface-2); }
+.pill[data-el="business-prism-pill"].line { background:var(--page); border-color:var(--accent); }
+@container (max-width:380px) { .pill[data-el="business-prism-pill"] .note { display:none; } .pill[data-el="business-prism-pill"] > .parts { gap:var(--gap-sm); } }
+
+.frame[data-el="business-prism-image-frame"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.frame[data-el="business-prism-image-frame"] { display:flex; width:auto; height:auto; padding:var(--gap-sm); border:var(--stroke) solid var(--line); border-radius:var(--radius); background:var(--page); }
+.frame[data-el="business-prism-image-frame"] > .seat { flex:1; min-width:0; min-height:0; border-radius:var(--radius-sm); }
+@container (max-width:400px) or (max-height:220px) { .frame[data-el="business-prism-image-frame"] { padding:calc(var(--gap-sm) / 2); } }
+
+.slide{--type-8:8px;--type-10:10px;--type-12:12px;--type-14:14px;--type-16:16px;--type-18:18px;--type-20:20px;--type-22:22px;--type-24:24px;--type-26:26px;--type-28:28px;--type-30:30px;--type-32:32px;--type-36:36px;--type-40:40px;--type-44:44px;--type-48:48px;--type-52:52px;--type-56:56px;--type-60:60px;--type-64:64px;--type-68:68px;--type-72:72px;--type-76:76px;--type-80:80px;--type-84:84px;--type-88:88px;--type-92:92px;--type-96:96px;--type-100:100px;--type-104:104px;--type-108:108px;--type-112:112px;--type-116:116px;--type-120:120px;--type-124:124px;--type-128:128px}
+html,body{margin:0;padding:0;background:#ededf0}.slide .overrides .group{position:relative;gap:0}.overrides .node{position:absolute;box-sizing:border-box;-webkit-font-smoothing:antialiased}.overrides .vector svg{display:block;width:100%;height:100%}.overrides .frame>.seat{width:100%;height:100%}.overrides .seat[data-ph]::after{content:none}.overrides .pill>.parts{gap:0}.overrides .pill>.parts>.name{transform-origin:center}.overrides .node.title{text-wrap:initial}.overrides .node.lead{text-wrap:initial}@page{size:1280px 720px;margin:0}@media print{.slide{break-after:page;print-color-adjust:exact;-webkit-print-color-adjust:exact}.slide:last-child{break-after:auto}}</style></head><body><section class="slide" data-deck="061" data-slide="slide_10" style="--page:#f1f2f8"><div class="page overrides" style="inset:0;gap:0"><div class="body" style="gap:0"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6"><div class="node vector" data-node="0" data-kind="svg" style="left:70px;top:55px;width:22px;height:28px"><svg viewBox="0 0 22 28"><path fill="#50aff7" d="M0 6 9 0l13 7-8 5zM0 9l7 4v11l-7-4zM14 12l8-5v16l-8 5z"/><path fill="#bce3fa" d="m7 13 7-4v19l-7-4z"/></svg></div><div class="node lead" data-node="1" data-kind="text" style="position:absolute;left:97px;top:56px;width:200px;height:28px;font-family:Pretendard;font-size:18px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#17191c;text-align:left;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">MIRICOMPANY</div><div class="node lead" data-node="2" data-kind="text" style="position:absolute;left:1048px;top:58px;width:158px;height:22px;font-family:Pretendard;font-size:14px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#85858a;text-align:right;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">Business Proposal</div><div class="node pill" data-el="business-prism-pill" data-node="3" data-kind="pill" style="position:absolute;left:564px;top:91px;width:152px;height:35px;font-family:Pretendard;font-size:17px;font-weight:500;line-height:1;letter-spacing:0px;color:#fff;text-align:left;--surface:#51b0fa;--stroke:0px;--line:transparent;padding:0;border-radius:17.5px;white-space:nowrap"><div class="parts"><span class="name" data-chip-label style="font:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;white-space:inherit;position:relative;display:inline-block">시장 환경 분석</span></div></div><div class="node lead" data-node="4" data-kind="text" style="position:absolute;left:86px;top:141px;width:1108px;height:46px;font-family:Pretendard;font-size:32px;font-weight:600;line-height:1.3;letter-spacing:0.3px;color:#0f4698;text-align:center;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">시장의 성장세, 주요 트렌드 또는 환경 변화를 간단하게 요약해 보세요.</div><div class="node card" data-el="business-prism-card" data-node="5" data-kind="rect" style="position:absolute;left:72px;top:213px;width:552px;height:451px;--surface:#fff;--radius:7px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node card" data-el="business-prism-card" data-node="6" data-kind="rect" style="position:absolute;left:72px;top:213px;width:552px;height:60px;--surface:#51b0fa;--radius:5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node lead" data-node="7" data-kind="text" style="position:absolute;left:72px;top:213px;width:552px;height:60px;font-family:Pretendard;font-size:21px;font-weight:600;line-height:1.35;letter-spacing:0px;color:#fff;text-align:center;display:flex;flex-direction:column;justify-content:center;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">주요 트렌드</div><div class="node frame" data-el="business-prism-image-frame" data-node="8" data-kind="placeholder" style="position:absolute;left:104px;top:300px;width:488px;height:170px;--surface-2:#e5e5e5;--radius:3px;--radius-sm:3px;--stroke:0px;--line:transparent;padding:0;border-radius:3px"><div class="seat" data-ph="1"></div></div><div class="node card" data-el="business-prism-card" data-node="9" data-kind="rect" style="position:absolute;left:106px;top:502px;width:29px;height:29px;--surface:#0f4698;--radius:5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node vector" data-node="10" data-kind="icon" style="left:109px;top:505px;width:23px;height:23px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div class="node lead" data-node="11" data-kind="text" style="position:absolute;left:145px;top:503px;width:460px;height:37px;font-family:Pretendard;font-size:19px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:left;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">1인 가구 증가로 [상품] 수요 증가</div><div class="node vector" data-node="12" data-kind="line" style="left:106px;top:540px;width:489px;height:1px;overflow:visible"><svg viewBox="0 0 489 1" overflow="visible"><line x1="0" y1="0" x2="489" y2="1" stroke="#d4d4d4" stroke-width="1" /></svg></div><div class="node card" data-el="business-prism-card" data-node="13" data-kind="rect" style="position:absolute;left:106px;top:556px;width:29px;height:29px;--surface:#0f4698;--radius:5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node vector" data-node="14" data-kind="icon" style="left:109px;top:559px;width:23px;height:23px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div class="node lead" data-node="15" data-kind="text" style="position:absolute;left:145px;top:557px;width:460px;height:37px;font-family:Pretendard;font-size:19px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:left;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">주요 소비 트렌드를 입력해 보세요.</div><div class="node vector" data-node="16" data-kind="line" style="left:106px;top:594px;width:489px;height:1px;overflow:visible"><svg viewBox="0 0 489 1" overflow="visible"><line x1="0" y1="0" x2="489" y2="1" stroke="#d4d4d4" stroke-width="1" /></svg></div><div class="node card" data-el="business-prism-card" data-node="17" data-kind="rect" style="position:absolute;left:106px;top:611px;width:29px;height:29px;--surface:#0f4698;--radius:5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node vector" data-node="18" data-kind="icon" style="left:109px;top:614px;width:23px;height:23px"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div class="node lead" data-node="19" data-kind="text" style="position:absolute;left:145px;top:612px;width:460px;height:37px;font-family:Pretendard;font-size:19px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:left;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">타겟 고객의 가치관 변화 등 포함</div><div class="node card" data-el="business-prism-card" data-node="20" data-kind="rect" style="position:absolute;left:654px;top:213px;width:552px;height:451px;--surface:#fff;--radius:7px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node card" data-el="business-prism-card" data-node="21" data-kind="rect" style="position:absolute;left:654px;top:213px;width:552px;height:60px;--surface:#51b0fa;--radius:5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node lead" data-node="22" data-kind="text" style="position:absolute;left:654px;top:213px;width:552px;height:60px;font-family:Pretendard;font-size:21px;font-weight:600;line-height:1.35;letter-spacing:0px;color:#fff;text-align:center;display:flex;flex-direction:column;justify-content:center;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">[상품] 시장 규모 및 성장률</div><div class="node vector" data-node="23" data-kind="line" style="left:721px;top:322px;width:1px;height:151px;overflow:visible"><svg viewBox="0 0 1 151" overflow="visible"><line x1="0" y1="0" x2="1" y2="151" stroke="#d0d0d0" stroke-width="1" /></svg></div><div class="node vector" data-node="24" data-kind="line" style="left:721px;top:473px;width:412px;height:1px;overflow:visible"><svg viewBox="0 0 412 1" overflow="visible"><line x1="0" y1="0" x2="412" y2="1" stroke="#d0d0d0" stroke-width="1" /></svg></div><div class="node lead" data-node="25" data-kind="text" style="position:absolute;left:688px;top:459px;width:27px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:right;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">0</div><div class="node lead" data-node="26" data-kind="text" style="position:absolute;left:688px;top:409px;width:27px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:right;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">20</div><div class="node lead" data-node="27" data-kind="text" style="position:absolute;left:688px;top:359px;width:27px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:right;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">40</div><div class="node lead" data-node="28" data-kind="text" style="position:absolute;left:688px;top:309px;width:27px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:right;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">60</div><div class="node card" data-el="business-prism-card" data-node="29" data-kind="rect" style="position:absolute;left:735px;top:447px;width:55px;height:26px;--surface:#bce3fc;--radius:0px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node lead" data-node="30" data-kind="text" style="position:absolute;left:735px;top:476px;width:55px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:center;display:flex;flex-direction:column;justify-content:center;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">20XX</div><div class="node card" data-el="business-prism-card" data-node="31" data-kind="rect" style="position:absolute;left:759px;top:419px;width:7px;height:7px;--surface:#51b0fa;--radius:3.5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node card" data-el="business-prism-card" data-node="32" data-kind="rect" style="position:absolute;left:817px;top:422px;width:55px;height:51px;--surface:#bce3fc;--radius:0px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node lead" data-node="33" data-kind="text" style="position:absolute;left:817px;top:476px;width:55px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:center;display:flex;flex-direction:column;justify-content:center;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">20XX</div><div class="node card" data-el="business-prism-card" data-node="34" data-kind="rect" style="position:absolute;left:841px;top:394px;width:7px;height:7px;--surface:#51b0fa;--radius:3.5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node card" data-el="business-prism-card" data-node="35" data-kind="rect" style="position:absolute;left:900px;top:397px;width:55px;height:76px;--surface:#bce3fc;--radius:0px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node lead" data-node="36" data-kind="text" style="position:absolute;left:900px;top:476px;width:55px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:center;display:flex;flex-direction:column;justify-content:center;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">20XX</div><div class="node card" data-el="business-prism-card" data-node="37" data-kind="rect" style="position:absolute;left:924px;top:369px;width:7px;height:7px;--surface:#51b0fa;--radius:3.5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node card" data-el="business-prism-card" data-node="38" data-kind="rect" style="position:absolute;left:982px;top:372px;width:55px;height:101px;--surface:#bce3fc;--radius:0px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node lead" data-node="39" data-kind="text" style="position:absolute;left:982px;top:476px;width:55px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:center;display:flex;flex-direction:column;justify-content:center;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">20XX</div><div class="node card" data-el="business-prism-card" data-node="40" data-kind="rect" style="position:absolute;left:1006px;top:344px;width:7px;height:7px;--surface:#51b0fa;--radius:3.5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node card" data-el="business-prism-card" data-node="41" data-kind="rect" style="position:absolute;left:1064px;top:347px;width:55px;height:126px;--surface:#bce3fc;--radius:0px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node lead" data-node="42" data-kind="text" style="position:absolute;left:1064px;top:476px;width:55px;height:24px;font-family:Pretendard;font-size:13px;font-weight:400;line-height:1.35;letter-spacing:0px;color:#252525;text-align:center;display:flex;flex-direction:column;justify-content:center;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">20XX</div><div class="node card" data-el="business-prism-card" data-node="43" data-kind="rect" style="position:absolute;left:1088px;top:319px;width:7px;height:7px;--surface:#51b0fa;--radius:3.5px;--stroke:0px;--line:transparent;padding:0"><div class="parts"></div></div><div class="node vector" data-node="44" data-kind="line" style="left:762px;top:322px;width:329px;height:100px;overflow:visible"><svg viewBox="0 0 329 100" overflow="visible"><line x1="0" y1="100" x2="329" y2="0" stroke="#51b0fa" stroke-width="1.5" /></svg></div><div class="node lead" data-node="45" data-kind="text" style="position:absolute;left:687px;top:522px;width:485px;height:117px;font-family:Pretendard;font-size:19px;font-weight:400;line-height:1.5;letter-spacing:0px;color:#252525;text-align:left;display:flex;flex-direction:column;justify-content:flex-start;white-space:pre-wrap;word-break:keep-all;overflow-wrap:normal;margin:0">•  시장 성장률, 주요 성장 동인, 향후 전망 등을 2-3문장으로 입력하세요.
+•  우리 제품/서비스에 특히 유리한 시장 기회나 환경 변화를 2-3문장으로 입력하세요.</div></div></div></div></section><script>document.fonts.ready.then(()=>{for(const el of document.querySelectorAll('[data-kind="pill"]')){const l=el.querySelector('[data-chip-label]'),s=getComputedStyle(el),c=document.createElement('canvas').getContext('2d');c.font=s.fontWeight+' '+s.fontSize+' '+s.fontFamily;const m=c.measureText(l.textContent),dx=(m.actualBoundingBoxRight-m.actualBoundingBoxLeft-m.width)/2,dy=(m.fontBoundingBoxAscent-m.fontBoundingBoxDescent+m.actualBoundingBoxDescent-m.actualBoundingBoxAscent)/2;l.style.transform='translate('+(-dx)+'px,'+(-dy)+'px)'}document.body.dataset.ready='true'})</script></body></html>

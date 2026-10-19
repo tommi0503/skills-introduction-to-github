@@ -1,0 +1,12 @@
+.donuts[data-el="business-prism-chart-donut"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.donuts[data-el="business-prism-chart-donut"] { display:flex; gap:var(--gap-lg); align-items:stretch; justify-content:center; }
+.donuts[data-el="business-prism-chart-donut"] > .donut { flex:1; }
+.donut[data-el="business-prism-chart-donut"] { container-type:size; position:relative; min-width:0; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--gap); isolation:isolate; }
+.donut[data-el="business-prism-chart-donut"]::before { content:""; width:min(70cqw,70cqh); height:min(70cqw,70cqh); border-radius:50%; background:conic-gradient(var(--accent) calc(var(--v) * 1%),var(--surface-2) 0); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:-2; }
+.donut[data-el="business-prism-chart-donut"]::after { content:""; width:min(48cqw,48cqh); height:min(48cqw,48cqh); border-radius:50%; background:var(--page); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:-1; }
+.donut[data-el="business-prism-chart-donut"] .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+.donut[data-el="business-prism-chart-donut"] .name { position:absolute; top:calc(50% + min(35cqw,35cqh) + var(--gap)); font-size:var(--type-20); font-weight:var(--name-weight); line-height:var(--name-line); text-align:center; }
+@container (max-width:320px) { .donut[data-el="business-prism-chart-donut"] .fig { font-size:var(--type-30); } .donut[data-el="business-prism-chart-donut"] .name { font-size:var(--type-14); } }
+
+.donuts[data-el="business-prism-chart-donut"] > .donut { height:100%; }

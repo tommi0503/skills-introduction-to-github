@@ -1,0 +1,28 @@
+.arch[data-el="business-prism-architecture"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.arch[data-el="business-prism-architecture"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.arch[data-el="business-prism-architecture"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.arch[data-el="business-prism-architecture"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.arch[data-el="business-prism-architecture"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.arch[data-el="business-prism-architecture"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.arch[data-el="business-prism-architecture"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.arch[data-el="business-prism-architecture"] .name { font-size:var(--type-18); }
+.arch[data-el="business-prism-architecture"] .note { font-size:var(--type-14); }
+.arch[data-el="business-prism-architecture"] .kick { font-size:var(--type-12); }
+.arch[data-el="business-prism-architecture"] .fig { font-size:var(--type-40); }
+.arch[data-el="business-prism-architecture"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.arch[data-el="business-prism-architecture"] .name { font-size:var(--type-16); }
+.arch[data-el="business-prism-architecture"] .note { font-size:var(--type-12); }
+.arch[data-el="business-prism-architecture"] .kick { display:none; }
+.arch[data-el="business-prism-architecture"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .arch[data-el="business-prism-architecture"] .note { display:none; } }
+
+.arch[data-el="business-prism-architecture"] { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+.arch[data-el="business-prism-architecture"] .layer { flex:1; min-height:0; max-height:140px; display:flex; align-items:center; gap:var(--gap); border:var(--stroke) solid var(--line); background:var(--surface); padding:var(--gap); }
+.arch[data-el="business-prism-architecture"] .layer > .name { flex:0 0 22%; align-self:stretch; display:flex; align-items:center; padding:var(--gap); background:var(--tone-1); color:var(--tone-1-ink); font-size:var(--type-20); }
+.arch[data-el="business-prism-architecture"] .chip { flex:1; display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--gap); min-height:50px; background:var(--page); border:var(--stroke) solid var(--line); font-size:var(--type-18); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width:700px) or (max-height:350px) { .arch[data-el="business-prism-architecture"] .layer { padding:var(--gap-sm); gap:var(--gap-sm); } .arch[data-el="business-prism-architecture"] .layer > .name { font-size:var(--type-16); padding:var(--gap-sm); } .arch[data-el="business-prism-architecture"] .chip { font-size:var(--type-14); padding:var(--gap-sm); min-height:32px; } }

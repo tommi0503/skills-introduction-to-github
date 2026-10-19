@@ -1,0 +1,25 @@
+.lines[data-el="business-prism-chart-line"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.lines[data-el="business-prism-chart-line"] { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr); padding:var(--pad); isolation:isolate; anchor-scope:all; background:repeating-linear-gradient(to top,var(--line) 0 1px,transparent 1px 25%); }
+.lines[data-el="business-prism-chart-line"] .pt { display:contents; }
+.lines[data-el="business-prism-chart-line"] .pt > b { grid-row:1; position:relative; align-self:end; justify-self:center; margin-bottom:calc(var(--gap-lg) + (100cqh - 152px) * var(--v) / var(--max)); anchor-name:var(--business-prism-point); color:var(--accent); font-size:var(--type-18); font-weight:var(--figure-weight); line-height:var(--label-line); padding-bottom:var(--gap); }
+.lines[data-el="business-prism-chart-line"] .pt > b::after { content:""; position:absolute; bottom:-4px; left:calc(50% - 4px); width:8px; height:8px; border-radius:50%; background:var(--accent); border:var(--stroke) solid var(--page); }
+.lines[data-el="business-prism-chart-line"] .pt > span { grid-row:2; text-align:center; font-size:var(--type-16); line-height:var(--label-line); color:var(--mute); }
+.lines[data-el="business-prism-chart-line"] .pt::before, .lines[data-el="business-prism-chart-line"] .pt::after { content:""; position:absolute; left:anchor(var(--business-prism-previous) center); right:anchor(var(--business-prism-point) center); pointer-events:none; }
+.lines[data-el="business-prism-chart-line"] .pt::before { top:anchor(var(--business-prism-previous) bottom); bottom:anchor(var(--business-prism-point) bottom); background:linear-gradient(to top right,transparent calc(50% - 1px),var(--accent) calc(50% - 1px),var(--accent) calc(50% + 1px),transparent calc(50% + 1px)); }
+.lines[data-el="business-prism-chart-line"] .pt::after { top:anchor(var(--business-prism-point) bottom); bottom:anchor(var(--business-prism-previous) bottom); background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--accent) calc(50% - 1px),var(--accent) calc(50% + 1px),transparent calc(50% + 1px)); }
+.lines[data-el="business-prism-chart-line"] .pt:first-child::before, .lines[data-el="business-prism-chart-line"] .pt:first-child::after { content:none; }
+@container (max-width:650px) or (max-height:300px) { .lines[data-el="business-prism-chart-line"] .pt > b { font-size:var(--type-14); } .lines[data-el="business-prism-chart-line"] .pt > span { font-size:var(--type-12); } }
+
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(1) { --business-prism-point: --bp-line-1; --business-prism-previous: --bp-line-1; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(2) { --business-prism-point: --bp-line-2; --business-prism-previous: --bp-line-1; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(3) { --business-prism-point: --bp-line-3; --business-prism-previous: --bp-line-2; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(4) { --business-prism-point: --bp-line-4; --business-prism-previous: --bp-line-3; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(5) { --business-prism-point: --bp-line-5; --business-prism-previous: --bp-line-4; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(6) { --business-prism-point: --bp-line-6; --business-prism-previous: --bp-line-5; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(7) { --business-prism-point: --bp-line-7; --business-prism-previous: --bp-line-6; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(8) { --business-prism-point: --bp-line-8; --business-prism-previous: --bp-line-7; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(9) { --business-prism-point: --bp-line-9; --business-prism-previous: --bp-line-8; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(10) { --business-prism-point: --bp-line-10; --business-prism-previous: --bp-line-9; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(11) { --business-prism-point: --bp-line-11; --business-prism-previous: --bp-line-10; }
+.lines[data-el="business-prism-chart-line"] .pt:nth-child(12) { --business-prism-point: --bp-line-12; --business-prism-previous: --bp-line-11; }

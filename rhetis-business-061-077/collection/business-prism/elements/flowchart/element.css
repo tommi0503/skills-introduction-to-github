@@ -1,0 +1,32 @@
+.flowchart[data-el="business-prism-flowchart"] { min-width:0; min-height:0; container-type:size; position:relative; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+
+.flowchart[data-el="business-prism-flowchart"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+.flowchart[data-el="business-prism-flowchart"] .note { font-size:var(--type-18); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.flowchart[data-el="business-prism-flowchart"] .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+.flowchart[data-el="business-prism-flowchart"] .fig { font-size:var(--type-64); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); font-variant-numeric:tabular-nums; }
+.flowchart[data-el="business-prism-flowchart"] .fig small { font-size:var(--type-24); margin-left:var(--gap-sm); }
+.flowchart[data-el="business-prism-flowchart"] .mark { display:flex; align-items:center; justify-content:center; flex:none; color:var(--accent); font-weight:var(--label-weight); font-size:var(--type-24); line-height:var(--label-line); }
+@container (max-width:560px) or (max-height:300px) {
+.flowchart[data-el="business-prism-flowchart"] .name { font-size:var(--type-18); }
+.flowchart[data-el="business-prism-flowchart"] .note { font-size:var(--type-14); }
+.flowchart[data-el="business-prism-flowchart"] .kick { font-size:var(--type-12); }
+.flowchart[data-el="business-prism-flowchart"] .fig { font-size:var(--type-40); }
+.flowchart[data-el="business-prism-flowchart"] .fig small { font-size:var(--type-18); }
+}
+@container (max-width:300px) or (max-height:160px) {
+.flowchart[data-el="business-prism-flowchart"] .name { font-size:var(--type-16); }
+.flowchart[data-el="business-prism-flowchart"] .note { font-size:var(--type-12); }
+.flowchart[data-el="business-prism-flowchart"] .kick { display:none; }
+.flowchart[data-el="business-prism-flowchart"] .fig { font-size:var(--type-28); }
+}
+@container (max-width:180px) or (max-height:110px) { .flowchart[data-el="business-prism-flowchart"] .note { display:none; } }
+
+.flowchart[data-el="business-prism-flowchart"] { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap-lg); padding:var(--gap); }
+.flowchart[data-el="business-prism-flowchart"] .node { position:relative; display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--gap); background:var(--surface); border:var(--stroke) solid var(--line); font-size:var(--type-20); font-weight:var(--name-weight); line-height:var(--name-line); }
+.flowchart[data-el="business-prism-flowchart"] .node.start, .flowchart[data-el="business-prism-flowchart"] .node.end { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); border-radius:999px; }
+.flowchart[data-el="business-prism-flowchart"] .node.ask { background:var(--accent-soft); color:var(--accent); border-color:var(--accent); }
+.flowchart[data-el="business-prism-flowchart"] .node.to-r::after { content:"→"; position:absolute; left:100%; width:var(--gap-lg); color:var(--accent); font-size:var(--type-28); }
+.flowchart[data-el="business-prism-flowchart"] .node.to-l::after { content:"←"; position:absolute; right:100%; width:var(--gap-lg); color:var(--accent); font-size:var(--type-28); }
+.flowchart[data-el="business-prism-flowchart"] .node.to-d::before { content:"↓"; position:absolute; top:100%; height:var(--gap-lg); color:var(--accent); font-size:var(--type-28); }
+.flowchart[data-el="business-prism-flowchart"] .node.to-u::before { content:"↑"; position:absolute; bottom:100%; height:var(--gap-lg); color:var(--accent); font-size:var(--type-28); }
+@container (max-width:700px) or (max-height:350px) { .flowchart[data-el="business-prism-flowchart"] .node { font-size:var(--type-14); padding:var(--gap-sm); } }
