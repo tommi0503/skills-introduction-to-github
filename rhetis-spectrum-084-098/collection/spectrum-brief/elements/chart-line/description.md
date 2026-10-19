@@ -1,0 +1,1 @@
+A fine mint polyline connects equally spaced data points over subtle guide rules. Value labels are real text. The numeric next-value extension supplies the succeeding point for CSS atan2/hypot geometry; the final point needs no successor.
