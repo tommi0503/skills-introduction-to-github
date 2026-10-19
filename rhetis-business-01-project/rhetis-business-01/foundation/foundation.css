@@ -1,0 +1,44 @@
+.slide { width:1280px; height:720px; position:relative; box-sizing:border-box; background:var(--page); color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.slide *, .slide *::before, .slide *::after { box-sizing:border-box; }
+.slide .page { position:absolute; inset:var(--margin-y) var(--margin-x); display:flex; flex-direction:column; gap:var(--gap-lg); border-top:2px solid var(--accent); padding-top:var(--space-5); }
+.slide .head { flex:none; display:flex; flex-direction:column; gap:var(--gap-sm); }
+.slide .head.center { align-items:center; text-align:center; }
+.slide .kicker { margin:0; font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track-latin); color:var(--accent); }
+.slide .title { margin:0; font-family:var(--font-display); font-size:var(--type-36); font-weight:var(--title-weight); letter-spacing:var(--title-track); line-height:var(--title-line); }
+.slide .lead { margin:0; font-size:var(--type-18); font-weight:var(--lead-weight); letter-spacing:var(--lead-track); line-height:var(--lead-line); color:var(--ink-2); }
+.slide .body { flex:1; min-height:0; display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(6,minmax(0,1fr)); gap:var(--gap); }
+.slide .body > *, .slide .group > *, .slide .stack > *, .slide .split > * { min-width:0; min-height:0; }
+.slide .group { display:flex; align-items:stretch; gap:var(--gap); }
+.slide .group > * { flex:1; }
+.slide .group.col, .slide .stack { display:flex; flex-direction:column; gap:var(--gap); }
+.slide .stack > * { flex:1; }
+.slide .group.two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.slide .group.three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.slide .split { display:grid; grid-template-columns:1fr 1.7fr; gap:var(--gap-lg); }
+.slide .split.wide-left { grid-template-columns:1.7fr 1fr; }
+.slide .top, .slide .foot { position:absolute; left:var(--margin-x); right:var(--margin-x); display:flex; align-items:center; gap:var(--furn-gap); font-size:var(--type-12); line-height:var(--label-line); color:var(--mute); }
+.slide .top { top:var(--furn-edge); height:var(--top-h); }
+.slide .foot { bottom:var(--furn-edge); height:var(--foot-h); border-top:var(--stroke) solid var(--line); padding-top:var(--furn-gap); }
+.slide .foot .no { margin-left:auto; color:var(--accent); }
+.slide .rail { position:absolute; inset:var(--margin-y) auto var(--margin-y) var(--furn-edge); width:var(--rail-w); border-right:var(--stroke) solid var(--line); }
+.slide .rail .idx { font-size:var(--type-32); color:var(--accent); font-weight:var(--figure-weight); }
+.slide .rail .label { font-size:var(--type-12); line-height:var(--label-line); }
+.slide .rail .on { background:var(--accent-soft); color:var(--accent); }
+.slide .seat { display:flex; align-items:center; justify-content:center; background:var(--surface-2); color:var(--mute); position:relative; min-width:0; min-height:0; border:var(--stroke) solid var(--line); font-size:var(--type-14); }
+.slide .seat::after { content:attr(data-ph); }
+.slide .seat.avatar { width:72px; height:72px; border-radius:999px; }
+.slide .seat.portrait { aspect-ratio:3/4; }
+.slide .seat.logo { min-height:72px; }
+.slide .seat.icon { width:48px; height:48px; border-radius:var(--radius-sm); }
+.slide .seat.back { position:absolute; inset:0; z-index:0; }
+.slide .icon { width:28px; height:28px; flex:none; }
+.slide.cover .page { border:var(--stroke) solid var(--line); padding:var(--space-7); overflow:hidden; }
+.slide.cover .lockup { position:relative; z-index:1; width:75%; display:flex; flex-direction:column; gap:var(--space-4); }
+.slide.cover .title { font-size:var(--type-60); }
+.slide.cover .at-center { margin:auto; text-align:center; align-items:center; }
+.slide.cover .at-left { margin-block:auto; }
+.slide.cover .at-bottom-left { margin-top:auto; }
+.slide.cover .at-top-left { margin-bottom:auto; }
+.slide.cover .meta { position:relative; z-index:1; font-size:var(--type-14); margin-top:var(--gap-lg); color:var(--ink-2); }
+.slide.cover .deco { position:absolute; width:42%; height:100%; right:0; bottom:0; background:var(--accent-soft); clip-path:polygon(68% 0,100% 0,100% 100%,0 100%,0 68%); }
+.slide.cover .deco::after { content:""; position:absolute; inset:var(--space-6); border:2px solid var(--accent); clip-path:polygon(68% 0,100% 0,100% 100%,0 100%,0 68%); }

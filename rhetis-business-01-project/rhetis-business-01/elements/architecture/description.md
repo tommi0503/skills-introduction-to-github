@@ -1,0 +1,1 @@
+A layered service architecture made from wide horizontal frames and evenly aligned component chips. A pale teal first layer signals the customer-facing level, while lower layers use quiet surfaces. Every chip is optically centered and uses the same fine outline.

@@ -1,0 +1,1 @@
+A disciplined pricing row with thin framed plans, teal top rules and a prominent price baseline. The recommended plan uses a pale accent field. Shared checklists and typography make plan comparison easy without decorative sales badges.

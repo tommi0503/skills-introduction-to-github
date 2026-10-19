@@ -1,0 +1,1 @@
+A disciplined partner grid built from equal neutral logo seats. The thin outline and small corner radius match other business frames, and the layout changes from three to four columns for a larger partner group. Actual image marks remain placeholders.

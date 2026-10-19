@@ -1,0 +1,1 @@
+A thin teal line joins equal-spaced data points, with compact values above and category labels on a ruled baseline. CSS anchor positioning connects the actual rendered point locations in either direction; the line therefore follows the supplied numeric values rather than a decorative preset.

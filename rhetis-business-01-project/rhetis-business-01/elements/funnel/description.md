@@ -1,0 +1,1 @@
+A centered conversion funnel formed from finely outlined, progressively narrower horizontal bands. Labels and figures align to opposite ends; the final stage becomes solid teal. Alternating quiet surfaces improve separation without excessive color.

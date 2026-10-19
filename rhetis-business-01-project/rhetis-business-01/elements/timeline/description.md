@@ -1,0 +1,1 @@
+A restrained project track with thin rules, outlined teal milestones and concise date labels. The active point receives a filled marker and pale halo. Horizontal, staggered and vertical arrangements share the same editorial hierarchy.

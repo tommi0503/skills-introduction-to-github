@@ -1,0 +1,1 @@
+A slim rounded progress track below a left-aligned label and right-aligned figure. The simple teal fill and pale remainder keep attention on the value. The meter is designed to stack cleanly with consistent baselines.

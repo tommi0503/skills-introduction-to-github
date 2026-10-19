@@ -1,0 +1,29 @@
+:is(.arch[data-el="rhetis-business-01-architecture"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.arch[data-el="rhetis-business-01-architecture"]) {display:flex;flex-direction:column;gap:var(--gap);}
+:is(.arch[data-el="rhetis-business-01-architecture"]) .layer {flex:1;display:flex;align-items:center;gap:var(--gap);padding:var(--space-4);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);background:var(--surface);}
+:is(.arch[data-el="rhetis-business-01-architecture"]) .layer > .name {flex:1;color:var(--accent);font-size:var(--type-22);}
+:is(.arch[data-el="rhetis-business-01-architecture"]) .chip {flex:1;align-self:stretch;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--space-3);background:var(--page);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line);}
+:is(.arch[data-el="rhetis-business-01-architecture"]) .layer:first-child {background:var(--accent-soft);border-color:var(--accent);}
+@container (max-width:620px) { :is(.arch[data-el="rhetis-business-01-architecture"]) .chip {font-size:var(--type-14);padding:var(--space-2);} :is(.arch[data-el="rhetis-business-01-architecture"]) .layer {gap:var(--space-2);} :is(.arch[data-el="rhetis-business-01-architecture"]) .layer > .name {font-size:var(--type-16);} }
+
+@container (max-width: 620px) {
+:is(.arch[data-el="rhetis-business-01-architecture"]) .name { font-size:var(--type-20); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .note { font-size:var(--type-14); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.arch[data-el="rhetis-business-01-architecture"]) .name { font-size:var(--type-16); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .note { font-size:var(--type-12); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .fig { font-size:var(--type-28); }
+:is(.arch[data-el="rhetis-business-01-architecture"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.arch[data-el="rhetis-business-01-architecture"]) .kick { display:none; } :is(.arch[data-el="rhetis-business-01-architecture"]) .note { font-size:var(--type-12); } }
+
+@container (max-height:360px) { :is(.arch[data-el="rhetis-business-01-architecture"]) .layer {padding:var(--space-2);gap:var(--gap-sm);} :is(.arch[data-el="rhetis-business-01-architecture"]) .layer > .name {font-size:var(--type-18);} :is(.arch[data-el="rhetis-business-01-architecture"]) .chip {padding:var(--space-2);font-size:var(--type-14);} }

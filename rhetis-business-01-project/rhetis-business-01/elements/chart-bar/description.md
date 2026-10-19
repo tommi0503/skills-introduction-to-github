@@ -1,0 +1,1 @@
+A clean quantitative bar chart with thin baseline, pale teal bars and a solid emphasis bar. Values sit just beyond each bar and labels align with the category axis. The horizontal variant keeps the same measured business typography.

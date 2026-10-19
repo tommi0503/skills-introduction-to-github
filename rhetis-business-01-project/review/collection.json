@@ -1,0 +1,1320 @@
+{
+  "collection": "rhetis-business-01",
+  "status": "complete",
+  "contractChecks": 5038,
+  "contractErrors": [],
+  "elementCount": 31,
+  "fixtureCount": 79,
+  "renderCount": 158,
+  "browserSlotChecks": 316,
+  "browser": "Chromium, Playwright Core",
+  "canvas": [
+    1280,
+    720
+  ],
+  "overflowCount": 0,
+  "fontLoadingFailures": 0,
+  "minimumTextContrast": 4.552,
+  "previewCommands": [
+    "python tools/preview.py rhetis-business-01 contract/type-steps.json --out light.html",
+    "python tools/preview.py rhetis-business-01 contract/type-steps.json --dark --out dark.html"
+  ],
+  "visualReview": {
+    "approach": "Individual full-size browser images were opened for all 31 element families and both foundations. Light and dark representative variants were inspected separately. All 79 fixtures were automatically checked at full and declared minimum slots in both modes.",
+    "rounds": [
+      {
+        "round": 1,
+        "finding": "Minimum-slot text exceeded five element families: agenda, architecture, list, vertical steps and vertical timeline.",
+        "fix": "Reduced type by defined steps, reduced tokenized gaps, and suppressed timeline kickers at compact heights."
+      },
+      {
+        "round": 2,
+        "finding": "Inline surfaces stretched excessively in full slots; nested metric figures were too small; three-set Venn labels were obscured; hierarchy subtrees and mixed flowchart directions needed explicit connectors.",
+        "fix": "Bound pill/tag/callout heights, strengthened nested figures, repositioned Venn sets and labels, and completed diagram wires."
+      },
+      {
+        "round": 3,
+        "finding": "Neutral preview CSS shared the frame class and small tag, affecting the picture frame size and number unit colors. The light accent-soft combination had 4.44 contrast.",
+        "fix": "Scoped frame dimensions, explicitly inherited figure unit color, and lightened accent-soft for 4.552 contrast. Final font loading was awaited explicitly before capture."
+      }
+    ],
+    "primaryIntegration": "Checked representative light/dark cards, line chart, hub, flowchart and table individually. Removed surplus filled shadow behind mixed-direction flowchart branches; both affected fixtures rerendered in both modes at full/min sizes without overflow."
+  },
+  "designDecisions": [
+    "One integrated collection combines the five reference decks: thin frames and rules, restrained corner radii, teal hierarchy and blue/red/yellow supporting tones.",
+    "The dark palette is independently designed around deep teal surfaces and pale accents, rather than mechanically inverted.",
+    "No reference image is used as a rendered slide background. Photograph, logo and portrait material is represented by numbered neutral seats.",
+    "The line chart uses CSS Anchor Positioning to connect values directly. Radial diagrams use CSS trigonometry and real directional connectors.",
+    "Korean business fixture copy is newly written where the low-resolution reference did not define an element. English descriptions document the appearance only."
+  ],
+  "limitations": [
+    "The pure CSS line-chart connection requires a browser supporting CSS Anchor Positioning; it was verified in the delivered Chromium environment.",
+    "The collection interprets a shared design language across five source families; direct slide replication remains in the separate clone application."
+  ],
+  "assets": [
+    {
+      "file": "review/collection/dark-agenda-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "4e593565d3ec6b7ddb2d55acc065c7e03b2bee77810a44ecfa23a8be8b8422ab"
+    },
+    {
+      "file": "review/collection/dark-agenda-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "43378092f83942016c086e95d54710783ba3810e3698dfaf7dd76b05ac516c80"
+    },
+    {
+      "file": "review/collection/dark-architecture-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "97db26aa1e43f8654fb6ad83f235e00706e19d731bc189e02843db5081e8d154"
+    },
+    {
+      "file": "review/collection/dark-architecture-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "cb76f492be54de933f41e071fa79506d9d89d9c3bb87a15d3c92ea0d3edda690"
+    },
+    {
+      "file": "review/collection/dark-callout-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "006fe1bea64d657739528e274a24992ab9f09cc9d473f0ecdde535d1db84ab7c"
+    },
+    {
+      "file": "review/collection/dark-callout-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "135d8bf027448aaa38365563eaee2c2b62dcb306b743066dade64197a31e5ebe"
+    },
+    {
+      "file": "review/collection/dark-card-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "151f83807f01008c1853cdeb9307ce50048a37b820ab6d151da512b6cb17c014"
+    },
+    {
+      "file": "review/collection/dark-card-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f40dcfff3e8050a06fc312541588fc835229714908fa554353b8279e26b5115b"
+    },
+    {
+      "file": "review/collection/dark-card-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "151538cd79d16971473b3bb086a6b56831531065509fb73fb21b20246dd80e3a"
+    },
+    {
+      "file": "review/collection/dark-card-04.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f045de0bb20c209c32857a60f13f726a80be15badcbf79d76fcfa162ca7adf0e"
+    },
+    {
+      "file": "review/collection/dark-card-05.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c8b3c42d244efb941cdabbf27c93388805c7c501e6ea07e4b7b8c5f15ef387ec"
+    },
+    {
+      "file": "review/collection/dark-card-06.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "292447d9dd6ff3714af3f68d1819dd2fbe93793e949f08986182bc3297e0b8d7"
+    },
+    {
+      "file": "review/collection/dark-card-07.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "45151dec23b79dcafffefd187686ae048833a943243096688cd26898cafe7a35"
+    },
+    {
+      "file": "review/collection/dark-card-08.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "9fd71ff7bcc0e36355b15444e4046bc4e11f4bb2db5c1b7ed5a92467e5e76a85"
+    },
+    {
+      "file": "review/collection/dark-card-09.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "97e133765909188022bca72b44d4d0ad9bcdb58ee7bb045fff09b2a7437abc63"
+    },
+    {
+      "file": "review/collection/dark-chart-bar-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "dbc3da775c6fd95c3548972bfe62227d98649ae6cb5792839ee79f11f0b4176f"
+    },
+    {
+      "file": "review/collection/dark-chart-bar-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "81c856386fd2fabb68b9deab8dfb418ea8f194964d1c14a6d678fc95aa791675"
+    },
+    {
+      "file": "review/collection/dark-chart-bar-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "a2e5c294e856983df838e0c80f67154708ba64f25df2001a755fba89abd4c882"
+    },
+    {
+      "file": "review/collection/dark-chart-donut-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "3b6100856b6c261497a3dbcfab2eadd9874915649ae738976a889e9a73ed36b5"
+    },
+    {
+      "file": "review/collection/dark-chart-donut-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "9328e5f1034bae05b51dfc48ce300d98bbe78e9d695167e40cc5b0fddfb9d3ff"
+    },
+    {
+      "file": "review/collection/dark-chart-line-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "8223e4e86adf7559666b96e62f02ed7cfe3b314bd22f467b91101de7026f3ffe"
+    },
+    {
+      "file": "review/collection/dark-chart-line-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "39f67d7c817023ffc5bbce7ec5578c21f59419ddc13ca979811c2ee0b93b0c23"
+    },
+    {
+      "file": "review/collection/dark-cycle-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "7ccd3cb22cd09d47135edff8d57bfa7ef7d6149f2844d4855fc4ac61755554c1"
+    },
+    {
+      "file": "review/collection/dark-cycle-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "7ad59bf9d9f196da78eea88cb6d086db2ab324e87ad1d1e1206260c430652fd8"
+    },
+    {
+      "file": "review/collection/dark-cycle-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "52291702faf201994a983d361a13caca67bcdbe404aa98c7084d5e864f7f3ea8"
+    },
+    {
+      "file": "review/collection/dark-delta-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "57bc983e5d63e31b16bec5a03caa8a6277dc666e0398497f38d4cd9871a1f231"
+    },
+    {
+      "file": "review/collection/dark-delta-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ea235bd05e0cfd74c35e78e3687fb2b05860c76d16d61c26dea7d97512a22ded"
+    },
+    {
+      "file": "review/collection/dark-flowchart-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "b20a28dadb85cb61a1b664d2deb64e94e84cde2f0da03ca2ab732a31c0400210"
+    },
+    {
+      "file": "review/collection/dark-flowchart-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "cd2a7e9fb6a28b8d58b0a8d43f4e11c12ad67af359d1c3a83181d43b04ff490e"
+    },
+    {
+      "file": "review/collection/dark-foundation-01-content.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "5dd11a46c6ba7e2697fd97c04feb93a9955e438246fd6a99194626da518b39f5"
+    },
+    {
+      "file": "review/collection/dark-foundation-02-cover.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "750291613c15742bf0040e443a355a1038af37f4dd67ccc1ed80a671a7a65c7f"
+    },
+    {
+      "file": "review/collection/dark-funnel-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "46d915a780558e5ad3446459a2c9343051e1a930c87d707cfe7219cceb48809f"
+    },
+    {
+      "file": "review/collection/dark-funnel-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "93f2faf0d976efc2e88ccb21cc5d13d07b8e2d715baa1af3100b12dbc60adae3"
+    },
+    {
+      "file": "review/collection/dark-gauge-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0d8f4dcd3d3ddd2def1d214ac4e0994d6396dda7138c9a27bc2330516f63190c"
+    },
+    {
+      "file": "review/collection/dark-gauge-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "01887cc3b20697358ae75d0de387c9bba2df91c4c7db6c8f54ace0f82a905167"
+    },
+    {
+      "file": "review/collection/dark-hierarchy-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "4387d9c83657457150bc5fbbb69d820611ad274d0a50eac74148f0c3d1d1994c"
+    },
+    {
+      "file": "review/collection/dark-hierarchy-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "35282faa5d4ebef41222904fcfc2fbd1d3d3f187b0f200aed2f17ec81720ce4b"
+    },
+    {
+      "file": "review/collection/dark-hub-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "902348f3f8fead7b0a1b2fff2fcc82b64d58af433145fe4a2936768809117913"
+    },
+    {
+      "file": "review/collection/dark-hub-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "1f35f4bf42a6cef6126635f22714556c5bbfece6311f74fa090ba403f1fb50ba"
+    },
+    {
+      "file": "review/collection/dark-hub-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "1c32116083f5d371dc95fac3b77899b77f2247414aa3fe592f29acb19e4b3965"
+    },
+    {
+      "file": "review/collection/dark-image-frame-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0c6d2833f67df4a923a3de72e54ac52c49c477e7d74d26640ddcc1a6c1f9e9c2"
+    },
+    {
+      "file": "review/collection/dark-image-frame-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "bb88527915384eb5d58e5ee9be0f89d3fd535733a477ab4bfe680008035d50ae"
+    },
+    {
+      "file": "review/collection/dark-legend-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "051f7f057e912f2cba74167bb67668a57fc9c88c94749e340a62845c58c2f397"
+    },
+    {
+      "file": "review/collection/dark-legend-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "abc375b7674ba8275a750cf692f3ff24242feb04795d6dd44d749a1966be7d79"
+    },
+    {
+      "file": "review/collection/dark-list-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "4be10f259340f56d046c1310f333776f2e356cfda1ab3809a8c63ed80b3d4d79"
+    },
+    {
+      "file": "review/collection/dark-list-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "3bfd003a95220feafe4bbb91c87fb4a93f0d76a35879e53b6d270ecf09428aa6"
+    },
+    {
+      "file": "review/collection/dark-list-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "906d23872299d2befd231bd003ba2983f42a21d1f024f1bd4d0eb7fe4b961842"
+    },
+    {
+      "file": "review/collection/dark-logo-group-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0de7c7b514afd2dced566b6c68dbd9a5611fb59bdee4c7250f998d1f36cd8bb0"
+    },
+    {
+      "file": "review/collection/dark-logo-group-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f1a6e7681bbec7c8c3f9aae2d9f787a018f09e2191cd90ef10e85aa96f752dc6"
+    },
+    {
+      "file": "review/collection/dark-matrix-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "2ebd33cba485426984b96662ae67cbd9419b80c7ec387f33487750b9c13c4320"
+    },
+    {
+      "file": "review/collection/dark-matrix-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "805d852db265e2b6e85c71a505e866093a46ed0efd3c6cee7aed1d3c4673f478"
+    },
+    {
+      "file": "review/collection/dark-metric-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "d832b221bf9a10521a0f6896d15ac219c7c4f900b1a333dbf194af91afe02ebb"
+    },
+    {
+      "file": "review/collection/dark-metric-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "8baf8fb430b88f2ab0c3c7e99f88fbf2b845e1a739c938f4c72359fdad2a10d0"
+    },
+    {
+      "file": "review/collection/dark-person-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "344b96bd5501cc719c05fc6071c0c7d78d28e42325313982e90031436eae1757"
+    },
+    {
+      "file": "review/collection/dark-person-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "5acf938950ca353b1c377f589482a3a95fe5d41dad5589fae5645509b77b904b"
+    },
+    {
+      "file": "review/collection/dark-pill-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c5eee4d2ccdc46cfed1ee5dded567d4fc101dc085f8330105b28366b5cbbd10c"
+    },
+    {
+      "file": "review/collection/dark-pill-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ad06ce1ecd9615402aaf3b03b97b57319e3b7577accf10b50495f4a1f7735e39"
+    },
+    {
+      "file": "review/collection/dark-pill-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "7ee873c717b456ed100146f23e0f9877d2c11b0b15bf519248a25c09dd7a9bd7"
+    },
+    {
+      "file": "review/collection/dark-pill-04.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f16b93331e42eeb4d7c010aae9c9df8a4faf94c5eb87c865df8217f59a47949c"
+    },
+    {
+      "file": "review/collection/dark-pricing-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c9010a2ab4c14ca0e450851efbab6d8ded01add4d8b8cb4a2e09eac6ac33b341"
+    },
+    {
+      "file": "review/collection/dark-pricing-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ef145a946f82ca3a067a955bc5b0f367f5bb191ab8a2b421f1007b9c94c64476"
+    },
+    {
+      "file": "review/collection/dark-pricing-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0040054bf0ea8ba4102f4f53bf8d6fdb801d427b529bc3e14a12a407dea72cb4"
+    },
+    {
+      "file": "review/collection/dark-pyramid-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "7288255546a3787e5590a980da16d54fe8ed0afd75a10db5db6f82531b7d3261"
+    },
+    {
+      "file": "review/collection/dark-pyramid-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "a4b8f1961fd965cee24818d6388e440eb9bcff80543dea9ceda3fbb9ca2197c8"
+    },
+    {
+      "file": "review/collection/dark-quote-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "af5ba6e7045cdc7ce045df92cfa3d6870b225dc3be0fd9f09e036023c63e05ce"
+    },
+    {
+      "file": "review/collection/dark-quote-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "b7f00a60a71b9ecfff5d08a07feee02bd5fd8104d38dd4b8bd3f9aa434eba72f"
+    },
+    {
+      "file": "review/collection/dark-steps-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "9eef3882ea4031710f9d3b811e46cf5ee2fe279066c0baadd586d900bb857320"
+    },
+    {
+      "file": "review/collection/dark-steps-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "e36db16acd97e49424999e6b4e6d12e0ed31eab173aaec0831a822adc12b5c97"
+    },
+    {
+      "file": "review/collection/dark-table-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ea8c0ee39c6a69dcefbe1579ca7d5d3c3057a391c7d61bc21683ad5ccce6d387"
+    },
+    {
+      "file": "review/collection/dark-table-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f152ffa07b451dfe8d5d1c170c7cda4839a044c5795ea5f78f00edaab95ac51f"
+    },
+    {
+      "file": "review/collection/dark-tag-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "b66bae34eaf5accdc8fbebed5ab56b33cb8adf09b941e5ab26cb890a9fab37af"
+    },
+    {
+      "file": "review/collection/dark-tag-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "2982fc5916378a7474486550c243f7df1dae101a99491f9442fc03de113b67ea"
+    },
+    {
+      "file": "review/collection/dark-timeline-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "b2b0341c17265228fb5106d8f90a95c4a0425a4a5edaf4f73cf7b7c3044d48d4"
+    },
+    {
+      "file": "review/collection/dark-timeline-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ff21b7d8ddda95978a7e6b436e90f8facb167a1bfd7ea7feed10cfdab97f1ff3"
+    },
+    {
+      "file": "review/collection/dark-timeline-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0ce055645d7e0f2fe83f9426d593eb67cf41242dfec5b57d9ac04474d34db3c4"
+    },
+    {
+      "file": "review/collection/dark-venn-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "dc7ded13ad623d494f8ecf8a35550171a418b8f7842ab246a482ad67c17f83f8"
+    },
+    {
+      "file": "review/collection/dark-venn-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "885c02d703da8c1d5bca6536baf57066c7932eafd8ae64d52244d7fe249df3eb"
+    },
+    {
+      "file": "review/collection/dark-versus-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "fa7832886443b49bf291116cbaf07cbaa1f61fb05f6d1a8683e38d4b88ae663b"
+    },
+    {
+      "file": "review/collection/dark-versus-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f7642f511269c2c9e4be5124fb229841518b0107079a559ce57e553113c3fe28"
+    },
+    {
+      "file": "review/collection/light-agenda-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "70939fa4950460d818f62730531a19cc203d0e50cffb514f3bd98e990b973f2a"
+    },
+    {
+      "file": "review/collection/light-agenda-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "80342dd994da6bbfc110aaadad765ae73ccb6ab3c5dc0b39859ca46e50e59c0c"
+    },
+    {
+      "file": "review/collection/light-architecture-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c169ae45f352f247103101b8856ad61c82862497e4829bc6b23fef40a5a4be0f"
+    },
+    {
+      "file": "review/collection/light-architecture-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "26dd5e444bcac439a13b79b3d19a63ad44e6d84e877d351abef7ad05517bb187"
+    },
+    {
+      "file": "review/collection/light-callout-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "130084447eaeeb2fce1d74e0953cfb8954de48097830fa300889d0566bc98469"
+    },
+    {
+      "file": "review/collection/light-callout-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "8c0743230b98aa2fb16ebdad4397bb0c6eb3e713089a1a0f653de7164c890a09"
+    },
+    {
+      "file": "review/collection/light-card-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "327a9b51f9265b90a37fcaafc43448fb0a0d1f47d87a2181070f7966e13004b7"
+    },
+    {
+      "file": "review/collection/light-card-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "6c15b4615f91d92afb3f4d283ad0b0ee6bd9e3b9687f6caf16183134db091576"
+    },
+    {
+      "file": "review/collection/light-card-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "907fb54a7639d06af07735b1215c385dd34b032a1678ee349d904c2e0a43861e"
+    },
+    {
+      "file": "review/collection/light-card-04.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "4af338cbcca3e326292e4a5717bca76fc1a68b999a4e9093cc72b9cc227e719e"
+    },
+    {
+      "file": "review/collection/light-card-05.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "768f25c59dd1ca2c16b1f2646e8cc681117fa0c299582b6742ff692a8073049d"
+    },
+    {
+      "file": "review/collection/light-card-06.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "5236e81dcf99285a299e05c17f883842b9467ad985d20f693f3e3fc1cf6fc792"
+    },
+    {
+      "file": "review/collection/light-card-07.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ba88f5c30bd6ba8fae6ab41572a49c71a686f7d9d8f6f11145e7b17bb8d522cf"
+    },
+    {
+      "file": "review/collection/light-card-08.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "3869135fa5f15a8bda8d2a4a4619da34e0785a91ec401d75cc5dad5bb5dc786d"
+    },
+    {
+      "file": "review/collection/light-card-09.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "e83ccbf3ab1bd7c25a5b75405c8dcff88bb6fc0c3ad65b2bed657715f2ae713e"
+    },
+    {
+      "file": "review/collection/light-chart-bar-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "e2046cdf1d005b076c47108caaa68318eb7ad593341c0852a8a0da3d91720585"
+    },
+    {
+      "file": "review/collection/light-chart-bar-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "647dac3f7946f0d5071c12c5b565115c51292d642108a05ab2817e61f233e7f5"
+    },
+    {
+      "file": "review/collection/light-chart-bar-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "f432231ff4c058edd9bc134318aa704ae949b3db9cfec66ac1fb856cb30947db"
+    },
+    {
+      "file": "review/collection/light-chart-donut-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "363ee0dcf1f7ad8f02fd994092af8d0c1d84a18e623ca478e64a52b7b9c5ee9f"
+    },
+    {
+      "file": "review/collection/light-chart-donut-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0b2f70f81b000201551a614bc07b627203f8f3892810416ffead09ebc05001e0"
+    },
+    {
+      "file": "review/collection/light-chart-line-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "cf31164251764dc1c9ce70017768980116bcf906198796372189f6d1863a80bc"
+    },
+    {
+      "file": "review/collection/light-chart-line-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "2ea4b4cead39c1bddae14997b7e6af942c6f3486477e381916da6cec4f6ad74f"
+    },
+    {
+      "file": "review/collection/light-cycle-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "5131f1934ce38b054228a661436b64773b8e86f17c99cdc6b62691e73e118421"
+    },
+    {
+      "file": "review/collection/light-cycle-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "422963a712b626c4f572e336f77b07bae83ad9ef812bf2eb424acceb9bb24dd8"
+    },
+    {
+      "file": "review/collection/light-cycle-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "652be69add66e78f25addf71f78a3113fd7b320d21ae2d65f56d0c32f34e44f6"
+    },
+    {
+      "file": "review/collection/light-delta-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "62008f5230638fb808939b63bbd08d1d59d1021f85a6ba1aea9bc77b83c581e2"
+    },
+    {
+      "file": "review/collection/light-delta-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ff9900224116d43c7db8f9b40c01b701378c720e289f3cf01634add1ee483d56"
+    },
+    {
+      "file": "review/collection/light-flowchart-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "a2b36389461dbbdc3fc74105165351a6e4baca86c1e66271926f96dbe262b711"
+    },
+    {
+      "file": "review/collection/light-flowchart-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "91c0b46a7e45e4282cca80c9a2cf63abaefb871b40c9e2b577adfb0730a6caea"
+    },
+    {
+      "file": "review/collection/light-foundation-01-content.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "d3de8432b51d423d6bbb4b8a22d29721fcfcc3c9a651ad4c5bdd625bbfc0fc38"
+    },
+    {
+      "file": "review/collection/light-foundation-02-cover.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "85e08cbb5d1570d54cb6cb424a409fe40af3b294c021ccd1ad324365db9d1cbe"
+    },
+    {
+      "file": "review/collection/light-funnel-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "3c0f0509de684fbfab3b128499e6e78536553f132b87810873fd15b923de73db"
+    },
+    {
+      "file": "review/collection/light-funnel-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "058fed29f7f3c46000b1b47857fca8b5103f410d5d9fa2adb2b74d7d0643e95d"
+    },
+    {
+      "file": "review/collection/light-gauge-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "29cb9beda2173b4e6fed2852e51aed91b727311cbc5fea271784d4e455d5f111"
+    },
+    {
+      "file": "review/collection/light-gauge-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0965718dc04c83a34395daa821a2675d242675714b342e69f515bfc0eddba52d"
+    },
+    {
+      "file": "review/collection/light-hierarchy-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "6537f0effd575b8fd70b54f8a96864c9d2dda6136a7c86cc0117709c56963422"
+    },
+    {
+      "file": "review/collection/light-hierarchy-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "1891a4dec3316b7fd06dadbb3228f1bfbd8f535a41e8eb7af6cf80de05081bc0"
+    },
+    {
+      "file": "review/collection/light-hub-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "fd6ae1efd73a76052d5488c0483e85f75cdedb1035e5a18de7aab995f195b393"
+    },
+    {
+      "file": "review/collection/light-hub-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "48f4c3051297b00c2a05ae067005e001f373a2f14df92934042e153aca6b2370"
+    },
+    {
+      "file": "review/collection/light-hub-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "b43fe58ebb50256efcc603085e41a03dd643f53b7bbba5ce7a66461e3773beee"
+    },
+    {
+      "file": "review/collection/light-image-frame-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0b14a003cfedd6c932ab4e5112d64fb42194a59ef62e80fb522bf180b83b0ef9"
+    },
+    {
+      "file": "review/collection/light-image-frame-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "75410b6abd1bc78c36b684d1d2be640cbb6a4908e453deb75abbf2828c9121f1"
+    },
+    {
+      "file": "review/collection/light-legend-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "42c0d10bfd9df77c4a8498cc7d0739465e8715da8614ee053cb30bd3363d6597"
+    },
+    {
+      "file": "review/collection/light-legend-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0d8f34a993c7b060ec54527d816f8a5308a86ad617e99d3b33a49c2de259754a"
+    },
+    {
+      "file": "review/collection/light-list-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "641038c852e198cdd2f71094b25bd073ad4af67fbc3223b08aee8face75cec20"
+    },
+    {
+      "file": "review/collection/light-list-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "9dd5d62802aaf8a60e3f26d639428fdc9a4cb1eb6eb9bc93b576ef974b73d573"
+    },
+    {
+      "file": "review/collection/light-list-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "5026ad020640bfac71f2987facfcbfeaba6e3e36bdb253be5d5f0addf2955bac"
+    },
+    {
+      "file": "review/collection/light-logo-group-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "56a6c741096388968a70bf36f7628b9596add6f02386b933e6f93a02f6e951c1"
+    },
+    {
+      "file": "review/collection/light-logo-group-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "675da727e6e3f9f6e4a6925ea262aab7e7cedce244028558ee32e7a0df70358b"
+    },
+    {
+      "file": "review/collection/light-matrix-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "dfa7457de205465212eb5077c63bebfb24eef8c45c9b080d7e7e7752ec75c831"
+    },
+    {
+      "file": "review/collection/light-matrix-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "328454162f397366a70928384f2c8a1073314820d05ee9c55fa57358bc9c1696"
+    },
+    {
+      "file": "review/collection/light-metric-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "610dc8e381d96b2b85b9430b3be3fbeff9a76ffd073c089403a7a01eb3689ee9"
+    },
+    {
+      "file": "review/collection/light-metric-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0c5169d7462df60adf615208ac501e587a0621a44e332f262daac031105b91d5"
+    },
+    {
+      "file": "review/collection/light-person-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "996490803d06ae20c9367d003f5877a1a0c4043624168867f40dfa90809f42a4"
+    },
+    {
+      "file": "review/collection/light-person-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "39ede5127d3e892075b39463cae20da986132b4a7730fee9b948f3a614fbe14b"
+    },
+    {
+      "file": "review/collection/light-pill-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "5ebf10bcf684209a234887e95a3b616ee62484e8df048fedb7d473d44c0a2d3b"
+    },
+    {
+      "file": "review/collection/light-pill-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "8644a39d77b41a9e319548e04b2f3aea83ee61781328644c3e8a674e10f6ad65"
+    },
+    {
+      "file": "review/collection/light-pill-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "152ef59987056363c6d282e9e915f56136bd7a1091b92e85523759842b268762"
+    },
+    {
+      "file": "review/collection/light-pill-04.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "bc937127159270f97a8b5046abbdea6cfd6169c865cd85d22a7e5f5e1dc1bb8d"
+    },
+    {
+      "file": "review/collection/light-pricing-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "1ef8e12f554e72c527baedf41fa24ef4991b19cd02d45ba06e0e116e9dbd6683"
+    },
+    {
+      "file": "review/collection/light-pricing-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "604e5f3f90fc1ae1d97f0c323438eefc02e349faf4a23937c7739e099e2f9bca"
+    },
+    {
+      "file": "review/collection/light-pricing-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ff930db88b40e30cc8d10d8466504c3a900afd1b508b51560c33e37bcdf9fb55"
+    },
+    {
+      "file": "review/collection/light-pyramid-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "9fa123186c707606b997a4caa6a5dc55930bc9ea80dca92a558584cdb45d98ef"
+    },
+    {
+      "file": "review/collection/light-pyramid-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "76a793b7dec82e80019657ea539ab8e5b85f1e79364e54e3bc4a88692b4c98f1"
+    },
+    {
+      "file": "review/collection/light-quote-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "2c9712e0660e3da1056a377e7219d1c6f2d4750d7132ff00c2c736c7697d0d1e"
+    },
+    {
+      "file": "review/collection/light-quote-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "2a79f8c1bb1b8e695a652d3d1ef5250922cae7a9ec08b80fb3df2100a3b1579f"
+    },
+    {
+      "file": "review/collection/light-steps-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "70f808d2fee865df48a35fad19acd5462397de31409e7245b9cdeb36b4ba9497"
+    },
+    {
+      "file": "review/collection/light-steps-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "dcc06a5bda9364d004ac41c116f290728fae3c0b5660a0e6a3d526cf3f9678f5"
+    },
+    {
+      "file": "review/collection/light-table-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "993fbaae386325116dcd3628e3f53e4d818cfe30846165eb09b3840d0a1942c8"
+    },
+    {
+      "file": "review/collection/light-table-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "e6348aaba92f16c085cdd042017459bf4815bef8c5f5b80cc61b5c10e6adbe39"
+    },
+    {
+      "file": "review/collection/light-tag-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0d79fb9be4afed1dff7de1d2e33bae3d6575e0b93521bf2f5f1271181a4e9b15"
+    },
+    {
+      "file": "review/collection/light-tag-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c2f8b2d6c6fc02c78a3343192e0425b15269caeab4254f0add21abf7a3361ba6"
+    },
+    {
+      "file": "review/collection/light-timeline-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c29b2e0a6e4327c68bf27f964739ac79438f9f559b3ffb45909aaacde24a9ee5"
+    },
+    {
+      "file": "review/collection/light-timeline-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "73c6f500991d83ff0f2173814055575a178a7e0bbd2a05ba7a405f83affe8246"
+    },
+    {
+      "file": "review/collection/light-timeline-03.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "b9825cb69b2b88cea7acfcc687d16ff94a6c02fe87e78b6a846d4b0244a41932"
+    },
+    {
+      "file": "review/collection/light-venn-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "e87ace42fcfed665b2e688c1b07ec829a45fc535669642e684db70f9628d716d"
+    },
+    {
+      "file": "review/collection/light-venn-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "afcd73a66e37f3dbe6da2bc70decb01606d65e8330de2a7622ddea815f60159a"
+    },
+    {
+      "file": "review/collection/light-versus-01.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "bdd859d884b0ffedddf1f8c12bf12796e2144d8ba0d5b7c65d46b3ca733701c0"
+    },
+    {
+      "file": "review/collection/light-versus-02.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "17c8b1bfefbbf9ea0ea2380dfe9c9688753cfa8ba77bc34b806c3ea7f43b5f96"
+    }
+  ]
+}

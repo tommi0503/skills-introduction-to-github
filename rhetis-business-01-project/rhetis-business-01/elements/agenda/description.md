@@ -1,0 +1,1 @@
+A contents list with circular two-digit marks, strong section names and concise explanatory subtitles. Fine dividers establish a steady reading rhythm, while the active section uses a pale teal field and filled marker.

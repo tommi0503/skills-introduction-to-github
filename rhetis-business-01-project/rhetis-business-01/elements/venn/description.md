@@ -1,0 +1,1 @@
+Two or three overlapping translucent circles express shared strategic territory. Fine teal and blue outlines distinguish the sets while a compact central phrase labels their common value. The open, simple geometry follows the diagrams in the references.

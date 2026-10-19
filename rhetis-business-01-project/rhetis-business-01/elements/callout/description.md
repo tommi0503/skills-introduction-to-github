@@ -1,0 +1,1 @@
+A concluding sentence set inside a pale teal field with a firm left rule. The key phrase uses accent-colored bold text, while the rest stays calm and centered. The field shares the restrained corner treatment of the framed page.

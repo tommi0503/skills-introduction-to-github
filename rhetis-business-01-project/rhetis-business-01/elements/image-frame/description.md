@@ -1,0 +1,1 @@
+A quiet picture frame with a fine outer outline, narrow inset and softly rounded neutral seat. The image placement stays a light-gray field so unavailable photography is explicit and does not compete with the surrounding UI.

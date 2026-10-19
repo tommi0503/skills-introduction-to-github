@@ -1,0 +1,1 @@
+A balanced side-by-side comparison with two fine business frames and a small central VS marker. The proposed side receives pale teal emphasis, while nested checklists retain the shared list contract and rhythm.

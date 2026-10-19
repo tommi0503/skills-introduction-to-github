@@ -1,0 +1,29 @@
+:is(.versus[data-el="rhetis-business-01-versus"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.versus[data-el="rhetis-business-01-versus"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.versus[data-el="rhetis-business-01-versus"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.versus[data-el="rhetis-business-01-versus"]) {display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:var(--gap);}
+:is(.versus[data-el="rhetis-business-01-versus"]) .side {display:flex;flex-direction:column;gap:var(--gap-lg);padding:var(--pad);background:var(--surface);border:var(--stroke) solid var(--line);border-radius:var(--radius);}
+:is(.versus[data-el="rhetis-business-01-versus"]) .side > .name {text-align:center;border-bottom:var(--stroke) solid var(--line);padding-bottom:var(--space-4);}
+:is(.versus[data-el="rhetis-business-01-versus"]) .side.on {background:var(--accent-soft);border-color:var(--accent);}
+:is(.versus[data-el="rhetis-business-01-versus"]) .side.on > .name {color:var(--accent);border-color:var(--accent);}
+:is(.versus[data-el="rhetis-business-01-versus"]) .side .list {flex:1;}
+:is(.versus[data-el="rhetis-business-01-versus"]) .vs {align-self:center;font-size:var(--type-22);font-weight:var(--label-weight);color:var(--mute);}
+@container (max-width:620px) { :is(.versus[data-el="rhetis-business-01-versus"]) .side {padding:var(--space-3);gap:var(--space-3);} }
+
+@container (max-width: 620px) {
+:is(.versus[data-el="rhetis-business-01-versus"]) .name { font-size:var(--type-20); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .note { font-size:var(--type-14); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.versus[data-el="rhetis-business-01-versus"]) .name { font-size:var(--type-16); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .note { font-size:var(--type-12); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .fig { font-size:var(--type-28); }
+:is(.versus[data-el="rhetis-business-01-versus"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.versus[data-el="rhetis-business-01-versus"]) .kick { display:none; } :is(.versus[data-el="rhetis-business-01-versus"]) .note { font-size:var(--type-12); } }

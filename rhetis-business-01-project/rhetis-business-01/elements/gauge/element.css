@@ -1,0 +1,28 @@
+:is(.meter[data-el="rhetis-business-01-gauge"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.meter[data-el="rhetis-business-01-gauge"]) { display:grid; grid-template-columns:1fr auto; align-content:center; row-gap:var(--gap); padding-bottom:var(--space-5); }
+:is(.meter[data-el="rhetis-business-01-gauge"])::before, :is(.meter[data-el="rhetis-business-01-gauge"])::after { content:""; position:absolute; bottom:var(--space-4); left:0; height:12px; border-radius:999px; }
+:is(.meter[data-el="rhetis-business-01-gauge"])::before { width:100%; background:var(--surface-2); }
+:is(.meter[data-el="rhetis-business-01-gauge"])::after { width:calc(var(--v)*1%); background:var(--accent); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .fig { font-size:var(--type-40); }
+
+@container (max-width: 620px) {
+:is(.meter[data-el="rhetis-business-01-gauge"]) .name { font-size:var(--type-20); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .note { font-size:var(--type-14); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.meter[data-el="rhetis-business-01-gauge"]) .name { font-size:var(--type-16); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .note { font-size:var(--type-12); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .fig { font-size:var(--type-28); }
+:is(.meter[data-el="rhetis-business-01-gauge"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.meter[data-el="rhetis-business-01-gauge"]) .kick { display:none; } :is(.meter[data-el="rhetis-business-01-gauge"]) .note { font-size:var(--type-12); } }
+
+:is(.meter[data-el="rhetis-business-01-gauge"]) {height:calc(var(--space-8)*2);max-height:100%;align-self:center;}

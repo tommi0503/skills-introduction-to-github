@@ -1,0 +1,26 @@
+:is(.frame[data-el="rhetis-business-01-image-frame"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.frame[data-el="rhetis-business-01-image-frame"]) {display:flex;padding:var(--space-3);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface);}
+:is(.frame[data-el="rhetis-business-01-image-frame"]) > .seat {flex:1;width:100%;height:100%;border:none;border-radius:var(--radius-sm);background:var(--surface-2);}
+@container (max-width:400px) { :is(.frame[data-el="rhetis-business-01-image-frame"]) > .seat {font-size:var(--type-12);} }
+
+@container (max-width: 620px) {
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .name { font-size:var(--type-20); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .note { font-size:var(--type-14); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .name { font-size:var(--type-16); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .note { font-size:var(--type-12); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .fig { font-size:var(--type-28); }
+:is(.frame[data-el="rhetis-business-01-image-frame"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.frame[data-el="rhetis-business-01-image-frame"]) .kick { display:none; } :is(.frame[data-el="rhetis-business-01-image-frame"]) .note { font-size:var(--type-12); } }
+
+:is(.frame[data-el="rhetis-business-01-image-frame"]) {width:100%;height:100%;}

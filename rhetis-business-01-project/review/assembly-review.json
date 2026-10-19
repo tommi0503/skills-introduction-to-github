@@ -1,0 +1,5385 @@
+{
+  "status": "complete",
+  "implementation": "src/assembly.js",
+  "api": "assembleSlide(deck, slide, renderNode) returns a complete section.canvas.slide.overrides. The callback is always called with assembled=false to avoid recursive adapters.",
+  "foundation": {
+    "structure": "section.slide > div.page > header.head + div.body",
+    "title": "Visible headings use h1.title; kicker, lead and meta are semantic p elements. A clipped accessibility h1 is added only if the original vector composition has no independently classified heading.",
+    "slots": "Every direct .body child is .group with only grid-column and grid-row inline declarations. A relative reference-slot inside each group preserves local reference geometry.",
+    "dimensions": [
+      1280,
+      720
+    ]
+  },
+  "grouping": {
+    "algorithm": "Choose unrotated rect surfaces >=120×60 and <65% canvas area, smallest first. Require at least 2 contained texts or text+icon. Greedily assign each original node once. Group text/icon/seat/pill into the same card.parts. Include local decorative strips and rules in source paint order. Exclude scattered backdrop furniture.",
+    "semanticParts": "Each card contains actual .parts descendants .name, .fig, .note, .kick and .mark as appropriate. Numeric values are not made into unrelated standalone metrics.",
+    "d05Examples": {
+      "s04": "3 performance cards: label + numeric figure + status in each card.parts",
+      "s05": "4 quadrant cards with icon, name and description",
+      "s07": "3 phase cards with local header strip, name, vector icon and description"
+    }
+  },
+  "tokens": {
+    "palette": "Deck palette supplies --page/--accent/--ink/--surface/--line. Unmatched precise reference colors use named --reference-color-N page tokens. Fonts use --font-body/--font-display or --reference-font-N.",
+    "typography": "Font size references nearest --type-N plus a reference correction. Weight, tracking and line-height reference the appropriate library role token plus a reference correction. Changing library tokens therefore changes assembled content.",
+    "runtimeReactionTest": {
+      "before": {
+        "weight": "500",
+        "color": "rgb(0, 0, 0)",
+        "background": "rgb(248, 248, 248)"
+      },
+      "after": {
+        "weight": "600",
+        "color": "rgb(204, 0, 51)",
+        "background": "rgb(213, 238, 255)"
+      },
+      "reacts": true
+    }
+  },
+  "validation": {
+    "browser": "Real Chromium using Playwright; all 105 slide DOMs reconstructed and inspected.",
+    "slideCount": 105,
+    "totals": {
+      "cards": 159,
+      "pills": 73,
+      "frames": 56,
+      "headings": 291,
+      "freeText": 833,
+      "decorations": 1413,
+      "sourceNodes": 3460,
+      "renderedNodes": 3460,
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    "geometryTolerancePx": 0.5,
+    "geometryMismatchCount": 0,
+    "fontSizeMismatchCount": 0,
+    "duplicateOriginalNodeCount": 0,
+    "emptyCardCount": 0,
+    "allOriginalNodesPreserved": true,
+    "allBodySlotInlinePropertiesValid": true,
+    "d05VisualReview": "All seven newly assembled pages rendered and opened individually; then clone/assembled per-page side-by-side comparisons inspected. Local border-origin and header-strip paint-order regressions were corrected.",
+    "temporaryEvidence": "/workspace/work/assembly-review/"
+  },
+  "honestLimitations": [
+    "This is deterministic geometry-assisted reconstruction, not authored semantic source data for every original chart.",
+    "Complex charts, tables, custom SVG diagrams, large background shapes, separators and ungrouped small atoms remain editable page decoration; they are not falsely claimed as library chart/table contracts.",
+    "Some pages have no eligible information-card surface and use foundation text/pill/frame plus page decoration.",
+    "Reference-specific geometry offsets and typography corrections are page overrides. The portable collection CSS and fixtures are unchanged."
+  ],
+  "slides": [
+    {
+      "deck": "d01",
+      "slide": "s01",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 3,
+      "freeText": 3,
+      "decorations": 10,
+      "groups": [],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 17,
+      "renderedNodes": 17,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s02",
+      "cards": 0,
+      "pills": 1,
+      "frames": 1,
+      "headings": 3,
+      "freeText": 30,
+      "decorations": 11,
+      "groups": [],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#939793",
+        "surface": "#fff",
+        "line": 3
+      },
+      "sourceNodes": 46,
+      "renderedNodes": 46,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s03",
+      "cards": 3,
+      "pills": 3,
+      "frames": 3,
+      "headings": 1,
+      "freeText": 4,
+      "decorations": 22,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 27,
+          "members": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          "parts": [
+            "name",
+            "kick",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 28,
+          "members": [
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#999",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 65,
+      "renderedNodes": 65,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s04",
+      "cards": 6,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 2,
+      "decorations": 12,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "kick",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            24,
+            25,
+            26
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 27,
+          "members": [
+            28,
+            29,
+            30
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 31,
+          "members": [
+            32,
+            33,
+            34
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 35,
+          "members": [
+            36,
+            37,
+            38
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 40,
+          "members": [
+            41,
+            42
+          ],
+          "parts": [
+            "name"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 43,
+      "renderedNodes": 43,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s05",
+      "cards": 1,
+      "pills": 0,
+      "frames": 1,
+      "headings": 1,
+      "freeText": 12,
+      "decorations": 24,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "kick",
+            "kick",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#606261",
+        "surface": "#f0f0f2",
+        "line": 1
+      },
+      "sourceNodes": 47,
+      "renderedNodes": 47,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s06",
+      "cards": 5,
+      "pills": 0,
+      "frames": 1,
+      "headings": 1,
+      "freeText": 2,
+      "decorations": 21,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 22,
+          "members": [
+            25,
+            26,
+            27,
+            28
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 29,
+          "members": [
+            32,
+            33,
+            34,
+            35
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 36,
+          "members": [
+            39,
+            40,
+            41,
+            42
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 43,
+          "members": [
+            45,
+            46
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 48,
+      "renderedNodes": 48,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s07",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 4,
+      "decorations": 16,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "kick",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 26,
+          "members": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 27,
+          "members": [
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 44,
+      "renderedNodes": 44,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s08",
+      "cards": 5,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 3,
+      "decorations": 17,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 25,
+          "members": [
+            26,
+            27,
+            28,
+            42
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 29,
+          "members": [
+            30,
+            31,
+            32,
+            43
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 33,
+          "members": [
+            34,
+            35,
+            36,
+            44
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 37,
+          "members": [
+            38,
+            39,
+            40,
+            45
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 46,
+      "renderedNodes": 46,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s09",
+      "cards": 2,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 9,
+      "decorations": 22,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 26,
+          "members": [
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#ededed",
+        "line": 1
+      },
+      "sourceNodes": 54,
+      "renderedNodes": 54,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s10",
+      "cards": 4,
+      "pills": 3,
+      "frames": 3,
+      "headings": 1,
+      "freeText": 2,
+      "decorations": 14,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "kick",
+            "note"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 31,
+          "members": [
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 39,
+          "members": [
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#555a57",
+        "surface": "#f2f2f2",
+        "line": 1
+      },
+      "sourceNodes": 47,
+      "renderedNodes": 47,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s11",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 4,
+      "decorations": 16,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "kick",
+            "note"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            29,
+            31,
+            33,
+            35,
+            36,
+            37,
+            38
+          ],
+          "parts": [
+            "name",
+            "kick",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 24,
+          "members": [
+            30,
+            32,
+            34,
+            39,
+            40,
+            41,
+            42
+          ],
+          "parts": [
+            "name",
+            "kick",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#606261",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 44,
+      "renderedNodes": 44,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s12",
+      "cards": 6,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 4,
+      "decorations": 19,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "kick",
+            "note"
+          ]
+        },
+        {
+          "source": 29,
+          "members": [
+            30,
+            31,
+            32
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 33,
+          "members": [
+            34,
+            35,
+            36
+          ],
+          "parts": [
+            "name",
+            "kick"
+          ]
+        },
+        {
+          "source": 37,
+          "members": [
+            38,
+            39,
+            40
+          ],
+          "parts": [
+            "name",
+            "kick"
+          ]
+        },
+        {
+          "source": 41,
+          "members": [
+            42,
+            43
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 45,
+          "members": [
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52
+          ],
+          "parts": [
+            "name",
+            "kick",
+            "kick",
+            "kick"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#fafafa",
+        "line": 1
+      },
+      "sourceNodes": 53,
+      "renderedNodes": 53,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s13",
+      "cards": 2,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 24,
+      "decorations": 39,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 67,
+          "members": [
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81
+          ],
+          "parts": [
+            "name",
+            "note",
+            "kick",
+            "kick",
+            "kick",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#606261",
+        "surface": "#f0f0f2",
+        "line": "#c8c9ca"
+      },
+      "sourceNodes": 82,
+      "renderedNodes": 82,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s14",
+      "cards": 6,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 2,
+      "decorations": 21,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 29,
+          "members": [
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 35,
+          "members": [
+            36,
+            37,
+            38,
+            39,
+            40
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 43,
+          "members": [
+            44,
+            45,
+            46,
+            47
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 48,
+          "members": [
+            49,
+            50,
+            51,
+            52
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#fff",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 53,
+      "renderedNodes": 53,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s15",
+      "cards": 7,
+      "pills": 5,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 3,
+      "decorations": 19,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 25,
+          "members": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 41,
+          "members": [
+            42,
+            43,
+            44,
+            45
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 47,
+          "members": [
+            48,
+            49,
+            50,
+            51
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 53,
+          "members": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 59,
+          "members": [
+            60,
+            61,
+            62,
+            63
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 65,
+          "members": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 70,
+      "renderedNodes": 70,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s16",
+      "cards": 5,
+      "pills": 2,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 2,
+      "decorations": 14,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "note"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            29,
+            30,
+            31,
+            32,
+            36,
+            37,
+            38,
+            39,
+            43,
+            45
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 26,
+          "members": [
+            27,
+            28
+          ],
+          "parts": [
+            "name"
+          ]
+        },
+        {
+          "source": 33,
+          "members": [
+            34,
+            35
+          ],
+          "parts": [
+            "name"
+          ]
+        },
+        {
+          "source": 40,
+          "members": [
+            41,
+            42
+          ],
+          "parts": [
+            "name"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#d2e7e3",
+        "line": 1
+      },
+      "sourceNodes": 46,
+      "renderedNodes": 46,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s17",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 6,
+      "decorations": 19,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "note"
+          ]
+        },
+        {
+          "source": 28,
+          "members": [
+            29,
+            30,
+            31
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "kick"
+          ]
+        },
+        {
+          "source": 38,
+          "members": [
+            39,
+            40,
+            41
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "kick"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#fff",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 43,
+      "renderedNodes": 43,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d01",
+      "slide": "s18",
+      "cards": 3,
+      "pills": 5,
+      "frames": 1,
+      "headings": 1,
+      "freeText": 3,
+      "decorations": 18,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            5,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "kick",
+            "kick"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            25,
+            29,
+            33,
+            34,
+            37,
+            38
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 24,
+          "members": [
+            26,
+            41,
+            42,
+            45,
+            46
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#d4d4d4",
+        "accent": "#407871",
+        "ink": "#407871",
+        "surface": "#f5f5f5",
+        "line": 1
+      },
+      "sourceNodes": 48,
+      "renderedNodes": 48,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s01",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 7,
+      "decorations": 8,
+      "groups": [],
+      "palette": {
+        "page": "#fff",
+        "accent": "#0569e8",
+        "ink": "#082ba0",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 18,
+      "renderedNodes": 18,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s02",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 16,
+      "decorations": 11,
+      "groups": [],
+      "palette": {
+        "page": "#fff",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 28,
+      "renderedNodes": 28,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s03",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 1,
+      "decorations": 5,
+      "groups": [],
+      "palette": {
+        "page": "#0c4ad1",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 9,
+      "renderedNodes": 9,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s04",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 2,
+      "decorations": 10,
+      "groups": [
+        {
+          "source": 6,
+          "members": [
+            7,
+            8,
+            9
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 11,
+          "members": [
+            12,
+            13,
+            14
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 16,
+          "members": [
+            17,
+            18,
+            19
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#0752b9",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 25,
+      "renderedNodes": 25,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s05",
+      "cards": 3,
+      "pills": 0,
+      "frames": 1,
+      "headings": 4,
+      "freeText": 1,
+      "decorations": 3,
+      "groups": [
+        {
+          "source": 9,
+          "members": [
+            10,
+            11
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 12,
+          "members": [
+            13,
+            14
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 15,
+          "members": [
+            16,
+            17
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#0752b9",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 18,
+      "renderedNodes": 18,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s06",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 1,
+      "decorations": 4,
+      "groups": [
+        {
+          "source": 7,
+          "members": [
+            8,
+            9,
+            10
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 12,
+          "members": [
+            13,
+            14,
+            15
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 17,
+          "members": [
+            18,
+            19,
+            20
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#626a74",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 21,
+      "renderedNodes": 21,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s07",
+      "cards": 1,
+      "pills": 0,
+      "frames": 1,
+      "headings": 4,
+      "freeText": 11,
+      "decorations": 14,
+      "groups": [
+        {
+          "source": 19,
+          "members": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#0752b9",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 36,
+      "renderedNodes": 36,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s08",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 5,
+      "freeText": 15,
+      "decorations": 10,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": 2
+      },
+      "sourceNodes": 30,
+      "renderedNodes": 30,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s09",
+      "cards": 1,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 9,
+      "decorations": 11,
+      "groups": [
+        {
+          "source": 8,
+          "members": [
+            9,
+            10,
+            11
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#dae4f2",
+        "line": 2
+      },
+      "sourceNodes": 28,
+      "renderedNodes": 28,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s10",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 11,
+      "decorations": 9,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#b9bfce",
+        "line": 1.5
+      },
+      "sourceNodes": 24,
+      "renderedNodes": 24,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s11",
+      "cards": 8,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 3,
+      "decorations": 5,
+      "groups": [
+        {
+          "source": 9,
+          "members": [
+            10,
+            11
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 12,
+          "members": [
+            13,
+            14
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 15,
+          "members": [
+            16,
+            17
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 18,
+          "members": [
+            19,
+            20
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 24,
+          "members": [
+            25,
+            26
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 27,
+          "members": [
+            28,
+            29
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 30,
+          "members": [
+            31,
+            32
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 33,
+          "members": [
+            34,
+            35
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 36,
+      "renderedNodes": 36,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s12",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 12,
+      "decorations": 16,
+      "groups": [
+        {
+          "source": 16,
+          "members": [
+            17,
+            18
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 27,
+          "members": [
+            28,
+            29
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 38,
+          "members": [
+            39,
+            40
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 41,
+      "renderedNodes": 41,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s13",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 9,
+      "decorations": 7,
+      "groups": [
+        {
+          "source": 8,
+          "members": [
+            9,
+            10
+          ],
+          "parts": [
+            "name"
+          ]
+        },
+        {
+          "source": 11,
+          "members": [
+            12,
+            13
+          ],
+          "parts": [
+            "name"
+          ]
+        },
+        {
+          "source": 14,
+          "members": [
+            15,
+            16
+          ],
+          "parts": [
+            "name"
+          ]
+        },
+        {
+          "source": 17,
+          "members": [
+            18,
+            19
+          ],
+          "parts": [
+            "name"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#082ba0",
+        "line": 1.5
+      },
+      "sourceNodes": 32,
+      "renderedNodes": 32,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s14",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 10,
+      "decorations": 7,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 21,
+      "renderedNodes": 21,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s15",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 2,
+      "decorations": 7,
+      "groups": [
+        {
+          "source": 7,
+          "members": [
+            8,
+            9
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 11,
+          "members": [
+            12,
+            13
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 15,
+          "members": [
+            16,
+            17
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 19,
+          "members": [
+            20,
+            21
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 25,
+      "renderedNodes": 25,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s16",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 17,
+      "decorations": 9,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 30,
+      "renderedNodes": 30,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s17",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 13,
+      "decorations": 10,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#0752b9",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 27,
+      "renderedNodes": 27,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s18",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 42,
+      "decorations": 51,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#333",
+        "surface": "#00b3c3",
+        "line": "#b4c9e5"
+      },
+      "sourceNodes": 97,
+      "renderedNodes": 97,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s19",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 9,
+      "decorations": 9,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#0752b9",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 22,
+      "renderedNodes": 22,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s20",
+      "cards": 4,
+      "pills": 0,
+      "frames": 4,
+      "headings": 4,
+      "freeText": 5,
+      "decorations": 5,
+      "groups": [
+        {
+          "source": 6,
+          "members": [
+            7,
+            10,
+            11
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 12,
+          "members": [
+            13,
+            16,
+            17
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 18,
+          "members": [
+            19,
+            22,
+            23
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 24,
+          "members": [
+            25,
+            28,
+            29
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 30,
+      "renderedNodes": 30,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s21",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 21,
+      "decorations": 9,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 34,
+      "renderedNodes": 34,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s22",
+      "cards": 5,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 5,
+      "decorations": 12,
+      "groups": [
+        {
+          "source": 7,
+          "members": [
+            10,
+            11
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 13,
+          "members": [
+            16,
+            17
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 19,
+          "members": [
+            22,
+            23
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 25,
+          "members": [
+            28,
+            29
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 30,
+          "members": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40
+          ],
+          "parts": [
+            "fig",
+            "fig",
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 41,
+      "renderedNodes": 41,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s23",
+      "cards": 1,
+      "pills": 5,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 13,
+      "decorations": 25,
+      "groups": [
+        {
+          "source": 6,
+          "members": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 65,
+      "renderedNodes": 65,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s24",
+      "cards": 0,
+      "pills": 7,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 14,
+      "decorations": 33,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 58,
+      "renderedNodes": 58,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s25",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 17,
+      "decorations": 6,
+      "groups": [],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": 1.5
+      },
+      "sourceNodes": 27,
+      "renderedNodes": 27,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s26",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 4,
+      "decorations": 15,
+      "groups": [
+        {
+          "source": 6,
+          "members": [
+            7,
+            8,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 11,
+          "members": [
+            12,
+            13,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 16,
+          "members": [
+            17,
+            18,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#798089",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 50,
+      "renderedNodes": 50,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s27",
+      "cards": 2,
+      "pills": 1,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 1,
+      "decorations": 16,
+      "groups": [
+        {
+          "source": 6,
+          "members": [
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 7,
+          "members": [
+            9,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 33,
+      "renderedNodes": 33,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s28",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 1,
+      "decorations": 7,
+      "groups": [
+        {
+          "source": 7,
+          "members": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 13,
+          "members": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 19,
+          "members": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 24,
+      "renderedNodes": 24,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s29",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 1,
+      "decorations": 3,
+      "groups": [
+        {
+          "source": 5,
+          "members": [
+            6,
+            7
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 8,
+          "members": [
+            9,
+            10
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 11,
+          "members": [
+            12,
+            13
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f2f3f4",
+        "accent": "#0569e8",
+        "ink": "#0752b9",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 17,
+      "renderedNodes": 17,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d02",
+      "slide": "s30",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 6,
+      "decorations": 9,
+      "groups": [],
+      "palette": {
+        "page": "#fff",
+        "accent": "#0569e8",
+        "ink": "#505965",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 16,
+      "renderedNodes": 16,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s01",
+      "cards": 1,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 0,
+      "decorations": 0,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            4,
+            5,
+            6
+          ],
+          "parts": [
+            "name",
+            "kick",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#838381",
+        "surface": "#0f7a7a",
+        "line": "#ccc"
+      },
+      "sourceNodes": 7,
+      "renderedNodes": 7,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s02",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 1,
+      "freeText": 6,
+      "decorations": 2,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 10,
+      "renderedNodes": 10,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s03",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 1,
+      "freeText": 2,
+      "decorations": 1,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 4,
+      "renderedNodes": 4,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s04",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 2,
+      "freeText": 2,
+      "decorations": 1,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 6,
+      "renderedNodes": 6,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s05",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 8,
+      "decorations": 9,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 19,
+      "renderedNodes": 19,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s06",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 3,
+      "decorations": 9,
+      "groups": [
+        {
+          "source": 11,
+          "members": [
+            12,
+            13
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 15,
+          "members": [
+            16,
+            17
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 19,
+          "members": [
+            20,
+            21
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            24,
+            25
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#0f7a7a",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 26,
+      "renderedNodes": 26,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s07",
+      "cards": 1,
+      "pills": 0,
+      "frames": 1,
+      "headings": 2,
+      "freeText": 2,
+      "decorations": 0,
+      "groups": [
+        {
+          "source": 3,
+          "members": [
+            4,
+            5
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#f7f1ee",
+        "surface": "#0f7a7a",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 8,
+      "renderedNodes": 8,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s08",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 10,
+      "decorations": 14,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#e9e2dd",
+        "line": 2
+      },
+      "sourceNodes": 28,
+      "renderedNodes": 28,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s09",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 2,
+      "freeText": 2,
+      "decorations": 1,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 6,
+      "renderedNodes": 6,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s10",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 9,
+      "decorations": 105,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": 2
+      },
+      "sourceNodes": 116,
+      "renderedNodes": 116,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s11",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 5,
+      "freeText": 3,
+      "decorations": 2,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#f7f1ee",
+        "surface": "#0f7a7a",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 10,
+      "renderedNodes": 10,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s12",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 2,
+      "freeText": 6,
+      "decorations": 0,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#f7f1ee",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 9,
+      "renderedNodes": 9,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s13",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 3,
+      "freeText": 8,
+      "decorations": 3,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 15,
+      "renderedNodes": 15,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s14",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 8,
+      "decorations": 5,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 15,
+      "renderedNodes": 15,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s15",
+      "cards": 1,
+      "pills": 0,
+      "frames": 1,
+      "headings": 2,
+      "freeText": 0,
+      "decorations": 1,
+      "groups": [
+        {
+          "source": 4,
+          "members": [
+            5,
+            6
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#e9e2dd",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 7,
+      "renderedNodes": 7,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s16",
+      "cards": 0,
+      "pills": 0,
+      "frames": 4,
+      "headings": 2,
+      "freeText": 2,
+      "decorations": 0,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 8,
+      "renderedNodes": 8,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s17",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 6,
+      "decorations": 20,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 28,
+      "renderedNodes": 28,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s18",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 2,
+      "freeText": 2,
+      "decorations": 7,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#e9e2dd",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 12,
+      "renderedNodes": 12,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s19",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 2,
+      "freeText": 2,
+      "decorations": 1,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#0f7a7a"
+      },
+      "sourceNodes": 6,
+      "renderedNodes": 6,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d03",
+      "slide": "s20",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 0,
+      "freeText": 2,
+      "decorations": 1,
+      "groups": [],
+      "palette": {
+        "page": "#f7f1ee",
+        "accent": "#0f7a7a",
+        "ink": "#0f7a7a",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 4,
+      "renderedNodes": 4,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s01",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 6,
+      "decorations": 9,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 17,
+      "renderedNodes": 17,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s02",
+      "cards": 2,
+      "pills": 0,
+      "frames": 0,
+      "headings": 0,
+      "freeText": 0,
+      "decorations": 13,
+      "groups": [
+        {
+          "source": 2,
+          "members": [
+            4,
+            5,
+            6
+          ],
+          "parts": [
+            "name",
+            "kick"
+          ]
+        },
+        {
+          "source": 9,
+          "members": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            35
+          ],
+          "parts": [
+            "fig",
+            "fig",
+            "fig",
+            "fig",
+            "fig",
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#f63025",
+        "surface": "#f63025",
+        "line": 1
+      },
+      "sourceNodes": 36,
+      "renderedNodes": 36,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s03",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 0,
+      "decorations": 4,
+      "groups": [
+        {
+          "source": 8,
+          "members": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 13,
+          "members": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 18,
+          "members": [
+            19,
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 23,
+          "members": [
+            24,
+            25,
+            26,
+            27
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 28,
+      "renderedNodes": 28,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s04",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 3,
+      "freeText": 13,
+      "decorations": 12,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 29,
+      "renderedNodes": 29,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s05",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 4,
+      "freeText": 9,
+      "decorations": 7,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#e9e9e9",
+        "line": 1
+      },
+      "sourceNodes": 21,
+      "renderedNodes": 21,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s06",
+      "cards": 0,
+      "pills": 1,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 23,
+      "decorations": 33,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 61,
+      "renderedNodes": 61,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s07",
+      "cards": 0,
+      "pills": 3,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 12,
+      "decorations": 22,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 41,
+      "renderedNodes": 41,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s08",
+      "cards": 0,
+      "pills": 4,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 20,
+      "decorations": 19,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 46,
+      "renderedNodes": 46,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s09",
+      "cards": 0,
+      "pills": 3,
+      "frames": 3,
+      "headings": 3,
+      "freeText": 9,
+      "decorations": 4,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": "#f63025"
+      },
+      "sourceNodes": 22,
+      "renderedNodes": 22,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s10",
+      "cards": 0,
+      "pills": 2,
+      "frames": 2,
+      "headings": 3,
+      "freeText": 7,
+      "decorations": 4,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": "#f63025"
+      },
+      "sourceNodes": 18,
+      "renderedNodes": 18,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s11",
+      "cards": 0,
+      "pills": 1,
+      "frames": 2,
+      "headings": 4,
+      "freeText": 3,
+      "decorations": 4,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 14,
+      "renderedNodes": 14,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s12",
+      "cards": 1,
+      "pills": 0,
+      "frames": 3,
+      "headings": 3,
+      "freeText": 3,
+      "decorations": 5,
+      "groups": [
+        {
+          "source": 8,
+          "members": [
+            9,
+            10
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#e7e7e7",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 17,
+      "renderedNodes": 17,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s13",
+      "cards": 0,
+      "pills": 0,
+      "frames": 3,
+      "headings": 3,
+      "freeText": 4,
+      "decorations": 7,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#e7e7e7",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 17,
+      "renderedNodes": 17,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s14",
+      "cards": 0,
+      "pills": 0,
+      "frames": 1,
+      "headings": 4,
+      "freeText": 8,
+      "decorations": 10,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#f63025",
+        "surface": "#fff",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 23,
+      "renderedNodes": 23,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s15",
+      "cards": 0,
+      "pills": 4,
+      "frames": 4,
+      "headings": 3,
+      "freeText": 8,
+      "decorations": 10,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 29,
+      "renderedNodes": 29,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s16",
+      "cards": 0,
+      "pills": 8,
+      "frames": 4,
+      "headings": 3,
+      "freeText": 20,
+      "decorations": 4,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": "#ccc"
+      },
+      "sourceNodes": 39,
+      "renderedNodes": 39,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s17",
+      "cards": 0,
+      "pills": 2,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 9,
+      "decorations": 11,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": 1
+      },
+      "sourceNodes": 25,
+      "renderedNodes": 25,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s18",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 23,
+      "decorations": 25,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#fff",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 51,
+      "renderedNodes": 51,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s19",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 28,
+      "decorations": 48,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 79,
+      "renderedNodes": 79,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s20",
+      "cards": 1,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 1,
+      "decorations": 18,
+      "groups": [
+        {
+          "source": 7,
+          "members": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "parts": [
+            "fig",
+            "fig",
+            "name",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": 1
+      },
+      "sourceNodes": 39,
+      "renderedNodes": 39,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s21",
+      "cards": 2,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 11,
+      "decorations": 20,
+      "groups": [
+        {
+          "source": 29,
+          "members": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 37,
+          "members": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 45,
+      "renderedNodes": 45,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s22",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 6,
+      "freeText": 15,
+      "decorations": 10,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 31,
+      "renderedNodes": 31,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s23",
+      "cards": 0,
+      "pills": 1,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 9,
+      "decorations": 29,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 43,
+      "renderedNodes": 43,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s24",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 27,
+      "decorations": 26,
+      "groups": [
+        {
+          "source": 25,
+          "members": [
+            26,
+            27
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 43,
+          "members": [
+            44,
+            45
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 61,
+          "members": [
+            62,
+            63
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": 1
+      },
+      "sourceNodes": 65,
+      "renderedNodes": 65,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s25",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 27,
+      "decorations": 45,
+      "groups": [],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": 1
+      },
+      "sourceNodes": 75,
+      "renderedNodes": 75,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s26",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 4,
+      "decorations": 7,
+      "groups": [
+        {
+          "source": 7,
+          "members": [
+            8,
+            9
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 12,
+          "members": [
+            13,
+            14
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 17,
+          "members": [
+            18,
+            19
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        },
+        {
+          "source": 22,
+          "members": [
+            23,
+            24
+          ],
+          "parts": [
+            "fig",
+            "name"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": 1
+      },
+      "sourceNodes": 26,
+      "renderedNodes": 26,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s27",
+      "cards": 1,
+      "pills": 3,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 5,
+      "decorations": 18,
+      "groups": [
+        {
+          "source": 28,
+          "members": [
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": 1
+      },
+      "sourceNodes": 34,
+      "renderedNodes": 34,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s28",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 0,
+      "decorations": 4,
+      "groups": [
+        {
+          "source": 7,
+          "members": [
+            8,
+            9,
+            10
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 11,
+          "members": [
+            12,
+            13,
+            14
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 15,
+          "members": [
+            16,
+            17,
+            18
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 19,
+          "members": [
+            20,
+            21,
+            22
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f8f8f8",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 23,
+      "renderedNodes": 23,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s29",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 4,
+      "freeText": 1,
+      "decorations": 8,
+      "groups": [
+        {
+          "source": 9,
+          "members": [
+            11,
+            15,
+            16,
+            20,
+            21,
+            25,
+            26
+          ],
+          "parts": [
+            "name",
+            "note",
+            "note",
+            "note"
+          ]
+        },
+        {
+          "source": 12,
+          "members": [
+            13,
+            14
+          ],
+          "parts": [
+            "name"
+          ]
+        },
+        {
+          "source": 17,
+          "members": [
+            18,
+            19
+          ],
+          "parts": [
+            "name"
+          ]
+        },
+        {
+          "source": 22,
+          "members": [
+            23,
+            24
+          ],
+          "parts": [
+            "name"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#fff",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 27,
+      "renderedNodes": 27,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d04",
+      "slide": "s30",
+      "cards": 1,
+      "pills": 0,
+      "frames": 1,
+      "headings": 0,
+      "freeText": 3,
+      "decorations": 6,
+      "groups": [
+        {
+          "source": 2,
+          "members": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "parts": [
+            "name",
+            "kick",
+            "note",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f5f5f5",
+        "accent": "#f63025",
+        "ink": "#080808",
+        "surface": "#f5f5f5",
+        "line": "#d9d9d9"
+      },
+      "sourceNodes": 16,
+      "renderedNodes": 16,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d05",
+      "slide": "s01",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 3,
+      "freeText": 3,
+      "decorations": 10,
+      "groups": [],
+      "palette": {
+        "page": "#f8f8f8",
+        "accent": "#aedbe9",
+        "ink": "#000",
+        "surface": "#aedbe9",
+        "line": "#000"
+      },
+      "sourceNodes": 16,
+      "renderedNodes": 16,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d05",
+      "slide": "s02",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 5,
+      "freeText": 11,
+      "decorations": 16,
+      "groups": [],
+      "palette": {
+        "page": "#f8f8f8",
+        "accent": "#aedbe9",
+        "ink": "#000",
+        "surface": "#aedbe9",
+        "line": "#000"
+      },
+      "sourceNodes": 32,
+      "renderedNodes": 32,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d05",
+      "slide": "s03",
+      "cards": 0,
+      "pills": 7,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 9,
+      "decorations": 13,
+      "groups": [],
+      "palette": {
+        "page": "#f8f8f8",
+        "accent": "#aedbe9",
+        "ink": "#000",
+        "surface": "#aedbe9",
+        "line": "#000"
+      },
+      "sourceNodes": 31,
+      "renderedNodes": 31,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d05",
+      "slide": "s04",
+      "cards": 3,
+      "pills": 2,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 7,
+      "decorations": 20,
+      "groups": [
+        {
+          "source": 14,
+          "members": [
+            16,
+            17,
+            18
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 19,
+          "members": [
+            21,
+            22,
+            23
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 24,
+          "members": [
+            26,
+            27,
+            28
+          ],
+          "parts": [
+            "fig",
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f8f8f8",
+        "accent": "#aedbe9",
+        "ink": "#000",
+        "surface": "#f8f8f8",
+        "line": "#000"
+      },
+      "sourceNodes": 43,
+      "renderedNodes": 43,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d05",
+      "slide": "s05",
+      "cards": 4,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 2,
+      "decorations": 12,
+      "groups": [
+        {
+          "source": 13,
+          "members": [
+            14,
+            15,
+            16
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 17,
+          "members": [
+            18,
+            19,
+            20
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 21,
+          "members": [
+            22,
+            23,
+            24
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 25,
+          "members": [
+            26,
+            27,
+            28
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f8f8f8",
+        "accent": "#aedbe9",
+        "ink": "#000",
+        "surface": "#f8f8f8",
+        "line": "#000"
+      },
+      "sourceNodes": 32,
+      "renderedNodes": 32,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d05",
+      "slide": "s06",
+      "cards": 0,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 12,
+      "decorations": 23,
+      "groups": [],
+      "palette": {
+        "page": "#f8f8f8",
+        "accent": "#aedbe9",
+        "ink": "#000",
+        "surface": "#f9f9f9",
+        "line": "#000"
+      },
+      "sourceNodes": 37,
+      "renderedNodes": 37,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    },
+    {
+      "deck": "d05",
+      "slide": "s07",
+      "cards": 3,
+      "pills": 0,
+      "frames": 0,
+      "headings": 2,
+      "freeText": 0,
+      "decorations": 15,
+      "groups": [
+        {
+          "source": 12,
+          "members": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 17,
+          "members": [
+            18,
+            19,
+            20,
+            21
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        },
+        {
+          "source": 22,
+          "members": [
+            23,
+            24,
+            25,
+            26
+          ],
+          "parts": [
+            "name",
+            "note"
+          ]
+        }
+      ],
+      "palette": {
+        "page": "#f8f8f8",
+        "accent": "#aedbe9",
+        "ink": "#000",
+        "surface": "#f8f8f8",
+        "line": "#000"
+      },
+      "sourceNodes": 29,
+      "renderedNodes": 29,
+      "geometryIssues": [],
+      "fontIssues": [],
+      "duplicateNodes": [],
+      "statCount": 0,
+      "emptyCards": 0,
+      "slotStyleIssues": 0
+    }
+  ]
+}

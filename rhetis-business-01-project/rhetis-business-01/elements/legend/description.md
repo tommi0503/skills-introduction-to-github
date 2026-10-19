@@ -1,0 +1,1 @@
+A simple color key built from small squared swatches and evenly spaced labels. The five supporting tones are shared with charts and diagrams, providing consistent meaning without additional visual decoration.

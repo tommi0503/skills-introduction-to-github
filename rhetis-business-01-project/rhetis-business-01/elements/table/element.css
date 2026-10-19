@@ -1,0 +1,31 @@
+:is(.tablebox[data-el="rhetis-business-01-table"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.tablebox[data-el="rhetis-business-01-table"]) { display:flex; flex-direction:column; justify-content:center; }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .table { width:100%; border-collapse:collapse; font-size:var(--type-18); line-height:var(--body-line); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) th, :is(.tablebox[data-el="rhetis-business-01-table"]) td { padding:var(--space-4) var(--space-5); text-align:left; border-bottom:var(--stroke) solid var(--line); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) th { background:var(--accent); color:var(--accent-ink); font-weight:var(--label-weight); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) tbody tr:nth-child(even) { background:var(--surface); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .num { text-align:right; font-variant-numeric:tabular-nums; }
+:is(.tablebox[data-el="rhetis-business-01-table"]) td.pick { background:var(--accent-soft); color:var(--accent); font-weight:var(--name-weight); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) th.pick { background:var(--tone-1); color:var(--tone-1-ink); }
+@container (max-width:620px) { :is(.tablebox[data-el="rhetis-business-01-table"]) .table {font-size:var(--type-14);} :is(.tablebox[data-el="rhetis-business-01-table"]) th, :is(.tablebox[data-el="rhetis-business-01-table"]) td {padding:var(--space-3);} }
+@container (max-width:400px) { :is(.tablebox[data-el="rhetis-business-01-table"]) .table {font-size:var(--type-12);} :is(.tablebox[data-el="rhetis-business-01-table"]) th, :is(.tablebox[data-el="rhetis-business-01-table"]) td {padding:var(--space-2);} }
+
+@container (max-width: 620px) {
+:is(.tablebox[data-el="rhetis-business-01-table"]) .name { font-size:var(--type-20); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .note { font-size:var(--type-14); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.tablebox[data-el="rhetis-business-01-table"]) .name { font-size:var(--type-16); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .note { font-size:var(--type-12); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .fig { font-size:var(--type-28); }
+:is(.tablebox[data-el="rhetis-business-01-table"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.tablebox[data-el="rhetis-business-01-table"]) .kick { display:none; } :is(.tablebox[data-el="rhetis-business-01-table"]) .note { font-size:var(--type-12); } }

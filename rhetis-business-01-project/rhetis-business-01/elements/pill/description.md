@@ -1,0 +1,1 @@
+A one-line capsule with carefully centered type and a compact symbol. The muted fill, solid teal and fine outline variants use identical padding and alignment. The supporting note is removed only in the narrowest slots.

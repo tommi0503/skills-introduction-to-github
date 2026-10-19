@@ -1,0 +1,1 @@
+A framed business card with a fine outline, a narrow teal top rule and generous internal spacing. A large figure anchors a compact hierarchy of kicker, title and supporting note. Emphasis uses a solid accent field; quiet and outlined versions keep the same geometry.

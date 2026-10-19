@@ -1,0 +1,30 @@
+:is(.list[data-el="rhetis-business-01-list"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.list[data-el="rhetis-business-01-list"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.list[data-el="rhetis-business-01-list"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.list[data-el="rhetis-business-01-list"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.list[data-el="rhetis-business-01-list"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.list[data-el="rhetis-business-01-list"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.list[data-el="rhetis-business-01-list"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.list[data-el="rhetis-business-01-list"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); counter-reset:rhetis-item; }
+:is(.list[data-el="rhetis-business-01-list"]) .item { position:relative; padding-left:var(--space-6); display:flex; flex-direction:column; gap:var(--space-1); counter-increment:rhetis-item; }
+:is(.list[data-el="rhetis-business-01-list"]) .item::before { content:""; position:absolute; left:0; top:var(--space-2); width:7px; height:7px; border-radius:999px; background:var(--accent); }
+:is(.list[data-el="rhetis-business-01-list"]).check .item::before { content:"✓"; top:0; width:auto; height:auto; background:none; font-size:var(--type-20); color:var(--accent); font-weight:var(--label-weight); }
+:is(.list[data-el="rhetis-business-01-list"]).num .item::before { content:counter(rhetis-item,decimal-leading-zero); top:0; width:auto; height:auto; background:none; font-size:var(--type-18); color:var(--accent); font-weight:var(--label-weight); }
+:is(.list[data-el="rhetis-business-01-list"]).divided .item + .item { padding-top:var(--space-4); border-top:var(--stroke) solid var(--line); }
+:is(.list[data-el="rhetis-business-01-list"]).divided .item + .item::before { top:var(--space-5); }
+
+@container (max-width: 620px) {
+:is(.list[data-el="rhetis-business-01-list"]) .name { font-size:var(--type-20); }
+:is(.list[data-el="rhetis-business-01-list"]) .note { font-size:var(--type-14); }
+:is(.list[data-el="rhetis-business-01-list"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.list[data-el="rhetis-business-01-list"]) .name { font-size:var(--type-16); }
+:is(.list[data-el="rhetis-business-01-list"]) .note { font-size:var(--type-12); }
+:is(.list[data-el="rhetis-business-01-list"]) .fig { font-size:var(--type-28); }
+:is(.list[data-el="rhetis-business-01-list"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.list[data-el="rhetis-business-01-list"]) .kick { display:none; } :is(.list[data-el="rhetis-business-01-list"]) .note { font-size:var(--type-12); } }
+
+@container (max-height:340px) { :is(.list[data-el="rhetis-business-01-list"]) {gap:var(--gap-sm);} :is(.list[data-el="rhetis-business-01-list"]) .item {gap:var(--space-1);} :is(.list[data-el="rhetis-business-01-list"]) .item .name {font-size:var(--type-18);} :is(.list[data-el="rhetis-business-01-list"]) .item .note {font-size:var(--type-12);} :is(.list[data-el="rhetis-business-01-list"]).divided .item + .item {padding-top:var(--space-2);} :is(.list[data-el="rhetis-business-01-list"]).divided .item + .item::before {top:var(--space-3);} }

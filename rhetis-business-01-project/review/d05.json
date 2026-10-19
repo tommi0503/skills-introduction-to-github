@@ -1,0 +1,106 @@
+{
+  "deck": "d05",
+  "slides": 7,
+  "rounds": 3,
+  "status": "complete",
+  "readmeReadCompletely": true,
+  "visualReview": {
+    "method": "All seven source images opened individually. Every slide rendered in Chromium, then source and final result opened side by side per slide; three render/review rounds total.",
+    "browser": "Chromium /usr/bin/chromium through playwright-core",
+    "finalRenderDirectory": "renders/agent3/clone",
+    "comparisonDirectory": "review/d05/round3-compare-sXX.jpg"
+  },
+  "roundNotes": [
+    {
+      "round": 1,
+      "found": [
+        "Shared renderer omitted chip border strokes.",
+        "Zero-height horizontal line nodes did not render, affecting screw slots, company fact separators, pyramid leader lines.",
+        "Display heading spacing and width differed.",
+        "Simple Lucide slide 7 icons lacked reference details."
+      ],
+      "fixed": [
+        "Reported shared renderer bugs to root; fixes integrated.",
+        "Adjusted display text dimensions, font weight, letter spacing, and baseline."
+      ]
+    },
+    {
+      "round": 2,
+      "found": [
+        "Korean slide headings included extra spaces.",
+        "Simple icons in strategy flow were visually too sparse."
+      ],
+      "fixed": [
+        "Corrected heading spacing and size.",
+        "Drew editable line vectors for document/pencil, hand/lightbulb, checklist and moneybag symbols.",
+        "Preserved original slide 5 frame offset (+8,-8)."
+      ]
+    },
+    {
+      "round": 3,
+      "found": [
+        "Font family in source is not declared; rendered Korean glyph and Latin letter shapes differ slightly from image.",
+        "Small gray support text and a few labels differ by a few pixels."
+      ],
+      "decision": "Accepted within three-round review limit; no clipping, canvas overflow or font loading failures remain."
+    }
+  ],
+  "decisions": [
+    "All content remained editable text, geometry, icons and inline SVG; no original reference was used as slide background.",
+    "Readable original text transcribed; no invented unreadable text was needed.",
+    "Shared frame, highlight, pill, diagram and flow-card helper functions provide reusable construction.",
+    "No photographic placeholders were needed for this deck, which consists of editable shapes and text."
+  ],
+  "knownDifferences": [
+    "Pretendard is loaded as a real variable font, but exact source font is unknown.",
+    "Some source pictograms were redrawn with simple vector strokes, retaining content and position."
+  ],
+  "automatedChecks": {
+    "dimensions": [
+      1280,
+      720
+    ],
+    "allSlidesRendered": true,
+    "fontLoading": "passed",
+    "issues": [
+      {
+        "slide": "s01",
+        "issues": []
+      },
+      {
+        "slide": "s02",
+        "issues": []
+      },
+      {
+        "slide": "s03",
+        "issues": []
+      },
+      {
+        "slide": "s04",
+        "issues": []
+      },
+      {
+        "slide": "s05",
+        "issues": []
+      },
+      {
+        "slide": "s06",
+        "issues": []
+      },
+      {
+        "slide": "s07",
+        "issues": []
+      }
+    ],
+    "renderScriptUnrelatedErrors": [
+      "http://127.0.0.1:4173/src/decks/d02.js",
+      "http://127.0.0.1:4173/src/decks/d02.js",
+      "http://127.0.0.1:4173/src/decks/d02.js",
+      "http://127.0.0.1:4173/src/decks/d02.js",
+      "http://127.0.0.1:4173/src/decks/d02.js",
+      "http://127.0.0.1:4173/src/decks/d02.js",
+      "http://127.0.0.1:4173/src/decks/d02.js",
+      "http://127.0.0.1:4173/src/decks/d02.js"
+    ]
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "deck": "d02",
+  "source": "src/decks/d02.js",
+  "sourceSha256": "708cc0e83c3f765ec8b97fa2d76034f05951e8ca1a84b09e0fdd09e0379685ee",
+  "referenceImages": 30,
+  "reviewer": "deck02 subagent",
+  "contractRead": "/workspace/work/rhetis-intake/kit/README.md (complete)",
+  "rounds": [
+    {
+      "id": "agent",
+      "rendered": 30,
+      "individualSideBySideReviewed": 30
+    },
+    {
+      "id": "agent2",
+      "rendered": 30,
+      "individualSideBySideReviewed": 8,
+      "scope": "수정 핵심8장"
+    },
+    {
+      "id": "agent3",
+      "rendered": 30,
+      "individualSideBySideReviewed": 30,
+      "finalTargetedRefresh": [
+        "s13",
+        "s14"
+      ]
+    }
+  ],
+  "decisions": [
+    "원본 이미지 전체를 사용하지 않고 텍스트·도형·선·차트·표를 데이터와 HTML/SVG로 구현",
+    "사진·인물·복잡한 지도/일러스트 영역을 연한 회색 placeholder로 대체",
+    "이미지형 선화 아이콘을 Lucide로 대체",
+    "원본 폰트 메타데이터가 제공되지 않아 로컬 Pretendard Variable를 실제 로드; 일부 한글 자폭·줄바꿈 차이는 남음",
+    "판독 어려운 작은 본문은 인접 페이지의 자연스러운 비즈니스 설명 문장으로 통일; 선으로 대체하지 않음"
+  ],
+  "difficulties": [
+    "원본 도넛 값 합계가110%여서 숫자를 유지하고 원호 길이만 정규화",
+    "사선 텍스트의 회전 원점과 큰 장식 Q&A의 의도적 화면 밖 잘림 처리"
+  ],
+  "knownDifferences": [
+    "회색 placeholder 영역은 사용자 요구에 따른 원본과의 의도적 차이",
+    "정확한 원본 글꼴을 특정할 수 없어 Pretendard 대체 및 글자 폭·줄바꿈 차이",
+    "일부 그림자·복합 아이콘은 단순화된 그림자 및 Lucide 선화로 재해석"
+  ],
+  "slides": [
+    {
+      "id": "s01",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s01.jpg",
+      "notes": "표지 제목 크기와 기준선, 큰 다이아몬드 모서리 및 연락처 행을 비교·수정. 사진은 회색 placeholder."
+    },
+    {
+      "id": "s02",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s02.jpg",
+      "notes": "목차 다이아몬드·번호 중앙정렬·영문 보조 제목 간격 비교. 사진은 placeholder."
+    },
+    {
+      "id": "s03",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s03.jpg",
+      "notes": "청색 섹션 표지, 흰색 제목 및 세 줄 목록과 다이아몬드 배경 비교."
+    },
+    {
+      "id": "s04",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s04.jpg",
+      "notes": "카드 3열의 공통 크기, 연결선·화살표와 하단 강조문을 확인."
+    },
+    {
+      "id": "s05",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s05.jpg",
+      "notes": "좌측 사진 영역 및 3단 카드 위치·여백 확인. 사진은 placeholder."
+    },
+    {
+      "id": "s06",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s06.jpg",
+      "notes": "3열 카드와 상단 탭, 아이콘·목록 위계 확인. 아이콘은 Lucide 대체."
+    },
+    {
+      "id": "s07",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s07.jpg",
+      "notes": "지도는 복잡한 그래픽이므로 단색 placeholder. 위치 핀과 4분할 도넛을 직접 구현. 원본 표기48/25/22/15의 합은110으로 원본 숫자 유지·호 길이만 정규화."
+    },
+    {
+      "id": "s08",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s08.jpg",
+      "notes": "TAM/SAM/SOM 3중 다이아몬드와 회전 라벨·외곽선·시장 설명 위치 확인."
+    },
+    {
+      "id": "s09",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s09.jpg",
+      "notes": "중첩 원과 4단 니즈 다이아몬드, 연결선 및 본문 기준선 확인."
+    },
+    {
+      "id": "s10",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s10.jpg",
+      "notes": "포지셔닝 맵 축·경쟁사 버블의 상대 위치와 크기 확인."
+    },
+    {
+      "id": "s11",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s11.jpg",
+      "notes": "2열 비교 패널의4개 행·번호·동일 여백 확인."
+    },
+    {
+      "id": "s12",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s12.jpg",
+      "notes": "상대 방향 막대와3개의 중앙 다이아몬드, 하단3열 설명 카드 확인."
+    },
+    {
+      "id": "s13",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s13.jpg",
+      "notes": "4분면 배경축과 SWOT 카드·좌우 텍스트 정렬 비교. 우측 본문 Range 경고는 명시적 줄바꿈으로 해결."
+    },
+    {
+      "id": "s14",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s14.jpg",
+      "notes": "70/45/20 원호·중앙 아이콘 및3열 설명을 비교. 20% 문구를 유색 호 안으로 수정."
+    },
+    {
+      "id": "s15",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s15.jpg",
+      "notes": "4개 경쟁력 카드 및 중앙 다이아몬드 위치·타이포 확인."
+    },
+    {
+      "id": "s16",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s16.jpg",
+      "notes": "중첩4연 다이아몬드의 숫자·아이콘·하단 채널 설명 확인."
+    },
+    {
+      "id": "s17",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s17.jpg",
+      "notes": "좌측4개 메시지와 우측4연 다이아몬드·연결화살표 확인. Lucide 아이콘 허용 대체."
+    },
+    {
+      "id": "s18",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s18.jpg",
+      "notes": "예산 표의5개 열·8개 상세 행과 병합 분류 셀 재현."
+    },
+    {
+      "id": "s19",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s19.jpg",
+      "notes": "인물사진4개는 다이아몬드 placeholder. 이름과 팀명 굵기·색 구분 및 소개문 비교."
+    },
+    {
+      "id": "s20",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s20.jpg",
+      "notes": "4개 일정 카드의 이미지·step 배지·하단 본문 비교. 일러스트는 placeholder."
+    },
+    {
+      "id": "s21",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s21.jpg",
+      "notes": "4연 화살표 연결과 아이콘, STEP 라벨 notch 간격 및3개 목록의60px 리듬 수정."
+    },
+    {
+      "id": "s22",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s22.jpg",
+      "notes": "분기 카드4열과 하단 연간 누적 KPI의구분선·숫자 중심 확인."
+    },
+    {
+      "id": "s23",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s23.jpg",
+      "notes": "월별 타임라인·상단 마일스톤·하단5개 진행 계획 막대를 비교. 12월 주석 위치 수정."
+    },
+    {
+      "id": "s24",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s24.jpg",
+      "notes": "상반기 간트 표6개월·7개 업무와 막대 위치·크기·중앙정렬 확인."
+    },
+    {
+      "id": "s25",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s25.jpg",
+      "notes": "4방향 기대효과 다이아몬드의 회전 라벨을 중심 기준 회전으로 수정. 외부 설명 연결선 비교."
+    },
+    {
+      "id": "s26",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s26.jpg",
+      "notes": "선·4분할 도넛·막대 차트를 직접 구현. 3열 카드와 하단 강조문을 확인."
+    },
+    {
+      "id": "s27",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s27.jpg",
+      "notes": "성장 지표3개 진행 막대, 우측 두 면적 차트·교차점 주석·범례 확인."
+    },
+    {
+      "id": "s28",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s28.jpg",
+      "notes": "3열 정성목표 카드의 사진은 회색 다이아몬드 placeholder. 제목·번호·본문 비교."
+    },
+    {
+      "id": "s29",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s29.jpg",
+      "notes": "3개 요약 카드, 하단 화살표·마무리 문장 중앙정렬 확인."
+    },
+    {
+      "id": "s30",
+      "browserRendered": true,
+      "individualSideBySideReviewed": true,
+      "comparison": "comparisons/agent3/d02-s30.jpg",
+      "notes": "마무리 제목·연락처·대형 Q&A·다이아몬드 배경 확인. Q&A는 원본 의도대로 하단에서 잘리는 장식 SVG 텍스트."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+:is(.steps[data-el="rhetis-business-01-steps"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.steps[data-el="rhetis-business-01-steps"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.steps[data-el="rhetis-business-01-steps"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.steps[data-el="rhetis-business-01-steps"]) { display:flex; align-items:stretch; gap:var(--gap-lg); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .step { position:relative; flex:1; display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); padding:var(--pad); border:var(--stroke) solid var(--line); border-top:calc(var(--stroke) * 3) solid var(--accent); background:var(--surface); border-radius:var(--radius-sm); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .mark { display:flex; align-items:center; justify-content:center; width:44px; height:44px; background:var(--accent); color:var(--accent-ink); border-radius:999px; margin-bottom:var(--space-3); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .step:not(:last-child)::after { content:""; position:absolute; width:calc(var(--gap-lg) + 2px); height:2px; top:50%; left:100%; background:var(--accent); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .step:not(:last-child)::before { content:""; position:absolute; width:7px; height:7px; border-top:2px solid var(--accent); border-right:2px solid var(--accent); rotate:45deg; left:calc(100% + var(--gap-lg) - 7px); top:calc(50% - 2px); }
+:is(.steps[data-el="rhetis-business-01-steps"]).col { flex-direction:column; }
+:is(.steps[data-el="rhetis-business-01-steps"]).col .step { padding:var(--space-4) var(--pad) var(--space-4) var(--space-8); }
+:is(.steps[data-el="rhetis-business-01-steps"]).col .mark { position:absolute; left:var(--space-3); top:50%; transform:translateY(-50%); margin:0; }
+:is(.steps[data-el="rhetis-business-01-steps"]).col .step:not(:last-child)::after { width:2px; height:calc(var(--gap-lg) + 2px); top:100%; left:50%; }
+:is(.steps[data-el="rhetis-business-01-steps"]).col .step:not(:last-child)::before { top:calc(100% + var(--gap-lg) - 7px); left:calc(50% - 2px); rotate:135deg; }
+@container (max-width:620px) { :is(.steps[data-el="rhetis-business-01-steps"]) .step {padding:var(--space-3);} :is(.steps[data-el="rhetis-business-01-steps"]) .mark {width:32px;height:32px;font-size:var(--type-18);} }
+
+@container (max-width: 620px) {
+:is(.steps[data-el="rhetis-business-01-steps"]) .name { font-size:var(--type-20); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .note { font-size:var(--type-14); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.steps[data-el="rhetis-business-01-steps"]) .name { font-size:var(--type-16); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .note { font-size:var(--type-12); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .fig { font-size:var(--type-28); }
+:is(.steps[data-el="rhetis-business-01-steps"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.steps[data-el="rhetis-business-01-steps"]) .kick { display:none; } :is(.steps[data-el="rhetis-business-01-steps"]) .note { font-size:var(--type-12); } }
+
+@container (max-height:440px) { :is(.steps[data-el="rhetis-business-01-steps"]).col .step {padding:var(--space-2) var(--space-3) var(--space-2) var(--space-8);gap:var(--space-1);} :is(.steps[data-el="rhetis-business-01-steps"]).col .step .name {font-size:var(--type-20);} :is(.steps[data-el="rhetis-business-01-steps"]).col .step .note {font-size:var(--type-12);} :is(.steps[data-el="rhetis-business-01-steps"]).col .mark {width:36px;height:36px;font-size:var(--type-18);} }

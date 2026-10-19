@@ -1,0 +1,220 @@
+{
+  "deck": "d01",
+  "title": "실무에 바로 쓰는 고객 세미나 기획안",
+  "sourceFile": "src/decks/d01.js",
+  "referenceCount": 18,
+  "canvas": [
+    1280,
+    720
+  ],
+  "contractRead": "README.md fully read before implementation; attached contract treated as source specification under user request",
+  "visualReview": {
+    "rounds": 3,
+    "method": "All 18 references viewed individually; pass 1 and pass 2 rendered in Chromium and every original/result side-by-side image inspected individually. Pass 3 inspected changed pages 02,13,16; unchanged slides retain pass 2 review.",
+    "finalRenderDirectory": "renders/d01-pass3/clone",
+    "comparisonDirectory": "comparisons/d01-pass3",
+    "finalAudit": "review/d01-pass3/clone-d01.json",
+    "errors": [],
+    "issueCount": 0
+  },
+  "fixes": [
+    "섹션 번호의 텍스트 박스 높이를 확장하여 실제 글리프 넘침 제거",
+    "빈 아이콘용 칩을 rect로 교체하여 chip 중심 검사를 정상화",
+    "제목의 선택 강조와 기준선 보정",
+    "리본 그림자와 프로필 카드 그라데이션 보정",
+    "예산표의 행 높이를 원본 42px/60px로 보정",
+    "목차 리본 간격·예산 합계 모서리·홍보 칩 글자 스트로크 보정"
+  ],
+  "decisions": [
+    "원본 사진·인물·펜은 사용자 지시에 따라 연회색 단색 placeholder 처리",
+    "기하 배경·바인더·종이 접힘·화살표·차트는 SVG/CSS로 직접 작성",
+    "원본의 의미상 불일치(04 섹션의 프로그램 구성 리본, 차트 합계, 오프라인 행 온라인 문구)는 시각 재현 목적상 유지"
+  ],
+  "limitations": [
+    "원본 폰트 파일/폰트명은 첨부에 없어서 로드된 Pretendard로 굵기·자간을 조정. 글리프 윤곽과 큰 목차 번호 노출 높이에 차이.",
+    "회색 placeholder 처리한 사진·펜을 제외하고도 작은 로고·월계수·복합 아이콘은 가독성 있는 대응 도형으로 단순화.",
+    "원본 종이 접힘의 사진적 질감은 재현 가능한 SVG 그라데이션으로 해석."
+  ],
+  "slides": [
+    {
+      "slide": "s01",
+      "reviewedIndividually": true,
+      "notes": "타이틀·노트·바인더를 HTML/SVG로 구성. 사진형 펜은 회색 대각 placeholder. 원본 로고는 텍스트와 기하형으로 단순화.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s02",
+      "reviewedIndividually": true,
+      "notes": "목차 네 그룹, 페이지 번호, 연두 리본을 재현. 타이포 대체 때문에 리본 위 큰 번호의 노출 높이와 원본에 작은 차이가 남음.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s03",
+      "reviewedIndividually": true,
+      "notes": "막대 차트와 증감 callout, 두 시장 변화 카드 구현. 사진 2개와 펜은 회색 placeholder.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s04",
+      "reviewedIndividually": true,
+      "notes": "중앙 허브와 4개 가치 카드, 점선 연결 구현. Lucide 대응 아이콘으로 대체.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s05",
+      "reviewedIndividually": true,
+      "notes": "개요 문단·기간/타겟/목표/예산 표 구현. 강연 사진 회색 placeholder.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s06",
+      "reviewedIndividually": true,
+      "notes": "3개 차별화 카드, 하향 화살표, 문장 내 강조 구현. 펜 회색 placeholder. 인용부호 형태는 폰트 차이.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s07",
+      "reviewedIndividually": true,
+      "notes": "타겟과 규모/과제 카드, 하단 callout 구현. 사용자·타겟 아이콘은 Lucide 대응형.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s08",
+      "reviewedIndividually": true,
+      "notes": "4단계 세로 타임라인과 도형 카드 구현. 원본 2025 마케팅 트렌드 문구 유지.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s09",
+      "reviewedIndividually": true,
+      "notes": "세션 metadata·설명·핵심 포인트·시간표 구현. 원본 수치와 라벨 유지.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s10",
+      "reviewedIndividually": true,
+      "notes": "연사 후보 3명 카드 및 1순위 그라데이션 구현. 인물 사진은 모두 회색 원형 placeholder.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s11",
+      "reviewedIndividually": true,
+      "notes": "연사와 청중 카드 및 양방향 그라데이션 화살표 구현. 복합 헤드셋 그림은 Lucide로 단순화.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s12",
+      "reviewedIndividually": true,
+      "notes": "네트워킹 시간/목적/제공 캡슐, 진행 방식·주요 활동 구현.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s13",
+      "reviewedIndividually": true,
+      "notes": "원본과 동일한 가변 행 높이의 예산표·합계·원형 차트 구현. 원본 차트 표기 45/20/15/5를 그대로 유지해 합계 불일치도 유지.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s14",
+      "reviewedIndividually": true,
+      "notes": "운영 조직 3열과 준비사항/필요협력 2열 구현. 원본 제목 말줄임표 두 점 유지.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s15",
+      "reviewedIndividually": true,
+      "notes": "모집 목표·방법·기간·등록 및 5단계 sequence 구현.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s16",
+      "reviewedIndividually": true,
+      "notes": "온라인·오프라인·PR 3행과 원형 아이콘·화살표·캡슐 구현. 원본 오프라인 행 목표의 온라인 홍보 문구 유지.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s17",
+      "reviewedIndividually": true,
+      "notes": "기대효과 2개·성과 수치 30%/4.8·그라데이션 배지 구현. 월계수 장식은 별 도형으로 단순화.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    },
+    {
+      "slide": "s18",
+      "reviewedIndividually": true,
+      "notes": "상단 3단계·하단 2단계 일정과 map pin SVG 구현. 펜 회색 placeholder. 원본으로 읽힌 기세미나 문구 유지.",
+      "finalSize": [
+        1280,
+        720
+      ],
+      "automatedIssues": []
+    }
+  ]
+}

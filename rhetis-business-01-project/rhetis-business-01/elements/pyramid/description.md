@@ -1,0 +1,1 @@
+A strategy hierarchy composed of clean trapezoid bands that widen downward. The top uses a small yellow signal, middle levels stay pale and the operating base uses solid teal. Each level supports a concise title and explanatory note.

@@ -1,0 +1,42 @@
+:is(.lines[data-el="rhetis-business-01-chart-line"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.lines[data-el="rhetis-business-01-chart-line"]) { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr) var(--space-6); padding:var(--space-6) var(--space-4) var(--space-4); isolation:isolate; anchor-scope:all; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt { display:contents; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt b { grid-row:1; align-self:start; height:calc(100% - var(--v) / var(--max) * (100% - var(--space-6))); display:flex; flex-direction:column; justify-content:flex-end; align-items:center; anchor-name:var(--rhetis-business-01-self); font-size:var(--type-24); font-weight:var(--figure-weight); line-height:var(--figure-line); color:var(--accent); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt b::after { content:""; width:10px; height:10px; margin-top:var(--space-2); margin-bottom:-5px; border-radius:999px; background:var(--accent); border:2px solid var(--page); z-index:2; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt span { grid-row:2; align-self:end; text-align:center; border-top:var(--stroke) solid var(--line); padding-top:var(--space-2); font-size:var(--type-16); line-height:var(--label-line); color:var(--ink-2); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt::before, :is(.lines[data-el="rhetis-business-01-chart-line"]) .pt::after { content:""; pointer-events:none; position:absolute; left:anchor(var(--rhetis-business-01-prev) center); right:anchor(var(--rhetis-business-01-self) center); z-index:-1; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt::before { top:calc(anchor(var(--rhetis-business-01-prev) bottom) - 1px); bottom:calc(anchor(var(--rhetis-business-01-self) bottom) - 1px); background:linear-gradient(to top right,transparent calc(50% - 1px),var(--accent) calc(50% - 1px),var(--accent) calc(50% + 1px),transparent calc(50% + 1px)); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt::after { top:calc(anchor(var(--rhetis-business-01-self) bottom) - 1px); bottom:calc(anchor(var(--rhetis-business-01-prev) bottom) - 1px); background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--accent) calc(50% - 1px),var(--accent) calc(50% + 1px),transparent calc(50% + 1px)); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:first-child::before, :is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:first-child::after { content:none; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(1) { --rhetis-business-01-self:--rhetis-line-1; --rhetis-business-01-prev:--rhetis-line-0; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(2) { --rhetis-business-01-self:--rhetis-line-2; --rhetis-business-01-prev:--rhetis-line-1; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(3) { --rhetis-business-01-self:--rhetis-line-3; --rhetis-business-01-prev:--rhetis-line-2; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(4) { --rhetis-business-01-self:--rhetis-line-4; --rhetis-business-01-prev:--rhetis-line-3; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(5) { --rhetis-business-01-self:--rhetis-line-5; --rhetis-business-01-prev:--rhetis-line-4; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(6) { --rhetis-business-01-self:--rhetis-line-6; --rhetis-business-01-prev:--rhetis-line-5; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(7) { --rhetis-business-01-self:--rhetis-line-7; --rhetis-business-01-prev:--rhetis-line-6; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(8) { --rhetis-business-01-self:--rhetis-line-8; --rhetis-business-01-prev:--rhetis-line-7; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(9) { --rhetis-business-01-self:--rhetis-line-9; --rhetis-business-01-prev:--rhetis-line-8; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(10) { --rhetis-business-01-self:--rhetis-line-10; --rhetis-business-01-prev:--rhetis-line-9; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(11) { --rhetis-business-01-self:--rhetis-line-11; --rhetis-business-01-prev:--rhetis-line-10; }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .pt:nth-child(12) { --rhetis-business-01-self:--rhetis-line-12; --rhetis-business-01-prev:--rhetis-line-11; }
+
+@container (max-width: 620px) {
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .name { font-size:var(--type-20); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .note { font-size:var(--type-14); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .name { font-size:var(--type-16); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .note { font-size:var(--type-12); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .fig { font-size:var(--type-28); }
+:is(.lines[data-el="rhetis-business-01-chart-line"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.lines[data-el="rhetis-business-01-chart-line"]) .kick { display:none; } :is(.lines[data-el="rhetis-business-01-chart-line"]) .note { font-size:var(--type-12); } }

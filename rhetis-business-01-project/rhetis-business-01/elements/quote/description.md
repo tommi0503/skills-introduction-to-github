@@ -1,0 +1,1 @@
+An editorial quotation with an oversized opening mark, a quiet panel and a narrow teal vertical rule. The author lockup combines a neutral circular portrait seat with two aligned text lines. The big variant increases the quotation hierarchy without adding ornament.

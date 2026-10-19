@@ -1,0 +1,29 @@
+:is(.callout[data-el="rhetis-business-01-callout"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.callout[data-el="rhetis-business-01-callout"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.callout[data-el="rhetis-business-01-callout"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.callout[data-el="rhetis-business-01-callout"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap); padding:var(--pad); border-radius:var(--radius-sm); border-left:calc(var(--stroke) * 4) solid var(--accent); background:var(--accent-soft); }
+:is(.callout[data-el="rhetis-business-01-callout"]) p { margin:0; font-size:var(--type-28); line-height:var(--name-line); letter-spacing:var(--name-track); text-align:center; }
+:is(.callout[data-el="rhetis-business-01-callout"]) b { color:var(--accent); font-weight:var(--name-weight); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .icon { color:var(--accent); flex:none; }
+@container (max-width:620px) { :is(.callout[data-el="rhetis-business-01-callout"]) p { font-size:var(--type-22); } }
+@container (max-width:400px) { :is(.callout[data-el="rhetis-business-01-callout"]) p { font-size:var(--type-18); } }
+
+@container (max-width: 620px) {
+:is(.callout[data-el="rhetis-business-01-callout"]) .name { font-size:var(--type-20); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .note { font-size:var(--type-14); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.callout[data-el="rhetis-business-01-callout"]) .name { font-size:var(--type-16); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .note { font-size:var(--type-12); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .fig { font-size:var(--type-28); }
+:is(.callout[data-el="rhetis-business-01-callout"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.callout[data-el="rhetis-business-01-callout"]) .kick { display:none; } :is(.callout[data-el="rhetis-business-01-callout"]) .note { font-size:var(--type-12); } }
+
+:is(.callout[data-el="rhetis-business-01-callout"]) {max-height:calc(var(--space-8)*2);height:100%;align-self:center;}

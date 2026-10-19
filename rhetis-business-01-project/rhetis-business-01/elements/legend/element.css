@@ -1,0 +1,29 @@
+:is(.legend[data-el="rhetis-business-01-legend"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.legend[data-el="rhetis-business-01-legend"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.legend[data-el="rhetis-business-01-legend"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.legend[data-el="rhetis-business-01-legend"]) { display:flex; flex-wrap:wrap; align-content:center; justify-content:center; gap:var(--gap-lg); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .key { display:inline-flex; align-items:center; gap:var(--gap-sm); font-size:var(--type-18); line-height:var(--label-line); font-weight:var(--label-weight); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .key::before { content:""; width:14px; height:14px; border-radius:var(--radius-sm); background:var(--accent); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .key.tone-1::before {background:var(--tone-1);}
+:is(.legend[data-el="rhetis-business-01-legend"]) .key.tone-2::before {background:var(--tone-2);}
+:is(.legend[data-el="rhetis-business-01-legend"]) .key.tone-3::before {background:var(--tone-3);}
+:is(.legend[data-el="rhetis-business-01-legend"]) .key.tone-4::before {background:var(--tone-4);}
+:is(.legend[data-el="rhetis-business-01-legend"]) .key.tone-5::before {background:var(--tone-5);}
+@container (max-width:620px) { :is(.legend[data-el="rhetis-business-01-legend"]) .key {font-size:var(--type-14);} }
+@container (max-width: 620px) {
+:is(.legend[data-el="rhetis-business-01-legend"]) .name { font-size:var(--type-20); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .note { font-size:var(--type-14); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.legend[data-el="rhetis-business-01-legend"]) .name { font-size:var(--type-16); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .note { font-size:var(--type-12); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .fig { font-size:var(--type-28); }
+:is(.legend[data-el="rhetis-business-01-legend"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.legend[data-el="rhetis-business-01-legend"]) .kick { display:none; } :is(.legend[data-el="rhetis-business-01-legend"]) .note { font-size:var(--type-12); } }

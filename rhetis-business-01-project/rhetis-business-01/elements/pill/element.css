@@ -1,0 +1,33 @@
+:is(.pill[data-el="rhetis-business-01-pill"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.pill[data-el="rhetis-business-01-pill"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.pill[data-el="rhetis-business-01-pill"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.pill[data-el="rhetis-business-01-pill"]) { display:flex; align-items:center; justify-content:center; border:var(--stroke) solid var(--line); border-radius:999px; padding:var(--space-3) var(--space-5); background:var(--accent-soft); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .parts { display:flex; align-items:center; justify-content:center; gap:var(--gap-sm); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .name { font-size:var(--type-20); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .note { font-size:var(--type-16); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .mark { font-size:var(--type-20); color:var(--accent); }
+:is(.pill[data-el="rhetis-business-01-pill"]).on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+:is(.pill[data-el="rhetis-business-01-pill"]).on :is(.note,.mark) { color:inherit; }
+:is(.pill[data-el="rhetis-business-01-pill"]).quiet { background:var(--surface); border-color:var(--surface); }
+:is(.pill[data-el="rhetis-business-01-pill"]).line { background:var(--page); }
+@container (max-width:400px) { :is(.pill[data-el="rhetis-business-01-pill"]) .parts { gap:var(--space-2); } :is(.pill[data-el="rhetis-business-01-pill"]) .note { display:none; } }
+
+@container (max-width: 620px) {
+:is(.pill[data-el="rhetis-business-01-pill"]) .name { font-size:var(--type-20); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .note { font-size:var(--type-14); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.pill[data-el="rhetis-business-01-pill"]) .name { font-size:var(--type-16); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .note { font-size:var(--type-12); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .fig { font-size:var(--type-28); }
+:is(.pill[data-el="rhetis-business-01-pill"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.pill[data-el="rhetis-business-01-pill"]) .kick { display:none; } :is(.pill[data-el="rhetis-business-01-pill"]) .note { font-size:var(--type-12); } }
+
+:is(.pill[data-el="rhetis-business-01-pill"]) {height:var(--space-8);align-self:center;}

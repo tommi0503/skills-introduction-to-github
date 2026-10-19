@@ -1,0 +1,1 @@
+A clear profile system with neutral portrait or avatar seats, bold names and restrained role descriptions. Team rows align equal portrait heights and text baselines; a single profile can include an expanded shared checklist.

@@ -1,0 +1,476 @@
+{
+  "deck": "d04",
+  "title": "미리그룹 창립 20주년 행사 결과보고서",
+  "source": "public/reference/d04/slide_01.png … slide_30.png",
+  "referenceCount": 30,
+  "readmeReadInFull": "/workspace/work/rhetis-intake/kit/README.md",
+  "canvas": [
+    1280,
+    720
+  ],
+  "sourceSha256": "4a9f9fbcacc9317b444447e1bb4c54175db5450d047698be9509bedbf9e5a559",
+  "reviewMethod": "30개 원본을 view_image로 개별 확인, 실제 Chromium에서 전 페이지 렌더, 원본/결과를 나란히 놓은 개별 비교 이미지를 3차 모두 직접 검수. 연락처 시트로 대체하지 않음.",
+  "rounds": [
+    {
+      "round": "agent",
+      "visualReviewed": 30,
+      "fixes": "대형 영문 baseline/폭, 장식 글자 overflow, 헤더 y좌표, inline 강조, 숫자 단위, 표 구분선, SVG 로고/별점 수정",
+      "note": "다른 담당 d02.js 작성 중의 404가 공통앱에 기록되었지만 d04 30장 렌더 완료."
+    },
+    {
+      "round": "agent2",
+      "visualReviewed": 30,
+      "automaticIssueCount": 0,
+      "networkOrJsErrors": 0,
+      "fixes": "원본 실측 팔레트, 4.7점 글꼴 크기, 소요시간 tag 간격, 숫자 단위 개, 원본 막대 하단각 및 단순 로고 형태 보정"
+    },
+    {
+      "round": "agent3",
+      "visualReviewed": 30,
+      "automaticIssueCount": 0,
+      "networkOrJsErrors": 0,
+      "fixes": "최종 소스 동결 후 재렌더·변경 반영 확인 완료"
+    }
+  ],
+  "automaticChecks": {
+    "report": "review/agent3/clone-d04.json",
+    "slides": 30,
+    "sizesAll": [
+      1280,
+      720
+    ],
+    "textOverflow": 0,
+    "fontLoadingFailures": 0,
+    "chipCenteringFailures": 0,
+    "errors": []
+  },
+  "interpretations": [
+    "원본의 사진·기기·인물·복잡한 행사 그래픽은 사용자 지시에 따라 #e6e6e6 단색 placeholder로 구현. 원본 이미지를 배경이나 제출 슬라이드에 사용하지 않음.",
+    "사진 위 흰 글자는 밝은 단색 placeholder 위에서도 읽을 수 있도록 검정으로 바꿈. 이 차이는 의도된 처리.",
+    "원본의 입체/채움 아이콘은 Lucide의 의미 대응 선 아이콘으로 재구성. 단순 배경·클립·로고·차트는 SVG.",
+    "전체가 20주년인데 일부 프로그램명 30주년, 시간 범위와 소요시간, 응답수와 투표 합계가 일치하지 않는 원본의 문구/숫자를 임의로 정정하지 않음.",
+    "사진 속 배너·스크린의 소문자는 사진 placeholder 범위에 포함. 독립 UI 텍스트에서 판독이 불가능해 새로 만든 장문은 없음."
+  ],
+  "slides": [
+    {
+      "slide": "s01",
+      "title": "MIRI AGENCY RESULTS REPORT",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s01.jpg",
+      "render": "renders/agent3/clone/d04-s01.png",
+      "renderSha256": "ee2e7b9a72c8d690ee32524f60e28c23783f847095d92878d6d8a4f4da8d2acb",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "표지의 대형 영문은 Arial을 실제 로드된 환경 글꼴로 사용하고 글자 폭과 baseline을 비교 보정. 연락처 카드의 모서리·클립·로고는 SVG."
+    },
+    {
+      "slide": "s02",
+      "title": "목차",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s02.jpg",
+      "render": "renders/agent3/clone/d04-s02.png",
+      "renderSha256": "73fa4fde9ddfc3132abdf20627161c712d9d781f5bb8b04328952192c9c9bafe",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "좌측 레드 목차 레일·우측 종이·클립·대각 모서리를 도형으로 재현. 원본 m 로고는 단순 SVG path로 재구성."
+    },
+    {
+      "slide": "s03",
+      "title": "주요 내용 요약",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s03.jpg",
+      "render": "renders/agent3/clone/d04-s03.png",
+      "renderSha256": "7653fe74d91d92f0101acd2697c008bcfd09aea4a2fdd500fdc8eda97fb04c1f",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "4열 카드·숫자 단위·레드 제목 강조 재현. 원본의 입체 아이콘은 Lucide 의미 대응 아이콘으로 구현."
+    },
+    {
+      "slide": "s04",
+      "title": "행사 기본 정보",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s04.jpg",
+      "render": "renders/agent3/clone/d04-s04.png",
+      "renderSha256": "8aca6a8c4bdadae20715dbfb10b47f22a85118284c7585ec19ef759634993f19",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "좌측 20주년 행사 그래픽은 이미지 항목으로 판단해 회색 placeholder. 정보 표는 텍스트와 선으로 구성."
+    },
+    {
+      "slide": "s05",
+      "title": "행사 기획 배경 및 목표",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s05.jpg",
+      "render": "renders/agent3/clone/d04-s05.png",
+      "renderSha256": "1af8936449610d0d6660b335f7c02f79cf730f8bc34c79959e6a15dc8fb0541f",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "행사 사진은 회색 placeholder. 사진 위 흰 글자는 연회색 배경 가독성을 위해 검정으로 변경. 레드 강조·하단 목표 3열 보존."
+    },
+    {
+      "slide": "s06",
+      "title": "참석자 현황 - 규모 및 구성",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s06.jpg",
+      "render": "renders/agent3/clone/d04-s06.png",
+      "renderSha256": "e6ed7ef5aea99af0d53f1e8acb3d1cf7ec07a0913c5c793cd8720517a0c5bc15",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "참석자 구성 50/100/120/80과 350명 합계, 참석률 97.2%를 원본대로 유지. 도넛과 callout 선을 SVG로 구현."
+    },
+    {
+      "slide": "s07",
+      "title": "참석자 현황 - 분석 및 인사이트",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s07.jpg",
+      "render": "renders/agent3/clone/d04-s07.png",
+      "renderSha256": "86cdbbf32520e96c4f16ffc9fca128b64848b1ca707a5dd91476e4fb53041f09",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "부서별 막대에는 원본에 수치가 없어 형상 높이로 재현. Insight pill 글자 중심과 폭 확인."
+    },
+    {
+      "slide": "s08",
+      "title": "행사 진행 타임라인",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s08.jpg",
+      "render": "renders/agent3/clone/d04-s08.png",
+      "renderSha256": "94ac43e0dedb0248379430d13b6d083c54dee19bfb53ba70e0d04faa19350151",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "시간표·소요시간 tag·시간별 색상 재현. 원본의 30주년 표기를 임의 정정하지 않고 보존. 작은 tag가 시간과 겹치지 않도록 보정."
+    },
+    {
+      "slide": "s09",
+      "title": "프로그램별 운영 결과 1",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s09.jpg",
+      "render": "renders/agent3/clone/d04-s09.png",
+      "renderSha256": "818b8d84a11d4e853a97ef4186b607d08958c4a08cca62db3bd93488fc58a656",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "프로그램 3열 이미지 3개는 회색 placeholder. 각 소요시간과 결과 문구 원문 보존."
+    },
+    {
+      "slide": "s10",
+      "title": "프로그램별 운영 결과 2",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s10.jpg",
+      "render": "renders/agent3/clone/d04-s10.png",
+      "renderSha256": "4f51277a0e2c02bf0f908981cb535467b83dce081384ae9c31f19c4a1e32e252",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "사진 2개는 회색 placeholder. 원본 19:00~21:00 / 90분 표기를 모순이 있어도 원문 그대로 유지."
+    },
+    {
+      "slide": "s11",
+      "title": "프로그램별 운영 결과 3",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s11.jpg",
+      "render": "renders/agent3/clone/d04-s11.png",
+      "renderSha256": "61cf02db0a7e67c542a407d77c95ae7e4426a881914ccb9134300220968e891a",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "CEO 발표 사진 2개는 회색 placeholder. 3행 대형 제목과 본문 줄바꿈 재현."
+    },
+    {
+      "slide": "s12",
+      "title": "현장 사진 1 - 주요 장면",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s12.jpg",
+      "render": "renders/agent3/clone/d04-s12.png",
+      "renderSha256": "333fda39222a0ec32e12425e4fbb0b143177ac59354819a3c9f34400086e70e6",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "주요 현장 사진 3개는 회색 placeholder. 왼쪽 사진 위 흰 텍스트는 가독성을 위해 검정으로 변경."
+    },
+    {
+      "slide": "s13",
+      "title": "현장 사진 2 - 세부 장면",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s13.jpg",
+      "render": "renders/agent3/clone/d04-s13.png",
+      "renderSha256": "30cfaed0795c3f69edd28e59d7dd81046990067b879c0f1782eaf5c438909dbd",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "현장 사진 3개는 회색 placeholder. 사진 위 텍스트는 검정으로 조정, 하단 결론 inline 레드 강조 보존."
+    },
+    {
+      "slide": "s14",
+      "title": "현장 사진 3 - 공간 연출",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s14.jpg",
+      "render": "renders/agent3/clone/d04-s14.png",
+      "renderSha256": "6d92ed5d69bdf1c2f27d62fe2e80c359edd5c86c5bc927135548fd41cf7d433a",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "연회장 사진은 회색 placeholder. 3개 포인트 말풍선·플러스·대각 모서리는 SVG/도형."
+    },
+    {
+      "slide": "s15",
+      "title": "운영 스태프 구성 및 역할",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s15.jpg",
+      "render": "renders/agent3/clone/d04-s15.png",
+      "renderSha256": "5330d1bc9114318a009814077758d8ed4ba3344f7ddf87a6be9c70e3a112c32b",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "원형 인물 사진 4개는 원형 회색 placeholder. 총괄/팀별 조직선·칩·직무는 텍스트/도형."
+    },
+    {
+      "slide": "s16",
+      "title": "장비 및 물품 운영 현황",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s16.jpg",
+      "render": "renders/agent3/clone/d04-s16.png",
+      "renderSha256": "b5b3f5b36733718cf8fc13f33be43238072192260d547c98ff04f835bbeb1265",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "4개 장비 사진은 회색 placeholder. 모델명·규격 tag 및 본문을 텍스트로 재현."
+    },
+    {
+      "slide": "s17",
+      "title": "돌발 상황 및 대응 내역",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s17.jpg",
+      "render": "renders/agent3/clone/d04-s17.png",
+      "renderSha256": "9de14c2c9733977dbb78e37d60fba6a37ab8704f1c516c4047030c8421f9a64e",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "좌우 돌발상황/대응 3행 비교표와 레드 화살표·강조 문구 재현."
+    },
+    {
+      "slide": "s18",
+      "title": "예산 집행 현황 1 - 항목별 내역",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s18.jpg",
+      "render": "renders/agent3/clone/d04-s18.png",
+      "renderSha256": "264cb196533e14c9710fe4d7e9c2f1bd3d313591b43eba7b0d41ec085e9f885a",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "예산 도넛 5개 구간·내부 라벨·가로 순위 pill을 SVG와 컴포넌트로 재현. 원본의 000/00만원 placeholder 숫자 유지."
+    },
+    {
+      "slide": "s19",
+      "title": "예산 집행 현황 2 - 계획 대비 실적",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s19.jpg",
+      "render": "renders/agent3/clone/d04-s19.png",
+      "renderSha256": "666ace53aa0b983ee880f03378e25bfabff7b203003d9f10fc16bfe3732da210",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "막대와 표의 원본 수치 1000/80/60/30/10 및 90/75/50/25/8 보존. 단위와 98.3% 결론은 원본대로."
+    },
+    {
+      "slide": "s20",
+      "title": "참석자 만족도 1 - 전체 결과",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s20.jpg",
+      "render": "renders/agent3/clone/d04-s20.png",
+      "renderSha256": "2462a33ae36e0cb637ccab2d9c197ee2ea16430527c756f7a9b711a85717930d",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "4.7점·340명/97%·투표 280/115/14/1/0 원문 수치 보존. 응답수와 투표 합계 불일치는 원본 데이터 이슈로 기록. 반별점은 커스텀 SVG."
+    },
+    {
+      "slide": "s21",
+      "title": "참석자 만족도 2 - 항목별 분석",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s21.jpg",
+      "render": "renders/agent3/clone/d04-s21.png",
+      "renderSha256": "4cf39b636794e906c14b319066fc12cf3a355fe0f4d6f768cacfd6a776182c46",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "4.8/4.6/4.5/4.7 라벨과 원본 막대 길이를 시각적으로 재현. 마지막 막대가 4.5보다 짧은 원본 불일치 보존. 후기 프로필 아이콘은 단순 SVG."
+    },
+    {
+      "slide": "s22",
+      "title": "수치로 보는 결과",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s22.jpg",
+      "render": "renders/agent3/clone/d04-s22.png",
+      "renderSha256": "f3661f628eecfbf8623aff9686bb2b4d0eaa1225eaa43340c9348c8a0e74baae",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "2×3 지표 그리드·수치 단위·가로 구분선 재현."
+    },
+    {
+      "slide": "s23",
+      "title": "목표 대비 달성률",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s23.jpg",
+      "render": "renders/agent3/clone/d04-s23.png",
+      "renderSha256": "95f22b70f4ef8c94bd7bf9cf09c4dbddcb772293cf53aed07c25afd4854499ee",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "막대+검정 선 복합차트·전체 목표 달성률 98% 도넛 구현. 원본 무수치 차트 형상 재현."
+    },
+    {
+      "slide": "s24",
+      "title": "미디어 노출 현황",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s24.jpg",
+      "render": "renders/agent3/clone/d04-s24.png",
+      "renderSha256": "10c5b628132a1d1d71e2e9369355f379b065ec3f0b0195894cfe3f844ee0810e",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "3열 도넛·범례·합계 재현. 원본 소셜/언론/사내 총계가 모두 19,452회인 표기와 범례 숫자 유지."
+    },
+    {
+      "slide": "s25",
+      "title": "협력사 및 파트너 운영 평가",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s25.jpg",
+      "render": "renders/agent3/clone/d04-s25.png",
+      "renderSha256": "fce400ebdbdf5e690a7bcf2012abdbd190a6f646b97b8a3bb6e122db8ec8ae7e",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "5열 파트너 평가표·레드 평가 열·inline 결론 강조 재현."
+    },
+    {
+      "slide": "s26",
+      "title": "잘된 점 - 운영 강점 분석",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s26.jpg",
+      "render": "renders/agent3/clone/d04-s26.png",
+      "renderSha256": "b6e7c7dcf9c94cb2a7e8d946dcbdd8569e0b6f87a32fae259b1473fc26848f24",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "4행 강점 목록·좌측 번호·우측 2개 bullet 구조 재현."
+    },
+    {
+      "slide": "s27",
+      "title": "아쉬운 점 - 개선 필요 사항",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s27.jpg",
+      "render": "renders/agent3/clone/d04-s27.png",
+      "renderSha256": "31f1292bb2275ee9c426f64c710af42341cfb228e5b10e669430b9cace6c9aca",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "원인/문제점 3열/연결선/개선방향 2열 구조 재현. 작은 개선 아이콘은 Lucide QR/Armchair 의미 대응."
+    },
+    {
+      "slide": "s28",
+      "title": "향후 제언 1 - 운영 개선 방향",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s28.jpg",
+      "render": "renders/agent3/clone/d04-s28.png",
+      "renderSha256": "d541b5baf86a6ab66453e9265d9c1e22d1c2d9b3ceb911e8e4c9b8d41af9dbaf",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "2×2 개선 제안 카드와 중앙 정렬 번호·제목·설명 재현."
+    },
+    {
+      "slide": "s29",
+      "title": "향후 제언 2 - 다음 행사 제안",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s29.jpg",
+      "render": "renders/agent3/clone/d04-s29.png",
+      "renderSha256": "0ed52a53c09b0644fbd8f3db652736cea1a77977b5aca50ccccbf9418db95e3d",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "대형 결론 문구·제안 3개/추천 행사 3개·체크 아이콘 재현."
+    },
+    {
+      "slide": "s30",
+      "title": "함께 해주셔서 감사합니다",
+      "visualReview": "pass_with_documented_placeholder_differences",
+      "individualComparison": "comparisons/agent3/d04-s30.jpg",
+      "render": "renders/agent3/clone/d04-s30.png",
+      "renderSha256": "8216eb7a981e3475a199580df59e8f06c12503da11adc262348ba406fd628485",
+      "size": [
+        1280,
+        720
+      ],
+      "automaticIssues": [],
+      "notes": "우측 연회장 사진은 회색 placeholder. 대형 감사 문구와 명함 카드·레드 대각 도형 재현."
+    }
+  ]
+}

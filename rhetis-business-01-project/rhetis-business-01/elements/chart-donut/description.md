@@ -1,0 +1,1 @@
+A proportion ring with a quiet remainder and a solid teal progress arc. The central figure and concise label stay readable inside the white aperture, while multiple rings align as an evenly spaced performance row.

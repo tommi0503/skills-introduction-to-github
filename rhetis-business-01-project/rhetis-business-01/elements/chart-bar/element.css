@@ -1,0 +1,36 @@
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) { display:flex; align-items:stretch; gap:var(--gap); padding:var(--space-6) var(--space-4) var(--space-6); border-bottom:var(--stroke) solid var(--line); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar { flex:1; min-width:0; position:relative; display:flex; align-items:center; justify-content:flex-end; flex-direction:column; }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar::before { content:""; position:absolute; inset:auto var(--space-3) 0; height:calc(var(--v) / var(--max) * 85%); background:var(--accent-soft); border-top:2px solid var(--accent); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar.on::before { background:var(--accent); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar b { position:absolute; bottom:calc(var(--v) / var(--max) * 85% + var(--space-2)); font-size:var(--type-24); font-weight:var(--figure-weight); line-height:var(--figure-line); color:var(--accent); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar span { position:absolute; top:calc(100% + var(--space-2)); font-size:var(--type-16); line-height:var(--label-line); white-space:nowrap; }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]).h { flex-direction:column; gap:var(--gap-lg); border:none; padding:var(--space-4) var(--space-7) var(--space-4) var(--space-8); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]).h .bar::before { inset:var(--space-2) auto var(--space-2) 0; height:auto; width:calc(var(--v) / var(--max) * 100%); border-top:none; border-right:2px solid var(--accent); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]).h .bar span { right:calc(100% + var(--space-3)); top:50%; transform:translateY(-50%); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]).h .bar b { left:calc(var(--v) / var(--max) * 100% + var(--space-2)); bottom:auto; top:50%; transform:translateY(-50%); font-size:var(--type-20); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar.tone-1::before {background:var(--tone-1);}
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar.tone-2::before {background:var(--tone-2);}
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar.tone-3::before {background:var(--tone-3);}
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar.tone-4::before {background:var(--tone-4);}
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .bar.tone-5::before {background:var(--tone-5);}
+
+@container (max-width: 620px) {
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .name { font-size:var(--type-20); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .note { font-size:var(--type-14); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .name { font-size:var(--type-16); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .note { font-size:var(--type-12); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .fig { font-size:var(--type-28); }
+:is(.bars[data-el="rhetis-business-01-chart-bar"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.bars[data-el="rhetis-business-01-chart-bar"]) .kick { display:none; } :is(.bars[data-el="rhetis-business-01-chart-bar"]) .note { font-size:var(--type-12); } }

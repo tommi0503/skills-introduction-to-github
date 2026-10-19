@@ -1,0 +1,1 @@
+A connected sequence of framed steps with circular teal number marks and fine directional arrows. Horizontal steps read as equal cards; the vertical variant moves the number to the left and connects the card centers downward.

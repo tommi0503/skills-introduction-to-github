@@ -1,0 +1,1 @@
+A compact process diagram with framed actions, rounded start and end nodes and a yellow decision node. Fine orthogonal connectors and directional arrowheads join nodes placed on an explicit grid. The business typography stays horizontal and readable.

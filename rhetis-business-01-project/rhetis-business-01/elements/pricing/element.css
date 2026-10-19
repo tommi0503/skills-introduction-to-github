@@ -1,0 +1,31 @@
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+.plans[data-el="rhetis-business-01-pricing"] {display:flex;gap:var(--gap);}
+.plan[data-el="rhetis-business-01-pricing"] {display:flex;flex-direction:column;gap:var(--gap);padding:var(--pad);border:var(--stroke) solid var(--line);border-top:calc(var(--stroke) * 3) solid var(--accent);border-radius:var(--radius);background:var(--surface);flex:1;}
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .price {margin:0;display:flex;align-items:baseline;gap:var(--space-2);padding-bottom:var(--space-4);border-bottom:var(--stroke) solid var(--line);}
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .price small {font-size:var(--type-16);color:var(--ink-2);}
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .list {flex:1;}
+.plan[data-el="rhetis-business-01-pricing"].on {background:var(--accent-soft);border-color:var(--accent);}
+.plan[data-el="rhetis-business-01-pricing"].on > .name {color:var(--accent);}
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .tag {align-self:flex-start;}
+
+@container (max-width: 620px) {
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .name { font-size:var(--type-20); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .note { font-size:var(--type-14); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .name { font-size:var(--type-16); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .note { font-size:var(--type-12); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .fig { font-size:var(--type-28); }
+:is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .kick { display:none; } :is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .note { font-size:var(--type-12); } }
+
+@container (max-width:400px) { :is(.plan[data-el="rhetis-business-01-pricing"], .plans[data-el="rhetis-business-01-pricing"]) .price .fig {font-size:var(--type-44);} }

@@ -1,0 +1,33 @@
+:is(.venn[data-el="rhetis-business-01-venn"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.venn[data-el="rhetis-business-01-venn"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.venn[data-el="rhetis-business-01-venn"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.venn[data-el="rhetis-business-01-venn"]) { display:flex; align-items:center; justify-content:center; isolation:isolate; }
+:is(.venn[data-el="rhetis-business-01-venn"]) .set { width:43%; aspect-ratio:1; max-height:90%; border-radius:999px; border:2px solid var(--accent); background:color-mix(in srgb,var(--accent-soft) 74%,transparent); display:flex; align-items:center; justify-content:center; text-align:center; padding:var(--space-6); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .set + .set {margin-left:-15%;}
+:is(.venn[data-el="rhetis-business-01-venn"]) .set.on {background:color-mix(in srgb,var(--tone-1) 18%,transparent);border-color:var(--tone-1);}
+:is(.venn[data-el="rhetis-business-01-venn"]) .core {position:absolute;left:42%;right:42%;top:43%;text-align:center;color:var(--accent);}
+:is(.venn[data-el="rhetis-business-01-venn"]) .core .name {font-size:var(--type-18);}
+:is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set {width:34%;}
+:is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set + .set {margin-left:-7%;}
+
+@container (max-width: 620px) {
+:is(.venn[data-el="rhetis-business-01-venn"]) .name { font-size:var(--type-20); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .note { font-size:var(--type-14); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.venn[data-el="rhetis-business-01-venn"]) .name { font-size:var(--type-16); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .note { font-size:var(--type-12); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .fig { font-size:var(--type-28); }
+:is(.venn[data-el="rhetis-business-01-venn"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.venn[data-el="rhetis-business-01-venn"]) .kick { display:none; } :is(.venn[data-el="rhetis-business-01-venn"]) .note { font-size:var(--type-12); } }
+
+:is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) {display:block;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set {position:absolute;width:min(48cqw,62cqh);height:min(48cqw,62cqh);aspect-ratio:1;margin:0;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(1) {left:calc(50% - min(48cqw,62cqh) * .82);top:5%;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(2) {left:calc(50% - min(48cqw,62cqh) * .18);top:5%;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(3) {left:calc(50% - min(48cqw,62cqh) / 2);top:35%;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .core {top:44%;left:43%;right:43%;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(1) .name {transform:translateX(-15%);} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(2) .name {transform:translateX(15%);} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(3) .name {transform:translateY(50%);}
+
+:is(.venn[data-el="rhetis-business-01-venn"]) .set .name {position:relative;z-index:2;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set + .set {margin-left:0;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(1) .name {position:absolute;left:16%;top:30%;transform:none;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(2) .name {position:absolute;right:16%;top:30%;transform:none;} :is(.venn[data-el="rhetis-business-01-venn"]):has(> .set:nth-child(3)) .set:nth-child(3) .name {position:absolute;left:50%;bottom:22%;transform:translateX(-50%);}

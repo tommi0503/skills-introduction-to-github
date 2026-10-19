@@ -1,0 +1,36 @@
+:is(.card[data-el="rhetis-business-01-card"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.card[data-el="rhetis-business-01-card"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.card[data-el="rhetis-business-01-card"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="rhetis-business-01-card"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.card[data-el="rhetis-business-01-card"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.card[data-el="rhetis-business-01-card"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.card[data-el="rhetis-business-01-card"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.card[data-el="rhetis-business-01-card"]) { display:flex; flex-direction:column; justify-content:center; background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); padding:var(--pad); border-top:calc(var(--stroke) * 3) solid var(--accent); }
+:is(.card[data-el="rhetis-business-01-card"]) .parts { display:flex; flex-direction:column; gap:var(--gap-sm); }
+:is(.card[data-el="rhetis-business-01-card"]).on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+:is(.card[data-el="rhetis-business-01-card"]).on :is(.name,.note,.fig,.kick,.mark) { color:inherit; }
+:is(.card[data-el="rhetis-business-01-card"]).quiet { background:var(--surface-2); border-color:var(--surface-2); }
+:is(.card[data-el="rhetis-business-01-card"]).line { background:var(--page); }
+:is(.card[data-el="rhetis-business-01-card"]) .mark { color:var(--accent); }
+:is(.card[data-el="rhetis-business-01-card"]) .fig small { font-size:var(--type-24); font-weight:var(--body-weight); }
+:is(.card[data-el="rhetis-business-01-card"]).tone-1 { background:var(--tone-1); color:var(--tone-1-ink); border-color:var(--tone-1); } :is(.card[data-el="rhetis-business-01-card"]).tone-1 :is(.name,.note,.fig,.kick) {color:inherit;}
+:is(.card[data-el="rhetis-business-01-card"]).tone-2 { background:var(--tone-2); color:var(--tone-2-ink); border-color:var(--tone-2); } :is(.card[data-el="rhetis-business-01-card"]).tone-2 :is(.name,.note,.fig,.kick) {color:inherit;}
+:is(.card[data-el="rhetis-business-01-card"]).tone-3 { background:var(--tone-3); color:var(--tone-3-ink); border-color:var(--tone-3); } :is(.card[data-el="rhetis-business-01-card"]).tone-3 :is(.name,.note,.fig,.kick) {color:inherit;}
+:is(.card[data-el="rhetis-business-01-card"]).tone-4 { background:var(--tone-4); color:var(--tone-4-ink); border-color:var(--tone-4); } :is(.card[data-el="rhetis-business-01-card"]).tone-4 :is(.name,.note,.fig,.kick) {color:inherit;}
+:is(.card[data-el="rhetis-business-01-card"]).tone-5 { background:var(--tone-5); color:var(--tone-5-ink); border-color:var(--tone-5); } :is(.card[data-el="rhetis-business-01-card"]).tone-5 :is(.name,.note,.fig,.kick) {color:inherit;}
+
+@container (max-width: 620px) {
+:is(.card[data-el="rhetis-business-01-card"]) .name { font-size:var(--type-20); }
+:is(.card[data-el="rhetis-business-01-card"]) .note { font-size:var(--type-14); }
+:is(.card[data-el="rhetis-business-01-card"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.card[data-el="rhetis-business-01-card"]) .name { font-size:var(--type-16); }
+:is(.card[data-el="rhetis-business-01-card"]) .note { font-size:var(--type-12); }
+:is(.card[data-el="rhetis-business-01-card"]) .fig { font-size:var(--type-28); }
+:is(.card[data-el="rhetis-business-01-card"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.card[data-el="rhetis-business-01-card"]) .kick { display:none; } :is(.card[data-el="rhetis-business-01-card"]) .note { font-size:var(--type-12); } }
+
+:is(.card[data-el="rhetis-business-01-card"]) .fig small {color:inherit;}

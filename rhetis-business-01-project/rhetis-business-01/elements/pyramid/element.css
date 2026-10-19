@@ -1,0 +1,31 @@
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) { display:flex; flex-direction:column; align-items:center; gap:var(--space-1); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level { flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:var(--space-1); width:100%; background:var(--surface-2); padding:var(--space-2) var(--space-6); clip-path:polygon(12% 0,88% 0,100% 100%,0 100%); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level:nth-child(1) {width:40%;background:var(--tone-3);color:var(--tone-3-ink);}
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level:nth-child(2) {width:55%;background:var(--accent-soft);}
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level:nth-child(3) {width:70%;}
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level:nth-child(4) {width:85%;}
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level:last-child {background:var(--accent);color:var(--accent-ink);}
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level:last-child .note {color:inherit;}
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level .name {font-size:var(--type-22);}
+@container (max-width:620px) { :is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level .name {font-size:var(--type-18);} :is(.pyramid[data-el="rhetis-business-01-pyramid"]) .level .note {font-size:var(--type-12);} }
+
+@container (max-width: 620px) {
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .name { font-size:var(--type-20); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .note { font-size:var(--type-14); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .name { font-size:var(--type-16); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .note { font-size:var(--type-12); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .fig { font-size:var(--type-28); }
+:is(.pyramid[data-el="rhetis-business-01-pyramid"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.pyramid[data-el="rhetis-business-01-pyramid"]) .kick { display:none; } :is(.pyramid[data-el="rhetis-business-01-pyramid"]) .note { font-size:var(--type-12); } }

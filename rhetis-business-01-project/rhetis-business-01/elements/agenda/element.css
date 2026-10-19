@@ -1,0 +1,31 @@
+:is(.agenda[data-el="rhetis-business-01-agenda"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.agenda[data-el="rhetis-business-01-agenda"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);}
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .entry {display:grid;grid-template-columns:var(--space-8) 1fr;column-gap:var(--gap);align-items:center;padding:var(--space-4) var(--space-5);border-bottom:var(--stroke) solid var(--line);}
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .mark {grid-row:1 / span 2;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:var(--stroke) solid var(--accent);color:var(--accent);border-radius:999px;font-size:var(--type-20);}
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .name {font-size:var(--type-24);}
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .entry.on {background:var(--accent-soft);border-radius:var(--radius-sm);border-bottom-color:var(--accent-soft);}
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .entry.on .mark {background:var(--accent);color:var(--accent-ink);}
+@container (max-width:620px) { :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry {padding:var(--space-3);grid-template-columns:var(--space-7) 1fr;} :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .name {font-size:var(--type-18);} }
+@container (max-height:360px) { :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry {padding-block:var(--space-2);} :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .note {font-size:var(--type-12);} :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .name {font-size:var(--type-18);} }
+
+@container (max-width: 620px) {
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .name { font-size:var(--type-20); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .note { font-size:var(--type-14); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .name { font-size:var(--type-16); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .note { font-size:var(--type-12); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .fig { font-size:var(--type-28); }
+:is(.agenda[data-el="rhetis-business-01-agenda"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.agenda[data-el="rhetis-business-01-agenda"]) .kick { display:none; } :is(.agenda[data-el="rhetis-business-01-agenda"]) .note { font-size:var(--type-12); } }
+
+@container (max-height:560px) { :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry {padding:var(--space-2) var(--space-4);} :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .name {font-size:var(--type-20);} :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .note {font-size:var(--type-14);} :is(.agenda[data-el="rhetis-business-01-agenda"]) .entry .mark {width:36px;height:36px;font-size:var(--type-18);} }

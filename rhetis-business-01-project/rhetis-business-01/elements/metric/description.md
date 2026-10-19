@@ -1,0 +1,1 @@
+Bare performance figures with large teal numerals, compact units and centered descriptive labels. A multi-metric row uses fine vertical dividers rather than heavy boxes. The figure remains the visual anchor at every size.

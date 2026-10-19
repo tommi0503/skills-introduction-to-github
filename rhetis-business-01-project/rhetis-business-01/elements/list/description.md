@@ -1,0 +1,1 @@
+A readable business list with accent-colored dots, ticks or automatic two-digit numbers. Items pair a firm title with a softer explanation, and an optional divided version uses thin horizontal rules. Markers remain separate from the content text.

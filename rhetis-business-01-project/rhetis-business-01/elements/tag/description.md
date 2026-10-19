@@ -1,0 +1,1 @@
+A compact editorial label with precise vertical centering and minimal rounding. Labels use pale teal, while in-text emphasis uses the reference language of a soft yellow marker. Both treatments preserve a crisp dark-text contrast.

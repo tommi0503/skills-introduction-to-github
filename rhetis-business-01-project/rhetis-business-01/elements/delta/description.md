@@ -1,0 +1,1 @@
+A direct before-and-after comparison using muted starting values, a clean accent arrow and bold teal results. The open layout echoes the large number treatments in the reference decks and avoids decorative containers.

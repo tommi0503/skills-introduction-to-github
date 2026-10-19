@@ -1,0 +1,44 @@
+:is(.cycle[data-el="rhetis-business-01-cycle"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); color:var(--ink); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) :is(.name,.note,.kick,.fig,.mark) { margin:0; min-width:0; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--ink-2); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--accent); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .fig { font-size:var(--type-48); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .mark { font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+
+:is(.cycle[data-el="rhetis-business-01-cycle"]) { isolation:isolate; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > * { --rhetis-business-01-n:4; --rhetis-business-01-rx:calc(50cqw - 16cqw); --rhetis-business-01-ry:calc(50cqh - 14cqh); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .core { position:absolute; inset:38% 37%; display:flex; align-items:center; justify-content:center; text-align:center; background:var(--accent); color:var(--accent-ink); border:var(--stroke) solid var(--accent); border-radius:var(--radius); z-index:2; padding:var(--space-3); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .core .name { font-size:var(--type-22); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .core .note { color:inherit; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node { --rhetis-business-01-angle:calc(-90deg + var(--rhetis-business-01-i) * 360deg / var(--rhetis-business-01-n)); position:absolute; left:calc(50% + cos(var(--rhetis-business-01-angle)) * var(--rhetis-business-01-rx) - 14%); top:calc(50% + sin(var(--rhetis-business-01-angle)) * var(--rhetis-business-01-ry) - 12%); width:28%; height:24%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:var(--space-1); padding:var(--space-3); background:var(--surface); border:var(--stroke) solid var(--line); border-top:calc(var(--stroke) * 3) solid var(--accent); border-radius:var(--radius-sm); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node .name { font-size:var(--type-20); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node .note { font-size:var(--type-14); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node .mark { color:var(--accent); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]):has(> .node:nth-child(3 of .node):last-child) > * { --rhetis-business-01-n:3; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]):has(> .node:nth-child(4 of .node):last-child) > * { --rhetis-business-01-n:4; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]):has(> .node:nth-child(5 of .node):last-child) > * { --rhetis-business-01-n:5; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]):has(> .node:nth-child(6 of .node):last-child) > * { --rhetis-business-01-n:6; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node:nth-child(1 of .node) { --rhetis-business-01-i:0; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node:nth-child(2 of .node) { --rhetis-business-01-i:1; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node:nth-child(3 of .node) { --rhetis-business-01-i:2; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node:nth-child(4 of .node) { --rhetis-business-01-i:3; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node:nth-child(5 of .node) { --rhetis-business-01-i:4; }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node:nth-child(6 of .node) { --rhetis-business-01-i:5; }
+
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node { --rhetis-business-01-dx:calc((cos(var(--rhetis-business-01-angle) + 360deg / var(--rhetis-business-01-n)) - cos(var(--rhetis-business-01-angle))) * var(--rhetis-business-01-rx)); --rhetis-business-01-dy:calc((sin(var(--rhetis-business-01-angle) + 360deg / var(--rhetis-business-01-n)) - sin(var(--rhetis-business-01-angle))) * var(--rhetis-business-01-ry)); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node::before { content:""; z-index:-1; position:absolute; left:50%; top:50%; height:2px; width:hypot(var(--rhetis-business-01-dx),var(--rhetis-business-01-dy)); transform-origin:0 50%; rotate:atan2(var(--rhetis-business-01-dy),var(--rhetis-business-01-dx)); background:var(--line); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) > .node::after { content:""; z-index:-1; position:absolute; left:calc(50% + var(--rhetis-business-01-dx) / 2); top:calc(50% + var(--rhetis-business-01-dy) / 2); width:12px; height:12px; clip-path:polygon(0 0,100% 50%,0 100%,25% 50%); background:var(--accent); rotate:atan2(var(--rhetis-business-01-dy),var(--rhetis-business-01-dx)); }
+@container (max-width:620px) { :is(.cycle[data-el="rhetis-business-01-cycle"]) > .node .note {font-size:var(--type-12);} :is(.cycle[data-el="rhetis-business-01-cycle"]) > .node .name {font-size:var(--type-16);} :is(.cycle[data-el="rhetis-business-01-cycle"]) > .core .name {font-size:var(--type-16);} }
+@container (max-width: 620px) {
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .name { font-size:var(--type-20); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .note { font-size:var(--type-14); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .fig { font-size:var(--type-36); }
+}
+@container (max-width: 400px) {
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .name { font-size:var(--type-16); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .note { font-size:var(--type-12); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .fig { font-size:var(--type-28); }
+:is(.cycle[data-el="rhetis-business-01-cycle"]) .kick { display:none; }
+}
+@container (max-height: 160px) { :is(.cycle[data-el="rhetis-business-01-cycle"]) .kick { display:none; } :is(.cycle[data-el="rhetis-business-01-cycle"]) .note { font-size:var(--type-12); } }

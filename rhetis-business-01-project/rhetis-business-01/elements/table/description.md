@@ -1,0 +1,1 @@
+A compact business table with a strong teal header, subtle alternating rows and fine horizontal rules. Numeric columns align right and use tabular figures. The selected outcome column receives a pale teal body and blue header to establish focus.

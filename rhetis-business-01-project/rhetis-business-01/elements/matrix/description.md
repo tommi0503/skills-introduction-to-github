@@ -1,0 +1,1 @@
+A framed two-by-two decision matrix with compact axis labels and spacious text cells. One priority quadrant uses a pale teal fill and accent outline. The axes remain outside the cell text, making the relationship explicit and readable.

@@ -1,0 +1,1 @@
+A balanced radial business diagram with a solid teal core and finely outlined member frames. Fine spokes connect every member directly to the central core. Three, four and six member fixtures demonstrate geometry changes, while small labels and restrained spacing keep the visual language consistent.

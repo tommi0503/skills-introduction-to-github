@@ -1,0 +1,1 @@
+A clear organizational tree with a solid teal root, pale teal functional nodes and quiet subordinate frames. Fine orthogonal rules join the root to every branch, and evenly spaced columns preserve a stable business hierarchy.
