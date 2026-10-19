@@ -1,0 +1,49 @@
+.funnel[data-el="report-forge-funnel"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.funnel[data-el="report-forge-funnel"] *, .funnel[data-el="report-forge-funnel"] *::before, .funnel[data-el="report-forge-funnel"] *::after { box-sizing:border-box; }
+.funnel[data-el="report-forge-funnel"] :is(p,b,small,span,blockquote) { margin:0; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.funnel[data-el="report-forge-funnel"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.funnel[data-el="report-forge-funnel"] { display:flex; flex-direction:column; align-items:center; gap:var(--gap-sm); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage { width:calc(var(--v)*1%); flex:1; min-height:0; padding:var(--gap-sm) var(--pad); display:flex; align-items:center; justify-content:space-between; gap:var(--gap-sm); background:var(--accent-soft); border-bottom:2px solid var(--accent); clip-path:polygon(0 0,100% 0,96% 100%,4% 100%); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage:first-child { background:var(--accent); color:var(--accent-ink); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .fig { font-size:var(--type-36); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .name { font-size:var(--type-22); }
+
+@container (max-width: 720px) {
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .name { font-size:var(--type-18); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .note { font-size:var(--type-14); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .fig { font-size:var(--type-36); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .kick { font-size:var(--type-12); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .name { font-size:var(--type-16); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .note { font-size:var(--type-12); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .fig { font-size:var(--type-28); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .note { display:none; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .name { font-size:var(--type-14); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .fig { font-size:var(--type-24); }
+}
+
+[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage { width:max(45%,calc(var(--v)*1%)); }
+@container (max-width:720px) { [data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage { padding:calc(var(--gap-sm)/3) var(--gap-sm); } [data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage .fig { font-size:var(--type-24); } [data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage .name { font-size:var(--type-18); } }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage { padding-inline:var(--gap-lg); clip-path:polygon(0 0,100% 0,98% 100%,2% 100%); }
+@container (max-width:720px) { .funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage { padding-inline:var(--gap-sm); } }
+
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage { width:calc(var(--v)*.6%); padding:0; position:relative; display:block; background:transparent; color:var(--ink); border:0; clip-path:none; isolation:isolate; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage::before { content:''; position:absolute; inset:0; background:var(--accent-soft); clip-path:polygon(0 0,100% 0,96% 100%,4% 100%); z-index:-1; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage:first-child::before { background:var(--accent); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage .name { position:absolute; right:calc(50% + 32cqw); width:18cqw; top:50%; translate:0 -50%; color:var(--ink); font-size:var(--type-22); text-align:left; }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage .fig { position:absolute; left:calc(50% + 32cqw); width:18cqw; top:50%; translate:0 -50%; color:var(--accent); font-size:var(--type-36); text-align:right; }
+@container (max-width:800px) {
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage .name { font-size:var(--type-16); }
+.funnel[data-el="report-forge-funnel"][data-el="report-forge-funnel"][data-el="report-forge-funnel"] .stage .fig { font-size:var(--type-24); }
+}

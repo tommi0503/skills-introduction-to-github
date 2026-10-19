@@ -1,0 +1,27 @@
+{
+  "name": "rhetis-report-forge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build && node scripts/copy-outputs.mjs",
+    "render": "node scripts/render.mjs",
+    "typecheck": "tsc --noEmit",
+    "verify": "python scripts/verify.py",
+    "assemble": "node scripts/assemble-library.mjs --audit",
+    "export": "node scripts/export.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "lucide-react": "1.52.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.3",
+    "typescript": "7.0.2",
+    "playwright-core": "1.63.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
+  }
+}

@@ -1,0 +1,41 @@
+.lines[data-el="report-forge-chart-line"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.lines[data-el="report-forge-chart-line"] *, .lines[data-el="report-forge-chart-line"] *::before, .lines[data-el="report-forge-chart-line"] *::after { box-sizing:border-box; }
+.lines[data-el="report-forge-chart-line"] :is(p,b,small,span,blockquote) { margin:0; }
+.lines[data-el="report-forge-chart-line"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.lines[data-el="report-forge-chart-line"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.lines[data-el="report-forge-chart-line"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.lines[data-el="report-forge-chart-line"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.lines[data-el="report-forge-chart-line"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.lines[data-el="report-forge-chart-line"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.lines[data-el="report-forge-chart-line"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+/* Points remain contract markup; display:contents gives connectors the chart as their containing block. */
+.lines[data-el="report-forge-chart-line"] { --report-forge-dot:10px; display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr) auto; isolation:isolate; anchor-scope:all; padding:var(--gap-lg) 0 0; }
+.lines[data-el="report-forge-chart-line"] > .pt { display:contents; }
+.lines[data-el="report-forge-chart-line"] > .pt > b { grid-row:1; align-self:start; height:calc(100% - var(--v)/var(--max,100)*(100% - var(--gap-lg))); min-height:0; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; anchor-name:var(--report-forge-self); color:var(--ink); font-size:var(--type-18); font-weight:var(--label-weight); line-height:var(--label-line); white-space:nowrap; position:relative; z-index:2; }
+.lines[data-el="report-forge-chart-line"] > .pt > b::after { content:''; flex:none; width:var(--report-forge-dot); height:var(--report-forge-dot); margin:calc(var(--gap-sm)/2) 0 calc(var(--report-forge-dot)/-2); border-radius:50%; background:var(--accent); }
+.lines[data-el="report-forge-chart-line"] > .pt > span { grid-row:2; padding:var(--gap-sm) 0; border-top:var(--stroke) solid var(--line); color:var(--mute); text-align:center; font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); white-space:nowrap; }
+.lines[data-el="report-forge-chart-line"] > .pt.on > b, .lines[data-el="report-forge-chart-line"] > .pt.on > span { color:var(--accent); }
+.lines[data-el="report-forge-chart-line"] > .pt::before, .lines[data-el="report-forge-chart-line"] > .pt::after { content:''; position:absolute; pointer-events:none; left:anchor(var(--report-forge-prev) center); right:anchor(var(--report-forge-self) center); z-index:1; }
+/* Two signed rectangles support both rising and falling runs, including equal-valued neighbours. */
+.lines[data-el="report-forge-chart-line"] > .pt::before { top:calc(anchor(var(--report-forge-prev) bottom) - var(--stroke)); bottom:calc(anchor(var(--report-forge-self) bottom) - var(--stroke)); background:linear-gradient(to top right,transparent calc(50% - var(--stroke) - .7px),var(--accent) calc(50% - var(--stroke)),var(--accent) calc(50% + var(--stroke)),transparent calc(50% + var(--stroke) + .7px)); }
+.lines[data-el="report-forge-chart-line"] > .pt::after { top:calc(anchor(var(--report-forge-self) bottom) - var(--stroke)); bottom:calc(anchor(var(--report-forge-prev) bottom) - var(--stroke)); background:linear-gradient(to bottom right,transparent calc(50% - var(--stroke) - .7px),var(--accent) calc(50% - var(--stroke)),var(--accent) calc(50% + var(--stroke)),transparent calc(50% + var(--stroke) + .7px)); }
+.lines[data-el="report-forge-chart-line"] > .pt:first-child::before, .lines[data-el="report-forge-chart-line"] > .pt:first-child::after { content:none; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(1) { --report-forge-self:--report-forge-point-1; --report-forge-prev:--report-forge-point-0; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(2) { --report-forge-self:--report-forge-point-2; --report-forge-prev:--report-forge-point-1; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(3) { --report-forge-self:--report-forge-point-3; --report-forge-prev:--report-forge-point-2; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(4) { --report-forge-self:--report-forge-point-4; --report-forge-prev:--report-forge-point-3; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(5) { --report-forge-self:--report-forge-point-5; --report-forge-prev:--report-forge-point-4; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(6) { --report-forge-self:--report-forge-point-6; --report-forge-prev:--report-forge-point-5; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(7) { --report-forge-self:--report-forge-point-7; --report-forge-prev:--report-forge-point-6; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(8) { --report-forge-self:--report-forge-point-8; --report-forge-prev:--report-forge-point-7; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(9) { --report-forge-self:--report-forge-point-9; --report-forge-prev:--report-forge-point-8; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(10) { --report-forge-self:--report-forge-point-10; --report-forge-prev:--report-forge-point-9; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(11) { --report-forge-self:--report-forge-point-11; --report-forge-prev:--report-forge-point-10; }
+.lines[data-el="report-forge-chart-line"] > .pt:nth-child(12) { --report-forge-self:--report-forge-point-12; --report-forge-prev:--report-forge-point-11; }
+@container (max-width:720px) {
+.lines[data-el="report-forge-chart-line"] > .pt > b { font-size:var(--type-16); }
+.lines[data-el="report-forge-chart-line"] > .pt > span { font-size:var(--type-12); }
+}
+@container (max-width:430px) {
+.lines[data-el="report-forge-chart-line"] > .pt > b { font-size:var(--type-14); }
+}

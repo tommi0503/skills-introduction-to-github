@@ -1,0 +1,35 @@
+.versus[data-el="report-forge-versus"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.versus[data-el="report-forge-versus"] *, .versus[data-el="report-forge-versus"] *::before, .versus[data-el="report-forge-versus"] *::after { box-sizing:border-box; }
+.versus[data-el="report-forge-versus"] :is(p,b,small,span,blockquote) { margin:0; }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.versus[data-el="report-forge-versus"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.versus[data-el="report-forge-versus"] { display:grid; grid-template-columns:1fr auto 1fr; gap:var(--gap); align-items:stretch; }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .side { background:var(--surface); padding:var(--pad); border:var(--stroke) solid var(--line); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .side.on { background:var(--accent-soft); border-top:4px solid var(--accent); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .vs { align-self:center; color:var(--accent); font-size:var(--type-24); font-weight:var(--figure-weight); }
+
+@container (max-width: 720px) {
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .name { font-size:var(--type-18); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .note { font-size:var(--type-14); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .fig { font-size:var(--type-36); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .kick { font-size:var(--type-12); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .name { font-size:var(--type-16); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .note { font-size:var(--type-12); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .fig { font-size:var(--type-28); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .note { display:none; }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .name { font-size:var(--type-14); }
+.versus[data-el="report-forge-versus"][data-el="report-forge-versus"] .fig { font-size:var(--type-24); }
+}
+
+[data-el="report-forge-versus"][data-el="report-forge-versus"][data-el="report-forge-versus"] .list[data-el="report-forge-list"] { container-type:inline-size; flex:none; height:auto; }

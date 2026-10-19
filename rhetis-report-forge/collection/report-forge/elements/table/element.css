@@ -1,0 +1,40 @@
+.tablebox[data-el="report-forge-table"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.tablebox[data-el="report-forge-table"] *, .tablebox[data-el="report-forge-table"] *::before, .tablebox[data-el="report-forge-table"] *::after { box-sizing:border-box; }
+.tablebox[data-el="report-forge-table"] :is(p,b,small,span,blockquote) { margin:0; }
+.tablebox[data-el="report-forge-table"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.tablebox[data-el="report-forge-table"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.tablebox[data-el="report-forge-table"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.tablebox[data-el="report-forge-table"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.tablebox[data-el="report-forge-table"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.tablebox[data-el="report-forge-table"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.tablebox[data-el="report-forge-table"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.tablebox[data-el="report-forge-table"] { display:flex; align-items:center; min-width:0; }
+.tablebox[data-el="report-forge-table"] .table { border-collapse:collapse; width:100%; table-layout:fixed; font-size:var(--type-18); line-height:var(--body-line); }
+.tablebox[data-el="report-forge-table"] .table th, .tablebox[data-el="report-forge-table"] .table td { padding:var(--gap-sm); border-bottom:var(--stroke) solid var(--line); text-align:left; vertical-align:middle; overflow-wrap:anywhere; }
+.tablebox[data-el="report-forge-table"] .table th { background:var(--ink); color:var(--page); font-weight:var(--label-weight); }
+.tablebox[data-el="report-forge-table"] .table td { background:var(--surface); }
+.tablebox[data-el="report-forge-table"] .table .pick { background:var(--accent-soft); color:var(--accent); font-weight:var(--name-weight); }
+.tablebox[data-el="report-forge-table"] .table th.pick { background:var(--accent); color:var(--accent-ink); }
+.tablebox[data-el="report-forge-table"] .table .num { text-align:right; font-variant-numeric:tabular-nums; }
+@container (max-width:720px) { .tablebox[data-el="report-forge-table"] .table { font-size:var(--type-14); } .tablebox[data-el="report-forge-table"] .table th, .tablebox[data-el="report-forge-table"] .table td { padding:calc(var(--gap-sm)/2); } }
+
+@container (max-width: 720px) {
+.tablebox[data-el="report-forge-table"] .name { font-size:var(--type-18); }
+.tablebox[data-el="report-forge-table"] .note { font-size:var(--type-14); }
+.tablebox[data-el="report-forge-table"] .fig { font-size:var(--type-36); }
+.tablebox[data-el="report-forge-table"] .kick { font-size:var(--type-12); }
+.tablebox[data-el="report-forge-table"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.tablebox[data-el="report-forge-table"] .name { font-size:var(--type-16); }
+.tablebox[data-el="report-forge-table"] .note { font-size:var(--type-12); }
+.tablebox[data-el="report-forge-table"] .fig { font-size:var(--type-28); }
+.tablebox[data-el="report-forge-table"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.tablebox[data-el="report-forge-table"] .note { display:none; }
+.tablebox[data-el="report-forge-table"] .name { font-size:var(--type-14); }
+.tablebox[data-el="report-forge-table"] .fig { font-size:var(--type-24); }
+}
+
+.tablebox[data-el="report-forge-table"] .table { color:var(--ink); }

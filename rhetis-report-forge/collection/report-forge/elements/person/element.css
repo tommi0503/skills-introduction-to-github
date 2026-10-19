@@ -1,0 +1,39 @@
+:is(.person,.people)[data-el="report-forge-person"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.person,.people)[data-el="report-forge-person"] *, :is(.person,.people)[data-el="report-forge-person"] *::before, :is(.person,.people)[data-el="report-forge-person"] *::after { box-sizing:border-box; }
+:is(.person,.people)[data-el="report-forge-person"] :is(p,b,small,span,blockquote) { margin:0; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.person,.people)[data-el="report-forge-person"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.person,.people)[data-el="report-forge-person"] { display:flex; align-items:center; justify-content:center; gap:var(--gap); }
+.person[data-el="report-forge-person"] { display:flex; flex:1; min-width:0; flex-direction:column; gap:var(--gap-sm); padding:var(--pad); border-top:var(--stroke) solid var(--line); align-items:center; text-align:center; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .seat.avatar { width:120px; max-width:60%; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .seat.portrait { width:65%; max-height:55%; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .name { font-size:var(--type-24); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .list { text-align:left; }
+
+@container (max-width: 720px) {
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .name { font-size:var(--type-18); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .note { font-size:var(--type-14); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .fig { font-size:var(--type-36); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .kick { font-size:var(--type-12); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .name { font-size:var(--type-16); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .note { font-size:var(--type-12); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .fig { font-size:var(--type-28); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .note { display:none; }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .name { font-size:var(--type-14); }
+:is(.person,.people)[data-el="report-forge-person"][data-el="report-forge-person"] .fig { font-size:var(--type-24); }
+}
+
+[data-el="report-forge-person"].people > .person { container-type:inline-size; align-self:stretch; }
+[data-el="report-forge-person"].people { align-items:stretch; }
+@container (min-width:260px) { [data-el="report-forge-person"][data-el="report-forge-person"][data-el="report-forge-person"] .name { font-size:var(--type-24); } [data-el="report-forge-person"][data-el="report-forge-person"][data-el="report-forge-person"] .note { font-size:var(--type-18); } }

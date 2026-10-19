@@ -1,0 +1,33 @@
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.tag,.hl)[data-el="report-forge-tag"] *, :is(.tag,.hl)[data-el="report-forge-tag"] *::before, :is(.tag,.hl)[data-el="report-forge-tag"] *::after { box-sizing:border-box; }
+:is(.tag,.hl)[data-el="report-forge-tag"] :is(p,b,small,span,blockquote) { margin:0; }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.tag,.hl)[data-el="report-forge-tag"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] { display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; padding:calc(var(--gap-sm)/2) var(--gap-sm); font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); background:var(--accent); color:var(--accent-ink); border-radius:var(--radius-sm); }
+.hl[data-el="report-forge-tag"][data-el="report-forge-tag"] { background:var(--accent-soft); color:var(--accent); border-bottom:2px solid var(--accent); }
+
+@container (max-width: 720px) {
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .name { font-size:var(--type-18); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .note { font-size:var(--type-14); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .fig { font-size:var(--type-36); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .kick { font-size:var(--type-12); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .name { font-size:var(--type-16); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .note { font-size:var(--type-12); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .fig { font-size:var(--type-28); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .note { display:none; }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .name { font-size:var(--type-14); }
+:is(.tag,.hl)[data-el="report-forge-tag"][data-el="report-forge-tag"] .fig { font-size:var(--type-24); }
+}
+
+[data-el="report-forge-tag"][data-el="report-forge-tag"][data-el="report-forge-tag"] { container-type:normal; white-space:nowrap; }

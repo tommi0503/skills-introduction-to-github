@@ -1,0 +1,38 @@
+:is(.plan,.plans)[data-el="report-forge-pricing"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.plan,.plans)[data-el="report-forge-pricing"] *, :is(.plan,.plans)[data-el="report-forge-pricing"] *::before, :is(.plan,.plans)[data-el="report-forge-pricing"] *::after { box-sizing:border-box; }
+:is(.plan,.plans)[data-el="report-forge-pricing"] :is(p,b,small,span,blockquote) { margin:0; }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.plan,.plans)[data-el="report-forge-pricing"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.plan,.plans)[data-el="report-forge-pricing"] { display:flex; gap:var(--gap); align-items:stretch; }
+.plan[data-el="report-forge-pricing"] { position:relative; display:flex; flex:1; flex-direction:column; gap:var(--gap); justify-content:center; padding:var(--pad); background:var(--surface); border:var(--stroke) solid var(--line); border-top:4px solid var(--line); }
+.plan[data-el="report-forge-pricing"].on { border-color:var(--accent); background:var(--accent-soft); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .price { display:flex; align-items:baseline; gap:var(--gap-sm); flex-wrap:wrap; }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .fig { font-size:var(--type-40); color:var(--accent); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .list { flex:none; gap:var(--gap-sm); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .tag { align-self:flex-start; }
+
+@container (max-width: 720px) {
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .name { font-size:var(--type-18); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .note { font-size:var(--type-14); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .fig { font-size:var(--type-36); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .kick { font-size:var(--type-12); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .name { font-size:var(--type-16); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .note { font-size:var(--type-12); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .fig { font-size:var(--type-28); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .note { display:none; }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .name { font-size:var(--type-14); }
+:is(.plan,.plans)[data-el="report-forge-pricing"][data-el="report-forge-pricing"] .fig { font-size:var(--type-24); }
+}
+
+[data-el="report-forge-pricing"][data-el="report-forge-pricing"][data-el="report-forge-pricing"] .list[data-el="report-forge-list"] { container-type:inline-size; flex:none; height:auto; }

@@ -1,0 +1,42 @@
+.legend[data-el="report-forge-legend"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.legend[data-el="report-forge-legend"] *, .legend[data-el="report-forge-legend"] *::before, .legend[data-el="report-forge-legend"] *::after { box-sizing:border-box; }
+.legend[data-el="report-forge-legend"] :is(p,b,small,span,blockquote) { margin:0; }
+.legend[data-el="report-forge-legend"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.legend[data-el="report-forge-legend"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.legend[data-el="report-forge-legend"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.legend[data-el="report-forge-legend"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.legend[data-el="report-forge-legend"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.legend[data-el="report-forge-legend"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.legend[data-el="report-forge-legend"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.legend[data-el="report-forge-legend"] { display:flex; align-items:center; justify-content:center; gap:var(--gap-lg); flex-wrap:wrap; }
+.legend[data-el="report-forge-legend"] .key { display:flex; align-items:center; gap:var(--gap-sm); font-size:var(--type-18); line-height:var(--label-line); }
+.legend[data-el="report-forge-legend"] .key::before { content:''; width:12px; height:12px; background:var(--accent); }
+
+@container (max-width: 720px) {
+.legend[data-el="report-forge-legend"] .name { font-size:var(--type-18); }
+.legend[data-el="report-forge-legend"] .note { font-size:var(--type-14); }
+.legend[data-el="report-forge-legend"] .fig { font-size:var(--type-36); }
+.legend[data-el="report-forge-legend"] .kick { font-size:var(--type-12); }
+.legend[data-el="report-forge-legend"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.legend[data-el="report-forge-legend"] .name { font-size:var(--type-16); }
+.legend[data-el="report-forge-legend"] .note { font-size:var(--type-12); }
+.legend[data-el="report-forge-legend"] .fig { font-size:var(--type-28); }
+.legend[data-el="report-forge-legend"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.legend[data-el="report-forge-legend"] .note { display:none; }
+.legend[data-el="report-forge-legend"] .name { font-size:var(--type-14); }
+.legend[data-el="report-forge-legend"] .fig { font-size:var(--type-24); }
+}
+
+.legend[data-el="report-forge-legend"] .key.tone-1::before { background:var(--tone-1); }
+
+.legend[data-el="report-forge-legend"] .key.tone-2::before { background:var(--tone-2); }
+
+.legend[data-el="report-forge-legend"] .key.tone-3::before { background:var(--tone-3); }
+
+.legend[data-el="report-forge-legend"] .key.tone-4::before { background:var(--tone-4); }
+
+.legend[data-el="report-forge-legend"] .key.tone-5::before { background:var(--tone-5); }

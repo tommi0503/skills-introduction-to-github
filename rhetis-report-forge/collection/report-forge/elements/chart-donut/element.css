@@ -1,0 +1,48 @@
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] *, :is(.donut,.donuts)[data-el="report-forge-chart-donut"] *::before, :is(.donut,.donuts)[data-el="report-forge-chart-donut"] *::after { box-sizing:border-box; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] :is(p,b,small,span,blockquote) { margin:0; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] { display:flex; align-items:center; justify-content:center; gap:var(--gap); }
+.donuts[data-el="report-forge-chart-donut"] > .donut { flex:1; }
+.donut[data-el="report-forge-chart-donut"] { position:relative; aspect-ratio:1; max-height:100%; max-width:100%; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:var(--pad); background:conic-gradient(var(--accent) calc(var(--v)*1%),var(--surface-2) 0); isolation:isolate; }
+.donut[data-el="report-forge-chart-donut"]::before { content:''; position:absolute; inset:15%; background:var(--page); border-radius:50%; z-index:-1; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .fig { color:var(--accent); font-size:var(--type-48); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .name { font-size:var(--type-20); text-align:center; }
+
+@container (max-width: 720px) {
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .name { font-size:var(--type-18); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .note { font-size:var(--type-14); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .fig { font-size:var(--type-36); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .kick { font-size:var(--type-12); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .name { font-size:var(--type-16); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .note { font-size:var(--type-12); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .fig { font-size:var(--type-28); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .note { display:none; }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .name { font-size:var(--type-14); }
+:is(.donut,.donuts)[data-el="report-forge-chart-donut"] .fig { font-size:var(--type-24); }
+}
+
+.donut[data-el="report-forge-chart-donut"] { width:auto; height:100%; aspect-ratio:1; max-height:none; align-self:center; justify-self:center; }
+.donuts[data-el="report-forge-chart-donut"] { --report-forge-donut-count:3; }
+.donuts[data-el="report-forge-chart-donut"]:has(> .donut:nth-child(2):last-child) { --report-forge-donut-count:2; }
+.donuts[data-el="report-forge-chart-donut"]:has(> .donut:nth-child(4):last-child) { --report-forge-donut-count:4; }
+.donuts[data-el="report-forge-chart-donut"]:has(> .donut:nth-child(5):last-child) { --report-forge-donut-count:5; }
+.donuts[data-el="report-forge-chart-donut"]:has(> .donut:nth-child(6):last-child) { --report-forge-donut-count:6; }
+.donuts[data-el="report-forge-chart-donut"] > .donut[data-el="report-forge-chart-donut"] { flex:none; width:min(calc((100cqw - (var(--report-forge-donut-count) - 1)*var(--gap))/var(--report-forge-donut-count)),100cqh); height:auto; aspect-ratio:1; }
+.donut[data-el="report-forge-chart-donut"] .name { max-width:74%; }
+@container (min-width:260px) {
+.donut[data-el="report-forge-chart-donut"] .fig { font-size:var(--type-48); }
+.donut[data-el="report-forge-chart-donut"] .name { font-size:var(--type-20); }
+}

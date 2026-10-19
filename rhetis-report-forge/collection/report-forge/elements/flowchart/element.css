@@ -1,0 +1,37 @@
+.flowchart[data-el="report-forge-flowchart"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.flowchart[data-el="report-forge-flowchart"] *, .flowchart[data-el="report-forge-flowchart"] *::before, .flowchart[data-el="report-forge-flowchart"] *::after { box-sizing:border-box; }
+.flowchart[data-el="report-forge-flowchart"] :is(p,b,small,span,blockquote) { margin:0; }
+.flowchart[data-el="report-forge-flowchart"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.flowchart[data-el="report-forge-flowchart"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.flowchart[data-el="report-forge-flowchart"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.flowchart[data-el="report-forge-flowchart"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.flowchart[data-el="report-forge-flowchart"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.flowchart[data-el="report-forge-flowchart"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.flowchart[data-el="report-forge-flowchart"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.flowchart[data-el="report-forge-flowchart"] { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(0,1fr)); gap:var(--gap-lg); align-items:center; }
+.flowchart[data-el="report-forge-flowchart"] .node { position:relative; padding:var(--pad); min-height:50%; background:var(--surface); border:var(--stroke) solid var(--line); display:flex; align-items:center; justify-content:center; text-align:center; }
+.flowchart[data-el="report-forge-flowchart"] .node.start, .flowchart[data-el="report-forge-flowchart"] .node.end { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); border-radius:999px; }
+.flowchart[data-el="report-forge-flowchart"] .node.ask { background:var(--accent-soft); border-color:var(--accent); }
+.flowchart[data-el="report-forge-flowchart"] .node.to-r::after { content:'→'; position:absolute; right:calc(var(--gap-lg)*-.8); font-size:var(--type-24); color:var(--accent); }
+.flowchart[data-el="report-forge-flowchart"] .node.to-l::after { content:'←'; position:absolute; left:calc(var(--gap-lg)*-.8); font-size:var(--type-24); color:var(--accent); }
+.flowchart[data-el="report-forge-flowchart"] .node.to-d::before { content:'↓'; position:absolute; top:100%; left:50%; font-size:var(--type-24); color:var(--accent); }
+.flowchart[data-el="report-forge-flowchart"] .node.to-u::before { content:'↑'; position:absolute; bottom:100%; left:50%; font-size:var(--type-24); color:var(--accent); }
+
+@container (max-width: 720px) {
+.flowchart[data-el="report-forge-flowchart"] .name { font-size:var(--type-18); }
+.flowchart[data-el="report-forge-flowchart"] .note { font-size:var(--type-14); }
+.flowchart[data-el="report-forge-flowchart"] .fig { font-size:var(--type-36); }
+.flowchart[data-el="report-forge-flowchart"] .kick { font-size:var(--type-12); }
+.flowchart[data-el="report-forge-flowchart"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.flowchart[data-el="report-forge-flowchart"] .name { font-size:var(--type-16); }
+.flowchart[data-el="report-forge-flowchart"] .note { font-size:var(--type-12); }
+.flowchart[data-el="report-forge-flowchart"] .fig { font-size:var(--type-28); }
+.flowchart[data-el="report-forge-flowchart"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.flowchart[data-el="report-forge-flowchart"] .note { display:none; }
+.flowchart[data-el="report-forge-flowchart"] .name { font-size:var(--type-14); }
+.flowchart[data-el="report-forge-flowchart"] .fig { font-size:var(--type-24); }
+}

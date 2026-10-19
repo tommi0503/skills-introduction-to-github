@@ -1,0 +1,51 @@
+.card[data-el="report-forge-card"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.card[data-el="report-forge-card"] *, .card[data-el="report-forge-card"] *::before, .card[data-el="report-forge-card"] *::after { box-sizing:border-box; }
+.card[data-el="report-forge-card"] :is(p,b,small,span,blockquote) { margin:0; }
+.card[data-el="report-forge-card"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.card[data-el="report-forge-card"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.card[data-el="report-forge-card"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.card[data-el="report-forge-card"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.card[data-el="report-forge-card"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.card[data-el="report-forge-card"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.card[data-el="report-forge-card"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.card[data-el="report-forge-card"] { display:flex; flex-direction:column; justify-content:center; padding:var(--pad); background:var(--surface); border:var(--stroke) solid var(--line); border-top:4px solid var(--accent); border-radius:var(--radius); }
+.card[data-el="report-forge-card"].quiet { background:var(--surface-2); border-color:var(--surface-2); }
+.card[data-el="report-forge-card"].line { background:transparent; border-top-width:var(--stroke); }
+.card[data-el="report-forge-card"].on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.card[data-el="report-forge-card"].on :is(.kick,.name,.note,.fig,.mark) { color:var(--accent-ink); }
+.card[data-el="report-forge-card"] .mark { margin-bottom:var(--gap-sm); }
+.card[data-el="report-forge-card"] .fig { color:var(--accent); }
+
+@container (max-width: 720px) {
+.card[data-el="report-forge-card"] .name { font-size:var(--type-18); }
+.card[data-el="report-forge-card"] .note { font-size:var(--type-14); }
+.card[data-el="report-forge-card"] .fig { font-size:var(--type-36); }
+.card[data-el="report-forge-card"] .kick { font-size:var(--type-12); }
+.card[data-el="report-forge-card"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.card[data-el="report-forge-card"] .name { font-size:var(--type-16); }
+.card[data-el="report-forge-card"] .note { font-size:var(--type-12); }
+.card[data-el="report-forge-card"] .fig { font-size:var(--type-28); }
+.card[data-el="report-forge-card"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.card[data-el="report-forge-card"] .note { display:none; }
+.card[data-el="report-forge-card"] .name { font-size:var(--type-14); }
+.card[data-el="report-forge-card"] .fig { font-size:var(--type-24); }
+}
+
+.card[data-el="report-forge-card"].tone-1 { background:var(--tone-1); color:var(--tone-1-ink); border-color:var(--tone-1); }
+.card[data-el="report-forge-card"].tone-1 :is(.name,.note,.kick,.fig,.mark) { color:var(--tone-1-ink); }
+
+.card[data-el="report-forge-card"].tone-2 { background:var(--tone-2); color:var(--tone-2-ink); border-color:var(--tone-2); }
+.card[data-el="report-forge-card"].tone-2 :is(.name,.note,.kick,.fig,.mark) { color:var(--tone-2-ink); }
+
+.card[data-el="report-forge-card"].tone-3 { background:var(--tone-3); color:var(--tone-3-ink); border-color:var(--tone-3); }
+.card[data-el="report-forge-card"].tone-3 :is(.name,.note,.kick,.fig,.mark) { color:var(--tone-3-ink); }
+
+.card[data-el="report-forge-card"].tone-4 { background:var(--tone-4); color:var(--tone-4-ink); border-color:var(--tone-4); }
+.card[data-el="report-forge-card"].tone-4 :is(.name,.note,.kick,.fig,.mark) { color:var(--tone-4-ink); }
+
+.card[data-el="report-forge-card"].tone-5 { background:var(--tone-5); color:var(--tone-5-ink); border-color:var(--tone-5); }
+.card[data-el="report-forge-card"].tone-5 :is(.name,.note,.kick,.fig,.mark) { color:var(--tone-5-ink); }

@@ -1,0 +1,1 @@
+A 1280 by 720 reporting page with a ruled chapter heading, a twelve by six body grid and optional quiet top, footer and section rail. Covers use a large editorial lockup and a slanted blue plane inspired by the closing report reference. Image seats are flat neutral placements.

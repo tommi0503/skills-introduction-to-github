@@ -1,0 +1,38 @@
+:is(.stat,.stats)[data-el="report-forge-metric"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.stat,.stats)[data-el="report-forge-metric"] *, :is(.stat,.stats)[data-el="report-forge-metric"] *::before, :is(.stat,.stats)[data-el="report-forge-metric"] *::after { box-sizing:border-box; }
+:is(.stat,.stats)[data-el="report-forge-metric"] :is(p,b,small,span,blockquote) { margin:0; }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.stat,.stats)[data-el="report-forge-metric"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.stat,.stats)[data-el="report-forge-metric"] { display:flex; align-items:center; justify-content:center; gap:var(--gap); }
+.stat[data-el="report-forge-metric"] { display:flex; align-items:center; justify-content:center; }
+.stats[data-el="report-forge-metric"] > .stat { flex:1; padding:var(--pad); border-right:var(--stroke) solid var(--line); }
+.stats[data-el="report-forge-metric"] > .stat:last-child { border:0; }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .fig { color:var(--accent); font-size:var(--type-72); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .name { font-size:var(--type-22); }
+
+@container (max-width: 720px) {
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .name { font-size:var(--type-18); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .note { font-size:var(--type-14); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .fig { font-size:var(--type-36); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .kick { font-size:var(--type-12); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .name { font-size:var(--type-16); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .note { font-size:var(--type-12); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .fig { font-size:var(--type-28); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .note { display:none; }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .name { font-size:var(--type-14); }
+:is(.stat,.stats)[data-el="report-forge-metric"][data-el="report-forge-metric"] .fig { font-size:var(--type-24); }
+}
+
+[data-el="report-forge-metric"].stats > .stat { container-type:inline-size; align-self:stretch; }
+@container (min-width:260px) { [data-el="report-forge-metric"][data-el="report-forge-metric"][data-el="report-forge-metric"] .fig { font-size:var(--type-56); } [data-el="report-forge-metric"][data-el="report-forge-metric"][data-el="report-forge-metric"] .name { font-size:var(--type-22); } [data-el="report-forge-metric"][data-el="report-forge-metric"][data-el="report-forge-metric"] .note { font-size:var(--type-16); } }

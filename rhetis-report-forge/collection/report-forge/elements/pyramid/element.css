@@ -1,0 +1,38 @@
+.pyramid[data-el="report-forge-pyramid"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.pyramid[data-el="report-forge-pyramid"] *, .pyramid[data-el="report-forge-pyramid"] *::before, .pyramid[data-el="report-forge-pyramid"] *::after { box-sizing:border-box; }
+.pyramid[data-el="report-forge-pyramid"] :is(p,b,small,span,blockquote) { margin:0; }
+.pyramid[data-el="report-forge-pyramid"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.pyramid[data-el="report-forge-pyramid"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.pyramid[data-el="report-forge-pyramid"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.pyramid[data-el="report-forge-pyramid"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.pyramid[data-el="report-forge-pyramid"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.pyramid[data-el="report-forge-pyramid"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.pyramid[data-el="report-forge-pyramid"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.pyramid[data-el="report-forge-pyramid"] { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--gap-sm); }
+.pyramid[data-el="report-forge-pyramid"] .level { flex:1; min-height:0; width:90%; background:var(--surface-2); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:var(--gap-sm) var(--pad); border-top:var(--stroke) solid var(--line); }
+.pyramid[data-el="report-forge-pyramid"] .level:nth-child(1) { width:38%; background:var(--accent); color:var(--accent-ink); }
+.pyramid[data-el="report-forge-pyramid"] .level:nth-child(1) .note { color:var(--accent-ink); }
+.pyramid[data-el="report-forge-pyramid"] .level:nth-child(2) { width:52%; background:var(--accent-soft); }
+.pyramid[data-el="report-forge-pyramid"] .level:nth-child(3) { width:66%; }
+.pyramid[data-el="report-forge-pyramid"] .level:nth-child(4) { width:80%; }
+.pyramid[data-el="report-forge-pyramid"] .name { font-size:var(--type-22); }
+.pyramid[data-el="report-forge-pyramid"] .note { font-size:var(--type-16); }
+
+@container (max-width: 720px) {
+.pyramid[data-el="report-forge-pyramid"] .name { font-size:var(--type-18); }
+.pyramid[data-el="report-forge-pyramid"] .note { font-size:var(--type-14); }
+.pyramid[data-el="report-forge-pyramid"] .fig { font-size:var(--type-36); }
+.pyramid[data-el="report-forge-pyramid"] .kick { font-size:var(--type-12); }
+.pyramid[data-el="report-forge-pyramid"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.pyramid[data-el="report-forge-pyramid"] .name { font-size:var(--type-16); }
+.pyramid[data-el="report-forge-pyramid"] .note { font-size:var(--type-12); }
+.pyramid[data-el="report-forge-pyramid"] .fig { font-size:var(--type-28); }
+.pyramid[data-el="report-forge-pyramid"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.pyramid[data-el="report-forge-pyramid"] .note { display:none; }
+.pyramid[data-el="report-forge-pyramid"] .name { font-size:var(--type-14); }
+.pyramid[data-el="report-forge-pyramid"] .fig { font-size:var(--type-24); }
+}

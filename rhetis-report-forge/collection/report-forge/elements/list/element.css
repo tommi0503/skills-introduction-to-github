@@ -1,0 +1,38 @@
+.list[data-el="report-forge-list"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.list[data-el="report-forge-list"] *, .list[data-el="report-forge-list"] *::before, .list[data-el="report-forge-list"] *::after { box-sizing:border-box; }
+.list[data-el="report-forge-list"] :is(p,b,small,span,blockquote) { margin:0; }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.list[data-el="report-forge-list"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.list[data-el="report-forge-list"] { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); counter-reset:item; }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .item { position:relative; padding-left:var(--gap-lg); counter-increment:item; }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .item::before { content:'•'; position:absolute; left:0; top:0; color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); }
+.list[data-el="report-forge-list"].check .item::before { content:'✓'; }
+.list[data-el="report-forge-list"].num .item::before { content:counter(item,decimal-leading-zero); font-size:var(--type-18); }
+.list[data-el="report-forge-list"].divided .item { padding-block:var(--gap-sm); border-bottom:var(--stroke) solid var(--line); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .item .name { font-size:var(--type-22); }
+
+@container (max-width: 720px) {
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .name { font-size:var(--type-18); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .note { font-size:var(--type-14); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .fig { font-size:var(--type-36); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .kick { font-size:var(--type-12); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .name { font-size:var(--type-16); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .note { font-size:var(--type-12); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .fig { font-size:var(--type-28); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .note { display:none; }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .name { font-size:var(--type-14); }
+.list[data-el="report-forge-list"][data-el="report-forge-list"] .fig { font-size:var(--type-24); }
+}
+
+@container (max-width:720px) { [data-el="report-forge-list"][data-el="report-forge-list"][data-el="report-forge-list"] .item .name { font-size:var(--type-18); } [data-el="report-forge-list"][data-el="report-forge-list"][data-el="report-forge-list"] .item .note { font-size:var(--type-14); } [data-el="report-forge-list"].divided .item { padding-block:calc(var(--gap-sm)/4); } }

@@ -1,0 +1,69 @@
+/* Clockwise members and tangent arrows share one ellipse; only the member count changes. */
+.cycle[data-el="report-forge-cycle"] { box-sizing:border-box; container-type:size; position:relative; isolation:isolate; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.cycle[data-el="report-forge-cycle"] *, .cycle[data-el="report-forge-cycle"] *::before, .cycle[data-el="report-forge-cycle"] *::after { box-sizing:border-box; }
+.cycle[data-el="report-forge-cycle"] :is(p,b,small,span) { margin:0; }
+.cycle[data-el="report-forge-cycle"] .name { font-size:var(--type-22); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.cycle[data-el="report-forge-cycle"] .note { font-size:var(--type-16); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.cycle[data-el="report-forge-cycle"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.cycle[data-el="report-forge-cycle"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.cycle[data-el="report-forge-cycle"] .fig { font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); }
+.cycle[data-el="report-forge-cycle"] .core { position:absolute; left:39%; top:39%; width:22%; height:22%; padding:var(--gap-sm); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:var(--accent); color:var(--accent-ink); border:var(--stroke) solid var(--accent); border-radius:var(--radius-sm); z-index:3; }
+.cycle[data-el="report-forge-cycle"] .core :is(.name,.note,.mark,.kick,.fig) { color:var(--accent-ink); }
+.cycle[data-el="report-forge-cycle"] .node { position:absolute; padding:var(--gap-sm); background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:calc(var(--gap-sm)/2); z-index:2; }
+.cycle[data-el="report-forge-cycle"]::before { content:''; position:absolute; left:14%; top:11%; width:72%; height:78%; border:var(--stroke) solid var(--line); border-radius:50%; z-index:0; }
+.cycle[data-el="report-forge-cycle"] .node { width:28%; height:22%; border-top:3px solid var(--accent); }
+.cycle[data-el="report-forge-cycle"] .node::after { content:''; position:absolute; width:12px; height:10px; background:var(--accent); clip-path:polygon(0 0,100% 50%,0 100%); z-index:1; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(4):last-child) > .node:nth-child(2) { left:36.00000%; top:-0.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(4):last-child) > .node:nth-child(2)::after { left:161.34612%; top:138.63636%; transform:translate(-50%,-50%) rotate(45.435deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(4):last-child) > .node:nth-child(3) { left:67.17691%; top:58.50000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(4):last-child) > .node:nth-child(3)::after { left:-61.34612%; top:138.63636%; transform:translate(-50%,-50%) rotate(180.000deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(4):last-child) > .node:nth-child(4) { left:4.82309%; top:58.50000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(4):last-child) > .node:nth-child(4)::after { left:50.00000%; top:-127.27273%; transform:translate(-50%,-50%) rotate(-45.435deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(2) { left:36.00000%; top:-0.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(2)::after { left:140.91373%; top:101.92198%; transform:translate(-50%,-50%) rotate(30.378deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(3) { left:72.00000%; top:39.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(3)::after { left:12.34230%; top:175.35075%; transform:translate(-50%,-50%) rotate(149.622deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(4) { left:36.00000%; top:78.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(4)::after { left:-40.91373%; top:-1.92198%; transform:translate(-50%,-50%) rotate(-149.622deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(5) { left:0.00000%; top:39.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(5):last-child) > .node:nth-child(5)::after { left:87.65770%; top:-75.35075%; transform:translate(-50%,-50%) rotate(-30.378deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(2) { left:36.00000%; top:-0.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(2)::after { left:125.57239%; top:83.85608%; transform:translate(-50%,-50%) rotate(23.069deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(3) { left:70.23803%; top:26.94834%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(3)::after { left:50.00000%; top:159.56057%; transform:translate(-50%,-50%) rotate(118.999deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(4) { left:57.16027%; top:70.55166%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(4)::after { left:-25.57239%; top:83.85608%; transform:translate(-50%,-50%) rotate(180.000deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(5) { left:14.83973%; top:70.55166%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(5)::after { left:3.29369%; top:-38.63636%; transform:translate(-50%,-50%) rotate(-118.999deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(6) { left:1.76197%; top:26.94834%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(6):last-child) > .node:nth-child(6)::after { left:96.70631%; top:-38.63636%; transform:translate(-50%,-50%) rotate(-23.069deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(2) { left:36.00000%; top:-0.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(2)::after { left:114.28571%; top:73.75004%; transform:translate(-50%,-50%) rotate(18.698deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(3) { left:67.17691%; top:19.50000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(3)::after { left:67.22531%; top:138.63636%; transform:translate(-50%,-50%) rotate(90.000deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(4) { left:67.17691%; top:58.50000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(4)::after { left:2.93959%; top:114.88632%; transform:translate(-50%,-50%) rotate(161.302deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(5) { left:36.00000%; top:78.00000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(5)::after { left:-14.28571%; top:26.24996%; transform:translate(-50%,-50%) rotate(-161.302deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(6) { left:4.82309%; top:58.50000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(6)::after { left:32.77469%; top:-38.63636%; transform:translate(-50%,-50%) rotate(-90.000deg); }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(7) { left:4.82309%; top:19.50000%; }
+.cycle[data-el="report-forge-cycle"]:has(> .node:nth-child(7):last-child) > .node:nth-child(7)::after { left:97.06041%; top:-14.88632%; transform:translate(-50%,-50%) rotate(-18.698deg); }
+
+@container (max-width: 720px) {
+ .cycle[data-el="report-forge-cycle"] .name { font-size:var(--type-18); }
+ .cycle[data-el="report-forge-cycle"] .note { font-size:var(--type-14); }
+ .cycle[data-el="report-forge-cycle"] .mark { font-size:var(--type-20); }
+ .cycle[data-el="report-forge-cycle"] .node, .cycle[data-el="report-forge-cycle"] .core { padding:calc(var(--gap-sm)/2); gap:calc(var(--gap-sm)/3); }
+}
+@container (max-width: 430px) {
+ .cycle[data-el="report-forge-cycle"] .name { font-size:var(--type-16); }
+ .cycle[data-el="report-forge-cycle"] .note { font-size:var(--type-12); }
+ .cycle[data-el="report-forge-cycle"] .mark { font-size:var(--type-18); }
+ .cycle[data-el="report-forge-cycle"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 210px) {
+ .cycle[data-el="report-forge-cycle"] .note { display:none; }
+ .cycle[data-el="report-forge-cycle"] .name { font-size:var(--type-14); }
+ .cycle[data-el="report-forge-cycle"] .mark { font-size:var(--type-16); }
+}

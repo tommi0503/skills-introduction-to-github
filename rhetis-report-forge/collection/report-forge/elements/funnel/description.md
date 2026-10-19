@@ -1,0 +1,1 @@
+A proportional reporting funnel renders each stage at its numeric --v width within a centered plot lane. The name and figure sit in shared left and right caption rails, so even a narrow conversion stage remains precise without clipping or distorting the value. Fine blue stages and outside labels echo the data-first report references.

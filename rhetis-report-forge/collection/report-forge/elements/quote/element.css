@@ -1,0 +1,37 @@
+.quote[data-el="report-forge-quote"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.quote[data-el="report-forge-quote"] *, .quote[data-el="report-forge-quote"] *::before, .quote[data-el="report-forge-quote"] *::after { box-sizing:border-box; }
+.quote[data-el="report-forge-quote"] :is(p,b,small,span,blockquote) { margin:0; }
+.quote[data-el="report-forge-quote"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.quote[data-el="report-forge-quote"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.quote[data-el="report-forge-quote"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.quote[data-el="report-forge-quote"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.quote[data-el="report-forge-quote"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.quote[data-el="report-forge-quote"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.quote[data-el="report-forge-quote"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.quote[data-el="report-forge-quote"] { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-lg); padding:var(--pad); border-left:4px solid var(--accent); background:var(--surface); }
+.quote[data-el="report-forge-quote"] blockquote { font-size:var(--type-36); line-height:var(--lead-line); letter-spacing:var(--title-track); font-weight:var(--lead-weight); }
+.quote[data-el="report-forge-quote"].big blockquote { font-size:var(--type-48); }
+.quote[data-el="report-forge-quote"] .by { display:grid; grid-template-columns:auto 1fr; align-items:center; column-gap:var(--gap-sm); }
+.quote[data-el="report-forge-quote"] .seat.avatar { width:64px; grid-row:span 2; }
+.quote[data-el="report-forge-quote"] .by .name { font-size:var(--type-20); }
+
+@container (max-width: 720px) {
+.quote[data-el="report-forge-quote"] .name { font-size:var(--type-18); }
+.quote[data-el="report-forge-quote"] .note { font-size:var(--type-14); }
+.quote[data-el="report-forge-quote"] .fig { font-size:var(--type-36); }
+.quote[data-el="report-forge-quote"] .kick { font-size:var(--type-12); }
+.quote[data-el="report-forge-quote"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.quote[data-el="report-forge-quote"] .name { font-size:var(--type-16); }
+.quote[data-el="report-forge-quote"] .note { font-size:var(--type-12); }
+.quote[data-el="report-forge-quote"] .fig { font-size:var(--type-28); }
+.quote[data-el="report-forge-quote"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.quote[data-el="report-forge-quote"] .note { display:none; }
+.quote[data-el="report-forge-quote"] .name { font-size:var(--type-14); }
+.quote[data-el="report-forge-quote"] .fig { font-size:var(--type-24); }
+}
+
+@container (max-width:720px) { .quote[data-el="report-forge-quote"] blockquote, .quote[data-el="report-forge-quote"].big blockquote { font-size:var(--type-24); } .quote[data-el="report-forge-quote"] .seat.avatar { width:48px; } }

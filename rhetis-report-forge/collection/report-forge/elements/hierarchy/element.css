@@ -1,0 +1,40 @@
+.org[data-el="report-forge-hierarchy"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.org[data-el="report-forge-hierarchy"] *, .org[data-el="report-forge-hierarchy"] *::before, .org[data-el="report-forge-hierarchy"] *::after { box-sizing:border-box; }
+.org[data-el="report-forge-hierarchy"] :is(p,b,small,span,blockquote) { margin:0; }
+.org[data-el="report-forge-hierarchy"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.org[data-el="report-forge-hierarchy"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.org[data-el="report-forge-hierarchy"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.org[data-el="report-forge-hierarchy"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.org[data-el="report-forge-hierarchy"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.org[data-el="report-forge-hierarchy"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.org[data-el="report-forge-hierarchy"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.org[data-el="report-forge-hierarchy"] { display:flex; align-items:stretch; justify-content:center; gap:var(--gap); align-items:flex-end; }
+.org[data-el="report-forge-hierarchy"] > .root { position:absolute; top:0; left:30%; width:40%; min-height:18%; background:var(--accent); color:var(--accent-ink); display:flex; align-items:center; justify-content:center; padding:var(--gap-sm); }
+.org[data-el="report-forge-hierarchy"] > .root::after { content:''; position:absolute; left:50%; top:100%; height:var(--gap-lg); width:1px; background:var(--line); }
+.org[data-el="report-forge-hierarchy"] .branch { flex:1; height:76%; position:relative; display:flex; flex-direction:column; align-items:stretch; gap:var(--gap-sm); }
+.org[data-el="report-forge-hierarchy"] .branch::before { content:''; position:absolute; left:50%; top:calc(var(--gap)*-1); width:1px; height:var(--gap); background:var(--line); }
+.org[data-el="report-forge-hierarchy"] .branch::after { content:''; position:absolute; left:0; right:calc(var(--gap)*-1); top:calc(var(--gap)*-1); height:1px; background:var(--line); }
+.org[data-el="report-forge-hierarchy"] .branch:last-child::after { right:50%; }
+.org[data-el="report-forge-hierarchy"] .branch:nth-child(2)::after { left:50%; }
+.org[data-el="report-forge-hierarchy"] .node { background:var(--accent-soft); border-top:2px solid var(--accent); padding:var(--gap-sm); text-align:center; }
+.org[data-el="report-forge-hierarchy"] .leaf { background:var(--surface); border:var(--stroke) solid var(--line); padding:var(--gap-sm); text-align:center; }
+.org[data-el="report-forge-hierarchy"] .name { font-size:var(--type-20); }
+
+@container (max-width: 720px) {
+.org[data-el="report-forge-hierarchy"] .name { font-size:var(--type-18); }
+.org[data-el="report-forge-hierarchy"] .note { font-size:var(--type-14); }
+.org[data-el="report-forge-hierarchy"] .fig { font-size:var(--type-36); }
+.org[data-el="report-forge-hierarchy"] .kick { font-size:var(--type-12); }
+.org[data-el="report-forge-hierarchy"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.org[data-el="report-forge-hierarchy"] .name { font-size:var(--type-16); }
+.org[data-el="report-forge-hierarchy"] .note { font-size:var(--type-12); }
+.org[data-el="report-forge-hierarchy"] .fig { font-size:var(--type-28); }
+.org[data-el="report-forge-hierarchy"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.org[data-el="report-forge-hierarchy"] .note { display:none; }
+.org[data-el="report-forge-hierarchy"] .name { font-size:var(--type-14); }
+.org[data-el="report-forge-hierarchy"] .fig { font-size:var(--type-24); }
+}

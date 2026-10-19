@@ -1,0 +1,88 @@
+/* Elbows use root-container lengths so both sides meet the same 50% centre. */
+.hub[data-el="report-forge-hub"] { box-sizing:border-box; container-type:size; position:relative; isolation:isolate; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.hub[data-el="report-forge-hub"] *, .hub[data-el="report-forge-hub"] *::before, .hub[data-el="report-forge-hub"] *::after { box-sizing:border-box; }
+.hub[data-el="report-forge-hub"] :is(p,b,small,span) { margin:0; }
+.hub[data-el="report-forge-hub"] .name { font-size:var(--type-22); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.hub[data-el="report-forge-hub"] .note { font-size:var(--type-16); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.hub[data-el="report-forge-hub"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.hub[data-el="report-forge-hub"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.hub[data-el="report-forge-hub"] .fig { font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); }
+.hub[data-el="report-forge-hub"] .core { position:absolute; left:39%; top:39%; width:22%; height:22%; padding:var(--gap-sm); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:var(--accent); color:var(--accent-ink); border:var(--stroke) solid var(--accent); border-radius:var(--radius-sm); z-index:3; }
+.hub[data-el="report-forge-hub"] .core :is(.name,.note,.mark,.kick,.fig) { color:var(--accent-ink); }
+.hub[data-el="report-forge-hub"] .spoke { position:absolute; padding:var(--gap-sm); background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:calc(var(--gap-sm)/2); z-index:2; }
+.hub[data-el="report-forge-hub"] .core { left:37%; top:38%; width:26%; height:24%; }
+.hub[data-el="report-forge-hub"] .spoke { width:29%; height:24%; box-shadow:inset 3px 0 var(--accent); }
+.hub[data-el="report-forge-hub"] .spoke::before { content:''; position:absolute; width:21cqw; border-color:var(--line); border-style:solid; border-width:0; pointer-events:none; z-index:-1; }
+.hub[data-el="report-forge-hub"] .spoke::after { content:''; position:absolute; top:50%; width:10px; height:10px; background:var(--accent); transform:translateY(-50%); pointer-events:none; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(2) { left:0.00000%; top:38.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(2)::before { height:0.00000cqh; top:50%; border-top-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(2)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(3) { left:71.00000%; top:14.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(3)::before { height:24.00000cqh; top:50%; border-top-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(3)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(4) { left:71.00000%; top:62.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(4)::before { height:24.00000cqh; bottom:50%; border-bottom-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(4):last-child) > .spoke:nth-child(4)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(2) { left:0.00000%; top:14.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(2)::before { height:24.00000cqh; top:50%; border-top-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(2)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(3) { left:71.00000%; top:14.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(3)::before { height:24.00000cqh; top:50%; border-top-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(3)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(4) { left:0.00000%; top:62.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(4)::before { height:24.00000cqh; bottom:50%; border-bottom-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(4)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(5) { left:71.00000%; top:62.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(5)::before { height:24.00000cqh; bottom:50%; border-bottom-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(5):last-child) > .spoke:nth-child(5)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(2) { left:0.00000%; top:6.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(2)::before { height:32.00000cqh; top:50%; border-top-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(2)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(3) { left:71.00000%; top:14.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(3)::before { height:24.00000cqh; top:50%; border-top-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(3)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(4) { left:0.00000%; top:38.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(4)::before { height:0.00000cqh; top:50%; border-top-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(4)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(5) { left:71.00000%; top:62.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(5)::before { height:24.00000cqh; bottom:50%; border-bottom-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(5)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(6) { left:0.00000%; top:70.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(6)::before { height:32.00000cqh; bottom:50%; border-bottom-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(6):last-child) > .spoke:nth-child(6)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(2) { left:0.00000%; top:6.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(2)::before { height:32.00000cqh; top:50%; border-top-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(2)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(3) { left:71.00000%; top:6.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(3)::before { height:32.00000cqh; top:50%; border-top-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(3)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(4) { left:0.00000%; top:38.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(4)::before { height:0.00000cqh; top:50%; border-top-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(4)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(5) { left:71.00000%; top:38.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(5)::before { height:0.00000cqh; top:50%; border-top-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(5)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(6) { left:0.00000%; top:70.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(6)::before { height:32.00000cqh; bottom:50%; border-bottom-width:var(--stroke); left:calc(100% + var(--stroke)); border-right-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(6)::after { right:-1px; clip-path:polygon(100% 0,0 50%,100% 100%); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(7) { left:71.00000%; top:70.00000%; }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(7)::before { height:32.00000cqh; bottom:50%; border-bottom-width:var(--stroke); right:calc(100% + var(--stroke)); border-left-width:var(--stroke); }
+.hub[data-el="report-forge-hub"]:has(> .spoke:nth-child(7):last-child) > .spoke:nth-child(7)::after { left:-1px; clip-path:polygon(0 0,100% 50%,0 100%); }
+
+@container (max-width: 720px) {
+ .hub[data-el="report-forge-hub"] .name { font-size:var(--type-18); }
+ .hub[data-el="report-forge-hub"] .note { font-size:var(--type-14); }
+ .hub[data-el="report-forge-hub"] .mark { font-size:var(--type-20); }
+ .hub[data-el="report-forge-hub"] .spoke, .hub[data-el="report-forge-hub"] .core { padding:calc(var(--gap-sm)/2); gap:calc(var(--gap-sm)/3); }
+}
+@container (max-width: 430px) {
+ .hub[data-el="report-forge-hub"] .name { font-size:var(--type-16); }
+ .hub[data-el="report-forge-hub"] .note { font-size:var(--type-12); }
+ .hub[data-el="report-forge-hub"] .mark { font-size:var(--type-18); }
+ .hub[data-el="report-forge-hub"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 210px) {
+ .hub[data-el="report-forge-hub"] .note { display:none; }
+ .hub[data-el="report-forge-hub"] .name { font-size:var(--type-14); }
+ .hub[data-el="report-forge-hub"] .mark { font-size:var(--type-16); }
+}

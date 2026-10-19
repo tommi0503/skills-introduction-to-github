@@ -1,0 +1,1 @@
+The hub element translates the report references into square, ruled geometry with generous white space, a deliberate blue highlight, compact labels and clear numerical hierarchy. Its members retain their semantic structure while typography steps down in smaller containers; dark mode uses separately balanced slate surfaces.

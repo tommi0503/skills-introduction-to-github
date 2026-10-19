@@ -1,0 +1,50 @@
+.bars[data-el="report-forge-chart-bar"] { box-sizing:border-box; container-type:size; position:relative; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.bars[data-el="report-forge-chart-bar"] *, .bars[data-el="report-forge-chart-bar"] *::before, .bars[data-el="report-forge-chart-bar"] *::after { box-sizing:border-box; }
+.bars[data-el="report-forge-chart-bar"] :is(p,b,small,span,blockquote) { margin:0; }
+.bars[data-el="report-forge-chart-bar"] .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+.bars[data-el="report-forge-chart-bar"] .kick { color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+.bars[data-el="report-forge-chart-bar"] .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.bars[data-el="report-forge-chart-bar"] .note { font-size:var(--type-18); color:var(--ink-2); line-height:var(--body-line); overflow-wrap:anywhere; }
+.bars[data-el="report-forge-chart-bar"] .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+.bars[data-el="report-forge-chart-bar"] small { font-size:var(--type-18); font-weight:var(--body-weight); }
+.bars[data-el="report-forge-chart-bar"] .mark { color:var(--accent); font-size:var(--type-24); font-weight:var(--label-weight); line-height:var(--label-line); }
+.bars[data-el="report-forge-chart-bar"] { display:flex; align-items:stretch; gap:var(--gap); padding:var(--gap-lg) var(--gap) var(--gap-lg); border-bottom:var(--stroke) solid var(--line); }
+.bars[data-el="report-forge-chart-bar"] .bar { position:relative; flex:1; min-width:0; display:flex; align-items:center; justify-content:flex-end; flex-direction:column; }
+.bars[data-el="report-forge-chart-bar"] .bar::before { content:''; position:absolute; bottom:0; width:70%; height:calc(var(--v)/var(--max)*85%); background:var(--surface-2); border-top:2px solid var(--line); }
+.bars[data-el="report-forge-chart-bar"] .bar.on::before { background:var(--accent); border-color:var(--accent); }
+.bars[data-el="report-forge-chart-bar"] .bar b { position:absolute; bottom:calc(var(--v)/var(--max)*85% + var(--gap-sm)); font-size:var(--type-20); font-weight:var(--label-weight); }
+.bars[data-el="report-forge-chart-bar"] .bar span { position:absolute; top:calc(100% + var(--gap-sm)); font-size:var(--type-16); line-height:var(--label-line); text-align:center; }
+.bars[data-el="report-forge-chart-bar"].h { flex-direction:column; }
+.bars[data-el="report-forge-chart-bar"].h .bar { align-items:flex-start; justify-content:center; }
+.bars[data-el="report-forge-chart-bar"].h .bar::before { bottom:auto; left:20%; height:60%; width:calc(var(--v)/var(--max)*70%); border-top:0; }
+.bars[data-el="report-forge-chart-bar"].h .bar span { top:auto; left:0; width:18%; text-align:left; }
+.bars[data-el="report-forge-chart-bar"].h .bar b { bottom:auto; left:calc(22% + var(--v)/var(--max)*70%); }
+
+@container (max-width: 720px) {
+.bars[data-el="report-forge-chart-bar"] .name { font-size:var(--type-18); }
+.bars[data-el="report-forge-chart-bar"] .note { font-size:var(--type-14); }
+.bars[data-el="report-forge-chart-bar"] .fig { font-size:var(--type-36); }
+.bars[data-el="report-forge-chart-bar"] .kick { font-size:var(--type-12); }
+.bars[data-el="report-forge-chart-bar"] .parts { gap:calc(var(--gap-sm)/2); }
+}
+@container (max-width: 430px) {
+.bars[data-el="report-forge-chart-bar"] .name { font-size:var(--type-16); }
+.bars[data-el="report-forge-chart-bar"] .note { font-size:var(--type-12); }
+.bars[data-el="report-forge-chart-bar"] .fig { font-size:var(--type-28); }
+.bars[data-el="report-forge-chart-bar"] .kick { display:none; }
+}
+@container (max-width: 280px) or (max-height: 110px) {
+.bars[data-el="report-forge-chart-bar"] .note { display:none; }
+.bars[data-el="report-forge-chart-bar"] .name { font-size:var(--type-14); }
+.bars[data-el="report-forge-chart-bar"] .fig { font-size:var(--type-24); }
+}
+
+.bars[data-el="report-forge-chart-bar"] .bar.tone-1::before { background:var(--tone-1); }
+
+.bars[data-el="report-forge-chart-bar"] .bar.tone-2::before { background:var(--tone-2); }
+
+.bars[data-el="report-forge-chart-bar"] .bar.tone-3::before { background:var(--tone-3); }
+
+.bars[data-el="report-forge-chart-bar"] .bar.tone-4::before { background:var(--tone-4); }
+
+.bars[data-el="report-forge-chart-bar"] .bar.tone-5::before { background:var(--tone-5); }
