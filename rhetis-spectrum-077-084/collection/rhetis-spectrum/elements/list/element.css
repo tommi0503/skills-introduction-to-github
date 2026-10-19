@@ -1,0 +1,22 @@
+:is(.list[data-el="rhetis-spectrum-list"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.list[data-el="rhetis-spectrum-list"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.list[data-el="rhetis-spectrum-list"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.list[data-el="rhetis-spectrum-list"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.list[data-el="rhetis-spectrum-list"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.list[data-el="rhetis-spectrum-list"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.list[data-el="rhetis-spectrum-list"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.list[data-el="rhetis-spectrum-list"]) p, :is(.list[data-el="rhetis-spectrum-list"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.list[data-el="rhetis-spectrum-list"]) .name {font-size:var(--type-18);} :is(.list[data-el="rhetis-spectrum-list"]) .fig {font-size:var(--type-40);} :is(.list[data-el="rhetis-spectrum-list"]) .fig small {font-size:var(--type-18);} :is(.list[data-el="rhetis-spectrum-list"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.list[data-el="rhetis-spectrum-list"]) .name {font-size:var(--type-16);} :is(.list[data-el="rhetis-spectrum-list"]) .fig {font-size:var(--type-32);} :is(.list[data-el="rhetis-spectrum-list"]) .note {font-size:var(--type-12);} :is(.list[data-el="rhetis-spectrum-list"]) .kick {display:none;} }
+:is(.list[data-el="rhetis-spectrum-list"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:spectrum-item;}
+:is(.list[data-el="rhetis-spectrum-list"]) .item {position:relative;padding-left:calc(var(--pad)*2);counter-increment:spectrum-item;}
+:is(.list[data-el="rhetis-spectrum-list"]) .item::before {content:"";position:absolute;left:var(--gap-sm);top:.65em;width:7px;height:7px;background:var(--accent);border-radius:50%;}
+:is(.list[data-el="rhetis-spectrum-list"]) .name {margin-bottom:calc(var(--gap-sm)/2);}
+:is(.list[data-el="rhetis-spectrum-list"]).check .item::before {content:"✓";background:var(--accent-soft);border-radius:var(--radius-sm);width:28px;height:28px;top:0;left:0;display:flex;align-items:center;justify-content:center;color:var(--accent-text);font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.list[data-el="rhetis-spectrum-list"]).num .item::before {content:counter(spectrum-item,decimal-leading-zero);width:32px;height:32px;top:0;left:0;border-radius:var(--radius-sm);background:var(--tone-2);color:var(--tone-2-ink);font-size:var(--type-16);font-weight:var(--label-weight);display:flex;align-items:center;justify-content:center;}
+:is(.list[data-el="rhetis-spectrum-list"]).divided .item {padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--line);}
+:is(.list[data-el="rhetis-spectrum-list"]):has(.item:nth-child(7)) {gap:var(--gap-sm);}
+:is(.list[data-el="rhetis-spectrum-list"]):has(.item:nth-child(7)) .name {font-size:var(--type-18);}
+:is(.list[data-el="rhetis-spectrum-list"]):has(.item:nth-child(7)) .note {font-size:var(--type-14);}
+@container (max-height:420px) {:is(.list[data-el="rhetis-spectrum-list"]) {gap:var(--gap-sm);} :is(.list[data-el="rhetis-spectrum-list"]) .name {font-size:var(--type-18);} :is(.list[data-el="rhetis-spectrum-list"]) .note {font-size:var(--type-14);}}
+@container (max-height:260px) {:is(.list[data-el="rhetis-spectrum-list"]) .note {display:none;}}

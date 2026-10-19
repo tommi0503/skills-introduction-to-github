@@ -1,0 +1,955 @@
+{
+  "schema": "rhetis.design-library-taxonomy/1",
+  "version": "2026-10-18.1",
+  "description": "The one source of category ids, their hierarchy and the semantic element contracts. Admin, resolver, admission and the author context read this file; nothing restates these lists.",
+  "groups": [
+    {
+      "id": "surface",
+      "labels": {
+        "en": "Surfaces",
+        "ko": "표면",
+        "ja": "サーフェス",
+        "zh": "表面"
+      }
+    },
+    {
+      "id": "content",
+      "labels": {
+        "en": "Content",
+        "ko": "콘텐츠",
+        "ja": "コンテンツ",
+        "zh": "内容"
+      }
+    },
+    {
+      "id": "data",
+      "labels": {
+        "en": "Data",
+        "ko": "데이터",
+        "ja": "データ",
+        "zh": "数据"
+      }
+    },
+    {
+      "id": "relationship",
+      "labels": {
+        "en": "Relationships",
+        "ko": "관계",
+        "ja": "関係",
+        "zh": "关系"
+      }
+    },
+    {
+      "id": "comparison",
+      "labels": {
+        "en": "Comparison",
+        "ko": "비교",
+        "ja": "比較",
+        "zh": "比较"
+      }
+    },
+    {
+      "id": "identity",
+      "labels": {
+        "en": "Identity",
+        "ko": "인물·로고",
+        "ja": "人物・ロゴ",
+        "zh": "人物与标志"
+      }
+    },
+    {
+      "id": "media",
+      "labels": {
+        "en": "Media",
+        "ko": "미디어",
+        "ja": "メディア",
+        "zh": "媒体"
+      }
+    },
+    {
+      "id": "navigation",
+      "labels": {
+        "en": "Navigation",
+        "ko": "내비게이션",
+        "ja": "ナビゲーション",
+        "zh": "导航"
+      }
+    },
+    {
+      "id": "foundation",
+      "labels": {
+        "en": "Foundation",
+        "ko": "기반",
+        "ja": "ファウンデーション",
+        "zh": "基础"
+      }
+    },
+    {
+      "id": "layout",
+      "labels": {
+        "en": "Layouts",
+        "ko": "레이아웃",
+        "ja": "レイアウト",
+        "zh": "布局"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "surface.card",
+      "group": "surface",
+      "labels": {
+        "en": "Card",
+        "ko": "카드",
+        "ja": "カード",
+        "zh": "卡片"
+      }
+    },
+    {
+      "id": "surface.pill",
+      "group": "surface",
+      "labels": {
+        "en": "Pill",
+        "ko": "필",
+        "ja": "ピル",
+        "zh": "胶囊"
+      }
+    },
+    {
+      "id": "surface.callout",
+      "group": "surface",
+      "labels": {
+        "en": "Callout",
+        "ko": "콜아웃",
+        "ja": "コールアウト",
+        "zh": "标注"
+      }
+    },
+    {
+      "id": "surface.tag",
+      "group": "surface",
+      "labels": {
+        "en": "Tag and highlight",
+        "ko": "태그·강조",
+        "ja": "タグ・ハイライト",
+        "zh": "标签与高亮"
+      }
+    },
+    {
+      "id": "content.list",
+      "group": "content",
+      "labels": {
+        "en": "List",
+        "ko": "목록",
+        "ja": "リスト",
+        "zh": "列表"
+      }
+    },
+    {
+      "id": "content.quote",
+      "group": "content",
+      "labels": {
+        "en": "Quote",
+        "ko": "인용",
+        "ja": "引用",
+        "zh": "引用"
+      }
+    },
+    {
+      "id": "data.metric",
+      "group": "data",
+      "labels": {
+        "en": "Metric",
+        "ko": "지표",
+        "ja": "指標",
+        "zh": "指标"
+      }
+    },
+    {
+      "id": "data.delta",
+      "group": "data",
+      "labels": {
+        "en": "Change",
+        "ko": "변화",
+        "ja": "変化",
+        "zh": "变化"
+      }
+    },
+    {
+      "id": "data.chart-bar",
+      "group": "data",
+      "labels": {
+        "en": "Bar chart",
+        "ko": "막대 차트",
+        "ja": "棒グラフ",
+        "zh": "柱状图"
+      }
+    },
+    {
+      "id": "data.chart-line",
+      "group": "data",
+      "labels": {
+        "en": "Line chart",
+        "ko": "선 차트",
+        "ja": "折れ線グラフ",
+        "zh": "折线图"
+      }
+    },
+    {
+      "id": "data.chart-donut",
+      "group": "data",
+      "labels": {
+        "en": "Donut",
+        "ko": "도넛",
+        "ja": "ドーナツ",
+        "zh": "环形图"
+      }
+    },
+    {
+      "id": "data.gauge",
+      "group": "data",
+      "labels": {
+        "en": "Meter",
+        "ko": "미터",
+        "ja": "メーター",
+        "zh": "进度条"
+      }
+    },
+    {
+      "id": "data.table",
+      "group": "data",
+      "labels": {
+        "en": "Table",
+        "ko": "표",
+        "ja": "表",
+        "zh": "表格"
+      }
+    },
+    {
+      "id": "data.legend",
+      "group": "data",
+      "labels": {
+        "en": "Legend",
+        "ko": "범례",
+        "ja": "凡例",
+        "zh": "图例"
+      }
+    },
+    {
+      "id": "relationship.steps",
+      "group": "relationship",
+      "labels": {
+        "en": "Steps",
+        "ko": "단계",
+        "ja": "ステップ",
+        "zh": "步骤"
+      }
+    },
+    {
+      "id": "relationship.timeline",
+      "group": "relationship",
+      "labels": {
+        "en": "Timeline",
+        "ko": "타임라인",
+        "ja": "タイムライン",
+        "zh": "时间线"
+      }
+    },
+    {
+      "id": "relationship.cycle",
+      "group": "relationship",
+      "labels": {
+        "en": "Cycle",
+        "ko": "순환",
+        "ja": "サイクル",
+        "zh": "循环"
+      }
+    },
+    {
+      "id": "relationship.hub",
+      "group": "relationship",
+      "labels": {
+        "en": "Hub",
+        "ko": "허브",
+        "ja": "ハブ",
+        "zh": "中心辐射"
+      }
+    },
+    {
+      "id": "relationship.funnel",
+      "group": "relationship",
+      "labels": {
+        "en": "Funnel",
+        "ko": "퍼널",
+        "ja": "ファネル",
+        "zh": "漏斗"
+      }
+    },
+    {
+      "id": "relationship.pyramid",
+      "group": "relationship",
+      "labels": {
+        "en": "Pyramid",
+        "ko": "피라미드",
+        "ja": "ピラミッド",
+        "zh": "金字塔"
+      }
+    },
+    {
+      "id": "relationship.matrix",
+      "group": "relationship",
+      "labels": {
+        "en": "2x2 matrix",
+        "ko": "2x2 매트릭스",
+        "ja": "2x2マトリクス",
+        "zh": "2x2矩阵"
+      }
+    },
+    {
+      "id": "relationship.venn",
+      "group": "relationship",
+      "labels": {
+        "en": "Venn",
+        "ko": "벤 다이어그램",
+        "ja": "ベン図",
+        "zh": "维恩图"
+      }
+    },
+    {
+      "id": "relationship.hierarchy",
+      "group": "relationship",
+      "labels": {
+        "en": "Hierarchy",
+        "ko": "계층도",
+        "ja": "階層図",
+        "zh": "层级图"
+      }
+    },
+    {
+      "id": "relationship.flowchart",
+      "group": "relationship",
+      "labels": {
+        "en": "Flowchart",
+        "ko": "순서도",
+        "ja": "フローチャート",
+        "zh": "流程图"
+      }
+    },
+    {
+      "id": "relationship.architecture",
+      "group": "relationship",
+      "labels": {
+        "en": "Architecture",
+        "ko": "아키텍처",
+        "ja": "アーキテクチャ",
+        "zh": "架构图"
+      }
+    },
+    {
+      "id": "comparison.versus",
+      "group": "comparison",
+      "labels": {
+        "en": "Versus",
+        "ko": "대비",
+        "ja": "対比",
+        "zh": "对比"
+      }
+    },
+    {
+      "id": "comparison.pricing",
+      "group": "comparison",
+      "labels": {
+        "en": "Pricing",
+        "ko": "요금제",
+        "ja": "料金プラン",
+        "zh": "价格方案"
+      }
+    },
+    {
+      "id": "identity.person",
+      "group": "identity",
+      "labels": {
+        "en": "Person",
+        "ko": "인물",
+        "ja": "人物",
+        "zh": "人物"
+      }
+    },
+    {
+      "id": "identity.logo-group",
+      "group": "identity",
+      "labels": {
+        "en": "Logos",
+        "ko": "로고 묶음",
+        "ja": "ロゴ群",
+        "zh": "标志组"
+      }
+    },
+    {
+      "id": "media.image-frame",
+      "group": "media",
+      "labels": {
+        "en": "Picture frame",
+        "ko": "이미지 프레임",
+        "ja": "画像フレーム",
+        "zh": "图片框"
+      }
+    },
+    {
+      "id": "navigation.agenda",
+      "group": "navigation",
+      "labels": {
+        "en": "Agenda",
+        "ko": "목차",
+        "ja": "目次",
+        "zh": "目录"
+      }
+    },
+    {
+      "id": "foundation.page",
+      "group": "foundation",
+      "labels": {
+        "en": "Page foundation",
+        "ko": "페이지 기반",
+        "ja": "ページ基盤",
+        "zh": "页面基础"
+      }
+    },
+    {
+      "id": "layout.agenda",
+      "group": "layout",
+      "labels": {
+        "en": "Agenda",
+        "ko": "목차",
+        "ja": "Agenda",
+        "zh": "Agenda"
+      }
+    },
+    {
+      "id": "layout.architecture",
+      "group": "layout",
+      "labels": {
+        "en": "Architecture",
+        "ko": "아키텍처",
+        "ja": "Architecture",
+        "zh": "Architecture"
+      }
+    },
+    {
+      "id": "layout.comparison",
+      "group": "layout",
+      "labels": {
+        "en": "Comparison",
+        "ko": "비교",
+        "ja": "Comparison",
+        "zh": "Comparison"
+      }
+    },
+    {
+      "id": "layout.cover",
+      "group": "layout",
+      "labels": {
+        "en": "Cover",
+        "ko": "표지",
+        "ja": "Cover",
+        "zh": "Cover"
+      }
+    },
+    {
+      "id": "layout.cta",
+      "group": "layout",
+      "labels": {
+        "en": "Cta",
+        "ko": "행동 유도",
+        "ja": "Cta",
+        "zh": "Cta"
+      }
+    },
+    {
+      "id": "layout.data-story",
+      "group": "layout",
+      "labels": {
+        "en": "Data story",
+        "ko": "데이터 스토리",
+        "ja": "Data story",
+        "zh": "Data story"
+      }
+    },
+    {
+      "id": "layout.feature-showcase",
+      "group": "layout",
+      "labels": {
+        "en": "Feature showcase",
+        "ko": "기능 소개",
+        "ja": "Feature showcase",
+        "zh": "Feature showcase"
+      }
+    },
+    {
+      "id": "layout.pricing",
+      "group": "layout",
+      "labels": {
+        "en": "Pricing",
+        "ko": "요금제",
+        "ja": "Pricing",
+        "zh": "Pricing"
+      }
+    },
+    {
+      "id": "layout.process",
+      "group": "layout",
+      "labels": {
+        "en": "Process",
+        "ko": "프로세스",
+        "ja": "Process",
+        "zh": "Process"
+      }
+    },
+    {
+      "id": "layout.quote",
+      "group": "layout",
+      "labels": {
+        "en": "Quote",
+        "ko": "인용",
+        "ja": "Quote",
+        "zh": "Quote"
+      }
+    },
+    {
+      "id": "layout.section-divider",
+      "group": "layout",
+      "labels": {
+        "en": "Section divider",
+        "ko": "섹션 구분",
+        "ja": "Section divider",
+        "zh": "Section divider"
+      }
+    },
+    {
+      "id": "layout.single-message",
+      "group": "layout",
+      "labels": {
+        "en": "Single message",
+        "ko": "단일 메시지",
+        "ja": "Single message",
+        "zh": "Single message"
+      }
+    },
+    {
+      "id": "layout.summary",
+      "group": "layout",
+      "labels": {
+        "en": "Summary",
+        "ko": "요약",
+        "ja": "Summary",
+        "zh": "Summary"
+      }
+    },
+    {
+      "id": "layout.team-profile",
+      "group": "layout",
+      "labels": {
+        "en": "Team profile",
+        "ko": "팀 소개",
+        "ja": "Team profile",
+        "zh": "Team profile"
+      }
+    },
+    {
+      "id": "layout.timeline",
+      "group": "layout",
+      "labels": {
+        "en": "Timeline",
+        "ko": "타임라인",
+        "ja": "Timeline",
+        "zh": "Timeline"
+      }
+    }
+  ],
+  "foundation": {
+    "contract": "foundation.page@1",
+    "category": "foundation.page",
+    "classes": [
+      "slide",
+      "dark",
+      "cover",
+      "page",
+      "head",
+      "center",
+      "kicker",
+      "title",
+      "lead",
+      "body",
+      "group",
+      "col",
+      "two",
+      "three",
+      "stack",
+      "split",
+      "wide-left",
+      "icon",
+      "top",
+      "rail",
+      "foot",
+      "idx",
+      "deck",
+      "sec",
+      "src",
+      "no",
+      "label",
+      "on",
+      "seat",
+      "avatar",
+      "portrait",
+      "logo",
+      "back",
+      "lockup",
+      "at-center",
+      "at-left",
+      "at-bottom-left",
+      "at-top-left",
+      "meta",
+      "deco",
+      "overrides"
+    ],
+    "parts": {
+      "seat": "`.seat[data-ph=\"N\"]` — a numbered seat for what the page cannot draw (an image, a 3D model); variants `.seat.avatar` `.seat.portrait` `.seat.logo` `.seat.back` `.seat.icon`. A seat is a placement, not a material."
+    },
+    "structure": "`<section class=\"slide [dark]\"><div class=\"page\"><header class=\"head [center]\"><p class=\"kicker\">…</p><h1 class=\"title\">…</h1><p class=\"lead\">…</p></header><div class=\"body\">…grid children…</div></div></section>`. `.body` is a 12-column x 6-row grid; each body child states only `style=\"grid-column:A / span N; grid-row:B / span M\"`. `.group` (a row of equal members; `.group.col` `.group.two` `.group.three`), `.stack` (a column), `.split` (two columns, first narrower; `.split.wide-left` reverses) hold several members of one slot. A cover is `class=\"slide cover\"`: no head/body; `.page` holds a `.lockup` (`.kicker` + `.title` + `.lead`) placed with `.at-center` `.at-left` `.at-bottom-left` `.at-top-left`, an optional `.meta` line, and optional `.deco` (the foundation's cover graphic) or `.seat.back`."
+  },
+  "parts": [
+    "parts",
+    "kick",
+    "fig",
+    "name",
+    "note",
+    "mark"
+  ],
+  "contracts": [
+    {
+      "id": "card.parts@1",
+      "category": "surface.card",
+      "roots": [
+        "card"
+      ],
+      "structure": "`.card` > `.parts` — variants `.on` (emphasis: accent fill) `.quiet` `.line` (outlined) `.tone-1…5`. Text parts inside `.parts`: `.kick` (small line above) `.fig` (the figure; `<small>` for its unit) `.name` `.note` `.mark` (icon or number)."
+    },
+    {
+      "id": "pill.parts@1",
+      "category": "surface.pill",
+      "roots": [
+        "pill"
+      ],
+      "structure": "`.pill` > `.parts` — a one-line capsule (mark + name + note); variants `.on` `.quiet` `.line`."
+    },
+    {
+      "id": "callout.sentence@1",
+      "category": "surface.callout",
+      "roots": [
+        "callout"
+      ],
+      "structure": "`.callout` — one sentence that concludes the page, written as `<p>문장 <b>핵심 구절</b></p>`, optional `.icon` before it."
+    },
+    {
+      "id": "tag.inline@1",
+      "category": "surface.tag",
+      "roots": [
+        "tag",
+        "hl"
+      ],
+      "structure": "`.tag` — a small label inside a part; `.hl` — a highlight inside running text."
+    },
+    {
+      "id": "list.items@1",
+      "category": "content.list",
+      "roots": [
+        "list"
+      ],
+      "members": {
+        "min": 2,
+        "max": 8
+      },
+      "structure": "`.list` > `.item` (`.name` + `.note`) — the element draws each item's marker: a dot, a tick on `.list.check`, the item's number on `.list.num`; `.list.divided` rules the items apart. Never write numbers into the items. An item's own `.mark` holds only an icon."
+    },
+    {
+      "id": "quote.voice@1",
+      "category": "content.quote",
+      "roots": [
+        "quote"
+      ],
+      "structure": "`.quote` > `<blockquote>` + `.by` (`.seat.avatar` + `.name` + `.note`) — variant `.quote.big`."
+    },
+    {
+      "id": "metric.figure@1",
+      "category": "data.metric",
+      "roots": [
+        "stat",
+        "stats"
+      ],
+      "members": {
+        "min": 1,
+        "max": 6
+      },
+      "structure": "`.stat` > `.parts` (`.fig` + `.name` + `.note`) — a bare figure without a surface; `.stats` > `.stat` × n a row of them with dividers."
+    },
+    {
+      "id": "delta.change@1",
+      "category": "data.delta",
+      "roots": [
+        "delta"
+      ],
+      "structure": "`.delta` — `<span class=\"from\">12.1억</span><span class=\"to\">15.6억</span>` before → after; the arrow is drawn by the element."
+    },
+    {
+      "id": "chart.bar@1",
+      "category": "data.chart-bar",
+      "roots": [
+        "bars"
+      ],
+      "members": {
+        "min": 2,
+        "max": 12
+      },
+      "structure": "`.bars` `style=\"--max:N\"` > `.bar` `style=\"--v:N\"` (`<b>` value + `<span>` label; `.bar.on`, `.bar.tone-N`) — vertical bars; `.bars.h` horizontal."
+    },
+    {
+      "id": "chart.line@1",
+      "category": "data.chart-line",
+      "roots": [
+        "lines"
+      ],
+      "members": {
+        "min": 3,
+        "max": 12
+      },
+      "structure": "`.lines` `style=\"--max:N\"` > `.pt` `style=\"--v:N\"` (`<b>` + `<span>`) — a line over equal steps, drawn by the element from the points."
+    },
+    {
+      "id": "chart.donut@1",
+      "category": "data.chart-donut",
+      "roots": [
+        "donut",
+        "donuts"
+      ],
+      "members": {
+        "min": 1,
+        "max": 4
+      },
+      "structure": "`.donut` `style=\"--v:N\"` (0–100) > `.fig` + `.name` — one share of a whole; `.donuts` > `.donut` × n a row of them."
+    },
+    {
+      "id": "gauge.meter@1",
+      "category": "data.gauge",
+      "roots": [
+        "meter"
+      ],
+      "structure": "`.meter` `style=\"--v:N\"` (0–100) > `.name` + `.fig` — a horizontal progress bar; several stack in a `.stack`."
+    },
+    {
+      "id": "table.grid@1",
+      "category": "data.table",
+      "roots": [
+        "tablebox"
+      ],
+      "structure": "`.tablebox` > `<table class=\"table\">` with explicit `<thead>`/`<tbody>`; `.pick` on the cells of the column that is the point; `.num` on numeric cells."
+    },
+    {
+      "id": "legend.keys@1",
+      "category": "data.legend",
+      "roots": [
+        "legend"
+      ],
+      "structure": "`.legend` > `.key.tone-N` — a chart legend."
+    },
+    {
+      "id": "steps.sequence@1",
+      "category": "relationship.steps",
+      "roots": [
+        "steps"
+      ],
+      "members": {
+        "min": 2,
+        "max": 6
+      },
+      "structure": "`.steps` > `.step` (`.mark` number + `.name` + `.note`) — joined left to right by the element's connector; `.steps.col` downward."
+    },
+    {
+      "id": "timeline.track@1",
+      "category": "relationship.timeline",
+      "roots": [
+        "track"
+      ],
+      "members": {
+        "min": 3,
+        "max": 8
+      },
+      "structure": "`.track` > `.stop` (`.kick` date + `.name` + `.note`; `.stop.on`) — points on a line; `.track.alt` alternates above/below; `.track.col` runs downward."
+    },
+    {
+      "id": "cycle.nodes@1",
+      "category": "relationship.cycle",
+      "roots": [
+        "cycle"
+      ],
+      "members": {
+        "min": 3,
+        "max": 6
+      },
+      "structure": "`.cycle` > `.core` + `.node` × 3–6 — members around a centre, arrows drawn by the element."
+    },
+    {
+      "id": "hub.spokes@1",
+      "category": "relationship.hub",
+      "roots": [
+        "hub"
+      ],
+      "members": {
+        "min": 3,
+        "max": 6
+      },
+      "structure": "`.hub` > `.core` + `.spoke` × 3–6 (`.mark` + `.name` + `.note`) — a centre with members on spokes."
+    },
+    {
+      "id": "funnel.stages@1",
+      "category": "relationship.funnel",
+      "roots": [
+        "funnel"
+      ],
+      "members": {
+        "min": 3,
+        "max": 6
+      },
+      "structure": "`.funnel` > `.stage` × 3–6 (`.name` + `.fig`), each `style=\"--v:N\"` (0–100) for its width."
+    },
+    {
+      "id": "pyramid.levels@1",
+      "category": "relationship.pyramid",
+      "roots": [
+        "pyramid"
+      ],
+      "members": {
+        "min": 3,
+        "max": 5
+      },
+      "structure": "`.pyramid` > `.level` × 3–5 (`.name` + `.note`)."
+    },
+    {
+      "id": "matrix.quadrants@1",
+      "category": "relationship.matrix",
+      "roots": [
+        "matrix"
+      ],
+      "structure": "`.matrix` > `.axis-x` (2 labels) `.axis-y` (2 labels) + `.cell` × 4 (`.cell.on`) — a 2×2."
+    },
+    {
+      "id": "venn.sets@1",
+      "category": "relationship.venn",
+      "roots": [
+        "venn"
+      ],
+      "members": {
+        "min": 2,
+        "max": 3
+      },
+      "structure": "`.venn` > `.set` × 2–3 (`.name`; `.set.on`) + optional `.core`."
+    },
+    {
+      "id": "hierarchy.org@1",
+      "category": "relationship.hierarchy",
+      "roots": [
+        "org"
+      ],
+      "structure": "`.org` > `.root` + `.branch` × 2–4 (`.node` + `.leaf` …) — a tree; connectors drawn by the element."
+    },
+    {
+      "id": "flowchart.nodes@1",
+      "category": "relationship.flowchart",
+      "roots": [
+        "flowchart"
+      ],
+      "structure": "`.flowchart` > `.node` (`.start` `.ask` `.end`) placed with `style=\"grid-column; grid-row\"` and connector classes `to-r to-d to-l to-u` — connectors and arrowheads drawn by the element."
+    },
+    {
+      "id": "architecture.layers@1",
+      "category": "relationship.architecture",
+      "roots": [
+        "arch"
+      ],
+      "members": {
+        "min": 2,
+        "max": 5
+      },
+      "structure": "`.arch` > `.layer` × 2–5 (`.name` + `.chip` …) — stacked architecture layers."
+    },
+    {
+      "id": "versus.pair@1",
+      "category": "comparison.versus",
+      "roots": [
+        "versus"
+      ],
+      "structure": "`.versus` > `.side` × 2 (+ `.side.on`) each `.name` + `.list`, with a `<b class=\"vs\">` mark between."
+    },
+    {
+      "id": "pricing.plans@1",
+      "category": "comparison.pricing",
+      "roots": [
+        "plan",
+        "plans"
+      ],
+      "members": {
+        "min": 1,
+        "max": 4
+      },
+      "structure": "`.plan` > `.name` + `.price` (`.fig` + `<small>`) + `.list.check` (+ `.tag`; `.plan.on`) — `.plans` > `.plan` × n a row."
+    },
+    {
+      "id": "person.profile@1",
+      "category": "identity.person",
+      "roots": [
+        "person",
+        "people"
+      ],
+      "members": {
+        "min": 1,
+        "max": 6
+      },
+      "structure": "`.person` > `.seat.avatar|.seat.portrait` + `.name` + `.note` (+ `.list`) — `.people` > `.person` × n a row."
+    },
+    {
+      "id": "logos.row@1",
+      "category": "identity.logo-group",
+      "roots": [
+        "logos"
+      ],
+      "members": {
+        "min": 3,
+        "max": 12
+      },
+      "structure": "`.logos` > `.seat.logo` × n."
+    },
+    {
+      "id": "frame.picture@1",
+      "category": "media.image-frame",
+      "roots": [
+        "frame"
+      ],
+      "structure": "`.frame` > `.seat[data-ph]` — the element's picture frame around one seat."
+    },
+    {
+      "id": "agenda.entries@1",
+      "category": "navigation.agenda",
+      "roots": [
+        "agenda"
+      ],
+      "members": {
+        "min": 2,
+        "max": 8
+      },
+      "structure": "`.agenda` > `.entry` (`.mark` number + `.name` + `.note`; `.entry.on`) — the contents list."
+    }
+  ],
+  "layout": {
+    "contract": "layout.slide@1",
+    "structure": "A slide layout: a head and named slots placed on the 12 x 6 body grid, or a cover."
+  }
+}

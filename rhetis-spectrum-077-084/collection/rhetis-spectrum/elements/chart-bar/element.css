@@ -1,0 +1,28 @@
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) p, :is(.bars[data-el="rhetis-spectrum-chart-bar"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name {font-size:var(--type-18);} :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig {font-size:var(--type-40);} :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig small {font-size:var(--type-18);} :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name {font-size:var(--type-16);} :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig {font-size:var(--type-32);} :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note {font-size:var(--type-12);} :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick {display:none;} }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) {display:flex;align-items:stretch;justify-content:space-around;gap:var(--gap);padding:var(--gap-lg) var(--gap) var(--gap-lg);border-bottom:var(--stroke) solid var(--line);background:repeating-linear-gradient(to top,var(--line) 0,var(--line) 1px,transparent 1px,transparent 25%);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar {flex:1;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0;}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar::before {content:"";width:65%;height:calc(var(--v)/var(--max)*100%);background:var(--tone-4);border-top:2px solid var(--tone-1);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.on::before {background:var(--accent);border-top-color:var(--accent-text);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.tone-1::before {background:var(--tone-1);border-top-color:var(--tone-1);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.tone-2::before {background:var(--tone-2);border-top-color:var(--tone-2);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.tone-3::before {background:var(--tone-3);border-top-color:var(--tone-3);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.tone-4::before {background:var(--tone-4);border-top-color:var(--tone-4);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.tone-5::before {background:var(--tone-5);border-top-color:var(--tone-5);}
+
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar b {position:absolute;bottom:calc(var(--v)/var(--max)*100% + var(--gap-sm));font-size:var(--type-20);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--ink);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar span {position:absolute;top:calc(100% + var(--gap-sm));font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);white-space:nowrap;}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h {flex-direction:column;padding:var(--gap) var(--gap-lg);background:none;gap:var(--gap-sm);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar {flex-direction:row;justify-content:flex-start;margin-left:calc(var(--pad)*2);margin-right:var(--pad);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar::before {width:calc(var(--v)/var(--max)*100%);height:55%;border-top:0;border-left:2px solid var(--tone-1);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar b {bottom:auto;left:calc(var(--v)/var(--max)*100% + var(--gap-sm));font-size:var(--type-18);}
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar span {top:auto;left:calc(var(--pad)*-2);}
+@container (max-width:640px) {:is(.bars[data-el="rhetis-spectrum-chart-bar"]) {gap:var(--gap-sm);} :is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar b,:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar span {font-size:var(--type-14);}}

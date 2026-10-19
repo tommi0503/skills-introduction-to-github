@@ -1,0 +1,23 @@
+:is(.card[data-el="rhetis-spectrum-card"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.card[data-el="rhetis-spectrum-card"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.card[data-el="rhetis-spectrum-card"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.card[data-el="rhetis-spectrum-card"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.card[data-el="rhetis-spectrum-card"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.card[data-el="rhetis-spectrum-card"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.card[data-el="rhetis-spectrum-card"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.card[data-el="rhetis-spectrum-card"]) p, :is(.card[data-el="rhetis-spectrum-card"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.card[data-el="rhetis-spectrum-card"]) .name {font-size:var(--type-18);} :is(.card[data-el="rhetis-spectrum-card"]) .fig {font-size:var(--type-40);} :is(.card[data-el="rhetis-spectrum-card"]) .fig small {font-size:var(--type-18);} :is(.card[data-el="rhetis-spectrum-card"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.card[data-el="rhetis-spectrum-card"]) .name {font-size:var(--type-16);} :is(.card[data-el="rhetis-spectrum-card"]) .fig {font-size:var(--type-32);} :is(.card[data-el="rhetis-spectrum-card"]) .note {font-size:var(--type-12);} :is(.card[data-el="rhetis-spectrum-card"]) .kick {display:none;} }
+:is(.card[data-el="rhetis-spectrum-card"]) {display:flex;align-items:stretch;border:var(--stroke) solid var(--line);border-top:3px solid var(--accent);background:var(--surface);border-radius:var(--radius-sm);}
+:is(.card[data-el="rhetis-spectrum-card"]) .parts {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--pad);width:100%;}
+:is(.card[data-el="rhetis-spectrum-card"]).on {background:var(--accent);color:var(--accent-ink);border-color:var(--accent-text);}
+:is(.card[data-el="rhetis-spectrum-card"]).on :is(.name,.fig,.note,.kick,.mark) {color:var(--accent-ink);}
+:is(.card[data-el="rhetis-spectrum-card"]).line {background:var(--page);border-top-color:var(--tone-1);}
+:is(.card[data-el="rhetis-spectrum-card"]).quiet {border-color:var(--surface);background:var(--surface);}
+:is(.card[data-el="rhetis-spectrum-card"]) .mark {width:48px;height:48px;border:var(--stroke) solid currentColor;border-radius:50%;}
+:is(.card[data-el="rhetis-spectrum-card"]) .fig {color:var(--tone-1);}
+:is(.card[data-el="rhetis-spectrum-card"]).tone-1 {background:var(--tone-1);border-color:var(--tone-1);} :is(.card[data-el="rhetis-spectrum-card"]).tone-1 :is(.name,.fig,.note,.kick,.mark) {color:var(--tone-1-ink);}
+:is(.card[data-el="rhetis-spectrum-card"]).tone-2 {background:var(--tone-2);border-color:var(--tone-2);} :is(.card[data-el="rhetis-spectrum-card"]).tone-2 :is(.name,.fig,.note,.kick,.mark) {color:var(--tone-2-ink);}
+:is(.card[data-el="rhetis-spectrum-card"]).tone-3 {background:var(--tone-3);border-color:var(--tone-3);} :is(.card[data-el="rhetis-spectrum-card"]).tone-3 :is(.name,.fig,.note,.kick,.mark) {color:var(--tone-3-ink);}
+:is(.card[data-el="rhetis-spectrum-card"]).tone-4 {background:var(--tone-4);border-color:var(--tone-4);} :is(.card[data-el="rhetis-spectrum-card"]).tone-4 :is(.name,.fig,.note,.kick,.mark) {color:var(--tone-4-ink);}
+:is(.card[data-el="rhetis-spectrum-card"]).tone-5 {background:var(--tone-5);border-color:var(--tone-5);} :is(.card[data-el="rhetis-spectrum-card"]).tone-5 :is(.name,.fig,.note,.kick,.mark) {color:var(--tone-5-ink);}

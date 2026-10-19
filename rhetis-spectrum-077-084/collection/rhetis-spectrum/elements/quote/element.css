@@ -1,0 +1,18 @@
+:is(.quote[data-el="rhetis-spectrum-quote"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) p, :is(.quote[data-el="rhetis-spectrum-quote"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.quote[data-el="rhetis-spectrum-quote"]) .name {font-size:var(--type-18);} :is(.quote[data-el="rhetis-spectrum-quote"]) .fig {font-size:var(--type-40);} :is(.quote[data-el="rhetis-spectrum-quote"]) .fig small {font-size:var(--type-18);} :is(.quote[data-el="rhetis-spectrum-quote"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.quote[data-el="rhetis-spectrum-quote"]) .name {font-size:var(--type-16);} :is(.quote[data-el="rhetis-spectrum-quote"]) .fig {font-size:var(--type-32);} :is(.quote[data-el="rhetis-spectrum-quote"]) .note {font-size:var(--type-12);} :is(.quote[data-el="rhetis-spectrum-quote"]) .kick {display:none;} }
+:is(.quote[data-el="rhetis-spectrum-quote"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-lg);padding:var(--pad);border-left:3px solid var(--accent);background:var(--surface);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) blockquote {font-family:var(--font-display);font-size:var(--type-36);font-weight:var(--lead-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track);position:relative;}
+:is(.quote[data-el="rhetis-spectrum-quote"]) blockquote::before {content:"“";display:block;color:var(--accent-text);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .by {display:grid;grid-template-columns:auto 1fr;column-gap:var(--gap-sm);align-items:center;}
+:is(.quote[data-el="rhetis-spectrum-quote"]) .by .seat {grid-row:span 2;}
+:is(.quote[data-el="rhetis-spectrum-quote"]).big blockquote {font-size:var(--type-48);}
+@container (max-width:640px) {:is(.quote[data-el="rhetis-spectrum-quote"]) blockquote,:is(.quote[data-el="rhetis-spectrum-quote"]).big blockquote {font-size:var(--type-24);} :is(.quote[data-el="rhetis-spectrum-quote"]) .by .seat {width:56px;height:56px;}}
+@container (max-height:260px) {:is(.quote[data-el="rhetis-spectrum-quote"]) {gap:var(--gap-sm);} :is(.quote[data-el="rhetis-spectrum-quote"]) blockquote,:is(.quote[data-el="rhetis-spectrum-quote"]).big blockquote {font-size:var(--type-20);} :is(.quote[data-el="rhetis-spectrum-quote"]) blockquote::before {display:none;}}

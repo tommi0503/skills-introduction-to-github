@@ -1,0 +1,1 @@
+Horizontal architecture layers align a blue category label with optically centred outlined chips. The coral top rule and blue foundation layer indicate the direction from experience to infrastructure.

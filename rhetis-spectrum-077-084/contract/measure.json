@@ -1,0 +1,19 @@
+{
+  "schema": "rhetis.design-library-measure/3",
+  "description": "How a frozen style's text sizes and spaces become sizes on one output format. A style holds the size of each text role and its smallest and largest text, every length a proportion of the format's reference text; a format holds that reference size, the steps text sizes stand on (textSteps: up to each `upTo`, sizes are multiples of its `step`) and its smallest legible text. Elements keep their own sizes and responsive steps, authored on the presentation format on its steps; on another format they scale with its reference size; no text falls below the style's smallest text. The page author reads the role sizes and states a size where a text's role calls for it.",
+  "authoredFormat": "slide-16x9",
+  "typeTokenRange": {"from": 8, "to": 128},
+  "radiusBands": [
+    {"token": "--radius-sm", "role": "sm", "above": 4, "upTo": 14},
+    {"token": "--radius", "role": "md", "above": 14, "upTo": 28},
+    {"token": "--radius-lg", "role": "lg", "above": 28, "upTo": 998}
+  ],
+  "formats": {
+    "slide-16x9": {"label": "Presentation 16:9", "page": {"width": 1280, "height": 720}, "body": 20,
+                   "textSteps": [{"upTo": 32, "step": 2}, {"step": 4}], "minText": 12, "spaceStep": 1},
+    "a4-portrait": {"label": "A4 brochure page (96 dpi)", "page": {"width": 794, "height": 1123}, "body": 13.333,
+                    "textSteps": [{"upTo": 21.33333, "step": 0.66667}, {"step": 1.33333}], "minText": 10.667, "spaceStep": 0.6667},
+    "mobile-portrait": {"label": "Mobile screen", "page": {"width": 390, "height": 844}, "body": 16,
+                        "textSteps": [{"upTo": 24, "step": 1}, {"step": 2}], "minText": 12, "spaceStep": 1}
+  }
+}

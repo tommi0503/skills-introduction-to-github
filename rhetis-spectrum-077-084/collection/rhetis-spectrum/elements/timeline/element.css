@@ -1,0 +1,24 @@
+:is(.track[data-el="rhetis-spectrum-timeline"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) p, :is(.track[data-el="rhetis-spectrum-timeline"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.track[data-el="rhetis-spectrum-timeline"]) .name {font-size:var(--type-18);} :is(.track[data-el="rhetis-spectrum-timeline"]) .fig {font-size:var(--type-40);} :is(.track[data-el="rhetis-spectrum-timeline"]) .fig small {font-size:var(--type-18);} :is(.track[data-el="rhetis-spectrum-timeline"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.track[data-el="rhetis-spectrum-timeline"]) .name {font-size:var(--type-16);} :is(.track[data-el="rhetis-spectrum-timeline"]) .fig {font-size:var(--type-32);} :is(.track[data-el="rhetis-spectrum-timeline"]) .note {font-size:var(--type-12);} :is(.track[data-el="rhetis-spectrum-timeline"]) .kick {display:none;} }
+:is(.track[data-el="rhetis-spectrum-timeline"]) {display:flex;align-items:center;gap:var(--gap);padding:var(--gap) 0;}
+:is(.track[data-el="rhetis-spectrum-timeline"])::before {content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop {flex:1;min-width:0;position:relative;padding:var(--pad) var(--gap-sm);border:var(--stroke) solid var(--line);background:var(--page);display:flex;flex-direction:column;gap:var(--gap-sm);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop::before {content:"";position:absolute;left:var(--gap-sm);top:-6px;width:10px;height:10px;border-radius:50%;background:var(--tone-1);border:2px solid var(--page);}
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop.on {background:var(--accent-soft);border-color:var(--accent-text);}
+:is(.track[data-el="rhetis-spectrum-timeline"]).alt .stop:nth-child(even) {align-self:flex-end;}
+:is(.track[data-el="rhetis-spectrum-timeline"]).alt .stop:nth-child(odd) {align-self:flex-start;}
+:is(.track[data-el="rhetis-spectrum-timeline"]).col {flex-direction:column;align-items:stretch;padding-left:var(--pad);}
+:is(.track[data-el="rhetis-spectrum-timeline"]).col::before {left:calc(var(--gap-sm)/2);top:0;bottom:0;width:1px;height:auto;right:auto;}
+:is(.track[data-el="rhetis-spectrum-timeline"]).col .stop {display:grid;grid-template-columns:100px 1fr;align-content:center;column-gap:var(--gap);padding:var(--gap-sm);}
+:is(.track[data-el="rhetis-spectrum-timeline"]).col .stop::before {left:calc(var(--pad)*-1);top:50%;}
+:is(.track[data-el="rhetis-spectrum-timeline"]).col .kick {grid-row:span 2;align-self:center;}
+@container (max-width:900px) {:is(.track[data-el="rhetis-spectrum-timeline"]) .name {font-size:var(--type-16);} :is(.track[data-el="rhetis-spectrum-timeline"]) .note {font-size:var(--type-12);} :is(.track[data-el="rhetis-spectrum-timeline"]) .kick {font-size:var(--type-12);}}
+@container (max-height:300px) {:is(.track[data-el="rhetis-spectrum-timeline"]) .note {display:none;}}

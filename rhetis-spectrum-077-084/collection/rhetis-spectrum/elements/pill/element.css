@@ -1,0 +1,19 @@
+:is(.pill[data-el="rhetis-spectrum-pill"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) p, :is(.pill[data-el="rhetis-spectrum-pill"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.pill[data-el="rhetis-spectrum-pill"]) .name {font-size:var(--type-18);} :is(.pill[data-el="rhetis-spectrum-pill"]) .fig {font-size:var(--type-40);} :is(.pill[data-el="rhetis-spectrum-pill"]) .fig small {font-size:var(--type-18);} :is(.pill[data-el="rhetis-spectrum-pill"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.pill[data-el="rhetis-spectrum-pill"]) .name {font-size:var(--type-16);} :is(.pill[data-el="rhetis-spectrum-pill"]) .fig {font-size:var(--type-32);} :is(.pill[data-el="rhetis-spectrum-pill"]) .note {font-size:var(--type-12);} :is(.pill[data-el="rhetis-spectrum-pill"]) .kick {display:none;} }
+:is(.pill[data-el="rhetis-spectrum-pill"]) {display:flex;align-items:center;justify-content:center;background:var(--surface);border:var(--stroke) solid var(--line);border-radius:999px;padding:var(--pad);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .parts {display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);min-width:0;}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .mark {width:36px;height:36px;flex:none;border-radius:50%;background:var(--accent-soft);}
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name {font-size:var(--type-22);text-align:center;}
+:is(.pill[data-el="rhetis-spectrum-pill"]).on {background:var(--accent);border-color:var(--accent-text);}
+:is(.pill[data-el="rhetis-spectrum-pill"]).on :is(.name,.note) {color:var(--accent-ink);}
+:is(.pill[data-el="rhetis-spectrum-pill"]).line {background:var(--page);border-color:var(--tone-1);}
+:is(.pill[data-el="rhetis-spectrum-pill"]).quiet {border-color:var(--surface);}
+@container (max-width:540px) {:is(.pill[data-el="rhetis-spectrum-pill"]) .note {display:none;} :is(.pill[data-el="rhetis-spectrum-pill"]) .name {font-size:var(--type-18);}}

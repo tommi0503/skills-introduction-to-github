@@ -1,0 +1,17 @@
+:is(.meter[data-el="rhetis-spectrum-gauge"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) p, :is(.meter[data-el="rhetis-spectrum-gauge"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.meter[data-el="rhetis-spectrum-gauge"]) .name {font-size:var(--type-18);} :is(.meter[data-el="rhetis-spectrum-gauge"]) .fig {font-size:var(--type-40);} :is(.meter[data-el="rhetis-spectrum-gauge"]) .fig small {font-size:var(--type-18);} :is(.meter[data-el="rhetis-spectrum-gauge"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.meter[data-el="rhetis-spectrum-gauge"]) .name {font-size:var(--type-16);} :is(.meter[data-el="rhetis-spectrum-gauge"]) .fig {font-size:var(--type-32);} :is(.meter[data-el="rhetis-spectrum-gauge"]) .note {font-size:var(--type-12);} :is(.meter[data-el="rhetis-spectrum-gauge"]) .kick {display:none;} }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) {display:grid;grid-template-columns:1fr auto;align-content:center;gap:var(--gap-sm);padding:var(--pad);}
+:is(.meter[data-el="rhetis-spectrum-gauge"])::before,:is(.meter[data-el="rhetis-spectrum-gauge"])::after {content:"";position:absolute;left:var(--pad);bottom:var(--pad);height:12px;border-radius:999px;}
+:is(.meter[data-el="rhetis-spectrum-gauge"])::before {right:var(--pad);background:var(--surface-2);}
+:is(.meter[data-el="rhetis-spectrum-gauge"])::after {width:calc((100% - var(--pad)*2)*var(--v)/100);background:var(--accent);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig {font-size:var(--type-40);color:var(--tone-1);}
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name {align-self:center;}
+@container (max-height:180px) {:is(.meter[data-el="rhetis-spectrum-gauge"]) {align-content:start;} :is(.meter[data-el="rhetis-spectrum-gauge"]) .fig {font-size:var(--type-28);}}

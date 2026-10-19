@@ -1,0 +1,14 @@
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) {min-width:0;min-height:0;container-type:size;position:relative;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .note {font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--mute);}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent-text);}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .fig {font-family:var(--font-display);font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .fig small {font-size:var(--type-24);font-weight:var(--label-weight);margin-left:calc(var(--gap-sm)/2);}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .mark {display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--accent-text);}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) p, :is(.frame[data-el="rhetis-spectrum-image-frame"]) blockquote {margin:0;}
+@container (max-width:640px) { :is(.frame[data-el="rhetis-spectrum-image-frame"]) .name {font-size:var(--type-18);} :is(.frame[data-el="rhetis-spectrum-image-frame"]) .fig {font-size:var(--type-40);} :is(.frame[data-el="rhetis-spectrum-image-frame"]) .fig small {font-size:var(--type-18);} :is(.frame[data-el="rhetis-spectrum-image-frame"]) .note {font-size:var(--type-14);} }
+@container (max-height:220px) { :is(.frame[data-el="rhetis-spectrum-image-frame"]) .name {font-size:var(--type-16);} :is(.frame[data-el="rhetis-spectrum-image-frame"]) .fig {font-size:var(--type-32);} :is(.frame[data-el="rhetis-spectrum-image-frame"]) .note {font-size:var(--type-12);} :is(.frame[data-el="rhetis-spectrum-image-frame"]) .kick {display:none;} }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) {display:flex;padding:var(--gap-sm);border:var(--stroke) solid var(--line);background:var(--page);position:relative;}
+:is(.frame[data-el="rhetis-spectrum-image-frame"])::before {content:"";position:absolute;left:var(--gap);top:-1px;width:48px;height:5px;background:var(--accent);}
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .seat {flex:1;width:100%;height:100%;background:var(--surface-2);}
+@container (max-width:480px) {:is(.frame[data-el="rhetis-spectrum-image-frame"]) {padding:calc(var(--gap-sm)/2);}}

@@ -1,0 +1,1 @@
+A clean 16:9 editorial page with a fine top rule, a short coral section marker and a precise twelve-by-six content grid. Covers feature an abstract stepped arrow formed from CSS shapes. Light grey seats reserve space for imagery. Foundation selectors deliberately avoid all element roots.

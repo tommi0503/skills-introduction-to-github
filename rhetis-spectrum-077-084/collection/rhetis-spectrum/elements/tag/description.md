@@ -1,0 +1,1 @@
+A compact pale-yellow label and a true inline text highlight carry the paper-tab language into running copy. The highlight uses intrinsic sizing, shallow token padding and baseline alignment so it never turns the sentence into a panel.

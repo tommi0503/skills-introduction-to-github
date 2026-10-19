@@ -1,0 +1,1 @@
+A gridded flowchart places capsule endpoints, yellow decision nodes and neutral actions on an explicit three-by-three grid. Directional arrows are CSS-generated and remain attached to the correct node.
