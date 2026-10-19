@@ -1,0 +1,1 @@
+A blue center occupies the middle of a three-by-three relationship field. Fine blue spokes connect pale peripheral members to the center; additional members use diagonal connections. The structure shares the report vocabulary of clear planes and restrained borders.

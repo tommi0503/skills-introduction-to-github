@@ -1,0 +1,28 @@
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:calc(var(--gap-sm)/2); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level { flex:1; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--accent-soft); border-bottom:var(--stroke) solid var(--accent); padding:calc(var(--gap-sm)/2) var(--gap-lg); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(1) { width:36%; background:var(--accent); color:var(--accent-ink); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(2) { width:52%; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(3) { width:68%; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(4) { width:84%; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-14); text-align:center; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .name { font-size:var(--type-20); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-16); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .fig { font-size:var(--type-36); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .name { font-size:var(--type-16); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-12); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .fig { font-size:var(--type-28); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { display:none; }
+}
+
+@container (max-width:650px) { .pyramid[data-el="rhetis-spectrum-pyramid"] .level { padding:calc(var(--gap-sm)/3) var(--gap-sm); } .pyramid[data-el="rhetis-spectrum-pyramid"] .level .name { font-size:var(--type-18); } .pyramid[data-el="rhetis-spectrum-pyramid"] .level .note { font-size:var(--type-12); } }

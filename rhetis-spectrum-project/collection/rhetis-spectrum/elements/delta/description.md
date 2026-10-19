@@ -1,0 +1,1 @@
+A muted starting value and a saturated blue destination are joined by a simple drawn arrow. The values share a strong numerical hierarchy while their contrasting emphasis makes the direction of change immediately legible.

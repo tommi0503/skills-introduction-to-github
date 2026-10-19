@@ -1,0 +1,1 @@
+Rectangular process nodes, rounded blue start/end nodes and a pale dashed decision node occupy an explicit grid. Fine directional arrow connectors follow the declared neighboring route. Small-slot typography steps down while keeping every node name visible.

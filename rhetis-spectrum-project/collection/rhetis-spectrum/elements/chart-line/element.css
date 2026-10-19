@@ -1,0 +1,26 @@
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:size; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) { display:flex; align-items:stretch; gap:0; padding:var(--gap-lg) var(--pad); border-bottom:var(--stroke) solid var(--line); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt { flex:1; position:relative; min-width:0; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt::before { content:""; position:absolute; left:50%; bottom:calc(var(--v)/var(--max)*80%); width:10px; height:10px; border-radius:50%; background:var(--accent); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt::after { content:""; position:absolute; left:50%; width:hypot(calc(100cqw/var(--rhetis-spectrum-line-count)), calc((var(--v) - var(--rhetis-spectrum-line-next))/var(--max)*100cqh*.8)); bottom:calc(var(--v)/var(--max)*80% + 4px); height:2px; background:var(--accent); transform-origin:left center; transform:rotate(atan2(calc((var(--v) - var(--rhetis-spectrum-line-next))/var(--max)*100cqh*.8),calc(100cqw/var(--rhetis-spectrum-line-count)))); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt:last-child::after { display:none; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt b { position:absolute; width:100%; text-align:center; bottom:calc(var(--v)/var(--max)*80% + 16px); font-size:var(--type-16); font-weight:var(--figure-weight); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt span { position:absolute; top:100%; width:100%; text-align:center; font-size:var(--type-14); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .name { font-size:var(--type-20); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { font-size:var(--type-16); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .fig { font-size:var(--type-36); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .name { font-size:var(--type-16); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { font-size:var(--type-12); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .fig { font-size:var(--type-28); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { display:none; }
+}

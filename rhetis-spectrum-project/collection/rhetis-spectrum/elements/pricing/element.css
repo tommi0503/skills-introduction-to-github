@@ -1,0 +1,32 @@
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]).plans { display:flex; gap:var(--gap); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]).plan { flex:1; min-width:0; padding:var(--pad); border:var(--stroke) solid var(--line); border-top:4px solid var(--line); border-radius:var(--radius-sm); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); background:var(--surface); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]).plan.on { border-color:var(--accent); background:var(--accent-soft); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .price { display:flex; align-items:baseline; gap:var(--gap-sm); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .price .fig { font-size:var(--type-48); font-weight:var(--figure-weight); color:var(--accent); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .price small { font-size:var(--type-16); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .name { font-size:var(--type-20); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { font-size:var(--type-16); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .fig { font-size:var(--type-36); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .name { font-size:var(--type-16); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { font-size:var(--type-12); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .fig { font-size:var(--type-28); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { display:none; }
+}
+
+ .plans[data-el="rhetis-spectrum-pricing"] { flex-wrap:wrap; }
+.plans[data-el="rhetis-spectrum-pricing"] > .plan { flex:1 1 220px; }
+@container (max-width:650px) { .plan[data-el="rhetis-spectrum-pricing"] { padding:var(--gap-sm); gap:var(--gap-sm); } .plan[data-el="rhetis-spectrum-pricing"] .price .fig { font-size:var(--type-36); } .plan[data-el="rhetis-spectrum-pricing"] .list .name { font-size:var(--type-16); } }
+@container (max-width:380px) { .plan[data-el="rhetis-spectrum-pricing"] .price .fig { font-size:var(--type-28); } }
+.plan[data-el="rhetis-spectrum-pricing"] .price { flex-wrap:wrap; gap:calc(var(--gap-sm)/2); }
+.plan[data-el="rhetis-spectrum-pricing"] .price .fig { white-space:nowrap; flex-shrink:0; }

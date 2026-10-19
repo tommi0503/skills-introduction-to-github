@@ -1,0 +1,1 @@
+Simple profiles combine monochrome image seats with a blue name and compact role copy. Circular avatars support brief introductions, while portrait seats accommodate a fuller team presentation. Repeated profiles share equal alignment and spacing.

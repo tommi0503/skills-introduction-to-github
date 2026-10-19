@@ -1,0 +1,1 @@
+Stacked system layers use a blue name rail and white outlined chips on a pale background. Fine outlines separate concerns, while equal chip spacing suggests a modular platform. Compact layouts reduce padding before reducing type.

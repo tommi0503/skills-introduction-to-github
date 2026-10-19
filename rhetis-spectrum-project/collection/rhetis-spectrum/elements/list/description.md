@@ -1,0 +1,1 @@
+Compact business statements align to an orderly left rail. Blue dots, check marks or generated two-digit counters identify each item; a divided variant adds thin horizontal rules. Names remain stronger than supporting explanations.

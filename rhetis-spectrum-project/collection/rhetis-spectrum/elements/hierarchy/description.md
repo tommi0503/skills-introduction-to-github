@@ -1,0 +1,1 @@
+A solid blue root introduces pale blue branch headers and quiet rectangular leaves. Fine rules connect the levels. Equal-width branches make reporting relationships legible while allowing compact Korean names to wrap naturally.

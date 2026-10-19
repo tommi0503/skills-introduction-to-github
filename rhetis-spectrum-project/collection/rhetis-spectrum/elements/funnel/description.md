@@ -1,0 +1,1 @@
+Centered horizontal stages narrow according to their declared percentage. A strong blue first stage introduces the process; subsequent stages use pale blue planes and fine blue rules, with names on the left and figures on the right.

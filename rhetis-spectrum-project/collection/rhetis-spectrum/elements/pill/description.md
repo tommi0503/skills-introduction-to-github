@@ -1,0 +1,1 @@
+A low horizontal capsule centers a compact name and optional mark. The filled version uses saturated blue, the outlined version keeps a white plane, and the quiet version recedes into a pale surface. Supporting copy disappears only in the smallest supported width.

@@ -1,0 +1,26 @@
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-template-rows:repeat(4,minmax(0,1fr)); gap:var(--gap); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node { position:relative; display:grid; place-items:center; padding:var(--gap-sm); background:var(--surface); border:var(--stroke) solid var(--accent); text-align:center; border-radius:var(--radius-sm); font-size:var(--type-18); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node.start,:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node.end { background:var(--accent); color:var(--accent-ink); border-radius:999px; }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node.ask { background:var(--accent-soft); border-style:dashed; }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-r::after { content:"→"; position:absolute; left:100%; width:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-d::before { content:"↓"; position:absolute; top:100%; height:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-l::after { content:"←"; position:absolute; right:100%; width:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-u::before { content:"↑"; position:absolute; bottom:100%; height:var(--gap); color:var(--accent); }
+@container (max-width: 650px) {
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .name { font-size:var(--type-20); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .note { font-size:var(--type-16); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .fig { font-size:var(--type-36); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .name { font-size:var(--type-16); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .note { font-size:var(--type-12); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .fig { font-size:var(--type-28); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .note { display:none; }
+}
+
+@container (max-width:650px) { .flowchart[data-el="rhetis-spectrum-flowchart"] .node { font-size:var(--type-14); padding:calc(var(--gap-sm)/2); } } @container (max-width:380px) { .flowchart[data-el="rhetis-spectrum-flowchart"] .node { font-size:var(--type-12); } }

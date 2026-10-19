@@ -1,0 +1,1 @@
+Thin blue circular outlines and pale blue translucent fills express overlap without decorative effects. An emphasized set can use solid blue. Set names remain centered and a separate core caption identifies the shared opportunity.

@@ -1,0 +1,28 @@
+:is(.track[data-el="rhetis-spectrum-timeline"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.track[data-el="rhetis-spectrum-timeline"]) { display:flex; align-items:center; gap:var(--gap); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop { flex:1; position:relative; padding-top:var(--gap-lg); border-top:2px solid var(--line); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop::before { content:""; position:absolute; left:0; top:-7px; width:12px; height:12px; border-radius:50%; background:var(--tone-2); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop.on::before { background:var(--accent); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { color:var(--accent); font-size:var(--type-18); }
+:is(.track[data-el="rhetis-spectrum-timeline"]).alt .stop:nth-child(even) { transform:translateY(calc(var(--gap)*-1)); }
+:is(.track[data-el="rhetis-spectrum-timeline"]).col { flex-direction:column; align-items:stretch; }
+:is(.track[data-el="rhetis-spectrum-timeline"]).col .stop { border-top:0; border-left:2px solid var(--line); padding:var(--gap-sm) var(--pad); }
+:is(.track[data-el="rhetis-spectrum-timeline"]).col .stop::before { top:var(--gap-sm); left:-7px; }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.track[data-el="rhetis-spectrum-timeline"]) .name { font-size:var(--type-20); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { font-size:var(--type-16); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .fig { font-size:var(--type-36); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.track[data-el="rhetis-spectrum-timeline"]) .name { font-size:var(--type-16); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { font-size:var(--type-12); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .fig { font-size:var(--type-28); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { display:none; }
+}

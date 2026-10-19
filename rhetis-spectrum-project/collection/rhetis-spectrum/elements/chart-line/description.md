@@ -1,0 +1,1 @@
+Equal-width time steps carry compact blue points, values and labels. CSS draws a continuous fine segment from each point to its successor using declared next-value and count variables, preserving the data geometry when the slot changes size.

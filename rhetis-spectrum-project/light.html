@@ -1,0 +1,1501 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>Rhetis Spectrum sheet</title><style>/* foundation */
+* { box-sizing:border-box; margin:0; padding:0; }
+.slide { width:1280px; height:720px; position:relative; overflow:hidden; background:var(--page); color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); word-break:keep-all; overflow-wrap:anywhere; }
+.slide > .page { position:absolute; inset:var(--margin-y) var(--margin-x); display:flex; flex-direction:column; gap:var(--gap); }
+.slide .head { display:flex; flex-direction:column; gap:var(--gap-sm); padding-bottom:var(--gap-sm); border-bottom:var(--stroke) solid var(--line); }
+.slide .head.center { text-align:center; align-items:center; }
+.slide .kicker { color:var(--accent); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track-latin); }
+.slide .title { font-family:var(--font-display); font-size:var(--type-44); font-weight:var(--title-weight); line-height:var(--title-line); letter-spacing:var(--title-track); }
+.slide .lead { font-size:var(--type-20); color:var(--ink-2); line-height:var(--lead-line); font-weight:var(--lead-weight); letter-spacing:var(--lead-track); }
+.slide .body { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(6,minmax(0,1fr)); gap:var(--gap); flex:1; min-height:0; }
+.slide .body > * { min-width:0; min-height:0; }
+.slide .group { display:flex; flex-wrap:wrap; container-type:inline-size; gap:var(--gap); min-width:0; min-height:0; }
+.slide .group > * { flex:1 1 180px; min-width:0; min-height:0; }
+.slide .group.col,.slide .stack { display:flex; flex-wrap:nowrap; container-type:inline-size; flex-direction:column; gap:var(--gap-sm); }
+.slide .group.two,.slide .group.three { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.slide .group.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.slide .split { display:grid; grid-template-columns:5fr 7fr; gap:var(--gap); min-height:0; }
+.slide .split.wide-left { grid-template-columns:7fr 5fr; }
+.slide .icon { width:1em; height:1em; display:inline-flex; flex:none; }
+.slide .icon svg { width:100%; height:100%; }
+.slide > .top,.slide > .foot { position:absolute; left:var(--margin-x); right:var(--margin-x); display:flex; justify-content:space-between; font-size:var(--type-12); color:var(--mute); gap:var(--gap); }
+.slide > .top { top:var(--furn-edge); border-bottom:var(--stroke) solid var(--line); }
+.slide > .foot { bottom:var(--furn-edge); }
+.slide > .rail { position:absolute; inset:0 auto 0 0; width:var(--rail-w); background:var(--accent); color:var(--accent-ink); display:flex; flex-direction:column; align-items:center; justify-content:space-around; font-size:var(--type-16); }
+.slide .seat { position:relative; background:var(--surface-2); display:grid; place-items:center; overflow:hidden; min-width:0; min-height:0; border-radius:var(--radius-sm); }
+.slide .seat::after { content:attr(data-ph); color:var(--mute); font-size:var(--type-14); font-weight:var(--label-weight); }
+.slide .seat.avatar { aspect-ratio:1; border-radius:50%; }
+.slide .seat.portrait { aspect-ratio:3/4; }
+.slide .seat.logo { min-height:52px; }
+.slide.cover .page { display:grid; grid-template:1fr/1fr; }
+.slide.cover .page > * { grid-area:1/1; }
+.slide.cover .lockup { z-index:1; align-self:center; justify-self:start; max-width:72%; display:flex; flex-direction:column; gap:var(--gap); }
+.slide.cover .title { font-size:var(--type-64); }
+.slide.cover .at-center { justify-self:center; text-align:center; }
+.slide.cover .at-top-left { align-self:start; }
+.slide.cover .at-bottom-left { align-self:end; }
+.slide.cover .meta { align-self:end; font-size:var(--type-14); color:var(--mute); }
+.slide.cover .deco { width:420px; height:100%; justify-self:end; background:linear-gradient(130deg,var(--accent-soft) 0 50%,var(--accent) 50%); clip-path:polygon(32% 0,100% 0,100% 100%,0 100%,42% 50%,0 0); }
+
+.slide .stack > * { flex:1; min-height:0; }
+/* agenda */
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) { display:flex; flex-direction:column; justify-content:space-evenly; gap:var(--gap-sm); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .entry { display:grid; grid-template-columns:52px 1fr 1.4fr; align-items:center; gap:var(--gap); padding:var(--gap-sm) var(--pad); border-bottom:var(--stroke) solid var(--line); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .mark { color:var(--accent); font-size:var(--type-28); font-weight:var(--figure-weight); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .entry.on { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:var(--radius-sm); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .name { font-size:var(--type-20); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { font-size:var(--type-16); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .fig { font-size:var(--type-36); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .name { font-size:var(--type-16); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { font-size:var(--type-12); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .fig { font-size:var(--type-28); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { display:none; }
+}
+
+@container (max-width:650px) { .agenda[data-el="rhetis-spectrum-agenda"] .entry { grid-template-columns:32px 1fr; gap:calc(var(--gap-sm)/2); padding:calc(var(--gap-sm)/2); } .agenda[data-el="rhetis-spectrum-agenda"] .entry .note { grid-column:2; } }
+/* architecture */
+:is(.arch[data-el="rhetis-spectrum-architecture"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) { display:flex; flex-direction:column; gap:var(--gap-sm); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .layer { flex:1; display:flex; align-items:center; gap:var(--gap-sm); border:var(--stroke) solid var(--line); background:var(--surface); padding:var(--gap-sm); border-radius:var(--radius-sm); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .layer > .name { width:25%; color:var(--accent); font-weight:var(--name-weight); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .chip { flex:1; display:flex; justify-content:center; align-items:center; padding:var(--gap-sm); background:var(--page); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); font-size:var(--type-16); text-align:center; }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .name { font-size:var(--type-20); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { font-size:var(--type-16); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .fig { font-size:var(--type-36); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .name { font-size:var(--type-16); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { font-size:var(--type-12); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .fig { font-size:var(--type-28); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { display:none; }
+}
+
+ .arch[data-el="rhetis-spectrum-architecture"] .layer { min-width:0; min-height:0; } .arch[data-el="rhetis-spectrum-architecture"] .chip { min-width:0; overflow-wrap:anywhere; }
+@container (max-width:650px) { .arch[data-el="rhetis-spectrum-architecture"] .layer { padding:calc(var(--gap-sm)/2); gap:calc(var(--gap-sm)/2); } .arch[data-el="rhetis-spectrum-architecture"] .chip { font-size:var(--type-12); padding:calc(var(--gap-sm)/2); } }
+/* callout */
+:is(.callout[data-el="rhetis-spectrum-callout"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.callout[data-el="rhetis-spectrum-callout"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap-sm); padding:var(--pad); border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:var(--radius-sm); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) p { font-size:var(--type-28); line-height:var(--lead-line); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) b { color:var(--accent); font-weight:var(--name-weight); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.callout[data-el="rhetis-spectrum-callout"]) .name { font-size:var(--type-20); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { font-size:var(--type-16); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .fig { font-size:var(--type-36); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.callout[data-el="rhetis-spectrum-callout"]) .name { font-size:var(--type-16); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { font-size:var(--type-12); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .fig { font-size:var(--type-28); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { display:none; }
+}
+/* card */
+:is(.card[data-el="rhetis-spectrum-card"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.card[data-el="rhetis-spectrum-card"]) { display:flex; align-items:center; padding:var(--pad); background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); }
+:is(.card[data-el="rhetis-spectrum-card"]).on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+:is(.card[data-el="rhetis-spectrum-card"]).quiet { background:transparent; border-color:transparent; }
+:is(.card[data-el="rhetis-spectrum-card"]).line { background:var(--page); border-color:var(--accent); }
+:is(.card[data-el="rhetis-spectrum-card"]) .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+:is(.card[data-el="rhetis-spectrum-card"]) .mark { font-size:var(--type-32); color:var(--accent); }
+:is(.card[data-el="rhetis-spectrum-card"]).on .mark { color:inherit; }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig small { font-size:var(--type-20); }
+:is(.card[data-el="rhetis-spectrum-card"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="rhetis-spectrum-card"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.card[data-el="rhetis-spectrum-card"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-1 { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-2 { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-3 { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-4 { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-5 { background:var(--tone-5); color:var(--tone-5-ink); }
+@container (max-width: 650px) {
+:is(.card[data-el="rhetis-spectrum-card"]) .name { font-size:var(--type-20); }
+:is(.card[data-el="rhetis-spectrum-card"]) .note { font-size:var(--type-16); }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig { font-size:var(--type-36); }
+:is(.card[data-el="rhetis-spectrum-card"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.card[data-el="rhetis-spectrum-card"]) .name { font-size:var(--type-16); }
+:is(.card[data-el="rhetis-spectrum-card"]) .note { font-size:var(--type-12); }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig { font-size:var(--type-28); }
+:is(.card[data-el="rhetis-spectrum-card"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.card[data-el="rhetis-spectrum-card"]) .note { display:none; }
+}
+
+@container (max-width: 650px) { .card[data-el="rhetis-spectrum-card"] { padding:var(--gap-sm); } .card[data-el="rhetis-spectrum-card"] .parts { gap:calc(var(--gap-sm)/2); } }
+/* chart-bar */
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) { display:flex; align-items:stretch; justify-content:space-around; gap:var(--gap-sm); padding:var(--gap-lg) var(--gap-sm) var(--gap-lg); border-bottom:var(--stroke) solid var(--line); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar { flex:1; position:relative; align-self:end; height:calc(var(--v)/var(--max)*85%); background:var(--tone-2); max-width:100px; min-height:2px; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.on { background:var(--accent); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar b { position:absolute; bottom:100%; width:100%; text-align:center; font-size:var(--type-18); color:var(--ink); font-weight:var(--figure-weight); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar span { position:absolute; top:100%; padding-top:var(--gap-sm); width:100%; text-align:center; font-size:var(--type-16); color:var(--ink-2); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h { flex-direction:column; padding-left:calc(var(--pad)*4); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar { align-self:start; height:auto; min-height:20px; width:calc(var(--v)/var(--max)*92%); max-width:none; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar span { top:0; right:calc(100% + var(--gap-sm)); width:calc(var(--pad)*3); padding:0; text-align:right; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar b { bottom:auto; left:calc(100% + var(--gap-sm)); width:auto; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-1 { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-2 { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-3 { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-4 { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-5 { background:var(--tone-5); color:var(--tone-5-ink); }
+@container (max-width: 650px) {
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name { font-size:var(--type-20); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { font-size:var(--type-16); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig { font-size:var(--type-36); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name { font-size:var(--type-16); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { font-size:var(--type-12); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig { font-size:var(--type-28); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { display:none; }
+}
+
+.bars[data-el="rhetis-spectrum-chart-bar"]:not(.h) { padding-bottom:calc(var(--gap-lg)*2); }
+.bars[data-el="rhetis-spectrum-chart-bar"] .bar span { line-height:var(--label-line); }
+.bars[data-el="rhetis-spectrum-chart-bar"].h { padding-left:calc(var(--pad)*5); }
+.bars[data-el="rhetis-spectrum-chart-bar"].h .bar span { width:calc(var(--pad)*4); font-size:var(--type-14); }
+.bars[data-el="rhetis-spectrum-chart-bar"].h .bar b { white-space:nowrap; }
+/* chart-donut */
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]).donuts { display:flex; align-items:center; justify-content:space-around; gap:var(--gap); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]).donut { aspect-ratio:1; max-height:100%; max-width:100%; border-radius:50%; background:conic-gradient(var(--accent) calc(var(--v)*1%),var(--surface-2) 0); display:flex; flex-direction:column; align-items:center; justify-content:center; isolation:isolate; }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]).donut::before { content:""; position:absolute; inset:16%; background:var(--page); border-radius:50%; z-index:-1; }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]).donuts > .donut { flex:1; min-width:0; }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .fig { font-size:var(--type-44); font-weight:var(--figure-weight); line-height:var(--figure-line); color:var(--accent); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .name { font-size:var(--type-18); text-align:center; max-width:62%; }
+@container (max-width: 650px) {
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .name { font-size:var(--type-20); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .note { font-size:var(--type-16); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .fig { font-size:var(--type-36); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .name { font-size:var(--type-16); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .note { font-size:var(--type-12); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .fig { font-size:var(--type-28); }
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.donut[data-el="rhetis-spectrum-chart-donut"],.donuts[data-el="rhetis-spectrum-chart-donut"]) .note { display:none; }
+}
+
+@container (max-width:380px) { .donut[data-el="rhetis-spectrum-chart-donut"] .fig { font-size:var(--type-28); } .donut[data-el="rhetis-spectrum-chart-donut"] .name { font-size:var(--type-12); } }
+/* chart-line */
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:size; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) { display:flex; align-items:stretch; gap:0; padding:var(--gap-lg) var(--pad); border-bottom:var(--stroke) solid var(--line); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt { flex:1; position:relative; min-width:0; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt::before { content:""; position:absolute; left:50%; bottom:calc(var(--v)/var(--max)*80%); width:10px; height:10px; border-radius:50%; background:var(--accent); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt::after { content:""; position:absolute; left:50%; width:hypot(calc(100cqw/var(--rhetis-spectrum-line-count)), calc((var(--v) - var(--rhetis-spectrum-line-next))/var(--max)*100cqh*.8)); bottom:calc(var(--v)/var(--max)*80% + 4px); height:2px; background:var(--accent); transform-origin:left center; transform:rotate(atan2(calc((var(--v) - var(--rhetis-spectrum-line-next))/var(--max)*100cqh*.8),calc(100cqw/var(--rhetis-spectrum-line-count)))); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt:last-child::after { display:none; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt b { position:absolute; width:100%; text-align:center; bottom:calc(var(--v)/var(--max)*80% + 16px); font-size:var(--type-16); font-weight:var(--figure-weight); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .pt span { position:absolute; top:100%; width:100%; text-align:center; font-size:var(--type-14); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .name { font-size:var(--type-20); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { font-size:var(--type-16); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .fig { font-size:var(--type-36); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .name { font-size:var(--type-16); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { font-size:var(--type-12); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .fig { font-size:var(--type-28); }
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.lines[data-el="rhetis-spectrum-chart-line"]) .note { display:none; }
+}
+/* cycle */
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap-sm); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .core { grid-area:2/2; border-radius:50%; background:var(--accent); color:var(--accent-ink); display:grid; place-items:center; text-align:center; padding:var(--gap-sm); font-size:var(--type-24); font-weight:var(--name-weight); z-index:2; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node { position:relative; border:var(--stroke) solid var(--line); background:var(--surface); border-radius:var(--radius-sm); padding:var(--gap-sm); display:flex; flex-direction:column; justify-content:center; gap:calc(var(--gap-sm)/2); text-align:center; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(2) { grid-area:1/2; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(3) { grid-area:2/3; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(4) { grid-area:3/2; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(5) { grid-area:2/1; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(6) { grid-area:1/1; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(7) { grid-area:3/3; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node::after { content:"↻"; color:var(--accent); position:absolute; right:calc(var(--gap-sm)*-1); top:45%; font-size:var(--type-24); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .mark { color:var(--accent); font-size:var(--type-24); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-14); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .name { font-size:var(--type-20); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-16); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .fig { font-size:var(--type-36); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .name { font-size:var(--type-16); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-12); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .fig { font-size:var(--type-28); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { display:none; }
+}
+
+.cycle[data-el="rhetis-spectrum-cycle"] { isolation:isolate; }
+.cycle[data-el="rhetis-spectrum-cycle"]::before { content:""; position:absolute; inset:20%; border:2px solid var(--accent); border-radius:50%; z-index:-1; }
+.cycle[data-el="rhetis-spectrum-cycle"] .node::after { content:"→"; right:calc(var(--gap-sm)*-1); }
+.cycle[data-el="rhetis-spectrum-cycle"] .node:nth-child(3)::after { content:"↓"; top:100%; right:50%; }
+.cycle[data-el="rhetis-spectrum-cycle"] .node:nth-child(4)::after { content:"←"; left:calc(var(--gap-sm)*-1); right:auto; }
+.cycle[data-el="rhetis-spectrum-cycle"] .node:nth-child(5)::after { content:"↑"; top:calc(var(--gap-sm)*-2); right:50%; }
+/* delta */
+:is(.delta[data-el="rhetis-spectrum-delta"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap-lg); font-size:var(--type-44); font-weight:var(--figure-weight); }
+:is(.delta[data-el="rhetis-spectrum-delta"])::before { content:"→"; color:var(--accent); order:1; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .from { color:var(--mute); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .to { color:var(--accent); order:2; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.delta[data-el="rhetis-spectrum-delta"]) .name { font-size:var(--type-20); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { font-size:var(--type-16); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .fig { font-size:var(--type-36); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.delta[data-el="rhetis-spectrum-delta"]) .name { font-size:var(--type-16); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { font-size:var(--type-12); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .fig { font-size:var(--type-28); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { display:none; }
+}
+/* flowchart */
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-template-rows:repeat(4,minmax(0,1fr)); gap:var(--gap); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node { position:relative; display:grid; place-items:center; padding:var(--gap-sm); background:var(--surface); border:var(--stroke) solid var(--accent); text-align:center; border-radius:var(--radius-sm); font-size:var(--type-18); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node.start,:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node.end { background:var(--accent); color:var(--accent-ink); border-radius:999px; }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .node.ask { background:var(--accent-soft); border-style:dashed; }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-r::after { content:"→"; position:absolute; left:100%; width:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-d::before { content:"↓"; position:absolute; top:100%; height:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-l::after { content:"←"; position:absolute; right:100%; width:var(--gap); color:var(--accent); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .to-u::before { content:"↑"; position:absolute; bottom:100%; height:var(--gap); color:var(--accent); }
+@container (max-width: 650px) {
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .name { font-size:var(--type-20); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .note { font-size:var(--type-16); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .fig { font-size:var(--type-36); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .name { font-size:var(--type-16); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .note { font-size:var(--type-12); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .fig { font-size:var(--type-28); }
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.flowchart[data-el="rhetis-spectrum-flowchart"]) .note { display:none; }
+}
+
+@container (max-width:650px) { .flowchart[data-el="rhetis-spectrum-flowchart"] .node { font-size:var(--type-14); padding:calc(var(--gap-sm)/2); } } @container (max-width:380px) { .flowchart[data-el="rhetis-spectrum-flowchart"] .node { font-size:var(--type-12); } }
+/* funnel */
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:var(--gap-sm); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .stage { width:calc(var(--v)*1%); flex:1; min-height:0; background:var(--accent-soft); border-top:2px solid var(--accent); display:flex; align-items:center; justify-content:space-between; padding:var(--gap-sm) var(--pad); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .stage:first-child { background:var(--accent); color:var(--accent-ink); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .fig { font-size:var(--type-28); font-weight:var(--figure-weight); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .name { font-size:var(--type-20); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { font-size:var(--type-16); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .fig { font-size:var(--type-36); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .name { font-size:var(--type-16); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { font-size:var(--type-12); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .fig { font-size:var(--type-28); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { display:none; }
+}
+
+.funnel[data-el="rhetis-spectrum-funnel"] .stage { container-type:inline-size; padding:calc(var(--gap-sm)/2); flex-direction:column; justify-content:center; gap:0; text-align:center; }
+.funnel[data-el="rhetis-spectrum-funnel"] .stage .fig { white-space:nowrap; flex-shrink:0; font-size:var(--type-28); line-height:var(--figure-line); }
+.funnel[data-el="rhetis-spectrum-funnel"] .stage .name { font-size:var(--type-20); line-height:var(--name-line); }
+@container (max-width:380px) { .funnel[data-el="rhetis-spectrum-funnel"] .stage .fig { font-size:var(--type-20); } .funnel[data-el="rhetis-spectrum-funnel"] .stage .name { font-size:var(--type-14); } }
+/* gauge */
+:is(.meter[data-el="rhetis-spectrum-gauge"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) { display:grid; grid-template-columns:1fr auto; align-content:center; gap:var(--gap-sm); padding-bottom:var(--gap); }
+:is(.meter[data-el="rhetis-spectrum-gauge"])::after { content:""; position:absolute; bottom:0; left:0; right:0; height:12px; border-radius:999px; background:linear-gradient(to right,var(--accent) calc(var(--v)*1%),var(--surface-2) 0); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig { font-size:var(--type-32); font-weight:var(--figure-weight); color:var(--accent); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name { font-size:var(--type-20); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { font-size:var(--type-16); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig { font-size:var(--type-36); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name { font-size:var(--type-16); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { font-size:var(--type-12); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig { font-size:var(--type-28); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { display:none; }
+}
+/* hierarchy */
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:auto 1fr; gap:var(--gap-lg) var(--gap-sm); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .root { grid-column:1/-1; justify-self:center; min-width:32%; padding:var(--gap-sm) var(--pad); text-align:center; background:var(--accent); color:var(--accent-ink); border-radius:var(--radius-sm); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .root::after { content:""; position:absolute; top:100%; left:50%; height:var(--gap-lg); border-left:2px solid var(--line); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .branch { display:flex; flex-direction:column; gap:var(--gap-sm); border-top:2px solid var(--line); padding-top:var(--gap-sm); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .node { background:var(--accent-soft); padding:var(--gap-sm); text-align:center; font-weight:var(--name-weight); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .leaf { background:var(--surface); padding:var(--gap-sm); text-align:center; font-size:var(--type-16); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]):has(.branch:nth-child(4)):not(:has(.branch:nth-child(5))) { grid-template-columns:repeat(3,minmax(0,1fr)); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]):not(:has(.branch:nth-child(4))) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .name { font-size:var(--type-20); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { font-size:var(--type-16); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .fig { font-size:var(--type-36); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .name { font-size:var(--type-16); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { font-size:var(--type-12); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .fig { font-size:var(--type-28); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { display:none; }
+}
+/* hub */
+:is(.hub[data-el="rhetis-spectrum-hub"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap-sm); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .core { grid-area:2/2; border-radius:50%; background:var(--accent); color:var(--accent-ink); display:grid; place-items:center; text-align:center; padding:var(--gap-sm); font-size:var(--type-24); font-weight:var(--name-weight); z-index:2; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke { position:relative; border:var(--stroke) solid var(--line); background:var(--surface); border-radius:var(--radius-sm); padding:var(--gap-sm); display:flex; flex-direction:column; justify-content:center; gap:calc(var(--gap-sm)/2); text-align:center; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(2) { grid-area:1/2; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(3) { grid-area:2/3; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(4) { grid-area:3/2; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(5) { grid-area:2/1; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(6) { grid-area:1/1; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(7) { grid-area:3/3; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke::after { content:"—"; color:var(--accent); position:absolute; right:calc(var(--gap-sm)*-1); top:45%; font-size:var(--type-24); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .mark { color:var(--accent); font-size:var(--type-24); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-14); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.hub[data-el="rhetis-spectrum-hub"]) .name { font-size:var(--type-20); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-16); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .fig { font-size:var(--type-36); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.hub[data-el="rhetis-spectrum-hub"]) .name { font-size:var(--type-16); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-12); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .fig { font-size:var(--type-28); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { display:none; }
+}
+
+.hub[data-el="rhetis-spectrum-hub"] .spoke::after { content:""; background:var(--accent); right:auto; top:auto; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(2)::after { left:50%; top:100%; height:var(--gap-sm); width:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(3)::after { right:100%; top:50%; width:var(--gap-sm); height:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(4)::after { left:50%; bottom:100%; height:var(--gap-sm); width:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(5)::after { left:100%; top:50%; width:var(--gap-sm); height:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(6)::after { left:100%; top:100%; width:calc(var(--gap-sm)*1.414); height:2px; transform-origin:0 0; transform:rotate(45deg); }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(7)::after { right:100%; bottom:100%; width:calc(var(--gap-sm)*1.414); height:2px; transform-origin:100% 100%; transform:rotate(45deg); }
+/* image-frame */
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) { padding:var(--gap-sm); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); background:var(--page); display:flex; }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .seat { width:100%; height:100%; border-radius:0; }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .name { font-size:var(--type-20); }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .note { font-size:var(--type-16); }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .fig { font-size:var(--type-36); }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .name { font-size:var(--type-16); }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .note { font-size:var(--type-12); }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .fig { font-size:var(--type-28); }
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.frame[data-el="rhetis-spectrum-image-frame"]) .note { display:none; }
+}
+/* legend */
+:is(.legend[data-el="rhetis-spectrum-legend"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.legend[data-el="rhetis-spectrum-legend"]) { display:flex; flex-wrap:wrap; justify-content:center; align-content:center; gap:var(--gap); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .key { display:flex; gap:var(--gap-sm); align-items:center; font-size:var(--type-18); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .key::before { content:""; width:12px; height:12px; background:var(--tone-1); border-radius:50%; }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-1::before { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-2::before { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-3::before { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-4::before { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-5::before { background:var(--tone-5); color:var(--tone-5-ink); }
+@container (max-width: 650px) {
+:is(.legend[data-el="rhetis-spectrum-legend"]) .name { font-size:var(--type-20); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { font-size:var(--type-16); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .fig { font-size:var(--type-36); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.legend[data-el="rhetis-spectrum-legend"]) .name { font-size:var(--type-16); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { font-size:var(--type-12); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .fig { font-size:var(--type-28); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { display:none; }
+}
+/* list */
+:is(.list[data-el="rhetis-spectrum-list"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.list[data-el="rhetis-spectrum-list"]) { display:flex; flex-direction:column; justify-content:space-evenly; gap:var(--gap-sm); counter-reset:item; }
+:is(.list[data-el="rhetis-spectrum-list"]) .item { position:relative; padding-left:var(--gap-lg); counter-increment:item; }
+:is(.list[data-el="rhetis-spectrum-list"]) .item::before { content:""; position:absolute; top:.55em; left:0; width:6px; height:6px; background:var(--accent); border-radius:50%; }
+:is(.list[data-el="rhetis-spectrum-list"]).check .item::before { content:"✓"; top:0; width:auto; height:auto; background:transparent; color:var(--accent); font-weight:var(--name-weight); }
+:is(.list[data-el="rhetis-spectrum-list"]).num .item::before { content:counter(item,decimal-leading-zero); top:0; width:auto; height:auto; background:transparent; color:var(--accent); font-size:var(--type-18); font-weight:var(--name-weight); }
+:is(.list[data-el="rhetis-spectrum-list"]).divided .item { padding-block:var(--gap-sm); border-bottom:var(--stroke) solid var(--line); }
+:is(.list[data-el="rhetis-spectrum-list"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.list[data-el="rhetis-spectrum-list"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.list[data-el="rhetis-spectrum-list"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.list[data-el="rhetis-spectrum-list"]) .name { font-size:var(--type-20); }
+:is(.list[data-el="rhetis-spectrum-list"]) .note { font-size:var(--type-16); }
+:is(.list[data-el="rhetis-spectrum-list"]) .fig { font-size:var(--type-36); }
+:is(.list[data-el="rhetis-spectrum-list"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.list[data-el="rhetis-spectrum-list"]) .name { font-size:var(--type-16); }
+:is(.list[data-el="rhetis-spectrum-list"]) .note { font-size:var(--type-12); }
+:is(.list[data-el="rhetis-spectrum-list"]) .fig { font-size:var(--type-28); }
+:is(.list[data-el="rhetis-spectrum-list"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.list[data-el="rhetis-spectrum-list"]) .note { display:none; }
+}
+/* logo-group */
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:minmax(0,1fr); gap:var(--gap); align-content:center; }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .seat.logo { border:var(--stroke) solid var(--line); background:var(--surface); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]):has(>.seat:nth-child(9)) { grid-template-columns:repeat(6,minmax(0,1fr)); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .name { font-size:var(--type-20); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .note { font-size:var(--type-16); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .fig { font-size:var(--type-36); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .name { font-size:var(--type-16); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .note { font-size:var(--type-12); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .fig { font-size:var(--type-28); }
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.logos[data-el="rhetis-spectrum-logo-group"]) .note { display:none; }
+}
+/* matrix */
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) { display:grid; grid-template-columns:var(--gap-lg) 1fr 1fr; grid-template-rows:1fr 1fr var(--gap-lg); gap:var(--gap-sm); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .axis-x { grid-area:3/2/4/4; display:flex; justify-content:space-between; font-size:var(--type-14); color:var(--mute); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .axis-y { grid-area:1/1/3/2; display:flex; flex-direction:column; justify-content:space-between; font-size:var(--type-14); color:var(--mute); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .cell { background:var(--surface); border:var(--stroke) solid var(--line); padding:var(--pad); display:flex; flex-direction:column; justify-content:center; }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .cell:nth-of-type(3) { grid-area:1/2; }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .cell:nth-of-type(4) { grid-area:1/3; }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .cell:nth-of-type(5) { grid-area:2/2; }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .cell:nth-of-type(6) { grid-area:2/3; }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .cell.on { background:var(--accent); color:var(--accent-ink); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .name { font-size:var(--type-20); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .note { font-size:var(--type-16); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .fig { font-size:var(--type-36); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .name { font-size:var(--type-16); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .note { font-size:var(--type-12); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .fig { font-size:var(--type-28); }
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.matrix[data-el="rhetis-spectrum-matrix"]) .note { display:none; }
+}
+/* metric */
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]).stat { display:flex; align-items:center; justify-content:center; padding:var(--gap-sm); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]).stats { display:flex; align-items:stretch; gap:var(--gap); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]).stats > .stat { flex:1; min-width:0; border-right:var(--stroke) solid var(--line); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]).stats > .stat:last-child { border-right:0; }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .parts { display:flex; flex-direction:column; gap:var(--gap-sm); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .fig { font-size:var(--type-64); line-height:var(--figure-line); font-weight:var(--figure-weight); letter-spacing:var(--figure-track); color:var(--accent); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .fig small { font-size:var(--type-24); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .name { font-size:var(--type-20); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .note { font-size:var(--type-16); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .fig { font-size:var(--type-36); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .name { font-size:var(--type-16); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .note { font-size:var(--type-12); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .fig { font-size:var(--type-28); }
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.stat[data-el="rhetis-spectrum-metric"],.stats[data-el="rhetis-spectrum-metric"]) .note { display:none; }
+}
+/* person */
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]).people { display:flex; gap:var(--gap); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]).person { flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); padding:var(--gap-sm); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .seat { flex:1; min-height:80px; max-height:60%; }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .seat.avatar { align-self:start; width:112px; height:112px; flex:none; }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .name { color:var(--accent); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .name { font-size:var(--type-20); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .note { font-size:var(--type-16); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .fig { font-size:var(--type-36); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .name { font-size:var(--type-16); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .note { font-size:var(--type-12); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .fig { font-size:var(--type-28); }
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.person[data-el="rhetis-spectrum-person"],.people[data-el="rhetis-spectrum-person"]) .note { display:none; }
+}
+/* pill */
+:is(.pill[data-el="rhetis-spectrum-pill"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.pill[data-el="rhetis-spectrum-pill"]) { display:flex; align-items:center; justify-content:center; border-radius:999px; background:var(--accent-soft); padding:var(--gap-sm) var(--pad); border:var(--stroke) solid transparent; }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .parts { display:flex; align-items:center; justify-content:center; gap:var(--gap-sm); width:100%; }
+:is(.pill[data-el="rhetis-spectrum-pill"]).on { background:var(--accent); color:var(--accent-ink); }
+:is(.pill[data-el="rhetis-spectrum-pill"]).line { border-color:var(--accent); background:var(--page); }
+:is(.pill[data-el="rhetis-spectrum-pill"]).quiet { background:var(--surface); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name { font-size:var(--type-20); text-align:center; }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { font-size:var(--type-14); }
+@container (max-width: 650px) {
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name { font-size:var(--type-20); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { font-size:var(--type-16); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .fig { font-size:var(--type-36); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name { font-size:var(--type-16); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { font-size:var(--type-12); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .fig { font-size:var(--type-28); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { display:none; }
+}
+
+.pill[data-el="rhetis-spectrum-pill"] { align-self:center; height:100%; max-height:80px; }
+
+@container (max-width:380px) { .pill[data-el="rhetis-spectrum-pill"] .parts { gap:calc(var(--gap-sm)/2); } .pill[data-el="rhetis-spectrum-pill"] .name { font-size:var(--type-14); } .pill[data-el="rhetis-spectrum-pill"] .note { display:none; } }
+/* pricing */
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]).plans { display:flex; gap:var(--gap); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]).plan { flex:1; min-width:0; padding:var(--pad); border:var(--stroke) solid var(--line); border-top:4px solid var(--line); border-radius:var(--radius-sm); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); background:var(--surface); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]).plan.on { border-color:var(--accent); background:var(--accent-soft); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .price { display:flex; align-items:baseline; gap:var(--gap-sm); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .price .fig { font-size:var(--type-48); font-weight:var(--figure-weight); color:var(--accent); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .price small { font-size:var(--type-16); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .name { font-size:var(--type-20); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { font-size:var(--type-16); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .fig { font-size:var(--type-36); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .name { font-size:var(--type-16); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { font-size:var(--type-12); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .fig { font-size:var(--type-28); }
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.plan[data-el="rhetis-spectrum-pricing"],.plans[data-el="rhetis-spectrum-pricing"]) .note { display:none; }
+}
+
+ .plans[data-el="rhetis-spectrum-pricing"] { flex-wrap:wrap; }
+.plans[data-el="rhetis-spectrum-pricing"] > .plan { flex:1 1 220px; }
+@container (max-width:650px) { .plan[data-el="rhetis-spectrum-pricing"] { padding:var(--gap-sm); gap:var(--gap-sm); } .plan[data-el="rhetis-spectrum-pricing"] .price .fig { font-size:var(--type-36); } .plan[data-el="rhetis-spectrum-pricing"] .list .name { font-size:var(--type-16); } }
+@container (max-width:380px) { .plan[data-el="rhetis-spectrum-pricing"] .price .fig { font-size:var(--type-28); } }
+.plan[data-el="rhetis-spectrum-pricing"] .price { flex-wrap:wrap; gap:calc(var(--gap-sm)/2); }
+.plan[data-el="rhetis-spectrum-pricing"] .price .fig { white-space:nowrap; flex-shrink:0; }
+/* pyramid */
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:calc(var(--gap-sm)/2); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level { flex:1; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--accent-soft); border-bottom:var(--stroke) solid var(--accent); padding:calc(var(--gap-sm)/2) var(--gap-lg); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(1) { width:36%; background:var(--accent); color:var(--accent-ink); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(2) { width:52%; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(3) { width:68%; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .level:nth-child(4) { width:84%; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-14); text-align:center; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .name { font-size:var(--type-20); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-16); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .fig { font-size:var(--type-36); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .name { font-size:var(--type-16); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { font-size:var(--type-12); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .fig { font-size:var(--type-28); }
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.pyramid[data-el="rhetis-spectrum-pyramid"]) .note { display:none; }
+}
+
+@container (max-width:650px) { .pyramid[data-el="rhetis-spectrum-pyramid"] .level { padding:calc(var(--gap-sm)/3) var(--gap-sm); } .pyramid[data-el="rhetis-spectrum-pyramid"] .level .name { font-size:var(--type-18); } .pyramid[data-el="rhetis-spectrum-pyramid"] .level .note { font-size:var(--type-12); } }
+/* quote */
+:is(.quote[data-el="rhetis-spectrum-quote"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.quote[data-el="rhetis-spectrum-quote"]) { padding:var(--pad); background:var(--surface); border-left:4px solid var(--accent); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) blockquote { font-size:var(--type-32); line-height:var(--lead-line); font-weight:var(--lead-weight); letter-spacing:var(--lead-track); }
+:is(.quote[data-el="rhetis-spectrum-quote"]).big blockquote { font-size:var(--type-48); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) blockquote::before { content:"“"; display:block; font-size:var(--type-64); color:var(--accent); line-height:var(--figure-line); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .by { display:grid; grid-template-columns:52px 1fr; align-items:center; column-gap:var(--gap-sm); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .by .seat { width:52px; height:52px; grid-row:1/3; }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.quote[data-el="rhetis-spectrum-quote"]) .name { font-size:var(--type-20); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .note { font-size:var(--type-16); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .fig { font-size:var(--type-36); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.quote[data-el="rhetis-spectrum-quote"]) .name { font-size:var(--type-16); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .note { font-size:var(--type-12); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .fig { font-size:var(--type-28); }
+:is(.quote[data-el="rhetis-spectrum-quote"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.quote[data-el="rhetis-spectrum-quote"]) .note { display:none; }
+}
+/* steps */
+:is(.steps[data-el="rhetis-spectrum-steps"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.steps[data-el="rhetis-spectrum-steps"]) { display:flex; align-items:stretch; gap:var(--gap); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .step { flex:1; min-width:0; padding:var(--pad); position:relative; background:var(--surface); border-top:4px solid var(--accent); display:flex; flex-direction:column; gap:var(--gap-sm); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .step:not(:last-child)::after { content:"→"; position:absolute; right:calc(var(--gap)*-0.8); top:40%; z-index:2; font-size:var(--type-24); color:var(--accent); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .mark { color:var(--accent); font-size:var(--type-32); font-weight:var(--figure-weight); }
+:is(.steps[data-el="rhetis-spectrum-steps"]).col { flex-direction:column; }
+:is(.steps[data-el="rhetis-spectrum-steps"]).col .step:not(:last-child)::after { content:"↓"; top:100%; left:50%; }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.steps[data-el="rhetis-spectrum-steps"]) .name { font-size:var(--type-20); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { font-size:var(--type-16); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .fig { font-size:var(--type-36); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.steps[data-el="rhetis-spectrum-steps"]) .name { font-size:var(--type-16); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { font-size:var(--type-12); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .fig { font-size:var(--type-28); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { display:none; }
+}
+
+ .steps[data-el="rhetis-spectrum-steps"].col .step { padding:var(--gap-sm); gap:calc(var(--gap-sm)/3); display:grid; grid-template-columns:48px 1fr; align-content:center; }
+.steps[data-el="rhetis-spectrum-steps"].col .mark { grid-row:1 / span 2; align-self:center; }
+.steps[data-el="rhetis-spectrum-steps"].col .name { font-size:var(--type-20); }
+.steps[data-el="rhetis-spectrum-steps"].col .note { font-size:var(--type-16); }
+/* table */
+:is(.tablebox[data-el="rhetis-spectrum-table"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) { display:flex; align-items:stretch; overflow:hidden; border-top:2px solid var(--accent); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .table { width:100%; height:100%; border-collapse:collapse; table-layout:fixed; font-size:var(--type-18); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) :is(th,td) { padding:var(--gap-sm); border-bottom:var(--stroke) solid var(--line); text-align:left; overflow-wrap:anywhere; }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) th { background:var(--accent); color:var(--accent-ink); font-weight:var(--name-weight); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) td { background:var(--surface); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .pick { background:var(--accent-soft); color:var(--accent); font-weight:var(--name-weight); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .num { text-align:right; font-variant-numeric:tabular-nums; }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .name { font-size:var(--type-20); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .note { font-size:var(--type-16); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .fig { font-size:var(--type-36); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .name { font-size:var(--type-16); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .note { font-size:var(--type-12); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .fig { font-size:var(--type-28); }
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.tablebox[data-el="rhetis-spectrum-table"]) .note { display:none; }
+}
+/* tag */
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:normal; }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) { display:inline-flex; align-items:center; justify-content:center; width:fit-content; white-space:nowrap; flex:none; align-self:center; padding:calc(var(--gap-sm)/2) var(--gap-sm); border-radius:999px; background:var(--accent); color:var(--accent-ink); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]).hl { display:inline; border-radius:0; background:var(--accent-soft); color:var(--accent); padding:0; }
+@container (max-width: 650px) {
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .name { font-size:var(--type-20); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .note { font-size:var(--type-16); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .fig { font-size:var(--type-36); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .name { font-size:var(--type-16); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .note { font-size:var(--type-12); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .fig { font-size:var(--type-28); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .note { display:none; }
+}
+/* timeline */
+:is(.track[data-el="rhetis-spectrum-timeline"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.track[data-el="rhetis-spectrum-timeline"]) { display:flex; align-items:center; gap:var(--gap); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop { flex:1; position:relative; padding-top:var(--gap-lg); border-top:2px solid var(--line); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop::before { content:""; position:absolute; left:0; top:-7px; width:12px; height:12px; border-radius:50%; background:var(--tone-2); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .stop.on::before { background:var(--accent); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { color:var(--accent); font-size:var(--type-18); }
+:is(.track[data-el="rhetis-spectrum-timeline"]).alt .stop:nth-child(even) { transform:translateY(calc(var(--gap)*-1)); }
+:is(.track[data-el="rhetis-spectrum-timeline"]).col { flex-direction:column; align-items:stretch; }
+:is(.track[data-el="rhetis-spectrum-timeline"]).col .stop { border-top:0; border-left:2px solid var(--line); padding:var(--gap-sm) var(--pad); }
+:is(.track[data-el="rhetis-spectrum-timeline"]).col .stop::before { top:var(--gap-sm); left:-7px; }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.track[data-el="rhetis-spectrum-timeline"]) .name { font-size:var(--type-20); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { font-size:var(--type-16); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .fig { font-size:var(--type-36); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.track[data-el="rhetis-spectrum-timeline"]) .name { font-size:var(--type-16); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { font-size:var(--type-12); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .fig { font-size:var(--type-28); }
+:is(.track[data-el="rhetis-spectrum-timeline"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.track[data-el="rhetis-spectrum-timeline"]) .note { display:none; }
+}
+/* venn */
+:is(.venn[data-el="rhetis-spectrum-venn"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.venn[data-el="rhetis-spectrum-venn"]) { display:flex; align-items:center; justify-content:center; isolation:isolate; }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .set { position:relative; width:44%; aspect-ratio:1; max-height:90%; border-radius:50%; border:2px solid var(--accent); background:color-mix(in srgb,var(--accent-soft) 80%,transparent); display:grid; place-items:center; text-align:center; padding:var(--pad); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .set + .set { margin-left:calc(var(--pad)*-2); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .set.on { background:var(--accent); color:var(--accent-ink); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .core { position:absolute; z-index:3; bottom:var(--gap); font-size:var(--type-24); color:var(--accent); font-weight:var(--name-weight); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.venn[data-el="rhetis-spectrum-venn"]) .name { font-size:var(--type-20); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { font-size:var(--type-16); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .fig { font-size:var(--type-36); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.venn[data-el="rhetis-spectrum-venn"]) .name { font-size:var(--type-16); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { font-size:var(--type-12); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .fig { font-size:var(--type-28); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { display:none; }
+}
+/* versus */
+:is(.versus[data-el="rhetis-spectrum-versus"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.versus[data-el="rhetis-spectrum-versus"]) { display:flex; align-items:stretch; gap:var(--gap-lg); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .side { flex:1; min-width:0; padding:var(--pad); background:var(--surface); border-top:4px solid var(--tone-2); display:flex; flex-direction:column; gap:var(--gap); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .side.on { border-color:var(--accent); background:var(--accent-soft); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .vs { align-self:center; color:var(--accent); font-size:var(--type-28); font-weight:var(--figure-weight); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.versus[data-el="rhetis-spectrum-versus"]) .name { font-size:var(--type-20); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .note { font-size:var(--type-16); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .fig { font-size:var(--type-36); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.versus[data-el="rhetis-spectrum-versus"]) .name { font-size:var(--type-16); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .note { font-size:var(--type-12); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .fig { font-size:var(--type-28); }
+:is(.versus[data-el="rhetis-spectrum-versus"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.versus[data-el="rhetis-spectrum-versus"]) .note { display:none; }
+}
+
+ .versus[data-el="rhetis-spectrum-versus"] .side { min-height:0; } @container (max-width:650px) { .versus[data-el="rhetis-spectrum-versus"] .side { padding:var(--gap-sm); gap:var(--gap-sm); } }
+.slide {
+  --page: #ffffff;
+  --surface: #f1f6f9;
+  --surface-2: #e5edf2;
+  --ink: #162536;
+  --ink-2: #384d61;
+  --mute: #53687a;
+  --line: #bdcdd8;
+  --accent: #004391;
+  --accent-ink: #ffffff;
+  --accent-soft: #e1edf9;
+  --tone-1: #004391;
+  --tone-1-ink: #ffffff;
+  --tone-2: #3f6fa9;
+  --tone-2-ink: #ffffff;
+  --tone-3: #80a5cd;
+  --tone-3-ink: #122840;
+  --tone-4: #a3d2cc;
+  --tone-4-ink: #153d38;
+  --tone-5: #c63236;
+  --tone-5-ink: #ffffff;
+  --good: #237361;
+  --warn: #865315;
+  --bad: #bc3438;
+  --font-display: "Pretendard Variable", "Noto Sans CJK KR", sans-serif;
+  --font-body: "Pretendard Variable", "Noto Sans CJK KR", sans-serif;
+  --weight-display: 700;
+  --weight-body: 400;
+  --title-weight: 700;
+  --lead-weight: 400;
+  --figure-weight: 600;
+  --name-weight: 600;
+  --body-weight: 400;
+  --label-weight: 500;
+  --tracking-display: -0.035em;
+  --title-track: -0.035em;
+  --lead-track: -0.02em;
+  --figure-track: -0.025em;
+  --name-track: -0.025em;
+  --body-track: -0.015em;
+  --label-track: -0.015em;
+  --label-track-latin: 0.04em;
+  --radius: 18px;
+  --radius-sm: 6px;
+  --stroke: 1px;
+  --text-min: 12px;
+  --margin-x: 56px;
+  --margin-y: 44px;
+  --gap: 24px;
+  --gap-sm: 12px;
+  --gap-lg: 36px;
+  --pad: 24px;
+  --furn-edge: 24px;
+  --top-h: 28px;
+  --foot-h: 24px;
+  --furn-gap: 20px;
+  --rail-w: 84px;
+  --rail-gap: 24px;
+  --title-line: 1.2;
+  --lead-line: 1.45;
+  --figure-line: 1.1;
+  --name-line: 1.3;
+  --body-line: 1.5;
+  --label-line: 1.25;
+}
+.slide.dark {
+  --page: #101c29;
+  --surface: #1b2b3d;
+  --surface-2: #263d52;
+  --ink: #f3f7fb;
+  --ink-2: #d0deea;
+  --mute: #a9bdce;
+  --line: #4c667e;
+  --accent: #8bbdf6;
+  --accent-ink: #102741;
+  --accent-soft: #273f5a;
+  --tone-1: #8bbdf6;
+  --tone-1-ink: #102741;
+  --tone-2: #b0cef0;
+  --tone-2-ink: #142b43;
+  --tone-3: #628bbd;
+  --tone-3-ink: #102741;
+  --tone-4: #89c7bd;
+  --tone-4-ink: #102e2a;
+  --tone-5: #ff9293;
+  --tone-5-ink: #351617;
+  --good: #89d3b1;
+  --warn: #f2ca82;
+  --bad: #ff9293;
+}
+.slide { --type-8: 8px; --type-10: 10px; --type-12: 12px; --type-14: 14px; --type-16: 16px; --type-18: 18px; --type-20: 20px; --type-22: 22px; --type-24: 24px; --type-26: 26px; --type-28: 28px; --type-30: 30px; --type-32: 32px; --type-36: 36px; --type-40: 40px; --type-44: 44px; --type-48: 48px; --type-52: 52px; --type-56: 56px; --type-60: 60px; --type-64: 64px; --type-68: 68px; --type-72: 72px; --type-76: 76px; --type-80: 80px; --type-84: 84px; --type-88: 88px; --type-92: 92px; --type-96: 96px; --type-100: 100px; --type-104: 104px; --type-108: 108px; --type-112: 112px; --type-116: 116px; --type-120: 120px; --type-124: 124px; --type-128: 128px; --radius-lg: var(--radius); }
+.slide { --rhetis-spectrum-line-count: 6; --rhetis-spectrum-line-next: 0; }
+</style><style>body{margin:0;padding:24px;background:#e8e8ec;font:14px system-ui;display:grid;gap:24px;grid-template-columns:repeat(auto-fill,640px)}h2{font-size:13px;font-weight:500;margin:0 0 8px}small{color:#777;margin-left:8px}.frame{width:640px;height:360px;overflow:hidden;border-radius:6px;background:#fff}.frame>.slide{width:1280px;height:720px;transform:scale(.5);transform-origin:0 0;position:relative}</style></head><body><article><h2>foundation / cover <small>min 12x6</small></h2><div class="frame"><section class="slide cover"><div class="page"><div class="deco"></div><div class="lockup at-left"><p class="kicker">BUSINESS REPORT</p><h1 class="title">변화를 읽고<br>다음 성장을 설계합니다</h1><p class="lead">데이터에서 실행까지 연결하는 비즈니스 제안</p></div><p class="meta">전략기획팀 · 2026 연간 보고서</p></div></section></div></article><article><h2>foundation / seat <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="seat" data-ph="01" style="grid-column:1 / span 12; grid-row:1 / span 6"></div></div></div></section></div></article><article><h2>agenda / agenda-4 <small>min 6x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="agenda" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-agenda">
+  <div class="entry on"><span class="mark">01</span><p class="name">시장 변화</p><p class="note">고객이 기대하는 응답 속도</p></div>
+  <div class="entry"><span class="mark">02</span><p class="name">우리의 진단</p><p class="note">병목 세 가지</p></div>
+  <div class="entry"><span class="mark">03</span><p class="name">해결 방안과 도입 계획</p><p class="note">단계별 일정과 필요한 자원을 함께 봅니다</p></div>
+  <div class="entry"><span class="mark">04</span><p class="name">기대 효과</p><p class="note">비용과 만족도</p></div>
+</div>
+</div></div></section></div></article><article><h2>agenda / agenda-5 <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="agenda" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-agenda">
+  <div class="entry"><span class="mark">01</span><p class="name">시장 변화</p><p class="note">고객이 기대하는 응답 속도</p></div>
+  <div class="entry"><span class="mark">02</span><p class="name">우리의 진단</p><p class="note">병목 세 가지</p></div>
+  <div class="entry on"><span class="mark">03</span><p class="name">해결 방안과 도입 계획</p><p class="note">단계별 일정과 필요한 자원을 함께 봅니다</p></div>
+  <div class="entry"><span class="mark">04</span><p class="name">기대 효과</p><p class="note">비용과 만족도</p></div>
+  <div class="entry"><span class="mark">05</span><p class="name">다음 단계</p><p class="note">결정할 것들</p></div>
+</div>
+</div></div></section></div></article><article><h2>architecture / arch-2 <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-architecture">
+  <div class="layer"><b class="name">사용자 채널</b><span class="chip">웹</span><span class="chip">모바일 앱</span><span class="chip">파트너 포털</span></div>
+  <div class="layer"><b class="name">서비스</b><span class="chip">주문</span><span class="chip">결제</span><span class="chip">추천</span><span class="chip">알림</span></div>
+</div>
+</div></div></section></div></article><article><h2>architecture / arch-4 <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-architecture">
+  <div class="layer"><b class="name">사용자 채널</b><span class="chip">웹</span><span class="chip">모바일 앱</span><span class="chip">파트너 포털</span></div>
+  <div class="layer"><b class="name">서비스</b><span class="chip">주문</span><span class="chip">결제</span><span class="chip">추천</span><span class="chip">알림</span></div>
+  <div class="layer"><b class="name">데이터 플랫폼</b><span class="chip">실시간 수집</span><span class="chip">분석 창고</span><span class="chip">모델 서빙</span></div>
+  <div class="layer"><b class="name">인프라</b><span class="chip">클라우드</span><span class="chip">보안</span><span class="chip">모니터링</span></div>
+</div>
+</div></div></section></div></article><article><h2>architecture / arch-5 <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-architecture">
+  <div class="layer"><b class="name">사용자 채널</b><span class="chip">웹</span><span class="chip">모바일 앱</span><span class="chip">파트너 포털</span></div>
+  <div class="layer"><b class="name">서비스</b><span class="chip">주문</span><span class="chip">결제</span><span class="chip">추천</span><span class="chip">알림</span></div>
+  <div class="layer"><b class="name">데이터 플랫폼</b><span class="chip">실시간 수집</span><span class="chip">분석 창고</span><span class="chip">모델 서빙</span></div>
+  <div class="layer"><b class="name">인프라</b><span class="chip">클라우드</span><span class="chip">보안</span><span class="chip">모니터링</span></div>
+  <div class="layer"><b class="name">외부 연동</b><span class="chip">PG사</span><span class="chip">물류</span></div>
+</div>
+</div></div></section></div></article><article><h2>callout / callout-plain <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="callout" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-callout"><p>올해 성장의 60%는 신규 계약이 아니라 <b>기존 고객의 확장</b>에서 나옵니다.</p></div>
+</div></div></section></div></article><article><h2>callout / callout <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="callout" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-callout"><span class="icon" data-icon="lightbulb"></span><p>전환율을 가르는 것은 기능의 수가 아니라 <b>첫 7일의 활성화 경험</b>입니다.</p></div>
+</div></div></section></div></article><article><h2>card / card-2-quiet <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card quiet" data-el="rhetis-spectrum-card"><div class="parts"><p class="kick">현재</p><p class="name">부서마다 다른 도구로 흩어진 업무 기록</p><p class="note">같은 숫자를 세 번 옮겨 적고, 회의 때마다 최신 자료가 무엇인지부터 확인합니다.</p></div></div>
+  <div class="card quiet" data-el="rhetis-spectrum-card"><div class="parts"><p class="kick">도입 후</p><p class="name">하나의 작업 공간</p><p class="note">기록과 지표가 한곳에 모여 바로 결정할 수 있습니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-3-icon3d <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="seat icon" data-ph="1"></span></span><b class="name">12시간 보온</b><p class="note">62도를 유지합니다</p></div></div>
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="seat icon" data-ph="2"></span></span><b class="name">앱 연동</b><p class="note">마신 양을 기록합니다</p></div></div>
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="seat icon" data-ph="3"></span></span><b class="name">무게 310g</b><p class="note">가방에 넣기 가볍습니다</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-3-line <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card line" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">1</span><p class="name">진단</p><p class="note">현재 업무 흐름과 병목을 2주 동안 살펴봅니다.</p></div></div>
+  <div class="card line" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">2</span><p class="name">파일럿 팀 시범 운영</p><p class="note">한 팀에서 먼저 써 보고 지표를 비교해 전사 확대 여부를 정합니다.</p></div></div>
+  <div class="card line" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">3</span><p class="name">전사 확대</p><p class="note">교육과 이관을 4주 안에 마칩니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-3-on <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><p class="kick">신규 고객</p><p class="fig">1,284<small>곳</small></p><p class="name">분기 신규 계약</p><p class="note">전 분기보다 212곳 늘었습니다.</p></div></div>
+  <div class="card on" data-el="rhetis-spectrum-card"><div class="parts"><p class="kick">유지율</p><p class="fig">94.2<small>%</small></p><p class="name">엔터프라이즈 고객 재계약률</p><p class="note">도입 1년이 지난 고객의 재계약 비율로, 업계 평균보다 11%p 높습니다.</p></div></div>
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><p class="kick">응답 속도</p><p class="fig">3.6<small>시간</small></p><p class="name">평균 첫 응답 시간</p><p class="note">지원 인력 증원 없이 절반으로 줄였습니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-4 <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="icon" data-icon="rocket"></span></span><p class="name">빠른 도입</p><p class="note">기존 시스템을 바꾸지 않고 2주 안에 연동합니다.</p></div></div>
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="icon" data-icon="shield-check"></span></span><p class="name">엔터프라이즈 보안 인증</p><p class="note">ISO 27001과 ISMS-P 인증을 모두 갖췄습니다.</p></div></div>
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="icon" data-icon="chart-line"></span></span><p class="name">실시간 분석</p><p class="note">팀별 성과 지표를 대시보드 하나에서 확인하고 주간 보고서로 자동 공유합니다.</p></div></div>
+  <div class="card" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="icon" data-icon="headset"></span></span><p class="name">전담 지원</p><p class="note">담당 매니저가 평일 4시간 안에 답합니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-5-tone <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card tone-1" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">1</span><p class="name">기획</p><p class="note">문제 정의와 목표 지표 합의</p></div></div>
+  <div class="card tone-2" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">2</span><p class="name">디자인</p><p class="note">사용자 흐름과 화면 설계</p></div></div>
+  <div class="card tone-3" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">3</span><p class="name">개발과 품질 검증</p><p class="note">2주 단위 배포와 자동화 테스트로 품질을 지킵니다</p></div></div>
+  <div class="card tone-4" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">4</span><p class="name">출시</p><p class="note">단계적 공개와 모니터링</p></div></div>
+  <div class="card tone-5" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark">5</span><p class="name">운영</p><p class="note">지표 점검과 개선 반복</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-card"><div class="parts"><span class="mark"><span class="icon" data-icon="target"></span></span><p class="kick">올해의 목표</p><p class="name">연간 반복 매출 300억 달성</p><p class="note">신규 계약보다 기존 고객의 확장 계약에서 성장의 60%를 만듭니다.</p></div></div>
+</div></div></section></div></article><article><h2>chart-bar / bars-12 <small>min 8x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100" data-el="rhetis-spectrum-chart-bar">
+  <div class="bar" style="--v:32"><b>32</b><span>1월</span></div>
+  <div class="bar" style="--v:35"><b>35</b><span>2월</span></div>
+  <div class="bar" style="--v:41"><b>41</b><span>3월</span></div>
+  <div class="bar" style="--v:38"><b>38</b><span>4월</span></div>
+  <div class="bar" style="--v:47"><b>47</b><span>5월</span></div>
+  <div class="bar" style="--v:52"><b>52</b><span>6월</span></div>
+  <div class="bar" style="--v:58"><b>58</b><span>7월</span></div>
+  <div class="bar" style="--v:55"><b>55</b><span>8월</span></div>
+  <div class="bar" style="--v:63"><b>63</b><span>9월</span></div>
+  <div class="bar" style="--v:71"><b>71</b><span>10월</span></div>
+  <div class="bar" style="--v:78"><b>78</b><span>11월</span></div>
+  <div class="bar on" style="--v:92"><b>92</b><span>12월</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-3 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:80" data-el="rhetis-spectrum-chart-bar">
+  <div class="bar" style="--v:41"><b>41%</b><span>자체 채널</span></div>
+  <div class="bar on" style="--v:68"><b>68%</b><span>파트너 공동 영업</span></div>
+  <div class="bar" style="--v:23"><b>23%</b><span>광고</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-6 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:16" data-el="rhetis-spectrum-chart-bar">
+  <div class="bar" style="--v:8.4"><b>8.4억</b><span>1분기</span></div>
+  <div class="bar" style="--v:9.1"><b>9.1억</b><span>2분기</span></div>
+  <div class="bar" style="--v:10.2"><b>10.2억</b><span>3분기</span></div>
+  <div class="bar" style="--v:12.1"><b>12.1억</b><span>4분기</span></div>
+  <div class="bar" style="--v:13.4"><b>13.4억</b><span>올해 1분기</span></div>
+  <div class="bar on" style="--v:15.6"><b>15.6억</b><span>2분기 목표</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-h-5 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars h" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:50" data-el="rhetis-spectrum-chart-bar">
+  <div class="bar on" style="--v:42"><b>42%</b><span>검색 광고</span></div>
+  <div class="bar" style="--v:27"><b>27%</b><span>지인 추천</span></div>
+  <div class="bar" style="--v:16"><b>16%</b><span>뉴스레터와 블로그 콘텐츠</span></div>
+  <div class="bar" style="--v:9"><b>9%</b><span>오프라인 행사</span></div>
+  <div class="bar" style="--v:6"><b>6%</b><span>기타</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-h-8 <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars h" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100" data-el="rhetis-spectrum-chart-bar">
+  <div class="bar on" style="--v:88"><b>88점</b><span>응답 속도</span></div>
+  <div class="bar" style="--v:81"><b>81점</b><span>안정성</span></div>
+  <div class="bar" style="--v:77"><b>77점</b><span>가격</span></div>
+  <div class="bar" style="--v:72"><b>72점</b><span>온보딩</span></div>
+  <div class="bar" style="--v:64"><b>64점</b><span>고객 지원</span></div>
+  <div class="bar" style="--v:58"><b>58점</b><span>연동 범위</span></div>
+  <div class="bar" style="--v:51"><b>51점</b><span>보고서</span></div>
+  <div class="bar" style="--v:43"><b>43점</b><span>모바일 앱</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-donut / donut <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donut" style="grid-column:1 / span 12; grid-row:1 / span 6; --v:68" data-el="rhetis-spectrum-chart-donut"><b class="fig">68<small>%</small></b><p class="name">도입 3개월 안에 유료로 전환한 고객사</p></div>
+</div></div></section></div></article><article><h2>chart-donut / donuts-3 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donuts" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-chart-donut">
+  <div class="donut" style="--v:72" data-el="rhetis-spectrum-chart-donut"><b class="fig">72<small>%</small></b><p class="name">재구매율</p></div>
+  <div class="donut" style="--v:48" data-el="rhetis-spectrum-chart-donut"><b class="fig">48<small>%</small></b><p class="name">신규 고객 가운데 추천으로 들어온 비율</p></div>
+  <div class="donut" style="--v:91" data-el="rhetis-spectrum-chart-donut"><b class="fig">91<small>%</small></b><p class="name">만족도</p></div>
+</div>
+</div></div></section></div></article><article><h2>chart-donut / donuts-4 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donuts" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-chart-donut">
+  <div class="donut" style="--v:84" data-el="rhetis-spectrum-chart-donut"><b class="fig">84<small>%</small></b><p class="name">수도권</p></div>
+  <div class="donut" style="--v:61" data-el="rhetis-spectrum-chart-donut"><b class="fig">61<small>%</small></b><p class="name">호남·충청권 신규 매장</p></div>
+  <div class="donut" style="--v:47" data-el="rhetis-spectrum-chart-donut"><b class="fig">47<small>%</small></b><p class="name">영남권</p></div>
+  <div class="donut" style="--v:29" data-el="rhetis-spectrum-chart-donut"><b class="fig">29<small>%</small></b><p class="name">해외 직영점</p></div>
+</div>
+</div></div></section></div></article><article><h2>chart-line / lines-12 <small>min 8x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="lines" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100; --rhetis-spectrum-line-count:12" data-el="rhetis-spectrum-chart-line">
+  <div class="pt" style="--v:62; --rhetis-spectrum-line-next:58.0"><b>62</b><span>1월</span></div>
+  <div class="pt" style="--v:58; --rhetis-spectrum-line-next:49.0"><b>58</b><span>2월</span></div>
+  <div class="pt" style="--v:49; --rhetis-spectrum-line-next:44.0"><b>49</b><span>3월</span></div>
+  <div class="pt" style="--v:44; --rhetis-spectrum-line-next:44.0"><b>44</b><span>4월</span></div>
+  <div class="pt" style="--v:44; --rhetis-spectrum-line-next:51.0"><b>44</b><span>5월</span></div>
+  <div class="pt" style="--v:51; --rhetis-spectrum-line-next:60.0"><b>51</b><span>6월</span></div>
+  <div class="pt" style="--v:60; --rhetis-spectrum-line-next:72.0"><b>60</b><span>7월</span></div>
+  <div class="pt" style="--v:72; --rhetis-spectrum-line-next:69.0"><b>72</b><span>8월</span></div>
+  <div class="pt" style="--v:69; --rhetis-spectrum-line-next:81.0"><b>69</b><span>9월</span></div>
+  <div class="pt" style="--v:81; --rhetis-spectrum-line-next:90.0"><b>81</b><span>10월</span></div>
+  <div class="pt" style="--v:90; --rhetis-spectrum-line-next:97.0"><b>90</b><span>11월</span></div>
+  <div class="pt on" style="--v:97; --rhetis-spectrum-line-next:97.0"><b>97</b><span>12월</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-line / lines-6 <small>min 4x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="lines" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100; --rhetis-spectrum-line-count:6" data-el="rhetis-spectrum-chart-line">
+  <div class="pt" style="--v:38; --rhetis-spectrum-line-next:44.0"><b>38%</b><span>1월</span></div>
+  <div class="pt" style="--v:44; --rhetis-spectrum-line-next:41.0"><b>44%</b><span>2월</span></div>
+  <div class="pt" style="--v:41; --rhetis-spectrum-line-next:57.0"><b>41%</b><span>3월</span></div>
+  <div class="pt" style="--v:57; --rhetis-spectrum-line-next:69.0"><b>57%</b><span>4월</span></div>
+  <div class="pt" style="--v:69; --rhetis-spectrum-line-next:86.0"><b>69%</b><span>5월</span></div>
+  <div class="pt on" style="--v:86; --rhetis-spectrum-line-next:86.0"><b>86%</b><span>6월 예상</span></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-3 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-cycle">
+  <div class="core"><b class="name">성장 루프</b></div>
+  <div class="node"><b class="name">고객 문제 발견</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-4 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-cycle">
+  <div class="core"><b class="name">성장 루프</b></div>
+  <div class="node"><b class="name">고객 문제 발견</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+  <div class="node"><b class="name">측정</b><p class="note">핵심 지표 3개만 봅니다</p></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-5 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-cycle">
+  <div class="core"><b class="name">성장 루프</b></div>
+  <div class="node"><b class="name">고객 문제 발견</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+  <div class="node"><b class="name">측정</b><p class="note">핵심 지표 3개만 봅니다</p></div>
+  <div class="node"><b class="name">학습</b><p class="note">다음 가설로</p></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-6 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-cycle">
+  <div class="core"><b class="name">성장 루프</b></div>
+  <div class="node"><b class="name">고객 문제 발견</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+  <div class="node"><b class="name">측정</b><p class="note">핵심 지표 3개만 봅니다</p></div>
+  <div class="node"><b class="name">학습</b><p class="note">다음 가설로</p></div>
+  <div class="node"><b class="name">확장</b><p class="note">검증된 것만</p></div>
+</div>
+</div></div></section></div></article><article><h2>delta / alternate-delta <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="delta" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-delta"><span class="from">분기 18.2억</span><span class="to">분기 24.8억</span></div>
+</div></div></section></div></article><article><h2>delta / delta <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="delta" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-delta"><span class="from">12.1억</span><span class="to">15.6억</span></div>
+</div></div></section></div></article><article><h2>flowchart / alternate-flowchart <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="flowchart" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-flowchart">
+  <div class="node start to-r" style="grid-column:1; grid-row:1"><b class="name">문의 접수</b></div>
+  <div class="node to-r" style="grid-column:2; grid-row:1"><b class="name">요건 확인</b></div>
+  <div class="node ask to-r to-d" style="grid-column:3; grid-row:1"><b class="name">예산 승인?</b></div>
+  <div class="node end" style="grid-column:4; grid-row:1"><b class="name">계약 체결</b></div>
+  <div class="node to-l" style="grid-column:3; grid-row:2"><b class="name">견적 조정</b></div>
+  <div class="node to-u" style="grid-column:2; grid-row:2"><b class="name">담당자 재협의</b></div>
+</div>
+</div></div></section></div></article><article><h2>flowchart / flowchart <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="flowchart" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-flowchart">
+  <div class="node start to-r" style="grid-column:1; grid-row:1"><b class="name">문의 접수</b></div>
+  <div class="node to-r" style="grid-column:2; grid-row:1"><b class="name">요건 확인</b></div>
+  <div class="node ask to-r to-d" style="grid-column:3; grid-row:1"><b class="name">예산 승인?</b></div>
+  <div class="node end" style="grid-column:4; grid-row:1"><b class="name">계약 체결</b></div>
+  <div class="node to-l" style="grid-column:3; grid-row:2"><b class="name">견적 조정</b></div>
+  <div class="node to-u" style="grid-column:2; grid-row:2"><b class="name">담당자 재협의</b></div>
+</div>
+</div></div></section></div></article><article><h2>funnel / funnel-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-funnel">
+  <div class="stage" style="--v:100"><span class="name">방문</span><b class="fig">48,200</b></div>
+  <div class="stage" style="--v:42"><span class="name">무료 체험 시작</span><b class="fig">5,400</b></div>
+  <div class="stage on" style="--v:24"><span class="name">유료 전환</span><b class="fig">1,620</b></div>
+</div>
+</div></div></section></div></article><article><h2>funnel / funnel-5 <small>min 6x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-funnel">
+  <div class="stage" style="--v:100"><span class="name">방문</span><b class="fig">48,200</b></div>
+  <div class="stage" style="--v:64"><span class="name">회원 가입</span><b class="fig">12,900</b></div>
+  <div class="stage" style="--v:42"><span class="name">무료 체험 시작</span><b class="fig">5,400</b></div>
+  <div class="stage on" style="--v:24"><span class="name">유료 전환</span><b class="fig">1,620</b></div>
+  <div class="stage" style="--v:14"><span class="name">재계약</span><b class="fig">1,180</b></div>
+</div>
+</div></div></section></div></article><article><h2>funnel / funnel-6 <small>min 10x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-funnel">
+  <div class="stage" style="--v:100"><span class="name">방문</span><b class="fig">48,200</b></div>
+  <div class="stage" style="--v:64"><span class="name">회원 가입</span><b class="fig">12,900</b></div>
+  <div class="stage" style="--v:42"><span class="name">무료 체험 시작</span><b class="fig">5,400</b></div>
+  <div class="stage on" style="--v:24"><span class="name">유료 전환</span><b class="fig">1,620</b></div>
+  <div class="stage" style="--v:14"><span class="name">재계약</span><b class="fig">1,180</b></div>
+  <div class="stage" style="--v:6"><span class="name">추천</span><b class="fig">310</b></div>
+</div>
+</div></div></section></div></article><article><h2>gauge / meter-4 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stack" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="meter" style="--v:92" data-el="rhetis-spectrum-gauge"><span class="name">핵심 기능 개발</span><b class="fig">92<small>%</small></b></div>
+  <div class="meter" style="--v:74" data-el="rhetis-spectrum-gauge"><span class="name">베타 고객 온보딩과 교육 자료 제작</span><b class="fig">74<small>%</small></b></div>
+  <div class="meter" style="--v:58" data-el="rhetis-spectrum-gauge"><span class="name">결제 연동</span><b class="fig">58<small>%</small></b></div>
+  <div class="meter" style="--v:31" data-el="rhetis-spectrum-gauge"><span class="name">해외 출시 준비</span><b class="fig">31<small>%</small></b></div>
+</div>
+</div></div></section></div></article><article><h2>gauge / meter <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="meter" style="grid-column:1 / span 12; grid-row:1 / span 6; --v:72" data-el="rhetis-spectrum-gauge"><span class="name">연간 매출 목표 달성률</span><b class="fig">72<small>%</small></b></div>
+</div></div></section></div></article><article><h2>hierarchy / org-2 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-hierarchy">
+  <div class="root"><b class="name">대표이사</b></div>
+  <div class="branch"><div class="node"><b class="name">제품 본부</b></div><div class="leaf"><span class="name">기획팀</span></div><div class="leaf"><span class="name">디자인팀</span></div><div class="leaf"><span class="name">플랫폼 개발팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">사업 본부</b></div><div class="leaf"><span class="name">영업팀</span></div><div class="leaf"><span class="name">파트너 제휴팀</span></div></div>
+</div>
+</div></div></section></div></article><article><h2>hierarchy / org-3 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-hierarchy">
+  <div class="root"><b class="name">대표이사</b></div>
+  <div class="branch"><div class="node"><b class="name">제품 본부</b></div><div class="leaf"><span class="name">기획팀</span></div><div class="leaf"><span class="name">디자인팀</span></div><div class="leaf"><span class="name">플랫폼 개발팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">사업 본부</b></div><div class="leaf"><span class="name">영업팀</span></div><div class="leaf"><span class="name">파트너 제휴팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">경영 지원 본부</b></div><div class="leaf"><span class="name">재무팀</span></div><div class="leaf"><span class="name">인사팀</span></div></div>
+</div>
+</div></div></section></div></article><article><h2>hierarchy / org-4 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-hierarchy">
+  <div class="root"><b class="name">대표이사</b></div>
+  <div class="branch"><div class="node"><b class="name">제품 본부</b></div><div class="leaf"><span class="name">기획팀</span></div><div class="leaf"><span class="name">디자인팀</span></div><div class="leaf"><span class="name">플랫폼 개발팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">사업 본부</b></div><div class="leaf"><span class="name">영업팀</span></div><div class="leaf"><span class="name">파트너 제휴팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">경영 지원 본부</b></div><div class="leaf"><span class="name">재무팀</span></div><div class="leaf"><span class="name">인사팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">고객 본부</b></div><div class="leaf"><span class="name">고객 성공팀</span></div><div class="leaf"><span class="name">지원 센터</span></div></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-3 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-4 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+  <div class="spoke"><span class="mark">4</span><b class="name">자동화</b><p class="note">반복 업무 처리</p></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-5 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+  <div class="spoke"><span class="mark">4</span><b class="name">자동화</b><p class="note">반복 업무 처리</p></div>
+  <div class="spoke"><span class="mark">5</span><b class="name">보안</b><p class="note">권한과 감사</p></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-6 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+  <div class="spoke"><span class="mark">4</span><b class="name">자동화</b><p class="note">반복 업무 처리</p></div>
+  <div class="spoke"><span class="mark">5</span><b class="name">보안</b><p class="note">권한과 감사</p></div>
+  <div class="spoke"><span class="mark">6</span><b class="name">연동</b><p class="note">기존 ERP와 연결</p></div>
+</div>
+</div></div></section></div></article><article><h2>image-frame / alternate-frame <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="frame" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-image-frame"><div class="seat" data-ph="제품 02"></div></div>
+</div></div></section></div></article><article><h2>image-frame / frame <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="frame" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-image-frame"><div class="seat" data-ph="1"></div></div>
+</div></div></section></div></article><article><h2>legend / alternate-legend-bars <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stack" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="legend" data-el="rhetis-spectrum-legend"><span class="key tone-1">직접 판매</span><span class="key tone-2">구독 서비스</span><span class="key tone-3">국내외 전략 파트너 채널</span><span class="key tone-4">기타 서비스</span></div>
+  <div class="bars" style="--max:60" data-el="rhetis-spectrum-chart-bar">
+    <div class="bar tone-1" style="--v:52"><b>52%</b><span>직접 판매</span></div><div class="bar tone-2" style="--v:21"><b>21%</b><span>구독 서비스</span></div><div class="bar tone-3" style="--v:17"><b>17%</b><span>간접 수익</span></div><div class="bar tone-4" style="--v:10"><b>10%</b><span>기타 서비스</span></div>
+  </div>
+</div>
+</div></div></section></div></article><article><h2>legend / legend-bars <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stack" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="legend" data-el="rhetis-spectrum-legend"><span class="key tone-1">정기 구독</span><span class="key tone-2">단건 결제</span><span class="key tone-3">파트너 채널을 통한 간접 매출</span><span class="key tone-4">교육·컨설팅</span></div>
+  <div class="bars" style="--max:60" data-el="rhetis-spectrum-chart-bar">
+    <div class="bar tone-1" style="--v:52"><b>52%</b><span>정기 구독</span></div><div class="bar tone-2" style="--v:21"><b>21%</b><span>단건 결제</span></div><div class="bar tone-3" style="--v:17"><b>17%</b><span>간접 매출</span></div><div class="bar tone-4" style="--v:10"><b>10%</b><span>교육·컨설팅</span></div>
+  </div>
+</div>
+</div></div></section></div></article><article><h2>list / list-3 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list check" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list-check <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list check" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list-divided <small>min 6x4 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list divided" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list-num <small>min 6x4 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list num" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+  <div class="item"><p class="name">성과 점검</p><p class="note">도입 30일 뒤 지표를 함께 봅니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>logo-group / logos-6 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="logos" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-logo-group">
+  <div class="seat logo" data-ph="1"></div>
+  <div class="seat logo" data-ph="2"></div>
+  <div class="seat logo" data-ph="3"></div>
+  <div class="seat logo" data-ph="4"></div>
+  <div class="seat logo" data-ph="5"></div>
+  <div class="seat logo" data-ph="6"></div>
+</div>
+</div></div></section></div></article><article><h2>logo-group / logos-8 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="logos" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-logo-group">
+  <div class="seat logo" data-ph="1"></div>
+  <div class="seat logo" data-ph="2"></div>
+  <div class="seat logo" data-ph="3"></div>
+  <div class="seat logo" data-ph="4"></div>
+  <div class="seat logo" data-ph="5"></div>
+  <div class="seat logo" data-ph="6"></div>
+  <div class="seat logo" data-ph="7"></div>
+  <div class="seat logo" data-ph="8"></div>
+</div>
+</div></div></section></div></article><article><h2>matrix / alternate-matrix <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="matrix" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-matrix">
+  <div class="axis-y"><span>효과 큼</span><span>효과 작음</span></div>
+  <div class="axis-x"><span>쉬움</span><span>어려움</span></div>
+  <div class="cell on"><b class="name">지금 실행</b><p class="note">결제 단계 줄이기, 재방문 알림</p></div>
+  <div class="cell"><b class="name">계획해서 추진</b><p class="note">추천 엔진 교체</p></div>
+  <div class="cell"><b class="name">틈날 때</b><p class="note">문구 다듬기</p></div>
+  <div class="cell"><b class="name">하지 않음</b><p class="note">전면 리브랜딩</p></div>
+</div>
+</div></div></section></div></article><article><h2>matrix / matrix <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="matrix" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-matrix">
+  <div class="axis-y"><span>효과 큼</span><span>효과 작음</span></div>
+  <div class="axis-x"><span>쉬움</span><span>어려움</span></div>
+  <div class="cell on"><b class="name">지금 실행</b><p class="note">결제 단계 줄이기, 재방문 알림</p></div>
+  <div class="cell"><b class="name">계획해서 추진</b><p class="note">추천 엔진 교체</p></div>
+  <div class="cell"><b class="name">틈날 때</b><p class="note">문구 다듬기</p></div>
+  <div class="cell"><b class="name">하지 않음</b><p class="note">전면 리브랜딩</p></div>
+</div>
+</div></div></section></div></article><article><h2>metric / stat <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stat" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-metric"><div class="parts"><p class="kick">2026년 3분기</p><p class="fig">312<small>억 원</small></p><p class="name">연간 반복 매출</p><p class="note">목표를 4% 넘겼고, 그중 60%가 기존 고객의 확장 계약입니다.</p></div></div>
+</div></div></section></div></article><article><h2>metric / stats-3 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stats" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-metric">
+  <div class="stat" data-el="rhetis-spectrum-metric"><div class="parts"><p class="fig">2.4<small>배</small></p><p class="name">업무 처리 속도</p><p class="note">도입 3개월 뒤 측정</p></div></div>
+  <div class="stat" data-el="rhetis-spectrum-metric"><div class="parts"><p class="fig">61<small>%</small></p><p class="name">반복 보고 업무 감소</p><p class="note">주간 보고서 자동화로 줄어든 수작업 시간의 비율</p></div></div>
+  <div class="stat" data-el="rhetis-spectrum-metric"><div class="parts"><p class="fig">18<small>일</small></p><p class="name">평균 도입 기간</p><p class="note">계약부터 전사 사용까지</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>metric / stats-4 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stats" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-metric">
+  <div class="stat" data-el="rhetis-spectrum-metric"><div class="parts"><p class="fig">1,284<small>곳</small></p><p class="name">누적 고객사</p><p class="note">전년 대비 38% 증가</p></div></div>
+  <div class="stat" data-el="rhetis-spectrum-metric"><div class="parts"><p class="fig">94.2<small>%</small></p><p class="name">엔터프라이즈 재계약률</p><p class="note">업계 평균보다 11%p 높은 수준</p></div></div>
+  <div class="stat" data-el="rhetis-spectrum-metric"><div class="parts"><p class="fig">3.6<small>시간</small></p><p class="name">평균 첫 응답</p><p class="note">지난해의 절반</p></div></div>
+  <div class="stat" data-el="rhetis-spectrum-metric"><div class="parts"><p class="fig">312<small>억</small></p><p class="name">연간 반복 매출</p><p class="note">목표 대비 104%</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>person / people-3-portrait <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="people" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-person">
+  <div class="person" data-el="rhetis-spectrum-person"><div class="seat portrait" data-ph="1"></div><p class="name">김서연</p><p class="note">대표이사 · 전 네이버 검색 총괄</p></div>
+  <div class="person" data-el="rhetis-spectrum-person"><div class="seat portrait" data-ph="2"></div><p class="name">알렉산더 박준호</p><p class="note">최고기술책임자</p></div>
+  <div class="person" data-el="rhetis-spectrum-person"><div class="seat portrait" data-ph="3"></div><p class="name">이도윤</p><p class="note">제품 총괄 · 카카오와 토스에서 12년 동안 제품을 만들었습니다</p></div>
+</div>
+</div></div></section></div></article><article><h2>person / people-4 <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="people" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-person">
+  <div class="person" data-el="rhetis-spectrum-person"><div class="seat avatar" data-ph="1"></div><p class="name">김서연</p><p class="note">대표이사 · 전 네이버 검색 총괄</p></div>
+  <div class="person" data-el="rhetis-spectrum-person"><div class="seat avatar" data-ph="2"></div><p class="name">알렉산더 박준호</p><p class="note">최고기술책임자</p></div>
+  <div class="person" data-el="rhetis-spectrum-person"><div class="seat avatar" data-ph="3"></div><p class="name">이도윤</p><p class="note">제품 총괄 · 카카오와 토스에서 12년 동안 제품을 만들었습니다</p></div>
+  <div class="person" data-el="rhetis-spectrum-person"><div class="seat avatar" data-ph="4"></div><p class="name">정하은</p><p class="note">고객 성공 리드</p></div>
+</div>
+</div></div></section></div></article><article><h2>person / person <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="person" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-person"><div class="seat avatar" data-ph="1"></div><p class="name">김서연</p><p class="note">대표이사 · 전 네이버 검색 총괄</p></div>
+</div></div></section></div></article><article><h2>pill / pill-3 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="pill" data-el="rhetis-spectrum-pill"><div class="parts"><span class="mark"><span class="icon" data-icon="zap"></span></span><p class="name">즉시 연동</p><p class="note">설치 없이 5분</p></div></div>
+  <div class="pill on" data-el="rhetis-spectrum-pill"><div class="parts"><span class="mark"><span class="icon" data-icon="lock"></span></span><p class="name">엔터프라이즈 보안</p><p class="note">국제 인증 2종과 국내 인증 보유</p></div></div>
+  <div class="pill" data-el="rhetis-spectrum-pill"><div class="parts"><span class="mark"><span class="icon" data-icon="users"></span></span><p class="name">무제한 사용자</p><p class="note">추가 비용 없음</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>pill / pill <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pill" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-pill"><div class="parts"><span class="mark"><span class="icon" data-icon="calendar-check"></span></span><p class="name">11월 3일 정식 출시</p><p class="note">사전 신청 고객부터 순서대로 열립니다</p></div></div>
+</div></div></section></div></article><article><h2>pricing / alternate-plans-3 <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plans" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-pricing">
+  <div class="plan" data-el="rhetis-spectrum-pricing"><p class="name">프로젝트형</p><p class="price"><span class="fig">₩0</span><small>/ 월</small></p><div class="list check" data-el="rhetis-spectrum-list"><div class="item"><p class="name">사용자 20명</p></div><div class="item"><p class="name">프로젝트 3개</p></div><div class="item"><p class="name">커뮤니티 지원</p></div></div></div>
+  <div class="plan on" data-el="rhetis-spectrum-pricing"><p class="name">전사 통합 운영</p><p class="price"><span class="fig">₩49,000</span><small>/ 사용자 · 월</small></p><div class="list check" data-el="rhetis-spectrum-list"><div class="item"><p class="name">사용자 무제한</p></div><div class="item"><p class="name">프로젝트 무제한</p></div><div class="item"><p class="name">자동 보고서와 대시보드</p></div><div class="item"><p class="name">평일 4시간 내 응답</p></div></div><span class="tag" data-el="rhetis-spectrum-tag">추천</span></div>
+  <div class="plan" data-el="rhetis-spectrum-pricing"><p class="name">글로벌 파트너십</p><p class="price"><span class="fig">별도 협의</span><small></small></p><div class="list check" data-el="rhetis-spectrum-list"><div class="item"><p class="name">전용 인프라</p></div><div class="item"><p class="name">보안 감사 로그</p></div><div class="item"><p class="name">전담 매니저</p></div><div class="item"><p class="name">맞춤 계약</p></div></div></div>
+</div>
+</div></div></section></div></article><article><h2>pricing / plans-3 <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plans" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-pricing">
+  <div class="plan" data-el="rhetis-spectrum-pricing"><p class="name">스타터</p><p class="price"><span class="fig">₩0</span><small>/ 월</small></p><div class="list check" data-el="rhetis-spectrum-list"><div class="item"><p class="name">사용자 5명</p></div><div class="item"><p class="name">프로젝트 3개</p></div><div class="item"><p class="name">커뮤니티 지원</p></div></div></div>
+  <div class="plan on" data-el="rhetis-spectrum-pricing"><p class="name">비즈니스</p><p class="price"><span class="fig">₩29,000</span><small>/ 사용자 · 월</small></p><div class="list check" data-el="rhetis-spectrum-list"><div class="item"><p class="name">사용자 무제한</p></div><div class="item"><p class="name">프로젝트 무제한</p></div><div class="item"><p class="name">자동 보고서와 대시보드</p></div><div class="item"><p class="name">평일 4시간 내 응답</p></div></div><span class="tag" data-el="rhetis-spectrum-tag">추천</span></div>
+  <div class="plan" data-el="rhetis-spectrum-pricing"><p class="name">엔터프라이즈</p><p class="price"><span class="fig">별도 협의</span><small></small></p><div class="list check" data-el="rhetis-spectrum-list"><div class="item"><p class="name">전용 인프라</p></div><div class="item"><p class="name">보안 감사 로그</p></div><div class="item"><p class="name">전담 매니저</p></div><div class="item"><p class="name">맞춤 계약</p></div></div></div>
+</div>
+</div></div></section></div></article><article><h2>pyramid / pyramid-3 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-pyramid">
+  <div class="level"><b class="name">비전</b><p class="note">모든 팀이 데이터로 결정한다</p></div>
+  <div class="level"><b class="name">전략</b><p class="note">3년 안에 핵심 업무를 자동화</p></div>
+  <div class="level"><b class="name">실행 과제</b><p class="note">분기별 12개 과제</p></div>
+</div>
+</div></div></section></div></article><article><h2>pyramid / pyramid-4 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-pyramid">
+  <div class="level"><b class="name">비전</b><p class="note">모든 팀이 데이터로 결정한다</p></div>
+  <div class="level"><b class="name">전략</b><p class="note">3년 안에 핵심 업무를 자동화</p></div>
+  <div class="level"><b class="name">실행 과제</b><p class="note">분기별 12개 과제</p></div>
+  <div class="level"><b class="name">운영 기반</b><p class="note">데이터 표준과 권한 체계, 교육 프로그램</p></div>
+</div>
+</div></div></section></div></article><article><h2>pyramid / pyramid-5 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-pyramid">
+  <div class="level"><b class="name">비전</b><p class="note">모든 팀이 데이터로 결정한다</p></div>
+  <div class="level"><b class="name">전략</b><p class="note">3년 안에 핵심 업무를 자동화</p></div>
+  <div class="level"><b class="name">실행 과제</b><p class="note">분기별 12개 과제</p></div>
+  <div class="level"><b class="name">운영 기반</b><p class="note">데이터 표준과 권한 체계, 교육 프로그램</p></div>
+  <div class="level"><b class="name">문화</b><p class="note">실험을 권장</p></div>
+</div>
+</div></div></section></div></article><article><h2>quote / quote-big <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="quote big" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-quote"><blockquote>좋은 도구는 일을 줄이는 것이 아니라, 해야 할 일을 분명하게 만듭니다.</blockquote><div class="by"><div class="seat avatar" data-ph="1"></div><p class="name">김서연</p><p class="note">대표이사</p></div></div>
+</div></div></section></div></article><article><h2>quote / quote <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="quote" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-quote"><blockquote>도입 석 달 만에 주간 보고에 쓰던 시간이 절반으로 줄었고, 회의는 숫자를 맞추는 자리에서 결정을 내리는 자리로 바뀌었습니다.</blockquote><div class="by"><div class="seat avatar" data-ph="1"></div><p class="name">박지훈</p><p class="note">한빛물산 운영본부장</p></div></div>
+</div></div></section></div></article><article><h2>steps / steps-3 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-steps">
+  <div class="step"><span class="mark">1</span><p class="name">문의 접수</p><p class="note">채널과 관계없이 한곳으로 모읍니다.</p></div>
+  <div class="step"><span class="mark">2</span><p class="name">자동 분류</p><p class="note">유형과 긴급도를 판단합니다.</p></div>
+  <div class="step"><span class="mark">3</span><p class="name">담당자 배정과 알림</p><p class="note">업무량을 보고 가장 빨리 답할 수 있는 담당자에게 넘깁니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>steps / steps-5 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-steps">
+  <div class="step"><span class="mark">1</span><p class="name">문의 접수</p><p class="note">채널과 관계없이 한곳으로 모읍니다.</p></div>
+  <div class="step"><span class="mark">2</span><p class="name">자동 분류</p><p class="note">유형과 긴급도를 판단합니다.</p></div>
+  <div class="step"><span class="mark">3</span><p class="name">담당자 배정과 알림</p><p class="note">업무량을 보고 가장 빨리 답할 수 있는 담당자에게 넘깁니다.</p></div>
+  <div class="step"><span class="mark">4</span><p class="name">해결</p><p class="note">답변 초안을 함께 제안합니다.</p></div>
+  <div class="step"><span class="mark">5</span><p class="name">회고</p><p class="note">반복 문의를 문서로 남깁니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>steps / steps-col-4 <small>min 6x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps col" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-steps">
+  <div class="step"><span class="mark">1</span><p class="name">문의 접수</p><p class="note">채널과 관계없이 한곳으로 모읍니다.</p></div>
+  <div class="step"><span class="mark">2</span><p class="name">자동 분류</p><p class="note">유형과 긴급도를 판단합니다.</p></div>
+  <div class="step"><span class="mark">3</span><p class="name">담당자 배정과 알림</p><p class="note">업무량을 보고 가장 빨리 답할 수 있는 담당자에게 넘깁니다.</p></div>
+  <div class="step"><span class="mark">4</span><p class="name">해결</p><p class="note">답변 초안을 함께 제안합니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>table / table-3x3 <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-table">
+  <table class="table">
+    <thead><tr><th>지표</th><th class="num">작년</th><th class="num pick">올해</th></tr></thead>
+    <tbody>
+      <tr><th>매출</th><td class="num">12.1억</td><td class="num pick">15.6억</td></tr>
+      <tr><th>신규 유료 고객사</th><td class="num">184곳</td><td class="num pick">312곳</td></tr>
+      <tr><th>재계약률</th><td class="num">81%</td><td class="num pick">92%</td></tr>
+    </tbody>
+  </table>
+</div>
+</div></div></section></div></article><article><h2>table / table-5x4 <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-table">
+  <table class="table">
+    <thead><tr><th>요금제</th><th class="num">월 요금</th><th class="num pick">연 요금</th><th class="num">사용자</th><th>지원</th></tr></thead>
+    <tbody>
+      <tr><th>스타터</th><td class="num">9,900원</td><td class="num pick">99,000원</td><td class="num">3명</td><td>이메일</td></tr>
+      <tr><th>팀</th><td class="num">29,000원</td><td class="num pick">290,000원</td><td class="num">20명</td><td>채팅</td></tr>
+      <tr><th>비즈니스 플러스 연간 약정</th><td class="num">79,000원</td><td class="num pick">790,000원</td><td class="num">100명</td><td>전담 매니저</td></tr>
+      <tr><th>엔터프라이즈</th><td class="num">별도 협의</td><td class="num pick">별도 협의</td><td class="num">무제한</td><td>24시간 전화</td></tr>
+    </tbody>
+  </table>
+</div>
+</div></div></section></div></article><article><h2>table / table-7x6 <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-table">
+  <table class="table">
+    <thead><tr><th>지역</th><th class="num">1월</th><th class="num">2월</th><th class="num">3월</th><th class="num">4월</th><th class="num">5월</th><th class="num pick">6월</th></tr></thead>
+    <tbody>
+      <tr><th>서울</th><td class="num">412</td><td class="num">438</td><td class="num">455</td><td class="num">471</td><td class="num">502</td><td class="num pick">538</td></tr>
+      <tr><th>경기·인천</th><td class="num">288</td><td class="num">301</td><td class="num">297</td><td class="num">325</td><td class="num">340</td><td class="num pick">362</td></tr>
+      <tr><th>부산·울산·경남</th><td class="num">154</td><td class="num">149</td><td class="num">163</td><td class="num">170</td><td class="num">181</td><td class="num pick">196</td></tr>
+      <tr><th>대구·경북</th><td class="num">97</td><td class="num">102</td><td class="num">99</td><td class="num">108</td><td class="num">113</td><td class="num pick">121</td></tr>
+      <tr><th>호남</th><td class="num">76</td><td class="num">80</td><td class="num">84</td><td class="num">83</td><td class="num">91</td><td class="num pick">98</td></tr>
+      <tr><th>해외</th><td class="num">31</td><td class="num">36</td><td class="num">44</td><td class="num">52</td><td class="num">67</td><td class="num pick">85</td></tr>
+    </tbody>
+  </table>
+</div>
+</div></div></section></div></article><article><h2>tag / alternate-tag-hl <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-card"><div class="parts"><p class="kick"><span class="tag" data-el="rhetis-spectrum-tag">검토 완료</span></p><p class="name">고객 중심의 신규 서비스 전략</p><p class="note">분기별 핵심 성과와 개선 기회를 <span class="hl" data-el="rhetis-spectrum-tag">검증된 데이터</span>으로 받아 봅니다.</p></div></div>
+</div></div></section></div></article><article><h2>tag / tag-hl <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-card"><div class="parts"><p class="kick"><span class="tag" data-el="rhetis-spectrum-tag">신규</span></p><p class="name">자동 보고서</p><p class="note">매주 월요일 아침, 지난주 지표를 <span class="hl" data-el="rhetis-spectrum-tag">요약 한 장</span>으로 받아 봅니다.</p></div></div>
+</div></div></section></div></article><article><h2>timeline / track-4 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="track" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-timeline">
+  <div class="stop"><p class="kick">2023.03</p><p class="name">법인 설립</p><p class="note">세 명이 시작했습니다.</p></div>
+  <div class="stop"><p class="kick">2023.11</p><p class="name">첫 유료 고객</p><p class="note">제조업 고객 12곳</p></div>
+  <div class="stop on"><p class="kick">2024.06</p><p class="name">시리즈 A 투자 유치</p><p class="note">누적 투자금 120억 원을 확보했습니다.</p></div>
+  <div class="stop"><p class="kick">2025.02</p><p class="name">일본 진출</p><p class="note">도쿄 지사 설립</p></div>
+</div>
+</div></div></section></div></article><article><h2>timeline / track-6 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="track" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-timeline">
+  <div class="stop"><p class="kick">2023.03</p><p class="name">법인 설립</p><p class="note">세 명이 시작했습니다.</p></div>
+  <div class="stop"><p class="kick">2023.11</p><p class="name">첫 유료 고객</p><p class="note">제조업 고객 12곳</p></div>
+  <div class="stop"><p class="kick">2024.06</p><p class="name">시리즈 A 투자 유치</p><p class="note">누적 투자금 120억 원을 확보했습니다.</p></div>
+  <div class="stop"><p class="kick">2025.02</p><p class="name">일본 진출</p><p class="note">도쿄 지사 설립</p></div>
+  <div class="stop on"><p class="kick">2025.10</p><p class="name">고객 1,000곳</p><p class="note">재계약률 94%</p></div>
+  <div class="stop"><p class="kick">2026.09</p><p class="name">흑자 전환</p><p class="note">분기 영업이익 달성</p></div>
+</div>
+</div></div></section></div></article><article><h2>timeline / track-alt-5 <small>min 8x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body">
+<div class="track alt" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-timeline">
+  <div class="stop"><p class="kick">2023.03</p><p class="name">법인 설립</p><p class="note">세 명이 시작했습니다.</p></div>
+  <div class="stop"><p class="kick">2023.11</p><p class="name">첫 유료 고객</p><p class="note">제조업 고객 12곳</p></div>
+  <div class="stop"><p class="kick">2024.06</p><p class="name">시리즈 A 투자 유치</p><p class="note">누적 투자금 120억 원을 확보했습니다.</p></div>
+  <div class="stop on"><p class="kick">2025.02</p><p class="name">일본 진출</p><p class="note">도쿄 지사 설립</p></div>
+  <div class="stop"><p class="kick">2025.10</p><p class="name">고객 1,000곳</p><p class="note">재계약률 94%</p></div>
+</div>
+</div></div></section></div></article><article><h2>venn / venn-2 <small>min 3x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="venn" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-venn">
+  <div class="set"><b class="name">고객이 원하는 것</b></div>
+  <div class="set"><b class="name">우리가 잘하는 것</b></div>
+  <b class="core">집중 영역</b>
+</div>
+</div></div></section></div></article><article><h2>venn / venn-3 <small>min 3x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="venn" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-venn">
+  <div class="set"><b class="name">시장 수요</b></div>
+  <div class="set"><b class="name">기술 역량</b></div>
+  <div class="set"><b class="name">수익성</b></div>
+  <b class="core">기회</b>
+</div>
+</div></div></section></div></article><article><h2>versus / alternate-versus <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="versus" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-versus">
+  <div class="side"><b class="name">직접 구축</b><div class="list" data-el="rhetis-spectrum-list"><div class="item"><span class="name">초기 투자 4.2억</span></div><div class="item"><span class="name">전담 개발자 6명과 운영 인력이 필요</span></div><div class="item"><span class="name">출시까지 9개월</span></div></div></div>
+  <b class="vs">VS</b>
+  <div class="side on"><b class="name">구독형 도입</b><div class="list" data-el="rhetis-spectrum-list"><div class="item"><span class="name">월 290만 원</span></div><div class="item"><span class="name">운영 인력 1명</span></div><div class="item"><span class="name">6주 안에 전사 적용</span></div></div></div>
+</div>
+</div></div></section></div></article><article><h2>versus / versus <small>min 8x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="versus" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="rhetis-spectrum-versus">
+  <div class="side"><b class="name">직접 구축</b><div class="list" data-el="rhetis-spectrum-list"><div class="item"><span class="name">초기 투자 4.2억</span></div><div class="item"><span class="name">전담 개발자 6명과 운영 인력이 필요</span></div><div class="item"><span class="name">출시까지 9개월</span></div></div></div>
+  <b class="vs">VS</b>
+  <div class="side on"><b class="name">구독형 도입</b><div class="list" data-el="rhetis-spectrum-list"><div class="item"><span class="name">월 290만 원</span></div><div class="item"><span class="name">운영 인력 1명</span></div><div class="item"><span class="name">6주 안에 전사 적용</span></div></div></div>
+</div>
+</div></div></section></div></article></body></html>

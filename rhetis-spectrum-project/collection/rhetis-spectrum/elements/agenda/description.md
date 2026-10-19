@@ -1,0 +1,1 @@
+Numbered contents entries align a blue index, strong section name and quieter explanation along fine horizontal rules. An active entry uses a pale blue band and blue leading edge. Narrow slots place the explanation beneath its section name.

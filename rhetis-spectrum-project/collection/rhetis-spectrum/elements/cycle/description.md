@@ -1,0 +1,1 @@
+A circular blue track connects pale nodes arranged around a solid blue center. Directional arrows show clockwise progression. Nodes keep short bold names and quieter explanations, combining a process loop with an explicit shared objective.

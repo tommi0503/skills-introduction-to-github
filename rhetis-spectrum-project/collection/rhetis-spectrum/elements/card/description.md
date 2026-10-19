@@ -1,0 +1,1 @@
+Rectangular information planes use restrained six-pixel corners, thin blue-gray outlines and generous internal space. Solid blue emphasis reverses the text, while the five tone variants provide a deliberate sequence from corporate blue through mint to coral. Figure, name and supporting copy form a calm vertical stack.

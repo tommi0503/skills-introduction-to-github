@@ -1,0 +1,1 @@
+Tables use a saturated blue header, pale body rows and thin horizontal dividers. A highlighted column uses a pale blue plane with blue text. Numeric columns align right and use tabular figures for quick comparison.

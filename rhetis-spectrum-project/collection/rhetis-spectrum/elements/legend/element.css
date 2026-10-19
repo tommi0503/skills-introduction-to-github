@@ -1,0 +1,27 @@
+:is(.legend[data-el="rhetis-spectrum-legend"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.legend[data-el="rhetis-spectrum-legend"]) { display:flex; flex-wrap:wrap; justify-content:center; align-content:center; gap:var(--gap); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .key { display:flex; gap:var(--gap-sm); align-items:center; font-size:var(--type-18); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .key::before { content:""; width:12px; height:12px; background:var(--tone-1); border-radius:50%; }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-1::before { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-2::before { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-3::before { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-4::before { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .tone-5::before { background:var(--tone-5); color:var(--tone-5-ink); }
+@container (max-width: 650px) {
+:is(.legend[data-el="rhetis-spectrum-legend"]) .name { font-size:var(--type-20); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { font-size:var(--type-16); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .fig { font-size:var(--type-36); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.legend[data-el="rhetis-spectrum-legend"]) .name { font-size:var(--type-16); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { font-size:var(--type-12); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .fig { font-size:var(--type-28); }
+:is(.legend[data-el="rhetis-spectrum-legend"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.legend[data-el="rhetis-spectrum-legend"]) .note { display:none; }
+}

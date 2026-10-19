@@ -1,0 +1,1 @@
+A compact horizontal key associates each series with a small circular palette marker. Labels retain the business body rhythm, and the group wraps cleanly when several longer series names share a slot.

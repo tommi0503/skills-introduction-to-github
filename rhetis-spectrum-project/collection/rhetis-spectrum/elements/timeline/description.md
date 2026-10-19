@@ -1,0 +1,1 @@
+A thin blue-gray track carries circular stops, compact dates and short business milestones. An active stop deepens the blue emphasis. Alternate and vertical arrangements preserve the same fine connector language.

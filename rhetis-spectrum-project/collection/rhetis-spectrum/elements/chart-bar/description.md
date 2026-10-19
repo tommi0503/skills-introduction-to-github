@@ -1,0 +1,1 @@
+Simple blue rectangular bars rise from a fine baseline; quieter series use the secondary palette. Values sit just above each mark and categories below it. The horizontal variant moves category labels to the left and values to the right.

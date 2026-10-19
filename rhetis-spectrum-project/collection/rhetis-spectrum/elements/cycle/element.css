@@ -1,0 +1,38 @@
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap-sm); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .core { grid-area:2/2; border-radius:50%; background:var(--accent); color:var(--accent-ink); display:grid; place-items:center; text-align:center; padding:var(--gap-sm); font-size:var(--type-24); font-weight:var(--name-weight); z-index:2; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node { position:relative; border:var(--stroke) solid var(--line); background:var(--surface); border-radius:var(--radius-sm); padding:var(--gap-sm); display:flex; flex-direction:column; justify-content:center; gap:calc(var(--gap-sm)/2); text-align:center; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(2) { grid-area:1/2; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(3) { grid-area:2/3; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(4) { grid-area:3/2; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(5) { grid-area:2/1; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(6) { grid-area:1/1; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node:nth-child(7) { grid-area:3/3; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .node::after { content:"↻"; color:var(--accent); position:absolute; right:calc(var(--gap-sm)*-1); top:45%; font-size:var(--type-24); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .mark { color:var(--accent); font-size:var(--type-24); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-14); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .name { font-size:var(--type-20); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-16); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .fig { font-size:var(--type-36); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .name { font-size:var(--type-16); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { font-size:var(--type-12); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .fig { font-size:var(--type-28); }
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.cycle[data-el="rhetis-spectrum-cycle"]) .note { display:none; }
+}
+
+.cycle[data-el="rhetis-spectrum-cycle"] { isolation:isolate; }
+.cycle[data-el="rhetis-spectrum-cycle"]::before { content:""; position:absolute; inset:20%; border:2px solid var(--accent); border-radius:50%; z-index:-1; }
+.cycle[data-el="rhetis-spectrum-cycle"] .node::after { content:"→"; right:calc(var(--gap-sm)*-1); }
+.cycle[data-el="rhetis-spectrum-cycle"] .node:nth-child(3)::after { content:"↓"; top:100%; right:50%; }
+.cycle[data-el="rhetis-spectrum-cycle"] .node:nth-child(4)::after { content:"←"; left:calc(var(--gap-sm)*-1); right:auto; }
+.cycle[data-el="rhetis-spectrum-cycle"] .node:nth-child(5)::after { content:"↑"; top:calc(var(--gap-sm)*-2); right:50%; }

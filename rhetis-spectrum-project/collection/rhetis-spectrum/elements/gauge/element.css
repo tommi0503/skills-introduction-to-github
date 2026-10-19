@@ -1,0 +1,22 @@
+:is(.meter[data-el="rhetis-spectrum-gauge"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) { display:grid; grid-template-columns:1fr auto; align-content:center; gap:var(--gap-sm); padding-bottom:var(--gap); }
+:is(.meter[data-el="rhetis-spectrum-gauge"])::after { content:""; position:absolute; bottom:0; left:0; right:0; height:12px; border-radius:999px; background:linear-gradient(to right,var(--accent) calc(var(--v)*1%),var(--surface-2) 0); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig { font-size:var(--type-32); font-weight:var(--figure-weight); color:var(--accent); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name { font-size:var(--type-20); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { font-size:var(--type-16); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig { font-size:var(--type-36); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .name { font-size:var(--type-16); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { font-size:var(--type-12); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .fig { font-size:var(--type-28); }
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.meter[data-el="rhetis-spectrum-gauge"]) .note { display:none; }
+}

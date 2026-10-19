@@ -1,0 +1,39 @@
+:is(.hub[data-el="rhetis-spectrum-hub"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap-sm); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .core { grid-area:2/2; border-radius:50%; background:var(--accent); color:var(--accent-ink); display:grid; place-items:center; text-align:center; padding:var(--gap-sm); font-size:var(--type-24); font-weight:var(--name-weight); z-index:2; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke { position:relative; border:var(--stroke) solid var(--line); background:var(--surface); border-radius:var(--radius-sm); padding:var(--gap-sm); display:flex; flex-direction:column; justify-content:center; gap:calc(var(--gap-sm)/2); text-align:center; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(2) { grid-area:1/2; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(3) { grid-area:2/3; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(4) { grid-area:3/2; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(5) { grid-area:2/1; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(6) { grid-area:1/1; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke:nth-child(7) { grid-area:3/3; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .spoke::after { content:"—"; color:var(--accent); position:absolute; right:calc(var(--gap-sm)*-1); top:45%; font-size:var(--type-24); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .mark { color:var(--accent); font-size:var(--type-24); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-14); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.hub[data-el="rhetis-spectrum-hub"]) .name { font-size:var(--type-20); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-16); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .fig { font-size:var(--type-36); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.hub[data-el="rhetis-spectrum-hub"]) .name { font-size:var(--type-16); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { font-size:var(--type-12); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .fig { font-size:var(--type-28); }
+:is(.hub[data-el="rhetis-spectrum-hub"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.hub[data-el="rhetis-spectrum-hub"]) .note { display:none; }
+}
+
+.hub[data-el="rhetis-spectrum-hub"] .spoke::after { content:""; background:var(--accent); right:auto; top:auto; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(2)::after { left:50%; top:100%; height:var(--gap-sm); width:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(3)::after { right:100%; top:50%; width:var(--gap-sm); height:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(4)::after { left:50%; bottom:100%; height:var(--gap-sm); width:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(5)::after { left:100%; top:50%; width:var(--gap-sm); height:2px; }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(6)::after { left:100%; top:100%; width:calc(var(--gap-sm)*1.414); height:2px; transform-origin:0 0; transform:rotate(45deg); }
+.hub[data-el="rhetis-spectrum-hub"] .spoke:nth-child(7)::after { right:100%; bottom:100%; width:calc(var(--gap-sm)*1.414); height:2px; transform-origin:100% 100%; transform:rotate(45deg); }

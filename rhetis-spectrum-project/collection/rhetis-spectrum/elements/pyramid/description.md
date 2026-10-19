@@ -1,0 +1,1 @@
+A stack of centered, progressively wider tiers forms a restrained stepped pyramid. The top tier uses solid blue and reversed type, while lower levels use pale planes and blue baseline rules. Both name and supporting note remain aligned to the center.

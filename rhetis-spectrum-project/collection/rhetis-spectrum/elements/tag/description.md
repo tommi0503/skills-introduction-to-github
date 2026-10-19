@@ -1,0 +1,1 @@
+Small solid blue labels use fully rounded ends and carefully centered lettering. Inline highlights instead use a pale blue ground and dark blue type, keeping a sentence continuous without adding a card-like container.

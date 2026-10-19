@@ -1,0 +1,35 @@
+:is(.card[data-el="rhetis-spectrum-card"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.card[data-el="rhetis-spectrum-card"]) { display:flex; align-items:center; padding:var(--pad); background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); }
+:is(.card[data-el="rhetis-spectrum-card"]).on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+:is(.card[data-el="rhetis-spectrum-card"]).quiet { background:transparent; border-color:transparent; }
+:is(.card[data-el="rhetis-spectrum-card"]).line { background:var(--page); border-color:var(--accent); }
+:is(.card[data-el="rhetis-spectrum-card"]) .parts { display:flex; flex-direction:column; gap:var(--gap-sm); min-width:0; }
+:is(.card[data-el="rhetis-spectrum-card"]) .mark { font-size:var(--type-32); color:var(--accent); }
+:is(.card[data-el="rhetis-spectrum-card"]).on .mark { color:inherit; }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig small { font-size:var(--type-20); }
+:is(.card[data-el="rhetis-spectrum-card"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="rhetis-spectrum-card"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.card[data-el="rhetis-spectrum-card"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-1 { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-2 { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-3 { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-4 { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.card[data-el="rhetis-spectrum-card"]).tone-5 { background:var(--tone-5); color:var(--tone-5-ink); }
+@container (max-width: 650px) {
+:is(.card[data-el="rhetis-spectrum-card"]) .name { font-size:var(--type-20); }
+:is(.card[data-el="rhetis-spectrum-card"]) .note { font-size:var(--type-16); }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig { font-size:var(--type-36); }
+:is(.card[data-el="rhetis-spectrum-card"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.card[data-el="rhetis-spectrum-card"]) .name { font-size:var(--type-16); }
+:is(.card[data-el="rhetis-spectrum-card"]) .note { font-size:var(--type-12); }
+:is(.card[data-el="rhetis-spectrum-card"]) .fig { font-size:var(--type-28); }
+:is(.card[data-el="rhetis-spectrum-card"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.card[data-el="rhetis-spectrum-card"]) .note { display:none; }
+}
+
+@container (max-width: 650px) { .card[data-el="rhetis-spectrum-card"] { padding:var(--gap-sm); } .card[data-el="rhetis-spectrum-card"] .parts { gap:calc(var(--gap-sm)/2); } }

@@ -1,0 +1,1 @@
+Four generous quadrants share fine blue-gray boundaries and quiet surfaces. One selected quadrant becomes saturated blue with reversed type. Axis labels remain outside the cells so that the comparison stays legible.

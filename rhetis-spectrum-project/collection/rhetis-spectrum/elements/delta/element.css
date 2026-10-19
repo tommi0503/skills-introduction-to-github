@@ -1,0 +1,23 @@
+:is(.delta[data-el="rhetis-spectrum-delta"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap-lg); font-size:var(--type-44); font-weight:var(--figure-weight); }
+:is(.delta[data-el="rhetis-spectrum-delta"])::before { content:"→"; color:var(--accent); order:1; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .from { color:var(--mute); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .to { color:var(--accent); order:2; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.delta[data-el="rhetis-spectrum-delta"]) .name { font-size:var(--type-20); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { font-size:var(--type-16); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .fig { font-size:var(--type-36); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.delta[data-el="rhetis-spectrum-delta"]) .name { font-size:var(--type-16); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { font-size:var(--type-12); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .fig { font-size:var(--type-28); }
+:is(.delta[data-el="rhetis-spectrum-delta"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.delta[data-el="rhetis-spectrum-delta"]) .note { display:none; }
+}

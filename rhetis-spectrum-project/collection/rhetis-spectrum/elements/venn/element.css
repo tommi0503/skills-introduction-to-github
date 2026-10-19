@@ -1,0 +1,24 @@
+:is(.venn[data-el="rhetis-spectrum-venn"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.venn[data-el="rhetis-spectrum-venn"]) { display:flex; align-items:center; justify-content:center; isolation:isolate; }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .set { position:relative; width:44%; aspect-ratio:1; max-height:90%; border-radius:50%; border:2px solid var(--accent); background:color-mix(in srgb,var(--accent-soft) 80%,transparent); display:grid; place-items:center; text-align:center; padding:var(--pad); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .set + .set { margin-left:calc(var(--pad)*-2); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .set.on { background:var(--accent); color:var(--accent-ink); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .core { position:absolute; z-index:3; bottom:var(--gap); font-size:var(--type-24); color:var(--accent); font-weight:var(--name-weight); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.venn[data-el="rhetis-spectrum-venn"]) .name { font-size:var(--type-20); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { font-size:var(--type-16); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .fig { font-size:var(--type-36); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.venn[data-el="rhetis-spectrum-venn"]) .name { font-size:var(--type-16); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { font-size:var(--type-12); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .fig { font-size:var(--type-28); }
+:is(.venn[data-el="rhetis-spectrum-venn"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.venn[data-el="rhetis-spectrum-venn"]) .note { display:none; }
+}

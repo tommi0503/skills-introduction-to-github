@@ -1,0 +1,1 @@
+A pale blue statement band uses a strong left edge and an emphatic blue phrase rather than a large ornament. Its centered sentence remains the single point of attention, with an optional compact icon beside it.

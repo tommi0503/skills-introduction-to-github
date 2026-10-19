@@ -1,0 +1,1 @@
+Three clear plan panels combine a strong name, prominent blue price and concise check list. The recommended plan uses a blue outline and pale fill with a rounded recommendation label. Narrower supported slots step down price typography and internal spacing.

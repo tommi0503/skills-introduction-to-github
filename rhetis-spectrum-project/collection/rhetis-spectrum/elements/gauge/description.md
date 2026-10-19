@@ -1,0 +1,1 @@
+A compact label and right-aligned figure sit above a low pill-shaped progress rail. Blue shows the achieved portion, while the remainder uses a quiet surface tone. Several gauges stack into a clean operational scorecard.

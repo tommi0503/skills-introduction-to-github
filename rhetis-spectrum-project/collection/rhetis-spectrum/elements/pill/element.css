@@ -1,0 +1,27 @@
+:is(.pill[data-el="rhetis-spectrum-pill"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.pill[data-el="rhetis-spectrum-pill"]) { display:flex; align-items:center; justify-content:center; border-radius:999px; background:var(--accent-soft); padding:var(--gap-sm) var(--pad); border:var(--stroke) solid transparent; }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .parts { display:flex; align-items:center; justify-content:center; gap:var(--gap-sm); width:100%; }
+:is(.pill[data-el="rhetis-spectrum-pill"]).on { background:var(--accent); color:var(--accent-ink); }
+:is(.pill[data-el="rhetis-spectrum-pill"]).line { border-color:var(--accent); background:var(--page); }
+:is(.pill[data-el="rhetis-spectrum-pill"]).quiet { background:var(--surface); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name { font-size:var(--type-20); text-align:center; }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { font-size:var(--type-14); }
+@container (max-width: 650px) {
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name { font-size:var(--type-20); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { font-size:var(--type-16); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .fig { font-size:var(--type-36); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.pill[data-el="rhetis-spectrum-pill"]) .name { font-size:var(--type-16); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { font-size:var(--type-12); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .fig { font-size:var(--type-28); }
+:is(.pill[data-el="rhetis-spectrum-pill"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.pill[data-el="rhetis-spectrum-pill"]) .note { display:none; }
+}
+
+.pill[data-el="rhetis-spectrum-pill"] { align-self:center; height:100%; max-height:80px; }
+
+@container (max-width:380px) { .pill[data-el="rhetis-spectrum-pill"] .parts { gap:calc(var(--gap-sm)/2); } .pill[data-el="rhetis-spectrum-pill"] .name { font-size:var(--type-14); } .pill[data-el="rhetis-spectrum-pill"] .note { display:none; } }

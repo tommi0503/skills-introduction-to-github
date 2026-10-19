@@ -1,0 +1,1 @@
+Two quiet comparison panels share one centered blue VS mark. A blue top rule and pale blue fill identify the proposed option. Each side carries an independently scoped business list, keeping all supporting arguments aligned.

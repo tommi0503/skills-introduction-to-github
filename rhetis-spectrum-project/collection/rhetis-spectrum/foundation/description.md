@@ -1,0 +1,1 @@
+A twelve-column six-row presentation grid with spacious margins, a fine rule below the heading and compact page furniture. Covers use an angular blue ribbon adapted from the corporate report references. Image seats are calm monochrome planes; they never invent photography.

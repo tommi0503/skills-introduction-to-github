@@ -1,0 +1,39 @@
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) { display:flex; align-items:stretch; justify-content:space-around; gap:var(--gap-sm); padding:var(--gap-lg) var(--gap-sm) var(--gap-lg); border-bottom:var(--stroke) solid var(--line); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar { flex:1; position:relative; align-self:end; height:calc(var(--v)/var(--max)*85%); background:var(--tone-2); max-width:100px; min-height:2px; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar.on { background:var(--accent); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar b { position:absolute; bottom:100%; width:100%; text-align:center; font-size:var(--type-18); color:var(--ink); font-weight:var(--figure-weight); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .bar span { position:absolute; top:100%; padding-top:var(--gap-sm); width:100%; text-align:center; font-size:var(--type-16); color:var(--ink-2); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h { flex-direction:column; padding-left:calc(var(--pad)*4); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar { align-self:start; height:auto; min-height:20px; width:calc(var(--v)/var(--max)*92%); max-width:none; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar span { top:0; right:calc(100% + var(--gap-sm)); width:calc(var(--pad)*3); padding:0; text-align:right; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]).h .bar b { bottom:auto; left:calc(100% + var(--gap-sm)); width:auto; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-1 { background:var(--tone-1); color:var(--tone-1-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-2 { background:var(--tone-2); color:var(--tone-2-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-3 { background:var(--tone-3); color:var(--tone-3-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-4 { background:var(--tone-4); color:var(--tone-4-ink); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .tone-5 { background:var(--tone-5); color:var(--tone-5-ink); }
+@container (max-width: 650px) {
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name { font-size:var(--type-20); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { font-size:var(--type-16); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig { font-size:var(--type-36); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .name { font-size:var(--type-16); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { font-size:var(--type-12); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .fig { font-size:var(--type-28); }
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.bars[data-el="rhetis-spectrum-chart-bar"]) .note { display:none; }
+}
+
+.bars[data-el="rhetis-spectrum-chart-bar"]:not(.h) { padding-bottom:calc(var(--gap-lg)*2); }
+.bars[data-el="rhetis-spectrum-chart-bar"] .bar span { line-height:var(--label-line); }
+.bars[data-el="rhetis-spectrum-chart-bar"].h { padding-left:calc(var(--pad)*5); }
+.bars[data-el="rhetis-spectrum-chart-bar"].h .bar span { width:calc(var(--pad)*4); font-size:var(--type-14); }
+.bars[data-el="rhetis-spectrum-chart-bar"].h .bar b { white-space:nowrap; }

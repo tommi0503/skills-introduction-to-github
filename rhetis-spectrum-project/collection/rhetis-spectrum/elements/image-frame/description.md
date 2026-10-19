@@ -1,0 +1,1 @@
+A fine blue-gray outline and a small white inset frame a neutral image seat. The design deliberately contributes only containment and alignment, leaving photography and complex illustration to the page author.

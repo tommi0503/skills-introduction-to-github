@@ -1,0 +1,25 @@
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) { display:flex; flex-direction:column; justify-content:space-evenly; gap:var(--gap-sm); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .entry { display:grid; grid-template-columns:52px 1fr 1.4fr; align-items:center; gap:var(--gap); padding:var(--gap-sm) var(--pad); border-bottom:var(--stroke) solid var(--line); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .mark { color:var(--accent); font-size:var(--type-28); font-weight:var(--figure-weight); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .entry.on { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:var(--radius-sm); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .name { font-size:var(--type-20); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { font-size:var(--type-16); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .fig { font-size:var(--type-36); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .name { font-size:var(--type-16); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { font-size:var(--type-12); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .fig { font-size:var(--type-28); }
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.agenda[data-el="rhetis-spectrum-agenda"]) .note { display:none; }
+}
+
+@container (max-width:650px) { .agenda[data-el="rhetis-spectrum-agenda"] .entry { grid-template-columns:32px 1fr; gap:calc(var(--gap-sm)/2); padding:calc(var(--gap-sm)/2); } .agenda[data-el="rhetis-spectrum-agenda"] .entry .note { grid-column:2; } }

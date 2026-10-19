@@ -1,0 +1,28 @@
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:var(--gap-sm); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .stage { width:calc(var(--v)*1%); flex:1; min-height:0; background:var(--accent-soft); border-top:2px solid var(--accent); display:flex; align-items:center; justify-content:space-between; padding:var(--gap-sm) var(--pad); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .stage:first-child { background:var(--accent); color:var(--accent-ink); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .fig { font-size:var(--type-28); font-weight:var(--figure-weight); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .name { font-size:var(--type-20); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { font-size:var(--type-16); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .fig { font-size:var(--type-36); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .name { font-size:var(--type-16); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { font-size:var(--type-12); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .fig { font-size:var(--type-28); }
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.funnel[data-el="rhetis-spectrum-funnel"]) .note { display:none; }
+}
+
+.funnel[data-el="rhetis-spectrum-funnel"] .stage { container-type:inline-size; padding:calc(var(--gap-sm)/2); flex-direction:column; justify-content:center; gap:0; text-align:center; }
+.funnel[data-el="rhetis-spectrum-funnel"] .stage .fig { white-space:nowrap; flex-shrink:0; font-size:var(--type-28); line-height:var(--figure-line); }
+.funnel[data-el="rhetis-spectrum-funnel"] .stage .name { font-size:var(--type-20); line-height:var(--name-line); }
+@container (max-width:380px) { .funnel[data-el="rhetis-spectrum-funnel"] .stage .fig { font-size:var(--type-20); } .funnel[data-el="rhetis-spectrum-funnel"] .stage .name { font-size:var(--type-14); } }

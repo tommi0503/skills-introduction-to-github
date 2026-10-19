@@ -1,0 +1,22 @@
+:is(.callout[data-el="rhetis-spectrum-callout"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.callout[data-el="rhetis-spectrum-callout"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap-sm); padding:var(--pad); border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:var(--radius-sm); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) p { font-size:var(--type-28); line-height:var(--lead-line); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) b { color:var(--accent); font-weight:var(--name-weight); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.callout[data-el="rhetis-spectrum-callout"]) .name { font-size:var(--type-20); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { font-size:var(--type-16); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .fig { font-size:var(--type-36); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.callout[data-el="rhetis-spectrum-callout"]) .name { font-size:var(--type-16); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { font-size:var(--type-12); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .fig { font-size:var(--type-28); }
+:is(.callout[data-el="rhetis-spectrum-callout"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.callout[data-el="rhetis-spectrum-callout"]) .note { display:none; }
+}

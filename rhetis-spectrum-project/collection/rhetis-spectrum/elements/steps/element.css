@@ -1,0 +1,30 @@
+:is(.steps[data-el="rhetis-spectrum-steps"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.steps[data-el="rhetis-spectrum-steps"]) { display:flex; align-items:stretch; gap:var(--gap); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .step { flex:1; min-width:0; padding:var(--pad); position:relative; background:var(--surface); border-top:4px solid var(--accent); display:flex; flex-direction:column; gap:var(--gap-sm); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .step:not(:last-child)::after { content:"→"; position:absolute; right:calc(var(--gap)*-0.8); top:40%; z-index:2; font-size:var(--type-24); color:var(--accent); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .mark { color:var(--accent); font-size:var(--type-32); font-weight:var(--figure-weight); }
+:is(.steps[data-el="rhetis-spectrum-steps"]).col { flex-direction:column; }
+:is(.steps[data-el="rhetis-spectrum-steps"]).col .step:not(:last-child)::after { content:"↓"; top:100%; left:50%; }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.steps[data-el="rhetis-spectrum-steps"]) .name { font-size:var(--type-20); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { font-size:var(--type-16); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .fig { font-size:var(--type-36); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.steps[data-el="rhetis-spectrum-steps"]) .name { font-size:var(--type-16); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { font-size:var(--type-12); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .fig { font-size:var(--type-28); }
+:is(.steps[data-el="rhetis-spectrum-steps"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.steps[data-el="rhetis-spectrum-steps"]) .note { display:none; }
+}
+
+ .steps[data-el="rhetis-spectrum-steps"].col .step { padding:var(--gap-sm); gap:calc(var(--gap-sm)/3); display:grid; grid-template-columns:48px 1fr; align-content:center; }
+.steps[data-el="rhetis-spectrum-steps"].col .mark { grid-row:1 / span 2; align-self:center; }
+.steps[data-el="rhetis-spectrum-steps"].col .name { font-size:var(--type-20); }
+.steps[data-el="rhetis-spectrum-steps"].col .note { font-size:var(--type-16); }

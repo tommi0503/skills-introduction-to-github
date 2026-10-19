@@ -1,0 +1,27 @@
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:auto 1fr; gap:var(--gap-lg) var(--gap-sm); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .root { grid-column:1/-1; justify-self:center; min-width:32%; padding:var(--gap-sm) var(--pad); text-align:center; background:var(--accent); color:var(--accent-ink); border-radius:var(--radius-sm); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .root::after { content:""; position:absolute; top:100%; left:50%; height:var(--gap-lg); border-left:2px solid var(--line); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .branch { display:flex; flex-direction:column; gap:var(--gap-sm); border-top:2px solid var(--line); padding-top:var(--gap-sm); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .node { background:var(--accent-soft); padding:var(--gap-sm); text-align:center; font-weight:var(--name-weight); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .leaf { background:var(--surface); padding:var(--gap-sm); text-align:center; font-size:var(--type-16); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]):has(.branch:nth-child(4)):not(:has(.branch:nth-child(5))) { grid-template-columns:repeat(3,minmax(0,1fr)); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]):not(:has(.branch:nth-child(4))) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .name { font-size:var(--type-20); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { font-size:var(--type-16); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .fig { font-size:var(--type-36); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .name { font-size:var(--type-16); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { font-size:var(--type-12); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .fig { font-size:var(--type-28); }
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.org[data-el="rhetis-spectrum-hierarchy"]) .note { display:none; }
+}

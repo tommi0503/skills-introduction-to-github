@@ -1,0 +1,18 @@
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:normal; }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) { display:inline-flex; align-items:center; justify-content:center; width:fit-content; white-space:nowrap; flex:none; align-self:center; padding:calc(var(--gap-sm)/2) var(--gap-sm); border-radius:999px; background:var(--accent); color:var(--accent-ink); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]).hl { display:inline; border-radius:0; background:var(--accent-soft); color:var(--accent); padding:0; }
+@container (max-width: 650px) {
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .name { font-size:var(--type-20); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .note { font-size:var(--type-16); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .fig { font-size:var(--type-36); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .name { font-size:var(--type-16); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .note { font-size:var(--type-12); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .fig { font-size:var(--type-28); }
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.tag[data-el="rhetis-spectrum-tag"],.hl[data-el="rhetis-spectrum-tag"]) .note { display:none; }
+}

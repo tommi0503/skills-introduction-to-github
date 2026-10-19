@@ -1,0 +1,1 @@
+A generous pale plane is anchored by a blue left rule and an oversized opening quotation mark. A compact circular avatar and two-line attribution sit below the quotation, preserving a clear separation between voice and evidence.

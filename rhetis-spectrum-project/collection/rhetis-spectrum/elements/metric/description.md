@@ -1,0 +1,1 @@
+Open, unboxed figures emphasize scale with large blue numerals and quiet supporting labels. Repeated metrics align in one row with fine vertical dividers, avoiding the heavier surfaces used for explanatory cards.

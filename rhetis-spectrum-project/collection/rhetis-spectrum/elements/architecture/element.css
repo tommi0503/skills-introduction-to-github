@@ -1,0 +1,26 @@
+:is(.arch[data-el="rhetis-spectrum-architecture"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); container-type:inline-size; }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) { display:flex; flex-direction:column; gap:var(--gap-sm); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .layer { flex:1; display:flex; align-items:center; gap:var(--gap-sm); border:var(--stroke) solid var(--line); background:var(--surface); padding:var(--gap-sm); border-radius:var(--radius-sm); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .layer > .name { width:25%; color:var(--accent); font-weight:var(--name-weight); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .chip { flex:1; display:flex; justify-content:center; align-items:center; padding:var(--gap-sm); background:var(--page); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); font-size:var(--type-16); text-align:center; }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { font-size:var(--type-18); line-height:var(--body-line); color:inherit; opacity:.88; }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+@container (max-width: 650px) {
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .name { font-size:var(--type-20); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { font-size:var(--type-16); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .fig { font-size:var(--type-36); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .kick { font-size:var(--type-12); }
+}
+@container (max-width: 380px) {
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .name { font-size:var(--type-16); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { font-size:var(--type-12); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .fig { font-size:var(--type-28); }
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .kick { display:none; }
+}
+@container (max-width: 240px) {
+:is(.arch[data-el="rhetis-spectrum-architecture"]) .note { display:none; }
+}
+
+ .arch[data-el="rhetis-spectrum-architecture"] .layer { min-width:0; min-height:0; } .arch[data-el="rhetis-spectrum-architecture"] .chip { min-width:0; overflow-wrap:anywhere; }
+@container (max-width:650px) { .arch[data-el="rhetis-spectrum-architecture"] .layer { padding:calc(var(--gap-sm)/2); gap:calc(var(--gap-sm)/2); } .arch[data-el="rhetis-spectrum-architecture"] .chip { font-size:var(--type-12); padding:calc(var(--gap-sm)/2); } }

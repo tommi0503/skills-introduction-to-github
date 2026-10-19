@@ -1,0 +1,1 @@
+A sequence of pale rectangular panels uses blue top rules and prominent step numbers. Blue arrows connect adjacent panels. The vertical version shifts the number to a narrow left column and compacts its spacing for a clear downward reading order.
