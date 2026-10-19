@@ -1,0 +1,1117 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>Spectrum 04 · Campaign Panels sheet</title><style>/* foundation */
+
+.slide{box-sizing:border-box;position:relative;width:1280px;height:720px;overflow:hidden;background:var(--page);color:var(--ink);font-family:var(--font-body),sans-serif;font-weight:var(--body-weight);font-size:var(--type-20);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+.slide *{box-sizing:border-box}
+.slide :is(p,h1,h2,h3,blockquote){margin:0}
+.slide>.page{position:absolute;inset:var(--margin-y) var(--margin-x);display:flex;flex-direction:column;gap:var(--gap-sm)}
+.page>.head{background:var(--surface);border-radius:var(--radius);padding:var(--pad);display:flex;flex-direction:column;gap:var(--gap-sm);flex:none}
+.head.center{text-align:center;align-items:center}
+.head .title{font-family:var(--font-display);font-size:var(--type-44);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track)}
+.kicker{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--accent)}
+.lead{font-size:var(--type-20);line-height:var(--lead-line);color:var(--ink-2);font-weight:var(--lead-weight);letter-spacing:var(--lead-track)}
+.page>.body{container-type:size;position:relative;flex:1;min-height:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:var(--gap);background:var(--surface);border-radius:var(--radius);padding:var(--pad)}
+.body>*{min-width:0;min-height:0}
+.group,.stack,.split{min-width:0;min-height:0;gap:var(--gap);display:flex}.group>*{flex:1;min-width:0}.group.col,.stack{flex-direction:column}.group.two,.group.three{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.group.three{grid-template-columns:repeat(3,minmax(0,1fr))}.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}.split.wide-left{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.icon{display:inline-flex;width:1em;height:1em;flex:none}.icon svg{width:100%;height:100%}
+.seat{display:grid;place-items:center;min-width:0;min-height:0;background:var(--line);border-radius:var(--radius-sm);overflow:hidden}.seat[data-ph]::after{content:attr(data-ph);display:grid;place-items:center;width:32px;height:32px;border-radius:999px;background:var(--surface);color:var(--mute);font-size:var(--type-14);font-weight:var(--label-weight)}.seat.avatar{aspect-ratio:1;border-radius:50%}.seat.logo{aspect-ratio:2.5}.seat.portrait{aspect-ratio:0.8}.seat.back{position:absolute;inset:0}
+.slide>.top,.slide>.foot{position:absolute;left:var(--margin-x);right:var(--margin-x);height:var(--foot-h);display:flex;align-items:center;gap:var(--gap-sm);font-size:var(--type-12);line-height:var(--label-line);color:var(--ink);font-weight:var(--label-weight)}.slide>.top{top:var(--furn-edge)}.slide>.foot{bottom:var(--furn-edge)}.foot .src,.foot .no{margin-left:auto}.slide:has(>.top)>.page{top:calc(var(--furn-edge) + var(--top-h) + var(--furn-gap))}.slide:has(>.foot)>.page{bottom:calc(var(--furn-edge) + var(--foot-h) + var(--furn-gap))}.rail{position:absolute;left:0;top:0;bottom:0;width:var(--rail-w);display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--surface);gap:var(--gap-sm);font-size:var(--type-14)}.rail .label{writing-mode:vertical-rl}.rail .on{color:var(--accent)}.slide:has(>.rail)>.page{left:calc(var(--rail-w) + var(--rail-gap))}
+.slide.cover>.page{display:grid;grid-template:1fr/1fr;background:var(--surface);border-radius:var(--radius);padding:calc(var(--pad)*2);overflow:hidden}.cover .page>*{grid-area:1/1}.cover .lockup{z-index:2;display:flex;flex-direction:column;gap:var(--gap);max-width:75%;align-self:center;justify-self:start}.cover .title{font-family:var(--font-display);font-size:var(--type-72);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track)}.cover .at-center{justify-self:center;text-align:center;align-items:center}.cover .at-top-left{align-self:start}.cover .at-bottom-left{align-self:end}.cover .meta{z-index:2;align-self:end;font-size:var(--type-14);color:var(--mute)}.cover .deco{justify-self:end;align-self:center;width:300px;height:300px;border:var(--stroke) solid var(--accent);border-radius:var(--radius);rotate:15deg;background:var(--accent-soft)}.cover .deco:before{content:"";position:absolute;inset:var(--gap);border:var(--stroke) solid var(--accent);border-radius:var(--radius)}
+
+.stack>*{flex:1;min-height:0}
+/* agenda */
+[data-el="spectrum-04-agenda"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-agenda"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-agenda"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-agenda"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-agenda"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-agenda"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-agenda"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-agenda"]{display:flex;flex-direction:column;gap:var(--gap-sm);justify-content:center}[data-el="spectrum-04-agenda"]>.entry{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1fr);align-items:center;gap:var(--gap);padding:var(--gap-sm) var(--pad);border-bottom:var(--stroke) solid var(--line)}[data-el="spectrum-04-agenda"] .mark{display:grid;place-items:center;width:40px;height:40px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:var(--type-20);font-weight:var(--label-weight)}[data-el="spectrum-04-agenda"]>.entry.on{background:var(--accent-soft);border-radius:var(--radius-sm);border-color:var(--accent)}@container(max-width:600px){[data-el="spectrum-04-agenda"]>.entry{grid-template-columns:32px minmax(0,1fr);gap:var(--gap-sm);padding:var(--gap-sm)}[data-el="spectrum-04-agenda"] .mark{width:28px;height:28px;font-size:var(--type-14)}[data-el="spectrum-04-agenda"] .note{grid-column:2}}
+
+@container (max-width:600px){[data-el="spectrum-04-agenda"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-agenda"] .note{font-size:var(--type-14)}[data-el="spectrum-04-agenda"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-agenda"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-agenda"] .name{font-size:var(--type-16)}[data-el="spectrum-04-agenda"] .note{font-size:var(--type-12)}[data-el="spectrum-04-agenda"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-agenda"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-agenda"] .note{display:none}}
+/* architecture */
+[data-el="spectrum-04-architecture"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-architecture"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-architecture"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-architecture"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-architecture"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-architecture"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-architecture"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-architecture"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm)}[data-el="spectrum-04-architecture"]>.layer{flex:1;min-height:0;display:flex;align-items:center;gap:var(--gap);padding:var(--pad);background:var(--surface-2);border-radius:var(--radius-sm);border-left:4px solid var(--accent)}[data-el="spectrum-04-architecture"]>.layer>.name{flex:0 0 22%}[data-el="spectrum-04-architecture"] .chip{display:flex;align-items:center;justify-content:center;flex:1;min-width:0;background:var(--surface);border:var(--stroke) solid var(--line);border-radius:999px;padding:var(--gap-sm);font-size:var(--type-18);text-align:center}
+
+@container (max-width:600px){[data-el="spectrum-04-architecture"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-architecture"] .note{font-size:var(--type-14)}[data-el="spectrum-04-architecture"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-architecture"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-architecture"] .name{font-size:var(--type-16)}[data-el="spectrum-04-architecture"] .note{font-size:var(--type-12)}[data-el="spectrum-04-architecture"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-architecture"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-architecture"] .note{display:none}}
+
+@container(max-width:500px){[data-el="spectrum-04-architecture"]>.layer{padding:var(--gap-sm);gap:var(--gap-sm);flex-wrap:wrap}[data-el="spectrum-04-architecture"]>.layer>.name{flex:0 0 100%;font-size:var(--type-16)}[data-el="spectrum-04-architecture"] .chip{font-size:var(--type-12);padding:calc(var(--gap-sm)/2)}}
+/* callout */
+[data-el="spectrum-04-callout"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-callout"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-callout"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-callout"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-callout"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-callout"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-callout"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-callout"]{display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);border-top:var(--stroke) solid var(--accent);background:var(--accent-soft);border-radius:var(--radius);font-size:var(--type-28);text-align:center;line-height:var(--lead-line)}[data-el="spectrum-04-callout"] b{color:var(--accent);font-weight:var(--name-weight)}[data-el="spectrum-04-callout"] p{margin:0}
+
+@container (max-width:600px){[data-el="spectrum-04-callout"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-callout"] .note{font-size:var(--type-14)}[data-el="spectrum-04-callout"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-callout"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-callout"] .name{font-size:var(--type-16)}[data-el="spectrum-04-callout"] .note{font-size:var(--type-12)}[data-el="spectrum-04-callout"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-callout"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-callout"] .note{display:none}}
+/* card */
+[data-el="spectrum-04-card"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-card"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-card"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-card"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-card"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-card"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-card"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-card"]{display:flex;align-items:center;background:var(--surface-2);border-radius:var(--radius);padding:var(--pad);border:var(--stroke) solid var(--line)}[data-el="spectrum-04-card"] .parts{display:flex;flex-direction:column;gap:var(--gap-sm);width:100%}[data-el="spectrum-04-card"] .mark{display:grid;place-items:center;width:44px;height:44px;background:var(--accent-soft);border-radius:999px;color:var(--accent);font-size:var(--type-24)}[data-el="spectrum-04-card"].on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}[data-el="spectrum-04-card"].on :is(.note,.kick){color:var(--accent-ink)}[data-el="spectrum-04-card"].quiet{background:var(--spectrum-04-clear);border-color:var(--spectrum-04-clear)}[data-el="spectrum-04-card"].line{background:var(--spectrum-04-clear)}
+
+@container (max-width:600px){[data-el="spectrum-04-card"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-card"] .note{font-size:var(--type-14)}[data-el="spectrum-04-card"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-card"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-card"] .name{font-size:var(--type-16)}[data-el="spectrum-04-card"] .note{font-size:var(--type-12)}[data-el="spectrum-04-card"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-card"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-card"] .note{display:none}}
+
+[data-el="spectrum-04-card"].tone-1{background:var(--tone-1);color:var(--tone-1-ink)}[data-el="spectrum-04-card"].tone-1 :is(.name,.note,.kick){color:var(--tone-1-ink)}
+[data-el="spectrum-04-card"].tone-2{background:var(--tone-2);color:var(--tone-2-ink)}[data-el="spectrum-04-card"].tone-2 :is(.name,.note,.kick){color:var(--tone-2-ink)}
+[data-el="spectrum-04-card"].tone-3{background:var(--tone-3);color:var(--tone-3-ink)}[data-el="spectrum-04-card"].tone-3 :is(.name,.note,.kick){color:var(--tone-3-ink)}
+[data-el="spectrum-04-card"].tone-4{background:var(--tone-4);color:var(--tone-4-ink)}[data-el="spectrum-04-card"].tone-4 :is(.name,.note,.kick){color:var(--tone-4-ink)}
+[data-el="spectrum-04-card"].tone-5{background:var(--tone-5);color:var(--tone-5-ink)}[data-el="spectrum-04-card"].tone-5 :is(.name,.note,.kick){color:var(--tone-5-ink)}/* chart-bar */
+[data-el="spectrum-04-chart-bar"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-chart-bar"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-chart-bar"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-chart-bar"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-chart-bar"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-chart-bar"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-chart-bar"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-chart-bar"]{display:flex;align-items:end;gap:var(--gap);padding:var(--gap-lg) var(--gap-sm);border-bottom:var(--stroke) solid var(--ink);background:repeating-linear-gradient(to top,var(--spectrum-04-clear) 0 24.8%,var(--line) 24.8% 25%)}[data-el="spectrum-04-chart-bar"]>.bar{position:relative;flex:1;min-width:0;height:calc(var(--v)/var(--max)*85%);background:var(--tone-3);border-radius:var(--radius-sm) var(--radius-sm) 0 0}[data-el="spectrum-04-chart-bar"]>.bar.on{background:var(--accent)}[data-el="spectrum-04-chart-bar"]>.bar>b{position:absolute;bottom:calc(100% + var(--gap-sm)/2);left:0;right:0;text-align:center;font-size:var(--type-18);font-weight:var(--label-weight);white-space:nowrap}[data-el="spectrum-04-chart-bar"]>.bar>span{position:absolute;top:calc(100% + var(--gap-sm));left:0;right:0;text-align:center;font-size:var(--type-16);line-height:var(--label-line);white-space:nowrap}[data-el="spectrum-04-chart-bar"].h{flex-direction:column;align-items:start;justify-content:space-around;padding:var(--gap) calc(var(--pad)*3);border-bottom:0;background:none}[data-el="spectrum-04-chart-bar"].h>.bar{flex:none;width:calc(var(--v)/var(--max)*100%);height:calc(var(--gap-lg)*1.2);border-radius:0 var(--radius-sm) var(--radius-sm) 0}[data-el="spectrum-04-chart-bar"].h>.bar>b{left:calc(100% + var(--gap-sm));right:auto;bottom:auto;top:var(--gap-sm)}[data-el="spectrum-04-chart-bar"].h>.bar>span{top:var(--gap-sm);right:calc(100% + var(--gap-sm));left:auto}
+
+@container (max-width:600px){[data-el="spectrum-04-chart-bar"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-chart-bar"] .note{font-size:var(--type-14)}[data-el="spectrum-04-chart-bar"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-chart-bar"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-chart-bar"] .name{font-size:var(--type-16)}[data-el="spectrum-04-chart-bar"] .note{font-size:var(--type-12)}[data-el="spectrum-04-chart-bar"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-chart-bar"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-chart-bar"] .note{display:none}}
+
+[data-el="spectrum-04-chart-bar"]>.bar.tone-1{background:var(--tone-1)}
+[data-el="spectrum-04-chart-bar"]>.bar.tone-2{background:var(--tone-2)}
+[data-el="spectrum-04-chart-bar"]>.bar.tone-3{background:var(--tone-3)}
+[data-el="spectrum-04-chart-bar"]>.bar.tone-4{background:var(--tone-4)}
+[data-el="spectrum-04-chart-bar"]>.bar.tone-5{background:var(--tone-5)}/* chart-donut */
+[data-el="spectrum-04-chart-donut"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-chart-donut"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-chart-donut"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-chart-donut"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-chart-donut"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-chart-donut"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-chart-donut"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-chart-donut"].donuts{display:flex;gap:var(--gap);align-items:center;justify-content:space-around}[data-el="spectrum-04-chart-donut"].donut,[data-el="spectrum-04-chart-donut"]>.donut{position:relative;aspect-ratio:1;max-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);background:conic-gradient(var(--accent) calc(var(--v)*1%),var(--surface-2) 0);border-radius:50%;isolation:isolate}[data-el="spectrum-04-chart-donut"].donuts>.donut{flex:1;min-width:0}[data-el="spectrum-04-chart-donut"].donut:before,[data-el="spectrum-04-chart-donut"]>.donut:before{content:"";position:absolute;inset:12%;background:var(--surface);border-radius:50%;z-index:-1}[data-el="spectrum-04-chart-donut"] .fig{font-size:var(--type-44)}[data-el="spectrum-04-chart-donut"] .name{font-size:var(--type-20);text-align:center;max-width:65%}@container(max-width:600px){[data-el="spectrum-04-chart-donut"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-chart-donut"] .name{font-size:var(--type-14)}}
+
+@container (max-width:600px){[data-el="spectrum-04-chart-donut"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-chart-donut"] .note{font-size:var(--type-14)}[data-el="spectrum-04-chart-donut"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-chart-donut"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-chart-donut"] .name{font-size:var(--type-16)}[data-el="spectrum-04-chart-donut"] .note{font-size:var(--type-12)}[data-el="spectrum-04-chart-donut"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-chart-donut"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-chart-donut"] .note{display:none}}
+/* chart-line */
+[data-el="spectrum-04-chart-line"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-chart-line"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-chart-line"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-chart-line"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-chart-line"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-chart-line"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-chart-line"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-chart-line"]{display:flex;align-items:end;gap:0;padding:var(--gap-lg) var(--gap);border-bottom:var(--stroke) solid var(--ink);background:repeating-linear-gradient(to top,var(--spectrum-04-clear) 0 24.8%,var(--line) 24.8% 25%)}[data-el="spectrum-04-chart-line"]>.pt{flex:1;position:relative;height:calc(var(--v)/var(--max)*85%);border-top:2px solid var(--accent);background:linear-gradient(to top,var(--spectrum-04-clear),var(--accent-soft))}[data-el="spectrum-04-chart-line"]>.pt:before{content:"";position:absolute;left:50%;top:-5px;width:10px;height:10px;border-radius:50%;background:var(--accent)}[data-el="spectrum-04-chart-line"]>.pt>b{position:absolute;bottom:calc(100% + var(--gap-sm));left:0;right:0;text-align:center;font-size:var(--type-18);font-weight:var(--label-weight)}[data-el="spectrum-04-chart-line"]>.pt>span{position:absolute;top:calc(100% + var(--gap-sm));left:0;right:0;text-align:center;font-size:var(--type-16);line-height:var(--label-line)}
+
+@container (max-width:600px){[data-el="spectrum-04-chart-line"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-chart-line"] .note{font-size:var(--type-14)}[data-el="spectrum-04-chart-line"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-chart-line"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-chart-line"] .name{font-size:var(--type-16)}[data-el="spectrum-04-chart-line"] .note{font-size:var(--type-12)}[data-el="spectrum-04-chart-line"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-chart-line"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-chart-line"] .note{display:none}}
+
+[data-el="spectrum-04-chart-line"]{isolation:isolate}
+[data-el="spectrum-04-chart-line"]:after{content:"";position:absolute;inset:var(--gap-lg) var(--gap);background:var(--accent);clip-path:var(--spectrum-04-trend-path);pointer-events:none;z-index:1}
+[data-el="spectrum-04-chart-line"]>.pt{border-top:0;background:none}
+/* cycle */
+[data-el="spectrum-04-cycle"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-cycle"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-cycle"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-cycle"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-cycle"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-cycle"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-cycle"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-cycle"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--gap);align-items:center}[data-el="spectrum-04-cycle"]>.core{grid-area:2/2;aspect-ratio:1;max-height:100%;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:var(--accent-ink);text-align:center;padding:var(--gap-sm);z-index:1}[data-el="spectrum-04-cycle"]>.node{position:relative;background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);padding:var(--gap-sm);text-align:center;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2)}[data-el="spectrum-04-cycle"]>.node:nth-child(2){grid-area:1/2}[data-el="spectrum-04-cycle"]>.node:nth-child(3){grid-area:2/3}[data-el="spectrum-04-cycle"]>.node:nth-child(4){grid-area:3/2}[data-el="spectrum-04-cycle"]>.node:nth-child(5){grid-area:2/1}[data-el="spectrum-04-cycle"]>.node:nth-child(6){grid-area:1/1}[data-el="spectrum-04-cycle"]>.node:nth-child(7){grid-area:3/3}[data-el="spectrum-04-cycle"]>.node:before{content:"→";position:absolute;left:50%;bottom:calc(var(--gap)*-1);color:var(--accent);font-size:var(--type-20)}[data-el="spectrum-04-cycle"] .name{font-size:var(--type-22)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-16)}@container(max-width:600px){[data-el="spectrum-04-cycle"] .name{font-size:var(--type-16)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-12)}}
+
+@container (max-width:600px){[data-el="spectrum-04-cycle"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-14)}[data-el="spectrum-04-cycle"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-cycle"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-cycle"] .name{font-size:var(--type-16)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-12)}[data-el="spectrum-04-cycle"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-cycle"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-cycle"] .note{display:none}}
+
+[data-el="spectrum-04-cycle"]>.core{justify-self:center;width:min(100%,200px)}[data-el="spectrum-04-cycle"]:before{content:"";position:absolute;left:28%;right:28%;top:22%;bottom:22%;border:var(--stroke) dashed var(--accent);border-radius:50%}[data-el="spectrum-04-cycle"]>.node:nth-child(2):before{content:"↘";left:100%;top:100%}[data-el="spectrum-04-cycle"]>.node:nth-child(3):before{content:"↙";left:0;top:100%}[data-el="spectrum-04-cycle"]>.node:nth-child(4):before{content:"↖";left:0;bottom:100%}[data-el="spectrum-04-cycle"]>.node:nth-child(5):before{content:"↗";left:100%;bottom:100%}
+
+[data-el="spectrum-04-cycle"]{display:block}[data-el="spectrum-04-cycle"]>.core{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(22%,180px);height:auto;max-height:none;aspect-ratio:1}[data-el="spectrum-04-cycle"]>.node{position:absolute;width:28%;translate:-50% -50%;z-index:1}[data-el="spectrum-04-cycle"]>.node:before{content:none}[data-el="spectrum-04-cycle"]:before{inset:15% 16%}[data-el="spectrum-04-cycle"]:after{content:"↻";position:absolute;left:72%;top:45%;color:var(--accent);font-size:var(--type-36);line-height:var(--figure-line)}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(4):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(4):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(30deg));top:calc(50% + 35% * sin(30deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(4):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(150deg));top:calc(50% + 35% * sin(150deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(0deg));top:calc(50% + 35% * sin(0deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(90deg));top:calc(50% + 35% * sin(90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(5){left:calc(50% + 34% * cos(180deg));top:calc(50% + 35% * sin(180deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(-18deg));top:calc(50% + 35% * sin(-18deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(54deg));top:calc(50% + 35% * sin(54deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(5){left:calc(50% + 34% * cos(126deg));top:calc(50% + 35% * sin(126deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(6){left:calc(50% + 34% * cos(198deg));top:calc(50% + 35% * sin(198deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(-30deg));top:calc(50% + 35% * sin(-30deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(30deg));top:calc(50% + 35% * sin(30deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(5){left:calc(50% + 34% * cos(90deg));top:calc(50% + 35% * sin(90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(6){left:calc(50% + 34% * cos(150deg));top:calc(50% + 35% * sin(150deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(7){left:calc(50% + 34% * cos(210deg));top:calc(50% + 35% * sin(210deg))}
+/* delta */
+[data-el="spectrum-04-delta"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-delta"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-delta"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-delta"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-delta"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-delta"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-delta"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-delta"]{display:flex;align-items:center;justify-content:center;gap:var(--gap-lg);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}[data-el="spectrum-04-delta"] .from{color:var(--mute)}[data-el="spectrum-04-delta"] .to{color:var(--accent)}[data-el="spectrum-04-delta"] .from:after{content:"→";display:inline-block;margin-left:var(--gap-lg);color:var(--ink)}@container(max-width:600px){[data-el="spectrum-04-delta"]{font-size:var(--type-36);gap:var(--gap-sm)}}
+
+@container (max-width:600px){[data-el="spectrum-04-delta"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-delta"] .note{font-size:var(--type-14)}[data-el="spectrum-04-delta"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-delta"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-delta"] .name{font-size:var(--type-16)}[data-el="spectrum-04-delta"] .note{font-size:var(--type-12)}[data-el="spectrum-04-delta"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-delta"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-delta"] .note{display:none}}
+/* flowchart */
+[data-el="spectrum-04-flowchart"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-flowchart"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-flowchart"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-flowchart"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-flowchart"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-flowchart"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-flowchart"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-flowchart"]{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:var(--gap-lg);align-items:center;padding:var(--gap)}[data-el="spectrum-04-flowchart"]>.node{position:relative;display:grid;place-items:center;padding:var(--pad);min-height:96px;background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);text-align:center}[data-el="spectrum-04-flowchart"]>.start,[data-el="spectrum-04-flowchart"]>.end{border-radius:999px;background:var(--accent);color:var(--accent-ink)}[data-el="spectrum-04-flowchart"]>.ask{background:var(--accent-soft);border-color:var(--accent)}[data-el="spectrum-04-flowchart"]>.to-r:after{content:"→";position:absolute;left:calc(100% + var(--gap-sm)/2);top:50%;translate:0 -50%;font-size:var(--type-24);color:var(--accent)}[data-el="spectrum-04-flowchart"]>.to-l:after{content:"←";position:absolute;right:calc(100% + var(--gap-sm)/2);top:50%;translate:0 -50%;font-size:var(--type-24);color:var(--accent)}[data-el="spectrum-04-flowchart"]>.to-d:before{content:"↓";position:absolute;top:100%;left:50%;font-size:var(--type-24);color:var(--accent)}[data-el="spectrum-04-flowchart"]>.to-u:before{content:"↑";position:absolute;bottom:100%;left:50%;font-size:var(--type-24);color:var(--accent)}
+
+@container (max-width:600px){[data-el="spectrum-04-flowchart"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-flowchart"] .note{font-size:var(--type-14)}[data-el="spectrum-04-flowchart"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-flowchart"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-flowchart"] .name{font-size:var(--type-16)}[data-el="spectrum-04-flowchart"] .note{font-size:var(--type-12)}[data-el="spectrum-04-flowchart"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-flowchart"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-flowchart"] .note{display:none}}
+/* funnel */
+[data-el="spectrum-04-funnel"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-funnel"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-funnel"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-funnel"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-funnel"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-funnel"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-funnel"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-funnel"]{display:flex;flex-direction:column;align-items:center;gap:var(--gap-sm)}[data-el="spectrum-04-funnel"]>.stage{flex:1;min-height:0;width:calc(var(--v)*1%);display:flex;align-items:center;justify-content:space-between;padding:var(--gap-sm) var(--pad);background:var(--accent-soft);border-top:var(--stroke) solid var(--accent);border-radius:var(--radius-sm);gap:var(--gap-sm)}[data-el="spectrum-04-funnel"]>.stage:nth-child(2n){background:var(--surface-2);border-color:var(--line)}[data-el="spectrum-04-funnel"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-funnel"] .name{font-size:var(--type-22)}
+
+@container (max-width:600px){[data-el="spectrum-04-funnel"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-funnel"] .note{font-size:var(--type-14)}[data-el="spectrum-04-funnel"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-funnel"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-funnel"] .name{font-size:var(--type-16)}[data-el="spectrum-04-funnel"] .note{font-size:var(--type-12)}[data-el="spectrum-04-funnel"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-funnel"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-funnel"] .note{display:none}}
+
+[data-el="spectrum-04-funnel"]>.stage{width:max(38%,calc(var(--v)*1%));flex-shrink:1}[data-el="spectrum-04-funnel"] .fig{white-space:nowrap;flex:none;font-size:var(--type-28)}[data-el="spectrum-04-funnel"] .name{min-width:0;font-size:var(--type-20)}@container(max-width:600px){[data-el="spectrum-04-funnel"]>.stage{padding:calc(var(--gap-sm)/2) var(--gap-sm);gap:calc(var(--gap-sm)/2)}[data-el="spectrum-04-funnel"] .fig{font-size:var(--type-20)}[data-el="spectrum-04-funnel"] .name{font-size:var(--type-16)}}
+
+[data-el="spectrum-04-funnel"]>.stage{width:calc(30% + var(--v)*0.7%)}
+/* gauge */
+[data-el="spectrum-04-gauge"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-gauge"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-gauge"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-gauge"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-gauge"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-gauge"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-gauge"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-gauge"]{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 16px;align-content:center;gap:var(--gap-sm);padding:var(--gap-sm) 0}[data-el="spectrum-04-gauge"]:after{content:"";grid-column:1/-1;background:linear-gradient(to right,var(--accent) calc(var(--v)*1%),var(--surface-2) 0);border-radius:999px}[data-el="spectrum-04-gauge"] .fig{font-size:var(--type-28)}
+
+@container (max-width:600px){[data-el="spectrum-04-gauge"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-gauge"] .note{font-size:var(--type-14)}[data-el="spectrum-04-gauge"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-gauge"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-gauge"] .name{font-size:var(--type-16)}[data-el="spectrum-04-gauge"] .note{font-size:var(--type-12)}[data-el="spectrum-04-gauge"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-gauge"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-gauge"] .note{display:none}}
+
+[data-el="spectrum-04-gauge"]{padding:0;grid-template-rows:auto 8px;gap:calc(var(--gap-sm)/2)}[data-el="spectrum-04-gauge"] .fig{font-size:var(--type-24)}@container(max-width:600px){[data-el="spectrum-04-gauge"] .fig{font-size:var(--type-24)}[data-el="spectrum-04-gauge"] .name{font-size:var(--type-16)}}
+/* hierarchy */
+[data-el="spectrum-04-hierarchy"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-hierarchy"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-hierarchy"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-hierarchy"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-hierarchy"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-hierarchy"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-hierarchy"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-hierarchy"]{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto 1fr;gap:var(--gap-lg);padding:var(--gap-sm)}[data-el="spectrum-04-hierarchy"]>.root{grid-column:1/-1;justify-self:center;width:40%;text-align:center;background:var(--accent);color:var(--accent-ink);border-radius:var(--radius-sm);padding:var(--gap-sm)}[data-el="spectrum-04-hierarchy"]:has(>.branch:nth-child(4):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}[data-el="spectrum-04-hierarchy"]:has(>.branch:nth-child(3):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}[data-el="spectrum-04-hierarchy"]>.branch{position:relative;display:flex;flex-direction:column;gap:var(--gap-sm);border-top:var(--stroke) solid var(--accent);padding-top:var(--gap)}[data-el="spectrum-04-hierarchy"]>.branch:before{content:"";position:absolute;top:calc(var(--gap-lg)*-1);left:50%;height:var(--gap-lg);border-left:var(--stroke) solid var(--accent)}[data-el="spectrum-04-hierarchy"] :is(.node,.leaf){padding:var(--gap-sm);text-align:center;border-radius:var(--radius-sm);background:var(--surface-2);border:var(--stroke) solid var(--line)}[data-el="spectrum-04-hierarchy"] .node{background:var(--accent-soft)}[data-el="spectrum-04-hierarchy"] .leaf .name{font-size:var(--type-18)}
+
+@container (max-width:600px){[data-el="spectrum-04-hierarchy"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-hierarchy"] .note{font-size:var(--type-14)}[data-el="spectrum-04-hierarchy"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-hierarchy"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-hierarchy"] .name{font-size:var(--type-16)}[data-el="spectrum-04-hierarchy"] .note{font-size:var(--type-12)}[data-el="spectrum-04-hierarchy"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-hierarchy"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-hierarchy"] .note{display:none}}
+
+@container(max-width:800px){[data-el="spectrum-04-hierarchy"]>.branch{gap:calc(var(--gap-sm)/2);padding-top:var(--gap-sm)}[data-el="spectrum-04-hierarchy"] :is(.node,.leaf){padding:calc(var(--gap-sm)/2)}[data-el="spectrum-04-hierarchy"] .leaf .name{font-size:var(--type-14)}[data-el="spectrum-04-hierarchy"] .node .name{font-size:var(--type-16)}}
+
+[data-el="spectrum-04-hierarchy"]:before{content:"";position:absolute;top:calc(var(--gap-lg)*2 + var(--gap-sm));left:12%;right:12%;border-top:var(--stroke) solid var(--accent)}[data-el="spectrum-04-hierarchy"]>.root:after{content:"";position:absolute;left:50%;top:100%;height:var(--gap-lg);border-left:var(--stroke) solid var(--accent)}
+[data-el="spectrum-04-hierarchy"]:before{position:relative;grid-area:1/1/2/-1;align-self:end;top:auto;left:auto;right:auto;margin:0 11%;border-top:var(--stroke) solid var(--accent)}
+[data-el="spectrum-04-hierarchy"]>.root{position:relative;grid-area:1/1/2/-1;z-index:1}
+[data-el="spectrum-04-hierarchy"]>.root:after{content:none}
+/* hub */
+[data-el="spectrum-04-hub"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-hub"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-hub"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-hub"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-hub"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-hub"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-hub"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-hub"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--gap);align-items:center}[data-el="spectrum-04-hub"]>.core{grid-area:2/2;aspect-ratio:1;max-height:100%;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:var(--accent-ink);text-align:center;padding:var(--gap-sm);z-index:1}[data-el="spectrum-04-hub"]>.spoke{position:relative;background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);padding:var(--gap-sm);text-align:center;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2)}[data-el="spectrum-04-hub"]>.spoke:nth-child(2){grid-area:1/2}[data-el="spectrum-04-hub"]>.spoke:nth-child(3){grid-area:2/3}[data-el="spectrum-04-hub"]>.spoke:nth-child(4){grid-area:3/2}[data-el="spectrum-04-hub"]>.spoke:nth-child(5){grid-area:2/1}[data-el="spectrum-04-hub"]>.spoke:nth-child(6){grid-area:1/1}[data-el="spectrum-04-hub"]>.spoke:nth-child(7){grid-area:3/3}[data-el="spectrum-04-hub"]>.spoke:before{content:"→";position:absolute;left:50%;bottom:calc(var(--gap)*-1);color:var(--accent);font-size:var(--type-20)}[data-el="spectrum-04-hub"] .name{font-size:var(--type-22)}[data-el="spectrum-04-hub"] .note{font-size:var(--type-16)}@container(max-width:600px){[data-el="spectrum-04-hub"] .name{font-size:var(--type-16)}[data-el="spectrum-04-hub"] .note{font-size:var(--type-12)}}
+
+@container (max-width:600px){[data-el="spectrum-04-hub"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-hub"] .note{font-size:var(--type-14)}[data-el="spectrum-04-hub"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-hub"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-hub"] .name{font-size:var(--type-16)}[data-el="spectrum-04-hub"] .note{font-size:var(--type-12)}[data-el="spectrum-04-hub"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-hub"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-hub"] .note{display:none}}
+
+[data-el="spectrum-04-hub"]>.core{justify-self:center;width:min(100%,200px)}[data-el="spectrum-04-hub"]:before{content:"";position:absolute;inset:18%;background:linear-gradient(var(--accent),var(--accent)) center/1px 100% no-repeat,linear-gradient(var(--accent),var(--accent)) center/100% 1px no-repeat}[data-el="spectrum-04-hub"]>.spoke:before{content:none}
+
+[data-el="spectrum-04-hub"]:before{background:linear-gradient(var(--accent),var(--accent)) center/1px 100% no-repeat,linear-gradient(var(--accent),var(--accent)) center/100% 1px no-repeat,linear-gradient(to top right,var(--spectrum-04-clear) calc(50% - 1px),var(--accent) 50%,var(--spectrum-04-clear) calc(50% + 1px))}
+/* image-frame */
+[data-el="spectrum-04-image-frame"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-image-frame"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-image-frame"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-image-frame"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-image-frame"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-image-frame"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-image-frame"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-image-frame"]{padding:var(--gap-sm);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface);display:flex}[data-el="spectrum-04-image-frame"]>.seat{width:100%;height:100%;border-radius:calc(var(--radius) - var(--gap-sm));background:var(--line)}
+
+@container (max-width:600px){[data-el="spectrum-04-image-frame"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-image-frame"] .note{font-size:var(--type-14)}[data-el="spectrum-04-image-frame"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-image-frame"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-image-frame"] .name{font-size:var(--type-16)}[data-el="spectrum-04-image-frame"] .note{font-size:var(--type-12)}[data-el="spectrum-04-image-frame"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-image-frame"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-image-frame"] .note{display:none}}
+/* legend */
+[data-el="spectrum-04-legend"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-legend"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-legend"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-legend"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-legend"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-legend"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-legend"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-legend"]{display:flex;align-items:center;justify-content:center;gap:var(--gap-lg);flex-wrap:wrap}[data-el="spectrum-04-legend"]>.key{display:flex;align-items:center;gap:var(--gap-sm);font-size:var(--type-18)}[data-el="spectrum-04-legend"]>.key:before{content:"";width:12px;height:12px;border-radius:50%;background:var(--tone-1)}
+
+@container (max-width:600px){[data-el="spectrum-04-legend"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-legend"] .note{font-size:var(--type-14)}[data-el="spectrum-04-legend"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-legend"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-legend"] .name{font-size:var(--type-16)}[data-el="spectrum-04-legend"] .note{font-size:var(--type-12)}[data-el="spectrum-04-legend"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-legend"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-legend"] .note{display:none}}
+
+[data-el="spectrum-04-legend"]>.key.tone-1:before{background:var(--tone-1)}
+[data-el="spectrum-04-legend"]>.key.tone-2:before{background:var(--tone-2)}
+[data-el="spectrum-04-legend"]>.key.tone-3:before{background:var(--tone-3)}
+[data-el="spectrum-04-legend"]>.key.tone-4:before{background:var(--tone-4)}
+[data-el="spectrum-04-legend"]>.key.tone-5:before{background:var(--tone-5)}
+[data-el="spectrum-04-legend"]{flex:none;min-height:32px}
+/* list */
+[data-el="spectrum-04-list"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-list"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-list"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-list"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-list"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-list"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-list"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-list"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:item;padding:0}[data-el="spectrum-04-list"]>.item{position:relative;counter-increment:item;padding-left:calc(var(--gap-lg) + var(--gap-sm));display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2)}[data-el="spectrum-04-list"]>.item:before{content:"";position:absolute;left:var(--gap-sm);top:var(--gap-sm);width:8px;height:8px;border-radius:50%;background:var(--accent)}[data-el="spectrum-04-list"].check>.item:before{content:"✓";background:var(--spectrum-04-clear);width:24px;height:24px;top:0;left:0;color:var(--accent);font-size:var(--type-24);font-weight:var(--name-weight)}[data-el="spectrum-04-list"].num>.item:before{content:counter(item,decimal-leading-zero);background:var(--spectrum-04-clear);width:auto;height:auto;top:0;left:0;color:var(--accent);font-size:var(--type-20);font-weight:var(--name-weight)}[data-el="spectrum-04-list"].divided>.item{padding-bottom:var(--gap);border-bottom:var(--stroke) solid var(--line)}
+
+@container (max-width:600px){[data-el="spectrum-04-list"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-list"] .note{font-size:var(--type-14)}[data-el="spectrum-04-list"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-list"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-list"] .name{font-size:var(--type-16)}[data-el="spectrum-04-list"] .note{font-size:var(--type-12)}[data-el="spectrum-04-list"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-list"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-list"] .note{display:none}}
+/* logo-group */
+[data-el="spectrum-04-logo-group"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-logo-group"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-logo-group"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-logo-group"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-logo-group"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-logo-group"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-logo-group"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-logo-group"]{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap);align-content:center}[data-el="spectrum-04-logo-group"]>.seat.logo{height:100px;background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm)}@container(max-width:600px){[data-el="spectrum-04-logo-group"]{grid-template-columns:repeat(3,minmax(0,1fr))}[data-el="spectrum-04-logo-group"]>.seat.logo{height:64px}}
+
+@container (max-width:600px){[data-el="spectrum-04-logo-group"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-logo-group"] .note{font-size:var(--type-14)}[data-el="spectrum-04-logo-group"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-logo-group"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-logo-group"] .name{font-size:var(--type-16)}[data-el="spectrum-04-logo-group"] .note{font-size:var(--type-12)}[data-el="spectrum-04-logo-group"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-logo-group"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-logo-group"] .note{display:none}}
+/* matrix */
+[data-el="spectrum-04-matrix"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-matrix"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-matrix"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-matrix"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-matrix"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-matrix"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-matrix"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-matrix"]{display:grid;grid-template-columns:var(--gap-lg) 1fr 1fr;grid-template-rows:1fr 1fr var(--gap-lg);gap:var(--gap-sm)}[data-el="spectrum-04-matrix"]>.cell{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--pad);background:var(--surface-2);border-radius:var(--radius-sm)}[data-el="spectrum-04-matrix"]>.cell:nth-of-type(3){grid-area:1/2}[data-el="spectrum-04-matrix"]>.cell:nth-of-type(4){grid-area:1/3}[data-el="spectrum-04-matrix"]>.cell:nth-of-type(5){grid-area:2/2}[data-el="spectrum-04-matrix"]>.cell:nth-of-type(6){grid-area:2/3}[data-el="spectrum-04-matrix"]>.cell.on{background:var(--accent);color:var(--accent-ink)}[data-el="spectrum-04-matrix"]>.cell.on .note{color:var(--accent-ink)}[data-el="spectrum-04-matrix"]>.axis-y{grid-area:1/1/3/2;display:flex;flex-direction:column;justify-content:space-around;font-size:var(--type-14);writing-mode:vertical-rl}[data-el="spectrum-04-matrix"]>.axis-x{grid-area:3/2/4/4;display:flex;justify-content:space-around;font-size:var(--type-14)}
+
+@container (max-width:600px){[data-el="spectrum-04-matrix"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-matrix"] .note{font-size:var(--type-14)}[data-el="spectrum-04-matrix"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-matrix"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-matrix"] .name{font-size:var(--type-16)}[data-el="spectrum-04-matrix"] .note{font-size:var(--type-12)}[data-el="spectrum-04-matrix"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-matrix"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-matrix"] .note{display:none}}
+
+[data-el="spectrum-04-matrix"]>.axis-y{writing-mode:horizontal-tb;flex-direction:column;align-items:center;justify-content:space-around}[data-el="spectrum-04-matrix"]>.axis-y>span{white-space:nowrap;writing-mode:vertical-rl;text-orientation:upright;line-height:var(--label-line)}
+/* metric */
+[data-el="spectrum-04-metric"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-metric"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-metric"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-metric"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-metric"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-metric"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-metric"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-metric"].stats{display:flex;align-items:stretch;gap:var(--gap)}[data-el="spectrum-04-metric"].stat{display:flex;align-items:center}[data-el="spectrum-04-metric"].stats>.stat{flex:1;min-width:0;padding:var(--pad);border-left:var(--stroke) solid var(--line)}[data-el="spectrum-04-metric"].stats>.stat:first-child{border-left:0}[data-el="spectrum-04-metric"] .parts{display:flex;flex-direction:column;gap:var(--gap-sm)}[data-el="spectrum-04-metric"] .fig{color:var(--accent)}[data-el="spectrum-04-metric"] .name{font-size:var(--type-22)}
+
+@container (max-width:600px){[data-el="spectrum-04-metric"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-metric"] .note{font-size:var(--type-14)}[data-el="spectrum-04-metric"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-metric"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-metric"] .name{font-size:var(--type-16)}[data-el="spectrum-04-metric"] .note{font-size:var(--type-12)}[data-el="spectrum-04-metric"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-metric"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-metric"] .note{display:none}}
+/* person */
+[data-el="spectrum-04-person"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-person"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-person"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-person"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-person"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-person"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-person"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-person"].people{display:flex;gap:var(--gap)}[data-el="spectrum-04-person"].person,[data-el="spectrum-04-person"]>.person{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--pad);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface-2)}[data-el="spectrum-04-person"] .seat.avatar{width:104px;height:104px;flex:none}[data-el="spectrum-04-person"] .seat.portrait{width:100%;flex:1;min-height:80px;max-height:60%}[data-el="spectrum-04-person"] .name{color:var(--accent)}[data-el="spectrum-04-person"] .list{flex:1}
+
+@container (max-width:600px){[data-el="spectrum-04-person"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-person"] .note{font-size:var(--type-14)}[data-el="spectrum-04-person"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-person"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-person"] .name{font-size:var(--type-16)}[data-el="spectrum-04-person"] .note{font-size:var(--type-12)}[data-el="spectrum-04-person"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-person"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-person"] .note{display:none}}
+/* pill */
+[data-el="spectrum-04-pill"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-pill"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-pill"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-pill"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-pill"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-pill"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-pill"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-pill"]{display:flex;align-items:center;justify-content:center;padding:var(--gap-sm) var(--pad);background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:999px}[data-el="spectrum-04-pill"] .parts{display:flex;align-items:center;justify-content:center;gap:var(--gap-sm)}[data-el="spectrum-04-pill"] .name{font-size:var(--type-20)}[data-el="spectrum-04-pill"].on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}[data-el="spectrum-04-pill"].on .note{color:var(--accent-ink)}[data-el="spectrum-04-pill"].quiet{background:var(--spectrum-04-clear);border-color:var(--spectrum-04-clear)}[data-el="spectrum-04-pill"].line{background:var(--spectrum-04-clear)}
+
+@container (max-width:600px){[data-el="spectrum-04-pill"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-pill"] .note{font-size:var(--type-14)}[data-el="spectrum-04-pill"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-pill"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-pill"] .name{font-size:var(--type-16)}[data-el="spectrum-04-pill"] .note{font-size:var(--type-12)}[data-el="spectrum-04-pill"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-pill"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-pill"] .note{display:none}}
+
+[data-el="spectrum-04-pill"]{align-self:center;height:fit-content;flex:none;width:100%}[data-el="spectrum-04-pill"] .parts{white-space:nowrap;flex-wrap:nowrap}[data-el="spectrum-04-pill"] :is(.name,.note){white-space:nowrap}@container(max-width:600px){[data-el="spectrum-04-pill"] .name{font-size:var(--type-16)}[data-el="spectrum-04-pill"] .note{font-size:var(--type-12)}}
+/* pricing */
+[data-el="spectrum-04-pricing"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-pricing"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-pricing"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-pricing"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-pricing"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-pricing"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-pricing"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-pricing"].plans{display:flex;gap:var(--gap)}[data-el="spectrum-04-pricing"].plan,[data-el="spectrum-04-pricing"]>.plan{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--gap);padding:var(--pad);background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius)}[data-el="spectrum-04-pricing"] .plan.on,[data-el="spectrum-04-pricing"].plan.on{background:var(--accent-soft);border-color:var(--accent)}[data-el="spectrum-04-pricing"] .price{display:flex;align-items:baseline;gap:var(--gap-sm);padding-bottom:var(--gap);border-bottom:var(--stroke) solid var(--line)}[data-el="spectrum-04-pricing"] .price .fig{font-size:var(--type-48);color:var(--accent)}[data-el="spectrum-04-pricing"] .list{flex:1}[data-el="spectrum-04-pricing"] .list .name{font-size:var(--type-18)}[data-el="spectrum-04-pricing"] .tag{align-self:start}
+
+@container (max-width:600px){[data-el="spectrum-04-pricing"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-pricing"] .note{font-size:var(--type-14)}[data-el="spectrum-04-pricing"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-pricing"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-pricing"] .name{font-size:var(--type-16)}[data-el="spectrum-04-pricing"] .note{font-size:var(--type-12)}[data-el="spectrum-04-pricing"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-pricing"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-pricing"] .note{display:none}}
+
+[data-el="spectrum-04-pricing"] .tag{container-type:normal;flex:none;white-space:nowrap}[data-el="spectrum-04-pricing"] .price{flex-wrap:wrap}[data-el="spectrum-04-pricing"].plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:var(--gap)}[data-el="spectrum-04-pricing"] .list{gap:var(--gap-sm);justify-content:center}[data-el="spectrum-04-pricing"] .list .name{font-size:var(--type-16)}[data-el="spectrum-04-pricing"] .price .fig{font-size:var(--type-40)}[data-el="spectrum-04-pricing"] .price small{font-size:var(--type-16)}
+/* pyramid */
+[data-el="spectrum-04-pyramid"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-pyramid"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-pyramid"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-pyramid"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-pyramid"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-pyramid"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-pyramid"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-pyramid"]{display:flex;flex-direction:column;align-items:center;gap:calc(var(--gap-sm)/2)}[data-el="spectrum-04-pyramid"]>.level{flex:1;min-height:0;width:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:calc(var(--gap-sm)/2);background:var(--surface-2);clip-path:polygon(8% 0,92% 0,100% 100%,0 100%);padding:var(--gap-sm) var(--pad)}[data-el="spectrum-04-pyramid"]>.level:first-child{width:40%;background:var(--accent);color:var(--accent-ink)}[data-el="spectrum-04-pyramid"]>.level:first-child .note{color:var(--accent-ink)}[data-el="spectrum-04-pyramid"]>.level:nth-child(2){width:55%;background:var(--accent-soft)}[data-el="spectrum-04-pyramid"]>.level:nth-child(3){width:70%}[data-el="spectrum-04-pyramid"]>.level:nth-child(4){width:85%}[data-el="spectrum-04-pyramid"] .name{font-size:var(--type-22)}[data-el="spectrum-04-pyramid"] .note{font-size:var(--type-16)}
+
+@container (max-width:600px){[data-el="spectrum-04-pyramid"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-pyramid"] .note{font-size:var(--type-14)}[data-el="spectrum-04-pyramid"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-pyramid"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-pyramid"] .name{font-size:var(--type-16)}[data-el="spectrum-04-pyramid"] .note{font-size:var(--type-12)}[data-el="spectrum-04-pyramid"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-pyramid"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-pyramid"] .note{display:none}}
+/* quote */
+[data-el="spectrum-04-quote"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-quote"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-quote"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-quote"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-quote"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-quote"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-quote"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-quote"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-lg);padding:var(--pad);border-left:4px solid var(--accent);background:var(--surface-2);border-radius:var(--radius)}[data-el="spectrum-04-quote"] blockquote{margin:0;font-size:var(--type-36);line-height:var(--lead-line);font-weight:var(--lead-weight);letter-spacing:var(--lead-track)}[data-el="spectrum-04-quote"].big blockquote{font-size:var(--type-56);font-weight:var(--title-weight)}[data-el="spectrum-04-quote"] .by{display:grid;grid-template-columns:56px 1fr;gap:0 var(--gap-sm);align-items:center}[data-el="spectrum-04-quote"] .by>.seat{grid-row:span 2;width:56px;height:56px}[data-el="spectrum-04-quote"] .by .name{font-size:var(--type-18)}[data-el="spectrum-04-quote"] .by .note{font-size:var(--type-14)}@container(max-width:600px){[data-el="spectrum-04-quote"] blockquote,[data-el="spectrum-04-quote"].big blockquote{font-size:var(--type-28)}}
+
+@container (max-width:600px){[data-el="spectrum-04-quote"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-quote"] .note{font-size:var(--type-14)}[data-el="spectrum-04-quote"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-quote"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-quote"] .name{font-size:var(--type-16)}[data-el="spectrum-04-quote"] .note{font-size:var(--type-12)}[data-el="spectrum-04-quote"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-quote"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-quote"] .note{display:none}}
+/* steps */
+[data-el="spectrum-04-steps"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-steps"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-steps"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-steps"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-steps"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-steps"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-steps"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-steps"]{display:flex;align-items:stretch;gap:var(--gap)}[data-el="spectrum-04-steps"]>.step{position:relative;flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--pad);background:var(--surface-2);border-radius:var(--radius-sm)}[data-el="spectrum-04-steps"]>.step:not(:last-child):after{content:"→";position:absolute;right:calc(var(--gap)*-0.8);top:var(--pad);color:var(--accent);font-size:var(--type-24);z-index:1}[data-el="spectrum-04-steps"] .mark{display:grid;place-items:center;width:40px;height:40px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:var(--type-20);font-weight:var(--label-weight)}[data-el="spectrum-04-steps"].col{flex-direction:column}[data-el="spectrum-04-steps"].col>.step{display:grid;grid-template-columns:48px 1fr;align-items:center;padding:var(--gap-sm)}[data-el="spectrum-04-steps"].col .mark{grid-row:span 2}[data-el="spectrum-04-steps"].col>.step:not(:last-child):after{content:"↓";right:auto;left:var(--pad);top:auto;bottom:calc(var(--gap)*-1.1)}
+
+@container (max-width:600px){[data-el="spectrum-04-steps"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-steps"] .note{font-size:var(--type-14)}[data-el="spectrum-04-steps"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-steps"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-steps"] .name{font-size:var(--type-16)}[data-el="spectrum-04-steps"] .note{font-size:var(--type-12)}[data-el="spectrum-04-steps"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-steps"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-steps"] .note{display:none}}
+/* table */
+[data-el="spectrum-04-table"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-table"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-table"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-table"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-table"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-table"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-table"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-table"]{overflow:hidden;border-radius:var(--radius-sm);border:var(--stroke) solid var(--line);display:flex;align-items:stretch}[data-el="spectrum-04-table"] .table{width:100%;height:100%;border-collapse:collapse;font-size:var(--type-18);line-height:var(--body-line)}[data-el="spectrum-04-table"] :is(th,td){padding:var(--gap-sm);border-bottom:var(--stroke) solid var(--line);border-right:var(--stroke) solid var(--line);text-align:left;font-weight:var(--body-weight)}[data-el="spectrum-04-table"] th{font-weight:var(--label-weight);background:var(--surface-2)}[data-el="spectrum-04-table"] .pick{background:var(--accent-soft);color:var(--accent);font-weight:var(--name-weight)}[data-el="spectrum-04-table"] .num{text-align:right;font-variant-numeric:tabular-nums}@container(max-width:600px){[data-el="spectrum-04-table"] .table{font-size:var(--type-14)}[data-el="spectrum-04-table"] :is(th,td){padding:calc(var(--gap-sm)/2)}}
+
+@container (max-width:600px){[data-el="spectrum-04-table"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-table"] .note{font-size:var(--type-14)}[data-el="spectrum-04-table"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-table"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-table"] .name{font-size:var(--type-16)}[data-el="spectrum-04-table"] .note{font-size:var(--type-12)}[data-el="spectrum-04-table"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-table"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-table"] .note{display:none}}
+/* tag */
+[data-el="spectrum-04-tag"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-tag"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-tag"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-tag"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-tag"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-tag"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-tag"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-tag"].tag{display:inline-flex;align-items:center;justify-content:center;padding:calc(var(--gap-sm)/2) var(--gap-sm);border:var(--stroke) solid var(--accent);background:var(--accent-soft);color:var(--accent);border-radius:999px;font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line)}[data-el="spectrum-04-tag"].hl{background:var(--accent-soft);color:var(--accent);font-weight:var(--name-weight);padding:0 calc(var(--gap-sm)/2)}
+
+@container (max-width:600px){[data-el="spectrum-04-tag"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-tag"] .note{font-size:var(--type-14)}[data-el="spectrum-04-tag"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-tag"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-tag"] .name{font-size:var(--type-16)}[data-el="spectrum-04-tag"] .note{font-size:var(--type-12)}[data-el="spectrum-04-tag"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-tag"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-tag"] .note{display:none}}
+
+[data-el="spectrum-04-tag"]{container-type:normal;white-space:nowrap;flex:none}
+/* timeline */
+[data-el="spectrum-04-timeline"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-timeline"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-timeline"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-timeline"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-timeline"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-timeline"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-timeline"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-timeline"]{display:flex;align-items:center;gap:var(--gap);padding:var(--gap-lg) 0}[data-el="spectrum-04-timeline"]>.stop{position:relative;flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--gap-sm);padding-top:var(--gap-lg);border-top:2px solid var(--line)}[data-el="spectrum-04-timeline"]>.stop:before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;background:var(--accent);border-radius:50%}[data-el="spectrum-04-timeline"]>.stop.on{border-top-color:var(--accent)}[data-el="spectrum-04-timeline"].alt>.stop:nth-child(even){transform:translateY(calc(var(--gap-lg)*2))}[data-el="spectrum-04-timeline"].col{flex-direction:column;align-items:stretch}[data-el="spectrum-04-timeline"].col>.stop{border-top:0;border-left:2px solid var(--line);padding:var(--gap-sm) var(--pad)}[data-el="spectrum-04-timeline"].col>.stop:before{top:var(--gap-sm);left:-7px}
+
+@container (max-width:600px){[data-el="spectrum-04-timeline"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-timeline"] .note{font-size:var(--type-14)}[data-el="spectrum-04-timeline"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-timeline"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-timeline"] .name{font-size:var(--type-16)}[data-el="spectrum-04-timeline"] .note{font-size:var(--type-12)}[data-el="spectrum-04-timeline"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-timeline"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-timeline"] .note{display:none}}
+[data-el="spectrum-04-timeline"].alt:before{content:"";position:absolute;left:0;right:0;top:50%;border-top:var(--stroke) solid var(--line)}
+[data-el="spectrum-04-timeline"].alt>.stop{align-self:stretch;transform:none;border-top:0;justify-content:center;padding-top:0}
+[data-el="spectrum-04-timeline"].alt>.stop:before{top:50%;translate:0 -50%}
+[data-el="spectrum-04-timeline"].alt>.stop:nth-child(odd)>:is(.kick,.name,.note){transform:translateY(calc(var(--gap-lg)*-2))}
+[data-el="spectrum-04-timeline"].alt>.stop:nth-child(even)>:is(.kick,.name,.note){transform:translateY(calc(var(--gap-lg)*2))}
+/* venn */
+[data-el="spectrum-04-venn"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-venn"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-venn"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-venn"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-venn"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-venn"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-venn"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-venn"]{display:flex;align-items:center;justify-content:center;isolation:isolate}[data-el="spectrum-04-venn"]>.set{position:relative;flex:1;aspect-ratio:1;max-height:100%;border:var(--stroke) solid var(--accent);background:color-mix(in srgb,var(--accent-soft) 65%,var(--spectrum-04-clear));border-radius:50%;display:grid;place-items:center;text-align:center;padding:var(--pad)}[data-el="spectrum-04-venn"]>.set+.set{margin-left:-12%}[data-el="spectrum-04-venn"]>.set.on{background:color-mix(in srgb,var(--accent) 22%,var(--spectrum-04-clear))}[data-el="spectrum-04-venn"]>.core{position:absolute;left:50%;top:50%;translate:-50% -50%;background:var(--surface);padding:var(--gap-sm);border-radius:999px;color:var(--accent);font-size:var(--type-20);font-weight:var(--name-weight)}
+
+@container (max-width:600px){[data-el="spectrum-04-venn"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-venn"] .note{font-size:var(--type-14)}[data-el="spectrum-04-venn"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-venn"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-venn"] .name{font-size:var(--type-16)}[data-el="spectrum-04-venn"] .note{font-size:var(--type-12)}[data-el="spectrum-04-venn"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-venn"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-venn"] .note{display:none}}
+
+[data-el="spectrum-04-venn"]:has(>.set:nth-child(3)){display:block}[data-el="spectrum-04-venn"]:has(>.set:nth-child(3))>.set{position:absolute;width:min(48%,420px);height:auto;max-height:none;aspect-ratio:1;left:18%;top:3%;margin:0}[data-el="spectrum-04-venn"]:has(>.set:nth-child(3))>.set:nth-child(2){left:40%}[data-el="spectrum-04-venn"]:has(>.set:nth-child(3))>.set:nth-child(3){left:29%;top:30%}[data-el="spectrum-04-venn"]:has(>.set:nth-child(3))>.set:nth-child(1) .name{translate:-12% -20%}[data-el="spectrum-04-venn"]:has(>.set:nth-child(3))>.set:nth-child(2) .name{translate:12% -20%}[data-el="spectrum-04-venn"]:has(>.set:nth-child(3))>.set:nth-child(3) .name{translate:0 24%}[data-el="spectrum-04-venn"]:has(>.set:nth-child(3))>.core{top:42%;left:53%;font-size:var(--type-16)}
+
+[data-el="spectrum-04-venn"]>.set .name{position:relative;z-index:2}[data-el="spectrum-04-venn"]>.core{z-index:3}
+/* versus */
+[data-el="spectrum-04-versus"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-versus"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-versus"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-versus"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-versus"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-versus"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-versus"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-versus"]{display:grid;grid-template-columns:1fr 40px 1fr;gap:var(--gap);align-items:stretch}[data-el="spectrum-04-versus"]>.side{padding:var(--pad);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface-2);display:flex;flex-direction:column;gap:var(--gap)}[data-el="spectrum-04-versus"]>.side.on{background:var(--accent-soft);border-color:var(--accent)}[data-el="spectrum-04-versus"]>.vs{align-self:center;display:grid;place-items:center;aspect-ratio:1;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:var(--type-18);font-weight:var(--label-weight)}[data-el="spectrum-04-versus"]>.side>.list{flex:1}
+
+@container (max-width:600px){[data-el="spectrum-04-versus"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-versus"] .note{font-size:var(--type-14)}[data-el="spectrum-04-versus"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-versus"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-versus"] .name{font-size:var(--type-16)}[data-el="spectrum-04-versus"] .note{font-size:var(--type-12)}[data-el="spectrum-04-versus"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-versus"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-versus"] .note{display:none}}
+.slide {
+  --page: #ef5726;
+  --surface: #ffffff;
+  --surface-2: #f4f4f2;
+  --ink: #161616;
+  --ink-2: #3c3c3a;
+  --mute: #62625d;
+  --line: #c4c4be;
+  --accent: #c43912;
+  --accent-ink: #ffffff;
+  --accent-soft: #fce7df;
+  --tone-1: #c43912;
+  --tone-1-ink: #ffffff;
+  --tone-2: #ffe178;
+  --tone-2-ink: #262312;
+  --tone-3: #203e50;
+  --tone-3-ink: #ffffff;
+  --tone-4: #6847a8;
+  --tone-4-ink: #ffffff;
+  --tone-5: #c2d344;
+  --tone-5-ink: #20240c;
+  --good: #236047;
+  --warn: #785500;
+  --bad: #af2f2f;
+  --font-display: Pretendard;
+  --font-body: Pretendard;
+  --weight-display: 800;
+  --weight-body: 400;
+  --tracking-display: -0.045em;
+  --radius: 24px;
+  --radius-sm: 8px;
+  --stroke: 1px;
+  --text-min: 12px;
+  --margin-x: 40px;
+  --margin-y: 32px;
+  --gap: 20px;
+  --gap-sm: 10px;
+  --gap-lg: 32px;
+  --pad: 24px;
+  --furn-edge: 16px;
+  --top-h: 24px;
+  --foot-h: 24px;
+  --furn-gap: 12px;
+  --rail-w: 48px;
+  --rail-gap: 16px;
+  --title-weight: 800;
+  --title-line: 1.15;
+  --title-track: -0.04em;
+  --lead-weight: 400;
+  --lead-line: 1.5;
+  --lead-track: -0.025em;
+  --figure-weight: 800;
+  --figure-line: 1.3;
+  --figure-track: -0.045em;
+  --name-weight: 700;
+  --name-line: 1.3;
+  --name-track: -0.025em;
+  --body-weight: 400;
+  --body-line: 1.55;
+  --body-track: -0.02em;
+  --label-weight: 600;
+  --label-line: 1.25;
+  --label-track: -0.015em;
+  --label-track-latin: 0.1em;
+  --spectrum-04-clear: transparent;
+}
+.slide.dark {
+  --page: #0c0d0c;
+  --surface: #1d1e1b;
+  --surface-2: #2b2d27;
+  --ink: #f9f9f2;
+  --ink-2: #e1e1d8;
+  --mute: #b3b4a8;
+  --line: #64665c;
+  --accent: #d1df57;
+  --accent-ink: #15190a;
+  --accent-soft: #30371b;
+  --tone-1: #ed8965;
+  --tone-1-ink: #201209;
+  --tone-2: #ffe178;
+  --tone-2-ink: #262312;
+  --tone-3: #a6c5cc;
+  --tone-3-ink: #10282d;
+  --tone-4: #c0a9ee;
+  --tone-4-ink: #25173d;
+  --tone-5: #d1df57;
+  --tone-5-ink: #20240c;
+  --good: #a1d2ac;
+  --warn: #edcf6e;
+  --bad: #f4a3a3;
+}
+.slide { --type-8: 8px; --type-10: 10px; --type-12: 12px; --type-14: 14px; --type-16: 16px; --type-18: 18px; --type-20: 20px; --type-22: 22px; --type-24: 24px; --type-26: 26px; --type-28: 28px; --type-30: 30px; --type-32: 32px; --type-36: 36px; --type-40: 40px; --type-44: 44px; --type-48: 48px; --type-52: 52px; --type-56: 56px; --type-60: 60px; --type-64: 64px; --type-68: 68px; --type-72: 72px; --type-76: 76px; --type-80: 80px; --type-84: 84px; --type-88: 88px; --type-92: 92px; --type-96: 96px; --type-100: 100px; --type-104: 104px; --type-108: 108px; --type-112: 112px; --type-116: 116px; --type-120: 120px; --type-124: 124px; --type-128: 128px; --radius-lg: var(--radius); }
+.slide { --spectrum-04-trend-path: polygon(0 70%,100% 20%,100% 20.65%,0 70.65%); }
+</style><style>body{margin:0;padding:24px;background:#e8e8ec;font:14px system-ui;display:grid;gap:24px;grid-template-columns:repeat(auto-fill,640px)}h2{font-size:13px;font-weight:500;margin:0 0 8px}small{color:#777;margin-left:8px}article>.frame{width:640px;height:360px;overflow:hidden;border-radius:6px;background:#fff}article>.frame>.slide{width:1280px;height:720px;transform:scale(.5);transform-origin:0 0;position:relative}</style><link rel="stylesheet" href="public/fonts/fonts.css"></head><body><article><h2>foundation / cover <small>min 12x6</small></h2><div class="frame"><section class="slide cover"><div class="page"><div class="deco"></div><div class="lockup at-left"><p class="kicker">SPECTRUM 04 · CAMPAIGN KIT</p><h1 class="title">일상을 바꾸는<br>새로운 프로모션</h1><p class="lead">고객의 관심에서 실행까지, 하나의 디자인 언어로 연결합니다.</p></div><p class="meta">브랜드전략팀 · 2026</p></div></section>
+</div></article><article><h2>foundation / seat <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="seat" data-ph="1" style="grid-column:1 / span 12; grid-row:1 / span 6"></div>
+</div></div></section></div></article><article><h2>agenda / agenda-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="agenda" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-agenda">
+  <div class="entry on"><span class="mark">01</span><p class="name">시장 변화</p><p class="note">고객이 기대하는 응답 속도</p></div>
+  <div class="entry"><span class="mark">02</span><p class="name">우리의 진단</p><p class="note">병목 세 가지</p></div>
+  <div class="entry"><span class="mark">03</span><p class="name">해결 방안과 도입 계획</p><p class="note">단계별 일정과 필요한 자원을 함께 봅니다</p></div>
+  <div class="entry"><span class="mark">04</span><p class="name">기대 효과</p><p class="note">비용과 만족도</p></div>
+</div>
+</div></div></section></div></article><article><h2>agenda / agenda-5 <small>min 6x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="agenda" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-agenda">
+  <div class="entry"><span class="mark">01</span><p class="name">시장 변화</p><p class="note">고객이 기대하는 응답 속도</p></div>
+  <div class="entry"><span class="mark">02</span><p class="name">우리의 진단</p><p class="note">병목 세 가지</p></div>
+  <div class="entry on"><span class="mark">03</span><p class="name">해결 방안과 도입 계획</p><p class="note">단계별 일정과 필요한 자원을 함께 봅니다</p></div>
+  <div class="entry"><span class="mark">04</span><p class="name">기대 효과</p><p class="note">비용과 만족도</p></div>
+  <div class="entry"><span class="mark">05</span><p class="name">다음 단계</p><p class="note">결정할 것들</p></div>
+</div>
+</div></div></section></div></article><article><h2>architecture / arch-2 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-architecture">
+  <div class="layer"><b class="name">사용자 채널</b><span class="chip">웹</span><span class="chip">모바일 앱</span><span class="chip">파트너 포털</span></div>
+  <div class="layer"><b class="name">서비스</b><span class="chip">주문</span><span class="chip">결제</span><span class="chip">추천</span><span class="chip">알림</span></div>
+</div>
+</div></div></section></div></article><article><h2>architecture / arch-4 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-architecture">
+  <div class="layer"><b class="name">사용자 채널</b><span class="chip">웹</span><span class="chip">모바일 앱</span><span class="chip">파트너 포털</span></div>
+  <div class="layer"><b class="name">서비스</b><span class="chip">주문</span><span class="chip">결제</span><span class="chip">추천</span><span class="chip">알림</span></div>
+  <div class="layer"><b class="name">데이터 플랫폼</b><span class="chip">실시간 수집</span><span class="chip">분석 창고</span><span class="chip">모델 서빙</span></div>
+  <div class="layer"><b class="name">인프라</b><span class="chip">클라우드</span><span class="chip">보안</span><span class="chip">모니터링</span></div>
+</div>
+</div></div></section></div></article><article><h2>architecture / arch-5 <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="arch" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-architecture">
+  <div class="layer"><b class="name">사용자 채널</b><span class="chip">웹</span><span class="chip">모바일 앱</span><span class="chip">파트너 포털</span></div>
+  <div class="layer"><b class="name">서비스</b><span class="chip">주문</span><span class="chip">결제</span><span class="chip">추천</span><span class="chip">알림</span></div>
+  <div class="layer"><b class="name">데이터 플랫폼</b><span class="chip">실시간 수집</span><span class="chip">분석 창고</span><span class="chip">모델 서빙</span></div>
+  <div class="layer"><b class="name">인프라</b><span class="chip">클라우드</span><span class="chip">보안</span><span class="chip">모니터링</span></div>
+  <div class="layer"><b class="name">외부 연동</b><span class="chip">PG사</span><span class="chip">물류</span></div>
+</div>
+</div></div></section></div></article><article><h2>callout / callout-plain <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="callout" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-callout"><p>올해 성장의 60%는 신규 계약이 아니라 <b>기존 고객의 확장</b>에서 나옵니다.</p></div>
+</div></div></section></div></article><article><h2>callout / callout <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="callout" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-callout"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg></span><p>전환율을 가르는 것은 기능의 수가 아니라 <b>첫 7일의 활성화 경험</b>입니다.</p></div>
+</div></div></section></div></article><article><h2>card / card-2-quiet <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card quiet" data-el="spectrum-04-card"><div class="parts"><p class="kick">현재</p><p class="name">부서마다 다른 도구로 흩어진 업무 기록</p><p class="note">같은 숫자를 세 번 옮겨 적고, 회의 때마다 최신 자료가 무엇인지부터 확인합니다.</p></div></div>
+  <div class="card quiet" data-el="spectrum-04-card"><div class="parts"><p class="kick">도입 후</p><p class="name">하나의 작업 공간</p><p class="note">기록과 지표가 한곳에 모여 바로 결정할 수 있습니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-3-icon3d <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="seat icon" data-ph="1"></span></span><b class="name">12시간 보온</b><p class="note">62도를 유지합니다</p></div></div>
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="seat icon" data-ph="2"></span></span><b class="name">앱 연동</b><p class="note">마신 양을 기록합니다</p></div></div>
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="seat icon" data-ph="3"></span></span><b class="name">무게 310g</b><p class="note">가방에 넣기 가볍습니다</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-3-line <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card line" data-el="spectrum-04-card"><div class="parts"><span class="mark">1</span><p class="name">진단</p><p class="note">현재 업무 흐름과 병목을 2주 동안 살펴봅니다.</p></div></div>
+  <div class="card line" data-el="spectrum-04-card"><div class="parts"><span class="mark">2</span><p class="name">파일럿 팀 시범 운영</p><p class="note">한 팀에서 먼저 써 보고 지표를 비교해 전사 확대 여부를 정합니다.</p></div></div>
+  <div class="card line" data-el="spectrum-04-card"><div class="parts"><span class="mark">3</span><p class="name">전사 확대</p><p class="note">교육과 이관을 4주 안에 마칩니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-3-on <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><p class="kick">신규 구매자</p><p class="fig">1,284<small>곳</small></p><p class="name">분기 신규 계약</p><p class="note">전 분기보다 212곳 늘었습니다.</p></div></div>
+  <div class="card on" data-el="spectrum-04-card"><div class="parts"><p class="kick">유지율</p><p class="fig">94.2<small>%</small></p><p class="name">엔터프라이즈 고객 재계약률</p><p class="note">도입 1년이 지난 고객의 재계약 비율로, 업계 평균보다 11%p 높습니다.</p></div></div>
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><p class="kick">응답 속도</p><p class="fig">3.6<small>시간</small></p><p class="name">평균 첫 응답 시간</p><p class="note">지원 인력 증원 없이 절반으로 줄였습니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></span></span><p class="name">빠른 도입</p><p class="note">기존 시스템을 바꾸지 않고 2주 안에 연동합니다.</p></div></div>
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span></span><p class="name">엔터프라이즈 보안 인증</p><p class="note">ISO 27001과 ISMS-P 인증을 모두 갖췄습니다.</p></div></div>
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg></span></span><p class="name">실시간 분석</p><p class="note">팀별 성과 지표를 대시보드 하나에서 확인하고 주간 보고서로 자동 공유합니다.</p></div></div>
+  <div class="card" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg></span></span><p class="name">전담 지원</p><p class="note">담당 매니저가 평일 4시간 안에 답합니다.</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card-5-tone <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="group" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="card tone-1" data-el="spectrum-04-card"><div class="parts"><span class="mark">1</span><p class="name">기획</p><p class="note">문제 정의와 목표 지표 합의</p></div></div>
+  <div class="card tone-2" data-el="spectrum-04-card"><div class="parts"><span class="mark">2</span><p class="name">디자인</p><p class="note">사용자 흐름과 화면 설계</p></div></div>
+  <div class="card tone-3" data-el="spectrum-04-card"><div class="parts"><span class="mark">3</span><p class="name">개발과 품질 검증</p><p class="note">2주 단위 배포와 자동화 테스트로 품질을 지킵니다</p></div></div>
+  <div class="card tone-4" data-el="spectrum-04-card"><div class="parts"><span class="mark">4</span><p class="name">출시</p><p class="note">단계적 공개와 모니터링</p></div></div>
+  <div class="card tone-5" data-el="spectrum-04-card"><div class="parts"><span class="mark">5</span><p class="name">운영</p><p class="note">지표 점검과 개선 반복</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>card / card <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-card"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span></span><p class="kick">올해의 목표</p><p class="name">연간 반복 매출 300억 달성</p><p class="note">신규 계약보다 기존 고객의 확장 계약에서 성장의 60%를 만듭니다.</p></div></div>
+</div></div></section></div></article><article><h2>chart-bar / bars-12 <small>min 8x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100" data-el="spectrum-04-chart-bar">
+  <div class="bar" style="--v:32"><b>32</b><span>1월</span></div>
+  <div class="bar" style="--v:35"><b>35</b><span>2월</span></div>
+  <div class="bar" style="--v:41"><b>41</b><span>3월</span></div>
+  <div class="bar" style="--v:38"><b>38</b><span>4월</span></div>
+  <div class="bar" style="--v:47"><b>47</b><span>5월</span></div>
+  <div class="bar" style="--v:52"><b>52</b><span>6월</span></div>
+  <div class="bar" style="--v:58"><b>58</b><span>7월</span></div>
+  <div class="bar" style="--v:55"><b>55</b><span>8월</span></div>
+  <div class="bar" style="--v:63"><b>63</b><span>9월</span></div>
+  <div class="bar" style="--v:71"><b>71</b><span>10월</span></div>
+  <div class="bar" style="--v:78"><b>78</b><span>11월</span></div>
+  <div class="bar on" style="--v:92"><b>92</b><span>12월</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:80" data-el="spectrum-04-chart-bar">
+  <div class="bar" style="--v:41"><b>41%</b><span>자체 채널</span></div>
+  <div class="bar on" style="--v:68"><b>68%</b><span>파트너 공동 영업</span></div>
+  <div class="bar" style="--v:23"><b>23%</b><span>광고</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-6 <small>min 4x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:16" data-el="spectrum-04-chart-bar">
+  <div class="bar" style="--v:8.4"><b>8.4억</b><span>1분기</span></div>
+  <div class="bar" style="--v:9.1"><b>9.1억</b><span>2분기</span></div>
+  <div class="bar" style="--v:10.2"><b>10.2억</b><span>3분기</span></div>
+  <div class="bar" style="--v:12.1"><b>12.1억</b><span>4분기</span></div>
+  <div class="bar" style="--v:13.4"><b>13.4억</b><span>올해 1분기</span></div>
+  <div class="bar on" style="--v:15.6"><b>15.6억</b><span>2분기 목표</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-h-5 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars h" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:50" data-el="spectrum-04-chart-bar">
+  <div class="bar on" style="--v:42"><b>42%</b><span>검색 광고</span></div>
+  <div class="bar" style="--v:27"><b>27%</b><span>지인 추천</span></div>
+  <div class="bar" style="--v:16"><b>16%</b><span>뉴스레터와 블로그 콘텐츠</span></div>
+  <div class="bar" style="--v:9"><b>9%</b><span>오프라인 행사</span></div>
+  <div class="bar" style="--v:6"><b>6%</b><span>기타</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-bar / bars-h-8 <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="bars h" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100" data-el="spectrum-04-chart-bar">
+  <div class="bar on" style="--v:88"><b>88점</b><span>응답 속도</span></div>
+  <div class="bar" style="--v:81"><b>81점</b><span>안정성</span></div>
+  <div class="bar" style="--v:77"><b>77점</b><span>가격</span></div>
+  <div class="bar" style="--v:72"><b>72점</b><span>온보딩</span></div>
+  <div class="bar" style="--v:64"><b>64점</b><span>고객 지원</span></div>
+  <div class="bar" style="--v:58"><b>58점</b><span>연동 범위</span></div>
+  <div class="bar" style="--v:51"><b>51점</b><span>보고서</span></div>
+  <div class="bar" style="--v:43"><b>43점</b><span>모바일 앱</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-donut / donut <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donut" style="grid-column:1 / span 12; grid-row:1 / span 6; --v:68" data-el="spectrum-04-chart-donut"><b class="fig">68<small>%</small></b><p class="name">도입 3개월 안에 유료로 전환한 고객사</p></div>
+</div></div></section></div></article><article><h2>chart-donut / donuts-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donuts" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-chart-donut">
+  <div class="donut" style="--v:72" data-el="spectrum-04-chart-donut"><b class="fig">72<small>%</small></b><p class="name">재구매율</p></div>
+  <div class="donut" style="--v:48" data-el="spectrum-04-chart-donut"><b class="fig">48<small>%</small></b><p class="name">신규 구매자 가운데 추천으로 들어온 비율</p></div>
+  <div class="donut" style="--v:91" data-el="spectrum-04-chart-donut"><b class="fig">91<small>%</small></b><p class="name">만족도</p></div>
+</div>
+</div></div></section></div></article><article><h2>chart-donut / donuts-4 <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="donuts" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-chart-donut">
+  <div class="donut" style="--v:84" data-el="spectrum-04-chart-donut"><b class="fig">84<small>%</small></b><p class="name">수도권</p></div>
+  <div class="donut" style="--v:61" data-el="spectrum-04-chart-donut"><b class="fig">61<small>%</small></b><p class="name">호남·충청권 신규 매장</p></div>
+  <div class="donut" style="--v:47" data-el="spectrum-04-chart-donut"><b class="fig">47<small>%</small></b><p class="name">영남권</p></div>
+  <div class="donut" style="--v:29" data-el="spectrum-04-chart-donut"><b class="fig">29<small>%</small></b><p class="name">해외 직영점</p></div>
+</div>
+</div></div></section></div></article><article><h2>chart-line / lines-12 <small>min 8x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="lines" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100; --spectrum-04-trend-path:polygon(4.167% 47.300%,12.500% 50.700%,20.833% 58.350%,29.167% 62.600%,37.500% 62.600%,45.833% 56.650%,54.167% 49.000%,62.500% 38.800%,70.833% 41.350%,79.167% 31.150%,87.500% 23.500%,95.833% 17.550%,95.833% 18.200%,87.500% 24.150%,79.167% 31.800%,70.833% 42.000%,62.500% 39.450%,54.167% 49.650%,45.833% 57.300%,37.500% 63.250%,29.167% 63.250%,20.833% 59.000%,12.500% 51.350%,4.167% 47.950%)" data-el="spectrum-04-chart-line">
+  <div class="pt" style="--v:62"><b>62</b><span>1월</span></div>
+  <div class="pt" style="--v:58"><b>58</b><span>2월</span></div>
+  <div class="pt" style="--v:49"><b>49</b><span>3월</span></div>
+  <div class="pt" style="--v:44"><b>44</b><span>4월</span></div>
+  <div class="pt" style="--v:44"><b>44</b><span>5월</span></div>
+  <div class="pt" style="--v:51"><b>51</b><span>6월</span></div>
+  <div class="pt" style="--v:60"><b>60</b><span>7월</span></div>
+  <div class="pt" style="--v:72"><b>72</b><span>8월</span></div>
+  <div class="pt" style="--v:69"><b>69</b><span>9월</span></div>
+  <div class="pt" style="--v:81"><b>81</b><span>10월</span></div>
+  <div class="pt" style="--v:90"><b>90</b><span>11월</span></div>
+  <div class="pt on" style="--v:97"><b>97</b><span>12월</span></div>
+</div>
+</div></div></section></div></article><article><h2>chart-line / lines-6 <small>min 4x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="lines" style="grid-column:1 / span 12; grid-row:1 / span 6; --max:100; --spectrum-04-trend-path:polygon(8.333% 67.700%,25.000% 62.600%,41.667% 65.150%,58.333% 51.550%,75.000% 41.350%,91.667% 26.900%,91.667% 27.550%,75.000% 42.000%,58.333% 52.200%,41.667% 65.800%,25.000% 63.250%,8.333% 68.350%)" data-el="spectrum-04-chart-line">
+  <div class="pt" style="--v:38"><b>38%</b><span>1월</span></div>
+  <div class="pt" style="--v:44"><b>44%</b><span>2월</span></div>
+  <div class="pt" style="--v:41"><b>41%</b><span>3월</span></div>
+  <div class="pt" style="--v:57"><b>57%</b><span>4월</span></div>
+  <div class="pt" style="--v:69"><b>69%</b><span>5월</span></div>
+  <div class="pt on" style="--v:86"><b>86%</b><span>6월 예상</span></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-cycle">
+  <div class="core"><b class="name">캠페인 성장</b></div>
+  <div class="node"><b class="name">고객 행동 분석</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-cycle">
+  <div class="core"><b class="name">캠페인 성장</b></div>
+  <div class="node"><b class="name">고객 행동 분석</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+  <div class="node"><b class="name">측정</b><p class="note">핵심 지표 3개만 봅니다</p></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-5 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-cycle">
+  <div class="core"><b class="name">캠페인 성장</b></div>
+  <div class="node"><b class="name">고객 행동 분석</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+  <div class="node"><b class="name">측정</b><p class="note">핵심 지표 3개만 봅니다</p></div>
+  <div class="node"><b class="name">학습</b><p class="note">다음 가설로</p></div>
+</div>
+</div></div></section></div></article><article><h2>cycle / cycle-6 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="cycle" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-cycle">
+  <div class="core"><b class="name">캠페인 성장</b></div>
+  <div class="node"><b class="name">고객 행동 분석</b><p class="note">현장 인터뷰와 데이터로 가설을 세웁니다</p></div>
+  <div class="node"><b class="name">실험 설계</b><p class="note">2주 단위</p></div>
+  <div class="node"><b class="name">출시</b><p class="note">작게 먼저</p></div>
+  <div class="node"><b class="name">측정</b><p class="note">핵심 지표 3개만 봅니다</p></div>
+  <div class="node"><b class="name">학습</b><p class="note">다음 가설로</p></div>
+  <div class="node"><b class="name">확장</b><p class="note">검증된 것만</p></div>
+</div>
+</div></div></section></div></article><article><h2>delta / delta <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="delta" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-delta"><span class="from">12.1억</span><span class="to">15.6억</span></div>
+</div></div></section></div></article><article><h2>delta / expanded <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="delta" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-delta"><span class="from">14.3억</span><span class="to">18.2억</span></div>
+</div></div></section></div></article><article><h2>flowchart / expanded <small>min 6x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="flowchart" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-flowchart">
+  <div class="node start to-r" style="grid-column:1; grid-row:1"><b class="name">문의 접수</b></div>
+  <div class="node to-r" style="grid-column:2; grid-row:1"><b class="name">요건 확인</b></div>
+  <div class="node ask to-r to-d" style="grid-column:3; grid-row:1"><b class="name">예산 승인?</b></div>
+  <div class="node end" style="grid-column:4; grid-row:1"><b class="name">계약 체결</b></div>
+  <div class="node to-l" style="grid-column:3; grid-row:2"><b class="name">견적 조정</b></div>
+  <div class="node to-u" style="grid-column:2; grid-row:2"><b class="name">담당자 재협의</b></div>
+</div>
+</div></div></section></div></article><article><h2>flowchart / flowchart <small>min 6x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="flowchart" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-flowchart">
+  <div class="node start to-r" style="grid-column:1; grid-row:1"><b class="name">문의 접수</b></div>
+  <div class="node to-r" style="grid-column:2; grid-row:1"><b class="name">요건 확인</b></div>
+  <div class="node ask to-r to-d" style="grid-column:3; grid-row:1"><b class="name">예산 승인?</b></div>
+  <div class="node end" style="grid-column:4; grid-row:1"><b class="name">계약 체결</b></div>
+  <div class="node to-l" style="grid-column:3; grid-row:2"><b class="name">견적 조정</b></div>
+  <div class="node to-u" style="grid-column:2; grid-row:2"><b class="name">담당자 재협의</b></div>
+</div>
+</div></div></section></div></article><article><h2>funnel / funnel-3 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-funnel">
+  <div class="stage" style="--v:100"><span class="name">방문</span><b class="fig">48,200</b></div>
+  <div class="stage" style="--v:42"><span class="name">무료 체험 시작</span><b class="fig">5,400</b></div>
+  <div class="stage on" style="--v:24"><span class="name">유료 전환</span><b class="fig">1,620</b></div>
+</div>
+</div></div></section></div></article><article><h2>funnel / funnel-5 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-funnel">
+  <div class="stage" style="--v:100"><span class="name">방문</span><b class="fig">48,200</b></div>
+  <div class="stage" style="--v:64"><span class="name">회원 가입</span><b class="fig">12,900</b></div>
+  <div class="stage" style="--v:42"><span class="name">무료 체험 시작</span><b class="fig">5,400</b></div>
+  <div class="stage on" style="--v:24"><span class="name">유료 전환</span><b class="fig">1,620</b></div>
+  <div class="stage" style="--v:14"><span class="name">재계약</span><b class="fig">1,180</b></div>
+</div>
+</div></div></section></div></article><article><h2>funnel / funnel-6 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="funnel" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-funnel">
+  <div class="stage" style="--v:100"><span class="name">방문</span><b class="fig">48,200</b></div>
+  <div class="stage" style="--v:64"><span class="name">회원 가입</span><b class="fig">12,900</b></div>
+  <div class="stage" style="--v:42"><span class="name">무료 체험 시작</span><b class="fig">5,400</b></div>
+  <div class="stage on" style="--v:24"><span class="name">유료 전환</span><b class="fig">1,620</b></div>
+  <div class="stage" style="--v:14"><span class="name">재계약</span><b class="fig">1,180</b></div>
+  <div class="stage" style="--v:6"><span class="name">추천</span><b class="fig">310</b></div>
+</div>
+</div></div></section></div></article><article><h2>gauge / meter-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stack" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="meter" style="--v:92" data-el="spectrum-04-gauge"><span class="name">핵심 기능 개발</span><b class="fig">92<small>%</small></b></div>
+  <div class="meter" style="--v:74" data-el="spectrum-04-gauge"><span class="name">베타 고객 온보딩과 교육 자료 제작</span><b class="fig">74<small>%</small></b></div>
+  <div class="meter" style="--v:58" data-el="spectrum-04-gauge"><span class="name">결제 연동</span><b class="fig">58<small>%</small></b></div>
+  <div class="meter" style="--v:31" data-el="spectrum-04-gauge"><span class="name">해외 출시 준비</span><b class="fig">31<small>%</small></b></div>
+</div>
+</div></div></section></div></article><article><h2>gauge / meter <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="meter" style="grid-column:1 / span 12; grid-row:1 / span 6; --v:72" data-el="spectrum-04-gauge"><span class="name">연간 매출 목표 달성률</span><b class="fig">72<small>%</small></b></div>
+</div></div></section></div></article><article><h2>hierarchy / org-2 <small>min 4x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-hierarchy">
+  <div class="root"><b class="name">캠페인 총괄</b></div>
+  <div class="branch"><div class="node"><b class="name">상품 전략팀</b></div><div class="leaf"><span class="name">기획팀</span></div><div class="leaf"><span class="name">디자인팀</span></div><div class="leaf"><span class="name">플랫폼 개발팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">채널 운영팀</b></div><div class="leaf"><span class="name">영업팀</span></div><div class="leaf"><span class="name">파트너 제휴팀</span></div></div>
+</div>
+</div></div></section></div></article><article><h2>hierarchy / org-3 <small>min 6x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-hierarchy">
+  <div class="root"><b class="name">캠페인 총괄</b></div>
+  <div class="branch"><div class="node"><b class="name">상품 전략팀</b></div><div class="leaf"><span class="name">기획팀</span></div><div class="leaf"><span class="name">디자인팀</span></div><div class="leaf"><span class="name">플랫폼 개발팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">채널 운영팀</b></div><div class="leaf"><span class="name">영업팀</span></div><div class="leaf"><span class="name">파트너 제휴팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">성과 분석팀</b></div><div class="leaf"><span class="name">재무팀</span></div><div class="leaf"><span class="name">인사팀</span></div></div>
+</div>
+</div></div></section></div></article><article><h2>hierarchy / org-4 <small>min 8x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="org" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-hierarchy">
+  <div class="root"><b class="name">캠페인 총괄</b></div>
+  <div class="branch"><div class="node"><b class="name">상품 전략팀</b></div><div class="leaf"><span class="name">기획팀</span></div><div class="leaf"><span class="name">디자인팀</span></div><div class="leaf"><span class="name">플랫폼 개발팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">채널 운영팀</b></div><div class="leaf"><span class="name">영업팀</span></div><div class="leaf"><span class="name">파트너 제휴팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">성과 분석팀</b></div><div class="leaf"><span class="name">재무팀</span></div><div class="leaf"><span class="name">인사팀</span></div></div>
+  <div class="branch"><div class="node"><b class="name">고객 본부</b></div><div class="leaf"><span class="name">고객 성공팀</span></div><div class="leaf"><span class="name">지원 센터</span></div></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+  <div class="spoke"><span class="mark">4</span><b class="name">자동화</b><p class="note">반복 업무 처리</p></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-5 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+  <div class="spoke"><span class="mark">4</span><b class="name">자동화</b><p class="note">반복 업무 처리</p></div>
+  <div class="spoke"><span class="mark">5</span><b class="name">보안</b><p class="note">권한과 감사</p></div>
+</div>
+</div></div></section></div></article><article><h2>hub / hub-6 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="hub" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-hub">
+  <div class="core"><b class="name">통합 플랫폼</b></div>
+  <div class="spoke"><span class="mark">1</span><b class="name">데이터 수집</b><p class="note">매장·앱·콜센터의 기록을 한곳에 모읍니다</p></div>
+  <div class="spoke"><span class="mark">2</span><b class="name">분석</b><p class="note">주간 리포트</p></div>
+  <div class="spoke"><span class="mark">3</span><b class="name">추천</b><p class="note">개인별 제안</p></div>
+  <div class="spoke"><span class="mark">4</span><b class="name">자동화</b><p class="note">반복 업무 처리</p></div>
+  <div class="spoke"><span class="mark">5</span><b class="name">보안</b><p class="note">권한과 감사</p></div>
+  <div class="spoke"><span class="mark">6</span><b class="name">연동</b><p class="note">기존 ERP와 연결</p></div>
+</div>
+</div></div></section></div></article><article><h2>image-frame / expanded <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="frame" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-image-frame"><div class="seat" data-ph="2"></div></div>
+</div></div></section></div></article><article><h2>image-frame / frame <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="frame" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-image-frame"><div class="seat" data-ph="1"></div></div>
+</div></div></section></div></article><article><h2>legend / expanded <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stack" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="legend" data-el="spectrum-04-legend"><span class="key tone-1">정기 구독</span><span class="key tone-2">단건 결제</span><span class="key tone-3">파트너 채널을 통한 간접 매출</span><span class="key tone-4">교육·컨설팅</span></div>
+  <div class="bars" style="--max:60" data-el="spectrum-04-chart-bar">
+    <div class="bar tone-1" style="--v:52"><b>52%</b><span>정기 구독</span></div><div class="bar tone-2" style="--v:21"><b>21%</b><span>단건 결제</span></div><div class="bar tone-3" style="--v:17"><b>17%</b><span>간접 매출</span></div><div class="bar tone-4" style="--v:10"><b>10%</b><span>교육·컨설팅</span></div>
+  </div>
+</div>
+</div></div></section></div></article><article><h2>legend / legend-bars <small>min 4x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stack" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="legend" data-el="spectrum-04-legend"><span class="key tone-1">정기 구독</span><span class="key tone-2">단건 결제</span><span class="key tone-3">파트너 채널을 통한 간접 매출</span><span class="key tone-4">교육·컨설팅</span></div>
+  <div class="bars" style="--max:60" data-el="spectrum-04-chart-bar">
+    <div class="bar tone-1" style="--v:52"><b>52%</b><span>정기 구독</span></div><div class="bar tone-2" style="--v:21"><b>21%</b><span>단건 결제</span></div><div class="bar tone-3" style="--v:17"><b>17%</b><span>간접 매출</span></div><div class="bar tone-4" style="--v:10"><b>10%</b><span>교육·컨설팅</span></div>
+  </div>
+</div>
+</div></div></section></div></article><article><h2>list / list-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list check" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list-check <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list check" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list-divided <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list divided" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list-num <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list num" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+  <div class="item"><p class="name">성과 점검</p><p class="note">도입 30일 뒤 지표를 함께 봅니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>list / list <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="list" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-list">
+  <div class="item"><p class="name">도입 범위 확정</p><p class="note">1차는 영업과 고객지원 두 조직으로 시작합니다.</p></div>
+  <div class="item"><p class="name">데이터 이관</p><p class="note">기존 기록 3년 치를 주말 동안 옮깁니다.</p></div>
+  <div class="item"><p class="name">권한과 보안 정책 설정</p><p class="note">부서별 열람 범위를 정하고 외부 공유는 승인 뒤에만 열리도록 합니다.</p></div>
+  <div class="item"><p class="name">사용자 교육</p><p class="note">팀별 1시간 실습으로 마칩니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>logo-group / logos-6 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="logos" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-logo-group">
+  <div class="seat logo" data-ph="1"></div>
+  <div class="seat logo" data-ph="2"></div>
+  <div class="seat logo" data-ph="3"></div>
+  <div class="seat logo" data-ph="4"></div>
+  <div class="seat logo" data-ph="5"></div>
+  <div class="seat logo" data-ph="6"></div>
+</div>
+</div></div></section></div></article><article><h2>logo-group / logos-8 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="logos" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-logo-group">
+  <div class="seat logo" data-ph="1"></div>
+  <div class="seat logo" data-ph="2"></div>
+  <div class="seat logo" data-ph="3"></div>
+  <div class="seat logo" data-ph="4"></div>
+  <div class="seat logo" data-ph="5"></div>
+  <div class="seat logo" data-ph="6"></div>
+  <div class="seat logo" data-ph="7"></div>
+  <div class="seat logo" data-ph="8"></div>
+</div>
+</div></div></section></div></article><article><h2>matrix / expanded <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="matrix" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-matrix">
+  <div class="axis-y"><span>효과 큼</span><span>효과 작음</span></div>
+  <div class="axis-x"><span>쉬움</span><span>어려움</span></div>
+  <div class="cell on"><b class="name">지금 실행</b><p class="note">결제 단계 줄이기, 재방문 알림</p></div>
+  <div class="cell"><b class="name">계획해서 추진</b><p class="note">추천 엔진 교체</p></div>
+  <div class="cell"><b class="name">틈날 때</b><p class="note">문구 다듬기</p></div>
+  <div class="cell"><b class="name">하지 않음</b><p class="note">전면 리브랜딩</p></div>
+</div>
+</div></div></section></div></article><article><h2>matrix / matrix <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="matrix" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-matrix">
+  <div class="axis-y"><span>효과 큼</span><span>효과 작음</span></div>
+  <div class="axis-x"><span>쉬움</span><span>어려움</span></div>
+  <div class="cell on"><b class="name">지금 실행</b><p class="note">결제 단계 줄이기, 재방문 알림</p></div>
+  <div class="cell"><b class="name">계획해서 추진</b><p class="note">추천 엔진 교체</p></div>
+  <div class="cell"><b class="name">틈날 때</b><p class="note">문구 다듬기</p></div>
+  <div class="cell"><b class="name">하지 않음</b><p class="note">전면 리브랜딩</p></div>
+</div>
+</div></div></section></div></article><article><h2>metric / stat <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stat" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-metric"><div class="parts"><p class="kick">2026년 3분기</p><p class="fig">312<small>억 원</small></p><p class="name">연간 반복 매출</p><p class="note">목표를 4% 넘겼고, 그중 60%가 기존 고객의 확장 계약입니다.</p></div></div>
+</div></div></section></div></article><article><h2>metric / stats-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stats" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-metric">
+  <div class="stat" data-el="spectrum-04-metric"><div class="parts"><p class="fig">2.4<small>배</small></p><p class="name">업무 처리 속도</p><p class="note">도입 3개월 뒤 측정</p></div></div>
+  <div class="stat" data-el="spectrum-04-metric"><div class="parts"><p class="fig">61<small>%</small></p><p class="name">반복 보고 업무 감소</p><p class="note">주간 보고서 자동화로 줄어든 수작업 시간의 비율</p></div></div>
+  <div class="stat" data-el="spectrum-04-metric"><div class="parts"><p class="fig">18<small>일</small></p><p class="name">평균 도입 기간</p><p class="note">계약부터 전사 사용까지</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>metric / stats-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stats" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-metric">
+  <div class="stat" data-el="spectrum-04-metric"><div class="parts"><p class="fig">1,284<small>곳</small></p><p class="name">누적 고객사</p><p class="note">전년 대비 38% 증가</p></div></div>
+  <div class="stat" data-el="spectrum-04-metric"><div class="parts"><p class="fig">94.2<small>%</small></p><p class="name">엔터프라이즈 재계약률</p><p class="note">업계 평균보다 11%p 높은 수준</p></div></div>
+  <div class="stat" data-el="spectrum-04-metric"><div class="parts"><p class="fig">3.6<small>시간</small></p><p class="name">평균 첫 응답</p><p class="note">지난해의 절반</p></div></div>
+  <div class="stat" data-el="spectrum-04-metric"><div class="parts"><p class="fig">312<small>억</small></p><p class="name">연간 반복 매출</p><p class="note">목표 대비 104%</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>person / people-3-portrait <small>min 6x3 | 3x6</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="people" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-person">
+  <div class="person" data-el="spectrum-04-person"><div class="seat portrait" data-ph="1"></div><p class="name">김서연</p><p class="note">캠페인 총괄 · 전 네이버 검색 총괄</p></div>
+  <div class="person" data-el="spectrum-04-person"><div class="seat portrait" data-ph="2"></div><p class="name">알렉산더 박준호</p><p class="note">최고기술책임자</p></div>
+  <div class="person" data-el="spectrum-04-person"><div class="seat portrait" data-ph="3"></div><p class="name">이도윤</p><p class="note">제품 총괄 · 카카오와 토스에서 12년 동안 제품을 만들었습니다</p></div>
+</div>
+</div></div></section></div></article><article><h2>person / people-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="people" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-person">
+  <div class="person" data-el="spectrum-04-person"><div class="seat avatar" data-ph="1"></div><p class="name">김서연</p><p class="note">캠페인 총괄 · 전 네이버 검색 총괄</p></div>
+  <div class="person" data-el="spectrum-04-person"><div class="seat avatar" data-ph="2"></div><p class="name">알렉산더 박준호</p><p class="note">최고기술책임자</p></div>
+  <div class="person" data-el="spectrum-04-person"><div class="seat avatar" data-ph="3"></div><p class="name">이도윤</p><p class="note">제품 총괄 · 카카오와 토스에서 12년 동안 제품을 만들었습니다</p></div>
+  <div class="person" data-el="spectrum-04-person"><div class="seat avatar" data-ph="4"></div><p class="name">정하은</p><p class="note">고객 성공 리드</p></div>
+</div>
+</div></div></section></div></article><article><h2>person / person <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="person" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-person"><div class="seat avatar" data-ph="1"></div><p class="name">김서연</p><p class="note">캠페인 총괄 · 전 네이버 검색 총괄</p></div>
+</div></div></section></div></article><article><h2>pill / pill-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="stack" style="grid-column:1 / span 12; grid-row:1 / span 6">
+  <div class="pill" data-el="spectrum-04-pill"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></span></span><p class="name">즉시 연동</p><p class="note">설치 없이 5분</p></div></div>
+  <div class="pill on" data-el="spectrum-04-pill"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span></span><p class="name">엔터프라이즈 보안</p><p class="note">국제 인증 2종과 국내 인증 보유</p></div></div>
+  <div class="pill" data-el="spectrum-04-pill"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span></span><p class="name">무제한 사용자</p><p class="note">추가 비용 없음</p></div></div>
+</div>
+</div></div></section></div></article><article><h2>pill / pill <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pill" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-pill"><div class="parts"><span class="mark"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg></span></span><p class="name">11월 3일 정식 출시</p><p class="note">사전 신청 고객부터 순서대로 열립니다</p></div></div>
+</div></div></section></div></article><article><h2>pricing / expanded <small>min 9x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plans" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-pricing">
+  <div class="plan" data-el="spectrum-04-pricing"><p class="name">스타터</p><p class="price"><span class="fig">₩0</span><small>/ 월</small></p><div class="list check" data-el="spectrum-04-list"><div class="item"><p class="name">사용자 5명</p></div><div class="item"><p class="name">프로젝트 3개</p></div><div class="item"><p class="name">커뮤니티 지원</p></div></div></div>
+  <div class="plan on" data-el="spectrum-04-pricing"><p class="name">비즈니스</p><p class="price"><span class="fig">₩29,000</span><small>/ 사용자 · 월</small></p><div class="list check" data-el="spectrum-04-list"><div class="item"><p class="name">사용자 무제한</p></div><div class="item"><p class="name">프로젝트 무제한</p></div><div class="item"><p class="name">자동 보고서와 대시보드</p></div><div class="item"><p class="name">평일 4시간 내 응답</p></div></div><span class="tag" data-el="spectrum-04-tag">추천</span></div>
+  <div class="plan" data-el="spectrum-04-pricing"><p class="name">엔터프라이즈</p><p class="price"><span class="fig">별도 협의</span><small></small></p><div class="list check" data-el="spectrum-04-list"><div class="item"><p class="name">전용 인프라</p></div><div class="item"><p class="name">보안 감사 로그</p></div><div class="item"><p class="name">전담 매니저</p></div><div class="item"><p class="name">맞춤 계약</p></div></div></div>
+</div>
+</div></div></section></div></article><article><h2>pricing / plans-3 <small>min 9x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="plans" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-pricing">
+  <div class="plan" data-el="spectrum-04-pricing"><p class="name">스타터</p><p class="price"><span class="fig">₩0</span><small>/ 월</small></p><div class="list check" data-el="spectrum-04-list"><div class="item"><p class="name">사용자 5명</p></div><div class="item"><p class="name">프로젝트 3개</p></div><div class="item"><p class="name">커뮤니티 지원</p></div></div></div>
+  <div class="plan on" data-el="spectrum-04-pricing"><p class="name">비즈니스</p><p class="price"><span class="fig">₩29,000</span><small>/ 사용자 · 월</small></p><div class="list check" data-el="spectrum-04-list"><div class="item"><p class="name">사용자 무제한</p></div><div class="item"><p class="name">프로젝트 무제한</p></div><div class="item"><p class="name">자동 보고서와 대시보드</p></div><div class="item"><p class="name">평일 4시간 내 응답</p></div></div><span class="tag" data-el="spectrum-04-tag">추천</span></div>
+  <div class="plan" data-el="spectrum-04-pricing"><p class="name">엔터프라이즈</p><p class="price"><span class="fig">별도 협의</span><small></small></p><div class="list check" data-el="spectrum-04-list"><div class="item"><p class="name">전용 인프라</p></div><div class="item"><p class="name">보안 감사 로그</p></div><div class="item"><p class="name">전담 매니저</p></div><div class="item"><p class="name">맞춤 계약</p></div></div></div>
+</div>
+</div></div></section></div></article><article><h2>pyramid / pyramid-3 <small>min 4x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-pyramid">
+  <div class="level"><b class="name">비전</b><p class="note">모든 팀이 데이터로 결정한다</p></div>
+  <div class="level"><b class="name">전략</b><p class="note">3년 안에 핵심 업무를 자동화</p></div>
+  <div class="level"><b class="name">실행 과제</b><p class="note">분기별 12개 과제</p></div>
+</div>
+</div></div></section></div></article><article><h2>pyramid / pyramid-4 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-pyramid">
+  <div class="level"><b class="name">비전</b><p class="note">모든 팀이 데이터로 결정한다</p></div>
+  <div class="level"><b class="name">전략</b><p class="note">3년 안에 핵심 업무를 자동화</p></div>
+  <div class="level"><b class="name">실행 과제</b><p class="note">분기별 12개 과제</p></div>
+  <div class="level"><b class="name">운영 기반</b><p class="note">데이터 표준과 권한 체계, 교육 프로그램</p></div>
+</div>
+</div></div></section></div></article><article><h2>pyramid / pyramid-5 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="pyramid" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-pyramid">
+  <div class="level"><b class="name">비전</b><p class="note">모든 팀이 데이터로 결정한다</p></div>
+  <div class="level"><b class="name">전략</b><p class="note">3년 안에 핵심 업무를 자동화</p></div>
+  <div class="level"><b class="name">실행 과제</b><p class="note">분기별 12개 과제</p></div>
+  <div class="level"><b class="name">운영 기반</b><p class="note">데이터 표준과 권한 체계, 교육 프로그램</p></div>
+  <div class="level"><b class="name">문화</b><p class="note">실험을 권장</p></div>
+</div>
+</div></div></section></div></article><article><h2>quote / quote-big <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="quote big" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-quote"><blockquote>좋은 도구는 일을 줄이는 것이 아니라, 해야 할 일을 분명하게 만듭니다.</blockquote><div class="by"><div class="seat avatar" data-ph="1"></div><p class="name">김서연</p><p class="note">캠페인 총괄</p></div></div>
+</div></div></section></div></article><article><h2>quote / quote <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="quote" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-quote"><blockquote>도입 석 달 만에 주간 보고에 쓰던 시간이 절반으로 줄었고, 회의는 숫자를 맞추는 자리에서 결정을 내리는 자리로 바뀌었습니다.</blockquote><div class="by"><div class="seat avatar" data-ph="1"></div><p class="name">박지훈</p><p class="note">한빛물산 운영본부장</p></div></div>
+</div></div></section></div></article><article><h2>steps / steps-3 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-steps">
+  <div class="step"><span class="mark">1</span><p class="name">문의 접수</p><p class="note">채널과 관계없이 한곳으로 모읍니다.</p></div>
+  <div class="step"><span class="mark">2</span><p class="name">자동 분류</p><p class="note">유형과 긴급도를 판단합니다.</p></div>
+  <div class="step"><span class="mark">3</span><p class="name">담당자 배정과 알림</p><p class="note">업무량을 보고 가장 빨리 답할 수 있는 담당자에게 넘깁니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>steps / steps-5 <small>min 10x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-steps">
+  <div class="step"><span class="mark">1</span><p class="name">문의 접수</p><p class="note">채널과 관계없이 한곳으로 모읍니다.</p></div>
+  <div class="step"><span class="mark">2</span><p class="name">자동 분류</p><p class="note">유형과 긴급도를 판단합니다.</p></div>
+  <div class="step"><span class="mark">3</span><p class="name">담당자 배정과 알림</p><p class="note">업무량을 보고 가장 빨리 답할 수 있는 담당자에게 넘깁니다.</p></div>
+  <div class="step"><span class="mark">4</span><p class="name">해결</p><p class="note">답변 초안을 함께 제안합니다.</p></div>
+  <div class="step"><span class="mark">5</span><p class="name">회고</p><p class="note">반복 문의를 문서로 남깁니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>steps / steps-col-4 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="steps col" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-steps">
+  <div class="step"><span class="mark">1</span><p class="name">문의 접수</p><p class="note">채널과 관계없이 한곳으로 모읍니다.</p></div>
+  <div class="step"><span class="mark">2</span><p class="name">자동 분류</p><p class="note">유형과 긴급도를 판단합니다.</p></div>
+  <div class="step"><span class="mark">3</span><p class="name">담당자 배정과 알림</p><p class="note">업무량을 보고 가장 빨리 답할 수 있는 담당자에게 넘깁니다.</p></div>
+  <div class="step"><span class="mark">4</span><p class="name">해결</p><p class="note">답변 초안을 함께 제안합니다.</p></div>
+</div>
+</div></div></section></div></article><article><h2>table / table-3x3 <small>min 4x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-table">
+  <table class="table">
+    <thead><tr><th>지표</th><th class="num">작년</th><th class="num pick">올해</th></tr></thead>
+    <tbody>
+      <tr><th>매출</th><td class="num">12.1억</td><td class="num pick">15.6억</td></tr>
+      <tr><th>신규 유료 고객사</th><td class="num">184곳</td><td class="num pick">312곳</td></tr>
+      <tr><th>재계약률</th><td class="num">81%</td><td class="num pick">92%</td></tr>
+    </tbody>
+  </table>
+</div>
+</div></div></section></div></article><article><h2>table / table-5x4 <small>min 6x3 | 12x2</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-table">
+  <table class="table">
+    <thead><tr><th>요금제</th><th class="num">월 요금</th><th class="num pick">연 요금</th><th class="num">사용자</th><th>지원</th></tr></thead>
+    <tbody>
+      <tr><th>스타터</th><td class="num">9,900원</td><td class="num pick">99,000원</td><td class="num">3명</td><td>이메일</td></tr>
+      <tr><th>팀</th><td class="num">29,000원</td><td class="num pick">290,000원</td><td class="num">20명</td><td>채팅</td></tr>
+      <tr><th>비즈니스 플러스 연간 약정</th><td class="num">79,000원</td><td class="num pick">790,000원</td><td class="num">100명</td><td>전담 매니저</td></tr>
+      <tr><th>엔터프라이즈</th><td class="num">별도 협의</td><td class="num pick">별도 협의</td><td class="num">무제한</td><td>24시간 전화</td></tr>
+    </tbody>
+  </table>
+</div>
+</div></div></section></div></article><article><h2>table / table-7x6 <small>min 8x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="tablebox" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-table">
+  <table class="table">
+    <thead><tr><th>지역</th><th class="num">1월</th><th class="num">2월</th><th class="num">3월</th><th class="num">4월</th><th class="num">5월</th><th class="num pick">6월</th></tr></thead>
+    <tbody>
+      <tr><th>서울</th><td class="num">412</td><td class="num">438</td><td class="num">455</td><td class="num">471</td><td class="num">502</td><td class="num pick">538</td></tr>
+      <tr><th>경기·인천</th><td class="num">288</td><td class="num">301</td><td class="num">297</td><td class="num">325</td><td class="num">340</td><td class="num pick">362</td></tr>
+      <tr><th>부산·울산·경남</th><td class="num">154</td><td class="num">149</td><td class="num">163</td><td class="num">170</td><td class="num">181</td><td class="num pick">196</td></tr>
+      <tr><th>대구·경북</th><td class="num">97</td><td class="num">102</td><td class="num">99</td><td class="num">108</td><td class="num">113</td><td class="num pick">121</td></tr>
+      <tr><th>호남</th><td class="num">76</td><td class="num">80</td><td class="num">84</td><td class="num">83</td><td class="num">91</td><td class="num pick">98</td></tr>
+      <tr><th>해외</th><td class="num">31</td><td class="num">36</td><td class="num">44</td><td class="num">52</td><td class="num">67</td><td class="num pick">85</td></tr>
+    </tbody>
+  </table>
+</div>
+</div></div></section></div></article><article><h2>tag / expanded <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-card"><div class="parts"><p class="kick"><span class="tag" data-el="spectrum-04-tag">신규</span></p><p class="name">자동 보고서</p><p class="note">매주 월요일 아침, 지난주 지표를 <span class="hl" data-el="spectrum-04-tag">요약 한 장</span>으로 받아 봅니다.</p></div></div>
+</div></div></section></div></article><article><h2>tag / tag-hl <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="card" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-card"><div class="parts"><p class="kick"><span class="tag" data-el="spectrum-04-tag">신규</span></p><p class="name">자동 보고서</p><p class="note">매주 월요일 아침, 지난주 지표를 <span class="hl" data-el="spectrum-04-tag">요약 한 장</span>으로 받아 봅니다.</p></div></div>
+</div></div></section></div></article><article><h2>timeline / track-4 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="track" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-timeline">
+  <div class="stop"><p class="kick">2023.03</p><p class="name">법인 설립</p><p class="note">세 명이 시작했습니다.</p></div>
+  <div class="stop"><p class="kick">2023.11</p><p class="name">첫 유료 고객</p><p class="note">제조업 고객 12곳</p></div>
+  <div class="stop on"><p class="kick">2024.06</p><p class="name">시리즈 A 투자 유치</p><p class="note">누적 투자금 120억 원을 확보했습니다.</p></div>
+  <div class="stop"><p class="kick">2025.02</p><p class="name">일본 진출</p><p class="note">도쿄 지사 설립</p></div>
+</div>
+</div></div></section></div></article><article><h2>timeline / track-6 <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="track" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-timeline">
+  <div class="stop"><p class="kick">2023.03</p><p class="name">법인 설립</p><p class="note">세 명이 시작했습니다.</p></div>
+  <div class="stop"><p class="kick">2023.11</p><p class="name">첫 유료 고객</p><p class="note">제조업 고객 12곳</p></div>
+  <div class="stop"><p class="kick">2024.06</p><p class="name">시리즈 A 투자 유치</p><p class="note">누적 투자금 120억 원을 확보했습니다.</p></div>
+  <div class="stop"><p class="kick">2025.02</p><p class="name">일본 진출</p><p class="note">도쿄 지사 설립</p></div>
+  <div class="stop on"><p class="kick">2025.10</p><p class="name">고객 1,000곳</p><p class="note">재계약률 94%</p></div>
+  <div class="stop"><p class="kick">2026.09</p><p class="name">흑자 전환</p><p class="note">분기 영업이익 달성</p></div>
+</div>
+</div></div></section></div></article><article><h2>timeline / track-alt-5 <small>min 6x4</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body">
+<div class="track alt" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-timeline">
+  <div class="stop"><p class="kick">2023.03</p><p class="name">법인 설립</p><p class="note">세 명이 시작했습니다.</p></div>
+  <div class="stop"><p class="kick">2023.11</p><p class="name">첫 유료 고객</p><p class="note">제조업 고객 12곳</p></div>
+  <div class="stop"><p class="kick">2024.06</p><p class="name">시리즈 A 투자 유치</p><p class="note">누적 투자금 120억 원을 확보했습니다.</p></div>
+  <div class="stop on"><p class="kick">2025.02</p><p class="name">일본 진출</p><p class="note">도쿄 지사 설립</p></div>
+  <div class="stop"><p class="kick">2025.10</p><p class="name">고객 1,000곳</p><p class="note">재계약률 94%</p></div>
+</div>
+</div></div></section></div></article><article><h2>venn / venn-2 <small>min 6x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="venn" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-venn">
+  <div class="set"><b class="name">고객이 원하는 것</b></div>
+  <div class="set"><b class="name">우리가 잘하는 것</b></div>
+  <b class="core">집중 영역</b>
+</div>
+</div></div></section></div></article><article><h2>venn / venn-3 <small>min 6x5</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="venn" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-venn">
+  <div class="set"><b class="name">시장 수요</b></div>
+  <div class="set"><b class="name">기술 역량</b></div>
+  <div class="set"><b class="name">수익성</b></div>
+  <b class="core">기회</b>
+</div>
+</div></div></section></div></article><article><h2>versus / expanded <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="versus" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-versus">
+  <div class="side"><b class="name">직접 구축</b><div class="list" data-el="spectrum-04-list"><div class="item"><span class="name">초기 투자 4.2억</span></div><div class="item"><span class="name">전담 개발자 6명과 운영 인력이 필요</span></div><div class="item"><span class="name">출시까지 9개월</span></div></div></div>
+  <b class="vs">VS</b>
+  <div class="side on"><b class="name">구독형 도입</b><div class="list" data-el="spectrum-04-list"><div class="item"><span class="name">월 290만 원</span></div><div class="item"><span class="name">운영 인력 1명</span></div><div class="item"><span class="name">6주 안에 전사 적용</span></div></div></div>
+</div>
+</div></div></section></div></article><article><h2>versus / versus <small>min 6x3</small></h2><div class="frame"><section class="slide"><div class="page"><div class="body"><div class="versus" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="spectrum-04-versus">
+  <div class="side"><b class="name">직접 구축</b><div class="list" data-el="spectrum-04-list"><div class="item"><span class="name">초기 투자 4.2억</span></div><div class="item"><span class="name">전담 개발자 6명과 운영 인력이 필요</span></div><div class="item"><span class="name">출시까지 9개월</span></div></div></div>
+  <b class="vs">VS</b>
+  <div class="side on"><b class="name">구독형 도입</b><div class="list" data-el="spectrum-04-list"><div class="item"><span class="name">월 290만 원</span></div><div class="item"><span class="name">운영 인력 1명</span></div><div class="item"><span class="name">6주 안에 전사 적용</span></div></div></div>
+</div>
+</div></div></section></div></article></body></html>

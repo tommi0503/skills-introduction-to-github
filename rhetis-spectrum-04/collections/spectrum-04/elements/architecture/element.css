@@ -1,0 +1,14 @@
+[data-el="spectrum-04-architecture"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-architecture"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-architecture"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-architecture"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-architecture"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-architecture"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-architecture"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-architecture"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm)}[data-el="spectrum-04-architecture"]>.layer{flex:1;min-height:0;display:flex;align-items:center;gap:var(--gap);padding:var(--pad);background:var(--surface-2);border-radius:var(--radius-sm);border-left:4px solid var(--accent)}[data-el="spectrum-04-architecture"]>.layer>.name{flex:0 0 22%}[data-el="spectrum-04-architecture"] .chip{display:flex;align-items:center;justify-content:center;flex:1;min-width:0;background:var(--surface);border:var(--stroke) solid var(--line);border-radius:999px;padding:var(--gap-sm);font-size:var(--type-18);text-align:center}
+
+@container (max-width:600px){[data-el="spectrum-04-architecture"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-architecture"] .note{font-size:var(--type-14)}[data-el="spectrum-04-architecture"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-architecture"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-architecture"] .name{font-size:var(--type-16)}[data-el="spectrum-04-architecture"] .note{font-size:var(--type-12)}[data-el="spectrum-04-architecture"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-architecture"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-architecture"] .note{display:none}}
+
+@container(max-width:500px){[data-el="spectrum-04-architecture"]>.layer{padding:var(--gap-sm);gap:var(--gap-sm);flex-wrap:wrap}[data-el="spectrum-04-architecture"]>.layer>.name{flex:0 0 100%;font-size:var(--type-16)}[data-el="spectrum-04-architecture"] .chip{font-size:var(--type-12);padding:calc(var(--gap-sm)/2)}}

@@ -1,0 +1,1 @@
+A 1280 by 720 canvas framed in campaign orange, with a rounded white heading panel and a twelve-column, six-row content panel. White space, dark type, and inset rules carry the hierarchy. Covers use a strong editorial lockup and a geometric corner frame rather than photographic decoration. Seats remain simple neutral placements.

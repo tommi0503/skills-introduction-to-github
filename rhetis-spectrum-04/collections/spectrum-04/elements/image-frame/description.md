@@ -1,0 +1,1 @@
+The image frame component uses the Spectrum campaign grammar: clean white space, confident dark type, rounded inset panels, fine gray rules, and a single solid orange emphasis. Member counts and longer Korean business labels remain editable. Compact containers reduce type and spacing in discrete steps; dark mode uses charcoal surfaces with lime emphasis.

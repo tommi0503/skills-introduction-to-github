@@ -1,0 +1,52 @@
+[data-el="spectrum-04-cycle"]{box-sizing:border-box;container-type:inline-size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-20);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="spectrum-04-cycle"] :is(.name,.note,.fig,.kick,.mark){margin:0;min-width:0}
+[data-el="spectrum-04-cycle"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="spectrum-04-cycle"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)}
+[data-el="spectrum-04-cycle"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);color:var(--accent);letter-spacing:var(--label-track)}
+[data-el="spectrum-04-cycle"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="spectrum-04-cycle"] small{font-size:var(--type-20);font-weight:var(--label-weight)}
+[data-el="spectrum-04-cycle"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--gap);align-items:center}[data-el="spectrum-04-cycle"]>.core{grid-area:2/2;aspect-ratio:1;max-height:100%;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:var(--accent-ink);text-align:center;padding:var(--gap-sm);z-index:1}[data-el="spectrum-04-cycle"]>.node{position:relative;background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);padding:var(--gap-sm);text-align:center;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2)}[data-el="spectrum-04-cycle"]>.node:nth-child(2){grid-area:1/2}[data-el="spectrum-04-cycle"]>.node:nth-child(3){grid-area:2/3}[data-el="spectrum-04-cycle"]>.node:nth-child(4){grid-area:3/2}[data-el="spectrum-04-cycle"]>.node:nth-child(5){grid-area:2/1}[data-el="spectrum-04-cycle"]>.node:nth-child(6){grid-area:1/1}[data-el="spectrum-04-cycle"]>.node:nth-child(7){grid-area:3/3}[data-el="spectrum-04-cycle"]>.node:before{content:"→";position:absolute;left:50%;bottom:calc(var(--gap)*-1);color:var(--accent);font-size:var(--type-20)}[data-el="spectrum-04-cycle"] .name{font-size:var(--type-22)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-16)}@container(max-width:600px){[data-el="spectrum-04-cycle"] .name{font-size:var(--type-16)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-12)}}
+
+@container (max-width:600px){[data-el="spectrum-04-cycle"] :is(.name,.chip){font-size:var(--type-18)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-14)}[data-el="spectrum-04-cycle"] .fig{font-size:var(--type-40)}[data-el="spectrum-04-cycle"] .parts{gap:var(--gap-sm)}}
+@container (max-width:300px){[data-el="spectrum-04-cycle"] .name{font-size:var(--type-16)}[data-el="spectrum-04-cycle"] .note{font-size:var(--type-12)}[data-el="spectrum-04-cycle"] .fig{font-size:var(--type-28)}[data-el="spectrum-04-cycle"] .kick{display:none}}
+@container (max-width:160px){[data-el="spectrum-04-cycle"] .note{display:none}}
+
+[data-el="spectrum-04-cycle"]>.core{justify-self:center;width:min(100%,200px)}[data-el="spectrum-04-cycle"]:before{content:"";position:absolute;left:28%;right:28%;top:22%;bottom:22%;border:var(--stroke) dashed var(--accent);border-radius:50%}[data-el="spectrum-04-cycle"]>.node:nth-child(2):before{content:"↘";left:100%;top:100%}[data-el="spectrum-04-cycle"]>.node:nth-child(3):before{content:"↙";left:0;top:100%}[data-el="spectrum-04-cycle"]>.node:nth-child(4):before{content:"↖";left:0;bottom:100%}[data-el="spectrum-04-cycle"]>.node:nth-child(5):before{content:"↗";left:100%;bottom:100%}
+
+[data-el="spectrum-04-cycle"]{display:block}[data-el="spectrum-04-cycle"]>.core{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(22%,180px);height:auto;max-height:none;aspect-ratio:1}[data-el="spectrum-04-cycle"]>.node{position:absolute;width:28%;translate:-50% -50%;z-index:1}[data-el="spectrum-04-cycle"]>.node:before{content:none}[data-el="spectrum-04-cycle"]:before{inset:15% 16%}[data-el="spectrum-04-cycle"]:after{content:"↻";position:absolute;left:72%;top:45%;color:var(--accent);font-size:var(--type-36);line-height:var(--figure-line)}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(4):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(4):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(30deg));top:calc(50% + 35% * sin(30deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(4):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(150deg));top:calc(50% + 35% * sin(150deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(0deg));top:calc(50% + 35% * sin(0deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(90deg));top:calc(50% + 35% * sin(90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(5):last-child)>.node:nth-child(5){left:calc(50% + 34% * cos(180deg));top:calc(50% + 35% * sin(180deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(-18deg));top:calc(50% + 35% * sin(-18deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(54deg));top:calc(50% + 35% * sin(54deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(5){left:calc(50% + 34% * cos(126deg));top:calc(50% + 35% * sin(126deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(6):last-child)>.node:nth-child(6){left:calc(50% + 34% * cos(198deg));top:calc(50% + 35% * sin(198deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(2){left:calc(50% + 34% * cos(-90deg));top:calc(50% + 35% * sin(-90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(3){left:calc(50% + 34% * cos(-30deg));top:calc(50% + 35% * sin(-30deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(4){left:calc(50% + 34% * cos(30deg));top:calc(50% + 35% * sin(30deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(5){left:calc(50% + 34% * cos(90deg));top:calc(50% + 35% * sin(90deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(6){left:calc(50% + 34% * cos(150deg));top:calc(50% + 35% * sin(150deg))}
+
+[data-el="spectrum-04-cycle"]:has(>.node:nth-child(7):last-child)>.node:nth-child(7){left:calc(50% + 34% * cos(210deg));top:calc(50% + 35% * sin(210deg))}
