@@ -1,0 +1,20 @@
+:is(.legend[data-el="blueprint-06-legend"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.legend[data-el="blueprint-06-legend"]) * { box-sizing:border-box; min-width:0; }
+:is(.legend[data-el="blueprint-06-legend"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.legend[data-el="blueprint-06-legend"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.legend[data-el="blueprint-06-legend"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.legend[data-el="blueprint-06-legend"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.legend[data-el="blueprint-06-legend"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.legend[data-el="blueprint-06-legend"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.legend[data-el="blueprint-06-legend"]) .name {font-size:var(--type-20)} :is(.legend[data-el="blueprint-06-legend"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.legend[data-el="blueprint-06-legend"]) .name {font-size:var(--type-18)} :is(.legend[data-el="blueprint-06-legend"]) .note {font-size:var(--type-14)} :is(.legend[data-el="blueprint-06-legend"]) .kick {display:none} :is(.legend[data-el="blueprint-06-legend"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.legend[data-el="blueprint-06-legend"]) .note {display:none} }
+
+:is(.legend[data-el="blueprint-06-legend"]) {display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:var(--gap-lg);padding:var(--gap)} :is(.legend[data-el="blueprint-06-legend"]) .key{display:flex;align-items:center;gap:var(--gap-sm);font-size:var(--type-18);line-height:var(--label-line);font-weight:var(--label-weight);color:var(--ink-2)} :is(.legend[data-el="blueprint-06-legend"]) .key::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent)}
+@container bp (max-width:650px){:is(.legend[data-el="blueprint-06-legend"]) .key{font-size:var(--type-14)}} @container bp (max-height:150px){:is(.legend[data-el="blueprint-06-legend"]) .key{font-size:var(--type-14)}}
+
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-1::before {background:var(--tone-1)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-2::before {background:var(--tone-2)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-3::before {background:var(--tone-3)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-4::before {background:var(--tone-4)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-5::before {background:var(--tone-5)}

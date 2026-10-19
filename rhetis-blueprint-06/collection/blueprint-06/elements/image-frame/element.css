@@ -1,0 +1,14 @@
+:is(.frame[data-el="blueprint-06-image-frame"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) * { box-sizing:border-box; min-width:0; }
+:is(.frame[data-el="blueprint-06-image-frame"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.frame[data-el="blueprint-06-image-frame"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.frame[data-el="blueprint-06-image-frame"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.frame[data-el="blueprint-06-image-frame"]) .name {font-size:var(--type-20)} :is(.frame[data-el="blueprint-06-image-frame"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.frame[data-el="blueprint-06-image-frame"]) .name {font-size:var(--type-18)} :is(.frame[data-el="blueprint-06-image-frame"]) .note {font-size:var(--type-14)} :is(.frame[data-el="blueprint-06-image-frame"]) .kick {display:none} :is(.frame[data-el="blueprint-06-image-frame"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.frame[data-el="blueprint-06-image-frame"]) .note {display:none} }
+
+:is(.frame[data-el="blueprint-06-image-frame"]) {display:flex;padding:var(--gap-sm);border:var(--stroke) solid var(--line);background:var(--surface);border-radius:var(--radius)} :is(.frame[data-el="blueprint-06-image-frame"]) .seat{width:100%;height:100%;border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;border:var(--stroke) solid var(--line)} :is(.frame[data-el="blueprint-06-image-frame"]) .seat::after{font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)}
+@container bp (max-width:600px){:is(.frame[data-el="blueprint-06-image-frame"]) .seat::after{font-size:var(--type-14)}} @container bp (max-height:200px){:is(.frame[data-el="blueprint-06-image-frame"]) .seat::after{font-size:var(--type-12)}}

@@ -1,0 +1,701 @@
+<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=1280"><title>미리컴퍼니 운영 성과 리포트 — 지점별 목표 달성 현황</title><style>@font-face{font-family:Oswald;src:url('../../../assets/fonts/Oswald-500.woff2');font-weight:500;font-display:block}@font-face{font-family:Montserrat;src:url('../../../assets/fonts/Montserrat-Variable.woff2');font-weight:100 900;font-display:block}@font-face{font-family:'Gmarket Sans';src:url('../../../assets/fonts/GmarketSansLight.woff');font-weight:300;font-display:block}@font-face{font-family:'Gmarket Sans';src:url('../../../assets/fonts/GmarketSansMedium.woff');font-weight:500;font-display:block}@font-face{font-family:'Gmarket Sans';src:url('../../../assets/fonts/GmarketSansBold.woff');font-weight:700;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:block}@font-face{font-family:Pretendard;src:url('../../../assets/fonts/Pretendard-Black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:block}
+.slide {
+  --page: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f3f5fa;
+  --ink: #17223d;
+  --ink-2: #3d4b67;
+  --mute: #626d82;
+  --line: #d8dfea;
+  --accent: #3157d4;
+  --accent-ink: #ffffff;
+  --accent-soft: #edf1ff;
+  --tone-1: #3157d4;
+  --tone-1-ink: #ffffff;
+  --tone-2: #1c2d61;
+  --tone-2-ink: #ffffff;
+  --tone-3: #a4a6d3;
+  --tone-3-ink: #17223d;
+  --tone-4: #e1e7fc;
+  --tone-4-ink: #17223d;
+  --tone-5: #e7e8ee;
+  --tone-5-ink: #17223d;
+  --good: #127653;
+  --warn: #8b5b00;
+  --bad: #b83440;
+  --font-display: "Pretendard", sans-serif;
+  --font-body: "Pretendard", sans-serif;
+  --weight-display: 700;
+  --weight-body: 400;
+  --tracking-display: -.04em;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --stroke: 1px;
+  --text-min: 12px;
+  --margin-x: 56px;
+  --margin-y: 42px;
+  --gap: 20px;
+  --gap-sm: 10px;
+  --gap-lg: 32px;
+  --pad: 24px;
+  --furn-edge: 24px;
+  --top-h: 28px;
+  --foot-h: 20px;
+  --furn-gap: 14px;
+  --rail-w: 78px;
+  --rail-gap: 24px;
+  --title-weight: 700;
+  --title-line: 1.22;
+  --title-track: -.035em;
+  --lead-weight: 400;
+  --lead-line: 1.5;
+  --lead-track: -.025em;
+  --figure-weight: 700;
+  --figure-line: 1.08;
+  --figure-track: -.04em;
+  --name-weight: 600;
+  --name-line: 1.35;
+  --name-track: -.025em;
+  --body-weight: 400;
+  --body-line: 1.55;
+  --body-track: -.02em;
+  --label-weight: 600;
+  --label-line: 1.2;
+  --label-track: -.015em;
+  --label-track-latin: .07em;
+}
+.slide.dark {
+  --page: #111a30;
+  --surface: #19253f;
+  --surface-2: #22304d;
+  --ink: #f3f6ff;
+  --ink-2: #d2dcf1;
+  --mute: #a8b5d0;
+  --line: #455675;
+  --accent: #95b4ff;
+  --accent-ink: #111a30;
+  --accent-soft: #243c6d;
+  --tone-1: #95b4ff;
+  --tone-1-ink: #111a30;
+  --tone-2: #d7e3ff;
+  --tone-2-ink: #111a30;
+  --tone-3: #b6b8eb;
+  --tone-3-ink: #111a30;
+  --tone-4: #324f87;
+  --tone-4-ink: #f3f6ff;
+  --tone-5: #35415e;
+  --tone-5-ink: #f3f6ff;
+  --good: #6fe1b2;
+  --warn: #ffd37d;
+  --bad: #ff9ba5;
+}
+
+.slide, .slide * { box-sizing:border-box; }
+.slide { position:relative; width:1280px; height:720px; overflow:hidden; background:var(--page); color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); word-break:keep-all; overflow-wrap:anywhere; -webkit-font-smoothing:antialiased; }
+.slide :is(h1,h2,h3,p,blockquote,figure,ul,ol) { margin:0; padding:0; }
+.slide > .page { position:absolute; inset:var(--margin-y) var(--margin-x); display:flex; flex-direction:column; gap:var(--gap-lg); }
+.slide:has(> .foot) > .page { bottom:calc(var(--furn-edge) + var(--foot-h) + var(--furn-gap)); }
+.slide:has(> .top) > .page { top:calc(var(--furn-edge) + var(--top-h) + var(--furn-gap)); }
+.slide:has(> .rail) > .page { left:calc(var(--rail-w) + var(--rail-gap)); }
+.slide .page > .head { display:flex; flex-direction:column; gap:var(--gap-sm); flex:none; }
+.slide .head.center { align-items:center; text-align:center; }
+.slide .kicker { color:var(--accent); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track-latin); }
+.slide .title { color:var(--ink); font-family:var(--font-display); font-size:var(--type-36); font-weight:var(--title-weight); line-height:var(--title-line); letter-spacing:var(--title-track); }
+.slide .lead { color:var(--ink-2); font-size:var(--type-18); font-weight:var(--lead-weight); line-height:var(--lead-line); letter-spacing:var(--lead-track); }
+.slide .page > .body { min-height:0; flex:1; display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(6,minmax(0,1fr)); gap:var(--gap); }
+.slide .body > *, .slide :is(.group,.stack,.split) > * { min-width:0; min-height:0; }
+.slide .group { display:flex; gap:var(--gap); }
+.slide .group > * { flex:1; }
+.slide .group.col, .slide .stack { display:flex; flex-direction:column; gap:var(--gap-sm); }
+.slide .stack > * { flex:1; min-height:0; }
+.slide .group.two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--gap); }
+.slide .group.three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--gap); }
+.slide .split { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:var(--gap); }
+.slide .split.wide-left { grid-template-columns:minmax(0,7fr) minmax(0,5fr); }
+.slide .icon { display:inline-flex; width:1em; height:1em; flex:none; }
+.slide .icon svg { width:100%; height:100%; }
+.slide > :is(.top,.foot) { position:absolute; left:var(--margin-x); right:var(--margin-x); display:flex; align-items:center; gap:var(--gap-sm); font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--mute); }
+.slide > .top { top:var(--furn-edge); height:var(--top-h); border-bottom:var(--stroke) solid var(--line); }
+.slide > .foot { bottom:var(--furn-edge); height:var(--foot-h); border-top:var(--stroke) solid var(--line); padding-top:var(--gap-sm); }
+.slide :is(.top,.foot) .sec { margin-left:auto; }
+.slide .foot .src { margin-left:auto; }
+.slide .foot .no { margin-left:var(--gap); color:var(--accent); font-weight:var(--label-weight); }
+.slide > .rail { position:absolute; inset:0 auto 0 0; width:var(--rail-w); background:var(--tone-2); color:var(--tone-2-ink); display:flex; flex-direction:column; align-items:center; gap:var(--gap); padding:var(--margin-y) var(--gap-sm); font-size:var(--type-14); }
+.slide .rail .on { font-weight:var(--title-weight); color:var(--tone-2-ink); }
+.slide .rail .label { writing-mode:vertical-rl; margin-top:auto; font-size:var(--type-12); }
+.slide .seat { display:flex; align-items:center; justify-content:center; background:var(--surface-2); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); min-width:0; min-height:0; color:var(--mute); }
+.slide .seat[data-ph]::after { content:attr(data-ph); font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); }
+.slide .seat.avatar { width:64px; height:64px; aspect-ratio:1; border-radius:50%; }
+.slide .seat.portrait { aspect-ratio:4/5; }
+.slide .seat.logo { min-height:48px; }
+.slide .seat.icon { width:48px; height:48px; }
+.slide.cover > .page { display:grid; grid-template-columns:1fr; grid-template-rows:1fr; }
+.slide.cover .page > * { grid-area:1/1; }
+.slide.cover .lockup { z-index:1; max-width:76%; align-self:center; display:flex; flex-direction:column; gap:var(--gap); }
+.slide.cover .lockup.at-center { justify-self:center; text-align:center; align-items:center; }
+.slide.cover .lockup.at-left { justify-self:start; }
+.slide.cover .lockup.at-bottom-left { align-self:end; }
+.slide.cover .lockup.at-top-left { align-self:start; }
+.slide.cover .title { font-size:var(--type-64); }
+.slide.cover .lead { font-size:var(--type-24); }
+.slide.cover .meta { z-index:1; align-self:end; font-size:var(--type-14); color:var(--ink-2); }
+.slide.cover .deco { position:absolute; width:42%; height:100%; right:0; top:0; background:linear-gradient(120deg,var(--accent-soft) 0 44%,var(--accent) 44% 48%,var(--tone-2) 48% 100%); clip-path:polygon(68% 0,100% 0,100% 100%,0 100%); }
+.slide.cover .seat.back { position:absolute; inset:0; z-index:0; }
+
+:is(.agenda[data-el="blueprint-06-agenda"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.agenda[data-el="blueprint-06-agenda"]) * { box-sizing:border-box; min-width:0; }
+:is(.agenda[data-el="blueprint-06-agenda"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.agenda[data-el="blueprint-06-agenda"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.agenda[data-el="blueprint-06-agenda"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.agenda[data-el="blueprint-06-agenda"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.agenda[data-el="blueprint-06-agenda"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.agenda[data-el="blueprint-06-agenda"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.agenda[data-el="blueprint-06-agenda"]) .name {font-size:var(--type-20)} :is(.agenda[data-el="blueprint-06-agenda"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.agenda[data-el="blueprint-06-agenda"]) .name {font-size:var(--type-18)} :is(.agenda[data-el="blueprint-06-agenda"]) .note {font-size:var(--type-14)} :is(.agenda[data-el="blueprint-06-agenda"]) .kick {display:none} :is(.agenda[data-el="blueprint-06-agenda"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.agenda[data-el="blueprint-06-agenda"]) .note {display:none} }
+
+:is(.agenda[data-el="blueprint-06-agenda"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--gap)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry{display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.2fr);align-items:center;gap:var(--gap);padding:var(--gap);border-bottom:var(--stroke) solid var(--line)} :is(.agenda[data-el="blueprint-06-agenda"]) .mark{color:var(--accent);font-size:var(--type-32);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry .name{font-size:var(--type-24)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry .note{font-size:var(--type-16)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry.on{background:var(--accent-soft);border-radius:var(--radius-sm);border-color:var(--accent-soft)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry.on .name{color:var(--accent)}
+@container bp (max-width:650px){:is(.agenda[data-el="blueprint-06-agenda"]) .entry{grid-template-columns:40px 1fr;column-gap:var(--gap-sm);padding:var(--gap-sm)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry .note{grid-column:2;font-size:var(--type-14)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry .name{font-size:var(--type-18)} :is(.agenda[data-el="blueprint-06-agenda"]) .mark{font-size:var(--type-24);grid-row:span 2}} @container bp (max-height:350px){:is(.agenda[data-el="blueprint-06-agenda"]) .entry{padding:var(--gap-sm)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry .name{font-size:var(--type-18)} :is(.agenda[data-el="blueprint-06-agenda"]) .entry .note{font-size:var(--type-14)} :is(.agenda[data-el="blueprint-06-agenda"]) .mark{font-size:var(--type-24)}}
+
+:is(.agenda[data-el="blueprint-06-agenda"]):has(> .entry:nth-child(6)) .entry{padding:var(--gap-sm)} :is(.agenda[data-el="blueprint-06-agenda"]):has(> .entry:nth-child(6)) .entry .name{font-size:var(--type-20)} :is(.agenda[data-el="blueprint-06-agenda"]):has(> .entry:nth-child(6)) .entry .note{font-size:var(--type-14)}
+
+:is(.arch[data-el="blueprint-06-architecture"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.arch[data-el="blueprint-06-architecture"]) * { box-sizing:border-box; min-width:0; }
+:is(.arch[data-el="blueprint-06-architecture"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.arch[data-el="blueprint-06-architecture"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.arch[data-el="blueprint-06-architecture"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.arch[data-el="blueprint-06-architecture"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.arch[data-el="blueprint-06-architecture"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.arch[data-el="blueprint-06-architecture"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.arch[data-el="blueprint-06-architecture"]) .name {font-size:var(--type-20)} :is(.arch[data-el="blueprint-06-architecture"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.arch[data-el="blueprint-06-architecture"]) .name {font-size:var(--type-18)} :is(.arch[data-el="blueprint-06-architecture"]) .note {font-size:var(--type-14)} :is(.arch[data-el="blueprint-06-architecture"]) .kick {display:none} :is(.arch[data-el="blueprint-06-architecture"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.arch[data-el="blueprint-06-architecture"]) .note {display:none} }
+
+:is(.arch[data-el="blueprint-06-architecture"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--gap)} :is(.arch[data-el="blueprint-06-architecture"]) .layer{display:flex;align-items:center;flex-wrap:wrap;gap:var(--gap-sm);padding:var(--gap);background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm)} :is(.arch[data-el="blueprint-06-architecture"]) .layer:first-child{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)} :is(.arch[data-el="blueprint-06-architecture"]) .layer .name{font-size:var(--type-20);min-width:24%;flex:1} :is(.arch[data-el="blueprint-06-architecture"]) .chip{display:inline-flex;align-items:center;justify-content:center;min-width:100px;min-height:40px;padding:var(--gap-sm) var(--gap);border:var(--stroke) solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink-2);font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);text-align:center}
+@container bp (max-width:650px){:is(.arch[data-el="blueprint-06-architecture"]) .layer{padding:var(--gap-sm)} :is(.arch[data-el="blueprint-06-architecture"]) .layer .name{font-size:var(--type-16)} :is(.arch[data-el="blueprint-06-architecture"]) .chip{font-size:var(--type-14);min-width:80px;min-height:30px;padding:calc(var(--gap-sm)/2) var(--gap-sm)}} @container bp (max-height:300px){:is(.arch[data-el="blueprint-06-architecture"]) .layer{padding:var(--gap-sm)} :is(.arch[data-el="blueprint-06-architecture"]) .layer .name{font-size:var(--type-16)} :is(.arch[data-el="blueprint-06-architecture"]) .chip{font-size:var(--type-14);min-height:28px;padding:calc(var(--gap-sm)/2) var(--gap-sm)}}
+
+:is(.callout[data-el="blueprint-06-callout"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.callout[data-el="blueprint-06-callout"]) * { box-sizing:border-box; min-width:0; }
+:is(.callout[data-el="blueprint-06-callout"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.callout[data-el="blueprint-06-callout"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.callout[data-el="blueprint-06-callout"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.callout[data-el="blueprint-06-callout"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.callout[data-el="blueprint-06-callout"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.callout[data-el="blueprint-06-callout"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.callout[data-el="blueprint-06-callout"]) .name {font-size:var(--type-20)} :is(.callout[data-el="blueprint-06-callout"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.callout[data-el="blueprint-06-callout"]) .name {font-size:var(--type-18)} :is(.callout[data-el="blueprint-06-callout"]) .note {font-size:var(--type-14)} :is(.callout[data-el="blueprint-06-callout"]) .kick {display:none} :is(.callout[data-el="blueprint-06-callout"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.callout[data-el="blueprint-06-callout"]) .note {display:none} }
+
+:is(.callout[data-el="blueprint-06-callout"]) {display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);border-top:var(--stroke) solid var(--line);border-bottom:var(--stroke) solid var(--line);background:var(--accent-soft);text-align:center}
+:is(.callout[data-el="blueprint-06-callout"]) p {font-size:var(--type-28);line-height:var(--lead-line);font-weight:var(--lead-weight);letter-spacing:var(--lead-track)} :is(.callout[data-el="blueprint-06-callout"]) b {color:var(--accent);font-weight:var(--title-weight)}
+@container bp (max-width:600px){:is(.callout[data-el="blueprint-06-callout"]) p{font-size:var(--type-20)}} @container bp (max-height:140px){:is(.callout[data-el="blueprint-06-callout"]) p{font-size:var(--type-18)}}
+
+:is(.card[data-el="blueprint-06-card"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.card[data-el="blueprint-06-card"]) * { box-sizing:border-box; min-width:0; }
+:is(.card[data-el="blueprint-06-card"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.card[data-el="blueprint-06-card"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="blueprint-06-card"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.card[data-el="blueprint-06-card"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.card[data-el="blueprint-06-card"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.card[data-el="blueprint-06-card"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.card[data-el="blueprint-06-card"]) .name {font-size:var(--type-20)} :is(.card[data-el="blueprint-06-card"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.card[data-el="blueprint-06-card"]) .name {font-size:var(--type-18)} :is(.card[data-el="blueprint-06-card"]) .note {font-size:var(--type-14)} :is(.card[data-el="blueprint-06-card"]) .kick {display:none} :is(.card[data-el="blueprint-06-card"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.card[data-el="blueprint-06-card"]) .note {display:none} }
+
+:is(.card[data-el="blueprint-06-card"]) { background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); }
+:is(.card[data-el="blueprint-06-card"]) .parts { height:100%; display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); padding:var(--pad); }
+:is(.card[data-el="blueprint-06-card"]).quiet { background:var(--surface-2); border-color:var(--surface-2); }
+:is(.card[data-el="blueprint-06-card"]).line { border-color:var(--accent); }
+:is(.card[data-el="blueprint-06-card"]).on { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+:is(.card[data-el="blueprint-06-card"]).on :is(.name,.fig,.note,.kick,.mark) {color:var(--accent-ink)}
+:is(.card[data-el="blueprint-06-card"]) .mark { width:40px; height:40px; display:grid; place-items:center; border-radius:50%; background:var(--accent-soft); color:var(--accent); font-size:var(--type-18); font-weight:var(--label-weight); }
+@container bp (min-width:750px) { :is(.card[data-el="blueprint-06-card"]) .parts {padding:var(--gap-lg)} :is(.card[data-el="blueprint-06-card"]) .fig {font-size:var(--type-80)} :is(.card[data-el="blueprint-06-card"]) .name {font-size:var(--type-32)} }
+@container bp (max-height:170px) { :is(.card[data-el="blueprint-06-card"]) .parts {padding:var(--gap-sm); gap:calc(var(--gap-sm)/2)} :is(.card[data-el="blueprint-06-card"]) .mark {display:none} }
+
+:is(.card[data-el="blueprint-06-card"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink);border-color:var(--tone-1)} :is(.card[data-el="blueprint-06-card"]).tone-1 :is(.name,.note,.fig,.kick) {color:var(--tone-1-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink);border-color:var(--tone-2)} :is(.card[data-el="blueprint-06-card"]).tone-2 :is(.name,.note,.fig,.kick) {color:var(--tone-2-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink);border-color:var(--tone-3)} :is(.card[data-el="blueprint-06-card"]).tone-3 :is(.name,.note,.fig,.kick) {color:var(--tone-3-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink);border-color:var(--tone-4)} :is(.card[data-el="blueprint-06-card"]).tone-4 :is(.name,.note,.fig,.kick) {color:var(--tone-4-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink);border-color:var(--tone-5)} :is(.card[data-el="blueprint-06-card"]).tone-5 :is(.name,.note,.fig,.kick) {color:var(--tone-5-ink)}
+
+:is(.bars[data-el="blueprint-06-chart-bar"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.bars[data-el="blueprint-06-chart-bar"]) * { box-sizing:border-box; min-width:0; }
+:is(.bars[data-el="blueprint-06-chart-bar"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.bars[data-el="blueprint-06-chart-bar"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.bars[data-el="blueprint-06-chart-bar"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.bars[data-el="blueprint-06-chart-bar"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.bars[data-el="blueprint-06-chart-bar"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.bars[data-el="blueprint-06-chart-bar"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.bars[data-el="blueprint-06-chart-bar"]) .name {font-size:var(--type-20)} :is(.bars[data-el="blueprint-06-chart-bar"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.bars[data-el="blueprint-06-chart-bar"]) .name {font-size:var(--type-18)} :is(.bars[data-el="blueprint-06-chart-bar"]) .note {font-size:var(--type-14)} :is(.bars[data-el="blueprint-06-chart-bar"]) .kick {display:none} :is(.bars[data-el="blueprint-06-chart-bar"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.bars[data-el="blueprint-06-chart-bar"]) .note {display:none} }
+
+:is(.bars[data-el="blueprint-06-chart-bar"]) {display:flex;align-items:stretch;justify-content:space-around;gap:var(--gap);padding:var(--gap-lg) var(--gap) var(--gap-lg);border-bottom:var(--stroke) solid var(--line);background:repeating-linear-gradient(to top,var(--line) 0 1px,transparent 1px 25%);position:relative}
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar {flex:1;position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:var(--gap-sm);padding-bottom:var(--gap-lg)}
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar::before {content:"";position:absolute;bottom:var(--gap-lg);width:65%;height:calc((100% - var(--gap-lg))*var(--v)/var(--max));background:var(--tone-3);border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar.on::before {background:var(--accent)} :is(.bars[data-el="blueprint-06-chart-bar"]) .bar b {position:absolute;bottom:calc(var(--gap-lg) + (100% - var(--gap-lg))*var(--v)/var(--max));font-size:var(--type-18);color:var(--ink);font-weight:var(--label-weight);line-height:var(--label-line);white-space:nowrap} :is(.bars[data-el="blueprint-06-chart-bar"]) .bar span {position:absolute;top:calc(100% - var(--gap));font-size:var(--type-14);line-height:var(--label-line);color:var(--ink-2);text-align:center}
+:is(.bars[data-el="blueprint-06-chart-bar"]).h {flex-direction:column;gap:var(--gap);background:none;border-bottom:none;padding:var(--gap)} :is(.bars[data-el="blueprint-06-chart-bar"]).h .bar{width:100%;min-height:0;flex-direction:row;align-items:center;justify-content:flex-start;padding:0 0 0 calc(var(--gap-lg)*2)} :is(.bars[data-el="blueprint-06-chart-bar"]).h .bar::before{bottom:auto;left:calc(var(--gap-lg)*2);width:calc((100% - var(--gap-lg)*3)*var(--v)/var(--max));height:56%;border-radius:0 var(--radius-sm) var(--radius-sm) 0} :is(.bars[data-el="blueprint-06-chart-bar"]).h .bar span{top:auto;left:0;width:calc(var(--gap-lg)*2 - var(--gap-sm));text-align:right} :is(.bars[data-el="blueprint-06-chart-bar"]).h .bar b{left:calc(var(--gap-lg)*2 + (100% - var(--gap-lg)*3)*var(--v)/var(--max) + var(--gap-sm));bottom:auto;font-size:var(--type-16)}
+@container bp (max-width:600px){:is(.bars[data-el="blueprint-06-chart-bar"]) {gap:var(--gap-sm)} :is(.bars[data-el="blueprint-06-chart-bar"]) .bar b{font-size:var(--type-14)} :is(.bars[data-el="blueprint-06-chart-bar"]) .bar span{font-size:var(--type-12)}} @container bp (max-height:240px){:is(.bars[data-el="blueprint-06-chart-bar"]) .bar b{font-size:var(--type-14)} :is(.bars[data-el="blueprint-06-chart-bar"]) .bar span{font-size:var(--type-12)}}
+
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar.tone-1::before {background:var(--tone-1)}
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar.tone-2::before {background:var(--tone-2)}
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar.tone-3::before {background:var(--tone-3)}
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar.tone-4::before {background:var(--tone-4)}
+:is(.bars[data-el="blueprint-06-chart-bar"]) .bar.tone-5::before {background:var(--tone-5)}
+
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) * { box-sizing:border-box; min-width:0; }
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .name {font-size:var(--type-20)} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .name {font-size:var(--type-18)} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .note {font-size:var(--type-14)} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .kick {display:none} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .note {display:none} }
+
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) {display:flex;align-items:center;justify-content:space-around;gap:var(--gap);padding:var(--gap)} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .donut {position:relative;flex:1;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm)}
+.donut[data-el="blueprint-06-chart-donut"] {position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm)}
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .donut::before,.donut[data-el="blueprint-06-chart-donut"]::before {content:"";position:absolute;width:min(80%,300px);aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--v)*1%),var(--line) 0);mask:radial-gradient(circle,transparent 0 54%,var(--ink) 55%);}
+:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .fig {font-size:var(--type-48);z-index:1} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .name{font-size:var(--type-18);z-index:1;text-align:center;max-width:55%}
+@container bp (max-width:700px){:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .fig{font-size:var(--type-32)} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .name{font-size:var(--type-14)}} @container bp (max-height:250px){:is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .fig{font-size:var(--type-32)} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .name{font-size:var(--type-14)} :is(.donut[data-el="blueprint-06-chart-donut"],.donuts[data-el="blueprint-06-chart-donut"]) .donut::before,.donut[data-el="blueprint-06-chart-donut"]::before{width:min(50%,180px)}}
+
+:is(.lines[data-el="blueprint-06-chart-line"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.lines[data-el="blueprint-06-chart-line"]) * { box-sizing:border-box; min-width:0; }
+:is(.lines[data-el="blueprint-06-chart-line"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.lines[data-el="blueprint-06-chart-line"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.lines[data-el="blueprint-06-chart-line"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.lines[data-el="blueprint-06-chart-line"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.lines[data-el="blueprint-06-chart-line"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.lines[data-el="blueprint-06-chart-line"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.lines[data-el="blueprint-06-chart-line"]) .name {font-size:var(--type-20)} :is(.lines[data-el="blueprint-06-chart-line"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.lines[data-el="blueprint-06-chart-line"]) .name {font-size:var(--type-18)} :is(.lines[data-el="blueprint-06-chart-line"]) .note {font-size:var(--type-14)} :is(.lines[data-el="blueprint-06-chart-line"]) .kick {display:none} :is(.lines[data-el="blueprint-06-chart-line"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.lines[data-el="blueprint-06-chart-line"]) .note {display:none} }
+
+:is(.lines[data-el="blueprint-06-chart-line"]) {display:flex;align-items:stretch;position:relative;padding:var(--gap-lg) var(--gap) calc(var(--gap-lg)*2);border-bottom:var(--stroke) solid var(--line);background:repeating-linear-gradient(to top,var(--line) 0 1px,transparent 1px 25%)}
+:is(.lines[data-el="blueprint-06-chart-line"]) .pt {position:relative;flex:1;min-height:0;--blueprint-06-plot-h:100cqh;--blueprint-06-run:calc(100cqw/var(--blueprint-06-count));--blueprint-06-rise:calc((var(--v) - var(--blueprint-06-next))*var(--blueprint-06-plot-h)/var(--max));}
+:is(.lines[data-el="blueprint-06-chart-line"]) .pt::before {content:"";position:absolute;left:50%;top:calc((1 - var(--v)/var(--max))*100%);width:9px;height:9px;transform:translate(-50%,-50%);border:2px solid var(--surface);border-radius:50%;background:var(--accent);z-index:2}
+:is(.lines[data-el="blueprint-06-chart-line"]) .pt:not(:last-child)::after {content:"";position:absolute;left:50%;top:calc((1 - var(--v)/var(--max))*100%);height:2px;width:hypot(var(--blueprint-06-run),var(--blueprint-06-rise));transform:rotate(atan2(var(--blueprint-06-rise),var(--blueprint-06-run)));transform-origin:left center;background:var(--accent)}
+:is(.lines[data-el="blueprint-06-chart-line"]) .pt b {position:absolute;bottom:calc(var(--v)/var(--max)*100% + var(--gap-sm));left:50%;transform:translateX(-50%);font-size:var(--type-18);font-weight:var(--label-weight);color:var(--accent);white-space:nowrap;line-height:var(--label-line)}
+:is(.lines[data-el="blueprint-06-chart-line"]) .pt span{position:absolute;left:50%;bottom:calc(-1*var(--gap-lg));transform:translateX(-50%);font-size:var(--type-14);color:var(--ink-2);line-height:var(--label-line);white-space:nowrap}
+@container bp (max-width:650px){:is(.lines[data-el="blueprint-06-chart-line"]) .pt b{font-size:var(--type-14)} :is(.lines[data-el="blueprint-06-chart-line"]) .pt span{font-size:var(--type-12)}} @container bp (max-height:220px){:is(.lines[data-el="blueprint-06-chart-line"]) .pt b{font-size:var(--type-14)}}
+
+:is(.cycle[data-el="blueprint-06-cycle"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.cycle[data-el="blueprint-06-cycle"]) * { box-sizing:border-box; min-width:0; }
+:is(.cycle[data-el="blueprint-06-cycle"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.cycle[data-el="blueprint-06-cycle"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.cycle[data-el="blueprint-06-cycle"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.cycle[data-el="blueprint-06-cycle"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.cycle[data-el="blueprint-06-cycle"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.cycle[data-el="blueprint-06-cycle"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.cycle[data-el="blueprint-06-cycle"]) .name {font-size:var(--type-20)} :is(.cycle[data-el="blueprint-06-cycle"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.cycle[data-el="blueprint-06-cycle"]) .name {font-size:var(--type-18)} :is(.cycle[data-el="blueprint-06-cycle"]) .note {font-size:var(--type-14)} :is(.cycle[data-el="blueprint-06-cycle"]) .kick {display:none} :is(.cycle[data-el="blueprint-06-cycle"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.cycle[data-el="blueprint-06-cycle"]) .note {display:none} }
+
+:is(.cycle[data-el="blueprint-06-cycle"]) {position:relative;isolation:isolate} :is(.cycle[data-el="blueprint-06-cycle"]) .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:24%;height:24%;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center;padding:var(--gap-sm);z-index:2}
+:is(.cycle[data-el="blueprint-06-cycle"]) .node {--blueprint-06-angle:calc(var(--blueprint-06-i)*360deg/var(--blueprint-06-members) - 90deg);position:absolute;left:calc(50% + 36%*cos(var(--blueprint-06-angle)));top:calc(50% + 36%*sin(var(--blueprint-06-angle)));transform:translate(-50%,-50%);width:24%;min-height:20%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:calc(var(--gap-sm)/2);padding:var(--gap-sm);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface);text-align:center;font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);z-index:1}
+:is(.cycle[data-el="blueprint-06-cycle"]) .name{font-size:var(--type-20)} :is(.cycle[data-el="blueprint-06-cycle"]) .note{font-size:var(--type-14)} :is(.cycle[data-el="blueprint-06-cycle"]) .mark{font-size:var(--type-14);color:var(--accent);font-weight:var(--label-weight)}
+@container bp (max-width:700px){:is(.cycle[data-el="blueprint-06-cycle"]) .core{font-size:var(--type-18)} :is(.cycle[data-el="blueprint-06-cycle"]) .name,:is(.cycle[data-el="blueprint-06-cycle"]) .node{font-size:var(--type-16)} :is(.cycle[data-el="blueprint-06-cycle"]) .note{font-size:var(--type-12)}} @container bp (max-height:350px){:is(.cycle[data-el="blueprint-06-cycle"]) .core{font-size:var(--type-16)} :is(.cycle[data-el="blueprint-06-cycle"]) .name,:is(.cycle[data-el="blueprint-06-cycle"]) .node{font-size:var(--type-14)} :is(.cycle[data-el="blueprint-06-cycle"]) .note{display:none}}
+:is(.cycle[data-el="blueprint-06-cycle"])::before{content:"";position:absolute;inset:14%;border:var(--stroke) solid var(--line);border-radius:50%;z-index:0} :is(.cycle[data-el="blueprint-06-cycle"]) .node::after{content:"→";position:absolute;--blueprint-06-middle:calc(var(--blueprint-06-angle) + 180deg/var(--blueprint-06-members));left:calc(50% + 36cqw*(cos(var(--blueprint-06-middle)) - cos(var(--blueprint-06-angle))));top:calc(50% + 36cqh*(sin(var(--blueprint-06-middle)) - sin(var(--blueprint-06-angle))));transform:translate(-50%,-50%) rotate(atan2(calc(36cqh*cos(var(--blueprint-06-middle))),calc(-36cqw*sin(var(--blueprint-06-middle)))));font-size:var(--type-24);color:var(--accent)}
+:is(.cycle[data-el="blueprint-06-cycle"]) .node:nth-child(2){--blueprint-06-i:0}
+:is(.cycle[data-el="blueprint-06-cycle"]) .node:nth-child(3){--blueprint-06-i:1}
+:is(.cycle[data-el="blueprint-06-cycle"]) .node:nth-child(4){--blueprint-06-i:2}
+:is(.cycle[data-el="blueprint-06-cycle"]) .node:nth-child(5){--blueprint-06-i:3}
+:is(.cycle[data-el="blueprint-06-cycle"]) .node:nth-child(6){--blueprint-06-i:4}
+:is(.cycle[data-el="blueprint-06-cycle"]) .node:nth-child(7){--blueprint-06-i:5}
+:is(.cycle[data-el="blueprint-06-cycle"]):has(> .node:nth-child(4)):not(:has(> .node:nth-child(5))){--blueprint-06-members:3}
+:is(.cycle[data-el="blueprint-06-cycle"]):has(> .node:nth-child(5)):not(:has(> .node:nth-child(6))){--blueprint-06-members:4}
+:is(.cycle[data-el="blueprint-06-cycle"]):has(> .node:nth-child(6)):not(:has(> .node:nth-child(7))){--blueprint-06-members:5}
+:is(.cycle[data-el="blueprint-06-cycle"]):has(> .node:nth-child(7)):not(:has(> .node:nth-child(8))){--blueprint-06-members:6}
+
+:is(.delta[data-el="blueprint-06-delta"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.delta[data-el="blueprint-06-delta"]) * { box-sizing:border-box; min-width:0; }
+:is(.delta[data-el="blueprint-06-delta"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.delta[data-el="blueprint-06-delta"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.delta[data-el="blueprint-06-delta"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.delta[data-el="blueprint-06-delta"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.delta[data-el="blueprint-06-delta"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.delta[data-el="blueprint-06-delta"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.delta[data-el="blueprint-06-delta"]) .name {font-size:var(--type-20)} :is(.delta[data-el="blueprint-06-delta"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.delta[data-el="blueprint-06-delta"]) .name {font-size:var(--type-18)} :is(.delta[data-el="blueprint-06-delta"]) .note {font-size:var(--type-14)} :is(.delta[data-el="blueprint-06-delta"]) .kick {display:none} :is(.delta[data-el="blueprint-06-delta"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.delta[data-el="blueprint-06-delta"]) .note {display:none} }
+
+:is(.delta[data-el="blueprint-06-delta"]) {display:flex;align-items:center;justify-content:center;gap:var(--gap-lg)} :is(.delta[data-el="blueprint-06-delta"]) span{font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums} :is(.delta[data-el="blueprint-06-delta"]) .from{color:var(--mute)} :is(.delta[data-el="blueprint-06-delta"]) .to{color:var(--accent)} :is(.delta[data-el="blueprint-06-delta"]) .from::after{content:"→";display:inline-block;color:var(--accent);margin-left:var(--gap-lg);font-size:var(--type-40)}
+@container bp (max-width:650px){:is(.delta[data-el="blueprint-06-delta"]) span{font-size:var(--type-40)} :is(.delta[data-el="blueprint-06-delta"]) .from::after{font-size:var(--type-28);margin-left:var(--gap)}} @container bp (max-height:160px){:is(.delta[data-el="blueprint-06-delta"]) span{font-size:var(--type-32)}}
+
+:is(.flowchart[data-el="blueprint-06-flowchart"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.flowchart[data-el="blueprint-06-flowchart"]) * { box-sizing:border-box; min-width:0; }
+:is(.flowchart[data-el="blueprint-06-flowchart"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.flowchart[data-el="blueprint-06-flowchart"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.flowchart[data-el="blueprint-06-flowchart"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.flowchart[data-el="blueprint-06-flowchart"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.flowchart[data-el="blueprint-06-flowchart"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.flowchart[data-el="blueprint-06-flowchart"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.flowchart[data-el="blueprint-06-flowchart"]) .name {font-size:var(--type-20)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.flowchart[data-el="blueprint-06-flowchart"]) .name {font-size:var(--type-18)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .note {font-size:var(--type-14)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .kick {display:none} :is(.flowchart[data-el="blueprint-06-flowchart"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.flowchart[data-el="blueprint-06-flowchart"]) .note {display:none} }
+
+:is(.flowchart[data-el="blueprint-06-flowchart"]) {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--gap-lg);padding:var(--gap)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .node{position:relative;display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center} :is(.flowchart[data-el="blueprint-06-flowchart"]) .node.start,:is(.flowchart[data-el="blueprint-06-flowchart"]) .node.end{border-radius:999px;background:var(--accent);border-color:var(--accent);color:var(--accent-ink)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .node.ask{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);border-style:dashed}
+:is(.flowchart[data-el="blueprint-06-flowchart"]) .to-r::after{content:"→";position:absolute;left:100%;top:50%;transform:translateY(-50%);width:var(--gap-lg);color:var(--accent);font-size:var(--type-24)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .to-l::after{content:"←";position:absolute;right:100%;top:50%;transform:translateY(-50%);width:var(--gap-lg);color:var(--accent);font-size:var(--type-24)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .to-d::before{content:"↓";position:absolute;top:100%;left:50%;transform:translateX(-50%);height:var(--gap-lg);color:var(--accent);font-size:var(--type-24)} :is(.flowchart[data-el="blueprint-06-flowchart"]) .to-u::before{content:"↑";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);height:var(--gap-lg);color:var(--accent);font-size:var(--type-24)}
+@container bp (max-width:650px){:is(.flowchart[data-el="blueprint-06-flowchart"]) .node{font-size:var(--type-14)}} @container bp (max-height:280px){:is(.flowchart[data-el="blueprint-06-flowchart"]) .node{font-size:var(--type-14)}}
+
+:is(.funnel[data-el="blueprint-06-funnel"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.funnel[data-el="blueprint-06-funnel"]) * { box-sizing:border-box; min-width:0; }
+:is(.funnel[data-el="blueprint-06-funnel"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.funnel[data-el="blueprint-06-funnel"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.funnel[data-el="blueprint-06-funnel"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.funnel[data-el="blueprint-06-funnel"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.funnel[data-el="blueprint-06-funnel"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.funnel[data-el="blueprint-06-funnel"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.funnel[data-el="blueprint-06-funnel"]) .name {font-size:var(--type-20)} :is(.funnel[data-el="blueprint-06-funnel"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.funnel[data-el="blueprint-06-funnel"]) .name {font-size:var(--type-18)} :is(.funnel[data-el="blueprint-06-funnel"]) .note {font-size:var(--type-14)} :is(.funnel[data-el="blueprint-06-funnel"]) .kick {display:none} :is(.funnel[data-el="blueprint-06-funnel"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.funnel[data-el="blueprint-06-funnel"]) .note {display:none} }
+
+:is(.funnel[data-el="blueprint-06-funnel"]) {display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--gap)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage{display:flex;align-items:center;justify-content:space-between;gap:var(--gap);width:calc(var(--v)*1%);min-height:0;flex:1;max-height:96px;padding:var(--gap-sm) calc(var(--pad)*2);background:var(--tone-4);color:var(--tone-4-ink);clip-path:polygon(0 0,100% 0,92% 100%,8% 100%)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage:first-child{background:var(--accent);color:var(--accent-ink)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage:nth-child(2){background:var(--tone-3);color:var(--tone-3-ink)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage:last-child{background:var(--tone-2);color:var(--tone-2-ink)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage .fig{font-size:var(--type-28);color:inherit} :is(.funnel[data-el="blueprint-06-funnel"]) .stage .name{font-size:var(--type-20);color:inherit}
+@container bp (max-width:650px){:is(.funnel[data-el="blueprint-06-funnel"]) .stage{padding:var(--gap-sm) var(--gap-lg)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage .name{font-size:var(--type-16)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage .fig{font-size:var(--type-20)}} @container bp (max-height:300px){:is(.funnel[data-el="blueprint-06-funnel"]) .stage .name{font-size:var(--type-14)} :is(.funnel[data-el="blueprint-06-funnel"]) .stage .fig{font-size:var(--type-18)}}
+
+:is(.meter[data-el="blueprint-06-gauge"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) * { box-sizing:border-box; min-width:0; }
+:is(.meter[data-el="blueprint-06-gauge"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.meter[data-el="blueprint-06-gauge"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.meter[data-el="blueprint-06-gauge"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.meter[data-el="blueprint-06-gauge"]) .name {font-size:var(--type-20)} :is(.meter[data-el="blueprint-06-gauge"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.meter[data-el="blueprint-06-gauge"]) .name {font-size:var(--type-18)} :is(.meter[data-el="blueprint-06-gauge"]) .note {font-size:var(--type-14)} :is(.meter[data-el="blueprint-06-gauge"]) .kick {display:none} :is(.meter[data-el="blueprint-06-gauge"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.meter[data-el="blueprint-06-gauge"]) .note {display:none} }
+
+:is(.meter[data-el="blueprint-06-gauge"]) {position:relative;display:grid;grid-template-columns:1fr auto;align-content:center;column-gap:var(--gap);row-gap:var(--gap);padding:var(--pad);border-bottom:var(--stroke) solid var(--line)} :is(.meter[data-el="blueprint-06-gauge"]) .name{font-size:var(--type-24)} :is(.meter[data-el="blueprint-06-gauge"]) .fig{font-size:var(--type-40)}
+:is(.meter[data-el="blueprint-06-gauge"])::before {content:"";grid-column:1/-1;grid-row:2;height:12px;background:var(--line);border-radius:999px} :is(.meter[data-el="blueprint-06-gauge"])::after{content:"";grid-column:1/-1;grid-row:2;height:12px;width:calc(var(--v)*1%);background:var(--accent);border-radius:999px}
+@container bp (max-width:600px){:is(.meter[data-el="blueprint-06-gauge"]) .name{font-size:var(--type-18)} :is(.meter[data-el="blueprint-06-gauge"]) .fig{font-size:var(--type-28)}} @container bp (max-height:150px){:is(.meter[data-el="blueprint-06-gauge"]) .name{font-size:var(--type-16)} :is(.meter[data-el="blueprint-06-gauge"]) .fig{font-size:var(--type-24)}}
+
+:is(.org[data-el="blueprint-06-hierarchy"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.org[data-el="blueprint-06-hierarchy"]) * { box-sizing:border-box; min-width:0; }
+:is(.org[data-el="blueprint-06-hierarchy"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.org[data-el="blueprint-06-hierarchy"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.org[data-el="blueprint-06-hierarchy"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.org[data-el="blueprint-06-hierarchy"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.org[data-el="blueprint-06-hierarchy"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.org[data-el="blueprint-06-hierarchy"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.org[data-el="blueprint-06-hierarchy"]) .name {font-size:var(--type-20)} :is(.org[data-el="blueprint-06-hierarchy"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.org[data-el="blueprint-06-hierarchy"]) .name {font-size:var(--type-18)} :is(.org[data-el="blueprint-06-hierarchy"]) .note {font-size:var(--type-14)} :is(.org[data-el="blueprint-06-hierarchy"]) .kick {display:none} :is(.org[data-el="blueprint-06-hierarchy"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.org[data-el="blueprint-06-hierarchy"]) .note {display:none} }
+
+:is(.org[data-el="blueprint-06-hierarchy"]) {position:relative;display:flex;align-items:stretch;gap:var(--gap);padding:calc(var(--gap-lg)*3) var(--gap) var(--gap);}
+:is(.org[data-el="blueprint-06-hierarchy"]) .root {position:absolute;top:var(--gap-sm);left:50%;transform:translateX(-50%);padding:var(--gap-sm) var(--gap-lg);border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center}
+:is(.org[data-el="blueprint-06-hierarchy"])::before{content:"";position:absolute;top:calc(var(--gap-lg)*3);left:var(--gap);right:var(--gap);height:1px;background:var(--line)} :is(.org[data-el="blueprint-06-hierarchy"]) .root::after{content:"";position:absolute;left:50%;top:100%;height:calc(var(--gap-lg)*3 - var(--gap-sm)*3 - 1lh);width:1px;background:var(--line)} :is(.org[data-el="blueprint-06-hierarchy"]) .branch {position:relative;flex:1;display:flex;flex-direction:column;gap:var(--gap-sm);padding-top:var(--gap);border-top:var(--stroke) solid var(--line)} :is(.org[data-el="blueprint-06-hierarchy"]) .branch::before{content:"";position:absolute;left:50%;top:0;width:1px;height:var(--gap);background:var(--line)} :is(.org[data-el="blueprint-06-hierarchy"]) .node{padding:var(--gap-sm);background:var(--tone-4);color:var(--tone-4-ink);border-radius:var(--radius-sm);font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center} :is(.org[data-el="blueprint-06-hierarchy"]) .leaf{padding:var(--gap-sm);background:var(--surface-2);border:var(--stroke) solid var(--line);font-size:var(--type-16);line-height:var(--body-line);color:var(--ink-2);text-align:center}
+@container bp (max-width:650px){:is(.org[data-el="blueprint-06-hierarchy"]) .node{font-size:var(--type-16)} :is(.org[data-el="blueprint-06-hierarchy"]) .leaf{font-size:var(--type-14)} :is(.org[data-el="blueprint-06-hierarchy"]) .root{font-size:var(--type-18)}} @container bp (max-height:300px){:is(.org[data-el="blueprint-06-hierarchy"]) .leaf{padding:calc(var(--gap-sm)/2);font-size:var(--type-14)} :is(.org[data-el="blueprint-06-hierarchy"]) .node{font-size:var(--type-16)}}
+
+:is(.hub[data-el="blueprint-06-hub"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.hub[data-el="blueprint-06-hub"]) * { box-sizing:border-box; min-width:0; }
+:is(.hub[data-el="blueprint-06-hub"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.hub[data-el="blueprint-06-hub"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.hub[data-el="blueprint-06-hub"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.hub[data-el="blueprint-06-hub"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.hub[data-el="blueprint-06-hub"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.hub[data-el="blueprint-06-hub"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.hub[data-el="blueprint-06-hub"]) .name {font-size:var(--type-20)} :is(.hub[data-el="blueprint-06-hub"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.hub[data-el="blueprint-06-hub"]) .name {font-size:var(--type-18)} :is(.hub[data-el="blueprint-06-hub"]) .note {font-size:var(--type-14)} :is(.hub[data-el="blueprint-06-hub"]) .kick {display:none} :is(.hub[data-el="blueprint-06-hub"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.hub[data-el="blueprint-06-hub"]) .note {display:none} }
+
+:is(.hub[data-el="blueprint-06-hub"]) {position:relative;isolation:isolate} :is(.hub[data-el="blueprint-06-hub"]) .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:24%;height:24%;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center;padding:var(--gap-sm);z-index:2}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke {--blueprint-06-angle:calc(var(--blueprint-06-i)*360deg/var(--blueprint-06-members) - 90deg);position:absolute;left:calc(50% + 36%*cos(var(--blueprint-06-angle)));top:calc(50% + 36%*sin(var(--blueprint-06-angle)));transform:translate(-50%,-50%);width:24%;min-height:20%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:calc(var(--gap-sm)/2);padding:var(--gap-sm);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface);text-align:center;font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);z-index:1}
+:is(.hub[data-el="blueprint-06-hub"]) .name{font-size:var(--type-20)} :is(.hub[data-el="blueprint-06-hub"]) .note{font-size:var(--type-14)} :is(.hub[data-el="blueprint-06-hub"]) .mark{font-size:var(--type-14);color:var(--accent);font-weight:var(--label-weight)}
+@container bp (max-width:700px){:is(.hub[data-el="blueprint-06-hub"]) .core{font-size:var(--type-18)} :is(.hub[data-el="blueprint-06-hub"]) .name,:is(.hub[data-el="blueprint-06-hub"]) .spoke{font-size:var(--type-16)} :is(.hub[data-el="blueprint-06-hub"]) .note{font-size:var(--type-12)}} @container bp (max-height:350px){:is(.hub[data-el="blueprint-06-hub"]) .core{font-size:var(--type-16)} :is(.hub[data-el="blueprint-06-hub"]) .name,:is(.hub[data-el="blueprint-06-hub"]) .spoke{font-size:var(--type-14)} :is(.hub[data-el="blueprint-06-hub"]) .note{display:none}}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke::before{content:"";position:absolute;left:50%;top:50%;height:1px;--blueprint-06-spoke-x:calc(-36cqw*cos(var(--blueprint-06-angle)));--blueprint-06-spoke-y:calc(-36cqh*sin(var(--blueprint-06-angle)));--blueprint-06-spoke-rot:atan2(var(--blueprint-06-spoke-y),var(--blueprint-06-spoke-x));--blueprint-06-spoke-stop:min(abs(12cqw/cos(var(--blueprint-06-spoke-rot))),abs(10cqh/sin(var(--blueprint-06-spoke-rot))));width:hypot(var(--blueprint-06-spoke-x),var(--blueprint-06-spoke-y));transform-origin:left center;transform:rotate(var(--blueprint-06-spoke-rot));background:linear-gradient(to right,transparent var(--blueprint-06-spoke-stop),var(--line) var(--blueprint-06-spoke-stop));z-index:-1}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke:nth-child(2){--blueprint-06-i:0}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke:nth-child(3){--blueprint-06-i:1}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke:nth-child(4){--blueprint-06-i:2}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke:nth-child(5){--blueprint-06-i:3}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke:nth-child(6){--blueprint-06-i:4}
+:is(.hub[data-el="blueprint-06-hub"]) .spoke:nth-child(7){--blueprint-06-i:5}
+:is(.hub[data-el="blueprint-06-hub"]):has(> .spoke:nth-child(4)):not(:has(> .spoke:nth-child(5))){--blueprint-06-members:3}
+:is(.hub[data-el="blueprint-06-hub"]):has(> .spoke:nth-child(5)):not(:has(> .spoke:nth-child(6))){--blueprint-06-members:4}
+:is(.hub[data-el="blueprint-06-hub"]):has(> .spoke:nth-child(6)):not(:has(> .spoke:nth-child(7))){--blueprint-06-members:5}
+:is(.hub[data-el="blueprint-06-hub"]):has(> .spoke:nth-child(7)):not(:has(> .spoke:nth-child(8))){--blueprint-06-members:6}
+
+:is(.frame[data-el="blueprint-06-image-frame"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) * { box-sizing:border-box; min-width:0; }
+:is(.frame[data-el="blueprint-06-image-frame"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.frame[data-el="blueprint-06-image-frame"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.frame[data-el="blueprint-06-image-frame"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.frame[data-el="blueprint-06-image-frame"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.frame[data-el="blueprint-06-image-frame"]) .name {font-size:var(--type-20)} :is(.frame[data-el="blueprint-06-image-frame"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.frame[data-el="blueprint-06-image-frame"]) .name {font-size:var(--type-18)} :is(.frame[data-el="blueprint-06-image-frame"]) .note {font-size:var(--type-14)} :is(.frame[data-el="blueprint-06-image-frame"]) .kick {display:none} :is(.frame[data-el="blueprint-06-image-frame"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.frame[data-el="blueprint-06-image-frame"]) .note {display:none} }
+
+:is(.frame[data-el="blueprint-06-image-frame"]) {display:flex;padding:var(--gap-sm);border:var(--stroke) solid var(--line);background:var(--surface);border-radius:var(--radius)} :is(.frame[data-el="blueprint-06-image-frame"]) .seat{width:100%;height:100%;border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;border:var(--stroke) solid var(--line)} :is(.frame[data-el="blueprint-06-image-frame"]) .seat::after{font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)}
+@container bp (max-width:600px){:is(.frame[data-el="blueprint-06-image-frame"]) .seat::after{font-size:var(--type-14)}} @container bp (max-height:200px){:is(.frame[data-el="blueprint-06-image-frame"]) .seat::after{font-size:var(--type-12)}}
+
+:is(.legend[data-el="blueprint-06-legend"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.legend[data-el="blueprint-06-legend"]) * { box-sizing:border-box; min-width:0; }
+:is(.legend[data-el="blueprint-06-legend"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.legend[data-el="blueprint-06-legend"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.legend[data-el="blueprint-06-legend"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.legend[data-el="blueprint-06-legend"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.legend[data-el="blueprint-06-legend"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.legend[data-el="blueprint-06-legend"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.legend[data-el="blueprint-06-legend"]) .name {font-size:var(--type-20)} :is(.legend[data-el="blueprint-06-legend"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.legend[data-el="blueprint-06-legend"]) .name {font-size:var(--type-18)} :is(.legend[data-el="blueprint-06-legend"]) .note {font-size:var(--type-14)} :is(.legend[data-el="blueprint-06-legend"]) .kick {display:none} :is(.legend[data-el="blueprint-06-legend"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.legend[data-el="blueprint-06-legend"]) .note {display:none} }
+
+:is(.legend[data-el="blueprint-06-legend"]) {display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:var(--gap-lg);padding:var(--gap)} :is(.legend[data-el="blueprint-06-legend"]) .key{display:flex;align-items:center;gap:var(--gap-sm);font-size:var(--type-18);line-height:var(--label-line);font-weight:var(--label-weight);color:var(--ink-2)} :is(.legend[data-el="blueprint-06-legend"]) .key::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent)}
+@container bp (max-width:650px){:is(.legend[data-el="blueprint-06-legend"]) .key{font-size:var(--type-14)}} @container bp (max-height:150px){:is(.legend[data-el="blueprint-06-legend"]) .key{font-size:var(--type-14)}}
+
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-1::before {background:var(--tone-1)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-2::before {background:var(--tone-2)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-3::before {background:var(--tone-3)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-4::before {background:var(--tone-4)}
+:is(.legend[data-el="blueprint-06-legend"]) .key.tone-5::before {background:var(--tone-5)}
+
+:is(.list[data-el="blueprint-06-list"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.list[data-el="blueprint-06-list"]) * { box-sizing:border-box; min-width:0; }
+:is(.list[data-el="blueprint-06-list"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.list[data-el="blueprint-06-list"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.list[data-el="blueprint-06-list"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.list[data-el="blueprint-06-list"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.list[data-el="blueprint-06-list"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.list[data-el="blueprint-06-list"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.list[data-el="blueprint-06-list"]) .name {font-size:var(--type-20)} :is(.list[data-el="blueprint-06-list"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.list[data-el="blueprint-06-list"]) .name {font-size:var(--type-18)} :is(.list[data-el="blueprint-06-list"]) .note {font-size:var(--type-14)} :is(.list[data-el="blueprint-06-list"]) .kick {display:none} :is(.list[data-el="blueprint-06-list"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.list[data-el="blueprint-06-list"]) .note {display:none} }
+
+:is(.list[data-el="blueprint-06-list"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:bp-list;padding:var(--gap)} :is(.list[data-el="blueprint-06-list"]) .item {position:relative;padding-left:var(--gap-lg);counter-increment:bp-list;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2)}
+:is(.list[data-el="blueprint-06-list"]) .item::before {content:"";position:absolute;left:0;top:var(--gap-sm);width:6px;height:6px;border-radius:50%;background:var(--accent)}
+:is(.list[data-el="blueprint-06-list"]).check .item::before {content:"✓";top:0;background:none;width:20px;height:20px;color:var(--accent);font-size:var(--type-20);font-weight:var(--title-weight)}
+:is(.list[data-el="blueprint-06-list"]).num .item::before {content:counter(bp-list,decimal-leading-zero);top:0;background:none;width:24px;height:24px;color:var(--accent);font-size:var(--type-16);font-weight:var(--label-weight)}
+:is(.list[data-el="blueprint-06-list"]).divided .item + .item {border-top:var(--stroke) solid var(--line);padding-top:var(--gap)} :is(.list[data-el="blueprint-06-list"]).divided .item + .item::before{top:calc(var(--gap) + var(--gap-sm))}
+@container bp (max-height:320px){:is(.list[data-el="blueprint-06-list"]) .name{font-size:var(--type-18)} :is(.list[data-el="blueprint-06-list"]) .note{font-size:var(--type-14)} :is(.list[data-el="blueprint-06-list"]) .item{gap:0} } @container bp (max-height:220px){:is(.list[data-el="blueprint-06-list"]) .item{padding-left:var(--gap)} :is(.list[data-el="blueprint-06-list"]) .note{display:none}}
+
+:is(.logos[data-el="blueprint-06-logo-group"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.logos[data-el="blueprint-06-logo-group"]) * { box-sizing:border-box; min-width:0; }
+:is(.logos[data-el="blueprint-06-logo-group"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.logos[data-el="blueprint-06-logo-group"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.logos[data-el="blueprint-06-logo-group"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.logos[data-el="blueprint-06-logo-group"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.logos[data-el="blueprint-06-logo-group"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.logos[data-el="blueprint-06-logo-group"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.logos[data-el="blueprint-06-logo-group"]) .name {font-size:var(--type-20)} :is(.logos[data-el="blueprint-06-logo-group"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.logos[data-el="blueprint-06-logo-group"]) .name {font-size:var(--type-18)} :is(.logos[data-el="blueprint-06-logo-group"]) .note {font-size:var(--type-14)} :is(.logos[data-el="blueprint-06-logo-group"]) .kick {display:none} :is(.logos[data-el="blueprint-06-logo-group"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.logos[data-el="blueprint-06-logo-group"]) .note {display:none} }
+
+:is(.logos[data-el="blueprint-06-logo-group"]) {display:flex;flex-wrap:wrap;align-content:center;align-items:stretch;justify-content:center;gap:var(--gap);padding:var(--gap)} :is(.logos[data-el="blueprint-06-logo-group"]) .seat.logo {flex:1 1 22%;max-width:30%;min-height:96px;border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center} :is(.logos[data-el="blueprint-06-logo-group"]) .seat.logo::after{font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)}
+@container bp (max-width:650px){:is(.logos[data-el="blueprint-06-logo-group"]) .seat.logo{min-height:64px} :is(.logos[data-el="blueprint-06-logo-group"]) .seat.logo::after{font-size:var(--type-14)}} @container bp (max-height:220px){:is(.logos[data-el="blueprint-06-logo-group"]) .seat.logo{min-height:48px} :is(.logos[data-el="blueprint-06-logo-group"]) .seat.logo::after{font-size:var(--type-12)}}
+
+:is(.matrix[data-el="blueprint-06-matrix"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.matrix[data-el="blueprint-06-matrix"]) * { box-sizing:border-box; min-width:0; }
+:is(.matrix[data-el="blueprint-06-matrix"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.matrix[data-el="blueprint-06-matrix"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.matrix[data-el="blueprint-06-matrix"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.matrix[data-el="blueprint-06-matrix"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.matrix[data-el="blueprint-06-matrix"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.matrix[data-el="blueprint-06-matrix"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.matrix[data-el="blueprint-06-matrix"]) .name {font-size:var(--type-20)} :is(.matrix[data-el="blueprint-06-matrix"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.matrix[data-el="blueprint-06-matrix"]) .name {font-size:var(--type-18)} :is(.matrix[data-el="blueprint-06-matrix"]) .note {font-size:var(--type-14)} :is(.matrix[data-el="blueprint-06-matrix"]) .kick {display:none} :is(.matrix[data-el="blueprint-06-matrix"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.matrix[data-el="blueprint-06-matrix"]) .note {display:none} }
+
+:is(.matrix[data-el="blueprint-06-matrix"]) {position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:var(--gap-sm);padding:var(--gap-lg) var(--gap-lg) calc(var(--gap-lg)*2) calc(var(--gap-lg)*2)} :is(.matrix[data-el="blueprint-06-matrix"]) .cell{display:flex;align-items:center;justify-content:center;text-align:center;background:var(--surface-2);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);padding:var(--gap);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line)} :is(.matrix[data-el="blueprint-06-matrix"]) .cell.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)} :is(.matrix[data-el="blueprint-06-matrix"]) .axis-x{position:absolute;left:calc(var(--gap-lg)*2);right:var(--gap-lg);bottom:var(--gap-sm);display:flex;justify-content:space-between;font-size:var(--type-14);color:var(--ink-2)} :is(.matrix[data-el="blueprint-06-matrix"]) .axis-y{position:absolute;top:var(--gap-lg);bottom:calc(var(--gap-lg)*2);left:var(--gap-sm);display:flex;flex-direction:column-reverse;justify-content:space-between;font-size:var(--type-14);color:var(--ink-2)} :is(.matrix[data-el="blueprint-06-matrix"]) .axis-y span{writing-mode:vertical-rl}
+@container bp (max-width:650px){:is(.matrix[data-el="blueprint-06-matrix"]) .cell{font-size:var(--type-18)}} @container bp (max-height:300px){:is(.matrix[data-el="blueprint-06-matrix"]) .cell{font-size:var(--type-16)} :is(.matrix[data-el="blueprint-06-matrix"]) .axis-x,:is(.matrix[data-el="blueprint-06-matrix"]) .axis-y{font-size:var(--type-12)}}
+
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) * { box-sizing:border-box; min-width:0; }
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .name {font-size:var(--type-20)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .name {font-size:var(--type-18)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .note {font-size:var(--type-14)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .kick {display:none} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .note {display:none} }
+
+:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) {display:flex;align-items:stretch;gap:var(--gap)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .stat {flex:1;display:flex;align-items:center;padding:var(--gap);border-left:var(--stroke) solid var(--line)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .stat:first-child{border-left:none} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .parts{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm)}
+.stat[data-el="blueprint-06-metric"] {display:flex;align-items:center;padding:var(--gap)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .fig{font-size:var(--type-72)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .name{font-size:var(--type-22)}
+@container bp (max-width:650px){:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .fig{font-size:var(--type-40)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .name{font-size:var(--type-18)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .stat{padding:var(--gap-sm)}} @container bp (max-height:240px){:is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .fig{font-size:var(--type-40)} :is(.stat[data-el="blueprint-06-metric"],.stats[data-el="blueprint-06-metric"]) .name{font-size:var(--type-16)}}
+
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) * { box-sizing:border-box; min-width:0; }
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .name {font-size:var(--type-20)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .name {font-size:var(--type-18)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .note {font-size:var(--type-14)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .kick {display:none} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .note {display:none} }
+
+:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) {display:flex;align-items:stretch;gap:var(--gap);padding:var(--gap-sm)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .person{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);text-align:center} .person[data-el="blueprint-06-person"] {display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);text-align:center} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .seat.avatar{width:128px;height:128px;border-radius:50%} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .seat.portrait{width:65%;height:55%;border-radius:var(--radius-sm)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .name{font-size:var(--type-24)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .note{max-width:90%;font-size:var(--type-16)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .list{text-align:left;padding:var(--gap-sm)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .list .name{font-size:var(--type-16)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .list .note{font-size:var(--type-14)}
+@container bp (max-width:700px){:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .name{font-size:var(--type-18)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .note{font-size:var(--type-14)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .seat.avatar{width:80px;height:80px}} @container bp (max-height:330px){:is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .seat.avatar{width:80px;height:80px} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .name{font-size:var(--type-18)} :is(.person[data-el="blueprint-06-person"],.people[data-el="blueprint-06-person"]) .note{font-size:var(--type-14)}}
+
+:is(.pill[data-el="blueprint-06-pill"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pill[data-el="blueprint-06-pill"]) * { box-sizing:border-box; min-width:0; }
+:is(.pill[data-el="blueprint-06-pill"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.pill[data-el="blueprint-06-pill"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pill[data-el="blueprint-06-pill"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pill[data-el="blueprint-06-pill"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.pill[data-el="blueprint-06-pill"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.pill[data-el="blueprint-06-pill"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.pill[data-el="blueprint-06-pill"]) .name {font-size:var(--type-20)} :is(.pill[data-el="blueprint-06-pill"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.pill[data-el="blueprint-06-pill"]) .name {font-size:var(--type-18)} :is(.pill[data-el="blueprint-06-pill"]) .note {font-size:var(--type-14)} :is(.pill[data-el="blueprint-06-pill"]) .kick {display:none} :is(.pill[data-el="blueprint-06-pill"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.pill[data-el="blueprint-06-pill"]) .note {display:none} }
+
+:is(.pill[data-el="blueprint-06-pill"]) {display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--accent-soft);border:var(--stroke) solid var(--accent-soft)}
+:is(.pill[data-el="blueprint-06-pill"]) .parts {display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm) var(--pad);text-align:center}
+:is(.pill[data-el="blueprint-06-pill"]) .name {font-size:var(--type-20);color:var(--accent)} :is(.pill[data-el="blueprint-06-pill"]) .note {font-size:var(--type-14)} :is(.pill[data-el="blueprint-06-pill"]) .mark {font-size:var(--type-16);font-weight:var(--label-weight);color:var(--accent)}
+:is(.pill[data-el="blueprint-06-pill"]).on {background:var(--accent);border-color:var(--accent)} :is(.pill[data-el="blueprint-06-pill"]).on :is(.name,.note,.mark){color:var(--accent-ink)} :is(.pill[data-el="blueprint-06-pill"]).quiet {background:var(--surface-2);border-color:var(--surface-2)} :is(.pill[data-el="blueprint-06-pill"]).line {background:var(--surface);border-color:var(--accent)}
+@container bp (max-width:420px){:is(.pill[data-el="blueprint-06-pill"]) .parts{padding:var(--gap-sm);gap:calc(var(--gap-sm)/2)} :is(.pill[data-el="blueprint-06-pill"]) .name{font-size:var(--type-16)} :is(.pill[data-el="blueprint-06-pill"]) .note{display:none}}
+
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) * { box-sizing:border-box; min-width:0; }
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .name {font-size:var(--type-20)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .name {font-size:var(--type-18)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .note {font-size:var(--type-14)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .kick {display:none} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .note {display:none} }
+
+:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) {display:flex;align-items:stretch;gap:var(--gap);padding:var(--gap-sm)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .plan{display:flex;flex:1;flex-direction:column;gap:var(--gap);padding:var(--pad);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface)} .plan[data-el="blueprint-06-pricing"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--pad);border:var(--stroke) solid var(--line);border-radius:var(--radius);background:var(--surface)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .plan.on,.plan[data-el="blueprint-06-pricing"].on{border-color:var(--accent);background:var(--accent-soft)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .price{display:flex;align-items:baseline;gap:var(--gap-sm);padding-bottom:var(--gap);border-bottom:var(--stroke) solid var(--line)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .price small{font-size:var(--type-16);font-weight:var(--body-weight);color:var(--ink-2)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .fig{font-size:var(--type-44)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .name{font-size:var(--type-24)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .list{padding:0;flex:1} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .list .name{font-size:var(--type-16)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .list .note{font-size:var(--type-14)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .tag{font-size:var(--type-12);padding:calc(var(--gap-sm)/2) var(--gap-sm);align-self:flex-start;justify-self:start}
+@container bp (max-width:750px){:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .plan{padding:var(--gap-sm)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .fig{font-size:var(--type-32)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .name{font-size:var(--type-18)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .list .name{font-size:var(--type-14)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .list .note{display:none}} @container bp (max-height:350px){:is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .fig{font-size:var(--type-28)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .list .name{font-size:var(--type-14)} :is(.plan[data-el="blueprint-06-pricing"],.plans[data-el="blueprint-06-pricing"]) .list .note{display:none}}
+
+:is(.pyramid[data-el="blueprint-06-pyramid"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pyramid[data-el="blueprint-06-pyramid"]) * { box-sizing:border-box; min-width:0; }
+:is(.pyramid[data-el="blueprint-06-pyramid"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.pyramid[data-el="blueprint-06-pyramid"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pyramid[data-el="blueprint-06-pyramid"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pyramid[data-el="blueprint-06-pyramid"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.pyramid[data-el="blueprint-06-pyramid"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.pyramid[data-el="blueprint-06-pyramid"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.pyramid[data-el="blueprint-06-pyramid"]) .name {font-size:var(--type-20)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.pyramid[data-el="blueprint-06-pyramid"]) .name {font-size:var(--type-18)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .note {font-size:var(--type-14)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .kick {display:none} :is(.pyramid[data-el="blueprint-06-pyramid"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.pyramid[data-el="blueprint-06-pyramid"]) .note {display:none} }
+
+:is(.pyramid[data-el="blueprint-06-pyramid"]) {display:flex;flex-direction:column;justify-content:center;align-items:center;gap:calc(var(--gap-sm)/2);padding:var(--gap)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:calc(var(--gap-sm)/2);flex:1;max-height:110px;text-align:center;clip-path:polygon(14% 0,86% 0,100% 100%,0 100%);background:var(--tone-4);color:var(--tone-4-ink);padding:var(--gap-sm) var(--pad)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level:first-child{width:40%;background:var(--tone-3);color:var(--tone-3-ink);clip-path:polygon(50% 0,100% 100%,0 100%);padding-top:var(--gap-lg)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level:nth-child(2){width:60%} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level:nth-child(3){width:80%;background:var(--accent);color:var(--accent-ink)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level:nth-child(4){width:90%;background:var(--tone-2);color:var(--tone-2-ink)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level:nth-child(5){width:100%;background:var(--tone-2);color:var(--tone-2-ink)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level .name{font-size:var(--type-20);color:inherit} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level .note{font-size:var(--type-14);color:inherit}
+@container bp (max-width:650px){:is(.pyramid[data-el="blueprint-06-pyramid"]) .level .name{font-size:var(--type-16)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level .note{font-size:var(--type-12)}} @container bp (max-height:350px){:is(.pyramid[data-el="blueprint-06-pyramid"]) .level .name{font-size:var(--type-14)} :is(.pyramid[data-el="blueprint-06-pyramid"]) .level .note{display:none}}
+
+:is(.quote[data-el="blueprint-06-quote"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.quote[data-el="blueprint-06-quote"]) * { box-sizing:border-box; min-width:0; }
+:is(.quote[data-el="blueprint-06-quote"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.quote[data-el="blueprint-06-quote"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.quote[data-el="blueprint-06-quote"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.quote[data-el="blueprint-06-quote"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.quote[data-el="blueprint-06-quote"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.quote[data-el="blueprint-06-quote"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.quote[data-el="blueprint-06-quote"]) .name {font-size:var(--type-20)} :is(.quote[data-el="blueprint-06-quote"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.quote[data-el="blueprint-06-quote"]) .name {font-size:var(--type-18)} :is(.quote[data-el="blueprint-06-quote"]) .note {font-size:var(--type-14)} :is(.quote[data-el="blueprint-06-quote"]) .kick {display:none} :is(.quote[data-el="blueprint-06-quote"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.quote[data-el="blueprint-06-quote"]) .note {display:none} }
+
+:is(.quote[data-el="blueprint-06-quote"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-lg);padding:var(--gap-lg);background:var(--surface-2);border-radius:var(--radius);position:relative}
+:is(.quote[data-el="blueprint-06-quote"])::before {content:"“";color:var(--accent);font-family:var(--font-display);font-size:var(--type-80);line-height:var(--figure-line);font-weight:var(--title-weight)}
+:is(.quote[data-el="blueprint-06-quote"]) blockquote {font-size:var(--type-32);font-weight:var(--lead-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track)} :is(.quote[data-el="blueprint-06-quote"]) .by {display:grid;grid-template-columns:64px 1fr;column-gap:var(--gap);align-items:center} :is(.quote[data-el="blueprint-06-quote"]) .by .seat {grid-row:1/3} :is(.quote[data-el="blueprint-06-quote"]) .by .name{font-size:var(--type-18)} :is(.quote[data-el="blueprint-06-quote"]) .by .note{font-size:var(--type-14)}
+:is(.quote[data-el="blueprint-06-quote"]).big blockquote{font-size:var(--type-40)} @container bp (max-width:650px){:is(.quote[data-el="blueprint-06-quote"]) blockquote,:is(.quote[data-el="blueprint-06-quote"]).big blockquote{font-size:var(--type-24)}} @container bp (max-height:320px){:is(.quote[data-el="blueprint-06-quote"])::before{font-size:var(--type-48)} :is(.quote[data-el="blueprint-06-quote"]) blockquote,:is(.quote[data-el="blueprint-06-quote"]).big blockquote{font-size:var(--type-20)} :is(.quote[data-el="blueprint-06-quote"]) .by .seat{width:40px;height:40px} :is(.quote[data-el="blueprint-06-quote"]) .by{grid-template-columns:40px 1fr;gap:var(--gap-sm)} }
+
+:is(.steps[data-el="blueprint-06-steps"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.steps[data-el="blueprint-06-steps"]) * { box-sizing:border-box; min-width:0; }
+:is(.steps[data-el="blueprint-06-steps"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.steps[data-el="blueprint-06-steps"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="blueprint-06-steps"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.steps[data-el="blueprint-06-steps"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.steps[data-el="blueprint-06-steps"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.steps[data-el="blueprint-06-steps"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.steps[data-el="blueprint-06-steps"]) .name {font-size:var(--type-20)} :is(.steps[data-el="blueprint-06-steps"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.steps[data-el="blueprint-06-steps"]) .name {font-size:var(--type-18)} :is(.steps[data-el="blueprint-06-steps"]) .note {font-size:var(--type-14)} :is(.steps[data-el="blueprint-06-steps"]) .kick {display:none} :is(.steps[data-el="blueprint-06-steps"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.steps[data-el="blueprint-06-steps"]) .note {display:none} }
+
+:is(.steps[data-el="blueprint-06-steps"]) {display:flex;align-items:center;gap:var(--gap-lg);padding:var(--gap)} :is(.steps[data-el="blueprint-06-steps"]) .step{position:relative;flex:1;display:flex;flex-direction:column;gap:var(--gap-sm);align-items:center;text-align:center} :is(.steps[data-el="blueprint-06-steps"]) .mark{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font-size:var(--type-20);font-weight:var(--label-weight);line-height:var(--label-line)} :is(.steps[data-el="blueprint-06-steps"]) .step:not(:last-child)::after{content:"→";position:absolute;left:calc(100% + var(--gap-sm)/2);top:var(--gap-sm);color:var(--mute);font-size:var(--type-24);font-weight:var(--label-weight)} :is(.steps[data-el="blueprint-06-steps"]) .name{font-size:var(--type-22)}
+:is(.steps[data-el="blueprint-06-steps"]).col {flex-direction:column;align-items:stretch;gap:var(--gap)} :is(.steps[data-el="blueprint-06-steps"]).col .step {display:grid;grid-template-columns:48px 1fr;column-gap:var(--gap);text-align:left;align-content:center} :is(.steps[data-el="blueprint-06-steps"]).col .mark{grid-row:1/3} :is(.steps[data-el="blueprint-06-steps"]).col .step:not(:last-child)::after{content:"↓";top:100%;left:var(--gap-sm);font-size:var(--type-20)}
+@container bp (max-width:650px){:is(.steps[data-el="blueprint-06-steps"]) .name{font-size:var(--type-18)} :is(.steps[data-el="blueprint-06-steps"]) .note{font-size:var(--type-14)} :is(.steps[data-el="blueprint-06-steps"]) .mark{width:36px;height:36px;font-size:var(--type-16)}} @container bp (max-height:260px){:is(.steps[data-el="blueprint-06-steps"]) .name{font-size:var(--type-16)} :is(.steps[data-el="blueprint-06-steps"]) .note{font-size:var(--type-14)} :is(.steps[data-el="blueprint-06-steps"]) .step{gap:calc(var(--gap-sm)/2)}}
+
+:is(.tablebox[data-el="blueprint-06-table"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.tablebox[data-el="blueprint-06-table"]) * { box-sizing:border-box; min-width:0; }
+:is(.tablebox[data-el="blueprint-06-table"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.tablebox[data-el="blueprint-06-table"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.tablebox[data-el="blueprint-06-table"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.tablebox[data-el="blueprint-06-table"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.tablebox[data-el="blueprint-06-table"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.tablebox[data-el="blueprint-06-table"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.tablebox[data-el="blueprint-06-table"]) .name {font-size:var(--type-20)} :is(.tablebox[data-el="blueprint-06-table"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.tablebox[data-el="blueprint-06-table"]) .name {font-size:var(--type-18)} :is(.tablebox[data-el="blueprint-06-table"]) .note {font-size:var(--type-14)} :is(.tablebox[data-el="blueprint-06-table"]) .kick {display:none} :is(.tablebox[data-el="blueprint-06-table"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.tablebox[data-el="blueprint-06-table"]) .note {display:none} }
+
+:is(.tablebox[data-el="blueprint-06-table"]) {display:flex;align-items:center;padding:var(--gap-sm);border:var(--stroke) solid var(--line);border-radius:var(--radius-sm);background:var(--surface)} :is(.tablebox[data-el="blueprint-06-table"]) .table {border-collapse:collapse;width:100%;table-layout:fixed;font-size:var(--type-18);line-height:var(--body-line)} :is(.tablebox[data-el="blueprint-06-table"]) :is(th,td){padding:var(--gap-sm);border-bottom:var(--stroke) solid var(--line);text-align:left;vertical-align:middle;overflow-wrap:anywhere} :is(.tablebox[data-el="blueprint-06-table"]) th{font-weight:var(--label-weight);background:var(--accent);color:var(--accent-ink)} :is(.tablebox[data-el="blueprint-06-table"]) tr:last-child td{border-bottom:0} :is(.tablebox[data-el="blueprint-06-table"]) td{color:var(--ink-2)} :is(.tablebox[data-el="blueprint-06-table"]) .num{text-align:right;font-variant-numeric:tabular-nums} :is(.tablebox[data-el="blueprint-06-table"]) td.pick{background:var(--accent-soft);color:var(--accent);font-weight:var(--name-weight)} :is(.tablebox[data-el="blueprint-06-table"]) th.pick{background:var(--tone-2);color:var(--tone-2-ink)}
+@container bp (max-width:650px){:is(.tablebox[data-el="blueprint-06-table"]) .table{font-size:var(--type-14)} :is(.tablebox[data-el="blueprint-06-table"]) :is(th,td){padding:var(--gap-sm)}} @container bp (max-height:350px){:is(.tablebox[data-el="blueprint-06-table"]) .table{font-size:var(--type-14)} :is(.tablebox[data-el="blueprint-06-table"]) :is(th,td){padding:calc(var(--gap-sm)/2) var(--gap-sm)}}
+
+@container bp (max-height:550px){:is(.tablebox[data-el="blueprint-06-table"]) :is(th,td){padding:calc(var(--gap-sm)*.75) var(--gap-sm)}}
+
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) * { box-sizing:border-box; min-width:0; }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .name {font-size:var(--type-20)} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .name {font-size:var(--type-18)} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .note {font-size:var(--type-14)} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .kick {display:none} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .note {display:none} }
+
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) {display:inline-flex;align-items:center;justify-content:center;align-self:center;justify-self:center;width:max-content;max-width:100%;height:max-content;padding:var(--gap-sm) var(--gap);font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);background:var(--accent);color:var(--accent-ink);border-radius:999px;text-align:center}
+.hl[data-el="blueprint-06-tag"] {border-radius:var(--radius-sm);background:var(--accent-soft);color:var(--accent);box-decoration-break:clone}
+@container bp (max-width:300px){:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) {font-size:var(--type-14)}}
+
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) {container-type:normal}
+
+:is(.track[data-el="blueprint-06-timeline"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.track[data-el="blueprint-06-timeline"]) * { box-sizing:border-box; min-width:0; }
+:is(.track[data-el="blueprint-06-timeline"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.track[data-el="blueprint-06-timeline"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.track[data-el="blueprint-06-timeline"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.track[data-el="blueprint-06-timeline"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.track[data-el="blueprint-06-timeline"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.track[data-el="blueprint-06-timeline"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.track[data-el="blueprint-06-timeline"]) .name {font-size:var(--type-20)} :is(.track[data-el="blueprint-06-timeline"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.track[data-el="blueprint-06-timeline"]) .name {font-size:var(--type-18)} :is(.track[data-el="blueprint-06-timeline"]) .note {font-size:var(--type-14)} :is(.track[data-el="blueprint-06-timeline"]) .kick {display:none} :is(.track[data-el="blueprint-06-timeline"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.track[data-el="blueprint-06-timeline"]) .note {display:none} }
+
+:is(.track[data-el="blueprint-06-timeline"]) {display:flex;align-items:center;gap:var(--gap);padding:var(--gap)} :is(.track[data-el="blueprint-06-timeline"]) .stop{flex:1;position:relative;display:flex;flex-direction:column;gap:var(--gap-sm);padding-top:var(--gap-lg);border-top:var(--stroke) solid var(--line)} :is(.track[data-el="blueprint-06-timeline"]) .stop::before{content:"";position:absolute;top:-5px;left:0;width:10px;height:10px;background:var(--tone-3);border-radius:50%} :is(.track[data-el="blueprint-06-timeline"]) .stop.on::before{background:var(--accent)} :is(.track[data-el="blueprint-06-timeline"]) .stop.on .name{color:var(--accent)} :is(.track[data-el="blueprint-06-timeline"]) .name{font-size:var(--type-22)}
+:is(.track[data-el="blueprint-06-timeline"]).alt .stop:nth-child(even){transform:translateY(calc(var(--gap-lg)*-1));padding-top:0;padding-bottom:var(--gap-lg);border-top:0;border-bottom:var(--stroke) solid var(--line)} :is(.track[data-el="blueprint-06-timeline"]).alt .stop:nth-child(even)::before{top:auto;bottom:-5px}
+:is(.track[data-el="blueprint-06-timeline"]).col{flex-direction:column;align-items:stretch;gap:0} :is(.track[data-el="blueprint-06-timeline"]).col .stop{padding:var(--gap-sm) var(--gap-lg);border-top:none;border-left:var(--stroke) solid var(--line)} :is(.track[data-el="blueprint-06-timeline"]).col .stop::before{top:var(--gap);left:-5px}
+@container bp (max-width:650px){:is(.track[data-el="blueprint-06-timeline"]) .name{font-size:var(--type-16)} :is(.track[data-el="blueprint-06-timeline"]) .note{font-size:var(--type-14)} :is(.track[data-el="blueprint-06-timeline"]) .kick{font-size:var(--type-12)}} @container bp (max-height:250px){:is(.track[data-el="blueprint-06-timeline"]) .note{display:none} :is(.track[data-el="blueprint-06-timeline"]) .name{font-size:var(--type-16)}}
+
+@container bp (max-height:380px){:is(.track[data-el="blueprint-06-timeline"]).col .stop{padding:calc(var(--gap-sm)/2) var(--gap-lg);gap:calc(var(--gap-sm)/2)} :is(.track[data-el="blueprint-06-timeline"]).col .name{font-size:var(--type-18)} :is(.track[data-el="blueprint-06-timeline"]).col .note{font-size:var(--type-14)}}
+
+:is(.venn[data-el="blueprint-06-venn"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.venn[data-el="blueprint-06-venn"]) * { box-sizing:border-box; min-width:0; }
+:is(.venn[data-el="blueprint-06-venn"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.venn[data-el="blueprint-06-venn"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.venn[data-el="blueprint-06-venn"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.venn[data-el="blueprint-06-venn"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.venn[data-el="blueprint-06-venn"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.venn[data-el="blueprint-06-venn"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.venn[data-el="blueprint-06-venn"]) .name {font-size:var(--type-20)} :is(.venn[data-el="blueprint-06-venn"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.venn[data-el="blueprint-06-venn"]) .name {font-size:var(--type-18)} :is(.venn[data-el="blueprint-06-venn"]) .note {font-size:var(--type-14)} :is(.venn[data-el="blueprint-06-venn"]) .kick {display:none} :is(.venn[data-el="blueprint-06-venn"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.venn[data-el="blueprint-06-venn"]) .note {display:none} }
+
+:is(.venn[data-el="blueprint-06-venn"]) {position:relative;display:flex;align-items:center;justify-content:center;padding:var(--gap)} :is(.venn[data-el="blueprint-06-venn"]) .set{width:42%;aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:var(--pad);background:color-mix(in srgb,var(--tone-3) 70%,transparent);border:var(--stroke) solid var(--tone-3);margin-left:calc(var(--gap-lg)*-1)} :is(.venn[data-el="blueprint-06-venn"]) .set:first-child{margin-left:0} :is(.venn[data-el="blueprint-06-venn"]) .set.on{background:color-mix(in srgb,var(--accent) 75%,transparent);border-color:var(--accent);color:var(--accent-ink)} :is(.venn[data-el="blueprint-06-venn"]) .set .name{font-size:var(--type-24);color:inherit;text-align:center} :is(.venn[data-el="blueprint-06-venn"]):has(.set:nth-child(3)) .set{width:34%;margin-left:calc(var(--gap)*-1)} :is(.venn[data-el="blueprint-06-venn"]) .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--tone-2);color:var(--tone-2-ink);border:var(--stroke) solid var(--surface);border-radius:999px;padding:var(--gap-sm) var(--gap);font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);text-align:center}
+@container bp (max-width:650px){:is(.venn[data-el="blueprint-06-venn"]) .set .name{font-size:var(--type-18)} :is(.venn[data-el="blueprint-06-venn"]) .core{font-size:var(--type-14)}} @container bp (max-height:250px){:is(.venn[data-el="blueprint-06-venn"]) .set{width:28%} :is(.venn[data-el="blueprint-06-venn"]) .set .name{font-size:var(--type-16)}}
+
+:is(.versus[data-el="blueprint-06-versus"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.versus[data-el="blueprint-06-versus"]) * { box-sizing:border-box; min-width:0; }
+:is(.versus[data-el="blueprint-06-versus"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.versus[data-el="blueprint-06-versus"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.versus[data-el="blueprint-06-versus"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.versus[data-el="blueprint-06-versus"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.versus[data-el="blueprint-06-versus"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.versus[data-el="blueprint-06-versus"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.versus[data-el="blueprint-06-versus"]) .name {font-size:var(--type-20)} :is(.versus[data-el="blueprint-06-versus"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.versus[data-el="blueprint-06-versus"]) .name {font-size:var(--type-18)} :is(.versus[data-el="blueprint-06-versus"]) .note {font-size:var(--type-14)} :is(.versus[data-el="blueprint-06-versus"]) .kick {display:none} :is(.versus[data-el="blueprint-06-versus"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.versus[data-el="blueprint-06-versus"]) .note {display:none} }
+
+:is(.versus[data-el="blueprint-06-versus"]) {display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:var(--gap);align-items:stretch;padding:var(--gap)} :is(.versus[data-el="blueprint-06-versus"]) .side{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);background:var(--surface-2);border-radius:var(--radius);border:var(--stroke) solid var(--line);padding:var(--pad)} :is(.versus[data-el="blueprint-06-versus"]) .side.on{background:var(--accent-soft);border-color:var(--accent)} :is(.versus[data-el="blueprint-06-versus"]) .side.on > .name{color:var(--accent)} :is(.versus[data-el="blueprint-06-versus"]) .vs{align-self:center;font-size:var(--type-20);font-weight:var(--title-weight);color:var(--mute);line-height:var(--label-line)} :is(.versus[data-el="blueprint-06-versus"]) .side > .name{text-align:center;font-size:var(--type-24)} :is(.versus[data-el="blueprint-06-versus"]) .side .list{padding:0;flex:1} :is(.versus[data-el="blueprint-06-versus"]) .side .list .name{font-size:var(--type-18)} :is(.versus[data-el="blueprint-06-versus"]) .side .list .note{font-size:var(--type-14)}
+@container bp (max-width:650px){:is(.versus[data-el="blueprint-06-versus"]) .side{padding:var(--gap-sm)} :is(.versus[data-el="blueprint-06-versus"]) .side > .name{font-size:var(--type-18)} :is(.versus[data-el="blueprint-06-versus"]) .side .list .name{font-size:var(--type-16)}} @container bp (max-height:300px){:is(.versus[data-el="blueprint-06-versus"]) .side > .name{font-size:var(--type-18)} :is(.versus[data-el="blueprint-06-versus"]) .side .list .name{font-size:var(--type-14)}}
+
+.slide{--type-8:8px;--type-10:10px;--type-12:12px;--type-14:14px;--type-16:16px;--type-18:18px;--type-20:20px;--type-22:22px;--type-24:24px;--type-26:26px;--type-28:28px;--type-30:30px;--type-32:32px;--type-36:36px;--type-40:40px;--type-44:44px;--type-48:48px;--type-52:52px;--type-56:56px;--type-60:60px;--type-64:64px;--type-68:68px;--type-72:72px;--type-76:76px;--type-80:80px;--type-84:84px;--type-88:88px;--type-92:92px;--type-96:96px;--type-100:100px;--type-104:104px;--type-108:108px;--type-112:112px;--type-116:116px;--type-120:120px;--type-124:124px;--type-128:128px;--blueprint-06-count:5;--blueprint-06-next:0;--blueprint-06-i:0;--blueprint-06-members:3}
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{background:#e9ebef}.slide{width:1280px;height:720px;overflow:hidden;break-after:page;print-color-adjust:exact;-webkit-print-color-adjust:exact}.slide:last-child{break-after:auto}.slide .name,.slide .note,.slide .lead,.slide .title,.slide blockquote{white-space:pre-line}.slide svg{max-width:100%;max-height:100%}.slide .mark svg{width:36px;height:36px}.slide .seat[data-ph]{background:#e5e5e5}.slide .seat[data-ph]::after{content:none!important}@page{size:1280px 720px;margin:0}</style></head><body><section class="slide" data-deck="045" data-slide="slide_26" style="--accent:#385bd7;--accent-soft:#edf1fc;--tone-1:#385bd7;--tone-2:#708be1;--tone-3:#aab9ee;--tone-4:#d2daf6"><div class="page"><header class="head"><p class="kicker">Target Achievement Status</p><h1 class="title">지점별 목표 달성 현황</h1><p class="lead">매출 평균 000만 원 달성률</p></header><div class="body"><div class="donuts" data-el="blueprint-06-chart-donut" style="grid-column:1 / span 12;grid-row:1 / span 5;"><div class="donut" data-el="blueprint-06-chart-donut" style="--v:100"><div class="fig">138%</div><div class="name">미리점</div></div><div class="donut" data-el="blueprint-06-chart-donut" style="--v:100"><div class="fig">126%</div><div class="name">비즈점</div></div><div class="donut" data-el="blueprint-06-chart-donut" style="--v:100"><div class="fig">117%</div><div class="name">스마일점</div></div><div class="donut" data-el="blueprint-06-chart-donut" style="--v:95"><div class="fig">95%</div><div class="name">평균</div></div></div><div class="callout" data-el="blueprint-06-callout" style="grid-column:2 / span 10;grid-row:6 / span 1;"><p>상위 지점은 SNS 홍보/예약 유입률 연동 우수</p></div></div></div><footer class="foot"><span class="deck">MIRI COMPANY</span><span class="src">BLUEPRINT 06</span><span class="no">26</span></footer></section><script>document.fonts.ready.then(()=>document.body.dataset.ready='true')</script></body></html>

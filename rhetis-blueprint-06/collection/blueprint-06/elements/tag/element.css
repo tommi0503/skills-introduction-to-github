@@ -1,0 +1,17 @@
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) * { box-sizing:border-box; min-width:0; }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .name {font-size:var(--type-20)} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .name {font-size:var(--type-18)} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .note {font-size:var(--type-14)} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .kick {display:none} :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) .note {display:none} }
+
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) {display:inline-flex;align-items:center;justify-content:center;align-self:center;justify-self:center;width:max-content;max-width:100%;height:max-content;padding:var(--gap-sm) var(--gap);font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);background:var(--accent);color:var(--accent-ink);border-radius:999px;text-align:center}
+.hl[data-el="blueprint-06-tag"] {border-radius:var(--radius-sm);background:var(--accent-soft);color:var(--accent);box-decoration-break:clone}
+@container bp (max-width:300px){:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) {font-size:var(--type-14)}}
+
+:is(.tag[data-el="blueprint-06-tag"],.hl[data-el="blueprint-06-tag"]) {container-type:normal}

@@ -1,0 +1,1 @@
+A fixed 1280 by 720 canvas with a twelve-column, six-row body, a compact blue kicker, a clear title and light footer rules. Top, side and footer furniture preserve generous breathing room. Covers use an optional geometric diagonal cobalt ribbon rather than photographic artwork; numbered neutral seats reserve media without inventing imagery.

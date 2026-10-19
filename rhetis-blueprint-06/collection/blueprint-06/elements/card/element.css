@@ -1,0 +1,27 @@
+:is(.card[data-el="blueprint-06-card"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.card[data-el="blueprint-06-card"]) * { box-sizing:border-box; min-width:0; }
+:is(.card[data-el="blueprint-06-card"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.card[data-el="blueprint-06-card"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="blueprint-06-card"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.card[data-el="blueprint-06-card"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.card[data-el="blueprint-06-card"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.card[data-el="blueprint-06-card"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.card[data-el="blueprint-06-card"]) .name {font-size:var(--type-20)} :is(.card[data-el="blueprint-06-card"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.card[data-el="blueprint-06-card"]) .name {font-size:var(--type-18)} :is(.card[data-el="blueprint-06-card"]) .note {font-size:var(--type-14)} :is(.card[data-el="blueprint-06-card"]) .kick {display:none} :is(.card[data-el="blueprint-06-card"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.card[data-el="blueprint-06-card"]) .note {display:none} }
+
+:is(.card[data-el="blueprint-06-card"]) { background:var(--surface); border:var(--stroke) solid var(--line); border-radius:var(--radius); }
+:is(.card[data-el="blueprint-06-card"]) .parts { height:100%; display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); padding:var(--pad); }
+:is(.card[data-el="blueprint-06-card"]).quiet { background:var(--surface-2); border-color:var(--surface-2); }
+:is(.card[data-el="blueprint-06-card"]).line { border-color:var(--accent); }
+:is(.card[data-el="blueprint-06-card"]).on { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
+:is(.card[data-el="blueprint-06-card"]).on :is(.name,.fig,.note,.kick,.mark) {color:var(--accent-ink)}
+:is(.card[data-el="blueprint-06-card"]) .mark { width:40px; height:40px; display:grid; place-items:center; border-radius:50%; background:var(--accent-soft); color:var(--accent); font-size:var(--type-18); font-weight:var(--label-weight); }
+@container bp (min-width:750px) { :is(.card[data-el="blueprint-06-card"]) .parts {padding:var(--gap-lg)} :is(.card[data-el="blueprint-06-card"]) .fig {font-size:var(--type-80)} :is(.card[data-el="blueprint-06-card"]) .name {font-size:var(--type-32)} }
+@container bp (max-height:170px) { :is(.card[data-el="blueprint-06-card"]) .parts {padding:var(--gap-sm); gap:calc(var(--gap-sm)/2)} :is(.card[data-el="blueprint-06-card"]) .mark {display:none} }
+
+:is(.card[data-el="blueprint-06-card"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink);border-color:var(--tone-1)} :is(.card[data-el="blueprint-06-card"]).tone-1 :is(.name,.note,.fig,.kick) {color:var(--tone-1-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink);border-color:var(--tone-2)} :is(.card[data-el="blueprint-06-card"]).tone-2 :is(.name,.note,.fig,.kick) {color:var(--tone-2-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink);border-color:var(--tone-3)} :is(.card[data-el="blueprint-06-card"]).tone-3 :is(.name,.note,.fig,.kick) {color:var(--tone-3-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink);border-color:var(--tone-4)} :is(.card[data-el="blueprint-06-card"]).tone-4 :is(.name,.note,.fig,.kick) {color:var(--tone-4-ink)}
+:is(.card[data-el="blueprint-06-card"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink);border-color:var(--tone-5)} :is(.card[data-el="blueprint-06-card"]).tone-5 :is(.name,.note,.fig,.kick) {color:var(--tone-5-ink)}

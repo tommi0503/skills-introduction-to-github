@@ -1,0 +1,18 @@
+:is(.list[data-el="blueprint-06-list"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.list[data-el="blueprint-06-list"]) * { box-sizing:border-box; min-width:0; }
+:is(.list[data-el="blueprint-06-list"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.list[data-el="blueprint-06-list"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.list[data-el="blueprint-06-list"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.list[data-el="blueprint-06-list"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.list[data-el="blueprint-06-list"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.list[data-el="blueprint-06-list"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.list[data-el="blueprint-06-list"]) .name {font-size:var(--type-20)} :is(.list[data-el="blueprint-06-list"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.list[data-el="blueprint-06-list"]) .name {font-size:var(--type-18)} :is(.list[data-el="blueprint-06-list"]) .note {font-size:var(--type-14)} :is(.list[data-el="blueprint-06-list"]) .kick {display:none} :is(.list[data-el="blueprint-06-list"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.list[data-el="blueprint-06-list"]) .note {display:none} }
+
+:is(.list[data-el="blueprint-06-list"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:bp-list;padding:var(--gap)} :is(.list[data-el="blueprint-06-list"]) .item {position:relative;padding-left:var(--gap-lg);counter-increment:bp-list;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2)}
+:is(.list[data-el="blueprint-06-list"]) .item::before {content:"";position:absolute;left:0;top:var(--gap-sm);width:6px;height:6px;border-radius:50%;background:var(--accent)}
+:is(.list[data-el="blueprint-06-list"]).check .item::before {content:"✓";top:0;background:none;width:20px;height:20px;color:var(--accent);font-size:var(--type-20);font-weight:var(--title-weight)}
+:is(.list[data-el="blueprint-06-list"]).num .item::before {content:counter(bp-list,decimal-leading-zero);top:0;background:none;width:24px;height:24px;color:var(--accent);font-size:var(--type-16);font-weight:var(--label-weight)}
+:is(.list[data-el="blueprint-06-list"]).divided .item + .item {border-top:var(--stroke) solid var(--line);padding-top:var(--gap)} :is(.list[data-el="blueprint-06-list"]).divided .item + .item::before{top:calc(var(--gap) + var(--gap-sm))}
+@container bp (max-height:320px){:is(.list[data-el="blueprint-06-list"]) .name{font-size:var(--type-18)} :is(.list[data-el="blueprint-06-list"]) .note{font-size:var(--type-14)} :is(.list[data-el="blueprint-06-list"]) .item{gap:0} } @container bp (max-height:220px){:is(.list[data-el="blueprint-06-list"]) .item{padding-left:var(--gap)} :is(.list[data-el="blueprint-06-list"]) .note{display:none}}

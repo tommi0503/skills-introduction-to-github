@@ -1,0 +1,15 @@
+:is(.callout[data-el="blueprint-06-callout"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.callout[data-el="blueprint-06-callout"]) * { box-sizing:border-box; min-width:0; }
+:is(.callout[data-el="blueprint-06-callout"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.callout[data-el="blueprint-06-callout"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.callout[data-el="blueprint-06-callout"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.callout[data-el="blueprint-06-callout"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.callout[data-el="blueprint-06-callout"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.callout[data-el="blueprint-06-callout"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.callout[data-el="blueprint-06-callout"]) .name {font-size:var(--type-20)} :is(.callout[data-el="blueprint-06-callout"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.callout[data-el="blueprint-06-callout"]) .name {font-size:var(--type-18)} :is(.callout[data-el="blueprint-06-callout"]) .note {font-size:var(--type-14)} :is(.callout[data-el="blueprint-06-callout"]) .kick {display:none} :is(.callout[data-el="blueprint-06-callout"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.callout[data-el="blueprint-06-callout"]) .note {display:none} }
+
+:is(.callout[data-el="blueprint-06-callout"]) {display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);border-top:var(--stroke) solid var(--line);border-bottom:var(--stroke) solid var(--line);background:var(--accent-soft);text-align:center}
+:is(.callout[data-el="blueprint-06-callout"]) p {font-size:var(--type-28);line-height:var(--lead-line);font-weight:var(--lead-weight);letter-spacing:var(--lead-track)} :is(.callout[data-el="blueprint-06-callout"]) b {color:var(--accent);font-weight:var(--title-weight)}
+@container bp (max-width:600px){:is(.callout[data-el="blueprint-06-callout"]) p{font-size:var(--type-20)}} @container bp (max-height:140px){:is(.callout[data-el="blueprint-06-callout"]) p{font-size:var(--type-18)}}

@@ -1,0 +1,17 @@
+:is(.pill[data-el="blueprint-06-pill"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pill[data-el="blueprint-06-pill"]) * { box-sizing:border-box; min-width:0; }
+:is(.pill[data-el="blueprint-06-pill"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.pill[data-el="blueprint-06-pill"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.pill[data-el="blueprint-06-pill"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.pill[data-el="blueprint-06-pill"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.pill[data-el="blueprint-06-pill"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.pill[data-el="blueprint-06-pill"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.pill[data-el="blueprint-06-pill"]) .name {font-size:var(--type-20)} :is(.pill[data-el="blueprint-06-pill"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.pill[data-el="blueprint-06-pill"]) .name {font-size:var(--type-18)} :is(.pill[data-el="blueprint-06-pill"]) .note {font-size:var(--type-14)} :is(.pill[data-el="blueprint-06-pill"]) .kick {display:none} :is(.pill[data-el="blueprint-06-pill"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.pill[data-el="blueprint-06-pill"]) .note {display:none} }
+
+:is(.pill[data-el="blueprint-06-pill"]) {display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--accent-soft);border:var(--stroke) solid var(--accent-soft)}
+:is(.pill[data-el="blueprint-06-pill"]) .parts {display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm) var(--pad);text-align:center}
+:is(.pill[data-el="blueprint-06-pill"]) .name {font-size:var(--type-20);color:var(--accent)} :is(.pill[data-el="blueprint-06-pill"]) .note {font-size:var(--type-14)} :is(.pill[data-el="blueprint-06-pill"]) .mark {font-size:var(--type-16);font-weight:var(--label-weight);color:var(--accent)}
+:is(.pill[data-el="blueprint-06-pill"]).on {background:var(--accent);border-color:var(--accent)} :is(.pill[data-el="blueprint-06-pill"]).on :is(.name,.note,.mark){color:var(--accent-ink)} :is(.pill[data-el="blueprint-06-pill"]).quiet {background:var(--surface-2);border-color:var(--surface-2)} :is(.pill[data-el="blueprint-06-pill"]).line {background:var(--surface);border-color:var(--accent)}
+@container bp (max-width:420px){:is(.pill[data-el="blueprint-06-pill"]) .parts{padding:var(--gap-sm);gap:calc(var(--gap-sm)/2)} :is(.pill[data-el="blueprint-06-pill"]) .name{font-size:var(--type-16)} :is(.pill[data-el="blueprint-06-pill"]) .note{display:none}}

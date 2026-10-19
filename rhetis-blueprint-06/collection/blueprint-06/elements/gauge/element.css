@@ -1,0 +1,15 @@
+:is(.meter[data-el="blueprint-06-gauge"]) { container:bp / size; min-width:0; min-height:0; font-family:var(--font-body); color:var(--ink); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) * { box-sizing:border-box; min-width:0; }
+:is(.meter[data-el="blueprint-06-gauge"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.meter[data-el="blueprint-06-gauge"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) .note { font-size:var(--type-16); color:var(--ink-2); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) .kick { font-size:var(--type-14); color:var(--accent); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); }
+:is(.meter[data-el="blueprint-06-gauge"]) .fig { font-size:var(--type-56); color:var(--accent); font-family:var(--font-display); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.meter[data-el="blueprint-06-gauge"]) .fig small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight); letter-spacing:var(--label-track); }
+@container bp (max-width:600px) { :is(.meter[data-el="blueprint-06-gauge"]) .name {font-size:var(--type-20)} :is(.meter[data-el="blueprint-06-gauge"]) .fig {font-size:var(--type-40)} }
+@container bp (max-height:240px) { :is(.meter[data-el="blueprint-06-gauge"]) .name {font-size:var(--type-18)} :is(.meter[data-el="blueprint-06-gauge"]) .note {font-size:var(--type-14)} :is(.meter[data-el="blueprint-06-gauge"]) .kick {display:none} :is(.meter[data-el="blueprint-06-gauge"]) .fig {font-size:var(--type-36)} }
+@container bp (max-height:130px) { :is(.meter[data-el="blueprint-06-gauge"]) .note {display:none} }
+
+:is(.meter[data-el="blueprint-06-gauge"]) {position:relative;display:grid;grid-template-columns:1fr auto;align-content:center;column-gap:var(--gap);row-gap:var(--gap);padding:var(--pad);border-bottom:var(--stroke) solid var(--line)} :is(.meter[data-el="blueprint-06-gauge"]) .name{font-size:var(--type-24)} :is(.meter[data-el="blueprint-06-gauge"]) .fig{font-size:var(--type-40)}
+:is(.meter[data-el="blueprint-06-gauge"])::before {content:"";grid-column:1/-1;grid-row:2;height:12px;background:var(--line);border-radius:999px} :is(.meter[data-el="blueprint-06-gauge"])::after{content:"";grid-column:1/-1;grid-row:2;height:12px;width:calc(var(--v)*1%);background:var(--accent);border-radius:999px}
+@container bp (max-width:600px){:is(.meter[data-el="blueprint-06-gauge"]) .name{font-size:var(--type-18)} :is(.meter[data-el="blueprint-06-gauge"]) .fig{font-size:var(--type-28)}} @container bp (max-height:150px){:is(.meter[data-el="blueprint-06-gauge"]) .name{font-size:var(--type-16)} :is(.meter[data-el="blueprint-06-gauge"]) .fig{font-size:var(--type-24)}}
