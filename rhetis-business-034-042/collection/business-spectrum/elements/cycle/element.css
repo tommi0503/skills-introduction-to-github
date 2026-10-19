@@ -1,0 +1,48 @@
+:is(.cycle[data-el="business-spectrum-cycle"]) { position:relative; min-width:0; min-height:0; container-type:size; font-family:var(--font-body),sans-serif; color:var(--ink); }
+:is(.cycle[data-el="business-spectrum-cycle"]) *, :is(.cycle[data-el="business-spectrum-cycle"]) *::before, :is(.cycle[data-el="business-spectrum-cycle"]) *::after { box-sizing:border-box; }
+:is(.cycle[data-el="business-spectrum-cycle"]) :is(.name,.fig,.note,.kick,.mark), :is(.cycle[data-el="business-spectrum-cycle"]) :is(p,blockquote) { margin:0; }
+:is(.cycle[data-el="business-spectrum-cycle"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.cycle[data-el="business-spectrum-cycle"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--mute); }
+:is(.cycle[data-el="business-spectrum-cycle"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); color:var(--accent); letter-spacing:var(--label-track); }
+:is(.cycle[data-el="business-spectrum-cycle"]) .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.cycle[data-el="business-spectrum-cycle"]) .mark { display:grid;place-items:center;flex:none; width:44px;height:44px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:var(--type-20);font-weight:var(--label-weight);line-height:var(--label-line); }
+:is(.cycle[data-el="business-spectrum-cycle"]) small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight);line-height:var(--label-line); }
+@container (max-width:640px) { :is(.cycle[data-el="business-spectrum-cycle"]) .name {font-size:var(--type-20);} :is(.cycle[data-el="business-spectrum-cycle"]) .note {font-size:var(--type-16);} :is(.cycle[data-el="business-spectrum-cycle"]) .fig {font-size:var(--type-40);} :is(.cycle[data-el="business-spectrum-cycle"]) .mark {width:36px;height:36px;font-size:var(--type-16);} }
+@container (max-width:320px) { :is(.cycle[data-el="business-spectrum-cycle"]) .name {font-size:var(--type-16);} :is(.cycle[data-el="business-spectrum-cycle"]) .note {font-size:var(--type-14);} :is(.cycle[data-el="business-spectrum-cycle"]) .fig {font-size:var(--type-32);} :is(.cycle[data-el="business-spectrum-cycle"]) .kick {display:none;} }
+@container (max-width:200px) and (max-height:140px) { :is(.cycle[data-el="business-spectrum-cycle"]) .note {display:none;} }
+:is(.cycle[data-el="business-spectrum-cycle"]){position:relative;isolation:isolate;}:is(.cycle[data-el="business-spectrum-cycle"]) .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:24%;height:30%;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);z-index:2;}
+:is(.cycle[data-el="business-spectrum-cycle"]) .node{position:absolute;width:25%;height:25%;left:calc(50% + var(--x)*1%);top:calc(50% + var(--y)*1%);transform:translate(-50%,-50%);padding:var(--gap-sm);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:calc(var(--gap-sm)/2);text-align:center;border-radius:var(--radius-sm);background:var(--surface);border:var(--stroke) solid var(--line);z-index:1;}:is(.cycle[data-el="business-spectrum-cycle"]) .node .name{font-size:var(--type-20);}:is(.cycle[data-el="business-spectrum-cycle"]) .node .note{font-size:var(--type-14);}:is(.cycle[data-el="business-spectrum-cycle"]) .node .mark{width:28px;height:28px;font-size:var(--type-14);}
+:is(.cycle[data-el="business-spectrum-cycle"]) .node::before{content:"";position:absolute;left:50%;top:50%;width:calc(var(--len)*1cqw);height:1px;transform-origin:left;transform:rotate(var(--angle));background:var(--line);z-index:-1;}
+@container(max-width:650px){:is(.cycle[data-el="business-spectrum-cycle"]) .core{font-size:var(--type-18);}:is(.cycle[data-el="business-spectrum-cycle"]) .node .name{font-size:var(--type-16);}:is(.cycle[data-el="business-spectrum-cycle"]) .node .note{font-size:var(--type-12);}:is(.cycle[data-el="business-spectrum-cycle"]) .node .mark{display:none;}}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(4):last-child)>.node:nth-of-type(2){--x:0.0000;--y:-35.0000;--angle:90.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(4):last-child)>.node:nth-of-type(3){--x:31.1769;--y:17.5000;--angle:210.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(4):last-child)>.node:nth-of-type(4){--x:-31.1769;--y:17.5000;--angle:330.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(5):last-child)>.node:nth-of-type(2){--x:0.0000;--y:-35.0000;--angle:90.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(5):last-child)>.node:nth-of-type(3){--x:36.0000;--y:0.0000;--angle:180.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(5):last-child)>.node:nth-of-type(4){--x:0.0000;--y:35.0000;--angle:270.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(5):last-child)>.node:nth-of-type(5){--x:-36.0000;--y:0.0000;--angle:360.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(6):last-child)>.node:nth-of-type(2){--x:0.0000;--y:-35.0000;--angle:90.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(6):last-child)>.node:nth-of-type(3){--x:34.2380;--y:-10.8156;--angle:162.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(6):last-child)>.node:nth-of-type(4){--x:21.1603;--y:28.3156;--angle:234.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(6):last-child)>.node:nth-of-type(5){--x:-21.1603;--y:28.3156;--angle:306.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(6):last-child)>.node:nth-of-type(6){--x:-34.2380;--y:-10.8156;--angle:378.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(7):last-child)>.node:nth-of-type(2){--x:0.0000;--y:-35.0000;--angle:90.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(7):last-child)>.node:nth-of-type(3){--x:31.1769;--y:-17.5000;--angle:150.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(7):last-child)>.node:nth-of-type(4){--x:31.1769;--y:17.5000;--angle:210.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(7):last-child)>.node:nth-of-type(5){--x:0.0000;--y:35.0000;--angle:270.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(7):last-child)>.node:nth-of-type(6){--x:-31.1769;--y:17.5000;--angle:330.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"]):has(>.node:nth-of-type(7):last-child)>.node:nth-of-type(7){--x:-31.1769;--y:-17.5000;--angle:390.0000deg;--len:32;}
+:is(.cycle[data-el="business-spectrum-cycle"])::before{content:"";position:absolute;inset:14% 20%;border:2px solid var(--line);border-radius:999px;}:is(.cycle[data-el="business-spectrum-cycle"]) .node::after{content:"›";position:absolute;right:calc(-1*var(--gap-sm));top:50%;color:var(--accent);font-size:var(--type-28);font-weight:var(--label-weight);line-height:var(--label-line);}
+
+.cycle[data-el="business-spectrum-cycle"] .core{width:min(24cqw,32cqh);height:auto;aspect-ratio:1;}
+.cycle[data-el="business-spectrum-cycle"] .node::before{background:linear-gradient(to right,transparent 0 42%,var(--line) 42% 100%);}
+
+
+.cycle[data-el="business-spectrum-cycle"] .core{width:min(24cqw,32cqh);height:auto;aspect-ratio:1;}
+.cycle[data-el="business-spectrum-cycle"] .node::before{background:linear-gradient(to right,transparent 0 42%,var(--line) 42% 100%);}
+
+
+.cycle[data-el="business-spectrum-cycle"] .node{z-index:auto;}
+.cycle[data-el="business-spectrum-cycle"] .node::before{width:hypot(calc(var(--x)*1cqw),calc(var(--y)*1cqh));transform:rotate(calc(atan2(calc(var(--y)*1cqh),calc(var(--x)*1cqw)) + 180deg));background:var(--line);}
+
+.cycle[data-el="business-spectrum-cycle"] .node{left:calc(37.5% + var(--x)*1%);top:calc(37.5% + var(--y)*1%);transform:none;}

@@ -1,0 +1,44 @@
+:is(.lines[data-el="business-spectrum-chart-line"]) { position:relative; min-width:0; min-height:0; container-type:size; font-family:var(--font-body),sans-serif; color:var(--ink); }
+:is(.lines[data-el="business-spectrum-chart-line"]) *, :is(.lines[data-el="business-spectrum-chart-line"]) *::before, :is(.lines[data-el="business-spectrum-chart-line"]) *::after { box-sizing:border-box; }
+:is(.lines[data-el="business-spectrum-chart-line"]) :is(.name,.fig,.note,.kick,.mark), :is(.lines[data-el="business-spectrum-chart-line"]) :is(p,blockquote) { margin:0; }
+:is(.lines[data-el="business-spectrum-chart-line"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.lines[data-el="business-spectrum-chart-line"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--mute); }
+:is(.lines[data-el="business-spectrum-chart-line"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); color:var(--accent); letter-spacing:var(--label-track); }
+:is(.lines[data-el="business-spectrum-chart-line"]) .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.lines[data-el="business-spectrum-chart-line"]) .mark { display:grid;place-items:center;flex:none; width:44px;height:44px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:var(--type-20);font-weight:var(--label-weight);line-height:var(--label-line); }
+:is(.lines[data-el="business-spectrum-chart-line"]) small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight);line-height:var(--label-line); }
+@container (max-width:640px) { :is(.lines[data-el="business-spectrum-chart-line"]) .name {font-size:var(--type-20);} :is(.lines[data-el="business-spectrum-chart-line"]) .note {font-size:var(--type-16);} :is(.lines[data-el="business-spectrum-chart-line"]) .fig {font-size:var(--type-40);} :is(.lines[data-el="business-spectrum-chart-line"]) .mark {width:36px;height:36px;font-size:var(--type-16);} }
+@container (max-width:320px) { :is(.lines[data-el="business-spectrum-chart-line"]) .name {font-size:var(--type-16);} :is(.lines[data-el="business-spectrum-chart-line"]) .note {font-size:var(--type-14);} :is(.lines[data-el="business-spectrum-chart-line"]) .fig {font-size:var(--type-32);} :is(.lines[data-el="business-spectrum-chart-line"]) .kick {display:none;} }
+@container (max-width:200px) and (max-height:140px) { :is(.lines[data-el="business-spectrum-chart-line"]) .note {display:none;} }
+:is(.lines[data-el="business-spectrum-chart-line"]){position:relative;anchor-scope:all;border-bottom:var(--stroke) solid var(--line);background:repeating-linear-gradient(to top,transparent 0 calc(25% - 1px),var(--line) calc(25% - 1px) 25%);}
+:is(.lines[data-el="business-spectrum-chart-line"]) .pt{position:absolute;left:calc(40px + (100% - 80px)*(var(--i) - 1)/(var(--n) - 1));top:calc(24px + (100% - 80px)*(1 - var(--v)/var(--max,100)));width:8px;height:8px;margin-left:-4px;border-radius:999px;background:var(--accent);anchor-name:var(--self);z-index:1;}
+:is(.lines[data-el="business-spectrum-chart-line"]) .pt b{position:absolute;bottom:var(--gap-sm);left:50%;transform:translateX(-50%);font-size:var(--type-18);font-weight:var(--figure-weight);line-height:var(--figure-line);white-space:nowrap;background:var(--page);}
+:is(.lines[data-el="business-spectrum-chart-line"]) .pt span{position:absolute;top:calc((100cqh - 80px)*var(--v)/var(--max,100) + 24px);left:50%;transform:translateX(-50%);font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);white-space:nowrap;}
+:is(.lines[data-el="business-spectrum-chart-line"]) .pt::before,:is(.lines[data-el="business-spectrum-chart-line"]) .pt::after{content:"";position:fixed;left:anchor(var(--prev) center);right:anchor(var(--self) center);pointer-events:none;z-index:-1;}
+:is(.lines[data-el="business-spectrum-chart-line"]) .pt::before{top:anchor(var(--prev) center);bottom:anchor(var(--self) center);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--accent) calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 1px));}
+:is(.lines[data-el="business-spectrum-chart-line"]) .pt::after{top:anchor(var(--self) center);bottom:anchor(var(--prev) center);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--accent) calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 1px));}
+:is(.lines[data-el="business-spectrum-chart-line"]) .pt:first-child::before,:is(.lines[data-el="business-spectrum-chart-line"]) .pt:first-child::after{display:none;}
+@container(max-width:600px){:is(.lines[data-el="business-spectrum-chart-line"]) .pt b{font-size:var(--type-14);}:is(.lines[data-el="business-spectrum-chart-line"]) .pt span{font-size:var(--type-12);}}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(2):last-child){--n:2;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(3):last-child){--n:3;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(4):last-child){--n:4;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(5):last-child){--n:5;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(6):last-child){--n:6;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(7):last-child){--n:7;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(8):last-child){--n:8;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(9):last-child){--n:9;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(10):last-child){--n:10;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(11):last-child){--n:11;}
+:is(.lines[data-el="business-spectrum-chart-line"]):has(>.pt:nth-child(12):last-child){--n:12;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(1){--i:1;--self:--spectrum-point-1;--prev:--spectrum-point-0;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(2){--i:2;--self:--spectrum-point-2;--prev:--spectrum-point-1;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(3){--i:3;--self:--spectrum-point-3;--prev:--spectrum-point-2;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(4){--i:4;--self:--spectrum-point-4;--prev:--spectrum-point-3;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(5){--i:5;--self:--spectrum-point-5;--prev:--spectrum-point-4;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(6){--i:6;--self:--spectrum-point-6;--prev:--spectrum-point-5;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(7){--i:7;--self:--spectrum-point-7;--prev:--spectrum-point-6;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(8){--i:8;--self:--spectrum-point-8;--prev:--spectrum-point-7;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(9){--i:9;--self:--spectrum-point-9;--prev:--spectrum-point-8;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(10){--i:10;--self:--spectrum-point-10;--prev:--spectrum-point-9;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(11){--i:11;--self:--spectrum-point-11;--prev:--spectrum-point-10;}
+:is(.lines[data-el="business-spectrum-chart-line"])>.pt:nth-child(12){--i:12;--self:--spectrum-point-12;--prev:--spectrum-point-11;}

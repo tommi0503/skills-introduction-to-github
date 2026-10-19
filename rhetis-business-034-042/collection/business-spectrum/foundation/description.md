@@ -1,0 +1,1 @@
+A 1280 × 720 presentation foundation with a 12 by 6 content grid, confident left-aligned headings, optional capsule-like furniture and a precise sidebar. Covers use layered flat diagonal ribbons, adapting the references’ blue corner geometry without importing imagery. Numbered neutral seats reserve space for photography and complex artwork.

@@ -1,0 +1,23 @@
+:is(.steps[data-el="business-spectrum-steps"]) { position:relative; min-width:0; min-height:0; container-type:size; font-family:var(--font-body),sans-serif; color:var(--ink); }
+:is(.steps[data-el="business-spectrum-steps"]) *, :is(.steps[data-el="business-spectrum-steps"]) *::before, :is(.steps[data-el="business-spectrum-steps"]) *::after { box-sizing:border-box; }
+:is(.steps[data-el="business-spectrum-steps"]) :is(.name,.fig,.note,.kick,.mark), :is(.steps[data-el="business-spectrum-steps"]) :is(p,blockquote) { margin:0; }
+:is(.steps[data-el="business-spectrum-steps"]) .name { font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="business-spectrum-steps"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--mute); }
+:is(.steps[data-el="business-spectrum-steps"]) .kick { font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); color:var(--accent); letter-spacing:var(--label-track); }
+:is(.steps[data-el="business-spectrum-steps"]) .fig { font-size:var(--type-56); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.steps[data-el="business-spectrum-steps"]) .mark { display:grid;place-items:center;flex:none; width:44px;height:44px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:var(--type-20);font-weight:var(--label-weight);line-height:var(--label-line); }
+:is(.steps[data-el="business-spectrum-steps"]) small { color:inherit; font-size:var(--type-20); font-weight:var(--label-weight);line-height:var(--label-line); }
+@container (max-width:640px) { :is(.steps[data-el="business-spectrum-steps"]) .name {font-size:var(--type-20);} :is(.steps[data-el="business-spectrum-steps"]) .note {font-size:var(--type-16);} :is(.steps[data-el="business-spectrum-steps"]) .fig {font-size:var(--type-40);} :is(.steps[data-el="business-spectrum-steps"]) .mark {width:36px;height:36px;font-size:var(--type-16);} }
+@container (max-width:320px) { :is(.steps[data-el="business-spectrum-steps"]) .name {font-size:var(--type-16);} :is(.steps[data-el="business-spectrum-steps"]) .note {font-size:var(--type-14);} :is(.steps[data-el="business-spectrum-steps"]) .fig {font-size:var(--type-32);} :is(.steps[data-el="business-spectrum-steps"]) .kick {display:none;} }
+@container (max-width:200px) and (max-height:140px) { :is(.steps[data-el="business-spectrum-steps"]) .note {display:none;} }
+:is(.steps[data-el="business-spectrum-steps"]){display:flex;align-items:stretch;gap:var(--gap-lg);}:is(.steps[data-el="business-spectrum-steps"]) .step{position:relative;flex:1;display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--pad);background:var(--surface);border-radius:var(--radius-sm);border-top:3px solid var(--accent);}
+:is(.steps[data-el="business-spectrum-steps"]) .step:not(:last-child)::after{content:"→";position:absolute;left:calc(100% + var(--gap-sm)/2);top:50%;transform:translateY(-50%);color:var(--accent);font-size:var(--type-20);font-weight:var(--label-weight);line-height:var(--label-line);}:is(.steps[data-el="business-spectrum-steps"]).col{flex-direction:column;}:is(.steps[data-el="business-spectrum-steps"]).col .step{flex-direction:row;align-items:center;}:is(.steps[data-el="business-spectrum-steps"]).col .step::after{left:50%;top:100%;transform:rotate(90deg);}
+@container(max-width:650px){:is(.steps[data-el="business-spectrum-steps"]) .step{padding:var(--gap-sm);gap:calc(var(--gap-sm)/2);}:is(.steps[data-el="business-spectrum-steps"]) .step .name{font-size:var(--type-18);}:is(.steps[data-el="business-spectrum-steps"]) .step .note{font-size:var(--type-14);}}
+
+@container(max-height:460px){
+.steps.col[data-el="business-spectrum-steps"] .step{min-height:0;padding:var(--gap-sm);gap:var(--gap-sm);}
+.steps.col[data-el="business-spectrum-steps"] .step .name{font-size:var(--type-18);}
+.steps.col[data-el="business-spectrum-steps"] .step .note{font-size:var(--type-14);}
+.steps.col[data-el="business-spectrum-steps"] .step .mark{width:32px;height:32px;font-size:var(--type-16);}
+}
+
