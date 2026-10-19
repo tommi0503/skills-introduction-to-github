@@ -1,0 +1,1 @@
+Numbered entries align a large index, bold section name and quieter description across a ruled row. The current section receives a lime band with compact rounded corners. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

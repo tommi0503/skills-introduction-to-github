@@ -1,0 +1,1 @@
+A muted starting figure leads through a typographic arrow into a lime-backed result. Tabular figures and generous separation make the direction of change unmistakable. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

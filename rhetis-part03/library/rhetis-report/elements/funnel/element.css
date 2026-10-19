@@ -1,0 +1,36 @@
+:is(.funnel[data-el="rhetis-report-funnel"]) {container-type:inline-size;min-width:0;min-height:0} :is(.funnel[data-el="rhetis-report-funnel"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.funnel[data-el="rhetis-report-funnel"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.funnel[data-el="rhetis-report-funnel"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.funnel[data-el="rhetis-report-funnel"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.funnel[data-el="rhetis-report-funnel"]) .fig small {font-size:var(--type-20)}
+:is(.funnel[data-el="rhetis-report-funnel"]) {display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm)} :is(.funnel[data-el="rhetis-report-funnel"])>.stage {width:calc(var(--v) * 1%);display:flex;align-items:center;justify-content:space-between;gap:var(--gap);padding:var(--gap-sm) var(--pad);background:var(--surface-2);border:var(--stroke) solid var(--line);min-height:48px} :is(.funnel[data-el="rhetis-report-funnel"])>.stage:first-child {background:var(--accent);color:var(--accent-ink);border-color:var(--ink)} :is(.funnel[data-el="rhetis-report-funnel"]) .fig {font-size:var(--type-28);font-weight:var(--figure-weight)}
+:is(.funnel[data-el="rhetis-report-funnel"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.funnel[data-el="rhetis-report-funnel"]) .tone-1::before {background:var(--tone-1)}
+:is(.funnel[data-el="rhetis-report-funnel"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.funnel[data-el="rhetis-report-funnel"]) .tone-2::before {background:var(--tone-2)}
+:is(.funnel[data-el="rhetis-report-funnel"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.funnel[data-el="rhetis-report-funnel"]) .tone-3::before {background:var(--tone-3)}
+:is(.funnel[data-el="rhetis-report-funnel"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.funnel[data-el="rhetis-report-funnel"]) .tone-4::before {background:var(--tone-4)}
+:is(.funnel[data-el="rhetis-report-funnel"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.funnel[data-el="rhetis-report-funnel"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.funnel[data-el="rhetis-report-funnel"]) .name {font-size:var(--type-20)} :is(.funnel[data-el="rhetis-report-funnel"]) .note {font-size:var(--type-16)} :is(.funnel[data-el="rhetis-report-funnel"]) .fig {font-size:var(--type-40)} :is(.funnel[data-el="rhetis-report-funnel"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.funnel[data-el="rhetis-report-funnel"]) .name {font-size:var(--type-16)} :is(.funnel[data-el="rhetis-report-funnel"]) .note {font-size:var(--type-14)} :is(.funnel[data-el="rhetis-report-funnel"]) .fig {font-size:var(--type-28)} :is(.funnel[data-el="rhetis-report-funnel"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.funnel[data-el="rhetis-report-funnel"]) .note {display:none}
+}
+.funnel[data-el="rhetis-report-funnel"]>.stage {position:relative;isolation:isolate;width:100%;min-height:56px;background:none;border:0;gap:var(--gap);padding:var(--gap-sm) var(--pad)}
+.funnel[data-el="rhetis-report-funnel"]>.stage:first-child {background:none;border:0;color:var(--ink)}
+.funnel[data-el="rhetis-report-funnel"]>.stage::before {content:'';position:absolute;inset:0 auto 0 50%;transform:translateX(-50%);width:calc(var(--v) * 1%);background:var(--surface-2);border:var(--stroke) solid var(--line);z-index:-1}
+.funnel[data-el="rhetis-report-funnel"]>.stage:first-child::before {background:var(--accent);border-color:var(--ink)}
+.funnel[data-el="rhetis-report-funnel"]>.stage>.name {font-size:var(--type-20);white-space:nowrap}
+.funnel[data-el="rhetis-report-funnel"]>.stage>.fig {font-size:var(--type-28);white-space:nowrap}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-funnel"] .fig small {color:inherit}
+[data-el="rhetis-report-funnel"].on :is(.note,.kick), [data-el="rhetis-report-funnel"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-funnel"].tone-1 :is(.note,.kick), [data-el="rhetis-report-funnel"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-funnel"].tone-2 :is(.note,.kick), [data-el="rhetis-report-funnel"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-funnel"].tone-3 :is(.note,.kick), [data-el="rhetis-report-funnel"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-funnel"].tone-4 :is(.note,.kick), [data-el="rhetis-report-funnel"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-funnel"].tone-5 :is(.note,.kick), [data-el="rhetis-report-funnel"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

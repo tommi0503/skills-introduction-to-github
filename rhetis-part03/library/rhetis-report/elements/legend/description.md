@@ -1,0 +1,1 @@
+Compact coloured square keys and single-line labels wrap evenly. Secondary series use blue, sage and orange while the primary key remains lime. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

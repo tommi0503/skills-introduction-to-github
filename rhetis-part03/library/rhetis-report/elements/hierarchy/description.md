@@ -1,0 +1,1 @@
+A lime root spans the top of a disciplined branching tree. Neutral child and leaf boxes attach through fine vertical and horizontal ink-grey connectors. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

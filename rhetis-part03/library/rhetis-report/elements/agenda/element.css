@@ -1,0 +1,30 @@
+:is(.agenda[data-el="rhetis-report-agenda"]) {container-type:inline-size;min-width:0;min-height:0} :is(.agenda[data-el="rhetis-report-agenda"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.agenda[data-el="rhetis-report-agenda"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.agenda[data-el="rhetis-report-agenda"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.agenda[data-el="rhetis-report-agenda"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.agenda[data-el="rhetis-report-agenda"]) .fig small {font-size:var(--type-20)}
+:is(.agenda[data-el="rhetis-report-agenda"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm)} :is(.agenda[data-el="rhetis-report-agenda"])>.entry {display:grid;grid-template-columns:72px 1fr 1fr;align-items:center;gap:var(--gap);border-bottom:var(--stroke) solid var(--line);padding:var(--gap-sm) var(--pad)} :is(.agenda[data-el="rhetis-report-agenda"])>.entry.on {background:var(--accent);color:var(--accent-ink);border-color:var(--ink);border-radius:var(--radius-sm)} :is(.agenda[data-el="rhetis-report-agenda"]) .mark {font-size:var(--type-36);font-weight:var(--figure-weight)}
+:is(.agenda[data-el="rhetis-report-agenda"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.agenda[data-el="rhetis-report-agenda"]) .tone-1::before {background:var(--tone-1)}
+:is(.agenda[data-el="rhetis-report-agenda"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.agenda[data-el="rhetis-report-agenda"]) .tone-2::before {background:var(--tone-2)}
+:is(.agenda[data-el="rhetis-report-agenda"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.agenda[data-el="rhetis-report-agenda"]) .tone-3::before {background:var(--tone-3)}
+:is(.agenda[data-el="rhetis-report-agenda"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.agenda[data-el="rhetis-report-agenda"]) .tone-4::before {background:var(--tone-4)}
+:is(.agenda[data-el="rhetis-report-agenda"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.agenda[data-el="rhetis-report-agenda"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.agenda[data-el="rhetis-report-agenda"]) .name {font-size:var(--type-20)} :is(.agenda[data-el="rhetis-report-agenda"]) .note {font-size:var(--type-16)} :is(.agenda[data-el="rhetis-report-agenda"]) .fig {font-size:var(--type-40)} :is(.agenda[data-el="rhetis-report-agenda"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.agenda[data-el="rhetis-report-agenda"]) .name {font-size:var(--type-16)} :is(.agenda[data-el="rhetis-report-agenda"]) .note {font-size:var(--type-14)} :is(.agenda[data-el="rhetis-report-agenda"]) .fig {font-size:var(--type-28)} :is(.agenda[data-el="rhetis-report-agenda"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.agenda[data-el="rhetis-report-agenda"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-agenda"] .fig small {color:inherit}
+[data-el="rhetis-report-agenda"].on :is(.note,.kick), [data-el="rhetis-report-agenda"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-agenda"].tone-1 :is(.note,.kick), [data-el="rhetis-report-agenda"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-agenda"].tone-2 :is(.note,.kick), [data-el="rhetis-report-agenda"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-agenda"].tone-3 :is(.note,.kick), [data-el="rhetis-report-agenda"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-agenda"].tone-4 :is(.note,.kick), [data-el="rhetis-report-agenda"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-agenda"].tone-5 :is(.note,.kick), [data-el="rhetis-report-agenda"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

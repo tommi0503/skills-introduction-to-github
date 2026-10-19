@@ -1,0 +1,1 @@
+Equal-width time steps place lime-centred dots at the supplied values. CSS anchor positions connect the actual points with fine ink lines; direct labels sit above the points and period names along the baseline. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

@@ -1,0 +1,1 @@
+Equal-width plan panels stack a plan name, dominant price, supporting checklist and optional badge. A heavy ink outline and pale lime surface distinguish the recommended plan. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

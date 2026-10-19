@@ -1,0 +1,1 @@
+Generously separated business statements use generated dots, checkmarks or decimal-leading-zero markers. Divided lists add quiet neutral rules while retaining the same left text alignment. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

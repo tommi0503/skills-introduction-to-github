@@ -1,0 +1,1 @@
+A direct label and large percentage sit over a thin horizontal progress band. The remaining track is neutral, with a crisp ink edge at the lime progress endpoint. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

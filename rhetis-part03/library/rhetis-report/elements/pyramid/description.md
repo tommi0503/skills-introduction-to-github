@@ -1,0 +1,1 @@
+Centred trapezoidal levels grow steadily from a narrow lime top toward wider neutral foundations. Each level uses a bold name and quieter explanation. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

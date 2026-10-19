@@ -1,0 +1,1 @@
+Grid-positioned neutral nodes carry direct labels with simple directional arrow connectors. Start and end nodes are lime capsules; decision nodes use restrained rounded corners. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

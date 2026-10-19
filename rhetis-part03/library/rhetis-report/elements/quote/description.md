@@ -1,0 +1,1 @@
+An oversized opening quotation mark introduces an editorial quotation above a compact avatar-and-attribution row. A strong top rule anchors the statement without enclosing it in a card. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

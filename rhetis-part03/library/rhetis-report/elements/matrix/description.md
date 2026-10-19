@@ -1,0 +1,1 @@
+Four restrained panels form a two-by-two field inside external axis labels. The selected quadrant receives lime fill and a dark outline, preserving the report’s emphasis vocabulary. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

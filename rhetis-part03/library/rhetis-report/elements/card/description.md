@@ -1,0 +1,1 @@
+A lightly rounded neutral panel carries a kicker, large figure, title and supporting note in a quiet vertical stack. Accent cards switch to acid lime with dark ink; outlined variants retain the white page. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

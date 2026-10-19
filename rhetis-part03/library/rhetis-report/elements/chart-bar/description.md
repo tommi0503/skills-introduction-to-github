@@ -1,0 +1,1 @@
+Squared blue columns rise from a common baseline with lime reserved for the focal series. Horizontal variants retain direct value and category labels while expanding the bands across the row. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

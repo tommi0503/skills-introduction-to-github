@@ -1,0 +1,30 @@
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) {container-type:inline-size;min-width:0;min-height:0} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .fig small {font-size:var(--type-20)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) {display:inline-flex;align-items:center;justify-content:center;padding:var(--gap-sm) var(--pad);font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);background:var(--accent);color:var(--accent-ink);border:var(--stroke) solid var(--ink);border-radius:999px} .hl[data-el="rhetis-report-tag"] {display:inline;background:var(--accent);color:var(--accent-ink);padding:0 var(--gap-sm)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .tone-1::before {background:var(--tone-1)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .tone-2::before {background:var(--tone-2)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .tone-3::before {background:var(--tone-3)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .tone-4::before {background:var(--tone-4)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .name {font-size:var(--type-20)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .note {font-size:var(--type-16)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .fig {font-size:var(--type-40)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .name {font-size:var(--type-16)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .note {font-size:var(--type-14)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .fig {font-size:var(--type-28)} :is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.tag[data-el="rhetis-report-tag"], .hl[data-el="rhetis-report-tag"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-tag"] .fig small {color:inherit}
+[data-el="rhetis-report-tag"].on :is(.note,.kick), [data-el="rhetis-report-tag"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-tag"].tone-1 :is(.note,.kick), [data-el="rhetis-report-tag"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-tag"].tone-2 :is(.note,.kick), [data-el="rhetis-report-tag"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-tag"].tone-3 :is(.note,.kick), [data-el="rhetis-report-tag"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-tag"].tone-4 :is(.note,.kick), [data-el="rhetis-report-tag"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-tag"].tone-5 :is(.note,.kick), [data-el="rhetis-report-tag"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

@@ -1,0 +1,1 @@
+Stacked full-width bands hold a bold layer name followed by aligned neutral capsules. The top layer is lime, establishing the system entry point. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

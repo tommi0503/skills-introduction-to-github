@@ -1,0 +1,30 @@
+:is(.matrix[data-el="rhetis-report-matrix"]) {container-type:inline-size;min-width:0;min-height:0} :is(.matrix[data-el="rhetis-report-matrix"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.matrix[data-el="rhetis-report-matrix"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.matrix[data-el="rhetis-report-matrix"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.matrix[data-el="rhetis-report-matrix"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.matrix[data-el="rhetis-report-matrix"]) .fig small {font-size:var(--type-20)}
+:is(.matrix[data-el="rhetis-report-matrix"]) {position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));padding:var(--gap-lg);gap:var(--gap-sm)} :is(.matrix[data-el="rhetis-report-matrix"])>.cell {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--pad);background:var(--surface);border:var(--stroke) solid var(--line)} :is(.matrix[data-el="rhetis-report-matrix"])>.cell.on {background:var(--accent);color:var(--accent-ink);border-color:var(--ink)} :is(.matrix[data-el="rhetis-report-matrix"])>.axis-x,:is(.matrix[data-el="rhetis-report-matrix"])>.axis-y {position:absolute;display:flex;justify-content:space-between;gap:var(--gap);font-size:var(--type-14);color:var(--mute)} :is(.matrix[data-el="rhetis-report-matrix"])>.axis-x {left:var(--gap-lg);right:var(--gap-lg);bottom:0} :is(.matrix[data-el="rhetis-report-matrix"])>.axis-y {top:var(--gap-lg);bottom:var(--gap-lg);left:0;writing-mode:vertical-rl}
+:is(.matrix[data-el="rhetis-report-matrix"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.matrix[data-el="rhetis-report-matrix"]) .tone-1::before {background:var(--tone-1)}
+:is(.matrix[data-el="rhetis-report-matrix"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.matrix[data-el="rhetis-report-matrix"]) .tone-2::before {background:var(--tone-2)}
+:is(.matrix[data-el="rhetis-report-matrix"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.matrix[data-el="rhetis-report-matrix"]) .tone-3::before {background:var(--tone-3)}
+:is(.matrix[data-el="rhetis-report-matrix"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.matrix[data-el="rhetis-report-matrix"]) .tone-4::before {background:var(--tone-4)}
+:is(.matrix[data-el="rhetis-report-matrix"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.matrix[data-el="rhetis-report-matrix"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.matrix[data-el="rhetis-report-matrix"]) .name {font-size:var(--type-20)} :is(.matrix[data-el="rhetis-report-matrix"]) .note {font-size:var(--type-16)} :is(.matrix[data-el="rhetis-report-matrix"]) .fig {font-size:var(--type-40)} :is(.matrix[data-el="rhetis-report-matrix"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.matrix[data-el="rhetis-report-matrix"]) .name {font-size:var(--type-16)} :is(.matrix[data-el="rhetis-report-matrix"]) .note {font-size:var(--type-14)} :is(.matrix[data-el="rhetis-report-matrix"]) .fig {font-size:var(--type-28)} :is(.matrix[data-el="rhetis-report-matrix"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.matrix[data-el="rhetis-report-matrix"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-matrix"] .fig small {color:inherit}
+[data-el="rhetis-report-matrix"].on :is(.note,.kick), [data-el="rhetis-report-matrix"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-matrix"].tone-1 :is(.note,.kick), [data-el="rhetis-report-matrix"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-matrix"].tone-2 :is(.note,.kick), [data-el="rhetis-report-matrix"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-matrix"].tone-3 :is(.note,.kick), [data-el="rhetis-report-matrix"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-matrix"].tone-4 :is(.note,.kick), [data-el="rhetis-report-matrix"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-matrix"].tone-5 :is(.note,.kick), [data-el="rhetis-report-matrix"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

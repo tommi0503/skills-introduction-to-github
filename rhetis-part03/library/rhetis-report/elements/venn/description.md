@@ -1,0 +1,1 @@
+Overlapping outlined circles use translucent blue and lime fields to show shared membership. An optional dark centre capsule names the intersection. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

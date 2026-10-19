@@ -1,0 +1,1 @@
+A neutral portrait or circular avatar seat leads into a bold name and quiet role. A fine bottom rule creates a report-like profile without a decorative card shell. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

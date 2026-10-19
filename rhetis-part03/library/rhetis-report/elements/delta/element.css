@@ -1,0 +1,30 @@
+:is(.delta[data-el="rhetis-report-delta"]) {container-type:inline-size;min-width:0;min-height:0} :is(.delta[data-el="rhetis-report-delta"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.delta[data-el="rhetis-report-delta"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.delta[data-el="rhetis-report-delta"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.delta[data-el="rhetis-report-delta"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.delta[data-el="rhetis-report-delta"]) .fig small {font-size:var(--type-20)}
+:is(.delta[data-el="rhetis-report-delta"]) {display:flex;align-items:center;justify-content:center;gap:var(--gap-lg);font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line)} :is(.delta[data-el="rhetis-report-delta"]) .from {color:var(--mute)} :is(.delta[data-el="rhetis-report-delta"]) .to {background:var(--accent);color:var(--accent-ink);padding:var(--gap-sm) var(--pad)} :is(.delta[data-el="rhetis-report-delta"]) .to::before {content:'→';display:inline-block;margin-right:var(--gap);font-weight:var(--body-weight)}
+:is(.delta[data-el="rhetis-report-delta"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.delta[data-el="rhetis-report-delta"]) .tone-1::before {background:var(--tone-1)}
+:is(.delta[data-el="rhetis-report-delta"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.delta[data-el="rhetis-report-delta"]) .tone-2::before {background:var(--tone-2)}
+:is(.delta[data-el="rhetis-report-delta"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.delta[data-el="rhetis-report-delta"]) .tone-3::before {background:var(--tone-3)}
+:is(.delta[data-el="rhetis-report-delta"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.delta[data-el="rhetis-report-delta"]) .tone-4::before {background:var(--tone-4)}
+:is(.delta[data-el="rhetis-report-delta"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.delta[data-el="rhetis-report-delta"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.delta[data-el="rhetis-report-delta"]) .name {font-size:var(--type-20)} :is(.delta[data-el="rhetis-report-delta"]) .note {font-size:var(--type-16)} :is(.delta[data-el="rhetis-report-delta"]) .fig {font-size:var(--type-40)} :is(.delta[data-el="rhetis-report-delta"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.delta[data-el="rhetis-report-delta"]) .name {font-size:var(--type-16)} :is(.delta[data-el="rhetis-report-delta"]) .note {font-size:var(--type-14)} :is(.delta[data-el="rhetis-report-delta"]) .fig {font-size:var(--type-28)} :is(.delta[data-el="rhetis-report-delta"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.delta[data-el="rhetis-report-delta"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-delta"] .fig small {color:inherit}
+[data-el="rhetis-report-delta"].on :is(.note,.kick), [data-el="rhetis-report-delta"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-delta"].tone-1 :is(.note,.kick), [data-el="rhetis-report-delta"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-delta"].tone-2 :is(.note,.kick), [data-el="rhetis-report-delta"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-delta"].tone-3 :is(.note,.kick), [data-el="rhetis-report-delta"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-delta"].tone-4 :is(.note,.kick), [data-el="rhetis-report-delta"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-delta"].tone-5 :is(.note,.kick), [data-el="rhetis-report-delta"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

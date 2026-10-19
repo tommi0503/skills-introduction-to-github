@@ -1,0 +1,30 @@
+:is(.venn[data-el="rhetis-report-venn"]) {container-type:inline-size;min-width:0;min-height:0} :is(.venn[data-el="rhetis-report-venn"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.venn[data-el="rhetis-report-venn"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.venn[data-el="rhetis-report-venn"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.venn[data-el="rhetis-report-venn"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.venn[data-el="rhetis-report-venn"]) .fig small {font-size:var(--type-20)}
+:is(.venn[data-el="rhetis-report-venn"]) {position:relative;display:flex;align-items:center;justify-content:center;padding:var(--pad)} :is(.venn[data-el="rhetis-report-venn"])>.set {display:flex;align-items:center;justify-content:center;aspect-ratio:1;flex:1;max-width:420px;border-radius:50%;background:color-mix(in srgb,var(--tone-2) 18%,transparent);border:var(--stroke) solid var(--ink);padding:var(--pad);text-align:center;margin-left:calc(var(--gap-lg) * -1)} :is(.venn[data-el="rhetis-report-venn"])>.set:first-child {margin-left:0} :is(.venn[data-el="rhetis-report-venn"])>.set.on {background:color-mix(in srgb,var(--accent) 65%,transparent)} :is(.venn[data-el="rhetis-report-venn"])>.core {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--ink);color:var(--page);padding:var(--gap-sm);border-radius:999px;font-size:var(--type-18)}
+:is(.venn[data-el="rhetis-report-venn"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.venn[data-el="rhetis-report-venn"]) .tone-1::before {background:var(--tone-1)}
+:is(.venn[data-el="rhetis-report-venn"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.venn[data-el="rhetis-report-venn"]) .tone-2::before {background:var(--tone-2)}
+:is(.venn[data-el="rhetis-report-venn"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.venn[data-el="rhetis-report-venn"]) .tone-3::before {background:var(--tone-3)}
+:is(.venn[data-el="rhetis-report-venn"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.venn[data-el="rhetis-report-venn"]) .tone-4::before {background:var(--tone-4)}
+:is(.venn[data-el="rhetis-report-venn"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.venn[data-el="rhetis-report-venn"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.venn[data-el="rhetis-report-venn"]) .name {font-size:var(--type-20)} :is(.venn[data-el="rhetis-report-venn"]) .note {font-size:var(--type-16)} :is(.venn[data-el="rhetis-report-venn"]) .fig {font-size:var(--type-40)} :is(.venn[data-el="rhetis-report-venn"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.venn[data-el="rhetis-report-venn"]) .name {font-size:var(--type-16)} :is(.venn[data-el="rhetis-report-venn"]) .note {font-size:var(--type-14)} :is(.venn[data-el="rhetis-report-venn"]) .fig {font-size:var(--type-28)} :is(.venn[data-el="rhetis-report-venn"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.venn[data-el="rhetis-report-venn"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-venn"] .fig small {color:inherit}
+[data-el="rhetis-report-venn"].on :is(.note,.kick), [data-el="rhetis-report-venn"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-venn"].tone-1 :is(.note,.kick), [data-el="rhetis-report-venn"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-venn"].tone-2 :is(.note,.kick), [data-el="rhetis-report-venn"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-venn"].tone-3 :is(.note,.kick), [data-el="rhetis-report-venn"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-venn"].tone-4 :is(.note,.kick), [data-el="rhetis-report-venn"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-venn"].tone-5 :is(.note,.kick), [data-el="rhetis-report-venn"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

@@ -1,0 +1,1 @@
+A concluding sentence sits between crisp horizontal rules. Its key phrase receives a flat acid-lime highlight rather than a floating box or shadow. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

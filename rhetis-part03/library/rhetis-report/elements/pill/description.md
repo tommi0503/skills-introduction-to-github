@@ -1,0 +1,1 @@
+A compact capsule aligns a mark, name and secondary note on one optical centre line. Ink outlines and lime emphasis keep this small control consistent with the larger report panels. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

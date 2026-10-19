@@ -1,0 +1,1 @@
+Dates and descriptive text grow from small points on a fine common track. Lime distinguishes the current stop; alternate and vertical forms preserve the same restrained line language. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

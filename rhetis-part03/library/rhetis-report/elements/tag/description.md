@@ -1,0 +1,1 @@
+Small capsule labels use lime fill, ink text and a thin outline. The inline highlight variant is rectangular so it follows a sentence naturally. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

@@ -1,0 +1,1 @@
+Large unboxed figures establish the dominant reading level. Multiple metrics form a row separated by thin vertical rules; units stay visibly subordinate to their numbers. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

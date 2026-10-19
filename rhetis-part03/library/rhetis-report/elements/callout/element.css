@@ -1,0 +1,30 @@
+:is(.callout[data-el="rhetis-report-callout"]) {container-type:inline-size;min-width:0;min-height:0} :is(.callout[data-el="rhetis-report-callout"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.callout[data-el="rhetis-report-callout"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.callout[data-el="rhetis-report-callout"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.callout[data-el="rhetis-report-callout"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.callout[data-el="rhetis-report-callout"]) .fig small {font-size:var(--type-20)}
+:is(.callout[data-el="rhetis-report-callout"]) {display:flex;align-items:center;gap:var(--gap);border-top:var(--stroke) solid var(--ink);border-bottom:var(--stroke) solid var(--ink);padding:var(--pad);font-size:var(--type-28);line-height:var(--lead-line)} :is(.callout[data-el="rhetis-report-callout"]) b {background:var(--accent);color:var(--accent-ink);font-weight:var(--name-weight);padding:0 var(--gap-sm)}
+:is(.callout[data-el="rhetis-report-callout"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.callout[data-el="rhetis-report-callout"]) .tone-1::before {background:var(--tone-1)}
+:is(.callout[data-el="rhetis-report-callout"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.callout[data-el="rhetis-report-callout"]) .tone-2::before {background:var(--tone-2)}
+:is(.callout[data-el="rhetis-report-callout"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.callout[data-el="rhetis-report-callout"]) .tone-3::before {background:var(--tone-3)}
+:is(.callout[data-el="rhetis-report-callout"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.callout[data-el="rhetis-report-callout"]) .tone-4::before {background:var(--tone-4)}
+:is(.callout[data-el="rhetis-report-callout"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.callout[data-el="rhetis-report-callout"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.callout[data-el="rhetis-report-callout"]) .name {font-size:var(--type-20)} :is(.callout[data-el="rhetis-report-callout"]) .note {font-size:var(--type-16)} :is(.callout[data-el="rhetis-report-callout"]) .fig {font-size:var(--type-40)} :is(.callout[data-el="rhetis-report-callout"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.callout[data-el="rhetis-report-callout"]) .name {font-size:var(--type-16)} :is(.callout[data-el="rhetis-report-callout"]) .note {font-size:var(--type-14)} :is(.callout[data-el="rhetis-report-callout"]) .fig {font-size:var(--type-28)} :is(.callout[data-el="rhetis-report-callout"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.callout[data-el="rhetis-report-callout"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-callout"] .fig small {color:inherit}
+[data-el="rhetis-report-callout"].on :is(.note,.kick), [data-el="rhetis-report-callout"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-callout"].tone-1 :is(.note,.kick), [data-el="rhetis-report-callout"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-callout"].tone-2 :is(.note,.kick), [data-el="rhetis-report-callout"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-callout"].tone-3 :is(.note,.kick), [data-el="rhetis-report-callout"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-callout"].tone-4 :is(.note,.kick), [data-el="rhetis-report-callout"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-callout"].tone-5 :is(.note,.kick), [data-el="rhetis-report-callout"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

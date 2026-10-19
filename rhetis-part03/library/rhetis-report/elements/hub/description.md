@@ -1,0 +1,1 @@
+An outlined lime core anchors a grid of neutral spoke descriptions. Fine short connector rules and bold labels keep the central relationship readable without decorative effects. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

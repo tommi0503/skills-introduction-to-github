@@ -1,0 +1,30 @@
+:is(.quote[data-el="rhetis-report-quote"]) {container-type:inline-size;min-width:0;min-height:0} :is(.quote[data-el="rhetis-report-quote"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.quote[data-el="rhetis-report-quote"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.quote[data-el="rhetis-report-quote"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.quote[data-el="rhetis-report-quote"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.quote[data-el="rhetis-report-quote"]) .fig small {font-size:var(--type-20)}
+:is(.quote[data-el="rhetis-report-quote"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-lg);border-top:3px solid var(--ink);padding:var(--pad)} :is(.quote[data-el="rhetis-report-quote"]) blockquote {font-size:var(--type-36);line-height:var(--lead-line);font-weight:var(--lead-weight);letter-spacing:var(--lead-track)} :is(.quote[data-el="rhetis-report-quote"]) blockquote::before {content:'“';display:block;color:var(--ink);font-size:var(--type-72);line-height:var(--figure-line)} :is(.quote[data-el="rhetis-report-quote"]) .by {display:grid;grid-template-columns:auto 1fr;column-gap:var(--gap-sm);align-items:center} :is(.quote[data-el="rhetis-report-quote"]) .by .seat {width:64px;grid-row:span 2} :is(.quote[data-el="rhetis-report-quote"]).big blockquote {font-size:var(--type-44)}
+:is(.quote[data-el="rhetis-report-quote"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.quote[data-el="rhetis-report-quote"]) .tone-1::before {background:var(--tone-1)}
+:is(.quote[data-el="rhetis-report-quote"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.quote[data-el="rhetis-report-quote"]) .tone-2::before {background:var(--tone-2)}
+:is(.quote[data-el="rhetis-report-quote"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.quote[data-el="rhetis-report-quote"]) .tone-3::before {background:var(--tone-3)}
+:is(.quote[data-el="rhetis-report-quote"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.quote[data-el="rhetis-report-quote"]) .tone-4::before {background:var(--tone-4)}
+:is(.quote[data-el="rhetis-report-quote"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.quote[data-el="rhetis-report-quote"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.quote[data-el="rhetis-report-quote"]) .name {font-size:var(--type-20)} :is(.quote[data-el="rhetis-report-quote"]) .note {font-size:var(--type-16)} :is(.quote[data-el="rhetis-report-quote"]) .fig {font-size:var(--type-40)} :is(.quote[data-el="rhetis-report-quote"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.quote[data-el="rhetis-report-quote"]) .name {font-size:var(--type-16)} :is(.quote[data-el="rhetis-report-quote"]) .note {font-size:var(--type-14)} :is(.quote[data-el="rhetis-report-quote"]) .fig {font-size:var(--type-28)} :is(.quote[data-el="rhetis-report-quote"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.quote[data-el="rhetis-report-quote"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-quote"] .fig small {color:inherit}
+[data-el="rhetis-report-quote"].on :is(.note,.kick), [data-el="rhetis-report-quote"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-quote"].tone-1 :is(.note,.kick), [data-el="rhetis-report-quote"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-quote"].tone-2 :is(.note,.kick), [data-el="rhetis-report-quote"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-quote"].tone-3 :is(.note,.kick), [data-el="rhetis-report-quote"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-quote"].tone-4 :is(.note,.kick), [data-el="rhetis-report-quote"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-quote"].tone-5 :is(.note,.kick), [data-el="rhetis-report-quote"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

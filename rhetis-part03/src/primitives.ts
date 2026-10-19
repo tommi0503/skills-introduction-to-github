@@ -1,0 +1,10 @@
+import type {Element,Slide,Deck} from './model'
+export const T=(x:number,y:number,w:number,h:number,text:string,size:number,extra:Partial<Element>={}):Element=>({kind:'text',x:x/12.8,y:y/7.2,w:w/12.8,h:h/7.2,text,size,font:'Pretendard',lineHeight:1.2,...extra})
+export const B=(x:number,y:number,w:number,h:number,fill:string,extra:Partial<Element>={}):Element=>({kind:'box',x:x/12.8,y:y/7.2,w:w/12.8,h:h/7.2,fill,...extra})
+export const I=(x:number,y:number,w:number,h:number,label='',extra:Partial<Element>={}):Element=>({kind:'image',x:x/12.8,y:y/7.2,w:w/12.8,h:h/7.2,text:label,...extra})
+export const L=(x:number,y:number,w:number,color='#bbb',width=1,extra:Partial<Element>={}):Element=>({kind:'line',x:x/12.8,y:y/7.2,w:extra.vertical?0:w/12.8,h:extra.vertical?w/7.2:0,color,strokeWidth:width,...extra})
+export const IC=(x:number,y:number,w:number,h:number,name:string,color='#222',extra:Partial<Element>={}):Element=>({kind:'icon',x:x/12.8,y:y/7.2,w:w/12.8,h:h/7.2,icon:name,color,...extra})
+export const C=(x:number,y:number,w:number,h:number,text:string,size:number,fill:string,extra:Partial<Element>={}):Element=>({kind:'chip',x:x/12.8,y:y/7.2,w:w/12.8,h:h/7.2,text,size,fill,font:'Pretendard',weight:500,radius:8,align:'center',lineHeight:1,...extra})
+export const P=(points:number[][],color:string,width=1,fill?:string,extra:Partial<Element>={}):Element=>({kind:'path',x:0,y:0,w:100,h:100,points:points.map(([x,y])=>({x:x/12.8,y:y/7.2})),color,strokeWidth:width,fill,closed:!!fill,...extra})
+export const S=(id:string,title:string,background:string,elements:Element[]):Slide=>({id,title,background,elements})
+export const D=(id:string,title:string,slides:Slide[]):Deck=>({id,title,slides,columns:2,referenceSize:{width:1280,height:720},referenceRegions:slides.map(()=>({x:0,y:0,w:100,h:100})),references:slides.map(s=>`/reference/${id}/${s.id}.png`)})

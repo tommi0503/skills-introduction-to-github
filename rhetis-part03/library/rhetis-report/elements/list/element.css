@@ -1,0 +1,30 @@
+:is(.list[data-el="rhetis-report-list"]) {container-type:inline-size;min-width:0;min-height:0} :is(.list[data-el="rhetis-report-list"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.list[data-el="rhetis-report-list"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.list[data-el="rhetis-report-list"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.list[data-el="rhetis-report-list"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.list[data-el="rhetis-report-list"]) .fig small {font-size:var(--type-20)}
+:is(.list[data-el="rhetis-report-list"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);counter-reset:item} :is(.list[data-el="rhetis-report-list"])>.item {position:relative;padding:var(--gap-sm) var(--pad);padding-left:calc(var(--pad) * 2);counter-increment:item} :is(.list[data-el="rhetis-report-list"])>.item::before {content:'•';position:absolute;left:var(--gap-sm);top:var(--gap-sm);font-size:var(--type-24);color:var(--ink)} :is(.list[data-el="rhetis-report-list"]).check>.item::before {content:'✓';font-weight:var(--label-weight)} :is(.list[data-el="rhetis-report-list"]).num>.item::before {content:counter(item,decimal-leading-zero);font-size:var(--type-18);font-weight:var(--label-weight)} :is(.list[data-el="rhetis-report-list"]).divided>.item {border-bottom:var(--stroke) solid var(--line)} :is(.list[data-el="rhetis-report-list"]) .name {display:block}
+:is(.list[data-el="rhetis-report-list"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.list[data-el="rhetis-report-list"]) .tone-1::before {background:var(--tone-1)}
+:is(.list[data-el="rhetis-report-list"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.list[data-el="rhetis-report-list"]) .tone-2::before {background:var(--tone-2)}
+:is(.list[data-el="rhetis-report-list"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.list[data-el="rhetis-report-list"]) .tone-3::before {background:var(--tone-3)}
+:is(.list[data-el="rhetis-report-list"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.list[data-el="rhetis-report-list"]) .tone-4::before {background:var(--tone-4)}
+:is(.list[data-el="rhetis-report-list"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.list[data-el="rhetis-report-list"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.list[data-el="rhetis-report-list"]) .name {font-size:var(--type-20)} :is(.list[data-el="rhetis-report-list"]) .note {font-size:var(--type-16)} :is(.list[data-el="rhetis-report-list"]) .fig {font-size:var(--type-40)} :is(.list[data-el="rhetis-report-list"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.list[data-el="rhetis-report-list"]) .name {font-size:var(--type-16)} :is(.list[data-el="rhetis-report-list"]) .note {font-size:var(--type-14)} :is(.list[data-el="rhetis-report-list"]) .fig {font-size:var(--type-28)} :is(.list[data-el="rhetis-report-list"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.list[data-el="rhetis-report-list"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-list"] .fig small {color:inherit}
+[data-el="rhetis-report-list"].on :is(.note,.kick), [data-el="rhetis-report-list"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-list"].tone-1 :is(.note,.kick), [data-el="rhetis-report-list"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-list"].tone-2 :is(.note,.kick), [data-el="rhetis-report-list"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-list"].tone-3 :is(.note,.kick), [data-el="rhetis-report-list"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-list"].tone-4 :is(.note,.kick), [data-el="rhetis-report-list"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-list"].tone-5 :is(.note,.kick), [data-el="rhetis-report-list"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

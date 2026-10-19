@@ -1,0 +1,51 @@
+:is(.lines[data-el="rhetis-report-chart-line"]) {container-type:inline-size;min-width:0;min-height:0} :is(.lines[data-el="rhetis-report-chart-line"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.lines[data-el="rhetis-report-chart-line"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.lines[data-el="rhetis-report-chart-line"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.lines[data-el="rhetis-report-chart-line"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.lines[data-el="rhetis-report-chart-line"]) .fig small {font-size:var(--type-20)}
+:is(.lines[data-el="rhetis-report-chart-line"]) {display:flex;align-items:stretch;border-bottom:var(--stroke) solid var(--line);gap:0;padding:var(--pad)} :is(.lines[data-el="rhetis-report-chart-line"])>.pt {position:relative;flex:1;display:flex;flex-direction:column;justify-content:space-between;text-align:center;padding-top:calc((1 - var(--v) / var(--max)) * 280px)} :is(.lines[data-el="rhetis-report-chart-line"])>.pt>b {position:relative;font-size:var(--type-24);font-weight:var(--figure-weight)} :is(.lines[data-el="rhetis-report-chart-line"])>.pt>b::after {content:'';display:block;width:12px;height:12px;border:3px solid var(--ink);border-radius:50%;background:var(--accent);margin:var(--gap-sm) auto} :is(.lines[data-el="rhetis-report-chart-line"])>.pt>span {font-size:var(--type-16);padding-top:var(--gap)} :is(.lines[data-el="rhetis-report-chart-line"])>.pt::before {content:'';position:absolute;top:calc((1 - var(--v) / var(--max)) * 280px + 38px);left:50%;width:100%;height:2px;background:var(--ink);transform-origin:left} :is(.lines[data-el="rhetis-report-chart-line"])>.pt:last-child::before {display:none}
+:is(.lines[data-el="rhetis-report-chart-line"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.lines[data-el="rhetis-report-chart-line"]) .tone-1::before {background:var(--tone-1)}
+:is(.lines[data-el="rhetis-report-chart-line"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.lines[data-el="rhetis-report-chart-line"]) .tone-2::before {background:var(--tone-2)}
+:is(.lines[data-el="rhetis-report-chart-line"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.lines[data-el="rhetis-report-chart-line"]) .tone-3::before {background:var(--tone-3)}
+:is(.lines[data-el="rhetis-report-chart-line"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.lines[data-el="rhetis-report-chart-line"]) .tone-4::before {background:var(--tone-4)}
+:is(.lines[data-el="rhetis-report-chart-line"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.lines[data-el="rhetis-report-chart-line"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.lines[data-el="rhetis-report-chart-line"]) .name {font-size:var(--type-20)} :is(.lines[data-el="rhetis-report-chart-line"]) .note {font-size:var(--type-16)} :is(.lines[data-el="rhetis-report-chart-line"]) .fig {font-size:var(--type-40)} :is(.lines[data-el="rhetis-report-chart-line"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.lines[data-el="rhetis-report-chart-line"]) .name {font-size:var(--type-16)} :is(.lines[data-el="rhetis-report-chart-line"]) .note {font-size:var(--type-14)} :is(.lines[data-el="rhetis-report-chart-line"]) .fig {font-size:var(--type-28)} :is(.lines[data-el="rhetis-report-chart-line"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.lines[data-el="rhetis-report-chart-line"]) .note {display:none}
+}
+
+.lines[data-el="rhetis-report-chart-line"] {position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+.lines[data-el="rhetis-report-chart-line"]>.pt {display:contents;padding:0}
+.lines[data-el="rhetis-report-chart-line"]>.pt>b {grid-row:1;align-self:start;height:calc((1 - var(--v) / var(--max)) * (100% - 40px) + 40px);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;anchor-name:var(--rhetis-report-chart-line-self)}
+.lines[data-el="rhetis-report-chart-line"]>.pt>b::after {margin:var(--gap-sm) 0 0;flex:none}
+.lines[data-el="rhetis-report-chart-line"]>.pt>span {grid-row:2;padding-top:var(--gap)}
+.lines[data-el="rhetis-report-chart-line"]>.pt::before {content:'';position:absolute;left:anchor(var(--rhetis-report-chart-line-prev) center);right:anchor(var(--rhetis-report-chart-line-self) center);width:auto;height:auto;top:calc(anchor(var(--rhetis-report-chart-line-prev) bottom) - 6px);bottom:calc(anchor(var(--rhetis-report-chart-line-self) bottom) - 6px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--ink) 50%,transparent calc(50% + 1px));z-index:0;min-height:2px}
+.lines[data-el="rhetis-report-chart-line"]>.pt::after {content:'';position:absolute;left:anchor(var(--rhetis-report-chart-line-prev) center);right:anchor(var(--rhetis-report-chart-line-self) center);top:calc(anchor(var(--rhetis-report-chart-line-self) bottom) - 6px);bottom:calc(anchor(var(--rhetis-report-chart-line-prev) bottom) - 6px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--ink) 50%,transparent calc(50% + 1px));z-index:0;min-height:2px}
+.lines[data-el="rhetis-report-chart-line"]>.pt:first-child::before,.lines[data-el="rhetis-report-chart-line"]>.pt:first-child::after {display:none}
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(1) { --rhetis-report-chart-line-self: --rhetis-report-point-1; --rhetis-report-chart-line-prev: --rhetis-report-point-0; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(2) { --rhetis-report-chart-line-self: --rhetis-report-point-2; --rhetis-report-chart-line-prev: --rhetis-report-point-1; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(3) { --rhetis-report-chart-line-self: --rhetis-report-point-3; --rhetis-report-chart-line-prev: --rhetis-report-point-2; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(4) { --rhetis-report-chart-line-self: --rhetis-report-point-4; --rhetis-report-chart-line-prev: --rhetis-report-point-3; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(5) { --rhetis-report-chart-line-self: --rhetis-report-point-5; --rhetis-report-chart-line-prev: --rhetis-report-point-4; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(6) { --rhetis-report-chart-line-self: --rhetis-report-point-6; --rhetis-report-chart-line-prev: --rhetis-report-point-5; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(7) { --rhetis-report-chart-line-self: --rhetis-report-point-7; --rhetis-report-chart-line-prev: --rhetis-report-point-6; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(8) { --rhetis-report-chart-line-self: --rhetis-report-point-8; --rhetis-report-chart-line-prev: --rhetis-report-point-7; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(9) { --rhetis-report-chart-line-self: --rhetis-report-point-9; --rhetis-report-chart-line-prev: --rhetis-report-point-8; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(10) { --rhetis-report-chart-line-self: --rhetis-report-point-10; --rhetis-report-chart-line-prev: --rhetis-report-point-9; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(11) { --rhetis-report-chart-line-self: --rhetis-report-point-11; --rhetis-report-chart-line-prev: --rhetis-report-point-10; }
+.lines[data-el="rhetis-report-chart-line"]>.pt:nth-child(12) { --rhetis-report-chart-line-self: --rhetis-report-point-12; --rhetis-report-chart-line-prev: --rhetis-report-point-11; }
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-chart-line"] .fig small {color:inherit}
+[data-el="rhetis-report-chart-line"].on :is(.note,.kick), [data-el="rhetis-report-chart-line"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-chart-line"].tone-1 :is(.note,.kick), [data-el="rhetis-report-chart-line"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-chart-line"].tone-2 :is(.note,.kick), [data-el="rhetis-report-chart-line"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-chart-line"].tone-3 :is(.note,.kick), [data-el="rhetis-report-chart-line"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-chart-line"].tone-4 :is(.note,.kick), [data-el="rhetis-report-chart-line"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-chart-line"].tone-5 :is(.note,.kick), [data-el="rhetis-report-chart-line"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

@@ -1,0 +1,1 @@
+Two outlined neutral panels face across a compact VS mark. The selected side receives a pale lime field, while nested lists retain their own semantic styling. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

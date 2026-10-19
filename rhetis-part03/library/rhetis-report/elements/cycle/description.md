@@ -1,0 +1,1 @@
+Rounded neutral nodes surround a dark circular core. Small directional arrows articulate the feedback loop, with layout positions accommodating three to six nodes. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

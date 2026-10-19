@@ -1,0 +1,1 @@
+Successively narrower centred neutral bands encode the supplied percentage. The leading band is lime; names and direct values remain on readable full-width rows even when the final band is very narrow. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

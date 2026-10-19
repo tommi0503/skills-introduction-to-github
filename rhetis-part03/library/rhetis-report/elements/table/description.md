@@ -1,0 +1,1 @@
+A restrained editorial table uses a neutral header band, fine horizontal rules and right-aligned numeric cells. Pale lime marks the selected column without competing with its values. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

@@ -1,0 +1,1 @@
+A thin ink outline and modest inset surround one flat neutral media seat. Restrained outer corners protect the image boundary without adding a shadow. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

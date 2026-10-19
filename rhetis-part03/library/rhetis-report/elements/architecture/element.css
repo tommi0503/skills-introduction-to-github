@@ -1,0 +1,30 @@
+:is(.arch[data-el="rhetis-report-architecture"]) {container-type:inline-size;min-width:0;min-height:0} :is(.arch[data-el="rhetis-report-architecture"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.arch[data-el="rhetis-report-architecture"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.arch[data-el="rhetis-report-architecture"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.arch[data-el="rhetis-report-architecture"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.arch[data-el="rhetis-report-architecture"]) .fig small {font-size:var(--type-20)}
+:is(.arch[data-el="rhetis-report-architecture"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm)} :is(.arch[data-el="rhetis-report-architecture"])>.layer {display:flex;align-items:center;gap:var(--gap);padding:var(--pad);background:var(--surface);border:var(--stroke) solid var(--line)} :is(.arch[data-el="rhetis-report-architecture"])>.layer:first-child {background:var(--accent);color:var(--accent-ink);border-color:var(--ink)} :is(.arch[data-el="rhetis-report-architecture"])>.layer>.name {width:24%;flex:none} :is(.arch[data-el="rhetis-report-architecture"]) .chip {display:inline-flex;align-items:center;justify-content:center;flex:1;min-height:40px;padding:var(--gap-sm);border:var(--stroke) solid var(--line);border-radius:999px;background:var(--page);color:var(--ink);font-size:var(--type-16)}
+:is(.arch[data-el="rhetis-report-architecture"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.arch[data-el="rhetis-report-architecture"]) .tone-1::before {background:var(--tone-1)}
+:is(.arch[data-el="rhetis-report-architecture"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.arch[data-el="rhetis-report-architecture"]) .tone-2::before {background:var(--tone-2)}
+:is(.arch[data-el="rhetis-report-architecture"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.arch[data-el="rhetis-report-architecture"]) .tone-3::before {background:var(--tone-3)}
+:is(.arch[data-el="rhetis-report-architecture"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.arch[data-el="rhetis-report-architecture"]) .tone-4::before {background:var(--tone-4)}
+:is(.arch[data-el="rhetis-report-architecture"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.arch[data-el="rhetis-report-architecture"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.arch[data-el="rhetis-report-architecture"]) .name {font-size:var(--type-20)} :is(.arch[data-el="rhetis-report-architecture"]) .note {font-size:var(--type-16)} :is(.arch[data-el="rhetis-report-architecture"]) .fig {font-size:var(--type-40)} :is(.arch[data-el="rhetis-report-architecture"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.arch[data-el="rhetis-report-architecture"]) .name {font-size:var(--type-16)} :is(.arch[data-el="rhetis-report-architecture"]) .note {font-size:var(--type-14)} :is(.arch[data-el="rhetis-report-architecture"]) .fig {font-size:var(--type-28)} :is(.arch[data-el="rhetis-report-architecture"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.arch[data-el="rhetis-report-architecture"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-architecture"] .fig small {color:inherit}
+[data-el="rhetis-report-architecture"].on :is(.note,.kick), [data-el="rhetis-report-architecture"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-architecture"].tone-1 :is(.note,.kick), [data-el="rhetis-report-architecture"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-architecture"].tone-2 :is(.note,.kick), [data-el="rhetis-report-architecture"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-architecture"].tone-3 :is(.note,.kick), [data-el="rhetis-report-architecture"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-architecture"].tone-4 :is(.note,.kick), [data-el="rhetis-report-architecture"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-architecture"].tone-5 :is(.note,.kick), [data-el="rhetis-report-architecture"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

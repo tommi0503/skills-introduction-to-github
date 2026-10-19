@@ -1,0 +1,30 @@
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) {container-type:inline-size;min-width:0;min-height:0} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .fig small {font-size:var(--type-20)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) {display:flex;gap:var(--gap);align-items:stretch} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]).person,:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"])>.person {flex:1;display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--pad);border-bottom:var(--stroke) solid var(--ink)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .seat {width:100%;flex:1;min-height:80px} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .seat.avatar {width:140px;max-width:100%;flex:none;align-self:center} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .name {margin-top:var(--gap-sm)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .tone-1::before {background:var(--tone-1)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .tone-2::before {background:var(--tone-2)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .tone-3::before {background:var(--tone-3)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .tone-4::before {background:var(--tone-4)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .name {font-size:var(--type-20)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .note {font-size:var(--type-16)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .fig {font-size:var(--type-40)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .name {font-size:var(--type-16)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .note {font-size:var(--type-14)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .fig {font-size:var(--type-28)} :is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.person[data-el="rhetis-report-person"], .people[data-el="rhetis-report-person"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-person"] .fig small {color:inherit}
+[data-el="rhetis-report-person"].on :is(.note,.kick), [data-el="rhetis-report-person"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-person"].tone-1 :is(.note,.kick), [data-el="rhetis-report-person"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-person"].tone-2 :is(.note,.kick), [data-el="rhetis-report-person"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-person"].tone-3 :is(.note,.kick), [data-el="rhetis-report-person"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-person"].tone-4 :is(.note,.kick), [data-el="rhetis-report-person"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-person"].tone-5 :is(.note,.kick), [data-el="rhetis-report-person"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

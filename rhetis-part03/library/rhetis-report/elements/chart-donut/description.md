@@ -1,0 +1,1 @@
+A clean lime arc measures one share against a neutral remainder. A white centre carries the figure and label; small multiples preserve an equal circular silhouette. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.

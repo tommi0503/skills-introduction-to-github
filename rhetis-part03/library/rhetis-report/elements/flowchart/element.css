@@ -1,0 +1,30 @@
+:is(.flowchart[data-el="rhetis-report-flowchart"]) {container-type:inline-size;min-width:0;min-height:0} :is(.flowchart[data-el="rhetis-report-flowchart"]) .name {font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink-2)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .kick {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--mute)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .fig {font-size:var(--type-52);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .fig small {font-size:var(--type-20)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]) {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:1fr;gap:var(--gap);padding:var(--pad)} :is(.flowchart[data-el="rhetis-report-flowchart"])>.node {position:relative;display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);background:var(--surface);border:var(--stroke) solid var(--ink);font-size:var(--type-20);text-align:center} :is(.flowchart[data-el="rhetis-report-flowchart"])>.node.start,:is(.flowchart[data-el="rhetis-report-flowchart"])>.node.end {background:var(--accent);color:var(--accent-ink);border-radius:999px} :is(.flowchart[data-el="rhetis-report-flowchart"])>.node.ask {border-radius:var(--radius)} :is(.flowchart[data-el="rhetis-report-flowchart"])>.to-r::after {content:'→';position:absolute;left:100%;width:var(--gap);font-size:var(--type-24)} :is(.flowchart[data-el="rhetis-report-flowchart"])>.to-d::after {content:'↓';position:absolute;top:100%;height:var(--gap);font-size:var(--type-24)} :is(.flowchart[data-el="rhetis-report-flowchart"])>.to-l::after {content:'←';position:absolute;right:100%;width:var(--gap);font-size:var(--type-24)} :is(.flowchart[data-el="rhetis-report-flowchart"])>.to-u::after {content:'↑';position:absolute;bottom:100%;height:var(--gap);font-size:var(--type-24)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]).tone-1 {background:var(--tone-1);color:var(--tone-1-ink)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .tone-1::before {background:var(--tone-1)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]).tone-2 {background:var(--tone-2);color:var(--tone-2-ink)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .tone-2::before {background:var(--tone-2)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]).tone-3 {background:var(--tone-3);color:var(--tone-3-ink)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .tone-3::before {background:var(--tone-3)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]).tone-4 {background:var(--tone-4);color:var(--tone-4-ink)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .tone-4::before {background:var(--tone-4)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]).tone-5 {background:var(--tone-5);color:var(--tone-5-ink)}
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .tone-5::before {background:var(--tone-5)}
+@container (max-width: 620px) {
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .name {font-size:var(--type-20)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .note {font-size:var(--type-16)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .fig {font-size:var(--type-40)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .parts {gap:var(--gap-sm)}
+}
+@container (max-width: 320px) {
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .name {font-size:var(--type-16)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .note {font-size:var(--type-14)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .fig {font-size:var(--type-28)} :is(.flowchart[data-el="rhetis-report-flowchart"]) .kick {display:none}
+}
+@container (max-width: 180px) {
+:is(.flowchart[data-el="rhetis-report-flowchart"]) .note {display:none}
+}
+
+/* Unit labels inherit semantic ink, including preview environments. */
+[data-el="rhetis-report-flowchart"] .fig small {color:inherit}
+[data-el="rhetis-report-flowchart"].on :is(.note,.kick), [data-el="rhetis-report-flowchart"] .on :is(.note,.kick) {color:var(--accent-ink)}
+[data-el="rhetis-report-flowchart"].tone-1 :is(.note,.kick), [data-el="rhetis-report-flowchart"] .tone-1 :is(.note,.kick) {color:var(--tone-1-ink)}
+[data-el="rhetis-report-flowchart"].tone-2 :is(.note,.kick), [data-el="rhetis-report-flowchart"] .tone-2 :is(.note,.kick) {color:var(--tone-2-ink)}
+[data-el="rhetis-report-flowchart"].tone-3 :is(.note,.kick), [data-el="rhetis-report-flowchart"] .tone-3 :is(.note,.kick) {color:var(--tone-3-ink)}
+[data-el="rhetis-report-flowchart"].tone-4 :is(.note,.kick), [data-el="rhetis-report-flowchart"] .tone-4 :is(.note,.kick) {color:var(--tone-4-ink)}
+[data-el="rhetis-report-flowchart"].tone-5 :is(.note,.kick), [data-el="rhetis-report-flowchart"] .tone-5 :is(.note,.kick) {color:var(--tone-5-ink)}

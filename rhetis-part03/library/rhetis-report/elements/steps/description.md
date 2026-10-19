@@ -1,0 +1,1 @@
+Circular lime number marks begin ruled, openly spaced step panels. Arrow connectors establish reading order, and the vertical variant relocates the marks beside compact text stacks. Narrow containers reduce supporting type in discrete steps; optional kicker and note details recede only at the smallest widths.
