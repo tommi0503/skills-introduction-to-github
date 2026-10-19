@@ -1,0 +1,1 @@
+Rectangular reporting cards use a fine border and a short mint top rule. A substantial figure or compact number marker establishes hierarchy; filled emphasis and five supporting tonal fields use the same restrained geometry.

@@ -1,0 +1,42 @@
+
+.slide { box-sizing:border-box; width:1280px; height:720px; overflow:hidden; position:relative; background:var(--page); color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.slide *, .slide *::before, .slide *::after { box-sizing:border-box; }
+.slide .page { position:relative; width:100%; height:100%; padding:var(--margin-y) var(--margin-x); display:flex; flex-direction:column; gap:var(--gap-lg); }
+.slide .head { position:relative; flex:none; padding-left:var(--rail-gap); border-left:var(--rail-w) solid var(--accent); }
+.slide .head.center { text-align:center; border-left:0; padding-left:0; }
+.slide .kicker { margin:0 0 var(--gap-sm); color:var(--accent); font-size:var(--type-14); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track-latin); }
+.slide .title { margin:0; font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--title-weight); line-height:var(--title-line); letter-spacing:var(--title-track); }
+.slide .lead { margin:var(--gap-sm) 0 0; color:var(--ink-2); font-size:var(--type-18); font-weight:var(--lead-weight); line-height:var(--lead-line); letter-spacing:var(--lead-track); }
+.slide .body { flex:1; min-height:0; min-width:0; display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(6,minmax(0,1fr)); gap:var(--gap); container-type:size; }
+.slide .group { display:flex; min-width:0; min-height:0; gap:var(--gap); }
+.slide .group>* { flex:1; min-width:0; min-height:0; }
+.slide .group.col, .slide .stack { display:flex; flex-direction:column; min-width:0; min-height:0; gap:var(--gap); }
+.slide .group.two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.slide .group.three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.slide .split { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.6fr); gap:var(--gap-lg); min-width:0; min-height:0; }
+.slide .split.wide-left { grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); }
+.slide .top, .slide .foot { position:absolute; left:var(--margin-x); right:var(--margin-x); display:flex; align-items:center; justify-content:space-between; gap:var(--furn-gap); color:var(--mute); font-size:var(--type-12); line-height:var(--label-line); }
+.slide .top { top:var(--furn-edge); height:var(--top-h); }
+.slide .foot { bottom:var(--furn-edge); height:var(--foot-h); }
+.slide .rail { position:absolute; top:0; bottom:0; left:0; width:var(--rail-w); background:var(--accent); }
+.slide .idx, .slide .no { color:var(--accent); font-weight:var(--label-weight); }
+.slide .seat { display:flex; align-items:center; justify-content:center; min-width:0; min-height:0; position:relative; overflow:hidden; background:var(--surface-2); border:var(--stroke) solid var(--line); border-radius:var(--radius-sm); color:var(--mute); }
+.slide .seat::after { content:attr(data-ph); font-size:var(--type-14); font-weight:var(--label-weight); }
+.slide .seat.avatar { width:72px; height:72px; border-radius:999px; aspect-ratio:1; flex:none; }
+.slide .seat.portrait { aspect-ratio:4/5; }
+.slide .seat.logo { height:80px; min-width:80px; }
+.slide .seat.icon { width:48px; height:48px; flex:none; }
+.slide .seat.back { position:absolute; inset:0; border:0; }
+.slide.cover .page { display:block; }
+.slide.cover .lockup { position:absolute; width:70%; z-index:1; }
+.slide.cover .title { font-size:var(--type-64); }
+.slide.cover .lead { font-size:var(--type-24); }
+.slide.cover .at-left { left:var(--margin-x); top:28%; }
+.slide.cover .at-center { top:32%; left:15%; text-align:center; }
+.slide.cover .at-bottom-left { left:var(--margin-x); bottom:22%; }
+.slide.cover .at-top-left { left:var(--margin-x); top:18%; }
+.slide.cover .meta { position:absolute; bottom:var(--margin-y); left:var(--margin-x); color:var(--mute); font-size:var(--type-14); }
+.slide.cover .deco { position:absolute; right:0; top:0; width:34%; height:100%; background:linear-gradient(135deg,var(--accent-soft) 0 48%,var(--tone-2) 48% 64%,var(--accent) 64%); clip-path:polygon(80% 0,100% 0,100% 100%,0 100%); }
+
+.slide .stack > .seat.portrait { flex:1;min-height:0; }
+.slide .stack > .group { min-height:80px; flex-shrink:0; }
