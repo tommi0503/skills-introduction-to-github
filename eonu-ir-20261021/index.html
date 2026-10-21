@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>EONU — IR Deck Studio</title>
+  <link rel="stylesheet" href="src/slides.css">
+  <link rel="stylesheet" href="src/viewer.css">
+  <script defer src="src/components.js"></script>
+  <script defer src="src/slides.js"></script>
+  <script defer src="src/viewer.js"></script>
+</head>
+<body class="viewer-page">
+  <header class="viewer-topbar">
+    <a class="viewer-brand" href="#/design/01" aria-label="EONU 시안 첫 페이지"><span class="viewer-brand-mark">eonu<span>●</span></span><span class="viewer-brand-label">IR DECK STUDIO</span></a>
+    <nav class="viewer-mode" aria-label="프레젠테이션 스타일">
+      <button type="button" data-mode="wireframe" aria-pressed="false">와이어프레임</button>
+      <button type="button" data-mode="design" aria-pressed="true">디자인 시안</button>
+    </nav>
+    <div class="viewer-tools">
+      <a class="viewer-tool" id="planning-link" href="docs/planning.html" target="_blank" rel="noopener" title="IR 기획 검토와 개선안"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3h12v14H4zM7 6h6M7 10h6M7 14h3"/></svg><span>기획 검토</span></a>
+      <a class="viewer-tool" id="pdf-link" href="previews/eonu-design.pdf" target="_blank" rel="noopener" title="현재 스타일의 전체 PDF 열기"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2h7l4 4v12H5zM12 2v5h4M8 10h5M8 13h5"/></svg><span>PDF</span></a>
+      <button type="button" id="grid-toggle" class="viewer-tool" aria-pressed="false" title="전체 보기 · G"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="12" y="2" width="6" height="6" rx="1"/><rect x="2" y="12" width="6" height="6" rx="1"/><rect x="12" y="12" width="6" height="6" rx="1"/></svg><span>전체 보기</span></button>
+      <button type="button" id="notes-toggle" class="viewer-tool" aria-pressed="false" title="발표 대본 · N"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="2" width="14" height="16" rx="2"/><path d="M6 6h8M6 10h8M6 14h5"/></svg><span>발표 대본</span></button>
+      <a id="print-link" class="viewer-tool" href="design/print.html" target="_blank" rel="noopener" title="12장 인쇄용 보기"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7V2h10v5M5 14H2V7h16v7h-3M5 11h10v7H5z"/></svg><span>인쇄</span></a>
+    </div>
+  </header>
+
+  <main class="viewer-main">
+    <section id="presentation" class="viewer-presentation" aria-label="슬라이드 보기">
+      <div class="viewer-slide-wrap" id="slide-wrap">
+        <div id="slide-host" class="viewer-slide-host"></div>
+      </div>
+    </section>
+    <section id="grid" class="viewer-grid" aria-label="전체 12장 미리보기" hidden></section>
+    <aside id="notes" class="viewer-notes" aria-label="현재 슬라이드 발표 대본" hidden>
+      <div class="viewer-notes-heading"><div><span class="viewer-overline">PRESENTER NOTES</span><h2 id="notes-title"></h2></div><button type="button" id="notes-close" class="viewer-tool" aria-label="발표 대본 닫기">닫기 ×</button></div>
+      <div id="notes-text"></div>
+      <p id="notes-source" class="viewer-note-source"></p>
+    </aside>
+  </main>
+
+  <footer class="viewer-footer">
+    <div class="viewer-position"><span id="section-label">INTRO</span><span class="viewer-position-divider"></span><span id="mode-label">디자인 시안</span></div>
+    <nav class="viewer-pagination" aria-label="페이지 이동">
+      <button type="button" id="previous" aria-label="이전 슬라이드" title="이전 · ←">←</button>
+      <label class="viewer-page-select"><span class="viewer-sr-only">슬라이드 선택</span><select id="page-select" aria-label="슬라이드 선택"></select><span>/ <span id="total-count">12</span></span></label>
+      <button type="button" id="next" aria-label="다음 슬라이드" title="다음 · →">→</button>
+    </nav>
+    <div class="viewer-footer-right"><span class="viewer-keyhint">← → 페이지 이동</span><a id="single-link" href="design/01.html" target="_blank" rel="noopener">개별 HTML ↗</a></div>
+  </footer>
+  <div class="viewer-sr-only" id="announcement" role="status" aria-live="polite"></div>
+</body>
+</html>
