@@ -1,0 +1,13 @@
+{
+ "name":"eonu-ir-20261021-v2",
+ "version":"1.0.0",
+ "private":true,
+ "description":"EONU 12-slide IR wireframe and design, offline HTML viewer",
+ "scripts":{
+  "build":"node scripts/build-pages.mjs && node scripts/build-docs.mjs",
+  "render":"node scripts/render.mjs",
+  "sheets":"python3 scripts/make-sheets.py",
+  "package":"python3 scripts/package.py"
+ },
+ "devDependencies":{"marked":"^16.4.2","playwright":"^1.55.0"}
+}
