@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EONU IR · 선택안 통합</title>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="shared/viewer.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">콘텐츠로 이동</a>
+  <header class="app-header">
+    <a href="#view=final&amp;page=01&amp;mode=design&amp;layout=focus" class="wordmark" aria-label="EONU IR 첫 장">EONU <span>IR</span></a>
+    <nav class="top-actions" aria-label="검수 도구">
+      <button id="overviewButton" title="전체 12장 보기 (G)">12장 보기</button>
+      <button id="compareButton" title="같은 페이지의 시안과 와이어프레임 비교 (C)">시안·와이어 비교</button>
+      <button id="exportButton" title="이 브라우저의 검수 메모를 JSON 파일로 저장">메모 내보내기 ↗</button>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <aside id="drawer" class="drawer" hidden aria-label="발표 대본과 검수 메모"></aside>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="shared/catalog.js"></script>
+  <script src="shared/viewer.js"></script>
+</body>
+</html>

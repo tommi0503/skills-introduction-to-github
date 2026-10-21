@@ -1,0 +1,72 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import vm from 'node:vm';
+import crypto from 'node:crypto';
+import {root,launch} from './runtime.mjs';
+
+const selection=JSON.parse(await fs.readFile(path.join(root,'selection.json'),'utf8'));
+const sourceText=await fs.readFile(path.join(root,'shared/content.js'),'utf8');
+const sources={};
+for(const id of ['a','d','e','v3']){
+ const ctx={window:{},console};vm.createContext(ctx);vm.runInContext(sourceText,ctx);
+ const files=id==='v3'?['v3-components.js','v3-slides.js']:[id+'.js'];
+ for(const file of files)vm.runInContext(await fs.readFile(path.join(root,'src/snapshots',file),'utf8'),ctx);
+ sources[id]=id==='v3'?ctx.window.EONU:ctx.window.CONCEPT;
+}
+const named={
+ '#251044':'#202632','#251b35':'#202632','#23394b':'#202632',
+ '#8553cf':'#437aff','#7044c5':'#437aff','#477cff':'#437aff','#bd6652':'#437aff',
+ '#c8acf4':'#dce8ff','#d6c5f0':'#8291a9','#f6f2fc':'#ffffff','#f8f4ec':'#ffffff',
+ '#fcf9f3':'#ffffff','#956451':'#437aff','#655a74':'#768091'
+};
+function bluePalette(text){return text.replace(/#([0-9a-f]{8}|[0-9a-f]{6}|[0-9a-f]{4}|[0-9a-f]{3})\b/gi,(full,hex)=>{
+ let h=hex.toLowerCase();if(h.length<5)h=[...h].map(x=>x+x).join('');const alpha=h.slice(6),base='#'+h.slice(0,6);if(named[base])return named[base]+alpha;
+ const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16),max=Math.max(r,g,b),min=Math.min(r,g,b),l=(max+min)/510;
+ if(max-min<14)return '#'+h;
+ const sat=(max-min)/(255-Math.abs(max+min-255));
+ if(l>.95)return '#f8faff'+alpha;if(l>.88)return '#edf3ff'+alpha;if(l>.78)return '#dce7fb'+alpha;
+ if(l<.3)return '#202632'+alpha;
+ if(sat>.36)return '#437aff'+alpha;
+ return (l>.6?'#8792a4':'#6e788a')+alpha;
+})}
+function scopeCSS(css,id){css=css.replace(/\/\*[\s\S]*?\*\//g,'').replace(/@font-face\s*\{[^}]*\}/g,'');return css.replace(/([^{}]+)\{/g,(full,pre)=>{
+ if(pre.trim().startsWith('@'))return pre+'{';
+ const selectors=pre.trim().split(',').map(s=>{
+  s=s.trim();if(/\.slide(?![-\w])/.test(s))return s.replace(/\.slide(?![-\w])/g,`.slide.source-${id}`);
+  if(/^(\.wireframe|\.page-\d+|\.bookend)(?![-\w])/.test(s))return `.slide.source-${id}`+s;
+  if(['body','html',':root'].includes(s))return `.slide.source-${id}`;
+  return `.slide.source-${id} `+s;
+ });return selectors.join(',')+'{';
+})}
+const captions=['','재구성한 설명용 사례','서비스가 지향하는 연결 구조','사업 가설 · 비급여 필요성과 상담 전환 성과는 검증 전','설명용 제품 구조 · 실제 접속 QR 아님','설명용 데모 · 실제 서비스 화면 및 EMR 연동 아님','사업 모델 가설 · 첫 병원군·가격·계약 미확정','시장 범위 개념도 · 면적은 금액에 비례하지 않음 · 입력값 미확정','후속 검토·연구 방향 · 연동 및 임상 효과 검증 전','현재 접점은 공식 제휴·실증·유료 계약과 구분','사업계획 총액 · 배분·기간·기관 목표·CAC 미확정',''];
+const sections=['','01. 문제 인식','02. 연결 가치','03. 병원 도입 가설','04. 병원에서 시작','05. 데모 흐름','06. 사업 모델','07. 시장 산정','08. 환자에서 확장','09. 현재의 근거','10. 팀과 실행 계획',''];
+const browser=await launch(),page=await browser.newPage();const slides=[];
+try{
+ for(const [index,id] of selection.mapping.entries()){
+  const original=sources[id].slides[index],bookend=index===0||index===11;
+  const title=index===9?'현장 피드백을, <em>첫 도입으로.</em>':original.title.replace(/<br\s*\/?\s*>/g,bookend?'<br>':' ');
+  const raw=bluePalette(sources[id].renderSlide(original,'design'));
+  const html=await page.evaluate(({raw,id,index,title,bookend,section,caption,subtitle})=>{
+   const doc=new DOMParser().parseFromString(raw,'text/html'),el=doc.querySelector('.slide');
+   el.classList.add('source-'+id);el.dataset.source=id;el.dataset.slide=String(index+1).padStart(2,'0');if(bookend)el.classList.add('bookend');
+   if(bookend){el.querySelectorAll('.muted-white').forEach(n=>n.remove());const hero=el.querySelector('.hero');if(hero)hero.innerHTML=index===0?'함께 오지 못해도,<br><em>이야기는 함께.</em>':'환자에게 필요한 연결.<br><em>병원도 계속 쓸 이유.</em>';}
+   if(!bookend){
+    el.querySelectorAll('.slide-header,.heading,.section-label,.slide-footer,.page-number').forEach(n=>n.remove());
+    const header=doc.createElement('header');header.className='unified-header section-label';header.textContent=section;el.prepend(header);
+    const heading=doc.createElement('div');heading.className='heading unified-heading';heading.innerHTML='<h1>'+title+'</h1><p class="subtitle">'+subtitle.replace(/<br\s*\/?\s*>/g,' ')+'</p>';el.append(heading);
+    const footer=doc.createElement('footer');footer.className='slide-footer unified-footer';footer.innerHTML='<span class="source-note">'+caption+'</span><span class="footer-brand">EONU</span><span class="page-number">'+String(index+1).padStart(2,'0')+'</span>';el.append(footer);
+   }
+   return el.outerHTML;
+  },{raw,id,index,title,bookend,section:sections[index],caption:captions[index],subtitle:original.subtitle||''});
+  slides.push({...original,id:String(index+1).padStart(2,'0'),title,source:id,section:sections[index],caption:captions[index],html});
+ }
+}finally{await browser.close()}
+await fs.writeFile(path.join(root,'concepts/final/deck.js'),'/* Selected compositions, unified style. Generated by scripts/compose.mjs. */\nwindow.CONCEPT={slides:'+JSON.stringify(slides,null,2)+',renderSlide:(s,mode="design")=>s.html.replace(/class="slide design /,`class="slide ${mode} `)};\n');
+let css='/* Scoped original structures; final art direction follows below. */\n';
+for(const id of ['a','d','e','v3']){const file=id==='v3'?'v3-slides.css':id+'.css';css+=scopeCSS(bluePalette(await fs.readFile(path.join(root,'src/snapshots',file),'utf8')),id)+'\n'}
+css+=await fs.readFile(path.join(root,'src/unified.css'),'utf8');await fs.writeFile(path.join(root,'concepts/final/style.css'),css);
+await fs.writeFile(path.join(root,'concepts/final/concept.json'),JSON.stringify({id:'final',name:'EONU · 선택안 통합',tagline:'선택한 구성에 화이트·블루 스타일을 적용한 12장',accent:'#437aff',references:['A','D','E','v3'],selection:selection.mapping},null,2));
+const proofs=slides.map((s,i)=>({page:s.id,selectedSource:selection.mapping[i],actualSource:s.source,fullTalkPreserved:s.talk===sources[s.source].slides[i].talk,fullNotePreserved:s.note===sources[s.source].slides[i].note}));
+await fs.writeFile(path.join(root,'review/selection-checks.json'),JSON.stringify({status:proofs.every(p=>p.selectedSource===p.actualSource&&p.fullTalkPreserved&&p.fullNotePreserved)?'passed':'failed',pages:proofs},null,2));
+const hashes={};for(const file of await fs.readdir(path.join(root,'src/snapshots'))){hashes[file]=crypto.createHash('sha256').update(await fs.readFile(path.join(root,'src/snapshots',file))).digest('hex')};await fs.writeFile(path.join(root,'review/source-snapshots.json'),JSON.stringify(hashes,null,2));
+console.log('Composed D/A/A/v3/A/v3/A/v3/v3/E/A/D into one 12-slide deck.');
