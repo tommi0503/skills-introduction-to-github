@@ -1,0 +1,1 @@
+Flat stacked segments share a measured baseline and separate category strip. Ranked series use their own contrasting labels, while horizontal and percentage versions retain the same rectangular grammar. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

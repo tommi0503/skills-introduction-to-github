@@ -1,0 +1,1 @@
+A direct, flush heading stacks a small kicker, a bold statement and a quieter note. Selected words carry the dark accent while centered and filled versions keep the same hierarchy. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

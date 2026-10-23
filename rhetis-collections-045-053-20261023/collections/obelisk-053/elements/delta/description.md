@@ -1,0 +1,1 @@
+Two upright tabular figures sit on either side of a short geometric arrow. The earlier value recedes into a neutral step and the destination takes the dark accent. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

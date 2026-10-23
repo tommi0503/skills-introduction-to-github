@@ -1,0 +1,1 @@
+The matrix element extends Portico’s hard-edged architectural modules. A fine rule establishes alignment, compact accent rectangles identify the primary point, and large clear sans-serif figures sit above quiet supporting text. Container steps reduce type and spacing while preserving names and figures.

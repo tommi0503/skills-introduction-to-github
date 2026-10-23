@@ -1,0 +1,1 @@
+A straight, shallow meter runs beneath a left label and a right figure. The dark accent length is set by the value, with no rounded decoration competing with the label. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

@@ -1,0 +1,1 @@
+Axisfold pairs an elongated capsule rail ending in a circular knot with compact rounded panels. Connected square fragments, circular relationship diagrams, floating numbered corner tabs, and assertive left-aligned typography create a precise yet approachable company narrative. The accent is a ranked palette position, never a fixed brand hue.

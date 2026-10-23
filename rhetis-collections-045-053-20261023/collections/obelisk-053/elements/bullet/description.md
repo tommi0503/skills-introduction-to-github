@@ -1,0 +1,1 @@
+A shallow horizontal value band sits against a neutral target field. Its label stays on the left and its numeric result and target note remain on the right. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

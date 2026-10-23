@@ -1,0 +1,42 @@
+:is(.stacks[data-el="launchrail-048-chart-stack"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) * { box-sizing:border-box; min-width:0; }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) .seat.avatar { border-radius:50%; }
+:is(.stacks[data-el="launchrail-048-chart-stack"]) { display:flex; gap:var(--gap); padding:var(--gap-lg) var(--gap-sm); border-bottom:var(--stroke) solid var(--n-5); } :is(.stacks[data-el="launchrail-048-chart-stack"]) > .sbar { flex:1; display:flex; flex-direction:column-reverse; justify-content:flex-start; position:relative; } :is(.stacks[data-el="launchrail-048-chart-stack"]) > .sbar > span { position:absolute; top:calc(100% + var(--gap-sm)); left:0; right:0; text-align:center; font-size:var(--type-16); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .seg { height:calc(var(--v) / var(--max,100) * 100%); background:var(--a1); color:var(--a1-on); display:flex; align-items:center; justify-content:center; font-size:var(--type-16); } :is(.stacks[data-el="launchrail-048-chart-stack"]).pct .seg { height:calc(var(--v) * 1%); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .seg.tone-2 { background:var(--a2); color:var(--a2-on); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .seg.tone-3 { background:var(--a3); color:var(--a3-on); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .seg.tone-4 { background:var(--a4); color:var(--a4-on); } :is(.stacks[data-el="launchrail-048-chart-stack"]).h { flex-direction:column; padding-left:calc(var(--gap-lg) * 3); } :is(.stacks[data-el="launchrail-048-chart-stack"]).h > .sbar { flex-direction:row; align-items:stretch; } :is(.stacks[data-el="launchrail-048-chart-stack"]).h .seg { height:auto; width:calc(var(--v) / var(--max,100) * 100%); } :is(.stacks[data-el="launchrail-048-chart-stack"]).h > .sbar > span { left:calc(var(--gap-lg) * -3); width:calc(var(--gap-lg) * 2.5); top:30%; }
+
+@container (max-width: 650px) { :is(.stacks[data-el="launchrail-048-chart-stack"]) .name { font-size:var(--type-20); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .fig { font-size:var(--type-40); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .note { font-size:var(--type-16); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.stacks[data-el="launchrail-048-chart-stack"]) .name { font-size:var(--type-18); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .fig { font-size:var(--type-32); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .note { font-size:var(--type-14); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.stacks[data-el="launchrail-048-chart-stack"]) .kick { display:none; } :is(.stacks[data-el="launchrail-048-chart-stack"]) .note { font-size:var(--type-14); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .name { font-size:var(--type-18); } :is(.stacks[data-el="launchrail-048-chart-stack"]) .fig { font-size:var(--type-32); } }
+
+:is(.stacks[data-el="launchrail-048-chart-stack"]) small { color:inherit; }
+
+:is(.stacks)[data-el="launchrail-048-chart-stack"] small { color:inherit; margin-left:0; }
+
+:is(.stacks)[data-el="launchrail-048-chart-stack"] .fig { font-family:var(--font-display); }
+
+/* Native semantic review: visible data geometry. */
+.stacks[data-el="launchrail-048-chart-stack"] .seg:nth-child(2) { background:var(--a1);color:var(--a1-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg:nth-child(3) { background:var(--a2);color:var(--a2-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg:nth-child(4) { background:var(--a3);color:var(--a3-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg:nth-child(5) { background:var(--a4);color:var(--a4-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg:nth-child(6) { background:var(--n-4);color:var(--ink); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg.tone-1 { background:var(--a1);color:var(--a1-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg.tone-2 { background:var(--a2);color:var(--a2-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg.tone-3 { background:var(--a3);color:var(--a3-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg.tone-4 { background:var(--a4);color:var(--a4-on); }
+.stacks[data-el="launchrail-048-chart-stack"] .seg.tone-5 { background:var(--n-4);color:var(--ink); }
+
+/* Final native size and connector fixes. */
+.stacks[data-el="launchrail-048-chart-stack"] .seg:nth-child(4),.stacks[data-el="launchrail-048-chart-stack"] .seg.tone-3 {background:var(--a3-7);color:var(--page);}.stacks[data-el="launchrail-048-chart-stack"] {padding-bottom:calc(var(--gap-lg)*2);}.stacks[data-el="launchrail-048-chart-stack"]>.legend {position:absolute;left:0;right:0;bottom:var(--gap-sm);height:var(--gap);display:flex;justify-content:center;gap:var(--gap);container-type:normal;}.stacks[data-el="launchrail-048-chart-stack"]>.legend>.key.tone-3::before {background:var(--a3-7);}
+
+.stacks[data-el="launchrail-048-chart-stack"]>.legend>.key.tone-5::before {background:var(--n-4);}
+
+.stacks.h[data-el="launchrail-048-chart-stack"] .seg>b {font-size:var(--type-14);}

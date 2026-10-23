@@ -1,0 +1,1 @@
+Four rectangular fields occupy exact quadrants beside discreet axis labels. The chosen quadrant is filled; the SWOT version replaces axis furniture with compact letter kickers and lists. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

@@ -1,0 +1,1 @@
+Equal rectangular logo seats sit in a regular three-column field. Thin edges and generous gutters preserve the original deck’s exact, architectural alignment. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

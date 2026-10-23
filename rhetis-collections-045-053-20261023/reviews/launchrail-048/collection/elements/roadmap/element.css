@@ -1,0 +1,26 @@
+:is(.roadmap[data-el="launchrail-048-roadmap"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) * { box-sizing:border-box; min-width:0; }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) .seat.avatar { border-radius:50%; }
+:is(.roadmap[data-el="launchrail-048-roadmap"]) { display:flex; flex-direction:column; gap:var(--gap); padding-top:var(--gap-lg); } :is(.roadmap[data-el="launchrail-048-roadmap"]) > .heads { position:absolute; left:20%; right:0; top:0; display:grid; grid-template-columns:repeat(var(--cols),1fr); text-align:center; font-size:var(--type-16); } :is(.roadmap[data-el="launchrail-048-roadmap"]) > .lane { position:relative; flex:1; margin-left:20%; background:repeating-linear-gradient(to right,var(--n-1) 0 calc(100% / var(--cols) - 1px),var(--n-3) 0 calc(100% / var(--cols))); border-radius:var(--radius-sm); } :is(.roadmap[data-el="launchrail-048-roadmap"]) > .lane > .name { position:absolute; right:calc(100% + var(--gap-sm)); width:calc(100cqw * .18); top:30%; font-size:var(--type-18); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .bar { position:absolute; top:20%; height:60%; left:calc(var(--from) / var(--cols) * 100%); width:calc((var(--to) - var(--from)) / var(--cols) * 100%); background:var(--a1-2-soft); color:var(--ink); border-radius:999px; display:flex; align-items:center; justify-content:center; padding:var(--gap-sm); font-size:var(--type-16); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .bar.on { background:var(--a1); color:var(--a1-on); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .bar.tone-2 { background:var(--a2); color:var(--a2-on); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .mile { position:absolute; left:calc(var(--at) / var(--cols) * 100%); top:0; bottom:0; border-left:2px solid var(--a1); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .mile span { position:absolute; left:var(--gap-sm); bottom:0; font-size:var(--type-14); }
+
+@container (max-width: 650px) { :is(.roadmap[data-el="launchrail-048-roadmap"]) .name { font-size:var(--type-20); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .fig { font-size:var(--type-40); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .note { font-size:var(--type-16); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.roadmap[data-el="launchrail-048-roadmap"]) .name { font-size:var(--type-18); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .fig { font-size:var(--type-32); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .note { font-size:var(--type-14); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.roadmap[data-el="launchrail-048-roadmap"]) .kick { display:none; } :is(.roadmap[data-el="launchrail-048-roadmap"]) .note { font-size:var(--type-14); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .name { font-size:var(--type-18); } :is(.roadmap[data-el="launchrail-048-roadmap"]) .fig { font-size:var(--type-32); } }
+
+:is(.roadmap[data-el="launchrail-048-roadmap"]) small { color:inherit; }
+
+:is(.roadmap)[data-el="launchrail-048-roadmap"] small { color:inherit; margin-left:0; }
+
+:is(.roadmap)[data-el="launchrail-048-roadmap"] .fig { font-family:var(--font-display); }
+
+/* Native contract anatomy corrections. */
+.roadmap[data-el="launchrail-048-roadmap"] .mile span {white-space:nowrap;width:max-content;}

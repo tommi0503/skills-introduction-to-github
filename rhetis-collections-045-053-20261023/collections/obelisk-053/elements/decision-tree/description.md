@@ -1,0 +1,1 @@
+Deep question fields divide into clear answer branches and quiet rectangular outcomes. The recommended outcome takes the primary field, keeping the logic in an upright reading order. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

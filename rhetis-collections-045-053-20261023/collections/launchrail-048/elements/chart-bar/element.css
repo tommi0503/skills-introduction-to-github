@@ -1,0 +1,45 @@
+@layer launchrail048Base {
+:is(.bars[data-el="launchrail-048-chart-bar"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) * { box-sizing:border-box; min-width:0; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) .seat.avatar { border-radius:50%; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) { display:flex; align-items:stretch; gap:var(--gap-sm); padding:var(--gap) var(--gap-sm) calc(var(--gap) * 2); border-bottom:var(--stroke) solid var(--n-5); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) > .bar { flex:1; position:relative; display:flex; align-items:center; justify-content:flex-end; flex-direction:column; min-width:0; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) > .bar::before { content:""; width:65%; height:calc(var(--v) / var(--max) * (100% - var(--gap) * 2)); background:var(--n-3); border-radius:var(--radius-sm) var(--radius-sm) 0 0; position:absolute; bottom:0; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) > .bar.on::before { background:var(--a1); } :is(.bars[data-el="launchrail-048-chart-bar"]) > .bar.tone-2::before { background:var(--a2); } :is(.bars[data-el="launchrail-048-chart-bar"]) > .bar.tone-3::before { background:var(--a3); } :is(.bars[data-el="launchrail-048-chart-bar"]) > .bar.tone-4::before { background:var(--a4); }
+:is(.bars[data-el="launchrail-048-chart-bar"]) > .bar > b { position:absolute; bottom:calc(var(--v) / var(--max) * (100% - var(--gap) * 2) + var(--gap-sm)); font-size:var(--type-20); font-weight:var(--figure-weight); line-height:var(--figure-line); white-space:nowrap; }
+:is(.bars[data-el="launchrail-048-chart-bar"]) > .bar > span { position:absolute; top:calc(100% + var(--gap-sm)); text-align:center; font-size:var(--type-16); line-height:var(--label-line); white-space:nowrap; }
+:is(.bars[data-el="launchrail-048-chart-bar"]).h { flex-direction:column; border-bottom:0; border-left:var(--stroke) solid var(--n-5); padding:var(--gap-sm) calc(var(--gap) * 2) var(--gap-sm) calc(var(--gap) * 7); }
+:is(.bars[data-el="launchrail-048-chart-bar"]).h > .bar { align-items:flex-start; justify-content:center; }
+:is(.bars[data-el="launchrail-048-chart-bar"]).h > .bar::before { width:calc(var(--v) / var(--max) * 100%); height:60%; left:0; bottom:auto; border-radius:0 999px 999px 0; }
+:is(.bars[data-el="launchrail-048-chart-bar"]).h > .bar > b { left:calc(var(--v) / var(--max) * 100% + var(--gap-sm)); bottom:auto; font-size:var(--type-18); }
+:is(.bars[data-el="launchrail-048-chart-bar"]).h > .bar > span { left:calc(var(--gap) * -7); width:calc(var(--gap) * 6.5); top:auto; text-align:right; font-size:var(--type-16); }
+@container (max-width:650px) { :is(.bars[data-el="launchrail-048-chart-bar"]) > .bar > b { font-size:var(--type-16); } :is(.bars[data-el="launchrail-048-chart-bar"]) > .bar > span { font-size:var(--type-12); }  }
+
+@container (max-width: 650px) { :is(.bars[data-el="launchrail-048-chart-bar"]) .name { font-size:var(--type-20); } :is(.bars[data-el="launchrail-048-chart-bar"]) .fig { font-size:var(--type-40); } :is(.bars[data-el="launchrail-048-chart-bar"]) .note { font-size:var(--type-16); } :is(.bars[data-el="launchrail-048-chart-bar"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.bars[data-el="launchrail-048-chart-bar"]) .name { font-size:var(--type-18); } :is(.bars[data-el="launchrail-048-chart-bar"]) .fig { font-size:var(--type-32); } :is(.bars[data-el="launchrail-048-chart-bar"]) .note { font-size:var(--type-14); } :is(.bars[data-el="launchrail-048-chart-bar"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.bars[data-el="launchrail-048-chart-bar"]) .kick { display:none; } :is(.bars[data-el="launchrail-048-chart-bar"]) .note { font-size:var(--type-14); } :is(.bars[data-el="launchrail-048-chart-bar"]) .name { font-size:var(--type-18); } :is(.bars[data-el="launchrail-048-chart-bar"]) .fig { font-size:var(--type-32); } }
+
+:is(.bars[data-el="launchrail-048-chart-bar"]) small { color:inherit; }
+
+:is(.bars[data-el="launchrail-048-chart-bar"]) > .bar.tone-2 > b { color:var(--a2-7); }
+
+
+}
+/* Measured component anatomy: shared numeric layout API. */
+:is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-w:"] { flex:none; align-self:flex-start; width:var(--launchrail-048-w); height:var(--launchrail-048-h); margin-left:var(--launchrail-048-x); margin-top:var(--launchrail-048-y); }
+/* Measured component anatomy: shared numeric layout API. */
+:is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-layout:1;"].h { display:block;padding:0;border-left:var(--stroke) solid var(--n-3);border-bottom:var(--stroke) solid var(--n-3); } :is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-layout:1;"].h>.bar { position:absolute;left:0;top:calc(14px + (var(--launchrail-048-index) - 1)*69px);width:calc(var(--v)/var(--max)*100%);height:41px;min-height:0;border-radius:0 999px 999px 0;background:var(--a2);padding:0;display:block; } :is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-layout:1;"].h>.bar>b { position:absolute;left:calc(100% + 7px);top:9px;font-size:var(--type-16);font-weight:var(--body-weight);color:var(--a2-7);white-space:nowrap; } :is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-layout:1;"].h>.bar>span { position:absolute;left:-87px;top:8px;width:80px;font-size:var(--type-16);font-weight:var(--body-weight);color:var(--ink);text-align:right;white-space:nowrap; } :is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-layout:1;"].h>.bar::before { content:counter(tick) "%";counter-reset:tick calc((var(--launchrail-048-index) - 1)*10);position:absolute;left:calc((var(--launchrail-048-index) - 1)*88px - 22px);top:calc(267px - (var(--launchrail-048-index) - 1)*69px);width:45px;font-size:var(--type-14);text-align:center;color:var(--ink); } :is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-layout:1;"].h::after { content:"40%";position:absolute;left:330px;top:281px;width:45px;text-align:center;font-size:var(--type-14);color:var(--ink); }
+/* Measured component anatomy: shared numeric layout API. */
+:is(.bars)[data-el="launchrail-048-chart-bar"][data-el][data-el][style*="--launchrail-048-layout:1;"].h>.bar::before { height:auto;background:none;border:0;border-radius:0;padding:0; }
+:is(.bars)[data-el="launchrail-048-chart-bar"] small { color:inherit; margin-left:0; }
+
+:is(.bars)[data-el="launchrail-048-chart-bar"] .fig { font-family:var(--font-display); }

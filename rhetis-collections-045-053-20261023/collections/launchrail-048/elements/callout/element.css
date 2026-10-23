@@ -1,0 +1,37 @@
+@layer launchrail048Base {
+:is(.callout[data-el="launchrail-048-callout"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.callout[data-el="launchrail-048-callout"]) * { box-sizing:border-box; min-width:0; }
+:is(.callout[data-el="launchrail-048-callout"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.callout[data-el="launchrail-048-callout"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.callout[data-el="launchrail-048-callout"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.callout[data-el="launchrail-048-callout"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.callout[data-el="launchrail-048-callout"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.callout[data-el="launchrail-048-callout"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.callout[data-el="launchrail-048-callout"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.callout[data-el="launchrail-048-callout"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.callout[data-el="launchrail-048-callout"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.callout[data-el="launchrail-048-callout"]) .seat.avatar { border-radius:50%; }
+:is(.callout[data-el="launchrail-048-callout"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap); padding:var(--pad); background:var(--n-1); border-radius:999px; text-align:center; }
+:is(.callout[data-el="launchrail-048-callout"]) p { font-size:var(--type-28); line-height:var(--lead-line); font-weight:var(--lead-weight); } :is(.callout[data-el="launchrail-048-callout"]) b { color:var(--a1-7); font-weight:var(--name-weight); } :is(.callout[data-el="launchrail-048-callout"]) .icon { color:var(--a1-7); width:calc(var(--gap) * 1.5); height:calc(var(--gap) * 1.5); }
+@container (max-width:700px) { :is(.callout[data-el="launchrail-048-callout"]) p { font-size:var(--type-22); } }
+@container (max-height:140px) { :is(.callout[data-el="launchrail-048-callout"]) p { font-size:var(--type-20); } }
+
+@container (max-width: 650px) { :is(.callout[data-el="launchrail-048-callout"]) .name { font-size:var(--type-20); } :is(.callout[data-el="launchrail-048-callout"]) .fig { font-size:var(--type-40); } :is(.callout[data-el="launchrail-048-callout"]) .note { font-size:var(--type-16); } :is(.callout[data-el="launchrail-048-callout"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.callout[data-el="launchrail-048-callout"]) .name { font-size:var(--type-18); } :is(.callout[data-el="launchrail-048-callout"]) .fig { font-size:var(--type-32); } :is(.callout[data-el="launchrail-048-callout"]) .note { font-size:var(--type-14); } :is(.callout[data-el="launchrail-048-callout"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.callout[data-el="launchrail-048-callout"]) .kick { display:none; } :is(.callout[data-el="launchrail-048-callout"]) .note { font-size:var(--type-14); } :is(.callout[data-el="launchrail-048-callout"]) .name { font-size:var(--type-18); } :is(.callout[data-el="launchrail-048-callout"]) .fig { font-size:var(--type-32); } }
+
+:is(.callout[data-el="launchrail-048-callout"]) small { color:inherit; }
+
+
+}
+/* Reusable measured layout API and source review. */
+:is(.callout)[data-el="launchrail-048-callout"][data-el][data-el][style*="--launchrail-048-w:"] { flex:none; align-self:flex-start; width:var(--launchrail-048-w); height:var(--launchrail-048-h); margin-left:var(--launchrail-048-x); margin-top:var(--launchrail-048-y); }
+/* Reusable measured layout API and source review. */
+:is(.callout)[data-el="launchrail-048-callout"][data-el][data-el][style*="--launchrail-048-title-strip:1;"]:has(>p>b:only-child) { border-radius:0;background:var(--a1-1-soft);padding:0;display:flex;align-items:center;justify-content:center;color:var(--a1); } :is(.callout)[data-el="launchrail-048-callout"][data-el][data-el][style*="--launchrail-048-title-strip:1;"]:has(>p>b:only-child) p { font-size:var(--type-24);line-height:var(--label-line);font-weight:var(--name-weight);text-align:center; }
+/* Measured component anatomy: shared numeric layout API. */
+:is(.callout)[data-el="launchrail-048-callout"][data-el][data-el][style*="--launchrail-048-answer:1;"] { display:flex;align-items:center;justify-content:flex-start;background:var(--n-2);border-radius:999px;padding:0 calc(var(--gap) + var(--gap-sm)*.5);gap:calc(var(--gap-sm)*1.625); } :is(.callout)[data-el="launchrail-048-callout"][data-el][data-el][style*="--launchrail-048-answer:1;"] .icon { width:32px;height:32px;color:var(--ink); } :is(.callout)[data-el="launchrail-048-callout"][data-el][data-el][style*="--launchrail-048-answer:1;"] p { font-size:var(--type-20);text-align:left;font-weight:var(--body-weight); }
+/* Measured component anatomy: shared numeric layout API. */
+:is(.callout)[data-el="launchrail-048-callout"][data-el][data-el][style*="--launchrail-048-title-strip:1;"]:has(>p>b:only-child) { background:var(--a1-1-soft); }
+:is(.callout)[data-el="launchrail-048-callout"] small { color:inherit; margin-left:0; }
+
+:is(.callout)[data-el="launchrail-048-callout"] .fig { font-family:var(--font-display); }

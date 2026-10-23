@@ -1,0 +1,29 @@
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) *{box-sizing:border-box;min-width:0;}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]).on .name,:is(.waterfall[data-el="obelisk-053-chart-waterfall"]).on .note,:is(.waterfall[data-el="obelisk-053-chart-waterfall"]).on .fig,:is(.waterfall[data-el="obelisk-053-chart-waterfall"]).on .kick,:is(.waterfall[data-el="obelisk-053-chart-waterfall"]).on .mark{color:var(--a1-on);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"]){display:flex;gap:var(--gap);padding:var(--gap-lg) var(--gap) var(--gap-lg);border-bottom:var(--stroke) solid var(--n-4);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"])>.move{flex:1;position:relative;}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"])>.move::before{content:"";position:absolute;left:10%;width:80%;bottom:calc(min(var(--from),var(--to))/var(--max)*100%);height:calc(abs(var(--to) - var(--from))/var(--max)*100%);background:var(--a1);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"])>.move.down::before{background:var(--n-5);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"])>.move.total::before{bottom:0;height:calc(var(--to)/var(--max)*100%);background:var(--a1-9);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"])>.move>b{position:absolute;bottom:calc(max(var(--from),var(--to))/var(--max)*100% + var(--gap-sm));width:100%;text-align:center;font-size:var(--type-16);}
+:is(.waterfall[data-el="obelisk-053-chart-waterfall"])>.move>span{position:absolute;top:calc(100% + var(--gap-sm));width:100%;text-align:center;font-size:var(--type-14);}
+@container (max-width: 520px){:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .name{font-size:var(--type-18)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .fig{font-size:var(--type-32)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .note{font-size:var(--type-14)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .name{font-size:var(--type-16)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .fig{font-size:var(--type-24)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .note{font-size:var(--type-12)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .kick{display:none}}
+@container (max-height: 150px){:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .name{font-size:var(--type-16)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .fig{font-size:var(--type-24)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .note{font-size:var(--type-12)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .kick{display:none}}
+@container (max-height:300px){:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .name{font-size:var(--type-16)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .note{font-size:var(--type-12)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .fig{font-size:var(--type-24)}:is(.waterfall[data-el="obelisk-053-chart-waterfall"]) .kick{font-size:var(--type-12)}}
+.waterfall[data-el="obelisk-053-chart-waterfall"]>.move:not(:last-child)::after{content:"";position:absolute;left:90%;width:calc(20% + var(--gap));bottom:calc(var(--to)/var(--max)*100%);height:var(--stroke);background:var(--n-4);}

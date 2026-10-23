@@ -1,0 +1,1 @@
+A row of quiet rectangular touchpoint fields supports a primary emotion trace. Stage names remain close to the lower rail while pain points use restrained semantic emphasis. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

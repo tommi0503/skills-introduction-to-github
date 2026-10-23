@@ -1,0 +1,1 @@
+A deep source field divides into horizontal destination bands, their leading thicknesses following the stated shares. Labels and figures share a stable left-to-right rhythm. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

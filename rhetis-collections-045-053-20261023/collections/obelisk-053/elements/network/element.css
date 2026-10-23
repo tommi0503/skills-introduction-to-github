@@ -1,0 +1,28 @@
+:is(.network[data-el="obelisk-053-network"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.network[data-el="obelisk-053-network"]) *{box-sizing:border-box;min-width:0;}
+:is(.network[data-el="obelisk-053-network"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.network[data-el="obelisk-053-network"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.network[data-el="obelisk-053-network"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.network[data-el="obelisk-053-network"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.network[data-el="obelisk-053-network"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.network[data-el="obelisk-053-network"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.network[data-el="obelisk-053-network"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.network[data-el="obelisk-053-network"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.network[data-el="obelisk-053-network"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.network[data-el="obelisk-053-network"]).on .name,:is(.network[data-el="obelisk-053-network"]).on .note,:is(.network[data-el="obelisk-053-network"]).on .fig,:is(.network[data-el="obelisk-053-network"]).on .kick,:is(.network[data-el="obelisk-053-network"]).on .mark{color:var(--a1-on);}
+:is(.network[data-el="obelisk-053-network"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.network[data-el="obelisk-053-network"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.network[data-el="obelisk-053-network"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.network[data-el="obelisk-053-network"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.network[data-el="obelisk-053-network"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.network[data-el="obelisk-053-network"]){position:relative;isolation:isolate;}
+:is(.network[data-el="obelisk-053-network"])>.node{position:absolute;left:calc(var(--gap-lg) + var(--x)*.01*(100% - var(--gap-lg)*2));top:calc(var(--gap-lg) + var(--y)*.01*(100% - var(--gap-lg)*2));translate:-50% -50%;width:120px;height:64px;padding:var(--gap-sm);display:flex;align-items:center;justify-content:center;background:var(--n-1);border:var(--stroke) solid var(--n-4);z-index:2;}
+:is(.network[data-el="obelisk-053-network"])>.node.on{background:var(--a1);color:var(--a1-on);border-color:var(--a1-7);}
+:is(.network[data-el="obelisk-053-network"])>.node .name{font-size:var(--type-16);color:inherit;}
+:is(.network[data-el="obelisk-053-network"])>.link{position:absolute;left:calc(var(--gap-lg) + var(--x1)*.01*(100% - var(--gap-lg)*2));top:calc(var(--gap-lg) + var(--y1)*.01*(100% - var(--gap-lg)*2));width:calc(hypot((var(--x2) - var(--x1))*.01*(100cqw - var(--gap-lg)*2),(var(--y2) - var(--y1))*.01*(100cqh - var(--gap-lg)*2)));height:1px;background:var(--n-4);transform-origin:left;rotate:atan2(calc((var(--y2) - var(--y1))*(100cqh - var(--gap-lg)*2)),calc((var(--x2) - var(--x1))*(100cqw - var(--gap-lg)*2)));}
+:is(.network[data-el="obelisk-053-network"])>.link.strong{height:3px;background:var(--a1);}
+@container (max-width: 520px){:is(.network[data-el="obelisk-053-network"]) .name{font-size:var(--type-18)}:is(.network[data-el="obelisk-053-network"]) .fig{font-size:var(--type-32)}:is(.network[data-el="obelisk-053-network"]) .note{font-size:var(--type-14)}:is(.network[data-el="obelisk-053-network"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.network[data-el="obelisk-053-network"]) .name{font-size:var(--type-16)}:is(.network[data-el="obelisk-053-network"]) .fig{font-size:var(--type-24)}:is(.network[data-el="obelisk-053-network"]) .note{font-size:var(--type-12)}:is(.network[data-el="obelisk-053-network"]) .kick{display:none}}
+@container (max-height: 150px){:is(.network[data-el="obelisk-053-network"]) .name{font-size:var(--type-16)}:is(.network[data-el="obelisk-053-network"]) .fig{font-size:var(--type-24)}:is(.network[data-el="obelisk-053-network"]) .note{font-size:var(--type-12)}:is(.network[data-el="obelisk-053-network"]) .kick{display:none}}
+@container (max-height:300px){:is(.network[data-el="obelisk-053-network"]) .name{font-size:var(--type-16)}:is(.network[data-el="obelisk-053-network"]) .note{font-size:var(--type-12)}:is(.network[data-el="obelisk-053-network"]) .fig{font-size:var(--type-24)}:is(.network[data-el="obelisk-053-network"]) .kick{font-size:var(--type-12)}}
+:is(.network[data-el="obelisk-053-network"])>.node{left:calc(60px + var(--x)*.01*(100% - 120px));top:calc(36px + var(--y)*.01*(100% - 72px))}

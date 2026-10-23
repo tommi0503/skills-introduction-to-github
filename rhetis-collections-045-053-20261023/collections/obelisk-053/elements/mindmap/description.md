@@ -1,0 +1,1 @@
+A compact deep circular idea sits between open branches. Thin top rules and inset leaf labels show the hierarchy while the wide gutters leave the center legible. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

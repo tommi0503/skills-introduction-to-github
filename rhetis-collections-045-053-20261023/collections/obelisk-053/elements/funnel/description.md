@@ -1,0 +1,1 @@
+Centered horizontal stage fields narrow in proportion to their values. The labels retain a stable readable rail while the quiet surfaces and a single emphasized stage show the conversion path. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

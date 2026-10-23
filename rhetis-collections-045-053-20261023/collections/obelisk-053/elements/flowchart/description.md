@@ -1,0 +1,1 @@
+Flush rectangular nodes follow a strict grid, with capsule terminals and clipped decision fields. Thin orthogonal connectors preserve the left-to-right or top-to-bottom reading order. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

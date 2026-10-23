@@ -1,0 +1,1 @@
+A tightly spaced miniature sequence provides a compact trend beside a figure. The strips keep a shared baseline and optional status color marks improvement or decline. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

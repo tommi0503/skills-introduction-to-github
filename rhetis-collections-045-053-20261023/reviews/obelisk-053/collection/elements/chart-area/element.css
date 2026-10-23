@@ -1,0 +1,58 @@
+:is(.areas[data-el="obelisk-053-chart-area"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.areas[data-el="obelisk-053-chart-area"]) *{box-sizing:border-box;min-width:0;}
+:is(.areas[data-el="obelisk-053-chart-area"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.areas[data-el="obelisk-053-chart-area"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.areas[data-el="obelisk-053-chart-area"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.areas[data-el="obelisk-053-chart-area"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.areas[data-el="obelisk-053-chart-area"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.areas[data-el="obelisk-053-chart-area"]).on .name,:is(.areas[data-el="obelisk-053-chart-area"]).on .note,:is(.areas[data-el="obelisk-053-chart-area"]).on .fig,:is(.areas[data-el="obelisk-053-chart-area"]).on .kick,:is(.areas[data-el="obelisk-053-chart-area"]).on .mark{color:var(--a1-on);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.areas[data-el="obelisk-053-chart-area"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.areas[data-el="obelisk-053-chart-area"]){anchor-scope:all;isolation:isolate;padding:var(--gap-lg) 0;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series{position:absolute;inset:var(--gap-lg) 0;display:flex;anchor-scope:all;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.name{position:absolute;top:calc(var(--gap-lg)*-1);left:calc(var(--obelisk-053-series-index,0)*25%);font-size:var(--type-14);color:var(--obelisk-053-series,var(--a1));}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt{flex:1;align-self:flex-start;height:calc(100% - var(--v)/var(--max)*100%);anchor-name:var(--obelisk-053-self);}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt>b{position:absolute;bottom:calc(var(--v)/var(--max)*100%);font-size:var(--type-14);translate:-50% calc(var(--gap-sm)*-1);}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:not(:first-of-type)::before{content:"";position:absolute;left:anchor(var(--obelisk-053-prev) center);right:anchor(var(--obelisk-053-self) center);top:0;bottom:0;background:var(--obelisk-053-series,var(--a1-2-soft));clip-path:polygon(0 anchor(var(--obelisk-053-prev) bottom),100% anchor(var(--obelisk-053-self) bottom),100% 100%,0 100%);opacity:.55;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(1 of .pt){--obelisk-053-self:--obelisk-area-1;--obelisk-053-prev:--obelisk-area-0;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(2 of .pt){--obelisk-053-self:--obelisk-area-2;--obelisk-053-prev:--obelisk-area-1;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(3 of .pt){--obelisk-053-self:--obelisk-area-3;--obelisk-053-prev:--obelisk-area-2;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(4 of .pt){--obelisk-053-self:--obelisk-area-4;--obelisk-053-prev:--obelisk-area-3;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(5 of .pt){--obelisk-053-self:--obelisk-area-5;--obelisk-053-prev:--obelisk-area-4;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(6 of .pt){--obelisk-053-self:--obelisk-area-6;--obelisk-053-prev:--obelisk-area-5;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(7 of .pt){--obelisk-053-self:--obelisk-area-7;--obelisk-053-prev:--obelisk-area-6;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(8 of .pt){--obelisk-053-self:--obelisk-area-8;--obelisk-053-prev:--obelisk-area-7;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(9 of .pt){--obelisk-053-self:--obelisk-area-9;--obelisk-053-prev:--obelisk-area-8;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(10 of .pt){--obelisk-053-self:--obelisk-area-10;--obelisk-053-prev:--obelisk-area-9;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(11 of .pt){--obelisk-053-self:--obelisk-area-11;--obelisk-053-prev:--obelisk-area-10;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:nth-child(12 of .pt){--obelisk-053-self:--obelisk-area-12;--obelisk-053-prev:--obelisk-area-11;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series:nth-child(1){--obelisk-053-series-index:0;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series:nth-child(2){--obelisk-053-series-index:1;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series:nth-child(3){--obelisk-053-series-index:2;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series:nth-child(4){--obelisk-053-series-index:3;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.axis{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-around;font-size:var(--type-14);border-top:var(--stroke) solid var(--n-4);padding-top:var(--gap-sm);}
+@container (max-width: 520px){:is(.areas[data-el="obelisk-053-chart-area"]) .name{font-size:var(--type-18)}:is(.areas[data-el="obelisk-053-chart-area"]) .fig{font-size:var(--type-32)}:is(.areas[data-el="obelisk-053-chart-area"]) .note{font-size:var(--type-14)}:is(.areas[data-el="obelisk-053-chart-area"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.areas[data-el="obelisk-053-chart-area"]) .name{font-size:var(--type-16)}:is(.areas[data-el="obelisk-053-chart-area"]) .fig{font-size:var(--type-24)}:is(.areas[data-el="obelisk-053-chart-area"]) .note{font-size:var(--type-12)}:is(.areas[data-el="obelisk-053-chart-area"]) .kick{display:none}}
+@container (max-height: 150px){:is(.areas[data-el="obelisk-053-chart-area"]) .name{font-size:var(--type-16)}:is(.areas[data-el="obelisk-053-chart-area"]) .fig{font-size:var(--type-24)}:is(.areas[data-el="obelisk-053-chart-area"]) .note{font-size:var(--type-12)}:is(.areas[data-el="obelisk-053-chart-area"]) .kick{display:none}}
+
+
+:is(.areas[data-el="obelisk-053-chart-area"])>.series{inset:0 0 var(--gap-lg);--obelisk-053-plot:calc(100cqh - var(--gap-lg)*2);}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.name{top:0;}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt{width:0;flex:1;height:0;margin-top:calc(var(--gap-lg) + var(--obelisk-053-plot) - var(--v)/var(--max)*var(--obelisk-053-plot));anchor-name:var(--obelisk-053-self);}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:not(:first-of-type)::before{top:calc(anchor(var(--obelisk-053-prev) top) - var(--obelisk-053-plot));bottom:0;clip-path:polygon(0 var(--obelisk-053-plot),100% calc(100% - var(--v)/var(--max)*var(--obelisk-053-plot)),100% 100%,0 100%);opacity:.5;background:var(--obelisk-053-series,var(--a1));}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:not(:first-of-type)::after{content:"";position:absolute;left:anchor(var(--obelisk-053-prev) center);right:anchor(var(--obelisk-053-self) center);top:calc(anchor(var(--obelisk-053-prev) top) - var(--obelisk-053-plot));bottom:0;clip-path:polygon(0 calc(var(--obelisk-053-plot) - 1px),100% calc(100% - var(--v)/var(--max)*var(--obelisk-053-plot) - 1px),100% calc(100% - var(--v)/var(--max)*var(--obelisk-053-plot) + 1px),0 calc(var(--obelisk-053-plot) + 1px));background:var(--obelisk-053-series,var(--a1));}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt>b{position:relative;bottom:auto;display:block;translate:0 calc(-100% - var(--gap-sm));font-size:var(--type-12);text-align:center;}
+:is(.areas[data-el="obelisk-053-chart-area"]).stacked>.series:nth-child(1){z-index:5}:is(.areas[data-el="obelisk-053-chart-area"]).stacked>.series:nth-child(2){z-index:4}:is(.areas[data-el="obelisk-053-chart-area"]).stacked>.series:nth-child(3){z-index:3}:is(.areas[data-el="obelisk-053-chart-area"]).stacked>.series:nth-child(4){z-index:2}
+
+@container (max-height:300px){:is(.areas[data-el="obelisk-053-chart-area"]) .name{font-size:var(--type-16)}:is(.areas[data-el="obelisk-053-chart-area"]) .note{font-size:var(--type-12)}:is(.areas[data-el="obelisk-053-chart-area"]) .fig{font-size:var(--type-24)}:is(.areas[data-el="obelisk-053-chart-area"]) .kick{font-size:var(--type-12)}}
+:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt>b{translate:0 calc(-100% - var(--gap-sm));min-width:var(--gap-lg)}:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:first-of-type>b{translate:0 calc(-100% - var(--gap-sm))}:is(.areas[data-el="obelisk-053-chart-area"])>.series>.pt:last-of-type>b{translate:calc(var(--gap-lg)*-1) calc(-100% - var(--gap-sm))}
+:is(.areas[data-el="obelisk-053-chart-area"]){padding:0}:is(.areas[data-el="obelisk-053-chart-area"])>.series>.name{color:var(--a1-7)}
+/* Native readability review. */
+.areas[data-el="obelisk-053-chart-area"]>.series:nth-child(1 of .series){--obelisk-053-series:var(--a1);}.areas[data-el="obelisk-053-chart-area"]>.series:nth-child(2 of .series){--obelisk-053-series:var(--a2);}.areas[data-el="obelisk-053-chart-area"]>.series:nth-child(3 of .series){--obelisk-053-series:var(--a3);}.areas[data-el="obelisk-053-chart-area"]>.series:nth-child(4 of .series){--obelisk-053-series:var(--a4);}

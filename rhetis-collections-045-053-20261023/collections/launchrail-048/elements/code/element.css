@@ -1,0 +1,29 @@
+:is(.code[data-el="launchrail-048-code"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.code[data-el="launchrail-048-code"]) * { box-sizing:border-box; min-width:0; }
+:is(.code[data-el="launchrail-048-code"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.code[data-el="launchrail-048-code"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.code[data-el="launchrail-048-code"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.code[data-el="launchrail-048-code"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.code[data-el="launchrail-048-code"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.code[data-el="launchrail-048-code"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.code[data-el="launchrail-048-code"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.code[data-el="launchrail-048-code"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.code[data-el="launchrail-048-code"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.code[data-el="launchrail-048-code"]) .seat.avatar { border-radius:50%; }
+:is(.code[data-el="launchrail-048-code"]) { display:flex; flex-direction:column; gap:var(--gap); background:var(--n-1); border-radius:var(--radius); border:var(--stroke) solid var(--n-3); padding:var(--pad); } :is(.code[data-el="launchrail-048-code"]) > .name { font-size:var(--type-18); color:var(--a1-7); padding-bottom:var(--gap-sm); border-bottom:var(--stroke) solid var(--n-3); } :is(.code[data-el="launchrail-048-code"]) > .lines { flex:1; font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); counter-reset:lines; } :is(.code[data-el="launchrail-048-code"]) > .lines p { white-space:pre-wrap; counter-increment:lines; } :is(.code[data-el="launchrail-048-code"]).numbered > .lines p::before { content:counter(lines); display:inline-block; width:var(--gap-lg); color:var(--n-6); } :is(.code[data-el="launchrail-048-code"]) .k { color:var(--a1-7); font-weight:var(--name-weight); } :is(.code[data-el="launchrail-048-code"]) .s { color:var(--good); } :is(.code[data-el="launchrail-048-code"]) .c { color:var(--n-6); } :is(.code[data-el="launchrail-048-code"]) .n { color:var(--a2); }
+
+@container (max-width: 650px) { :is(.code[data-el="launchrail-048-code"]) .name { font-size:var(--type-20); } :is(.code[data-el="launchrail-048-code"]) .fig { font-size:var(--type-40); } :is(.code[data-el="launchrail-048-code"]) .note { font-size:var(--type-16); } :is(.code[data-el="launchrail-048-code"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.code[data-el="launchrail-048-code"]) .name { font-size:var(--type-18); } :is(.code[data-el="launchrail-048-code"]) .fig { font-size:var(--type-32); } :is(.code[data-el="launchrail-048-code"]) .note { font-size:var(--type-14); } :is(.code[data-el="launchrail-048-code"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.code[data-el="launchrail-048-code"]) .kick { display:none; } :is(.code[data-el="launchrail-048-code"]) .note { font-size:var(--type-14); } :is(.code[data-el="launchrail-048-code"]) .name { font-size:var(--type-18); } :is(.code[data-el="launchrail-048-code"]) .fig { font-size:var(--type-32); } }
+
+/* Browser review corrections. */
+:is(.code[data-el="launchrail-048-code"]) .s { color:var(--a2-7); } :is(.code[data-el="launchrail-048-code"]) .n { color:var(--a2-7); }
+
+:is(.code[data-el="launchrail-048-code"]) small { color:inherit; }
+
+/* Final source-to-library comparison. */
+:is(.code[data-el="launchrail-048-code"]) > .lines { font-family:var(--launchrail-048-font-code); } :is(.code[data-el="launchrail-048-code"]) .c { color:var(--n-7); }
+
+:is(.code)[data-el="launchrail-048-code"] small { color:inherit; margin-left:0; }
+
+:is(.code)[data-el="launchrail-048-code"] .fig { font-family:var(--font-display); }

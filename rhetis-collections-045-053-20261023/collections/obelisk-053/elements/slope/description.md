@@ -1,0 +1,1 @@
+Paired values sit at the opposite ends of a minimal comparison field. Fine connecting slopes carry the change, with a single primary pair separating itself from the quieter set. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

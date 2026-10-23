@@ -1,0 +1,1 @@
+A compact deep circular core connects to restrained rectangular spoke fields. Circular marks and direct labels sit outside the core, with thin radial rules carrying the relationship. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

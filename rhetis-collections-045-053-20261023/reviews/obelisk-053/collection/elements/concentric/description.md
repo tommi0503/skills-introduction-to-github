@@ -1,0 +1,1 @@
+Precisely centered circular fields express nested scope. Their diameters fit both dimensions of the slot and their upright labels occupy the open upper portion of each ring. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

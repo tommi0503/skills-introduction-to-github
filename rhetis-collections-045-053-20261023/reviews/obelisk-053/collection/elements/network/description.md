@@ -1,0 +1,1 @@
+Small rectangular nodes occupy explicit coordinates inside a safe outer inset. Hairline links pass behind them, with thicker primary edges marking the strongest relationships. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

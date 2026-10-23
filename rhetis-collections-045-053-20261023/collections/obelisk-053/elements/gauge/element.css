@@ -1,0 +1,26 @@
+:is(.meter[data-el="obelisk-053-gauge"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.meter[data-el="obelisk-053-gauge"]) *{box-sizing:border-box;min-width:0;}
+:is(.meter[data-el="obelisk-053-gauge"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.meter[data-el="obelisk-053-gauge"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.meter[data-el="obelisk-053-gauge"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.meter[data-el="obelisk-053-gauge"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.meter[data-el="obelisk-053-gauge"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.meter[data-el="obelisk-053-gauge"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.meter[data-el="obelisk-053-gauge"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.meter[data-el="obelisk-053-gauge"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.meter[data-el="obelisk-053-gauge"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.meter[data-el="obelisk-053-gauge"]).on .name,:is(.meter[data-el="obelisk-053-gauge"]).on .note,:is(.meter[data-el="obelisk-053-gauge"]).on .fig,:is(.meter[data-el="obelisk-053-gauge"]).on .kick,:is(.meter[data-el="obelisk-053-gauge"]).on .mark{color:var(--a1-on);}
+:is(.meter[data-el="obelisk-053-gauge"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.meter[data-el="obelisk-053-gauge"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.meter[data-el="obelisk-053-gauge"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.meter[data-el="obelisk-053-gauge"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.meter[data-el="obelisk-053-gauge"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.meter[data-el="obelisk-053-gauge"]){display:grid;grid-template-columns:1fr auto;align-content:center;gap:var(--gap-sm);padding-bottom:var(--gap);}
+:is(.meter[data-el="obelisk-053-gauge"])::before,:is(.meter[data-el="obelisk-053-gauge"])::after{content:"";position:absolute;bottom:0;left:0;height:12px;background:var(--n-2);width:100%;}
+:is(.meter[data-el="obelisk-053-gauge"])::after{width:calc(var(--v)*1%);background:var(--a1);}
+:is(.meter[data-el="obelisk-053-gauge"]) .fig{font-size:var(--type-28);}
+@container (max-width: 520px){:is(.meter[data-el="obelisk-053-gauge"]) .name{font-size:var(--type-18)}:is(.meter[data-el="obelisk-053-gauge"]) .fig{font-size:var(--type-32)}:is(.meter[data-el="obelisk-053-gauge"]) .note{font-size:var(--type-14)}:is(.meter[data-el="obelisk-053-gauge"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.meter[data-el="obelisk-053-gauge"]) .name{font-size:var(--type-16)}:is(.meter[data-el="obelisk-053-gauge"]) .fig{font-size:var(--type-24)}:is(.meter[data-el="obelisk-053-gauge"]) .note{font-size:var(--type-12)}:is(.meter[data-el="obelisk-053-gauge"]) .kick{display:none}}
+@container (max-height: 150px){:is(.meter[data-el="obelisk-053-gauge"]) .name{font-size:var(--type-16)}:is(.meter[data-el="obelisk-053-gauge"]) .fig{font-size:var(--type-24)}:is(.meter[data-el="obelisk-053-gauge"]) .note{font-size:var(--type-12)}:is(.meter[data-el="obelisk-053-gauge"]) .kick{display:none}}
+@container (max-height:300px){:is(.meter[data-el="obelisk-053-gauge"]) .name{font-size:var(--type-16)}:is(.meter[data-el="obelisk-053-gauge"]) .note{font-size:var(--type-12)}:is(.meter[data-el="obelisk-053-gauge"]) .fig{font-size:var(--type-24)}:is(.meter[data-el="obelisk-053-gauge"]) .kick{font-size:var(--type-12)}}
+:is(.meter[data-el="obelisk-053-gauge"]){padding-bottom:var(--gap-sm);gap:calc(var(--gap-sm)/2)}:is(.meter[data-el="obelisk-053-gauge"]) .fig{font-size:var(--type-24)}

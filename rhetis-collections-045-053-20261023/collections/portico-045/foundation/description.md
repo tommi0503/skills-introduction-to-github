@@ -1,0 +1,1 @@
+A twelve-column, six-row page with a fine top rule, strong left heading and quiet furniture. The cover places an oversized lockup against a stepped rectangular mosaic at the right edge. Numbered media seats reserve the same clear geometric spaces without inventing imagery.

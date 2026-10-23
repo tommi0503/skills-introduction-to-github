@@ -1,0 +1,1 @@
+Nested rectangular shares use quiet fields with one selected tile. Branch labels stay above the tiles and every number remains inside its assigned area. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

@@ -1,0 +1,1 @@
+Small circular points sit between two discreet value axes. Bubble size expresses an additional quantity while pale label seats preserve contrast over the plot. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

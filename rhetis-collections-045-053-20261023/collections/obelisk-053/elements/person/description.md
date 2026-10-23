@@ -1,0 +1,1 @@
+A pale portrait seat anchors each profile, followed by a direct name and short role. Rows retain even widths; circular avatars give the compact variation a quieter identity cue. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

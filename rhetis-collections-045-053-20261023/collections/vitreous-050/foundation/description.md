@@ -1,0 +1,1 @@
+A centered headline sits below a two-piece capsule masthead. The twelve by six body grid begins on a shared horizontal datum. Rounded image seats and broad capsule lockups echo the source deck; covers use generous left-aligned typography and a restrained overlapping disk.

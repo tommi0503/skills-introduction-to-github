@@ -1,0 +1,1 @@
+Numbered contents entries align against thin horizontal rules. The compact primary numeral precedes a strong label, while the supporting phrase or page reference sits at the far edge. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

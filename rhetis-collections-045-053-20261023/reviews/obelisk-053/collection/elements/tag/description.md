@@ -1,0 +1,1 @@
+A compact dark rectangular tag sits inside a larger text part. Running highlights use a pale field under the words, preserving the ordinary line rhythm. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

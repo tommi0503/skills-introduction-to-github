@@ -1,0 +1,1 @@
+A 12-by-6 body grid sits below an assertive heading and a thin capsule rail whose circular terminal suggests a connection. Spacious side margins keep dense tables and circular systems legible. Cover lockups share the same typography and connected-square graphic grammar.

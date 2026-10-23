@@ -1,0 +1,1 @@
+Upright period heads sit above thin horizontal lanes. Flat duration bars span the time grid, while narrow milestone rules mark individual commitments. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

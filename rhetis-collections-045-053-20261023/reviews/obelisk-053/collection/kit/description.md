@@ -1,0 +1,1 @@
+An architectural company narrative defined by a narrow two-tone rail, exact rectangular fields, restrained furniture and bold circular relationships. Flat planes alternate with open white space; primary emphasis is reserved for one statement, one path or one member. Typography stays direct and compact, with upright figures and level baselines.
