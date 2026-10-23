@@ -1,0 +1,1 @@
+Rectangular stage fields carry a deep top label and aligned explanatory copy. Four stages rise as a structural staircase; vertical steps use a narrow numbered rail and a connecting rule. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

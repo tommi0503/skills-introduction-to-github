@@ -1,0 +1,1 @@
+Quiet horizontal owner fields support a grid of rectangular activity nodes. Orthogonal connectors cross the lane boundaries, with deep capsule terminals indicating the start and finish. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

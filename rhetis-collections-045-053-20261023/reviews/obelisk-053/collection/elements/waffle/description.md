@@ -1,0 +1,1 @@
+Counted rectangular units form a compact, exact matrix beside a figure and label. The person variation clips the units to upright silhouettes without adding pictorial decoration. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

@@ -1,0 +1,1 @@
+Bare figures sit above consistent labels without a card surface. A row shares vertical dividers and aligned figure baselines, making the number the visual anchor. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

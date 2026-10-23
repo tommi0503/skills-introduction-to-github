@@ -1,0 +1,1 @@
+Small square swatches precede compact labels in a centered row. Ranked series stay visibly distinct without decorative containers, and the keys wrap as a coherent group. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

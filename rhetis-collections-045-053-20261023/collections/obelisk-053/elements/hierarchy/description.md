@@ -1,0 +1,1 @@
+A centered deep management field sits above evenly spaced branches. Straight hairlines and flat child labels make the organizational levels explicit without rounded cards. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

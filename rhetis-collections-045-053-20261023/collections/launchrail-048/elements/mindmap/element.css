@@ -1,0 +1,60 @@
+:is(.mindmap[data-el="launchrail-048-mindmap"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) * { box-sizing:border-box; min-width:0; }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) .seat.avatar { border-radius:50%; }
+:is(.mindmap[data-el="launchrail-048-mindmap"]) { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--gap); padding:0 0; align-content:center; } :is(.mindmap[data-el="launchrail-048-mindmap"]) > .core { position:absolute; width:24%; left:38%; top:35%; height:30%; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; background:var(--a1); color:var(--a1-on); padding:var(--gap-sm); } :is(.mindmap[data-el="launchrail-048-mindmap"]) > .branch { position:relative; width:68%; background:var(--n-1); border-radius:var(--radius); padding:var(--pad); } :is(.mindmap[data-el="launchrail-048-mindmap"]) > .branch:nth-child(odd of .branch) { justify-self:end; } :is(.mindmap[data-el="launchrail-048-mindmap"]) > .branch::before { content:""; position:absolute; top:50%; height:var(--gap); width:35%; left:100%; border-top:var(--stroke) solid var(--n-6); border-radius:0 50% 0 0; } :is(.mindmap[data-el="launchrail-048-mindmap"]) > .branch:nth-child(odd of .branch)::before { left:auto; right:100%; border-radius:50% 0 0 0; } :is(.mindmap[data-el="launchrail-048-mindmap"]) .leaf { font-size:var(--type-16); padding-top:var(--gap-sm); } :is(.mindmap[data-el="launchrail-048-mindmap"]) > .branch .name { font-size:var(--type-20); color:var(--a1-7); }
+
+@container (max-width: 650px) { :is(.mindmap[data-el="launchrail-048-mindmap"]) .name { font-size:var(--type-20); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .fig { font-size:var(--type-40); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .note { font-size:var(--type-16); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.mindmap[data-el="launchrail-048-mindmap"]) .name { font-size:var(--type-18); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .fig { font-size:var(--type-32); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .note { font-size:var(--type-14); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.mindmap[data-el="launchrail-048-mindmap"]) .kick { display:none; } :is(.mindmap[data-el="launchrail-048-mindmap"]) .note { font-size:var(--type-14); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .name { font-size:var(--type-18); } :is(.mindmap[data-el="launchrail-048-mindmap"]) .fig { font-size:var(--type-32); } }
+
+:is(.mindmap[data-el="launchrail-048-mindmap"]) small { color:inherit; }
+
+:is(.mindmap)[data-el="launchrail-048-mindmap"] small { color:inherit; margin-left:0; }
+
+:is(.mindmap)[data-el="launchrail-048-mindmap"] .fig { font-family:var(--font-display); }
+
+/* Native contract anatomy corrections. */
+.mindmap[data-el="launchrail-048-mindmap"] {grid-template-columns:34% 1fr 34%;isolation:isolate;}
+.mindmap[data-el="launchrail-048-mindmap"]>.core {z-index:2;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch {width:100%;display:flex;flex-direction:column;gap:var(--gap-sm);}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(odd of .branch) {grid-column:1;justify-self:start;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(even of .branch) {grid-column:3;justify-self:end;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch::before {left:100%;right:auto;width:18cqw;height:var(--gap);border-top:var(--stroke) solid var(--n-6);border-radius:50% 50% 0 0;z-index:-1;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(even of .branch)::before {left:auto;right:100%;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(1 of .branch) {grid-row:1;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(2 of .branch) {grid-row:1;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(3 of .branch) {grid-row:2;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(4 of .branch) {grid-row:2;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(5 of .branch) {grid-row:3;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(6 of .branch) {grid-row:3;}
+
+
+/* Final native topology and intrinsic-size review. */
+.mindmap[data-el="launchrail-048-mindmap"] {anchor-scope:all;}
+.mindmap[data-el="launchrail-048-mindmap"]>.core {anchor-name:--launchrail-048-mind-core;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch {position:static;anchor-name:var(--launchrail-048-mind-self);}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch::before,.mindmap[data-el="launchrail-048-mindmap"]>.branch::after {content:"";position:absolute;width:auto;height:auto;left:anchor(var(--launchrail-048-mind-self) right);right:anchor(--launchrail-048-mind-core left);border:0;border-radius:0;background:var(--n-6);z-index:-1;pointer-events:none;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch::before {top:calc(anchor(var(--launchrail-048-mind-self) center) - 1px);bottom:calc(anchor(--launchrail-048-mind-core center) - 1px);clip-path:shape(from 0px 0px,curve to 100% calc(100% - 2px) with 50% 0px / 50% calc(100% - 2px),line to 100% 100%,curve to 0px 2px with 50% 100% / 50% 2px,close);}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch::after {top:calc(anchor(--launchrail-048-mind-core center) - 1px);bottom:calc(anchor(var(--launchrail-048-mind-self) center) - 1px);clip-path:shape(from 0px calc(100% - 2px),curve to 100% 0px with 50% calc(100% - 2px) / 50% 0px,line to 100% 2px,curve to 0px 100% with 50% 2px / 50% 100%,close);}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(even of .branch)::before,.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(even of .branch)::after {left:anchor(--launchrail-048-mind-core right);right:anchor(var(--launchrail-048-mind-self) left);transform:scaleY(-1);}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(1 of .branch) {--launchrail-048-mind-self:--launchrail-048-mind-1;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(2 of .branch) {--launchrail-048-mind-self:--launchrail-048-mind-2;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(3 of .branch) {--launchrail-048-mind-self:--launchrail-048-mind-3;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(4 of .branch) {--launchrail-048-mind-self:--launchrail-048-mind-4;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(5 of .branch) {--launchrail-048-mind-self:--launchrail-048-mind-5;}
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(6 of .branch) {--launchrail-048-mind-self:--launchrail-048-mind-6;}
+
+
+/* Final native size and connector fixes. */
+.mindmap[data-el="launchrail-048-mindmap"]>.branch {padding:calc(var(--gap-sm)*2);}.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(odd of .branch)::before,.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(odd of .branch)::after {left:anchor(var(--launchrail-048-mind-self) right);right:anchor(--launchrail-048-mind-core left);transform:none;}
+
+.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(odd of .branch)::before,.mindmap[data-el="launchrail-048-mindmap"]>.branch:nth-child(odd of .branch)::after {border-radius:0;}

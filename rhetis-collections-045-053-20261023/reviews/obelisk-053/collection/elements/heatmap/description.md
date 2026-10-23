@@ -1,0 +1,1 @@
+Measured rows and columns use quiet cells whose fill grows with intensity. Small values remain centered and the names sit on a fixed left rail. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

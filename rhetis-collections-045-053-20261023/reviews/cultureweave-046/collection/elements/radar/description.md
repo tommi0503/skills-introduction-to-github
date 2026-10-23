@@ -1,0 +1,1 @@
+The radar follows the Cultureweave editorial system: hairline structure, restrained paper surfaces, compact labels and generous white space. A single ranked accent identifies the selected datum or path. Typography descends in discrete container steps while names and figures remain visible.

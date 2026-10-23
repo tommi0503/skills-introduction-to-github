@@ -1,0 +1,1 @@
+Person follows the Launchrail folder language: precise thin rules, generous rounded quiet surfaces, circular marks and centered capsule labels. Accent is reserved for the primary comparison while supporting information remains neutral. The typography steps down in narrow or short containers.

@@ -1,0 +1,1 @@
+A single hairline introduces an open quote field. Large, direct text is followed by a small circular portrait and a two-line attribution; the lighter furniture leaves the voice as the point. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

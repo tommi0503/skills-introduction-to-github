@@ -1,0 +1,1 @@
+Two flat comparison sides share a central, unboxed VS marker. The stronger side takes the primary field and its nested checklist keeps the same typographic rhythm. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

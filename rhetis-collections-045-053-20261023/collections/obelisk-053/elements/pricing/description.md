@@ -1,0 +1,1 @@
+Upright plan columns use an exact top rule, a clear price and a spaced checklist. The selected plan is filled, with a compact dark recommendation label and a stable title level. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

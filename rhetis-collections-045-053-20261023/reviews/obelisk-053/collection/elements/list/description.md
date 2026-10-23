@@ -1,0 +1,1 @@
+Upright labels and small notes form a measured column. Dots, border-drawn checks or automatically counted numerals align on a narrow left rail, with optional horizontal dividers. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

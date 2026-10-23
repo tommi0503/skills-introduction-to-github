@@ -1,0 +1,28 @@
+:is(.list[data-el="obelisk-053-list"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.list[data-el="obelisk-053-list"]) *{box-sizing:border-box;min-width:0;}
+:is(.list[data-el="obelisk-053-list"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.list[data-el="obelisk-053-list"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.list[data-el="obelisk-053-list"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.list[data-el="obelisk-053-list"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.list[data-el="obelisk-053-list"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.list[data-el="obelisk-053-list"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.list[data-el="obelisk-053-list"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.list[data-el="obelisk-053-list"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.list[data-el="obelisk-053-list"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.list[data-el="obelisk-053-list"]).on .name,:is(.list[data-el="obelisk-053-list"]).on .note,:is(.list[data-el="obelisk-053-list"]).on .fig,:is(.list[data-el="obelisk-053-list"]).on .kick,:is(.list[data-el="obelisk-053-list"]).on .mark{color:var(--a1-on);}
+:is(.list[data-el="obelisk-053-list"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.list[data-el="obelisk-053-list"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.list[data-el="obelisk-053-list"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.list[data-el="obelisk-053-list"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.list[data-el="obelisk-053-list"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.list[data-el="obelisk-053-list"]){display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:item;}
+:is(.list[data-el="obelisk-053-list"])>.item{position:relative;padding-left:var(--pad);counter-increment:item;display:grid;gap:var(--gap-sm);}
+:is(.list[data-el="obelisk-053-list"])>.item::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;border-radius:50%;background:var(--ink);}
+:is(.list[data-el="obelisk-053-list"]).num>.item::before{content:counter(item,decimal-leading-zero);width:auto;height:auto;top:0;background:none;border-radius:0;color:var(--a1-7);font-size:var(--type-16);font-weight:var(--label-weight);}
+:is(.list[data-el="obelisk-053-list"]).check>.item::before{width:10px;height:6px;rotate:-45deg;border-bottom:2px solid var(--a1);border-left:2px solid var(--a1);background:none;border-radius:0;}
+:is(.list[data-el="obelisk-053-list"]).divided>.item{border-bottom:var(--stroke) solid var(--n-3);padding-bottom:var(--gap-sm);}
+@container (max-width: 520px){:is(.list[data-el="obelisk-053-list"]) .name{font-size:var(--type-18)}:is(.list[data-el="obelisk-053-list"]) .fig{font-size:var(--type-32)}:is(.list[data-el="obelisk-053-list"]) .note{font-size:var(--type-14)}:is(.list[data-el="obelisk-053-list"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.list[data-el="obelisk-053-list"]) .name{font-size:var(--type-16)}:is(.list[data-el="obelisk-053-list"]) .fig{font-size:var(--type-24)}:is(.list[data-el="obelisk-053-list"]) .note{font-size:var(--type-12)}:is(.list[data-el="obelisk-053-list"]) .kick{display:none}}
+@container (max-height: 150px){:is(.list[data-el="obelisk-053-list"]) .name{font-size:var(--type-16)}:is(.list[data-el="obelisk-053-list"]) .fig{font-size:var(--type-24)}:is(.list[data-el="obelisk-053-list"]) .note{font-size:var(--type-12)}:is(.list[data-el="obelisk-053-list"]) .kick{display:none}}
+@container (max-height:300px){:is(.list[data-el="obelisk-053-list"]) .name{font-size:var(--type-16)}:is(.list[data-el="obelisk-053-list"]) .note{font-size:var(--type-12)}:is(.list[data-el="obelisk-053-list"]) .fig{font-size:var(--type-24)}:is(.list[data-el="obelisk-053-list"]) .kick{font-size:var(--type-12)}}
+:is(.list[data-el="obelisk-053-list"]){gap:var(--gap-sm)}:is(.list[data-el="obelisk-053-list"])>.item{gap:calc(var(--gap-sm)/2);min-height:0}:is(.list[data-el="obelisk-053-list"]) .name{font-size:var(--type-18)}:is(.list[data-el="obelisk-053-list"]) .note{font-size:var(--type-14)}@container(max-height:300px){:is(.list[data-el="obelisk-053-list"]) .name{font-size:var(--type-14)}:is(.list[data-el="obelisk-053-list"]) .note{font-size:var(--type-12)}}

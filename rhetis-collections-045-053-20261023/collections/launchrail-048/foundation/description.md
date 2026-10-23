@@ -1,0 +1,1 @@
+A double fine-line folder frame with an oblique folded corner and a stack of tabs at the upper right. A hollow circular heading marker and quiet baseline establish a stable business-page grid. Covers pair centered oversized type with cropped circular arcs.

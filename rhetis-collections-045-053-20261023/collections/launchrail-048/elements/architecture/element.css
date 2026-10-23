@@ -1,0 +1,26 @@
+:is(.arch[data-el="launchrail-048-architecture"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.arch[data-el="launchrail-048-architecture"]) * { box-sizing:border-box; min-width:0; }
+:is(.arch[data-el="launchrail-048-architecture"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.arch[data-el="launchrail-048-architecture"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.arch[data-el="launchrail-048-architecture"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.arch[data-el="launchrail-048-architecture"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.arch[data-el="launchrail-048-architecture"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.arch[data-el="launchrail-048-architecture"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.arch[data-el="launchrail-048-architecture"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.arch[data-el="launchrail-048-architecture"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.arch[data-el="launchrail-048-architecture"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.arch[data-el="launchrail-048-architecture"]) .seat.avatar { border-radius:50%; }
+:is(.arch[data-el="launchrail-048-architecture"]) { display:flex; flex-direction:column; gap:var(--gap-sm); justify-content:center; } :is(.arch[data-el="launchrail-048-architecture"]) > .layer { flex:1; display:flex; align-items:center; gap:var(--gap); padding:var(--gap); border-radius:var(--radius-sm); background:var(--n-1); } :is(.arch[data-el="launchrail-048-architecture"]) > .layer > .name { width:25%; color:var(--a1-7); } :is(.arch[data-el="launchrail-048-architecture"]) > .layer > .chip { flex:1; padding:var(--gap-sm); background:var(--page); border:var(--stroke) solid var(--n-3); border-radius:999px; text-align:center; font-size:var(--type-18); } :is(.arch[data-el="launchrail-048-architecture"]) > .layer:first-child { border-left:var(--gap-sm) solid var(--a1); }
+
+@container (max-width: 650px) { :is(.arch[data-el="launchrail-048-architecture"]) .name { font-size:var(--type-20); } :is(.arch[data-el="launchrail-048-architecture"]) .fig { font-size:var(--type-40); } :is(.arch[data-el="launchrail-048-architecture"]) .note { font-size:var(--type-16); } :is(.arch[data-el="launchrail-048-architecture"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.arch[data-el="launchrail-048-architecture"]) .name { font-size:var(--type-18); } :is(.arch[data-el="launchrail-048-architecture"]) .fig { font-size:var(--type-32); } :is(.arch[data-el="launchrail-048-architecture"]) .note { font-size:var(--type-14); } :is(.arch[data-el="launchrail-048-architecture"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.arch[data-el="launchrail-048-architecture"]) .kick { display:none; } :is(.arch[data-el="launchrail-048-architecture"]) .note { font-size:var(--type-14); } :is(.arch[data-el="launchrail-048-architecture"]) .name { font-size:var(--type-18); } :is(.arch[data-el="launchrail-048-architecture"]) .fig { font-size:var(--type-32); } }
+
+/* Browser review corrections. */
+:is(.arch[data-el="launchrail-048-architecture"]) > .layer { padding:var(--gap-sm); gap:var(--gap-sm); min-height:0; } :is(.arch[data-el="launchrail-048-architecture"]) > .layer > .chip { font-size:var(--type-16); padding:var(--gap-sm); }
+
+:is(.arch[data-el="launchrail-048-architecture"]) small { color:inherit; }
+
+:is(.arch)[data-el="launchrail-048-architecture"] small { color:inherit; margin-left:0; }
+
+:is(.arch)[data-el="launchrail-048-architecture"] .fig { font-family:var(--font-display); }

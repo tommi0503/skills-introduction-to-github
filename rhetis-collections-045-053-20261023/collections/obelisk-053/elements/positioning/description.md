@@ -1,0 +1,1 @@
+A fine pair of crossing axes carries compact rectangular competitor marks. The selected mark uses the primary field and its label has a clear contrasting seat. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

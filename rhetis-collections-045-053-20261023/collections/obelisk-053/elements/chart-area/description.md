@@ -1,0 +1,1 @@
+Fine connected slopes cap restrained filled areas over equal time steps. Series labels remain in a clear top band and cumulative series are layered in data order. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

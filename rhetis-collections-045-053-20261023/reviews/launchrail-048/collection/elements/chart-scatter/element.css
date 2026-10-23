@@ -1,0 +1,26 @@
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) * { box-sizing:border-box; min-width:0; }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) .seat.avatar { border-radius:50%; }
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) { border-left:var(--stroke) solid var(--n-5); border-bottom:var(--stroke) solid var(--n-5); background:repeating-linear-gradient(to top,transparent 0 24%,var(--n-2) 24.8% 25%); margin:var(--gap-lg); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) > .dot { position:absolute; left:calc(var(--x) / var(--xmax) * 90% + 5%); bottom:calc(var(--y) / var(--ymax) * 80% + 10%); width:12px; height:12px; background:var(--n-5); border-radius:50%; transform:translate(-50%,50%); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) > .dot.on { background:var(--a1); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) > .dot > span { position:absolute; bottom:calc(100% + var(--gap-sm)); left:50%; transform:translateX(-50%); white-space:nowrap; font-size:var(--type-14); } :is(.scatter[data-el="launchrail-048-chart-scatter"]).bubble > .dot { width:calc(var(--r,30) * .7px + 12px); height:calc(var(--r,30) * .7px + 12px); background:color-mix(in srgb,var(--a1) 55%,transparent); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) > .axis-x { position:absolute; bottom:calc(var(--gap-lg) * -1); left:40%; font-size:var(--type-16); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) > .axis-y { position:absolute; left:calc(var(--gap-lg) * -1); top:25%; writing-mode:vertical-rl; font-size:var(--type-16); }
+
+@container (max-width: 650px) { :is(.scatter[data-el="launchrail-048-chart-scatter"]) .name { font-size:var(--type-20); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .fig { font-size:var(--type-40); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .note { font-size:var(--type-16); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.scatter[data-el="launchrail-048-chart-scatter"]) .name { font-size:var(--type-18); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .fig { font-size:var(--type-32); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .note { font-size:var(--type-14); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.scatter[data-el="launchrail-048-chart-scatter"]) .kick { display:none; } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .note { font-size:var(--type-14); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .name { font-size:var(--type-18); } :is(.scatter[data-el="launchrail-048-chart-scatter"]) .fig { font-size:var(--type-32); } }
+
+/* Browser review corrections. */
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) > .dot > span { color:var(--ink); background:var(--page); border-radius:999px; padding:calc(var(--gap-sm) * .5); }
+
+:is(.scatter[data-el="launchrail-048-chart-scatter"]) small { color:inherit; }
+
+:is(.scatter)[data-el="launchrail-048-chart-scatter"] small { color:inherit; margin-left:0; }
+
+:is(.scatter)[data-el="launchrail-048-chart-scatter"] .fig { font-family:var(--font-display); }

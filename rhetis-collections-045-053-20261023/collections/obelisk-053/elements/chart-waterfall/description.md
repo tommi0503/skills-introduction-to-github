@@ -1,0 +1,1 @@
+Floating rectangular movements connect a running total across equal steps. Primary increases and quieter reductions stay visually distinct, with total columns rooted at the baseline. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

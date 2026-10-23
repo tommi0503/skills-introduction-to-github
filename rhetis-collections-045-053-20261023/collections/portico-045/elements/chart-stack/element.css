@@ -1,0 +1,33 @@
+.stacks[data-el="portico-045-chart-stack"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;display:flex;align-items:stretch;gap:var(--gap);padding:var(--gap-lg) var(--gap);color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.stacks[data-el="portico-045-chart-stack"] *{box-sizing:border-box;min-width:0}
+.stacks[data-el="portico-045-chart-stack"]>.sbar{display:flex;flex-direction:column-reverse;justify-content:flex-start;flex:1;position:relative;min-width:0}
+.stacks[data-el="portico-045-chart-stack"] .sbar>.seg{flex:none;height:calc(var(--v)/var(--max,100)*100%);display:grid;place-items:center;background:var(--a1);color:var(--a1-on);font-size:var(--type-18);font-weight:var(--figure-weight);font-variant-numeric:tabular-nums;border-top:1px solid var(--page)}
+.stacks[data-el="portico-045-chart-stack"] .sbar>.seg:nth-child(2 of .seg){background:var(--n-4);color:var(--ink)}
+.stacks[data-el="portico-045-chart-stack"] .sbar>.seg:nth-child(3 of .seg){background:var(--n-2);color:var(--ink)}
+.stacks[data-el="portico-045-chart-stack"] .sbar>.seg:nth-child(4 of .seg){background:var(--a1-2-soft);color:var(--ink)}
+.stacks[data-el="portico-045-chart-stack"] .sbar>.seg:nth-child(5 of .seg){background:var(--a1-4-soft);color:var(--ink)}
+.stacks[data-el="portico-045-chart-stack"] .seg>b{font-size:var(--type-18);font-weight:inherit;line-height:var(--figure-line)}
+.stacks[data-el="portico-045-chart-stack"]>.sbar>span{position:absolute;top:100%;width:100%;text-align:center;padding-top:var(--gap-sm);font-size:var(--type-16);line-height:var(--label-line);letter-spacing:var(--label-track)}
+.stacks[data-el="portico-045-chart-stack"].pct .seg{height:calc(var(--v)*1%)}
+.stacks[data-el="portico-045-chart-stack"].h{flex-direction:column;padding-left:calc(var(--gap-lg)*2)}
+.stacks[data-el="portico-045-chart-stack"].h>.sbar{flex-direction:row;align-items:center}
+.stacks[data-el="portico-045-chart-stack"].h .sbar>.seg{width:calc(var(--v)/var(--max,100)*100%);height:75%;border-top:0;border-right:1px solid var(--page);font-size:var(--type-14)}
+.stacks[data-el="portico-045-chart-stack"].h>.sbar>span{top:50%;right:calc(100% + var(--gap-sm));translate:0 -50%;width:72px;padding:0;text-align:right;font-size:var(--type-14)}
+@container (max-width:1000px){.stacks[data-el="portico-045-chart-stack"] .seg,.stacks[data-el="portico-045-chart-stack"].h .sbar>.seg{font-size:var(--type-12)}.stacks[data-el="portico-045-chart-stack"]>.sbar>span{font-size:var(--type-12)}}
+@container (max-height:350px){.stacks[data-el="portico-045-chart-stack"] .sbar>.seg{font-size:var(--type-12)}}
+
+.stacks[data-el="portico-045-chart-stack"].h .seg>b{font-size:var(--type-14)}
+@container (max-width:1000px){.stacks[data-el="portico-045-chart-stack"] .seg>b,.stacks[data-el="portico-045-chart-stack"].h .seg>b{font-size:var(--type-12)}}
+@container (max-height:350px){.stacks[data-el="portico-045-chart-stack"] .seg>b{font-size:var(--type-12)}}
+
+/* A nested legend gives each segment an explicit, matching series name. */
+.stacks[data-el="portico-045-chart-stack"]:has(>.legend) {padding-bottom:calc(var(--gap-lg)*2)}
+.stacks[data-el="portico-045-chart-stack"]>.legend[data-el="portico-045-legend"] {position:absolute;left:var(--gap);right:var(--gap);bottom:var(--gap-sm);height:var(--gap-lg);padding:0;gap:var(--gap);container-type:normal;font-size:var(--type-14)}
+.stacks[data-el="portico-045-chart-stack"]>.legend>.key {font-size:var(--type-14)}
+.stacks[data-el="portico-045-chart-stack"]>.legend>.key::before {border:var(--stroke) solid var(--n-5)}
+.stacks[data-el="portico-045-chart-stack"]>.legend>.key:nth-child(1)::before {background:var(--a1)}
+.stacks[data-el="portico-045-chart-stack"]>.legend>.key:nth-child(2)::before {background:var(--n-4)}
+.stacks[data-el="portico-045-chart-stack"]>.legend>.key:nth-child(3)::before {background:var(--n-2)}
+.stacks[data-el="portico-045-chart-stack"]>.legend>.key:nth-child(4)::before {background:var(--a1-2-soft)}
+.stacks[data-el="portico-045-chart-stack"]>.legend>.key:nth-child(5)::before {background:var(--a1-4-soft)}
+@container (max-width:1000px) {.stacks[data-el="portico-045-chart-stack"]>.legend>.key {font-size:var(--type-12)}}

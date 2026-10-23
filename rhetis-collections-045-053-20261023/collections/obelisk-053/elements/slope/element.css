@@ -1,0 +1,76 @@
+:is(.slope[data-el="obelisk-053-slope"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.slope[data-el="obelisk-053-slope"]) *{box-sizing:border-box;min-width:0;}
+:is(.slope[data-el="obelisk-053-slope"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.slope[data-el="obelisk-053-slope"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.slope[data-el="obelisk-053-slope"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.slope[data-el="obelisk-053-slope"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.slope[data-el="obelisk-053-slope"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.slope[data-el="obelisk-053-slope"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.slope[data-el="obelisk-053-slope"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.slope[data-el="obelisk-053-slope"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.slope[data-el="obelisk-053-slope"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.slope[data-el="obelisk-053-slope"]).on .name,:is(.slope[data-el="obelisk-053-slope"]).on .note,:is(.slope[data-el="obelisk-053-slope"]).on .fig,:is(.slope[data-el="obelisk-053-slope"]).on .kick,:is(.slope[data-el="obelisk-053-slope"]).on .mark{color:var(--a1-on);}
+:is(.slope[data-el="obelisk-053-slope"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.slope[data-el="obelisk-053-slope"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.slope[data-el="obelisk-053-slope"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.slope[data-el="obelisk-053-slope"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.slope[data-el="obelisk-053-slope"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.slope[data-el="obelisk-053-slope"]){position:relative;}
+:is(.slope[data-el="obelisk-053-slope"])>.heads{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;font-size:var(--type-16);}
+:is(.slope[data-el="obelisk-053-slope"])>.pair{position:absolute;inset:var(--gap-lg) var(--pad);}
+:is(.slope[data-el="obelisk-053-slope"])>.pair::before{content:"";position:absolute;left:12%;right:12%;top:calc(100% - max(var(--a),var(--b))/var(--max)*100%);height:calc(abs(var(--b) - var(--a))/var(--max)*100%);background:var(--n-5);clip-path:polygon(0 0,100% calc(100% - 2px),100% 100%,0 2px);}
+:is(.slope[data-el="obelisk-053-slope"])>.pair.on::before{background:var(--a1);}
+:is(.slope[data-el="obelisk-053-slope"])>.pair .name{position:absolute;left:0;bottom:calc(var(--a)/var(--max)*100% + var(--gap-sm));font-size:var(--type-14);}
+:is(.slope[data-el="obelisk-053-slope"])>.pair .a,:is(.slope[data-el="obelisk-053-slope"])>.pair .b{position:absolute;bottom:calc(var(--a)/var(--max)*100%);font-size:var(--type-16);}
+:is(.slope[data-el="obelisk-053-slope"])>.pair .a{left:0;}
+:is(.slope[data-el="obelisk-053-slope"])>.pair .b{right:0;bottom:calc(var(--b)/var(--max)*100%);}
+:is(.slope[data-el="obelisk-053-slope"]).dumbbell{display:flex;flex-direction:column;padding-top:var(--gap-lg);}
+:is(.slope[data-el="obelisk-053-slope"]).dumbbell>.pair{position:relative;inset:auto;flex:1;margin:0 var(--pad);}
+@container (max-width: 520px){:is(.slope[data-el="obelisk-053-slope"]) .name{font-size:var(--type-18)}:is(.slope[data-el="obelisk-053-slope"]) .fig{font-size:var(--type-32)}:is(.slope[data-el="obelisk-053-slope"]) .note{font-size:var(--type-14)}:is(.slope[data-el="obelisk-053-slope"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.slope[data-el="obelisk-053-slope"]) .name{font-size:var(--type-16)}:is(.slope[data-el="obelisk-053-slope"]) .fig{font-size:var(--type-24)}:is(.slope[data-el="obelisk-053-slope"]) .note{font-size:var(--type-12)}:is(.slope[data-el="obelisk-053-slope"]) .kick{display:none}}
+@container (max-height: 150px){:is(.slope[data-el="obelisk-053-slope"]) .name{font-size:var(--type-16)}:is(.slope[data-el="obelisk-053-slope"]) .fig{font-size:var(--type-24)}:is(.slope[data-el="obelisk-053-slope"]) .note{font-size:var(--type-12)}:is(.slope[data-el="obelisk-053-slope"]) .kick{display:none}}
+@container (max-height:300px){:is(.slope[data-el="obelisk-053-slope"]) .name{font-size:var(--type-16)}:is(.slope[data-el="obelisk-053-slope"]) .note{font-size:var(--type-12)}:is(.slope[data-el="obelisk-053-slope"]) .fig{font-size:var(--type-24)}:is(.slope[data-el="obelisk-053-slope"]) .kick{font-size:var(--type-12)}}
+/* Native panel functional review. */
+.slope[data-el="obelisk-053-slope"]>.pair::before{--obelisk-053-run:calc((100cqw - 2*var(--pad))*.76);--obelisk-053-rise:calc((var(--a) - var(--b))/var(--max)*(100cqh - 2*var(--gap-lg)));left:12%;right:auto;top:calc(100% - var(--a)/var(--max)*100%);height:var(--stroke);width:hypot(var(--obelisk-053-run),var(--obelisk-053-rise));clip-path:none;rotate:atan2(var(--obelisk-053-rise),var(--obelisk-053-run));transform-origin:left center;}
+.slope[data-el="obelisk-053-slope"]>.pair .name{left:0;bottom:auto;top:calc(var(--obelisk-053-row)*var(--gap-lg));font-size:var(--type-14);width:14%;}
+.slope[data-el="obelisk-053-slope"]>.pair .a{left:0;bottom:auto;top:calc(var(--obelisk-053-row)*var(--gap-lg) + var(--gap));}
+.slope[data-el="obelisk-053-slope"]>.pair .b{right:0;bottom:auto;top:calc(var(--obelisk-053-row)*var(--gap-lg) + var(--gap));}
+.slope[data-el="obelisk-053-slope"].dumbbell{gap:var(--gap-sm);}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair{margin:0;min-height:0;}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair::before{left:calc(25% + min(var(--a),var(--b))/var(--max)*65%);top:50%;width:calc(abs(var(--b) - var(--a))/var(--max)*65%);height:var(--stroke);rotate:none;background:var(--n-5);}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair.on::before{background:var(--a1);}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .name{top:50%;left:0;translate:0 -50%;width:22%;}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a,.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b{top:50%;bottom:auto;right:auto;translate:-50% -50%;background:var(--page);padding:var(--gap-sm);border-radius:50%;border:var(--stroke) solid var(--n-4);}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a{left:calc(25% + var(--a)/var(--max)*65%);}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b{left:calc(25% + var(--b)/var(--max)*65%);}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(1 of .pair){--obelisk-053-row:0;}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(2 of .pair){--obelisk-053-row:1;}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(3 of .pair){--obelisk-053-row:2;}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(4 of .pair){--obelisk-053-row:3;}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(5 of .pair){--obelisk-053-row:4;}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(6 of .pair){--obelisk-053-row:5;}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(7 of .pair){--obelisk-053-row:6;}
+.slope[data-el="obelisk-053-slope"]>.pair:nth-child(8 of .pair){--obelisk-053-row:7;}
+
+
+.slope[data-el="obelisk-053-slope"]>.pair .name{top:calc(var(--obelisk-053-row)*100%/var(--obelisk-053-slope-count));}.slope[data-el="obelisk-053-slope"]>.pair .a,.slope[data-el="obelisk-053-slope"]>.pair .b{top:calc(var(--obelisk-053-row)*100%/var(--obelisk-053-slope-count) + var(--gap-sm)*1.5);}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .name{top:50%;}.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a,.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b{top:50%;border:0;background:none;padding:0;}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a{translate:-50% -130%;}.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b{translate:-50% 30%;}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a::before,.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b::before{content:"";position:absolute;left:50%;translate:-50% 0;width:8px;height:8px;border-radius:50%;background:var(--n-6);}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a::before{top:calc(100% + 2px);}.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b::before{top:-10px;}
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair.on .a::before,.slope[data-el="obelisk-053-slope"].dumbbell>.pair.on .b::before{background:var(--a1);}
+.slope[data-el="obelisk-053-slope"]:has(>.pair:nth-child(2 of .pair)){--obelisk-053-slope-count:2;}.slope[data-el="obelisk-053-slope"]:has(>.pair:nth-child(3 of .pair)){--obelisk-053-slope-count:3;}.slope[data-el="obelisk-053-slope"]:has(>.pair:nth-child(4 of .pair)){--obelisk-053-slope-count:4;}.slope[data-el="obelisk-053-slope"]:has(>.pair:nth-child(5 of .pair)){--obelisk-053-slope-count:5;}.slope[data-el="obelisk-053-slope"]:has(>.pair:nth-child(6 of .pair)){--obelisk-053-slope-count:6;}.slope[data-el="obelisk-053-slope"]:has(>.pair:nth-child(7 of .pair)){--obelisk-053-slope-count:7;}.slope[data-el="obelisk-053-slope"]:has(>.pair:nth-child(8 of .pair)){--obelisk-053-slope-count:8;}
+
+.slope[data-el="obelisk-053-slope"].dumbbell{gap:0;padding:var(--gap) 0 0}.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a,.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b{font-size:var(--type-14);line-height:var(--label-line)}.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a::before{top:100%}.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b::before{top:-8px}@container(max-height:300px){.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a,.slope[data-el="obelisk-053-slope"].dumbbell>.pair .b{font-size:var(--type-12)}}
+
+/* Each pair owns a row; vertical displacement encodes before-to-after change. */
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell){display:flex;flex-direction:column;padding-top:var(--gap-lg);gap:var(--gap-sm);}
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair{position:relative;inset:auto;flex:1;min-height:0;margin:0 var(--pad);}
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair::before{--obelisk-053-run:calc((100cqw - 2*var(--pad))*.64);--obelisk-053-rise:calc((var(--a) - var(--b))/var(--max)*(100cqh - var(--gap-lg) - (var(--obelisk-053-slope-count) - 1)*var(--gap-sm))/var(--obelisk-053-slope-count));left:28%;top:calc(100% - var(--a)/var(--max)*100%);}
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair .name{left:0;top:50%;bottom:auto;translate:0 -50%;width:22%;}
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair .a{top:auto;bottom:calc(var(--a)/var(--max)*100%);left:calc(28% - var(--gap-lg));}
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair .b{top:auto;bottom:calc(var(--b)/var(--max)*100%);right:0;}
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair.on .name,.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair.on .a,.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.pair.on .b{color:var(--a1-7);}
+.slope[data-el="obelisk-053-slope"]:not(.dumbbell)>.heads{left:calc(var(--pad) + (100% - 2*var(--pad))*.28);right:var(--pad);}
+
+.slope[data-el="obelisk-053-slope"].dumbbell>.pair .a::before{background:var(--page);border:var(--stroke) solid var(--n-6)}.slope[data-el="obelisk-053-slope"].dumbbell>.pair.on .a::before{background:var(--page);border-color:var(--a1)}

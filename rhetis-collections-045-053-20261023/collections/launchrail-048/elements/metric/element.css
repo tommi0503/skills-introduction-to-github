@@ -1,0 +1,28 @@
+@layer launchrail048Base {
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) * { box-sizing:border-box; min-width:0; }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .seat.avatar { border-radius:50%; }
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) { display:flex; align-items:stretch; justify-content:center; } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .stat { flex:1; display:flex; align-items:center; justify-content:center; padding:var(--pad); border-left:var(--stroke) dashed var(--n-5); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .stat:first-child { border-left:0; } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .parts { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); text-align:center; } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .fig { color:var(--a1-7); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]).stat { align-items:center; }
+
+@container (max-width: 650px) { :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .name { font-size:var(--type-20); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .fig { font-size:var(--type-40); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .note { font-size:var(--type-16); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .name { font-size:var(--type-18); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .fig { font-size:var(--type-32); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .note { font-size:var(--type-14); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .kick { display:none; } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .note { font-size:var(--type-14); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .name { font-size:var(--type-18); } :is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) .fig { font-size:var(--type-32); } }
+
+:is(.stat[data-el="launchrail-048-metric"],.stats[data-el="launchrail-048-metric"]) small { color:inherit; }
+
+
+}
+/* Measured component anatomy: shared numeric layout API. */
+:is(.stat,.stats)[data-el="launchrail-048-metric"][data-el][data-el][style*="--launchrail-048-w:"] { flex:none; align-self:flex-start; width:var(--launchrail-048-w); height:var(--launchrail-048-h); margin-left:var(--launchrail-048-x); margin-top:var(--launchrail-048-y); }
+:is(.stat,.stats)[data-el="launchrail-048-metric"] small { color:inherit; margin-left:0; }
+
+:is(.stat,.stats)[data-el="launchrail-048-metric"] .fig { font-family:var(--font-display); }

@@ -1,0 +1,14 @@
+.code[data-el="portico-045-code"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--pad);background:var(--n-1);border-top:2px solid var(--a1);color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.code[data-el="portico-045-code"] *{box-sizing:border-box;min-width:0}
+.code[data-el="portico-045-code"]>.name{margin:0;padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-3);font-family:var(--font-display);font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.code[data-el="portico-045-code"]>.lines{display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2);min-height:0;font-family:var(--portico-045-code-font);counter-reset:portico-code-line}
+.code[data-el="portico-045-code"] .lines>p{position:relative;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:4;font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.code[data-el="portico-045-code"] .lines>p:empty::after{content:" "}
+.code[data-el="portico-045-code"].numbered .lines>p{padding-left:calc(var(--gap) + var(--gap-sm));counter-increment:portico-code-line}
+.code[data-el="portico-045-code"].numbered .lines>p::before{content:counter(portico-code-line);position:absolute;left:0;top:0;width:var(--gap);text-align:right;color:var(--n-7);font-variant-numeric:tabular-nums}
+.code[data-el="portico-045-code"] .k{color:var(--a1-7);font-weight:var(--name-weight)}
+.code[data-el="portico-045-code"] .s{color:var(--a2-7)}
+.code[data-el="portico-045-code"] .n{color:var(--a3-7)}
+.code[data-el="portico-045-code"] .c{color:var(--n-7)}
+@container (max-width:700px){.code[data-el="portico-045-code"] .lines>p{font-size:var(--type-14)}}
+@container (max-height:300px){.code[data-el="portico-045-code"] .lines>p{font-size:var(--type-12)}.code[data-el="portico-045-code"]>.name{font-size:var(--type-14)}}

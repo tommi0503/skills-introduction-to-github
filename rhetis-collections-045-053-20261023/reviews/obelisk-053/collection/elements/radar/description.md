@@ -1,0 +1,1 @@
+Subtle circular guides support translucent ranked polygons. Axis names stay outside the plot and series labels sit in a separate clear band above the filled shapes. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

@@ -1,0 +1,1 @@
+Nine exact fields form a structured comparison matrix beside discreet three-level axes. One primary cell shows the focus and secondary cells retain quiet neutral planes. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

@@ -1,0 +1,398 @@
+{
+  "collection": "obelisk-053",
+  "method": "공식 preview native 1280×720 패널을 라이트·다크 요소별로 실제 열람. 변경한 관계 요소는 native 패널로 다시 검수. 자동 검사와 별개로 판단.",
+  "elements": [
+    {
+      "element": "agenda",
+      "verdict": "pass",
+      "lightSha256": "8e0b1c7488d7d8f13812c2ac67910ef25ec048a10d886af0292fd090a1b00b3a",
+      "darkSha256": "3137e0d29ce5332c69bf08446f7b7a96f4846babb838aa8ea42f3753e80f0ef9",
+      "notes": "라이트 3개 및 다크 5개 행에서 번호·제목·보조문과 강조 행을 읽어 구분선과 정렬을 확인했다."
+    },
+    {
+      "element": "architecture",
+      "verdict": "pass",
+      "lightSha256": "45361b8e8b863f07d39bd6db5b393d7f046351d100d22a397b6346d41e00af8b",
+      "darkSha256": "7dfa2c7d9b4945d6f0a53a7d5973c029898ac7bba00fd630b94ab6a960f39b4e",
+      "notes": "2층과 5층에서 왼쪽 강조선·층 이름·내부 chip이 층별로 분리되어 보임을 확인했다."
+    },
+    {
+      "element": "balance",
+      "verdict": "pass",
+      "lightSha256": "e29b58257326531152c6a326594ebd48b5c19ed98883d69bbeebae15d8a277e9",
+      "darkSha256": "204aa503f7d817ca55dd693d84595fa356c4415553ec9adfae6e8d9529148575",
+      "notes": "수평/기울어진 실제 빔, 삼각 지지대, 두 pan 및 지지대 아래 판정문을 확인했다. 음수 tilt의 왼쪽 pan이 낮다."
+    },
+    {
+      "element": "bullet",
+      "verdict": "pass",
+      "lightSha256": "db56fd51184a018bf47af87b9b50d31abdc7fab5d708f3caeb38fae6eea44614",
+      "darkSha256": "0c9180c59569d6e48793ff152a9ad84a65c73af368999967d3c0b5bafc4a4659",
+      "notes": "86/90, 100/100, 62/75, 92/85의 실적과 독립된 목표 tick을 읽고 각 행 밴드/목표 note가 분리됨을 확인했다."
+    },
+    {
+      "element": "callout",
+      "verdict": "pass",
+      "lightSha256": "e9f7b3e7aa941dcdfc0326e50f0c456ba8e601129382998e01910df464cbcb27",
+      "darkSha256": "8000c5e20f333746b5ac3a355adcdd20c98a13ccd5e24f9e8d3f3ed0a739ca5c",
+      "notes": "문장 안 강조 구절과 왼쪽 세로선, 아이콘 자리와 문장 시각 중심을 확인했다."
+    },
+    {
+      "element": "card",
+      "verdict": "pass",
+      "lightSha256": "ce74f2390f9a62c38a6acdc51c5583673ab16fde3928b6348a13aef1aa311e84",
+      "darkSha256": "cbd2466cdccdff20ecd4eb15790cd9adc8081376d13e7221f069086211e1f8ce",
+      "notes": "quiet 쌍의 제목 시작 높이와 강조 카드의 kick/name/note 위계를 읽었다. 모범 구성 별도 fixture도 보존했다."
+    },
+    {
+      "element": "chart-area",
+      "verdict": "pass",
+      "lightSha256": "6fbbd66c5a346da07c2119a70e500cc0880a2ae536eeea2344bf214ed835c888",
+      "darkSha256": "3d9fd8099a7457b1c7e8f66715175857191b1945e9de2226db23c496ca270789",
+      "notes": "12개 점의 단일 면과 3개 누적 면의 각 계열 경계, 마지막 합계·기간 라벨을 확인했다."
+    },
+    {
+      "element": "chart-bar",
+      "verdict": "pass",
+      "lightSha256": "ba6156771f5467b743784ed66d7313a26bfe89b7ccd58efb01e736f5433ae673",
+      "darkSha256": "4074b16e8ed4ecde556d7dbba80b4dcd425f5b69d10771c0daf8686d24b57ce5",
+      "notes": "12개 월별 수치와 3개 비율 막대에서 축·수치·라벨을 읽었다. 가장 높은 막대의 숫자 여백을 확인했다."
+    },
+    {
+      "element": "chart-donut",
+      "verdict": "pass",
+      "lightSha256": "6f60692bebce459af2f8c6b982a75f5a2ce562195f8b45b93d09a6fda16ef56e",
+      "darkSha256": "d5e406a57da6af5892be9b2e889b1a3d8411fb1ea16ae3a4d899f78cdc86420a",
+      "notes": "0%의 빈 링과 84/61/47/29%의 네 도넛을 읽고 정원·중앙 수치·이름이 유지됨을 확인했다."
+    },
+    {
+      "element": "chart-line",
+      "verdict": "pass",
+      "lightSha256": "d9d7507a243956d16fdecd1bdeffb2572b1aa2d0bca3f5761f691c3b540e1203",
+      "darkSha256": "d1aa2f0ac9dc709c634174cfeb8ff1828703ee80850cde65ce5b960e14438a65",
+      "notes": "12개 점의 44→44 수평 연결 및 작은 변화 50→51→50→52→51가 끊기지 않는 실선을 확인했다. 마지막 최소칸4×2의6개월·8×2의12개월을 두 모드에서 실제 확인. 짝수 숨김을 제거해 모든 축 이름을 보이고, plot point와 같은 x중심으로 맞추며 nowrap으로 단어가 갈라지지 않음. 기존 최소칸은 유지."
+    },
+    {
+      "element": "chart-scatter",
+      "verdict": "pass",
+      "lightSha256": "c4d07e10d14742d64c864d7514deff40b6ddd3bd924ae986ad48a873ebe28271",
+      "darkSha256": "4cff15ee80598ef121d2e280cf1e791c42b569dd598ad27ed8bef4c51d547b01",
+      "notes": "5개 bubble의 크기 차이와 8개 산점의 좌표·라벨, 양축 이름과 강조 점을 확인했다."
+    },
+    {
+      "element": "chart-stack",
+      "verdict": "pass",
+      "lightSha256": "24a41b6ad3107f56bf55b59dcc977679a78350568cd188f89fafdd5cfd6e1e09",
+      "darkSha256": "dd0f5f100c0fbc14a6437a90ae278b6e3316434ead89c754e614c6226640329b",
+      "notes": "12개 막대의 2계열과 4개 100% 막대의 3계열을 별도 색 면으로 읽고 내부 수치가 각 면 안에 있음을 확인했다. 모든 stack fixture에 같은 계열색의 범례를 중첩하였다."
+    },
+    {
+      "element": "chart-waterfall",
+      "verdict": "pass",
+      "lightSha256": "2a66b5e85d719ac8f4b43ee096327b08473d905877f94200a752df935b5b8263",
+      "darkSha256": "620bbbfe989eee193e48164313643c76946eb28bc6cd6afd0156e428b5bd940b",
+      "notes": "기초→증감→기말 floating bar와 연결선을 확인했다. 비모범 수치 1088+79+60+32−18=1241을 맞췄다."
+    },
+    {
+      "element": "code",
+      "verdict": "pass",
+      "lightSha256": "cd0833bbde0d3fa029728fe2250fcd148651bb07998603cdd369ae13739c47fc",
+      "darkSha256": "133953063af0ae460597f1dcada13cf80adbb19426584eaee6d529ef5b5dcf17",
+      "notes": "명령 한 줄과 Python 들여쓰기/토큰 색을 읽었다. SQL numbered native panel에서 실제 1,2,3,4,5,6,7,8,9를 확인했다. Nanum Gothic Coding을 로드했다."
+    },
+    {
+      "element": "concentric",
+      "verdict": "pass",
+      "lightSha256": "275fc3ebf10ee2d001b5688397d089a89160df58b4dda2b8706c3b0ea5ea86f3",
+      "darkSha256": "d9591c638322479186d875879e38d6be9dda330a11dc653ed9a96dfe105af8a1",
+      "notes": "2중 및 4중 포함 원의 바깥 이름/수치와 내부 수치까지 가려지지 않는 위치를 확인했다."
+    },
+    {
+      "element": "cycle",
+      "verdict": "pass",
+      "lightSha256": "6b009ba52625321311e24044d4138c4f0bff3a9a5f3c72808971cd2c8f0b37d2",
+      "darkSha256": "ff0de000b4af9bc0a54bf714076db37bc0ccc7acaaef560f41eb7f42c02f3060",
+      "notes": "3분절 및 6분절 링, 중앙 core, 각 구간 이름/note/방향 화살표를 확인했다. 사각 node 배경의 원 밖 돌출을 제거했다. 최종 native 3·6노드에서 원 밖으로 나왔던 node의 채움 override를 제거하고 라벨만 실제 글자폭으로 채움. 중앙 core 정원과 섹터 내부 화살표를 재확인."
+    },
+    {
+      "element": "decision-tree",
+      "verdict": "pass",
+      "lightSha256": "95a62eb580964c2d241bf246e82d01b8e2fc32ddad41d6ba7ac506f910a1221f",
+      "darkSha256": "75cf2191b4b7d6654b3005153eff333873fdca2461ebf44c089562977b9fd521",
+      "notes": "3갈래 질문과 중첩 2갈래 질문에서 질문 stem·연속 분기선·답변 stem·결과 면을 확인했다."
+    },
+    {
+      "element": "delta",
+      "verdict": "pass",
+      "lightSha256": "d04ad4229b80799dbed1dc2ece85a4074b8507e4713c5e51b5a270a3b0e79c8f",
+      "darkSha256": "edf9ac6e827bf9ec9e9df006948a3ab70fc0afbf6b80f798af9064f6ae3adcc4",
+      "notes": "두 개 before→after와 단일 12.1억→15.6억의 실제 화살표·수치 baseline을 확인했다."
+    },
+    {
+      "element": "flowchart",
+      "verdict": "pass",
+      "lightSha256": "54d37d81045da46cc0e0e679bf32de0af134e9e9059dff7631135ff16d09dc4f",
+      "darkSha256": "c321061d76155625d3eb8c1a748624b6f18710561d5b6bee8848433927df6af3",
+      "notes": "질문 노드에서 오른쪽/아래 분기, 순환 fixture의 오른쪽/아래/왼쪽/위 화살촉과 연결 끝을 확인했다."
+    },
+    {
+      "element": "funnel",
+      "verdict": "pass",
+      "lightSha256": "5c9d2de808f129d87fc90be77fb634fcf90bb022e8d091c8d2fd817e0e03cd54",
+      "darkSha256": "315422a644f3f30ed876507b3b08af36af82911643cf09fdbbc158fc44d2ae4f",
+      "notes": "3단과 6단의 --v에 따른 폭 감소 및 바깥 이름/오른쪽 수치를 읽었다."
+    },
+    {
+      "element": "gauge",
+      "verdict": "pass",
+      "lightSha256": "ee3008a28bca900af9232165d28ac03323f9447274beaecf0b0dae3483bb4f05",
+      "darkSha256": "a165bd2278848292a75d17fd4e686beb07eebc835a6f911a3a87a09baf2e56d7",
+      "notes": "4개 수평 게이지의 92/70/45/20% 및 단일 72%를 읽고 actual 막대와 남은 track을 확인했다."
+    },
+    {
+      "element": "headline",
+      "verdict": "pass",
+      "lightSha256": "d2d0ca428884427c3183cc916918963827a756bbc64a730998c054a07d7603ad",
+      "darkSha256": "169b653aa6b94454cc6db9a19b00be2efaa02d0116a94f66f4bf15a063acd4f5",
+      "notes": "감사합니다 큰 제목과 영문 제목의 kick/강조 단어/note를 읽고 위계를 확인했다."
+    },
+    {
+      "element": "heatmap",
+      "verdict": "pass",
+      "lightSha256": "b0ffa48c9ea4c3f690b965ee901bf3fd4cf8cf7de56178623b131aa99b19e5fe",
+      "darkSha256": "4590f47434cf79fe16f09c2f7b0eb76de218a4939bf73ef0ab53291e5a965881",
+      "notes": "12주 calendar와 5×6 수치 grid에서 농도 차이, 행·열 라벨과 각 값을 확인했다. Calendar는 12개 열/7개 행을 정사각형 칸으로 표시하고 긴 주차 라벨도 읽었다."
+    },
+    {
+      "element": "hierarchy",
+      "verdict": "pass",
+      "lightSha256": "de56ba352087a182e5bf4f5b7d85701f563ec376223007913de367845d66a093",
+      "darkSha256": "c8ef797e29257262405ddefe996e09535e4b50bec54b8851794ffca29acefb7a",
+      "notes": "2부문 및 4부문 조직도에서 root stem·연속 가로 bus·각 branch stem 및 leaf 목록을 확인했다."
+    },
+    {
+      "element": "hub",
+      "verdict": "pass",
+      "lightSha256": "c71e2b4070feaa06379613df740758a517d7757ec7b6b26a12dc52a07b873a64",
+      "darkSha256": "5da0dc3eeeb880469daf722f01eddb841e669cb279954b4fb93bbe549db4f3b6",
+      "notes": "3개 및 6개 spoke 연결을 확인했다. spoke의 불투명 면이 선을 덮어 이름/note를 선이 관통하지 않는다."
+    },
+    {
+      "element": "image-frame",
+      "verdict": "pass",
+      "lightSha256": "9c1b36826725298a43bb8fd256578a81e7793675fe6691f5d32e24f1ed5be431",
+      "darkSha256": "e2a27faac9bab7caf6e4121aaff37ffe680abdc06ed46bd8cd264f100936248f",
+      "notes": "3개 나란한 이미지 frame과 단일 큰 frame에서 회색 seat·frame 여백·외곽선이 유지됨을 확인했다."
+    },
+    {
+      "element": "journey",
+      "verdict": "pass",
+      "lightSha256": "bb66a46ebe47c1cb1ad1f86ae025470fc3b01b614a3fde1d62134fc6a82af045",
+      "darkSha256": "b9d56896963d6e4632df28c36cf80689fea830f2753f43befb1b5f4790d351b0",
+      "notes": "3개와 7개 stage에서 모든 mood 점 사이 선이 끝까지 연결되고 pain·접점 note가 아래에 분리됨을 확인했다."
+    },
+    {
+      "element": "legend",
+      "verdict": "pass",
+      "lightSha256": "1d834df11b39b58c7815b23d2a693e772e39583026ccceb2f73aed61d2429756",
+      "darkSha256": "5840cd51ab3390a1aa91a9412547b73253d24a8543e16dd9b07fa8209c248e9d",
+      "notes": "3개/5개 키의 색표와 라벨을 읽었다. 다섯 번째 계열을 네 번째와 다른 팔레트 자리로 수정했다."
+    },
+    {
+      "element": "list",
+      "verdict": "pass",
+      "lightSha256": "2cf61b3d8f4f61e9537bf38b9db787cc7b753f7d7d075204a9d876567cb99190",
+      "darkSha256": "76922a020b21eb4704c8855a1705f14fff1ed98a1ab36a7d167a53d7b07ed9ce",
+      "notes": "체크형 및 bullet형 목록의 실제 marker, 긴 이름/note 줄바꿈과 행 간격을 확인했다."
+    },
+    {
+      "element": "logo-group",
+      "verdict": "pass",
+      "lightSha256": "c1a0997f33a7610ed739491db314720244f9c4b529180a41b3d78a922009c4f9",
+      "darkSha256": "4b8463aaa63962e1af276304e70267923bbdc792378e436b5cf2368da6055f00",
+      "notes": "6개와 8개 seat의 회색 로고 자리, 격자 간격과 모든 칸 경계를 확인했다."
+    },
+    {
+      "element": "matrix",
+      "verdict": "pass",
+      "lightSha256": "84691eff8b3b0c0327a42de36554fc539f7884a5ff08cf93bccf16fd5428cccd",
+      "darkSha256": "a110cbcbff24689105dad1795055ed98cb15d970a55fdd696544d34a7b61d662",
+      "notes": "2×2 축/강조 셀과 SWOT의 4개 구분·kick·체크 목록을 읽었다. y축 낮음은 아래, 높음은 위에 배치했다."
+    },
+    {
+      "element": "matrix-nine",
+      "verdict": "pass",
+      "lightSha256": "139f723ebadd9f1d676c605c8f8fcb81d58bcc54b387d7ca7d7997c8b4203236",
+      "darkSha256": "c50cff62150b6a8c4f73762dbb6776bb18b3059efa434d69d8cfaaeb0c67bead",
+      "notes": "9개 셀의 행 순서·강조·이름/note와 3단계 축을 확인했다."
+    },
+    {
+      "element": "metric",
+      "verdict": "pass",
+      "lightSha256": "d26659fa6ff4e0ea2da287a20f3331a7ccfa65db36dc86a4b3bb6892f782eebf",
+      "darkSha256": "00ef4d68a1fcec8470eb4744e2b71c86bc5adc30f4dd369046aec8eee8338dc3",
+      "notes": "단일 60%와 네 수치 열의 fig/unit/name/note 및 세로 divider를 확인했다."
+    },
+    {
+      "element": "mindmap",
+      "verdict": "pass",
+      "lightSha256": "e0b7ea15eb942e2c0db30fe331025fe1138f0aaac9dd158c9bfd30b30169f01a",
+      "darkSha256": "2d5d7edc5198b3ed0846efbdf769a5f41667a96f9955dfe8727629e4a9b3d5ce",
+      "notes": "중앙 core에서 양쪽 branch로 이어지는 연결과 각 leaf의 보조 세로선을 확인했다."
+    },
+    {
+      "element": "network",
+      "verdict": "pass",
+      "lightSha256": "560fc5aed3a2235fe9e46b44859ac96c405ad97a3fba77216e485007ae0560cd",
+      "darkSha256": "0c2f4b64d909b3440ccba22a20763035c4dc60112008cfd4388777cc79bfef2f",
+      "notes": "3개 및 6개 node의 실제 다대다 link를 확인했다. 강한 선과 보조 선이 불투명 node 면 뒤에 놓인다."
+    },
+    {
+      "element": "person",
+      "verdict": "pass",
+      "lightSha256": "0fa9c6acd9446eac31181fa5f7ca49a2b26de46c55d6130ac7e5d187b7912654",
+      "darkSha256": "d7ad878a1b5095d7b8202a68d70e9bd9d1ff5f8504e08519deb6c3aea480cced",
+      "notes": "3인 프로필 및 1인 긴 소개에서 avatar/name/note/체크 목록을 읽고 이름 시작 높이를 확인했다."
+    },
+    {
+      "element": "pill",
+      "verdict": "pass",
+      "lightSha256": "9403d9bfc2e958669e3862d91b99c020b423a77664986a15677c3aa7d0a2103e",
+      "darkSha256": "1a90cc4592208d6365614ea9a9383a322ab275a450d07edbb91aaa248f902066",
+      "notes": "강조·quiet·line 네 capsule과 단일 pill에서 mark/name/note 한 줄과 시각 중심을 확인했다."
+    },
+    {
+      "element": "positioning",
+      "verdict": "pass",
+      "lightSha256": "32d667978edfe87b6d003584ae17bd23acae4a6cfe69c2ec6786c79b82e113d7",
+      "darkSha256": "16ad9f43d46420c8c53b2c2184fae88e760d0aa0061f341f68b3e6ca0d4c2e4e",
+      "notes": "중앙 교차축·양끝 라벨과 2개/4개 mark 좌표를 확인했다. mark 라벨에 본문 대비를 적용했다."
+    },
+    {
+      "element": "pricing",
+      "verdict": "pass",
+      "lightSha256": "181c83971b0b905d729ab7c0313b12aed385952b795dfef7b11e7144e7e77009",
+      "darkSha256": "f04c78ac346d1d9e7e7c1c5063f79f2e02d3e3acfee74c52806cbefb335f7f13",
+      "notes": "2개·3개 plan에서 tag 유무와 관계없이 이름/가격 행을 예약해 같은 높이로 맞췄다. 강조 plan의 check marker도 대비를 확보했다."
+    },
+    {
+      "element": "prose",
+      "verdict": "pass",
+      "lightSha256": "f891bd41c623bc37cc5a7bcbf400e9cba5b99cd07479233d40fe6eceaee3fdb8",
+      "darkSha256": "a964c458f7e8331b8dcc00797e6714e005d599191fe6335c4f2d1b2fee0038cf",
+      "notes": "두 단락 열과 긴 두 문단에서 실제 한글 문장을 읽고 단락 간격·강조 구절·줄바꿈을 확인했다."
+    },
+    {
+      "element": "pyramid",
+      "verdict": "pass",
+      "lightSha256": "c245e99317dd110903cf5e8ed62f3079209602a485adaba982af3328d1fe974c",
+      "darkSha256": "ed9f8e519d7ebfd3e577477b44427b0fdcd0e1fd448f73f4a67061d0f43455bc",
+      "notes": "3층과 5층의 아래로 넓어지는 층, 가운데 이름·note와 강조 최상층을 확인했다."
+    },
+    {
+      "element": "quote",
+      "verdict": "pass",
+      "lightSha256": "102974a475d3467dfcd83558cf32b02026b7bc7d3a4bb5b311440d0b35cb544b",
+      "darkSha256": "936a0ee3c868007caf6131c4acd8096b95148f76d0d3f83e9dddcafc00700018",
+      "notes": "2개 인용과 big 인용에서 인용문·저자 avatar·이름·직함을 읽고 좌우 정렬을 확인했다."
+    },
+    {
+      "element": "radar",
+      "verdict": "pass",
+      "lightSha256": "2fa0fc0418fd6b64a92d24ba492c107a648fed257f5c50a0a04710bc400c6f19",
+      "darkSha256": "1a287dfc438cb34a077e68f944d3b3302b408336420e8380de17403c621a8143",
+      "notes": "주 에이전트의 native 재검수에서 기존 series 이름이 동일좌표에 겹치는 확정 결함을 찾아 최초 판정을 취소했다. 계열 이름을 아래1/2/3칸의 범례로 분리하고 각 key와 polygon이 같은 series색을 사용한다. 5축 무톤 첫 계열은 a1, 비교는 n-6로 구분하고 explicit tone은 유지했다. 3/5/8축의 라이트·다크 native를 실제 열어 계열1/2/3명이 모두 표시됨, legend/axis 겹침없음, 8축 tone-3 초록 유지 확인. 기존 최소4×3/6×4/8×4부터12×6까지144개 정수크기 검사0. radar-series-audit.json에 실제 이름 bbox·색/key 일치 기록."
+    },
+    {
+      "element": "roadmap",
+      "verdict": "pass",
+      "lightSha256": "8ba5d1caa25051a79ed3a3ef5e403c9bcf802cbdb3b4381c270bb7a9467c184d",
+      "darkSha256": "e262ac313e383d043016a40e9166949836ebe8604df89a0cdd94fba215939155",
+      "notes": "3기간 2lane 및 4분기 4lane의 실제 from/to 길이, 구간 이름과 첫 출하 milestone을 확인했다."
+    },
+    {
+      "element": "sankey",
+      "verdict": "pass",
+      "lightSha256": "aaefe30c63a3971b705f9584801c1ba0efb3f4ce236189ddf1f334e21c7805e4",
+      "darkSha256": "810e403cf7e319d3e7e74b4dbb4eb9ff9f936e76675b975ba1ae517da9c3de16",
+      "notes": "source에서 각 destination으로 흐르는 두께가 다른 band와 2차 분기를 확인했다. nested fixture는 부모→두 번째 분기 사이에도 bus와 share 두께의 수평 band를 표시한다."
+    },
+    {
+      "element": "slope",
+      "verdict": "pass",
+      "lightSha256": "a850738d265101343e822ea66d3a22c3efefef2154ad40c05530f0d31d18e259",
+      "darkSha256": "b5b216432930857929b610e96992acac633a7f0b0dfd906c47048d8bd5f5188c",
+      "notes": "일반 slope의 증가/감소 선 방향과 dumbbell의 두 endpoint·연결 막대 및 수치를 확인했다. dumbbell의 before 점은 속이 빈 원, after 점은 채운 원으로 범례 ○/●와 일치함을 최종 native에서 확인."
+    },
+    {
+      "element": "sparkline",
+      "verdict": "pass",
+      "lightSha256": "6bbba4e2f87272079a9b6946187e0271d06c2371d5b33de197d36a2232a01944",
+      "darkSha256": "7ae371270ad47b0898585692d1349d470cf15f27f718a71a60a9f8500c30a090",
+      "notes": "24점 mini line과 bars 변형, metric 안의 작은 상승 추세가 연속으로 읽히는 것을 확인했다."
+    },
+    {
+      "element": "steps",
+      "verdict": "pass",
+      "lightSha256": "8581a5cbd472da5ce872b6a69b826e7edc06f9a2586fd2a3593aae24db9026a4",
+      "darkSha256": "4d6dcf4912317e8f56f525a21ebe6a3a6c752e7c810e2d09bea7233c3514493a",
+      "notes": "3개 수평 step과 4개 세로 step에서 방향에 맞는 connector, mark/name/note를 확인했다."
+    },
+    {
+      "element": "swimlane",
+      "verdict": "pass",
+      "lightSha256": "e963c3e2a5e50238197151776a4c130e5a150edd3177640db57ceaf8dcf81ad0",
+      "darkSha256": "4df2c54305d622ba29490646fdc154d329309d10b967b543ceb18a8292de6166",
+      "notes": "2lane·3lane의 소유자 라벨과 행 사이/옆 노드 방향 화살표가 분리되어 보임을 확인했다."
+    },
+    {
+      "element": "table",
+      "verdict": "pass",
+      "lightSha256": "0ca1d5155712566ab0ee7722f9428fde6d1185edead07e69debc41ceed266884",
+      "darkSha256": "d5b2dcb1f3a322d8ce4f0d7238b061f076c0ec1d4cdc5fa3fc7728e6c14c524f",
+      "notes": "3열 및 6열 표에서 thead/tbody·강조 열·숫자 셀과 모든 행 이름을 읽었다."
+    },
+    {
+      "element": "tag",
+      "verdict": "pass",
+      "lightSha256": "82b76d945a9a3973150520582e3f08364d8c0e8ab7ebaf3ec9041fb051dd3468",
+      "darkSha256": "ebb829c2b6254fa8418a59ac95548bc6e6fa27a6e21c6269b8943abad02b760e",
+      "notes": "작은 tag와 본문 highlight를 읽었다. highlight는 본문 크기를 유지하여 줄 안에서 작아지지 않는다."
+    },
+    {
+      "element": "timeline",
+      "verdict": "pass",
+      "lightSha256": "0671ed7d339236b566cd51a49e46979c48bd91b7ba8a88218b0e1bf61d6d14fc",
+      "darkSha256": "4f140a66371ce8720c3e5123d919d5147747a782a415c4262b95d71a8623c999",
+      "notes": "5개 수평 stop과 4개 세로 stop에서 날짜 chip·축·점·강조 stop·name/note를 확인했다."
+    },
+    {
+      "element": "treemap",
+      "verdict": "pass",
+      "lightSha256": "f8beb1c4ee01c806952342fe0340e7e269f1f46098ecf36bda72f64bae9b1f47",
+      "darkSha256": "b5e371d3ceff1e9b8ccc67ccffbbfbe034eb51e4ec98f971fd14ada8e9de1b83",
+      "notes": "단일 branch의 46/31/15/8 면적비와 여러 branch의 상대 면적을 확인했다. 잘못된 20% flex-basis를 제거했다."
+    },
+    {
+      "element": "venn",
+      "verdict": "pass",
+      "lightSha256": "58ded28cbaa18252ed56acf36f52cf198b614bbbaa5769a5a6119fe962c75e07",
+      "darkSha256": "44852d3cdc12b7307b038c98dc31d0012e41e426e9a546c49efd3c4217b84a30",
+      "notes": "2개/3개 set의 겹침을 유지하면서 core가 set 이름을 가리지 않도록 바깥쪽 라벨을 배치했다."
+    },
+    {
+      "element": "versus",
+      "verdict": "pass",
+      "lightSha256": "5118e61f7c7a60f7e92556013ea37c16ca6beb18df140b9ad1d79ab505aee199",
+      "darkSha256": "7fdf57e7a6c85ef54d2421bc3b7fa75bb711c64f8383e3cb1816696f6a7dd506",
+      "notes": "두 side의 제목과 중앙 VS, 각 체크 목록을 읽고 강조 side에서도 marker가 보이는지 확인했다."
+    },
+    {
+      "element": "waffle",
+      "verdict": "pass",
+      "lightSha256": "853096c3cb9451757fa38000563ae6d984823a6a2db517922452264fbb02078e",
+      "darkSha256": "5cf638128d3e024d60c8f563bb3dc974cc75536971a83c7044fbae53e4ba2569",
+      "notes": "3개의 50단위 share와 10인 pictogram의 60/30%를 실제 개수로 확인했다. 인물의 세로 왜곡을 제거했다."
+    }
+  ]
+}

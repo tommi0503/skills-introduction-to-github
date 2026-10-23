@@ -1,0 +1,30 @@
+:is(.org[data-el="obelisk-053-hierarchy"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.org[data-el="obelisk-053-hierarchy"]) *{box-sizing:border-box;min-width:0;}
+:is(.org[data-el="obelisk-053-hierarchy"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.org[data-el="obelisk-053-hierarchy"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.org[data-el="obelisk-053-hierarchy"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.org[data-el="obelisk-053-hierarchy"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.org[data-el="obelisk-053-hierarchy"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.org[data-el="obelisk-053-hierarchy"]).on .name,:is(.org[data-el="obelisk-053-hierarchy"]).on .note,:is(.org[data-el="obelisk-053-hierarchy"]).on .fig,:is(.org[data-el="obelisk-053-hierarchy"]).on .kick,:is(.org[data-el="obelisk-053-hierarchy"]).on .mark{color:var(--a1-on);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.org[data-el="obelisk-053-hierarchy"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.org[data-el="obelisk-053-hierarchy"]){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto 1fr;gap:var(--gap-lg) var(--gap);}
+:is(.org[data-el="obelisk-053-hierarchy"])>.root{grid-row:1;grid-column:1/-1;justify-self:center;width:50%;padding:var(--gap-sm);text-align:center;background:var(--a1-9);color:var(--page);position:relative;}
+:is(.org[data-el="obelisk-053-hierarchy"])>.root::after{content:"";position:absolute;height:var(--gap-lg);width:1px;top:100%;left:50%;background:var(--n-4);}
+:is(.org[data-el="obelisk-053-hierarchy"])>.branch{position:relative;display:flex;flex-direction:column;gap:var(--gap-sm);border-top:var(--stroke) solid var(--n-4);padding-top:var(--gap-sm);}
+:is(.org[data-el="obelisk-053-hierarchy"])>.branch .node{background:var(--a1);color:var(--a1-on);padding:var(--gap-sm);text-align:center;}
+:is(.org[data-el="obelisk-053-hierarchy"])>.branch .leaf{padding:var(--gap-sm);background:var(--n-1);font-size:var(--type-16);}
+@container (max-width: 520px){:is(.org[data-el="obelisk-053-hierarchy"]) .name{font-size:var(--type-18)}:is(.org[data-el="obelisk-053-hierarchy"]) .fig{font-size:var(--type-32)}:is(.org[data-el="obelisk-053-hierarchy"]) .note{font-size:var(--type-14)}:is(.org[data-el="obelisk-053-hierarchy"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.org[data-el="obelisk-053-hierarchy"]) .name{font-size:var(--type-16)}:is(.org[data-el="obelisk-053-hierarchy"]) .fig{font-size:var(--type-24)}:is(.org[data-el="obelisk-053-hierarchy"]) .note{font-size:var(--type-12)}:is(.org[data-el="obelisk-053-hierarchy"]) .kick{display:none}}
+@container (max-height: 150px){:is(.org[data-el="obelisk-053-hierarchy"]) .name{font-size:var(--type-16)}:is(.org[data-el="obelisk-053-hierarchy"]) .fig{font-size:var(--type-24)}:is(.org[data-el="obelisk-053-hierarchy"]) .note{font-size:var(--type-12)}:is(.org[data-el="obelisk-053-hierarchy"]) .kick{display:none}}
+:is(.org[data-el="obelisk-053-hierarchy"]):has(>.branch:nth-child(2 of .branch):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}:is(.org[data-el="obelisk-053-hierarchy"]):has(>.branch:nth-child(3 of .branch):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}
+@container (max-height:300px){:is(.org[data-el="obelisk-053-hierarchy"]) .name{font-size:var(--type-16)}:is(.org[data-el="obelisk-053-hierarchy"]) .note{font-size:var(--type-12)}:is(.org[data-el="obelisk-053-hierarchy"]) .fig{font-size:var(--type-24)}:is(.org[data-el="obelisk-053-hierarchy"]) .kick{font-size:var(--type-12)}}
+:is(.org[data-el="obelisk-053-hierarchy"])>.branch{min-height:0;gap:calc(var(--gap-sm)/2)}:is(.org[data-el="obelisk-053-hierarchy"])>.branch .leaf{padding:calc(var(--gap-sm)/2);font-size:var(--type-14)}:is(.org[data-el="obelisk-053-hierarchy"])>.branch .node{padding:calc(var(--gap-sm)/2);font-size:var(--type-16)}
+.org[data-el="obelisk-053-hierarchy"]>.root::before{content:"";position:absolute;left:-50%;right:-50%;top:calc(100% + var(--gap-lg));height:var(--stroke);background:var(--n-4)}.org[data-el="obelisk-053-hierarchy"]>.branch::before{content:"";position:absolute;left:50%;top:0;height:var(--gap-sm);width:var(--stroke);background:var(--n-4)}

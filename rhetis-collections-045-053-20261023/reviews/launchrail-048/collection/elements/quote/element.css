@@ -1,0 +1,27 @@
+:is(.quote[data-el="launchrail-048-quote"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.quote[data-el="launchrail-048-quote"]) * { box-sizing:border-box; min-width:0; }
+:is(.quote[data-el="launchrail-048-quote"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.quote[data-el="launchrail-048-quote"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.quote[data-el="launchrail-048-quote"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.quote[data-el="launchrail-048-quote"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.quote[data-el="launchrail-048-quote"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.quote[data-el="launchrail-048-quote"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.quote[data-el="launchrail-048-quote"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.quote[data-el="launchrail-048-quote"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.quote[data-el="launchrail-048-quote"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.quote[data-el="launchrail-048-quote"]) .seat.avatar { border-radius:50%; }
+:is(.quote[data-el="launchrail-048-quote"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); border:var(--stroke) solid var(--a1-4-soft); border-radius:var(--radius); padding:var(--pad); }
+:is(.quote[data-el="launchrail-048-quote"]) blockquote { font-size:var(--type-36); line-height:var(--lead-line); font-weight:var(--lead-weight); }
+:is(.quote[data-el="launchrail-048-quote"]) blockquote::before { content:"“"; color:var(--a1-7); font-size:var(--type-64); line-height:var(--figure-line); }
+:is(.quote[data-el="launchrail-048-quote"]) .by { display:grid; grid-template-columns:auto 1fr; gap:var(--gap-sm) var(--gap); align-items:center; } :is(.quote[data-el="launchrail-048-quote"]) .by .seat { width:calc(var(--gap) * 3); grid-row:1 / span 2; } :is(.quote[data-el="launchrail-048-quote"]) .by .name { align-self:end; } :is(.quote[data-el="launchrail-048-quote"]) .by .note { align-self:start; } :is(.quote[data-el="launchrail-048-quote"]).big blockquote { font-size:var(--type-48); }
+@container (max-width:700px) { :is(.quote[data-el="launchrail-048-quote"]) blockquote, :is(.quote[data-el="launchrail-048-quote"]).big blockquote { font-size:var(--type-26); } }
+
+@container (max-width: 650px) { :is(.quote[data-el="launchrail-048-quote"]) .name { font-size:var(--type-20); } :is(.quote[data-el="launchrail-048-quote"]) .fig { font-size:var(--type-40); } :is(.quote[data-el="launchrail-048-quote"]) .note { font-size:var(--type-16); } :is(.quote[data-el="launchrail-048-quote"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.quote[data-el="launchrail-048-quote"]) .name { font-size:var(--type-18); } :is(.quote[data-el="launchrail-048-quote"]) .fig { font-size:var(--type-32); } :is(.quote[data-el="launchrail-048-quote"]) .note { font-size:var(--type-14); } :is(.quote[data-el="launchrail-048-quote"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.quote[data-el="launchrail-048-quote"]) .kick { display:none; } :is(.quote[data-el="launchrail-048-quote"]) .note { font-size:var(--type-14); } :is(.quote[data-el="launchrail-048-quote"]) .name { font-size:var(--type-18); } :is(.quote[data-el="launchrail-048-quote"]) .fig { font-size:var(--type-32); } }
+
+:is(.quote[data-el="launchrail-048-quote"]) small { color:inherit; }
+
+:is(.quote)[data-el="launchrail-048-quote"] small { color:inherit; margin-left:0; }
+
+:is(.quote)[data-el="launchrail-048-quote"] .fig { font-family:var(--font-display); }

@@ -1,0 +1,1 @@
+The card uses Axisfold’s capsule labels, compact rounded modules, fine rules and circular connection grammar. One primary accent establishes the main reading path; neutral fields keep supporting content quiet. Typography steps down inside smaller slots while names and figures remain visible.

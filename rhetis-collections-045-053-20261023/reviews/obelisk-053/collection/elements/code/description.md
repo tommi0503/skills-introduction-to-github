@@ -1,0 +1,1 @@
+A quiet rectangular code field uses direct line rhythm, a small file heading and optional counted line numbers. Ranked syntax emphasis remains restrained and readable in both modes. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

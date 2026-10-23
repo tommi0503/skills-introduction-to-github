@@ -1,0 +1,27 @@
+.sankey[data-el="portico-045-sankey"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/3);padding:var(--gap-sm);isolation:isolate;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.sankey[data-el="portico-045-sankey"] *{box-sizing:border-box;min-width:0}
+.sankey[data-el="portico-045-sankey"]>.source{position:absolute;inset:var(--gap-sm) auto var(--gap-sm) var(--gap-sm);width:30%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm);background:var(--a1);color:var(--a1-on);z-index:2}
+.sankey[data-el="portico-045-sankey"] .name{margin:0;font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.sankey[data-el="portico-045-sankey"] .fig{margin:0;font-size:var(--type-24);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.sankey[data-el="portico-045-sankey"]>.branch{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:var(--gap-sm);flex:var(--v);margin-left:45%;padding:0 var(--gap);min-height:0;background:var(--n-1);z-index:1}
+.sankey[data-el="portico-045-sankey"]>.branch::before{content:"";position:absolute;right:100%;top:0;bottom:0;width:15cqw;background:var(--n-3);z-index:-1}
+.sankey[data-el="portico-045-sankey"]>.branch.on{background:var(--a1-1-soft)}
+.sankey[data-el="portico-045-sankey"]>.branch.on::before{background:var(--a1-3-soft)}
+.sankey[data-el="portico-045-sankey"]>.branch.out::before{background:var(--n-5)}
+.sankey[data-el="portico-045-sankey"]:has(>.branch>.branch)>.source{width:20%}
+.sankey[data-el="portico-045-sankey"]:has(>.branch>.branch)>.branch{margin-left:36%;padding:0;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;background:transparent;gap:calc(var(--gap-sm)/3)}
+.sankey[data-el="portico-045-sankey"]:has(>.branch>.branch)>.branch::before{width:16cqw}
+.sankey[data-el="portico-045-sankey"]>.branch:has(>.branch)::after{content:"";position:absolute;left:0;top:0;bottom:0;width:28%;background:var(--n-1);z-index:-1}
+.sankey[data-el="portico-045-sankey"]>.branch.on:has(>.branch)::after{background:var(--a1-1-soft)}
+.sankey[data-el="portico-045-sankey"]>.branch:has(>.branch)>.name{position:absolute;left:0;top:calc(50% - var(--gap));width:28%;text-align:center;translate:0 -100%;font-size:var(--type-16)}
+.sankey[data-el="portico-045-sankey"]>.branch:has(>.branch)>.fig{position:absolute;left:0;top:50%;width:28%;text-align:center;font-size:var(--type-20)}
+.sankey[data-el="portico-045-sankey"] .branch>.branch{position:relative;display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);flex:var(--v);margin-left:50%;padding:0 var(--gap-sm);min-height:0;background:var(--n-1)}
+.sankey[data-el="portico-045-sankey"] .branch>.branch::before{content:"";position:absolute;right:100%;top:0;bottom:0;width:14.08cqw;background:var(--n-3);z-index:-1}
+.sankey[data-el="portico-045-sankey"] .branch.on>.branch::before{background:var(--a1-3-soft)}
+.sankey[data-el="portico-045-sankey"] .branch>.branch.out::before{background:var(--n-5)}
+.sankey[data-el="portico-045-sankey"] .branch>.branch>.name{font-size:var(--type-14)}
+.sankey[data-el="portico-045-sankey"] .branch>.branch>.fig{font-size:var(--type-16)}
+.sankey[data-el="portico-045-sankey"]:has(>.branch:nth-child(6 of .branch))>.branch>.name{font-size:var(--type-14)}
+.sankey[data-el="portico-045-sankey"]:has(>.branch:nth-child(6 of .branch))>.branch>.fig{font-size:var(--type-18)}
+@container (max-width:800px){.sankey[data-el="portico-045-sankey"] .name{font-size:var(--type-14)}.sankey[data-el="portico-045-sankey"] .fig{font-size:var(--type-18)}.sankey[data-el="portico-045-sankey"] .branch>.branch>.name{font-size:var(--type-12)}.sankey[data-el="portico-045-sankey"] .branch>.branch>.fig{font-size:var(--type-14)}}
+@container (max-height:400px){.sankey[data-el="portico-045-sankey"] .name{font-size:var(--type-14)}.sankey[data-el="portico-045-sankey"] .fig{font-size:var(--type-18)}}

@@ -1,0 +1,51 @@
+:is(.lines[data-el="launchrail-048-chart-line"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.lines[data-el="launchrail-048-chart-line"]) * { box-sizing:border-box; min-width:0; }
+:is(.lines[data-el="launchrail-048-chart-line"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.lines[data-el="launchrail-048-chart-line"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.lines[data-el="launchrail-048-chart-line"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.lines[data-el="launchrail-048-chart-line"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.lines[data-el="launchrail-048-chart-line"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.lines[data-el="launchrail-048-chart-line"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.lines[data-el="launchrail-048-chart-line"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.lines[data-el="launchrail-048-chart-line"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.lines[data-el="launchrail-048-chart-line"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.lines[data-el="launchrail-048-chart-line"]) .seat.avatar { border-radius:50%; }
+:is(.lines[data-el="launchrail-048-chart-line"]) { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr) var(--gap-lg); padding-top:var(--gap-lg); border-bottom:var(--stroke) solid var(--n-5); isolation:isolate; anchor-scope:all; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt { display:contents; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt > b { grid-row:1; align-self:start; justify-self:stretch; height:calc(100% - var(--v) / var(--max) * (100% - var(--gap-lg))); display:flex; align-items:center; justify-content:flex-end; flex-direction:column; anchor-name:var(--launchrail-048-self); font-size:var(--type-18); font-weight:var(--figure-weight); line-height:var(--figure-line); color:var(--a1-7); }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt > b::after { content:""; display:block; width:8px; height:8px; border-radius:50%; background:var(--a1); margin-top:var(--gap-sm); margin-bottom:-4px; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt > span { grid-row:2; display:flex; align-items:center; justify-content:center; font-size:var(--type-16); line-height:var(--label-line); text-align:center; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt::before, :is(.lines[data-el="launchrail-048-chart-line"]) > .pt::after { content:""; position:absolute; left:anchor(var(--launchrail-048-prev) center); right:anchor(var(--launchrail-048-self) center); pointer-events:none; z-index:-1; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt::before { top:calc(anchor(var(--launchrail-048-prev) bottom) - 1px); bottom:calc(anchor(var(--launchrail-048-self) bottom) - 1px); background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--a1) 50%,transparent calc(50% + 1px)); }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt::after { top:calc(anchor(var(--launchrail-048-self) bottom) - 1px); bottom:calc(anchor(var(--launchrail-048-prev) bottom) - 1px); background:linear-gradient(to top right,transparent calc(50% - 1px),var(--a1) 50%,transparent calc(50% + 1px)); }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:first-child::before, :is(.lines[data-el="launchrail-048-chart-line"]) > .pt:first-child::after { content:none; }
+@container (max-width:650px) { :is(.lines[data-el="launchrail-048-chart-line"]) > .pt > b { font-size:var(--type-14); } :is(.lines[data-el="launchrail-048-chart-line"]) > .pt > span { font-size:var(--type-12); }  }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(1) { --launchrail-048-self:--launchrail-048-line-1;  }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(2) { --launchrail-048-self:--launchrail-048-line-2; --launchrail-048-prev:--launchrail-048-line-1; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(3) { --launchrail-048-self:--launchrail-048-line-3; --launchrail-048-prev:--launchrail-048-line-2; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(4) { --launchrail-048-self:--launchrail-048-line-4; --launchrail-048-prev:--launchrail-048-line-3; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(5) { --launchrail-048-self:--launchrail-048-line-5; --launchrail-048-prev:--launchrail-048-line-4; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(6) { --launchrail-048-self:--launchrail-048-line-6; --launchrail-048-prev:--launchrail-048-line-5; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(7) { --launchrail-048-self:--launchrail-048-line-7; --launchrail-048-prev:--launchrail-048-line-6; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(8) { --launchrail-048-self:--launchrail-048-line-8; --launchrail-048-prev:--launchrail-048-line-7; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(9) { --launchrail-048-self:--launchrail-048-line-9; --launchrail-048-prev:--launchrail-048-line-8; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(10) { --launchrail-048-self:--launchrail-048-line-10; --launchrail-048-prev:--launchrail-048-line-9; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(11) { --launchrail-048-self:--launchrail-048-line-11; --launchrail-048-prev:--launchrail-048-line-10; }
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt:nth-child(12) { --launchrail-048-self:--launchrail-048-line-12; --launchrail-048-prev:--launchrail-048-line-11; }
+
+@container (max-width: 650px) { :is(.lines[data-el="launchrail-048-chart-line"]) .name { font-size:var(--type-20); } :is(.lines[data-el="launchrail-048-chart-line"]) .fig { font-size:var(--type-40); } :is(.lines[data-el="launchrail-048-chart-line"]) .note { font-size:var(--type-16); } :is(.lines[data-el="launchrail-048-chart-line"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.lines[data-el="launchrail-048-chart-line"]) .name { font-size:var(--type-18); } :is(.lines[data-el="launchrail-048-chart-line"]) .fig { font-size:var(--type-32); } :is(.lines[data-el="launchrail-048-chart-line"]) .note { font-size:var(--type-14); } :is(.lines[data-el="launchrail-048-chart-line"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.lines[data-el="launchrail-048-chart-line"]) .kick { display:none; } :is(.lines[data-el="launchrail-048-chart-line"]) .note { font-size:var(--type-14); } :is(.lines[data-el="launchrail-048-chart-line"]) .name { font-size:var(--type-18); } :is(.lines[data-el="launchrail-048-chart-line"]) .fig { font-size:var(--type-32); } }
+
+/* Browser review corrections. */
+:is(.lines[data-el="launchrail-048-chart-line"]) > .pt::before { background:linear-gradient(to top right,transparent calc(50% - 1px),var(--a1) 50%,transparent calc(50% + 1px)); } :is(.lines[data-el="launchrail-048-chart-line"]) > .pt::after { background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--a1) 50%,transparent calc(50% + 1px)); }
+
+:is(.lines[data-el="launchrail-048-chart-line"]) small { color:inherit; }
+
+/* A filled polygon has a nonzero two-pixel band even when adjacent data values are equal. */
+.lines[data-el="launchrail-048-chart-line"] > .pt::before { background:var(--a1);clip-path:polygon(0 0,100% calc(100% - 2px),100% 100%,0 2px); }
+.lines[data-el="launchrail-048-chart-line"] > .pt::after { background:var(--a1);clip-path:polygon(0 calc(100% - 2px),100% 0,100% 2px,0 100%); }
+
+:is(.lines)[data-el="launchrail-048-chart-line"] small { color:inherit; margin-left:0; }
+
+:is(.lines)[data-el="launchrail-048-chart-line"] .fig { font-family:var(--font-display); }

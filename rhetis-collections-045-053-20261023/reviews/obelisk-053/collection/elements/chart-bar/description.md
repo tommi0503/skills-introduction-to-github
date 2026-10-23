@@ -1,0 +1,1 @@
+Flush rectangular bars rise from a quiet ruled plot. Values sit above the bar tops and category labels stay below the baseline; horizontal bars reserve a wide label rail. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

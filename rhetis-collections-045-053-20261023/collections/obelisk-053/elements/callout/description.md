@@ -1,0 +1,1 @@
+A quiet rectangular sentence panel uses one narrow leading rule. The centered sentence contains one dark accent phrase, with room beside it for a restrained line icon. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

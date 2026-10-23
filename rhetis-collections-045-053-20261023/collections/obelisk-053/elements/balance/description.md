@@ -1,0 +1,1 @@
+Two rectangular pans sit on a deep structural beam over a simple triangular fulcrum. A restrained tilt carries the comparison while labels remain upright and readable. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

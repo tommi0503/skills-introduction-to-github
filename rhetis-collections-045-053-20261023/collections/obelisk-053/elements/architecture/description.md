@@ -1,0 +1,1 @@
+Stacked horizontal layers use a narrow primary rule at the left. The layer name stays on a shared rail while the component chips form a calm rectangular row. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

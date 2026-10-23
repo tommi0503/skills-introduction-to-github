@@ -1,0 +1,1 @@
+A hairline-edged page holds a small-cap navigation rail and a twelve-by-six editorial body to its right. The cover divides its field vertically and places circular wire contours at the outer edge. Sans-serif copy remains secondary to the strong serif title.

@@ -1,0 +1,1 @@
+A precision folder system with folded corners, stepped overlapping tabs, hollow circular headings and capsule labels. Fine connectors, restrained rounded panels and centered circular marks organize dense business information. Accent is assigned by role rather than owned as a fixed hue.

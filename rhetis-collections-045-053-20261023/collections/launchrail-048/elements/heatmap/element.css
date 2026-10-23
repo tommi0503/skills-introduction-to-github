@@ -1,0 +1,33 @@
+:is(.heat[data-el="launchrail-048-heatmap"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.heat[data-el="launchrail-048-heatmap"]) * { box-sizing:border-box; min-width:0; }
+:is(.heat[data-el="launchrail-048-heatmap"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.heat[data-el="launchrail-048-heatmap"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.heat[data-el="launchrail-048-heatmap"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.heat[data-el="launchrail-048-heatmap"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.heat[data-el="launchrail-048-heatmap"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.heat[data-el="launchrail-048-heatmap"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.heat[data-el="launchrail-048-heatmap"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.heat[data-el="launchrail-048-heatmap"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.heat[data-el="launchrail-048-heatmap"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.heat[data-el="launchrail-048-heatmap"]) .seat.avatar { border-radius:50%; }
+:is(.heat[data-el="launchrail-048-heatmap"]) { display:flex; flex-direction:column; gap:var(--gap-sm); } :is(.heat[data-el="launchrail-048-heatmap"]) > .heads, :is(.heat[data-el="launchrail-048-heatmap"]) > .row { display:grid; grid-template-columns:calc(var(--gap-lg) * 2) repeat(var(--cols),minmax(0,1fr)); gap:var(--gap-sm); align-items:stretch; flex:1; } :is(.heat[data-el="launchrail-048-heatmap"]) > .heads { flex:none; padding-left:calc(var(--gap-lg) * 2 + var(--gap-sm)); grid-template-columns:repeat(var(--cols),minmax(0,1fr)); font-size:var(--type-16); text-align:center; } :is(.heat[data-el="launchrail-048-heatmap"]) .row > .name { display:flex; align-items:center; font-size:var(--type-18); } :is(.heat[data-el="launchrail-048-heatmap"]) .cell { display:flex; align-items:center; justify-content:center; border-radius:var(--radius-sm); background:color-mix(in srgb,var(--a1) calc(var(--v) * .7% + 10%),var(--page)); color:var(--ink); font-size:var(--type-18); } :is(.heat[data-el="launchrail-048-heatmap"]).calendar .row { grid-template-columns:repeat(var(--cols),minmax(0,1fr)); } :is(.heat[data-el="launchrail-048-heatmap"]).calendar .heads { padding-left:0; } :is(.heat[data-el="launchrail-048-heatmap"]).calendar .cell { aspect-ratio:1; }
+
+@container (max-width: 650px) { :is(.heat[data-el="launchrail-048-heatmap"]) .name { font-size:var(--type-20); } :is(.heat[data-el="launchrail-048-heatmap"]) .fig { font-size:var(--type-40); } :is(.heat[data-el="launchrail-048-heatmap"]) .note { font-size:var(--type-16); } :is(.heat[data-el="launchrail-048-heatmap"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.heat[data-el="launchrail-048-heatmap"]) .name { font-size:var(--type-18); } :is(.heat[data-el="launchrail-048-heatmap"]) .fig { font-size:var(--type-32); } :is(.heat[data-el="launchrail-048-heatmap"]) .note { font-size:var(--type-14); } :is(.heat[data-el="launchrail-048-heatmap"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.heat[data-el="launchrail-048-heatmap"]) .kick { display:none; } :is(.heat[data-el="launchrail-048-heatmap"]) .note { font-size:var(--type-14); } :is(.heat[data-el="launchrail-048-heatmap"]) .name { font-size:var(--type-18); } :is(.heat[data-el="launchrail-048-heatmap"]) .fig { font-size:var(--type-32); } }
+
+/* Browser review corrections. */
+:is(.heat[data-el="launchrail-048-heatmap"]) > .row { min-height:0; } :is(.heat[data-el="launchrail-048-heatmap"]) .cell { min-height:0; background:color-mix(in srgb,var(--a1) calc(var(--v) * .35% + 5%),var(--page)); } :is(.heat[data-el="launchrail-048-heatmap"]).calendar .cell { aspect-ratio:auto; }
+
+:is(.heat[data-el="launchrail-048-heatmap"]) small { color:inherit; }
+
+:is(.heat)[data-el="launchrail-048-heatmap"] small { color:inherit; margin-left:0; }
+
+:is(.heat)[data-el="launchrail-048-heatmap"] .fig { font-family:var(--font-display); }
+
+/* Final native topology and intrinsic-size review. */
+.heat.calendar[data-el="launchrail-048-heatmap"] {--launchrail-048-calendar-cell:min(calc((100cqw - (var(--cols) - 1)*var(--gap-sm))/var(--cols)),calc((100cqh - var(--gap-lg) - 6*var(--gap-sm))/7));justify-content:center;}
+.heat.calendar[data-el="launchrail-048-heatmap"]>.heads,.heat.calendar[data-el="launchrail-048-heatmap"]>.row {grid-template-columns:repeat(var(--cols),var(--launchrail-048-calendar-cell));width:max-content;max-width:100%;margin:0 auto;flex:none;}
+.heat.calendar[data-el="launchrail-048-heatmap"]>.row {height:var(--launchrail-048-calendar-cell);}
+.heat.calendar[data-el="launchrail-048-heatmap"] .cell {aspect-ratio:1;}
+

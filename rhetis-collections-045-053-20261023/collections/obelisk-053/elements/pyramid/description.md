@@ -1,0 +1,1 @@
+A stack of precisely centered levels widens toward its base. Narrow gaps separate the flat fields; the top level carries the primary emphasis and each level keeps its label upright. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

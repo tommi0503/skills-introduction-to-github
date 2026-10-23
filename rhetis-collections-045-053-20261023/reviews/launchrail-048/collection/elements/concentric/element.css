@@ -1,0 +1,47 @@
+@layer launchrail048Base {
+:is(.orbit[data-el="launchrail-048-concentric"]) { box-sizing:border-box; position:relative; min-width:0; min-height:0; container-type:size; color:var(--ink); font-family:var(--font-body); font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.orbit[data-el="launchrail-048-concentric"]) * { box-sizing:border-box; min-width:0; }
+:is(.orbit[data-el="launchrail-048-concentric"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.orbit[data-el="launchrail-048-concentric"]) .name { font-family:var(--font-body); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.orbit[data-el="launchrail-048-concentric"]) .note { font-size:var(--type-18); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); color:var(--n-7); }
+:is(.orbit[data-el="launchrail-048-concentric"]) .kick { font-size:var(--type-16); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--a1-7); }
+:is(.orbit[data-el="launchrail-048-concentric"]) .fig { font-size:var(--type-52); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.orbit[data-el="launchrail-048-concentric"]) small { font-size:var(--type-22); font-weight:var(--body-weight); }
+:is(.orbit[data-el="launchrail-048-concentric"]) .icon { width:calc(var(--gap) * 2); height:calc(var(--gap) * 2); display:inline-block; flex:none; }
+:is(.orbit[data-el="launchrail-048-concentric"]) .seat { display:flex; align-items:center; justify-content:center; background:var(--n-2); color:var(--n-7); aspect-ratio:1; }
+:is(.orbit[data-el="launchrail-048-concentric"]) .seat::after { content:attr(data-ph); font-size:var(--type-18); }
+:is(.orbit[data-el="launchrail-048-concentric"]) .seat.avatar { border-radius:50%; }
+:is(.orbit[data-el="launchrail-048-concentric"]) { display:block; } :is(.orbit[data-el="launchrail-048-concentric"]) > .ring { position:absolute; left:10%; bottom:0; width:80%; height:100%; border-radius:50%; background:var(--a1); color:var(--a1-on); display:flex; flex-direction:column; align-items:center; padding-top:var(--gap); gap:var(--gap-sm); text-align:center; }
+:is(.orbit[data-el="launchrail-048-concentric"]) > .ring:nth-child(2) { width:60%; height:75%; left:20%; background:var(--n-1); color:var(--ink); } :is(.orbit[data-el="launchrail-048-concentric"]) > .ring:nth-child(3) { width:40%; height:50%; left:30%; background:var(--a2); color:var(--a2-on); } :is(.orbit[data-el="launchrail-048-concentric"]) > .ring:nth-child(4) { width:24%; height:30%; left:38%; background:var(--a1-7); color:var(--page); }
+:is(.orbit[data-el="launchrail-048-concentric"]) > .ring .fig { font-size:var(--type-28); } :is(.orbit[data-el="launchrail-048-concentric"]) > .ring .name { font-size:var(--type-20); } :is(.orbit[data-el="launchrail-048-concentric"]) > .ring .note { font-size:var(--type-14); color:var(--ink); }
+
+@container (max-width: 650px) { :is(.orbit[data-el="launchrail-048-concentric"]) .name { font-size:var(--type-20); } :is(.orbit[data-el="launchrail-048-concentric"]) .fig { font-size:var(--type-40); } :is(.orbit[data-el="launchrail-048-concentric"]) .note { font-size:var(--type-16); } :is(.orbit[data-el="launchrail-048-concentric"]) .kick { font-size:var(--type-14); } }
+@container (max-width: 360px) { :is(.orbit[data-el="launchrail-048-concentric"]) .name { font-size:var(--type-18); } :is(.orbit[data-el="launchrail-048-concentric"]) .fig { font-size:var(--type-32); } :is(.orbit[data-el="launchrail-048-concentric"]) .note { font-size:var(--type-14); } :is(.orbit[data-el="launchrail-048-concentric"]) .kick { display:none; } }
+@container (max-height: 150px) { :is(.orbit[data-el="launchrail-048-concentric"]) .kick { display:none; } :is(.orbit[data-el="launchrail-048-concentric"]) .note { font-size:var(--type-14); } :is(.orbit[data-el="launchrail-048-concentric"]) .name { font-size:var(--type-18); } :is(.orbit[data-el="launchrail-048-concentric"]) .fig { font-size:var(--type-32); } }
+
+/* Browser review corrections. */
+:is(.orbit[data-el="launchrail-048-concentric"]) > .ring .note { color:inherit; }
+
+:is(.orbit[data-el="launchrail-048-concentric"]) small { color:inherit; }
+
+
+}
+/* Measured component anatomy: shared numeric layout API. */
+:is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-w:"] { flex:none; align-self:flex-start; width:var(--launchrail-048-w); height:var(--launchrail-048-h); margin-left:var(--launchrail-048-x); margin-top:var(--launchrail-048-y); }
+/* Measured component anatomy: shared numeric layout API. */
+:is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"] { display:block;padding:0; } :is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring { position:absolute;left:0;top:0;width:415px;height:415px;border:0;border-radius:50%;background:var(--a1);display:block; } :is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring:nth-child(2) { left:58px;top:115px;width:300px;height:300px;background:var(--n-1); } :is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring:nth-child(3) { left:109px;top:217px;width:198px;height:198px;background:var(--a2); } :is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring>.fig { position:absolute;left:0;top:44px;width:100%;text-align:center;font-size:var(--type-24);font-weight:var(--name-weight);color:var(--a1-on);line-height:var(--name-line); } :is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring:nth-child(2)>.fig { top:56px;color:var(--ink); } :is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring:nth-child(3)>.fig { top:82px;color:var(--a2-on); } :is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring>.name { position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden; }
+/* Measured component anatomy: shared numeric layout API. */
+:is(.orbit)[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring>.name { display:none; }
+:is(.orbit)[data-el="launchrail-048-concentric"] small { color:inherit; margin-left:0; }
+
+:is(.orbit)[data-el="launchrail-048-concentric"] .fig { font-family:var(--font-display); }
+
+/* Measured component anatomy: shared numeric layout API. */
+.orbit[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring>.fig { top:46px; } .orbit[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring:nth-child(2)>.fig { top:59px; } .orbit[data-el="launchrail-048-concentric"][data-el][data-el][style*="--launchrail-048-layout:1;"]>.ring:nth-child(3)>.fig { top:87px; }
+/* Final native topology and intrinsic-size review. */
+.orbit[data-el="launchrail-048-concentric"]:not([style*="--launchrail-048-layout:1;"]) {--launchrail-048-orbit-d:min(96cqh,90cqw);}
+.orbit[data-el="launchrail-048-concentric"]:not([style*="--launchrail-048-layout:1;"])>.ring:nth-child(1) {left:50%;width:calc(var(--launchrail-048-orbit-d)*1);height:calc(var(--launchrail-048-orbit-d)*1);transform:translateX(-50%);}
+.orbit[data-el="launchrail-048-concentric"]:not([style*="--launchrail-048-layout:1;"])>.ring:nth-child(2) {left:50%;width:calc(var(--launchrail-048-orbit-d)*0.75);height:calc(var(--launchrail-048-orbit-d)*0.75);transform:translateX(-50%);}
+.orbit[data-el="launchrail-048-concentric"]:not([style*="--launchrail-048-layout:1;"])>.ring:nth-child(3) {left:50%;width:calc(var(--launchrail-048-orbit-d)*0.5);height:calc(var(--launchrail-048-orbit-d)*0.5);transform:translateX(-50%);}
+.orbit[data-el="launchrail-048-concentric"]:not([style*="--launchrail-048-layout:1;"])>.ring:nth-child(4) {left:50%;width:calc(var(--launchrail-048-orbit-d)*0.3);height:calc(var(--launchrail-048-orbit-d)*0.3);transform:translateX(-50%);}
+

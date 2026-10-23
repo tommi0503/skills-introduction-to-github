@@ -1,0 +1,1 @@
+A quiet translucent presentation system of long capsule rails, soft outlined panels, overlapping disks and light geometric sans-serif typography. Strong names sit above thin explanatory copy; one filled capsule carries the focal point. Shapes and spatial rhythm remain independent of the supplied palette.

@@ -1,0 +1,1 @@
+Dates sit in centered capsules above or beside an exact track. The alternating version places filled primary and deep panels on opposite sides of the line, preserving a clear sequence. The construction follows the collection’s exact margins, square surfaces, dark accent roles and discrete type steps, reducing secondary detail in smaller placements.

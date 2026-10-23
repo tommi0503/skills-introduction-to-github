@@ -1,0 +1,1 @@
+The image-frame element uses the Vitreous visual grammar: softly outlined translucent panels, capsule ends, thin geometric labels, strong focal names and restrained circular anchors. The structure communicates media image-frame while keeping the supplied palette independent of the form. Compact slots reduce type and spacing in discrete steps.

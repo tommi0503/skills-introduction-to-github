@@ -1,0 +1,1 @@
+A disciplined corporate system built from a closing slide: hard-edged rectangular modules, an exceptionally large left-aligned sans-serif headline, fine horizontal rules, and compact accent labels. Architectural photo mosaics become measured negative space and stepped modular edges. All accents are palette roles, never a fixed brand hue.

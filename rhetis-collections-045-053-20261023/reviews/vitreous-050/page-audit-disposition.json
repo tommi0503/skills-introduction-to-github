@@ -1,0 +1,671 @@
+{
+  "collection": "vitreous-050",
+  "checkedAtUtc": "2026-10-23T12:52:30.401972+00:00",
+  "method": "Read-only Chromium DOM/Range/TextMetrics; visually read existing final PNGs01/02/16/17; pixel scan of existing PNGs02/16. No screenshot regenerated, no source/PNG modified.",
+  "findings": [
+    {
+      "page": "replica/slide_01.html",
+      "originalFinding": "outside-slide",
+      "classification": "intentional-decorative-bleed",
+      "actualTextClipping": false,
+      "actualDecorationClipping": true,
+      "unintendedContentOverflow": false,
+      "reason": "글자가 없는 129px 원을 x=-64에 둔 원본의 왼쪽 가장자리 장식이다. slide overflow:hidden으로 왼쪽 64px를 의도적으로 잘라 보여준다. 본문·연락처와 별개이며 글자 잘림이나 가로 스크롤이 없다.",
+      "domEvidence": {
+        "html": "<div style=\"position:absolute;left:-64px;top:97px;width:129px;height:129px;border-radius:50%;background:linear-gradient(#6a9ef5,#bbd5ff)\"></div>",
+        "elementRect": {
+          "x": -64,
+          "y": 97,
+          "width": 129,
+          "height": 129,
+          "right": 65,
+          "bottom": 226
+        },
+        "text": null,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "cls": "",
+            "rect": {
+              "x": -64,
+              "y": 97,
+              "width": 129,
+              "height": 129,
+              "right": 65,
+              "bottom": 226
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "SECTION",
+            "cls": "slide p1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "BODY",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "HTML",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          }
+        ],
+        "background": "rgba(0, 0, 0, 0) linear-gradient(rgb(106, 158, 245), rgb(187, 213, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px none rgb(48, 51, 52)",
+        "filter": "none",
+        "fontsStatus": "loaded"
+      },
+      "frozenPng": "replica/slide_01.png",
+      "frozenPngSha256": "f692bd5d39ccdf6f0b6c1c5303efa91080f4800177ffcc951248b58f9cc7e33a",
+      "inkEvidence": null
+    },
+    {
+      "page": "replica/slide_02.html",
+      "originalFinding": "text-range",
+      "classification": "false-positive-own-box-range",
+      "actualTextClipping": false,
+      "actualDecorationClipping": false,
+      "unintendedContentOverflow": false,
+      "reason": "Fundraising & Financial Plan의 Range 폭239.453125px가 자기 div 폭232px보다 오른쪽으로7.453125px 크다. 그러나 자기 div와 capsule 조상 모두 overflow:visible, clip-path:none이다. 실제 글자 잉크 오른쪽1152.6px는 capsule 오른쪽1180px 및 slide 오른쪽1280px 안에 있다. 고정된 최종 PNG에서 끝의 Plan까지 모두 보인다.",
+      "domEvidence": {
+        "html": "<div class=\"blue\" style=\"font-size:20px;font-weight:500\">Fundraising &amp; Financial Plan</div>",
+        "elementRect": {
+          "x": 913,
+          "y": 591,
+          "width": 232,
+          "height": 25,
+          "right": 1145,
+          "bottom": 616
+        },
+        "text": {
+          "rangeRects": [
+            {
+              "x": 913,
+              "y": 591,
+              "width": 239.453125,
+              "height": 25,
+              "right": 1152.453125,
+              "bottom": 616
+            }
+          ],
+          "font": "500 20px SUITE",
+          "lineHeight": "normal",
+          "letterSpacing": "-0.6px",
+          "actualBoundingBoxLeft": -1,
+          "actualBoundingBoxRight": 239.60000610351562,
+          "actualBoundingBoxAscent": 14,
+          "actualBoundingBoxDescent": 4,
+          "advance": 239.44000244140625
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "cls": "blue",
+            "rect": {
+              "x": 913,
+              "y": 591,
+              "width": 232,
+              "height": 25,
+              "right": 1145,
+              "bottom": 616
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "DIV",
+            "cls": "box cap",
+            "rect": {
+              "x": 878,
+              "y": 569,
+              "width": 302,
+              "height": 85,
+              "right": 1180,
+              "bottom": 654
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "SECTION",
+            "cls": "slide p2",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "BODY",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "HTML",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          }
+        ],
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px none rgb(48, 125, 244)",
+        "filter": "none",
+        "fontsStatus": "loaded"
+      },
+      "frozenPng": "replica/slide_02.png",
+      "frozenPngSha256": "817d74cd5621ae5d709368ab3314d5422ab5d88e2907a06fd12f18ec974249d3",
+      "inkEvidence": {
+        "method": "Canvas TextMetrics and frozen-PNG blue ink scan; no image mutation",
+        "canvasInkX": [
+          914,
+          1152.6000061035156
+        ],
+        "pngStrongInkBoundsXYXY": [
+          915,
+          597,
+          1152,
+          615
+        ],
+        "pngPixelPredicate": "B>200 and R<150 and G<190 within x910..1159,y590..618",
+        "nearestCapsuleRight": 1180,
+        "slideRight": 1280,
+        "remainingRightMarginToCapsuleAtLeast": 27.39
+      }
+    },
+    {
+      "page": "replica/slide_02.html",
+      "originalFinding": "outside-slide",
+      "classification": "intentional-decorative-bleed",
+      "actualTextClipping": false,
+      "actualDecorationClipping": true,
+      "unintendedContentOverflow": false,
+      "reason": "글자가 없는 반투명226px 원을 x=-114에 둔 원본 장식이다. slide overflow:hidden이 왼쪽114px를 자르는 의도된 가장자리 표현이다. Contents와 목차 문구는 이 원의 자식이 아니며 글자 누락이 없다.",
+      "domEvidence": {
+        "html": "<div style=\"position:absolute;left:-114px;top:1px;width:226px;height:226px;border:1px solid white;border-radius:50%;background:#ffffff52\"></div>",
+        "elementRect": {
+          "x": -114,
+          "y": 1,
+          "width": 226,
+          "height": 226,
+          "right": 112,
+          "bottom": 227
+        },
+        "text": null,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "cls": "",
+            "rect": {
+              "x": -114,
+              "y": 1,
+              "width": 226,
+              "height": 226,
+              "right": 112,
+              "bottom": 227
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "SECTION",
+            "cls": "slide p2",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "BODY",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "HTML",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          }
+        ],
+        "background": "rgba(255, 255, 255, 0.32) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "1px solid rgb(255, 255, 255)",
+        "filter": "none",
+        "fontsStatus": "loaded"
+      },
+      "frozenPng": "replica/slide_02.png",
+      "frozenPngSha256": "817d74cd5621ae5d709368ab3314d5422ab5d88e2907a06fd12f18ec974249d3",
+      "inkEvidence": null
+    },
+    {
+      "page": "replica/slide_16.html",
+      "originalFinding": "outside-slide",
+      "classification": "intentional-decorative-bleed",
+      "actualTextClipping": false,
+      "actualDecorationClipping": true,
+      "unintendedContentOverflow": false,
+      "reason": "글자가 없는 SVG 지도 핀의 wrapper는 x=-26,y333,w303,h410으로 오른쪽277·아래743이다. 왼쪽26px와 아래23px는 slide의1280×720 경계에서 의도적으로 잘린 원본 배경 장식이다. SWOT 글자·설명은 별도 요소이며 잘리지 않는다.",
+      "domEvidence": {
+        "html": "<div style=\"position:absolute;left:-26px;top:333px;width:303px;height:410px\"><svg width=\"303\" height=\"410\" viewBox=\"0 0 303 410\"><path d=\"M151 410L20 225A151 151 0 1 1 283 225Z\" fill=\"#b1ccfb\"></path><circle cx=\"151\" cy=\"151\" r=\"80\" fill=\"#e5efff\"></circle></svg></div>",
+        "elementRect": {
+          "x": -26,
+          "y": 333,
+          "width": 303,
+          "height": 410,
+          "right": 277,
+          "bottom": 743
+        },
+        "text": null,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "cls": "",
+            "rect": {
+              "x": -26,
+              "y": 333,
+              "width": 303,
+              "height": 410,
+              "right": 277,
+              "bottom": 743
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "SECTION",
+            "cls": "slide p16",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "BODY",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "HTML",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          }
+        ],
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px none rgb(48, 51, 52)",
+        "filter": "none",
+        "fontsStatus": "loaded"
+      },
+      "frozenPng": "replica/slide_16.png",
+      "frozenPngSha256": "5ad1f9d0db5cbf1cfa0ce63531d7793ee0885dd692e10a8be7d4818eb846dc0c",
+      "inkEvidence": null
+    },
+    {
+      "page": "replica/slide_16.html",
+      "originalFinding": "text-range",
+      "classification": "false-positive-own-box-range",
+      "actualTextClipping": false,
+      "actualDecorationClipping": false,
+      "unintendedContentOverflow": false,
+      "reason": "W는 SUITE96px/700이며 advance108.575943px가 자기 div 폭90px보다 넓지만 overflow:visible이다. 유일한 clip 조상은1280×720 slide로 Range와 실제 글자 잉크가 모두 그 안에 있다. 고정PNG의 강한 파랑 잉크는 x683..778,y343..413이며 이웃 세로선 x782보다 왼쪽에 있다. W의 오른쪽 획도 온전히 보인다.",
+      "domEvidence": {
+        "html": "<div class=\"blue swotletter\" style=\"position:absolute;left:677px;top:316px;width:90px;font-size:98px\">W</div>",
+        "elementRect": {
+          "x": 677,
+          "y": 316,
+          "width": 90,
+          "height": 124.796875,
+          "right": 767,
+          "bottom": 440.796875
+        },
+        "text": {
+          "rangeRects": [
+            {
+              "x": 677,
+              "y": 318,
+              "width": 108.578125,
+              "height": 120,
+              "right": 785.578125,
+              "bottom": 438
+            }
+          ],
+          "font": "700 96px / 124.8px SUITE",
+          "lineHeight": "124.8px",
+          "letterSpacing": "normal",
+          "actualBoundingBoxLeft": -6,
+          "actualBoundingBoxRight": 103,
+          "actualBoundingBoxAscent": 70,
+          "actualBoundingBoxDescent": 1,
+          "advance": 108.57594299316406
+        },
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "cls": "blue swotletter",
+            "rect": {
+              "x": 677,
+              "y": 316,
+              "width": 90,
+              "height": 124.796875,
+              "right": 767,
+              "bottom": 440.796875
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "SECTION",
+            "cls": "slide p16",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "BODY",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "HTML",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          }
+        ],
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px none rgb(91, 152, 246)",
+        "filter": "none",
+        "fontsStatus": "loaded"
+      },
+      "frozenPng": "replica/slide_16.png",
+      "frozenPngSha256": "5ad1f9d0db5cbf1cfa0ce63531d7793ee0885dd692e10a8be7d4818eb846dc0c",
+      "inkEvidence": {
+        "method": "Canvas TextMetrics and frozen-PNG blue ink scan; no image mutation",
+        "canvasInkX": [
+          683,
+          780
+        ],
+        "pngStrongInkBoundsXYXY": [
+          683,
+          343,
+          779,
+          414
+        ],
+        "pngPixelPredicate": "B>200 and R<150 and G<190 within x675..781,y330..419",
+        "neighborDividerX": 782,
+        "explanatoryTextBeginsX": 808
+      }
+    },
+    {
+      "page": "replica/slide_17.html",
+      "originalFinding": "outside-slide",
+      "classification": "intentional-decorative-bleed",
+      "actualTextClipping": false,
+      "actualDecorationClipping": true,
+      "unintendedContentOverflow": false,
+      "reason": "글자가 없는 위쪽 곡선 화살표의300×620 wrapper가 x1000,y100인 배경 장식이다. 오른쪽1300이 slide보다20px 넓고8px blur의 halo도 화면 경계에서 잘리는 의도된 장식이다. 아래720에서는 채움이 투명해진다. Phase·목표·전략 글자는 별도 요소로 모두 화면 안에 있다.",
+      "domEvidence": {
+        "html": "<div style=\"position:absolute;left:1000px;top:100px;width:300px;height:620px;filter:blur(8px)\"><svg viewBox=\"0 0 300 620\" width=\"300\" height=\"620\"><defs><linearGradient id=\"rise\" x2=\"0\" y2=\"1\"><stop stop-color=\"#8cb5ff\" stop-opacity=\".65\"></stop><stop offset=\"1\" stop-color=\"#9bc0ff\" stop-opacity=\"0\"></stop></linearGradient></defs><path d=\"M37 190 Q143 90 218 10 L310 130 L270 166 Q245 340 250 620 L118 620 Q149 345 147 190 Z\" fill=\"url(#rise)\"></path></svg></div>",
+        "elementRect": {
+          "x": 1000,
+          "y": 100,
+          "width": 300,
+          "height": 620,
+          "right": 1300,
+          "bottom": 720
+        },
+        "text": null,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "cls": "",
+            "rect": {
+              "x": 1000,
+              "y": 100,
+              "width": 300,
+              "height": 620,
+              "right": 1300,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "SECTION",
+            "cls": "slide p17",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "BODY",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          },
+          {
+            "tag": "HTML",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 720,
+              "right": 1280,
+              "bottom": 720
+            },
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "clipPath": "none",
+            "contain": "none"
+          }
+        ],
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "border": "0px none rgb(48, 51, 52)",
+        "filter": "blur(8px)",
+        "fontsStatus": "loaded"
+      },
+      "frozenPng": "replica/slide_17.png",
+      "frozenPngSha256": "d1895fbf4437654e0996ccdaef2bcf3b14c19f5ace1a7cfec4f09ffa59ceea93",
+      "inkEvidence": null
+    }
+  ],
+  "summary": {
+    "findingsReviewed": 6,
+    "intentionalDecorativeBleeds": 4,
+    "falsePositiveTextRanges": 2,
+    "actualUnintendedTextClipping": 0,
+    "actualUnintendedContentOverflow": 0
+  },
+  "freezeVerification": {
+    "collectionFilesCompared": 350,
+    "collectionFileMismatches": [],
+    "pagePngsCompared": 80,
+    "pagePngMismatches": [],
+    "loadedSourceHashesCompared": 361,
+    "loadedSourceMismatches": []
+  }
+}

@@ -1,0 +1,46 @@
+:is(.matrix[data-el="obelisk-053-matrix"]){position:relative;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size;box-sizing:border-box;}
+:is(.matrix[data-el="obelisk-053-matrix"]) *{box-sizing:border-box;min-width:0;}
+:is(.matrix[data-el="obelisk-053-matrix"]) .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.matrix[data-el="obelisk-053-matrix"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin:0;color:var(--n-7);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.matrix[data-el="obelisk-053-matrix"]) .fig{font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .fig small{font-size:var(--type-18);font-weight:var(--label-weight);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .icon{display:inline-block;width:28px;height:28px;flex:none;}
+:is(.matrix[data-el="obelisk-053-matrix"]) .mark{font-size:var(--type-22);font-weight:var(--label-weight);color:var(--a1-7);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .seat{display:flex;align-items:center;justify-content:center;background:var(--n-2);color:var(--n-6);aspect-ratio:1;}
+:is(.matrix[data-el="obelisk-053-matrix"]).on{background:var(--a1);color:var(--a1-on);}
+:is(.matrix[data-el="obelisk-053-matrix"]).on .name,:is(.matrix[data-el="obelisk-053-matrix"]).on .note,:is(.matrix[data-el="obelisk-053-matrix"]).on .fig,:is(.matrix[data-el="obelisk-053-matrix"]).on .kick,:is(.matrix[data-el="obelisk-053-matrix"]).on .mark{color:var(--a1-on);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .tone-1{--obelisk-053-series:var(--a1);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .tone-2{--obelisk-053-series:var(--a2);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .tone-3{--obelisk-053-series:var(--a3);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .tone-4{--obelisk-053-series:var(--a4);}
+:is(.matrix[data-el="obelisk-053-matrix"]) .tone-5{--obelisk-053-series:var(--a1-9);}
+:is(.matrix[data-el="obelisk-053-matrix"]){display:grid;grid-template-columns:var(--gap-lg) repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr)) var(--gap-lg);gap:var(--gap-sm);}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell{padding:var(--pad);display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);background:var(--n-1);}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell.on{background:var(--a1);color:var(--a1-on);}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell.on .name,:is(.matrix[data-el="obelisk-053-matrix"])>.cell.on .note{color:var(--a1-on);}
+:is(.matrix[data-el="obelisk-053-matrix"])>.axis-x{grid-row:3;grid-column:2 / span 2;display:flex;justify-content:space-between;font-size:var(--type-14);}
+:is(.matrix[data-el="obelisk-053-matrix"])>.axis-y{grid-column:1;grid-row:1 / span 2;display:flex;flex-direction:column;justify-content:space-between;font-size:var(--type-14);}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell:nth-child(1 of .cell){grid-column:2;grid-row:1;}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell:nth-child(2 of .cell){grid-column:3;grid-row:1;}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell:nth-child(3 of .cell){grid-column:2;grid-row:2;}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell:nth-child(4 of .cell){grid-column:3;grid-row:2;}
+:is(.matrix[data-el="obelisk-053-matrix"]).swot{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));}
+:is(.matrix[data-el="obelisk-053-matrix"]).swot>.cell:nth-child(1 of .cell){grid-column:1;grid-row:1;}
+:is(.matrix[data-el="obelisk-053-matrix"]).swot>.cell:nth-child(2 of .cell){grid-column:2;grid-row:1;}
+:is(.matrix[data-el="obelisk-053-matrix"]).swot>.cell:nth-child(3 of .cell){grid-column:1;grid-row:2;}
+:is(.matrix[data-el="obelisk-053-matrix"]).swot>.cell:nth-child(4 of .cell){grid-column:2;grid-row:2;}
+@container (max-width: 520px){:is(.matrix[data-el="obelisk-053-matrix"]) .name{font-size:var(--type-18)}:is(.matrix[data-el="obelisk-053-matrix"]) .fig{font-size:var(--type-32)}:is(.matrix[data-el="obelisk-053-matrix"]) .note{font-size:var(--type-14)}:is(.matrix[data-el="obelisk-053-matrix"]) .kick{font-size:var(--type-12)}}
+@container (max-width: 300px){:is(.matrix[data-el="obelisk-053-matrix"]) .name{font-size:var(--type-16)}:is(.matrix[data-el="obelisk-053-matrix"]) .fig{font-size:var(--type-24)}:is(.matrix[data-el="obelisk-053-matrix"]) .note{font-size:var(--type-12)}:is(.matrix[data-el="obelisk-053-matrix"]) .kick{display:none}}
+@container (max-height: 150px){:is(.matrix[data-el="obelisk-053-matrix"]) .name{font-size:var(--type-16)}:is(.matrix[data-el="obelisk-053-matrix"]) .fig{font-size:var(--type-24)}:is(.matrix[data-el="obelisk-053-matrix"]) .note{font-size:var(--type-12)}:is(.matrix[data-el="obelisk-053-matrix"]) .kick{display:none}}
+@container (max-height:300px){:is(.matrix[data-el="obelisk-053-matrix"]) .name{font-size:var(--type-16)}:is(.matrix[data-el="obelisk-053-matrix"]) .note{font-size:var(--type-12)}:is(.matrix[data-el="obelisk-053-matrix"]) .fig{font-size:var(--type-24)}:is(.matrix[data-el="obelisk-053-matrix"]) .kick{font-size:var(--type-12)}}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell{padding:var(--gap-sm);gap:calc(var(--gap-sm)/2)}
+:is(.matrix[data-el="obelisk-053-matrix"])>.cell.on .kick{color:var(--a1-on)}
+[data-el="obelisk-053-matrix"] .list[data-el="obelisk-053-list"]{container-type:normal;flex:1;gap:var(--gap-sm);min-height:0}
+@container(max-height:350px){[data-el="obelisk-053-matrix"] .list[data-el="obelisk-053-list"] .name{font-size:var(--type-14)}[data-el="obelisk-053-matrix"] .list[data-el="obelisk-053-list"] .note{font-size:var(--type-12)}}
+/* Native readability review. */
+.matrix[data-el="obelisk-053-matrix"]:not(.swot){grid-template-columns:calc(var(--gap-lg)*2) repeat(2,minmax(0,1fr));}.matrix[data-el="obelisk-053-matrix"]>.axis-y{flex-direction:column-reverse;}
+
+.matrix[data-el="obelisk-053-matrix"]>.cell.on .list>.item::before{color:var(--a1-on)}
+
+.matrix[data-el="obelisk-053-matrix"]>.cell.on .list.check>.item::before{border-color:var(--a1-on)}
