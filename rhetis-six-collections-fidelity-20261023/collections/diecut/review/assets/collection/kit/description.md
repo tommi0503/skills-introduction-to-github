@@ -1,0 +1,1 @@
+Diecut translates an industrial automation proposal into a system of softly machined panels, capsule headers, precise fine rules, and circular sequence markers. Broad neutral plates hold compact, clearly ranked information; emphasis acts as a bright insert rather than decorative color.

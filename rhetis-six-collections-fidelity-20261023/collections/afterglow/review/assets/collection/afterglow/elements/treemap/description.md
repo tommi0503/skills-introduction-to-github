@@ -1,0 +1,1 @@
+The treemap element translates the framed screen into thin rules, small circular joints and restrained accent emphasis. Names remain firm while secondary Korean explanations sit in quieter neutral ink. Surfaces use the shared rounded corner and a subtle lower accent edge. The layout changes in discrete container steps.

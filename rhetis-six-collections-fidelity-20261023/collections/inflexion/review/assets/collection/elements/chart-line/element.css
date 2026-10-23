@@ -1,0 +1,34 @@
+:is(.lines[data-el="inflexion-chart-line"]) {position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);anchor-scope:all;}
+:is(.lines[data-el="inflexion-chart-line"]) *{box-sizing:border-box;min-width:0;}
+:is(.lines[data-el="inflexion-chart-line"]) .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.lines[data-el="inflexion-chart-line"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;}
+:is(.lines[data-el="inflexion-chart-line"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.lines[data-el="inflexion-chart-line"]) .fig{font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.lines[data-el="inflexion-chart-line"]) small{color:inherit;margin-left:0;font-size:var(--type-20);font-weight:var(--label-weight);letter-spacing:var(--label-track);}
+:is(.lines[data-el="inflexion-chart-line"]) .icon{width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex:none;}
+@container (max-width:550px){ :is(.lines[data-el="inflexion-chart-line"]) .name{font-size:var(--type-20);} :is(.lines[data-el="inflexion-chart-line"]) .fig{font-size:var(--type-48);} :is(.lines[data-el="inflexion-chart-line"]) .note{font-size:var(--type-14);} }
+@container (max-width:300px){ :is(.lines[data-el="inflexion-chart-line"]) .name{font-size:var(--type-16);} :is(.lines[data-el="inflexion-chart-line"]) .fig{font-size:var(--type-32);} :is(.lines[data-el="inflexion-chart-line"]) .kick{font-size:var(--type-12);} }
+@container (max-height:220px){ :is(.lines[data-el="inflexion-chart-line"]) .name{font-size:var(--type-18);} :is(.lines[data-el="inflexion-chart-line"]) .fig{font-size:var(--type-40);} :is(.lines[data-el="inflexion-chart-line"]) .note{font-size:var(--type-14);} }
+:is(.lines[data-el="inflexion-chart-line"]){display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) var(--gap-lg);background:repeating-linear-gradient(to top,var(--n-2) 0 1px,var(--page) 1px 25%);}
+:is(.lines[data-el="inflexion-chart-line"]) .pt{display:contents;}
+:is(.lines[data-el="inflexion-chart-line"]) .pt b{grid-row:1;align-self:start;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:calc(100% - var(--v)/var(--max)*(100% - var(--gap-lg)));font-size:var(--type-18);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-7);anchor-name:var(--inflexion-self);padding-bottom:var(--gap-sm);}
+:is(.lines[data-el="inflexion-chart-line"]) .pt b::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--a1);bottom:-4px;}
+:is(.lines[data-el="inflexion-chart-line"]) .pt span{grid-row:2;text-align:center;border-top:var(--stroke) solid var(--n-4);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);padding-top:var(--gap-sm);color:var(--n-7);}
+:is(.lines[data-el="inflexion-chart-line"]) .pt::before,:is(.lines[data-el="inflexion-chart-line"]) .pt::after{content:"";position:absolute;left:anchor(var(--inflexion-prev) center);right:anchor(var(--inflexion-self) center);pointer-events:none;}
+:is(.lines[data-el="inflexion-chart-line"]) .pt::before{top:calc(anchor(var(--inflexion-prev) bottom) - 1px);bottom:calc(anchor(var(--inflexion-self) bottom) - 1px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--a1) 50%,transparent calc(50% + 1px));}
+:is(.lines[data-el="inflexion-chart-line"]) .pt::after{top:calc(anchor(var(--inflexion-self) bottom) - 1px);bottom:calc(anchor(var(--inflexion-prev) bottom) - 1px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--a1) 50%,transparent calc(50% + 1px));}
+:is(.lines[data-el="inflexion-chart-line"]) .pt:first-child::before,:is(.lines[data-el="inflexion-chart-line"]) .pt:first-child::after{content:none;}
+@container (max-width:650px){:is(.lines[data-el="inflexion-chart-line"]) .pt b{font-size:var(--type-14);}:is(.lines[data-el="inflexion-chart-line"]) .pt span{font-size:var(--type-12);}}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(1){--inflexion-self:--inflexion-p1;--inflexion-prev:--inflexion-p1;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(2){--inflexion-self:--inflexion-p2;--inflexion-prev:--inflexion-p1;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(3){--inflexion-self:--inflexion-p3;--inflexion-prev:--inflexion-p2;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(4){--inflexion-self:--inflexion-p4;--inflexion-prev:--inflexion-p3;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(5){--inflexion-self:--inflexion-p5;--inflexion-prev:--inflexion-p4;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(6){--inflexion-self:--inflexion-p6;--inflexion-prev:--inflexion-p5;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(7){--inflexion-self:--inflexion-p7;--inflexion-prev:--inflexion-p6;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(8){--inflexion-self:--inflexion-p8;--inflexion-prev:--inflexion-p7;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(9){--inflexion-self:--inflexion-p9;--inflexion-prev:--inflexion-p8;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(10){--inflexion-self:--inflexion-p10;--inflexion-prev:--inflexion-p9;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(11){--inflexion-self:--inflexion-p11;--inflexion-prev:--inflexion-p10;}
+:is(.lines[data-el="inflexion-chart-line"]) >.pt:nth-child(12){--inflexion-self:--inflexion-p12;--inflexion-prev:--inflexion-p11;}
+:is(.lines[data-el="inflexion-chart-line"]) .pt b{position:relative;}:is(.lines[data-el="inflexion-chart-line"]) .pt b{line-height:var(--body-line);}

@@ -1,0 +1,31 @@
+from pathlib import Path
+import json,shutil
+B=Path('/workspace/work/deliverables/nocturne');C=B/'collection/nocturne';R=B/'review'
+def patch(folder,s):
+ p=C/f'elements/{folder}/element.css';p.write_text(p.read_text()+s.replace('R',f'[data-el="nocturne-{folder}"]')+'\n')
+p=C/'kit/kit.json';k=json.loads(p.read_text());k['extensions'].update({'--nocturne-statement-track':'tracking','--nocturne-kicker-weight':'weight','--nocturne-copy-weight':'weight','--nocturne-metric-name-weight':'weight','--nocturne-callout-line':'number','--nocturne-value-line':'number','--nocturne-value-track':'tracking','--nocturne-panel-track':'tracking'});p.write_text(json.dumps(k,indent=2))
+p=C/'kit/css/tokens.css';p.write_text(p.read_text()+'.slide{--nocturne-statement-scale:1.55625;--nocturne-statement-track:.00251em;--nocturne-kicker-weight:550;--nocturne-copy-weight:350;--nocturne-metric-name-weight:600;--nocturne-callout-line:1.7;--nocturne-value-line:1.42;--nocturne-value-track:-.0347826em;--nocturne-panel-track:-.020588em;}\n')
+p=C/'foundation/foundation.css';p.write_text(p.read_text()+'''
+.slide .head{gap:calc(var(--gap-sm)*2.116667)}
+.slide .page{gap:calc(var(--gap-lg)*.6785714)}
+.slide .page:has(>.head):has(.body>.stats){gap:calc(var(--gap-lg)*.51785714)}
+.slide .body>.group:has(>.pill){justify-content:center;gap:calc(var(--gap-sm)*2.166667)}
+.slide .top .deck:has(>.icon){gap:calc(var(--gap-sm)*.75)}
+.slide .top .deck>.icon{display:none}
+.slide .top .deck::before{content:'';width:17px;height:18px;flex:none;background:var(--a1);clip-path:polygon(10% 18%,65% 18%,90% 54%,70% 91%,50% 91%,25% 50%,50% 50%,65% 73%,75% 55%,55% 27%,15% 27%)}
+.slide.cover .lockup{transform:translateY(calc(var(--gap-sm)*-1.23))}
+''')
+patch('headline','''R.center:not(.big):not(.on):not(:has(.note)):has(h2>b) h2{font-weight:var(--nocturne-kicker-weight);transform:translateY(calc(var(--gap-sm)*.3229))}R.center:not(.big):not(.on):not(:has(.note)):has(h2>b) h2 b{font-weight:inherit}R.center:not(.big):not(.on):not(:has(.note)):has(h2>b)::after{content:'';position:absolute;left:50%;top:calc(100% + var(--gap-sm)*1.277778);height:58px;border-left:2px dotted var(--n-5)}R.center:not(.big):not(.on):not(:has(.note)):not(:has(h2>b)) h2{color:var(--a1-7);transform:none}R.center:not(.big):not(.on):not(:has(.note)):not(:has(h2>b)){align-self:start;padding-top:calc(var(--gap-sm)*4.5);height:var(--type-128)}R.big:not(:has(h2>b)) h2{letter-spacing:var(--nocturne-statement-track)}''')
+patch('callout','''R:has(p>br){transform:translateY(calc(var(--gap-sm)*-2.666667));padding-top:calc(var(--gap-sm)*4.777778)}R:has(p>br) p{line-height:var(--nocturne-callout-line)}R:not(:has(p>br)) p{font-size:var(--type-26);line-height:var(--lead-line);color:var(--n-7);font-weight:var(--nocturne-copy-weight)}R:not(:has(p>br))::before{top:calc(var(--gap-lg)*-.75)}''')
+p=C/'elements/callout/element.css';p.write_text(p.read_text().replace('line-height:1.7','line-height:var(--nocturne-callout-line)'))
+patch('metric','''R.stats{gap:calc(var(--gap-lg) - 1px);width:calc(100% - 2px)}R.stat::before{border-width:calc(var(--stroke)*1.5)}R.stat .parts{gap:calc(var(--gap-sm)*.75)}R.stat .name{font-weight:var(--nocturne-metric-name-weight);line-height:var(--label-line)}R.stat .fig{line-height:var(--title-line)}''')
+patch('pill','''R.pill.line{container-type:normal;width:auto;flex:0 0 auto;height:67px;min-height:67px;max-height:67px;padding:0 calc(var(--gap-sm)*2.25);transform:translateY(calc(var(--gap-sm)*.638889));background:var(--n-2);border-color:var(--n-5)}R.pill.line .name{font-size:var(--type-30);font-weight:var(--nocturne-kicker-weight);letter-spacing:var(--label-track)}''')
+patch('prose','''R.lead:has(p>br){justify-content:flex-start;padding-top:var(--gap);color:var(--n-7)}R.lead:has(p>br) p{font-size:var(--type-26);line-height:var(--lead-line);font-weight:var(--nocturne-copy-weight);transform:scale(.961538)}''')
+patch('card','''R.quiet:has(.mark>.seat) .name{position:absolute;top:34.9076%;width:100%;min-height:0;display:block;font-size:var(--type-48);font-weight:var(--body-weight);line-height:var(--nocturne-value-line);letter-spacing:var(--nocturne-value-track);transform:scale(.958333)}R.quiet:has(.mark>.seat) .name b{font-weight:var(--nocturne-statement-weight)}R.quiet:has(.mark>.seat) .kick{top:13.55236%;font-weight:var(--body-weight)}R.quiet:has(.mark>.seat) .note{bottom:13.7577%;font-weight:var(--body-weight)}''')
+patch('list','''R.divided{width:calc(100% - var(--gap-sm)*.666667);height:calc(var(--gap-lg)*6 + var(--gap-sm)*3);max-height:100%;align-self:start;margin-left:calc(var(--gap-sm)*.75);padding:calc(var(--gap-sm)*1.5) calc(var(--gap-lg) + var(--pad)*.625);border-width:calc(var(--stroke)*1.5);border-radius:calc(var(--radius) + 1px)}R.divided .item{flex:0 0 calc(var(--gap-lg)*1.5);padding:0}R.divided .item>.name{font-size:var(--type-32);font-weight:var(--body-weight);letter-spacing:var(--nocturne-panel-track);transform:scale(1.0625)}@container(max-width:800px){R.divided{height:auto;max-height:100%;padding:var(--gap-sm)}R.divided .item{flex:1;padding:var(--gap-sm)}R.divided .item>.name{font-size:var(--type-24);transform:none}}''')
+p=R/'reassembled/slide_19.html';s=p.read_text().replace('class="prose lead" data-el="nocturne-prose" style="grid-column:1 / span 12; grid-row:4 / span 1"','class="prose lead" data-el="nocturne-prose" style="grid-column:1 / span 12; grid-row:4 / span 2"').replace('<div class="group" style="grid-column:4 / span 6; grid-row:5 / span 2">','<div class="group" style="grid-column:3 / span 8; grid-row:5 / span 2">');p.write_text(s)
+p=R/'reassembled/slide_21.html';s=p.read_text().replace('고객이<br>최우선입니다.','<b>고객이</b><br>최우선입니다.').replace('함께 더 멀리<br>갈 수 있습니다.','<b>함께</b> 더 멀리<br>갈 수 있습니다.').replace('실행만이<br>증명합니다.','<b>실행만이</b><br>증명합니다.');p.write_text(s)
+p=R/'reassembled/slide_22.html';s=p.read_text().replace('class="list divided" data-el="nocturne-list" style="grid-column:1 / span 12; grid-row:1 / span 5"','class="list divided" data-el="nocturne-list" style="grid-column:1 / span 12; grid-row:1 / span 6"');p.write_text(s)
+for p in C.rglob('*.css'):
+ q=R/'assets/collection'/p.relative_to(C);shutil.copy(p,q)
+print('Second fidelity source pass ready')

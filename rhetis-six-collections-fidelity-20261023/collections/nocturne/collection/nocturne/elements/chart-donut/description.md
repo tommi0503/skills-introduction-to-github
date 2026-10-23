@@ -1,0 +1,1 @@
+A measured circular ring surrounds an isolated figure, with the name below the ring. Multiple rings use a responsive grid so a narrow four-member fixture becomes two rows instead of squeezing the figures.

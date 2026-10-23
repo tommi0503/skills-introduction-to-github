@@ -1,0 +1,69 @@
+:is(.spark[data-el="diecut-sparkline"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.spark[data-el="diecut-sparkline"]) *,:is(.spark[data-el="diecut-sparkline"]) *:before,:is(.spark[data-el="diecut-sparkline"]) *:after{box-sizing:border-box}
+:is(.spark[data-el="diecut-sparkline"]) :is(p,h2,blockquote){margin:0}
+:is(.spark[data-el="diecut-sparkline"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.spark[data-el="diecut-sparkline"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.spark[data-el="diecut-sparkline"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.spark[data-el="diecut-sparkline"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.spark[data-el="diecut-sparkline"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.spark[data-el="diecut-sparkline"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.spark[data-el="diecut-sparkline"]) .name{font-size:var(--type-20)}:is(.spark[data-el="diecut-sparkline"]) .note{font-size:var(--type-16)}:is(.spark[data-el="diecut-sparkline"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.spark[data-el="diecut-sparkline"]) .name{font-size:var(--type-18)}:is(.spark[data-el="diecut-sparkline"]) .note{font-size:var(--type-14)}:is(.spark[data-el="diecut-sparkline"]) .fig{font-size:var(--type-32)}:is(.spark[data-el="diecut-sparkline"]) .kick{display:none}}
+@container(max-height:160px){:is(.spark[data-el="diecut-sparkline"]) .note{display:none}:is(.spark[data-el="diecut-sparkline"]) .fig{font-size:var(--type-28)}:is(.spark[data-el="diecut-sparkline"]) .name{font-size:var(--type-18)}}
+
+:is(.spark[data-el="diecut-sparkline"]){display:flex;align-items:flex-end;gap:var(--gap-sm);padding:var(--gap-sm);min-height:48px}:is(.spark[data-el="diecut-sparkline"])>span{flex:1;height:calc(var(--v)/var(--max)*90%);background:var(--n-6);border-radius:999px}:is(.spark[data-el="diecut-sparkline"]).up>span{background:var(--good)}:is(.spark[data-el="diecut-sparkline"]).down>span{background:var(--bad)}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span{border-radius:999px;min-height:3px}
+
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"]):not(.bars){display:grid;grid-auto-flow:column;grid-auto-columns:1fr;align-items:stretch;padding:var(--gap-sm);isolation:isolate;--diecut-spark:var(--n-7)}:is(.spark[data-el="diecut-sparkline"]).up{--diecut-spark:var(--good)}:is(.spark[data-el="diecut-sparkline"]).down{--diecut-spark:var(--bad)}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span{position:static;align-self:start;justify-self:center;min-height:0;width:0;height:0;background:none;margin-top:calc((100cqh - var(--gap))* (1 - var(--v)/var(--max)));anchor-name:var(--diecut-self)}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:before,:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:after{content:'';position:absolute;left:anchor(var(--diecut-prev) center);right:anchor(var(--diecut-self) center);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--diecut-spark) 50%,transparent calc(50% + 1px))}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:before{top:anchor(var(--diecut-prev) top);bottom:anchor(var(--diecut-self) top)}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:after{top:anchor(var(--diecut-self) top);bottom:anchor(var(--diecut-prev) top);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--diecut-spark) 50%,transparent calc(50% + 1px))}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:first-child:before,:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:first-child:after{content:none}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(1){--diecut-self:--diecut-spark-1;--diecut-prev:--diecut-spark-0}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(2){--diecut-self:--diecut-spark-2;--diecut-prev:--diecut-spark-1}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(3){--diecut-self:--diecut-spark-3;--diecut-prev:--diecut-spark-2}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(4){--diecut-self:--diecut-spark-4;--diecut-prev:--diecut-spark-3}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(5){--diecut-self:--diecut-spark-5;--diecut-prev:--diecut-spark-4}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(6){--diecut-self:--diecut-spark-6;--diecut-prev:--diecut-spark-5}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(7){--diecut-self:--diecut-spark-7;--diecut-prev:--diecut-spark-6}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(8){--diecut-self:--diecut-spark-8;--diecut-prev:--diecut-spark-7}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(9){--diecut-self:--diecut-spark-9;--diecut-prev:--diecut-spark-8}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(10){--diecut-self:--diecut-spark-10;--diecut-prev:--diecut-spark-9}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(11){--diecut-self:--diecut-spark-11;--diecut-prev:--diecut-spark-10}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(12){--diecut-self:--diecut-spark-12;--diecut-prev:--diecut-spark-11}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(13){--diecut-self:--diecut-spark-13;--diecut-prev:--diecut-spark-12}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(14){--diecut-self:--diecut-spark-14;--diecut-prev:--diecut-spark-13}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(15){--diecut-self:--diecut-spark-15;--diecut-prev:--diecut-spark-14}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(16){--diecut-self:--diecut-spark-16;--diecut-prev:--diecut-spark-15}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(17){--diecut-self:--diecut-spark-17;--diecut-prev:--diecut-spark-16}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(18){--diecut-self:--diecut-spark-18;--diecut-prev:--diecut-spark-17}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(19){--diecut-self:--diecut-spark-19;--diecut-prev:--diecut-spark-18}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(20){--diecut-self:--diecut-spark-20;--diecut-prev:--diecut-spark-19}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(21){--diecut-self:--diecut-spark-21;--diecut-prev:--diecut-spark-20}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(22){--diecut-self:--diecut-spark-22;--diecut-prev:--diecut-spark-21}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(23){--diecut-self:--diecut-spark-23;--diecut-prev:--diecut-spark-22}
+/* Review round two: fit and geometry. */
+:is(.spark[data-el="diecut-sparkline"])>span:nth-child(24){--diecut-self:--diecut-spark-24;--diecut-prev:--diecut-spark-23}
+/* Final integrated review. */
+:is(.spark[data-el="diecut-sparkline"]) small{color:inherit;margin-left:0}:is(.spark[data-el="diecut-sparkline"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}
+/* Final integrated review. */
+:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span{margin:0;height:calc((1 - var(--v)/var(--max))*(100cqh - var(--gap)));width:100%;background:none;max-height:none;anchor-name:var(--diecut-self)}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:before{top:anchor(var(--diecut-prev) bottom);bottom:anchor(var(--diecut-self) bottom)}:is(.spark[data-el="diecut-sparkline"]):not(.bars)>span:after{top:anchor(var(--diecut-self) bottom);bottom:anchor(var(--diecut-prev) bottom)}

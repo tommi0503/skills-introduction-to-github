@@ -1,0 +1,1 @@
+The decision-tree applies Confluence’s centred circular emphasis, soft inset panels and concise heavy hierarchy to the decision.tree contract. Accent colour denotes one focal item, while quiet surfaces and thin rules preserve supporting context. Container steps reduce text and spacing for compact placements.

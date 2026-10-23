@@ -1,0 +1,1 @@
+An airy twelve-by-six stage with a compact bilingual header, a thin horizontal rule dipping gently at the centre, generous outside margins and optional quiet top and footer furniture. Covers use a large left lockup with a restrained orbital construction.

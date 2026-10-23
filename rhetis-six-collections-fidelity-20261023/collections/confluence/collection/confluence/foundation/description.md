@@ -1,0 +1,1 @@
+A pale open canvas ends on a split accent baseline. The twelve by six body grid sits below a concise heavy title, with optional left rail and a large cover lockup balanced against a square image seat.

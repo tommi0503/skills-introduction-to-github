@@ -1,0 +1,1 @@
+Four softly bounded panels form a measured quadrant, with axis labels outside the panel faces. The SWOT form uses large letter cues, a short heading, and compact contract lists inside the same frames.

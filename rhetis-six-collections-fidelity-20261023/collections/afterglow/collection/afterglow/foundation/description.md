@@ -1,0 +1,1 @@
+A full screen sits inside a rounded hairline frame with a low accent horizon. The header separates a quiet English kicker and firm accent heading. The body uses a 12 by 6 grid; covers use a large left lockup and a long horizontal divider.

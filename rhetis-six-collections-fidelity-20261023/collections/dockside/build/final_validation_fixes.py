@@ -1,0 +1,13 @@
+exec(open('/workspace/work/deliverables/dockside/build/refine_collection.py').read().split("f='chart-area'")[0])
+f='chart-area';r=root(f);append(f,f'''{r}{{padding:0}}{r}>.series{{inset:0 0 var(--gap-lg)}}{r} .pt{{--dockside-height:calc(100cqh - var(--gap-lg)*2);--dockside-value-height:calc(var(--dockside-height)*var(--v)/var(--max));margin-top:calc(var(--gap-lg) + var(--dockside-height) - var(--dockside-value-height))}}{r}>.series>.name{{top:0}}{r} .pt>b{{position:relative;display:block;width:max-content;translate:-50% calc(-100% - var(--gap-sm));transform:none}}{r} .series:nth-of-type(2)>.name{{left:30%}}{r} .series:nth-of-type(3)>.name{{left:60%}}{r} .series:nth-of-type(2) .pt::before{{background:var(--a2-2-soft)}}{r} .series:nth-of-type(2) .pt::after,{r} .series:nth-of-type(2)>.name::before{{background:var(--a2)}}{r} .series:nth-of-type(3) .pt::before{{background:var(--a3-2-soft)}}{r} .series:nth-of-type(3) .pt::after,{r} .series:nth-of-type(3)>.name::before{{background:var(--a3)}}''')
+f='radar';p=C/f'elements/{f}/element.css';p.write_text(p.read_text().replace('))}}:is(.radar', '))}:is(.radar').rstrip().removesuffix('}')+'\n')
+f='chart-donut';r=root(f);s=f'''@container(max-width:650px){{{r}:has(>.donut:nth-child(4))>.donut{{position:absolute;width:calc((min(100cqw,100cqh) - var(--gap)*2)/2);height:calc((min(100cqw,100cqh) - var(--gap)*2)/2);max-width:none;max-height:none;flex:none;transform:translate(-50%,-50%);border-width:6px}}{r}:has(>.donut:nth-child(4))>.donut::before{{inset:8px}}{r}:has(>.donut:nth-child(4)) .fig{{font-size:var(--type-24)}}{r}:has(>.donut:nth-child(4)) .fig small{{font-size:var(--type-12)}}{r}:has(>.donut:nth-child(4)) .name{{font-size:var(--type-12)}}'''
+for i,(x,y) in enumerate([(25,25),(75,25),(25,75),(75,75)]):s+=f'{r}:has(>.donut:nth-child(4))>.donut:nth-child({i+1}){{left:{x}%;top:{y}%}}'
+s+='}';append(f,s)
+f='timeline';r=root(f);append(f,f'{r}.col{{gap:var(--gap-sm)}}{r}.col .stop{{flex:1;display:grid;grid-template-columns:65px 1fr;align-content:center;column-gap:var(--gap-sm);row-gap:calc(var(--gap-sm)/2);padding:var(--gap-sm) var(--pad)}}{r}.col .stop .kick{{grid-row:1/span 2;align-self:center;justify-self:start}}{r}.col .stop .name{{font-size:var(--type-18)}}{r}.col .stop .note{{font-size:var(--type-14)}}')
+f='waffle';r=root(f);append(f,f'{r} .units{{max-width:min(650px,calc(100cqh - var(--pad)*6))}}')
+# Accessible accent foregrounds, independent of the ranked accent hue.
+for p in list(C.glob('elements/*/element.css'))+[C/'foundation/foundation.css']:
+ s=p.read_text()
+ for a in range(1,5):s=re.sub(r'(?<![-\w])color:\s*var\(--a'+str(a)+r'\)',f'color:var(--a{a}-7)',s)
+ p.write_text(s)

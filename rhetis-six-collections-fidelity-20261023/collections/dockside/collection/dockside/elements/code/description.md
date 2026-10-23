@@ -1,0 +1,1 @@
+The code element translates the desktop dock language into a content.code composition. Rounded inset surfaces use bright rims and restrained neutral shadows; concise capsules identify a stage or accent. Its semantic geometry, connections and data remain visible as the allotted cell changes size, with stepped type and quieter secondary notes.

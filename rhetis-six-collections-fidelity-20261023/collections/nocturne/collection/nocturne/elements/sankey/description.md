@@ -1,0 +1,1 @@
+A rounded source node fans into ordered bands whose destination panels retain legible labels. Anchor geometry connects every main branch, and a second split repeats the source frame and flow-band treatment inside its branch.

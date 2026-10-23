@@ -1,0 +1,1 @@
+A twelve by six content grid floats beside a slim dock. Dark chapter capsules establish the upper left origin; large titles emphasize one word. Quiet diagonal fields gather at the right edge. Covers use a centered lockup and a row of numbered square seats, with a larger focused seat.

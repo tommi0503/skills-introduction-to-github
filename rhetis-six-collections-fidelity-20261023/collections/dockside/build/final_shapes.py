@@ -1,0 +1,17 @@
+exec(open('/workspace/work/deliverables/dockside/build/refine_collection.py').read().split("f='chart-area'")[0])
+f='image-frame';r=root(f);append(f,f'{r}{{width:100%;height:100%;max-width:100%;max-height:100%;overflow:visible}}{r} .seat{{width:auto;height:100%;max-width:100%;max-height:100%;aspect-ratio:1}}')
+f='pill';r=root(f);append(f,f'{r}{{align-self:center;width:100%;height:fit-content;max-height:calc(var(--pad)*4)}}')
+f='matrix-nine';r=root(f);s=''
+for i in range(9):s+=f'{r}>.cell:nth-child({i+1} of .cell){{grid-column:{i%3+2};grid-row:{i//3+1}}}'
+append(f,s)
+f='mindmap';r=root(f);append(f,f'''{r}>.branch::after{{height:1px;border:0;top:50%;width:var(--gap);background:var(--n-4)}}{r}>.branch:nth-child(2)::after,{r}>.branch:nth-child(4)::after{{width:calc(var(--gap) + 50%);height:calc(100% + var(--gap));background:none;border-top:1px solid var(--n-4);border-right:1px solid var(--n-4);border-radius:0 var(--radius) 0 0}}{r}>.branch:nth-child(4)::after{{top:auto;bottom:50%;border-top:0;border-bottom:1px solid var(--n-4);border-radius:0 0 var(--radius) 0}}{r}>.branch:nth-child(5)::after,{r}>.branch:nth-child(7)::after{{width:calc(var(--gap) + 50%);height:calc(100% + var(--gap));background:none;border-top:1px solid var(--n-4);border-left:1px solid var(--n-4);border-radius:var(--radius) 0 0 0}}{r}>.branch:nth-child(7)::after{{top:auto;bottom:50%;border-top:0;border-bottom:1px solid var(--n-4);border-radius:0 0 0 var(--radius)}}{r}:has(>.branch:nth-child(3):last-child)>.branch:nth-child(2){{grid-area:2/1}}{r}:has(>.branch:nth-child(3):last-child)>.branch:nth-child(3){{grid-area:2/3}}{r}:has(>.branch:nth-child(3):last-child)>.branch::after{{height:1px;width:var(--gap);border:0;background:var(--n-4);top:50%;bottom:auto}}{r}:has(>.branch:nth-child(3):last-child)>.branch:nth-child(3)::after{{left:auto;right:100%}}''')
+f='funnel';r=root(f);append(f,f'{r} .stage{{width:100%;border:none;background:none;box-shadow:none;justify-content:center;gap:var(--gap)}}{r} .stage::before{{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);height:100%;width:calc(var(--v)*1%);border-radius:var(--radius-sm);border:2px solid var(--page);background:var(--n-2)}}{r} .stage:first-child{{background:none;color:var(--ink)}}{r} .stage:first-child::before{{background:var(--a1-2-soft)}}{r} .stage .name,{r} .stage .fig{{z-index:1;position:relative;background:var(--page);padding:calc(var(--gap-sm)/3);border-radius:var(--radius-sm)}}')
+# Real alternative data and member counts for the contracts without normative fixtures.
+for f in ['pricing','versus']:
+ p=C/f'elements/{f}/fixtures/extended.html';s=p.read_text().replace('베이직','스타터').replace('스탠다드','비즈니스').replace('엔터프라이즈','전사 통합 운영').replace('29','39').replace('79','99').replace('원자재','핵심 부품').replace('전년','직전 회계연도').replace('기존','도입 이전').replace('개선','통합 운영 이후');p.write_text(s)
+req={'card':['card-2-quiet','card-3-icon3d','card-3-line','card-3-on','card-4','card-5-tone'],'callout':['callout','callout-icon','callout-stack'],'chart-area':['area-1','areas-2','areas-stacked-3','area-3pt'],'chart-bar':['bars-12','bars-6','bars-3','bars-h-5','bars-h-8','bars-2'],'chart-donut':['donut','donuts-3','donuts-4','donut-0','donut-100'],'chart-line':['lines-12','lines-6','lines-3','lines-flat']}
+for p in C.glob('elements/*/fixtures/*.html'):
+ if p.stem in req.get(p.parent.parent.name,[]):continue
+ s=p.read_text().replace('TEXT HERE','핵심 사업').replace('GRAPH DATA','운영 체계')
+ s=re.sub(r'<span class="icon">[^<]*</span>','<span class="icon" data-icon="sparkles"></span>',s)
+ p.write_text(s)

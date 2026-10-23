@@ -1,0 +1,1 @@
+Confluence joins a calm open canvas with crisp inset title strips, small radius panels, centred numbered discs, and a two-part baseline. Dense bold headings contrast with compact explanatory copy. Circular hubs create a generous central focus, while pale surfaces keep peripheral detail quiet.

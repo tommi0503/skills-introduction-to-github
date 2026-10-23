@@ -1,0 +1,19 @@
+:is(.code[data-el="diecut-code"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.code[data-el="diecut-code"]) *,:is(.code[data-el="diecut-code"]) *:before,:is(.code[data-el="diecut-code"]) *:after{box-sizing:border-box}
+:is(.code[data-el="diecut-code"]) :is(p,h2,blockquote){margin:0}
+:is(.code[data-el="diecut-code"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.code[data-el="diecut-code"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.code[data-el="diecut-code"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.code[data-el="diecut-code"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.code[data-el="diecut-code"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.code[data-el="diecut-code"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.code[data-el="diecut-code"]) .name{font-size:var(--type-20)}:is(.code[data-el="diecut-code"]) .note{font-size:var(--type-16)}:is(.code[data-el="diecut-code"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.code[data-el="diecut-code"]) .name{font-size:var(--type-18)}:is(.code[data-el="diecut-code"]) .note{font-size:var(--type-14)}:is(.code[data-el="diecut-code"]) .fig{font-size:var(--type-32)}:is(.code[data-el="diecut-code"]) .kick{display:none}}
+@container(max-height:160px){:is(.code[data-el="diecut-code"]) .note{display:none}:is(.code[data-el="diecut-code"]) .fig{font-size:var(--type-28)}:is(.code[data-el="diecut-code"]) .name{font-size:var(--type-18)}}
+
+:is(.code[data-el="diecut-code"]){display:flex;flex-direction:column;justify-content:center;gap:var(--gap);background:var(--n-9);color:var(--page);border-radius:var(--radius);padding:var(--pad);counter-reset:line}:is(.code[data-el="diecut-code"])>.name{font-size:var(--type-18);border-bottom:var(--stroke) solid var(--n-6);padding-bottom:var(--gap);color:var(--page)}:is(.code[data-el="diecut-code"])>.lines{display:flex;flex-direction:column;gap:var(--gap-sm);font-size:var(--type-18);line-height:var(--body-line)}:is(.code[data-el="diecut-code"])>.lines>p{white-space:pre-wrap;counter-increment:line;overflow-wrap:anywhere}:is(.code[data-el="diecut-code"]).numbered>.lines>p:before{content:counter(line);display:inline-block;min-width:var(--gap-lg);color:var(--n-4)}:is(.code[data-el="diecut-code"]) .k{color:var(--a1-2)}:is(.code[data-el="diecut-code"]) .s{color:var(--a2-2)}:is(.code[data-el="diecut-code"]) .c{color:var(--n-3)}:is(.code[data-el="diecut-code"]) .n{color:var(--a3-2)}@container(max-width:600px){:is(.code[data-el="diecut-code"])>.lines{font-size:var(--type-14)}}
+
+/* Final integrated review. */
+:is(.code[data-el="diecut-code"]) small{color:inherit;margin-left:0}:is(.code[data-el="diecut-code"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}
+/* Final integrated review. */
+:is(.code[data-el="diecut-code"])>.lines{font-family:var(--diecut-font-code)}

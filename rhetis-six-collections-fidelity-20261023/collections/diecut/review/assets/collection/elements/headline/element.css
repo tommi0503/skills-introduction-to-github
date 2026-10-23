@@ -1,0 +1,21 @@
+:is(.headline[data-el="diecut-headline"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.headline[data-el="diecut-headline"]) *,:is(.headline[data-el="diecut-headline"]) *:before,:is(.headline[data-el="diecut-headline"]) *:after{box-sizing:border-box}
+:is(.headline[data-el="diecut-headline"]) :is(p,h2,blockquote){margin:0}
+:is(.headline[data-el="diecut-headline"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.headline[data-el="diecut-headline"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.headline[data-el="diecut-headline"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.headline[data-el="diecut-headline"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.headline[data-el="diecut-headline"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.headline[data-el="diecut-headline"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.headline[data-el="diecut-headline"]) .name{font-size:var(--type-20)}:is(.headline[data-el="diecut-headline"]) .note{font-size:var(--type-16)}:is(.headline[data-el="diecut-headline"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.headline[data-el="diecut-headline"]) .name{font-size:var(--type-18)}:is(.headline[data-el="diecut-headline"]) .note{font-size:var(--type-14)}:is(.headline[data-el="diecut-headline"]) .fig{font-size:var(--type-32)}:is(.headline[data-el="diecut-headline"]) .kick{display:none}}
+@container(max-height:160px){:is(.headline[data-el="diecut-headline"]) .note{display:none}:is(.headline[data-el="diecut-headline"]) .fig{font-size:var(--type-28)}:is(.headline[data-el="diecut-headline"]) .name{font-size:var(--type-18)}}
+
+:is(.headline[data-el="diecut-headline"]){display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap);text-align:left}:is(.headline[data-el="diecut-headline"]) h2{font-family:var(--font-display);font-size:var(--type-44);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track);word-break:keep-all}:is(.headline[data-el="diecut-headline"]) h2 b{font-weight:var(--title-weight);background:linear-gradient(0deg,var(--a1-2-soft) 45%,transparent 45%)}:is(.headline[data-el="diecut-headline"]).big h2{font-size:var(--type-64)}:is(.headline[data-el="diecut-headline"]).center{text-align:center;align-items:center}:is(.headline[data-el="diecut-headline"]).on{padding:var(--pad);border-radius:var(--radius);background:var(--a1);color:var(--a1-on)}:is(.headline[data-el="diecut-headline"]).on :is(.kick,.note){color:var(--a1-on)}@container(max-width:600px){:is(.headline[data-el="diecut-headline"]) h2{font-size:var(--type-32)}:is(.headline[data-el="diecut-headline"]).big h2{font-size:var(--type-44)}}@container(max-width:350px){:is(.headline[data-el="diecut-headline"]) h2,:is(.headline[data-el="diecut-headline"]).big h2{font-size:var(--type-28)}}
+
+@container(min-width:1000px) and (min-height:160px){:is(.headline[data-el="diecut-headline"]).big h2{font-size:var(--type-128)}}
+/* Final integrated review. */
+:is(.headline[data-el="diecut-headline"]) small{color:inherit;margin-left:0}:is(.headline[data-el="diecut-headline"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}
+/* Final integrated review. */
+:is(.headline[data-el="diecut-headline"]).big h2{font-weight:var(--weight-body)}
+:is(.headline[data-el="diecut-headline"]).on h2 b{background:none;color:var(--a1-on);text-decoration:underline;text-underline-offset:.15em;text-decoration-thickness:1px}

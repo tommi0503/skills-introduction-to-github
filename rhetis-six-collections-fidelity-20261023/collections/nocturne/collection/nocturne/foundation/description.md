@@ -1,0 +1,1 @@
+A centered presentation stage with wide breathing room, compact upper furniture, and a twelve by six content grid. Two diffuse corner lights frame ordinary pages; a spreading, softly blurred beam introduces a central statement. Photo-led pages reach the side edges, while a mixed Latin/Korean cover lockup, quiet date, and restrained placeholder ornaments close the deck.

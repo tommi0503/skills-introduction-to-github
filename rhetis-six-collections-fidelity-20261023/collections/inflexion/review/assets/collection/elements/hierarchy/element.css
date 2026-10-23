@@ -1,0 +1,20 @@
+:is(.org[data-el="inflexion-hierarchy"]) {position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);anchor-scope:all;}
+:is(.org[data-el="inflexion-hierarchy"]) *{box-sizing:border-box;min-width:0;}
+:is(.org[data-el="inflexion-hierarchy"]) .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;}
+:is(.org[data-el="inflexion-hierarchy"]) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;}
+:is(.org[data-el="inflexion-hierarchy"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7);margin:0;}
+:is(.org[data-el="inflexion-hierarchy"]) .fig{font-size:var(--type-64);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);margin:0;color:var(--a1-7);}
+:is(.org[data-el="inflexion-hierarchy"]) small{color:inherit;margin-left:0;font-size:var(--type-20);font-weight:var(--label-weight);letter-spacing:var(--label-track);}
+:is(.org[data-el="inflexion-hierarchy"]) .icon{width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex:none;}
+@container (max-width:550px){ :is(.org[data-el="inflexion-hierarchy"]) .name{font-size:var(--type-20);} :is(.org[data-el="inflexion-hierarchy"]) .fig{font-size:var(--type-48);} :is(.org[data-el="inflexion-hierarchy"]) .note{font-size:var(--type-14);} }
+@container (max-width:300px){ :is(.org[data-el="inflexion-hierarchy"]) .name{font-size:var(--type-16);} :is(.org[data-el="inflexion-hierarchy"]) .fig{font-size:var(--type-32);} :is(.org[data-el="inflexion-hierarchy"]) .kick{font-size:var(--type-12);} }
+@container (max-height:220px){ :is(.org[data-el="inflexion-hierarchy"]) .name{font-size:var(--type-18);} :is(.org[data-el="inflexion-hierarchy"]) .fig{font-size:var(--type-40);} :is(.org[data-el="inflexion-hierarchy"]) .note{font-size:var(--type-14);} }
+:is(.org[data-el="inflexion-hierarchy"]){display:flex;justify-content:center;align-items:stretch;gap:var(--gap);padding-top:calc(var(--pad)*5);}
+:is(.org[data-el="inflexion-hierarchy"]) .root{position:absolute;left:35%;right:35%;top:var(--gap);padding:var(--gap-sm) var(--pad);border-radius:999px;background:var(--a1);color:var(--a1-on);text-align:center;font-size:var(--type-24);font-weight:var(--name-weight);}
+:is(.org[data-el="inflexion-hierarchy"]) .root::after{content:"";position:absolute;left:50%;top:100%;height:var(--gap-lg);border-left:var(--stroke) solid var(--a1);}
+:is(.org[data-el="inflexion-hierarchy"]) .branch{position:relative;flex:1;display:flex;flex-direction:column;gap:var(--gap-sm);border-top:var(--stroke) solid var(--a1);padding-top:var(--gap-lg);}
+:is(.org[data-el="inflexion-hierarchy"]) .branch::before{content:"";position:absolute;top:0;left:50%;height:var(--gap-lg);border-left:var(--stroke) solid var(--a1);}
+:is(.org[data-el="inflexion-hierarchy"]) .node{background:var(--n-1);border:var(--stroke) solid var(--a1);border-radius:var(--radius-sm);padding:var(--gap-sm);text-align:center;font-size:var(--type-20);font-weight:var(--name-weight);color:var(--a1-7);}
+:is(.org[data-el="inflexion-hierarchy"]) .leaf{padding:var(--gap-sm);text-align:center;border-bottom:var(--stroke) solid var(--n-3);font-size:var(--type-16);}
+@container (max-width:650px){:is(.org[data-el="inflexion-hierarchy"]) .node{font-size:var(--type-16);}:is(.org[data-el="inflexion-hierarchy"]) .root{font-size:var(--type-20);}:is(.org[data-el="inflexion-hierarchy"]) .leaf{font-size:var(--type-14);}}
+:is(.org[data-el="inflexion-hierarchy"]) .branch{padding-top:var(--type-100);}:is(.org[data-el="inflexion-hierarchy"]) .branch::before{height:var(--type-100);}@container (max-height:300px){:is(.org[data-el="inflexion-hierarchy"]) .branch{padding-top:var(--gap-lg);}:is(.org[data-el="inflexion-hierarchy"]) .branch::before{height:var(--gap-lg);}}

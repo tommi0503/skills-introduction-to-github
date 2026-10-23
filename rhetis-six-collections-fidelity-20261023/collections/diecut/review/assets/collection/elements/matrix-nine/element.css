@@ -1,0 +1,37 @@
+:is(.grid9[data-el="diecut-matrix-nine"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.grid9[data-el="diecut-matrix-nine"]) *,:is(.grid9[data-el="diecut-matrix-nine"]) *:before,:is(.grid9[data-el="diecut-matrix-nine"]) *:after{box-sizing:border-box}
+:is(.grid9[data-el="diecut-matrix-nine"]) :is(p,h2,blockquote){margin:0}
+:is(.grid9[data-el="diecut-matrix-nine"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.grid9[data-el="diecut-matrix-nine"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.grid9[data-el="diecut-matrix-nine"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.grid9[data-el="diecut-matrix-nine"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.grid9[data-el="diecut-matrix-nine"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.grid9[data-el="diecut-matrix-nine"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.grid9[data-el="diecut-matrix-nine"]) .name{font-size:var(--type-20)}:is(.grid9[data-el="diecut-matrix-nine"]) .note{font-size:var(--type-16)}:is(.grid9[data-el="diecut-matrix-nine"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.grid9[data-el="diecut-matrix-nine"]) .name{font-size:var(--type-18)}:is(.grid9[data-el="diecut-matrix-nine"]) .note{font-size:var(--type-14)}:is(.grid9[data-el="diecut-matrix-nine"]) .fig{font-size:var(--type-32)}:is(.grid9[data-el="diecut-matrix-nine"]) .kick{display:none}}
+@container(max-height:160px){:is(.grid9[data-el="diecut-matrix-nine"]) .note{display:none}:is(.grid9[data-el="diecut-matrix-nine"]) .fig{font-size:var(--type-28)}:is(.grid9[data-el="diecut-matrix-nine"]) .name{font-size:var(--type-18)}}
+
+:is(.grid9[data-el="diecut-matrix-nine"]){display:grid;grid-template-columns:var(--gap-lg) repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr)) var(--gap-lg);gap:var(--gap-sm);padding:var(--gap)}:is(.grid9[data-el="diecut-matrix-nine"])>.axis-x{grid-area:4/2/5/5;display:flex;justify-content:space-around;font-size:var(--type-16)}:is(.grid9[data-el="diecut-matrix-nine"])>.axis-y{grid-area:1/1/4/2;display:flex;flex-direction:column-reverse;justify-content:space-around;font-size:var(--type-16);writing-mode:vertical-rl;transform:rotate(180deg)}:is(.grid9[data-el="diecut-matrix-nine"])>.cell{background:var(--n-2);border-radius:var(--radius-sm);padding:var(--gap);display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm)}:is(.grid9[data-el="diecut-matrix-nine"])>.cell.on{background:var(--a1);color:var(--a1-on)}:is(.grid9[data-el="diecut-matrix-nine"]) .name{font-size:var(--type-20)}:is(.grid9[data-el="diecut-matrix-nine"]) .note{font-size:var(--type-16)}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(3){grid-column:2;grid-row:1}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(4){grid-column:3;grid-row:1}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(5){grid-column:4;grid-row:1}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(6){grid-column:2;grid-row:2}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(7){grid-column:3;grid-row:2}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(8){grid-column:4;grid-row:2}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(9){grid-column:2;grid-row:3}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(10){grid-column:3;grid-row:3}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-of-type(11){grid-column:4;grid-row:3}
+
+/* Final integrated review. */
+:is(.grid9[data-el="diecut-matrix-nine"]) small{color:inherit;margin-left:0}:is(.grid9[data-el="diecut-matrix-nine"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}
+/* Final integrated review. */
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell.on :is(.name,.note,.kick),:is(.grid9[data-el="diecut-matrix-nine"])>.cell.on .list,:is(.grid9[data-el="diecut-matrix-nine"])>.cell.on .list .name{color:var(--a1-on)}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(1 of .cell){grid-column:2;grid-row:1}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(2 of .cell){grid-column:3;grid-row:1}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(3 of .cell){grid-column:4;grid-row:1}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(4 of .cell){grid-column:2;grid-row:2}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(5 of .cell){grid-column:3;grid-row:2}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(6 of .cell){grid-column:4;grid-row:2}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(7 of .cell){grid-column:2;grid-row:3}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(8 of .cell){grid-column:3;grid-row:3}
+:is(.grid9[data-el="diecut-matrix-nine"])>.cell:nth-child(9 of .cell){grid-column:4;grid-row:3}

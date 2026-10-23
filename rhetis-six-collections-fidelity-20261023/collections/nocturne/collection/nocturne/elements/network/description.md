@@ -1,0 +1,1 @@
+Circular nodes connect through fine straight relationship lines in a many-to-many field. One focal node and strong links carry the accent, with neutral nodes kept visibly distinct from the background.

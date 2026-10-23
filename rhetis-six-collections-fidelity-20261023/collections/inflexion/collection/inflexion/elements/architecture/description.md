@@ -1,0 +1,1 @@
+The architecture uses Inflexion’s compact capsule labels, fine orbital rules and broad quiet surfaces. A single primary accent identifies the point; restrained secondary tones and a stepped typographic scale keep long Korean business labels legible in both modes.

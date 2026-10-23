@@ -1,0 +1,1 @@
+Small circular points sit on a fine continuous accent stroke with clear values above and labels beneath the plot. CSS anchors connect all intervals, including equal-valued points, without an image or script.

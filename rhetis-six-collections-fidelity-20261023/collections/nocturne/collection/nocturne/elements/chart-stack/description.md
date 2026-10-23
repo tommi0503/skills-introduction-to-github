@@ -1,0 +1,1 @@
+Neutral or ranked accent segments build vertical or horizontal bars with clear baseline labels. The active bar uses a focused accent sequence, and percentage stacks keep their full-height interpretation.

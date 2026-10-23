@@ -1,0 +1,19 @@
+exec(open('/workspace/work/deliverables/dockside/build/refine_collection.py').read().split("f='chart-area'")[0])
+f='chart-stack';r=root(f);append(f,f'{r} .seg:nth-child(3){{background:var(--a2);color:var(--a2-on)}}{r} .seg:nth-child(4){{background:var(--a3);color:var(--a3-on)}}{r} .seg:nth-child(5){{background:var(--a4);color:var(--a4-on)}}')
+f='swimlane';r=root(f);append(f,f'''{r}{{--dockside-lanes:2;grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding-left:calc(var(--pad)*4)}}{r}:has(>.lane:nth-child(3 of .lane)){{--dockside-lanes:3}}{r}:has(>.lane:nth-child(4 of .lane)){{--dockside-lanes:4}}{r}:has(>.lane:nth-child(5 of .lane)){{--dockside-lanes:5}}{r} .lane{{position:relative}}{r} .lane>.name{{position:absolute;right:calc(100% + var(--gap-sm));top:50%;transform:translateY(-50%);writing-mode:horizontal-tb;width:calc(var(--pad)*3);text-align:center}}{r} .node{{height:64px;min-height:64px;max-height:64px;align-self:center}}{r} .to-r::after{{top:calc(50% - 4px);height:8px;clip-path:polygon(0 42%,70% 42%,70% 0,100% 50%,70% 100%,70% 58%,0 58%)}}{r} .to-d::before{{left:calc(50% - 4px);width:8px;height:calc((100cqh + var(--gap))/var(--dockside-lanes) - 64px);clip-path:polygon(42% 0,58% 0,58% calc(100% - 8px),100% calc(100% - 8px),50% 100%,0 calc(100% - 8px),42% calc(100% - 8px))}}''')
+p=C/'elements/swimlane/element.json';d=json.load(open(p));d['tokenDefaults']['--dockside-lanes']='2';p.write_text(json.dumps(d,indent=2)+'\n')
+f='flowchart';r=root(f);append(f,f'{r} .to-r::after{{top:calc(50% - 4px);height:8px;clip-path:polygon(0 42%,70% 42%,70% 0,100% 50%,70% 100%,70% 58%,0 58%)}}{r} .to-d::before{{left:calc(50% - 4px);width:8px;clip-path:polygon(42% 0,58% 0,58% calc(100% - 8px),100% calc(100% - 8px),50% 100%,0 calc(100% - 8px),42% calc(100% - 8px))}}')
+f='hierarchy';r=root(f);append(f,f'{r}:has(.person){{padding-top:224px}}{r} .root:has(.person){{width:28%;padding:var(--gap-sm);background:none}}{r} .root>.person{{height:180px;width:100%;padding:var(--gap-sm);gap:calc(var(--gap-sm)/2)}}{r} .node>.person{{height:160px;padding:var(--gap-sm);gap:calc(var(--gap-sm)/2)}}{r} .node:has(.person){{padding:0}}{r} .root>.person .name,{r} .node>.person .name{{font-size:var(--type-16)}}{r} .root>.person .seat,{r} .node>.person .seat{{height:80px;width:80px;max-height:80px}}')
+f='mindmap';r=root(f);append(f,f'{r}:has(>.branch:nth-child(5):last-child)>.branch:nth-child(3){{grid-area:3/1}}{r}:has(>.branch:nth-child(5):last-child)>.branch:nth-child(4){{grid-area:1/3}}{r}:has(>.branch:nth-child(5):last-child)>.branch:nth-child(5){{grid-area:3/3}}{r} .branch>.person{{height:100%;width:100%;padding:calc(var(--gap-sm)/2);gap:calc(var(--gap-sm)/2)}}{r} .branch>.person .seat{{height:64px;width:64px;max-height:64px}}{r} .branch>.person .name{{font-size:var(--type-16)}}{r} .branch>.person .note{{font-size:var(--type-14)}}')
+# Add portrait seats through the existing person contract inside relational nodes.
+from bs4 import BeautifulSoup
+V=Path('/workspace/work/deliverables/dockside/review')
+def person(name,role,n):return f'<div class="person" data-el="dockside-person"><div class="seat avatar" data-ph="{n}"></div><b class="name">{name}</b><p class="note">{role}</p></div>'
+p=V/'reassembled/slide_27.html';b=BeautifulSoup(p.read_text(),'html.parser');q=b.select_one('.org .root');q.clear();q.append(BeautifulSoup(person('김미리','팀장 / 리더',1),'html.parser'))
+for q,(name,role,n) in zip(b.select('.org .branch'),[('박미리','기획 / 개발',2),('오미리','디자인 / UI',3),('강미리','마케팅 / 운영',4)]):
+ q.clear();q.append(BeautifulSoup('<div class="node">'+person(name,role,n)+'</div>','html.parser'))
+p.write_text(str(b))
+p=V/'reassembled/slide_28.html';b=BeautifulSoup(p.read_text(),'html.parser')
+for q,(name,role,n) in zip(b.select('.mindmap .branch'),[('김미리','기획',1),('강미리','개발',2),('박미리','디자인',3),('오미리','마케팅',4)]):
+ q.clear();q.append(BeautifulSoup(person(name,role,n),'html.parser'))
+p.write_text(str(b))

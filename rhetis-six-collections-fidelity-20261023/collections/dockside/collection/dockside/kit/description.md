@@ -1,0 +1,1 @@
+Dockside combines a slim desktop dock, luminous inset panels, quiet diagonal fields, and concise dark chapter capsules. Bright rims surround rounded surfaces, while one ranked accent carries a short title phrase, a functional tab, or a single metric. Circular orbit diagrams echo the focused icon in the dock. Photography and illustration remain numbered seats.

@@ -1,0 +1,1 @@
+A wide rounded equipment plate sits inside an exposed neutral chassis, with shallow side slots, a dark capsule kicker, generous centered titles, and a strict twelve-by-six body grid. Fine connectors and numbered seats retain the engineering character across covers and content pages.

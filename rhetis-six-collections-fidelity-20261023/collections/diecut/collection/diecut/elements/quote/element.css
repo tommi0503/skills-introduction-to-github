@@ -1,0 +1,17 @@
+:is(.quote[data-el="diecut-quote"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.quote[data-el="diecut-quote"]) *,:is(.quote[data-el="diecut-quote"]) *:before,:is(.quote[data-el="diecut-quote"]) *:after{box-sizing:border-box}
+:is(.quote[data-el="diecut-quote"]) :is(p,h2,blockquote){margin:0}
+:is(.quote[data-el="diecut-quote"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.quote[data-el="diecut-quote"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.quote[data-el="diecut-quote"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.quote[data-el="diecut-quote"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.quote[data-el="diecut-quote"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.quote[data-el="diecut-quote"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.quote[data-el="diecut-quote"]) .name{font-size:var(--type-20)}:is(.quote[data-el="diecut-quote"]) .note{font-size:var(--type-16)}:is(.quote[data-el="diecut-quote"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.quote[data-el="diecut-quote"]) .name{font-size:var(--type-18)}:is(.quote[data-el="diecut-quote"]) .note{font-size:var(--type-14)}:is(.quote[data-el="diecut-quote"]) .fig{font-size:var(--type-32)}:is(.quote[data-el="diecut-quote"]) .kick{display:none}}
+@container(max-height:160px){:is(.quote[data-el="diecut-quote"]) .note{display:none}:is(.quote[data-el="diecut-quote"]) .fig{font-size:var(--type-28)}:is(.quote[data-el="diecut-quote"]) .name{font-size:var(--type-18)}}
+
+:is(.quote[data-el="diecut-quote"]){display:flex;flex-direction:column;justify-content:center;gap:var(--gap-lg);background:var(--n-1);border-radius:var(--radius);padding:var(--pad)}:is(.quote[data-el="diecut-quote"]) blockquote{font-size:var(--type-32);font-weight:var(--body-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track);text-align:center}:is(.quote[data-el="diecut-quote"]).big blockquote{font-size:var(--type-44)}:is(.quote[data-el="diecut-quote"]) .by{display:grid;grid-template-columns:64px 1fr;gap:var(--gap-sm) var(--gap);align-self:center;align-items:center}:is(.quote[data-el="diecut-quote"]) .by .seat{grid-row:span 2;width:64px;height:64px}:is(.quote[data-el="diecut-quote"]) .by .name{align-self:end}:is(.quote[data-el="diecut-quote"]) .by .note{align-self:start}@container(max-width:650px){:is(.quote[data-el="diecut-quote"]) blockquote,:is(.quote[data-el="diecut-quote"]).big blockquote{font-size:var(--type-24)}}
+
+/* Final integrated review. */
+:is(.quote[data-el="diecut-quote"]) small{color:inherit;margin-left:0}:is(.quote[data-el="diecut-quote"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}

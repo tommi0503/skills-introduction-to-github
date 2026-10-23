@@ -1,0 +1,17 @@
+:is(.callout[data-el="diecut-callout"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.callout[data-el="diecut-callout"]) *,:is(.callout[data-el="diecut-callout"]) *:before,:is(.callout[data-el="diecut-callout"]) *:after{box-sizing:border-box}
+:is(.callout[data-el="diecut-callout"]) :is(p,h2,blockquote){margin:0}
+:is(.callout[data-el="diecut-callout"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.callout[data-el="diecut-callout"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.callout[data-el="diecut-callout"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.callout[data-el="diecut-callout"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.callout[data-el="diecut-callout"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.callout[data-el="diecut-callout"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.callout[data-el="diecut-callout"]) .name{font-size:var(--type-20)}:is(.callout[data-el="diecut-callout"]) .note{font-size:var(--type-16)}:is(.callout[data-el="diecut-callout"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.callout[data-el="diecut-callout"]) .name{font-size:var(--type-18)}:is(.callout[data-el="diecut-callout"]) .note{font-size:var(--type-14)}:is(.callout[data-el="diecut-callout"]) .fig{font-size:var(--type-32)}:is(.callout[data-el="diecut-callout"]) .kick{display:none}}
+@container(max-height:160px){:is(.callout[data-el="diecut-callout"]) .note{display:none}:is(.callout[data-el="diecut-callout"]) .fig{font-size:var(--type-28)}:is(.callout[data-el="diecut-callout"]) .name{font-size:var(--type-18)}}
+
+:is(.callout[data-el="diecut-callout"]){display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);background:var(--n-9);color:var(--page);border-radius:999px}:is(.callout[data-el="diecut-callout"]) p{font-size:var(--type-28);font-weight:var(--body-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track);text-align:center}:is(.callout[data-el="diecut-callout"]) p b{font-weight:var(--name-weight);color:var(--page);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--a1)}:is(.callout[data-el="diecut-callout"]) .icon{color:var(--a1);width:40px;height:40px}@container(max-width:650px){:is(.callout[data-el="diecut-callout"]) p{font-size:var(--type-20)}}@container(max-height:140px){:is(.callout[data-el="diecut-callout"]) p{font-size:var(--type-18)}:is(.callout[data-el="diecut-callout"]) .icon{width:28px;height:28px}}
+
+/* Final integrated review. */
+:is(.callout[data-el="diecut-callout"]) small{color:inherit;margin-left:0}:is(.callout[data-el="diecut-callout"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}

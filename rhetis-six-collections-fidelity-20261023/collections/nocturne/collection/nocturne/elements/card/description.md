@@ -1,0 +1,1 @@
+Rounded neutral panels place a short heading and explanation around an isolated figure or a small circular mark. A single active panel receives the accent surface; quiet picture panels use a full seat behind the centered statement.

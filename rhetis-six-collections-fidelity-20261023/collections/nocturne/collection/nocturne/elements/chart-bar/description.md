@@ -1,0 +1,1 @@
+Neutral bars have softly rounded caps, isolated values above them, and labels below the baseline. One active bar carries the accent; horizontal bars reserve a label gutter and keep their values beyond the bar ends.

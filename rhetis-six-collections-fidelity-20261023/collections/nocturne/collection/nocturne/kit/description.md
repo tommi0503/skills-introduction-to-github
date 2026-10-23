@@ -1,0 +1,1 @@
+Nocturne is a quiet stage built from isolated circular figures, hairline orbital outlines, restrained capsule labels, and wide centered statements. A diffuse corner light frames the message without drawing an illustration. Supporting content uses understated rounded panels and dotted separators, while the single focal figure remains sharply legible.

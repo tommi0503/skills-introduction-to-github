@@ -1,0 +1,9 @@
+# 주 에이전트 최종 통합 검수
+
+9장 전체를 개별 대조하고 Service 176px의 실제 glyph bbox, 파랑 host 팔레트와 Process 장식 위치를 복원했다. P08의 과도한 음수 자간으로 한글 획이 붙는 오류를 발견해 정상 자간의 Freesentation으로 교체했다. replica와 재조립 모두 5줄·24.75px 행간·최장355px를 확인했다.
+
+작은 연락처 시트만으로 완료하지 않고 각 페이지 비교 PNG를 한 장씩 열었다. 큰 이미지를 표시하는 도구가 일부 부품을 생략해 보여주는 사례는 단독 crop과 실제 PNG 픽셀로 다시 확인했다. 마지막 수정은 영향 요소의 후속 grid 검사와 페이지 PNG/PDF 재생성으로 검증했다. `audit-parent-delivery-final.json`은 최종 소스와 PNG/PDF 해시, CSS 복사본을 기록한다.
+
+`audit-parent-grid-*.json`의 초기 전수 검사와 최종 영향 요소 후속 검사를 함께 본다. `sourceUnchanged:false`는 검사 중 뒤따른 수정이 있었다는 기록이며 그 결과만으로 최종판을 승인한 것이 아니다. 해당 변경 요소는 `followup-final`·`last-final`·`pill-final` 보고서에서 다시 검사했다. raw overflow는 연결선·외부 라벨·축 배치를 포함한다. DOM 대비의 gradient/의사 요소 오탐 및 원본의 낮은 대비는 검수 기록에서 구분했다.
+
+사진·3D·이미지 아이콘·기기 화면의 회색 placeholder는 요청된 처리이다. 원본 글꼴을 확정할 수 없는 경우 허용된 실제 로드 글꼴을 사용했다. 허용된 placeholder 외에도 자형, Lucide 세부 윤곽, 노이즈와 일부 그라디언트 강도·연결선 끝 모양에는 잔여 차이가 있어 픽셀 100% 일치라고 주장하지 않는다.

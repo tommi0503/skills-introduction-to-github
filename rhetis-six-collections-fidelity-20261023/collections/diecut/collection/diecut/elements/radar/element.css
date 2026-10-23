@@ -1,0 +1,57 @@
+:is(.radar[data-el="diecut-radar"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.radar[data-el="diecut-radar"]) *,:is(.radar[data-el="diecut-radar"]) *:before,:is(.radar[data-el="diecut-radar"]) *:after{box-sizing:border-box}
+:is(.radar[data-el="diecut-radar"]) :is(p,h2,blockquote){margin:0}
+:is(.radar[data-el="diecut-radar"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.radar[data-el="diecut-radar"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.radar[data-el="diecut-radar"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.radar[data-el="diecut-radar"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.radar[data-el="diecut-radar"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.radar[data-el="diecut-radar"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.radar[data-el="diecut-radar"]) .name{font-size:var(--type-20)}:is(.radar[data-el="diecut-radar"]) .note{font-size:var(--type-16)}:is(.radar[data-el="diecut-radar"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.radar[data-el="diecut-radar"]) .name{font-size:var(--type-18)}:is(.radar[data-el="diecut-radar"]) .note{font-size:var(--type-14)}:is(.radar[data-el="diecut-radar"]) .fig{font-size:var(--type-32)}:is(.radar[data-el="diecut-radar"]) .kick{display:none}}
+@container(max-height:160px){:is(.radar[data-el="diecut-radar"]) .note{display:none}:is(.radar[data-el="diecut-radar"]) .fig{font-size:var(--type-28)}:is(.radar[data-el="diecut-radar"]) .name{font-size:var(--type-18)}}
+
+:is(.radar[data-el="diecut-radar"]){position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;padding:var(--pad)}:is(.radar[data-el="diecut-radar"]):before{content:'';position:absolute;inset:14%;border:var(--stroke) solid var(--n-4);border-radius:50%;background:repeating-radial-gradient(circle,var(--n-1) 0 22%,var(--n-4) 22.2% 22.5%,var(--n-1) 22.7% 44%);z-index:-2}:is(.radar[data-el="diecut-radar"])>.series{position:absolute;inset:18%;background:color-mix(in srgb,var(--a1) 25%,transparent);border:var(--stroke) solid var(--a1);clip-path:polygon(50% calc(50% - var(--v1)/var(--max)*50%),calc(50% + var(--v2)/var(--max)*50%) 35%,calc(50% + var(--v3)/var(--max)*32%) calc(50% + var(--v3)/var(--max)*50%),calc(50% - var(--v4)/var(--max)*32%) calc(50% + var(--v4)/var(--max)*50%),calc(50% - var(--v5)/var(--max)*50%) 35%)}:is(.radar[data-el="diecut-radar"])>.series>.name{position:absolute;bottom:0;font-size:var(--type-14)}:is(.radar[data-el="diecut-radar"])>.axis{position:absolute;left:calc(50% + cos(var(--diecut-angle))*44%);top:calc(50% + sin(var(--diecut-angle))*43%);transform:translate(-50%,-50%);white-space:nowrap}:is(.radar[data-el="diecut-radar"])>.axis .name{font-size:var(--type-18)}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(1){--diecut-angle:calc(-90deg + (1-1)*360deg/var(--n))}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(2){--diecut-angle:calc(-90deg + (2-1)*360deg/var(--n))}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(3){--diecut-angle:calc(-90deg + (3-1)*360deg/var(--n))}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(4){--diecut-angle:calc(-90deg + (4-1)*360deg/var(--n))}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(5){--diecut-angle:calc(-90deg + (5-1)*360deg/var(--n))}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(6){--diecut-angle:calc(-90deg + (6-1)*360deg/var(--n))}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(7){--diecut-angle:calc(-90deg + (7-1)*360deg/var(--n))}
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(8){--diecut-angle:calc(-90deg + (8-1)*360deg/var(--n))}
+
+/* Review round two: fit and geometry. */
+:is(.radar[data-el="diecut-radar"])>.series{background:none;border:0;clip-path:none}:is(.radar[data-el="diecut-radar"])>.series:before{content:'';position:absolute;inset:0;background:color-mix(in srgb,var(--a1) 25%,transparent);clip-path:var(--diecut-polygon)}:is(.radar[data-el="diecut-radar"])>.series.tone-2:before{background:color-mix(in srgb,var(--a2) 18%,transparent)}:is(.radar[data-el="diecut-radar"])>.series.tone-3:before{background:color-mix(in srgb,var(--a3) 18%,transparent)}:is(.radar[data-el="diecut-radar"])>.series>.name{bottom:calc(var(--pad)*-1);font-size:var(--type-14);left:0;white-space:nowrap}:is(.radar[data-el="diecut-radar"])>.series:nth-of-type(2)>.name{left:35%}:is(.radar[data-el="diecut-radar"])>.series:nth-of-type(3)>.name{left:70%}
+/* Review round two: fit and geometry. */
+@container style(--n:3){:is(.radar[data-el="diecut-radar"])>.series{--diecut-polygon:polygon(calc(50% + sin(0.0deg)*var(--v1)/var(--max)*50%) calc(50% - cos(0.0deg)*var(--v1)/var(--max)*50%),calc(50% + sin(120.0deg)*var(--v2)/var(--max)*50%) calc(50% - cos(120.0deg)*var(--v2)/var(--max)*50%),calc(50% + sin(240.0deg)*var(--v3)/var(--max)*50%) calc(50% - cos(240.0deg)*var(--v3)/var(--max)*50%))}}
+/* Review round two: fit and geometry. */
+@container style(--n:4){:is(.radar[data-el="diecut-radar"])>.series{--diecut-polygon:polygon(calc(50% + sin(0.0deg)*var(--v1)/var(--max)*50%) calc(50% - cos(0.0deg)*var(--v1)/var(--max)*50%),calc(50% + sin(90.0deg)*var(--v2)/var(--max)*50%) calc(50% - cos(90.0deg)*var(--v2)/var(--max)*50%),calc(50% + sin(180.0deg)*var(--v3)/var(--max)*50%) calc(50% - cos(180.0deg)*var(--v3)/var(--max)*50%),calc(50% + sin(270.0deg)*var(--v4)/var(--max)*50%) calc(50% - cos(270.0deg)*var(--v4)/var(--max)*50%))}}
+/* Review round two: fit and geometry. */
+@container style(--n:5){:is(.radar[data-el="diecut-radar"])>.series{--diecut-polygon:polygon(calc(50% + sin(0.0deg)*var(--v1)/var(--max)*50%) calc(50% - cos(0.0deg)*var(--v1)/var(--max)*50%),calc(50% + sin(72.0deg)*var(--v2)/var(--max)*50%) calc(50% - cos(72.0deg)*var(--v2)/var(--max)*50%),calc(50% + sin(144.0deg)*var(--v3)/var(--max)*50%) calc(50% - cos(144.0deg)*var(--v3)/var(--max)*50%),calc(50% + sin(216.0deg)*var(--v4)/var(--max)*50%) calc(50% - cos(216.0deg)*var(--v4)/var(--max)*50%),calc(50% + sin(288.0deg)*var(--v5)/var(--max)*50%) calc(50% - cos(288.0deg)*var(--v5)/var(--max)*50%))}}
+/* Review round two: fit and geometry. */
+@container style(--n:6){:is(.radar[data-el="diecut-radar"])>.series{--diecut-polygon:polygon(calc(50% + sin(0.0deg)*var(--v1)/var(--max)*50%) calc(50% - cos(0.0deg)*var(--v1)/var(--max)*50%),calc(50% + sin(60.0deg)*var(--v2)/var(--max)*50%) calc(50% - cos(60.0deg)*var(--v2)/var(--max)*50%),calc(50% + sin(120.0deg)*var(--v3)/var(--max)*50%) calc(50% - cos(120.0deg)*var(--v3)/var(--max)*50%),calc(50% + sin(180.0deg)*var(--v4)/var(--max)*50%) calc(50% - cos(180.0deg)*var(--v4)/var(--max)*50%),calc(50% + sin(240.0deg)*var(--v5)/var(--max)*50%) calc(50% - cos(240.0deg)*var(--v5)/var(--max)*50%),calc(50% + sin(300.0deg)*var(--v6)/var(--max)*50%) calc(50% - cos(300.0deg)*var(--v6)/var(--max)*50%))}}
+/* Review round two: fit and geometry. */
+@container style(--n:7){:is(.radar[data-el="diecut-radar"])>.series{--diecut-polygon:polygon(calc(50% + sin(0.0deg)*var(--v1)/var(--max)*50%) calc(50% - cos(0.0deg)*var(--v1)/var(--max)*50%),calc(50% + sin(51.42857142857143deg)*var(--v2)/var(--max)*50%) calc(50% - cos(51.42857142857143deg)*var(--v2)/var(--max)*50%),calc(50% + sin(102.85714285714286deg)*var(--v3)/var(--max)*50%) calc(50% - cos(102.85714285714286deg)*var(--v3)/var(--max)*50%),calc(50% + sin(154.28571428571428deg)*var(--v4)/var(--max)*50%) calc(50% - cos(154.28571428571428deg)*var(--v4)/var(--max)*50%),calc(50% + sin(205.71428571428572deg)*var(--v5)/var(--max)*50%) calc(50% - cos(205.71428571428572deg)*var(--v5)/var(--max)*50%),calc(50% + sin(257.14285714285717deg)*var(--v6)/var(--max)*50%) calc(50% - cos(257.14285714285717deg)*var(--v6)/var(--max)*50%),calc(50% + sin(308.57142857142856deg)*var(--v7)/var(--max)*50%) calc(50% - cos(308.57142857142856deg)*var(--v7)/var(--max)*50%))}}
+/* Review round two: fit and geometry. */
+@container style(--n:8){:is(.radar[data-el="diecut-radar"])>.series{--diecut-polygon:polygon(calc(50% + sin(0.0deg)*var(--v1)/var(--max)*50%) calc(50% - cos(0.0deg)*var(--v1)/var(--max)*50%),calc(50% + sin(45.0deg)*var(--v2)/var(--max)*50%) calc(50% - cos(45.0deg)*var(--v2)/var(--max)*50%),calc(50% + sin(90.0deg)*var(--v3)/var(--max)*50%) calc(50% - cos(90.0deg)*var(--v3)/var(--max)*50%),calc(50% + sin(135.0deg)*var(--v4)/var(--max)*50%) calc(50% - cos(135.0deg)*var(--v4)/var(--max)*50%),calc(50% + sin(180.0deg)*var(--v5)/var(--max)*50%) calc(50% - cos(180.0deg)*var(--v5)/var(--max)*50%),calc(50% + sin(225.0deg)*var(--v6)/var(--max)*50%) calc(50% - cos(225.0deg)*var(--v6)/var(--max)*50%),calc(50% + sin(270.0deg)*var(--v7)/var(--max)*50%) calc(50% - cos(270.0deg)*var(--v7)/var(--max)*50%),calc(50% + sin(315.0deg)*var(--v8)/var(--max)*50%) calc(50% - cos(315.0deg)*var(--v8)/var(--max)*50%))}}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"]) small{color:inherit;margin-left:0}:is(.radar[data-el="diecut-radar"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis{z-index:3}:is(.radar[data-el="diecut-radar"])>.axis .name{background:var(--page);padding:0 var(--gap-sm)}:is(.radar[data-el="diecut-radar"])>.series>.name{background:var(--page)}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(1){--diecut-angle:calc(-90deg + (1 - 1) * 360deg / var(--n))}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(2){--diecut-angle:calc(-90deg + (2 - 1) * 360deg / var(--n))}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(3){--diecut-angle:calc(-90deg + (3 - 1) * 360deg / var(--n))}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(4){--diecut-angle:calc(-90deg + (4 - 1) * 360deg / var(--n))}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(5){--diecut-angle:calc(-90deg + (5 - 1) * 360deg / var(--n))}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(6){--diecut-angle:calc(-90deg + (6 - 1) * 360deg / var(--n))}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(7){--diecut-angle:calc(-90deg + (7 - 1) * 360deg / var(--n))}
+/* Final integrated review. */
+:is(.radar[data-el="diecut-radar"])>.axis:nth-child(8){--diecut-angle:calc(-90deg + (8 - 1) * 360deg / var(--n))}

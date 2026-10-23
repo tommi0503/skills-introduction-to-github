@@ -1,0 +1,1 @@
+A softly rounded neutral frame contains monospaced source using the kit’s dedicated code-font extension. A quiet filename rule, optional generated line numbers, and restrained semantic token colors support reading.

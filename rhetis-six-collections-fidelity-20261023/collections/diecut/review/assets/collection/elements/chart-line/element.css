@@ -1,0 +1,43 @@
+:is(.lines[data-el="diecut-chart-line"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.lines[data-el="diecut-chart-line"]) *,:is(.lines[data-el="diecut-chart-line"]) *:before,:is(.lines[data-el="diecut-chart-line"]) *:after{box-sizing:border-box}
+:is(.lines[data-el="diecut-chart-line"]) :is(p,h2,blockquote){margin:0}
+:is(.lines[data-el="diecut-chart-line"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.lines[data-el="diecut-chart-line"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.lines[data-el="diecut-chart-line"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.lines[data-el="diecut-chart-line"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.lines[data-el="diecut-chart-line"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.lines[data-el="diecut-chart-line"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.lines[data-el="diecut-chart-line"]) .name{font-size:var(--type-20)}:is(.lines[data-el="diecut-chart-line"]) .note{font-size:var(--type-16)}:is(.lines[data-el="diecut-chart-line"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.lines[data-el="diecut-chart-line"]) .name{font-size:var(--type-18)}:is(.lines[data-el="diecut-chart-line"]) .note{font-size:var(--type-14)}:is(.lines[data-el="diecut-chart-line"]) .fig{font-size:var(--type-32)}:is(.lines[data-el="diecut-chart-line"]) .kick{display:none}}
+@container(max-height:160px){:is(.lines[data-el="diecut-chart-line"]) .note{display:none}:is(.lines[data-el="diecut-chart-line"]) .fig{font-size:var(--type-28)}:is(.lines[data-el="diecut-chart-line"]) .name{font-size:var(--type-18)}}
+
+:is(.lines[data-el="diecut-chart-line"]){display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;padding:var(--gap-lg) var(--gap);isolation:isolate}:is(.lines[data-el="diecut-chart-line"])>.pt{display:contents}:is(.lines[data-el="diecut-chart-line"])>.pt>b{grid-row:1;align-self:start;height:calc(100% - var(--v)/var(--max)*(100% - 36px));display:flex;flex-direction:column;align-items:center;justify-content:flex-end;font-size:var(--type-22);font-weight:var(--figure-weight);line-height:var(--figure-line);white-space:nowrap;anchor-name:var(--diecut-self)}:is(.lines[data-el="diecut-chart-line"])>.pt>b:after{content:'';display:block;width:8px;height:8px;border-radius:999px;background:var(--ink);margin-top:var(--gap-sm);z-index:2}:is(.lines[data-el="diecut-chart-line"])>.pt.on>b:after{background:var(--a1)}:is(.lines[data-el="diecut-chart-line"])>.pt>span{grid-row:2;font-size:var(--type-16);text-align:center;border-top:var(--stroke) solid var(--n-4);padding-top:var(--gap)}:is(.lines[data-el="diecut-chart-line"])>.pt:before,:is(.lines[data-el="diecut-chart-line"])>.pt:after{content:'';position:absolute;left:anchor(var(--diecut-prev) center);right:anchor(var(--diecut-self) center);z-index:-1}:is(.lines[data-el="diecut-chart-line"])>.pt:before{top:calc(anchor(var(--diecut-prev) bottom) - 4px);bottom:calc(anchor(var(--diecut-self) bottom) - 4px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--ink) calc(50% - .5px),var(--ink) calc(50% + .5px),transparent calc(50% + 1px))}:is(.lines[data-el="diecut-chart-line"])>.pt:after{top:calc(anchor(var(--diecut-self) bottom) - 4px);bottom:calc(anchor(var(--diecut-prev) bottom) - 4px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--ink) calc(50% - .5px),var(--ink) calc(50% + .5px),transparent calc(50% + 1px))}:is(.lines[data-el="diecut-chart-line"])>.pt:first-child:before,:is(.lines[data-el="diecut-chart-line"])>.pt:first-child:after{content:none}@container(max-width:650px){:is(.lines[data-el="diecut-chart-line"])>.pt>b{font-size:var(--type-16)}:is(.lines[data-el="diecut-chart-line"])>.pt>span{font-size:var(--type-14)}:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(even)>span{visibility:hidden}}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(1){--diecut-self:--diecut-line-1;--diecut-prev:--diecut-line-0}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(2){--diecut-self:--diecut-line-2;--diecut-prev:--diecut-line-1}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(3){--diecut-self:--diecut-line-3;--diecut-prev:--diecut-line-2}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(4){--diecut-self:--diecut-line-4;--diecut-prev:--diecut-line-3}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(5){--diecut-self:--diecut-line-5;--diecut-prev:--diecut-line-4}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(6){--diecut-self:--diecut-line-6;--diecut-prev:--diecut-line-5}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(7){--diecut-self:--diecut-line-7;--diecut-prev:--diecut-line-6}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(8){--diecut-self:--diecut-line-8;--diecut-prev:--diecut-line-7}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(9){--diecut-self:--diecut-line-9;--diecut-prev:--diecut-line-8}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(10){--diecut-self:--diecut-line-10;--diecut-prev:--diecut-line-9}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(11){--diecut-self:--diecut-line-11;--diecut-prev:--diecut-line-10}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(12){--diecut-self:--diecut-line-12;--diecut-prev:--diecut-line-11}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(13){--diecut-self:--diecut-line-13;--diecut-prev:--diecut-line-12}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(14){--diecut-self:--diecut-line-14;--diecut-prev:--diecut-line-13}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(15){--diecut-self:--diecut-line-15;--diecut-prev:--diecut-line-14}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(16){--diecut-self:--diecut-line-16;--diecut-prev:--diecut-line-15}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(17){--diecut-self:--diecut-line-17;--diecut-prev:--diecut-line-16}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(18){--diecut-self:--diecut-line-18;--diecut-prev:--diecut-line-17}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(19){--diecut-self:--diecut-line-19;--diecut-prev:--diecut-line-18}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(20){--diecut-self:--diecut-line-20;--diecut-prev:--diecut-line-19}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(21){--diecut-self:--diecut-line-21;--diecut-prev:--diecut-line-20}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(22){--diecut-self:--diecut-line-22;--diecut-prev:--diecut-line-21}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(23){--diecut-self:--diecut-line-23;--diecut-prev:--diecut-line-22}
+:is(.lines[data-el="diecut-chart-line"])>.pt:nth-child(24){--diecut-self:--diecut-line-24;--diecut-prev:--diecut-line-23}
+
+/* Final integrated review. */
+:is(.lines[data-el="diecut-chart-line"]) small{color:inherit;margin-left:0}:is(.lines[data-el="diecut-chart-line"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}.lines.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(8)):not(:has(>.pt:nth-child(9))){padding:0;grid-template-rows:100%}
+.lines.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(8)):not(:has(>.pt:nth-child(9)))>.pt>b{height:calc(100% - var(--v)/var(--max)*100% + 4px);font-size:var(--type-18);font-weight:var(--body-weight)}
+.lines.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(8)):not(:has(>.pt:nth-child(9)))>.pt>span:empty{display:none}

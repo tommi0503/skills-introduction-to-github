@@ -1,0 +1,1 @@
+A low, fully rounded capsule keeps the mark, name and optional note on one visual centerline. The outlined form uses the neutral panel ground, while the active form uses the accent with its paired foreground.

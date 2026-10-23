@@ -1,0 +1,17 @@
+:is(.meter[data-el="diecut-gauge"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.meter[data-el="diecut-gauge"]) *,:is(.meter[data-el="diecut-gauge"]) *:before,:is(.meter[data-el="diecut-gauge"]) *:after{box-sizing:border-box}
+:is(.meter[data-el="diecut-gauge"]) :is(p,h2,blockquote){margin:0}
+:is(.meter[data-el="diecut-gauge"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.meter[data-el="diecut-gauge"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.meter[data-el="diecut-gauge"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.meter[data-el="diecut-gauge"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.meter[data-el="diecut-gauge"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.meter[data-el="diecut-gauge"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.meter[data-el="diecut-gauge"]) .name{font-size:var(--type-20)}:is(.meter[data-el="diecut-gauge"]) .note{font-size:var(--type-16)}:is(.meter[data-el="diecut-gauge"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.meter[data-el="diecut-gauge"]) .name{font-size:var(--type-18)}:is(.meter[data-el="diecut-gauge"]) .note{font-size:var(--type-14)}:is(.meter[data-el="diecut-gauge"]) .fig{font-size:var(--type-32)}:is(.meter[data-el="diecut-gauge"]) .kick{display:none}}
+@container(max-height:160px){:is(.meter[data-el="diecut-gauge"]) .note{display:none}:is(.meter[data-el="diecut-gauge"]) .fig{font-size:var(--type-28)}:is(.meter[data-el="diecut-gauge"]) .name{font-size:var(--type-18)}}
+
+:is(.meter[data-el="diecut-gauge"]){display:grid;grid-template-columns:1fr auto;align-content:center;gap:var(--gap);padding:var(--pad);isolation:isolate}:is(.meter[data-el="diecut-gauge"]) .fig{font-size:var(--type-36)}:is(.meter[data-el="diecut-gauge"]):before{content:'';height:20px;grid-column:1/-1;grid-row:2;background:var(--n-3);border-radius:999px}:is(.meter[data-el="diecut-gauge"]):after{content:'';position:absolute;left:var(--pad);bottom:calc(50% - 44px);height:20px;width:calc((100% - var(--pad)*2)*var(--v)/100);background:var(--a1);border-radius:999px}
+
+/* Final integrated review. */
+:is(.meter[data-el="diecut-gauge"]) small{color:inherit;margin-left:0}:is(.meter[data-el="diecut-gauge"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}

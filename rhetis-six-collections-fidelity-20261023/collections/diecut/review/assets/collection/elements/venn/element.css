@@ -1,0 +1,30 @@
+:is(.venn[data-el="diecut-venn"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.venn[data-el="diecut-venn"]) *,:is(.venn[data-el="diecut-venn"]) *:before,:is(.venn[data-el="diecut-venn"]) *:after{box-sizing:border-box}
+:is(.venn[data-el="diecut-venn"]) :is(p,h2,blockquote){margin:0}
+:is(.venn[data-el="diecut-venn"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.venn[data-el="diecut-venn"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.venn[data-el="diecut-venn"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.venn[data-el="diecut-venn"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.venn[data-el="diecut-venn"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.venn[data-el="diecut-venn"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.venn[data-el="diecut-venn"]) .name{font-size:var(--type-20)}:is(.venn[data-el="diecut-venn"]) .note{font-size:var(--type-16)}:is(.venn[data-el="diecut-venn"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.venn[data-el="diecut-venn"]) .name{font-size:var(--type-18)}:is(.venn[data-el="diecut-venn"]) .note{font-size:var(--type-14)}:is(.venn[data-el="diecut-venn"]) .fig{font-size:var(--type-32)}:is(.venn[data-el="diecut-venn"]) .kick{display:none}}
+@container(max-height:160px){:is(.venn[data-el="diecut-venn"]) .note{display:none}:is(.venn[data-el="diecut-venn"]) .fig{font-size:var(--type-28)}:is(.venn[data-el="diecut-venn"]) .name{font-size:var(--type-18)}}
+
+:is(.venn[data-el="diecut-venn"]){display:flex;align-items:center;justify-content:center;padding:var(--gap-lg);isolation:isolate}:is(.venn[data-el="diecut-venn"])>.set{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;width:40%;aspect-ratio:1;border:var(--stroke) solid var(--ink);border-radius:50%;background:color-mix(in srgb,var(--n-2) 40%,transparent);margin-left:calc(var(--gap-lg)*-1);padding:var(--gap-lg)}:is(.venn[data-el="diecut-venn"])>.set:first-child{margin-left:0}:is(.venn[data-el="diecut-venn"])>.set.on{background:color-mix(in srgb,var(--a1) 35%,transparent)}:is(.venn[data-el="diecut-venn"])>.core{position:absolute;left:43%;right:43%;top:45%;text-align:center;font-size:var(--type-20);font-weight:var(--name-weight)}@container(max-width:500px){:is(.venn[data-el="diecut-venn"]) .name{font-size:var(--type-18)}}
+
+/* Final integrated review. */
+:is(.venn[data-el="diecut-venn"]) small{color:inherit;margin-left:0}:is(.venn[data-el="diecut-venn"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}
+/* Source fidelity review: tilted engineering ellipses, horizontal content. */
+.venn.venn[data-el="diecut-venn"]{display:flex;align-items:center;justify-content:center;padding:0;counter-reset:diecut-roi;isolation:isolate}
+.venn.venn[data-el="diecut-venn"]>.set{position:absolute;left:25.82%;top:45.78%;transform:translate(-50%,-50%);width:28.47%;height:62.25%;aspect-ratio:auto;margin:0;padding:0;border:0;border-radius:0;background:none;display:flex;flex-direction:column;justify-content:center;align-items:center;counter-increment:diecut-roi;isolation:isolate}
+.venn.venn[data-el="diecut-venn"]>.set:nth-child(2){left:50.18%}.venn.venn[data-el="diecut-venn"]>.set:nth-child(3){left:74.54%}
+.venn.venn[data-el="diecut-venn"]>.set:before{content:'';position:absolute;left:50%;top:50%;width:111%;height:85.16%;border:var(--stroke) solid var(--ink);border-radius:50%;transform:translate(-50%,-50%) rotate(-45deg);z-index:-1}
+.venn.venn[data-el="diecut-venn"]>.set:after{content:counter(diecut-roi,decimal-leading-zero);position:absolute;top:1.29%;left:21.15%;width:17.63%;height:17.74%;border-radius:999px;background:var(--a1);color:var(--a1-on);display:flex;align-items:center;justify-content:center;font-size:var(--type-32);font-weight:var(--body-weight);line-height:var(--label-line)}
+.venn.venn[data-el="diecut-venn"]>.set>div{position:absolute;left:4.16%;top:33.22%;width:83.33%;text-align:center}
+.venn.venn[data-el="diecut-venn"] .name{display:block;font-size:var(--type-28);font-weight:var(--name-weight);line-height:var(--name-line)}
+.venn.venn[data-el="diecut-venn"] .note{margin-top:var(--gap);font-size:var(--type-20);color:var(--ink);line-height:var(--body-line)}
+.venn.venn[data-el="diecut-venn"]:not(:has(>.set:nth-child(3)))>.set:first-child{left:38%}.venn.venn[data-el="diecut-venn"]:not(:has(>.set:nth-child(3)))>.set:nth-child(2){left:62%}
+.venn.venn[data-el="diecut-venn"]>.set:before{height:auto;aspect-ratio:173 / 132}.venn.venn[data-el="diecut-venn"]>.set:after{height:auto;aspect-ratio:1}
+.venn.venn[data-el="diecut-venn"]>.core{left:43%;right:43%;top:72%;font-size:var(--type-18)}
+@container(max-width:700px){.venn.venn[data-el="diecut-venn"] .name{font-size:var(--type-18)}.venn.venn[data-el="diecut-venn"]>.set:after{font-size:var(--type-18)}.venn.venn[data-el="diecut-venn"]>.core{font-size:var(--type-14)}}

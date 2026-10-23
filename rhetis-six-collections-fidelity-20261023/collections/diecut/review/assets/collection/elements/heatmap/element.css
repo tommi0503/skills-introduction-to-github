@@ -1,0 +1,21 @@
+:is(.heat[data-el="diecut-heatmap"]){position:relative;min-width:0;min-height:0;max-width:100%;box-sizing:border-box;container-type:size;anchor-scope:all;color:var(--ink);font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.heat[data-el="diecut-heatmap"]) *,:is(.heat[data-el="diecut-heatmap"]) *:before,:is(.heat[data-el="diecut-heatmap"]) *:after{box-sizing:border-box}
+:is(.heat[data-el="diecut-heatmap"]) :is(p,h2,blockquote){margin:0}
+:is(.heat[data-el="diecut-heatmap"]) .name{font-family:var(--font-display);font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+:is(.heat[data-el="diecut-heatmap"]) .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-8);overflow-wrap:anywhere}
+:is(.heat[data-el="diecut-heatmap"]) .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}
+:is(.heat[data-el="diecut-heatmap"]) .fig{font-family:var(--font-display);font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+:is(.heat[data-el="diecut-heatmap"]) small{font-size:var(--type-20);font-weight:var(--body-weight)}
+:is(.heat[data-el="diecut-heatmap"]) .icon{display:inline-block;width:32px;height:32px;flex:none}
+@container(max-width:600px){:is(.heat[data-el="diecut-heatmap"]) .name{font-size:var(--type-20)}:is(.heat[data-el="diecut-heatmap"]) .note{font-size:var(--type-16)}:is(.heat[data-el="diecut-heatmap"]) .fig{font-size:var(--type-40)}}
+@container(max-width:350px){:is(.heat[data-el="diecut-heatmap"]) .name{font-size:var(--type-18)}:is(.heat[data-el="diecut-heatmap"]) .note{font-size:var(--type-14)}:is(.heat[data-el="diecut-heatmap"]) .fig{font-size:var(--type-32)}:is(.heat[data-el="diecut-heatmap"]) .kick{display:none}}
+@container(max-height:160px){:is(.heat[data-el="diecut-heatmap"]) .note{display:none}:is(.heat[data-el="diecut-heatmap"]) .fig{font-size:var(--type-28)}:is(.heat[data-el="diecut-heatmap"]) .name{font-size:var(--type-18)}}
+
+:is(.heat[data-el="diecut-heatmap"]){display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--gap)}:is(.heat[data-el="diecut-heatmap"])>.heads{display:grid;grid-template-columns:repeat(var(--cols),1fr);margin-left:18%;font-size:var(--type-16);text-align:center}:is(.heat[data-el="diecut-heatmap"])>.row{flex:1;min-height:0;display:grid;grid-template-columns:18% repeat(var(--cols),1fr);gap:var(--gap-sm);align-items:stretch}:is(.heat[data-el="diecut-heatmap"])>.row>.name{display:flex;align-items:center;font-size:var(--type-18)}:is(.heat[data-el="diecut-heatmap"]) .cell{display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);background:color-mix(in srgb,var(--a1) calc(var(--v)*1%),var(--n-1));color:var(--ink);font-size:var(--type-16);font-weight:var(--label-weight)}:is(.heat[data-el="diecut-heatmap"]).calendar>.heads{margin-left:0}:is(.heat[data-el="diecut-heatmap"]).calendar>.row{grid-template-columns:repeat(var(--cols),1fr)}:is(.heat[data-el="diecut-heatmap"]).calendar .cell{border-radius:var(--radius-sm);aspect-ratio:1}@container(max-width:600px){:is(.heat[data-el="diecut-heatmap"]) .cell,:is(.heat[data-el="diecut-heatmap"])>.heads{font-size:var(--type-14)}:is(.heat[data-el="diecut-heatmap"])>.row>.name{font-size:var(--type-14)}}
+
+/* Final integrated review. */
+:is(.heat[data-el="diecut-heatmap"]) small{color:inherit;margin-left:0}:is(.heat[data-el="diecut-heatmap"]) .icon{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);line-height:var(--label-line)}
+/* Final integrated review. */
+.slide.dark :is(.heat[data-el="diecut-heatmap"]) .cell{color:color-mix(in srgb,var(--ink) calc((1 - clamp(0,var(--v) - 60,1))*100%),var(--a1-on))}
+/* A neutral value capsule keeps every density readable in either mode. */
+:is(.heat[data-el="diecut-heatmap"]) .cell>b{display:inline-flex;align-items:center;justify-content:center;background:var(--page);color:var(--ink);border-radius:999px;padding:calc(var(--gap-sm)/2) var(--gap-sm);font-size:var(--type-14)}

@@ -1,0 +1,15 @@
+<!-- min: 5x5 -->
+<div class="code numbered" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="confetti-code"><p class="name">churn.py</p><div class="lines">
+<p><span class="k">def</span> monthly_churn(rows):</p>
+<p>    <span class="c"># 월별 해지율을 계산합니다</span></p>
+<p>    total = <span class="n">0</span></p>
+<p>    lost = <span class="n">0</span></p>
+<p>    <span class="k">for</span> row <span class="k">in</span> rows:</p>
+<p>        total += row[<span class="s">"active"</span>]</p>
+<p>        lost += row[<span class="s">"cancelled"</span>]</p>
+<p>    <span class="k">if</span> total == <span class="n">0</span>:</p>
+<p>        <span class="k">return</span> <span class="n">0.0</span></p>
+<p>    <span class="k">return</span> round(lost / total * <span class="n">100</span>, <span class="n">2</span>)</p>
+<p></p>
+<p>print(monthly_churn(load(<span class="s">"2026-09.csv"</span>)))</p>
+</div></div>

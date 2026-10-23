@@ -1,0 +1,1 @@
+A body heading uses a spare type stack with a quiet upper line and a short note. Bare statements can reach the largest allowed type step, while an accent phrase provides a more restrained focal point.

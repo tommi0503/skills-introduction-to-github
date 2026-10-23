@@ -1,0 +1,1 @@
+The architecture element translates the desktop dock language into a relationship.architecture composition. Rounded inset surfaces use bright rims and restrained neutral shadows; concise capsules identify a stage or accent. Its semantic geometry, connections and data remain visible as the allotted cell changes size, with stepped type and quieter secondary notes.

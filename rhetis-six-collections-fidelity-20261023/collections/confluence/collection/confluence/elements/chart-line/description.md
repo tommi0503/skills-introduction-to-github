@@ -1,0 +1,1 @@
+The chart-line applies Confluence’s centred circular emphasis, soft inset panels and concise heavy hierarchy to the chart.line contract. Accent colour denotes one focal item, while quiet surfaces and thin rules preserve supporting context. Container steps reduce text and spacing for compact placements.

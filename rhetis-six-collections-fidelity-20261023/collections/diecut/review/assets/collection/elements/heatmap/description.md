@@ -1,0 +1,1 @@
+The heatmap element uses Diecut’s machined neutral panel, capsule inserts, fine engineering rules, circular markers, and restrained hierarchy. Its layout reserves clear reading space and preserves essential labels in compact slots.

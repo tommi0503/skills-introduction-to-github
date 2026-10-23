@@ -1,0 +1,1 @@
+An airy investor presentation system with a shallow inward bend in fine horizontal rules, broad rounded panels, capsule labels and orbit-like circular relationships. Strong display figures and compact semantic labels carry the emphasis while quiet secondary surfaces preserve generous breathing room.
