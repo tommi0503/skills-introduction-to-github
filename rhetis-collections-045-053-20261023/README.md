@@ -1,5 +1,11 @@
 # Rhetis · 기업 덱 045–053
 
+## 통합 소스 ZIP
+
+[전체 컬렉션·재현본·조립본 코드 ZIP 다운로드](downloads/rhetis-all-source.zip) · [통합 소스 검증 기록](integrated-source-validation.json)
+
+컬렉션6개·요소336개·재현본107개·조립본107개와 글꼴·계약·미리보기 도구를 한 폴더에 통합했습니다. 압축을 푼 뒤 README 안내대로 HTTP 서버를 실행하면 됩니다. 렌더 PNG·PDF와 기존 개별 ZIP을 중복으로 넣지 않은 소스 전용 묶음입니다.
+
 ## 전체 비교 PDF
 
 [원본 | 재현본 · 107장](previews/original-vs-replica.pdf) · [원본 | 라이브러리 조립본 · 107장](previews/original-vs-reassembled.pdf)
