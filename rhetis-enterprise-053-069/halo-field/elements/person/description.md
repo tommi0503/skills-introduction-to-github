@@ -1,0 +1,1 @@
+A rounded profile panel pairs a restrained image seat with a name, fine accent rule and supporting credentials. Rows preserve equal panels; compact profiles reduce avatar size before suppressing secondary notes. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

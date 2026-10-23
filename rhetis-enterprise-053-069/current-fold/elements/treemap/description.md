@@ -1,0 +1,1 @@
+The treemap element translates the Current Fold language into nested rectangles whose areas follow the shares; with one branch the tiles fill the whole.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

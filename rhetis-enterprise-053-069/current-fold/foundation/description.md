@@ -1,0 +1,1 @@
+A fine full-height edge rail and open curved corner frame anchor an airy twelve by six grid. Headers use a small accent kicker above a strong, closely spaced title and a fine horizontal rule. Pale picture seats remain neutral.

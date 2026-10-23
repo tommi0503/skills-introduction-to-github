@@ -1,0 +1,1 @@
+Rounded vertical bars rise from a fine baseline with separate values and axis labels. The horizontal variant moves labels to the left and values to the bar ends; emphasis selects a single deeper bar. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

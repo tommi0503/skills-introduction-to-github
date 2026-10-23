@@ -1,0 +1,1 @@
+The funnel element translates the Current Fold language into `.funnel` > `.stage` × 3–6 (`.name` + `.fig`), each `style="--v:N"` (0–100) for its width.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

@@ -1,0 +1,1 @@
+Outlined circular members surround a filled central idea along a fine circular track. The open interior and light connections extend the source deck’s practical, professional and partnership motif. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

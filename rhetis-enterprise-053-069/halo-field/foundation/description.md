@@ -1,0 +1,1 @@
+A fine accent rule separates small page furniture from an ample title and a twelve by six content grid. Soft neutral page grounds support round panels. Covers use large quiet rings outside the reading area. The typography stays left aligned with a restrained hierarchy.

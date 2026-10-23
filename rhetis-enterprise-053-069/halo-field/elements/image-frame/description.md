@@ -1,0 +1,1 @@
+A lightly rounded white frame surrounds a single image seat with a small even inset. A quiet lower edge adds separation without competing with the image. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

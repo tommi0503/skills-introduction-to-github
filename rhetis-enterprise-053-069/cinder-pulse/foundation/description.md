@@ -1,0 +1,1 @@
+The slide is a neutral surround with inset panels. Top headings sit beside a narrow section label; a rail variant puts the same title at the left. A twelve by six body grid accepts components without changing their geometry. Covers pair light large type with five staggered capsule silhouettes.

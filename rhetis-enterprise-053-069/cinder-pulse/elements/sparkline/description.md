@@ -1,0 +1,1 @@
+The sparkline component uses the Cinder Pulse diagram vocabulary: quiet inset panels, fine neutral connectors, slender capsule marks and one clear accent. Text retains a light hierarchy while numeric values use a firmer weight. Its compact container treatment reduces type and spacing without removing the central name or figure.

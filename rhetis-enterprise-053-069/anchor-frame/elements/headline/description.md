@@ -1,0 +1,1 @@
+The headline follows the Anchor Frame language: an open, flat composition with thin square boundaries, deliberate edge alignment and a single accent decision. The hierarchy uses bold upright names and quieter supporting text; container steps reduce detail before hiding secondary notes. Its geometry serves the headline relationship rather than adding unrelated decoration.

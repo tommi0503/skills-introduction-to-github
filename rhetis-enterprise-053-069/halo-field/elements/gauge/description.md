@@ -1,0 +1,1 @@
+A horizontal rounded track places a readable name and figure above the measured fill. Its quiet background makes the supplied proportion immediately visible. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

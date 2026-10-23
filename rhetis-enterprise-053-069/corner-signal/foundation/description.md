@@ -1,0 +1,1 @@
+A precise twelve-by-six informational grid sits beneath a wide left-aligned heading. The sparse neutral canvas has no decorative border; covers use an oversized typographic lockup and a sharply clipped accent title.

@@ -1,0 +1,1 @@
+Bare figures sit on the page without a card surface. Large deep-accent numbers align in an even row with thin separators and a restrained name-and-note hierarchy. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

@@ -1,0 +1,1 @@
+A measured horizontal sequence uses large circular marks for a short process and chevron marks for six-step execution flows. Fine connectors join members; the vertical variant keeps a compact numbered reading order. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

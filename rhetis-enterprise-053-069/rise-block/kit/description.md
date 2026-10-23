@@ -1,0 +1,1 @@
+A precise sequence of gently rounded rectangular blocks ascends above quiet, unrounded plinths. A single hairline rail and generous white intervals keep large business figures and blunt, left-aligned typography legible. Emphasis lands on the last block, while secondary content stays on pale neutral grounds.

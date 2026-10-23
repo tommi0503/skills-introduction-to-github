@@ -1,0 +1,1 @@
+Quiet circular sets overlap without heavy borders, allowing the intersection to remain visible. An optional compact central label names the shared value. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

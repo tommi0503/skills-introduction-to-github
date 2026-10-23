@@ -1,0 +1,1 @@
+Quiet horizontal lanes align to shared period headings. Rounded duration bars span their supplied intervals, and a small diamond marks a named milestone. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

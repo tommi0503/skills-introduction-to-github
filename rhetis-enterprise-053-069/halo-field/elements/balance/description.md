@@ -1,0 +1,1 @@
+Two quietly rounded pans hold named considerations above a restrained verdict line. The supplied tilt offsets the pans, while one pale accent identifies the selected side. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

@@ -1,0 +1,1 @@
+A balanced vertical list uses small round markers, CSS-drawn checks or automatic numbers. Divided rows add fine rules, with names aligned on a common left edge and quieter supporting notes below. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

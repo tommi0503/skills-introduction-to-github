@@ -1,0 +1,1 @@
+Pale capsule questions lead through finely ruled answer branches to rounded outcomes. A filled recommended outcome carries the decision while conditions stay small and neutral. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

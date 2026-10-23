@@ -1,0 +1,1 @@
+The decision-tree element translates the Current Fold language into at most three questions deep; branches drawn by the element.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

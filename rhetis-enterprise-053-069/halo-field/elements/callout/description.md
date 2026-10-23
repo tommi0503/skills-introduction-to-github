@@ -1,0 +1,1 @@
+A thin accent rule introduces a centered concluding sentence. The bold clause carries the point while an optional icon remains modest beside the sentence. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

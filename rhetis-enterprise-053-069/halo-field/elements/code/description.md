@@ -1,0 +1,1 @@
+A quiet rounded panel presents monospaced source lines beneath an optional fine-ruled file name. Ranked deep accents distinguish tokens, and optional automatic line numbers remain subordinate. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

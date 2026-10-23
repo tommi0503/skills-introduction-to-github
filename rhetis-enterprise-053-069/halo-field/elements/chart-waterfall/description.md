@@ -1,0 +1,1 @@
+Floating rounded bars show each supplied change between running totals. Quiet connectors link the steps, while positive, negative and total bars remain distinct through rank and neutral depth. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

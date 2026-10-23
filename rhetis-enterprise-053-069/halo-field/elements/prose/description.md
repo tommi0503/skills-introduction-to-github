@@ -1,0 +1,1 @@
+Readable paragraphs use a relaxed line rhythm and deep-accent emphasis. The lead variant opens larger, the quiet variant recedes, and two columns preserve a clean reading measure. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

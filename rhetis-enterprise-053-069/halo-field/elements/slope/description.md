@@ -1,0 +1,1 @@
+Before and after headings frame a series of paired values joined by fine directional lines. A single emphasized pair leads the comparison, while dumbbell mode flattens the connector. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

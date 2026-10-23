@@ -1,0 +1,1 @@
+A quiet circular track contains one ranked-accent share around a clean center. Centered figures and short names remain visible at zero and full completion, and several rings form an evenly spaced row. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

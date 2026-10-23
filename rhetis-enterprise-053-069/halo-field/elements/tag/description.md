@@ -1,0 +1,1 @@
+Small rounded labels sit inside running prose, while inline highlights mark only the important words. Their pale ground and deep accent text retain contrast in both modes. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

@@ -1,0 +1,1 @@
+Soft full-width layers stack with consistent separation. One accent layer leads neutral supporting layers, while small outlined capsules name the components within each layer. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

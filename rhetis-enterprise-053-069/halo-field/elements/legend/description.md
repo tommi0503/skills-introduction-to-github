@@ -1,0 +1,1 @@
+A compact, wrapping row pairs small circular swatches with neutral readable series names. Rank is carried by the swatch rather than by changing the typography. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

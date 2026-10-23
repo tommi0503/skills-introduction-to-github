@@ -1,0 +1,1 @@
+A six-row twelve-column stage with a fine left rail, generous margins and an understated divider below the header. Covers use a large left lockup with an offset rectangular mosaic suggestion. Furniture never styles element roots.

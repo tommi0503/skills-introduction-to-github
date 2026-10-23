@@ -1,0 +1,1 @@
+A filled source block feeds softly rounded branch bands sized by their supplied shares. Pale connections and quiet drop-off branches keep the primary path readable. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

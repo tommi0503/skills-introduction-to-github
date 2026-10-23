@@ -1,0 +1,1 @@
+A filled round center is surrounded by softly rounded member panels on a restrained grid. Small marks, clear names and quiet notes keep the spokes subordinate to the central idea. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

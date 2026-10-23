@@ -1,0 +1,1 @@
+Halo Field uses ample breathing room, fine horizontal rules, large left-aligned headings, soft round panels, and circular progress motifs. A single filled accent leads each composition while quiet neutral forms support it. The visual grammar comes from the fifteen-page marketing proposal deck, not from an existing sample collection.

@@ -1,0 +1,1 @@
+Nine softly rounded cells form a measured three-by-three field with compact axis labels. Quiet names and notes support a single stronger selected cell. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

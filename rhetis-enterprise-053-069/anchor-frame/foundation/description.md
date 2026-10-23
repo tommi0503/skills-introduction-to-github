@@ -1,0 +1,1 @@
+The foundation keeps a rigid 12 by 6 body within generous margins. A narrow vertical accent starts the header. The cover uses an oversized two-tier lockup and overlapping anchored rectangles at the right, leaving a wide white field for text. Numbered seats are deliberately neutral.

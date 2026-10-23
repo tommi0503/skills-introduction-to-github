@@ -1,0 +1,1 @@
+Stage names and touchpoint notes sit below a fine emotional path driven by the supplied mood values. Small circular points and a quiet selected stage retain the deck’s line-and-round-node vocabulary. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

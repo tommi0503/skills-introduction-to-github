@@ -1,0 +1,1 @@
+Small ranked dots occupy a restrained two-axis plot. Labels sit above their points, while bubble mode expands supplied magnitudes without introducing a second decorative system. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

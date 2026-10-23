@@ -1,0 +1,1 @@
+Rounded process boxes and capsule endpoints sit on an explicit grid. Fine rightward and downward connectors use the source deck’s restrained line weight; questions receive a pale accent ground. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

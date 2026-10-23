@@ -1,0 +1,1 @@
+A filled capsule root leads fine connectors to rounded branch nodes and pale leaf panels. Equal branch spacing and shared text alignment clarify the hierarchy. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

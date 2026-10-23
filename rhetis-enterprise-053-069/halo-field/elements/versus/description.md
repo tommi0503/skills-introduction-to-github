@@ -1,0 +1,1 @@
+Two equally weighted rounded side panels face a compact circular comparison mark. A pale accent selects one side without turning the entire composition into competing blocks. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

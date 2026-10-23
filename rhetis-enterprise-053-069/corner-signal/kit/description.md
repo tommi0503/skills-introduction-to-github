@@ -1,0 +1,1 @@
+Corner Signal uses sharp industrial plates with a clipped upper-right corner, a narrow top signal and an occasional left triangular flag. Spacious pale fields support direct typography and measured informational diagrams. One ranked accent leads each composition; neutral plates provide the counterweight.

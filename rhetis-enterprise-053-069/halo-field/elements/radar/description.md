@@ -1,0 +1,1 @@
+Fine concentric guides support value-based polygons on three to eight spokes. Axis names sit within the plot boundary, and translucent ranked fills allow several profiles to be compared. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

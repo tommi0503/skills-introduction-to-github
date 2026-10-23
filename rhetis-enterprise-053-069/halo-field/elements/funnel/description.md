@@ -1,0 +1,1 @@
+Centered rounded stages narrow according to their supplied proportions. A single filled first stage leads quieter supporting levels, with names and figures balanced across each stage. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

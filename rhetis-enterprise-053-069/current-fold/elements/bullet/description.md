@@ -1,0 +1,1 @@
+The bullet element translates the Current Fold language into actual against target and bands in one row; `.bullets` > `.bullet` × n stacks them.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

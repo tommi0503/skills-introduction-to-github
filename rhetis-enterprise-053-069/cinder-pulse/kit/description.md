@@ -1,0 +1,1 @@
+Cinder Pulse frames clear white information panels inside a deep neutral canvas. Slender capsule silhouettes, restrained corner rounding, light oversized headings and a narrow accent rail create a calm, diagram-led corporate rhythm. Single accented hubs and bars organize attention without ornamenting every surface.

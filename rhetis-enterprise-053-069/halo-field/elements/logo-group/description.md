@@ -1,0 +1,1 @@
+A wrapping row of nearly square logo seats uses quiet pale grounds and fine borders. Equal visual weight leaves room for different wordmarks without creating a long decorative strip. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

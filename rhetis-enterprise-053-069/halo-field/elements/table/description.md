@@ -1,0 +1,1 @@
+An accent header and fine horizontal rules organize explicit table rows. Alternating quiet grounds and a pale selected column support reading without heavy box borders. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

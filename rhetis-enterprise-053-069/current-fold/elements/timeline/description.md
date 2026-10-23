@@ -1,0 +1,1 @@
+The timeline element translates the Current Fold language into points on a line; `.track.alt` alternates above/below; `.track.col` runs downward.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

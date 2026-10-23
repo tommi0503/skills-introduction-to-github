@@ -1,0 +1,42 @@
+
+.slide{width:1280px;height:720px;position:relative;box-sizing:border-box;overflow:hidden;background:var(--page);color:var(--ink);font-family:var(--font-body);font-weight:var(--weight-body);letter-spacing:var(--body-track);line-height:var(--body-line)}
+.slide .page{height:100%;box-sizing:border-box;padding:var(--margin-y) var(--margin-x);display:flex;flex-direction:column;gap:var(--gap);position:relative}
+.slide .head{flex:none;min-height:0;display:flex;flex-direction:column;gap:var(--gap-sm)}
+.slide .head.center{text-align:center;align-items:center}
+.slide .kicker{margin:0;border-left:8px solid var(--a1);padding-left:var(--pad);font-size:var(--type-20);font-weight:var(--label-weight);letter-spacing:var(--label-track-latin);line-height:var(--label-line)}
+.slide .title{margin:0;font-size:var(--type-48);font-family:var(--font-display);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track)}
+.slide .title b{color:var(--a1-7);font-weight:inherit}
+.slide .lead{margin:0;font-size:var(--type-20);font-weight:var(--lead-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track)}
+.slide .body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:var(--gap);flex:1;min-height:0;container-type:size}
+.slide .body>*{min-width:0;min-height:0}
+.slide .group{display:flex;gap:var(--gap);min-width:0;min-height:0;container-type:size}
+.slide .group>*{flex:1;min-width:0;min-height:0}
+.slide .group.col,.slide .stack{display:flex;flex-direction:column;gap:var(--gap);min-height:0;container-type:size}
+.slide .stack>*{flex:1;min-height:0;min-width:0}
+.slide .group.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.slide .group.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.slide .split{display:grid;grid-template-columns:1fr 2fr;gap:var(--gap);container-type:size;min-height:0}
+.slide .split.wide-left{grid-template-columns:2fr 1fr}
+.slide .seat{box-sizing:border-box;position:relative;min-height:0;min-width:0;aspect-ratio:1;background:var(--n-1);border:1px solid var(--n-3);display:flex;align-items:center;justify-content:center;color:var(--n-7);font-size:var(--type-20);font-weight:var(--label-weight)}
+.slide .seat::after{content:attr(data-ph)}
+.slide .seat.avatar{border-radius:999px;aspect-ratio:1}
+.slide .seat.portrait{aspect-ratio:3/4}
+.slide .seat.logo{aspect-ratio:1}
+.slide .seat.back{position:absolute;right:var(--margin-x);top:var(--margin-y);height:62%;width:22%;aspect-ratio:auto}
+.slide .seat.icon{width:64px;height:64px;aspect-ratio:1}
+.slide .icon{width:32px;height:32px;display:inline-flex;flex:none;align-items:center;justify-content:center}
+.slide .foot,.slide .top{display:flex;justify-content:space-between;gap:var(--gap);font-size:var(--type-14);line-height:var(--label-line);color:var(--n-7)}
+.slide .foot{margin-top:auto}.slide .rail{position:absolute;left:var(--furn-edge);top:var(--margin-y);writing-mode:vertical-rl;font-size:var(--type-14)}
+.slide.cover .page{display:block}
+.slide.cover .lockup{position:absolute;width:68%;z-index:1}
+.slide.cover .lockup.at-left{left:var(--margin-x);top:26%}
+.slide.cover .lockup.at-center{left:16%;top:30%;text-align:center}
+.slide.cover .lockup.at-top-left{left:var(--margin-x);top:var(--margin-y)}
+.slide.cover .lockup.at-bottom-left{left:var(--margin-x);bottom:20%}
+.slide.cover .lockup .kicker{position:absolute;top:calc(var(--margin-y) * -2.6);left:0;white-space:nowrap}
+.slide.cover .title{font-size:var(--type-76);line-height:var(--title-line);margin:0 0 var(--gap)}
+.slide.cover .title b{display:block;font-size:var(--type-100);color:var(--ink)}
+.slide.cover .meta{position:absolute;left:var(--margin-x);bottom:var(--margin-y);font-size:var(--type-20);color:var(--n-7);line-height:var(--body-line)}
+.slide.cover .deco{position:absolute;right:var(--margin-x);top:var(--margin-y);width:22%;height:66%;border:1px solid var(--a1-3-muted)}
+.slide.cover .deco::before{content:'';position:absolute;inset:0;background:linear-gradient(var(--a1),var(--a1)) left top/10px 10px no-repeat,linear-gradient(var(--a1),var(--a1)) right top/10px 10px no-repeat,linear-gradient(var(--a1),var(--a1)) right bottom/10px 10px no-repeat,linear-gradient(var(--a1),var(--a1)) left bottom/10px 10px no-repeat}
+.slide.cover .deco::after{content:'';position:absolute;width:128%;height:54%;left:-66%;top:76%;border:1px solid var(--a1-3-muted);background:linear-gradient(var(--a1),var(--a1)) left top/10px 10px no-repeat,linear-gradient(var(--a1),var(--a1)) right top/10px 10px no-repeat,linear-gradient(var(--a1),var(--a1)) right bottom/10px 10px no-repeat,linear-gradient(var(--a1),var(--a1)) left bottom/10px 10px no-repeat}

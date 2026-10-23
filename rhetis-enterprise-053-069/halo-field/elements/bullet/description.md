@@ -1,0 +1,1 @@
+A compact row places a name, qualitative track and actual figure on a shared baseline. The accent bar expresses performance while the note states the target in readable text. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

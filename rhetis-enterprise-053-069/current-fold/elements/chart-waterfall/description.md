@@ -1,0 +1,1 @@
+The chart-waterfall element translates the Current Fold language into the element draws floating bars and the connectors between consecutive steps.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

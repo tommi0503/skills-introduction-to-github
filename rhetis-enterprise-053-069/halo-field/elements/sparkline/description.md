@@ -1,0 +1,1 @@
+A small unlabelled sequence of slender bars expresses trend beside a larger figure. Rounded tops match the deck’s measured bar charts; semantic up and down states use the supplied status colors. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

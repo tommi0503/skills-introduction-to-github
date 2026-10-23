@@ -1,0 +1,1 @@
+Rounded plans align their name, price and feature list on steady vertical positions. The selected plan receives a clear accent edge and a quiet tinted ground, with a small recommendation label. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

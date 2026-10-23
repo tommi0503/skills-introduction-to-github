@@ -1,0 +1,1 @@
+Rounded branch panels radiate to either side of a filled center. Fine curved links and inset leaf text keep the relationships readable without a heavy organizational grid. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

@@ -1,0 +1,1 @@
+Fine rules and small outlined stops hold dated entries on one shared track. Capsule dates sit above clear names and quiet notes; vertical and alternating variants preserve the same point-and-line grammar. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

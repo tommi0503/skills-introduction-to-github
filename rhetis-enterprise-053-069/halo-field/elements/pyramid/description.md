@@ -1,0 +1,1 @@
+A stack of separated trapezoids widens from top to bottom. Neutral upper levels lead into a single stronger lower level, using centered names and concise notes. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

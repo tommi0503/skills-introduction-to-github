@@ -1,0 +1,1 @@
+Two fine crossing axes support nearly round named marks on a quiet page field. The selected position uses one solid accent, and labels remain inside the plotting boundary. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

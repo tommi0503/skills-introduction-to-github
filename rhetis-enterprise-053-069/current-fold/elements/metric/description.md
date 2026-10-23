@@ -1,0 +1,1 @@
+The metric element translates the Current Fold language into a bare figure without a surface; `.stats` > `.stat` × n a row of them with dividers.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

@@ -1,0 +1,1 @@
+Current Fold uses a slim full-height rail, generous white planes, a fine sweeping arc, square pale panels, compact rounded utility labels, and a hierarchy that rises in deliberate steps. Figures carry the emphasis while diagrams use open connectors and restrained circles. The source is deck 055; no sample collection styling was used.

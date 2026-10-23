@@ -1,0 +1,1 @@
+Nested circles express inclusion through progressively smaller quiet fields. Names and figures sit in their own exposed bands, with one ranked-accent ring identifying the selected scope. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

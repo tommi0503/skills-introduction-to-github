@@ -1,0 +1,1 @@
+A muted starting value and a stronger ending value are joined by a small CSS arrow. Open space around the pair makes the change the focal point. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

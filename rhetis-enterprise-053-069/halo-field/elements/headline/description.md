@@ -1,0 +1,1 @@
+A left-aligned display heading can move between a compact introduction and a statement-size message. Bold words carry the deep accent; centered and filled variants retain the same measured spacing. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

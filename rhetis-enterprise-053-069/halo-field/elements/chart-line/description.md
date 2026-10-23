@@ -1,0 +1,1 @@
+Small outlined points follow the supplied values across equal time steps. Fine anchor-positioned connecting lines keep values above the plot and labels on a stable baseline. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

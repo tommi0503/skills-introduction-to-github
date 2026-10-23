@@ -1,0 +1,1 @@
+Segments stack in supplied order on equal tracks, using ranked accents and separate category labels. Percentage and horizontal variants keep the same calm baseline and measured spacing. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

@@ -1,0 +1,1 @@
+Counted square units form a compact ten-column field above a clear figure and name. Filled units carry the share, while the figures variant uses a simple person silhouette. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

@@ -1,0 +1,1 @@
+Filled areas connect actual values between evenly spaced points. Series names sit above the plot, labels remain below a fine axis, and stacked series retain their supplied running totals. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

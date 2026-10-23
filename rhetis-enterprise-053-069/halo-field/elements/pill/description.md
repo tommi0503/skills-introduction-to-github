@@ -1,0 +1,1 @@
+A one-line capsule centers its label and supporting text as a compact horizontal unit. Filled, outlined and quiet surfaces share the same optical center and rounded ends. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

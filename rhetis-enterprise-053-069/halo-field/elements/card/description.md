@@ -1,0 +1,1 @@
+A softly rounded panel centers a steady stack of kicker, figure, title and note. A fine rule under the title recalls the source deck’s objective cards; an emphasized panel uses a solid ranked accent. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

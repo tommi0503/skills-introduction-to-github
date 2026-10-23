@@ -1,0 +1,1 @@
+Centered statements carry an accent first line and an ink second line. A compact dark capsule holds the section. The twelve by six content grid sits on open page space, while a folded lower rule anchors every page. Image seats are neutral square placements. Cover statements sit toward the left with a quiet scanline field on the lower right.

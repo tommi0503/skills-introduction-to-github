@@ -1,0 +1,1 @@
+Rounded small cells encode density inside a clean labelled grid. Readable value chips preserve contrast over changing fills; the calendar variant removes row-name space for an even day field. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

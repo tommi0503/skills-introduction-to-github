@@ -1,0 +1,1 @@
+The radar element translates the Current Fold language into each series a filled polygon over K spokes, first axis at the top, clockwise.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

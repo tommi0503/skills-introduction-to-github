@@ -1,0 +1,1 @@
+The slope element translates the Current Fold language into each item's change between two moments; `.slope.dumbbell` draws horizontal dumbbells instead of slope lines.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

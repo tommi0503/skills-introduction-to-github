@@ -1,0 +1,1 @@
+The pill uses the Rise Block vocabulary: restrained rectangular planes, a precise accent edge, moderate corners, aligned titles and generous intervals. The foreground is distinct from a quiet neutral plinth; emphasis advances to one clear focal block. It adapts by container steps rather than scaling typography continuously.

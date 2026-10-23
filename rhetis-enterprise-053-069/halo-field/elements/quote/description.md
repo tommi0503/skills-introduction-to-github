@@ -1,0 +1,1 @@
+A generous quotation sits beside a fine vertical accent rule inside a soft round panel. The author block pairs a round avatar with a clear name and secondary attribution. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

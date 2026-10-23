@@ -1,0 +1,1 @@
+Named owner rows form a quiet background for rounded process nodes. Capsule endpoints and fine connectors preserve the same flowchart grammar while keeping responsibility visible. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

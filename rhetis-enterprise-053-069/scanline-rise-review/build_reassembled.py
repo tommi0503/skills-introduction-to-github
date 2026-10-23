@@ -1,0 +1,60 @@
+from pathlib import Path
+import json,sys,re
+R=Path(__file__).parent;C=R.parent/'scanline-rise';O=R/'reassembled';O.mkdir(exist_ok=True)
+sys.path.insert(0,str(R));from build_replica import entries,rows,cs,pests,quarters,issues,plan,texts
+ID='scanline-rise'
+def el(folder,root,inner,var='',style=''):return f'<div class="{root} {var}" data-el="{ID}-{folder}"'+(f' style="{style}"' if style else '')+'>'+inner+'</div>'
+def pos(markup,c,r,w,h):
+ return re.sub(r'^(<[^>]+)',lambda m:m[1]+f' style="grid-column:{c} / span {w}; grid-row:{r} / span {h}"',markup,count=1) if 'style=' not in markup.split('>')[0] else re.sub(r'style="',f'style="grid-column:{c} / span {w}; grid-row:{r} / span {h};',markup,count=1)
+def group(xs,var=''):return '<div class="group '+var+'">'+''.join(xs)+'</div>'
+def stack(xs):return '<div class="stack">'+''.join(xs)+'</div>'
+def listel(ls):return el('list','list',''.join(f'<div class="item"><p class="name">{t}</p></div>' for t in ls))
+def card(name,note='',fig='',variant='',ic=''):
+ p=(f'<span class="mark"><span class="icon" data-icon="{ic}"></span></span>' if ic else '')+(f'<p class="fig">{fig}</p>' if fig else '')+f'<p class="name">{name}</p>'+(f'<p class="note">{note}</p>' if note else '')
+ return el('card','card','<div class="parts">'+p+'</div>',variant)
+def head(k,a,b):return f'<header class="head center"><p class="kicker">{k}</p><h1 class="title"><b>{a}</b><br>{b}</h1></header>'
+def line(vals,labels=['1Q','2Q','3Q','4Q']):return el('chart-line','lines',''.join(f'<div class="pt" style="--v:{v}"><b>{v}</b><span>{n}</span></div>' for v,n in zip(vals,labels)),style='--max:100')
+def bars(vals,labels):return el('chart-bar','bars',''.join(f'<div class="bar {"on" if i==len(vals)-1 else ""}" style="--v:{v}"><b>{v}</b><span>{n}</span></div>' for i,(v,n) in enumerate(zip(vals,labels))),style='--max:100')
+def donut(v,n):return el('chart-donut','donut',f'<b class="fig">{v}<small>%</small></b><p class="name">{n}</p>',style=f'--v:{v}')
+def title(t):return el('headline','headline',f'<h2>{t}</h2>')
+def call(t):return el('callout','callout',f'<p>{t}</p>')
+def frame(n):return el('image-frame','frame',f'<div class="seat" data-ph="{n}"></div>')
+def cycle(core,ls):return el('cycle','cycle',f'<div class="core">{core}</div>'+''.join(f'<div class="node">{n}</div>' for n in ls))
+P={}
+P[1]='<section class="slide cover"><div class="page"><div class="lockup at-left"><p class="kicker">MIRI COMPANY</p><h1 class="title"><b>2080 하반기</b><br>사업 성과 보고서</h1><p class="lead">이곳에 해당 자료에 관한 간단한 설명을 입력해 보세요.</p></div><p class="meta">MAIL. contact@miridih.com<br>TEL. 030-000-0000<br>ADD. 미리시 미리로 미리구 7</p><div class="deco"></div></div></section>'
+P[2]=(head('MIRI COMPANY','CONTENTS',''),pos(el('agenda','agenda',''.join(f'<div class="entry"><span class="mark">0{i+1}</span><p class="name">{n}</p><p class="note">소제목을 입력하세요<br>소제목을 입력하세요<br>소제목을 입력하세요</p></div>' for i,n in enumerate(entries))),1,1,12,6))
+P[3]=(head('01. 사업개요','본 사업은 취향 기반 콘텐츠·커뮤니티 플랫폼을 통해','사용자 확보 및 광고·제휴 수익을 창출'),pos(stack([card(n,'<br>'.join(ls),variant='',ic={'video':'clapperboard','bag':'handshake','user':'user'}[ic]) for n,ic,ls in rows]),1,1,7,6)+pos(cycle('MIRI<br>COMPANY',['콘텐츠 공급','관련 키워드','사용자 활동']),8,1,5,6))
+P[4]=(head('01. 연간목표','사용자 참여 확대 및 광고·제휴 수익 강화를 위해','연초 설정한 핵심 전략 방향'),pos(call('커뮤니티 활동량 확대 및 사용자 체류 시간 증가　＋　광고 및 제휴 기반 수익 구조 강화'),1,1,12,2)+pos(group([card(n,txt,variant='',ic=ic) for n,txt,ic in [('핵심 카테고리 콘텐츠 공급 확대','일간 인기 콘텐츠 큐레이션 강화<br>신규 게시글 생성 프로그램 운영','clapperboard'),('사용자 참여 촉진 구조 고도화','참여형 캠페인 운영<br>목표 달성을 위한 전략적 방향을 입력해 보세요.','user-round-check'),('광고·제휴 상품 경쟁력 강화','브랜드 협업형 콘텐츠 패키지 개발<br>목표 달성을 위한 전략적 방향을 입력해 보세요.','shopping-bag')]]),1,3,12,4))
+P[5]=(head('02. 사업 환경 변화','20XX년 외부 환경 변화로 콘텐츠 신뢰성과','커뮤니티 품질이 핵심 경쟁 요소로 부상'),pos(el('matrix','matrix','<div class="axis-x"><span>외부 환경</span><span>사업 영향</span></div><div class="axis-y"><span>환경 변화</span><span>대응 방향</span></div>'+''.join(f'<div class="cell"><p class="name">{n}</p><p class="note">{s}</p></div>' for n,s in pests)),1,1,7,6)+pos(stack([listel(['고객 니즈가 신뢰 기반 커뮤니티 선호로 이동','기술·규제 변화로 콘텐츠 품질 강화 요구 증가','고객 니즈가 신뢰 기반 커뮤니티 선호로 이동']),call('외부 환경 변화가 실제 우리 사업 방향·전략·성과에 미친 영향을 정리해 입력해 보세요.')]),8,1,5,6))
+P[6]=(head('02. 케이피아이','매출·고객·전환율 중심의','사업 성과 측정 체계 및 핵심 지표 구조'),pos(el('architecture','arch',''.join(f'<div class="layer"><p class="name">{n}</p>'+''.join(f'<span class="chip">{t}</span>' for t in ls)+'</div>' for n,ls in [('매출',['광고 매출','제휴 매출','유료 콘텐츠 매출']),('고객수',['신규 고객 유입','재방문 고객 증가','고객 유지율 개선']),('전환율',['구매 전환율 증가','고객 전환율 증가','문의 전환율 증가'])])),1,1,12,3)+pos(el('hub','hub','<div class="core">핵심성과</div>'+''.join(f'<div class="spoke"><p class="name">{n}</p><p class="note">{t}</p></div>' for n,t in [('콘텐츠 노출량 증가','카테고리별 노출수'),('광고 상품 이용률 증가','관련 세부 지표'),('추천 피드 도달률','관련 세부 지표')])),1,4,12,3))
+P[7]=(head('03. 주요 추진 현황','분기별 핵심 과제 순차 추진으로','연간 목표 달성 기반 마련'),pos(el('steps','steps',''.join(f'<div class="step"><span class="mark">{i+1}Q</span><p class="name">{n}</p></div>' for i,n in enumerate(quarters))),1,1,12,2)+pos(group([card(n,'<br>'.join(ls),variant='') for n,ls in [('콘텐츠 공급 강화',['신규 테마 콘텐츠 시리즈 제작','인기 콘텐츠 큐레이션 재편']),('사용자 참여 기능 개선',['댓글·공감 인터랙션 개선','두 번째 실행 내용을 입력해 보세요.']),('광고·제휴 상품 고도화',['광고 상품 리뉴얼','세 번째 실행 내용을 입력해 보세요.'])]]),1,3,12,3)+pos(group([el('gauge','meter',f'<p class="name">진행률</p><b class="fig">{v}%</b>',style=f'--v:{v}') for v in [78,64,90]]),1,6,12,1))
+P[8]=(head('03. 핵심 성과 요약','주요 지표 전년 대비 고른 상승,','참여율 및 콘텐츠 소비 증가가 핵심 동력'),pos(bars([55,64,73,85],['1Q','2Q','3Q','4Q']),1,1,6,5)+pos(call('설치 수 및 MAU가 고르게 증가했습니다.'),1,6,6,1)+pos(group([card('MAU','',fig='85만 명',variant='on'),card('참여율','',fig='+34%')],'two'),7,1,6,3)+pos(group([card('광고 매출','',fig='30억 원'),card('커뮤니티 만족도','',fig='4.5점')],'two'),7,4,6,3))
+rows9=[('성과 요약',['월간 신규 게시글 수와 주간 재방문율<br>모두 목표 대비 높은 수준으로 상승','댓글·공감수 증가와 참여 기반<br>전환율 향상에 기여','광고 상품 이용률과 제휴 캠페인 수<br>모두 성장세 유지']),('관련 수치',['신규 게시글 +28%<br>활동 전환율 +7%p','참여 액션 XX만 건<br>참여율 +14%','이곳에 관련 성과를 입력해 보세요.'])]
+P[9]=(head('04. 프로젝트별 성과','3개 프로젝트 모두 핵심 지표에서 일정 수준 이상의','개선을 보이며 안정적인 성과 달성'),pos(el('table','tablebox','<table class="table"><thead><tr><th>구분</th><th>프로젝트 1</th><th>프로젝트 2</th><th>프로젝트 3</th></tr></thead><tbody>'+''.join('<tr><th>'+n+'</th>'+''.join('<td>'+d+'</td>' for d in ls)+'</tr>' for n,ls in rows9)+'</tbody></table>'),1,1,12,4)+pos(group([line(v,['2Q','3Q','4Q']) for v in [[25,36,70],[42,64,72],[37,45,73]]]),1,5,12,2))
+P[10]=(head('04. 세부 프로젝트','세부 프로젝트 추진을 통한 콘텐츠 노출·유입','구조 개선 및 핵심 지표 향상'),pos(stack([card('목표','콘텐츠 노출 경로 개선<br>신규 유입 고객의 초기 소비 경험 강화',variant=''),card('접근 방식','사용자 행동 기반 추천 구조 개편<br>첫 화면 콘텐츠 큐레이션 재설계',variant=''),card('주요 성과','첫 노출 도달 수　1,234<br>수치 관련 키워드　50%',variant='')]),1,1,6,6)+pos(call('콘텐츠 소비 구조 비중'),7,1,6,1)+pos(donut(40,'추천 기반 40%<br>검색 25%·피드 25%<br>관련 키워드 10%'),7,2,6,5))
+P[11]=(head('04. 프로젝트 상세','세부 프로젝트를 통한 콘텐츠 노출 구조 개선 및','초기 소비 경험 강화로 사용자 유입 최적화'),pos(stack([card('사업 개요','콘텐츠 노출 구조 개선을 통해 초기 소비 경험 강화<br>프로젝트가 해결하고자 한 방향을 입력해 보세요.',variant=''),card('세부 내용','첫 화면 콘텐츠 큐레이션 방식 재정비<br>사용자 행동 기반 추천 알고리즘 적용<br>콘텐츠 접근 동선 단축을 위한 UI 조정',variant='quiet'),bars([29,100],['1Q 10,000건','4Q 35,000건'])]),1,1,6,6)+pos(group([frame(1),frame(2)]),7,1,6,6))
+P[12]=(head('04. 성공 요인','세부 프로젝트의 문제 분석·노출 전략·실행 구조','유기적 결합으로 핵심 지표 개선 견인'),pos(group([card(n,txt+'<br><br>'+tools,variant='',ic=ic) for n,txt,tools,ic in [('사용자 행동 분석','주요 이탈 지점 분석을 통한 핵심 병목 파악<br>사용자 초기 진입 시나리오 기반 개선 도출','행동로그 분석 툴<br>활용 도구를 입력해 보세요.','user'),('일관된 콘텐츠 노출 전략','사용자 행동 기반 추천 로직 일괄 적용<br>첫 노출 영역의 고정된 큐레이션 규칙 확립','큐레이션 가이드<br>활용 도구를 입력해 보세요.','chart-no-axes-combined'),('신속한 실행 및 피드백','배포 → 측정 → 보완의 짧은 주기 운영<br>지표 기반 개선 방식 정착','주간 리뷰 체계<br>활용 도구를 입력해 보세요.','presentation')]]),1,1,12,6))
+P[13]=(head('04. 고객 관련 성과','고객 전환율의 경우 신규·기존 사용자의 커뮤니티','참여율 상승으로 3Q 및 4Q에서 큰 폭 개선'),pos(bars([40,48,56,64,71,79,88,96],['1Q 신규','1Q 기존','2Q 신규','2Q 기존','3Q 신규','3Q 기존','4Q 신규','4Q 기존']),1,1,6,6)+pos(stack([card('경로 다변화로 신규 사용자 참여 확대','신규 유입의 주요 경로가 커뮤니티 콘텐츠 → 추천 흐름으로 이동<br>콘텐츠 기반 유입 고객의 전환율이 기존 대비 +7%p',variant=''),card('기존 사용자의 반복 참여가 참여율 향상 견인','기존 고객의 반복 전환 비중이 성장<br>이용 빈도 증가가 전환율 개선에 직접 기여',variant='')]),7,1,6,6))
+P[14]=(head('05. 운영 관련 성과','운영 프로세스의 경우 단절된 업무 체계 연계 개선으로','효율성 및 일관성 향상'),pos(stack([call('문제 진단　주요 업무에 관한 공유 기회가 적어 정보 전달 지연 및 작업 오류가 자주 발생'),call('개선 효과　역할 간 실시간 상호 검증과 정보 교류가 가능해져 처리 속도 향상과 오류 감소 효과')]),1,1,12,2)+pos(el('versus','versus',f'<div class="side"><p class="name">개선 전</p>{listel(["운영 업무 → 작업 오류","검수 업무 → 소통 단절"])}</div><b class="vs">VS</b><div class="side on"><p class="name">개선 후</p>{listel(["운영 업무의 자동 확인","검수 업무의 실시간 연계"])}</div>'),1,3,12,4))
+P[15]=(head('05. 운영 핵심','운영 과정에서 확인된 주요 이슈와','이를 해결하기 위한 개선 방향'),pos(el('table','tablebox','<table class="table"><thead><tr><th>구분</th><th>주요 이슈</th><th class="pick">개선 포인트</th></tr></thead><tbody>'+''.join(f'<tr><th>{n}</th><td>{a}</td><td class="pick">{b}</td></tr>' for n,a,b in issues)+'</tbody></table>'),1,1,12,6))
+P[16]=(head('05. 차년도 전략','차년도는 콘텐츠 소비 중심 성장 구조 강화 및','커뮤니티 활성화 기반 확대에 주력'),pos(stack([card(texts[0][0],'<br>'.join(texts[0][1]),variant='quiet'),card(texts[2][0],'<br>'.join(texts[2][1]),variant='quiet')]),1,1,4,6)+pos(cycle('콘텐츠 소비 중심<br>성장 구조 강화',['콘텐츠','커뮤니티','생태계','프로세스']),5,1,4,6)+pos(stack([card(texts[1][0],'<br>'.join(texts[1][1]),variant='quiet'),card(texts[3][0],'<br>'.join(texts[3][1]),variant='quiet')]),9,1,4,6))
+P[17]=(head('05. 추진 계획','차년도는 콘텐츠 소비 중심 성장 구조 강화 및','커뮤니티 활성화 기 확대에 주력'),''.join(pos(card(n,'<br>'.join(ls),variant='quiet'),i*3+1,4-i,3,i+2) for i,(n,ls) in enumerate(plan))+pos(el('legend','legend','<span class="key tone-1">상반기</span><span class="key tone-2">하반기</span>'),1,6,12,1))
+P[18]=(head('05. 추후 계획','콘텐츠 소비 중심 성장 구조 강화를 위한','차년도 4대 핵심 전략'),pos(group([stack([card('01　사업 성과 핵심 요약','핵심 지표 전반에서 개선 흐름 확인<br>콘텐츠 노출 구조 개편 후 초기 소비·유입 지표 상승<br>이곳에 올해 사업 성과의 핵심사항을 입력해 보세요.',variant=''),frame(1)]),stack([card('02　차년도 향후 계획','콘텐츠 소비 중심 성장 고도화<br>추천·노출 개선 작업을 지속 적용하며 성과 유지 및 확산 추진<br>커뮤니티 참여 구조 강화',variant=''),frame(2)])]),1,1,12,6))
+# Source style supplies colors only. No page-specific component rules are added.
+palette=json.loads(Path('/workspace/work/ref/contract/palette.json').read_text())['light'];palette.update({'--a1':'#2088f8','--a1-on':'#ffffff','--a1-7':'#1673cb','--a1-1-soft':'#edf7ff','--a1-2-soft':'#bce5fb','--a1-3-soft':'#7cccf6','--a1-2-muted':'#c9dce5','--page':'#ffffff','--ink':'#222222'})
+style=';'.join(k+':'+v for k,v in palette.items())
+links='<link rel="stylesheet" href="../assets/fonts/fonts.css"><link rel="stylesheet" href="../collection.css">'
+css=''.join(p.read_text() for p in [C/'kit/css/tokens.css',C/'foundation/foundation.css']+sorted((C/'elements').glob('*/element.css')))
+steps=json.loads(Path('/workspace/work/ref/contract/type-steps.json').read_text());css+='\n.slide{'+''.join(f'--type-{n}:{n}px;' for n in steps)+'--scanline-rise-i:0;--scanline-rise-angle:-90deg;--scanline-rise-c:var(--a1);}'
+(R/'collection.css').write_text(css)
+for i,p in P.items():
+ if isinstance(p,tuple):markup=f'<section class="slide"><div class="page"><div class="deco"></div><div class="top"><span class="deck">MIRI COMPANY</span></div>{p[0]}<div class="body">{p[1]}</div></div></section>'
+ else:markup=p
+ markup=markup.replace('class="slide"',f'class="slide" style="{style}"',1).replace('class="slide cover"',f'class="slide cover" style="{style}"',1)
+ (O/f'slide-{i:02}.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8">'+links+'<body style="margin:0;width:1280px;height:720px">'+markup+'</body></html>')
+from build_replica import icon
+mapping={'clapperboard':'video','handshake':'bag','user':'user','user-round-check':'user','shopping-bag':'bag','chart-no-axes-combined':'chart','presentation':'chart'}
+icons={name:icon(value).replace('<svg ','<svg width="100%" height="100%" ') for name,value in mapping.items()}
+runtime='<script>const icons='+json.dumps(icons)+';document.querySelectorAll("[data-icon]").forEach(e=>{e.innerHTML=icons[e.dataset.icon]||""});</script>'
+for f in O.glob('*.html'):f.write_text(f.read_text().replace('</body>',runtime+'</body>'))
+print('reassembled',len(P))

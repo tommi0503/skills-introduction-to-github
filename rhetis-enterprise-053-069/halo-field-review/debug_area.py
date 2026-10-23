@@ -1,0 +1,3 @@
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox']);pg=b.new_page(viewport={'width':1280,'height':720});pg.goto('http://127.0.0.1:8765/halo-field-review/library/light.html');print(pg.evaluate('''()=>[...document.querySelector('[data-el="halo-field-chart-area"] .series').querySelectorAll('.pt')].slice(0,4).map(e=>{let r=e.getBoundingClientRect(),c=getComputedStyle(e,'::before');return {v:e.style.getPropertyValue('--v'),y:r.y,x:r.x,h:r.height,top:c.top,left:c.left,right:c.right,height:c.height,clip:c.clipPath,hp:getComputedStyle(e).getPropertyValue('--halo-field-h')}})'''));b.close()

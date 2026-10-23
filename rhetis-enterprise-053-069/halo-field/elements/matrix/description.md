@@ -1,0 +1,1 @@
+Four soft panels form a readable quadrant field with modest axis labels. The SWOT variant gives each panel a small letter, name and structured list, with one clear accent selection. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

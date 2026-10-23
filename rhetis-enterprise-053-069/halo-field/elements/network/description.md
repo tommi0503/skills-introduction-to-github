@@ -1,0 +1,1 @@
+Round named nodes sit on supplied coordinates and connect through fine value-based line segments. Strong links and one filled node establish a clear focal relationship without extra ornament. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

@@ -1,0 +1,1 @@
+The delta component uses the Scanline Rise report grammar: fine single-pixel framing, compact restrained corners, open spacing, calm secondary surfaces and one clear accent. Its visual hierarchy follows the centered report statements and flat header panels in the source deck. Relationships use precise rules and orbital forms rather than shadows or decorative illustrations.

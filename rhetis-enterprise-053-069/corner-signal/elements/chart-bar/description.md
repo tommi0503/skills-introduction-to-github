@@ -1,0 +1,1 @@
+The chart-bar follows Corner Signal’s precise industrial grammar: sharp corners, a narrow ranked-accent signal, spacious neutral support, and strong but economical type. Structure and emphasis remain readable when the available grid cell narrows.

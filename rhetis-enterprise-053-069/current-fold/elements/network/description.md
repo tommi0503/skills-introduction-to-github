@@ -1,0 +1,1 @@
+The network element translates the Current Fold language into many-to-many relations; the element draws each link as a line between its points.. Fine open rules, pale planes, disciplined left alignment and compact utility shapes carry the hierarchy; a single clear accent marks the primary item. Narrow containers step typography down through the kit scale.

@@ -1,0 +1,1 @@
+Nested rounded tiles divide quiet branches into proportional shares. Large branches carry short names above the field, and a single filled tile can identify the main opportunity. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.

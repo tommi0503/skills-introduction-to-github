@@ -1,0 +1,1 @@
+Large light-weight entry numbers sit above thin accent rules. Below each rule, a quiet fading panel holds a clear section name and concise contents note, reflecting the source contents page. Container steps reduce type and spacing in compact seats while preserving the essential names and figures.
