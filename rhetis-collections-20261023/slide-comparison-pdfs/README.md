@@ -16,3 +16,5 @@
 [검증 기록](verification.json): 원본96장에 대한 비교 PNG192개를 모두 포함합니다. 각 개별 PDF와 통합 PDF에서 모든 삽입 이미지가 원본 PNG와 픽셀 단위로 일치하고, 페이지 밖으로 잘린 이미지는 없습니다.
 
 재생성: 상위 컬렉션 루트에서 `python slide-comparison-pdfs/build_pdfs.py`.
+
+[업로드된 PDF 6개 실제 재다운로드 검증](download-verification.json)도 통과했습니다.
