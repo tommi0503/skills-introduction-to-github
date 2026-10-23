@@ -1,0 +1,1 @@
+Dot, check, or generated-number markers occupy a fixed rail; divided variants separate items with fine horizontal rules. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

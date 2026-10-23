@@ -1,0 +1,5 @@
+from pathlib import Path
+C=Path(__file__).parent/'meridian-deck'
+f=C/'elements/person/element.css';q='.slide .body>[data-el="meridian-deck-person"].person:has(>.seat.avatar):has(>.list)'
+s=q+'{display:grid;grid-template-columns:180px minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr);align-content:center;justify-content:center;gap:var(--gap-sm) var(--gap);padding:var(--gap)}'+q+'>.seat.avatar{grid-column:1;grid-row:1 / span 3;position:relative;inset:auto;display:grid;width:180px;height:180px;max-height:none;max-width:none;aspect-ratio:1;align-self:center;justify-self:center;flex:none}'+q+'>.name{grid-column:2;grid-row:1;position:relative;inset:auto;font-size:var(--type-24);padding:0;margin:0;width:auto;align-self:end}'+q+'>.note{grid-column:2;grid-row:2;position:relative;inset:auto;font-size:var(--type-18);padding:0;margin:0;width:auto;white-space:normal}'+q+'>.list{grid-column:2;grid-row:3;position:relative;inset:auto;font-size:var(--type-16);line-height:var(--body-line);padding-left:var(--pad);margin:0;align-self:start}'
+f.write_text(f.read_text()+'\n/* Compact profile: fixed square photo and adjacent readable copy. */\n'+s+'\n')

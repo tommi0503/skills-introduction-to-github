@@ -1,0 +1,1 @@
+Quiet points or measured bubbles sit on two neutral axes, with annotation labels offset above the marks. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

@@ -1,0 +1,57 @@
+{
+  "collection": "vectorbox",
+  "status": "rendered; manual fidelity acceptance is separate",
+  "completedAtUTC": "2026-10-23T16:46:54Z",
+  "commands": [
+    {
+      "script": "integrate_runtime.py",
+      "args": [
+        "vectorbox"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "validate.py",
+      "args": [
+        "vectorbox"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "check_resources.py",
+      "args": [
+        "vectorbox"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "qa/audit_css.py",
+      "args": [
+        "vectorbox"
+      ],
+      "seconds": 0.5
+    },
+    {
+      "script": "render.py",
+      "args": [
+        "vectorbox",
+        "all"
+      ],
+      "seconds": 91.1
+    },
+    {
+      "script": "official_preview.py",
+      "args": [
+        "vectorbox"
+      ],
+      "seconds": 0.4
+    },
+    {
+      "script": "fidelity.py",
+      "args": [
+        "vectorbox"
+      ],
+      "seconds": 25.8
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Quarter labels and a stable owner-name column lead into crisp duration bars on thin horizontal rules. Deep bars mark priority and slim dashed lines mark milestones. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

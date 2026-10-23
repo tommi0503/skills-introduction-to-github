@@ -1,0 +1,1 @@
+Floating rectangular steps preserve the running total and connect with fine dashed rules. A final total uses a deep solid column, while reductions remain neutral. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

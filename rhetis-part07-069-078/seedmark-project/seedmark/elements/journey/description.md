@@ -1,0 +1,1 @@
+A quiet outlined customer-stage sequence places a measured emotion point above the touchpoint and pain text. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

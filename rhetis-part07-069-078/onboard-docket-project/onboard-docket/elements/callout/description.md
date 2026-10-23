@@ -1,0 +1,1 @@
+A broad neutral capsule contains one centered conclusion. Bold words use a deep accent role and an optional small icon leads the line without changing its optical center. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Round nodes and precise coordinate-based links express many-to-many relationships, reserving strong colour for the main node and path. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

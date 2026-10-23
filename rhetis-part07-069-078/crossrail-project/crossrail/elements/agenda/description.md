@@ -1,0 +1,1 @@
+Each contents label ends on a shared fine rule, with a deep two-digit index aligned at the opposite side. The selected entry receives only a quiet field. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

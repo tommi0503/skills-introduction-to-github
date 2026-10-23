@@ -1,0 +1,1 @@
+Quiet rounded process nodes occupy an explicit grid, with capsule endpoints and outlined questions. Small element-drawn connector arrows communicate direction without decorative icons. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

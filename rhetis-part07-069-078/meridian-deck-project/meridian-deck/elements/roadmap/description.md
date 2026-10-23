@@ -1,0 +1,1 @@
+Rounded duration bars run over quiet equal period tracks; lane labels and milestones stay on their own rails. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

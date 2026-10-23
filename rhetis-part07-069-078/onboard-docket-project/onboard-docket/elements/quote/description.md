@@ -1,0 +1,1 @@
+A narrow accent rule anchors a substantial quotation, followed by a compact author block. A dark reverse highlight can emphasize a short phrase, echoing the welcome slide. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

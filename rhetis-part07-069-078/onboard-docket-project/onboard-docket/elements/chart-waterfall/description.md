@@ -1,0 +1,1 @@
+Rounded floating bars show changes from an explicit previous total to the next total. Thin connectors follow the running total while total bars stand from zero. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

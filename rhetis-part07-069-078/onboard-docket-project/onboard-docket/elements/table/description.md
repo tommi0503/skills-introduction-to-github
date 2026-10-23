@@ -1,0 +1,1 @@
+A broad accent header and alternating quiet document rows organize tabular data. Numeric cells align right and selected columns use a soft accent ground; compact containers reduce type and cell padding in discrete steps. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Thin circular outlines overlap gently around an optional central decision. Neutral transparent fields preserve the relation without introducing decorative gradients. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

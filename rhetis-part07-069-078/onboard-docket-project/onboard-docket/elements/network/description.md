@@ -1,0 +1,1 @@
+Circular nodes connect through generic trigonometric line geometry derived from endpoint coordinates. Strong links and one selected node use the accent while the rest remain neutral. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

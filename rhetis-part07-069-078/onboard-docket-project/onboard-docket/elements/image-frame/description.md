@@ -1,0 +1,1 @@
+A simple padded document frame holds a neutral numbered picture seat. The frame preserves a square-like placement and lets the supplied grid determine the surrounding composition. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Small labelled discs occupy explicit coordinates on a crossed two-axis field. The chosen position becomes deep while competitors stay quiet. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

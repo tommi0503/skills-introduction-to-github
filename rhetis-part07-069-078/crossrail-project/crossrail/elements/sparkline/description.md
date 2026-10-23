@@ -1,0 +1,1 @@
+A compact unlabelled trend uses crisp vertical units adjacent to a main figure. Up and down states express meaning through status roles. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

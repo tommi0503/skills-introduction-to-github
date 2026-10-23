@@ -1,0 +1,1 @@
+Stage panels reserve an upper emotional trend and a lower touchpoint narrative, with a quiet pain-point inset. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+Two quiet rounded pans sit on a thin beam whose tilt follows the supplied numeric value. A triangular fulcrum carries a concise verdict and the selected pan uses a soft accent surface. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Large quiet overlapping circles carry simple names, with one solid accent set and an optional central overlap label. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

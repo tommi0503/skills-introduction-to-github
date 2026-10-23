@@ -1,0 +1,1 @@
+Four spacious panels share a two-axis grid; SWOT replaces the axes with strong circular initial badges. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

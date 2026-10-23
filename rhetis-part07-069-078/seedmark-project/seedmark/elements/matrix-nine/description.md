@@ -1,0 +1,1 @@
+A disciplined nine-box grid uses quiet rounded cells, clear perimeter axes and one bounded recommended position. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

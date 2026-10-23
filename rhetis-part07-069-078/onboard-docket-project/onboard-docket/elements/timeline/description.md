@@ -1,0 +1,1 @@
+Small accent dots mark a hairline track with dates held above and descriptions below. The column variant places dates in a dedicated left track, and an alternating variant changes the rhythm without changing type roles. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

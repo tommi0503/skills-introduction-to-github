@@ -1,0 +1,1 @@
+Outline capsules arrange around a calm central disc and a thin circular connector. The source’s equal-weight relationship language remains legible for three to six members. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

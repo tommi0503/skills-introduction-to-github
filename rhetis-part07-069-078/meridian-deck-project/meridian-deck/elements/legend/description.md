@@ -1,0 +1,1 @@
+Small horizontal colour dashes precede compact labels, leaving series colour in the key rather than colouring the prose. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

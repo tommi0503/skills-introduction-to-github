@@ -1,0 +1,1 @@
+Equal rectangular plan columns receive a deep top rail, a clear price baseline and an open check list. The selected plan uses a quiet accent field rather than a badge explosion. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

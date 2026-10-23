@@ -1,0 +1,1 @@
+Neutral trapezoid stages narrow by their actual data share while a single accent stage carries the argument. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

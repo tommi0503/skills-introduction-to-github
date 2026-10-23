@@ -1,0 +1,1 @@
+Actual performance appears as a slim accent bar against quiet qualitative bands and a precise ink target marker. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

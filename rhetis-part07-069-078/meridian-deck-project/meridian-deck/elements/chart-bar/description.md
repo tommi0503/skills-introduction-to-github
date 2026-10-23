@@ -1,0 +1,1 @@
+Square-ended neutral bars reserve one decisive accent; values sit above the bars and category labels below a clean baseline. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+A shallow rounded track holds a proportional accent fill under an aligned name and figure. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

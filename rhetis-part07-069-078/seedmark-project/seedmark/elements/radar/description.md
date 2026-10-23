@@ -1,0 +1,1 @@
+Transparent ranked-accent polygons compare multiple dimensions inside quiet circular guides and clearly separated axis nouns. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

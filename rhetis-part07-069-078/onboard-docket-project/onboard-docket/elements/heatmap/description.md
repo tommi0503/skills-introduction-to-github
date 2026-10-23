@@ -1,0 +1,1 @@
+Rounded density cells form a labeled grid on the document surface. Numeric intensity controls a restrained accent wash and calendar mode turns the cells into compact square day seats. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Seedmark is an editorial presentation system of fine neutral outlines, generous white space, rounded capsules and a single highlighted phrase marked by diagonal endpoint dots. Light display type contrasts with bold noun labels and figures. The geometry is purposeful rather than decorative; each line, circle and block communicates grouping or emphasis.

@@ -1,0 +1,1 @@
+Quiet previous and strong current figures stand on either side of a CSS-drawn arrow, keeping comparison independent of a surface. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+Nested crisp rectangles follow the supplied branch and tile shares. Short centred names and figures remain subordinate to the area relationships. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

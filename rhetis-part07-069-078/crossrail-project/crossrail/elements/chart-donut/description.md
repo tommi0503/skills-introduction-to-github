@@ -1,0 +1,1 @@
+A restrained circular share surrounds a large figure and short centred name. The highlighted arc is deep while the remainder is neutral; a row of donuts preserves equal figure baselines. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

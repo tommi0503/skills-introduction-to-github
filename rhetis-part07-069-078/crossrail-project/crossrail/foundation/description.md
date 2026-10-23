@@ -1,0 +1,1 @@
+A deep structural top rail and a fine right rule set a stable frame. A compact kicker, large left aligned heading and generous fixed inset lead into a twelve by six body grid. Covers expand the deep accent into a full ground crossed by horizontal and vertical rules. Group, stack and split provide neutral composition without imposing element shapes.

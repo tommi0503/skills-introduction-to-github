@@ -1,0 +1,1 @@
+The 1280 by 720 page provides quiet corner furniture, a centred capsule kicker, light heading with one endpoint-marked highlighted phrase, and a ruled transition into a twelve-column, six-row body. Covers balance an emphatic left lockup against a single rounded picture seat.

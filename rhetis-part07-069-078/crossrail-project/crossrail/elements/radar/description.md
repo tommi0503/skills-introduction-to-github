@@ -1,0 +1,1 @@
+Three through eight explicit axes surround a restrained radial field. Each series is an actual-value polygon using the ranked series accents at quiet fill strength. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

@@ -1,0 +1,1 @@
+Two columns of quiet capsules carry automatic-looking circular number marks and a strong short name. Optional notes remain subordinate, and compact layouts step down before becoming a single column. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

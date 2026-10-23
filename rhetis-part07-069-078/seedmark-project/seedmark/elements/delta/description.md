@@ -1,0 +1,1 @@
+A muted before-value moves through a drawn arrow into an endpoint-bounded highlighted result. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

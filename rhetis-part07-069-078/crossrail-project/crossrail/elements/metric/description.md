@@ -1,0 +1,1 @@
+An unboxed figure dominates a stable name-and-note stack. A ruled name baseline and optional separators in a row of figures echo the source’s summary pages. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

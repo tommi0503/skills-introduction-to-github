@@ -1,0 +1,1 @@
+A central label is surrounded by evenly positioned capsule members and modest icon circles. Fine structural connectors avoid heavy spokes competing with the content. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

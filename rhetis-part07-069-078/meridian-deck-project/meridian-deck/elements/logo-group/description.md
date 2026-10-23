@@ -1,0 +1,1 @@
+Square logo seats align in a quiet outlined row, with wrapping only when the member count requires it. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

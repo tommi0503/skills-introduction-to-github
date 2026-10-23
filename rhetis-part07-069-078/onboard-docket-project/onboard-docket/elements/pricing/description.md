@@ -1,0 +1,1 @@
+Rounded plan panels combine a capsule heading, centered price and nested checklist. The selected plan is distinguished by a restrained accent outline and soft surface. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

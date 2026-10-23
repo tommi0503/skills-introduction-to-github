@@ -1,0 +1,1 @@
+A deep central circle distributes into calm left and right branch blocks. Fine linking rules and subordinate leaf dividers keep the map structured. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

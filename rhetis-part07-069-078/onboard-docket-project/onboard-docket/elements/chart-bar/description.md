@@ -1,0 +1,1 @@
+Rounded-ended bars rise from a hairline baseline with reserved value and category tracks. Horizontal plots allocate an explicit wider label gutter and allow long category names to wrap. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Vertically stacked tapered stages narrow according to the supplied shares, with aligned names and figures. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

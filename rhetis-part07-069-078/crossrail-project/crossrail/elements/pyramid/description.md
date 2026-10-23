@@ -1,0 +1,1 @@
+Four flat, separated hierarchy levels widen from a triangular deep apex into neutral foundation bands. Short names remain centred within their own level. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

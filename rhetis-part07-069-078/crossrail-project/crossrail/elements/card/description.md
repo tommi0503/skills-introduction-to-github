@@ -1,0 +1,1 @@
+A rectangular panel starts with a restrained deep accent rule. Equal title and note tracks keep the names of adjacent cards aligned; short figure cards place the number and its label on one ruled header row. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

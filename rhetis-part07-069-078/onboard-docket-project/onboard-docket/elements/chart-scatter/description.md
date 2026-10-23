@@ -1,0 +1,1 @@
+Small circular data marks sit on a quiet ruled field with labels above them. Bubble marks use restrained transparent fills; one selected point receives the principal accent. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

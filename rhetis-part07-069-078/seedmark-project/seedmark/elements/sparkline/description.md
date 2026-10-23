@@ -1,0 +1,1 @@
+A spare inline miniature trend keeps its statistical shape without competing with the neighbouring figure. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

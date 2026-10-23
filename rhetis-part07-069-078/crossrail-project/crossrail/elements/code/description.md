@@ -1,0 +1,1 @@
+A crisp neutral source panel has a deep top rail, ruled filename and preserved line breaks. Numbered lines and quiet syntax roles remain subordinate to reading. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

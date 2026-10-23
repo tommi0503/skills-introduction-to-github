@@ -1,0 +1,1 @@
+A single centred sentence sits between structural rules on a quiet field. The decisive words deepen into the ranked accent, with an optional modest icon at the left. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

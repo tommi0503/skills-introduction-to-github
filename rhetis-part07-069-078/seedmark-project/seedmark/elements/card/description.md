@@ -1,0 +1,1 @@
+A rounded outlined card keeps noun headings aligned above a thin divider, with concise text and optional dark icon disk. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

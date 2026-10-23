@@ -1,0 +1,1 @@
+A small accent capsule labels a local detail while inline highlights use a quiet accent wash. Both forms remain visually subordinate to the heading they accompany. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

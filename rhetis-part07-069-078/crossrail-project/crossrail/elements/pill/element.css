@@ -1,0 +1,15 @@
+[data-el="crossrail-pill"]{box-sizing:border-box;display:flex;align-items:center;justify-content:center;border:1px solid var(--n-3);border-radius:999px;background:var(--page);padding:var(--gap-sm) var(--gap);container-type:inline-size} [data-el="crossrail-pill"] .parts{display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);min-width:0} [data-el="crossrail-pill"] .name{font-size:var(--type-24);font-weight:var(--name-weight);margin:0} [data-el="crossrail-pill"] .note{font-size:var(--type-18);color:var(--n-7);margin:0} [data-el="crossrail-pill"] .mark{display:flex;align-items:center;justify-content:center;width:36px;height:36px;font-size:var(--type-18);color:var(--a1-7)} [data-el="crossrail-pill"] .icon{width:22px;height:22px} [data-el="crossrail-pill"].on{background:var(--a1);color:var(--a1-on);border-color:var(--a1)} [data-el="crossrail-pill"].on .note,[data-el="crossrail-pill"].on .mark{color:var(--a1-on)} [data-el="crossrail-pill"].quiet{background:var(--n-1);border-color:var(--n-1)} [data-el="crossrail-pill"].line{border-color:var(--a1-7)} @container(max-width:320px){[data-el="crossrail-pill"] .name{font-size:var(--type-18)} [data-el="crossrail-pill"] .note{font-size:var(--type-14)}}
+
+[data-el="crossrail-pill"] small{color:inherit;margin:0}
+
+[data-el="crossrail-pill"]:not(:has(.mark,.note)){width:98px;height:66px;max-height:66px;flex:none;padding:0}[data-el="crossrail-pill"]:not(:has(.mark,.note)) .name{font-size:var(--type-26)}
+
+:where(.group.col)>[data-el="crossrail-pill"]:not(:has(.mark,.note)):not(:last-child){margin-bottom:var(--gap)}
+
+[data-el="crossrail-pill"].line:not(:has(.mark,.note)){width:42px;height:42px;max-height:42px;flex:none;justify-self:center;align-self:start;margin-left:calc(var(--gap-lg)*3.65);transform:translateY(calc(var(--gap-sm)/-4));padding:0;background:var(--a1-7);border:0;color:var(--page)}[data-el="crossrail-pill"].line:not(:has(.mark,.note)) .name{font-family:var(--crossrail-font-label);font-size:var(--type-18);color:inherit}
+
+[data-el="crossrail-pill"]:has(.note):not(:has(.mark)){max-height:86px;height:86px}[data-el="crossrail-pill"]:has(.note):not(:has(.mark)) .parts{flex-direction:column;gap:calc(var(--gap-sm)/2)}[data-el="crossrail-pill"]:has(.note):not(:has(.mark)) .name{font-size:var(--type-26);color:var(--n-7)}[data-el="crossrail-pill"]:has(.note):not(:has(.mark)) .note{font-size:var(--type-18);font-weight:var(--name-weight);color:var(--ink)}
+
+[data-el="crossrail-pill"]:not(.line):not(:has(.mark,.note)){width:100%;max-width:100%;height:calc(var(--gap-lg)*1.65);max-height:calc(var(--gap-lg)*1.65)}[data-el="crossrail-pill"]:not(.line):not(:has(.mark,.note)) .name{white-space:nowrap}:where(.group.col)>[data-el="crossrail-pill"]:not(.line):not(:has(.mark,.note)){width:calc(var(--gap-lg)*2.45)}
+
+:where([data-el="crossrail-versus"] .side)>[data-el="crossrail-pill"]{width:auto;max-width:none;flex:none}

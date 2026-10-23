@@ -1,0 +1,1 @@
+An accent header band spans a quiet cell matrix; fine horizontal separators and white vertical gutters keep numbers legible. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

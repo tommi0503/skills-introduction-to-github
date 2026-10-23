@@ -1,0 +1,1 @@
+Centered bands narrow according to numeric shares. Quiet neutral and soft accent surfaces support one clearly selected leading stage, with figures separated from the stage names. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

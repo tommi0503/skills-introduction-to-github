@@ -1,0 +1,1 @@
+Small square swatches and short ranked-series names sit on a calm shared baseline, wrapping only as complete keys. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

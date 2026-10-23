@@ -1,0 +1,1 @@
+A single thin rounded frame holds a quiet numbered picture seat without extra decoration. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

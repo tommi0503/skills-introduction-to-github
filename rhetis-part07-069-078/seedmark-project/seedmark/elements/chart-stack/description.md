@@ -1,0 +1,1 @@
+Stacked ranked-accent shares retain centred values and open baseline labels in either orientation. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

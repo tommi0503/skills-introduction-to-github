@@ -1,0 +1,57 @@
+{
+  "collection": "seedmark",
+  "status": "rendered; manual fidelity acceptance is separate",
+  "completedAtUTC": "2026-10-23T17:43:10Z",
+  "commands": [
+    {
+      "script": "integrate_runtime.py",
+      "args": [
+        "seedmark"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "validate.py",
+      "args": [
+        "seedmark"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "check_resources.py",
+      "args": [
+        "seedmark"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "qa/audit_css.py",
+      "args": [
+        "seedmark"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "render.py",
+      "args": [
+        "seedmark",
+        "all"
+      ],
+      "seconds": 104.7
+    },
+    {
+      "script": "official_preview.py",
+      "args": [
+        "seedmark"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "fidelity.py",
+      "args": [
+        "seedmark"
+      ],
+      "seconds": 36.4
+    }
+  ]
+}

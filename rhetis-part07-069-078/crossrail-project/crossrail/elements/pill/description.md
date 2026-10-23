@@ -1,0 +1,1 @@
+A fine outline capsule keeps its mark, label and secondary value on a common optical centre. Emphasis changes the capsule to an accent field rather than adding decorative material. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

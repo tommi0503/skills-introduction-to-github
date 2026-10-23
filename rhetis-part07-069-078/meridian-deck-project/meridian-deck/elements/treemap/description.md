@@ -1,0 +1,1 @@
+Ranked shares divide clean nested rectangles; the selected tile is solid accent with a clear on-colour label. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

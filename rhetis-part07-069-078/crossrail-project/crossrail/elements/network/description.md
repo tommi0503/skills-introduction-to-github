@@ -1,0 +1,1 @@
+Circular labelled nodes attach to fine links determined by explicit endpoint coordinates. The important node and strong relation deepen into the primary accent. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

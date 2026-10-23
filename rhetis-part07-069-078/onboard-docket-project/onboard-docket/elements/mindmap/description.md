@@ -1,0 +1,1 @@
+Rounded branch panels radiate to either side of a central accent capsule. Quiet curved-edge relations and compact leaves keep the otherwise free structure orderly. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

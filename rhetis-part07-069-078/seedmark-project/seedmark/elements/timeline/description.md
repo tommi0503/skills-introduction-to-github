@@ -1,0 +1,1 @@
+An understated point track distinguishes dates and decisions through a fine rule and a single ranked endpoint. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

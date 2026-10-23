@@ -1,0 +1,1 @@
+CSS anchor polygons connect actual adjacent point values to a continuous quiet fill. The same geometry supports multiple and cumulative stacked series while keeping series names above the plot. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

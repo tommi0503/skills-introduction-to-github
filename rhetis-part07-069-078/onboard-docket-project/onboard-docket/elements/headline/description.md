@@ -1,0 +1,1 @@
+A strong sans heading sits inside a generously padded block. Kicker, main phrase and note follow distinct levels, with a single deep accent emphasis and optional fully accented surface. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

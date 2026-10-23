@@ -1,0 +1,1 @@
+Two neutral document panels face one another around a small circular comparison mark. The selected side uses a soft accent background and a colored capsule heading. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

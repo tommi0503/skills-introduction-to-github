@@ -1,0 +1,1 @@
+A strong central capsule anchors balanced left and right branches, with fine subordinate leaf rules. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

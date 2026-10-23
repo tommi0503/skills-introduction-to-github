@@ -1,0 +1,1 @@
+A quiet document row contains a capsule progress track, a left label and a right-aligned figure. The actual numeric value controls the filled length. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

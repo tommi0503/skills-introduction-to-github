@@ -1,0 +1,1 @@
+A deep rectangular root links through thin stems to clear branch headers and ruled leaves. Symmetry and stable label tracks carry the company-structure language. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

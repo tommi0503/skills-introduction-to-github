@@ -1,0 +1,1 @@
+A fine, straight progress track sits beneath a name and numeric result. The deep filled segment communicates progress without a bulky gauge housing. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

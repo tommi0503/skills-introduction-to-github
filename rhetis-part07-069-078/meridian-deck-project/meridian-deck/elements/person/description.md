@@ -1,0 +1,1 @@
+A square or portrait seat precedes an accent department/name line and a quiet role description, aligned across the row. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+A document sits on a neutral desk with a detached continuous binder rail. Chapter numbers divide the large heading from the title; a hairline rules the body below it. The twelve-by-six body grid respects substantial margins and uses capsules, circles and quietly rounded panels to structure information. Cover pages extend the binder rail down the right edge.

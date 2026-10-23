@@ -1,0 +1,1 @@
+Nested circular fields place the broadest opportunity outside the contained opportunities. Each ring’s name and figure occupy a reserved upper band. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

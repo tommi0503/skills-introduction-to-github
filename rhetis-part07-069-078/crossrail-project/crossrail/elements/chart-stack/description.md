@@ -1,0 +1,1 @@
+Crisp rectangular segments stack without rounded corners, reserving ranked accents for meaningful series. Outside category labels and centred segment figures keep the chart analytical. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

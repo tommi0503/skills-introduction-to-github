@@ -1,0 +1,1 @@
+Rounded duration capsules span a period grid alongside dedicated lane names. Accent milestone rules and quiet period labels provide an orderly schedule without arbitrary decoration. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

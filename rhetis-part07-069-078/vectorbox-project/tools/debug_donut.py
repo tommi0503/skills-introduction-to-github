@@ -1,0 +1,3 @@
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox']);pg=b.new_page();pg.goto('http://127.0.0.1:8871/library/light.html');print(pg.locator('article').filter(has=pg.locator('h2',has_text='chart-donut / donuts-3')).locator('.donut').first.evaluate("e=>({before:{w:getComputedStyle(e,'::before').width,h:getComputedStyle(e,'::before').height,z:getComputedStyle(e,'::before').zIndex,top:getComputedStyle(e,'::before').top},after:{w:getComputedStyle(e,'::after').width,h:getComputedStyle(e,'::after').height,bg:getComputedStyle(e,'::after').background,top:getComputedStyle(e,'::after').top,z:getComputedStyle(e,'::after').zIndex}})"));b.close()

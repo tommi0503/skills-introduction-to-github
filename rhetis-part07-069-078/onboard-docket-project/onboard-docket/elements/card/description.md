@@ -1,0 +1,1 @@
+A softly rounded document panel centers a balanced content block with fixed title and description tracks. Circular numbered or icon marks sit above the title; selected panels use the principal accent as a complete surface. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

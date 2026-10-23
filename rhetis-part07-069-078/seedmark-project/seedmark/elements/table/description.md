@@ -1,0 +1,1 @@
+A crisp editorial table combines a solid dark header, open ruled rows and one pale highlighted decision column. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

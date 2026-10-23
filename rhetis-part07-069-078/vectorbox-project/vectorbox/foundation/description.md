@@ -1,0 +1,1 @@
+An open 12 by 6 grid sits below a heavy left-aligned title and a small Latin kicker. A short accent rail marks the upper left, while selection-corner enclosures supply the cover graphic. Square image seats, quiet furniture and transparent grouping preserve the precise white-space rhythm of the source deck.

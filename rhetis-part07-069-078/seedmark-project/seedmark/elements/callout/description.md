@@ -1,0 +1,1 @@
+A quiet rounded sentence band concludes a page, giving one phrase a bounded highlight. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

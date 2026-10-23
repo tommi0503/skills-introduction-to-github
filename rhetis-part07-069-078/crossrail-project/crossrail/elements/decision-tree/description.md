@@ -1,0 +1,1 @@
+A deep question block splits through fine rules into named answer branches and rectangular outcomes. The recommended result receives a quiet accent field. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

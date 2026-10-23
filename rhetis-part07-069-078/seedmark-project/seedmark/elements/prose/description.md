@@ -1,0 +1,1 @@
+Open editorial paragraphs use generous leading and selective bold emphasis without decorative framing. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

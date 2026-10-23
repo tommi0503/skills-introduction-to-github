@@ -1,0 +1,1 @@
+Generic zero-size point anchors derive every segment from the current and previous values. Opposite diagonal rectangles draw rising and falling segments while separate category and value tracks remain outside the stroke. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

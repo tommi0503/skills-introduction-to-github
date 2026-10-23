@@ -1,0 +1,1 @@
+A thin circular ring centres a strong figure and label; its diameter is bounded by both container dimensions to remain circular. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

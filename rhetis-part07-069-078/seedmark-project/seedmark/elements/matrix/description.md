@@ -1,0 +1,1 @@
+A two-by-two framework uses fine rounded quadrants, restrained axis furniture and one bounded highlighted decision cell. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

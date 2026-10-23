@@ -1,0 +1,1 @@
+A pale rounded positioning field centres two fine axes, with quiet competitor disks and a dark capsule for our position. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

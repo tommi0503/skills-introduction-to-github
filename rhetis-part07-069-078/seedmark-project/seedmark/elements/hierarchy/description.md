@@ -1,0 +1,1 @@
+A dark top capsule branches through fine orthogonal connectors into quieter pill-shaped departments and outlined leaves. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

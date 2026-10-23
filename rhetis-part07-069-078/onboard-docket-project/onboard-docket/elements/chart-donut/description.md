@@ -1,0 +1,1 @@
+A broad circular ring surrounds a figure and short name. The selected share uses the ranked accent and the rest stays neutral, with circular geometry repeated consistently across individual and grouped rings. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Quiet circular observations occupy explicit value coordinates in a simply ruled two-axis field. A deep result and optionally scaled bubbles establish importance without changing label placement. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

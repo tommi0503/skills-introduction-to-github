@@ -1,0 +1,1 @@
+A strong triangular apex expands into successively wider trapezoid levels, with quiet supporting notes centred on each band. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+Rectangular process nodes occupy a strict grid and connect through directional line-and-arrow geometry. Start and end nodes use outline capsules; questions receive quiet emphasis. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

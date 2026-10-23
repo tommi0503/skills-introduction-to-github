@@ -1,0 +1,1 @@
+A central source panel distributes into right-hand rounded branches through proportioned bands. The selected path uses the accent while drop-off paths stay quiet. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

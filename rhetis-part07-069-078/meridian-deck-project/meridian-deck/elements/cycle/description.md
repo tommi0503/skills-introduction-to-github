@@ -1,0 +1,1 @@
+Small circular or capsule nodes surround a quiet centre; a fine elliptical path and a small arrowhead express circulation. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+Four restrained ruled panels establish a two-by-two decision field. A single chosen cell receives a quiet accent field; the SWOT form replaces axes with clear initial labels. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

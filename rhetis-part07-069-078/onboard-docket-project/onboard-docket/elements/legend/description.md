@@ -1,0 +1,1 @@
+Small circular swatches and compact labels form a restrained horizontal key. It wraps at narrow widths while retaining clear series ordering. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+A generous voice panel places a typographic quotation above a compact profile byline. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

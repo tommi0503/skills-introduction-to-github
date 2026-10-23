@@ -1,0 +1,1 @@
+Fine proportional relations connect calm outlined nodes, with a single dark focus and a measured ranked-accent strong path. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

@@ -1,0 +1,67 @@
+from pathlib import Path
+import json
+P=Path(__file__).parent;C=P/'meridian-deck'
+# Add the contracted monospaced family as a namespaced shared kit extension.
+k=C/'kit/kit.json';x=json.loads(k.read_text());x['extensions']['--meridian-deck-font-code']='font';k.write_text(json.dumps(x,indent=2))
+t=C/'kit/css/tokens.css';t.write_text(t.read_text()+"\n.slide { --meridian-deck-font-code:'Nanum Gothic Coding'; }\n")
+f=C/'elements/code/element.css';f.write_text(f.read_text()+'\n[data-el="meridian-deck-code"], [data-el="meridian-deck-code"] .lines { font-family:var(--meridian-deck-font-code); }\n')
+# Distinct descriptions explain each drawing rather than repeating a generic promise.
+features={
+'card':'A circular badge sits above a broad rounded panel; numbered, icon, outlined, quiet, and filled variants retain the same aligned title rail.',
+'pill':'One shallow capsule horizontally centres the mark, label, and optional supporting phrase; the accent version uses the corresponding on-colour.',
+'callout':'A full sentence sits in a shallow accent capsule, with an optional restrained icon and bold words carrying the conclusion.',
+'tag':'A compact capsule identifies a small part, while the inline highlight is a quiet rectangular wash behind continuous text.',
+'list':'Dot, check, or generated-number markers occupy a fixed rail; divided variants separate items with fine horizontal rules.',
+'quote':'A large opening quotation mark and a short vertical accent rule anchor the voice; a circular avatar and two-line attribution finish the block.',
+'headline':'A short neutral vertical rule precedes strong sans-serif type, with accent-weight words and an optional secondary sentence.',
+'prose':'Unboxed paragraphs use a readable rhythm and accent-weight emphasis; the two-column version separates continuous narrative with a generous gutter.',
+'metric':'A large bare figure, small unit, aligned label, and supporting note form a compact numerical lockup; rows add fine dividers.',
+'delta':'Quiet previous and strong current figures stand on either side of a CSS-drawn arrow, keeping comparison independent of a surface.',
+'chart-bar':'Square-ended neutral bars reserve one decisive accent; values sit above the bars and category labels below a clean baseline.',
+'chart-line':'Fine interpolated segments join hollow circular points. Values sit above the points, separate from the lower category-label rail.',
+'chart-donut':'A thin circular ring centres a strong figure and label; its diameter is bounded by both container dimensions to remain circular.',
+'gauge':'A shallow rounded track holds a proportional accent fill under an aligned name and figure.',
+'table':'An accent header band spans a quiet cell matrix; fine horizontal separators and white vertical gutters keep numbers legible.',
+'legend':'Small horizontal colour dashes precede compact labels, leaving series colour in the key rather than colouring the prose.',
+'steps':'Circular numbered badges lead equally spaced rounded panels, joined by small directional connectors.',
+'timeline':'Round date badges sit on a fine shared line, with a restrained alternate-height rhythm for longer histories.',
+'cycle':'Small circular or capsule nodes surround a quiet centre; a fine elliptical path and a small arrowhead express circulation.',
+'hub':'A broad quiet circular centre connects the ranked members. The four-member arrangement uses diagonal circular badges and outside notes.',
+'funnel':'Vertically stacked tapered stages narrow according to the supplied shares, with aligned names and figures.',
+'pyramid':'A strong triangular apex expands into successively wider trapezoid levels, with quiet supporting notes centred on each band.',
+'matrix':'Four spacious panels share a two-axis grid; SWOT replaces the axes with strong circular initial badges.',
+'venn':'Large quiet overlapping circles carry simple names, with one solid accent set and an optional central overlap label.',
+'hierarchy':'An accent capsule root sits above equally weighted branches, neutral department capsules, and smaller quiet leaves.',
+'flowchart':'Rounded nodes and pointed decisions occupy a regular grid, joined by small directional connector and arrowhead shapes.',
+'architecture':'A stack of fine-outlined quiet layers pairs an accent capsule name with equally weighted white capability chips.',
+'versus':'Two broad panels share a thin title rail and a modest central comparison mark; the recommended side receives a quiet accent wash.',
+'pricing':'Plans use tall quiet panels with an accent top rule, a clear price lockup, and a compact feature list.',
+'person':'A square or portrait seat precedes an accent department/name line and a quiet role description, aligned across the row.',
+'logo-group':'Square logo seats align in a quiet outlined row, with wrapping only when the member count requires it.',
+'image-frame':'A fine accent rectangle encloses a square image seat, with a small circular corner badge.',
+'agenda':'Numbered entries form a generous three-column grid; accent numbers and horizontal hairlines keep the hierarchy clear.',
+'chart-stack':'Square-ended bars stack ranked series with light separators, keeping category labels outside the plotted fill.',
+'chart-waterfall':'Floating rectangular steps reflect the supplied running totals; fine horizontal connectors link successive levels.',
+'chart-area':'Interpolated filled polygons connect arbitrary neighbouring values through CSS anchors, with the legend above and the labels below.',
+'chart-scatter':'Small round points sit on quiet value axes; bubble variants size the same circular form by the supplied radius.',
+'sparkline':'Small square-ended trend bars sit beside a larger figure; good and bad variants use semantic palette roles.',
+'heatmap':'A compact matrix of quiet rounded cells translates density into accent strength while values retain a solid legible backing.',
+'waffle':'Small repeated square units express a share as a count; the figures variant clips the same units into small people.',
+'treemap':'Ranked shares divide clean nested rectangles; the selected tile is solid accent with a clear on-colour label.',
+'sankey':'An accent source feeds proportionally marked branches through broad quiet bands; secondary splits remain inside their parent branch.',
+'radar':'Ranked filled polygons share circular guide rings, with axis names placed around the edge rather than inside the plotted shapes.',
+'bullet':'A slim actual fill sits over quiet qualitative bands, with a separate target label and tick.',
+'slope':'Before and after figures sit on a fine comparison track; the dumbbell variant places values along a shared horizontal scale.',
+'roadmap':'Rounded duration bars run over quiet equal period tracks; lane labels and milestones stay on their own rails.',
+'swimlane':'A grid flow uses quiet owner bands, rounded task nodes, pointed decisions, and short CSS-drawn directional connectors.',
+'concentric':'Nested circular fields share a lower-left origin, turning set inclusion into a clear outer-to-inner hierarchy.',
+'journey':'Stage panels reserve an upper emotional trend and a lower touchpoint narrative, with a quiet pain-point inset.',
+'mindmap':'A strong central capsule anchors balanced left and right branches, with fine subordinate leaf rules.',
+'decision-tree':'A central accent question splits into evenly spaced conditional branches and quiet rounded outcomes.',
+'balance':'Two broad quiet pans sit on a tilted beam; the recommendation remains at the small geometric fulcrum.',
+'matrix-nine':'Nine quiet panels form a finely ruled square matrix, with one decisive accent cell and compact outside axis labels.',
+'positioning':'Capsule markers sit on crossing value axes over a quiet two-part accent field; one ranked marker carries the strongest emphasis.',
+'network':'Round nodes and precise coordinate-based links express many-to-many relationships, reserving strong colour for the main node and path.',
+'code':'A quiet rounded code panel uses the bundled monospaced family, generated line numbers, and deep ranked token colours.'}
+for e,desc in features.items():(C/'elements'/e/'description.md').write_text(desc+' The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.\n')
+print('Final source descriptions and mono token completed')

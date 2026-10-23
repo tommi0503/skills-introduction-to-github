@@ -1,0 +1,1 @@
+Near-square neutral logo seats form a wrapping row with generous spacing. Quiet rounded corners keep the logos in the same document system without inventing brand artwork. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

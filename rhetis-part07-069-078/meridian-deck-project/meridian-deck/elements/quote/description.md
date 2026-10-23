@@ -1,0 +1,1 @@
+A large opening quotation mark and a short vertical accent rule anchor the voice; a circular avatar and two-line attribution finish the block. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

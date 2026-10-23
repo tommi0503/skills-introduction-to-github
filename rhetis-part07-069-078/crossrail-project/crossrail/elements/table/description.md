@@ -1,0 +1,1 @@
+A precise table uses quiet header fields, fine full rules and deep emphasis on the selected column. Numeric columns align to a common right edge, with container steps reducing padding before text. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

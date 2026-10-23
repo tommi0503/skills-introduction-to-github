@@ -1,0 +1,1 @@
+Quiet rectangles divide branches by their numeric shares and stack child tiles within each branch. Compact tile containers use thinner shared-token padding and discrete smaller figures so small branches remain readable. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

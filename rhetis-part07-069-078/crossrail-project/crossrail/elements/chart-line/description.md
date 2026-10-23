@@ -1,0 +1,1 @@
+A precise thin line connects actual child point values through CSS anchors. Small circular vertices, above-point values and separated axis labels keep the trend legible at narrow sizes. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

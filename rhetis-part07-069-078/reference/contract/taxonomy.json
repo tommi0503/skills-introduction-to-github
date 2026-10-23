@@ -1,0 +1,1491 @@
+{
+  "schema": "rhetis.design-library-taxonomy/1",
+  "version": "2026-10-19.4",
+  "description": "The one source of category ids, their hierarchy and the semantic element contracts. Admin, resolver, admission and the author context read this file; nothing restates these lists.",
+  "groups": [
+    {
+      "id": "surface",
+      "labels": {
+        "en": "Surfaces",
+        "ko": "표면",
+        "ja": "サーフェス",
+        "zh": "表面"
+      }
+    },
+    {
+      "id": "content",
+      "labels": {
+        "en": "Content",
+        "ko": "콘텐츠",
+        "ja": "コンテンツ",
+        "zh": "内容"
+      }
+    },
+    {
+      "id": "data",
+      "labels": {
+        "en": "Data",
+        "ko": "데이터",
+        "ja": "データ",
+        "zh": "数据"
+      }
+    },
+    {
+      "id": "relationship",
+      "labels": {
+        "en": "Relationships",
+        "ko": "관계",
+        "ja": "関係",
+        "zh": "关系"
+      }
+    },
+    {
+      "id": "comparison",
+      "labels": {
+        "en": "Comparison",
+        "ko": "비교",
+        "ja": "比較",
+        "zh": "比较"
+      }
+    },
+    {
+      "id": "identity",
+      "labels": {
+        "en": "Identity",
+        "ko": "인물·로고",
+        "ja": "人物・ロゴ",
+        "zh": "人物与标志"
+      }
+    },
+    {
+      "id": "media",
+      "labels": {
+        "en": "Media",
+        "ko": "미디어",
+        "ja": "メディア",
+        "zh": "媒体"
+      }
+    },
+    {
+      "id": "navigation",
+      "labels": {
+        "en": "Navigation",
+        "ko": "내비게이션",
+        "ja": "ナビゲーション",
+        "zh": "导航"
+      }
+    },
+    {
+      "id": "foundation",
+      "labels": {
+        "en": "Foundation",
+        "ko": "기반",
+        "ja": "ファウンデーション",
+        "zh": "基础"
+      }
+    },
+    {
+      "id": "layout",
+      "labels": {
+        "en": "Layouts",
+        "ko": "레이아웃",
+        "ja": "レイアウト",
+        "zh": "布局"
+      }
+    },
+    {
+      "id": "background",
+      "labels": {
+        "en": "Backgrounds",
+        "ko": "배경",
+        "ja": "背景",
+        "zh": "背景"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "surface.card",
+      "group": "surface",
+      "labels": {
+        "en": "Card",
+        "ko": "카드",
+        "ja": "カード",
+        "zh": "卡片"
+      }
+    },
+    {
+      "id": "surface.pill",
+      "group": "surface",
+      "labels": {
+        "en": "Pill",
+        "ko": "필",
+        "ja": "ピル",
+        "zh": "胶囊"
+      }
+    },
+    {
+      "id": "surface.callout",
+      "group": "surface",
+      "labels": {
+        "en": "Callout",
+        "ko": "콜아웃",
+        "ja": "コールアウト",
+        "zh": "标注"
+      }
+    },
+    {
+      "id": "surface.tag",
+      "group": "surface",
+      "labels": {
+        "en": "Tag and highlight",
+        "ko": "태그·강조",
+        "ja": "タグ・ハイライト",
+        "zh": "标签与高亮"
+      }
+    },
+    {
+      "id": "content.list",
+      "group": "content",
+      "labels": {
+        "en": "List",
+        "ko": "목록",
+        "ja": "リスト",
+        "zh": "列表"
+      }
+    },
+    {
+      "id": "content.quote",
+      "group": "content",
+      "labels": {
+        "en": "Quote",
+        "ko": "인용",
+        "ja": "引用",
+        "zh": "引用"
+      }
+    },
+    {
+      "id": "content.headline",
+      "group": "content",
+      "labels": {
+        "en": "Headline",
+        "ko": "제목",
+        "ja": "見出し",
+        "zh": "标题"
+      }
+    },
+    {
+      "id": "content.prose",
+      "group": "content",
+      "labels": {
+        "en": "Body text",
+        "ko": "본문",
+        "ja": "本文",
+        "zh": "正文"
+      }
+    },
+    {
+      "id": "content.code",
+      "group": "content",
+      "labels": {
+        "en": "Code block",
+        "ko": "코드 블록",
+        "ja": "コードブロック",
+        "zh": "代码块"
+      }
+    },
+    {
+      "id": "data.metric",
+      "group": "data",
+      "labels": {
+        "en": "Metric",
+        "ko": "지표",
+        "ja": "指標",
+        "zh": "指标"
+      }
+    },
+    {
+      "id": "data.delta",
+      "group": "data",
+      "labels": {
+        "en": "Change",
+        "ko": "변화",
+        "ja": "変化",
+        "zh": "变化"
+      }
+    },
+    {
+      "id": "data.chart-bar",
+      "group": "data",
+      "labels": {
+        "en": "Bar chart",
+        "ko": "막대 차트",
+        "ja": "棒グラフ",
+        "zh": "柱状图"
+      }
+    },
+    {
+      "id": "data.chart-line",
+      "group": "data",
+      "labels": {
+        "en": "Line chart",
+        "ko": "선 차트",
+        "ja": "折れ線グラフ",
+        "zh": "折线图"
+      }
+    },
+    {
+      "id": "data.chart-donut",
+      "group": "data",
+      "labels": {
+        "en": "Donut",
+        "ko": "도넛",
+        "ja": "ドーナツ",
+        "zh": "环形图"
+      }
+    },
+    {
+      "id": "data.gauge",
+      "group": "data",
+      "labels": {
+        "en": "Meter",
+        "ko": "미터",
+        "ja": "メーター",
+        "zh": "进度条"
+      }
+    },
+    {
+      "id": "data.table",
+      "group": "data",
+      "labels": {
+        "en": "Table",
+        "ko": "표",
+        "ja": "表",
+        "zh": "表格"
+      }
+    },
+    {
+      "id": "data.legend",
+      "group": "data",
+      "labels": {
+        "en": "Legend",
+        "ko": "범례",
+        "ja": "凡例",
+        "zh": "图例"
+      }
+    },
+    {
+      "id": "data.chart-stack",
+      "group": "data",
+      "labels": {
+        "en": "Stacked bar",
+        "ko": "누적 막대",
+        "ja": "積み上げ棒",
+        "zh": "堆积条形"
+      }
+    },
+    {
+      "id": "data.chart-waterfall",
+      "group": "data",
+      "labels": {
+        "en": "Waterfall",
+        "ko": "워터폴",
+        "ja": "ウォーターフォール",
+        "zh": "瀑布图"
+      }
+    },
+    {
+      "id": "data.chart-area",
+      "group": "data",
+      "labels": {
+        "en": "Area chart",
+        "ko": "영역 차트",
+        "ja": "エリアチャート",
+        "zh": "面积图"
+      }
+    },
+    {
+      "id": "data.chart-scatter",
+      "group": "data",
+      "labels": {
+        "en": "Scatter & bubble",
+        "ko": "산점도·버블",
+        "ja": "散布図・バブル",
+        "zh": "散点图与气泡图"
+      }
+    },
+    {
+      "id": "data.sparkline",
+      "group": "data",
+      "labels": {
+        "en": "Sparkline",
+        "ko": "스파크라인",
+        "ja": "スパークライン",
+        "zh": "迷你图"
+      }
+    },
+    {
+      "id": "data.heatmap",
+      "group": "data",
+      "labels": {
+        "en": "Heatmap",
+        "ko": "히트맵",
+        "ja": "ヒートマップ",
+        "zh": "热力图"
+      }
+    },
+    {
+      "id": "data.waffle",
+      "group": "data",
+      "labels": {
+        "en": "Waffle & pictogram",
+        "ko": "와플·픽토그램",
+        "ja": "ワッフル・ピクトグラム",
+        "zh": "华夫图与象形图"
+      }
+    },
+    {
+      "id": "data.treemap",
+      "group": "data",
+      "labels": {
+        "en": "Treemap",
+        "ko": "트리맵",
+        "ja": "ツリーマップ",
+        "zh": "矩形树图"
+      }
+    },
+    {
+      "id": "data.sankey",
+      "group": "data",
+      "labels": {
+        "en": "Sankey",
+        "ko": "생키",
+        "ja": "サンキー",
+        "zh": "桑基图"
+      }
+    },
+    {
+      "id": "data.radar",
+      "group": "data",
+      "labels": {
+        "en": "Radar",
+        "ko": "레이더",
+        "ja": "レーダー",
+        "zh": "雷达图"
+      }
+    },
+    {
+      "id": "data.bullet",
+      "group": "data",
+      "labels": {
+        "en": "Bullet chart",
+        "ko": "불릿 차트",
+        "ja": "ブレットチャート",
+        "zh": "子弹图"
+      }
+    },
+    {
+      "id": "data.slope",
+      "group": "data",
+      "labels": {
+        "en": "Slope & dumbbell",
+        "ko": "슬로프·덤벨",
+        "ja": "スロープ・ダンベル",
+        "zh": "斜率图与哑铃图"
+      }
+    },
+    {
+      "id": "relationship.steps",
+      "group": "relationship",
+      "labels": {
+        "en": "Steps",
+        "ko": "단계",
+        "ja": "ステップ",
+        "zh": "步骤"
+      }
+    },
+    {
+      "id": "relationship.timeline",
+      "group": "relationship",
+      "labels": {
+        "en": "Timeline",
+        "ko": "타임라인",
+        "ja": "タイムライン",
+        "zh": "时间线"
+      }
+    },
+    {
+      "id": "relationship.cycle",
+      "group": "relationship",
+      "labels": {
+        "en": "Cycle",
+        "ko": "순환",
+        "ja": "サイクル",
+        "zh": "循环"
+      }
+    },
+    {
+      "id": "relationship.hub",
+      "group": "relationship",
+      "labels": {
+        "en": "Hub",
+        "ko": "허브",
+        "ja": "ハブ",
+        "zh": "中心辐射"
+      }
+    },
+    {
+      "id": "relationship.funnel",
+      "group": "relationship",
+      "labels": {
+        "en": "Funnel",
+        "ko": "퍼널",
+        "ja": "ファネル",
+        "zh": "漏斗"
+      }
+    },
+    {
+      "id": "relationship.pyramid",
+      "group": "relationship",
+      "labels": {
+        "en": "Pyramid",
+        "ko": "피라미드",
+        "ja": "ピラミッド",
+        "zh": "金字塔"
+      }
+    },
+    {
+      "id": "relationship.matrix",
+      "group": "relationship",
+      "labels": {
+        "en": "2x2 matrix",
+        "ko": "2x2 매트릭스",
+        "ja": "2x2マトリクス",
+        "zh": "2x2矩阵"
+      }
+    },
+    {
+      "id": "relationship.venn",
+      "group": "relationship",
+      "labels": {
+        "en": "Venn",
+        "ko": "벤 다이어그램",
+        "ja": "ベン図",
+        "zh": "维恩图"
+      }
+    },
+    {
+      "id": "relationship.hierarchy",
+      "group": "relationship",
+      "labels": {
+        "en": "Hierarchy",
+        "ko": "계층도",
+        "ja": "階層図",
+        "zh": "层级图"
+      }
+    },
+    {
+      "id": "relationship.flowchart",
+      "group": "relationship",
+      "labels": {
+        "en": "Flowchart",
+        "ko": "순서도",
+        "ja": "フローチャート",
+        "zh": "流程图"
+      }
+    },
+    {
+      "id": "relationship.architecture",
+      "group": "relationship",
+      "labels": {
+        "en": "Architecture",
+        "ko": "아키텍처",
+        "ja": "アーキテクチャ",
+        "zh": "架构图"
+      }
+    },
+    {
+      "id": "relationship.roadmap",
+      "group": "relationship",
+      "labels": {
+        "en": "Roadmap & Gantt",
+        "ko": "로드맵·간트",
+        "ja": "ロードマップ・ガント",
+        "zh": "路线图与甘特图"
+      }
+    },
+    {
+      "id": "relationship.swimlane",
+      "group": "relationship",
+      "labels": {
+        "en": "Swimlane",
+        "ko": "스윔레인",
+        "ja": "スイムレーン",
+        "zh": "泳道图"
+      }
+    },
+    {
+      "id": "relationship.concentric",
+      "group": "relationship",
+      "labels": {
+        "en": "Concentric circles",
+        "ko": "동심원",
+        "ja": "同心円",
+        "zh": "同心圆"
+      }
+    },
+    {
+      "id": "relationship.journey",
+      "group": "relationship",
+      "labels": {
+        "en": "Customer journey",
+        "ko": "고객 여정",
+        "ja": "カスタマージャーニー",
+        "zh": "客户旅程"
+      }
+    },
+    {
+      "id": "relationship.mindmap",
+      "group": "relationship",
+      "labels": {
+        "en": "Mind map",
+        "ko": "마인드맵",
+        "ja": "マインドマップ",
+        "zh": "思维导图"
+      }
+    },
+    {
+      "id": "relationship.decision-tree",
+      "group": "relationship",
+      "labels": {
+        "en": "Decision tree",
+        "ko": "의사결정 트리",
+        "ja": "決定木",
+        "zh": "决策树"
+      }
+    },
+    {
+      "id": "relationship.matrix-nine",
+      "group": "relationship",
+      "labels": {
+        "en": "3×3 matrix",
+        "ko": "3×3 매트릭스",
+        "ja": "3×3マトリクス",
+        "zh": "3×3矩阵"
+      }
+    },
+    {
+      "id": "relationship.network",
+      "group": "relationship",
+      "labels": {
+        "en": "Network",
+        "ko": "관계망",
+        "ja": "ネットワーク",
+        "zh": "关系网络"
+      }
+    },
+    {
+      "id": "comparison.versus",
+      "group": "comparison",
+      "labels": {
+        "en": "Versus",
+        "ko": "대비",
+        "ja": "対比",
+        "zh": "对比"
+      }
+    },
+    {
+      "id": "comparison.pricing",
+      "group": "comparison",
+      "labels": {
+        "en": "Pricing",
+        "ko": "요금제",
+        "ja": "料金プラン",
+        "zh": "价格方案"
+      }
+    },
+    {
+      "id": "comparison.balance",
+      "group": "comparison",
+      "labels": {
+        "en": "Trade-off scale",
+        "ko": "저울·트레이드오프",
+        "ja": "天秤・トレードオフ",
+        "zh": "天平与权衡"
+      }
+    },
+    {
+      "id": "comparison.positioning",
+      "group": "comparison",
+      "labels": {
+        "en": "Positioning map",
+        "ko": "포지셔닝 맵",
+        "ja": "ポジショニングマップ",
+        "zh": "定位图"
+      }
+    },
+    {
+      "id": "identity.person",
+      "group": "identity",
+      "labels": {
+        "en": "Person",
+        "ko": "인물",
+        "ja": "人物",
+        "zh": "人物"
+      }
+    },
+    {
+      "id": "identity.logo-group",
+      "group": "identity",
+      "labels": {
+        "en": "Logos",
+        "ko": "로고 묶음",
+        "ja": "ロゴ群",
+        "zh": "标志组"
+      }
+    },
+    {
+      "id": "media.image-frame",
+      "group": "media",
+      "labels": {
+        "en": "Picture frame",
+        "ko": "이미지 프레임",
+        "ja": "画像フレーム",
+        "zh": "图片框"
+      }
+    },
+    {
+      "id": "navigation.agenda",
+      "group": "navigation",
+      "labels": {
+        "en": "Agenda",
+        "ko": "목차",
+        "ja": "目次",
+        "zh": "目录"
+      }
+    },
+    {
+      "id": "foundation.page",
+      "group": "foundation",
+      "labels": {
+        "en": "Page foundation",
+        "ko": "페이지 기반",
+        "ja": "ページ基盤",
+        "zh": "页面基础"
+      }
+    },
+    {
+      "id": "layout.agenda",
+      "group": "layout",
+      "labels": {
+        "en": "Agenda",
+        "ko": "목차",
+        "ja": "Agenda",
+        "zh": "Agenda"
+      }
+    },
+    {
+      "id": "layout.architecture",
+      "group": "layout",
+      "labels": {
+        "en": "Architecture",
+        "ko": "아키텍처",
+        "ja": "Architecture",
+        "zh": "Architecture"
+      }
+    },
+    {
+      "id": "layout.comparison",
+      "group": "layout",
+      "labels": {
+        "en": "Comparison",
+        "ko": "비교",
+        "ja": "Comparison",
+        "zh": "Comparison"
+      }
+    },
+    {
+      "id": "layout.cover",
+      "group": "layout",
+      "labels": {
+        "en": "Cover",
+        "ko": "표지",
+        "ja": "Cover",
+        "zh": "Cover"
+      }
+    },
+    {
+      "id": "layout.cta",
+      "group": "layout",
+      "labels": {
+        "en": "Cta",
+        "ko": "행동 유도",
+        "ja": "Cta",
+        "zh": "Cta"
+      }
+    },
+    {
+      "id": "layout.data-story",
+      "group": "layout",
+      "labels": {
+        "en": "Data story",
+        "ko": "데이터 스토리",
+        "ja": "Data story",
+        "zh": "Data story"
+      }
+    },
+    {
+      "id": "layout.feature-showcase",
+      "group": "layout",
+      "labels": {
+        "en": "Feature showcase",
+        "ko": "기능 소개",
+        "ja": "Feature showcase",
+        "zh": "Feature showcase"
+      }
+    },
+    {
+      "id": "layout.pricing",
+      "group": "layout",
+      "labels": {
+        "en": "Pricing",
+        "ko": "요금제",
+        "ja": "Pricing",
+        "zh": "Pricing"
+      }
+    },
+    {
+      "id": "layout.process",
+      "group": "layout",
+      "labels": {
+        "en": "Process",
+        "ko": "프로세스",
+        "ja": "Process",
+        "zh": "Process"
+      }
+    },
+    {
+      "id": "layout.quote",
+      "group": "layout",
+      "labels": {
+        "en": "Quote",
+        "ko": "인용",
+        "ja": "Quote",
+        "zh": "Quote"
+      }
+    },
+    {
+      "id": "layout.section-divider",
+      "group": "layout",
+      "labels": {
+        "en": "Section divider",
+        "ko": "섹션 구분",
+        "ja": "Section divider",
+        "zh": "Section divider"
+      }
+    },
+    {
+      "id": "layout.single-message",
+      "group": "layout",
+      "labels": {
+        "en": "Single message",
+        "ko": "단일 메시지",
+        "ja": "Single message",
+        "zh": "Single message"
+      }
+    },
+    {
+      "id": "layout.summary",
+      "group": "layout",
+      "labels": {
+        "en": "Summary",
+        "ko": "요약",
+        "ja": "Summary",
+        "zh": "Summary"
+      }
+    },
+    {
+      "id": "layout.team-profile",
+      "group": "layout",
+      "labels": {
+        "en": "Team profile",
+        "ko": "팀 소개",
+        "ja": "Team profile",
+        "zh": "Team profile"
+      }
+    },
+    {
+      "id": "layout.timeline",
+      "group": "layout",
+      "labels": {
+        "en": "Timeline",
+        "ko": "타임라인",
+        "ja": "Timeline",
+        "zh": "Timeline"
+      }
+    },
+    {
+      "id": "background.frame",
+      "group": "background",
+      "labels": {
+        "en": "Frame background",
+        "ko": "프레임 배경",
+        "ja": "フレーム背景",
+        "zh": "框架背景"
+      }
+    },
+    {
+      "id": "background.vector",
+      "group": "background",
+      "labels": {
+        "en": "Vector background",
+        "ko": "벡터 배경",
+        "ja": "ベクター背景",
+        "zh": "矢量背景"
+      }
+    }
+  ],
+  "foundation": {
+    "contract": "foundation.page@1",
+    "category": "foundation.page",
+    "classes": [
+      "slide",
+      "dark",
+      "cover",
+      "page",
+      "head",
+      "center",
+      "kicker",
+      "title",
+      "lead",
+      "body",
+      "group",
+      "col",
+      "two",
+      "three",
+      "stack",
+      "split",
+      "wide-left",
+      "icon",
+      "top",
+      "rail",
+      "foot",
+      "idx",
+      "deck",
+      "sec",
+      "src",
+      "no",
+      "label",
+      "on",
+      "seat",
+      "avatar",
+      "portrait",
+      "logo",
+      "back",
+      "lockup",
+      "at-center",
+      "at-left",
+      "at-bottom-left",
+      "at-top-left",
+      "meta",
+      "deco",
+      "overrides"
+    ],
+    "parts": {
+      "seat": "`.seat[data-ph=\"N\"]` — a numbered seat for what the page cannot draw (an image, a 3D model); variants `.seat.avatar` `.seat.portrait` `.seat.logo` `.seat.back` `.seat.icon`. A seat is a placement, not a material."
+    },
+    "structure": "`<section class=\"slide [dark]\"><div class=\"page\"><header class=\"head [center]\"><p class=\"kicker\">…</p><h1 class=\"title\">…</h1><p class=\"lead\">…</p></header><div class=\"body\">…grid children…</div></div></section>`. `.body` is a 12-column x 6-row grid; each body child states only `style=\"grid-column:A / span N; grid-row:B / span M\"`. `.group` (a row of equal members; `.group.col` `.group.two` `.group.three`), `.stack` (a column), `.split` (two columns, first narrower; `.split.wide-left` reverses) hold several members of one slot. A cover is `class=\"slide cover\"`: no head/body; `.page` holds a `.lockup` (`.kicker` + `.title` + `.lead`) placed with `.at-center` `.at-left` `.at-bottom-left` `.at-top-left`, an optional `.meta` line, and optional `.deco` (the foundation's cover graphic) or `.seat.back`."
+  },
+  "parts": [
+    "parts",
+    "kick",
+    "fig",
+    "name",
+    "note",
+    "mark"
+  ],
+  "contracts": [
+    {
+      "id": "card.parts@1",
+      "category": "surface.card",
+      "roots": [
+        "card"
+      ],
+      "structure": "`.card` > `.parts` — variants `.on` (emphasis: accent fill) `.quiet` `.line` (outlined) `.tone-1…5`. Text parts inside `.parts`: `.kick` (small line above) `.fig` (the figure; `<small>` for its unit) `.name` `.note` `.mark` (icon or number)."
+    },
+    {
+      "id": "pill.parts@1",
+      "category": "surface.pill",
+      "roots": [
+        "pill"
+      ],
+      "structure": "`.pill` > `.parts` — a one-line capsule (mark + name + note); variants `.on` `.quiet` `.line`."
+    },
+    {
+      "id": "callout.sentence@1",
+      "category": "surface.callout",
+      "roots": [
+        "callout"
+      ],
+      "structure": "`.callout` — one sentence that concludes the page, written as `<p>문장 <b>핵심 구절</b></p>`, optional `.icon` before it."
+    },
+    {
+      "id": "tag.inline@1",
+      "category": "surface.tag",
+      "roots": [
+        "tag",
+        "hl"
+      ],
+      "structure": "`.tag` — a small label inside a part; `.hl` — a highlight inside running text."
+    },
+    {
+      "id": "list.items@1",
+      "category": "content.list",
+      "roots": [
+        "list"
+      ],
+      "members": {
+        "min": 2,
+        "max": 8
+      },
+      "structure": "`.list` > `.item` (`.name` + `.note`) — the element draws each item's marker: a dot, a tick on `.list.check`, the item's number on `.list.num`; `.list.divided` rules the items apart. Never write numbers into the items. An item's own `.mark` holds only an icon."
+    },
+    {
+      "id": "quote.voice@1",
+      "category": "content.quote",
+      "roots": [
+        "quote"
+      ],
+      "structure": "`.quote` > `<blockquote>` + `.by` (`.seat.avatar` + `.name` + `.note`) — variant `.quote.big`."
+    },
+    {
+      "id": "headline.block@1",
+      "category": "content.headline",
+      "roots": [
+        "headline"
+      ],
+      "structure": "`.headline` > `.kick` (optional small line above) + `<h2>` (the heading; `<b>` on the words that carry it) + `.note` (optional one-line subhead) — a heading set inside the body, apart from the page head; variants `.headline.big` (a statement-size heading that is the page's point), `.headline.center`, `.headline.on` (on the accent ground)."
+    },
+    {
+      "id": "prose.text@1",
+      "category": "content.prose",
+      "roots": [
+        "prose"
+      ],
+      "structure": "`.prose` > `<p>` × 1–4 (running text; `<b>` for emphasis) — body copy set as paragraphs; variants `.prose.lead` (a larger opening paragraph), `.prose.cols` (paragraphs flow into two columns), `.prose.quiet` (secondary text)."
+    },
+    {
+      "id": "metric.figure@1",
+      "category": "data.metric",
+      "roots": [
+        "stat",
+        "stats"
+      ],
+      "members": {
+        "min": 1,
+        "max": 6
+      },
+      "structure": "`.stat` > `.parts` (`.fig` + `.name` + `.note`) — a bare figure without a surface; `.stats` > `.stat` × n a row of them with dividers."
+    },
+    {
+      "id": "delta.change@1",
+      "category": "data.delta",
+      "roots": [
+        "delta"
+      ],
+      "structure": "`.delta` — `<span class=\"from\">12.1억</span><span class=\"to\">15.6억</span>` before → after; the arrow is drawn by the element."
+    },
+    {
+      "id": "chart.bar@1",
+      "category": "data.chart-bar",
+      "roots": [
+        "bars"
+      ],
+      "members": {
+        "min": 2,
+        "max": 12
+      },
+      "structure": "`.bars` `style=\"--max:N\"` > `.bar` `style=\"--v:N\"` (`<b>` value + `<span>` label; `.bar.on`, `.bar.tone-N`) — vertical bars; `.bars.h` horizontal."
+    },
+    {
+      "id": "chart.line@1",
+      "category": "data.chart-line",
+      "roots": [
+        "lines"
+      ],
+      "members": {
+        "min": 3,
+        "max": 12
+      },
+      "structure": "`.lines` `style=\"--max:N\"` > `.pt` `style=\"--v:N\"` (`<b>` + `<span>`) — a line over equal steps, drawn by the element from the points."
+    },
+    {
+      "id": "chart.donut@1",
+      "category": "data.chart-donut",
+      "roots": [
+        "donut",
+        "donuts"
+      ],
+      "members": {
+        "min": 1,
+        "max": 4
+      },
+      "structure": "`.donut` `style=\"--v:N\"` (0–100) > `.fig` + `.name` — one share of a whole; `.donuts` > `.donut` × n a row of them."
+    },
+    {
+      "id": "gauge.meter@1",
+      "category": "data.gauge",
+      "roots": [
+        "meter"
+      ],
+      "structure": "`.meter` `style=\"--v:N\"` (0–100) > `.name` + `.fig` — a horizontal progress bar; several stack in a `.stack`."
+    },
+    {
+      "id": "table.grid@1",
+      "category": "data.table",
+      "roots": [
+        "tablebox"
+      ],
+      "structure": "`.tablebox` > `<table class=\"table\">` with explicit `<thead>`/`<tbody>`; `.pick` on the cells of the column that is the point; `.num` on numeric cells."
+    },
+    {
+      "id": "legend.keys@1",
+      "category": "data.legend",
+      "roots": [
+        "legend"
+      ],
+      "structure": "`.legend` > `.key.tone-N` — a chart legend."
+    },
+    {
+      "id": "steps.sequence@1",
+      "category": "relationship.steps",
+      "roots": [
+        "steps"
+      ],
+      "members": {
+        "min": 2,
+        "max": 6
+      },
+      "structure": "`.steps` > `.step` (`.mark` number + `.name` + `.note`) — joined left to right by the element's connector; `.steps.col` downward."
+    },
+    {
+      "id": "timeline.track@1",
+      "category": "relationship.timeline",
+      "roots": [
+        "track"
+      ],
+      "members": {
+        "min": 3,
+        "max": 8
+      },
+      "structure": "`.track` > `.stop` (`.kick` date + `.name` + `.note`; `.stop.on`) — points on a line; `.track.alt` alternates above/below; `.track.col` runs downward."
+    },
+    {
+      "id": "cycle.nodes@1",
+      "category": "relationship.cycle",
+      "roots": [
+        "cycle"
+      ],
+      "members": {
+        "min": 3,
+        "max": 6
+      },
+      "structure": "`.cycle` > `.core` + `.node` × 3–6 — members around a centre, arrows drawn by the element."
+    },
+    {
+      "id": "hub.spokes@1",
+      "category": "relationship.hub",
+      "roots": [
+        "hub"
+      ],
+      "members": {
+        "min": 3,
+        "max": 6
+      },
+      "structure": "`.hub` > `.core` + `.spoke` × 3–6 (`.mark` + `.name` + `.note`) — a centre with members on spokes."
+    },
+    {
+      "id": "funnel.stages@1",
+      "category": "relationship.funnel",
+      "roots": [
+        "funnel"
+      ],
+      "members": {
+        "min": 3,
+        "max": 6
+      },
+      "structure": "`.funnel` > `.stage` × 3–6 (`.name` + `.fig`), each `style=\"--v:N\"` (0–100) for its width."
+    },
+    {
+      "id": "pyramid.levels@1",
+      "category": "relationship.pyramid",
+      "roots": [
+        "pyramid"
+      ],
+      "members": {
+        "min": 3,
+        "max": 5
+      },
+      "structure": "`.pyramid` > `.level` × 3–5 (`.name` + `.note`)."
+    },
+    {
+      "id": "matrix.quadrants@1",
+      "category": "relationship.matrix",
+      "roots": [
+        "matrix"
+      ],
+      "structure": "`.matrix` > `.axis-x` (2 labels) `.axis-y` (2 labels) + `.cell` × 4 (`.cell.on`) — a 2×2 — variant `.matrix.swot`: no axes; the four cells are Strengths, Weaknesses, Opportunities, Threats in that order, each with `.kick` (S/W/O/T) + `.name` + `.list`."
+    },
+    {
+      "id": "venn.sets@1",
+      "category": "relationship.venn",
+      "roots": [
+        "venn"
+      ],
+      "members": {
+        "min": 2,
+        "max": 3
+      },
+      "structure": "`.venn` > `.set` × 2–3 (`.name`; `.set.on`) + optional `.core`."
+    },
+    {
+      "id": "hierarchy.org@1",
+      "category": "relationship.hierarchy",
+      "roots": [
+        "org"
+      ],
+      "structure": "`.org` > `.root` + `.branch` × 2–4 (`.node` + `.leaf` …) — a tree; connectors drawn by the element."
+    },
+    {
+      "id": "flowchart.nodes@1",
+      "category": "relationship.flowchart",
+      "roots": [
+        "flowchart"
+      ],
+      "structure": "`.flowchart` > `.node` (`.start` `.ask` `.end`) placed with `style=\"grid-column; grid-row\"` and connector classes `to-r to-d to-l to-u` — connectors and arrowheads drawn by the element."
+    },
+    {
+      "id": "architecture.layers@1",
+      "category": "relationship.architecture",
+      "roots": [
+        "arch"
+      ],
+      "members": {
+        "min": 2,
+        "max": 5
+      },
+      "structure": "`.arch` > `.layer` × 2–5 (`.name` + `.chip` …) — stacked architecture layers."
+    },
+    {
+      "id": "versus.pair@1",
+      "category": "comparison.versus",
+      "roots": [
+        "versus"
+      ],
+      "structure": "`.versus` > `.side` × 2 (+ `.side.on`) each `.name` + `.list`, with a `<b class=\"vs\">` mark between."
+    },
+    {
+      "id": "pricing.plans@1",
+      "category": "comparison.pricing",
+      "roots": [
+        "plan",
+        "plans"
+      ],
+      "members": {
+        "min": 1,
+        "max": 4
+      },
+      "structure": "`.plan` > `.name` + `.price` (`.fig` + `<small>`) + `.list.check` (+ `.tag`; `.plan.on`) — `.plans` > `.plan` × n a row."
+    },
+    {
+      "id": "person.profile@1",
+      "category": "identity.person",
+      "roots": [
+        "person",
+        "people"
+      ],
+      "members": {
+        "min": 1,
+        "max": 6
+      },
+      "structure": "`.person` > `.seat.avatar|.seat.portrait` + `.name` + `.note` (+ `.list`) — `.people` > `.person` × n a row."
+    },
+    {
+      "id": "logos.row@1",
+      "category": "identity.logo-group",
+      "roots": [
+        "logos"
+      ],
+      "members": {
+        "min": 3,
+        "max": 12
+      },
+      "structure": "`.logos` > `.seat.logo` × n."
+    },
+    {
+      "id": "frame.picture@1",
+      "category": "media.image-frame",
+      "roots": [
+        "frame"
+      ],
+      "structure": "`.frame` > `.seat[data-ph]` — the element's picture frame around one seat."
+    },
+    {
+      "id": "agenda.entries@1",
+      "category": "navigation.agenda",
+      "roots": [
+        "agenda"
+      ],
+      "members": {
+        "min": 2,
+        "max": 8
+      },
+      "structure": "`.agenda` > `.entry` (`.mark` number + `.name` + `.note`; `.entry.on`) — the contents list."
+    },
+    {
+      "id": "chart.stack@1",
+      "category": "data.chart-stack",
+      "roots": [
+        "stacks"
+      ],
+      "members": {
+        "min": 2,
+        "max": 12
+      },
+      "structure": "`.stacks` `style=\"--max:N\"` > `.sbar` × 2–12 (`<span>` label + `.seg` × 2–5, each `style=\"--v:N\"` with `<b>` value and `.tone-N`; `.sbar.on`) — segments stacked in order; `.stacks.pct` 100% bars (each bar's segments sum to 100, --max unused); `.stacks.h` horizontal. Pair with a `.legend` for the segment names."
+    },
+    {
+      "id": "chart.waterfall@1",
+      "category": "data.chart-waterfall",
+      "roots": [
+        "waterfall"
+      ],
+      "members": {
+        "min": 3,
+        "max": 10
+      },
+      "structure": "`.waterfall` `style=\"--max:N\"` > `.move` × 3–10 (`<b>` value + `<span>` label), each `style=\"--from:A; --to:B\"` (the running total before and after this step) and one of `.up` `.down` `.total` (a total bar stands from 0 to --to) — the element draws floating bars and the connectors between consecutive steps."
+    },
+    {
+      "id": "chart.area@1",
+      "category": "data.chart-area",
+      "roots": [
+        "areas"
+      ],
+      "structure": "`.areas` `style=\"--max:N\"` > `.series` × 1–4 (`.tone-N`; `.name`) > `.pt` × 3–12 `style=\"--v:N\"` (`<b>` value optional) + `.axis` > `<span>` × the point count (labels) — filled areas over equal steps, drawn by the element the way it draws a line; `.areas.stacked` stacks the series: on it each point's --v is the running total up to and including its series, series listed bottom first."
+    },
+    {
+      "id": "chart.scatter@1",
+      "category": "data.chart-scatter",
+      "roots": [
+        "scatter"
+      ],
+      "members": {
+        "min": 3,
+        "max": 24
+      },
+      "structure": "`.scatter` `style=\"--xmax:N; --ymax:M\"` > `.axis-x` (`<span>` name) + `.axis-y` (`<span>` name) + `.dot` × 3–24 `style=\"--x:A; --y:B\"` (`<span>` label optional; `.dot.on`, `.dot.tone-N`) — points on two value axes from 0; `.scatter.bubble` sizes each dot by its `--r` (0–100)."
+    },
+    {
+      "id": "spark.trend@1",
+      "category": "data.sparkline",
+      "roots": [
+        "spark"
+      ],
+      "structure": "`.spark` `style=\"--max:N\"` > `<span>` × 5–24 each `style=\"--v:N\"` — a mini trend with no axes or labels, set inline beside a figure: nests inside a `.stat` or `.card` `.parts` (after `.fig`) or stands alone in a small cell; `.spark.bars` mini bars; `.spark.up` / `.spark.down` colours the trend as good or bad."
+    },
+    {
+      "id": "heatmap.grid@1",
+      "category": "data.heatmap",
+      "roots": [
+        "heat"
+      ],
+      "structure": "`.heat` `style=\"--cols:N\"` > `.heads` (`<span>` × N column labels) + `.row` × 2–12 (`.name` + `.cell` × N each `style=\"--v:N\"` 0–100, `<b>` value optional) — density by colour strength; `.heat.calendar` square day cells with no row names (rows are weekdays, `.heads` the weeks)."
+    },
+    {
+      "id": "waffle.units@1",
+      "category": "data.waffle",
+      "roots": [
+        "waffle"
+      ],
+      "members": {
+        "min": 1,
+        "max": 4
+      },
+      "structure": "`.waffle` > `.units` > `<span class=\"u\">` × 10–100 (`.u.on` the counted share, `.u.tone-N` a second share) + `.fig` + `.name` — a share as counted units, '10명 중 3명'; `.waffle.figures` draws each unit as a person pictogram. Several stand side by side in a `.group`."
+    },
+    {
+      "id": "treemap.tiles@1",
+      "category": "data.treemap",
+      "roots": [
+        "treemap"
+      ],
+      "structure": "`.treemap` > `.branch` × 1–5 `style=\"--v:N\"` (its share of the whole, 0–100; `.name`) > `.tile` × 1–8 `style=\"--v:N\"` (its share of the branch, 0–100; `.name` + `.fig`; `.tile.on`) — nested rectangles whose areas follow the shares; with one branch the tiles fill the whole."
+    },
+    {
+      "id": "sankey.flows@1",
+      "category": "data.sankey",
+      "roots": [
+        "sankey"
+      ],
+      "structure": "`.sankey` > `.source` (`.name` + `.fig`) + `.branch` × 2–6 `style=\"--v:N\"` (share of the source, 0–100; `.name` + `.fig`; `.branch.on` the main path, `.branch.out` a drop-off) — bands as thick as their share flow from the source to each branch; a `.branch` may itself hold `.branch` × 2–4 for a second split."
+    },
+    {
+      "id": "radar.axes@1",
+      "category": "data.radar",
+      "roots": [
+        "radar"
+      ],
+      "structure": "`.radar` `style=\"--max:N; --n:K\"` (K = 3–8 axes) > `.axis` × K (`.name`) + `.series` × 1–3 (`.tone-N`; `.name`) `style=\"--v1:A; --v2:B; …; --vK:Z\"` — each series a filled polygon over K spokes, first axis at the top, clockwise."
+    },
+    {
+      "id": "bullet.target@1",
+      "category": "data.bullet",
+      "roots": [
+        "bullet",
+        "bullets"
+      ],
+      "members": {
+        "min": 1,
+        "max": 6
+      },
+      "structure": "`.bullet` `style=\"--v:N; --target:T\"` (0–100; optional `--low:L; --high:H` qualitative bands) > `.name` + `.fig` (+ `.note` for the target) — actual against target and bands in one row; `.bullets` > `.bullet` × n stacks them."
+    },
+    {
+      "id": "slope.pairs@1",
+      "category": "data.slope",
+      "roots": [
+        "slope"
+      ],
+      "members": {
+        "min": 2,
+        "max": 8
+      },
+      "structure": "`.slope` `style=\"--max:N\"` > `.heads` (`<span>` before + `<span>` after) + `.pair` × 2–8 `style=\"--a:A; --b:B\"` (`.name` + `<b class=\"a\">` + `<b class=\"b\">`; `.pair.on`) — each item's change between two moments; `.slope.dumbbell` draws horizontal dumbbells instead of slope lines."
+    },
+    {
+      "id": "roadmap.lanes@1",
+      "category": "relationship.roadmap",
+      "roots": [
+        "roadmap"
+      ],
+      "members": {
+        "min": 2,
+        "max": 6
+      },
+      "structure": "`.roadmap` `style=\"--cols:N\"` > `.heads` (`<span>` × N periods) + `.lane` × 2–6 (`.name` + `.bar` × 1–4 `style=\"--from:A; --to:B\"` in periods, 0-based start and exclusive end, each `<span>` label, `.bar.on` `.bar.tone-N`; optional `.mile` `style=\"--at:A\"` with `<span>` — a milestone point) — durations on tracks; a timeline marks moments, a roadmap spans periods."
+    },
+    {
+      "id": "swimlane.flow@1",
+      "category": "relationship.swimlane",
+      "roots": [
+        "swimlane"
+      ],
+      "members": {
+        "min": 2,
+        "max": 5
+      },
+      "structure": "`.swimlane` `style=\"--cols:N\"` > `.lane` × 2–5 `style=\"grid-row:L\"` (`.name` — the owner) + `.node` (`.start` `.ask` `.end`) placed with `style=\"grid-column:C; grid-row:L\"` in its lane and connector classes `to-r to-d to-l to-u` — a flowchart whose rows are owners; connectors and arrowheads drawn by the element."
+    },
+    {
+      "id": "orbit.nested@1",
+      "category": "relationship.concentric",
+      "roots": [
+        "orbit"
+      ],
+      "members": {
+        "min": 2,
+        "max": 4
+      },
+      "structure": "`.orbit` > `.ring` × 2–4, outermost first (`.name` + `.fig`, `.note` optional; `.ring.on`) — each set contains the next, e.g. TAM ⊃ SAM ⊃ SOM; inclusion, not overlap (that is a venn)."
+    },
+    {
+      "id": "journey.map@1",
+      "category": "relationship.journey",
+      "roots": [
+        "journey"
+      ],
+      "members": {
+        "min": 3,
+        "max": 7
+      },
+      "structure": "`.journey` > `.stage` × 3–7 `style=\"--mood:M; --next:X\"` (0–100, 100 delighted; --next is the following stage's mood, omitted on the last) (`.name` + `.note` the touchpoint + `.pain` optional pain point; `.stage.on`) — stages in a row with the emotion curve drawn across them by the element."
+    },
+    {
+      "id": "mindmap.branches@1",
+      "category": "relationship.mindmap",
+      "roots": [
+        "mindmap"
+      ],
+      "members": {
+        "min": 2,
+        "max": 6
+      },
+      "structure": "`.mindmap` > `.core` (`.name`) + `.branch` × 2–6 (`.name` + `.leaf` × 0–4; `.branch.on`) — branches radiate left and right of the centre with curved links drawn by the element; freer than a hierarchy."
+    },
+    {
+      "id": "decision.tree@1",
+      "category": "relationship.decision-tree",
+      "roots": [
+        "dtree"
+      ],
+      "structure": "`.dtree` > `.q` (`.name` — the question) + `.opts` > `.opt` × 2–3 (`.cond` the answer on the branch + either a nested `.q` + `.opts` or an `.end` outcome with `.name`; `.end.on` the recommended outcome) — at most three questions deep; branches drawn by the element."
+    },
+    {
+      "id": "balance.scale@1",
+      "category": "comparison.balance",
+      "roots": [
+        "balance"
+      ],
+      "structure": "`.balance` `style=\"--tilt:T\"` (−100…100, negative = the left pan weighs more) > `.pan` × 2 (`.name` + `.item` × 1–4 each `.name`; `.pan.on`) + `.fulcrum` (`<span>` verdict, optional) — two sides weighed on a beam the element tilts by --tilt."
+    },
+    {
+      "id": "matrix.nine@1",
+      "category": "relationship.matrix-nine",
+      "roots": [
+        "grid9"
+      ],
+      "structure": "`.grid9` > `.axis-x` (3 labels, low → high) + `.axis-y` (3 labels, low → high) + `.cell` × 9 row by row from the top (`.name` + `.note`; `.cell.on`, `.cell.tone-N`) — a nine-box such as GE-McKinsey."
+    },
+    {
+      "id": "positioning.map@1",
+      "category": "comparison.positioning",
+      "roots": [
+        "posmap"
+      ],
+      "members": {
+        "min": 2,
+        "max": 12
+      },
+      "structure": "`.posmap` > `.axis-x` (2 labels: low, high) + `.axis-y` (2 labels: low, high) + `.mark` × 2–12 `style=\"--x:A; --y:B\"` (0–100; `.seat.logo` or `.name`; `.mark.on` ours) — competitors placed on two axes crossing at the centre."
+    },
+    {
+      "id": "network.graph@1",
+      "category": "relationship.network",
+      "roots": [
+        "network"
+      ],
+      "members": {
+        "min": 3,
+        "max": 12
+      },
+      "structure": "`.network` > `.node` × 3–12 `style=\"--x:A; --y:B\"` (0–100 of the box; `.name`; `.node.on`, `.node.tone-N`) + `.link` × 2–20 `style=\"--x1:A; --y1:B; --x2:C; --y2:D\"` (its two nodes' positions; `.link.strong`) — many-to-many relations; the element draws each link as a line between its points."
+    },
+    {
+      "id": "code.block@1",
+      "category": "content.code",
+      "roots": [
+        "code"
+      ],
+      "structure": "`.code` > `.name` (optional file name) + `.lines` > `<p>` × 1–24 (one source line each, leading spaces kept; tokens wrapped as `<span class=\"k\">` keyword, `<span class=\"s\">` string, `<span class=\"c\">` comment, `<span class=\"n\">` number) — monospaced source; `.code.numbered` draws line numbers."
+    }
+  ],
+  "layout": {
+    "contract": "layout.slide@1",
+    "structure": "A slide layout: a head and named slots placed on the 12 x 6 body grid, or a cover."
+  },
+  "background": {
+    "contract": "background.drawing@1",
+    "structure": "One SVG on the slide's 1280x720 coordinates (viewBox `0 0 1280 720`) drawn behind the page; every fill, stroke and stop-color is `none`, a `url(#id)` it defines or a colour token `var(--name)`. A frame (`background.frame`) is the same on every page and states its inset {top,right,bottom,left}: the content box the page's margins start inside. A vector (`background.vector`) is re-drawn for each page outside the page's measured keep-out."
+  }
+}

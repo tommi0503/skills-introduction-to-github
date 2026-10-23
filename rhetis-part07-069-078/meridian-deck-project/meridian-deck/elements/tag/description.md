@@ -1,0 +1,1 @@
+A compact capsule identifies a small part, while the inline highlight is a quiet rectangular wash behind continuous text. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

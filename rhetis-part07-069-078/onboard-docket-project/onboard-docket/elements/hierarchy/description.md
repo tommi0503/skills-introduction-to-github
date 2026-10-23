@@ -1,0 +1,1 @@
+A central accent capsule connects to dark branch heads and small quiet leaf capsules. Thin perpendicular links remain separate from the text and preserve the document-like organization chart. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

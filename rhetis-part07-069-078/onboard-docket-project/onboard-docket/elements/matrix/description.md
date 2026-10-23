@@ -1,0 +1,1 @@
+Four rounded document panels share one consistent internal rhythm. Axis labels sit outside the panels; SWOT cells use a large single-letter kick above the name and nested list. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

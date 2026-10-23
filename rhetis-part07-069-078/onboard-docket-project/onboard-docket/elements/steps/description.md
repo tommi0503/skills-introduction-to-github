@@ -1,0 +1,1 @@
+Equal circular marks lead a left-to-right sequence with small triangular connectors. Fixed content tracks keep every title aligned; the vertical form becomes dark or accent step tabs beside quiet explanations. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

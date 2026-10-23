@@ -1,0 +1,1 @@
+Two broad panels share a thin title rail and a modest central comparison mark; the recommended side receives a quiet accent wash. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

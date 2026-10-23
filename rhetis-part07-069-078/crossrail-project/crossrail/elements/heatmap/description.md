@@ -1,0 +1,1 @@
+Aligned density cells and clear row names form a compact analytical matrix. Calendar cells become square and omit the row-name column. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

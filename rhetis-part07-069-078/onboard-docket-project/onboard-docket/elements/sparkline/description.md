@@ -1,0 +1,1 @@
+A compact run of tiny rounded bars forms an inline trend strip. Meaningful upward or downward states use the semantic palette roles rather than a new brand color. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

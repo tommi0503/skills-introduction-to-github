@@ -1,0 +1,1 @@
+Nine compact rounded panels occupy a labeled three-by-three field. One selected cell carries the accent while supporting cells use neutral or soft accent tones. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

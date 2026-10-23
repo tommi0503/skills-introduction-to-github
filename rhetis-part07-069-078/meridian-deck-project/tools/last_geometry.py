@@ -1,0 +1,7 @@
+from pathlib import Path
+P=Path(__file__).parent;C=P/'meridian-deck'
+f=C/'elements/headline/element.css';s=f.read_text();s=s.replace('.center h2{font-size:var(--type-32);line-height:var(--meridian-deck-line-height-1p4);color:var(--n-7);font-weight:var(--meridian-deck-font-weight-650)}','.center:not(.big) h2{font-size:var(--type-32);line-height:var(--meridian-deck-line-height-1p4);color:var(--n-7);font-weight:var(--meridian-deck-font-weight-650)}')
+h='[data-el="meridian-deck-headline"]';q='.slide .body>'+h
+s+='\n'+q+':not(.big):not(.center){border-left:0;padding-top:18px;padding-left:24px;height:58px;justify-content:start}'+q+':not(.big):not(.center) h2{font-size:var(--type-18);font-weight:var(--body-weight)}'+q+':not(.big):not(.center) h2>b{font-size:var(--type-22);font-weight:var(--title-weight)}'+q+':has(>h2>b:only-child){padding:9px 0 0 8px;height:50px}'+q+':has(>h2>b:only-child):nth-child(1){margin-left:25px;width:242px}'+q+':has(>h2>b:only-child):nth-child(2){margin-left:-24px;width:242px}'+q+':has(>h2>b:only-child):nth-child(3){margin-left:24px;width:631px}\n';f.write_text(s)
+f=C/'elements/pill/element.css';pi='[data-el="meridian-deck-pill"]';f.write_text(f.read_text()+'\n.slide .body>.stack>'+pi+':not(:has(.mark,.note)):nth-child(2){background:color-mix(in srgb,var(--n-6) 95%,var(--page))}.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack:nth-child(2)>'+pi+'{background:color-mix(in srgb,var(--n-6) 95%,var(--page))}\n')
+print('Final measured heading positions')

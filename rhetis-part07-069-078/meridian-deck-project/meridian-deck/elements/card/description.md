@@ -1,0 +1,1 @@
+A circular badge sits above a broad rounded panel; numbered, icon, outlined, quiet, and filled variants retain the same aligned title rail. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

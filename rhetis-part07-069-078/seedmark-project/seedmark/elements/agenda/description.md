@@ -1,0 +1,1 @@
+Contents entries use two calm ruled columns, small plain numbers and a bounded highlight for the active section. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

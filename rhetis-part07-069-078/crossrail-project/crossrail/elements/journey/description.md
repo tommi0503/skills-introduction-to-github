@@ -1,0 +1,1 @@
+A row of rectangular touchpoints supports a thin mood curve and small vertices above. Notes and restrained pain statements preserve clear stage ownership. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

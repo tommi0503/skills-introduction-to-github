@@ -1,0 +1,1 @@
+A circular or portrait image seat sits above a strong ruled name and quiet role. Equal-width profiles preserve the source equipment and team alignment. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

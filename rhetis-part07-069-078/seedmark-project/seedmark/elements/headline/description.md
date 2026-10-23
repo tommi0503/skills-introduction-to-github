@@ -1,0 +1,1 @@
+A light display statement highlights one bold phrase between two ink endpoint markers. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

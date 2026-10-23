@@ -1,0 +1,1 @@
+Interpolated filled polygons connect arbitrary neighbouring values through CSS anchors, with the legend above and the labels below. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

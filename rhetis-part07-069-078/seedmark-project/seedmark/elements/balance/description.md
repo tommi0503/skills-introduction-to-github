@@ -1,0 +1,1 @@
+Two restrained argument pans sit on a fine tilted ink beam and a compact triangular decision fulcrum. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

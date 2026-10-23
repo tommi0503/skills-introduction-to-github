@@ -1,0 +1,1 @@
+Readable paragraphs retain an open document rhythm without ornamental frames. Two-column passages use a compact discrete type step before their text could generate an unwanted third column. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

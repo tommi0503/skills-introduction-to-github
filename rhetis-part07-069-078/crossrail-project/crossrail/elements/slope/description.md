@@ -1,0 +1,1 @@
+Before and after values occupy a paired comparison field with distinct endpoint discs. The dumbbell form reuses the same figures on horizontal paired tracks. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

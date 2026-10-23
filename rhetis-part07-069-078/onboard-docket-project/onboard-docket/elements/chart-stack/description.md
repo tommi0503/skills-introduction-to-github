@@ -1,0 +1,1 @@
+Vertical or horizontal stacks use ordered accent and neutral bands with values centered inside them. A dedicated category track and an external legend protect the plot from long labels. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+An accent capsule root sits above equally weighted branches, neutral department capsules, and smaller quiet leaves. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+Full-width rounded layers align a bold left name with internal capsule chips. The leading layer is accented, while subsequent layers use quiet surfaces and a thin name divider. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

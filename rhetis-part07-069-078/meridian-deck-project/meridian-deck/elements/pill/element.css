@@ -1,0 +1,57 @@
+[data-el="meridian-deck-pill"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;anchor-scope:all;font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}[data-el="meridian-deck-pill"] *{box-sizing:border-box}[data-el="meridian-deck-pill"] :is(p,h2,blockquote){margin:0}[data-el="meridian-deck-pill"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}[data-el="meridian-deck-pill"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}[data-el="meridian-deck-pill"] .fig{font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}[data-el="meridian-deck-pill"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7)}[data-el="meridian-deck-pill"] .icon{display:inline-block;width:48px;height:48px;flex:none}[data-el="meridian-deck-pill"]{display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--n-1);padding:var(--gap-sm) var(--pad)}[data-el="meridian-deck-pill"] .parts{display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);width:100%}[data-el="meridian-deck-pill"] .name{font-size:var(--type-20)}[data-el="meridian-deck-pill"] .note{font-size:var(--type-16)}[data-el="meridian-deck-pill"] .mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:999px;color:var(--a1-7)}[data-el="meridian-deck-pill"] .mark .icon{width:56%;height:56%}[data-el="meridian-deck-pill"].on{background:var(--a1);color:var(--a1-on)}[data-el="meridian-deck-pill"].on .note,[data-el="meridian-deck-pill"].on .mark{color:var(--a1-on)}[data-el="meridian-deck-pill"].line{border:var(--stroke) solid var(--a1);background:var(--page)}[data-el="meridian-deck-pill"].quiet{background:var(--n-1);color:var(--n-7)}
+@container (max-width:520px){[data-el="meridian-deck-pill"] .name{font-size:var(--type-18)}[data-el="meridian-deck-pill"] .note{font-size:var(--type-14)}[data-el="meridian-deck-pill"] .fig{font-size:var(--type-36)}[data-el="meridian-deck-pill"] .kick{font-size:var(--type-12)}}
+@container (max-width:300px){[data-el="meridian-deck-pill"] .name{font-size:var(--type-16)}[data-el="meridian-deck-pill"] .note{font-size:var(--type-12)}[data-el="meridian-deck-pill"] .fig{font-size:var(--type-28)}[data-el="meridian-deck-pill"] .mark{width:56px;height:56px}[data-el="meridian-deck-pill"] h2{font-size:var(--type-28)}}
+@container (max-height:170px){[data-el="meridian-deck-pill"] .kick{display:none}[data-el="meridian-deck-pill"] .name{font-size:var(--type-16)}[data-el="meridian-deck-pill"] .note{font-size:var(--type-12)}[data-el="meridian-deck-pill"] .fig{font-size:var(--type-28)}}
+@container (max-height:100px){[data-el="meridian-deck-pill"] .note{display:none}}
+
+/* Pass 2: restore the source badge and circular data vocabulary. */
+[data-el="meridian-deck-pill"].pill{flex:0 0 auto;height:auto}[data-el="meridian-deck-pill"].pill .parts{min-height:var(--gap);height:auto}
+[data-el="meridian-deck-pill"] small{color:inherit;margin:0}
+
+[data-el="meridian-deck-pill"] small{color:inherit;margin:0}
+
+/* Final geometry review fixes. */
+[data-el="meridian-deck-pill"].pill{min-height:calc(var(--type-20)*var(--name-line) + var(--gap-sm)*2)}
+/* Critical integration: flex-basis and root cover matching. */
+[data-el="meridian-deck-pill"].pill{container-type:inline-size}.group>[data-el="meridian-deck-pill"].pill{flex:1 1 0;min-width:0}[data-el="meridian-deck-pill"].pill .name{font-size:var(--type-18);line-height:var(--name-line)}
+@container (max-width:520px){[data-el="meridian-deck-pill"] .name{font-size:var(--type-14)}}
+/* Critical integration: flex-basis and root cover matching. */
+[data-el="meridian-deck-pill"].pill{container-type:inline-size}.group>[data-el="meridian-deck-pill"].pill{flex:1 1 0;min-width:0}[data-el="meridian-deck-pill"].pill .name{font-size:var(--type-18);line-height:var(--name-line)}
+@container (max-width:520px){[data-el="meridian-deck-pill"] .name{font-size:var(--type-14)}}
+/* Source fidelity panels. */
+.slide .body>.split:not(.wide-left) [data-el="meridian-deck-pill"]{height:35px;min-height:35px;border-radius:999px;padding:0}.slide .body>.split:not(.wide-left) [data-el="meridian-deck-pill"] .parts{height:100%;justify-content:center}.slide .body>.split:not(.wide-left) [data-el="meridian-deck-pill"] .name{font-size:var(--type-14);font-weight:var(--meridian-deck-font-weight-400);line-height:var(--meridian-deck-line-height-1p2)}
+
+
+
+
+/* TAIL RESTORATION */
+
+.slide .body>.split:has(>.stack>.group:nth-child(4))>.stack>.group>[data-el="meridian-deck-pill"]{height:27px;width:137px;padding:0;margin-top:var(--meridian-deck-space-3px);min-height:0;border:0;background:var(--n-7);color:var(--page);border-radius:999px;flex:none}
+.slide .body>.split:has(>.stack>.group:nth-child(4))>.stack>.group>[data-el="meridian-deck-pill"] .parts{display:flex;align-items:center;justify-content:center;padding:0;width:100%;height:100%}
+.slide .body>.split:has(>.stack>.group:nth-child(4))>.stack>.group>[data-el="meridian-deck-pill"] .name{font-size:var(--type-14);line-height:var(--meridian-deck-line-height-1p2);font-weight:var(--body-weight);color:inherit;margin:0}
+.slide .body>.split:has(>.stack>.group:nth-child(4))>.stack:last-child>[data-el="meridian-deck-pill"]{position:absolute;left:216px;top:0;width:188px;height:39px;min-height:0;padding:0;background:var(--a1);color:var(--a1-on);border:0;border-radius:999px}
+.slide .body>.split:has(>.stack>.group:nth-child(4))>.stack:last-child>[data-el="meridian-deck-pill"] .parts{padding:0;display:flex;align-items:center;justify-content:center;height:100%}
+.slide .body>.split:has(>.stack>.group:nth-child(4))>.stack:last-child>[data-el="meridian-deck-pill"] .name{font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--meridian-deck-line-height-1p2);color:inherit;margin:0}
+.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack>[data-el="meridian-deck-pill"]{flex:none;width:192px;height:41px;min-height:0;border:0;padding:0;background:var(--n-4);color:var(--page);border-radius:999px}
+.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack:nth-child(2)>[data-el="meridian-deck-pill"]{background:var(--n-6)}
+.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack:nth-child(3)>[data-el="meridian-deck-pill"]{background:var(--n-7)}
+.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack:nth-child(4)>[data-el="meridian-deck-pill"]{background:var(--a1);color:var(--a1-on)}
+.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack>[data-el="meridian-deck-pill"] .parts{display:flex;align-items:center;justify-content:center;height:100%;padding:0}
+.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack>[data-el="meridian-deck-pill"] .name{font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--meridian-deck-line-height-1p2);color:inherit;margin:0}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:first-child>[data-el="meridian-deck-pill"]{position:absolute;top:0;left:285px;width:257px;height:26px;min-height:0;z-index:1;border:0;padding:0;background:var(--n-7);color:var(--page);border-radius:999px}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:first-child>[data-el="meridian-deck-pill"]:nth-child(2){left:904px;width:151px;background:var(--a1);color:var(--a1-on)}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:first-child>[data-el="meridian-deck-pill"] .parts{display:flex;align-items:center;justify-content:center;padding:0;height:100%}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:first-child>[data-el="meridian-deck-pill"] .name{font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--meridian-deck-line-height-1p2);color:inherit;margin:0}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:nth-child(3)>.stack>.stack>[data-el="meridian-deck-pill"]{flex:none;width:147px;height:50px;min-height:0;border:0;padding:0;background:var(--n-7);color:var(--page);border-radius:999px}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:nth-child(3)>.stack>.stack>[data-el="meridian-deck-pill"].on{background:var(--a1);color:var(--a1-on)}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:nth-child(3)>.stack>.stack>[data-el="meridian-deck-pill"] .parts{display:flex;align-items:center;justify-content:center;height:100%;padding:0}
+.slide .body>.stack:has(>.group:first-child+:nth-child(2)+.group:nth-child(3)+:last-child)>.group:nth-child(3)>.stack>.stack>[data-el="meridian-deck-pill"] .name{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--meridian-deck-line-height-1p2);color:inherit;margin:0}
+
+/* MEASURED RESTORATION REVIEW */
+.slide .body>[data-el="meridian-deck-pill"].on{height:38px;min-height:38px;max-height:38px;align-self:start;translate:18px 47px;padding:0}.slide .body>.stack>[data-el="meridian-deck-pill"]:not(:has(.mark,.note)){flex:none;width:172px;height:83px;min-height:83px;border-radius:var(--radius);padding:0;background:var(--n-6);color:var(--page)}.slide .body>.stack>[data-el="meridian-deck-pill"]:not(:has(.mark,.note)):first-child{background:var(--a1)}.slide .body>.stack>[data-el="meridian-deck-pill"]:not(:has(.mark,.note)):last-child{height:135px;min-height:135px;background:var(--n-7)}.slide .body>.stack>[data-el="meridian-deck-pill"]:not(:has(.mark,.note)) .name{font-size:var(--type-18);color:var(--page);font-weight:var(--meridian-deck-font-weight-600)}
+/* RESTORATION REGRESSION AUDIT */
+.slide .body>.stack>[data-el="meridian-deck-pill"]:not(:has(.mark,.note)):not(:last-child) .name{color:var(--a1-on)}.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack:nth-child(-n+2)>[data-el="meridian-deck-pill"] .name{color:var(--a1-on)}
+
+.slide .body>.stack>[data-el="meridian-deck-pill"]:not(:has(.mark,.note)):nth-child(2){background:color-mix(in srgb,var(--n-6) 95%,var(--page))}.slide .body>.group:has(>.stack:nth-child(4):last-child)>.stack:nth-child(2)>[data-el="meridian-deck-pill"]{background:color-mix(in srgb,var(--n-6) 95%,var(--page))}
+
+.slide.dark .body>.group:has(>.stack:nth-child(4):last-child)>.stack:first-child>[data-el="meridian-deck-pill"] .name{color:var(--ink)}

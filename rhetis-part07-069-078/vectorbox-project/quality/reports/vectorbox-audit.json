@@ -1,0 +1,36 @@
+{
+  "collection": "vectorbox",
+  "counts": {
+    "elementCss": 56,
+    "goldenFixtures": 28,
+    "otherFixtures": 157
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "rule": "geometry-spacing-review",
+      "file": "vectorbox/elements/chart-waterfall/element.css",
+      "detail": {
+        "property": "margin-top",
+        "value": "calc((1 - max(var(--from),var(--to)) / var(--max)) * (100% - var(--gap-lg)))"
+      },
+      "line": 1
+    },
+    {
+      "severity": "warning",
+      "rule": "geometry-spacing-review",
+      "file": "vectorbox/elements/chart-waterfall/element.css",
+      "detail": {
+        "property": "margin-top",
+        "value": "calc((1 - var(--to) / var(--max)) * (100% - var(--gap-lg)))"
+      },
+      "line": 1
+    }
+  ],
+  "summary": {
+    "error": 0,
+    "warning": 2,
+    "incomplete": 0
+  },
+  "limitations": "Static local audit; browser geometry and upstream Rhetis intake are separate."
+}

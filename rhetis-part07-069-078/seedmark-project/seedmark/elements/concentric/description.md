@@ -1,0 +1,1 @@
+Left-tangent nested circular sets move from a dark whole through pale addressable layers to a clean initial target. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

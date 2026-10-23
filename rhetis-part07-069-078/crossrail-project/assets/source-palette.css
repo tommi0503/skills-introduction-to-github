@@ -1,0 +1,23 @@
+/* External source style: source-deck colors only. */
+.slide{--page:#ffffff;--ink:#1e385d;--n-1:#f1f2f5;--n-2:#e7e9ee;--n-3:#d4d6df;--n-4:#bbc1d0;--n-5:#99a3b9;--n-6:#747d94;--n-7:#8c8c8c;--n-8:#3d4658;--n-9:#1e385d;--a1:#1e385d;--a1-on:#ffffff;--a1-1:#f7f8fa;--a1-2:#edf0f5;--a1-3:#d4d8e2;--a1-4:#bfc6d6;--a1-5:#969fb7;--a1-6:#65719a;--a1-7:#1e385d;--a1-8:#172c4a;--a1-9:#102139;--a1-1-soft:#f7f8fa;--a1-2-soft:#edf0f5;--a1-3-soft:#d4d8e2;--a1-4-soft:#bfc6d6;--a1-5-soft:#969fb7;--a1-6-soft:#65719a;--a1-7-soft:#1e385d;--a1-8-soft:#172c4a;--a1-9-soft:#102139;--a1-1-muted:#f7f8fa;--a1-2-muted:#edf0f5;--a1-3-muted:#d4d8e2;--a1-4-muted:#bfc6d6;--a1-5-muted:#969fb7;--a1-6-muted:#65719a;--a1-7-muted:#1e385d;--a1-8-muted:#172c4a;--a1-9-muted:#102139;--a2:#65719a;--a2-on:#ffffff;--a2-1:#f7f8fa;--a2-2:#edf0f5;--a2-3:#d4d8e2;--a2-4:#bfc6d6;--a2-5:#969fb7;--a2-6:#65719a;--a2-7:#65719a;--a2-8:#172c4a;--a2-9:#102139;--a2-1-soft:#f7f8fa;--a2-2-soft:#edf0f5;--a2-3-soft:#d4d8e2;--a2-4-soft:#bfc6d6;--a2-5-soft:#969fb7;--a2-6-soft:#65719a;--a2-7-soft:#1e385d;--a2-8-soft:#172c4a;--a2-9-soft:#102139;--a2-1-muted:#f7f8fa;--a2-2-muted:#edf0f5;--a2-3-muted:#d4d8e2;--a2-4-muted:#bfc6d6;--a2-5-muted:#969fb7;--a2-6-muted:#65719a;--a2-7-muted:#1e385d;--a2-8-muted:#172c4a;--a2-9-muted:#102139;--a3:#969fb7;--a3-on:#ffffff;--a3-1:#f7f8fa;--a3-2:#edf0f5;--a3-3:#d4d8e2;--a3-4:#bfc6d6;--a3-5:#969fb7;--a3-6:#65719a;--a3-7:#969fb7;--a3-8:#172c4a;--a3-9:#102139;--a3-1-soft:#f7f8fa;--a3-2-soft:#edf0f5;--a3-3-soft:#d4d8e2;--a3-4-soft:#bfc6d6;--a3-5-soft:#969fb7;--a3-6-soft:#65719a;--a3-7-soft:#1e385d;--a3-8-soft:#172c4a;--a3-9-soft:#102139;--a3-1-muted:#f7f8fa;--a3-2-muted:#edf0f5;--a3-3-muted:#d4d8e2;--a3-4-muted:#bfc6d6;--a3-5-muted:#969fb7;--a3-6-muted:#65719a;--a3-7-muted:#1e385d;--a3-8-muted:#172c4a;--a3-9-muted:#102139;--a4:#d4d8e2;--a4-on:#ffffff;--a4-1:#f7f8fa;--a4-2:#edf0f5;--a4-3:#d4d8e2;--a4-4:#bfc6d6;--a4-5:#969fb7;--a4-6:#65719a;--a4-7:#1e385d;--a4-8:#172c4a;--a4-9:#102139;--a4-1-soft:#f7f8fa;--a4-2-soft:#edf0f5;--a4-3-soft:#d4d8e2;--a4-4-soft:#bfc6d6;--a4-5-soft:#969fb7;--a4-6-soft:#65719a;--a4-7-soft:#1e385d;--a4-8-soft:#172c4a;--a4-9-soft:#102139;--a4-1-muted:#f7f8fa;--a4-2-muted:#edf0f5;--a4-3-muted:#d4d8e2;--a4-4-muted:#bfc6d6;--a4-5-muted:#969fb7;--a4-6-muted:#65719a;--a4-7-muted:#1e385d;--a4-8-muted:#172c4a;--a4-9-muted:#102139;--good:#237044;--warn:#9d6e15;--bad:#a73236;}
+
+/* Source-only palette-role remapping. This provider contains no geometry or type rules. */
+.slide:not(.cover) .head>.kicker{--n-7:var(--n-5)}
+.slide.cover .lockup>.kicker{--n-1:var(--a1-5)}
+.slide [data-el="crossrail-card"].quiet .kick{--n-7:var(--n-3)}
+.slide [data-el="crossrail-card"].quiet.on:first-child .fig{--n-7:var(--n-5)}
+.slide [data-el="crossrail-hub"] .core small{--n-7:var(--n-5)}
+.slide [data-el="crossrail-legend"] .key>b{--n-7:var(--n-5)}
+.slide [data-el="crossrail-pill"] .name{--n-7:var(--n-5)}
+.slide [data-el="crossrail-roadmap"] .bar{--n-7:var(--n-5)}
+.slide [data-el="crossrail-table"] th:first-child{--bad:var(--warn)}
+
+.slide:has(>.seat.back:not(.portrait)) [data-el="crossrail-prose"]{--n-7:#555555}
+
+.slide.cover .lockup>.kicker{--page:var(--a1-5);--ink:var(--a1-5)}.slide [data-el="crossrail-chart-bar"].quiet>.bar:first-child>b{--n-7:var(--n-5)}
+
+.slide:has(.rail.on):not(:has(.head.at-bottom-left)) [data-el="crossrail-agenda"]{--n-7:#555555}
+
+.slide [data-el="crossrail-table"]:not(:has(thead)):has(tr:nth-child(6)){--n-7:var(--ink)}
+
+.slide [data-el="crossrail-pyramid"]:not(:has(.note)) .level:nth-child(4){--ink:var(--page)}

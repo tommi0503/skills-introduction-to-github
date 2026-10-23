@@ -1,0 +1,1 @@
+Plain paragraphs carry the voice, with generous paragraph gaps and restrained bold emphasis. Two-column reading and quieter secondary copy preserve the deck’s calm editorial rhythm. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

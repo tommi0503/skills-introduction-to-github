@@ -1,0 +1,1 @@
+Nested neutral discs communicate inclusion while an accent ring identifies the selected scale. Names and figures occupy the exposed top of each disc rather than overlap the next level. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

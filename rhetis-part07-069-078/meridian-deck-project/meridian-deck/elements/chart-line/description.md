@@ -1,0 +1,1 @@
+Fine interpolated segments join hollow circular points. Values sit above the points, separate from the lower category-label rail. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+One shallow capsule horizontally centres the mark, label, and optional supporting phrase; the accent version uses the corresponding on-colour. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+Ranked filled polygons share circular guide rings, with axis names placed around the edge rather than inside the plotted shapes. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

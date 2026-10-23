@@ -1,0 +1,1 @@
+Rounded questions descend through small outlined condition labels toward neutral outcomes and one pale recommendation. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

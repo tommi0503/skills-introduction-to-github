@@ -1,0 +1,1 @@
+A fine outlined tag or endpoint-marked inline highlighter gives the system its central emphasis grammar. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

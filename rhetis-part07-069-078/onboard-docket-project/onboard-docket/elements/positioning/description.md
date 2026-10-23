@@ -1,0 +1,1 @@
+A restrained cross-axis field holds rounded name or logo markers at explicit coordinates. The selected company is accented and competitors remain quiet. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Rounded process nodes connect through directional fine-line arrows, with dark start and end capsules and restrained decision emphasis. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

@@ -1,0 +1,46 @@
+[data-el="meridian-deck-person"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;anchor-scope:all;font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}[data-el="meridian-deck-person"] *{box-sizing:border-box}[data-el="meridian-deck-person"] :is(p,h2,blockquote){margin:0}[data-el="meridian-deck-person"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}[data-el="meridian-deck-person"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}[data-el="meridian-deck-person"] .fig{font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}[data-el="meridian-deck-person"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7)}[data-el="meridian-deck-person"] .icon{display:inline-block;width:48px;height:48px;flex:none}[data-el="meridian-deck-person"].people{display:flex;gap:var(--gap-lg);align-items:stretch}[data-el="meridian-deck-person"].person{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:var(--gap-sm);flex:1;padding:var(--gap-sm)}[data-el="meridian-deck-person"] .seat{width:100%;height:auto;max-height:55%;aspect-ratio:1;align-self:center;border-radius:var(--radius-sm)}[data-el="meridian-deck-person"] .seat.avatar{border-radius:999px;max-width:200px}[data-el="meridian-deck-person"].person>.name{font-size:var(--type-24);color:var(--a1-7);padding-top:var(--gap-sm)}[data-el="meridian-deck-person"].person>.note{font-size:var(--type-18);border-bottom:var(--stroke) solid var(--n-3);padding-bottom:var(--gap-sm)}
+@container (max-width:520px){[data-el="meridian-deck-person"] .name{font-size:var(--type-18)}[data-el="meridian-deck-person"] .note{font-size:var(--type-14)}[data-el="meridian-deck-person"] .fig{font-size:var(--type-36)}[data-el="meridian-deck-person"] .kick{font-size:var(--type-12)}}
+@container (max-width:300px){[data-el="meridian-deck-person"] .name{font-size:var(--type-16)}[data-el="meridian-deck-person"] .note{font-size:var(--type-12)}[data-el="meridian-deck-person"] .fig{font-size:var(--type-28)}[data-el="meridian-deck-person"] .mark{width:56px;height:56px}[data-el="meridian-deck-person"] h2{font-size:var(--type-28)}}
+@container (max-height:170px){[data-el="meridian-deck-person"] .kick{display:none}[data-el="meridian-deck-person"] .name{font-size:var(--type-16)}[data-el="meridian-deck-person"] .note{font-size:var(--type-12)}[data-el="meridian-deck-person"] .fig{font-size:var(--type-28)}}
+@container (max-height:100px){[data-el="meridian-deck-person"] .note{display:none}}
+
+/* Meridian review pass 2: intrinsic geometry and compact content. */
+[data-el="meridian-deck-person"].people{height:100%}[data-el="meridian-deck-person"].person{height:100%;overflow:visible}[data-el="meridian-deck-person"] .seat{flex:0 1 auto;max-height:52%}
+/* Pass 2: restore the source badge and circular data vocabulary. */
+[data-el="meridian-deck-person"].person>.note{font-size:var(--type-18);line-height:var(--body-line);font-weight:var(--body-weight);border-bottom:0}
+[data-el="meridian-deck-person"] small{color:inherit;margin:0}
+
+[data-el="meridian-deck-person"] small{color:inherit;margin:0}
+
+/* Source fidelity details. */
+.slide.src .body>[data-el="meridian-deck-person"].person:has(>.seat.portrait):not(:has(>.list)){position:relative;display:block;padding:0}.slide.src .body>[data-el="meridian-deck-person"].person:has(>.seat.portrait):not(:has(>.list))>.seat{position:absolute;left:72px;top:1px;width:310px;height:412px;max-width:none;max-height:none;aspect-ratio:auto;border-radius:0}.slide.src .body>[data-el="meridian-deck-person"].person:has(>.seat.portrait):not(:has(>.list))>.name{position:absolute;left:72px;top:421px;width:180px;font-size:var(--type-14);line-height:var(--meridian-deck-line-height-1p55);font-weight:var(--meridian-deck-font-weight-600);color:var(--n-7)}.slide.src .body>[data-el="meridian-deck-person"].person:has(>.seat.portrait):not(:has(>.list))>.note{position:absolute;left:240px;top:424px;width:230px;font-size:var(--type-10);line-height:var(--meridian-deck-line-height-1p55);font-weight:var(--meridian-deck-font-weight-400);color:var(--n-6);white-space:nowrap}
+
+
+
+
+/* TAIL RESTORATION */
+
+.slide .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:minmax(0,1fr);gap:var(--meridian-deck-space-37px);align-content:start;align-items:start;width:calc(100% - 5px);height:min(390px,100%);container-name:meridian-tail-people;container-type:size;padding:0;margin:var(--meridian-deck-space-neg7px) 0 0 var(--meridian-deck-space-4px)}
+.slide .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person{display:block;position:relative;width:100%;height:100%;min-width:0;padding:0;margin:0;background:none;border:0}
+.slide .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.seat.portrait{position:relative;left:auto;top:auto;width:100%;height:auto;max-height:none;max-width:none;aspect-ratio:262 / 218;padding:0;background:var(--n-2);border:0;border-radius:0}
+.slide .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.seat.portrait::before{content:attr(data-ph)}
+.slide .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.name{position:relative;inset:auto;width:auto;padding:0;margin:var(--meridian-deck-space-29px) 0 0;font-size:var(--type-20);line-height:var(--meridian-deck-line-height-1p4);font-weight:var(--name-weight);color:var(--a1-7)}
+.slide .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.note{position:relative;inset:auto;width:auto;height:auto;padding:0;margin:0;font-size:var(--type-20);line-height:var(--meridian-deck-line-height-1p4);font-weight:var(--body-weight);color:var(--n-7);white-space:normal;border:0}
+.slide .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.note>span{display:block;border-top:1px solid var(--n-3);margin-top:var(--meridian-deck-space-15px);padding-top:var(--meridian-deck-space-15px);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--meridian-deck-line-height-1p4)}
+
+@container meridian-tail-people (max-width:1000px){
+[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.name{font-size:var(--type-18);margin-top:var(--meridian-deck-space-20px)}
+[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.note{font-size:var(--type-18)}
+[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.note>span{font-size:var(--type-16);margin-top:var(--meridian-deck-space-10px);padding-top:var(--meridian-deck-space-10px)}
+}
+
+/* RESTORATION REGRESSION AUDIT */
+[data-el="meridian-deck-person"].person>.note{color:var(--n-7)}
+
+.slide.src .body>[data-el="meridian-deck-person"].person:has(>.seat.portrait):not(:has(>.list))>.note{color:var(--n-7)}
+
+/* Compact profile: fixed square photo and adjacent readable copy. */
+.slide .body>[data-el="meridian-deck-person"].person:has(>.seat.avatar):has(>.list){display:grid;grid-template-columns:180px minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr);align-content:center;justify-content:center;gap:var(--gap-sm) var(--gap);padding:var(--gap)}.slide .body>[data-el="meridian-deck-person"].person:has(>.seat.avatar):has(>.list)>.seat.avatar{grid-column:1;grid-row:1 / span 3;position:relative;inset:auto;display:grid;width:180px;height:180px;max-height:none;max-width:none;aspect-ratio:1;align-self:center;justify-self:center;flex:none}.slide .body>[data-el="meridian-deck-person"].person:has(>.seat.avatar):has(>.list)>.name{grid-column:2;grid-row:1;position:relative;inset:auto;font-size:var(--type-24);padding:0;margin:0;width:auto;align-self:end}.slide .body>[data-el="meridian-deck-person"].person:has(>.seat.avatar):has(>.list)>.note{grid-column:2;grid-row:2;position:relative;inset:auto;font-size:var(--type-18);padding:0;margin:0;width:auto;white-space:normal}.slide .body>[data-el="meridian-deck-person"].person:has(>.seat.avatar):has(>.list)>.list{grid-column:2;grid-row:3;position:relative;inset:auto;font-size:var(--type-16);line-height:var(--body-line);padding-left:var(--pad);margin:0;align-self:start}
+
+/* Source placeholders stay unlabelled; ordinary library seats retain data-ph. */
+.slide.src .body>[data-el="meridian-deck-person"].people:has(>.person:nth-child(4):last-child)>[data-el="meridian-deck-person"].person>.seat.portrait::before{content:none}

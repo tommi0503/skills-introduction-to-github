@@ -1,0 +1,1 @@
+A bare, right-weighted figure anchors a quiet label and note. Rows use thin dividers on one neutral strip, directly recalling the original KPI table. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

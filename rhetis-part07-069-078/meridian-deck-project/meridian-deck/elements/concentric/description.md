@@ -1,0 +1,1 @@
+Nested circular fields share a lower-left origin, turning set inclusion into a clear outer-to-inner hierarchy. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

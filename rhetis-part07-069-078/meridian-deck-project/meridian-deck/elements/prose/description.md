@@ -1,0 +1,1 @@
+Unboxed paragraphs use a readable rhythm and accent-weight emphasis; the two-column version separates continuous narrative with a generous gutter. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

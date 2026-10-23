@@ -1,0 +1,216 @@
+{
+  "collection": "vectorbox",
+  "sourceSha256": "f7115472ed780ec9a5f6c6f67ac25ad54841ea3c0d0ba97647498adfff44a6a9",
+  "summary": {
+    "goldenRows": 6,
+    "goldenFailures": 0,
+    "regularRows": 3,
+    "regularFailures": 0,
+    "intentionalCompositions": 1,
+    "notApplicable": 1
+  },
+  "checks": [
+    {
+      "fixture": "card / card-2-quiet min 8x4",
+      "cardCount": 2,
+      "namedCardCount": 2,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": true
+    },
+    {
+      "fixture": "card / card-3-icon3d min 9x4",
+      "cardCount": 3,
+      "namedCardCount": 3,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": true
+    },
+    {
+      "fixture": "card / card-3-line min 9x4",
+      "cardCount": 3,
+      "namedCardCount": 3,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": true
+    },
+    {
+      "fixture": "card / card-3-on min 9x4",
+      "cardCount": 3,
+      "namedCardCount": 3,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": true
+    },
+    {
+      "fixture": "card / card-4 min 12x4",
+      "cardCount": 4,
+      "namedCardCount": 4,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": true
+    },
+    {
+      "fixture": "card / card-5-tone min 12x4",
+      "cardCount": 5,
+      "namedCardCount": 5,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": true
+    },
+    {
+      "fixture": "card / source-burst-pair min 6x3",
+      "cardCount": 2,
+      "namedCardCount": 0,
+      "nameAbsent": true,
+      "titleOffsets": [],
+      "drift": null,
+      "unscaledDrift": null,
+      "status": "not-applicable",
+      "golden": false
+    },
+    {
+      "fixture": "card / source-caption-pair min 6x4",
+      "cardCount": 2,
+      "namedCardCount": 2,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        29
+      ],
+      "drift": 29,
+      "unscaledDrift": 58,
+      "status": "intentional-composition",
+      "golden": false,
+      "intentionalComposition": {
+        "reason": "The source page places normal and quiet caption cards at different vertical origins; quiet preserves its 58px internal source offset. Raw drift is retained, not counted as a golden-row pass.",
+        "expectedUnscaledOffset": 58
+      }
+    },
+    {
+      "fixture": "card / source-outline-icons-four min 12x5",
+      "cardCount": 4,
+      "namedCardCount": 4,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": false
+    },
+    {
+      "fixture": "card / source-results-four min 12x5",
+      "cardCount": 4,
+      "namedCardCount": 4,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": false
+    },
+    {
+      "fixture": "card / source-ring-icons-four min 12x5",
+      "cardCount": 4,
+      "namedCardCount": 4,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "drift": 0,
+      "unscaledDrift": 0,
+      "status": "pass",
+      "golden": false
+    }
+  ],
+  "intentionalComposition": [
+    {
+      "fixture": "card / source-caption-pair min 6x4",
+      "cardCount": 2,
+      "namedCardCount": 2,
+      "nameAbsent": false,
+      "titleOffsets": [
+        0,
+        29
+      ],
+      "drift": 29,
+      "unscaledDrift": 58,
+      "status": "intentional-composition",
+      "golden": false,
+      "intentionalComposition": {
+        "reason": "The source page places normal and quiet caption cards at different vertical origins; quiet preserves its 58px internal source offset. Raw drift is retained, not counted as a golden-row pass.",
+        "expectedUnscaledOffset": 58
+      }
+    }
+  ],
+  "notApplicable": [
+    {
+      "fixture": "card / source-burst-pair min 6x3",
+      "cardCount": 2,
+      "namedCardCount": 0,
+      "nameAbsent": true,
+      "titleOffsets": [],
+      "drift": null,
+      "unscaledDrift": null,
+      "status": "not-applicable",
+      "golden": false
+    }
+  ]
+}

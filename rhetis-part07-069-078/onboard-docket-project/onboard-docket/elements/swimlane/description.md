@@ -1,0 +1,1 @@
+Quiet ownership lanes contain a grid of rounded process nodes. Capsule endpoints, outlined questions and small directional connectors repeat the flowchart vocabulary inside the lane structure. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

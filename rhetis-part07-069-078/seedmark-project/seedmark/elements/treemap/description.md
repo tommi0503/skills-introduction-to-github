@@ -1,0 +1,1 @@
+Proportional outlined tiles create a measured neutral mosaic with one pale accent block carrying the decision. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

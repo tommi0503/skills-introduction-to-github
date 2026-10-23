@@ -1,0 +1,1 @@
+Filled generic polygons derive directly from each series numeric variables over three to eight axes. Circular guides, reserved perimeter labels and separate bottom series names retain the restrained diagram vocabulary. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Numbered entries form a generous three-column grid; accent numbers and horizontal hairlines keep the hierarchy clear. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

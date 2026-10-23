@@ -1,0 +1,1 @@
+A rounded document panel contains monospaced source loaded through an explicit Nanum Gothic Coding kit extension. A capsule file label, automatic line counters and high-contrast token colors support source review. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

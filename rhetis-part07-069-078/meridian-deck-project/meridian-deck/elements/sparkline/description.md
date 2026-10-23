@@ -1,0 +1,1 @@
+Small square-ended trend bars sit beside a larger figure; good and bad variants use semantic palette roles. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

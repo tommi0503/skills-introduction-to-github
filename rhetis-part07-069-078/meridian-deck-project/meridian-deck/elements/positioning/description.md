@@ -1,0 +1,1 @@
+Capsule markers sit on crossing value axes over a quiet two-part accent field; one ranked marker carries the strongest emphasis. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

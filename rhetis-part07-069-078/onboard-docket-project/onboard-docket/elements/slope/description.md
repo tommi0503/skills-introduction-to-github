@@ -1,0 +1,1 @@
+Before and after values share a restrained row with an element-drawn relation line. The dumbbell variant uses circular endpoint badges and one selected pair is accented. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

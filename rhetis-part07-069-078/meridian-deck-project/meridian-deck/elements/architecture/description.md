@@ -1,0 +1,1 @@
+A stack of fine-outlined quiet layers pairs an accent capsule name with equally weighted white capability chips. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

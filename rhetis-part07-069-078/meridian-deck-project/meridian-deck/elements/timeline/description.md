@@ -1,0 +1,1 @@
+Round date badges sit on a fine shared line, with a restrained alternate-height rhythm for longer histories. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

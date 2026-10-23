@@ -1,0 +1,1 @@
+A slim actual fill sits over quiet qualitative bands, with a separate target label and tick. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

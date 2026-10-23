@@ -1,0 +1,1 @@
+A short neutral vertical rule precedes strong sans-serif type, with accent-weight words and an optional secondary sentence. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

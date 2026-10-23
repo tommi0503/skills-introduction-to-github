@@ -1,0 +1,1 @@
+Nine quiet panels form a finely ruled square matrix, with one decisive accent cell and compact outside axis labels. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

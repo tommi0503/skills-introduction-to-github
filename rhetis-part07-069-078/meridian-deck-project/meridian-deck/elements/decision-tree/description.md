@@ -1,0 +1,1 @@
+A central accent question splits into evenly spaced conditional branches and quiet rounded outcomes. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

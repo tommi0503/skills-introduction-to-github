@@ -1,0 +1,1 @@
+Two substantial figures share a neutral capsule, joined by an element-drawn directional arrow. The destination carries a deeper accent while the starting value stays quiet. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Plans use tall quiet panels with an accent top rule, a clear price lockup, and a compact feature list. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+A full sentence sits in a shallow accent capsule, with an optional restrained icon and bold words carrying the conclusion. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+A broad quiet circular centre connects the ranked members. The four-member arrangement uses diagonal circular badges and outside notes. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

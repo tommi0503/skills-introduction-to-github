@@ -1,0 +1,1 @@
+Owners form quiet horizontal lanes under a shared process grid. Rectangular and capsule nodes use the same thin directional connectors as the flowchart. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

@@ -1,0 +1,36 @@
+[data-el="meridian-deck-image-frame"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;anchor-scope:all;font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}[data-el="meridian-deck-image-frame"] *{box-sizing:border-box}[data-el="meridian-deck-image-frame"] :is(p,h2,blockquote){margin:0}[data-el="meridian-deck-image-frame"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--n-7)}[data-el="meridian-deck-image-frame"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}[data-el="meridian-deck-image-frame"] .fig{font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}[data-el="meridian-deck-image-frame"] .note{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7)}[data-el="meridian-deck-image-frame"] .icon{display:inline-block;width:48px;height:48px;flex:none}[data-el="meridian-deck-image-frame"]{display:flex;align-items:center;justify-content:center;padding:calc(var(--gap-sm)/2);border:var(--stroke) solid var(--a1);position:relative}[data-el="meridian-deck-image-frame"] .seat{height:100%;max-width:100%;aspect-ratio:1;background:var(--n-2)}[data-el="meridian-deck-image-frame"]::before{content:'';position:absolute;z-index:2;left:calc(var(--gap-sm)*-.25);top:calc(var(--gap-sm)*-.25);width:24px;height:24px;border-radius:999px;background:var(--a1);border:var(--stroke) solid var(--page)}
+@container (max-width:520px){[data-el="meridian-deck-image-frame"] .name{font-size:var(--type-18)}[data-el="meridian-deck-image-frame"] .note{font-size:var(--type-14)}[data-el="meridian-deck-image-frame"] .fig{font-size:var(--type-36)}[data-el="meridian-deck-image-frame"] .kick{font-size:var(--type-12)}}
+@container (max-width:300px){[data-el="meridian-deck-image-frame"] .name{font-size:var(--type-16)}[data-el="meridian-deck-image-frame"] .note{font-size:var(--type-12)}[data-el="meridian-deck-image-frame"] .fig{font-size:var(--type-28)}[data-el="meridian-deck-image-frame"] .mark{width:56px;height:56px}[data-el="meridian-deck-image-frame"] h2{font-size:var(--type-28)}}
+@container (max-height:170px){[data-el="meridian-deck-image-frame"] .kick{display:none}[data-el="meridian-deck-image-frame"] .name{font-size:var(--type-16)}[data-el="meridian-deck-image-frame"] .note{font-size:var(--type-12)}[data-el="meridian-deck-image-frame"] .fig{font-size:var(--type-28)}}
+@container (max-height:100px){[data-el="meridian-deck-image-frame"] .note{display:none}}
+
+[data-el="meridian-deck-image-frame"] small{color:inherit;margin:0}
+
+[data-el="meridian-deck-image-frame"] small{color:inherit;margin:0}
+
+/* Critical integration: flex-basis and root cover matching. */
+[data-el="meridian-deck-image-frame"] .seat{width:min(100cqw,100cqh);height:min(100cqw,100cqh);aspect-ratio:1;flex:none}
+/* Critical integration: flex-basis and root cover matching. */
+[data-el="meridian-deck-image-frame"] .seat{width:min(100cqw,100cqh);height:min(100cqw,100cqh);aspect-ratio:1;flex:none}
+/* Scoped media composition behavior. */
+.slide .body>.stack>.split>.split>[data-el="meridian-deck-image-frame"]{height:137px;align-self:start;border:0;padding:0;background:var(--n-2)}.slide .body>.stack>.split>.split>[data-el="meridian-deck-image-frame"]::before{content:none}.slide .body>.stack>.split>.split>[data-el="meridian-deck-image-frame"]>.seat{width:100%;height:100%;max-width:100%;max-height:100%;aspect-ratio:auto}.slide .split.wide-left>[data-el="meridian-deck-image-frame"]{height:392px;align-self:start;border:0;padding:0;background:var(--n-2);translate:0 15px}.slide .split.wide-left>[data-el="meridian-deck-image-frame"]::before{content:none}.slide .split.wide-left>[data-el="meridian-deck-image-frame"]>.seat{width:100%;height:100%;aspect-ratio:auto;max-width:none;max-height:none}
+
+/* Source fidelity panels. */
+.slide .body>.split:not(.wide-left)>.stack>[data-el="meridian-deck-image-frame"]{height:367px;width:439px;min-height:367px;flex:none;margin-top:calc(var(--pad) + var(--stroke)*2);margin-left:calc(var(--top-h) - var(--stroke)*7);padding:0;border:0;background:var(--n-2)}.slide .body>.split:not(.wide-left)>.stack>[data-el="meridian-deck-image-frame"]::before{content:none}.slide .body>.split:not(.wide-left)>.stack>[data-el="meridian-deck-image-frame"]>.seat{width:100%;height:100%;aspect-ratio:auto;max-width:none;max-height:none}
+
+
+
+
+/* TAIL RESTORATION */
+
+.slide .body>.group.three:has(>.stack>[data-el="meridian-deck-image-frame"])>.stack>[data-el="meridian-deck-image-frame"]{position:relative;display:block;width:350px;height:203px;min-height:0;max-height:none;padding:var(--meridian-deck-space-5px);border:1px solid var(--a1-4-muted);background:var(--page);border-radius:0;overflow:visible}
+.slide .body>.group.three:has(>.stack>[data-el="meridian-deck-image-frame"])>.stack>[data-el="meridian-deck-image-frame"]>.seat{display:block;width:338px;height:191px;max-width:none;max-height:none;aspect-ratio:auto;background:var(--n-2);border-radius:0}
+.slide .body>.group.three:has(>.stack>[data-el="meridian-deck-image-frame"])>.stack>[data-el="meridian-deck-image-frame"]>.seat::before{content:attr(data-ph);position:absolute;left:50%;top:50%;translate:-50% -50%}.slide .body>.group.three:has(>.stack>[data-el="meridian-deck-image-frame"])>.stack>[data-el="meridian-deck-image-frame"]>.seat::after{content:none}
+.slide .body>.group.three:has(>.stack>[data-el="meridian-deck-image-frame"])>.stack>[data-el="meridian-deck-image-frame"]::before{content:"";position:absolute;left:-5px;top:-7px;width:33px;height:33px;border:0;border-radius:50%;background:var(--a1);z-index:2}
+.slide .body>.group.three:has(>.stack>[data-el="meridian-deck-image-frame"])>.stack>[data-el="meridian-deck-image-frame"]::after{content:"";position:absolute;left:5px;top:3px;width:13px;height:13px;z-index:3;background:linear-gradient(var(--a1-on),var(--a1-on)) center/2px 13px no-repeat,linear-gradient(var(--a1-on),var(--a1-on)) center/13px 2px no-repeat;transform:none}
+
+/* Final immutable audit repairs. */
+.slide.src .split.wide-left>[data-el="meridian-deck-image-frame"].frame{width:100%;max-width:100%}
+
+/* Source placeholders stay unlabelled; ordinary library seats retain data-ph. */
+.slide.src .body>.group.three:has(>.stack>[data-el="meridian-deck-image-frame"])>.stack>[data-el="meridian-deck-image-frame"]>.seat::before{content:none}

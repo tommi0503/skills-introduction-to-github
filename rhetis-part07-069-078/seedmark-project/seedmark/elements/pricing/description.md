@@ -1,0 +1,1 @@
+Pricing plans use quiet outlined columns, an aligned price divider and one highlighter-backed recommended plan. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

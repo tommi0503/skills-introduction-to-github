@@ -1,0 +1,1 @@
+Stage panels place clear titles and touchpoint notes below a numeric mood path. Small accent points and a restrained connecting line trace the experience, with pains separated on a high-contrast local surface. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

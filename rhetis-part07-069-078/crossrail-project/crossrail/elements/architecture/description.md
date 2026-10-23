@@ -1,0 +1,1 @@
+Straight horizontal layers use a deep leading rail, strong layer name and finely outlined capsules for their internal services. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

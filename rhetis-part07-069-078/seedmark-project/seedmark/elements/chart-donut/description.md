@@ -1,0 +1,1 @@
+A clean circular share uses a modest ring and centred figure with a short noun, staying legible at zero and full values. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

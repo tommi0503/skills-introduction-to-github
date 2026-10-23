@@ -1,0 +1,1 @@
+Small ink points join through thin continuous anchor-connected strokes, with figures above and axis labels below. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

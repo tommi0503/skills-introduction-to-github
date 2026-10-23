@@ -1,0 +1,1 @@
+Rectangular columns stand on a finely ruled plot with values clearly above the bars and labels below. The singled-out result deepens into the main accent; horizontal bars keep the same label hierarchy. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

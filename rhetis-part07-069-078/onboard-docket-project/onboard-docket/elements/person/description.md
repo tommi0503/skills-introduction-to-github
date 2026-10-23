@@ -1,0 +1,1 @@
+Circular or rounded portrait seats sit above aligned names and concise roles. A row distributes people evenly and reserves generous quiet space around each portrait. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Floating neutral and accent bars trace a running total using exact before-and-after values and thin dashed bridges. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

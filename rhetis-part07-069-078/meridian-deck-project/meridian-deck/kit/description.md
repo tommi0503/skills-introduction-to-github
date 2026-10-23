@@ -1,0 +1,1 @@
+Meridian Deck frames business information with a fine continuous rule above and below a generous white field. Strong sans-serif headings share a short vertical hairline; circular badges, broad rounded panels, and compact capsules turn a restrained grid into a confident presentation. Only one ranked accent leads, while neutral supporting figures remain quiet.

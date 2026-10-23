@@ -1,0 +1,1 @@
+A 12 by 6 body grid sits between a short headline rule and continuous top and bottom furniture. The headline pairs a decisive accent title with a quiet baseline subtitle. Covers use large unboxed typography and a simple circular placeholder field; the bottom metadata is a clean full-width capsule band.

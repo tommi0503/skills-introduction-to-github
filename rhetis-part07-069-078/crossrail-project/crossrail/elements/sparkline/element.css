@@ -1,0 +1,8 @@
+[data-el="crossrail-sparkline"]{display:flex;align-items:end;gap:calc(var(--gap-sm)/6);min-height:50px;min-width:100px;container-type:size} [data-el="crossrail-sparkline"]>span{flex:1;height:calc(var(--v)/var(--max)*100%);background:var(--n-4);min-width:2px} [data-el="crossrail-sparkline"].bars>span{background:var(--a1-7)} [data-el="crossrail-sparkline"].up>span{background:var(--good)} [data-el="crossrail-sparkline"].down>span{background:var(--bad)}
+
+@container(max-width:500px){[data-el="crossrail-sparkline"]>span{min-width:1px}}
+
+[data-el="crossrail-sparkline"] small{color:inherit;margin:0}
+
+/* Final functional review: sizing, data visibility and relationship geometry. */
+.parts>[data-el="crossrail-sparkline"]{height:calc(var(--gap-lg)*2);flex:none;min-height:calc(var(--gap-lg)*2)}

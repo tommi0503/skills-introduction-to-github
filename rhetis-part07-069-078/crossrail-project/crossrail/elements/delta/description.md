@@ -1,0 +1,1 @@
+A quiet previous figure and a deep-accent resulting figure face each other across a deliberately drawn directional arrow. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

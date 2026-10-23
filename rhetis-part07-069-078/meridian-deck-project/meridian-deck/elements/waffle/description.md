@@ -1,0 +1,1 @@
+Small repeated square units express a share as a count; the figures variant clips the same units into small people. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

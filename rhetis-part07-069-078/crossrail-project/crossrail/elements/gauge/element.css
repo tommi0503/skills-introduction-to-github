@@ -1,0 +1,6 @@
+[data-el="crossrail-gauge"]{position:relative;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;align-content:center;gap:var(--gap-sm);padding-bottom:var(--gap);container-type:inline-size} [data-el="crossrail-gauge"]::before{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:var(--n-2)} [data-el="crossrail-gauge"]::after{content:"";position:absolute;left:0;bottom:0;height:12px;width:calc(var(--v)*1%);background:var(--a1-7)} [data-el="crossrail-gauge"] .name{font-size:var(--type-24);font-weight:var(--name-weight);margin:0} [data-el="crossrail-gauge"] .fig{font-size:var(--type-32);font-weight:var(--figure-weight);margin:0} @container(max-width:400px){[data-el="crossrail-gauge"] .name{font-size:var(--type-18)} [data-el="crossrail-gauge"] .fig{font-size:var(--type-24)}}
+
+[data-el="crossrail-gauge"] small{color:inherit;margin:0}
+
+/* Final functional review: sizing, data visibility and relationship geometry. */
+[data-el="crossrail-gauge"]{container-type:size}[data-el="crossrail-gauge"]::before,[data-el="crossrail-gauge"]::after{bottom:calc(50% - var(--gap-lg))}@container(max-height:180px){[data-el="crossrail-gauge"]::before,[data-el="crossrail-gauge"]::after{bottom:0}}

@@ -1,0 +1,1 @@
+A compact dark source distributes measured neutral bands into rounded destinations, making the main path visibly accented. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

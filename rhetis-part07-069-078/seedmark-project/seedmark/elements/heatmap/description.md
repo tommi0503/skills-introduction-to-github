@@ -1,0 +1,1 @@
+Rounded density cells use a single ranked accent at graduated strength while preserving a readable neutral label system. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

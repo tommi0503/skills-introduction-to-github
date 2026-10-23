@@ -1,0 +1,1 @@
+A modest rounded source panel uses real monospaced type, preserved indentation and neutral CSS line counters. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

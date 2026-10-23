@@ -1,0 +1,1 @@
+Two rectangular pans share a fine beam whose tilt follows the supplied value. The verdict sits in a restrained triangular fulcrum below the comparison. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

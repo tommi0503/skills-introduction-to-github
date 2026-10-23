@@ -1,0 +1,1 @@
+Rounded nodes and pointed decisions occupy a regular grid, joined by small directional connector and arrowhead shapes. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

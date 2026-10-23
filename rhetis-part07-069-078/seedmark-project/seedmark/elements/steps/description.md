@@ -1,0 +1,1 @@
+Dark numbered or icon disks sit on a fine connecting rule above aligned short stage captions. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

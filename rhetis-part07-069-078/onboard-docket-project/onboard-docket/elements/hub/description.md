@@ -1,0 +1,1 @@
+Spokes follow a semicircular arc above a bottom core. Each spoke combines a colored capsule name, quiet explanation and circular icon or number mark, echoing the keyword diagram in the source deck. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+A large voice is bracketed by fine horizontal rules. The attribution pairs a restrained circular portrait seat with a name and role on a clean two-line baseline. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

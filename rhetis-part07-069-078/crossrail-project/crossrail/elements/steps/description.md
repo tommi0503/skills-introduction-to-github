@@ -1,0 +1,1 @@
+Horizontal steps join through angular chevron heads before ruled name and note blocks. The vertical form becomes a sequence of fine outline capsules with restrained circular marks. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

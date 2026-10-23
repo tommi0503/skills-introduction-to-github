@@ -1,0 +1,1 @@
+Nine equal ruled decision boxes surround two restrained three-label axes. A single deep cell establishes the chosen option without breaking the grid. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

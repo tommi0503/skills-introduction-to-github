@@ -1,0 +1,1 @@
+A single deep source distributes into quiet rectangular branches through proportioned bands. The principal path receives a stronger leading rail. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

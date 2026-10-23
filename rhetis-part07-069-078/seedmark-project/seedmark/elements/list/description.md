@@ -1,0 +1,1 @@
+A fine editorial list uses true CSS counters, ink dots or drawn check marks, with optional hairline divisions. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

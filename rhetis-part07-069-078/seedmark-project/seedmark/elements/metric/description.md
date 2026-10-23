@@ -1,0 +1,1 @@
+Bare bold figures sit above short noun labels, with only fine dividers between peers. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

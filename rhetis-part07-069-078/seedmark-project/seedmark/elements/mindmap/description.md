@@ -1,0 +1,1 @@
+A single central capsule fans into softly linked outlined thought blocks, keeping the argument free of decorative texture. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

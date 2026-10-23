@@ -1,0 +1,1 @@
+A quiet rounded code panel uses the bundled monospaced family, generated line numbers, and deep ranked token colours. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

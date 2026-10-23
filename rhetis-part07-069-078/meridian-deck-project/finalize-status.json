@@ -1,0 +1,57 @@
+{
+  "collection": "meridian-deck",
+  "status": "rendered; manual fidelity acceptance is separate",
+  "completedAtUTC": "2026-10-23T17:39:29Z",
+  "commands": [
+    {
+      "script": "integrate_runtime.py",
+      "args": [
+        "meridian-deck"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "validate.py",
+      "args": [
+        "meridian-deck"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "check_resources.py",
+      "args": [
+        "meridian-deck"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "qa/audit_css.py",
+      "args": [
+        "meridian-deck"
+      ],
+      "seconds": 0.3
+    },
+    {
+      "script": "render.py",
+      "args": [
+        "meridian-deck",
+        "all"
+      ],
+      "seconds": 127.4
+    },
+    {
+      "script": "official_preview.py",
+      "args": [
+        "meridian-deck"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "fidelity.py",
+      "args": [
+        "meridian-deck"
+      ],
+      "seconds": 78.6
+    }
+  ]
+}

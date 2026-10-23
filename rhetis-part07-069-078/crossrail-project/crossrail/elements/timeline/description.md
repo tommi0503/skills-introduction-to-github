@@ -1,0 +1,1 @@
+Moments attach to a fine rule through small circular nodes. Deep date strips and alternating label blocks translate the source’s quarter-by-quarter roadmap. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

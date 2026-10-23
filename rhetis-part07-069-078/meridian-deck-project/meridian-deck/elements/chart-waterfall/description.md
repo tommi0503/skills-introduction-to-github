@@ -1,0 +1,1 @@
+Floating rectangular steps reflect the supplied running totals; fine horizontal connectors link successive levels. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

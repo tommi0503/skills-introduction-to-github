@@ -1,0 +1,1 @@
+A symmetric tiered silhouette gives its dark apex priority while lower tiers step quietly toward the ground. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

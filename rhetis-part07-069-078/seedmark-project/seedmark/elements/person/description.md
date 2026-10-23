@@ -1,0 +1,1 @@
+A circular portrait seat, bold name and restrained role caption form a simple centred team profile. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

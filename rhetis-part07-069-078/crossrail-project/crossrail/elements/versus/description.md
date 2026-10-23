@@ -1,0 +1,1 @@
+Two calm panels face across a small comparison mark. Deep top rails and ruled headings link the comparison to the source partnership page. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

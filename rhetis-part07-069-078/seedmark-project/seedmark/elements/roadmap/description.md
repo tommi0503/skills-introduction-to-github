@@ -1,0 +1,1 @@
+Rounded duration strips sit on a disciplined period grid, with one ranked accent path and dashed milestone marks. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

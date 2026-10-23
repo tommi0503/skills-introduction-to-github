@@ -1,0 +1,1 @@
+An accent source feeds proportionally marked branches through broad quiet bands; secondary splits remain inside their parent branch. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

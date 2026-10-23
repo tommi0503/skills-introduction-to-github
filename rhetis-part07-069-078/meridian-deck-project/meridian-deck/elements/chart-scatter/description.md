@@ -1,0 +1,1 @@
+Small round points sit on quiet value axes; bubble variants size the same circular form by the supplied radius. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

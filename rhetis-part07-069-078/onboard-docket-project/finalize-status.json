@@ -1,0 +1,57 @@
+{
+  "collection": "onboard-docket",
+  "status": "rendered; manual fidelity acceptance is separate",
+  "completedAtUTC": "2026-10-23T17:45:38Z",
+  "commands": [
+    {
+      "script": "integrate_runtime.py",
+      "args": [
+        "onboard-docket"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "validate.py",
+      "args": [
+        "onboard-docket"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "check_resources.py",
+      "args": [
+        "onboard-docket"
+      ],
+      "seconds": 0.1
+    },
+    {
+      "script": "qa/audit_css.py",
+      "args": [
+        "onboard-docket"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "render.py",
+      "args": [
+        "onboard-docket",
+        "all"
+      ],
+      "seconds": 144.4
+    },
+    {
+      "script": "official_preview.py",
+      "args": [
+        "onboard-docket"
+      ],
+      "seconds": 0.2
+    },
+    {
+      "script": "fidelity.py",
+      "args": [
+        "onboard-docket"
+      ],
+      "seconds": 33.1
+    }
+  ]
+}

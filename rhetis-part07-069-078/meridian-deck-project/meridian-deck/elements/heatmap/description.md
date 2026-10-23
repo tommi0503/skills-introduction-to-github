@@ -1,0 +1,1 @@
+A compact matrix of quiet rounded cells translates density into accent strength while values retain a solid legible backing. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

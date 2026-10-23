@@ -1,0 +1,1 @@
+Counted square or person-shaped units form a precise share, supported by a prominent plain figure and noun. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

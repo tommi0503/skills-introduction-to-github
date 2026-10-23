@@ -1,0 +1,1 @@
+Small labels use a restrained deep capsule; an inline highlight uses a quiet accent field that follows the running text rather than making a separate sticker. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

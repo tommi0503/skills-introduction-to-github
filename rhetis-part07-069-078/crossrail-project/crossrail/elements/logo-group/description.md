@@ -1,0 +1,1 @@
+Square logo seats form a generously spaced row or wrap inside fine horizontal rules. The frame supports identity without inventing logo artwork. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

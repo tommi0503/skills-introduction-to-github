@@ -1,0 +1,1 @@
+A quiet horizontal row combines a capsule actual bar, a thin target mark and an explicit figure. Labels have a dedicated leading column and target notes sit below the plot. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Progressively wider clipped bands build a tiered structure. The top tier carries the principal accent, while lower tiers recede into softly rounded document tones. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

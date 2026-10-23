@@ -1,0 +1,1 @@
+Circular numbered badges lead equally spaced rounded panels, joined by small directional connectors. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+Square-ended bars stack ranked series with light separators, keeping category labels outside the plotted fill. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

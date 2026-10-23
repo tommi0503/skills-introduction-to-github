@@ -1,0 +1,1 @@
+A fine rectangular picture seat receives only a small structural accent at its upper edge. The image itself remains a numbered neutral seat. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

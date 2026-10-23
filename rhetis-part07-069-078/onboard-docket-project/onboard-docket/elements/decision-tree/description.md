@@ -1,0 +1,1 @@
+Capsule questions branch into named conditions and rounded outcomes. The selected outcome alone uses an accent fill, with thin links and shared spacing preserving a clear reading direction. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

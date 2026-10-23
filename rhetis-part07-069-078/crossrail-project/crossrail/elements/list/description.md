@@ -1,0 +1,1 @@
+Ruled or open entries use a modest marker column and strong name before the supporting sentence. Numbered and check states draw their markers without adding text to the data. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

@@ -1,0 +1,1 @@
+Three to six flat trapezoid fields narrow through the actual provided stage shares. The final stage becomes deep, carrying a clear name and numeric figure. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

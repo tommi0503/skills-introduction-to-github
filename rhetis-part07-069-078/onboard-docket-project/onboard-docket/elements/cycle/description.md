@@ -1,0 +1,1 @@
+Members travel around a thin circular path and a quiet central disc. Number or icon circles repeat the onboarding diagram language rather than adding decorative symbols. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

@@ -1,0 +1,1 @@
+Measured rounded members gather around a compact central capsule, linked by restrained radial or circular strokes. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

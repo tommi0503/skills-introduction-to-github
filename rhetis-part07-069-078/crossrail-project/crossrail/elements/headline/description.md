@@ -1,0 +1,1 @@
+A left aligned statement uses a small quiet kicker, strong sans heading and a subordinate note. A larger statement, centred placement and accent-ground state remain part of the same hierarchy. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

@@ -1,0 +1,20 @@
+[data-el="crossrail-versus"]{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch;gap:var(--gap);container-type:inline-size} [data-el="crossrail-versus"] .side{box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:var(--pad);background:var(--n-1);border-top:12px solid var(--n-4);gap:var(--gap)} [data-el="crossrail-versus"] .side.on{border-color:var(--a1-7);background:var(--a1-1-soft)} [data-el="crossrail-versus"] .side>.name{font-size:var(--type-32);font-weight:var(--name-weight);margin:0;border-bottom:1px solid var(--n-3);padding-bottom:var(--gap-sm)} [data-el="crossrail-versus"] .vs{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);color:var(--n-7)} @container(max-width:650px){[data-el="crossrail-versus"] .side{padding:var(--gap-sm)} [data-el="crossrail-versus"] .side>.name{font-size:var(--type-24)}}
+[data-el="crossrail-versus"] .side>.list{flex:1;min-height:0;container-type:inline-size;justify-content:center;gap:var(--gap-sm)}[data-el="crossrail-versus"] .side>.list .name{font-size:var(--type-20)}[data-el="crossrail-versus"] .side>.list .note{font-size:var(--type-16)}
+
+[data-el="crossrail-versus"] small{color:inherit;margin:0}
+
+[data-el="crossrail-versus"]:has(.side>.pill){grid-template-columns:minmax(0,1fr) 10px minmax(0,1fr);gap:var(--gap);transform:translateY(calc(var(--gap-sm)/-4))}
+[data-el="crossrail-versus"]:has(.side>.pill) .side{position:relative;display:flex;flex-direction:column;justify-content:flex-start;gap:0;padding:0;border:0;background:transparent}
+[data-el="crossrail-versus"]:has(.side>.pill) .side::before{content:"";position:absolute;inset:calc(var(--gap-lg)*2) 0 0;background:var(--n-1);z-index:-1}
+[data-el="crossrail-versus"]:has(.side>.pill) .side>.name{height:65px;min-height:65px;display:flex;align-items:center;justify-content:center;background:var(--a1-6);color:var(--page);font-size:var(--type-26);padding:0;border:0}
+[data-el="crossrail-versus"]:has(.side>.pill) .side.on>.name{background:var(--a1-7)}
+[data-el="crossrail-versus"]:has(.side>.pill) .side>.pill{margin:var(--gap-lg) var(--pad) 0;height:65px;min-height:65px}
+[data-el="crossrail-versus"]:has(.side>.pill) .side>.prose{margin:calc(var(--gap-sm)*4/3) var(--pad) 0;min-height:72px}
+[data-el="crossrail-versus"]:has(.side>.pill) .side>.list{margin:var(--gap) var(--pad) 0;flex:none;min-height:96px;justify-content:flex-start;gap:var(--gap-sm)}
+[data-el="crossrail-versus"]:has(.side>.pill) .side>.list .name{font-size:var(--type-18);font-weight:var(--body-weight)}
+[data-el="crossrail-versus"]:has(.side>.pill) .vs{align-items:flex-start;position:relative;padding-top:calc(var(--gap-sm)*5/3);overflow:visible}
+[data-el="crossrail-versus"]:has(.side>.pill) .vs .icon{width:52px;height:40px;max-width:none;color:var(--a1-6);stroke-width:6}
+
+[data-el="crossrail-versus"]:has(.side>.pill) .vs::before{content:"";position:absolute;left:calc(var(--gap)*-1);top:calc(var(--gap-sm)*5/6);width:52px;height:46px;background:var(--a1-6);clip-path:polygon(0 20%,68% 20%,68% 0,100% 50%,68% 100%,68% 80%,0 80%)}
+
+[data-el="crossrail-versus"]:has(.side>.pill) .side>.pill{width:calc(100% - var(--pad)*2);max-width:calc(100% - var(--pad)*2);flex:none}

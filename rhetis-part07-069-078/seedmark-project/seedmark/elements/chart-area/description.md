@@ -1,0 +1,1 @@
+Continuous translucent ranked-accent areas interpolate precisely between the supplied points, with series names above and axis labels below. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

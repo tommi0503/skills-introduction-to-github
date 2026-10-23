@@ -1,0 +1,1 @@
+Neutral capsule tracks organize each item. Numbered lists separate a circular automatic counter, an accent title capsule and a right-hand explanation; divided lists become simple ruled document rows. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

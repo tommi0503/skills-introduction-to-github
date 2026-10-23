@@ -1,0 +1,1 @@
+Two sets overlap in a horizontal composition; three sets form the triangular cluster seen in the company-values slide. Dark neutral circles and a single accent circle retain white page dividers. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

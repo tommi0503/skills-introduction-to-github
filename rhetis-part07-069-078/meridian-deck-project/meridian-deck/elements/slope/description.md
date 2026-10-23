@@ -1,0 +1,1 @@
+Before and after figures sit on a fine comparison track; the dumbbell variant places values along a shared horizontal scale. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

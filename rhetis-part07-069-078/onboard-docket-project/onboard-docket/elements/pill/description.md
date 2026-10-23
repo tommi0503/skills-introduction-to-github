@@ -1,0 +1,1 @@
+A single line sits in a bounded capsule with a circular leading mark. Its height remains controlled even when the assigned grid slot is tall, so it reads as a label rather than a circular card. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

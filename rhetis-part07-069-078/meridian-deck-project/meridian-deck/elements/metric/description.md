@@ -1,0 +1,1 @@
+A large bare figure, small unit, aligned label, and supporting note form a compact numerical lockup; rows add fine dividers. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

@@ -1,0 +1,1 @@
+A counted grid of small rounded units expresses the share, followed by an explicit figure and short name. The figures variant uses a simple person silhouette clipped from the same units. All typography, spacing and surfaces belong to the shared kit, and text contrast remains tied to palette roles in both display modes.

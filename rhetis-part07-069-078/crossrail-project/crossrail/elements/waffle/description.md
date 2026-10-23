@@ -1,0 +1,1 @@
+Ten-column square units count a share beside a large figure and short name. The optional figure state cuts the unit into a restrained person silhouette. All typography, spacing and colors are supplied through the shared kit and ranked palette roles.

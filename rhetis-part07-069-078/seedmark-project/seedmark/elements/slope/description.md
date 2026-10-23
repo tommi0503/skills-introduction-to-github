@@ -1,0 +1,1 @@
+Two labelled moments connect through spare comparison strokes; a dumbbell variant aligns each change to a horizontal row. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

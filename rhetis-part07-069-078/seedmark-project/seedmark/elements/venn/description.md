@@ -1,0 +1,1 @@
+Open intersecting circles give each set a plain name while an outlined centre identifies the shared opportunity. Seedmark uses a restrained outline, deliberate capsule emphasis, light page ground and precise typographic contrast.

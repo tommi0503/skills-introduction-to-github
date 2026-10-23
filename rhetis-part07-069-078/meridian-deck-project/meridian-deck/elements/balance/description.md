@@ -1,0 +1,1 @@
+Two broad quiet pans sit on a tilted beam; the recommendation remains at the small geometric fulcrum. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.

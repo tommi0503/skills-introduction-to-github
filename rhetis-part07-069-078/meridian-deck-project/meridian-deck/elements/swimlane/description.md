@@ -1,0 +1,1 @@
+A grid flow uses quiet owner bands, rounded task nodes, pointed decisions, and short CSS-drawn directional connectors. The drawing shares Meridian Deck’s fine rules, restrained surfaces, and clearly stepped sans-serif hierarchy.
