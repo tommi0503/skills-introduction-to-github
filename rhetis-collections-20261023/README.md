@@ -50,3 +50,8 @@ python reference/tools/preview.py fluxweave reference/contract/type-steps.json -
 ```
 
 build/에는 작업에 사용한 생성·렌더·검수 스크립트를 보존했습니다. 스크립트의 /workspace 경로는 제작 환경을 기준으로 하므로 다른 환경에서는 해당 경로를 조정해야 합니다.
+
+
+## 요소별 검수 PDF
+
+[전체 285쪽 통합본과 컬렉션별 57쪽 PDF](element-review-pdfs/) — 요소마다 라이트·다크를 나란히 놓고, 요소별 책갈피를 추가했습니다.
