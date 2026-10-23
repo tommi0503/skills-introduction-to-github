@@ -1,0 +1,1 @@
+Milestones sit on a restrained one-pixel track with small circular points, compact dates and strong names. The current stop uses the accent, while horizontal, alternating and vertical tracks retain the chapter-like typography.

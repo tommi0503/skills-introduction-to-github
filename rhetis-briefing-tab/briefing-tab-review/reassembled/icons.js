@@ -1,0 +1,1 @@
+window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-icon]').forEach(e=>{let h=document.createElement('i');h.setAttribute('data-lucide',e.dataset.icon);e.appendChild(h)});lucide.createIcons({attrs:{width:'100%',height:'100%','stroke-width':1.4}});});

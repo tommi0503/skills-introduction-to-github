@@ -1,0 +1,1 @@
+A quiet document panel with a thin chapter-colour cap, generous inset and a stable vertical rhythm. Compact names, aligned figures and neutral notes share the same visual hierarchy as the onboarding pages; one filled panel can carry the conclusion.

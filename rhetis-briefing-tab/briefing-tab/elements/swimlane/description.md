@@ -1,0 +1,1 @@
+Owner rows form quiet horizontal bands behind compact process nodes. Hairline arrow connectors cross the reserved gutters, while rounded start and end nodes and one accent endpoint retain the deck’s restrained tab vocabulary.

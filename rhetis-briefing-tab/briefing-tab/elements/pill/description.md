@@ -1,0 +1,1 @@
+A compact capsule whose number, name and optional note are optically centred on one line. Neutral, outlined and filled versions preserve the source deck’s simple keyword treatment without decorative symbols.

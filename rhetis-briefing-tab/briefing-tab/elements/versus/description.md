@@ -1,0 +1,1 @@
+Two balanced document panels compare approaches with a quiet central VS capsule. Titles share the same baseline, fine dividers separate content, and only the recommended side receives the soft accent surface and slim top rule.

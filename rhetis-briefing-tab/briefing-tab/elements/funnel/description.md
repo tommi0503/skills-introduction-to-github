@@ -1,0 +1,1 @@
+Successive stages narrow exactly with their supplied percentages. Quiet rectangular bands, small corner radii and a dark top tab translate the source deck into a restrained conversion funnel, with names and figures aligned inside each stage.

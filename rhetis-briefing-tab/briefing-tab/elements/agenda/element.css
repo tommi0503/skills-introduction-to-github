@@ -1,0 +1,13 @@
+.agenda[data-el="briefing-tab-agenda"] { container-type:size; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.agenda[data-el="briefing-tab-agenda"] * { box-sizing:border-box; min-width:0; margin:0; }
+.agenda[data-el="briefing-tab-agenda"] .name { font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.agenda[data-el="briefing-tab-agenda"] .note { color:var(--n-7); font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.agenda[data-el="briefing-tab-agenda"] .icon { display:inline-block; width:24px; height:24px; }
+
+.agenda[data-el="briefing-tab-agenda"] { display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm); }
+.agenda[data-el="briefing-tab-agenda"] > .entry { flex:1;min-height:0;display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.2fr);gap:var(--gap);align-items:center;padding:var(--gap) var(--pad);border-radius:var(--radius);background:var(--n-1); }
+.agenda[data-el="briefing-tab-agenda"] .mark { display:flex;align-items:center;justify-content:center;align-self:stretch;border-right:1px solid var(--n-3);padding-right:var(--gap);font-size:var(--type-32);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-7); }
+.agenda[data-el="briefing-tab-agenda"] .name { font-size:var(--type-24); }
+.agenda[data-el="briefing-tab-agenda"] > .entry.on { background:var(--a1-2-soft); }
+@container (max-width:740px) { .agenda[data-el="briefing-tab-agenda"] > .entry{grid-template-columns:44px minmax(0,1fr);padding:var(--gap-sm) var(--gap);gap:var(--gap-sm)} .agenda[data-el="briefing-tab-agenda"] .mark{grid-row:1 / span 2;font-size:var(--type-24)} .agenda[data-el="briefing-tab-agenda"] .name{font-size:var(--type-18)} .agenda[data-el="briefing-tab-agenda"] .note{grid-column:2;font-size:var(--type-14)} }
+@container (max-height:280px) { .agenda[data-el="briefing-tab-agenda"] .note{display:none} .agenda[data-el="briefing-tab-agenda"] > .entry{grid-template-columns:44px minmax(0,1fr);padding-block:var(--gap-sm)} .agenda[data-el="briefing-tab-agenda"] .name{font-size:var(--type-18)} .agenda[data-el="briefing-tab-agenda"] .mark{font-size:var(--type-24)} }

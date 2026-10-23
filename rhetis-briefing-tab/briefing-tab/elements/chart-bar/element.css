@@ -1,0 +1,85 @@
+.bars[data-el="briefing-tab-chart-bar"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);}
+.bars[data-el="briefing-tab-chart-bar"]{display:grid;grid-auto-columns:minmax(0,1fr);grid-auto-flow:column;align-items:end;gap:var(--gap);padding:var(--gap-lg) var(--gap-sm) calc(var(--gap-lg)*2);background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 25%);background-origin:content-box;}
+.bars[data-el="briefing-tab-chart-bar"]>.bar{height:calc(var(--v)/var(--max)*100%);min-height:1px;background:var(--n-8);border-radius:var(--radius-sm) var(--radius-sm) 0 0;position:relative;max-width:180px;width:100%;justify-self:center;}
+.bars[data-el="briefing-tab-chart-bar"]>.bar.on{background:var(--a1);}
+.bars[data-el="briefing-tab-chart-bar"]>.bar>b{font-size:var(--type-16);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);position:absolute;bottom:calc(100% + var(--gap-sm));left:50%;translate:-50% 0;white-space:nowrap;color:var(--ink);}
+.bars[data-el="briefing-tab-chart-bar"]>.bar>span{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);position:absolute;top:calc(100% + var(--gap-sm));left:50%;translate:-50% 0;width:max-content;max-width:140%;text-align:center;color:var(--n-7);}
+.bars[data-el="briefing-tab-chart-bar"].h{display:flex;flex-direction:column;align-items:stretch;justify-content:space-around;padding:var(--gap-sm) calc(var(--gap-lg)*2) var(--gap-sm) calc(var(--pad)*7);background:repeating-linear-gradient(to right,var(--n-3) 0 1px,transparent 1px 25%);background-origin:content-box;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar{flex:1;min-height:0;max-height:44px;width:calc(var(--v)/var(--max)*100%);max-width:none;border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar>b{left:calc(100% + var(--gap-sm));top:50%;bottom:auto;translate:0 -50%;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar>span{left:auto;right:calc(100% + var(--gap));top:50%;translate:0 -50%;max-width:none;width:calc(var(--pad)*6);text-align:right;}
+@container (max-width:600px){.bars[data-el="briefing-tab-chart-bar"]>.bar>b{font-size:var(--type-12);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.bars[data-el="briefing-tab-chart-bar"]>.bar>span{font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+.bars[data-el="briefing-tab-chart-bar"]:has(>.bar:nth-child(9))>.bar:nth-child(even)>span{visibility:hidden;}
+}
+@container (max-height:220px){.bars[data-el="briefing-tab-chart-bar"]>.bar>b{font-size:var(--type-12);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.bars[data-el="briefing-tab-chart-bar"]>.bar>span{font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+}
+.bars[data-el="briefing-tab-chart-bar"] p{margin:0;}
+.bars[data-el="briefing-tab-chart-bar"]>.bar.tone-1{background:var(--a1);}
+.bars[data-el="briefing-tab-chart-bar"]>.bar.tone-2{background:var(--a2);}
+.bars[data-el="briefing-tab-chart-bar"]>.bar.tone-3{background:var(--a3);}
+.bars[data-el="briefing-tab-chart-bar"]>.bar.tone-4{background:var(--a4);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h){padding-top:calc(var(--gap-lg) + var(--gap-sm));}
+.bars[data-el="briefing-tab-chart-bar"]>.bar.tone-5{background:var(--n-7);}
+
+/* Source-derived chart composition: intrinsic labels, shared scales and annotations. */
+.bars[data-el="briefing-tab-chart-bar"]:not(.h)[aria-label]{--briefing-tab-axis-step:calc(100cqh/5);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h)[aria-label]::before{counter-reset:briefing-tab-t5 var(--max) briefing-tab-t4 calc(var(--max)*4/5) briefing-tab-t3 calc(var(--max)*3/5) briefing-tab-t2 calc(var(--max)*2/5) briefing-tab-t1 calc(var(--max)/5);content:counter(briefing-tab-t5) attr(aria-label) "\a" counter(briefing-tab-t4) attr(aria-label) "\a" counter(briefing-tab-t3) attr(aria-label) "\a" counter(briefing-tab-t2) attr(aria-label) "\a" counter(briefing-tab-t1) attr(aria-label) "\a" "0" attr(aria-label);white-space:pre;position:absolute;right:calc(100% - var(--gap));top:calc(var(--briefing-tab-chart-top,var(--gap-lg)) - var(--briefing-tab-axis-step)/2);font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--briefing-tab-axis-step);letter-spacing:var(--label-track);color:var(--n-8);text-align:right;width:calc(var(--pad)*3);}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines){padding:calc(var(--pad)*53/24) 0 calc(var(--pad)*33/8) var(--gap);gap:0;--briefing-tab-chart-top:calc(var(--pad)*53/24);background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%);background-origin:content-box;}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines)>.bar{width:calc(100% - var(--gap)*17/8);border-radius:0;background:var(--n-8);}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines)>.bar>b:not(:empty){width:64px;height:64px;border-radius:50%;background:var(--n-8);color:var(--page);bottom:calc(100cqh*var(--v)/var(--max) - 32px);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:var(--type-16);font-weight:var(--figure-weight);line-height:var(--label-line);letter-spacing:var(--label-track);translate:-50% 0;}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines)>.bar>b>small{font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--label-line);}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines)>.bar>b:empty{display:none;}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines)>.bar>span{top:calc(100% + var(--gap-sm)/2);font-size:var(--type-14);color:var(--n-8);}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines)>.bar[title]::after{content:attr(title);position:absolute;left:50%;bottom:calc(100cqh + 1px);translate:-50% 0;white-space:nowrap;color:var(--a1-7);font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--label-line);}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines)>.bar[title]:not(:last-child)::before{content:"";position:absolute;left:50%;bottom:calc(100cqh - var(--pad)*4);translate:-50% 0;width:12px;height:94px;background:var(--a1);clip-path:polygon(44% 0,56% 0,56% 90%,100% 90%,50% 100%,0 90%,44% 90%);}
+.bars[data-el="briefing-tab-chart-bar"].h{display:grid;grid-template-columns:max-content minmax(0,1fr);grid-template-rows:repeat(var(--briefing-tab-h-count,6),minmax(0,1fr));gap:0 var(--gap-sm);padding:calc(var(--pad)*23/24) var(--gap-lg) calc(var(--gap-lg)*2) 0;align-items:center;background:none;isolation:isolate;anchor-scope:all;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar{display:contents;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar::before{content:"";grid-column:2;grid-row:var(--briefing-tab-i);height:38px;max-height:88%;width:calc(var(--v)/var(--max)*100%);border-radius:0 var(--radius-sm) var(--radius-sm) 0;background:var(--n-8);anchor-name:var(--briefing-tab-bar-anchor);}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar.tone-1::before,.bars[data-el="briefing-tab-chart-bar"].h>.bar.on::before{background:var(--a1);}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar>span{position:static;grid-column:1;grid-row:var(--briefing-tab-i);width:auto;max-width:calc(var(--pad)*6);translate:none;font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--label-line);color:var(--a1-7);text-align:right;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar>b{position:absolute;left:calc(anchor(var(--briefing-tab-bar-anchor) right) + var(--gap-sm));top:anchor(var(--briefing-tab-bar-anchor) center);right:auto;bottom:auto;translate:0 -50%;font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--label-line);color:var(--a1-7);}
+.bars[data-el="briefing-tab-chart-bar"].h::after{content:"";grid-column:2;grid-row:1 / span var(--briefing-tab-h-count,6);align-self:stretch;anchor-name:--briefing-tab-h-plot;background:repeating-linear-gradient(to right,var(--n-3) 0 1px,transparent 1px 20%);z-index:-1;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(-n+5)::after{counter-reset:briefing-tab-ht calc(var(--max)*(var(--briefing-tab-i) - 1)/5);content:counter(briefing-tab-ht);position:absolute;left:calc(anchor(--briefing-tab-h-plot left) + anchor-size(--briefing-tab-h-plot width)*(var(--briefing-tab-i) - 1)/5);bottom:var(--gap-lg);translate:-50% 0;font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--label-line);color:var(--a1-7);}
+.bars[data-el="briefing-tab-chart-bar"].h::before{counter-reset:briefing-tab-hmax var(--max);content:counter(briefing-tab-hmax);position:absolute;left:anchor(--briefing-tab-h-plot right);bottom:var(--gap-lg);translate:-50% 0;font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--label-line);color:var(--a1-7);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1))){padding:calc(var(--gap)*2) calc(var(--gap)*4) calc(var(--pad)*19/12) var(--pad);gap:0;--briefing-tab-chart-top:calc(var(--gap)*2);background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%);background-origin:content-box;}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1)))>.bar{width:calc(100% - var(--pad));}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1)))>.bar>b{font-size:var(--type-14);font-weight:var(--body-weight);color:var(--a1-7);bottom:calc(100% + var(--gap-sm)/2);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1)))>.bar>span{font-size:var(--type-14);color:var(--a1-7);top:calc(100% + var(--gap-sm)/2);}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(1){--briefing-tab-i:1;--briefing-tab-bar-anchor:--briefing-tab-hbar1;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(1):last-child){--briefing-tab-h-count:1;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(2){--briefing-tab-i:2;--briefing-tab-bar-anchor:--briefing-tab-hbar2;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(2):last-child){--briefing-tab-h-count:2;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(3){--briefing-tab-i:3;--briefing-tab-bar-anchor:--briefing-tab-hbar3;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(3):last-child){--briefing-tab-h-count:3;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(4){--briefing-tab-i:4;--briefing-tab-bar-anchor:--briefing-tab-hbar4;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(4):last-child){--briefing-tab-h-count:4;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(5){--briefing-tab-i:5;--briefing-tab-bar-anchor:--briefing-tab-hbar5;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(5):last-child){--briefing-tab-h-count:5;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(6){--briefing-tab-i:6;--briefing-tab-bar-anchor:--briefing-tab-hbar6;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(6):last-child){--briefing-tab-h-count:6;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(7){--briefing-tab-i:7;--briefing-tab-bar-anchor:--briefing-tab-hbar7;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(7):last-child){--briefing-tab-h-count:7;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(8){--briefing-tab-i:8;--briefing-tab-bar-anchor:--briefing-tab-hbar8;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(8):last-child){--briefing-tab-h-count:8;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(9){--briefing-tab-i:9;--briefing-tab-bar-anchor:--briefing-tab-hbar9;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(9):last-child){--briefing-tab-h-count:9;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(10){--briefing-tab-i:10;--briefing-tab-bar-anchor:--briefing-tab-hbar10;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(10):last-child){--briefing-tab-h-count:10;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(11){--briefing-tab-i:11;--briefing-tab-bar-anchor:--briefing-tab-hbar11;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(11):last-child){--briefing-tab-h-count:11;}
+.bars[data-el="briefing-tab-chart-bar"].h>.bar:nth-child(12){--briefing-tab-i:12;--briefing-tab-bar-anchor:--briefing-tab-hbar12;}
+.bars[data-el="briefing-tab-chart-bar"].h:has(>.bar:nth-child(12):last-child){--briefing-tab-h-count:12;}
+.bars[data-el="briefing-tab-chart-bar"]:has(+.lines),.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1))){background-clip:content-box;}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1))){padding-top:calc(var(--gap-lg) + var(--gap-sm)/4);--briefing-tab-chart-top:calc(var(--gap-lg) + var(--gap-sm)/4);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1)))::before{color:var(--a1-7);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h)[aria-label]{isolation:isolate;}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h)[aria-label]::after{content:"";position:absolute;left:var(--gap);right:0;top:var(--briefing-tab-chart-top,var(--gap-lg));height:100cqh;border-top:1px solid var(--n-3);border-bottom:1px solid var(--n-3);pointer-events:none;z-index:-1;}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):has(>.bar.tone-1):not(:has(>.bar:not(.tone-1)))::after{left:var(--pad);right:calc(var(--gap)*4);}
+/* A chart beside a note column reserves the shared column for value annotations. */
+.bars.h[data-el="briefing-tab-chart-bar"]:has(+.list){padding-right:calc(var(--pad)*53/12);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):is(.stack:only-child>.group.two>*){padding-left:calc(var(--pad) + var(--gap)*7/8);padding-right:calc(var(--gap)*4 - var(--gap)*7/8);}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):is(.stack:only-child>.group.two>*)::before{right:calc(100% - var(--pad) - var(--gap)*7/8 + var(--gap-sm));}
+.bars[data-el="briefing-tab-chart-bar"]:not(.h):is(.stack:only-child>.group.two>*)::after{left:calc(var(--pad) + var(--gap)*7/8);right:calc(var(--gap)*4 - var(--gap)*7/8);}
+.bars.h[data-el="briefing-tab-chart-bar"]:has(+.list){column-gap:calc(var(--gap-sm)*.8);}

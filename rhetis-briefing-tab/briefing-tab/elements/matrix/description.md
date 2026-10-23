@@ -1,0 +1,1 @@
+A two-by-two planning board uses quiet round-corner cells, fine rules and compact outer axis labels. One cell receives a soft accent surface; SWOT exchanges axes for bold initial letters and practical text lists.

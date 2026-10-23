@@ -1,0 +1,17 @@
+.treemap[data-el="briefing-tab-treemap"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);}
+.treemap[data-el="briefing-tab-treemap"]{display:flex;gap:var(--gap-sm);}
+.treemap[data-el="briefing-tab-treemap"]>.branch{flex:var(--v);min-width:0;display:flex;flex-direction:column;gap:var(--gap-sm);position:relative;padding-top:calc(var(--gap-lg)*1.5);}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.name{font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);position:absolute;left:var(--gap-sm);top:0;margin:0;}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile{flex:var(--v);min-height:0;background:var(--n-1);border:1px solid var(--n-3);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:var(--gap-sm);padding:var(--gap-sm);box-sizing:border-box;}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile.on{background:var(--a1-7);color:var(--page);border-color:var(--a1-7);}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile>.name{font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);text-align:center;}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile>.fig{font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+@container (max-width:600px){.treemap[data-el="briefing-tab-treemap"]>.branch>.name{font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile>.name{font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile>.fig{font-size:var(--type-20);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+}
+.treemap[data-el="briefing-tab-treemap"] p{margin:0;}
+@container (max-height:350px){.treemap[data-el="briefing-tab-treemap"]>.branch>.tile{flex-direction:row;justify-content:space-between;padding:calc(var(--gap-sm)/2);gap:calc(var(--gap-sm)/2);}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile>.name{font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);text-align:left;}
+.treemap[data-el="briefing-tab-treemap"]>.branch>.tile>.fig{font-size:var(--type-20);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+}

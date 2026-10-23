@@ -1,0 +1,11 @@
+:is(.person,.people)[data-el="briefing-tab-person"]{position:relative;container-type:size;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);box-sizing:border-box;}
+:is(.person,.people)[data-el="briefing-tab-person"] *{box-sizing:border-box;}
+:is(.person,.people)[data-el="briefing-tab-person"] .name{font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.person,.people)[data-el="briefing-tab-person"] .note{font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);}
+:is(.person,.people)[data-el="briefing-tab-person"] .fig{font-family:var(--font-display);font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+:is(.person,.people)[data-el="briefing-tab-person"]{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:var(--gap);align-items:center;}
+.person[data-el="briefing-tab-person"],.people[data-el="briefing-tab-person"]>.person{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--pad);text-align:center;background:var(--n-1);border-radius:var(--radius);min-width:0;height:100%;}
+:is(.person,.people)[data-el="briefing-tab-person"] .seat{width:min(100%,160px);aspect-ratio:1;flex:none;background:var(--n-2);border:var(--stroke) solid var(--n-3);border-radius:50%;display:grid;place-items:center;color:var(--n-7);font-size:var(--type-16);}
+:is(.person,.people)[data-el="briefing-tab-person"] .seat.portrait{border-radius:var(--radius-sm);aspect-ratio:3/4;}
+@container (max-width:750px){.people[data-el="briefing-tab-person"]>.person{padding:var(--gap-sm);}:is(.person,.people)[data-el="briefing-tab-person"] .name{font-size:var(--type-16);}:is(.person,.people)[data-el="briefing-tab-person"] .seat{max-width:112px;}}
+@container (max-height:250px){:is(.person,.people)[data-el="briefing-tab-person"] .seat{max-width:80px;}:is(.person,.people)[data-el="briefing-tab-person"] .note{font-size:var(--type-12);}}

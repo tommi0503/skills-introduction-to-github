@@ -1,0 +1,1 @@
+A rounded paper panel sits within a quiet outer margin below a slim chapter strip. The header pairs a large section index with a compact, bold title, separated by a vertical hairline and closed by a horizontal rule. A twelve-column, six-row body keeps content aligned. The cover preserves the paper and relocates the tab to a right-hand icon rail.

@@ -1,0 +1,1 @@
+Two neutral trays hang from a fine beam whose tilt follows the supplied comparison value. A quiet triangular fulcrum and one lightly accented pan create a readable balance diagram without the decorative illustration style absent from the source deck.

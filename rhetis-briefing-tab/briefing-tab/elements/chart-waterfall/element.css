@@ -1,0 +1,13 @@
+.waterfall[data-el="briefing-tab-chart-waterfall"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);}
+.waterfall[data-el="briefing-tab-chart-waterfall"]{display:flex;gap:var(--gap-lg);padding:var(--gap-lg) var(--gap) calc(var(--gap-lg)*2);background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 25%);background-origin:content-box;}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move{flex:1;position:relative;min-width:0;}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move::before{content:"";position:absolute;left:0;right:0;bottom:calc(min(var(--from),var(--to))/var(--max)*100%);height:calc(abs(var(--to) - var(--from))/var(--max)*100%);background:var(--n-8);border-radius:var(--radius-sm);}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move.up::before{background:var(--a1);}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move.total::before{bottom:0;height:calc(var(--to)/var(--max)*100%);background:var(--a1-7);}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move:not(:last-child)::after{content:"";position:absolute;left:100%;width:var(--gap-lg);bottom:calc(var(--to)/var(--max)*100%);border-top:1px dashed var(--n-7);}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move>b{font-size:var(--type-16);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);position:absolute;bottom:calc(max(var(--from),var(--to))/var(--max)*100% + var(--gap-sm));left:50%;translate:-50% 0;white-space:nowrap;}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move>span{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);position:absolute;top:calc(100% + var(--gap-sm));left:50%;translate:-50% 0;text-align:center;width:max-content;max-width:130%;color:var(--n-7);}
+@container (max-width:600px){.waterfall[data-el="briefing-tab-chart-waterfall"]>.move>b{font-size:var(--type-12);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.waterfall[data-el="briefing-tab-chart-waterfall"]>.move>span{font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+}
+.waterfall[data-el="briefing-tab-chart-waterfall"] p{margin:0;}

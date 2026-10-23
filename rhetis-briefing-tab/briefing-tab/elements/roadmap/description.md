@@ -1,0 +1,1 @@
+Horizontal duration bars align to a shared period grid with names on a reserved left rail. Small rectangular corners, quiet row grounds and a single accent task echo the deck’s slim tabs; milestone rules remain distinct from duration spans.

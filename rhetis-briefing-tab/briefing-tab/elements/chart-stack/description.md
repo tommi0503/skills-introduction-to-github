@@ -1,0 +1,1 @@
+A restrained chart stack for the Briefing Tab document system. Hairline divisions, compact business labels, precise numeric geometry and a single ranked accent keep the information dominant; quiet neutral companions follow the original onboarding deck. It adapts its label scale and spacing to the allocated grid cell.

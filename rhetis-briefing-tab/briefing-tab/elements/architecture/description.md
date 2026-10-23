@@ -1,0 +1,1 @@
+Stacked service bands repeat the source deck’s explanatory strip: a strong left label separated by a fine vertical rule and centered capsule chips on a quiet surface. A thin top accent identifies the entry layer.

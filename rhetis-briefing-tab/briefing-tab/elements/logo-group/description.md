@@ -1,0 +1,1 @@
+A row of square logo seats rests between two hairline rules. Equal columns, modest corner radii and neutral fills preserve the source deck’s disciplined document rhythm without adding brand-specific decoration.

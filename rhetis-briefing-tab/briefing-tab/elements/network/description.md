@@ -1,0 +1,1 @@
+A many-to-many graph uses fine data-driven links behind compact capsule nodes. A single accent hub and one stronger path highlight responsibility while neutral peer nodes, generous edge margins and restrained type keep the diagram in the same document family.

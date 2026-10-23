@@ -1,0 +1,1 @@
+A compact accent core anchors paired left and right branches with quiet rectangular surfaces and curved hairline elbows. Branch names remain prominent, while subordinate leaves use the source deck’s smaller explanatory type and subtle rules.

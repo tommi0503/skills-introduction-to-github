@@ -1,0 +1,20 @@
+
+.callout[data-el="briefing-tab-callout"]{container-type:size;min-width:0;min-height:68px;height:100%;display:flex;align-items:center;justify-content:center;gap:var(--gap-lg);padding:var(--gap) var(--pad);background:var(--n-1);border-radius:var(--radius);color:var(--ink);box-sizing:border-box;font-family:var(--font-body)}
+.callout[data-el="briefing-tab-callout"] p{margin:0;font-size:var(--type-22);font-weight:var(--body-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track);overflow-wrap:anywhere}
+.callout[data-el="briefing-tab-callout"] b{font-weight:var(--title-weight);color:var(--a1-7)}
+.callout[data-el="briefing-tab-callout"] .icon{width:28px;height:28px;flex:none;color:var(--a1-7)}
+.callout[data-el="briefing-tab-callout"]:has(.icon) p{border-left:1px solid var(--n-3);padding-left:var(--gap-lg)}
+@container(max-width:700px){.callout[data-el="briefing-tab-callout"] p{font-size:var(--type-18)}}
+@container(max-width:480px){.callout[data-el="briefing-tab-callout"] p{font-size:var(--type-16)}}
+@container(max-height:100px){.callout[data-el="briefing-tab-callout"] p{font-size:var(--type-16)}}
+/* A leading label and a separate sentence form the deck's summary strip. */
+.callout[data-el="briefing-tab-callout"]:has(>p>b+span){container-type:inline-size;flex:0 0 auto;height:auto;min-height:0;padding:calc(var(--gap)*1.25) var(--pad);justify-content:flex-start}
+.callout[data-el="briefing-tab-callout"]>p:has(>b+span){display:grid;grid-template-columns:132px minmax(0,1fr);align-items:center;gap:var(--gap-lg);width:100%;font-size:var(--type-16)}
+.callout[data-el="briefing-tab-callout"]>p>b:has(+span){height:64px;display:flex;align-items:center;gap:calc(var(--gap)*.75);padding-right:var(--gap-lg);border-right:1px solid var(--n-3);font-size:var(--type-18);font-weight:var(--lead-weight);color:var(--n-8);white-space:nowrap}
+.callout[data-el="briefing-tab-callout"]>p>b:has(+span):before{content:'';width:7px;height:7px;flex:none;background:currentColor;border-radius:50%}
+.callout[data-el="briefing-tab-callout"]>p>b+span{display:block;font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7)}
+@container(max-width:600px){.callout[data-el="briefing-tab-callout"]>p:has(>b+span){grid-template-columns:100px minmax(0,1fr);gap:var(--gap)}.callout[data-el="briefing-tab-callout"]>p>b:has(+span){font-size:var(--type-16);padding-right:var(--gap)}.callout[data-el="briefing-tab-callout"]>p>b+span{font-size:var(--type-14)}}
+.callout[data-el="briefing-tab-callout"]:has(>p>b+span){padding-left:calc(var(--gap)*2);padding-right:calc(var(--gap)*2)}
+.callout[data-el="briefing-tab-callout"]>p:has(>b+span){grid-template-columns:124px minmax(0,1fr);gap:calc(var(--gap)*1.75)}
+.callout[data-el="briefing-tab-callout"]:is(.stack>*):not(:has(b)){container-type:inline-size;flex:0 0 101px;height:101px;min-height:0;margin-top:calc(var(--gap-sm)*-1);margin-bottom:calc(var(--gap-sm)*-.5);padding:var(--pad) calc(var(--pad)*1.25);justify-content:flex-start}
+.callout[data-el="briefing-tab-callout"]:is(.stack>*):not(:has(b)) p{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--lead-line);color:var(--n-7)}

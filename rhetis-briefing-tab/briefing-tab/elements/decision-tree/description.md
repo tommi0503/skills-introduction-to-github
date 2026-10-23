@@ -1,0 +1,1 @@
+Rounded question capsules branch through small condition labels into understated outcome panels. Fine horizontal and vertical rules clarify hierarchy, and a single accent outcome provides the same decisive emphasis as the source deck’s active tab.

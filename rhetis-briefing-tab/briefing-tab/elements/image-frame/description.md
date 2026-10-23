@@ -1,0 +1,1 @@
+A fine rectangular picture frame holds a nearly square or portrait numbered seat. Its quiet surface and small corner radius keep the image area subordinate to the presentation’s chapter strip and typography. A back seat becomes a full-bleed four-to-three plate suitable for the two-by-two document spread.

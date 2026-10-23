@@ -1,0 +1,1 @@
+The organization chart uses a centered dark tab and one-pixel orthogonal connectors leading to quiet departmental panels. Indented leaves continue the same fine line rather than adding decorative boxes.

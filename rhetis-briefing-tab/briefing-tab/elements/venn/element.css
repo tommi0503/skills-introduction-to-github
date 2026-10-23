@@ -1,0 +1,17 @@
+.venn[data-el="briefing-tab-venn"] { container-type:size; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.venn[data-el="briefing-tab-venn"] * { box-sizing:border-box; min-width:0; margin:0; }
+.venn[data-el="briefing-tab-venn"] .name { font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.venn[data-el="briefing-tab-venn"] .note { color:var(--n-7); font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.venn[data-el="briefing-tab-venn"] .icon { display:inline-block; width:24px; height:24px; }
+
+.venn[data-el="briefing-tab-venn"] { position:relative;isolation:isolate; }
+.venn[data-el="briefing-tab-venn"] > .set { position:absolute;left:38%;top:50%;transform:translate(-50%,-50%);width:min(48cqw,88cqh);height:min(48cqw,88cqh);border-radius:50%;border:1px solid var(--n-4);background:color-mix(in srgb,var(--n-2) 65%,transparent);display:flex;align-items:center;justify-content:flex-start;padding:var(--pad);text-align:center; }
+.venn[data-el="briefing-tab-venn"] > .set:nth-child(2) { left:62%;justify-content:flex-end; }
+.venn[data-el="briefing-tab-venn"] > .set.on { background:color-mix(in srgb,var(--a1-2-soft) 68%,transparent);border-color:var(--a1); }
+.venn[data-el="briefing-tab-venn"] > .set .name { width:45%;font-size:var(--type-24); }
+.venn[data-el="briefing-tab-venn"] > .core { position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);max-width:22%;padding:var(--gap-sm);border-radius:999px;background:var(--page);font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center;z-index:3; }
+.venn[data-el="briefing-tab-venn"]:has(> .set:nth-child(3)) > .set { width:min(44cqw,66cqh);height:min(44cqw,66cqh);top:38%;left:39%;align-items:flex-start;justify-content:flex-start; }
+.venn[data-el="briefing-tab-venn"]:has(> .set:nth-child(3)) > .set:nth-child(2) {left:61%;justify-content:flex-end}
+.venn[data-el="briefing-tab-venn"]:has(> .set:nth-child(3)) > .set:nth-child(3) {left:50%;top:65%;align-items:flex-end;justify-content:center}
+.venn[data-el="briefing-tab-venn"]:has(> .set:nth-child(3)) > .core {top:48%}
+@container (max-width:700px) { .venn[data-el="briefing-tab-venn"] > .set .name{font-size:var(--type-16)} .venn[data-el="briefing-tab-venn"] > .core{font-size:var(--type-14)} .venn[data-el="briefing-tab-venn"] > .set{padding:var(--gap)} }

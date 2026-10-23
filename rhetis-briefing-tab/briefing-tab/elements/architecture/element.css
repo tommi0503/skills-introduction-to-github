@@ -1,0 +1,13 @@
+.arch[data-el="briefing-tab-architecture"] { container-type:size; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.arch[data-el="briefing-tab-architecture"] * { box-sizing:border-box; min-width:0; margin:0; }
+.arch[data-el="briefing-tab-architecture"] .name { font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.arch[data-el="briefing-tab-architecture"] .note { color:var(--n-7); font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.arch[data-el="briefing-tab-architecture"] .icon { display:inline-block; width:24px; height:24px; }
+
+.arch[data-el="briefing-tab-architecture"] { display:flex;flex-direction:column;gap:var(--gap-sm); }
+.arch[data-el="briefing-tab-architecture"] > .layer { flex:1;display:flex;align-items:center;gap:var(--gap);padding:var(--gap) var(--pad);background:var(--n-1);border:1px solid var(--n-3);border-radius:var(--radius); }
+.arch[data-el="briefing-tab-architecture"] > .layer > .name { flex:0 0 24%;align-self:stretch;display:flex;align-items:center;border-right:1px solid var(--n-3);padding-right:var(--gap);font-size:var(--type-20); }
+.arch[data-el="briefing-tab-architecture"] > .layer:first-child { border-top:2px solid var(--a1); }
+.arch[data-el="briefing-tab-architecture"] .chip { flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);background:var(--page);border-radius:999px;font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+@container (max-width:760px) { .arch[data-el="briefing-tab-architecture"] > .layer{padding:var(--gap-sm);gap:var(--gap-sm)} .arch[data-el="briefing-tab-architecture"] > .layer > .name{font-size:var(--type-16)} .arch[data-el="briefing-tab-architecture"] .chip{font-size:var(--type-12)} }
+@container (max-height:240px) { .arch[data-el="briefing-tab-architecture"] > .layer{padding-block:var(--gap-sm)} }

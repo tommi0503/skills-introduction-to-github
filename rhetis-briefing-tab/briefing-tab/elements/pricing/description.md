@@ -1,0 +1,1 @@
+Pricing plans are quiet document panels with aligned names, large compact figures and a fine price divider. The recommended plan gains a small centered capsule label and a thin accent top edge rather than decorative ornament.

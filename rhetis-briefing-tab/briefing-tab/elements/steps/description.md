@@ -1,0 +1,1 @@
+A measured sequence of quiet document panels with circular chapter numbers, fine connectors and one slim accent edge. The vertical form preserves the same numbered hierarchy and aligns long notes with their titles.

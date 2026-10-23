@@ -1,0 +1,13 @@
+
+.headline[data-el="briefing-tab-headline"]{container-type:size;min-width:0;min-height:0;height:100%;display:flex;flex-direction:column;justify-content:center;gap:var(--gap);font-family:var(--font-body);color:var(--ink);box-sizing:border-box}
+.headline[data-el="briefing-tab-headline"] :is(.kick,h2,.note){margin:0;overflow-wrap:anywhere}
+.headline[data-el="briefing-tab-headline"] .kick{font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7)}
+.headline[data-el="briefing-tab-headline"] h2{font-family:var(--font-display);font-size:var(--type-36);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track)}.headline[data-el="briefing-tab-headline"] h2 b{color:var(--a1-7);font-weight:var(--title-weight)}
+.headline[data-el="briefing-tab-headline"] .note{font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7)}
+.headline.big[data-el="briefing-tab-headline"] h2{font-size:var(--type-64)}.headline.center[data-el="briefing-tab-headline"]{text-align:center;align-items:center}.headline.on[data-el="briefing-tab-headline"]{background:var(--a1);border-radius:var(--radius);padding:var(--pad);color:var(--a1-on)}.headline.on[data-el="briefing-tab-headline"] :is(.kick,.note,h2 b){color:var(--a1-on)}
+@container(max-width:600px){.headline[data-el="briefing-tab-headline"] h2{font-size:var(--type-28)}.headline.big[data-el="briefing-tab-headline"] h2{font-size:var(--type-40)}.headline[data-el="briefing-tab-headline"] .note{font-size:var(--type-18)}}
+@container(max-height:180px){.headline[data-el="briefing-tab-headline"] .kick{display:none}.headline[data-el="briefing-tab-headline"] h2{font-size:var(--type-24)}.headline.big[data-el="briefing-tab-headline"] h2{font-size:var(--type-32)}.headline[data-el="briefing-tab-headline"] .note{font-size:var(--type-16)}}
+@container(max-height:100px){.headline[data-el="briefing-tab-headline"] .note{display:none}}
+.headline.on[data-el="briefing-tab-headline"]:has(>h2:only-child){height:44px;align-self:start;margin:var(--gap) calc(var(--gap)*4) 0 calc(var(--gap)*4.5);padding:0 var(--gap);border-radius:calc(var(--radius)*6/7) calc(var(--radius)*6/7) 0 0;text-align:center;align-items:center}
+.headline.on[data-el="briefing-tab-headline"]:has(>h2:only-child)>h2{font-size:var(--type-22);font-weight:var(--lead-weight);line-height:var(--label-line)}
+.headline.on[data-el="briefing-tab-headline"]:has(>h2:only-child){container-type:inline-size;height:auto;min-height:44px;max-width:calc(var(--pad)*50/3)}

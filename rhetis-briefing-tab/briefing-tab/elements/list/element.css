@@ -1,0 +1,38 @@
+
+.list[data-el="briefing-tab-list"]{container-type:size;height:100%;min-height:0;min-width:0;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:item;font-family:var(--font-body);color:var(--ink)}
+.list[data-el="briefing-tab-list"] .item{position:relative;counter-increment:item;padding-left:var(--pad);min-width:0}
+.list[data-el="briefing-tab-list"] .item:before{content:'';position:absolute;left:var(--gap-sm);top:calc(var(--type-20)*.5);height:6px;width:6px;background:var(--n-8);border-radius:50%}
+.list[data-el="briefing-tab-list"] .name{margin:0;font-size:var(--type-20);line-height:var(--name-line);font-weight:var(--name-weight);letter-spacing:var(--name-track);overflow-wrap:anywhere}
+.list[data-el="briefing-tab-list"] .note{margin:var(--gap-sm) 0 0;font-size:var(--type-16);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--n-7);overflow-wrap:anywhere}
+.list.num[data-el="briefing-tab-list"] .item{padding-left:calc(var(--pad)*2)}.list.num[data-el="briefing-tab-list"] .item:before{content:counter(item,decimal-leading-zero);top:0;left:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:999px;font-size:var(--type-14);font-weight:var(--figure-weight);line-height:var(--label-line);color:var(--a1-on);background:var(--a1)}
+.list.check[data-el="briefing-tab-list"] .item:before{background:none;width:7px;height:12px;top:var(--gap-sm);border-radius:0;border:solid var(--a1-7);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.list.divided[data-el="briefing-tab-list"] .item+.item{border-top:1px solid var(--n-3);padding-top:var(--gap)}.list.divided[data-el="briefing-tab-list"] .item+.item:before{top:calc(var(--gap) + var(--type-20)*.5)}
+.list[data-el="briefing-tab-list"] .mark{position:absolute;left:0;top:0}.list[data-el="briefing-tab-list"] .mark .icon{display:block;width:20px;height:20px}.list[data-el="briefing-tab-list"] .item:has(.mark):before{display:none}
+@container(max-width:450px){.list[data-el="briefing-tab-list"] .name{font-size:var(--type-18)}.list[data-el="briefing-tab-list"] .note{font-size:var(--type-14)}}
+@container(max-height:280px){.list[data-el="briefing-tab-list"] .name{font-size:var(--type-16)}.list[data-el="briefing-tab-list"] .note{font-size:var(--type-14);margin-top:0}.list.divided[data-el="briefing-tab-list"] .item+.item{padding-top:var(--gap-sm)}}
+@container(max-height:160px){.list[data-el="briefing-tab-list"] .note{display:none}.list[data-el="briefing-tab-list"] .name{font-size:var(--type-14)}}
+.list.divided[data-el="briefing-tab-list"] .item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--gap);align-items:center;padding:var(--gap);background:var(--n-1);border:0;border-radius:var(--radius-sm)}
+.list.divided[data-el="briefing-tab-list"] .name{padding-left:var(--gap);padding-right:var(--gap);border-right:1px solid var(--n-3)}
+.list.divided[data-el="briefing-tab-list"] .note{margin:0}
+.list.divided[data-el="briefing-tab-list"] .item:before,.list.divided[data-el="briefing-tab-list"] .item+.item:before{left:var(--gap-sm);top:calc(50% - 3px)}
+.list.divided[data-el="briefing-tab-list"] .item{grid-template-columns:minmax(0,1fr)}
+.list.divided[data-el="briefing-tab-list"] .item:has(.note){grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
+.list.divided[data-el="briefing-tab-list"] .item:not(:has(.note)){padding:var(--gap-sm) var(--gap)}
+.list.divided[data-el="briefing-tab-list"] .item:not(:has(.note)) .name{border:0;padding-right:0}
+.list.divided[data-el="briefing-tab-list"]:is(.bars+.list){margin-left:calc(var(--gap)*2.25);margin-right:var(--gap)}
+/* A note-free divided list is a single document panel, with rules between rows. */
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)){height:calc(100% - var(--pad)*2.5);max-height:324px;align-self:start;margin:calc(var(--pad)*2.5) var(--gap-lg) 0 calc(var(--gap)*2);padding:var(--gap-sm) calc(var(--pad)*5/3) calc(var(--gap-sm)*1.5);gap:0;border:2px solid var(--page);border-radius:var(--radius);background:var(--n-1);box-shadow:0 0 var(--gap) color-mix(in srgb,var(--ink) 10%,transparent);justify-content:stretch}
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)) .item{flex:1;min-height:0;padding:0;background:none;display:flex;align-items:center;border-radius:0}
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)) .item+.item{padding:0;border-top:1px solid var(--n-3)}
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)) .name{font-size:var(--type-22);font-weight:var(--body-weight);line-height:var(--name-line);border:0;padding:0 0 0 var(--pad)}
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)) .item:before{width:9px;height:9px;left:0;top:calc(50% - 4.5px)}
+@container(max-width:400px){.list.divided[data-el="briefing-tab-list"]:not(:has(.note)) .name{font-size:var(--type-18)}}
+.list.divided[data-el="briefing-tab-list"]:has(>.item:nth-child(3):last-child):has(.note){height:min(330px,calc(100% - var(--gap)*1.75));max-width:calc(var(--pad)*577/24);align-self:start;margin-top:calc(var(--gap)*1.75);gap:calc(var(--gap)*13/16)}
+.list.divided[data-el="briefing-tab-list"]:has(>.item:nth-child(3):last-child):has(.note):not(.bars+.list){margin-left:calc(var(--gap)*-7/8)}
+.list.divided[data-el="briefing-tab-list"]:has(>.item:nth-child(3):last-child):has(.note)>.item{flex:1;min-height:0;padding:calc(var(--pad)*19/24) calc(var(--pad)*7/6);grid-template-columns:129px minmax(0,1fr);gap:calc(var(--gap)*1.75);border-radius:calc(var(--radius)*9/14)}
+.list.divided[data-el="briefing-tab-list"]:has(>.item:nth-child(3):last-child):has(.note) .name{display:flex;align-items:center;height:64px;font-size:var(--type-18);font-weight:var(--lead-weight);line-height:var(--name-line);padding-left:calc(var(--gap)*1.25);padding-right:var(--gap-sm)}
+.list.divided[data-el="briefing-tab-list"]:has(>.item:nth-child(3):last-child):has(.note) .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--lead-line)}
+.list.divided[data-el="briefing-tab-list"]:has(>.item:nth-child(3):last-child):has(.note)>.item:before{left:calc(var(--pad)*11/8);width:7px;height:7px;top:calc(50% - 3.5px)}
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)){color:var(--n-8)}
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)) .item+.item{border-top-color:var(--n-4);}
+.list.divided[data-el="briefing-tab-list"]:not(:has(.note)) .name{color:color-mix(in srgb,var(--ink) 85%,var(--page));}

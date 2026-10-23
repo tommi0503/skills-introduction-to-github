@@ -1,0 +1,1 @@
+Profiles sit on quiet rounded panels with circular numbered portrait seats, aligned names and restrained supporting copy. The hierarchy follows the document panels and small dividers of the source deck, while compact containers reduce portrait and type sizes together.

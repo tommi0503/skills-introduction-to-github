@@ -1,0 +1,20 @@
+.steps[data-el="briefing-tab-steps"] { container-type:size; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.steps[data-el="briefing-tab-steps"] * { box-sizing:border-box; min-width:0; margin:0; }
+.steps[data-el="briefing-tab-steps"] .name { font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.steps[data-el="briefing-tab-steps"] .note { color:var(--n-7); font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.steps[data-el="briefing-tab-steps"] .icon { display:inline-block; width:24px; height:24px; }
+
+.steps[data-el="briefing-tab-steps"] { display:flex; gap:var(--gap-lg); align-items:stretch; }
+.steps[data-el="briefing-tab-steps"] > .step { position:relative; flex:1; padding:var(--pad) var(--gap); background:var(--n-1); border-radius:var(--radius); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:var(--gap); }
+.steps[data-el="briefing-tab-steps"] > .step:not(:last-child)::after { content:''; position:absolute; z-index:2; width:var(--gap-lg); height:8px; top:50%; left:100%; background:var(--n-5); clip-path:polygon(0 42%,72% 42%,72% 0,100% 50%,72% 100%,72% 58%,0 58%); }
+.steps[data-el="briefing-tab-steps"] .mark { display:grid; place-items:center; width:52px; height:52px; border-radius:999px; background:var(--page); color:var(--a1-7); font-size:var(--type-24); font-weight:var(--figure-weight); line-height:var(--figure-line); }
+.steps[data-el="briefing-tab-steps"] .mark .icon { width:28px;height:28px; }
+.steps[data-el="briefing-tab-steps"] > .step.on { border-top:2px solid var(--a1); }
+.steps[data-el="briefing-tab-steps"] .name { font-size:var(--type-24); }
+.steps[data-el="briefing-tab-steps"].col { flex-direction:column; gap:var(--gap); }
+.steps[data-el="briefing-tab-steps"].col > .step { display:grid; grid-template-columns:52px minmax(0,1fr); gap:var(--gap-sm) var(--gap); padding:var(--gap) var(--pad); }
+.steps[data-el="briefing-tab-steps"].col .mark { grid-row:1 / span 2; }
+.steps[data-el="briefing-tab-steps"].col .note { grid-column:2; }
+.steps[data-el="briefing-tab-steps"].col > .step:not(:last-child)::after { width:8px;height:var(--gap);top:100%;left:calc(50% - 4px);clip-path:polygon(42% 0,58% 0,58% 72%,100% 72%,50% 100%,0 72%,42% 72%); }
+@container (max-width:720px) { .steps[data-el="briefing-tab-steps"] .name{font-size:var(--type-18)} .steps[data-el="briefing-tab-steps"] .note{font-size:var(--type-14)} .steps[data-el="briefing-tab-steps"] .mark{width:40px;height:40px;font-size:var(--type-20)} .steps[data-el="briefing-tab-steps"] > .step{padding:var(--gap);gap:var(--gap-sm)} }
+@container (max-height:220px) { .steps[data-el="briefing-tab-steps"] .note{display:none} .steps[data-el="briefing-tab-steps"] .mark{width:36px;height:36px} .steps[data-el="briefing-tab-steps"].col > .step{padding:var(--gap-sm) var(--gap)} }

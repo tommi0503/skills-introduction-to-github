@@ -1,0 +1,1 @@
+The contents list repeats the source title treatment at a smaller scale: oversized chapter numbers, a fine vertical separator and a clear name beside a quiet note. One active entry uses a soft accent surface.

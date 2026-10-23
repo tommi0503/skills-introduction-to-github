@@ -1,0 +1,1 @@
+Small rounded labels are positioned on two crossing hairline axes, with coordinate margins reserved to keep labels inside the slot. One accent label marks the focal service; other labels remain quiet and legible against the neutral document ground.

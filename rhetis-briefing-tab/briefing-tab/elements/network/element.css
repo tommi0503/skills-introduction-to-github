@@ -1,0 +1,14 @@
+.network[data-el="briefing-tab-network"]{position:relative;container-type:size;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);box-sizing:border-box;}
+.network[data-el="briefing-tab-network"] *{box-sizing:border-box;}
+.network[data-el="briefing-tab-network"] .name{font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+.network[data-el="briefing-tab-network"] .note{font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);}
+.network[data-el="briefing-tab-network"] .fig{font-family:var(--font-display);font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.network[data-el="briefing-tab-network"]{isolation:isolate;}
+.network[data-el="briefing-tab-network"]>.node{position:absolute;z-index:2;left:calc(14% + var(--x)*.72%);top:calc(14% + var(--y)*.72%);transform:translate(-50%,-50%);display:grid;place-items:center;max-width:calc(var(--pad)*7);padding:var(--gap-sm) var(--gap);border:var(--stroke) solid var(--n-3);border-radius:999px;background:var(--page);text-align:center;}
+.network[data-el="briefing-tab-network"]>.node.on{background:var(--a1);color:var(--a1-on);border-color:var(--a1);}
+.network[data-el="briefing-tab-network"]>.node.tone-2{background:var(--a2-1-soft);}
+.network[data-el="briefing-tab-network"]>.node>.name{font-size:var(--type-16);}
+.network[data-el="briefing-tab-network"]>.link{position:absolute;z-index:0;left:calc(14% + var(--x1)*.72%);top:calc(14% + var(--y1)*.72%);height:1px;width:hypot(calc((var(--x2) - var(--x1))*.0072*100cqi),calc((var(--y2) - var(--y1))*.0072*100cqb));transform:rotate(atan2(calc((var(--y2) - var(--y1))*.0072*100cqb),calc((var(--x2) - var(--x1))*.0072*100cqi)));transform-origin:0 0;background:var(--n-3);}
+.network[data-el="briefing-tab-network"]>.link.strong{height:2px;background:var(--a1-7);}
+@container (max-width:850px){.network[data-el="briefing-tab-network"]>.node{padding:var(--gap-sm);max-width:calc(var(--pad)*5);}.network[data-el="briefing-tab-network"]>.node>.name{font-size:var(--type-14);}}
+@container (max-height:300px){.network[data-el="briefing-tab-network"]>.node>.name{font-size:var(--type-12);}}

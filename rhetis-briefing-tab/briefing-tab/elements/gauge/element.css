@@ -1,0 +1,6 @@
+
+.meter[data-el="briefing-tab-gauge"]{container-type:size;position:relative;min-width:0;min-height:72px;height:100%;display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr 12px;gap:var(--gap-sm) var(--gap);align-items:center;font-family:var(--font-body);color:var(--ink);box-sizing:border-box}
+.meter[data-el="briefing-tab-gauge"] .name{font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);overflow-wrap:anywhere}.meter[data-el="briefing-tab-gauge"] .fig{font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-7)}
+.meter[data-el="briefing-tab-gauge"]:before,.meter[data-el="briefing-tab-gauge"]:after{content:'';grid-column:1/-1;grid-row:2;height:12px;border-radius:var(--radius-sm);justify-self:start;align-self:center}.meter[data-el="briefing-tab-gauge"]:before{background:var(--n-2);width:100%}.meter[data-el="briefing-tab-gauge"]:after{background:var(--a1);width:calc(var(--v)*1%)}
+@container(max-width:500px){.meter[data-el="briefing-tab-gauge"] .name{font-size:var(--type-16)}.meter[data-el="briefing-tab-gauge"] .fig{font-size:var(--type-24)}}
+@container(max-height:100px){.meter[data-el="briefing-tab-gauge"] .name{font-size:var(--type-16)}.meter[data-el="briefing-tab-gauge"] .fig{font-size:var(--type-22)}}

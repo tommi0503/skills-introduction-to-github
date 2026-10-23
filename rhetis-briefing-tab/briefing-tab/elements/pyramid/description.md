@@ -1,0 +1,1 @@
+Trapezoidal document bands build a clear ascending hierarchy. The narrow top tier carries the accent; lower tiers remain neutral with generous centered labels, preserving the source deck’s disciplined spacing.

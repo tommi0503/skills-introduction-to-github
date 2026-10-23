@@ -1,0 +1,1 @@
+A restrained process diagram uses near-square document nodes, capsule endpoints, a faceted decision node and fine directional connectors. Names stay centered with discrete type reductions in smaller cells.

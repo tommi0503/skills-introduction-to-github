@@ -1,0 +1,1 @@
+Paired values are joined by thin, data-driven slope lines with compact endpoint values and left-aligned series labels. One deeper accent line carries emphasis; neutral comparison lines and a low baseline maintain the source deck’s analytical tone.

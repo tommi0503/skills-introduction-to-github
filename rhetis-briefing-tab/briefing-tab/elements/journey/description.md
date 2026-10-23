@@ -1,0 +1,1 @@
+Equal-width touchpoint columns separate names, short notes and pain points from a fine data-driven emotion curve. Small circular points and one active tab extend the source deck’s line-chart and rounded-label language into a journey map.

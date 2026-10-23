@@ -1,0 +1,26 @@
+.mindmap[data-el="briefing-tab-mindmap"]{position:relative;container-type:size;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);box-sizing:border-box;}
+.mindmap[data-el="briefing-tab-mindmap"] *{box-sizing:border-box;}
+.mindmap[data-el="briefing-tab-mindmap"] .name{font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+.mindmap[data-el="briefing-tab-mindmap"] .note{font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);}
+.mindmap[data-el="briefing-tab-mindmap"] .fig{font-family:var(--font-display);font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.mindmap[data-el="briefing-tab-mindmap"]{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr) minmax(0,1fr);grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--gap);isolation:isolate;}
+.mindmap[data-el="briefing-tab-mindmap"]>.core{grid-column:2;grid-row:2;z-index:2;align-self:center;padding:var(--pad);background:var(--a1);color:var(--a1-on);border-radius:var(--radius);text-align:center;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch{position:relative;z-index:1;background:var(--n-1);border:var(--stroke) solid var(--n-3);border-radius:var(--radius-sm);padding:var(--gap-sm) var(--gap);display:flex;flex-direction:column;justify-content:center;gap:calc(var(--gap-sm)/2);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(even){grid-column:1;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(odd){grid-column:3;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(2),.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(3){grid-row:1;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(4),.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(5){grid-row:2;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(6),.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(7){grid-row:3;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch.on{border-color:var(--a1-7);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch>.leaf{font-size:var(--type-14);line-height:var(--label-line);color:var(--n-7);padding-left:var(--gap-sm);border-left:var(--stroke) solid var(--n-3);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch::before{content:"";position:absolute;z-index:-1;top:50%;width:calc(var(--gap) + 14cqi);height:1px;background:var(--n-3);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(even)::before{left:100%;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(odd)::before{right:100%;}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(2)::before,.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(3)::before{height:calc(33.333cqb + var(--gap));background:none;border-top:var(--stroke) solid var(--n-3);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(2)::before{border-right:var(--stroke) solid var(--n-3);border-top-right-radius:var(--radius);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(3)::before{border-left:var(--stroke) solid var(--n-3);border-top-left-radius:var(--radius);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(6)::before,.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(7)::before{top:auto;bottom:50%;height:calc(33.333cqb + var(--gap));background:none;border-bottom:var(--stroke) solid var(--n-3);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(6)::before{border-right:var(--stroke) solid var(--n-3);border-bottom-right-radius:var(--radius);}
+.mindmap[data-el="briefing-tab-mindmap"]>.branch:nth-child(7)::before{border-left:var(--stroke) solid var(--n-3);border-bottom-left-radius:var(--radius);}
+@container (max-width:900px){.mindmap[data-el="briefing-tab-mindmap"]>.core{padding:var(--gap-sm);}.mindmap[data-el="briefing-tab-mindmap"] .name{font-size:var(--type-16);}.mindmap[data-el="briefing-tab-mindmap"]>.branch>.leaf{font-size:var(--type-12);}}
+@container (max-height:340px){.mindmap[data-el="briefing-tab-mindmap"]>.branch>.leaf{font-size:var(--type-12);}}

@@ -1,0 +1,1 @@
+Nine softly filled boxes sit on a consistent two-axis grid with narrow hairline gutters. Names and short notes align through the cells, while a single accent border and pale fill identify the priority without introducing a second visual system.

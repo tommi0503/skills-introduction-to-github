@@ -1,0 +1,31 @@
+.slope[data-el="briefing-tab-slope"]{position:relative;container-type:size;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);box-sizing:border-box;}
+.slope[data-el="briefing-tab-slope"] *{box-sizing:border-box;}
+.slope[data-el="briefing-tab-slope"] .name{font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+.slope[data-el="briefing-tab-slope"] .note{font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);}
+.slope[data-el="briefing-tab-slope"] .fig{font-family:var(--font-display);font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.slope[data-el="briefing-tab-slope"]{isolation:isolate;border-bottom:var(--stroke) solid var(--n-3);}
+.slope[data-el="briefing-tab-slope"]>.heads{display:flex;justify-content:space-between;padding:0 calc(var(--pad)*5);font-size:var(--type-16);color:var(--n-7);}
+.slope[data-el="briefing-tab-slope"]>.pair{position:absolute;inset:calc(var(--pad)*2) calc(var(--pad)*5) var(--pad);container-type:size;--briefing-tab-slope-c:var(--n-7);}
+.slope[data-el="briefing-tab-slope"]>.pair.on{--briefing-tab-slope-c:var(--a1-7);}
+.slope[data-el="briefing-tab-slope"]>.pair::before{content:"";position:absolute;left:0;top:calc((1 - var(--a)/var(--max))*100%);width:hypot(100cqi,calc((var(--a) - var(--b))/var(--max)*100cqb));height:1px;background:var(--briefing-tab-slope-c);transform-origin:0 0;transform:rotate(atan2(calc((var(--a) - var(--b))/var(--max)*100cqb),100cqi));}
+.slope[data-el="briefing-tab-slope"]>.pair>.a,.slope[data-el="briefing-tab-slope"]>.pair>.b{position:absolute;font-size:var(--type-16);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--briefing-tab-slope-c);}
+.slope[data-el="briefing-tab-slope"]>.pair>.a{left:0;top:calc((1 - var(--a)/var(--max))*100%);transform:translate(-50%,-50%);}
+.slope[data-el="briefing-tab-slope"]>.pair>.b{right:0;top:calc((1 - var(--b)/var(--max))*100%);transform:translate(50%,-50%);}
+.slope[data-el="briefing-tab-slope"]>.pair>.a::before,.slope[data-el="briefing-tab-slope"]>.pair>.b::before{content:"";position:absolute;inset:calc(var(--gap-sm)*-.5);background:var(--page);border-radius:999px;z-index:-1;}
+.slope[data-el="briefing-tab-slope"]>.pair>.name{position:absolute;right:calc(100% + var(--gap));top:calc((1 - var(--a)/var(--max))*100%);width:calc(var(--pad)*4);transform:translateY(-50%);font-size:var(--type-14);text-align:right;color:var(--briefing-tab-slope-c);}
+@container (max-width:780px){.slope[data-el="briefing-tab-slope"]>.pair{inset-inline:calc(var(--pad)*4);}.slope[data-el="briefing-tab-slope"]>.pair>.name{width:calc(var(--pad)*3);font-size:var(--type-12);}.slope[data-el="briefing-tab-slope"]>.pair>.a,.slope[data-el="briefing-tab-slope"]>.pair>.b{font-size:var(--type-14);}}
+@container (max-height:300px){.slope[data-el="briefing-tab-slope"]>.pair>.name{font-size:var(--type-12);}}
+.slope.dumbbell[data-el="briefing-tab-slope"]{display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--gap-sm);}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.heads{padding:0;margin-left:25%;}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.pair{position:relative;inset:auto;flex:1;margin-left:25%;min-height:0;}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.pair::before{left:calc(min(var(--a),var(--b))/var(--max)*100%);top:50%;width:calc(abs(var(--b) - var(--a))/var(--max)*100cqi);height:2px;transform:none;}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.a,.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.b{right:auto;top:50%;transform:translate(-50%,-140%);}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.a{left:calc(var(--a)/var(--max)*100%);}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.b{left:calc(var(--b)/var(--max)*100%);}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.name{top:50%;width:calc(var(--pad)*6);}
+.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.a::after,.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.b::after{content:"";position:absolute;top:calc(100% + var(--gap-sm));left:50%;width:8px;height:8px;border-radius:50%;background:var(--briefing-tab-slope-c);transform:translate(-50%,-50%);}
+@container (max-width:800px){.slope.dumbbell[data-el="briefing-tab-slope"]>.pair>.name{width:calc(var(--pad)*4);}}
+/* Reserve the right gutter for values; actual endpoints stay on the plot. */
+.slope:not(.dumbbell)[data-el="briefing-tab-slope"]>.pair::after{content:"";position:absolute;right:-3px;top:calc((1 - var(--b)/var(--max))*100% - 3px);width:6px;height:6px;border-radius:50%;background:var(--briefing-tab-slope-c);}
+.slope:not(.dumbbell)[data-el="briefing-tab-slope"]>.pair>.b{right:calc(var(--gap-sm)*-1);transform:translate(100%,calc(-50% - var(--gap-sm)));}
+.slope:not(.dumbbell)[data-el="briefing-tab-slope"]>.pair.on>.b{transform:translate(100%,calc(-50% + var(--gap-sm)));}

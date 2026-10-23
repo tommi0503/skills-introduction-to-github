@@ -1,0 +1,28 @@
+.plans[data-el="briefing-tab-pricing"] { container-type:size; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.plans[data-el="briefing-tab-pricing"] * { box-sizing:border-box; min-width:0; margin:0; }
+.plans[data-el="briefing-tab-pricing"] .name { font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.plans[data-el="briefing-tab-pricing"] .note { color:var(--n-7); font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.plans[data-el="briefing-tab-pricing"] .icon { display:inline-block; width:24px; height:24px; }
+.plan[data-el="briefing-tab-pricing"] { container-type:size; min-width:0; min-height:0; color:var(--ink); font-family:var(--font-body); font-size:var(--type-18); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.plan[data-el="briefing-tab-pricing"] * { box-sizing:border-box; min-width:0; margin:0; }
+.plan[data-el="briefing-tab-pricing"] .name { font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); overflow-wrap:anywhere; }
+.plan[data-el="briefing-tab-pricing"] .note { color:var(--n-7); font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+.plan[data-el="briefing-tab-pricing"] .icon { display:inline-block; width:24px; height:24px; }
+
+.plans[data-el="briefing-tab-pricing"] { display:flex;gap:var(--gap);align-items:stretch; }
+.plans[data-el="briefing-tab-pricing"] > .plan,.plan[data-el="briefing-tab-pricing"] { position:relative;flex:1;display:flex;flex-direction:column;gap:var(--gap);padding:var(--pad);border:1px solid var(--n-3);border-radius:var(--radius);background:var(--n-1); }
+.plan[data-el="briefing-tab-pricing"].on { border-top:2px solid var(--a1);background:var(--a1-1-soft); }
+.plan[data-el="briefing-tab-pricing"] > .name { font-size:var(--type-24);min-height:calc(var(--type-24) * var(--name-line) * 2);display:flex;align-items:flex-end; }
+.plan[data-el="briefing-tab-pricing"] .price { display:flex;align-items:baseline;gap:var(--gap-sm);padding-bottom:var(--gap);border-bottom:1px solid var(--n-3); }
+.plan[data-el="briefing-tab-pricing"] .fig { font-size:var(--type-44);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+.plan[data-el="briefing-tab-pricing"] small { font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line); }
+.plan[data-el="briefing-tab-pricing"] > .tag { align-self:flex-start; }
+.plan[data-el="briefing-tab-pricing"] > .list { flex:1;min-height:0; }
+@container (max-width:760px) { .plans[data-el="briefing-tab-pricing"] > .plan{padding:var(--gap);gap:var(--gap-sm)} .plans[data-el="briefing-tab-pricing"] > .plan > .name{font-size:var(--type-18)} .plans[data-el="briefing-tab-pricing"] .fig{font-size:var(--type-32)} }
+@container (max-height:300px) { .plans[data-el="briefing-tab-pricing"] > .plan > .name{min-height:0} .plans[data-el="briefing-tab-pricing"] .price{padding-bottom:var(--gap-sm)} }
+
+.plans[data-el="briefing-tab-pricing"] > .plan[data-el="briefing-tab-pricing"], .plan[data-el="briefing-tab-pricing"] {display:grid;grid-template-rows:calc(var(--type-14) * var(--label-line) + var(--gap-sm) * 2) auto auto minmax(0,1fr);}
+.plan[data-el="briefing-tab-pricing"] > .tag {grid-row:1;justify-self:start;align-self:center;}
+.plan[data-el="briefing-tab-pricing"] > .name {grid-row:2;}
+.plan[data-el="briefing-tab-pricing"] > .price {grid-row:3;}
+.plan[data-el="briefing-tab-pricing"] > .list {grid-row:4;}

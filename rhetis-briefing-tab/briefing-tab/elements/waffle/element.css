@@ -1,0 +1,52 @@
+.waffle[data-el="briefing-tab-waffle"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);}
+.waffle[data-el="briefing-tab-waffle"]{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:minmax(0,1fr) auto;gap:var(--gap);align-items:center;padding:var(--pad);}
+.waffle[data-el="briefing-tab-waffle"]>.units{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:var(--gap-sm);grid-column:1/-1;align-content:center;}
+.waffle[data-el="briefing-tab-waffle"]>.units>.u{aspect-ratio:1;background:var(--n-2);border-radius:50%;position:relative;}
+.waffle[data-el="briefing-tab-waffle"]>.units>.u.on{background:var(--a1);}
+.waffle[data-el="briefing-tab-waffle"]>.units>.u.tone-2{background:var(--a2);}
+.waffle[data-el="briefing-tab-waffle"]>.fig{font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);grid-row:2;grid-column:2;color:var(--a1-7);}
+.waffle[data-el="briefing-tab-waffle"]>.name{font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);grid-row:2;grid-column:1;}
+.waffle[data-el="briefing-tab-waffle"].figures>.units>.u{background:none;border-radius:0;color:var(--n-3);}
+.waffle[data-el="briefing-tab-waffle"].figures>.units>.u.on{color:var(--a1);}
+.waffle[data-el="briefing-tab-waffle"].figures>.units>.u::before{content:"";position:absolute;width:28%;height:28%;left:36%;top:0;border-radius:50%;background:currentColor;}
+.waffle[data-el="briefing-tab-waffle"].figures>.units>.u::after{content:"";position:absolute;left:16%;right:16%;top:34%;bottom:0;background:currentColor;clip-path:polygon(20% 0,80% 0,100% 70%,70% 70%,65% 100%,35% 100%,30% 70%,0 70%);}
+@container (max-width:500px){.waffle[data-el="briefing-tab-waffle"]>.fig{font-size:var(--type-32);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.waffle[data-el="briefing-tab-waffle"]>.name{font-size:var(--type-14);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+.waffle[data-el="briefing-tab-waffle"]>.units{gap:calc(var(--gap-sm)/2);}
+}
+.waffle[data-el="briefing-tab-waffle"] p{margin:0;}
+.waffle[data-el="briefing-tab-waffle"]>.units{min-height:0;height:100%;grid-template-rows:repeat(var(--briefing-tab-waffle-rows,1),minmax(0,1fr));}
+.waffle[data-el="briefing-tab-waffle"]>.units>.u{height:100%;width:auto;max-width:100%;justify-self:center;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child){--briefing-tab-waffle-rows:1;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(20):last-child){--briefing-tab-waffle-rows:2;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(30):last-child){--briefing-tab-waffle-rows:3;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(40):last-child){--briefing-tab-waffle-rows:4;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(50):last-child){--briefing-tab-waffle-rows:5;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(60):last-child){--briefing-tab-waffle-rows:6;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(70):last-child){--briefing-tab-waffle-rows:7;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(80):last-child){--briefing-tab-waffle-rows:8;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(90):last-child){--briefing-tab-waffle-rows:9;}
+.waffle[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(100):last-child){--briefing-tab-waffle-rows:10;}
+.waffle[data-el="briefing-tab-waffle"]>.units>.u{width:min(100%,calc((100cqh - var(--pad)*5)/var(--briefing-tab-waffle-rows,1)));height:auto;aspect-ratio:1;align-self:center;}
+/* Ten-unit figure summaries retain the source's one-person and ten-dot rhythm. */
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child){--briefing-tab-waffle-accent:var(--a1);display:block;flex:0 0 192px;height:192px;max-height:100%;padding:0;align-self:stretch}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):has(.u.tone-3){--briefing-tab-waffle-accent:var(--a3)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):has(.u.tone-4){--briefing-tab-waffle-accent:var(--a4)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child){margin-top:calc(var(--gap)*-1 - var(--pad)*13/24)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):before{content:'';position:absolute;left:41px;top:60px;width:25px;height:25px;border-radius:50%;background:var(--briefing-tab-waffle-accent)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):after{content:'';position:absolute;left:24px;top:90px;width:60px;height:100px;background:var(--briefing-tab-waffle-accent);clip-path:polygon(12% 0,88% 0,100% 50%,96% 54%,74% 54%,68% 100%,32% 100%,26% 54%,4% 54%,0 50%)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):has(.u.tone-4):after{clip-path:polygon(28% 0,72% 0,100% 70%,78% 72%,68% 100%,32% 100%,22% 72%,0 70%)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.fig{position:absolute;left:104px;top:77px;font-family:var(--briefing-tab-share-font);font-size:var(--type-76);font-weight:var(--name-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--briefing-tab-waffle-accent)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.name{position:absolute;left:240px;right:var(--pad);top:116px;font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);color:var(--ink)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units{position:absolute;left:108px;top:160px;display:grid;grid-template-columns:repeat(10,28px);grid-template-rows:28px;gap:var(--gap-sm);height:28px;width:auto;align-content:normal}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units>.u{width:28px;height:28px;max-width:none;aspect-ratio:1;border-radius:50%;background:var(--n-1);color:var(--n-1)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units>.u.on{background:var(--briefing-tab-waffle-accent)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units>.u:before,.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units>.u:after{display:none}
+@container(max-width:500px){.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):before{left:30px;top:60px;width:20px;height:20px}.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):after{left:var(--gap);top:84px;width:48px;height:80px}.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.fig{left:76px;top:77px;font-size:var(--type-56)}.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.name{left:180px;top:105px;font-size:var(--type-10)}.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units{left:76px;right:var(--gap);grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:24px;gap:calc(var(--gap-sm)/2);height:24px}.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units>.u{width:100%;height:auto;max-height:24px}}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.fig{letter-spacing:calc(var(--figure-track)*6)}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):has(.u.tone-4)>.fig{top:65px}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):has(.u.tone-4)>.name{left:252px;top:111px}
+/* Figure text uses a deep accent on the page, independently of the unit fill. */
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child)>.fig{color:var(--a1-7);}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):has(.u.tone-3)>.fig{color:var(--a3-7);}
+.waffle.figures[data-el="briefing-tab-waffle"]:has(>.units>.u:nth-child(10):last-child):has(.u.tone-4)>.fig{color:var(--a4-7);}

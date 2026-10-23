@@ -1,0 +1,1 @@
+Bottom-aligned circular regions show true set inclusion rather than overlap. Each successive set is visibly contained by the previous one, with centered names and figures placed on the exposed upper arc and one lightly accented inner market.
