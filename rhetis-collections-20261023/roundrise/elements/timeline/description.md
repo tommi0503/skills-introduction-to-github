@@ -1,0 +1,1 @@
+Rounded event panels sit along a fine track with circular date anchors. The alternating version shifts successive panels below the track, and the vertical version becomes a compact date column beside name and note. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

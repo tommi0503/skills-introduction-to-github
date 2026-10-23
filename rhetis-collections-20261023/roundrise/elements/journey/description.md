@@ -1,0 +1,1 @@
+Rounded stage panels align their names, touchpoints and optional pain points beneath a sequence of circular mood markers. Fine sloped segments follow the next declared mood, with one softly tinted stage receiving emphasis. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

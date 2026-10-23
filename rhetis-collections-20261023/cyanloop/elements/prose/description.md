@@ -1,0 +1,1 @@
+Readable Korean paragraphs keep a calm line length and generous paragraph rhythm, with lead, secondary and two-column treatments. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

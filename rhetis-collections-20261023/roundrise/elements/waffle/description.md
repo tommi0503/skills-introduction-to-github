@@ -1,0 +1,1 @@
+A ten-column unit grid translates a share into a count of rounded blocks. The figures variant cuts the same units into simple person silhouettes, with a strong figure and short label beside the grid. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

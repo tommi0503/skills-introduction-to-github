@@ -1,0 +1,1 @@
+Small circular swatches and restrained text keys form a centered wrapping row. Ranked accent roles distinguish the series while wide spacing separates long business labels. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

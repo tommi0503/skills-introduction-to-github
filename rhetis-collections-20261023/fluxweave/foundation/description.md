@@ -1,0 +1,1 @@
+An editorial page on an open ground: generous outer margins, a heavy two-line heading and a twelve-by-six content grid. Optional section furniture forms a broad tinted vertical rail with a circular inset number. Covers use an oversized lockup and an abstract woven-line contour at the foot.

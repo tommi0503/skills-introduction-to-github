@@ -1,0 +1,37 @@
+[data-el="nightchamfer-chart-line"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}
+[data-el="nightchamfer-chart-line"] *,[data-el="nightchamfer-chart-line"] *::before,[data-el="nightchamfer-chart-line"] *::after{box-sizing:border-box}[data-el="nightchamfer-chart-line"] p,[data-el="nightchamfer-chart-line"] blockquote{margin:0}
+[data-el="nightchamfer-chart-line"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+[data-el="nightchamfer-chart-line"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7)}
+[data-el="nightchamfer-chart-line"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+[data-el="nightchamfer-chart-line"] .fig{font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+[data-el="nightchamfer-chart-line"] .fig small,[data-el="nightchamfer-chart-line"] small{font-size:var(--type-18);font-weight:var(--label-weight)}
+[data-el="nightchamfer-chart-line"] .icon{width:30px;height:30px;display:inline-flex;flex:none}
+@container (max-width:600px){[data-el="nightchamfer-chart-line"] .name{font-size:var(--type-18)}[data-el="nightchamfer-chart-line"] .note{font-size:var(--type-14)}[data-el="nightchamfer-chart-line"] .fig{font-size:var(--type-32)}}
+@container (max-height:230px){[data-el="nightchamfer-chart-line"] .name{font-size:var(--type-16)}[data-el="nightchamfer-chart-line"] .note{font-size:var(--type-12)}[data-el="nightchamfer-chart-line"] .fig{font-size:var(--type-28)}}
+[data-el="nightchamfer-chart-line"] {display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;padding:var(--pad) var(--gap) var(--gap-sm);anchor-scope:all;isolation:isolate;border-bottom:1px solid var(--n-4)}[data-el="nightchamfer-chart-line"]>.pt{display:contents}[data-el="nightchamfer-chart-line"]>.pt>b{grid-row:1;height:calc(100% - var(--v)/var(--max)*82%);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative;anchor-name:var(--nightchamfer-self);font-size:var(--type-18);font-weight:var(--label-weight);white-space:nowrap;padding-bottom:var(--gap-sm)}[data-el="nightchamfer-chart-line"]>.pt>b::after{content:"";position:absolute;bottom:0;width:8px;height:8px;transform:translateY(50%);background:var(--a1);border-radius:50%}[data-el="nightchamfer-chart-line"]>.pt.on>b{color:var(--a1-7)}[data-el="nightchamfer-chart-line"]>.pt>span{grid-row:2;text-align:center;font-size:var(--type-14);padding-top:var(--gap-sm);color:var(--n-7)}[data-el="nightchamfer-chart-line"]>.pt:not(:first-child)::before,[data-el="nightchamfer-chart-line"]>.pt:not(:first-child)::after{content:"";position:absolute;left:anchor(var(--nightchamfer-prev) center);right:anchor(var(--nightchamfer-self) center);pointer-events:none;z-index:-1}[data-el="nightchamfer-chart-line"]>.pt:not(:first-child)::before{top:calc(anchor(var(--nightchamfer-prev) bottom) - 1px);bottom:calc(anchor(var(--nightchamfer-self) bottom) - 1px);background:linear-gradient(to top right,color-mix(in srgb,var(--page) 0%,var(--ink) 0.001%) calc(50% - 1px),var(--a1) 50%,color-mix(in srgb,var(--page) 0%,var(--ink) 0.001%) calc(50% + 1px))}[data-el="nightchamfer-chart-line"]>.pt:not(:first-child)::after{top:calc(anchor(var(--nightchamfer-self) bottom) - 1px);bottom:calc(anchor(var(--nightchamfer-prev) bottom) - 1px);background:linear-gradient(to bottom right,color-mix(in srgb,var(--page) 0%,var(--ink) 0.001%) calc(50% - 1px),var(--a1) 50%,color-mix(in srgb,var(--page) 0%,var(--ink) 0.001%) calc(50% + 1px))}@container(max-width:650px){[data-el="nightchamfer-chart-line"]>.pt>b{font-size:var(--type-12)}[data-el="nightchamfer-chart-line"]>.pt>span{font-size:var(--type-12)}}@container(max-width:500px){[data-el="nightchamfer-chart-line"]:has(>.pt:nth-child(9))>.pt:nth-child(even)>span{visibility:hidden}}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(1){--nightchamfer-self:--nc-line-1;--nightchamfer-prev:--nc-line-0;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(2){--nightchamfer-self:--nc-line-2;--nightchamfer-prev:--nc-line-1;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(3){--nightchamfer-self:--nc-line-3;--nightchamfer-prev:--nc-line-2;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(4){--nightchamfer-self:--nc-line-4;--nightchamfer-prev:--nc-line-3;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(5){--nightchamfer-self:--nc-line-5;--nightchamfer-prev:--nc-line-4;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(6){--nightchamfer-self:--nc-line-6;--nightchamfer-prev:--nc-line-5;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(7){--nightchamfer-self:--nc-line-7;--nightchamfer-prev:--nc-line-6;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(8){--nightchamfer-self:--nc-line-8;--nightchamfer-prev:--nc-line-7;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(9){--nightchamfer-self:--nc-line-9;--nightchamfer-prev:--nc-line-8;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(10){--nightchamfer-self:--nc-line-10;--nightchamfer-prev:--nc-line-9;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(11){--nightchamfer-self:--nc-line-11;--nightchamfer-prev:--nc-line-10;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(12){--nightchamfer-self:--nc-line-12;--nightchamfer-prev:--nc-line-11;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(13){--nightchamfer-self:--nc-line-13;--nightchamfer-prev:--nc-line-12;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(14){--nightchamfer-self:--nc-line-14;--nightchamfer-prev:--nc-line-13;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(15){--nightchamfer-self:--nc-line-15;--nightchamfer-prev:--nc-line-14;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(16){--nightchamfer-self:--nc-line-16;--nightchamfer-prev:--nc-line-15;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(17){--nightchamfer-self:--nc-line-17;--nightchamfer-prev:--nc-line-16;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(18){--nightchamfer-self:--nc-line-18;--nightchamfer-prev:--nc-line-17;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(19){--nightchamfer-self:--nc-line-19;--nightchamfer-prev:--nc-line-18;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(20){--nightchamfer-self:--nc-line-20;--nightchamfer-prev:--nc-line-19;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(21){--nightchamfer-self:--nc-line-21;--nightchamfer-prev:--nc-line-20;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(22){--nightchamfer-self:--nc-line-22;--nightchamfer-prev:--nc-line-21;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(23){--nightchamfer-self:--nc-line-23;--nightchamfer-prev:--nc-line-22;}
+[data-el="nightchamfer-chart-line"] >.pt:nth-child(24){--nightchamfer-self:--nc-line-24;--nightchamfer-prev:--nc-line-23;}
+
+[data-el="nightchamfer-chart-line"].tone-1{--nightchamfer-rank:var(--a1)}[data-el="nightchamfer-chart-line"].tone-2{--nightchamfer-rank:var(--a2)}[data-el="nightchamfer-chart-line"].tone-3{--nightchamfer-rank:var(--a3)}[data-el="nightchamfer-chart-line"].tone-4{--nightchamfer-rank:var(--a4)}

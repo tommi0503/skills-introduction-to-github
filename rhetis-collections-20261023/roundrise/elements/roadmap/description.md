@@ -1,0 +1,1 @@
+Named lanes run beneath an evenly spaced period header. Rounded duration capsules occupy the declared start and end columns, while fine milestone markers remain distinct from the duration bars. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

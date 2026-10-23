@@ -1,0 +1,1 @@
+Nested inclusion fields descend toward a common lower centre, using alternating soft ranked surfaces and a deep innermost outcome. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

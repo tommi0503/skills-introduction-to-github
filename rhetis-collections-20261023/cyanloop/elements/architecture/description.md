@@ -1,0 +1,1 @@
+A stack of long capsule layers separates a strong layer name from small outlined capability chips, using one deep primary layer. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

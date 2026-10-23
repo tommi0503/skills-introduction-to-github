@@ -1,0 +1,20 @@
+from pathlib import Path
+C=Path('/workspace/output/nightchamfer')
+s='[data-el="nightchamfer-hub"]';p=C/'elements/hub/element.css';p.write_text(p.read_text()+f'''\n{s}{{display:block;padding:0;isolation:isolate}}
+{s}>.core{{position:absolute;left:38.4892086%;top:53.6324786%;transform:translateY(-50%);width:23.0215827%;height:auto;max-width:none;aspect-ratio:1;border:26px solid var(--a1-2-muted);background:linear-gradient(135deg,var(--a1-5),var(--a1-4));color:var(--ink);font-size:var(--type-30);line-height:var(--label-line)}}{s}>.core>.name{{font-size:var(--type-30);line-height:var(--label-line);color:var(--ink)}}
+{s}>.spoke{{position:absolute;left:.9892086%;top:14.5299145%;width:31.294964%;height:32.4786325%;padding:calc(var(--gap-sm)*1.5) var(--gap-sm) var(--gap-sm);border-radius:var(--radius);border:1px solid var(--n-4);background:linear-gradient(var(--n-1),var(--a1-1-muted));gap:var(--gap-sm)}}
+{s}>.spoke:nth-child(3),{s}>.spoke:nth-child(5),{s}>.spoke:nth-child(7){{left:67.7158273%}}
+{s}>.spoke:nth-child(4),{s}>.spoke:nth-child(5){{top:61.1111111%}}
+{s}>.spoke .name{{font-size:var(--type-22)}}{s}>.spoke .note{{font-size:var(--type-20);color:var(--n-7)}}
+{s}>.spoke::before{{content:"";position:absolute;left:100%;right:auto;top:50%;width:7.4640288cqw;height:46px;border:0;background:var(--n-4);clip-path:polygon(0 0,72% 0,100% 100%,calc(100% - 1px) 100%,71% 1px,0 1px)}}
+{s}>.spoke:nth-child(3)::before{{left:auto;right:100%;transform:scaleX(-1)}}{s}>.spoke:nth-child(4)::before{{top:calc(50% - 46px);transform:scaleY(-1)}}{s}>.spoke:nth-child(5)::before{{left:auto;right:100%;top:calc(50% - 46px);transform:scale(-1,-1)}}
+{s}>.spoke::after{{content:"";position:absolute;left:calc(100% + 7.4640288cqw - 6px);top:calc(50% + 46px - 6px);width:12px;height:12px;border-radius:50%;background:var(--a1)}}
+{s}>.spoke:nth-child(3)::after{{left:calc(-7.4640288cqw - 6px)}}{s}>.spoke:nth-child(4)::after{{top:calc(50% - 46px - 6px)}}{s}>.spoke:nth-child(5)::after{{left:calc(-7.4640288cqw - 6px);top:calc(50% - 46px - 6px)}}
+{s}:has(>.spoke:nth-child(7))>.spoke{{height:26%;top:0}}{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(4),{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(5){{top:74%}}{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(6),{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(7){{top:37%;height:26%}}
+{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(6)::before,{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(7)::before{{top:50%;height:1px;clip-path:none}}{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(7)::before{{left:auto;right:100%}}{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(6)::after,{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(7)::after{{top:calc(50% - 6px)}}{s}:has(>.spoke:nth-child(7))>.spoke:nth-child(7)::after{{left:calc(-7.4640288cqw - 6px)}}
+{s}:has(>.spoke:nth-child(4):last-child)>.core{{top:45%}}{s}:has(>.spoke:nth-child(4):last-child)>.spoke:nth-child(4){{left:34.352518%;top:73%;height:26%}}{s}:has(>.spoke:nth-child(4):last-child)>.spoke:nth-child(4)::before{{left:50%;top:-12px;width:1px;height:12px;clip-path:none;transform:none}}{s}:has(>.spoke:nth-child(4):last-child)>.spoke:nth-child(4)::after{{left:calc(50% - 6px);top:-18px}}
+@container(max-width:900px){{{s}>.core{{border-width:14px}}{s}>.core>.name{{font-size:var(--type-20)}}{s}>.spoke .name{{font-size:var(--type-16)}}{s}>.spoke .note{{font-size:var(--type-14)}}}}
+@container(max-height:320px){{{s}>.spoke{{padding:calc(var(--gap-sm)/2);gap:calc(var(--gap-sm)/2)}}{s}>.spoke .name{{font-size:var(--type-16)}}{s}>.spoke .note{{font-size:var(--type-12)}}{s}>.core{{border-width:10px}}{s}>.core>.name{{font-size:var(--type-16)}}}}
+''')
+p=C/'foundation/foundation.css';p.write_text(p.read_text()+'''\n.top{right:calc(var(--furn-edge) + var(--gap))}.head .kicker>.seat{width:27px;height:27px;border-radius:50%;font-size:var(--type-10)}\n''')
+p=Path('/workspace/work/nightchamfer/reassemble.py');t=p.read_text().replace("'#194786','#2057A9'","'#173B88','#2874E6'").replace('<p class="kicker">01</p>','<p class="kicker"><span class="seat avatar" data-ph="1"></span></p>');p.write_text(t)

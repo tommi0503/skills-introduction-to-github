@@ -1,0 +1,1 @@
+Equal stage panels carry a circular emotion trace above concise touchpoint text; pain labels remain secondary and one stage receives a soft emphasis. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

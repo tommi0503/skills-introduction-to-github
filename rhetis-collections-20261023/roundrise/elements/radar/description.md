@@ -1,0 +1,1 @@
+Ranked translucent polygons express three to eight values around a quiet radial grid. Axis labels surround the plot, while series names occupy a separate band above the shapes and remain outside the polygon clipping. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

@@ -1,0 +1,1 @@
+Quiet square logo seats form an evenly spaced row that can wrap when many members are present. Rounded corners and restrained surfaces keep partner marks secondary to the surrounding page narrative. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

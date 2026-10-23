@@ -1,0 +1,1 @@
+An inset quotation uses a broad display sentence, a slim accent edge and a compact attribution group with a circular avatar. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

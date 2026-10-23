@@ -1,0 +1,1 @@
+Successive rounded horizontal stages narrow according to their percentage values. Names and figures remain inside each stage, with the first stage carrying the full accent and subsequent stages staying soft. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

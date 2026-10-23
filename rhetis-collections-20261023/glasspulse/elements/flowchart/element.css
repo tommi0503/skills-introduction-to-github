@@ -1,0 +1,21 @@
+:is(.flowchart[data-el="glasspulse-flowchart"]){box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.flowchart[data-el="glasspulse-flowchart"]) *{box-sizing:border-box;min-width:0}
+:is(.flowchart[data-el="glasspulse-flowchart"]) :is(p,h2,blockquote){margin:0}
+:is(.flowchart[data-el="glasspulse-flowchart"]) .icon{display:inline-block;width:28px;height:28px;flex:none}
+:is(.flowchart[data-el="glasspulse-flowchart"]) {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:var(--gap);padding:var(--gap)} :is(.flowchart[data-el="glasspulse-flowchart"])>.node{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-22);font-weight:var(--name-weight);border:var(--stroke) solid var(--n-4);border-radius:var(--radius-sm);background:var(--n-1)} :is(.flowchart[data-el="glasspulse-flowchart"])>.node.start,:is(.flowchart[data-el="glasspulse-flowchart"])>.node.end{border-radius:999px;background:var(--a1);color:var(--a1-on);border-color:var(--a1)} :is(.flowchart[data-el="glasspulse-flowchart"])>.node.ask{border-color:var(--a1);background:var(--a1-1-soft)}    
+@container (max-width:240px){:is(.flowchart[data-el="glasspulse-flowchart"]) :is(.name,h2){font-size:var(--type-22)} :is(.flowchart[data-el="glasspulse-flowchart"]) .fig{font-size:var(--type-40)} :is(.flowchart[data-el="glasspulse-flowchart"]) .note{font-size:var(--type-16)} :is(.flowchart[data-el="glasspulse-flowchart"]) .kick{font-size:var(--type-14)}}
+@container (max-width:150px){:is(.flowchart[data-el="glasspulse-flowchart"]) .kick{display:none} :is(.flowchart[data-el="glasspulse-flowchart"]) :is(.name,h2){font-size:var(--type-18)} :is(.flowchart[data-el="glasspulse-flowchart"]) .fig{font-size:var(--type-28)} :is(.flowchart[data-el="glasspulse-flowchart"]) .note{font-size:var(--type-14)}}
+@container (max-height:170px){:is(.flowchart[data-el="glasspulse-flowchart"]) .kick{display:none} :is(.flowchart[data-el="glasspulse-flowchart"]) .note{display:none} :is(.flowchart[data-el="glasspulse-flowchart"]) .fig{font-size:var(--type-32)} :is(.flowchart[data-el="glasspulse-flowchart"]) :is(.name,h2){font-size:var(--type-20)}}
+
+/* Four independent edge layers preserve simultaneous branch directions. */
+.flowchart[data-el="glasspulse-flowchart"]>.node{--glasspulse-clear:color-mix(in srgb,var(--page) 0.001%,var(--page) 0%);--glasspulse-r:var(--glasspulse-clear);--glasspulse-d:var(--glasspulse-clear);--glasspulse-l:var(--glasspulse-clear);--glasspulse-u:var(--glasspulse-clear)}
+.flowchart[data-el="glasspulse-flowchart"]>.node.to-r{--glasspulse-r:var(--a1-7)}.flowchart[data-el="glasspulse-flowchart"]>.node.to-d{--glasspulse-d:var(--a1-7)}.flowchart[data-el="glasspulse-flowchart"]>.node.to-l{--glasspulse-l:var(--a1-7)}.flowchart[data-el="glasspulse-flowchart"]>.node.to-u{--glasspulse-u:var(--a1-7)}
+.flowchart[data-el="glasspulse-flowchart"]>.node:is(.to-r,.to-d,.to-l,.to-u)::after{content:"";position:absolute;inset:calc(var(--gap)*-1);width:auto;height:auto;pointer-events:none;background:
+conic-gradient(from 225deg at 100% 50%,var(--glasspulse-r) 0deg 90deg,var(--glasspulse-clear) 90deg 360deg) right center/10px 12px no-repeat,
+conic-gradient(from 315deg at 50% 100%,var(--glasspulse-d) 0deg 90deg,var(--glasspulse-clear) 90deg 360deg) center bottom/12px 10px no-repeat,
+conic-gradient(from 45deg at 0% 50%,var(--glasspulse-l) 0deg 90deg,var(--glasspulse-clear) 90deg 360deg) left center/10px 12px no-repeat,
+conic-gradient(from 135deg at 50% 0%,var(--glasspulse-u) 0deg 90deg,var(--glasspulse-clear) 90deg 360deg) center top/12px 10px no-repeat,
+linear-gradient(var(--glasspulse-r),var(--glasspulse-r)) right center/var(--gap) var(--stroke) no-repeat,
+linear-gradient(var(--glasspulse-d),var(--glasspulse-d)) center bottom/var(--stroke) var(--gap) no-repeat,
+linear-gradient(var(--glasspulse-l),var(--glasspulse-l)) left center/var(--gap) var(--stroke) no-repeat,
+linear-gradient(var(--glasspulse-u),var(--glasspulse-u)) center top/var(--stroke) var(--gap) no-repeat}

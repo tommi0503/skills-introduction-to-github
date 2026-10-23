@@ -1,0 +1,1 @@
+Ranked filled segments share one bar and retain their own readable value labels; horizontal and percentage arrangements preserve the same restrained rules. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

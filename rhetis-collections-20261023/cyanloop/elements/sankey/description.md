@@ -1,0 +1,1 @@
+A deep source capsule feeds measured rounded bands and quieter destination capsules, including a second split when the fixture contains nested branches. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

@@ -1,0 +1,1 @@
+Rounded rectangular process nodes, capsule endpoints and softly tinted decisions sit on an explicit grid. Fine geometric arrows support right, down, left and up routing across the reserved gutters. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

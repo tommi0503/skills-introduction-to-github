@@ -1,0 +1,1 @@
+A centered bold quotation forms an open text block with an optional circular avatar and a compact two-line attribution below. The large version strengthens the statement without adding ornamental quote marks. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

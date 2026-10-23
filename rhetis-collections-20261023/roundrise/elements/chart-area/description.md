@@ -1,0 +1,1 @@
+One or more equal-step series form continuous softly filled areas behind thin data edges. The series names sit in a clear band above the plot, labels sit below it, and stacked data use cumulative values as the visible upper boundary. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

@@ -1,0 +1,12 @@
+:is(.orbit[data-el="glasspulse-concentric"]){box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.orbit[data-el="glasspulse-concentric"]) *{box-sizing:border-box;min-width:0}
+:is(.orbit[data-el="glasspulse-concentric"]) :is(p,h2,blockquote){margin:0}
+:is(.orbit[data-el="glasspulse-concentric"]) .icon{display:inline-block;width:28px;height:28px;flex:none}
+.orbit[data-el="glasspulse-concentric"]{position:relative;display:flex;align-items:center;justify-content:center;padding:var(--gap);}
+.orbit[data-el="glasspulse-concentric"]>.ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;border:var(--stroke) solid var(--n-4);background:var(--n-1);display:grid;grid-template-columns:auto auto;justify-content:center;align-content:start;gap:calc(var(--gap-sm)/3);padding:calc(var(--gap-sm)*2/3);text-align:center;}
+.orbit[data-el="glasspulse-concentric"]>.ring:nth-child(1){width:min(90cqw,90cqh);height:min(90cqw,90cqh);}.orbit[data-el="glasspulse-concentric"]>.ring:nth-child(2){width:min(62cqw,62cqh);height:min(62cqw,62cqh);background:var(--a1-1-soft);}.orbit[data-el="glasspulse-concentric"]>.ring:nth-child(3){width:min(36cqw,36cqh);height:min(36cqw,36cqh);}.orbit[data-el="glasspulse-concentric"]>.ring:nth-child(4){width:min(18cqw,18cqh);height:min(18cqw,18cqh);}
+.orbit[data-el="glasspulse-concentric"]>.ring.on{background:var(--a1);color:var(--a1-on);border-color:var(--a1);}
+.orbit[data-el="glasspulse-concentric"] .name{font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);}.orbit[data-el="glasspulse-concentric"] .fig{font-size:var(--type-24);font-weight:var(--figure-weight);line-height:var(--figure-line);}.orbit[data-el="glasspulse-concentric"] .note{grid-column:1/-1;font-size:var(--type-12);line-height:var(--label-line);}
+.orbit[data-el="glasspulse-concentric"]>.ring:last-child{display:flex;flex-wrap:wrap;align-content:center;align-items:center;justify-content:center;}.orbit[data-el="glasspulse-concentric"]>.ring:last-child>.note{flex-basis:100%;}
+@container(max-height:520px){.orbit[data-el="glasspulse-concentric"]:has(>.ring:nth-child(4))>.ring:last-child .name{font-size:var(--type-14);}.orbit[data-el="glasspulse-concentric"]:has(>.ring:nth-child(4))>.ring:last-child .fig{font-size:var(--type-16);}}
+

@@ -1,0 +1,1 @@
+A strong ringed centre holds the shared idea, with symmetric outlined satellite panels carrying its members. Thin connecting strokes keep the relation legible and the centre remains the only strong fill.

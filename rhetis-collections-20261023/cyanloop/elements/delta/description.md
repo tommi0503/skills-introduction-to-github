@@ -1,0 +1,1 @@
+Two display figures sit on a shared baseline; a small drawn directional chevron bridges the quiet previous value and the darker emphasized result. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

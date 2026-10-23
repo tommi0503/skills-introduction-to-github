@@ -1,0 +1,1 @@
+Equal circular logo seats form a balanced single row or a uniform two-row grid, avoiding an oversized final member. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

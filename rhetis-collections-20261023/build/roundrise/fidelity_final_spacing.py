@@ -1,0 +1,5 @@
+from pathlib import Path
+B=Path('/workspace/output/roundrise')
+p=B/'foundation/foundation.css';s=p.read_text().replace('.body:has(>.group>.card>.parts>.mark.seat):not(:has(>.group>.card>.parts>.fig))','.body:has(>.group>.card>.parts>.kick):has(>.group>.card>.parts>.mark.seat):not(:has(.pill))');s+='''.slide .group.two:has(>.card.line)>.card.line+.card.line:before{content:"";width:60px;height:12px;background:var(--ink);clip-path:polygon(0 42%,85% 42%,85% 10%,100% 50%,85% 90%,85% 58%,0 58%)}.slide.dark .group.two:has(>.card.line)>.card.line+.card.line:before{background:var(--a1-on)}''';p.write_text(s)
+p=B/'elements/metric/element.css';s=p.read_text();s+='''.stat[data-el="roundrise-metric"]:is(.card>.parts>.stat){padding-right:0}.stat[data-el="roundrise-metric"]:is(.card>.parts>.stat) .note{font-size:var(--type-18)}''';p.write_text(s)
+p=B/'elements/card/element.css';s=p.read_text();s+='''.card[data-el="roundrise-card"]:has(>.parts>.areas)>.parts>.legend>.key:before{border-radius:50%}.card[data-el="roundrise-card"]:has(>.parts>.kick>.pill)>.parts>.kick>.pill .name{font-weight:var(--weight-body)}''';p.write_text(s)

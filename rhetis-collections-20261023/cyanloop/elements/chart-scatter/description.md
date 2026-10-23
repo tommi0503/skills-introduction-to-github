@@ -1,0 +1,1 @@
+Small circular marks sit on quiet two-value axes, while bubble marks use thin outlines and soft fills so their labels remain distinct. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

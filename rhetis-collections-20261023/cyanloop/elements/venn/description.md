@@ -1,0 +1,1 @@
+Thin outlined circular sets overlap with soft palette surfaces, with a deep shared label where the intersection carries the conclusion. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

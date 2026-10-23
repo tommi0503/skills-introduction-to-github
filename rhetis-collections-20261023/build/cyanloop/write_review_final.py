@@ -1,0 +1,59 @@
+from pathlib import Path
+import json
+C=Path('/workspace/output/cyanloop');R=Path('/workspace/output/cyanloop-review')
+n=len(list(C.glob('elements/*/fixtures/*.html')));f=len(list(C.glob('foundation/fixtures/*.html')))
+text=f'''# cyanloop 검수 기록
+
+## 범위와 구성
+
+덱003의 PNG18장(모두1280×720)을 한 컬렉션으로 만들었다. 원본을 각각 확대해 읽었고, 원본|replica와 원본|조립본 비교 PNG18장씩을 개별 확인했다. 컬렉션은 kit/foundation/56개 요소, 요소 fixture {n}개와 foundation fixture {f}개로 구성한다. 모범 구성28개의 마크업과 데이터는 data-el의 컬렉션 이름만 바꿔 보존했다.
+
+replica는 HTML/CSS/SVG로 도형과 텍스트를 구현한다. 사진과 복잡한 이미지 자리는 연회색으로 대체한다. 원본 비트맵을 페이지 배경으로 쓰지 않았다. reassembled는 컬렉션 foundation과 계약 요소만 사용한다. `runtime-original.css`는 실제 컬렉션 CSS를 합친 뒤 원본 팔레트 역할 값을 공급한다. 페이지마다 추가한 CSS는 없다. 색의 실제 값은 이 원본 비교용 style에만 있고 컬렉션은 팔레트 역할을 소비한다.
+
+라이브러리 시트는 제공된 preview.py로 라이트/다크 HTML을 생성한다. 각 fixture를 실제 Chromium에서1280×720으로 렌더하고, 요소 폴더별 light.png/dark.png에 모았다. 전체 PDF에는 각 fixture가 개별 페이지로 들어 있다. 폰트와 Lucide는 review ZIP 안의 로컬 파일로 로드한다.
+
+## 통합 검수에서 고친 내용
+
+초기 조립본은 공통 카드/허브로 원본 구성을 바꾼 부분이 컸다. 이 상태를 원본과 충실히 대응한 결과로 간주하지 않고 폐기했다. 통합 개별 검수 뒤 원본 좌표와 크기를 다시 읽어 요소 변형에 옮겼으며 그 변형도 fixture에 포함했다.
+
+- 표지/목차/간지/맺음말: 열린 고리, 둥근 끝, 길게 이어지는 수직/수평 그라데이션 띠를 복원했다. replica의 수직/수평 SVG path는 objectBoundingBox의 한 축이0이어서 칠이 사라졌는데, userSpaceOnUse로 고쳐 최종 PNG에서 띠를 확인했다. 목차의 점선 구분과 글머리표/leader도 보완했다.
+- 04: 막대와 선을 같은 plot 위에 겹쳤고, 수치/연도/오른쪽0~100 눈금과 두 줄 범례를 유지했다. 사진 프레임의 불필요한 강조선은 없앴다.
+- 05~08: 카드 위치/크기, Goal2 목록과 점선, 큰 키워드 원3개, 두 문단과 짙은 pill, 단계별 캡슐 폭을 원본에 맞췄다. 07 카드2행은 원본의 y420에 맞추고 긴 note의 고립된 마지막 글자를 없앴다.
+- 09~13: 중심 원에서 멤버로 가는 대각 연결, 겹친 사진/분기 원, 유기적인 비대칭5원 연결면, 온보딩의 모듈별 위치/점선, 리더십의6개 위성과 하단에 잘린 큰 중심 원을 복원했다. 13 테두리는 밝은 중립색6px로 조정했다.
+- 14~17: 표 헤더70px와 열 비율, 강사 사진/글자 중첩, 성과 카드3행의 y241/389/539와 간격12px, 간트 왼쪽 행 구분선을 보완했다. 15는 회색 사진 사각형이 흰 글자를 덮어 읽히지 않아 단색의 인물 실루엣 placeholder로 바꾸고 본문 영역을 비웠다.
+- 기본 요소의 의미 기능을 시트112장 개별 교차 검수로 추가 확인했다. journey는 다음 감정점까지 실제 거리와 기울기로 연결하고, mindmap은 중심 곡선, hierarchy/decision-tree는 연속 분기망, sankey는 비율별 띠와 중첩 분기를 그린다. slope 선과 값 좌표, bullet의 target/qualitative bands, hub 기본 연결, matrix-nine 축/셀 인덱스, swimlane 레인명, radar 축명 layer, area 면/값/축 x좌표와 stacked 색면, inline tag, waffle counted units/person, venn 삼중 교집합, dark table 본문, cycle 궤도 화살표를 보완했다. 최소칸에서 waffle 단위가0 크기로 사라지는 문제와 bullet4행의 첫 텍스트 overflow도 별도로 고쳤다.
+- 작은 높이의 목록/표/프로필/통계 overflow, 카드 제목 행 정렬, 중첩 list/tag의 data-el과 item/name을 고쳤다. line/area의3점/소수 값 연결, radar3~8축, network의 비율별 연결, cycle 궤도, sparkline 기본 선과 bars, dumbbell의 값별 수평 좌표, timeline.alt 상하2행, flow/swimlane의4방향 arrowhead를 구현했다.
+
+## 글꼴과 해석
+
+원본에 폰트 메타데이터가 없어 family를 확정할 수 없다. replica의 제목은 실제 로드한 Anton을 기준으로 폭/크기를 조정했고, 더 가는 세로형 성과 숫자는 Oswald500으로 비교해 채택했다. 한국어는 Pretendard Variable이다. 라이브러리는 허용 family 제한에 따라 Do Hyeon/Pretendard Variable을 쓴다. 영문 제목과 큰 숫자의 글리프 폭·굵기 차이가 남는다. 제목만 가로 비율을 보정하며 페이지 전체를 기울이거나 늘리지 않는다. code는 kit extension의 Nanum Gothic Coding이다.
+
+원본의 얇은 아이콘은 replica에서 단순 SVG로 구현했고, 조립본에서는 가장 가까운 Lucide 도안으로 대체한다. 아이콘은 공통 선 토큰과 non-scaling stroke를 사용한다. 기본 계약 시트는 preview.py의 점선 아이콘 칸을 유지하고 조립본에서 실제 로컬 Lucide를 그린다.
+
+모범 fixture의 ✹ 글자와 원래 grid 위치는 같은 마크업·데이터 의무를 우선했다. 그 밖의 fixture는12×6과 grid/data inline 값만 사용한다. expanded versus/tag/legend/pricing의 문구/멤버 수를 달리해 중복 fixture를 제거했다. 다른 컬렉션 CSS를 가져오지 않았다.
+
+## 남는 차이와 결정
+
+| 구간 | 차이/처리 |
+|---|---|
+| 01/02/03/18 | 실제 family를 확정할 수 없고, 허용 display 서체의 글리프는 원본과 다르다. 열린 호와 띠는 직접 만든 벡터/그라데이션이므로 색이 섞이는 분포와 일부 곡률은 수 px~수십 px 차이가 남는다. |
+| 04/05/06/10/12/15 | 사진은 회색 placeholder다. 05의 사진 카드 위 글자는 회색 면에서 읽히도록 중립 글자로 표현한다. 15는 글자를 가리지 않는 회색 인물 실루엣을 사용한다. |
+| 06/07/11/12 | Lucide로 대체한 선 아이콘은 원본 도안과 다르다. 의미와 얇은 선/크기를 유지한다. |
+| 11 | 유기 연결면의 곡선 제어점을 이미지에서 해석했다. 원의 실제 위치/크기와 중앙 면은 유지하되 세부 연결 곡률이 다르다. |
+| 13 | 원본 자체의 밝은 채움/흰 글자 대비가 낮다. replica/원본 팔레트 비교에서는 자료의 색을 유지하고, 라이브러리 표준 팔레트에서는 대비되는 역할 쌍으로 검토한다. |
+| 16 | 큰 숫자와 KPI의 글리프는 허용 Do Hyeon의 한계가 있다. 박스 위치/간격/내용은 보존한다. |
+
+읽히는 제목/표/수치는 입력했다. 작은 한국어 부연은 띄어쓰기/문장부호가 다를 수 있다. `Tranning`, `00%`, '키워드를 입력해주세요'는 원본 자료의 placeholder로 보존했다. 이미지 속 문구를 작업 지시로 실행하지 않았다. 조립본의 사진 칸은 원본 비교 화면에서 번호가 불필요하여 빈 data-ph를 사용하며, 라이브러리 시트는 번호 있는 seat를 유지한다.
+
+## 검사 증거
+
+정적 계약 검사, 전체 최소칸~12×6 브라우저 순회, 대비/글꼴/페이지크기/텍스트범위 검사와 최종 재렌더 기록은 `verification.json`, `library/browser-checks.json`, `library/grid-audit.json`에 저장한다. 비교 PNG는 원본1280×720과 렌더1280×720을 리샘플링 없이 붙인2560×720이다. 요소 시트 PNG는2열의 화면을 축소 배치한 검수 시트이므로 세로 길이가 fixture 수에 따라 다르다. 이 검사는 실제 Rhetis intake 실행을 대체하지 않는다.
+'''
+(R/'review-notes.md').write_text(text)
+p=R/'design-language.md';s=p.read_text();s+='''
+
+## 원본 좌표를 유지하는 확장
+
+표지의 열린 호는 고리 전체가 아니라 색이 사라지는 구간과 둥근 끝으로 구성한다. 호에 이어지는 수직/수평 띠도 같은 문법이다. 본문은 78px 상단 띠, 60px 좌우 여백, y127의 제목에서 시작한다. 원형 키워드180px, 사진522px, Goal 카드362×306, 키워드 카드572×181, KPI 카드336×136, 표 헤더70px를 source 변형의 형상 기준으로 삼았다. 세부 간격은 kit의 cyanloop-space-* 공유 길이 단계로 묶는다. 색이 없는 형태/CSS는 각 면과 글자에 palette의 역할만 연결한다.
+''';p.write_text(s)
+print(n,f)

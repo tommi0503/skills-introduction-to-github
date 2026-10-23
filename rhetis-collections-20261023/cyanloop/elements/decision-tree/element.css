@@ -1,0 +1,24 @@
+.dtree[data-el="cyanloop-decision-tree"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.dtree[data-el="cyanloop-decision-tree"]) * { box-sizing:border-box;min-width:0; }
+:is(.dtree[data-el="cyanloop-decision-tree"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.dtree[data-el="cyanloop-decision-tree"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.dtree[data-el="cyanloop-decision-tree"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.dtree[data-el="cyanloop-decision-tree"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.dtree[data-el="cyanloop-decision-tree"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.dtree[data-el="cyanloop-decision-tree"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.dtree[data-el="cyanloop-decision-tree"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.dtree[data-el="cyanloop-decision-tree"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-lg);padding:var(--pad);} :is(.dtree[data-el="cyanloop-decision-tree"]) .q{align-self:center;background:var(--a1-7);color:var(--page);border-radius:999px;padding:var(--pad);text-align:center;position:relative;} :is(.dtree[data-el="cyanloop-decision-tree"]) .q::after{content:'';position:absolute;left:50%;top:100%;height:var(--gap-lg);width:1px;background:var(--n-4);} :is(.dtree[data-el="cyanloop-decision-tree"]) .opts{display:flex;gap:var(--gap);align-items:stretch;} :is(.dtree[data-el="cyanloop-decision-tree"]) .opt{flex:1;display:flex;flex-direction:column;gap:var(--gap);position:relative;} :is(.dtree[data-el="cyanloop-decision-tree"]) .cond{font-size:var(--type-16);text-align:center;color:var(--n-7);} :is(.dtree[data-el="cyanloop-decision-tree"]) .end{padding:var(--pad);border-radius:var(--radius);background:var(--n-1);text-align:center;flex:1;display:flex;align-items:center;justify-content:center;} :is(.dtree[data-el="cyanloop-decision-tree"]) .end.on{background:var(--a1);color:var(--a1-on);} :is(.dtree[data-el="cyanloop-decision-tree"]) .q .name,:is(.dtree[data-el="cyanloop-decision-tree"]) .end .name{font-size:var(--type-20);} @container(max-width:650px){:is(.dtree[data-el="cyanloop-decision-tree"]) .q .name,:is(.dtree[data-el="cyanloop-decision-tree"]) .end .name{font-size:var(--type-16);} :is(.dtree[data-el="cyanloop-decision-tree"]) .cond{font-size:var(--type-12);}}
+
+
+
+/* Recursive question groups share a continuous branching rail at every depth. */
+.dtree[data-el="cyanloop-decision-tree"]{gap:var(--gap);}
+.dtree[data-el="cyanloop-decision-tree"] .q{z-index:1;}
+.dtree[data-el="cyanloop-decision-tree"] .q::after{height:calc(var(--gap) / 2);}
+.dtree[data-el="cyanloop-decision-tree"] .opts{position:relative;}
+.dtree[data-el="cyanloop-decision-tree"] .opts::before{content:'';position:absolute;left:calc(25% - var(--gap) / 4);width:calc(50% + var(--gap) / 2);top:calc(0px - var(--gap) / 2);height:var(--stroke);background:var(--n-4);}
+.dtree[data-el="cyanloop-decision-tree"] .opts:has(>.opt:nth-child(3))::before{left:calc(16.666667% - var(--gap) / 3);width:calc(66.666667% + var(--gap) * 2 / 3);}
+.dtree[data-el="cyanloop-decision-tree"] .opts>.opt::before{content:'';position:absolute;left:50%;top:calc(0px - var(--gap) / 2);width:var(--stroke);height:calc(var(--type-16) * var(--label-line) + var(--gap) * 1.5);background:var(--n-4);}
+.dtree[data-el="cyanloop-decision-tree"] .opt>.cond{position:relative;z-index:1;width:max-content;max-width:100%;align-self:center;background:var(--page);padding:0 var(--gap-sm);line-height:var(--label-line);}
+.dtree[data-el="cyanloop-decision-tree"] .opt>.end{position:relative;z-index:1;}
+@container(max-width:650px){.dtree[data-el="cyanloop-decision-tree"] .opts>.opt::before{height:calc(var(--type-12) * var(--label-line) + var(--gap) * 1.5);}}

@@ -1,0 +1,1 @@
+Nested rounded rectangles translate group and tile shares into proportional widths, using a single accent tile and short internal figures. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

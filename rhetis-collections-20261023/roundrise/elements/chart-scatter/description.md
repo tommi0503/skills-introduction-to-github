@@ -1,0 +1,1 @@
+A quiet two-axis plot places small circular marks by their actual x and y values. Labels sit above the marks, one point receives the accent, and the bubble variant expands the same circles by a third value. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

@@ -1,0 +1,1 @@
+Roundrise balances generous open grounds with broad rounded cards, capsule markers, circular nodes and dome-topped bars. Large compact sans headings and clear ranked figures establish an optimistic town-hall rhythm. Decorative volume is translated into quiet peripheral geometry, never ornamental content interference.

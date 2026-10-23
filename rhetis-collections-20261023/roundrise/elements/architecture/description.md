@@ -1,0 +1,1 @@
+A stack of broad rounded layers places its layer name beside a row of softly tinted capsule chips. Equal gutters and a restrained accent title make the hierarchy easy to scan. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

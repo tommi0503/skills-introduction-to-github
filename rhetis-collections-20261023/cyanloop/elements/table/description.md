@@ -1,0 +1,1 @@
+A deep header band anchors a clear business table, with quiet fine rules and soft selected columns. Numeric cells align to the right while Korean names retain a stable column rhythm. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

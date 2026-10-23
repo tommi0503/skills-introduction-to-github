@@ -1,0 +1,1 @@
+Two large tabular figures face a small geometric horizontal arrow. The starting value is neutral and the destination uses the deep accent, making the before-to-after movement legible without a card surface. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

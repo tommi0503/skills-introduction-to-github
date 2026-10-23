@@ -1,0 +1,1 @@
+Nested rounded tiles divide the space by branch and tile weights. Quiet branch labels sit above compact name-and-figure tile lockups, and one tile receives the solid accent. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

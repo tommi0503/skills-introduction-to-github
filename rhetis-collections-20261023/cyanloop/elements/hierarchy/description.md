@@ -1,0 +1,1 @@
+A centred deep root capsule connects to equal branch capsules and pale leaf strips. The complete tree is vertically balanced within its allocation. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

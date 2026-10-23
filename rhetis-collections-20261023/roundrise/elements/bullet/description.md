@@ -1,0 +1,1 @@
+A short label and figure sit above a capsule track containing qualitative bands, a narrow actual-value fill and a fine target marker. Stacked bullets maintain a stable row rhythm and reserve space for the target note. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

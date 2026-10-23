@@ -1,0 +1,1 @@
+Two broad rounded pans hold labeled items above a fine tilting beam and a simple geometric fulcrum. A soft accent identifies the preferred side while the verdict stays in a clear line beneath the scale. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

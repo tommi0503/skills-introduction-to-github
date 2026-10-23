@@ -1,0 +1,1 @@
+A slim capsule track follows the label and figure row, emphasizing completion without turning the whole cell into a heavy panel. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

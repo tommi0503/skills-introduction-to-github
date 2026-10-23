@@ -1,0 +1,1 @@
+Nine compact rounded boxes align behind independent three-step axis labels, using one primary accent rather than a competing rainbow of fills. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

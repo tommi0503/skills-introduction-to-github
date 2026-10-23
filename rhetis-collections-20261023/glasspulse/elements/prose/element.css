@@ -1,0 +1,12 @@
+:is(.prose[data-el="glasspulse-prose"]){box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.prose[data-el="glasspulse-prose"]) *{box-sizing:border-box;min-width:0}
+:is(.prose[data-el="glasspulse-prose"]) :is(p,h2,blockquote){margin:0}
+:is(.prose[data-el="glasspulse-prose"]) .icon{display:inline-block;width:28px;height:28px;flex:none}
+:is(.prose[data-el="glasspulse-prose"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm)} :is(.prose[data-el="glasspulse-prose"]) p{font-size:var(--type-26);line-height:var(--body-line)} :is(.prose[data-el="glasspulse-prose"]) b{color:var(--a1-7);font-weight:var(--name-weight)} :is(.prose[data-el="glasspulse-prose"]).lead p{font-size:var(--type-32)} :is(.prose[data-el="glasspulse-prose"]).quiet{color:var(--n-7)} :is(.prose[data-el="glasspulse-prose"]).cols{display:block;columns:2;column-gap:var(--gap-lg)} :is(.prose[data-el="glasspulse-prose"]).cols p{margin-bottom:var(--gap)}
+@container (max-width:240px){:is(.prose[data-el="glasspulse-prose"]) :is(.name,h2){font-size:var(--type-22)} :is(.prose[data-el="glasspulse-prose"]) .fig{font-size:var(--type-40)} :is(.prose[data-el="glasspulse-prose"]) .note{font-size:var(--type-16)} :is(.prose[data-el="glasspulse-prose"]) .kick{font-size:var(--type-14)}}
+@container (max-width:150px){:is(.prose[data-el="glasspulse-prose"]) .kick{display:none} :is(.prose[data-el="glasspulse-prose"]) :is(.name,h2){font-size:var(--type-18)} :is(.prose[data-el="glasspulse-prose"]) .fig{font-size:var(--type-28)} :is(.prose[data-el="glasspulse-prose"]) .note{font-size:var(--type-14)}}
+@container (max-height:170px){:is(.prose[data-el="glasspulse-prose"]) .kick{display:none} :is(.prose[data-el="glasspulse-prose"]) .note{display:none} :is(.prose[data-el="glasspulse-prose"]) .fig{font-size:var(--type-32)} :is(.prose[data-el="glasspulse-prose"]) :is(.name,h2){font-size:var(--type-20)}}
+
+
+.prose[data-el="glasspulse-prose"].lead:has(p>br){justify-content:flex-start;padding:0 calc(var(--gap-sm)*1.5);transform:translateY(calc(var(--gap-sm)*-0.5))}.prose[data-el="glasspulse-prose"].lead:has(p>br)>p{font-size:var(--type-40);line-height:var(--lead-line);color:var(--n-7)}.prose[data-el="glasspulse-prose"].lead p strong{font-weight:var(--name-weight);color:var(--ink)}
+

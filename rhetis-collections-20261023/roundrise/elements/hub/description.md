@@ -1,0 +1,1 @@
+A large accent disc anchors rounded spoke panels on either side. Each spoke has a balanced mark, name and note, and a fine link reaches toward the central goal without crossing the text. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

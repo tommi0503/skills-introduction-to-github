@@ -1,0 +1,1 @@
+A thin accent ring contains a square neutral image seat; the circle remains a circle even when the allocated grid cell is wide. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

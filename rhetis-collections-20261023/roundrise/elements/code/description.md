@@ -1,0 +1,1 @@
+A quiet rounded source panel holds a compact filename and genuinely monospaced lines. Optional fine line numbers and deep ranked syntax accents preserve code hierarchy while preformatted spacing remains intact. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

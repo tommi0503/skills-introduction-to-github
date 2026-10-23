@@ -1,0 +1,1 @@
+CSS anchor positions join each data value into a continuous linear filled area. Multiple series receive ranked fills and upper names, while cumulative series paint in reverse depth order to reveal the stacked bands.

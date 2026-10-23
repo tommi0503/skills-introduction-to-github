@@ -1,0 +1,1 @@
+Vertical bars end in broad rounded domes and rise from a fine baseline; one bar receives the full accent while the others stay soft. Horizontal bars reserve a generous label column and keep values outside the rounded ends. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

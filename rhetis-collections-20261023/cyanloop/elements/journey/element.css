@@ -1,0 +1,24 @@
+.journey[data-el="cyanloop-journey"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.journey[data-el="cyanloop-journey"]) * { box-sizing:border-box;min-width:0; }
+:is(.journey[data-el="cyanloop-journey"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.journey[data-el="cyanloop-journey"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.journey[data-el="cyanloop-journey"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.journey[data-el="cyanloop-journey"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.journey[data-el="cyanloop-journey"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.journey[data-el="cyanloop-journey"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.journey[data-el="cyanloop-journey"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.journey[data-el="cyanloop-journey"]) {display:flex;align-items:stretch;gap:var(--gap-sm);padding:var(--pad);} :is(.journey[data-el="cyanloop-journey"]) .stage{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--gap-sm);border-radius:var(--radius);background:var(--n-1);padding:var(--pad);padding-top:35%;} :is(.journey[data-el="cyanloop-journey"]) .stage::before{content:'';position:absolute;top:calc(45% - var(--mood) * .3%);left:50%;width:14px;height:14px;border-radius:50%;background:var(--a1);} :is(.journey[data-el="cyanloop-journey"]) .stage:not(:last-child)::after{content:'';position:absolute;top:calc(45% - var(--mood) * .3% + 6px);left:50%;width:calc(100% + var(--gap-sm));height:2px;background:var(--a1);transform:rotate(calc((var(--mood) - var(--next,var(--mood))) * .15deg));transform-origin:left;} :is(.journey[data-el="cyanloop-journey"]) .stage.on{background:var(--a1-2-soft);} :is(.journey[data-el="cyanloop-journey"]) .pain{font-size:var(--type-14);color:var(--bad);} @container(max-width:650px){:is(.journey[data-el="cyanloop-journey"]) .name{font-size:var(--type-18);} :is(.journey[data-el="cyanloop-journey"]) .note{font-size:var(--type-14);}}
+
+
+:is(.journey[data-el="cyanloop-journey"]) {padding:var(--gap-sm);} :is(.journey[data-el="cyanloop-journey"]) .stage{padding:var(--gap-sm);padding-top:var(--gap-lg);} :is(.journey[data-el="cyanloop-journey"]) .name{font-size:var(--type-18);} :is(.journey[data-el="cyanloop-journey"]) .note{font-size:var(--type-14);} @container(max-height:320px){:is(.journey[data-el="cyanloop-journey"]) .name{font-size:var(--type-16);} :is(.journey[data-el="cyanloop-journey"]) .note,:is(.journey[data-el="cyanloop-journey"]) .pain{font-size:var(--type-12);}}
+
+
+/* Emotion segments use the actual distance between the following stage centres. */
+.journey[data-el="cyanloop-journey"]{isolation:isolate;--cyanloop-journey-count:3;}
+.journey[data-el="cyanloop-journey"]:has(>.stage:nth-child(4):last-child){--cyanloop-journey-count:4;}
+.journey[data-el="cyanloop-journey"]:has(>.stage:nth-child(5):last-child){--cyanloop-journey-count:5;}
+.journey[data-el="cyanloop-journey"]:has(>.stage:nth-child(6):last-child){--cyanloop-journey-count:6;}
+.journey[data-el="cyanloop-journey"]:has(>.stage:nth-child(7):last-child){--cyanloop-journey-count:7;}
+.journey[data-el="cyanloop-journey"]>.stage::before{left:50%;top:calc(45% - var(--mood) * .3%);transform:translate(-50%,-50%);z-index:3;}
+.journey[data-el="cyanloop-journey"]>.stage:not(:last-child)::after{left:50%;top:calc(45% - var(--mood) * .3%);height:2px;width:hypot(calc((100cqw + var(--gap-sm)) / var(--cyanloop-journey-count)),calc((var(--mood) - var(--next,var(--mood))) * .003 * 100cqh));transform:rotate(atan2(calc((var(--mood) - var(--next,var(--mood))) * .003 * 100cqh),calc((100cqw + var(--gap-sm)) / var(--cyanloop-journey-count))));transform-origin:left center;z-index:2;}
+.journey[data-el="cyanloop-journey"]>.stage>:is(.name,.note,.pain){position:relative;z-index:4;}

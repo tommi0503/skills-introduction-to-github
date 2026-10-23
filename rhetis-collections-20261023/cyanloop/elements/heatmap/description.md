@@ -1,0 +1,1 @@
+Rounded density cells form aligned business rows; visible values receive tiny page-colour capsules to preserve contrast in both themes. Calendar cells keep square geometry. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

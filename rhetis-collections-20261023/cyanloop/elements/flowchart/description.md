@@ -1,0 +1,1 @@
+Rounded process nodes and deep terminal capsules occupy explicit grid cells, with hairline directional connections and a circular decision node. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

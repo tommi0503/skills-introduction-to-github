@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{for(const e of document.querySelectorAll('[data-icon]:empty')){const key=e.dataset.icon.split('-').map(p=>p[0].toUpperCase()+p.slice(1)).join('');const data=lucide.icons[key]||lucide.icons.BookOpen;if(data){const svg=lucide.createElement(data);svg.setAttribute('width','100%');svg.setAttribute('height','100%');e.append(svg);}}});

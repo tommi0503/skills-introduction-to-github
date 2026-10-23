@@ -1,0 +1,1 @@
+Small ranked-colour discs precede concise series names in one centred row, wrapping only as a complete label group. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

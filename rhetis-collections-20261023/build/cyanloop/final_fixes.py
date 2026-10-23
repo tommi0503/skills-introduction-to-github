@@ -1,0 +1,4 @@
+from pathlib import Path
+C=Path('/workspace/output/cyanloop')
+p=C/'elements/person/element.css';s=p.read_text();r=':is(.person[data-el="cyanloop-person"],.people[data-el="cyanloop-person"])';s+='\n'+r+' .person:has(.list) .seat,'+r+'.person:has(.list) .seat{width:120px;flex-shrink:0;}\n'+r+' .list{width:100%;flex:1;min-height:0;}\n';p.write_text(s)
+p=C/'elements/card/element.css';s=p.read_text();r=':is(.card[data-el="cyanloop-card"])';s+='\n'+r+' .note:empty{display:none;min-height:0;}\n'+r+':has(.note:empty){padding:var(--gap-sm);}\n@container(max-height:220px){'+r+' .parts{row-gap:calc(var(--gap-sm) / 2);}'+r+' .parts>.name{font-size:var(--type-18);min-height:calc(1em * var(--name-line));}'+r+' .parts>.note{font-size:var(--type-14);min-height:0;}'+r+' .fig{font-size:var(--type-28);}}\n';p.write_text(s)

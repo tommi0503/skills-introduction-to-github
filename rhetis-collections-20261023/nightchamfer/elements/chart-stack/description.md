@@ -1,0 +1,1 @@
+Square-edged ranked segments stack within equal bars or extend horizontally from a fixed label rail. Small page-and-ink value plates secure contrast, and very narrow segments lift their values above the bar.

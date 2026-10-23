@@ -1,0 +1,1 @@
+Progressively shorter capsules represent diminishing stages, keeping the name and figure readable at opposite ends of each level. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

@@ -1,0 +1,1 @@
+Two rounded comparison panels face a small central disc marked VS; one soft accent side receives the recommendation while nested lists stay readable. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

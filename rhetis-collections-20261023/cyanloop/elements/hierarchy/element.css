@@ -1,0 +1,26 @@
+.org[data-el="cyanloop-hierarchy"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.org[data-el="cyanloop-hierarchy"]) * { box-sizing:border-box;min-width:0; }
+:is(.org[data-el="cyanloop-hierarchy"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.org[data-el="cyanloop-hierarchy"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.org[data-el="cyanloop-hierarchy"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.org[data-el="cyanloop-hierarchy"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.org[data-el="cyanloop-hierarchy"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.org[data-el="cyanloop-hierarchy"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.org[data-el="cyanloop-hierarchy"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.org[data-el="cyanloop-hierarchy"]) {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto 1fr;gap:var(--gap-lg) var(--gap);padding:var(--pad);} :is(.org[data-el="cyanloop-hierarchy"]) .root{grid-column:1 / -1;justify-self:center;min-width:30%;padding:var(--pad);border-radius:999px;background:var(--a1-7);color:var(--page);font-size:var(--type-28);font-weight:var(--name-weight);text-align:center;position:relative;} :is(.org[data-el="cyanloop-hierarchy"]) .root::after{content:'';position:absolute;left:50%;top:100%;height:var(--gap-lg);width:1px;background:var(--n-4);} :is(.org[data-el="cyanloop-hierarchy"]) .branch{display:flex;flex-direction:column;gap:var(--gap-sm);position:relative;} :is(.org[data-el="cyanloop-hierarchy"]) .branch::before{content:'';position:absolute;left:50%;top:calc(0px - var(--gap));width:1px;height:var(--gap);background:var(--n-4);} :is(.org[data-el="cyanloop-hierarchy"]) .node{padding:var(--gap);border-radius:999px;background:var(--a1);color:var(--a1-on);text-align:center;font-size:var(--type-20);font-weight:var(--name-weight);} :is(.org[data-el="cyanloop-hierarchy"]) .leaf{padding:var(--gap-sm);background:var(--n-1);border-radius:var(--radius-sm);text-align:center;font-size:var(--type-18);} :is(.org[data-el="cyanloop-hierarchy"]):has(>.branch:nth-child(3):last-child){grid-template-columns:repeat(2,minmax(0,1fr));} :is(.org[data-el="cyanloop-hierarchy"]):has(>.branch:nth-child(4):last-child){grid-template-columns:repeat(3,minmax(0,1fr));} @container(max-width:650px){:is(.org[data-el="cyanloop-hierarchy"]) .root{font-size:var(--type-22);} :is(.org[data-el="cyanloop-hierarchy"]) .node{font-size:var(--type-16);} :is(.org[data-el="cyanloop-hierarchy"]) .leaf{font-size:var(--type-14);}}
+
+
+:is(.org[data-el="cyanloop-hierarchy"]) {gap:var(--gap) var(--gap-sm);padding:var(--gap-sm);} :is(.org[data-el="cyanloop-hierarchy"]) .root{padding:var(--gap-sm);font-size:var(--type-22);} :is(.org[data-el="cyanloop-hierarchy"]) .node{padding:var(--gap-sm);font-size:var(--type-18);} :is(.org[data-el="cyanloop-hierarchy"]) .leaf{font-size:var(--type-16);padding:calc(var(--gap-sm) / 2);} @container(max-height:350px){:is(.org[data-el="cyanloop-hierarchy"]) .root{font-size:var(--type-18);} :is(.org[data-el="cyanloop-hierarchy"]) .node{font-size:var(--type-14);} :is(.org[data-el="cyanloop-hierarchy"]) .leaf{font-size:var(--type-12);} :is(.org[data-el="cyanloop-hierarchy"]) .branch{gap:calc(var(--gap-sm) / 2);}}
+
+.org[data-el="cyanloop-hierarchy"]{grid-template-rows:auto auto;align-content:center;}
+
+
+/* The root stem joins one rail, whose drops meet every branch node. */
+.org[data-el="cyanloop-hierarchy"]>.root::after{height:calc(var(--gap) / 2);}
+.org[data-el="cyanloop-hierarchy"]>.branch::before{top:calc(0px - var(--gap) / 2);height:calc(var(--gap) / 2);}
+.org[data-el="cyanloop-hierarchy"]>.branch::after{content:'';position:absolute;top:calc(0px - var(--gap) / 2);left:calc(0px - var(--gap-sm) / 2);width:calc(100% + var(--gap-sm));height:var(--stroke);background:var(--n-4);}
+.org[data-el="cyanloop-hierarchy"]>.branch:nth-child(2)::after{left:50%;width:calc(50% + var(--gap-sm) / 2);}
+.org[data-el="cyanloop-hierarchy"]>.branch:last-child::after{width:calc(50% + var(--gap-sm) / 2);}
+.org[data-el="cyanloop-hierarchy"]>.branch>.leaf{position:relative;}
+.org[data-el="cyanloop-hierarchy"]>.branch>.leaf::before{content:'';position:absolute;left:50%;top:calc(0px - var(--gap-sm));width:var(--stroke);height:var(--gap-sm);background:var(--n-4);}
+@container(max-height:350px){.org[data-el="cyanloop-hierarchy"]>.branch>.leaf::before{top:calc(0px - var(--gap-sm) / 2);height:calc(var(--gap-sm) / 2);}}

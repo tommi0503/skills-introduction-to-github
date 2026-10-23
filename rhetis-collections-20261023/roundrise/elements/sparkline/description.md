@@ -1,0 +1,1 @@
+A compact sequence of soft vertical strokes communicates a trend beside a figure. The bar variant keeps full mini bars, while semantic up and down states apply the relevant status role. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

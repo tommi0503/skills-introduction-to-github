@@ -1,0 +1,1 @@
+A broad rounded plot uses delicate crossed axes and circular competitor marks. The main organization receives a larger softly tinted circle, with two endpoint labels on each axis and no decorative brand-colored background image. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

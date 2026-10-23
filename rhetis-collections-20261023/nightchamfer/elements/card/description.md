@@ -1,0 +1,1 @@
+Thin outlined panels centre a fixed-height name capsule above aligned supporting text. A ring-sized mark or numbered illustration seat supplies the visual pause; one filled accent panel can carry the conclusion.

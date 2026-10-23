@@ -1,0 +1,1 @@
+Two columns of wide capsule entries pair deep-accent numerals with a name and a secondary line. Emphasis is applied to one complete capsule, and the internal text grid reserves space for long titles. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

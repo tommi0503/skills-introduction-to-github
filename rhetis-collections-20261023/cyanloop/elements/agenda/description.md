@@ -1,0 +1,1 @@
+Strong display numerals introduce equal-width agenda entries with compact Korean names and notes, finished by a quiet lower rule. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

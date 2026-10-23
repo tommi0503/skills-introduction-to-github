@@ -1,0 +1,1 @@
+Fonts in artifacts/ were supplied in the user-provided Rhetis reference archive. Anton.ttf was retrieved from Google Fonts (Anton v27, fonts.gstatic.com), under the SIL Open Font License, for the independent replica only. The collection package itself contains no font binaries.

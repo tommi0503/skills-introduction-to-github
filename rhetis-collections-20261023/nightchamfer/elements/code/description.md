@@ -1,0 +1,1 @@
+A quiet rounded source panel uses the approved monospaced Nanum Gothic Coding kit token. Optional automatic line numbers, deep ranked syntax accents and readable neutral comments retain the technical tone.

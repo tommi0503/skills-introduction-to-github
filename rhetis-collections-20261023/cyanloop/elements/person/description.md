@@ -1,0 +1,1 @@
+Circular or portrait seats lead a centred profile name and role; optional career lists occupy a measured lower block without stretching the photograph. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

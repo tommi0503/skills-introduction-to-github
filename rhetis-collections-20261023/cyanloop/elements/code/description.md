@@ -1,0 +1,1 @@
+A restrained inset source panel uses the actual Nanum Gothic Coding monospace face, optional line numbering and readable ranked syntax colours. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

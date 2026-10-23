@@ -1,0 +1,1 @@
+A strong display heading floats inside the content grid with a short kicker and optional subtitle. Its statement, centred and accent-ground variants retain the deck’s forceful hierarchy. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

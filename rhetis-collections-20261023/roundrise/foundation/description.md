@@ -1,0 +1,1 @@
+An airy 12-by-6 page with a compact centered header, wide outer margins, delicate furniture and quietly tinted peripheral ground. Covers use bold stacked statements and an optional circular edge motif. Image seats remain neutral placements.

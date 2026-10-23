@@ -1,0 +1,1 @@
+A four-cell matrix uses broad rounded surfaces, quiet axes and a single filled emphasis cell. SWOT removes the axes and places a kicker, name and semantic list into each quadrant. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

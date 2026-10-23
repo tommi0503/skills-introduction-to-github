@@ -1,0 +1,1 @@
+A single capsule centres its mark, Korean label and short supporting note on their visual centre. Smaller allocations remove secondary text before disturbing the primary name. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

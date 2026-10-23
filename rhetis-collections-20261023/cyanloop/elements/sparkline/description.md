@@ -1,0 +1,1 @@
+A small capsule-ended microtrend sits beside a larger figure, using semantic upward or downward colour only when the variant carries that meaning. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

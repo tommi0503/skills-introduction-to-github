@@ -1,0 +1,1 @@
+Circular nodes sit at explicit coordinates and connect through fine length-and-angle links. One accent node and stronger links establish the primary relationship without overwhelming the smaller names. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

@@ -1,0 +1,22 @@
+:is(.cycle[data-el="glasspulse-cycle"]){box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.cycle[data-el="glasspulse-cycle"]) *{box-sizing:border-box;min-width:0}
+:is(.cycle[data-el="glasspulse-cycle"]) :is(p,h2,blockquote){margin:0}
+:is(.cycle[data-el="glasspulse-cycle"]) .icon{display:inline-block;width:28px;height:28px;flex:none}
+.cycle[data-el="glasspulse-cycle"]{--glasspulse-count:3;--glasspulse-nw:min(27cqw,260px);--glasspulse-nh:min(22cqh,110px);--glasspulse-rx:calc(50cqw - var(--glasspulse-nw)/2 - var(--gap));--glasspulse-ry:calc(50cqh - var(--glasspulse-nh)/2 - var(--gap));isolation:isolate;}
+.cycle[data-el="glasspulse-cycle"]>.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(25cqw,35cqh);height:min(25cqw,35cqh);border:var(--stroke) solid var(--a1);border-radius:50%;background:var(--a1-1-soft);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);}
+.cycle[data-el="glasspulse-cycle"]>.node{--glasspulse-angle:calc(-90deg + var(--glasspulse-i)*360deg/var(--glasspulse-count));--glasspulse-next:calc(var(--glasspulse-angle) + 360deg/var(--glasspulse-count));--glasspulse-dx:calc((cos(var(--glasspulse-next)) - cos(var(--glasspulse-angle)))*var(--glasspulse-rx));--glasspulse-dy:calc((sin(var(--glasspulse-next)) - sin(var(--glasspulse-angle)))*var(--glasspulse-ry));--glasspulse-linkangle:atan2(var(--glasspulse-dy),var(--glasspulse-dx));--glasspulse-trim:min(calc(var(--glasspulse-nw)/2/max(.001,abs(cos(var(--glasspulse-linkangle))))),calc(var(--glasspulse-nh)/2/max(.001,abs(sin(var(--glasspulse-linkangle))))));position:absolute;left:calc(50% + cos(var(--glasspulse-angle))*var(--glasspulse-rx));top:calc(50% + sin(var(--glasspulse-angle))*var(--glasspulse-ry));transform:translate(-50%,-50%);width:var(--glasspulse-nw);height:var(--glasspulse-nh);border:var(--stroke) solid var(--n-4);border-radius:var(--radius);background:linear-gradient(0deg,var(--a1-1-soft),var(--n-1) 28%);padding:var(--gap-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--gap-sm)/2);text-align:center;}
+.cycle[data-el="glasspulse-cycle"]>.node.on{border-color:var(--a1);}
+.cycle[data-el="glasspulse-cycle"]>.node::after{content:"";position:absolute;left:50%;top:50%;width:hypot(var(--glasspulse-dx),var(--glasspulse-dy));height:var(--stroke);background:var(--a1);clip-path:inset(0 var(--glasspulse-trim));transform-origin:0 50%;transform:rotate(var(--glasspulse-linkangle));pointer-events:none;}
+.cycle[data-el="glasspulse-cycle"]>.node::before{content:"";position:absolute;left:calc(50% + var(--glasspulse-dx) - cos(var(--glasspulse-linkangle))*(var(--glasspulse-trim) + 7px));top:calc(50% + var(--glasspulse-dy) - sin(var(--glasspulse-linkangle))*(var(--glasspulse-trim) + 7px));width:10px;height:10px;border-top:var(--stroke) solid var(--a1);border-right:var(--stroke) solid var(--a1);transform:translate(-50%,-50%) rotate(calc(var(--glasspulse-linkangle) + 45deg));}
+.cycle[data-el="glasspulse-cycle"] .name{font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);}.cycle[data-el="glasspulse-cycle"] .note{font-size:var(--type-18);color:var(--n-7);line-height:var(--body-line);}
+.cycle[data-el="glasspulse-cycle"]:has(>.node:nth-child(3 of .node):last-child){--glasspulse-count:3;}
+.cycle[data-el="glasspulse-cycle"]:has(>.node:nth-child(4 of .node):last-child){--glasspulse-count:4;}
+.cycle[data-el="glasspulse-cycle"]:has(>.node:nth-child(5 of .node):last-child){--glasspulse-count:5;}
+.cycle[data-el="glasspulse-cycle"]:has(>.node:nth-child(6 of .node):last-child){--glasspulse-count:6;}
+.cycle[data-el="glasspulse-cycle"]>.node:nth-child(1 of .node){--glasspulse-i:0;}
+.cycle[data-el="glasspulse-cycle"]>.node:nth-child(2 of .node){--glasspulse-i:1;}
+.cycle[data-el="glasspulse-cycle"]>.node:nth-child(3 of .node){--glasspulse-i:2;}
+.cycle[data-el="glasspulse-cycle"]>.node:nth-child(4 of .node){--glasspulse-i:3;}
+.cycle[data-el="glasspulse-cycle"]>.node:nth-child(5 of .node){--glasspulse-i:4;}
+.cycle[data-el="glasspulse-cycle"]>.node:nth-child(6 of .node){--glasspulse-i:5;}
+@container(max-width:700px){.cycle[data-el="glasspulse-cycle"] .name{font-size:var(--type-20);}.cycle[data-el="glasspulse-cycle"] .note{font-size:var(--type-14);}}

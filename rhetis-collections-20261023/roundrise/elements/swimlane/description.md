@@ -1,0 +1,1 @@
+A process grid adds quiet owner lanes behind rounded nodes and capsule endpoints. Fine directional arrows cross only the reserved gutters, while owner labels remain separate from the process text. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

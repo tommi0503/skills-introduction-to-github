@@ -1,0 +1,1 @@
+Three to eight labelled spokes surround a circular ruled field; each series is a real value-driven polygon, with its name in an unclipped upper legend position. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

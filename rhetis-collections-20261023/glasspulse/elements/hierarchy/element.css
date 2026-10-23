@@ -1,0 +1,20 @@
+:is(.org[data-el="glasspulse-hierarchy"]){box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.org[data-el="glasspulse-hierarchy"]) *{box-sizing:border-box;min-width:0}
+:is(.org[data-el="glasspulse-hierarchy"]) :is(p,h2,blockquote){margin:0}
+:is(.org[data-el="glasspulse-hierarchy"]) .icon{display:inline-block;width:28px;height:28px;flex:none}
+.org[data-el="glasspulse-hierarchy"]{--glasspulse-cols:3;display:grid;grid-template-columns:repeat(var(--glasspulse-cols),minmax(0,1fr));grid-template-rows:auto minmax(0,1fr);gap:var(--gap-lg) var(--gap);padding:var(--gap);anchor-scope:all;isolation:isolate;}
+.org[data-el="glasspulse-hierarchy"]>.root{position:relative;grid-column:1/-1;justify-self:center;padding:var(--gap) var(--gap-lg);background:var(--a1);color:var(--a1-on);border-radius:999px;font-size:var(--type-28);font-weight:var(--name-weight);line-height:var(--name-line);anchor-name:--glasspulse-org-root;}
+.org[data-el="glasspulse-hierarchy"]>.root::after{content:"";position:absolute;left:50%;top:100%;width:var(--stroke);height:calc(var(--gap-lg)/2);background:var(--n-4);}
+.org[data-el="glasspulse-hierarchy"]::before{content:"";position:absolute;top:calc(anchor(--glasspulse-org-root bottom) + var(--gap-lg)/2);left:calc(var(--gap) + (100% - var(--gap)*2 - (var(--glasspulse-cols) - 1)*var(--gap))/var(--glasspulse-cols)/2);right:calc(var(--gap) + (100% - var(--gap)*2 - (var(--glasspulse-cols) - 1)*var(--gap))/var(--glasspulse-cols)/2);height:var(--stroke);background:var(--n-4);}
+.org[data-el="glasspulse-hierarchy"]>.branch{position:relative;display:flex;flex-direction:column;justify-content:flex-start;gap:calc(var(--gap-sm)/2);min-height:0;}
+.org[data-el="glasspulse-hierarchy"]>.branch::before{content:"";position:absolute;left:50%;top:calc(-1*var(--gap-lg)/2);height:calc(var(--gap-lg)/2);width:var(--stroke);background:var(--n-4);}
+.org[data-el="glasspulse-hierarchy"] .node{border:var(--stroke) solid var(--n-4);border-radius:var(--radius);background:linear-gradient(0deg,var(--a1-1-soft),var(--n-1) 28%);padding:var(--gap-sm);text-align:center;font-size:var(--type-24);font-weight:var(--name-weight);line-height:var(--name-line);}
+.org[data-el="glasspulse-hierarchy"] .leaf{position:relative;padding:calc(var(--gap-sm)/2) var(--gap-sm);border-left:var(--stroke) solid var(--n-4);font-size:var(--type-16);line-height:var(--label-line);background:var(--n-1);}
+.org[data-el="glasspulse-hierarchy"] .leaf::before{content:"";position:absolute;left:calc(-1*var(--stroke));bottom:100%;height:calc(var(--gap-sm)/2);width:var(--stroke);background:var(--n-4);}
+.org[data-el="glasspulse-hierarchy"] .name{font-size:var(--type-24);line-height:var(--name-line);}
+.org[data-el="glasspulse-hierarchy"]:has(>.branch:nth-child(2 of .branch):last-child){--glasspulse-cols:2;}
+.org[data-el="glasspulse-hierarchy"]:has(>.branch:nth-child(3 of .branch):last-child){--glasspulse-cols:3;}
+.org[data-el="glasspulse-hierarchy"]:has(>.branch:nth-child(4 of .branch):last-child){--glasspulse-cols:4;}
+
+
+@container(max-width:900px){.org[data-el="glasspulse-hierarchy"]>.root{font-size:var(--type-24);padding:var(--gap-sm) var(--gap);}.org[data-el="glasspulse-hierarchy"] .node,.org[data-el="glasspulse-hierarchy"] .name{font-size:var(--type-20);}.org[data-el="glasspulse-hierarchy"] .leaf{font-size:var(--type-14);}}

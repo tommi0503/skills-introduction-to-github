@@ -1,0 +1,1 @@
+Evenly spaced value points connect with a delicate continuous anchor-driven line. Small circular points sit below their value labels, axis names remain below the plot, and narrow containers reduce or thin labels rather than wrap the axis. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

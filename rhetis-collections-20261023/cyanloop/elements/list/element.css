@@ -1,0 +1,26 @@
+.list[data-el="cyanloop-list"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.list[data-el="cyanloop-list"]) * { box-sizing:border-box;min-width:0; }
+:is(.list[data-el="cyanloop-list"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.list[data-el="cyanloop-list"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.list[data-el="cyanloop-list"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.list[data-el="cyanloop-list"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.list[data-el="cyanloop-list"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.list[data-el="cyanloop-list"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.list[data-el="cyanloop-list"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.list[data-el="cyanloop-list"]) { display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:item; }
+:is(.list[data-el="cyanloop-list"]) .item { position:relative;padding-left:var(--gap-lg);display:flex;flex-direction:column;gap:var(--gap-sm);counter-increment:item; } :is(.list[data-el="cyanloop-list"]) .item::before{content:'';position:absolute;left:var(--gap-sm);top:var(--gap-sm);width:6px;height:6px;background:var(--a1);border-radius:50%;}
+:is(.list[data-el="cyanloop-list"]).num .item::before { content:counter(item,decimal-leading-zero);background:var(--a1-7);color:var(--page);font-size:var(--type-14);font-weight:var(--label-weight);width:var(--gap);height:var(--gap);left:0;top:0;display:flex;align-items:center;justify-content:center; }
+:is(.list[data-el="cyanloop-list"]).check .item::before { width:8px;height:14px;border:2px solid var(--a1);border-top:0;border-left:0;transform:rotate(45deg);background:none;border-radius:0; }
+:is(.list[data-el="cyanloop-list"]).divided .item {padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-3);}
+@container(max-width:400px){:is(.list[data-el="cyanloop-list"]) .name{font-size:var(--type-18);} :is(.list[data-el="cyanloop-list"]) .note{font-size:var(--type-14);}}
+
+
+:is(.list[data-el="cyanloop-list"]) {gap:var(--gap-sm);} :is(.list[data-el="cyanloop-list"]) .item{gap:calc(var(--gap-sm) / 2);} :is(.list[data-el="cyanloop-list"]) .name{font-size:var(--type-18);} :is(.list[data-el="cyanloop-list"]) .note{font-size:var(--type-16);} @container(max-height:280px){:is(.list[data-el="cyanloop-list"]) .name{font-size:var(--type-16);} :is(.list[data-el="cyanloop-list"]) .note{font-size:var(--type-12);} :is(.list[data-el="cyanloop-list"]) .item{gap:0;}}
+
+.list[data-el="cyanloop-list"]{list-style:none;margin:0;padding:0;}
+
+
+.list[data-el="cyanloop-list"].divided.quiet{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,auto);grid-auto-flow:column;align-content:center;gap:var(--cyanloop-space-4) var(--gap);padding-top:var(--gap-lg);border-top:var(--stroke) dotted var(--n-5);}
+.list[data-el="cyanloop-list"].divided.quiet .item{border:0;padding:0 0 0 var(--gap-sm);}
+.list[data-el="cyanloop-list"].divided.quiet .item::before{left:0;top:10px;background:var(--n-9);width:4px;height:4px;}
+.list[data-el="cyanloop-list"].divided.quiet .item .name{font-size:var(--type-18);font-weight:var(--body-weight);color:var(--n-9);white-space:nowrap;}

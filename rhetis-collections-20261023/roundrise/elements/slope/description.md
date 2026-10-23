@@ -1,0 +1,1 @@
+Paired figures sit across a quiet connecting line with a small central name capsule. The main pair receives stronger emphasis, and the dumbbell variant compresses the relationship into a short horizontal span. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

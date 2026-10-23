@@ -1,0 +1,1 @@
+Small counted square units group beside an accent figure and a compact name. The figures variant uses a simple repeated person silhouette and switches to a horizontal compact arrangement in shallow cells.

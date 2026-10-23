@@ -1,0 +1,1 @@
+A centered rounded profile card combines a square or circular portrait seat with a strong name, quiet role and optional compact credential list. Multiple profiles share the same top-to-bottom visual rhythm. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

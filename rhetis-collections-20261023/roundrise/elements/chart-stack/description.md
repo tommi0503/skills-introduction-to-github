@@ -1,0 +1,1 @@
+Evenly spaced columns stack ranked soft accent segments, with a single emphasized series group and clear values inside the segments. Horizontal and percentage versions preserve label space and rounded terminal ends. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

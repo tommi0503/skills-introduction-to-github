@@ -1,0 +1,1 @@
+A compact labeled grid uses rounded density cells whose strength follows each percentage. Small value chips remain readable over the cell surfaces, and the calendar variant switches to an unlabeled square-cell rhythm. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

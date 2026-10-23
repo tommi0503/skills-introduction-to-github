@@ -1,0 +1,1 @@
+Nested rounded arch-like rings share one base and successively smaller extents. Each ring holds a compact name and figure near its upper edge, using deeper accent roles as the contained sets become more focused. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

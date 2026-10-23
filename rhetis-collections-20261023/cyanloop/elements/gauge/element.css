@@ -1,0 +1,13 @@
+.meter[data-el="cyanloop-gauge"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.meter[data-el="cyanloop-gauge"]) * { box-sizing:border-box;min-width:0; }
+:is(.meter[data-el="cyanloop-gauge"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.meter[data-el="cyanloop-gauge"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.meter[data-el="cyanloop-gauge"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.meter[data-el="cyanloop-gauge"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.meter[data-el="cyanloop-gauge"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.meter[data-el="cyanloop-gauge"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.meter[data-el="cyanloop-gauge"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.meter[data-el="cyanloop-gauge"]) {display:grid;grid-template-columns:1fr auto;align-content:center;gap:var(--gap-sm);padding:var(--pad);border-radius:var(--radius);background:var(--n-1);} :is(.meter[data-el="cyanloop-gauge"])::after{content:'';grid-column:1 / -1;height:var(--gap);border-radius:999px;background:linear-gradient(to right,var(--a1) calc(var(--v) * 1%),var(--n-3) 0);} :is(.meter[data-el="cyanloop-gauge"]) .fig{font-size:var(--type-40);color:var(--a1-7);} @container(max-width:450px){:is(.meter[data-el="cyanloop-gauge"]) .name{font-size:var(--type-18);} :is(.meter[data-el="cyanloop-gauge"]) .fig{font-size:var(--type-28);}}
+
+
+:is(.meter[data-el="cyanloop-gauge"]) {padding:var(--gap-sm);gap:calc(var(--gap-sm) / 2);} :is(.meter[data-el="cyanloop-gauge"])::after{height:var(--gap-sm);} :is(.meter[data-el="cyanloop-gauge"]) .fig{font-size:var(--type-28);} :is(.meter[data-el="cyanloop-gauge"]) .name{font-size:var(--type-18);} @container(max-height:140px){:is(.meter[data-el="cyanloop-gauge"]) .name{font-size:var(--type-16);} :is(.meter[data-el="cyanloop-gauge"]) .fig{font-size:var(--type-24);}}

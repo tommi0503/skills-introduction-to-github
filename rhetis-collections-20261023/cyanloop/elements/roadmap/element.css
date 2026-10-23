@@ -1,0 +1,25 @@
+.roadmap[data-el="cyanloop-roadmap"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.roadmap[data-el="cyanloop-roadmap"]) * { box-sizing:border-box;min-width:0; }
+:is(.roadmap[data-el="cyanloop-roadmap"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.roadmap[data-el="cyanloop-roadmap"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.roadmap[data-el="cyanloop-roadmap"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.roadmap[data-el="cyanloop-roadmap"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.roadmap[data-el="cyanloop-roadmap"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.roadmap[data-el="cyanloop-roadmap"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.roadmap[data-el="cyanloop-roadmap"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.roadmap[data-el="cyanloop-roadmap"]) {display:flex;flex-direction:column;gap:0;padding:var(--gap-sm);} :is(.roadmap[data-el="cyanloop-roadmap"]) .heads{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));margin-left:calc(var(--rail-w) + var(--gap));background:var(--a1-7);color:var(--page);padding:var(--gap) 0;font-size:var(--type-16);font-weight:var(--label-weight);text-align:center;} :is(.roadmap[data-el="cyanloop-roadmap"]) .lane{flex:1;position:relative;margin-left:calc(var(--rail-w) + var(--gap));border-bottom:var(--stroke) solid var(--n-3);background:repeating-linear-gradient(to right,var(--n-2) 0 1px,var(--page) 1px calc(100% / var(--cols)));} :is(.roadmap[data-el="cyanloop-roadmap"]) .lane>.name{position:absolute;right:calc(100% + var(--gap));width:var(--rail-w);top:50%;transform:translateY(-50%);font-size:var(--type-18);text-align:center;} :is(.roadmap[data-el="cyanloop-roadmap"]) .bar{position:absolute;left:calc(var(--from) / var(--cols) * 100%);width:calc((var(--to) - var(--from)) / var(--cols) * 100%);top:var(--gap-sm);bottom:var(--gap-sm);border-radius:999px;background:var(--a1);color:var(--a1-on);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);} :is(.roadmap[data-el="cyanloop-roadmap"]) .bar span{font-size:var(--type-16);line-height:var(--label-line);font-weight:var(--label-weight);} :is(.roadmap[data-el="cyanloop-roadmap"]) .bar.on{background:var(--a1-7);color:var(--page);} :is(.roadmap[data-el="cyanloop-roadmap"]) .mile{position:absolute;left:calc(var(--at) / var(--cols) * 100%);top:50%;width:12px;height:12px;background:var(--a1);transform:rotate(45deg);} :is(.roadmap[data-el="cyanloop-roadmap"]) .mile span{position:absolute;top:var(--gap);transform:rotate(-45deg);font-size:var(--type-12);white-space:nowrap;} @container(max-width:650px){:is(.roadmap[data-el="cyanloop-roadmap"]) .heads{font-size:var(--type-12);} :is(.roadmap[data-el="cyanloop-roadmap"]) .lane>.name{font-size:var(--type-14);} :is(.roadmap[data-el="cyanloop-roadmap"]) .bar span{font-size:var(--type-12);}}
+
+
+
+.roadmap[data-el="cyanloop-roadmap"].on{padding:var(--cyanloop-space-104) var(--cyanloop-space-4) var(--cyanloop-space-6) 0;}
+.roadmap[data-el="cyanloop-roadmap"].on .heads{margin-left:var(--cyanloop-space-217);height:74px;min-height:74px;padding:0;align-items:center;font-size:var(--type-20);}
+.roadmap[data-el="cyanloop-roadmap"].on .lane{margin-left:var(--cyanloop-space-217);}
+.roadmap[data-el="cyanloop-roadmap"].on .lane>.name{right:calc(100% + 5px);width:188px;font-size:var(--type-20);color:var(--n-9);}
+.roadmap[data-el="cyanloop-roadmap"].on .bar{top:0;bottom:0;border-radius:0;padding:var(--gap-sm);}
+.roadmap[data-el="cyanloop-roadmap"].on .bar span{font-size:var(--type-18);font-weight:var(--body-weight);}
+.roadmap[data-el="cyanloop-roadmap"].on .bar.on{background:var(--a2);color:var(--a2-on);}
+
+.roadmap[data-el="cyanloop-roadmap"].on .bar{padding:var(--cyanloop-space-4);}.roadmap[data-el="cyanloop-roadmap"].on .bar span{font-size:var(--type-16);}
+
+.roadmap[data-el="cyanloop-roadmap"].on .lane::before{content:'';position:absolute;right:100%;top:0;width:217px;height:1px;background:var(--n-3);}
+.roadmap[data-el="cyanloop-roadmap"].on .lane:last-child::after{content:'';position:absolute;right:100%;bottom:0;width:217px;height:1px;background:var(--n-3);}

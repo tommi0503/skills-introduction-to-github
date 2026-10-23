@@ -1,0 +1,1 @@
+Circular named marks sit on two crossing fine axes, with our position emphasized by one filled accent disc. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

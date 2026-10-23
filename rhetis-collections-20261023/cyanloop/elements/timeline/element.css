@@ -1,0 +1,40 @@
+.track[data-el="cyanloop-timeline"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.track[data-el="cyanloop-timeline"]) * { box-sizing:border-box;min-width:0; }
+:is(.track[data-el="cyanloop-timeline"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.track[data-el="cyanloop-timeline"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.track[data-el="cyanloop-timeline"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.track[data-el="cyanloop-timeline"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.track[data-el="cyanloop-timeline"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.track[data-el="cyanloop-timeline"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.track[data-el="cyanloop-timeline"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.track[data-el="cyanloop-timeline"]) {display:flex;align-items:center;gap:var(--gap);padding:var(--pad);} :is(.track[data-el="cyanloop-timeline"])::before{content:'';position:absolute;left:var(--pad);right:var(--pad);top:50%;height:1px;background:var(--n-4);} :is(.track[data-el="cyanloop-timeline"]) .stop{flex:1;position:relative;background:var(--page);border-top:var(--stroke) solid var(--a1);padding:var(--pad) var(--gap-sm);display:flex;flex-direction:column;gap:var(--gap-sm);} :is(.track[data-el="cyanloop-timeline"]) .stop::before{content:'';position:absolute;left:var(--gap-sm);top:-7px;width:14px;height:14px;border-radius:50%;background:var(--a1);} :is(.track[data-el="cyanloop-timeline"]) .stop.on{background:var(--a1-2-soft);border-radius:var(--radius);} :is(.track[data-el="cyanloop-timeline"]).alt .stop:nth-child(even){transform:translateY(var(--gap-lg));} :is(.track[data-el="cyanloop-timeline"]).col{flex-direction:column;align-items:stretch;} :is(.track[data-el="cyanloop-timeline"]).col::before{left:var(--pad);top:var(--pad);bottom:var(--pad);width:1px;height:auto;} :is(.track[data-el="cyanloop-timeline"]).col .stop{border-top:0;border-left:var(--stroke) solid var(--a1);padding:var(--gap-sm) var(--pad);} :is(.track[data-el="cyanloop-timeline"]).col .stop::before{left:-7px;top:var(--gap-sm);} @container(max-width:600px){:is(.track[data-el="cyanloop-timeline"]) .name{font-size:var(--type-18);} :is(.track[data-el="cyanloop-timeline"]) .note{font-size:var(--type-14);} :is(.track[data-el="cyanloop-timeline"]) .kick{font-size:var(--type-12);}}
+
+
+:is(.track[data-el="cyanloop-timeline"]).col{gap:var(--gap-sm);} :is(.track[data-el="cyanloop-timeline"]).col .stop{padding:var(--gap-sm) var(--pad);gap:calc(var(--gap-sm) / 2);} :is(.track[data-el="cyanloop-timeline"]).col .name{font-size:var(--type-18);} :is(.track[data-el="cyanloop-timeline"]).col .note{font-size:var(--type-14);} :is(.track[data-el="cyanloop-timeline"]).col .kick{font-size:var(--type-12);} @container(max-height:400px){:is(.track[data-el="cyanloop-timeline"]).col .name{font-size:var(--type-16);} :is(.track[data-el="cyanloop-timeline"]).col .note{font-size:var(--type-12);}}
+
+
+.track[data-el="cyanloop-timeline"].alt{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) minmax(0,1fr);align-items:stretch;column-gap:var(--gap-sm);row-gap:var(--gap-lg);}
+.track[data-el="cyanloop-timeline"].alt .stop{transform:none;justify-content:center;padding:var(--gap-sm);gap:var(--gap-sm);}
+.track[data-el="cyanloop-timeline"].alt .stop:nth-child(odd){grid-row:1;border-top:0;border-bottom:var(--stroke) solid var(--a1);}
+.track[data-el="cyanloop-timeline"].alt .stop:nth-child(even){grid-row:2;}
+.track[data-el="cyanloop-timeline"].alt .stop:nth-child(odd)::before{top:auto;bottom:-27px;}
+.track[data-el="cyanloop-timeline"].alt .stop:nth-child(even)::before{top:-27px;}
+.track[data-el="cyanloop-timeline"].alt .stop .name{font-size:var(--type-18);}
+.track[data-el="cyanloop-timeline"].alt .stop .note{font-size:var(--type-14);}
+@container(max-height:350px){.track[data-el="cyanloop-timeline"].alt .stop .name{font-size:var(--type-16);}.track[data-el="cyanloop-timeline"].alt .stop .note{font-size:var(--type-12);}.track[data-el="cyanloop-timeline"].alt .stop{gap:calc(var(--gap-sm)/2);}}
+
+
+.track[data-el="cyanloop-timeline"].on{display:block;padding:0;}
+.track[data-el="cyanloop-timeline"].on::before{display:none;}
+.track[data-el="cyanloop-timeline"].on .stop{position:absolute;left:65px;top:302px;width:249px;height:249px;border:0;border-radius:50%;background:var(--a3-7);color:var(--page);display:flex;justify-content:center;align-items:center;text-align:center;padding:var(--gap);gap:var(--gap-sm);}
+.track[data-el="cyanloop-timeline"].on .stop .kick{font-size:var(--type-24);color:inherit;}
+.track[data-el="cyanloop-timeline"].on .stop .name{font-size:var(--type-24);}
+.track[data-el="cyanloop-timeline"].on .stop .note{font-size:var(--type-18);}
+.track[data-el="cyanloop-timeline"].on .stop::before{left:calc(100% + var(--gap-sm));top:40%;width:12px;height:18px;border-radius:0;clip-path:polygon(0 0,100% 50%,0 100%);background:var(--a1);}
+.track[data-el="cyanloop-timeline"].on .stop:last-child::before{display:none;}
+.track[data-el="cyanloop-timeline"].on .stop:nth-child(2){left:345px;background:var(--a1);color:var(--a1-on);}
+.track[data-el="cyanloop-timeline"].on .stop:nth-child(3){left:625px;background:var(--a2);color:var(--a2-on);}
+.track[data-el="cyanloop-timeline"].on .stop:nth-child(4){left:905px;background:var(--a1-7);color:var(--page);}
+
+
+.track[data-el="cyanloop-timeline"].on .stop::before{width:12px;height:12px;background:none;clip-path:none;border-top:var(--stroke) solid var(--a1);border-right:var(--stroke) solid var(--a1);transform:rotate(45deg);}

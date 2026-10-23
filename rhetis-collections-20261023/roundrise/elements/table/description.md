@@ -1,0 +1,1 @@
+A broad rounded table enclosure uses a solid accent header, fine horizontal rules and clear numeric alignment. The chosen column receives a soft accent surface instead of a heavy outline. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

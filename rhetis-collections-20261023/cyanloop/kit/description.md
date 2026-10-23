@@ -1,0 +1,1 @@
+An educational presentation language built from open circular loops, generous capsule tracks, compact rounded panels and strong condensed display hierarchy. A deep section ribbon anchors the top, while one confident accent connects the central idea with its satellite members. Hairline rules and systematic gaps preserve calm across dense analytical views.

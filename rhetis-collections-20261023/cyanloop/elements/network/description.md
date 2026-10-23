@@ -1,0 +1,1 @@
+Circular relationship nodes connect through thin geometry calculated from both coordinate axes, with a stronger accent link only for the principal relationships. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

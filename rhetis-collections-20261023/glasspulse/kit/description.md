@@ -1,0 +1,1 @@
+Glasspulse is a quiet presentation system of broad rounded panels, finely doubled contours, capsule eyebrows and large centered figures. A low wash sits at the bottom of each surface, while thin chart lines and circular junctions establish a restrained technical rhythm. Emphasis is concentrated in a single figure or plate, with generous breathing room around the message.

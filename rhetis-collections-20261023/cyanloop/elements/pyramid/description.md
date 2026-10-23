@@ -1,0 +1,1 @@
+Successively wider capsule levels form an educational hierarchy, placing the shortest executive level above broad foundational capability levels. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

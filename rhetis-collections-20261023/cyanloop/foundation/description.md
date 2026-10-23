@@ -1,0 +1,1 @@
+A fixed 1280 by 720 presentation foundation with a deep top section ribbon, an expansive condensed heading and a six-row twelve-column content grid. Open-loop circles and capsule relationships echo the source education deck. The cover uses an oversized lockup and a cropped circular orbit; neutral numbered seats preserve space for photography.

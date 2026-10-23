@@ -1,0 +1,40 @@
+.slope[data-el="cyanloop-slope"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.slope[data-el="cyanloop-slope"]) * { box-sizing:border-box;min-width:0; }
+:is(.slope[data-el="cyanloop-slope"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.slope[data-el="cyanloop-slope"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.slope[data-el="cyanloop-slope"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.slope[data-el="cyanloop-slope"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.slope[data-el="cyanloop-slope"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.slope[data-el="cyanloop-slope"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.slope[data-el="cyanloop-slope"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.slope[data-el="cyanloop-slope"]) {display:flex;flex-direction:column;gap:var(--gap);padding:var(--pad);} :is(.slope[data-el="cyanloop-slope"]) .heads{display:flex;justify-content:space-between;font-size:var(--type-16);font-weight:var(--label-weight);} :is(.slope[data-el="cyanloop-slope"]) .pair{flex:1;position:relative;display:flex;justify-content:space-between;align-items:center;border-bottom:var(--stroke) solid var(--n-3);} :is(.slope[data-el="cyanloop-slope"]) .pair::before{content:'';position:absolute;left:15%;right:15%;height:2px;background:var(--n-5);transform:rotate(calc((var(--a) - var(--b)) * .2deg));} :is(.slope[data-el="cyanloop-slope"]) .pair.on::before{background:var(--a1);} :is(.slope[data-el="cyanloop-slope"]) .pair .name{position:absolute;left:25%;top:0;font-size:var(--type-18);background:var(--page);padding:0 var(--gap-sm);z-index:1;} :is(.slope[data-el="cyanloop-slope"]) .pair b{position:relative;z-index:1;background:var(--page);font-size:var(--type-24);font-weight:var(--label-weight);line-height:var(--label-line);} :is(.slope[data-el="cyanloop-slope"]).dumbbell .pair::before{transform:none;} @container(max-width:600px){:is(.slope[data-el="cyanloop-slope"]) .pair .name{font-size:var(--type-14);} :is(.slope[data-el="cyanloop-slope"]) .pair b{font-size:var(--type-18);}}
+
+
+:is(.slope[data-el="cyanloop-slope"]) {gap:var(--gap-sm);padding:var(--gap-sm);} :is(.slope[data-el="cyanloop-slope"]) .heads{font-size:var(--type-14);} :is(.slope[data-el="cyanloop-slope"]) .pair .name{font-size:var(--type-16);} :is(.slope[data-el="cyanloop-slope"]) .pair b{font-size:var(--type-20);} @container(max-height:350px){:is(.slope[data-el="cyanloop-slope"]) .pair .name{font-size:var(--type-12);} :is(.slope[data-el="cyanloop-slope"]) .pair b{font-size:var(--type-16);}}
+
+
+.slope[data-el="cyanloop-slope"].dumbbell .pair{min-height:44px;}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .name{left:0;top:50%;transform:translateY(-50%);width:26%;padding:0;font-size:var(--type-14);}
+.slope[data-el="cyanloop-slope"].dumbbell .pair::before{left:calc(30% + min(var(--a),var(--b)) / var(--max) * 65%);right:auto;top:50%;width:calc(abs(var(--b) - var(--a)) / var(--max) * 65%);height:2px;transform:none;background:var(--n-5);}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .a,.slope[data-el="cyanloop-slope"].dumbbell .pair .b{position:absolute;left:calc(30% + var(--a) / var(--max) * 65%);top:calc(50% - var(--gap));transform:translateX(-50%);background:none;font-size:var(--type-14);padding:0;}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .b{left:calc(30% + var(--b) / var(--max) * 65%);top:calc(50% + var(--gap-sm));}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .a::before,.slope[data-el="cyanloop-slope"].dumbbell .pair .b::before{content:'';position:absolute;width:10px;height:10px;left:calc(50% - 5px);top:calc(var(--gap) - 5px);border-radius:50%;border:2px solid var(--a1-7);background:var(--page);}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .b::before{top:calc(0px - var(--gap-sm) - 5px);background:var(--a1-7);}
+@container(max-height:400px){.slope[data-el="cyanloop-slope"].dumbbell{gap:0;}.slope[data-el="cyanloop-slope"].dumbbell .pair{min-height:38px;}.slope[data-el="cyanloop-slope"].dumbbell .pair .a,.slope[data-el="cyanloop-slope"].dumbbell .pair .b{font-size:var(--type-12);}}
+
+
+.slope[data-el="cyanloop-slope"].dumbbell{gap:0;}
+.slope[data-el="cyanloop-slope"].dumbbell .pair{min-height:0;}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .a,.slope[data-el="cyanloop-slope"].dumbbell .pair .b{font-size:var(--type-12);top:calc(50% - 18px);}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .b{top:calc(50% + 6px);}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .a::before{top:13px;}
+.slope[data-el="cyanloop-slope"].dumbbell .pair .b::before{top:-11px;}
+
+/* Functional geometry and readable layers, final cross-review. */
+
+.slope[data-el="cyanloop-slope"]:not(.dumbbell) .pair{container-type:size;isolation:isolate;}
+.slope[data-el="cyanloop-slope"]:not(.dumbbell) .pair::before{left:12%;right:auto;top:calc(15% + (1 - var(--a)/var(--max))*70%);width:hypot(76cqw,calc((var(--a) - var(--b))/var(--max)*70cqh));height:2px;transform:rotate(atan2(calc((var(--a) - var(--b))/var(--max)*70cqh),76cqw));transform-origin:left center;}
+.slope[data-el="cyanloop-slope"]:not(.dumbbell) .pair .name{left:50%;top:0;transform:translateX(-50%);white-space:nowrap;font-size:var(--type-14);}
+.slope[data-el="cyanloop-slope"]:not(.dumbbell) .pair .a,.slope[data-el="cyanloop-slope"]:not(.dumbbell) .pair .b{position:absolute;left:12%;top:calc(15% + (1 - var(--a)/var(--max))*70%);transform:translate(-50%,-50%);font-size:var(--type-14);padding:0 var(--gap-sm);white-space:nowrap;}
+.slope[data-el="cyanloop-slope"]:not(.dumbbell) .pair .b{left:88%;top:calc(15% + (1 - var(--b)/var(--max))*70%);}
+

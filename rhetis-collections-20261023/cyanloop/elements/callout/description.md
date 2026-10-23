@@ -1,0 +1,1 @@
+A long deep capsule places a concluding sentence and its bold phrase on one centred reading line, with an optional proportionate icon. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

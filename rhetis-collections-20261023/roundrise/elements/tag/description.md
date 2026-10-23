@@ -1,0 +1,1 @@
+Small capsule labels and soft inline highlights mark a phrase without interrupting the sentence. The emphasized label uses the accent foreground pair and keeps its text optically centered. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

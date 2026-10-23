@@ -1,0 +1,1 @@
+A generous softly tinted rounded panel centers one concluding sentence. A small leading icon may sit beside it, and the decisive phrase receives a deep accent rather than a decorative underline. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

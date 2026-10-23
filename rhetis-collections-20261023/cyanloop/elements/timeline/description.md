@@ -1,0 +1,1 @@
+A fine chronological track connects circular date points and concise event blocks, with one softly emphasized stop. The column variant trades width for a compact vertical rhythm. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

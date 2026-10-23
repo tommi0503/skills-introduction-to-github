@@ -1,0 +1,1 @@
+A strong rounded question leads to evenly divided answer columns. Small accent conditions label the branches, deeper questions retain the same panel rhythm, and the recommended outcome receives the solid accent. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

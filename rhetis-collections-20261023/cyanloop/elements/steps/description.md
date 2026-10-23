@@ -1,0 +1,1 @@
+Numbered circular endpoints lead a row of compact stage panels, joined by fine connectors. The column variant uses the same endpoint and a dedicated text gutter. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

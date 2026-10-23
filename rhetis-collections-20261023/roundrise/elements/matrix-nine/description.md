@@ -1,0 +1,1 @@
+Nine rounded cells form a restrained three-by-three decision field. Quiet low-to-high axes frame the cells, compact notes support each name, and one full-accent cell carries the operating priority. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

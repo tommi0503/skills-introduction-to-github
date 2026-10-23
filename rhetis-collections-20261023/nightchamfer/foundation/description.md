@@ -1,0 +1,1 @@
+The page uses a hairline which folds once near the upper right, an open title and lead, and a twelve by six body grid. A restrained depth wash at the lower edge supports fine outlined panels. Covers use very large flush-left type with an optional numbered image seat.

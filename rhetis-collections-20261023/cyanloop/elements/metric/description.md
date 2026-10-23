@@ -1,0 +1,1 @@
+A large condensed figure stands free of a card surface above a precise Korean metric name. Multiple metrics use hairline dividers and matching vertical positions. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

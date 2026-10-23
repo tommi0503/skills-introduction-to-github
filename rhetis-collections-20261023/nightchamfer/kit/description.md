@@ -1,0 +1,1 @@
+Nightchamfer combines a broken horizontal hairline, generous black-space proportions, restrained translucent panels and ringed focal discs. Short centred capsules carry category names; emphasis moves through one strong accent and its quiet depth steps. The page feels precise, technical and quietly luminous without relying on photographic decoration.

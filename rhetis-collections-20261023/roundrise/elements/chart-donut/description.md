@@ -1,0 +1,1 @@
+An inscribed circular ring carries the active share around a clean central figure and short label. Several donuts align in an even row, with the ring always sized to the available square rather than stretched into an ellipse. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

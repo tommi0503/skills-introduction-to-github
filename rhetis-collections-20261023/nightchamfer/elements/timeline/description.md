@@ -1,0 +1,1 @@
+Dotted vertical supports and thin horizontal tracks anchor date labels. A large horizontal cell becomes a rising schedule of short accent capsules; compact and vertical forms keep an even readable rhythm.

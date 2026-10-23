@@ -1,0 +1,1 @@
+The gauge element follows Glasspulse’s rounded low-wash plates, restrained double contours and capsule annotations. Heavy names remain readable above quiet supporting copy, with a single accent focus and thin connectors. Density changes in discrete container steps so the visual center stays balanced.

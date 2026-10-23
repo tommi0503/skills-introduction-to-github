@@ -1,0 +1,1 @@
+Discrete circular endpoints sit on one continuous thin polygon stroke calculated from the fixture values. Labels remain above the points and horizontal step names occupy a separate baseline. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

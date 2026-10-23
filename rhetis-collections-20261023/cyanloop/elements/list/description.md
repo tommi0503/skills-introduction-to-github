@@ -1,0 +1,1 @@
+A vertical list places tiny round markers, drawn check strokes or numbered circular endpoints beside a disciplined Korean text column. Divided lists add quiet hairline rules. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

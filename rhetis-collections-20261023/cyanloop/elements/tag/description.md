@@ -1,0 +1,1 @@
+Small capsule labels sit in running copy; inline highlights use a soft accent surface without changing the paragraph rhythm. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

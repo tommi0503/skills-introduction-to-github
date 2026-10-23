@@ -1,0 +1,1 @@
+Value-driven continuous filled polygons occupy a ruled plot, with each series named in a separate upper legend row and x labels below the plot. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

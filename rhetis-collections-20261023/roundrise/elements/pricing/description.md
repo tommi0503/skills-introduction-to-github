@@ -1,0 +1,1 @@
+Broad rounded plan panels place a clear name above a prominent price and a compact checked feature list. One plan gains an inset accent outline and optional capsule recommendation tag; the feature list owns a real share of the panel height. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

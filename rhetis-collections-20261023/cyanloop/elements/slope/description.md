@@ -1,0 +1,1 @@
+Named before-and-after pairs use restrained linking strokes and one stronger series. The dumbbell variant places both observations on a shared horizontal track. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

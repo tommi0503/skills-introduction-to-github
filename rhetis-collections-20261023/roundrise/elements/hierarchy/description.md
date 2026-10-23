@@ -1,0 +1,1 @@
+An accent capsule root sits above evenly spaced branch columns, each beginning with a softly tinted node and a stack of neutral leaf panels. Fine vertical connectors maintain the organizational relationship. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

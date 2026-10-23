@@ -1,0 +1,1 @@
+Circular members orbit a deep central disc on an open visual track, with directional arrowheads distinguishing recurrence from a simple hub. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

@@ -1,0 +1,1 @@
+A measured vertical list draws its own circular, numbered or check marker. Divided lists become broad rounded rows with a quiet rule between name and note at wide sizes, then return to compact stacked text in smaller cells. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

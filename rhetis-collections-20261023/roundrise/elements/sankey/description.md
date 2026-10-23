@@ -1,0 +1,1 @@
+A strong source panel feeds vertically arranged rounded branches through share-weighted bands. Soft branch panels, one primary accent path and neutral drop-offs preserve the flow hierarchy through a possible second split. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

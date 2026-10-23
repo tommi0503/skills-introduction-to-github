@@ -1,0 +1,1 @@
+An unbroken circular track carries the measured share, while a neutral centre holds the display percentage and a concise Korean name. Repeated rings keep equal size. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

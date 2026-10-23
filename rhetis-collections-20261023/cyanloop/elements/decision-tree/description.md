@@ -1,0 +1,1 @@
+Deep question capsules split into labelled alternatives and quiet outcome panels, with the recommended end receiving the accent fill. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

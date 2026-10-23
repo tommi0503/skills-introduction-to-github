@@ -1,0 +1,1 @@
+Bare, large accent figures sit above or beside their labels and explanatory notes. Multiple statistics form an even row with fine neutral dividers, keeping the numeric line stronger than any surrounding furniture. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

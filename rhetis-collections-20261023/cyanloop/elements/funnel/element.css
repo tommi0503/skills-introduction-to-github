@@ -1,0 +1,20 @@
+.funnel[data-el="cyanloop-funnel"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.funnel[data-el="cyanloop-funnel"]) * { box-sizing:border-box;min-width:0; }
+:is(.funnel[data-el="cyanloop-funnel"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.funnel[data-el="cyanloop-funnel"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.funnel[data-el="cyanloop-funnel"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.funnel[data-el="cyanloop-funnel"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.funnel[data-el="cyanloop-funnel"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.funnel[data-el="cyanloop-funnel"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.funnel[data-el="cyanloop-funnel"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.funnel[data-el="cyanloop-funnel"]) {display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);padding:var(--gap-sm);} :is(.funnel[data-el="cyanloop-funnel"]) .stage{width:calc(var(--v) * 1%);min-width:25%;flex:1;border-radius:999px;background:var(--a1-2-soft);display:flex;align-items:center;justify-content:space-between;gap:var(--gap);padding:var(--gap-sm) var(--pad);} :is(.funnel[data-el="cyanloop-funnel"]) .stage:first-child{background:var(--a1);color:var(--a1-on);} :is(.funnel[data-el="cyanloop-funnel"]) .fig{font-size:var(--type-36);} @container(max-width:600px){:is(.funnel[data-el="cyanloop-funnel"]) .name{font-size:var(--type-18);} :is(.funnel[data-el="cyanloop-funnel"]) .fig{font-size:var(--type-28);}}
+
+
+:is(.funnel[data-el="cyanloop-funnel"]) .stage{padding:calc(var(--gap-sm) / 2) var(--gap-sm);} :is(.funnel[data-el="cyanloop-funnel"]) .name{font-size:var(--type-18);} :is(.funnel[data-el="cyanloop-funnel"]) .fig{font-size:var(--type-28);} @container(max-height:350px){:is(.funnel[data-el="cyanloop-funnel"]) .name{font-size:var(--type-16);} :is(.funnel[data-el="cyanloop-funnel"]) .fig{font-size:var(--type-22);}}
+
+/* The coloured stage preserves its exact data width, including zero. Text remains readable at its centred anchor. */
+.funnel[data-el="cyanloop-funnel"] .stage{position:relative;min-width:0;padding:0;gap:0;}
+.funnel[data-el="cyanloop-funnel"] .stage>.name,.funnel[data-el="cyanloop-funnel"] .stage>.fig{position:absolute;left:50%;top:50%;width:max-content;max-width:calc(50cqw - var(--gap-sm));margin:0;}
+.funnel[data-el="cyanloop-funnel"] .stage>.name{transform:translate(calc(-100% - var(--gap-sm)/2),-50%);text-align:right;}
+.funnel[data-el="cyanloop-funnel"] .stage>.fig{transform:translate(calc(var(--gap-sm)/2),-50%);text-align:left;}
+.funnel[data-el="cyanloop-funnel"] .stage:first-child:is([style*="--v:0"],[style*="--v: 0"]){color:var(--ink);}

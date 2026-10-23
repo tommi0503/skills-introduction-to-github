@@ -1,0 +1,1 @@
+A short capsule bar compares the actual value against a thin target mark, with a separate label and figure row and a readable goal note. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

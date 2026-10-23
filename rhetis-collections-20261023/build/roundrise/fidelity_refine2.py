@@ -1,0 +1,8 @@
+from pathlib import Path
+B=Path('/workspace/output/roundrise')
+p=B/'elements/card/element.css';s=p.read_text();s+='''.card[data-el="roundrise-card"].line.on{background:var(--a1);color:var(--a1-on)}.card[data-el="roundrise-card"]:has(>.parts>:is(.bars,.areas)):not(:has(>.parts>.stat))>.parts>.name{min-height:calc(2em*var(--name-line) + var(--gap-sm)*5/12)}''';p.write_text(s)
+p=B/'foundation/foundation.css';s=p.read_text().replace('.group:has(>.card.line>.parts>.kick){','.group:has(>.card.line>.parts>.kick):not(:has(>.card.line>.parts>.mark)){');p.write_text(s)
+p=B/'elements/chart-area/element.css';s=p.read_text();r='.areas[data-el="roundrise-chart-area"]:has(+.stat)';s=s.replace(r,'.card[data-el="roundrise-card"]>.parts>'+r);s=s.replace('"\\A0"','"\\A 0"');p.write_text(s)
+p=B/'elements/chart-bar/element.css';s=p.read_text().replace('"\\A0"','"\\A 0"');p.write_text(s)
+p=B/'elements/headline/element.css';s=p.read_text().replace('.big.center:not(.on):has(>.kick):has(>h2>b)', '.big.center:not(.on):has(>.kick>b):has(>h2>b)');r='.headline[data-el="roundrise-headline"].big.center:has(>.kick):not(:has(>.kick>b)):has(>h2>b)';s+=r+'''{padding-top:calc(var(--pad)*1.6875);justify-content:flex-start;gap:calc(var(--gap-lg)*1.075)}'''+r+'''>.kick{font-size:var(--type-20);font-weight:var(--weight-body)}'''+r+''' h2{font-size:var(--type-48);line-height:var(--lead-line)}'''+r+'''>.note{font-size:var(--type-22);line-height:var(--body-line)}''';p.write_text(s)
+p=Path('/workspace/work/roundrise/reassemble.py');s=p.read_text().replace("'Miricompany' if k=='statement'", "'<b>Miricompany</b>' if k=='statement'");p.write_text(s)

@@ -1,0 +1,1 @@
+Rounded step panels align circular number marks above their names and notes. Fine connectors join the panels; the vertical version moves the mark beside a compact two-row text lockup. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

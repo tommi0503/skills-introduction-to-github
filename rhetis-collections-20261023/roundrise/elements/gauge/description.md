@@ -1,0 +1,1 @@
+A compact label and figure sit above a low horizontal capsule track. The full accent fills the measured share, with a quiet neutral remainder and a reduced track in dense stacks. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

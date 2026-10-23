@@ -1,0 +1,1 @@
+Small floating rounded bars distinguish increases, decreases and totals, with a fine connector showing the running balance between steps. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

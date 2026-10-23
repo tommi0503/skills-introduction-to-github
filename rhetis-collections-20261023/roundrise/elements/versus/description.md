@@ -1,0 +1,1 @@
+Two rounded surfaces flank a small accent VS marker. Each side contains an explicit title and a vertically balanced semantic list, with a softly tinted recommended side rather than an oversized dividing graphic. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

@@ -1,0 +1,1 @@
+A central disc balances free branches on both sides; small capsule leaves and fine branch rules preserve an exploratory rather than strictly hierarchical reading. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

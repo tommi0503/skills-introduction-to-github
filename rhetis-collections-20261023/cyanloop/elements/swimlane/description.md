@@ -1,0 +1,1 @@
+Light owner lanes support explicit process nodes, maintaining separate owner labels, rounded terminals and fine directional links. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

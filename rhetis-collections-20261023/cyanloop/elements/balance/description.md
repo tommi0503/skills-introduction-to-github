@@ -1,0 +1,1 @@
+Two measured panels hang against a tilted fine beam, with one softly emphasized pan and a separate centred verdict below. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

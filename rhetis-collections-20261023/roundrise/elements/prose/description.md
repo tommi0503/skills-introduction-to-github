@@ -1,0 +1,1 @@
+Open paragraphs use a light body weight, steady leading and generous separation. The lead variant enlarges the opening thought, the column variant creates two readable text streams, and quiet copy steps toward the neutral text hierarchy. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

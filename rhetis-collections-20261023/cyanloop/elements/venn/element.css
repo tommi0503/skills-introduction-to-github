@@ -1,0 +1,25 @@
+.venn[data-el="cyanloop-venn"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.venn[data-el="cyanloop-venn"]) * { box-sizing:border-box;min-width:0; }
+:is(.venn[data-el="cyanloop-venn"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.venn[data-el="cyanloop-venn"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.venn[data-el="cyanloop-venn"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.venn[data-el="cyanloop-venn"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.venn[data-el="cyanloop-venn"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.venn[data-el="cyanloop-venn"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.venn[data-el="cyanloop-venn"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.venn[data-el="cyanloop-venn"]) {display:flex;align-items:center;justify-content:center;padding:var(--pad);isolation:isolate;} :is(.venn[data-el="cyanloop-venn"]) .set{aspect-ratio:1;flex:1;max-height:95%;border-radius:50%;background:var(--a1-2-soft);border:2px solid var(--a1);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--gap);position:relative;} :is(.venn[data-el="cyanloop-venn"]) .set+.set{margin-left:calc(var(--cyanloop-space-0) - var(--gap-lg));background:var(--a2-2-soft);border-color:var(--a2-7);} :is(.venn[data-el="cyanloop-venn"]) .set.on{background:var(--a1);color:var(--a1-on);} :is(.venn[data-el="cyanloop-venn"]) .core{position:absolute;border-radius:999px;background:var(--a1-7);color:var(--page);padding:var(--gap-sm) var(--gap);font-size:var(--type-20);font-weight:var(--name-weight);} @container(max-width:600px){:is(.venn[data-el="cyanloop-venn"]) .name{font-size:var(--type-18);} :is(.venn[data-el="cyanloop-venn"]) .core{font-size:var(--type-16);}}
+
+
+/* Functional geometry and readable layers, final cross-review. */
+
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .set:nth-child(2) .name{align-self:flex-start;margin-top:var(--gap-lg);}
+
+
+/* Three-way intersection: each set overlaps both other sets and the shared core. */
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .set{position:absolute;flex:none;width:min(42cqw,58cqh);height:min(42cqw,58cqh);max-height:none;left:calc(50% - min(42cqw,58cqh)*.8);top:calc(50% - min(42cqw,58cqh)*.65);margin-left:0;}
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .set:nth-child(2){left:calc(50% - min(42cqw,58cqh)*.2);}
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .set:nth-child(3){left:calc(50% - min(42cqw,58cqh)*.5);top:calc(50% - min(42cqw,58cqh)*.15);}
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .set .name{position:absolute;top:28%;left:25%;margin:0;transform:translate(-50%,-50%);}
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .set:nth-child(2) .name{left:75%;}
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .set:nth-child(3) .name{left:50%;top:76%;}
+.venn[data-el="cyanloop-venn"]:has(>.set:nth-child(3)) .core{left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;}

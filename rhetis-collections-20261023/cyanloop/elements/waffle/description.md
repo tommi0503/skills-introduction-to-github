@@ -1,0 +1,1 @@
+A counted unit grid precedes a display share and Korean explanation; the figures variant uses drawn human silhouettes and a compact adjacent caption. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

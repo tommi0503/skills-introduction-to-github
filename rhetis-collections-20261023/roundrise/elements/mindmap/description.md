@@ -1,0 +1,1 @@
+A circular accent core sits between rounded branch panels on the left and right. Each branch holds a clear name and optional small leaves, with fine links preserving a calm symmetric relationship. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

@@ -1,0 +1,1 @@
+Floating rounded bars follow each running-total change, with fine connectors between consecutive stages. Neutral losses contrast with soft gains and a full-accent total; values sit safely above the taller endpoint. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

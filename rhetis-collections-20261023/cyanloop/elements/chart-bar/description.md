@@ -1,0 +1,1 @@
+Rounded capsule tops grow from a shared baseline, with one darker bar and value labels kept above the marks. Horizontal bars reuse the capsule track and reserve a separate name gutter. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

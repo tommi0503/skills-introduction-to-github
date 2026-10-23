@@ -1,0 +1,1 @@
+Two or three translucent accent-edged circles overlap gently around a possible shared core. Names stay inside their circles and the overlap receives meaning from the data, without extraneous decorative shapes. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

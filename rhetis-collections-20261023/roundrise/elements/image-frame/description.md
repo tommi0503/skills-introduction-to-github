@@ -1,0 +1,1 @@
+A broad rounded page-colored rim encloses a neutral numbered image seat. The seat remains square within a rectangular slot, preserving its proportions instead of becoming a long image strip. Type and spacing step down with the container, using the kit’s shared tokens and the active palette rather than fixed brand colors.

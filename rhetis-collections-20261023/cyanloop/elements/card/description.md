@@ -1,0 +1,1 @@
+A compact rounded panel pairs a circular icon or numeral with a stable title and note stack. Emphasis fills one panel while line and quiet variants preserve the same internal alignment. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

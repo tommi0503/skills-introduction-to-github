@@ -1,0 +1,1 @@
+A deep period header sits above quiet lane tracks and capsule duration bars, with milestone points kept separate from task labels. The component inherits the collection’s capsule, circle and hairline vocabulary, and uses explicit container steps for readable smaller allocations.

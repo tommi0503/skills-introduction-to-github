@@ -1,0 +1,23 @@
+.grid9[data-el="cyanloop-matrix-nine"] { container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) * { box-sizing:border-box;min-width:0; }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) :is(p,h2,h3,blockquote) { margin:0; }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) .name { font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track); }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) .note { font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track); }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) .kick { font-size:var(--type-14);color:var(--n-7);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track); }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) .fig { font-family:var(--font-display);font-size:var(--type-60);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track); }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) .fig small { font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--label-weight); }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) .icon { width:var(--gap-lg);height:var(--gap-lg);display:inline-block;flex-shrink:0; }
+:is(.grid9[data-el="cyanloop-matrix-nine"]) {display:grid;grid-template-columns:var(--gap-lg) repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr)) var(--gap-lg);gap:var(--gap-sm);padding:var(--gap-sm);} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--gap);background:var(--n-1);border-radius:var(--radius);} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell.on{background:var(--a1);color:var(--a1-on);} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(3){grid-column:2;grid-row:1;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(4){grid-column:3;grid-row:1;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(5){grid-column:4;grid-row:1;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(6){grid-column:2;grid-row:2;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(7){grid-column:3;grid-row:2;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(8){grid-column:4;grid-row:2;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(9){grid-column:2;grid-row:3;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(10){grid-column:3;grid-row:3;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .cell:nth-of-type(11){grid-column:4;grid-row:3;} :is(.grid9[data-el="cyanloop-matrix-nine"]) .axis-x{grid-column:2 / -1;grid-row:4;display:flex;justify-content:space-around;font-size:var(--type-14);} :is(.grid9[data-el="cyanloop-matrix-nine"]) .axis-y{grid-column:1;grid-row:1 / 4;display:flex;flex-direction:column-reverse;justify-content:space-around;font-size:var(--type-14);} :is(.grid9[data-el="cyanloop-matrix-nine"]) .name{font-size:var(--type-20);} :is(.grid9[data-el="cyanloop-matrix-nine"]) .note{font-size:var(--type-16);} @container(max-width:700px){:is(.grid9[data-el="cyanloop-matrix-nine"]) .name{font-size:var(--type-16);} :is(.grid9[data-el="cyanloop-matrix-nine"]) .note{font-size:var(--type-12);}}
+
+
+/* Functional geometry and readable layers, final cross-review. */
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(1 of .cell){grid-column:2;grid-row:1;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(2 of .cell){grid-column:3;grid-row:1;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(3 of .cell){grid-column:4;grid-row:1;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(4 of .cell){grid-column:2;grid-row:2;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(5 of .cell){grid-column:3;grid-row:2;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(6 of .cell){grid-column:4;grid-row:2;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(7 of .cell){grid-column:2;grid-row:3;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(8 of .cell){grid-column:3;grid-row:3;}
+.grid9[data-el="cyanloop-matrix-nine"] .cell:nth-child(9 of .cell){grid-column:4;grid-row:3;}
+
