@@ -60,3 +60,8 @@ build/에는 작업에 사용한 생성·렌더·검수 스크립트를 보존�
 ## 원본·카피 슬라이드 비교 PDF
 
 [전체 96쪽 통합본과 덱별 비교 PDF](slide-comparison-pdfs/) — 한 페이지 위쪽은 원본 | replica, 아래쪽은 원본 | 라이브러리 조립본입니다.
+
+
+## 전체 컬렉션·복제본 코드 통합 ZIP
+
+[통합 소스 ZIP 다운로드](rhetis-all-collections-source.zip) — 5개 컬렉션·280요소·replica96장·라이브러리 조립96장의 코드와 폰트·아이콘·계약·미리보기 도구를 포함합니다. 압축 해제 후 README와 index.html로 시작하세요. [패키지 검증](source-bundle-verification.json)도 확인할 수 있습니다.
