@@ -4,6 +4,8 @@
 
 요소별 시트를 모은 [검수 PDF 모음](element-sheet-pdfs/README.md)과 [6개 컬렉션 통합 PDF](element-sheet-pdfs/all-collections-element-sheets.pdf)를 제공합니다. 컬렉션별 114페이지(라이트 57장 + 다크 57장), 통합 684페이지이며 요소별 북마크가 있습니다.
 
+원본·카피본 비교 시트의 [검수 PDF 모음](comparison-pdfs/README.md)도 제공합니다. [원본 | replica 90쪽](comparison-pdfs/original-vs-replica.pdf), [원본 | 조립본 90쪽](comparison-pdfs/original-vs-reassembled.pdf), [전체 통합 180쪽](comparison-pdfs/all-slide-comparisons.pdf)에 덱·페이지별 북마크를 넣었습니다.
+
 | 덱 | 컬렉션 / 소스 | 원본 페이지 | 요소 fixture | 다운로드 |
 |---|---|---:|---:|---|
 | 030 | [chalkline](collections/chalkline/) | 2 | 171 | [collection](downloads/chalkline.zip) · [review](downloads/chalkline-review.zip) |
