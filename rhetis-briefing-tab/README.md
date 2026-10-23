@@ -34,4 +34,4 @@ python package_release.py
 
 필수 card-4의✹4개와callout2개의원본배치는일반규칙과충돌하나사용자가명시한동일마크업·데이터보존을우선했습니다.새fixture는빈Lucide슬롯을사용합니다.
 
-푸시 이후 `python verify_github.py`로 GitHub의 현재 커밋에서 두 ZIP을 실제로 다시 받아 SHA-256과 CRC를 검증할 수 있습니다. 최초 게시된 아카이브의 검증 결과는 `github-verification.json`에 있습니다.
+푸시 이후 `python verify_github.py`로 GitHub의 현재 커밋에서 두 ZIP을 실제로 다시 받아 SHA-256과 CRC를 검증할 수 있습니다. 최종 게시된 아카이브의 검증 결과는 `github-verification.json`에 있습니다.
