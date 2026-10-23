@@ -14,3 +14,5 @@
 각 개별 PDF와 통합 PDF의 모든 삽입 이미지가 원본 PNG와 픽셀 단위로 같은지 검사했고, 페이지 밖으로 잘린 시트는 없습니다. [검증 기록](verification.json)에 파일별 SHA-256, 페이지 수, 원본 시트 목록을 담았습니다.
 
 재생성: `python element-review-pdfs/build_pdfs.py` (상위 컬렉션 루트 기준). 기존 컬렉션·ZIP·replica·재조립 페이지는 변경하지 않았습니다.
+
+[업로드된 PDF 6개 실제 재다운로드 검증](download-verification.json)도 통과했습니다.
