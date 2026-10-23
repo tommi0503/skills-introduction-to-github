@@ -1,0 +1,1 @@
+Small circular observations sit on two numeric axes; bubbles use a proportional diameter and highlighted data retain a single strong accent. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

@@ -1,0 +1,1 @@
+Broadening square tiers communicate a hierarchy without bevels or a thick triangular frame. A single accented top tier establishes the point, followed by pale neutral tiers. Each tier centres its name and short note inside the available height.

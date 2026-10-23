@@ -1,0 +1,1 @@
+Ranked translucent polygons map numeric axis strengths on a light circular reference field, while labels sit outside the plot. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

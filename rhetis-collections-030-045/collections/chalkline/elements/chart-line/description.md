@@ -1,0 +1,1 @@
+A fine neutral line joins equal-step points, including descending and flat runs. Small dots mark the data and one accented endpoint identifies the main result. Values stay above the plot while axis labels occupy a separate baseline row; compact seats thin the visible labels.

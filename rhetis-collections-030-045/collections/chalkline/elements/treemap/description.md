@@ -1,0 +1,1 @@
+Rectangular branches divide the width by their shares, then tile height divides each branch’s contribution. Narrow tiles stack names and figures vertically at explicit type steps. A single selected tile may use the main accent; the remainder is neutral and square.

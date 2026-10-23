@@ -1,0 +1,1 @@
+Before and after values sit at heights derived from their data and join through thin direct lines. The emphasized pair uses the main accent. A dumbbell variant presents compact horizontal pairs, with small endpoint labels staggered where values are close.

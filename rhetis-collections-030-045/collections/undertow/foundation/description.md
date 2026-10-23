@@ -1,0 +1,1 @@
+A regular-weight centre title sits above a twelve-by-six grid, with a severe full-height side rail, small reversed capsule kicker and a discreet upper furniture row. Covers use a left aligned oversized lockup and a low full-width information strip. Square numbered seats reserve photography without pretending to be imagery.

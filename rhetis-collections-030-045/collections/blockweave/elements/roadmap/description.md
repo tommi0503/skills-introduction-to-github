@@ -1,0 +1,1 @@
+Fine period tracks support proportional rectangular duration bars and narrow milestone ticks, with fixed owner labels at the left. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

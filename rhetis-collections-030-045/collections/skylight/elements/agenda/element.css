@@ -1,0 +1,25 @@
+.agenda[data-el="skylight-agenda"] { position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.agenda[data-el="skylight-agenda"]) * {box-sizing:border-box;min-width:0;}
+:is(.agenda[data-el="skylight-agenda"]) :is(p,h2,blockquote,ul) {margin:0;}
+:is(.agenda[data-el="skylight-agenda"]) .name {font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.agenda[data-el="skylight-agenda"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.agenda[data-el="skylight-agenda"]) .fig {font-family:var(--font-body);font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.agenda[data-el="skylight-agenda"]) :is(.kick,small) {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+:is(.agenda[data-el="skylight-agenda"]) .kick {color:var(--n-7);}
+:is(.agenda[data-el="skylight-agenda"]) .icon {display:inline-block;width:32px;height:32px;flex:none;}
+@container (max-width:620px) { :is(.agenda[data-el="skylight-agenda"]) .name {font-size:var(--type-18);} :is(.agenda[data-el="skylight-agenda"]) .note {font-size:var(--type-16);} :is(.agenda[data-el="skylight-agenda"]) .fig {font-size:var(--type-36);} }
+@container (max-width:300px) { :is(.agenda[data-el="skylight-agenda"]) .name {font-size:var(--type-16);} :is(.agenda[data-el="skylight-agenda"]) .note {font-size:var(--type-14);} :is(.agenda[data-el="skylight-agenda"]) .kick {display:none;} :is(.agenda[data-el="skylight-agenda"]) .fig {font-size:var(--type-32);} }
+@container (max-height:170px) { :is(.agenda[data-el="skylight-agenda"]) .note {font-size:var(--type-14);} :is(.agenda[data-el="skylight-agenda"]) .kick {display:none;} }
+:is(.agenda[data-el="skylight-agenda"]) {display:flex;align-items:stretch;gap:var(--gap-sm);}:is(.agenda[data-el="skylight-agenda"]) .entry{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);background:linear-gradient(var(--a1-2-soft),var(--a1-1-soft) 65%);border-radius:var(--radius-sm);text-align:center;}:is(.agenda[data-el="skylight-agenda"]) .entry:nth-child(2n){background:linear-gradient(var(--a2-1-soft),var(--a1-1-soft));}:is(.agenda[data-el="skylight-agenda"]) .entry:nth-child(3n){background:linear-gradient(var(--n-1),var(--a1-1-soft));}:is(.agenda[data-el="skylight-agenda"]) .mark{font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}:is(.agenda[data-el="skylight-agenda"]) .name{font-size:var(--type-24);min-height:3em;}:is(.agenda[data-el="skylight-agenda"]) .note{border-top:var(--stroke) solid var(--n-3);padding-top:var(--gap);font-size:var(--type-18);}:is(.agenda[data-el="skylight-agenda"]) .entry.on{background:var(--a1);color:var(--a1-on);}@container(max-width:650px){:is(.agenda[data-el="skylight-agenda"]) .entry{padding:var(--gap-sm);}:is(.agenda[data-el="skylight-agenda"]) .name{font-size:var(--type-18);}:is(.agenda[data-el="skylight-agenda"]) .note{font-size:var(--type-14);}}@container(max-height:270px){:is(.agenda[data-el="skylight-agenda"]) .entry{gap:var(--gap-sm);}:is(.agenda[data-el="skylight-agenda"]) .name{font-size:var(--type-16);min-height:0;}:is(.agenda[data-el="skylight-agenda"]) .note{font-size:var(--type-12);padding-top:calc(var(--gap-sm)/2);}}
+
+[data-el="skylight-agenda"] small {color:inherit;}
+
+.agenda[data-el="skylight-agenda"] {gap:calc(var(--gap) - 3 * var(--stroke));padding-right:calc(6 * var(--stroke));}
+.agenda[data-el="skylight-agenda"] .entry {position:relative;justify-content:flex-start;padding:var(--gap-sm);gap:var(--gap-sm);background:linear-gradient(var(--a1-5-soft),var(--a1-1-soft) 70%);}
+.agenda[data-el="skylight-agenda"] .entry:nth-child(2n) {background:linear-gradient(var(--a2-3-soft),var(--a1-1-soft) 70%);}
+.agenda[data-el="skylight-agenda"] .entry:nth-child(3n) {background:linear-gradient(var(--n-1),var(--a1-1-soft));}
+.agenda[data-el="skylight-agenda"] .mark {margin-top:calc(2 * var(--gap-sm));}
+.agenda[data-el="skylight-agenda"] .name {font-size:var(--type-20);line-height:var(--name-line);min-height:0;}
+.agenda[data-el="skylight-agenda"] .note {position:absolute;top:60%;left:var(--gap);right:var(--gap);padding-top:calc(2 * var(--gap-sm));font-size:var(--type-16);line-height:var(--body-line);}
+@container(max-height:280px){.agenda[data-el="skylight-agenda"] .mark{margin-top:0;}.agenda[data-el="skylight-agenda"] .name{font-size:var(--type-16);}.agenda[data-el="skylight-agenda"] .note{font-size:var(--type-12);padding-top:calc(var(--gap-sm)/2);top:63%;}}
+.agenda[data-el="skylight-agenda"] .entry.on{background:var(--a1);color:var(--a1-on);}

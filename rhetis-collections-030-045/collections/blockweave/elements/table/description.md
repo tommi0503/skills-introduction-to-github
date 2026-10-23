@@ -1,0 +1,1 @@
+A solid accent heading spans quiet alternating rows, with horizontal rules, centered values and a soft selected column. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

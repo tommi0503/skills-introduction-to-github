@@ -1,0 +1,38 @@
+.headline[data-el="blockweave-headline"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.headline[data-el="blockweave-headline"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.headline[data-el="blockweave-headline"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.headline[data-el="blockweave-headline"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.headline[data-el="blockweave-headline"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.headline[data-el="blockweave-headline"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.headline[data-el="blockweave-headline"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.headline[data-el="blockweave-headline"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm)}
+.headline[data-el="blockweave-headline"] h2{font-size:var(--type-40);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track);margin:0}
+.headline[data-el="blockweave-headline"] h2 b{color:var(--a1-8);font-weight:var(--title-weight)}
+.headline[data-el="blockweave-headline"].big h2{font-size:var(--type-64)}
+.headline[data-el="blockweave-headline"].center{text-align:center}
+.headline[data-el="blockweave-headline"].on{background:var(--a1);padding:var(--pad);color:var(--a1-on)}
+.headline[data-el="blockweave-headline"].on h2 b,.headline[data-el="blockweave-headline"].on .note,.headline[data-el="blockweave-headline"].on .kick{color:var(--a1-on)}
+@container (max-width: 760px){.headline[data-el="blockweave-headline"] .name{font-size:var(--type-18)}.headline[data-el="blockweave-headline"] .note{font-size:var(--type-14)}.headline[data-el="blockweave-headline"] .fig{font-size:var(--type-40)}.headline[data-el="blockweave-headline"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.headline[data-el="blockweave-headline"] .name{font-size:var(--type-16)}.headline[data-el="blockweave-headline"] .note{font-size:var(--type-12)}.headline[data-el="blockweave-headline"] .fig{font-size:var(--type-28)}.headline[data-el="blockweave-headline"] .kick{font-size:var(--type-12)}.headline[data-el="blockweave-headline"] h2{font-size:var(--type-28)}.headline[data-el="blockweave-headline"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.headline[data-el="blockweave-headline"] .kick{display:none}.headline[data-el="blockweave-headline"] .note{display:none}}
+
+.headline[data-el="blockweave-headline"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+@container (max-height:200px){.headline[data-el="blockweave-headline"]{gap:var(--gap-sm);padding:var(--gap-sm)}.headline[data-el="blockweave-headline"] h2{font-size:var(--type-28)}.headline[data-el="blockweave-headline"].on{padding:var(--gap-sm) var(--gap)}}
+/* Refinement from original/replica/reassembled comparison. */
+@container (min-width:600px) and (max-height:200px){.headline[data-el="blockweave-headline"] h2{font-size:var(--type-40)}}@container (min-width:300px) and (max-width:600px) and (min-height:220px){.headline.big[data-el="blockweave-headline"] h2{font-size:var(--type-48)}}@container (max-width:300px){.headline.big[data-el="blockweave-headline"] h2{font-size:var(--type-40)}}
+@container (min-width:300px) and (max-height:200px){.headline.big[data-el="blockweave-headline"] h2{font-size:var(--type-64)}}
+
+/* Original-deck geometric review. */
+.headline[data-el="blockweave-headline"]:has(.kick){justify-content:flex-start;padding-top:var(--gap-lg);gap:var(--gap)}.headline[data-el="blockweave-headline"] .kick{font-size:var(--type-18);font-weight:var(--body-weight)}.headline[data-el="blockweave-headline"] h2 b{color:inherit}.headline[data-el="blockweave-headline"].big:not(:has(.kick)){justify-content:flex-start;padding-top:var(--gap-sm)}
+@container (min-width:300px) and (max-width:600px) and (min-height:220px){.headline.big[data-el="blockweave-headline"] h2{font-size:var(--type-48)}}
+
+.headline[data-el="blockweave-headline"]{padding-left:calc(var(--gap) - var(--gap-sm)*.5)}.headline.big[data-el="blockweave-headline"]:has(.kick){gap:calc(var(--gap-sm)*1.5)}.headline:not(.big)[data-el="blockweave-headline"]:has(.kick){padding-top:calc(var(--gap-sm)*2)}.headline:not(.big)[data-el="blockweave-headline"]:has(.kick) h2{font-weight:var(--body-weight)}.headline:not(.big)[data-el="blockweave-headline"]:has(.kick) h2 b{font-weight:var(--title-weight)}
+@container (min-width:300px) and (max-height:220px){.headline.big[data-el="blockweave-headline"]:not(:has(.kick)) h2{margin-top:calc(var(--gap) + var(--gap-sm))}}
+
+@container (min-width:300px){.headline.big[data-el="blockweave-headline"]:not(:has(.kick)) h2{margin-left:calc(var(--stroke)*-6)}}
+
+.headline:not(.big)[data-el="blockweave-headline"]:has(.kick) h2{line-height:var(--lead-line)}
+
+@container (max-height:220px){.headline.big[data-el="blockweave-headline"]:has(.kick) .kick{font-size:var(--type-14)}.headline.big[data-el="blockweave-headline"]:has(.kick) h2{font-size:var(--type-48)}.headline.big[data-el="blockweave-headline"]:has(.kick) .note{font-size:var(--type-14)}}

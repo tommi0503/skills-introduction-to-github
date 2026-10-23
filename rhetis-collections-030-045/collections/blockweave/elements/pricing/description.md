@@ -1,0 +1,1 @@
+Open rectangular plans align names, large prices and checklist details; a short accent top band identifies the recommended plan. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

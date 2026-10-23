@@ -1,0 +1,1 @@
+Broad neutral layers carry a narrow accent edge and rectangular system chips; the layer name occupies a fixed first column. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

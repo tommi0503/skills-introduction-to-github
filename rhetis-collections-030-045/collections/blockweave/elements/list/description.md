@@ -1,0 +1,1 @@
+A clean vertical list uses accent dots, CSS-drawn checks or automatic decimal markers, with optional dotted row dividers. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

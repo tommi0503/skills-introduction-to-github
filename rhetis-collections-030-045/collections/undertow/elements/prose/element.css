@@ -1,0 +1,27 @@
+:is(.prose[data-el="undertow-prose"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.prose[data-el="undertow-prose"]) * { box-sizing:border-box; } :is(.prose[data-el="undertow-prose"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.prose[data-el="undertow-prose"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.prose[data-el="undertow-prose"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.prose[data-el="undertow-prose"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.prose[data-el="undertow-prose"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.prose[data-el="undertow-prose"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); } :is(.prose[data-el="undertow-prose"]) p { font-size:var(--type-20); font-weight:var(--body-weight); line-height:var(--body-line); } :is(.prose[data-el="undertow-prose"]) b { font-weight:var(--name-weight); } :is(.prose[data-el="undertow-prose"]).lead p { font-size:var(--type-28); } :is(.prose[data-el="undertow-prose"]).quiet { color:var(--n-8); } :is(.prose[data-el="undertow-prose"]).cols { display:block; columns:2; column-gap:var(--gap-lg); } :is(.prose[data-el="undertow-prose"]).cols p { margin-bottom:var(--gap); }
+@container (max-width:540px) { :is(.prose[data-el="undertow-prose"]) p,:is(.prose[data-el="undertow-prose"]).lead p { font-size:var(--type-16); } :is(.prose[data-el="undertow-prose"]).cols { columns:1; } }
+
+[data-el="undertow-prose"] small { color:inherit; }
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.prose[data-el="undertow-prose"].lead {padding:0;background:none;border-top:2px solid var(--n-1);border-bottom:var(--stroke) solid var(--n-1);}
+.prose[data-el="undertow-prose"].lead p {font-size:var(--type-16);line-height:var(--body-line);padding-top:var(--gap-lg);max-width:415px;}
+.prose[data-el="undertow-prose"].quiet:has(>p>span) {padding:0;background:none;display:block;}
+.prose[data-el="undertow-prose"].quiet:has(>p>span) p {font-size:var(--type-14);line-height:var(--label-line);}
+.prose[data-el="undertow-prose"].cols {padding:0;background:none;text-align:center;}
+.prose[data-el="undertow-prose"].cols p {font-size:var(--type-22);line-height:var(--title-line);}
+
+
+.prose[data-el="undertow-prose"].lead {width:100%;} .prose[data-el="undertow-prose"].quiet:has(>p>span) {width:28px;display:block;} .prose[data-el="undertow-prose"].quiet:has(>p>span) p {display:flex;flex-direction:column;justify-content:space-between;height:100%;} .prose[data-el="undertow-prose"].cols {column-count:1;}
+
+.prose[data-el="undertow-prose"].lead {display:block;}
+
+.prose[data-el="undertow-prose"].lead {margin:0;}
+
+.prose[data-el="undertow-prose"].cols p {font-size:var(--type-18);}

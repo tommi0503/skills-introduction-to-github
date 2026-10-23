@@ -1,0 +1,1 @@
+An accent center circle links outward to flat neutral branch panels with indented leaves. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

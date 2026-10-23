@@ -1,0 +1,11 @@
+:is(.quote[data-el="undertow-quote"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.quote[data-el="undertow-quote"]) * { box-sizing:border-box; } :is(.quote[data-el="undertow-quote"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.quote[data-el="undertow-quote"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.quote[data-el="undertow-quote"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.quote[data-el="undertow-quote"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.quote[data-el="undertow-quote"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.quote[data-el="undertow-quote"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap); padding:var(--pad); border-top:calc(var(--stroke)*4) solid var(--a1); background:var(--page); }
+:is(.quote[data-el="undertow-quote"]) blockquote { font-family:var(--font-display); font-size:var(--type-32); font-weight:var(--lead-weight); line-height:var(--lead-line); letter-spacing:var(--lead-track); } :is(.quote[data-el="undertow-quote"]) blockquote b { color:var(--a1-8); }
+:is(.quote[data-el="undertow-quote"]) .by { display:grid; grid-template-columns:64px 1fr; align-items:center; column-gap:var(--gap-sm); } :is(.quote[data-el="undertow-quote"]) .by .seat { grid-row:1 / span 2; } :is(.quote[data-el="undertow-quote"]) .by .name { font-size:var(--type-18); } :is(.quote[data-el="undertow-quote"]) .by .note { font-size:var(--type-14); }
+:is(.quote[data-el="undertow-quote"]).big blockquote { font-size:var(--type-44); }
+@container (max-width:480px) { :is(.quote[data-el="undertow-quote"]) blockquote,:is(.quote[data-el="undertow-quote"]).big blockquote { font-size:var(--type-24); } }
+
+[data-el="undertow-quote"] small { color:inherit; }

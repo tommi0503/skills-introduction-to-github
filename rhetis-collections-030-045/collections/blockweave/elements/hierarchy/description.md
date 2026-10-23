@@ -1,0 +1,1 @@
+A centered accent root connects to a thin horizontal branch rule, then neutral department blocks and simple indented leaves. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

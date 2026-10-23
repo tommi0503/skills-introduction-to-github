@@ -1,0 +1,1 @@
+Business stages share a row with a thin mood curve above the captions; optional pain points use semantic status color. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

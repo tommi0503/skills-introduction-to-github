@@ -1,0 +1,1 @@
+Owner rows and a clear grid organize rectangular process nodes, capsule terminals and fine directional connectors. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

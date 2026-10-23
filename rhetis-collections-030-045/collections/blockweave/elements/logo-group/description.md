@@ -1,0 +1,1 @@
+Numbered square neutral logo seats form a spacious aligned row or wrap into a balanced grid. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

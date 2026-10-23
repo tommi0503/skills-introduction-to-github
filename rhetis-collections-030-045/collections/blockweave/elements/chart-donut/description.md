@@ -1,0 +1,1 @@
+A plain, thick circular share wraps around the centered figure and compact name; neutral remainder and accent share preserve zero and complete states. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

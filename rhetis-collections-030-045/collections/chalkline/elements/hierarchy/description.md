@@ -1,0 +1,1 @@
+A filled rectangular root leads through thin orthogonal rules to aligned branch names. Branch headers use quiet square surfaces, while individual leaves sit on ruled text rows. The structure expands from two to four branches without changing its line weight.

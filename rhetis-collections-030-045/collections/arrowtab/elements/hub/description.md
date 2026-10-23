@@ -1,0 +1,1 @@
+Arrowtab hub places a solid central core inside three to six outlined spokes. Fine straight connectors radiate to each circular member, preserving one-to-many meaning without implying a sequential cycle. Accent-topped borders and restrained labels belong to the source report language.

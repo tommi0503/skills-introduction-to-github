@@ -1,0 +1,43 @@
+:is(.steps[data-el="undertow-steps"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.steps[data-el="undertow-steps"]) * { box-sizing:border-box; } :is(.steps[data-el="undertow-steps"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.steps[data-el="undertow-steps"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.steps[data-el="undertow-steps"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.steps[data-el="undertow-steps"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.steps[data-el="undertow-steps"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.steps[data-el="undertow-steps"]) { display:flex; align-items:stretch; justify-content:center; gap:var(--gap-lg); }
+:is(.steps[data-el="undertow-steps"]) .step { flex:1; min-width:0; position:relative; display:grid; grid-template-rows:120px auto 1fr; gap:var(--gap-sm); text-align:center; align-content:center; padding-block:var(--gap-lg); }
+:is(.steps[data-el="undertow-steps"]) .mark { display:flex; align-items:center; justify-content:center; width:120px; height:120px; border-radius:50%; background:var(--n-2); color:var(--ink); justify-self:center; font-size:var(--type-28); font-weight:var(--name-weight); } :is(.steps[data-el="undertow-steps"]) .mark .icon { width:64px; height:64px; }
+:is(.steps[data-el="undertow-steps"]) .step.on .mark { background:var(--a1); color:var(--a1-on); }
+:is(.steps[data-el="undertow-steps"]) .step:not(:last-child)::after { content:""; position:absolute; right:calc(var(--gap-lg)/-1); top:calc(var(--gap-lg) + 60px); width:var(--gap-lg); border-top:2px dotted var(--n-5); }
+:is(.steps[data-el="undertow-steps"]).col { flex-direction:column; gap:var(--gap-sm); } :is(.steps[data-el="undertow-steps"]).col .step { grid-template-columns:64px 1fr; grid-template-rows:auto auto; padding:var(--gap-sm); text-align:left; align-items:center; } :is(.steps[data-el="undertow-steps"]).col .mark { grid-row:1 / span 2; width:64px; height:64px; } :is(.steps[data-el="undertow-steps"]).col .mark .icon { width:36px; height:36px; } :is(.steps[data-el="undertow-steps"]).col .step:not(:last-child)::after { right:auto; left:44px; top:calc(100% - var(--gap-sm)); height:var(--gap-sm); width:0; border-top:0; border-left:2px dotted var(--n-5); }
+@container (max-width:700px) { :is(.steps[data-el="undertow-steps"]) .step { grid-template-rows:72px auto 1fr; } :is(.steps[data-el="undertow-steps"]) .mark { width:72px; height:72px; } :is(.steps[data-el="undertow-steps"]) .mark .icon { width:40px; height:40px; } :is(.steps[data-el="undertow-steps"]) .name { font-size:var(--type-18); } :is(.steps[data-el="undertow-steps"]) .note { font-size:var(--type-14); } :is(.steps[data-el="undertow-steps"]) .step:not(:last-child)::after { top:calc(var(--gap-lg) + 36px); } }
+@container (max-width:900px) { :is(.steps[data-el="undertow-steps"]):has(> .step:nth-child(5)) .step { grid-template-rows:56px auto 1fr; } :is(.steps[data-el="undertow-steps"]):has(> .step:nth-child(5)) .mark { width:56px; height:56px; } :is(.steps[data-el="undertow-steps"]):has(> .step:nth-child(5)) .name { font-size:var(--type-16); } :is(.steps[data-el="undertow-steps"]):has(> .step:nth-child(5)) .note { font-size:var(--type-12); } }
+
+[data-el="undertow-steps"] small { color:inherit; }
+
+.steps[data-el="undertow-steps"]:has(> .step:nth-child(3):last-child):not(.col) .step { grid-template-rows:200px auto 1fr; }
+.steps[data-el="undertow-steps"]:has(> .step:nth-child(3):last-child):not(.col) .mark { width:200px; height:200px; font-size:var(--type-32); }
+@container (max-width:800px) { .steps[data-el="undertow-steps"]:has(> .step:nth-child(3):last-child):not(.col) .step { grid-template-rows:96px auto 1fr; } .steps[data-el="undertow-steps"]:has(> .step:nth-child(3):last-child):not(.col) .mark { width:96px; height:96px; font-size:var(--type-20); } }
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) {display:grid;grid-template-columns:repeat(3,249px);justify-content:space-between;gap:0;padding:0;border:0;background:none;}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on)::before {content:none;}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .step {display:block;position:relative;padding:0;border:0;background:none;text-align:center;}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .mark {position:relative;left:9px;top:0;width:225px;height:225px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:var(--type-36);padding-bottom:var(--gap);background:var(--n-1);color:var(--a1-8);margin:0;}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .step.on .mark {background:var(--a1-7);color:var(--page);}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .name {position:absolute;left:9px;top:127px;width:225px;font-size:var(--type-18);color:var(--a1-8);}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .step.on .name {color:var(--a1-on);}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .note {font-size:var(--type-18);line-height:var(--lead-line);margin:var(--gap) 0 0;color:var(--ink);}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .step:not(:last-child)::after {content:"";position:absolute;left:250px;top:105px;width:90px;height:3px;border-top:3px dotted var(--n-7);}
+
+
+
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .step {align-content:start;}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .mark {justify-self:start;font-size:var(--type-40);}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .name {font-size:var(--type-16);}
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .note {font-size:var(--type-16);}
+
+
+
+.steps[data-el="undertow-steps"]:not(.col):has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))):has(>.step.on) .step:not(:last-child) .mark::after {content:"";position:absolute;left:324px;top:100px;width:11px;height:13px;clip-path:polygon(0 0,100% 50%,0 100%);background:var(--n-7);}
+

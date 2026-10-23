@@ -1,0 +1,1 @@
+True nested circles communicate inclusion, using pale neutral steps and one optional soft accent. Compact name-and-figure pairs sit in each outer band while the innermost set centres its text. Narrow seats hide secondary notes before compromising the primary name or figure.

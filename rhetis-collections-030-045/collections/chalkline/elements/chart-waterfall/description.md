@@ -1,0 +1,1 @@
+Floating square bars show each change between its supplied running totals. Thin horizontal connectors preserve the continuity, while final totals rise from zero. Growth uses the ranked accent, reductions stay neutral and totals use ink.

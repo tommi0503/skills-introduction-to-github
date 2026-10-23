@@ -1,0 +1,53 @@
+.card[data-el="blockweave-card"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.card[data-el="blockweave-card"] >.parts>.kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.card[data-el="blockweave-card"] >.parts>.fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.card[data-el="blockweave-card"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.card[data-el="blockweave-card"] >.parts>.fig>small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.card[data-el="blockweave-card"]{height:100%;display:flex;background:var(--page);border:var(--stroke) solid var(--n-2);border-radius:var(--radius)}
+.card[data-el="blockweave-card"] >.parts{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--pad);width:100%;min-width:0}
+.card[data-el="blockweave-card"] >.parts>.mark{color:var(--a1-8);display:flex;align-items:center;justify-content:center;width:64px;height:64px;flex:none}
+.card[data-el="blockweave-card"].on{background:var(--a1);border-color:var(--a1-8);color:var(--a1-on)}
+.card[data-el="blockweave-card"].on>.parts>.name{color:var(--a1-on)}
+.card[data-el="blockweave-card"].on>.parts>.fig{color:var(--a1-on)}
+.card[data-el="blockweave-card"].on>.parts>.kick{color:var(--a1-on)}
+.card[data-el="blockweave-card"].on>.parts>.note{color:var(--a1-on)}
+.card[data-el="blockweave-card"].on>.parts>.mark{color:var(--a1-on)}
+.card[data-el="blockweave-card"].quiet{background:var(--n-1);border-color:var(--n-1)}
+.card[data-el="blockweave-card"].line{background:var(--page);border-color:var(--n-4)}
+.card[data-el="blockweave-card"].tone-1{background:var(--a1-2-soft);border-color:var(--n-2)}
+.card[data-el="blockweave-card"].tone-2{background:var(--a1-3-soft);border-color:var(--n-2)}
+.card[data-el="blockweave-card"].tone-3{background:var(--a1-4-soft);border-color:var(--n-2)}
+.card[data-el="blockweave-card"].tone-4{background:var(--a1-4-soft);border-color:var(--n-2)}
+.card[data-el="blockweave-card"].tone-5{background:var(--a1-4-soft);border-color:var(--n-2)}
+@container (max-width: 760px){.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-18)}.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-14)}.card[data-el="blockweave-card"] >.parts>.fig{font-size:var(--type-40)}.card[data-el="blockweave-card"] >.parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-16)}.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-12)}.card[data-el="blockweave-card"] >.parts>.fig{font-size:var(--type-28)}.card[data-el="blockweave-card"] >.parts>.kick{font-size:var(--type-12)}.card[data-el="blockweave-card"] h2{font-size:var(--type-28)}.card[data-el="blockweave-card"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.card[data-el="blockweave-card"] >.parts>.kick{display:none}.card[data-el="blockweave-card"] >.parts>.note{display:none}}
+
+.card[data-el="blockweave-card"] >.parts>.fig>small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+@container (min-width:280px) and (min-height:400px){.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-28)}.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-18)}.card[data-el="blockweave-card"] >.parts>.fig{font-size:var(--type-56)}}
+/* Refinement from original/replica/reassembled comparison. */
+.card[data-el="blockweave-card"]{background:var(--n-1)}.card.on[data-el="blockweave-card"]{background:var(--a1)}.card.quiet[data-el="blockweave-card"]{background:none;border:0}.card[data-el="blockweave-card"] >.parts>.name>b{color:var(--a1-8)}.card.on[data-el="blockweave-card"] >.parts>.name>b{color:var(--a1-on)}@container (min-width:280px) and (min-height:170px){.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-22)}.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-16)}}@container (max-width:300px) and (min-height:300px){.card.quiet[data-el="blockweave-card"] >.parts{justify-content:flex-start;padding-top:calc(var(--pad)*2.5)}.card.quiet[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-22)}.card.quiet[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-16)}}.card.line[data-el="blockweave-card"] >.parts>.name{background:var(--a1);color:var(--a1-on);padding:var(--gap-sm);text-align:center}.card.line[data-el="blockweave-card"] >.parts>.note{text-align:center}
+@container (min-width:220px) and (min-height:110px){.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-18)}.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-14)}}@container (min-width:280px) and (min-height:170px){.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-22)}.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-16)}}
+.card.quiet[data-el="blockweave-card"]{background:var(--n-1);border:0;border-radius:0}
+@container (min-width:280px) and (max-height:180px){.card.quiet[data-el="blockweave-card"] >.parts{padding:var(--pad);gap:var(--gap-sm)}.card.quiet[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-20)}.card.quiet[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-18)}}
+
+/* Original-deck geometric review. */
+.card[data-el="blockweave-card"]{border:0;border-radius:0;background:var(--n-1)}.card.quiet[data-el="blockweave-card"]{background:none;border:0}.card[data-el="blockweave-card"] >.parts>.name{font-weight:var(--label-weight)}
+@container (min-width:280px) and (max-height:180px){.card[data-el="blockweave-card"] >.parts{padding:var(--pad);gap:var(--gap-sm)}.card[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-18)}.card[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-16)}}
+.card.line[data-el="blockweave-card"]{border:0;background:none}.card.line[data-el="blockweave-card"] >.parts{justify-content:flex-start;padding:calc(var(--gap) - var(--stroke)*2) max(0px,calc((100cqw - 230px)*.5));gap:var(--gap-sm)}.card.line[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-20);font-weight:var(--label-weight);padding:calc(var(--gap-sm)*1.5) var(--gap-sm)}.card.line.quiet[data-el="blockweave-card"] >.parts>.name{background:var(--n-8);color:var(--page)}.card.line[data-el="blockweave-card"] >.parts>.note{font-size:var(--type-18)}.card.line[data-el="blockweave-card"] >.parts>.note small{display:block;font-size:var(--type-16);color:var(--n-6);line-height:var(--body-line)}
+@container (max-width:300px) and (min-height:300px){.card.quiet[data-el="blockweave-card"] >.parts{padding-left:calc(var(--gap) - var(--gap-sm) - var(--stroke)*2);padding-right:0;gap:calc(var(--gap-sm)*1.5)}.card.quiet[data-el="blockweave-card"] >.parts>.name{font-size:var(--type-24)}}
+
+.card[data-el="blockweave-card"]:has(>.parts>.group)>.parts{justify-content:stretch;padding:var(--gap);height:100%}.card[data-el="blockweave-card"]>.parts>.group{flex:1;gap:var(--gap-lg);height:100%}.card[data-el="blockweave-card"]>.parts>.group>.stack{position:relative;gap:var(--gap-sm);min-height:0}.card[data-el="blockweave-card"]>.parts>.group>.stack:not(:last-child)::after{content:"";position:absolute;right:calc(var(--gap-lg)*-.5);top:calc(var(--gap-lg) + var(--gap));bottom:var(--gap-sm);border-right:var(--stroke) dotted var(--n-5)}
+
+.card[data-el="blockweave-card"]:has(>.parts>.list){width:calc(100% - var(--gap)*2);height:calc(100% - var(--gap));margin-left:var(--gap-lg);margin-top:calc(var(--gap-sm)*-1);border-radius:var(--radius)}.card[data-el="blockweave-card"]:has(>.parts>.list)>.parts{height:100%;padding:var(--pad);gap:var(--gap-sm)}.card[data-el="blockweave-card"]>.parts>.list{flex:3;padding:var(--pad) calc(var(--pad) + var(--gap-sm));min-height:0}.card[data-el="blockweave-card"]>.parts>.callout{flex:1;height:auto;min-height:0;padding:var(--gap-sm)}.card[data-el="blockweave-card"]:has(>.parts>.group){width:calc(100% + var(--gap-sm)*4);margin-left:calc(var(--gap-sm)*-2)}
+
+.card[data-el="blockweave-card"]>.parts>.note>span:has(>span){display:flex;align-items:baseline;gap:var(--gap-sm);font-size:var(--type-16);line-height:var(--body-line);margin-top:calc(var(--stroke)*2)}.card[data-el="blockweave-card"]>.parts>.note>span:has(>span)::after{content:"";flex:1;order:1;border-bottom:var(--stroke) dotted var(--n-5);min-width:var(--gap-sm)}.card[data-el="blockweave-card"]>.parts>.note>span>span{flex:none}.card[data-el="blockweave-card"]>.parts>.note>span>b{order:2;font-size:var(--type-14);font-weight:var(--body-weight);color:var(--n-7)}.card.quiet[data-el="blockweave-card"]:has(>.parts>.kick)>.parts>.kick{font-size:var(--type-16);font-weight:var(--body-weight)}.card.quiet[data-el="blockweave-card"]>.parts>.note:has(>span>span){margin-top:var(--gap)}
+
+@container (min-width:600px) and (min-height:180px){.card.quiet[data-el="blockweave-card"]>.parts{background:var(--n-1);padding-left:calc(var(--pad) + var(--gap-lg) - var(--gap-sm) - var(--stroke)*2);padding-right:calc(var(--pad) + var(--gap-lg) - var(--gap-sm) - var(--stroke)*2)}.card.quiet[data-el="blockweave-card"]>.parts>.note>b{font-weight:var(--name-weight);color:var(--ink)}}
+@container (min-width:280px) and (max-width:460px) and (min-height:180px) and (max-height:300px){.card[data-el="blockweave-card"]:not(.quiet):not(.line)>.parts{justify-content:flex-start}}
+
+.card[data-el="blockweave-card"]:has(>.parts>.list){margin-top:0}

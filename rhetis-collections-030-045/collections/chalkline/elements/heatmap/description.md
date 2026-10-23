@@ -1,0 +1,1 @@
+Square cells encode density with successive strengths of the ranked accent. Small column headings and stable row names keep the grid legible, while value labels use tiny page-coloured backing for contrast. Calendar mode uses square day cells without a row-name column.

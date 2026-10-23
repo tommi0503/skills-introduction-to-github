@@ -1,0 +1,1 @@
+Two matching columns oppose an outlined header and an ink-filled header. Their square rows share stable heights and thin gaps, with a modest VS in the centre gutter. Nested list text stays regular at the source comparison-row size.

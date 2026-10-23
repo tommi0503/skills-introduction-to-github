@@ -1,0 +1,26 @@
+.callout[data-el="blockweave-callout"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.callout[data-el="blockweave-callout"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.callout[data-el="blockweave-callout"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.callout[data-el="blockweave-callout"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.callout[data-el="blockweave-callout"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.callout[data-el="blockweave-callout"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.callout[data-el="blockweave-callout"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.callout[data-el="blockweave-callout"]{height:100%;display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);border-top:var(--stroke) dotted var(--n-4);text-align:center}
+.callout[data-el="blockweave-callout"] p{margin:0;font-size:var(--type-28);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.callout[data-el="blockweave-callout"] b{color:var(--a1-8);font-weight:var(--title-weight)}
+@container (max-width: 760px){.callout[data-el="blockweave-callout"] .name{font-size:var(--type-18)}.callout[data-el="blockweave-callout"] .note{font-size:var(--type-14)}.callout[data-el="blockweave-callout"] .fig{font-size:var(--type-40)}.callout[data-el="blockweave-callout"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.callout[data-el="blockweave-callout"] .name{font-size:var(--type-16)}.callout[data-el="blockweave-callout"] .note{font-size:var(--type-12)}.callout[data-el="blockweave-callout"] .fig{font-size:var(--type-28)}.callout[data-el="blockweave-callout"] .kick{font-size:var(--type-12)}.callout[data-el="blockweave-callout"] h2{font-size:var(--type-28)}.callout[data-el="blockweave-callout"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.callout[data-el="blockweave-callout"] .kick{display:none}.callout[data-el="blockweave-callout"] .note{display:none}}
+
+.callout[data-el="blockweave-callout"] small{color:inherit}
+
+/* Refinement from original/replica/reassembled comparison. */
+@container (max-height:80px){.callout[data-el="blockweave-callout"]{padding:var(--gap-sm)}.callout[data-el="blockweave-callout"] p{font-size:var(--type-18)}}
+/* Original-deck geometric review. */
+.callout[data-el="blockweave-callout"] small{display:block;font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);margin-top:var(--gap-sm);color:var(--n-7)}
+
+.callout.line[data-el="blockweave-callout"]{border-top:0;padding:0;margin-top:calc(var(--gap)*-1)}.callout.line[data-el="blockweave-callout"] p{font-size:var(--type-20);font-weight:var(--body-weight)}.callout.line[data-el="blockweave-callout"] b{color:var(--ink)}.callout.line[data-el="blockweave-callout"]::before{content:"";position:absolute;left:50%;top:calc(var(--gap-lg)*-2);height:calc(var(--gap-lg) + var(--gap-sm));border-left:var(--stroke) dotted var(--n-6)}
+
+.callout.line[data-el="blockweave-callout"]::before{top:calc(var(--gap-lg)*-3.5);height:calc(var(--gap-lg)*3.25)}
+
+.callout[data-el="blockweave-callout"]:has(p>small){margin-top:calc(var(--gap-lg) - var(--gap-sm));height:calc(100% - var(--gap-lg) + var(--gap-sm));padding:var(--gap-lg) var(--pad) 0}.callout[data-el="blockweave-callout"]:has(p>small) p{font-size:var(--type-24)}.callout.quiet[data-el="blockweave-callout"]:has(p>small){position:relative;border-top:0;padding-top:calc(var(--gap-sm)*.5)}.callout.quiet[data-el="blockweave-callout"]:has(p>small)::before{content:"";position:absolute;left:0;right:0;top:calc(var(--gap-sm)*-2);border-top:var(--stroke) dotted var(--n-5)}.callout.quiet[data-el="blockweave-callout"]:has(p>small) p{font-size:var(--type-28)}

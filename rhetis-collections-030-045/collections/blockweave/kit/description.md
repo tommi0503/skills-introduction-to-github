@@ -1,0 +1,1 @@
+Blockweave is a quiet corporate system of open rectangular panels, short edge bars and precisely spaced circular diagrams. A square mosaic appears only at cover edges. Thin rules, restrained corners and decisive header bands keep information clear without ornamental surfaces.

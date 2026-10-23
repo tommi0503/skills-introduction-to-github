@@ -1,0 +1,1 @@
+A strong source block feeds share-scaled bands into quieter branch rows; a nested split remains indented and visibly subordinate. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

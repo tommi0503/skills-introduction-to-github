@@ -1,0 +1,120 @@
+:is(.card[data-el="undertow-card"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.card[data-el="undertow-card"]) * { box-sizing:border-box; } :is(.card[data-el="undertow-card"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.card[data-el="undertow-card"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.card[data-el="undertow-card"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.card[data-el="undertow-card"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.card[data-el="undertow-card"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.card[data-el="undertow-card"]) { background:var(--page); border-top:calc(var(--stroke)*5) solid var(--n-3); padding:var(--pad); display:flex; align-items:center; justify-content:center; text-align:center; }
+:is(.card[data-el="undertow-card"]) .parts { display:grid; width:100%; gap:var(--gap-sm); align-content:center; justify-items:center; }
+:is(.card[data-el="undertow-card"]) .fig { font-size:var(--type-52); }
+:is(.card[data-el="undertow-card"]) .name { padding-bottom:var(--gap-sm); border-bottom:var(--stroke) solid var(--n-4); width:100%; }
+:is(.card[data-el="undertow-card"]).on { background:var(--a1); color:var(--a1-on); border-color:var(--a1); }
+:is(.card[data-el="undertow-card"]).on .note,:is(.card[data-el="undertow-card"]).on .kick { color:var(--a1-on); }
+:is(.card[data-el="undertow-card"]).line { border:var(--stroke) solid var(--n-4); background:var(--page); }
+:is(.card[data-el="undertow-card"]).quiet { background:var(--n-1); border-color:var(--n-2); }
+:is(.card[data-el="undertow-card"]) .mark { width:72px; height:72px; border-radius:50%; background:var(--a1-2-soft); color:var(--a1-8); display:flex; align-items:center; justify-content:center; font-size:var(--type-28); }
+:is(.card[data-el="undertow-card"]) .mark .icon { width:40px; height:40px; }
+:is(.card[data-el="undertow-card"]) .mark:has(.seat.icon) { width:96px; height:96px; background:none; } :is(.card[data-el="undertow-card"]) .seat.icon { width:88px; height:88px; } :is(.card[data-el="undertow-card"]) .icon:not([data-icon]) { display:flex; align-items:center; justify-content:center; font-size:var(--type-20); line-height:var(--label-line); }
+:is(.card[data-el="undertow-card"]).tone-2 { border-color:var(--a2); } :is(.card[data-el="undertow-card"]).tone-3 { border-color:var(--a3); } :is(.card[data-el="undertow-card"]).tone-4 { border-color:var(--a4); } :is(.card[data-el="undertow-card"]).tone-5 { border-color:var(--n-6); }
+@container (max-width:260px) { :is(.card[data-el="undertow-card"]) .fig { font-size:var(--type-32); } :is(.card[data-el="undertow-card"]) .name { font-size:var(--type-20); } :is(.card[data-el="undertow-card"]) .note { font-size:var(--type-14); } :is(.card[data-el="undertow-card"]) .mark { width:56px; height:56px; } :is(.card[data-el="undertow-card"]) .mark .icon { width:30px; height:30px; } }
+@container (min-width:500px) { :is(.card[data-el="undertow-card"]) .parts:has(.mark):not(:has(.fig)) { grid-template-columns:110px minmax(0,1fr); text-align:center; } :is(.card[data-el="undertow-card"]) .parts:has(.mark):not(:has(.fig)) > .mark { grid-column:1; grid-row:1 / span 3; } :is(.card[data-el="undertow-card"]) .parts:has(.mark):not(:has(.fig)) > .name,:is(.card[data-el="undertow-card"]) .parts:has(.mark):not(:has(.fig)) > .note { grid-column:2; } }
+
+.card[data-el="undertow-card"] .parts > .seat { width:min(100%,160px); aspect-ratio:1; height:auto; }
+@container (max-height:220px) { .card[data-el="undertow-card"] .fig { font-size:var(--type-36); } .card[data-el="undertow-card"] .name { font-size:var(--type-18); } .card[data-el="undertow-card"] .note { font-size:var(--type-12); } .card[data-el="undertow-card"] .parts { gap:calc(var(--gap-sm)/2); } }
+
+[data-el="undertow-card"] small { color:inherit; }
+
+@container (min-height:300px) {.card[data-el="undertow-card"] .name {min-height:var(--type-64);display:flex;align-items:center;justify-content:center;} .card[data-el="undertow-card"] .note {min-height:var(--type-80);} .card[data-el="undertow-card"] .parts:has(.fig):has(.kick) {grid-template-rows:var(--type-16) var(--type-64) var(--type-64) var(--type-80);} }
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.card[data-el="undertow-card"] .parts {width:100%;height:100%;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark .icon) {padding:var(--undertow-space-15);background:var(--n-1);border:0;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark .icon) .parts {display:grid;grid-template-columns:143px 1fr;grid-template-rows:1fr 1fr;column-gap:var(--gap);row-gap:0;align-items:center;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark .icon) .mark {grid-column:1;grid-row:1 / span 2;width:143px;height:143px;border-radius:0;background:var(--a1-7);color:var(--page);margin:0;display:flex;align-items:center;justify-content:center;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark .icon) .mark .icon {width:78px;height:78px;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark .icon) .name {grid-column:2;grid-row:1;font-size:var(--type-22);text-align:center;align-self:center;color:var(--n-8);}
+.card[data-el="undertow-card"].line:has(>.parts>.mark .icon) .note {grid-column:2;grid-row:2;font-size:var(--type-16);text-align:center;line-height:var(--body-line);align-self:start;color:var(--n-7);margin:0;padding:0 var(--gap-sm);}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) {padding:var(--undertow-space-18) var(--undertow-space-17);background:var(--n-1);border:0;border-top:6px solid var(--n-3);}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .parts {display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;text-align:center;}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .seat {width:100%;height:160px;aspect-ratio:auto;flex:none;background:var(--n-2);}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .seat::after {content:none;}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .name {font-size:var(--type-24);margin:var(--gap-sm) 0 0;padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-5);color:var(--n-8);}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .note {font-size:var(--type-16);line-height:var(--lead-line);margin:var(--gap-sm) 0 0;color:var(--ink);}
+.card[data-el="undertow-card"].line:has(>.parts>.fig) {padding:0;border:0;background:var(--n-1);}
+.card[data-el="undertow-card"].line:has(>.parts>.fig) .parts {display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;text-align:center;}
+.card[data-el="undertow-card"].line:has(>.parts>.fig) .name {order:0;display:flex;align-items:center;justify-content:center;height:33px;min-height:33px;background:var(--n-3);font-size:var(--type-18);}
+.card[data-el="undertow-card"].line:has(>.parts>.fig) .fig {order:1;font-size:var(--type-40);margin-top:var(--gap);white-space:nowrap;}
+.card[data-el="undertow-card"].line:has(>.parts>.fig) .note {order:2;font-size:var(--type-12);margin-top:calc(var(--gap-sm)*.5);color:var(--ink);}
+.card[data-el="undertow-card"].quiet:not(:has(.fig)):not(:has(.note)) {padding:0;border:0;background:var(--n-3);}
+.card[data-el="undertow-card"].quiet:not(:has(.fig)):not(:has(.note)) .parts {display:flex;align-items:center;justify-content:center;}
+.card[data-el="undertow-card"].quiet:not(:has(.fig)):not(:has(.note)) .name {font-size:var(--type-20);text-align:center;}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) {padding:0;border:0;background:var(--n-1);text-align:center;overflow:visible;}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) .parts {display:flex;flex-direction:column;justify-content:flex-start;gap:0;}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) .kick {display:flex;align-items:flex-end;justify-content:center;height:46px;min-height:46px;width:100%;padding-bottom:calc(var(--gap-sm)*.75);text-decoration:underline;font-size:var(--type-18);background:var(--n-5);color:var(--page);}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) .name {height:56px;min-height:56px;width:100%;font-size:var(--type-24);background:var(--n-5);color:var(--page);padding:0 var(--gap-sm);}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) .note {width:100%;font-size:var(--type-18);line-height:var(--lead-line);padding:var(--gap-sm) var(--gap);margin:0;color:var(--ink);}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) .note+ .note {border-top:var(--stroke) solid var(--n-3);}
+.card[data-el="undertow-card"].tone-2.line:has(>.parts>.kick) .name,.card[data-el="undertow-card"].tone-2.line:has(>.parts>.kick) .kick {background:var(--n-6);}
+.card[data-el="undertow-card"].tone-3.line:has(>.parts>.kick) .name,.card[data-el="undertow-card"].tone-3.line:has(>.parts>.kick) .kick {background:var(--n-7);}
+.card[data-el="undertow-card"].on.line:has(>.parts>.kick) .name,.card[data-el="undertow-card"].on.line:has(>.parts>.kick) .kick {background:var(--ink);color:var(--page);}
+.card[data-el="undertow-card"].line:has(>.parts>.kick)::after {content:"";position:absolute;right:-6px;top:-54px;width:72px;height:28px;background:var(--a1-3-soft);clip-path:polygon(0 100%,17% 43%,43% 15%,76% 15%,74% 0,100% 30%,78% 65%,79% 40%,45% 35%,20% 60%);}
+.card[data-el="undertow-card"].on.line:has(>.parts>.kick)::after {content:none;}
+.card[data-el="undertow-card"].line:not(:has(.fig)):not(:has(.mark)):not(:has(.kick)):not(:has(.note)) {padding:0;border:0;background:var(--n-1);}
+.card[data-el="undertow-card"].line:not(:has(.fig)):not(:has(.mark)):not(:has(.kick)):not(:has(.note)) .parts {display:block;}
+.card[data-el="undertow-card"].line:not(:has(.fig)):not(:has(.mark)):not(:has(.kick)):not(:has(.note)) .name {height:46px;display:flex;align-items:center;justify-content:center;background:var(--n-3);font-size:var(--type-20);text-align:center;}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig) {padding:0;border:0;background:var(--n-2);text-align:center;color:var(--n-7);}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig) .parts {display:flex;flex-direction:column;justify-content:center;align-items:center;gap:calc(var(--gap-sm)*.5);}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig) .name {font-size:var(--type-18);}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig) .fig {font-size:var(--type-48);}
+.card[data-el="undertow-card"].on.quiet:has(>.parts>.fig) {background:var(--a1-2-soft);color:var(--ink);}
+
+
+
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) {padding:0;border:0;background:var(--n-1);}
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) .parts {display:flex;align-items:center;justify-content:flex-start;gap:var(--gap);height:100%;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) .mark {width:134px;min-width:134px;height:100%;border:0;border-radius:0;background:var(--n-4);color:var(--page);display:flex;align-items:center;justify-content:center;font-size:var(--type-24);margin:0;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) .name {font-size:var(--type-22);font-weight:var(--body-weight);line-height:var(--lead-line);padding-right:var(--gap);}
+
+
+
+.card[data-el="undertow-card"].line:has(>.parts>.mark .icon) .name {padding:0;border:0;min-height:0;}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .name {min-height:0;display:block;font-size:var(--type-24);margin-top:calc(var(--gap-sm)*4/3);padding-bottom:calc(var(--gap-sm)*.75);}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .note {min-height:0;font-size:var(--type-14);line-height:var(--body-line);margin-top:calc(var(--gap-sm)*4/3);}
+.card[data-el="undertow-card"].line:has(>.parts>.fig) .name {padding:0;border:0;min-height:0;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) {height:80px;align-self:end;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) .name {padding-bottom:0;border:0;min-height:0;}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) {height:263px;}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) .name {padding-bottom:0;border:0;min-height:0;display:block;}
+.card[data-el="undertow-card"].line:has(>.parts>.kick) .note {min-height:0;font-size:var(--type-16);padding:var(--undertow-space-20) var(--undertow-space-30);}
+.card[data-el="undertow-card"].on.line:has(>.parts>.kick) {width:246px;margin-left:var(--undertow-space-18);}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig) .name {padding:0;border:0;min-height:0;}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig):not(.on) {color:var(--n-5);}
+.card[data-el="undertow-card"].line:not(:has(.fig)):not(:has(.mark)):not(:has(.kick)):not(:has(.note)) .name {padding:0;border:0;min-height:0;}
+.card[data-el="undertow-card"].quiet:not(:has(.fig)):not(:has(.note)) .name {padding:0;border:0;min-height:0;}
+
+
+
+.card[data-el="undertow-card"]:has(>.parts>.mark:only-child) {background:none;border:0;padding:0;}
+.card[data-el="undertow-card"]:has(>.parts>.mark:only-child) .parts {display:flex;align-items:center;justify-content:center;}
+.card[data-el="undertow-card"]:has(>.parts>.mark:only-child) .mark {width:84px;height:84px;background:none;border:0;color:var(--a1-7);}
+.card[data-el="undertow-card"]:has(>.parts>.mark:only-child) .icon {width:84px;height:84px;}
+
+
+
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) .name {font-size:var(--type-18);white-space:nowrap;}
+.card[data-el="undertow-card"].line:has(>.parts>.kick)::after {left:180px;right:auto;top:-55px;width:100px;height:40px;transform:scale(.72,.7);transform-origin:0 0;background:linear-gradient(to right,var(--a1-3-soft),var(--a1-7));clip-path:path("M2 38Q25 5 77 7L75 0L100 12L78 26L79 16Q35 13 2 38Z");}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig):not(.on) {background:var(--page);}
+.card[data-el="undertow-card"].quiet:has(>.parts>.fig):not(.on)::after {content:"";position:absolute;left:50%;top:100%;width:46px;height:25px;transform:translateX(-50%);clip-path:polygon(0 0,100% 0,50% 100%);background:var(--page);}
+
+
+
+@container (max-width:280px) {.card[data-el="undertow-card"].on .name {font-size:var(--type-16);padding-bottom:0;}}
+
+
+.card[data-el="undertow-card"].line:not(:has(.fig)):not(:has(.mark)):not(:has(.kick)):not(:has(.note)) .name {font-size:var(--type-18);}
+
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) .name {text-align:left;}
+.card[data-el="undertow-card"].line:has(>.parts>.mark):not(:has(.icon)):not(:has(.note)) .mark {font-weight:var(--name-weight);}
+
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .mark {display:block;position:static;width:100%;height:160px;border:0;border-radius:0;background:none;flex:none;}
+.card[data-el="undertow-card"]:has(>.parts>.mark>.seat:not(.icon)) .mark .seat {width:100%;height:160px;aspect-ratio:auto;background:var(--n-2);}

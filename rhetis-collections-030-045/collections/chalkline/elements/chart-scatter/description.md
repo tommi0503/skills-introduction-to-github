@@ -1,0 +1,1 @@
+Small neutral dots sit on two fine value axes, with labels above their centres and a single accented observation. Bubble mode expands each circular mark according to its size value while keeping an understated border. Plot padding protects labels at the extremes.

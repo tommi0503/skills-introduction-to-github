@@ -1,0 +1,1 @@
+A thin accent measure crosses neutral qualitative bands, while a vertical target tick and a second-line target note remain distinct. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

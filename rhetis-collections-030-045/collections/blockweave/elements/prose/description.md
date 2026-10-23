@@ -1,0 +1,1 @@
+Quiet running paragraphs use generous line spacing, selective bold words and optional two-column flow. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

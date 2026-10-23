@@ -1,0 +1,1 @@
+Square-ended columns rise from a shared baseline, with values outside their tops and labels below. Background rules are faint and only the main bar uses the ranked accent. The horizontal variant reserves a fixed label column at the left and places values after each bar end.

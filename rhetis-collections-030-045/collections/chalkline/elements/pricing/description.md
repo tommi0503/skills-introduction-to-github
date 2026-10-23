@@ -1,0 +1,1 @@
+Plans appear as square pale panels below one top hairline, with bold names, clear prices and compact checked lists. One plan uses a quiet accent ground and may carry a naturally sized recommendation tag. Names and prices align across the row.

@@ -1,0 +1,1 @@
+An orderly matrix uses numeric tint strength for each cell, with row names in a fixed leading column and a separate column header row. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

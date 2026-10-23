@@ -1,0 +1,1 @@
+A flat directional ribbon occupies the upper edge, with a narrow neutral rail on the left. Chapter labels sit in an ink rectangle above large centered headings. The twelve-by-six content grid keeps square panels aligned. Covers enlarge the ribbon into a chevron and pair it with an optional numbered image seat.

@@ -1,0 +1,1 @@
+Simple rectangular process nodes, capsule terminals and diamond decisions occupy an explicit grid and connect through fine arrows. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

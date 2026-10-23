@@ -1,0 +1,3 @@
+Cutplane — source deck 033, manufacturing digital transformation proposals.
+
+All 56 taxonomy contracts are included. Mandatory reference fixtures preserve their original markup and data; only the collection prefix changes. Other fixtures reuse contract structures with manufacturing-focused copy. The design is derived from acute corner fields, unrounded planes and strong typographic contrast in the source deck, not from sample CSS.

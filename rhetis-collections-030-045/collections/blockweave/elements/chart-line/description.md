@@ -1,0 +1,1 @@
+Fine straight segments join actual numeric point anchors; restrained dots and values sit above a separate row of axis labels. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

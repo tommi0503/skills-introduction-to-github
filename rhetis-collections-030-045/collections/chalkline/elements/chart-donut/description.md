@@ -1,0 +1,1 @@
+A true circular ring shows the share of a whole with one ranked accent segment and a quiet neutral remainder. The central figure and short name are centred inside the clear opening. Multiple donuts keep equal diameters and reduce type in their smaller openings.

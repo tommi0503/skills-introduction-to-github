@@ -1,0 +1,49 @@
+.list[data-el="skylight-list"] { position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.list[data-el="skylight-list"]) * {box-sizing:border-box;min-width:0;}
+:is(.list[data-el="skylight-list"]) :is(p,h2,blockquote,ul) {margin:0;}
+:is(.list[data-el="skylight-list"]) .name {font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.list[data-el="skylight-list"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.list[data-el="skylight-list"]) .fig {font-family:var(--font-body);font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.list[data-el="skylight-list"]) :is(.kick,small) {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+:is(.list[data-el="skylight-list"]) .kick {color:var(--n-7);}
+:is(.list[data-el="skylight-list"]) .icon {display:inline-block;width:32px;height:32px;flex:none;}
+@container (max-width:620px) { :is(.list[data-el="skylight-list"]) .name {font-size:var(--type-18);} :is(.list[data-el="skylight-list"]) .note {font-size:var(--type-16);} :is(.list[data-el="skylight-list"]) .fig {font-size:var(--type-36);} }
+@container (max-width:300px) { :is(.list[data-el="skylight-list"]) .name {font-size:var(--type-16);} :is(.list[data-el="skylight-list"]) .note {font-size:var(--type-14);} :is(.list[data-el="skylight-list"]) .kick {display:none;} :is(.list[data-el="skylight-list"]) .fig {font-size:var(--type-32);} }
+@container (max-height:170px) { :is(.list[data-el="skylight-list"]) .note {font-size:var(--type-14);} :is(.list[data-el="skylight-list"]) .kick {display:none;} }
+:is(.list[data-el="skylight-list"]) {display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:0;list-style:none;counter-reset:skylight-list;}:is(.list[data-el="skylight-list"]) .item,:is(.list[data-el="skylight-list"])>li {position:relative;padding-left:var(--gap-lg);counter-increment:skylight-list;}:is(.list[data-el="skylight-list"]) .item::before,:is(.list[data-el="skylight-list"])>li::before {content:"";position:absolute;left:calc(var(--gap-sm)/2);top:calc(var(--gap-sm)*.6);width:6px;height:6px;background:var(--a1-7);border-radius:999px;}:is(.list[data-el="skylight-list"]).check .item::before {width:12px;height:7px;border:2px solid var(--a1-7);border-top:0;border-right:0;border-radius:0;rotate:-45deg;background:var(--page);}:is(.list[data-el="skylight-list"]).num .item::before {content:counter(skylight-list);width:22px;height:22px;left:0;top:0;display:grid;place-items:center;background:var(--a1-7);color:var(--page);font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);}:is(.list[data-el="skylight-list"]) .name {display:block;font-size:var(--type-20);}:is(.list[data-el="skylight-list"]) .note {display:block;}:is(.list[data-el="skylight-list"]).divided .item+ .item {border-top:2px dotted var(--n-3);padding-top:var(--gap-sm);}:is(.list[data-el="skylight-list"]) .mark .icon {width:22px;height:22px;}
+@container (max-width:380px){:is(.list[data-el="skylight-list"]) .name{font-size:var(--type-16);}:is(.list[data-el="skylight-list"]) .note{font-size:var(--type-14);}:is(.list[data-el="skylight-list"]){gap:calc(var(--gap-sm)/2);}}
+
+[data-el="skylight-list"] small {color:inherit;}
+
+[data-el="skylight-list"] {container-type:inline-size;gap:calc(var(--gap-sm)/2);}
+[data-el="skylight-list"] .name{font-size:var(--type-18);}[data-el="skylight-list"] .note{font-size:var(--type-16);}[data-el="skylight-list"].divided .item+.item{padding-top:calc(var(--gap-sm)/2);}
+@container(max-width:400px){[data-el="skylight-list"] .name{font-size:var(--type-14);}[data-el="skylight-list"] .note{font-size:var(--type-12);}}
+
+:is(.list[data-el="skylight-list"]) {container-type:inline-size;gap:calc(var(--gap-sm)/2);}
+:is(.list[data-el="skylight-list"]) .name{font-size:var(--type-18);}:is(.list[data-el="skylight-list"]) .note{font-size:var(--type-16);}:is(.list[data-el="skylight-list"]).divided .item+.item{padding-top:calc(var(--gap-sm)/2);}
+@container(max-width:400px){:is(.list[data-el="skylight-list"]) .name{font-size:var(--type-14);}:is(.list[data-el="skylight-list"]) .note{font-size:var(--type-12);}}
+
+.list[data-el="skylight-list"].divided .item{display:grid;grid-template-columns:minmax(80px,25%) minmax(0,1fr);align-items:start;gap:calc(var(--gap-sm)/2);}
+@container(max-width:350px){.list[data-el="skylight-list"].divided .item{display:block;}}
+
+@container(max-width:600px){.list[data-el="skylight-list"].divided .item{display:block;}}
+
+
+.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item{display:grid;grid-template-columns:145px minmax(0,1fr);}
+@container(max-width:400px){.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item{display:block;}}
+
+.list[data-el="skylight-list"].num:not(.divided):has(.item:nth-child(3):last-child){justify-content:flex-start;gap:var(--gap);}
+.list[data-el="skylight-list"].num:not(.divided):has(.item:nth-child(3):last-child) .name{font-size:var(--type-16);}
+.list[data-el="skylight-list"].num:not(.divided):has(.item:nth-child(3):last-child) .note{font-size:var(--type-14);}
+
+.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child){justify-content:flex-start;padding-top:calc(var(--gap-sm)/2);}
+@container(min-width:700px){.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item{grid-template-columns:96px minmax(0,1fr);align-items:center;height:58px;flex:none;background:var(--n-1);padding:0 var(--gap) 0 calc(var(--stroke) * 62);margin-bottom:calc(3 * var(--stroke));border:0;}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item::before{left:28px;top:calc(var(--gap-sm) + 3 * var(--stroke));background:none;color:var(--a1-7);font-size:var(--type-16);content:counter(skylight-list,decimal-leading-zero);}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .name{font-size:var(--type-18);}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .note{font-size:var(--type-16);}}
+
+.list[data-el="skylight-list"].divided:not(.num):has(.item:nth-child(3):last-child){justify-content:space-between;padding:var(--gap) calc(var(--stroke) * 19);}
+.list[data-el="skylight-list"].divided:not(.num):has(.item:nth-child(3):last-child) .item{padding-left:calc(var(--stroke) * 25);}
+.list[data-el="skylight-list"].divided:not(.num):has(.item:nth-child(3):last-child) .name{font-size:var(--type-18);}
+.list[data-el="skylight-list"].divided:not(.num):has(.item:nth-child(3):last-child) .note{font-size:var(--type-16);}
+
+@container(min-width:400px) and (max-width:650px) and (min-height:270px){.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child){display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:0;background:var(--n-1);padding:0 var(--gap);}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item{height:auto;align-items:center;padding-top:var(--gap-sm);padding-bottom:var(--gap-sm);}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item::before{top:calc(50% - 14px);}}
+
+@container(min-width:400px) and (max-width:650px) and (min-height:270px){.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item{grid-template-columns:156px minmax(0,1fr);padding-left:0;}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .name{padding-left:calc(36 * var(--stroke));font-size:var(--type-16);}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .note{font-size:var(--type-14);}.list[data-el="skylight-list"].num.divided:has(.item:nth-child(3):last-child) .item::before{left:0;}}

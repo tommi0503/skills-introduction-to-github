@@ -1,0 +1,1 @@
+A vertical sequence of small filled number circles leads to bold section names and optional quieter notes. Long horizontal hairlines divide the entries. The active name uses a deep accent step, preserving legible contrast in either mode.

@@ -1,0 +1,1 @@
+An unboxed quotation is anchored by a slim accent side rule and a small avatar-and-author line. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

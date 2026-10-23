@@ -1,0 +1,33 @@
+.hub[data-el="skylight-hub"] { position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.hub[data-el="skylight-hub"]) * {box-sizing:border-box;min-width:0;}
+:is(.hub[data-el="skylight-hub"]) :is(p,h2,blockquote,ul) {margin:0;}
+:is(.hub[data-el="skylight-hub"]) .name {font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.hub[data-el="skylight-hub"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.hub[data-el="skylight-hub"]) .fig {font-family:var(--font-body);font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.hub[data-el="skylight-hub"]) :is(.kick,small) {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+:is(.hub[data-el="skylight-hub"]) .kick {color:var(--n-7);}
+:is(.hub[data-el="skylight-hub"]) .icon {display:inline-block;width:32px;height:32px;flex:none;}
+@container (max-width:620px) { :is(.hub[data-el="skylight-hub"]) .name {font-size:var(--type-18);} :is(.hub[data-el="skylight-hub"]) .note {font-size:var(--type-16);} :is(.hub[data-el="skylight-hub"]) .fig {font-size:var(--type-36);} }
+@container (max-width:300px) { :is(.hub[data-el="skylight-hub"]) .name {font-size:var(--type-16);} :is(.hub[data-el="skylight-hub"]) .note {font-size:var(--type-14);} :is(.hub[data-el="skylight-hub"]) .kick {display:none;} :is(.hub[data-el="skylight-hub"]) .fig {font-size:var(--type-32);} }
+@container (max-height:170px) { :is(.hub[data-el="skylight-hub"]) .note {font-size:var(--type-14);} :is(.hub[data-el="skylight-hub"]) .kick {display:none;} }
+:is(.hub[data-el="skylight-hub"]) {display:grid;place-items:center;padding:var(--pad);isolation:isolate;}:is(.hub[data-el="skylight-hub"])::before{content:"";position:absolute;width:62%;height:70%;border:2px dotted var(--n-3);border-radius:999px;z-index:-1;}:is(.hub[data-el="skylight-hub"]) .core{position:absolute;left:40%;top:37%;width:20%;height:26%;display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);text-align:center;background:var(--a1);color:var(--a1-on);border-radius:999px;font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}:is(.hub[data-el="skylight-hub"]) .spoke{position:absolute;left:calc(50% + cos(var(--skylight-angle))*34%);top:calc(50% + sin(var(--skylight-angle))*34%);translate:-50% -50%;width:25%;min-height:23%;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--gap-sm)/2);padding:var(--gap-sm);text-align:center;background:var(--a1-1-soft);border-radius:var(--radius);border-top:4px solid var(--a1-7);}:is(.hub[data-el="skylight-hub"]) .spoke .name{font-size:var(--type-18);}:is(.hub[data-el="skylight-hub"]) .spoke .note{font-size:var(--type-14);}:is(.hub[data-el="skylight-hub"]) .mark{display:flex;justify-content:center;}:is(.hub[data-el="skylight-hub"]) .mark .icon{width:24px;height:24px;}@container(max-width:620px){:is(.hub[data-el="skylight-hub"]) .spoke .name{font-size:var(--type-16);}:is(.hub[data-el="skylight-hub"]) .spoke .note{font-size:var(--type-12);}:is(.hub[data-el="skylight-hub"]) .core{font-size:var(--type-18);}}@container(max-height:300px){:is(.hub[data-el="skylight-hub"]) .spoke .note{display:none;}}
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(3 of .spoke):last-child) .spoke:nth-child(1 of .spoke) { --skylight-angle:-90.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(3 of .spoke):last-child) .spoke:nth-child(2 of .spoke) { --skylight-angle:30.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(3 of .spoke):last-child) .spoke:nth-child(3 of .spoke) { --skylight-angle:150.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(1 of .spoke) { --skylight-angle:-90.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(2 of .spoke) { --skylight-angle:0.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(3 of .spoke) { --skylight-angle:90.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(4 of .spoke) { --skylight-angle:180.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(5 of .spoke):last-child) .spoke:nth-child(1 of .spoke) { --skylight-angle:-90.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(5 of .spoke):last-child) .spoke:nth-child(2 of .spoke) { --skylight-angle:-18.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(5 of .spoke):last-child) .spoke:nth-child(3 of .spoke) { --skylight-angle:54.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(5 of .spoke):last-child) .spoke:nth-child(4 of .spoke) { --skylight-angle:126.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(5 of .spoke):last-child) .spoke:nth-child(5 of .spoke) { --skylight-angle:198.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(6 of .spoke):last-child) .spoke:nth-child(1 of .spoke) { --skylight-angle:-90.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(6 of .spoke):last-child) .spoke:nth-child(2 of .spoke) { --skylight-angle:-30.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(6 of .spoke):last-child) .spoke:nth-child(3 of .spoke) { --skylight-angle:30.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(6 of .spoke):last-child) .spoke:nth-child(4 of .spoke) { --skylight-angle:90.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(6 of .spoke):last-child) .spoke:nth-child(5 of .spoke) { --skylight-angle:150.0deg; }
+:is(.hub[data-el="skylight-hub"]):has(> .spoke:nth-child(6 of .spoke):last-child) .spoke:nth-child(6 of .spoke) { --skylight-angle:210.0deg; }
+
+[data-el="skylight-hub"] small {color:inherit;}

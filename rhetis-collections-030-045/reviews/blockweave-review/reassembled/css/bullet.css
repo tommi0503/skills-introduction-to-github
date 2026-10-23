@@ -1,0 +1,30 @@
+.bullet[data-el="blockweave-bullet"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.bullet[data-el="blockweave-bullet"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.bullet[data-el="blockweave-bullet"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.bullet[data-el="blockweave-bullet"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.bullet[data-el="blockweave-bullet"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.bullet[data-el="blockweave-bullet"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.bullet[data-el="blockweave-bullet"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.bullets[data-el="blockweave-bullet"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.bullets[data-el="blockweave-bullet"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.bullets[data-el="blockweave-bullet"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.bullets[data-el="blockweave-bullet"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.bullets[data-el="blockweave-bullet"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.bullets[data-el="blockweave-bullet"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.bullets[data-el="blockweave-bullet"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.bullets[data-el="blockweave-bullet"]{display:flex;flex-direction:column;gap:var(--gap)}
+.bullet[data-el="blockweave-bullet"]{min-height:90px;flex:1;display:grid;grid-template-columns:1fr auto;align-content:center;gap:var(--gap-sm);padding:var(--gap-sm)}
+.bullet[data-el="blockweave-bullet"]::before{content:"";grid-column:1 / span 2;grid-row:2;height:22px;background:linear-gradient(to right,var(--n-2) calc(var(--low,40)*1%),var(--n-3) 0 calc(var(--high,75)*1%),var(--n-4) 0)}
+.bullet[data-el="blockweave-bullet"]::after{content:"";grid-column:1 / span 2;grid-row:2;height:10px;align-self:center;width:calc(var(--v)*1%);background:var(--a1)}
+.bullet[data-el="blockweave-bullet"] .fig{font-size:var(--type-28)}
+.bullet[data-el="blockweave-bullet"] .note{grid-column:1 / span 2}
+.bullet[data-el="blockweave-bullet"] .note::before{content:"";position:absolute;left:calc(var(--target)*1%);top:44%;height:32px;border-left:2px solid var(--ink)}
+@container (max-width: 760px){.bullet[data-el="blockweave-bullet"] .name,.bullets[data-el="blockweave-bullet"] .name{font-size:var(--type-18)}.bullet[data-el="blockweave-bullet"] .note,.bullets[data-el="blockweave-bullet"] .note{font-size:var(--type-14)}.bullet[data-el="blockweave-bullet"] .fig,.bullets[data-el="blockweave-bullet"] .fig{font-size:var(--type-40)}.bullet[data-el="blockweave-bullet"] .parts,.bullets[data-el="blockweave-bullet"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.bullet[data-el="blockweave-bullet"] .name,.bullets[data-el="blockweave-bullet"] .name{font-size:var(--type-16)}.bullet[data-el="blockweave-bullet"] .note,.bullets[data-el="blockweave-bullet"] .note{font-size:var(--type-12)}.bullet[data-el="blockweave-bullet"] .fig,.bullets[data-el="blockweave-bullet"] .fig{font-size:var(--type-28)}.bullet[data-el="blockweave-bullet"] .kick,.bullets[data-el="blockweave-bullet"] .kick{font-size:var(--type-12)}.bullet[data-el="blockweave-bullet"] h2,.bullets[data-el="blockweave-bullet"] h2{font-size:var(--type-28)}.bullet[data-el="blockweave-bullet"] p,.bullets[data-el="blockweave-bullet"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.bullet[data-el="blockweave-bullet"] .kick,.bullets[data-el="blockweave-bullet"] .kick{display:none}.bullet[data-el="blockweave-bullet"] .note,.bullets[data-el="blockweave-bullet"] .note{display:none}}
+
+.bullet[data-el="blockweave-bullet"] small,.bullets[data-el="blockweave-bullet"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+.bullet[data-el="blockweave-bullet"]{min-height:0}.bullet[data-el="blockweave-bullet"] .note::before{left:calc(var(--target)*.94%)}.bullet[data-el="blockweave-bullet"] .note{font-size:var(--type-12)}
+.bullet[data-el="blockweave-bullet"]::after{width:calc(min(var(--v),100)*1%)}.bullet[data-el="blockweave-bullet"]{gap:calc(var(--gap-sm)/2)}.bullet[data-el="blockweave-bullet"] .name{font-size:var(--type-18)}.bullet[data-el="blockweave-bullet"] .fig{font-size:var(--type-24)}.bullet[data-el="blockweave-bullet"] .note{font-size:var(--type-12)}

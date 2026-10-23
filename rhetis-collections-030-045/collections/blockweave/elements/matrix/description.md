@@ -1,0 +1,1 @@
+Four neutral rectangular quadrants sit between discreet end labels; the selected quadrant gains a short accent top edge. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

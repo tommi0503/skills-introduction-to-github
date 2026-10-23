@@ -1,0 +1,1 @@
+A slim actual-value band overlays three quiet qualitative ranges, with a thin accent stroke marking the target. Name, figure and target note remain outside the band. Standalone and stacked meters share a compact vertical unit instead of stretching the label away from its measure.

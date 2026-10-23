@@ -1,0 +1,1 @@
+Widely spaced plain columns rise from a fine baseline; the single emphasized bar uses the accent and all labels remain below the plot. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

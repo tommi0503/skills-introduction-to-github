@@ -1,0 +1,1 @@
+A square information panel has one hairline along its top and a vertically balanced text stack. A small filled circular marker introduces the bold name, while notes remain plain and figures use a heavier, larger cut. Quiet panels remove the surface, line panels retain a complete hairline, and one accent-filled panel carries the main emphasis.

@@ -1,0 +1,1 @@
+A compact quiet trend uses repeated data-height marks and a fine accent skyline; bar and status variants remain visually spare. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

@@ -1,0 +1,1 @@
+A numbered neutral picture seat sits inside a thin square outline with a small even inset. Several frames keep equal dimensions and spacing. The frame supplies only placement and line treatment, leaving image content to the host.

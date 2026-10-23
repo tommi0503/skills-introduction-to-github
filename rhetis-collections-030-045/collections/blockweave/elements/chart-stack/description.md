@@ -1,0 +1,1 @@
+Rectangular ranked-color segments stack from a common baseline; values sit inside segments and category names remain outside the plot. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

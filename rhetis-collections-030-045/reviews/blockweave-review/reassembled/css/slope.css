@@ -1,0 +1,29 @@
+.slope[data-el="blockweave-slope"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.slope[data-el="blockweave-slope"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.slope[data-el="blockweave-slope"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.slope[data-el="blockweave-slope"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.slope[data-el="blockweave-slope"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.slope[data-el="blockweave-slope"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.slope[data-el="blockweave-slope"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.slope[data-el="blockweave-slope"]{height:100%;position:relative;padding:var(--gap-lg) calc(var(--gap-lg)*3);isolation:isolate}
+.slope[data-el="blockweave-slope"] .heads{position:absolute;left:var(--gap-lg);right:var(--gap-lg);top:0;display:flex;justify-content:space-between;font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line)}
+.slope[data-el="blockweave-slope"] .pair{position:absolute;inset:var(--gap-lg) calc(var(--gap-lg)*3);container-type:size}
+.slope[data-el="blockweave-slope"] .pair::before{content:"";position:absolute;left:0;bottom:calc(var(--a)/var(--max)*100%);width:calc(hypot(100cqw,(var(--b) - var(--a))/var(--max)*100cqh));height:2px;transform-origin:left center;transform:rotate(atan2(calc((var(--a) - var(--b))/var(--max)*100cqh),100cqw));background:var(--n-4)}
+.slope[data-el="blockweave-slope"] .pair.on::before{background:var(--a1);height:3px}
+.slope[data-el="blockweave-slope"] .pair>.name{position:absolute;right:calc(100% + 8px);bottom:calc(var(--a)/var(--max)*100%);transform:translateY(50%);width:100px;text-align:right;font-size:var(--type-14)}
+.slope[data-el="blockweave-slope"] .pair b{position:absolute;font-size:var(--type-16);font-weight:var(--figure-weight);line-height:var(--figure-line)}
+.slope[data-el="blockweave-slope"] .pair .a{left:0;bottom:calc(var(--a)/var(--max)*100% + 8px)}
+.slope[data-el="blockweave-slope"] .pair .b{right:0;bottom:calc(var(--b)/var(--max)*100% + 8px)}
+.slope[data-el="blockweave-slope"].dumbbell{display:flex;flex-direction:column;gap:var(--gap)}
+.slope[data-el="blockweave-slope"].dumbbell .pair{position:relative;inset:auto;flex:1;margin-left:var(--gap-lg)}
+.slope[data-el="blockweave-slope"].dumbbell .pair::before{left:calc(min(var(--a),var(--b))/var(--max)*100%);bottom:50%;width:calc(abs(var(--b) - var(--a))/var(--max)*100%);transform:none}
+.slope[data-el="blockweave-slope"].dumbbell .pair>.name{right:calc(100% + 8px);bottom:50%}
+.slope[data-el="blockweave-slope"].dumbbell .pair .a{left:calc(var(--a)/var(--max)*100%);bottom:calc(50% + 8px)}
+.slope[data-el="blockweave-slope"].dumbbell .pair .b{left:calc(var(--b)/var(--max)*100%);right:auto;bottom:calc(50% + 8px)}
+@container (max-width: 760px){.slope[data-el="blockweave-slope"] .name{font-size:var(--type-18)}.slope[data-el="blockweave-slope"] .note{font-size:var(--type-14)}.slope[data-el="blockweave-slope"] .fig{font-size:var(--type-40)}.slope[data-el="blockweave-slope"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.slope[data-el="blockweave-slope"] .name{font-size:var(--type-16)}.slope[data-el="blockweave-slope"] .note{font-size:var(--type-12)}.slope[data-el="blockweave-slope"] .fig{font-size:var(--type-28)}.slope[data-el="blockweave-slope"] .kick{font-size:var(--type-12)}.slope[data-el="blockweave-slope"] h2{font-size:var(--type-28)}.slope[data-el="blockweave-slope"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.slope[data-el="blockweave-slope"] .kick{display:none}.slope[data-el="blockweave-slope"] .note{display:none}}
+
+.slope[data-el="blockweave-slope"] small{color:inherit}
+
+.slope.dumbbell[data-el="blockweave-slope"] .pair .b{bottom:calc(50% - 24px)}.slope:not(.dumbbell)[data-el="blockweave-slope"] .pair:nth-child(5)>.name{transform:translateY(calc(50% + 8px))}.slope:not(.dumbbell)[data-el="blockweave-slope"] .pair:nth-child(6)>.name{transform:translateY(calc(50% - 8px))}.slope:not(.dumbbell)[data-el="blockweave-slope"] .pair:nth-child(5)>.a{bottom:calc(var(--a)/var(--max)*100%)}.slope:not(.dumbbell)[data-el="blockweave-slope"] .pair:nth-child(6)>.a{bottom:calc(var(--a)/var(--max)*100% + 16px)}

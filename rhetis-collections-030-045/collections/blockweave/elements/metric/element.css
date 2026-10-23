@@ -1,0 +1,35 @@
+.stat[data-el="blockweave-metric"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.stat[data-el="blockweave-metric"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.stat[data-el="blockweave-metric"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.stat[data-el="blockweave-metric"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.stat[data-el="blockweave-metric"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.stat[data-el="blockweave-metric"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.stat[data-el="blockweave-metric"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.stats[data-el="blockweave-metric"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.stats[data-el="blockweave-metric"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.stats[data-el="blockweave-metric"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.stats[data-el="blockweave-metric"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.stats[data-el="blockweave-metric"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.stats[data-el="blockweave-metric"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.stats[data-el="blockweave-metric"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.stats[data-el="blockweave-metric"]{display:flex;align-items:stretch;gap:var(--gap-lg)}
+.stats[data-el="blockweave-metric"] .stat{flex:1;border-right:var(--stroke) dotted var(--n-4)}
+.stats[data-el="blockweave-metric"] .stat:last-child{border-right:0}
+.stat[data-el="blockweave-metric"]{height:100%;display:flex;align-items:center}
+.stat[data-el="blockweave-metric"] .parts{width:100%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:var(--gap)}
+.stat[data-el="blockweave-metric"] .fig{font-size:var(--type-64)}
+@container (max-width: 760px){.stat[data-el="blockweave-metric"] .name,.stats[data-el="blockweave-metric"] .name{font-size:var(--type-18)}.stat[data-el="blockweave-metric"] .note,.stats[data-el="blockweave-metric"] .note{font-size:var(--type-14)}.stat[data-el="blockweave-metric"] .fig,.stats[data-el="blockweave-metric"] .fig{font-size:var(--type-40)}.stat[data-el="blockweave-metric"] .parts,.stats[data-el="blockweave-metric"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.stat[data-el="blockweave-metric"] .name,.stats[data-el="blockweave-metric"] .name{font-size:var(--type-16)}.stat[data-el="blockweave-metric"] .note,.stats[data-el="blockweave-metric"] .note{font-size:var(--type-12)}.stat[data-el="blockweave-metric"] .fig,.stats[data-el="blockweave-metric"] .fig{font-size:var(--type-28)}.stat[data-el="blockweave-metric"] .kick,.stats[data-el="blockweave-metric"] .kick{font-size:var(--type-12)}.stat[data-el="blockweave-metric"] h2,.stats[data-el="blockweave-metric"] h2{font-size:var(--type-28)}.stat[data-el="blockweave-metric"] p,.stats[data-el="blockweave-metric"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.stat[data-el="blockweave-metric"] .kick,.stats[data-el="blockweave-metric"] .kick{display:none}.stat[data-el="blockweave-metric"] .note,.stats[data-el="blockweave-metric"] .note{display:none}}
+
+.stat[data-el="blockweave-metric"] small,.stats[data-el="blockweave-metric"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+@container (max-height:120px){.stat[data-el="blockweave-metric"] .parts{gap:var(--gap-sm)}.stat[data-el="blockweave-metric"] .fig{font-size:var(--type-28)}.stat[data-el="blockweave-metric"] .name{font-size:var(--type-14)}.stat[data-el="blockweave-metric"] .note{font-size:var(--type-12)}}
+/* Refinement from original/replica/reassembled comparison. */
+.stat[data-el="blockweave-metric"]:not(:has(.note)) .parts{flex-direction:row-reverse;align-items:center;justify-content:space-between}.stat[data-el="blockweave-metric"]:not(:has(.note)) .fig{font-size:var(--type-32)}.stat[data-el="blockweave-metric"]:not(:has(.note)) .name{font-size:var(--type-18)}
+@container (max-height:100px){.stat[data-el="blockweave-metric"]:not(:has(.note)){padding:0;border-bottom:var(--stroke) dotted var(--n-5)}.stat[data-el="blockweave-metric"]:not(:has(.note)) .parts{padding:0 var(--gap-sm);gap:var(--gap-sm)}.stat[data-el="blockweave-metric"]:not(:has(.note)) .fig{font-size:var(--type-22)}.stat[data-el="blockweave-metric"]:not(:has(.note)) .name{font-size:var(--type-18);font-weight:var(--body-weight)}}
+
+.stat[data-el="blockweave-metric"]:not(:has(.note)){border-bottom:var(--stroke) dotted var(--n-5)}.stat[data-el="blockweave-metric"]:not(:has(.note)):last-child{border-bottom:0}
+
+.stat[data-el="blockweave-metric"]:has(.spark)>.parts{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 64px;gap:var(--gap-sm)}.stat[data-el="blockweave-metric"]:has(.spark)>.parts>.name{grid-column:1;grid-row:1}.stat[data-el="blockweave-metric"]:has(.spark)>.parts>.fig{grid-column:2;grid-row:1}

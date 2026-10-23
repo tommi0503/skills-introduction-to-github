@@ -1,0 +1,1 @@
+Square stacked bands use the main accent for the first series and quieter neutral steps for the remaining series. Values sit within sufficiently wide segments; tiny horizontal segments move their labels above or below without changing the encoded width. Labels occupy a separate baseline or left column.

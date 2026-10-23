@@ -1,0 +1,1 @@
+Items sit on plain square rows, with a small dot, a CSS-drawn check or an automatically counted circular number at the left. Names align across rows and secondary notes follow below them. Divided lists replace the pale row surface with a simple bottom rule.

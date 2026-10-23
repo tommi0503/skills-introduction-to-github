@@ -1,0 +1,1 @@
+Small rounded name nodes occupy their supplied coordinates and are joined by fine straight links. The primary node and stronger links use the ranked accent, while other relationships stay neutral. The drawing remains sparse, with no decorative graph background.

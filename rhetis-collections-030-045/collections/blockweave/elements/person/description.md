@@ -1,0 +1,1 @@
+A neutral circular or portrait seat sits above an aligned name and role, followed by optional compact profile details. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

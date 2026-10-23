@@ -1,0 +1,20 @@
+.org[data-el="blockweave-hierarchy"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.org[data-el="blockweave-hierarchy"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.org[data-el="blockweave-hierarchy"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.org[data-el="blockweave-hierarchy"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.org[data-el="blockweave-hierarchy"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.org[data-el="blockweave-hierarchy"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.org[data-el="blockweave-hierarchy"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.org[data-el="blockweave-hierarchy"]{display:flex;align-items:stretch;gap:var(--gap);padding-top:calc(var(--pad)*4)}
+.org[data-el="blockweave-hierarchy"] .root{position:absolute;left:35%;top:var(--gap);width:30%;text-align:center;background:var(--a1);color:var(--a1-on);padding:var(--gap-sm) var(--pad);font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line)}
+.org[data-el="blockweave-hierarchy"] .root::after{content:"";position:absolute;left:50%;top:100%;height:40px;border-left:var(--stroke) solid var(--n-5)}
+.org[data-el="blockweave-hierarchy"] .branch{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--gap);border-top:var(--stroke) solid var(--n-5);padding-top:var(--gap)}
+.org[data-el="blockweave-hierarchy"] .node{background:var(--a1-2-soft);text-align:center;padding:var(--gap);font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line)}
+.org[data-el="blockweave-hierarchy"] .leaf{padding:var(--gap);background:var(--n-1);border-left:var(--stroke) solid var(--n-4);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line)}
+@container (max-width: 760px){.org[data-el="blockweave-hierarchy"] .name{font-size:var(--type-18)}.org[data-el="blockweave-hierarchy"] .note{font-size:var(--type-14)}.org[data-el="blockweave-hierarchy"] .fig{font-size:var(--type-40)}.org[data-el="blockweave-hierarchy"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.org[data-el="blockweave-hierarchy"] .name{font-size:var(--type-16)}.org[data-el="blockweave-hierarchy"] .note{font-size:var(--type-12)}.org[data-el="blockweave-hierarchy"] .fig{font-size:var(--type-28)}.org[data-el="blockweave-hierarchy"] .kick{font-size:var(--type-12)}.org[data-el="blockweave-hierarchy"] h2{font-size:var(--type-28)}.org[data-el="blockweave-hierarchy"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.org[data-el="blockweave-hierarchy"] .kick{display:none}.org[data-el="blockweave-hierarchy"] .note{display:none}}
+
+.org[data-el="blockweave-hierarchy"] small{color:inherit}
+
+@container (max-width:700px){.org[data-el="blockweave-hierarchy"] .leaf{padding:var(--gap-sm);font-size:var(--type-14)}.org[data-el="blockweave-hierarchy"] .branch{gap:var(--gap-sm)}}

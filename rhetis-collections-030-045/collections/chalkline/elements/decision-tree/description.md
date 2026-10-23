@@ -1,0 +1,1 @@
+An outlined question capsule leads through fine branch rules and small condition pills to square outcomes. Nested questions repeat the same plain construction. A single recommended outcome receives the ranked accent fill and its contrasting on-colour.

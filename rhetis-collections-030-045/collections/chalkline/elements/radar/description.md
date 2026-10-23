@@ -1,0 +1,1 @@
+Thin circular guides and radial spokes support one or more filled data polygons. The main series uses a soft ranked accent and later series stay neutral. Names sit in a separate top legend; clipping affects only polygon fills, leaving all axis and legend text visible.

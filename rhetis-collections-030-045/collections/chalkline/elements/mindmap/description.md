@@ -1,0 +1,1 @@
+A filled central capsule connects left and right branches through thin, softly curved orthogonal links. Each branch has a top rule and plain square leaf rows. Two-, four- and six-branch arrangements distribute their content around the centre while preserving the same linking grammar.

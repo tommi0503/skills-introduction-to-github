@@ -1,0 +1,22 @@
+.treemap[data-el="blockweave-treemap"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.treemap[data-el="blockweave-treemap"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.treemap[data-el="blockweave-treemap"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.treemap[data-el="blockweave-treemap"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.treemap[data-el="blockweave-treemap"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.treemap[data-el="blockweave-treemap"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.treemap[data-el="blockweave-treemap"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.treemap[data-el="blockweave-treemap"]{display:flex;gap:var(--gap-sm);padding:var(--gap-sm)}
+.treemap[data-el="blockweave-treemap"] .branch{flex:var(--v);position:relative;display:flex;flex-direction:column;gap:var(--gap-sm);padding-top:var(--gap-lg);min-width:0}
+.treemap[data-el="blockweave-treemap"] .branch>.name{position:absolute;top:0;left:0;font-size:var(--type-16)}
+.treemap[data-el="blockweave-treemap"] .tile{flex:var(--v);background:var(--a1-2-soft);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);padding:var(--gap-sm);min-height:0;text-align:center}
+.treemap[data-el="blockweave-treemap"] .tile .fig{font-size:var(--type-24)}
+.treemap[data-el="blockweave-treemap"] .tile .name{font-size:var(--type-18)}
+.treemap[data-el="blockweave-treemap"] .tile.on{background:var(--a1);color:var(--a1-on)}
+.treemap[data-el="blockweave-treemap"] .tile.on .name,.treemap[data-el="blockweave-treemap"] .tile.on .fig{color:var(--a1-on)}
+@container (max-width: 760px){.treemap[data-el="blockweave-treemap"] .name{font-size:var(--type-18)}.treemap[data-el="blockweave-treemap"] .note{font-size:var(--type-14)}.treemap[data-el="blockweave-treemap"] .fig{font-size:var(--type-40)}.treemap[data-el="blockweave-treemap"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.treemap[data-el="blockweave-treemap"] .name{font-size:var(--type-16)}.treemap[data-el="blockweave-treemap"] .note{font-size:var(--type-12)}.treemap[data-el="blockweave-treemap"] .fig{font-size:var(--type-28)}.treemap[data-el="blockweave-treemap"] .kick{font-size:var(--type-12)}.treemap[data-el="blockweave-treemap"] h2{font-size:var(--type-28)}.treemap[data-el="blockweave-treemap"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.treemap[data-el="blockweave-treemap"] .kick{display:none}.treemap[data-el="blockweave-treemap"] .note{display:none}}
+
+.treemap[data-el="blockweave-treemap"] small{color:inherit}
+
+@container (max-height:450px){.treemap[data-el="blockweave-treemap"] .tile{gap:0;padding:calc(var(--gap-sm)/2)}.treemap[data-el="blockweave-treemap"] .tile .name{font-size:var(--type-14)}.treemap[data-el="blockweave-treemap"] .tile .fig{font-size:var(--type-18)}}

@@ -1,0 +1,1 @@
+Small numbered or icon-bearing circles introduce bold step names and short notes below a top hairline. Thin chevrons connect the sequence. The column variant carries the same marker and text hierarchy down the page.

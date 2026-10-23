@@ -1,0 +1,1 @@
+Centered flat bands narrow according to their data share, pairing a left-aligned stage name with a bold right figure. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

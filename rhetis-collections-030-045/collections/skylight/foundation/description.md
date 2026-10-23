@@ -1,0 +1,1 @@
+A 1280 by 720 workplace report with sixty-six-pixel side margins, a compact upper furniture ribbon and low footer. The heading clears a twelve-column, six-row body. Tiny folded corner fields stay in the furniture, leaving the content quiet and unobstructed. Covers reserve the outer right edge for a restrained tessellation of square and diagonal fields.

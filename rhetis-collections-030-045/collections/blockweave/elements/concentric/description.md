@@ -1,0 +1,1 @@
+Nested neutral and soft accent circles rise from a common base, placing each market label above its contained successor. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

@@ -1,0 +1,1 @@
+A square pale panel holds genuinely monospaced source in the supplied Nanum Gothic Coding family. An optional file name and top rule establish the frame, while muted line numbers and a restrained deep-accent keyword colour support reading. Long lines wrap without leaving the seat.

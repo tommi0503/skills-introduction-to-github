@@ -1,0 +1,1 @@
+A thin capsule centres the complete one-line group of an optional intrinsic-width marker, bold name and smaller note. The filled state uses ink against page rather than an ornamental shadow; quiet and outlined states keep the same silhouette. Marker width follows the rendered content so the visible glyph group remains optically centred.

@@ -1,0 +1,24 @@
+.list[data-el="blockweave-list"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.list[data-el="blockweave-list"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.list[data-el="blockweave-list"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.list[data-el="blockweave-list"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.list[data-el="blockweave-list"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.list[data-el="blockweave-list"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.list[data-el="blockweave-list"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.list[data-el="blockweave-list"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);counter-reset:row;padding:var(--gap-sm)}
+.list[data-el="blockweave-list"] .item{position:relative;padding-left:var(--gap-lg);counter-increment:row;display:flex;flex-direction:column;gap:var(--gap-sm)}
+.list[data-el="blockweave-list"] .item::before{content:"";position:absolute;left:var(--gap-sm);top:10px;width:6px;height:6px;border-radius:999px;background:var(--a1)}
+.list[data-el="blockweave-list"].num .item::before{content:counter(row,decimal-leading-zero);top:0;width:28px;height:28px;background:none;color:var(--a1-8);font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line)}
+.list[data-el="blockweave-list"].check .item::before{width:12px;height:7px;border:2px solid var(--a1);border-top:0;border-right:0;border-radius:0;background:none;transform:rotate(-45deg)}
+.list[data-el="blockweave-list"].divided .item{border-bottom:var(--stroke) solid var(--n-3);padding-bottom:var(--gap)}
+@container (max-width: 760px){.list[data-el="blockweave-list"] .name{font-size:var(--type-18)}.list[data-el="blockweave-list"] .note{font-size:var(--type-14)}.list[data-el="blockweave-list"] .fig{font-size:var(--type-40)}.list[data-el="blockweave-list"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.list[data-el="blockweave-list"] .name{font-size:var(--type-16)}.list[data-el="blockweave-list"] .note{font-size:var(--type-12)}.list[data-el="blockweave-list"] .fig{font-size:var(--type-28)}.list[data-el="blockweave-list"] .kick{font-size:var(--type-12)}.list[data-el="blockweave-list"] h2{font-size:var(--type-28)}.list[data-el="blockweave-list"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.list[data-el="blockweave-list"] .kick{display:none}.list[data-el="blockweave-list"] .note{display:none}}
+
+.list[data-el="blockweave-list"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+@container (max-width:500px){.list[data-el="blockweave-list"]{gap:var(--gap-sm)}.list[data-el="blockweave-list"].divided .item{padding-bottom:var(--gap-sm)}}
+@container (max-height:320px){.list[data-el="blockweave-list"] .item{gap:calc(var(--gap-sm)/2)}.list[data-el="blockweave-list"] .name{font-size:var(--type-16)}.list[data-el="blockweave-list"] .note{font-size:var(--type-12)}}
+@container (max-height:320px){.list[data-el="blockweave-list"] .note{line-height:var(--label-line)}}
+.list.num[data-el="blockweave-list"]{background:var(--n-1);border-radius:var(--radius);padding:calc(var(--pad)*1.5) var(--gap-lg);gap:var(--gap)}.list.num[data-el="blockweave-list"] .item{padding-left:calc(var(--gap-lg) + var(--gap-sm));min-height:36px;justify-content:center}.list.num[data-el="blockweave-list"] .item::before{content:counter(row,upper-alpha);display:flex;align-items:center;justify-content:center;left:0;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--a1);color:var(--a1-on);font-size:var(--type-16)}.list.num[data-el="blockweave-list"] .name{font-size:var(--type-18);font-weight:var(--body-weight)}

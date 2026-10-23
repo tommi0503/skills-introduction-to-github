@@ -1,0 +1,1 @@
+A restrained table uses a strong top rule, a lighter header rule and plain horizontal row divisions. Numeric cells align to the right and the selected column gains a quiet accent ground. No shadows or rounded cell containers interrupt the grid.

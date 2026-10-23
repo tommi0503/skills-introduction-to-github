@@ -1,0 +1,1 @@
+Small square ranked-color keys sit in a centered flexible row with quiet, precise labels. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

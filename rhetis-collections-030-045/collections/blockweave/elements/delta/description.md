@@ -1,0 +1,1 @@
+Two bare figures are separated by a small outlined directional stroke; the resulting value receives the stronger text emphasis. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

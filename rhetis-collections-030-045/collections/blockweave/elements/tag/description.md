@@ -1,0 +1,1 @@
+A compact rectangular accent label centers its text precisely, while inline highlights use an unobtrusive soft plane. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

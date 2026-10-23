@@ -1,0 +1,20 @@
+.meter[data-el="blockweave-gauge"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.meter[data-el="blockweave-gauge"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.meter[data-el="blockweave-gauge"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.meter[data-el="blockweave-gauge"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.meter[data-el="blockweave-gauge"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.meter[data-el="blockweave-gauge"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.meter[data-el="blockweave-gauge"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.meter[data-el="blockweave-gauge"]{display:grid;grid-template-columns:1fr auto;align-content:center;gap:var(--gap);padding:var(--gap)}
+.meter[data-el="blockweave-gauge"]::before{content:"";grid-column:1 / span 2;grid-row:2;height:18px;background:var(--n-2)}
+.meter[data-el="blockweave-gauge"]::after{content:"";grid-column:1 / span 2;grid-row:2;height:18px;width:calc(var(--v) * 1%);background:var(--a1)}
+.meter[data-el="blockweave-gauge"] .fig{font-size:var(--type-32);grid-column:2;grid-row:1}
+.meter[data-el="blockweave-gauge"] .name{grid-column:1;grid-row:1}
+@container (max-width: 760px){.meter[data-el="blockweave-gauge"] .name{font-size:var(--type-18)}.meter[data-el="blockweave-gauge"] .note{font-size:var(--type-14)}.meter[data-el="blockweave-gauge"] .fig{font-size:var(--type-40)}.meter[data-el="blockweave-gauge"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.meter[data-el="blockweave-gauge"] .name{font-size:var(--type-16)}.meter[data-el="blockweave-gauge"] .note{font-size:var(--type-12)}.meter[data-el="blockweave-gauge"] .fig{font-size:var(--type-28)}.meter[data-el="blockweave-gauge"] .kick{font-size:var(--type-12)}.meter[data-el="blockweave-gauge"] h2{font-size:var(--type-28)}.meter[data-el="blockweave-gauge"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.meter[data-el="blockweave-gauge"] .kick{display:none}.meter[data-el="blockweave-gauge"] .note{display:none}}
+
+.meter[data-el="blockweave-gauge"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+.meter[data-el="blockweave-gauge"]{padding:var(--gap-sm);gap:var(--gap-sm)}@container (max-height:80px){.meter[data-el="blockweave-gauge"] .fig{font-size:var(--type-24)}.meter[data-el="blockweave-gauge"] .name{font-size:var(--type-16)}.meter[data-el="blockweave-gauge"]::before,.meter[data-el="blockweave-gauge"]::after{height:12px}}

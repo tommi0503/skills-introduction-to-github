@@ -1,0 +1,1 @@
+A strong center circle is surrounded by quiet circular spokes and a light linking orbit, with compact business labels. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

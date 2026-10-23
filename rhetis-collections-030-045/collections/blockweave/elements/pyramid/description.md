@@ -1,0 +1,1 @@
+Centered trapezoid bands widen from top to bottom, with evenly aligned labels and restrained soft accent planes. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

@@ -1,0 +1,1 @@
+A fine beam tilts according to the supplied value and carries two pale square pans. Names and compact ruled item rows describe each side. A small triangular fulcrum and centred verdict complete the weighing metaphor without extra illustration.

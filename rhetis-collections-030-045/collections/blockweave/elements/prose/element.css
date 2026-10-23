@@ -1,0 +1,36 @@
+.prose[data-el="blockweave-prose"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.prose[data-el="blockweave-prose"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.prose[data-el="blockweave-prose"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.prose[data-el="blockweave-prose"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.prose[data-el="blockweave-prose"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.prose[data-el="blockweave-prose"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.prose[data-el="blockweave-prose"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.prose[data-el="blockweave-prose"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm)}
+.prose[data-el="blockweave-prose"] p{margin:0;font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.prose[data-el="blockweave-prose"] b{font-weight:var(--name-weight)}
+.prose[data-el="blockweave-prose"].lead p{font-size:var(--type-24)}
+.prose[data-el="blockweave-prose"].quiet{color:var(--n-7)}
+.prose[data-el="blockweave-prose"].cols{display:block;column-count:2;column-gap:var(--gap-lg)}
+.prose[data-el="blockweave-prose"].cols p{margin-bottom:var(--gap)}
+@container (max-width: 760px){.prose[data-el="blockweave-prose"] .name{font-size:var(--type-18)}.prose[data-el="blockweave-prose"] .note{font-size:var(--type-14)}.prose[data-el="blockweave-prose"] .fig{font-size:var(--type-40)}.prose[data-el="blockweave-prose"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.prose[data-el="blockweave-prose"] .name{font-size:var(--type-16)}.prose[data-el="blockweave-prose"] .note{font-size:var(--type-12)}.prose[data-el="blockweave-prose"] .fig{font-size:var(--type-28)}.prose[data-el="blockweave-prose"] .kick{font-size:var(--type-12)}.prose[data-el="blockweave-prose"] h2{font-size:var(--type-28)}.prose[data-el="blockweave-prose"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.prose[data-el="blockweave-prose"] .kick{display:none}.prose[data-el="blockweave-prose"] .note{display:none}}
+
+.prose[data-el="blockweave-prose"] small{color:inherit}
+
+/* Original-deck geometric review. */
+@container (min-width:220px) and (max-width:460px){.prose[data-el="blockweave-prose"] p{font-size:var(--type-18)}}
+
+.prose.quiet[data-el="blockweave-prose"]{padding-left:calc(var(--pad)*2)}
+
+.prose[data-el="blockweave-prose"] p>small{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7)}
+
+.prose.quiet[data-el="blockweave-prose"]:has(>p>small){padding:0 calc(var(--gap-sm)*2) 0 0;margin-top:calc(var(--gap) - var(--gap-sm)*.5);text-align:right}.prose.quiet[data-el="blockweave-prose"]:has(>p>small) p{font-size:var(--type-12);line-height:var(--body-line)}.prose.quiet[data-el="blockweave-prose"] p>small{display:flex;flex-direction:column;gap:calc(var(--gap-sm)*1.5);font-size:var(--type-12);line-height:var(--body-line)}
+
+@container (min-width:600px){.prose[data-el="blockweave-prose"]:is(.stack>*){justify-content:flex-start;padding:var(--gap-sm) calc(var(--gap-lg) + var(--pad)) var(--gap-sm) calc(var(--gap) - var(--gap-sm)*.5)}}
+
+@container (min-width:600px){.prose[data-el="blockweave-prose"]:is(.stack>*){margin-top:calc(var(--gap-sm)*-2)}.prose[data-el="blockweave-prose"]:is(.stack>*) p{font-size:var(--type-16)}}
+
+@container (max-height:220px) and (max-width:460px){.prose[data-el="blockweave-prose"]:has(>p+p) p{font-size:var(--type-16)}}
+
+@container (min-width:600px){.prose[data-el="blockweave-prose"]:is(.stack>*) p{font-size:var(--type-18);line-height:var(--lead-line);word-break:keep-all}}

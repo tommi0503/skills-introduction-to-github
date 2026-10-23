@@ -1,0 +1,1 @@
+Arrowtab turns the business report’s directional ribbon into a quiet, square-edged system. Broad flat panels are punctuated by compact arrow tabs, a single assertive accent, thin straight rules and centered chapter labels. The composition pairs generous white margins with compact, aligned information. Rounded geometry appears only when it encodes a circular relationship or share.

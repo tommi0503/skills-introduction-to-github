@@ -1,0 +1,1 @@
+Competitor names or logo seats occupy numeric coordinates on crossed central axes, and the chosen company has a fine accent outline. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

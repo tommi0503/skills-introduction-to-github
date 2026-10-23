@@ -1,0 +1,1 @@
+Undertow balances quiet square panels, slender dividing rules and pill-shaped role labels against large circular centres and a severe vertical edge. Clear regular-weight headings leave bold figures and one filled accent centre to carry the argument. It takes its visual grammar from a minimal investor deck rather than a decorative card system.

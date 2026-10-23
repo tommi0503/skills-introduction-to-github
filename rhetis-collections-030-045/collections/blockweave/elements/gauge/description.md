@@ -1,0 +1,1 @@
+A slim neutral progress rail is filled by the numeric share, with name and value aligned on the line above. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

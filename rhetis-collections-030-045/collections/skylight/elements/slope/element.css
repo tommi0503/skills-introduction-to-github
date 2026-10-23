@@ -1,0 +1,106 @@
+.slope[data-el="skylight-slope"] { position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.slope[data-el="skylight-slope"]) * {box-sizing:border-box;min-width:0;}
+:is(.slope[data-el="skylight-slope"]) :is(p,h2,blockquote,ul) {margin:0;}
+:is(.slope[data-el="skylight-slope"]) .name {font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.slope[data-el="skylight-slope"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.slope[data-el="skylight-slope"]) .fig {font-family:var(--font-body);font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.slope[data-el="skylight-slope"]) :is(.kick,small) {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+:is(.slope[data-el="skylight-slope"]) .kick {color:var(--n-7);}
+:is(.slope[data-el="skylight-slope"]) .icon {display:inline-block;width:32px;height:32px;flex:none;}
+@container (max-width:620px) { :is(.slope[data-el="skylight-slope"]) .name {font-size:var(--type-18);} :is(.slope[data-el="skylight-slope"]) .note {font-size:var(--type-16);} :is(.slope[data-el="skylight-slope"]) .fig {font-size:var(--type-36);} }
+@container (max-width:300px) { :is(.slope[data-el="skylight-slope"]) .name {font-size:var(--type-16);} :is(.slope[data-el="skylight-slope"]) .note {font-size:var(--type-14);} :is(.slope[data-el="skylight-slope"]) .kick {display:none;} :is(.slope[data-el="skylight-slope"]) .fig {font-size:var(--type-32);} }
+@container (max-height:170px) { :is(.slope[data-el="skylight-slope"]) .note {font-size:var(--type-14);} :is(.slope[data-el="skylight-slope"]) .kick {display:none;} }
+:is(.slope[data-el="skylight-slope"]) {position:relative;padding:var(--gap-lg);isolation:isolate;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2);}:is(.slope[data-el="skylight-slope"]) .heads{display:flex;justify-content:space-between;gap:var(--gap);font-size:var(--type-18);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}:is(.slope[data-el="skylight-slope"]) .pair{position:absolute;inset:var(--gap-lg);anchor-scope:all;--skylight-color:var(--n-5);}:is(.slope[data-el="skylight-slope"]) .pair.on{--skylight-color:var(--a1);}:is(.slope[data-el="skylight-slope"]) .pair>.a,:is(.slope[data-el="skylight-slope"]) .pair>.b{position:absolute;top:calc((1 - var(--a)/var(--max))*75% + 10%);font-size:var(--type-18);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);background:var(--page);color:var(--skylight-color);z-index:3;}:is(.slope[data-el="skylight-slope"]) .pair>.a{left:6%;anchor-name:--skylight-slope-a;}:is(.slope[data-el="skylight-slope"]) .pair>.b{right:6%;top:calc((1 - var(--b)/var(--max))*75% + 10%);anchor-name:--skylight-slope-b;}:is(.slope[data-el="skylight-slope"]) .pair>.name{position:absolute;top:calc((1 - var(--a)/var(--max))*75% + 10% - 24px);left:6%;font-size:var(--type-14);color:var(--ink);white-space:nowrap;z-index:4;}:is(.slope[data-el="skylight-slope"]) .pair::before,:is(.slope[data-el="skylight-slope"]) .pair::after{content:"";position:absolute;left:anchor(--skylight-slope-a right);right:anchor(--skylight-slope-b left);}:is(.slope[data-el="skylight-slope"]) .pair::before{top:anchor(--skylight-slope-a center);bottom:anchor(--skylight-slope-b center);background:linear-gradient(to top right,var(--page) calc(50% - 1px),var(--skylight-color) calc(50% - 1px) calc(50% + 1px),var(--page) 0);}:is(.slope[data-el="skylight-slope"]) .pair::after{top:anchor(--skylight-slope-b center);bottom:anchor(--skylight-slope-a center);background:linear-gradient(to bottom right,var(--page) calc(50% - 1px),var(--skylight-color) calc(50% - 1px) calc(50% + 1px),var(--page) 0);}:is(.slope[data-el="skylight-slope"]).dumbbell .pair{position:relative;inset:auto;flex:1;min-height:0;display:block;}:is(.slope[data-el="skylight-slope"]).dumbbell .pair>.a{left:calc(var(--a)/var(--max)*70% + 20%);top:55%;}:is(.slope[data-el="skylight-slope"]).dumbbell .pair>.b{left:calc(var(--b)/var(--max)*70% + 20%);top:55%;right:auto;}:is(.slope[data-el="skylight-slope"]).dumbbell .pair>.name{left:0;top:0;}:is(.slope[data-el="skylight-slope"]).dumbbell .pair::before{top:65%;bottom:auto;height:2px;left:calc(min(var(--a),var(--b))/var(--max)*70% + 20%);right:calc(80% - max(var(--a),var(--b))/var(--max)*70%);background:var(--skylight-color);}:is(.slope[data-el="skylight-slope"]).dumbbell .pair::after{content:none;}@container(max-width:650px){:is(.slope[data-el="skylight-slope"]) .pair>.a,:is(.slope[data-el="skylight-slope"]) .pair>.b{font-size:var(--type-14);}:is(.slope[data-el="skylight-slope"]) .pair>.name{font-size:var(--type-12);}}@container(max-height:250px){:is(.slope[data-el="skylight-slope"]) .heads{font-size:var(--type-14);}}
+
+[data-el="skylight-slope"] small {color:inherit;}
+[data-el="skylight-slope"] {transform:translate(0);}
+
+:is(.slope[data-el="skylight-slope"]):not(.dumbbell) .pair>.name{left:0;top:calc(60% + var(--skylight-i)*40%/var(--skylight-count));font-size:var(--type-14);color:var(--ink);}
+:is(.slope[data-el="skylight-slope"]):not(.dumbbell) .pair>.a{left:45%;top:calc(60% + var(--skylight-i)*40%/var(--skylight-count));font-size:var(--type-14);color:var(--ink);}
+:is(.slope[data-el="skylight-slope"]):not(.dumbbell) .pair>.b{right:0;top:calc(60% + var(--skylight-i)*40%/var(--skylight-count));font-size:var(--type-14);color:var(--ink);}
+:is(.slope[data-el="skylight-slope"]):not(.dumbbell) .pair::before{left:10%;top:calc(8% + (1 - var(--a)/var(--max))*43%);bottom:auto;right:auto;width:calc(hypot(80cqw,(var(--b) - var(--a))/var(--max)*43cqh));height:2px;transform-origin:left center;rotate:atan2((var(--a) - var(--b))/var(--max)*43cqh,80cqw);background:var(--skylight-color);}
+:is(.slope[data-el="skylight-slope"]):not(.dumbbell) .pair::after{content:none;}:is(.slope[data-el="skylight-slope"]) .pair>.a,:is(.slope[data-el="skylight-slope"]) .pair>.b{color:var(--ink);}
+
+:is(.slope[data-el="skylight-slope"]):has(> .pair:nth-child(2 of .pair):last-child){--skylight-count:2;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(1 of .pair){--skylight-i:0;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(2 of .pair){--skylight-i:1;}
+
+:is(.slope[data-el="skylight-slope"]):has(> .pair:nth-child(3 of .pair):last-child){--skylight-count:3;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(1 of .pair){--skylight-i:0;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(2 of .pair){--skylight-i:1;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(3 of .pair){--skylight-i:2;}
+
+:is(.slope[data-el="skylight-slope"]):has(> .pair:nth-child(4 of .pair):last-child){--skylight-count:4;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(1 of .pair){--skylight-i:0;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(2 of .pair){--skylight-i:1;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(3 of .pair){--skylight-i:2;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(4 of .pair){--skylight-i:3;}
+
+:is(.slope[data-el="skylight-slope"]):has(> .pair:nth-child(5 of .pair):last-child){--skylight-count:5;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(1 of .pair){--skylight-i:0;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(2 of .pair){--skylight-i:1;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(3 of .pair){--skylight-i:2;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(4 of .pair){--skylight-i:3;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(5 of .pair){--skylight-i:4;}
+
+:is(.slope[data-el="skylight-slope"]):has(> .pair:nth-child(6 of .pair):last-child){--skylight-count:6;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(1 of .pair){--skylight-i:0;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(2 of .pair){--skylight-i:1;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(3 of .pair){--skylight-i:2;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(4 of .pair){--skylight-i:3;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(5 of .pair){--skylight-i:4;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(6 of .pair){--skylight-i:5;}
+
+:is(.slope[data-el="skylight-slope"]):has(> .pair:nth-child(7 of .pair):last-child){--skylight-count:7;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(1 of .pair){--skylight-i:0;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(2 of .pair){--skylight-i:1;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(3 of .pair){--skylight-i:2;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(4 of .pair){--skylight-i:3;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(5 of .pair){--skylight-i:4;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(6 of .pair){--skylight-i:5;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(7 of .pair){--skylight-i:6;}
+
+:is(.slope[data-el="skylight-slope"]):has(> .pair:nth-child(8 of .pair):last-child){--skylight-count:8;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(1 of .pair){--skylight-i:0;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(2 of .pair){--skylight-i:1;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(3 of .pair){--skylight-i:2;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(4 of .pair){--skylight-i:3;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(5 of .pair){--skylight-i:4;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(6 of .pair){--skylight-i:5;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(7 of .pair){--skylight-i:6;}
+
+:is(.slope[data-el="skylight-slope"]) .pair:nth-child(8 of .pair){--skylight-i:7;}

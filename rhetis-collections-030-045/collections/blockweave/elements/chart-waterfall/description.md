@@ -1,0 +1,1 @@
+Floating rectangular increments follow running totals, with dotted connectors linking each end to the next start. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

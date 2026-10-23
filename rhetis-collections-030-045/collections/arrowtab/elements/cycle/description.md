@@ -1,0 +1,1 @@
+Arrowtab cycle places a solid core at the centre of three to six outlined circular nodes. A thin circular track and a directional arrow communicate recurrence; one node can carry the accent. The square-edged report language survives in restrained type, flat fills and compact spacing, while circular geometry explicitly means recurrence.

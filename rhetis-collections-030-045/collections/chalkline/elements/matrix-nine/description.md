@@ -1,0 +1,1 @@
+Nine square cells form a disciplined three-by-three field with small low-to-high axis labels. Top hairlines and restrained type establish the cell rhythm. A selected position can use the main accent while secondary tones remain quiet.

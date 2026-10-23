@@ -1,0 +1,19 @@
+.agenda[data-el="blockweave-agenda"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.agenda[data-el="blockweave-agenda"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.agenda[data-el="blockweave-agenda"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.agenda[data-el="blockweave-agenda"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.agenda[data-el="blockweave-agenda"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.agenda[data-el="blockweave-agenda"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.agenda[data-el="blockweave-agenda"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.agenda[data-el="blockweave-agenda"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap)}
+.agenda[data-el="blockweave-agenda"] .entry{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:var(--gap-sm) var(--gap);padding:var(--pad);border-bottom:var(--stroke) solid var(--n-3)}
+.agenda[data-el="blockweave-agenda"] .mark{grid-row:1 / span 2;font-size:var(--type-24);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-8)}
+.agenda[data-el="blockweave-agenda"] .entry.on{background:var(--a1-2-soft)}
+@container (max-width: 760px){.agenda[data-el="blockweave-agenda"] .name{font-size:var(--type-18)}.agenda[data-el="blockweave-agenda"] .note{font-size:var(--type-14)}.agenda[data-el="blockweave-agenda"] .fig{font-size:var(--type-40)}.agenda[data-el="blockweave-agenda"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.agenda[data-el="blockweave-agenda"] .name{font-size:var(--type-16)}.agenda[data-el="blockweave-agenda"] .note{font-size:var(--type-12)}.agenda[data-el="blockweave-agenda"] .fig{font-size:var(--type-28)}.agenda[data-el="blockweave-agenda"] .kick{font-size:var(--type-12)}.agenda[data-el="blockweave-agenda"] h2{font-size:var(--type-28)}.agenda[data-el="blockweave-agenda"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.agenda[data-el="blockweave-agenda"] .kick{display:none}.agenda[data-el="blockweave-agenda"] .note{display:none}}
+
+.agenda[data-el="blockweave-agenda"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+.agenda[data-el="blockweave-agenda"]{gap:var(--gap-sm)}.agenda[data-el="blockweave-agenda"] .entry{padding:var(--gap-sm) var(--gap);gap:var(--gap-sm) var(--gap)}

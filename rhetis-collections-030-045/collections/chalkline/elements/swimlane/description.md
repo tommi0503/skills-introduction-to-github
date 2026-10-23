@@ -1,0 +1,1 @@
+Owner rows are divided by quiet horizontal rules. Capsule start and end nodes, square operations and outlined questions sit on the declared column and lane coordinates. Thin directional arrows span the actual cell spacing and stay behind the node surfaces.

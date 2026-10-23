@@ -1,0 +1,1 @@
+A very fine unlabelled trend joins equal-step values, or becomes a row of small square bars. It can stand alone or accompany a statistic without adding a chart frame. Good and bad semantic roles colour directional status variants.

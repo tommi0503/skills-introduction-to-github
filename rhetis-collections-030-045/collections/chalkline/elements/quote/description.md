@@ -1,0 +1,1 @@
+A single top rule introduces a generously sized spoken statement. A small circular numbered avatar and a two-line attribution anchor the lower edge. The large variant increases the statement while keeping the attribution understated and unframed.

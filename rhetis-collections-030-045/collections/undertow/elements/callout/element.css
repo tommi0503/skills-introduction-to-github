@@ -1,0 +1,27 @@
+:is(.callout[data-el="undertow-callout"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.callout[data-el="undertow-callout"]) * { box-sizing:border-box; } :is(.callout[data-el="undertow-callout"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.callout[data-el="undertow-callout"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.callout[data-el="undertow-callout"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.callout[data-el="undertow-callout"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.callout[data-el="undertow-callout"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.callout[data-el="undertow-callout"]) { display:flex; align-items:center; justify-content:center; gap:var(--gap-sm); background:var(--a1); color:var(--a1-on); padding:var(--pad); text-align:center; }
+:is(.callout[data-el="undertow-callout"]) p { font-size:var(--type-24); line-height:var(--lead-line); font-weight:var(--lead-weight); } :is(.callout[data-el="undertow-callout"]) b { font-weight:var(--name-weight); } :is(.callout[data-el="undertow-callout"]) .icon { width:32px; height:32px; }
+@container (max-width:640px) { :is(.callout[data-el="undertow-callout"]) p { font-size:var(--type-18); } }
+@container (max-height:130px) { :is(.callout[data-el="undertow-callout"]) p { font-size:var(--type-18); } }
+
+[data-el="undertow-callout"] small { color:inherit; }
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.callout[data-el="undertow-callout"]:not(:has(.icon)) {padding:0 var(--gap);display:flex;align-items:center;justify-content:center;background:var(--a1-7);color:var(--page);border:0;}
+.callout[data-el="undertow-callout"]:not(:has(.icon)) p {font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--label-line);}
+.callout[data-el="undertow-callout"]:not(:has(.icon))::before {content:"";width:18px;height:22px;clip-path:polygon(0 0,100% 50%,0 100%);background:currentColor;margin-right:var(--gap-sm);flex:none;}
+.callout[data-el="undertow-callout"][hidden] {padding:0;display:block;background:var(--n-1);color:var(--ink);border:0;}
+.callout[data-el="undertow-callout"][hidden] p {display:flex;align-items:center;height:100%;font-size:var(--type-22);line-height:var(--lead-line);font-weight:var(--body-weight);}
+.callout[data-el="undertow-callout"][hidden] p b {width:134px;min-width:134px;height:100%;display:flex;align-items:center;justify-content:center;background:var(--n-4);color:var(--page);font-size:var(--type-24);margin-right:var(--gap);}
+
+
+.callout[data-el="undertow-callout"]:not(:has(.icon)) {height:66px;align-self:end;}
+
+.callout[data-el="undertow-callout"]:not(:has(.icon)) p {font-size:var(--type-20);}
+
+.callout[data-el="undertow-callout"]:not(:has(.icon)) {width:100%;}

@@ -1,0 +1,1 @@
+A single thin rectangular rule surrounds a neutral square image seat, preserving the open corporate page. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

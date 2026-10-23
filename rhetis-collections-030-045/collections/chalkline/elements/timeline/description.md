@@ -1,0 +1,1 @@
+Small circular stops sit along a fine continuous track and introduce dates, bold event names and quiet notes. One stop may receive the main accent. The alternating variant places text on opposite sides of one shared line; the column variant becomes a simple vertical chronology.

@@ -1,0 +1,19 @@
+.arch[data-el="blockweave-architecture"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.arch[data-el="blockweave-architecture"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.arch[data-el="blockweave-architecture"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.arch[data-el="blockweave-architecture"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.arch[data-el="blockweave-architecture"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.arch[data-el="blockweave-architecture"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.arch[data-el="blockweave-architecture"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.arch[data-el="blockweave-architecture"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm)}
+.arch[data-el="blockweave-architecture"] .layer{flex:1;display:flex;align-items:center;gap:var(--gap);padding:var(--pad);background:var(--n-1);border-left:8px solid var(--a1)}
+.arch[data-el="blockweave-architecture"] .layer>.name{width:25%;flex:none}
+.arch[data-el="blockweave-architecture"] .chip{padding:var(--gap-sm) var(--gap);background:var(--page);font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);text-align:center}
+@container (max-width: 760px){.arch[data-el="blockweave-architecture"] .name{font-size:var(--type-18)}.arch[data-el="blockweave-architecture"] .note{font-size:var(--type-14)}.arch[data-el="blockweave-architecture"] .fig{font-size:var(--type-40)}.arch[data-el="blockweave-architecture"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.arch[data-el="blockweave-architecture"] .name{font-size:var(--type-16)}.arch[data-el="blockweave-architecture"] .note{font-size:var(--type-12)}.arch[data-el="blockweave-architecture"] .fig{font-size:var(--type-28)}.arch[data-el="blockweave-architecture"] .kick{font-size:var(--type-12)}.arch[data-el="blockweave-architecture"] h2{font-size:var(--type-28)}.arch[data-el="blockweave-architecture"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.arch[data-el="blockweave-architecture"] .kick{display:none}.arch[data-el="blockweave-architecture"] .note{display:none}}
+
+.arch[data-el="blockweave-architecture"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+.arch[data-el="blockweave-architecture"] .layer{gap:var(--gap-sm);padding:var(--gap-sm) var(--gap)}.arch[data-el="blockweave-architecture"] .chip{flex:1;min-width:0;padding:var(--gap-sm);font-size:var(--type-14)}@container (max-width:600px){.arch[data-el="blockweave-architecture"] .layer>.name{font-size:var(--type-16)}.arch[data-el="blockweave-architecture"] .chip{font-size:var(--type-12)}}

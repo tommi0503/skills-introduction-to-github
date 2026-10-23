@@ -1,0 +1,1 @@
+Two or three large thin-edged circles overlap on the page, with soft neutral and accent grounds. Names sit in distinct parts of their circles and an optional small filled capsule identifies their shared meaning. The overlap carries the explanation rather than ornamental graphics.

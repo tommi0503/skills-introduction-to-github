@@ -1,0 +1,1 @@
+A compact hairline capsule labels an item without adding a card surface. The filled variant reverses page and ink. Inline highlights use a quiet accent step beneath running text, preserving the ordinary reading rhythm. Tags retain natural text width when nested inside another element.

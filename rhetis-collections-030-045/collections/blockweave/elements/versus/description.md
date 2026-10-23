@@ -1,0 +1,1 @@
+Two open neutral panels align their named lists around a small central comparison marker. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

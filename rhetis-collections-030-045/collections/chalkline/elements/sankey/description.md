@@ -1,0 +1,1 @@
+One filled source block feeds flat bands whose thickness follows each share. The destination names and figures sit in rule-capped square rows. Nested branches add a second set of shorter proportional bands inside the destination group.

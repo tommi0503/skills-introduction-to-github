@@ -1,0 +1,1 @@
+Plain circular nodes sit at their numeric positions and fine straight links connect the actual endpoints, with one accent center. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

@@ -1,0 +1,44 @@
+:is(.list[data-el="undertow-list"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.list[data-el="undertow-list"]) * { box-sizing:border-box; } :is(.list[data-el="undertow-list"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.list[data-el="undertow-list"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.list[data-el="undertow-list"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.list[data-el="undertow-list"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.list[data-el="undertow-list"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.list[data-el="undertow-list"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); counter-reset:item; padding:var(--gap-sm) 0; }
+:is(.list[data-el="undertow-list"]) .item { position:relative; counter-increment:item; padding-left:var(--gap); } :is(.list[data-el="undertow-list"]) .item::before { content:""; position:absolute; left:0; top:.5em; width:6px; height:6px; border-radius:50%; background:var(--a1); }
+:is(.list[data-el="undertow-list"]) .name { font-size:var(--type-20); } :is(.list[data-el="undertow-list"]) .note { font-size:var(--type-16); margin-top:calc(var(--gap-sm)/2); }
+:is(.list[data-el="undertow-list"]).num .item::before { content:counter(item); top:0; width:var(--gap); height:var(--gap); display:flex; align-items:center; justify-content:center; background:var(--ink); color:var(--page); font-size:var(--type-12); } :is(.list[data-el="undertow-list"]).num .item { padding-left:var(--gap-lg); }
+:is(.list[data-el="undertow-list"]).check .item::before { border-left:2px solid var(--a1); border-bottom:2px solid var(--a1); border-radius:0; background:none; width:10px; height:6px; transform:rotate(-45deg); }
+:is(.list[data-el="undertow-list"]).divided .item { padding-block:var(--gap-sm); border-bottom:var(--stroke) solid var(--n-3); }
+@container (max-width:480px) { :is(.list[data-el="undertow-list"]) .name { font-size:var(--type-16); } :is(.list[data-el="undertow-list"]) .note { font-size:var(--type-14); } }
+:is(.list[data-el="undertow-list"]) { container-type:inline-size; }
+
+[data-el="undertow-list"] small { color:inherit; }
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) {padding:0;display:flex;flex-direction:column;gap:0;background:none;}
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) .item {height:85px;flex:none;display:grid;grid-template-columns:78px 1fr;gap:var(--gap-sm);align-items:center;padding:0 var(--undertow-space-10);border:0;border-bottom:2px solid var(--n-5);}
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) .item::before {content:none;}
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) .name {width:78px;height:36px;border-radius:999px;background:var(--n-1);display:flex;align-items:center;justify-content:center;font-size:var(--type-16);}
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) .item:nth-child(2) .name {background:var(--n-3);}
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) .item:nth-child(3) .name {background:var(--n-6);color:var(--page);}
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) .note {font-size:var(--type-18);line-height:var(--title-line);margin:0;color:var(--n-8);}
+.list[data-el="undertow-list"].check:has(>.item>b.name) {padding:0;display:flex;flex-direction:column;gap:var(--undertow-space-9);background:none;}
+.list[data-el="undertow-list"].check:has(>.item>b.name) .item {height:52px;min-height:52px;display:flex;align-items:center;justify-content:center;background:var(--n-1);padding:0 var(--gap-sm);border:0;}
+.list[data-el="undertow-list"].check:has(>.item>b.name) .item::before {content:none;}
+.list[data-el="undertow-list"].check:has(>.item>b.name) .name {font-size:var(--type-18);text-align:center;color:var(--a1-8);}
+.list[data-el="undertow-list"]:not(.check):not(.divided):not(.num) {padding:0;display:flex;flex-direction:column;gap:0;background:none;}
+.list[data-el="undertow-list"]:not(.check):not(.divided):not(.num) .item {display:block;padding:0 0 0 var(--gap-sm);border:0;position:relative;}
+.list[data-el="undertow-list"]:not(.check):not(.divided):not(.num) .item::before {content:"";position:absolute;left:0;top:var(--gap-sm);width:4px;height:4px;border-radius:50%;background:var(--ink);}
+.list[data-el="undertow-list"]:not(.check):not(.divided):not(.num) .name {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);}
+
+
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) {padding:0 var(--undertow-space-42) 0 var(--undertow-space-47);} .list[data-el="undertow-list"]:not(.check):not(.divided):not(.num) {margin:0 var(--undertow-space-42);width:calc(100% - 84px);}
+
+
+.list[data-el="undertow-list"].divided:has(>.item>b.name):has(>.item>.note) {justify-content:flex-start;}
+.list[data-el="undertow-list"]:not(.check):not(.divided):not(.num) {width:calc(100% - 70px);margin-left:var(--undertow-space-42);margin-right:var(--undertow-space-28);justify-content:flex-start;}
+.list[data-el="undertow-list"]:not(.check):not(.divided):not(.num) .name {font-size:var(--type-16);}
+
+
+.list[data-el="undertow-list"].check:has(>.item>b.name) .name {font-size:var(--type-16);}

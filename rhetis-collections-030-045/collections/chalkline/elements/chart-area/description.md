@@ -1,0 +1,1 @@
+Each series has a thin straight-edge outline and an understated filled area below it. Anchor-based segments derive their geometry from the actual point heights. A separate top legend and bottom axis keep text clear of the plot, and stacked series use cumulative values.

@@ -1,0 +1,1 @@
+An exact grid of small rectangular units shows a counted share beside a bare figure and business label; person units remain simple silhouettes. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

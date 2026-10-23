@@ -1,0 +1,1 @@
+Plain period headings organise square duration bars across thin horizontal lanes. Lane names occupy a stable left column and milestones use a small vertical stroke with an outside label. One bar may carry the main accent without changing its square-ended form.

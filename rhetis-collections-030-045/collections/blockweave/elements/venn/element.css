@@ -1,0 +1,68 @@
+.venn[data-el="blockweave-venn"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.venn[data-el="blockweave-venn"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.venn[data-el="blockweave-venn"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.venn[data-el="blockweave-venn"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.venn[data-el="blockweave-venn"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.venn[data-el="blockweave-venn"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.venn[data-el="blockweave-venn"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.venn[data-el="blockweave-venn"]{display:flex;align-items:center;justify-content:center;isolation:isolate;padding:var(--gap)}
+.venn[data-el="blockweave-venn"] .set{position:relative;flex:none;width:50%;aspect-ratio:1;border-radius:999px;background:var(--a1-2-soft);border:var(--stroke) solid var(--n-2);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--pad);opacity:.9}
+.venn[data-el="blockweave-venn"] .set + .set{margin-left:calc(var(--gap-lg)*-1)}
+.venn[data-el="blockweave-venn"] .set.on{background:var(--a1);color:var(--a1-on)}
+.venn[data-el="blockweave-venn"] .set.on .name{color:var(--a1-on)}
+.venn[data-el="blockweave-venn"]:has(.set:nth-child(3)) .set{width:36%;margin-left:calc(var(--gap)*-1)}
+.venn[data-el="blockweave-venn"] .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;display:grid;place-items:center;width:20%;aspect-ratio:1;border-radius:999px;background:var(--a1);color:var(--a1-on);padding:var(--gap-sm);text-align:center;font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line)}
+@container (max-width: 760px){.venn[data-el="blockweave-venn"] .name{font-size:var(--type-18)}.venn[data-el="blockweave-venn"] .note{font-size:var(--type-14)}.venn[data-el="blockweave-venn"] .fig{font-size:var(--type-40)}.venn[data-el="blockweave-venn"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.venn[data-el="blockweave-venn"] .name{font-size:var(--type-16)}.venn[data-el="blockweave-venn"] .note{font-size:var(--type-12)}.venn[data-el="blockweave-venn"] .fig{font-size:var(--type-28)}.venn[data-el="blockweave-venn"] .kick{font-size:var(--type-12)}.venn[data-el="blockweave-venn"] h2{font-size:var(--type-28)}.venn[data-el="blockweave-venn"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.venn[data-el="blockweave-venn"] .kick{display:none}.venn[data-el="blockweave-venn"] .note{display:none}}
+
+.venn[data-el="blockweave-venn"] small{color:inherit}
+
+.venn[data-el="blockweave-venn"] .set{width:63%}.venn[data-el="blockweave-venn"] .set+.set{margin-left:-28%}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)){display:block;position:relative;padding:0}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set{position:absolute;width:60%;margin:0;height:auto;aspect-ratio:1;padding:var(--gap)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(1){left:20%;top:0;background:var(--n-1)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(2){left:0;top:34%;background:var(--a1-2-soft)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3){left:40%;top:34%;background:var(--a1-3-soft)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(1) .name{transform:translateY(-40px)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(n+2) .name{transform:translateY(16px)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .core{top:53%;width:20%}
+
+/* Refinement from original/replica/reassembled comparison. */
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set{background:var(--n-1);opacity:1}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set .name{width:45%;transform:translateX(-50%);font-size:var(--type-24)}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set:nth-child(2) .name{transform:translateX(50%)}.venn[data-el="blockweave-venn"] .set .name small{display:block;font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .core{width:29%;height:78%;font-size:var(--type-28);clip-path:polygon(50% 0,63% 9%,76% 21%,88% 35%,97% 48%,100% 50%,97% 65%,88% 79%,76% 91%,63% 98%,50% 100%,37% 98%,24% 91%,12% 79%,3% 65%,0 50%,3% 35%,12% 21%,24% 9%,37% 2%)}
+@supports (clip-path:shape(from 50% 0%,curve to 50% 100% with 117% 25% / 117% 75%,curve to 50% 0% with -17% 75% / -17% 25%,close)){.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .core{clip-path:shape(from 50% 0%,curve to 50% 100% with 117% 25% / 117% 75%,curve to 50% 0% with -17% 75% / -17% 25%,close)}}
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set{width:min(63cqw,92cqh)}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set.on,.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set.on{background:var(--a1)}.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set{width:min(60cqw,60cqh)}.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(1){left:calc(50% - min(60cqw,60cqh)*.5)}.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(2){left:calc(50% - min(60cqw,60cqh)*.82);top:calc(min(60cqw,60cqh)*.55)}.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3){left:calc(50% - min(60cqw,60cqh)*.18);top:calc(min(60cqw,60cqh)*.55)}.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .core{top:calc(min(60cqw,60cqh)*.88);width:calc(min(60cqw,60cqh)*.32)}
+/* Two sets share a bounded circular field; names occupy the outer lobes. */
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))){display:block}
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set{position:absolute;top:50%;left:calc(50% - min(60cqw,86cqh)*.75);width:min(60cqw,86cqh);height:auto;transform:translateY(-50%);margin:0;padding:var(--gap-sm)}
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set:nth-child(2){left:calc(50% - min(60cqw,86cqh)*.25)}
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set .name{width:40%;transform:translateX(-50%);font-size:var(--type-20)}
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set:nth-child(2) .name{transform:translateX(50%)}
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .core{width:calc(min(60cqw,86cqh)*.48);height:calc(min(60cqw,86cqh)*.94);font-size:var(--type-24)}
+@container (max-height: 350px){.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set .name{font-size:var(--type-16)}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .core{font-size:var(--type-18)}}
+
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))){transform:translateX(calc(var(--gap-sm)*-1.5))}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set{left:calc(50% - min(63cqw,103cqh)*.75);width:min(63cqw,103cqh);background:var(--n-2)}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set:nth-child(2){left:calc(50% - min(63cqw,103cqh)*.25)}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .core{width:calc(min(63cqw,103cqh)*.48);height:calc(min(63cqw,103cqh)*.94)}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set .name{font-size:var(--type-24);color:var(--a1-8)}.venn[data-el="blockweave-venn"] .name small{color:var(--ink)}
+@container (max-height:350px){.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set .name{font-size:var(--type-16)}}
+
+/* Three actual circle intersections retain A/B/C regions and their central D. */
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set{overflow:hidden;width:min(60cqw,60cqh);border:0}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(1){left:calc(calc(50% + var(--gap-sm)*1.5) - min(60cqw,60cqh)*.5);background:var(--n-2)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(2){left:calc(calc(50% + var(--gap-sm)*1.5) - min(60cqw,60cqh)*.82);background:var(--a1-2-soft)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3){left:calc(calc(50% + var(--gap-sm)*1.5) - min(60cqw,60cqh)*.18);background:var(--a1-3-soft)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(2)::before{content:"";position:absolute;inset:0;background:var(--a1-4-soft);clip-path:circle(50% at 81.48% -4.44%)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3)::before{content:"";position:absolute;inset:0;background:var(--n-2);clip-path:circle(50% at -12.96% 50%)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3)::after{content:"";position:absolute;inset:0;background:var(--a1-2-soft);clip-path:circle(50% at 18.52% -4.44%)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set .name{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transform:none;padding:0;font-size:var(--type-20);line-height:var(--name-line);z-index:3}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(1) .name{padding-bottom:36%}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(n+2) .name{padding-top:15%}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(2) .name::before,.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3) .name::before,.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3) .name::after{position:absolute;font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink)}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(2) .name::before{content:"A";left:46%;top:9%}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3) .name::before{content:"C";left:42%;top:9%}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(3) .name::after{content:"B";left:14%;top:62%}
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .core{left:calc(calc(50% + var(--gap-sm)*1.5) - min(60cqw,60cqh)*.5);top:0;width:min(60cqw,60cqh);height:min(60cqw,60cqh);transform:none;border-radius:50%;display:block;text-align:center;padding:calc(min(60cqw,60cqh)*.8) 0 0;font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);background:var(--a1);color:var(--a1-on);mask-image:radial-gradient(circle calc(min(60cqw,60cqh)*.5) at 18.52% 104.44%,var(--ink) 99.9%,transparent 100%),radial-gradient(circle calc(min(60cqw,60cqh)*.5) at 81.48% 104.44%,var(--ink) 99.9%,transparent 100%);mask-composite:intersect}
+
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set:nth-child(n) .name{transform:none}.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .core{width:calc(min(63cqw,103cqh)*.45);height:calc(min(63cqw,103cqh)*.86)}
+
+.venn[data-el="blockweave-venn"]:not(:has(>.set:nth-child(3))) .set.on .name{color:var(--a1-on)}
+
+.venn[data-el="blockweave-venn"]:has(>.set:nth-child(3)) .set.on .name{color:var(--ink)}

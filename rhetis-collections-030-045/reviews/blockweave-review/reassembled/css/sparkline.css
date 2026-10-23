@@ -1,0 +1,22 @@
+.spark[data-el="blockweave-sparkline"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.spark[data-el="blockweave-sparkline"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.spark[data-el="blockweave-sparkline"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.spark[data-el="blockweave-sparkline"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.spark[data-el="blockweave-sparkline"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.spark[data-el="blockweave-sparkline"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.spark[data-el="blockweave-sparkline"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.spark[data-el="blockweave-sparkline"]{height:100%;min-height:40px;display:flex;align-items:stretch;gap:calc(var(--gap-sm)/4);position:relative;transform:translate(0);anchor-scope:all}
+.spark[data-el="blockweave-sparkline"] span{flex:1;min-width:0;position:relative}
+.spark[data-el="blockweave-sparkline"] span::before{content:"";position:absolute;left:0;right:0;bottom:0;height:calc(var(--v)/var(--max)*100%);background:var(--a1-3-soft);border-top:2px solid var(--a1)}
+.spark[data-el="blockweave-sparkline"].bars span::before{background:var(--a1);border-top:0}
+.spark[data-el="blockweave-sparkline"].up span::before{background:var(--good)}
+.spark[data-el="blockweave-sparkline"].down span::before{background:var(--bad)}
+@container (max-width: 760px){.spark[data-el="blockweave-sparkline"] .name{font-size:var(--type-18)}.spark[data-el="blockweave-sparkline"] .note{font-size:var(--type-14)}.spark[data-el="blockweave-sparkline"] .fig{font-size:var(--type-40)}.spark[data-el="blockweave-sparkline"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.spark[data-el="blockweave-sparkline"] .name{font-size:var(--type-16)}.spark[data-el="blockweave-sparkline"] .note{font-size:var(--type-12)}.spark[data-el="blockweave-sparkline"] .fig{font-size:var(--type-28)}.spark[data-el="blockweave-sparkline"] .kick{font-size:var(--type-12)}.spark[data-el="blockweave-sparkline"] h2{font-size:var(--type-28)}.spark[data-el="blockweave-sparkline"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.spark[data-el="blockweave-sparkline"] .kick{display:none}.spark[data-el="blockweave-sparkline"] .note{display:none}}
+
+.spark[data-el="blockweave-sparkline"] small{color:inherit}
+
+.spark[data-el="blockweave-sparkline"]:is(.parts>*){flex:1;width:100%;height:64px}
+
+.spark[data-el="blockweave-sparkline"]:is(.parts>*){grid-column:1 / -1;grid-row:2;min-width:0}

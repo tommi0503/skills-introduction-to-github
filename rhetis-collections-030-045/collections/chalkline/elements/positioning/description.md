@@ -1,0 +1,1 @@
+Two fine axes cross at the centre of an open field. Competitors appear as small outlined name capsules or numbered logo seats at their supplied coordinates; the host position uses a filled accent capsule. Axis captions stay at the field’s ends.

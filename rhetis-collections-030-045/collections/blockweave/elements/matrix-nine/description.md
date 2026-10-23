@@ -1,0 +1,1 @@
+Nine restrained rectangular boxes share a regular grid, with low-to-high axis labels and a single selected cell. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

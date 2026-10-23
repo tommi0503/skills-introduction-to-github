@@ -1,0 +1,1 @@
+A small filled circle with a drawn downward chevron precedes a plain concluding sentence. Its text has the source deck’s compact lead hierarchy, with bold words carrying the point. Tall placements stack the mark above the sentence, while short placements bring mark and sentence into one row.

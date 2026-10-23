@@ -1,0 +1,11 @@
+:is(.meter[data-el="undertow-gauge"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.meter[data-el="undertow-gauge"]) * { box-sizing:border-box; } :is(.meter[data-el="undertow-gauge"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.meter[data-el="undertow-gauge"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.meter[data-el="undertow-gauge"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.meter[data-el="undertow-gauge"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.meter[data-el="undertow-gauge"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.meter[data-el="undertow-gauge"]) { position:relative; min-height:64px; padding-bottom:var(--gap); display:flex; justify-content:space-between; align-items:center; gap:var(--gap-sm); }
+:is(.meter[data-el="undertow-gauge"]) .fig { font-size:var(--type-28); } :is(.meter[data-el="undertow-gauge"]) .name { font-size:var(--type-20); }
+:is(.meter[data-el="undertow-gauge"])::before,:is(.meter[data-el="undertow-gauge"])::after { content:""; position:absolute; bottom:0; left:0; height:12px; } :is(.meter[data-el="undertow-gauge"])::before { width:100%; background:var(--n-2); } :is(.meter[data-el="undertow-gauge"])::after { width:calc(var(--v)*1%); background:var(--a1); }
+@container (max-width:450px) { :is(.meter[data-el="undertow-gauge"]) .name { font-size:var(--type-16); } :is(.meter[data-el="undertow-gauge"]) .fig { font-size:var(--type-22); } }
+:is(.meter[data-el="undertow-gauge"]) { min-height:0; }
+
+[data-el="undertow-gauge"] small { color:inherit; }

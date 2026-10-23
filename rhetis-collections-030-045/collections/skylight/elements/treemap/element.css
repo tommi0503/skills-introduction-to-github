@@ -1,0 +1,35 @@
+.treemap[data-el="skylight-treemap"] { position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink); }
+:is(.treemap[data-el="skylight-treemap"]) * {box-sizing:border-box;min-width:0;}
+:is(.treemap[data-el="skylight-treemap"]) :is(p,h2,blockquote,ul) {margin:0;}
+:is(.treemap[data-el="skylight-treemap"]) .name {font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+:is(.treemap[data-el="skylight-treemap"]) .note {font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+:is(.treemap[data-el="skylight-treemap"]) .fig {font-family:var(--font-body);font-size:var(--type-48);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums;}
+:is(.treemap[data-el="skylight-treemap"]) :is(.kick,small) {font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);}
+:is(.treemap[data-el="skylight-treemap"]) .kick {color:var(--n-7);}
+:is(.treemap[data-el="skylight-treemap"]) .icon {display:inline-block;width:32px;height:32px;flex:none;}
+@container (max-width:620px) { :is(.treemap[data-el="skylight-treemap"]) .name {font-size:var(--type-18);} :is(.treemap[data-el="skylight-treemap"]) .note {font-size:var(--type-16);} :is(.treemap[data-el="skylight-treemap"]) .fig {font-size:var(--type-36);} }
+@container (max-width:300px) { :is(.treemap[data-el="skylight-treemap"]) .name {font-size:var(--type-16);} :is(.treemap[data-el="skylight-treemap"]) .note {font-size:var(--type-14);} :is(.treemap[data-el="skylight-treemap"]) .kick {display:none;} :is(.treemap[data-el="skylight-treemap"]) .fig {font-size:var(--type-32);} }
+@container (max-height:170px) { :is(.treemap[data-el="skylight-treemap"]) .note {font-size:var(--type-14);} :is(.treemap[data-el="skylight-treemap"]) .kick {display:none;} }
+:is(.treemap[data-el="skylight-treemap"]) {display:flex;gap:calc(var(--gap-sm)/2);padding:var(--gap-sm);}:is(.treemap[data-el="skylight-treemap"])>.branch{position:relative;flex:var(--v);display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2);padding-top:var(--gap-lg);}:is(.treemap[data-el="skylight-treemap"])>.branch>.name{position:absolute;top:0;left:0;font-size:var(--type-18);}:is(.treemap[data-el="skylight-treemap"]) .tile{flex:var(--v);display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);padding:var(--gap-sm);background:var(--a1-1-soft);border-radius:var(--radius-sm);border:var(--stroke) solid var(--page);}:is(.treemap[data-el="skylight-treemap"]) .tile.on{background:var(--a1);color:var(--a1-on);}:is(.treemap[data-el="skylight-treemap"]) .tile .name{font-size:var(--type-18);}:is(.treemap[data-el="skylight-treemap"]) .tile .fig{font-size:var(--type-28);}@container(max-width:650px){:is(.treemap[data-el="skylight-treemap"]) .tile .name{font-size:var(--type-14);}:is(.treemap[data-el="skylight-treemap"]) .tile .fig{font-size:var(--type-20);}}@container(max-height:270px){:is(.treemap[data-el="skylight-treemap"]) .tile{padding:calc(var(--gap-sm)/2);}:is(.treemap[data-el="skylight-treemap"]) .tile .name{font-size:var(--type-12);}}
+
+[data-el="skylight-treemap"] small {color:inherit;}
+
+[data-el="skylight-treemap"] .tile .name{flex:1;}[data-el="skylight-treemap"] .tile .fig{font-size:var(--type-22);flex:none;}@container(max-width:650px){[data-el="skylight-treemap"] .tile{gap:calc(var(--gap-sm)/2);}[data-el="skylight-treemap"] .tile .name{font-size:var(--type-12);}[data-el="skylight-treemap"] .tile .fig{font-size:var(--type-16);}}
+
+:is(.treemap[data-el="skylight-treemap"]) .tile .name{flex:1;}:is(.treemap[data-el="skylight-treemap"]) .tile .fig{font-size:var(--type-22);flex:none;}@container(max-width:650px){:is(.treemap[data-el="skylight-treemap"]) .tile{gap:calc(var(--gap-sm)/2);}:is(.treemap[data-el="skylight-treemap"]) .tile .name{font-size:var(--type-12);}:is(.treemap[data-el="skylight-treemap"]) .tile .fig{font-size:var(--type-16);}}
+
+:is(.treemap[data-el="skylight-treemap"]) .tile{flex-direction:column;justify-content:center;gap:calc(var(--gap-sm)/4);padding:calc(var(--gap-sm)/2);}:is(.treemap[data-el="skylight-treemap"]) .tile .name{flex:none;font-size:var(--type-14);}:is(.treemap[data-el="skylight-treemap"]) .tile .fig{font-size:var(--type-18);}
+@container(max-width:650px){:is(.treemap[data-el="skylight-treemap"]) .tile .name{font-size:var(--type-12);}:is(.treemap[data-el="skylight-treemap"]) .tile .fig{font-size:var(--type-14);}}
+
+.treemap[data-el="skylight-treemap"]:has(> .branch:only-child)>.branch {flex-direction:row;padding-top:var(--gap-lg);}
+.treemap[data-el="skylight-treemap"]:has(> .branch:only-child) .tile {padding:calc(var(--gap-sm)/4);}
+.treemap[data-el="skylight-treemap"]:has(> .branch:only-child) .tile .name {font-size:var(--type-14);}
+.treemap[data-el="skylight-treemap"]:has(> .branch:only-child) .tile .fig {font-size:var(--type-18);}
+
+.treemap[data-el="skylight-treemap"]:has(>.branch>.name:empty){padding:var(--gap-lg) calc(var(--stroke) * 27) 0 calc(var(--stroke) * 30);gap:calc(var(--stroke) * 13);}
+.treemap[data-el="skylight-treemap"]>.branch:has(>.name:empty){padding-top:0;gap:calc(var(--stroke) * 13);}
+.treemap[data-el="skylight-treemap"]>.branch>.name:empty{display:none;}
+.treemap[data-el="skylight-treemap"]:has(>.branch>.name:empty) .tile{border:0;border-radius:calc(3 * var(--radius));background:var(--n-4);padding:calc(var(--gap-sm)/4);gap:0;}
+.treemap[data-el="skylight-treemap"]:has(>.branch>.name:empty) .tile.on{background:var(--n-6);color:var(--page);}
+.treemap[data-el="skylight-treemap"]:has(>.branch>.name:empty) .tile :is(.name,.fig){font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);}
+.treemap[data-el="skylight-treemap"]:has(>.branch>.name:empty)>.branch:first-child>.tile:last-child,.treemap[data-el="skylight-treemap"]:has(>.branch>.name:empty)>.branch:last-child>.tile:first-of-type{flex-direction:row;}

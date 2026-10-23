@@ -1,0 +1,1 @@
+Bare large figures anchor aligned text stacks; rows use fine dotted dividers rather than independent colored cards. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

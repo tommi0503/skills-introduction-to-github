@@ -1,0 +1,1 @@
+A numbered portrait or circular avatar seat anchors a plain profile below a top hairline. Bold names, quieter roles and optional compact experience lists form a stable vertical stack. Rows of people keep the same seat scale and text alignment.

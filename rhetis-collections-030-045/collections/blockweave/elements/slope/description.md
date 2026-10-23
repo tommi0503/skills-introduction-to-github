@@ -1,0 +1,1 @@
+Fine direct lines connect each before-and-after value, with endpoint labels and one accent trajectory; dumbbells use the same value scale horizontally. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

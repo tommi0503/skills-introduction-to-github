@@ -1,0 +1,1 @@
+Successively shorter square bands encode the stage shares. Stage names remain on a stable left edge and figures align on a common right edge, allowing small stages to remain readable. A quiet accent fill marks the entry stage and the remaining bands use neutral steps.

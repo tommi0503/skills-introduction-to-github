@@ -1,0 +1,1 @@
+Running Korean paragraphs form a calm text block with no added surface or ornament. Lead text is larger and secondary text uses a quieter neutral step. The column variant places paragraphs in two balanced columns, returning to one column in a narrower content seat.

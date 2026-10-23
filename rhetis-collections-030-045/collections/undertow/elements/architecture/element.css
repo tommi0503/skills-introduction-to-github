@@ -1,0 +1,19 @@
+:is(.arch[data-el="undertow-architecture"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.arch[data-el="undertow-architecture"]) * { box-sizing:border-box; } :is(.arch[data-el="undertow-architecture"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.arch[data-el="undertow-architecture"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.arch[data-el="undertow-architecture"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.arch[data-el="undertow-architecture"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.arch[data-el="undertow-architecture"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.arch[data-el="undertow-architecture"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); } :is(.arch[data-el="undertow-architecture"]) .layer { display:flex; align-items:center; gap:var(--gap-sm); flex:1; min-height:0; max-height:120px; padding:var(--gap-sm); background:var(--page); border-bottom:var(--stroke) solid var(--n-3); } :is(.arch[data-el="undertow-architecture"]) .layer > .name { align-self:stretch; width:25%; display:flex; align-items:center; justify-content:center; background:var(--a1); color:var(--a1-on); font-size:var(--type-22); flex:none; } :is(.arch[data-el="undertow-architecture"]) .chip { flex:1; text-align:center; padding:var(--gap-sm); background:var(--n-1); font-size:var(--type-18); }
+@container (max-width:700px) { :is(.arch[data-el="undertow-architecture"]) .layer > .name { font-size:var(--type-16); } :is(.arch[data-el="undertow-architecture"]) .chip { font-size:var(--type-14); padding:calc(var(--gap-sm)/2); } }
+
+[data-el="undertow-architecture"] small { color:inherit; }
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.arch[data-el="undertow-architecture"]:not(:has(>.layer>.chip:nth-child(3))) {display:flex;flex-direction:column;gap:var(--undertow-space-9);padding:0;}
+.arch[data-el="undertow-architecture"]:not(:has(>.layer>.chip:nth-child(3))) .layer {height:101px;min-height:101px;display:grid;grid-template-columns:143px 1fr;gap:0;padding:0;border:0;background:var(--n-1);}
+.arch[data-el="undertow-architecture"]:not(:has(>.layer>.chip:nth-child(3))) .layer .name {align-self:stretch;display:flex;align-items:center;justify-content:center;background:var(--a1-7);color:var(--page);font-size:var(--type-30);margin:0;}
+.arch[data-el="undertow-architecture"]:not(:has(>.layer>.chip:nth-child(3))) .chip {display:flex;align-items:center;justify-content:center;text-align:center;border:0;border-radius:0;background:none;font-size:var(--type-22);padding:var(--gap-sm);line-height:var(--lead-line);}
+
+
+.arch[data-el="undertow-architecture"]:not(:has(>.layer>.chip:nth-child(3))) {justify-content:flex-start;} .arch[data-el="undertow-architecture"]:not(:has(>.layer>.chip:nth-child(3))) .layer {flex:none;} .arch[data-el="undertow-architecture"]:not(:has(>.layer>.chip:nth-child(3))) .layer .name {width:100%;}

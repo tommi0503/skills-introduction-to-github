@@ -1,0 +1,1 @@
+Counted square units show a share as a compact block beside a bold figure, with the name directly below. Figure mode cuts each counted unit into a simple person silhouette. The layout centres its information group instead of leaving the name isolated in a distant grid row.

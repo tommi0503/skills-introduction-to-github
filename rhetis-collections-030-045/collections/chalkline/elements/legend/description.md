@@ -1,0 +1,1 @@
+Short flat colour keys introduce plain labels in a centred row. Ranked emphasis starts with the main accent and continues through neutral and soft steps. Keys wrap with comfortable spacing rather than compressing their labels.

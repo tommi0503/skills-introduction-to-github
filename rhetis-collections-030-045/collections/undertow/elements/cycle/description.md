@@ -1,0 +1,1 @@
+The cycle uses Undertow’s square planes, hairline partitions, circular focal forms and short reversed capsules. It gives one accent priority and keeps supporting content quiet, with discrete typography steps for smaller grid allocations.

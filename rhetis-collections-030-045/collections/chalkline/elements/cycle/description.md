@@ -1,0 +1,1 @@
+Three to six square, rule-capped nodes surround a small outlined circular core. Thin directed segments connect each node to its successor, making the full loop visible. One pale accented node can mark the active stage without introducing a different card shape.

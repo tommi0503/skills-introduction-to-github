@@ -1,0 +1,1 @@
+Arrowtab mindmap uses crisp square geometry, a directional tab or fine rule where it clarifies hierarchy, and restrained flat surfaces. The primary accent marks one key result while quieter members use neutral or soft palette positions. Type and spacing step down in smaller grid seats while labels and figures stay visible.

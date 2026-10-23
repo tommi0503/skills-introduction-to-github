@@ -1,0 +1,23 @@
+.journey[data-el="blockweave-journey"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.journey[data-el="blockweave-journey"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.journey[data-el="blockweave-journey"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.journey[data-el="blockweave-journey"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.journey[data-el="blockweave-journey"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.journey[data-el="blockweave-journey"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.journey[data-el="blockweave-journey"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.journey[data-el="blockweave-journey"]{display:flex;gap:var(--gap-sm);padding:var(--gap-sm)}
+.journey[data-el="blockweave-journey"] .stage{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--gap-sm);padding:var(--pad) var(--gap-sm);min-width:0}
+.journey[data-el="blockweave-journey"] .stage::before{content:"";position:absolute;left:50%;bottom:calc(35% + var(--mood)*.55%);width:10px;height:10px;background:var(--a1);border-radius:999px}
+.journey[data-el="blockweave-journey"] .stage:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:calc(35% + var(--mood)*.55%);width:calc(hypot(100cqw,(var(--next) - var(--mood))*.55cqh));height:2px;background:var(--a1);transform-origin:left center;transform:rotate(atan2(calc((var(--mood) - var(--next))*.55cqh),100cqw))}
+.journey[data-el="blockweave-journey"] .pain{font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--bad);margin:0}
+.journey[data-el="blockweave-journey"] .stage.on{background:var(--a1-1-soft)}
+@container (max-width: 760px){.journey[data-el="blockweave-journey"] .name{font-size:var(--type-18)}.journey[data-el="blockweave-journey"] .note{font-size:var(--type-14)}.journey[data-el="blockweave-journey"] .fig{font-size:var(--type-40)}.journey[data-el="blockweave-journey"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.journey[data-el="blockweave-journey"] .name{font-size:var(--type-16)}.journey[data-el="blockweave-journey"] .note{font-size:var(--type-12)}.journey[data-el="blockweave-journey"] .fig{font-size:var(--type-28)}.journey[data-el="blockweave-journey"] .kick{font-size:var(--type-12)}.journey[data-el="blockweave-journey"] h2{font-size:var(--type-28)}.journey[data-el="blockweave-journey"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.journey[data-el="blockweave-journey"] .kick{display:none}.journey[data-el="blockweave-journey"] .note{display:none}}
+
+.journey[data-el="blockweave-journey"] small{color:inherit}
+
+/* Review corrections: compact density and containment. */
+.journey[data-el="blockweave-journey"] .stage{container-type:size}.journey[data-el="blockweave-journey"] .stage:not(:last-child)::after{width:calc(hypot(100cqw + 8px,(var(--next) - var(--mood))*.55cqh));transform:rotate(atan2(calc((var(--mood) - var(--next))*.55cqh),calc(100cqw + 8px)))}
+.journey[data-el="blockweave-journey"] .stage:not(:last-child)::after{width:calc(hypot(100cqw + 24px,(var(--next) - var(--mood))*.55*(100cqh + 48px)));transform:rotate(atan2(calc((var(--mood) - var(--next))*.55*(100cqh + 48px)),calc(100cqw + 24px)))}
+.journey[data-el="blockweave-journey"] .stage:not(:last-child)::after{width:calc(hypot(100cqw + 24px,(var(--next) - var(--mood))*.0055*(100cqh + 48px)));transform:rotate(atan2(calc((var(--mood) - var(--next))*.0055*(100cqh + 48px)),calc(100cqw + 24px)))}

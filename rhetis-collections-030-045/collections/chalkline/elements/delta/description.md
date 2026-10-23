@@ -1,0 +1,1 @@
+The previous value is subdued beside a drawn thin arrow and an underlined current value. Both endpoints remain visible in compact seats. It is a direct typographic before-and-after statement with no enclosing panel.

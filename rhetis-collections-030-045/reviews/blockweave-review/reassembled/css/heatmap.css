@@ -1,0 +1,21 @@
+.heat[data-el="blockweave-heatmap"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.heat[data-el="blockweave-heatmap"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.heat[data-el="blockweave-heatmap"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.heat[data-el="blockweave-heatmap"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.heat[data-el="blockweave-heatmap"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.heat[data-el="blockweave-heatmap"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.heat[data-el="blockweave-heatmap"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.heat[data-el="blockweave-heatmap"]{display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--gap-sm)}
+.heat[data-el="blockweave-heatmap"] .heads{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding-left:16%;text-align:center;font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+.heat[data-el="blockweave-heatmap"] .row{display:grid;grid-template-columns:16% repeat(var(--cols),minmax(0,1fr));gap:var(--gap-sm);flex:1}
+.heat[data-el="blockweave-heatmap"] .row>.name{font-size:var(--type-16);align-self:center}
+.heat[data-el="blockweave-heatmap"] .cell{background:color-mix(in srgb,var(--a1) calc(var(--v)*1%),var(--page));display:grid;place-items:center;position:relative;min-height:24px}
+.heat[data-el="blockweave-heatmap"] .cell b{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--ink);background:var(--page);padding:0 var(--gap-sm)}
+.heat[data-el="blockweave-heatmap"].calendar .heads{padding-left:0}
+.heat[data-el="blockweave-heatmap"].calendar .row{grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+.heat[data-el="blockweave-heatmap"].calendar .cell{aspect-ratio:1}
+@container (max-width: 760px){.heat[data-el="blockweave-heatmap"] .name{font-size:var(--type-18)}.heat[data-el="blockweave-heatmap"] .note{font-size:var(--type-14)}.heat[data-el="blockweave-heatmap"] .fig{font-size:var(--type-40)}.heat[data-el="blockweave-heatmap"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.heat[data-el="blockweave-heatmap"] .name{font-size:var(--type-16)}.heat[data-el="blockweave-heatmap"] .note{font-size:var(--type-12)}.heat[data-el="blockweave-heatmap"] .fig{font-size:var(--type-28)}.heat[data-el="blockweave-heatmap"] .kick{font-size:var(--type-12)}.heat[data-el="blockweave-heatmap"] h2{font-size:var(--type-28)}.heat[data-el="blockweave-heatmap"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.heat[data-el="blockweave-heatmap"] .kick{display:none}.heat[data-el="blockweave-heatmap"] .note{display:none}}
+
+.heat[data-el="blockweave-heatmap"] small{color:inherit}

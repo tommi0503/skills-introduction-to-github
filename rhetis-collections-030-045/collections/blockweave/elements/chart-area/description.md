@@ -1,0 +1,1 @@
+Data-driven trapezoids join neighboring anchors into continuous filled areas; neutral and ranked accent planes overlap or stack with small names along the top. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

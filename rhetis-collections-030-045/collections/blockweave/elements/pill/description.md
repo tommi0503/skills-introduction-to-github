@@ -1,0 +1,1 @@
+A true centered capsule groups its mark, one-line name and short note; emphasis uses a solid accent fill. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

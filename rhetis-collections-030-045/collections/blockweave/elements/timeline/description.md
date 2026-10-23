@@ -1,0 +1,1 @@
+A fine accent rail joins small circular stops and aligned dates, with alternating or vertical arrangements available. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

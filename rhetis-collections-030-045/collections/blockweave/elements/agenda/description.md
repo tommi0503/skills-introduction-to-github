@@ -1,0 +1,1 @@
+A flush-left entry list pairs small accent numbers with names and quiet notes, separated by fine horizontal rules. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

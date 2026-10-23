@@ -1,0 +1,1 @@
+A fixed 1280 by 720 page carries an acute accent wedge at its upper left and a quiet reverse wedge at its lower right. The head sits clear of the cut, with an optional centered alignment. Its body is a true 12 by 6 grid; sharp equal groups, stacks and asymmetric splits respect a consistent spacing rhythm. Covers use one broad diagonal field with a restrained left lockup.

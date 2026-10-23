@@ -1,0 +1,1 @@
+Four quiet square cells form a clean two-by-two field beneath small axis labels. A hairline tops each cell and one cell may receive a pale accent. The SWOT variant replaces axes with a bold initial, a Korean title and a compact list inside each quadrant.

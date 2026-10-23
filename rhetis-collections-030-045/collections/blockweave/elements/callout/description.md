@@ -1,0 +1,1 @@
+Callout follows Blockweave’s open corporate composition: sparse rectangular surfaces, short accent bands, thin rules and clear shared typography. Emphasis is concentrated in one member. Secondary content uses neutral planes, and dense layouts reduce type and spacing in discrete container steps.

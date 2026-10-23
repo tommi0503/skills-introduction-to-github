@@ -1,0 +1,1 @@
+Square, rule-capped layers stack vertically, each with a bold name at the left and thin capsules for its component chips. The first layer receives a quiet accent ground. All chip text stays centred and the layer rhythm remains consistent as member counts change.

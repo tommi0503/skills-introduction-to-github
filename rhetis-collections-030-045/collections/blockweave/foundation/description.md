@@ -1,0 +1,1 @@
+A 12 by 6 content grid sits beneath an open heading. A single fine top rule and a short left edge bar provide the page furniture. Covers carry a square mosaic on the right, with a large flush-left title and a restrained contact line. Seats remain neutral and numbered.

@@ -1,0 +1,1 @@
+Large overlapping soft circles express shared business scope, with a strong center core and restrained labels. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

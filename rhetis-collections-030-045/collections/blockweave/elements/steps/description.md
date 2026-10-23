@@ -1,0 +1,1 @@
+Rectangular step panels have small solid accent mark bands, a stable name line and a quiet note, joined by simple direction strokes. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

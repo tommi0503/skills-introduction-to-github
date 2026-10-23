@@ -1,0 +1,1 @@
+Stage names and touchpoint notes sit beneath rule-capped columns. A thin emotion curve connects small dots above the text, following each supplied mood and next-mood value. The main stage is accented and pain points use the semantic bad role.

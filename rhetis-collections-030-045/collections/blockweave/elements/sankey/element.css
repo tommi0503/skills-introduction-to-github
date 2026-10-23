@@ -1,0 +1,27 @@
+.sankey[data-el="blockweave-sankey"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.sankey[data-el="blockweave-sankey"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.sankey[data-el="blockweave-sankey"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.sankey[data-el="blockweave-sankey"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.sankey[data-el="blockweave-sankey"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.sankey[data-el="blockweave-sankey"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.sankey[data-el="blockweave-sankey"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.sankey[data-el="blockweave-sankey"]{display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--gap-sm) var(--gap-sm) var(--gap-sm) 30%}
+.sankey[data-el="blockweave-sankey"] .source{position:absolute;left:0;top:10%;bottom:10%;width:23%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--a1);color:var(--a1-on);padding:var(--gap-sm);text-align:center}
+.sankey[data-el="blockweave-sankey"] .source .name,.sankey[data-el="blockweave-sankey"] .source .fig{color:var(--a1-on)}
+.sankey[data-el="blockweave-sankey"] .branch{position:relative;flex:var(--v);min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);padding:var(--gap-sm) var(--pad);background:var(--n-1)}
+.sankey[data-el="blockweave-sankey"] .branch::before{content:"";position:absolute;right:100%;top:0;height:100%;width:10%;background:var(--a1-2-soft);clip-path:polygon(0 20%,100% 0,100% 100%,0 80%)}
+.sankey[data-el="blockweave-sankey"] .branch .fig{font-size:var(--type-24)}
+.sankey[data-el="blockweave-sankey"] .branch.on{background:var(--a1-2-soft)}
+.sankey[data-el="blockweave-sankey"] .branch.out{background:var(--n-2)}
+.sankey[data-el="blockweave-sankey"] .branch .branch{min-width:0;padding:var(--gap-sm);flex:var(--v);font-size:var(--type-14)}
+.sankey[data-el="blockweave-sankey"] .branch:has(.branch){flex-wrap:wrap}
+.sankey[data-el="blockweave-sankey"] .branch .branch .name{font-size:var(--type-14)}
+@container (max-width: 760px){.sankey[data-el="blockweave-sankey"] .name{font-size:var(--type-18)}.sankey[data-el="blockweave-sankey"] .note{font-size:var(--type-14)}.sankey[data-el="blockweave-sankey"] .fig{font-size:var(--type-40)}.sankey[data-el="blockweave-sankey"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.sankey[data-el="blockweave-sankey"] .name{font-size:var(--type-16)}.sankey[data-el="blockweave-sankey"] .note{font-size:var(--type-12)}.sankey[data-el="blockweave-sankey"] .fig{font-size:var(--type-28)}.sankey[data-el="blockweave-sankey"] .kick{font-size:var(--type-12)}.sankey[data-el="blockweave-sankey"] h2{font-size:var(--type-28)}.sankey[data-el="blockweave-sankey"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.sankey[data-el="blockweave-sankey"] .kick{display:none}.sankey[data-el="blockweave-sankey"] .note{display:none}}
+
+.sankey[data-el="blockweave-sankey"] small{color:inherit}
+
+.sankey[data-el="blockweave-sankey"] .branch:has(>.branch)>.name{flex:1 0 35%}.sankey[data-el="blockweave-sankey"] .branch:has(>.branch)>.fig{flex:1 0 50%;text-align:right}.sankey[data-el="blockweave-sankey"] .branch>.branch{flex-direction:column;justify-content:center;gap:calc(var(--gap-sm)*.5)}.sankey[data-el="blockweave-sankey"] .branch>.branch>.name{white-space:nowrap}.sankey[data-el="blockweave-sankey"] .branch>.branch>.fig{font-size:var(--type-18);white-space:nowrap}
+
+.sankey[data-el="blockweave-sankey"] .branch:has(>.branch)>.branch{flex:var(--v) 1 calc((100% - var(--gap-sm)*2)*var(--v)/100 - var(--gap-sm))}

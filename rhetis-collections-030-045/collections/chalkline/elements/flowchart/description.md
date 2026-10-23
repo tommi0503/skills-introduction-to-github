@@ -1,0 +1,1 @@
+Start and end nodes use compact filled capsules; ordinary steps use square hairline boxes and questions use a firmer outline. Independently drawn horizontal and vertical arrows honour all requested connector directions. The grid retains open space so the paths remain legible.

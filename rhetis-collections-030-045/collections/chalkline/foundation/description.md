@@ -1,0 +1,1 @@
+A hairline masthead spans the page above a narrow title rail and a twelve by six content grid. The generous left gutter separates the title from structured text and comparisons. Compact capsules balance the masthead. Seats are neutral numbered squares. The cover preserves the same rule, typographic gravity and single filled capsule.

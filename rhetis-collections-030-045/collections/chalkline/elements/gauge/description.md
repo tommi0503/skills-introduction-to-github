@@ -1,0 +1,1 @@
+A short square-ended progress band sits beneath an aligned name and figure. The measured part uses the main accent and the remainder stays neutral. A single meter keeps this compact unit near the seat’s centre, while several meters form evenly spaced rows.

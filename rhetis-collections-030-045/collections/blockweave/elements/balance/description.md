@@ -1,0 +1,1 @@
+Two shallow rectangular pans sit under a tilted beam; the tilt follows the numeric weight and a quiet central verdict anchors the base. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

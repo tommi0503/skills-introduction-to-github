@@ -1,0 +1,1 @@
+Small neutral circles orbit an accent core; a fine dotted orbit and arrowheads show the direction without a heavy enclosing surface. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

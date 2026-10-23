@@ -1,0 +1,64 @@
+:is(.hub[data-el="undertow-hub"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.hub[data-el="undertow-hub"]) * { box-sizing:border-box; } :is(.hub[data-el="undertow-hub"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.hub[data-el="undertow-hub"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.hub[data-el="undertow-hub"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.hub[data-el="undertow-hub"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.hub[data-el="undertow-hub"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.hub[data-el="undertow-hub"]) { position:relative; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(0,1fr)); gap:var(--gap-sm); padding:var(--gap-sm); }
+:is(.hub[data-el="undertow-hub"]) .core { grid-column:2; grid-row:2; justify-self:center; align-self:center; width:min(100%,190px); aspect-ratio:1; border-radius:50%; background:var(--a1); color:var(--a1-on); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; z-index:2; }
+:is(.hub[data-el="undertow-hub"]) .core .name { font-size:var(--type-28); } :is(.hub[data-el="undertow-hub"]) .core .icon { width:64px; height:64px; }
+:is(.hub[data-el="undertow-hub"]) .spoke { position:relative; background:var(--page); border-top:var(--stroke) solid var(--n-3); padding:var(--gap-sm); display:flex; flex-direction:column; justify-content:center; gap:calc(var(--gap-sm)/2); text-align:center; z-index:1; }
+:is(.hub[data-el="undertow-hub"]) .spoke::after { content:""; position:absolute; width:var(--gap); border-top:var(--stroke) solid var(--n-4); top:50%; left:100%; z-index:-1; }
+:is(.hub[data-el="undertow-hub"]) .spoke:nth-child(2) { grid-area:1/1; } :is(.hub[data-el="undertow-hub"]) .spoke:nth-child(3) { grid-area:1/3; } :is(.hub[data-el="undertow-hub"]) .spoke:nth-child(4) { grid-area:2/3; } :is(.hub[data-el="undertow-hub"]) .spoke:nth-child(5) { grid-area:3/3; } :is(.hub[data-el="undertow-hub"]) .spoke:nth-child(6) { grid-area:3/1; } :is(.hub[data-el="undertow-hub"]) .spoke:nth-child(7) { grid-area:2/1; }
+:is(.hub[data-el="undertow-hub"]) .spoke.on { background:var(--a1-2-soft); border-color:var(--a1); }
+@container (max-width:700px) { :is(.hub[data-el="undertow-hub"]) .name { font-size:var(--type-16); } :is(.hub[data-el="undertow-hub"]) .note { font-size:var(--type-12); } :is(.hub[data-el="undertow-hub"]) .core .name { font-size:var(--type-20); } }
+:is(.hub[data-el="undertow-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(1 of .spoke) { grid-area:1/1; }
+:is(.hub[data-el="undertow-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(2 of .spoke) { grid-area:1/3; }
+:is(.hub[data-el="undertow-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(3 of .spoke) { grid-area:3/1; }
+:is(.hub[data-el="undertow-hub"]):has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(4 of .spoke) { grid-area:3/3; }
+:is(.hub[data-el="undertow-hub"]):has(> .spoke:nth-child(3 of .spoke):last-child) .spoke:nth-child(1 of .spoke) { grid-area:1/1; }
+:is(.hub[data-el="undertow-hub"]):has(> .spoke:nth-child(3 of .spoke):last-child) .spoke:nth-child(2 of .spoke) { grid-area:2/3; }
+:is(.hub[data-el="undertow-hub"]):has(> .spoke:nth-child(3 of .spoke):last-child) .spoke:nth-child(3 of .spoke) { grid-area:3/1; }
+
+[data-el="undertow-hub"] small { color:inherit; }
+
+.hub[data-el="undertow-hub"] .core .note { color:var(--a1-on); font-size:var(--type-12); text-align:center; padding-inline:var(--gap-sm); }
+
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) { grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr)); }
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .core { position:absolute; left:50%;top:50%;transform:translate(-50%,-50%);width:min(34%,280px); }
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .core .name {font-size:var(--type-24);}
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(1 of .spoke) { grid-area:1/1;text-align:left;align-items:flex-start;padding:var(--pad);}
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(2 of .spoke) { grid-area:1/2;text-align:right;align-items:flex-end;padding:var(--pad);}
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(3 of .spoke) { grid-area:2/1;text-align:left;align-items:flex-start;padding:var(--pad);}
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .spoke:nth-child(4 of .spoke) { grid-area:2/2;text-align:right;align-items:flex-end;padding:var(--pad);}
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .spoke .note {width:70%;}
+@container (max-width:700px) { .hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .spoke .note {font-size:var(--type-12);} .hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .core .name {font-size:var(--type-16);} .hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .core .note {font-size:var(--type-10);} }
+.hub[data-el="undertow-hub"]:has(> .spoke:nth-child(4 of .spoke):last-child) .core {grid-area:auto;}
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) {display:block;padding:0;background:none;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke {position:absolute;width:510px;height:204px;left:0;top:0;padding:var(--gap-lg) var(--undertow-space-31) var(--gap);background:var(--n-1);border:0;display:block;text-align:left;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke:nth-child(3),.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke:nth-child(5) {left:524px;text-align:right;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke:nth-child(4),.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke:nth-child(5) {top:218px;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke::before,.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke::after {content:none;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke .name {display:block;font-size:var(--type-28);padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-5);}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke .note {font-size:var(--type-16);line-height:var(--body-line);width:330px;margin-top:var(--gap);color:var(--ink);}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke:nth-child(3) .note,.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke:nth-child(5) .note {margin-left:auto;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .core {position:absolute;left:363px;top:52px;width:318px;height:318px;transform:none;display:flex;flex-direction:column;align-items:center;justify-content:center;border:11px solid var(--n-1);border-radius:50%;padding:var(--gap);background:var(--a1-7);color:var(--page);z-index:2;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .core .icon {width:78px;height:78px;}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .core .name {font-size:var(--type-36);white-space:nowrap;margin-top:var(--gap-sm);}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .core .note {font-size:var(--type-16);width:230px;text-align:center;line-height:var(--lead-line);margin-top:var(--gap-sm);color:inherit;}
+
+
+
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .core {border-color:var(--page);}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .spoke .note {font-size:var(--type-14);line-height:var(--body-line);}
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .core .note {font-size:var(--type-14);line-height:var(--body-line);}
+
+
+.hub[data-el="undertow-hub"]:has(>.spoke:nth-child(5)):not(:has(>.spoke:nth-child(6))):not(:has(>.spoke>.mark)) .core .icon {width:64px;height:64px;}
+
+.hub[data-el="undertow-hub"] .core .mark:has(>.icon:nth-child(2)) {position:relative;display:block;width:64px;height:64px;flex:none;}
+.hub[data-el="undertow-hub"] .core .mark:has(>.icon:nth-child(2))>.icon {position:absolute;inset:0;width:64px;height:64px;}
+.hub[data-el="undertow-hub"] .core .mark:has(>.icon:nth-child(2))>.icon:nth-child(2) {left:17px;top:12px;right:auto;bottom:auto;width:30px;height:20px;}
+.hub[data-el="undertow-hub"]:has(>.core>.mark>.icon:nth-child(2)) .core .mark>.icon:nth-child(2) {left:17px;top:12px;right:auto;bottom:auto;width:30px;height:20px;}

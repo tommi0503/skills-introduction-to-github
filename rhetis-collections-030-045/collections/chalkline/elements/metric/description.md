@@ -1,0 +1,1 @@
+Large, heavy figures sit directly on the page above bold names and smaller notes. Units remain attached to the baseline but use a modest type step. A row of statistics is separated by vertical hairlines and aligned at the same visual level.

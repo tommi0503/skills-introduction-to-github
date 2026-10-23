@@ -1,0 +1,1 @@
+Plain nested rectangles allocate real proportional area to branches and tiles; only the chosen tile receives a full accent fill. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

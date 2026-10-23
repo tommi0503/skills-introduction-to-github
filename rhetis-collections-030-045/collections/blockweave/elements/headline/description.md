@@ -1,0 +1,1 @@
+Large unboxed type carries the page point; the key phrase uses a deep accent text role and optional solid accent ground. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

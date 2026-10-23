@@ -1,0 +1,1 @@
+A compact filled circular core anchors three to six surrounding information blocks. Each spoke runs from its block towards the core and the block’s top rule aligns its name and note. Small circular markers are optional and do not displace the primary name.

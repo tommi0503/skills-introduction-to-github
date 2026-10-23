@@ -1,0 +1,1 @@
+Bold display typography forms the element, with an optional small kicker and one plain explanatory line. Emphasised words receive a thin underline rather than decorative lettering. Centre and filled-ground variants retain the same spacing and hierarchy.

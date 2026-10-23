@@ -1,0 +1,1 @@
+A flat neutral source panel has a short accent top band, optional line numbers and discrete semantic token colors. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

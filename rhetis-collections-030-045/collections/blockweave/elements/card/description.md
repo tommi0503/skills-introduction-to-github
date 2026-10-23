@@ -1,0 +1,1 @@
+Open rectangular panels center a stable text stack; a restrained edge and small corner radius keep the surface quiet, while the emphasized member receives a solid accent fill. Typography, spacing and corner treatment follow the shared Blockweave tokens, with discrete container steps for compact seating.

@@ -1,0 +1,25 @@
+:is(.agenda[data-el="undertow-agenda"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.agenda[data-el="undertow-agenda"]) * { box-sizing:border-box; } :is(.agenda[data-el="undertow-agenda"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.agenda[data-el="undertow-agenda"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.agenda[data-el="undertow-agenda"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.agenda[data-el="undertow-agenda"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.agenda[data-el="undertow-agenda"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.agenda[data-el="undertow-agenda"]) { display:flex; flex-direction:column; justify-content:center; gap:var(--gap-sm); }
+:is(.agenda[data-el="undertow-agenda"]) .entry { display:flex; align-items:center; gap:var(--gap-sm); background:var(--page); padding:var(--gap-sm); min-height:50px; } :is(.agenda[data-el="undertow-agenda"]) .mark { display:flex; width:34px; height:34px; border-radius:50%; flex:none; background:var(--ink); color:var(--page); align-items:center; justify-content:center; font-size:var(--type-12); font-weight:var(--label-weight); } :is(.agenda[data-el="undertow-agenda"]) .name { font-size:var(--type-22); } :is(.agenda[data-el="undertow-agenda"]) .note { font-size:var(--type-14); margin-left:auto; text-align:right; } :is(.agenda[data-el="undertow-agenda"]) .entry.on .mark { background:var(--a1); color:var(--a1-on); }
+@container (max-width:600px) { :is(.agenda[data-el="undertow-agenda"]) .name { font-size:var(--type-16); } :is(.agenda[data-el="undertow-agenda"]) .note { font-size:var(--type-12); } }
+
+[data-el="undertow-agenda"] small { color:inherit; }
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.agenda[data-el="undertow-agenda"] {display:flex;flex-direction:column;gap:var(--undertow-space-10);padding:0;background:none;}
+.agenda[data-el="undertow-agenda"] .entry {height:56px;min-height:56px;flex:none;display:grid;grid-template-columns:32px auto 1fr;gap:var(--gap-sm);padding:calc(var(--gap-sm)*.75);background:var(--n-1);border:0;align-items:center;}
+.agenda[data-el="undertow-agenda"] .entry .mark {height:32px;width:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--page);font-size:var(--type-14);padding:0;}
+.agenda[data-el="undertow-agenda"] .entry .name {font-size:var(--type-20);white-space:nowrap;}
+.agenda[data-el="undertow-agenda"] .entry .note {font-size:var(--type-14);text-align:right;padding-right:var(--gap-sm);margin:0;}
+
+
+.agenda[data-el="undertow-agenda"] {padding:var(--undertow-space-213) var(--undertow-space-96) 0 var(--undertow-space-101);}
+
+.agenda[data-el="undertow-agenda"] {justify-content:flex-start;}
+
+.agenda[data-el="undertow-agenda"] {padding:0;}

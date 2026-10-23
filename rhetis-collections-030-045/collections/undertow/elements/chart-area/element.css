@@ -1,0 +1,77 @@
+:is(.areas[data-el="undertow-chart-area"]) { min-width:0; min-height:0; position:relative; container-type:size; font-family:var(--font-body); font-weight:var(--body-weight); line-height:var(--body-line); letter-spacing:var(--body-track); }
+:is(.areas[data-el="undertow-chart-area"]) * { box-sizing:border-box; } :is(.areas[data-el="undertow-chart-area"]) .name { font-family:var(--font-display); font-size:var(--type-24); font-weight:var(--name-weight); line-height:var(--name-line); letter-spacing:var(--name-track); }
+:is(.areas[data-el="undertow-chart-area"]) .fig { font-family:var(--font-display); font-size:var(--type-40); font-weight:var(--figure-weight); line-height:var(--figure-line); letter-spacing:var(--figure-track); font-variant-numeric:tabular-nums; }
+:is(.areas[data-el="undertow-chart-area"]) .fig small { font-size:var(--type-20); font-weight:var(--label-weight); } :is(.areas[data-el="undertow-chart-area"]) .note { font-size:var(--type-16); font-weight:var(--body-weight); line-height:var(--body-line); color:var(--n-8); } :is(.areas[data-el="undertow-chart-area"]) .kick { font-size:var(--type-12); font-weight:var(--label-weight); line-height:var(--label-line); letter-spacing:var(--label-track); color:var(--n-8); }
+:is(.areas[data-el="undertow-chart-area"]) { isolation:isolate; position:relative; border-bottom:var(--stroke) solid var(--n-4); }
+:is(.areas[data-el="undertow-chart-area"]) .series { position:absolute; inset:0 0 var(--gap-lg); display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); grid-template-rows:minmax(0,1fr); anchor-scope:all; --undertow-area-color:var(--a1-3-soft); }
+:is(.areas[data-el="undertow-chart-area"]) .series:nth-child(1) { z-index:4; } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(2) { z-index:3; --undertow-area-color:var(--n-3); } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(3) { z-index:2; --undertow-area-color:var(--a2-3-soft); } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(4) { z-index:1; --undertow-area-color:var(--a3-3-soft); }
+:is(.areas[data-el="undertow-chart-area"]) .series > .name { position:absolute; top:0; left:0; font-size:var(--type-14); color:var(--ink); background:var(--page); padding:calc(var(--gap-sm)/3) var(--gap-sm); border-radius:999px; z-index:5; } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(2) > .name { left:25%; } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(3) > .name { left:50%; } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(4) > .name { left:75%; }
+:is(.areas[data-el="undertow-chart-area"]) .pt { position:static; align-self:start; justify-self:center; width:0; height:0; margin-top:calc(var(--gap-lg)*2 + (100cqh - var(--gap-lg)*3)*(1 - var(--v)/var(--max))); anchor-name:var(--undertow-self); }
+:is(.areas[data-el="undertow-chart-area"]) .pt::before { content:none; }
+:is(.areas[data-el="undertow-chart-area"]) .pt::after { content:""; position:absolute; left:anchor(var(--undertow-prev) center); right:anchor(var(--undertow-self) center); top:calc(anchor(var(--undertow-prev) top) - 100cqh); bottom:0; background:var(--undertow-area-color); clip-path:polygon(0 100cqh,100% calc(100% - (100cqh - var(--gap-lg)*3)*var(--v)/var(--max)),100% 100%,0 100%); }
+:is(.areas[data-el="undertow-chart-area"]) .pt:first-of-type::before,:is(.areas[data-el="undertow-chart-area"]) .pt:first-of-type::after { content:none; } :is(.areas[data-el="undertow-chart-area"]) .pt b { position:absolute; transform:translate(-50%,-150%); font-size:var(--type-14); color:var(--ink); z-index:6; } :is(.areas[data-el="undertow-chart-area"]) .axis { position:absolute; left:0; right:0; bottom:0; height:var(--gap-lg); display:flex; justify-content:space-around; align-items:center; font-size:var(--type-14); }
+@container (max-width:600px) { :is(.areas[data-el="undertow-chart-area"]) .pt b,:is(.areas[data-el="undertow-chart-area"]) .series > .name,:is(.areas[data-el="undertow-chart-area"]) .axis { font-size:var(--type-12); } :is(.areas[data-el="undertow-chart-area"]) .axis span:nth-child(even):not(:last-child) { visibility:hidden; } }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(1 of .pt) { --undertow-self:--undertow-area-1; --undertow-prev:--undertow-area-0; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(2 of .pt) { --undertow-self:--undertow-area-2; --undertow-prev:--undertow-area-1; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(3 of .pt) { --undertow-self:--undertow-area-3; --undertow-prev:--undertow-area-2; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(4 of .pt) { --undertow-self:--undertow-area-4; --undertow-prev:--undertow-area-3; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(5 of .pt) { --undertow-self:--undertow-area-5; --undertow-prev:--undertow-area-4; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(6 of .pt) { --undertow-self:--undertow-area-6; --undertow-prev:--undertow-area-5; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(7 of .pt) { --undertow-self:--undertow-area-7; --undertow-prev:--undertow-area-6; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(8 of .pt) { --undertow-self:--undertow-area-8; --undertow-prev:--undertow-area-7; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(9 of .pt) { --undertow-self:--undertow-area-9; --undertow-prev:--undertow-area-8; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(10 of .pt) { --undertow-self:--undertow-area-10; --undertow-prev:--undertow-area-9; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(11 of .pt) { --undertow-self:--undertow-area-11; --undertow-prev:--undertow-area-10; }
+:is(.areas[data-el="undertow-chart-area"]) .pt:nth-child(12 of .pt) { --undertow-self:--undertow-area-12; --undertow-prev:--undertow-area-11; }
+:is(.areas[data-el="undertow-chart-area"]) .series { z-index:auto; overflow:hidden; } :is(.areas[data-el="undertow-chart-area"]) .pt::after { z-index:2; } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(1) .pt::after { z-index:4; } :is(.areas[data-el="undertow-chart-area"]) .series:nth-child(2) .pt::after { z-index:3; } :is(.areas[data-el="undertow-chart-area"]) .pt b,:is(.areas[data-el="undertow-chart-area"]) .series > .name { z-index:20; }
+
+[data-el="undertow-chart-area"] small { color:inherit; }
+
+.areas[data-el="undertow-chart-area"] {overflow:hidden;} .areas[data-el="undertow-chart-area"] .series {overflow:visible;}
+.areas[data-el="undertow-chart-area"] .pt b {position:relative;display:block;width:max-content;white-space:nowrap;}
+
+.areas[data-el="undertow-chart-area"] .series:nth-child(n) {z-index:auto;}
+
+/* UNDERTOW PRECISE COMPOSITIONS */
+
+
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] {border:0;overflow:visible;background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series {inset:0;container-type:size;transform:translate(0);overflow:hidden;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series:nth-child(1) {--undertow-area-color:var(--n-3);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series:nth-child(2) {--undertow-area-color:var(--a1-3-soft);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt {margin-top:calc(100cqh*(1 - var(--v)/var(--max)));}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt::after {clip-path:polygon(0 100cqh,100% calc(100% - 100cqh*var(--v)/var(--max)),100% 100%,0 100%);opacity:.45;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt b {font-size:var(--type-14);transform:translate(-50%,-150%);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series>.name {top:auto;bottom:0;left:0;background:none;padding:0;font-size:var(--type-12);visibility:hidden;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .axis {bottom:-30px;height:24px;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .axis span {visibility:visible;font-size:var(--type-14);}
+
+
+
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] {height:355px;background:none;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series {left:28px;right:8px;background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .axis {left:28px;right:8px;}
+
+
+
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series>.name {visibility:visible;top:14px;bottom:auto;left:56px;white-space:nowrap;background:none;color:var(--ink);font-size:var(--type-12);padding:0;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series:nth-child(2)>.name {left:144px;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series {--undertow-series-stroke:var(--n-5);background:none;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] {background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series:nth-child(2) {--undertow-series-stroke:var(--a1-7);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .series>.name::before {content:"";display:inline-block;width:10px;height:10px;background:var(--undertow-series-stroke);margin-right:var(--undertow-space-4);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt b {color:var(--undertow-series-stroke);font-weight:var(--body-weight);}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt::before {content:"";position:fixed;left:anchor(var(--undertow-self) center);top:anchor(var(--undertow-self) center);width:7px;height:7px;transform:translate(-50%,-50%);border-radius:50%;background:var(--undertow-series-stroke);z-index:30;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt b::before,.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt b::after {content:"";position:fixed;left:anchor(var(--undertow-prev) center);right:anchor(var(--undertow-self) center);pointer-events:none;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt b::before {top:calc(anchor(var(--undertow-prev) bottom) - .5px);bottom:calc(anchor(var(--undertow-self) bottom) - .5px);background:linear-gradient(to top right,transparent calc(50% - .5px),var(--undertow-series-stroke) calc(50% - .5px),var(--undertow-series-stroke) calc(50% + .5px),transparent calc(50% + .5px));}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt b::after {top:calc(anchor(var(--undertow-self) bottom) - .5px);bottom:calc(anchor(var(--undertow-prev) bottom) - .5px);background:linear-gradient(to bottom right,transparent calc(50% - .5px),var(--undertow-series-stroke) calc(50% - .5px),var(--undertow-series-stroke) calc(50% + .5px),transparent calc(50% + .5px));}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt:first-of-type b::before,.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt:first-of-type b::after {content:none;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"]::after {content:"";position:absolute;left:470px;top:135px;width:100px;height:70px;background:linear-gradient(to top right,transparent,var(--n-1));clip-path:path("M0 65Q50 60 63 19L48 15L91 0L94 40L76 31Q55 65 0 65Z");z-index:30;}
+
+
+
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] {background-size:calc(100% - 36px) 100%;background-position:28px 0;background-repeat:no-repeat;}
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt b {position:fixed;left:anchor(var(--undertow-self) center);top:calc(anchor(var(--undertow-self) top) - 24px);transform:none;width:40px;margin-left:calc(var(--gap)*-5/6);text-align:center;}
+
+
+.areas[data-el="undertow-chart-area"][style*="--undertow-plot-inset:"] .pt::after {background:linear-gradient(to bottom,var(--undertow-area-color),transparent);background-size:100% 100cqh;background-position:left bottom;background-repeat:no-repeat;opacity:.7;}

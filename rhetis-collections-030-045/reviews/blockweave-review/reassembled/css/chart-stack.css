@@ -1,0 +1,29 @@
+.stacks[data-el="blockweave-chart-stack"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.stacks[data-el="blockweave-chart-stack"] .name{font-size:var(--type-22);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);margin:0;overflow-wrap:anywhere}
+.stacks[data-el="blockweave-chart-stack"] .note{font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);margin:0;overflow-wrap:anywhere}
+.stacks[data-el="blockweave-chart-stack"] .kick{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);color:var(--a1-8);margin:0}
+.stacks[data-el="blockweave-chart-stack"] .fig{font-size:var(--type-56);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-8);margin:0}
+.stacks[data-el="blockweave-chart-stack"] .icon{display:inline-block;width:40px;height:40px;flex:none}
+.stacks[data-el="blockweave-chart-stack"] small{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line)}
+.stacks[data-el="blockweave-chart-stack"]{display:flex;gap:var(--gap);padding:var(--gap-lg) var(--gap);align-items:stretch;border-bottom:var(--stroke) solid var(--n-4)}
+.stacks[data-el="blockweave-chart-stack"] .sbar{position:relative;display:flex;flex-direction:column-reverse;justify-content:flex-start;flex:1;min-width:0}
+.stacks[data-el="blockweave-chart-stack"] .sbar>span{position:absolute;top:calc(100% + 8px);left:0;right:0;text-align:center;font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+.stacks[data-el="blockweave-chart-stack"] .seg{height:calc(var(--v)/var(--max)*100%);background:var(--a1);display:flex;align-items:center;justify-content:center;color:var(--a1-on)}
+.stacks[data-el="blockweave-chart-stack"].pct .seg{height:calc(var(--v)*1%)}
+.stacks[data-el="blockweave-chart-stack"] .seg b{font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+.stacks[data-el="blockweave-chart-stack"] .seg.tone-2{background:var(--a2);color:var(--a2-on)}
+.stacks[data-el="blockweave-chart-stack"] .seg.tone-3{background:var(--a3);color:var(--a3-on)}
+.stacks[data-el="blockweave-chart-stack"] .seg.tone-4{background:var(--a4);color:var(--a4-on)}
+.stacks[data-el="blockweave-chart-stack"] .seg.tone-5{background:var(--a4);color:var(--a4-on)}
+.stacks[data-el="blockweave-chart-stack"].h{flex-direction:column;padding-left:calc(var(--pad)*4)}
+.stacks[data-el="blockweave-chart-stack"].h .sbar{flex-direction:row;align-items:stretch}
+.stacks[data-el="blockweave-chart-stack"].h .seg{height:auto;width:calc(var(--v)/var(--max)*100%)}
+.stacks[data-el="blockweave-chart-stack"].pct.h .seg{width:calc(var(--v)*1%)}
+.stacks[data-el="blockweave-chart-stack"].h .sbar>span{top:50%;right:calc(100% + 8px);left:auto;transform:translateY(-50%);width:80px}
+@container (max-width: 760px){.stacks[data-el="blockweave-chart-stack"] .name{font-size:var(--type-18)}.stacks[data-el="blockweave-chart-stack"] .note{font-size:var(--type-14)}.stacks[data-el="blockweave-chart-stack"] .fig{font-size:var(--type-40)}.stacks[data-el="blockweave-chart-stack"] .parts{padding:var(--gap);gap:var(--gap-sm)}}
+@container (max-width: 460px){.stacks[data-el="blockweave-chart-stack"] .name{font-size:var(--type-16)}.stacks[data-el="blockweave-chart-stack"] .note{font-size:var(--type-12)}.stacks[data-el="blockweave-chart-stack"] .fig{font-size:var(--type-28)}.stacks[data-el="blockweave-chart-stack"] .kick{font-size:var(--type-12)}.stacks[data-el="blockweave-chart-stack"] h2{font-size:var(--type-28)}.stacks[data-el="blockweave-chart-stack"] p{font-size:var(--type-14)}}
+@container (max-width: 250px){.stacks[data-el="blockweave-chart-stack"] .kick{display:none}.stacks[data-el="blockweave-chart-stack"] .note{display:none}}
+
+.stacks[data-el="blockweave-chart-stack"] small{color:inherit}
+
+.stacks[data-el="blockweave-chart-stack"] .seg:nth-child(2 of .seg){background:var(--n-4);color:var(--ink)}.stacks[data-el="blockweave-chart-stack"] .seg:nth-child(3 of .seg){background:var(--a2-2-soft);color:var(--ink)}.stacks[data-el="blockweave-chart-stack"] .sbar>.seg.tone-1{background:var(--a1);color:var(--a1-on)}.stacks[data-el="blockweave-chart-stack"] .sbar>.seg.tone-2{background:var(--n-4);color:var(--ink)}.stacks[data-el="blockweave-chart-stack"] .sbar>.seg.tone-3{background:var(--a2-2-soft);color:var(--ink)}
