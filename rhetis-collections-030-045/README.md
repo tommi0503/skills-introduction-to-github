@@ -2,6 +2,8 @@
 
 첨부 이미지 ZIP의 6개 덱, 원본 90장을 각각 독립 컬렉션으로 제작한 소스와 검수 산출물입니다. [비교 미리보기](index.html), [90장 목록](inventory.md), [최종 파일 검사](verification.json)를 함께 제공합니다.
 
+요소별 시트를 모은 [검수 PDF 모음](element-sheet-pdfs/README.md)과 [6개 컬렉션 통합 PDF](element-sheet-pdfs/all-collections-element-sheets.pdf)를 제공합니다. 컬렉션별 114페이지(라이트 57장 + 다크 57장), 통합 684페이지이며 요소별 북마크가 있습니다.
+
 | 덱 | 컬렉션 / 소스 | 원본 페이지 | 요소 fixture | 다운로드 |
 |---|---|---:|---:|---|
 | 030 | [chalkline](collections/chalkline/) | 2 | 171 | [collection](downloads/chalkline.zip) · [review](downloads/chalkline-review.zip) |
