@@ -6,14 +6,16 @@
 
 원본·카피본 비교 시트의 [검수 PDF 모음](comparison-pdfs/README.md)도 제공합니다. [원본 | replica 90쪽](comparison-pdfs/original-vs-replica.pdf), [원본 | 조립본 90쪽](comparison-pdfs/original-vs-reassembled.pdf), [전체 통합 180쪽](comparison-pdfs/all-slide-comparisons.pdf)에 덱·페이지별 북마크를 넣었습니다.
 
+[전체 컬렉션·복제본 코드 통합 ZIP 다운로드](https://github.com/tommi0503/skills-introduction-to-github/releases/download/rhetis-030-045-all-in-one-20261023/rhetis-collections-030-045-all-in-one.zip) — 6개 컬렉션, replica·조립본 180장 코드, 검수 이미지·PDF, 원본, 폰트, 계약, 도구, 미리보기를 포함합니다. 압축을 푼 폴더에서 아래 미리보기 실행 명령을 사용할 수 있습니다. 개별 ZIP 12개의 중복 사본과 Python 캐시는 제외했습니다.
+
 | 덱 | 컬렉션 / 소스 | 원본 페이지 | 요소 fixture | 다운로드 |
 |---|---|---:|---:|---|
-| 030 | [chalkline](collections/chalkline/) | 2 | 171 | [collection](downloads/chalkline.zip) · [review](downloads/chalkline-review.zip) |
-| 031 | [undertow](collections/undertow/) | 13 | 174 | [collection](downloads/undertow.zip) · [review](downloads/undertow-review.zip) |
-| 033 | [cutplane](collections/cutplane/) | 15 | 171 | [collection](downloads/cutplane.zip) · [review](downloads/cutplane-review.zip) |
-| 038 | [skylight](collections/skylight/) | 21 | 175 | [collection](downloads/skylight.zip) · [review](downloads/skylight-review.zip) |
-| 043 | [arrowtab](collections/arrowtab/) | 20 | 180 | [collection](downloads/arrowtab.zip) · [review](downloads/arrowtab-review.zip) |
-| 045 | [blockweave](collections/blockweave/) | 19 | 183 | [collection](downloads/blockweave.zip) · [review](downloads/blockweave-review.zip) |
+| 030 | [chalkline](collections/chalkline/) | 2 | 171 | [collection](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/chalkline.zip) · [review](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/chalkline-review.zip) |
+| 031 | [undertow](collections/undertow/) | 13 | 174 | [collection](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/undertow.zip) · [review](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/undertow-review.zip) |
+| 033 | [cutplane](collections/cutplane/) | 15 | 171 | [collection](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/cutplane.zip) · [review](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/cutplane-review.zip) |
+| 038 | [skylight](collections/skylight/) | 21 | 175 | [collection](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/skylight.zip) · [review](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/skylight-review.zip) |
+| 043 | [arrowtab](collections/arrowtab/) | 20 | 180 | [collection](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/arrowtab.zip) · [review](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/arrowtab-review.zip) |
+| 045 | [blockweave](collections/blockweave/) | 19 | 183 | [collection](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/blockweave.zip) · [review](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-collections-030-045/downloads/blockweave-review.zip) |
 
 각 컬렉션은 kit, foundation, 계약 요소 56종을 포함합니다. `collections/<name>/`과 컬렉션 ZIP 안에는 계약이 허용한 CSS/JSON/MD/HTML만 있습니다. 사진·복잡한 일러스트·이미지 아이콘·기기 화면은 연회색 placeholder입니다. 원본 전체 이미지를 페이지 배경으로 쓰지 않았습니다.
 
