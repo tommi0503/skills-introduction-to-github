@@ -1,0 +1,1 @@
+Observed on page 05: a 359.328×401 rounded white panel has a 33 px inset, an opening label, title, accent rule and separate main and smaller note fields. Its small top-right mark occupies the measured 24 px slot. Container-relative parts and bounded typography retain those divisions in the received box.

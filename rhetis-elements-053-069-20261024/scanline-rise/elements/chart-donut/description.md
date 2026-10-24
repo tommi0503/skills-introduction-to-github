@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Circular measures pair a proportional ring with a figure and its caption. Its own painted parts include rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

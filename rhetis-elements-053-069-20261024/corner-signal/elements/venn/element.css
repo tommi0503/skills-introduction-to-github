@@ -1,0 +1,18 @@
+/* Not observed in the replica. Source05's chamfered planes and fine rules
+   define two or three overlapping sets; the complete element owns the core. */
+.venn[data-el="corner-signal-venn"]{container-type:size;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;box-sizing:border-box;color:var(--ink);font-family:var(--font-body);--venn-d:min(45cqw,60cqh);--venn-r:min(13cqw,17cqh);--venn-n:3}
+.venn[data-el="corner-signal-venn"] *{box-sizing:border-box;margin:0;min-width:0}
+.venn[data-el="corner-signal-venn"]>.set{position:absolute;left:calc(50% + cos(calc(-90deg + var(--venn-i)*360deg/var(--venn-n)))*var(--venn-r) - var(--venn-d)/2);top:calc(50% + sin(calc(-90deg + var(--venn-i)*360deg/var(--venn-n)))*var(--venn-r) - var(--venn-d)/2);width:var(--venn-d);height:var(--venn-d)}
+.venn[data-el="corner-signal-venn"]>.set::before{content:"";position:absolute;inset:0;z-index:0;background:color-mix(in srgb,var(--n-3) 46%,transparent);border:1px solid var(--n-5);clip-path:polygon(0 0,88% 0,100% 16%,100% 100%,0 100%)}
+.venn[data-el="corner-signal-venn"]>.set.on::before{background:color-mix(in srgb,var(--a1-6) 20%,transparent);border-color:var(--a1-7)}
+.venn[data-el="corner-signal-venn"]>.set>.name{position:absolute;z-index:2;top:12%;left:17.5%;width:65%;padding:min(1cqw,1.5cqh);background:var(--a1-7);color:var(--page);clip-path:polygon(0 0,90% 0,100% 20%,100% 100%,0 100%);text-align:center;font-weight:var(--name-weight);line-height:var(--name-line);font-size:clamp(var(--type-12),min(2cqw,4cqh),var(--type-22));overflow-wrap:anywhere}
+.venn[data-el="corner-signal-venn"]>.core{position:absolute;z-index:5;left:50%;top:50%;translate:-50% -50%;width:min(16cqw,24cqh);height:min(16cqw,24cqh);display:flex;align-items:center;justify-content:center;padding:min(1cqw,1.5cqh);background:var(--a1-7);color:var(--page);clip-path:polygon(0 0,90% 0,100% 15%,100% 100%,0 100%);text-align:center;font-size:clamp(var(--type-14),min(2.2cqw,5cqh),var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line)}
+.venn[data-el="corner-signal-venn"]:has(>.set:nth-child(2 of .set):nth-last-child(1 of .set)){--venn-n:2}
+.venn[data-el="corner-signal-venn"]:has(>.set:nth-child(2 of .set):nth-last-child(1 of .set))>.set{left:calc(50% + (var(--venn-i) - .5)*var(--venn-d)*.7 - var(--venn-d)/2);top:calc(50% - var(--venn-d)/2)}
+.venn[data-el="corner-signal-venn"]:has(>.set:nth-child(2 of .set):nth-last-child(1 of .set))>.set>.name{left:4%;top:35%;width:40%}
+.venn[data-el="corner-signal-venn"]:has(>.set:nth-child(2 of .set):nth-last-child(1 of .set))>.set:nth-child(2 of .set)>.name{left:56%}
+.venn[data-el="corner-signal-venn"]:has(>.set:nth-child(3 of .set):nth-last-child(1 of .set))>.set:nth-child(2 of .set)>.name{left:55%;top:50%;width:43%;translate:0 -50%}
+.venn[data-el="corner-signal-venn"]:has(>.set:nth-child(3 of .set):nth-last-child(1 of .set))>.set:nth-child(3 of .set)>.name{left:2%;top:50%;width:43%;translate:0 -50%}
+.venn[data-el="corner-signal-venn"]>.set:nth-child(1 of .set){--venn-i:0}
+.venn[data-el="corner-signal-venn"]>.set:nth-child(2 of .set){--venn-i:1}
+.venn[data-el="corner-signal-venn"]>.set:nth-child(3 of .set){--venn-i:2}

@@ -1,0 +1,1 @@
+Observed on page 18. Layered groups arrange named system parts and their internal members. Three technology layer columns with 270-ish top strips; first AI/vision system feeds two specialized controller columns via rightward connectors. Type uses bounded container-relative sizing, with shared weight and line-height roles.

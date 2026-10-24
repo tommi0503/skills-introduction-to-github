@@ -1,0 +1,1 @@
+Observed on page 08. Parent and child groups form a hierarchy whose connecting rules belong to the complete group. One CEO root,3 department branches and 3 team leaves each; all orthogonal connectors owned by this org. Type uses bounded container-relative sizing, with shared weight and line-height roles.

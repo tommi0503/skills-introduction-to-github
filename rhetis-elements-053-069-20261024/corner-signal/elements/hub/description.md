@@ -1,0 +1,1 @@
+Observed on page 09. A central hub and its surrounding named nodes share one owned connector field. Central 491×377 product/screen placeholder with 3 callout members on each side. Type uses bounded container-relative sizing, with shared weight and line-height roles.

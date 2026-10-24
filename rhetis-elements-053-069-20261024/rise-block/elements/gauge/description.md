@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A bounded progress track shows a numeric fraction beside its name and figure. Its own painted parts include shared-radius corners. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A compact point sequence draws a trend beside its summary label and figure. Its own painted parts include polygon-clipped faces. Container-relative dimensions scale the internal arrangement, while text uses the shared type roles.

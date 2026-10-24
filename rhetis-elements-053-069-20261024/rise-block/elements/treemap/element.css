@@ -1,0 +1,14 @@
+/* Unobserved leaf, new design. Source motif: 260×239 step face and its neutral plinth; no existing collection CSS is reused. */
+.treemap[data-el="rise-block-treemap"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);background:var(--n-1);border-top:calc(var(--pad)*.33333333) solid var(--a1-9);border-radius:var(--radius);display:flex;gap:var(--gap-sm);padding:var(--pad)}
+.treemap[data-el="rise-block-treemap"] *{box-sizing:border-box}
+.treemap[data-el="rise-block-treemap"] :is(b,p,span,small){margin:0}
+.treemap[data-el="rise-block-treemap"]>.branch{position:relative;flex:var(--v) 1 0;min-width:0;min-height:0;display:flex;flex-direction:column;padding-top:calc(var(--pad)*1.5);gap:calc(var(--gap-sm)*.4);container-type:size}
+.treemap[data-el="rise-block-treemap"]>.branch>.name{position:absolute;left:0;right:0;top:0;font-size:clamp(var(--type-8),calc(100cqw*.06),var(--type-16));font-weight:var(--name-weight);line-height:var(--label-line);color:var(--ink);text-align:center}
+.treemap[data-el="rise-block-treemap"]>.branch>.tile{flex:var(--v) 1 0;min-height:0;min-width:0;padding:calc(var(--gap-sm)*.3);background:var(--a1-1-soft);border:1px solid var(--n-3);border-radius:var(--radius);container-type:size;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--gap-sm)*.25);color:var(--ink)}
+.treemap[data-el="rise-block-treemap"]>.branch:nth-child(2)>.tile{background:var(--a2-1-soft)}
+.treemap[data-el="rise-block-treemap"]>.branch:nth-child(3)>.tile{background:var(--a3-1-soft)}
+.treemap[data-el="rise-block-treemap"]>.branch>.tile.on{background:var(--a1-7);color:var(--page)}
+.treemap[data-el="rise-block-treemap"]>.branch>.tile>.name{font-size:clamp(var(--type-8),calc(100cqh*.2),var(--type-16));font-weight:var(--name-weight);line-height:var(--label-line);text-align:center;overflow-wrap:anywhere;color:inherit}
+.treemap[data-el="rise-block-treemap"]>.branch>.tile>.fig{font-size:clamp(var(--type-8),calc(100cqh*.3),var(--type-32));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);text-align:center;color:inherit}
+.treemap[data-el="rise-block-treemap"]>.branch:nth-child(n)>.tile{background:var(--a1-9);color:var(--page);border-radius:var(--radius-sm)}
+.treemap[data-el="rise-block-treemap"]>.branch:nth-child(n)>.tile.on{background:var(--a1-7)}

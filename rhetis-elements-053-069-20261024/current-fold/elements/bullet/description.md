@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Each row combines an actual-value measure, qualitative bands and an independent target marker. Its own painted parts include polygon-clipped faces. Container queries adapt the element’s own parts, while shared type roles preserve the text hierarchy.

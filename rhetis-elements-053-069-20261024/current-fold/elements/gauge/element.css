@@ -1,0 +1,9 @@
+/* Unobserved leaf, new design. Source motif: 81/116/206px circles and20px chart figures; no existing collection CSS is reused. */
+.meter[data-el="current-fold-gauge"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);border-bottom:1px solid var(--n-3);width:100%;height:min(100%,128px);align-self:center;isolation:isolate}
+.meter[data-el="current-fold-gauge"] *{box-sizing:border-box}
+.meter[data-el="current-fold-gauge"] :is(b,p,span,small){margin:0}
+.meter[data-el="current-fold-gauge"]>.name{position:absolute;left:calc(var(--pad)*.5);top:10%;width:max-content;font-size:clamp(var(--type-10),calc(100cqh*.25),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);color:var(--page);max-width:58%;padding:0 calc(var(--gap-sm)*.5);border-radius:999px;background:var(--a1-9)}
+.meter[data-el="current-fold-gauge"]>.fig{position:absolute;right:calc(var(--pad)*.5);top:5%;font-size:clamp(var(--type-14),calc(100cqh*.45),var(--type-32));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-7)}
+.meter[data-el="current-fold-gauge"]::before,.meter[data-el="current-fold-gauge"]::after{content:'';position:absolute;left:calc(var(--pad)*.5);bottom:12%;height:min(12cqh,16px);border-radius:var(--radius-sm)}
+.meter[data-el="current-fold-gauge"]::before{right:calc(var(--pad)*.5);background:var(--n-3)}
+.meter[data-el="current-fold-gauge"]::after{width:calc((100cqw - var(--pad))*var(--v)/100);background:var(--a1-7)}

@@ -1,0 +1,1 @@
+Rounded white plates sit within a dark neutral perimeter. A horizontal title plate and a tall left rail share a short accent rule beside the PART label. The contents composition instead uses a free-standing heading and four measured plates. Long capsules, restrained circular marks, dense tables and light-weight large titles define the extensions.

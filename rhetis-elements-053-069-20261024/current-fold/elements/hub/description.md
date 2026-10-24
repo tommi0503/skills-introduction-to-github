@@ -1,0 +1,1 @@
+Observed on page 06. A central hub and its surrounding named nodes share one owned connector field. Static core value hub with 3 semantic spokes. Type uses bounded container-relative sizing, with shared weight and line-height roles.

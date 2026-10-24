@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Ordered entries group an index, a heading and supporting copy. Its own painted parts include polygon-clipped faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

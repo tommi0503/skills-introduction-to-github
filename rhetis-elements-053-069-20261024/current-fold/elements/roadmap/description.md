@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Dark period tabs accompany crisp duration strips with a folded upper corner. The small triangular facet belongs to the duration itself and preserves the deck’s cut-paper construction.

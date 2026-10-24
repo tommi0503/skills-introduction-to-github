@@ -1,0 +1,18 @@
+/* Source07: four contiguous 246.5px quarter chevrons, 49px header +69px gray panel.
+18px normal line boxes are 21px; three-line text extends 4px below the original
+118px panel, so the visible union is122px. No vertical timeline line exists here. */
+.track[data-el="scanline-rise-timeline"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:auto;max-height:100%;aspect-ratio:986/122;align-self:center;display:flex;gap:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.track[data-el="scanline-rise-timeline"] *{box-sizing:border-box;min-width:0;margin:0}
+.track[data-el="scanline-rise-timeline"]>.stop{position:relative;flex:1;min-height:0;background:linear-gradient(var(--n-1) 0 96.721311%,var(--page) 96.721311% 100%)}
+.track[data-el="scanline-rise-timeline"]>.stop>.kick{height:40.163934cqh;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,8% 50%);background:var(--a1-1-soft);color:var(--ink);font-size:clamp(var(--type-12),2.231237cqw,var(--type-22));font-weight:var(--figure-weight);line-height:var(--figure-line)}
+.track[data-el="scanline-rise-timeline"]>.stop:nth-child(2)>.kick{background:var(--a1-2-soft)}
+.track[data-el="scanline-rise-timeline"]>.stop:nth-child(3)>.kick{background:var(--a1-3-soft)}
+.track[data-el="scanline-rise-timeline"]>.stop:nth-child(n+4)>.kick{background:var(--a1-4-soft)}
+.track[data-el="scanline-rise-timeline"]>.stop>.name{padding:8.196721cqh 26.369168%;font-size:clamp(var(--type-10),1.825558cqw,var(--type-18));font-weight:var(--body-weight);line-height:calc(var(--body-line)*.777777778);letter-spacing:var(--body-track);color:var(--ink);overflow-wrap:anywhere}
+.track[data-el="scanline-rise-timeline"]>.stop>.note{font-size:var(--type-12);line-height:var(--body-line);color:var(--n-7)}
+.track[data-el="scanline-rise-timeline"]>.stop.on>.kick{background:var(--a1-7);color:var(--page)}
+.track[data-el="scanline-rise-timeline"].col{aspect-ratio:auto;height:100%;flex-direction:column}
+.track[data-el="scanline-rise-timeline"].col>.stop{display:grid;grid-template-columns:25% 1fr;background:var(--n-1)}
+.track[data-el="scanline-rise-timeline"].col>.stop>.kick{height:100%;clip-path:polygon(0 0,100% 0,100% 85%,50% 100%,0 85%)}
+.track[data-el="scanline-rise-timeline"].col>.stop>.name{align-self:center;padding:var(--gap-sm)}
+@container(max-width:700px){.track[data-el="scanline-rise-timeline"]>.stop>.name{padding-inline:14%;font-size:var(--type-10)}}

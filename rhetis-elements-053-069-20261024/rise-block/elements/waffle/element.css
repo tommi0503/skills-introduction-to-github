@@ -1,0 +1,15 @@
+/* Unobserved leaf, new design. Source motif: 260×239 step face and its neutral plinth; no existing collection CSS is reused. */
+.waffle[data-el="rise-block-waffle"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);background:var(--n-1);border-top:calc(var(--pad)*.33333333) solid var(--a1-9);border-radius:var(--radius);display:grid;grid-template-rows:minmax(0,1fr) auto auto;justify-items:center;align-items:center;gap:var(--gap-sm);padding:var(--pad)}
+.waffle[data-el="rise-block-waffle"] *{box-sizing:border-box}
+.waffle[data-el="rise-block-waffle"] :is(b,p,span,small){margin:0}
+.waffle[data-el="rise-block-waffle"]>.units{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:calc(var(--gap-sm)*.3);width:min(100%,66cqh);max-height:66cqh}
+.waffle[data-el="rise-block-waffle"]>.units>.u{--rise-block-waffle-unit-fill:var(--n-3);display:block;position:relative;aspect-ratio:1;background:var(--rise-block-waffle-unit-fill);border-radius:var(--radius)}
+.waffle[data-el="rise-block-waffle"]>.units>.u.on{--rise-block-waffle-unit-fill:var(--a1-9)}
+.waffle[data-el="rise-block-waffle"]>.units>.u.tone-2{--rise-block-waffle-unit-fill:var(--a2-7)}
+.waffle[data-el="rise-block-waffle"]>.fig{font-size:clamp(var(--type-14),calc(100cqw * 0.0457142857),var(--type-32));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--page);text-align:center;padding:calc(var(--gap-sm)*.3) var(--gap-sm);background:var(--a1-7);border-radius:var(--radius-sm)}
+.waffle[data-el="rise-block-waffle"]>.name{font-size:clamp(var(--type-8),calc(100cqw * 0.0228571429),var(--type-16));font-weight:var(--name-weight);line-height:var(--name-line);color:var(--ink);text-align:center;overflow-wrap:anywhere}
+.waffle[data-el="rise-block-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units{grid-template-columns:repeat(5,minmax(0,1fr))}
+.waffle[data-el="rise-block-waffle"].figures>.units>.u{background:none}
+.waffle[data-el="rise-block-waffle"].figures>.units>.u::before{content:'';position:absolute;left:35%;top:0;width:30%;height:30%;border-radius:999px;background:var(--rise-block-waffle-unit-fill)}
+.waffle[data-el="rise-block-waffle"].figures>.units>.u::after{content:'';position:absolute;left:20%;top:35%;width:60%;height:60%;border-radius:30% 30% 8% 8%;background:var(--rise-block-waffle-unit-fill)}
+.waffle[data-el="rise-block-waffle"]:not(.figures)>.units>.u{border-radius:var(--radius-sm)}

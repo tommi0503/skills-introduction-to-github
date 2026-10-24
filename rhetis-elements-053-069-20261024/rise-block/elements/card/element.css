@@ -1,0 +1,31 @@
+/* No observed card; deck grammar 053/19. Unobserved extension. Hard rectangular planes and an actual lower plinth.
+Kick, hero, name and note have independent rows. A fixed logical note row keeps the complete grid centered without moving the title or figure when copy length changes. */
+.card[data-el="rise-block-card"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);background:var(--page);border:0}
+.card[data-el="rise-block-card"] *{box-sizing:border-box;min-width:0;margin:0}
+.card[data-el="rise-block-card"]>.parts{--rise-block-card-name-reserve:clamp(var(--type-14),6cqh,var(--type-26));--rise-block-card-note-reserve:clamp(var(--type-12),6cqh,var(--type-16));--rise-block-card-name:clamp(var(--type-14),min(6cqw,6cqh),var(--type-26));--rise-block-card-figure:clamp(var(--type-24),min(13cqw,20cqh),var(--type-56));--rise-block-card-mark:min(22cqw,18cqh,var(--type-64));--rise-block-card-note:clamp(var(--type-12),min(3.5cqw,6cqh),var(--type-16));--rise-block-card-note-lines:4;--rise-block-card-kick:0px;--rise-block-card-hero:0px;position:relative;width:100%;height:100%;padding:min(5cqh,var(--gap)) min(6cqw,var(--gap));display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:var(--rise-block-card-kick) var(--rise-block-card-hero) calc(var(--rise-block-card-name-reserve)*var(--name-line)*2) calc(var(--rise-block-card-note-reserve)*var(--body-line)*var(--rise-block-card-note-lines));gap:min(2cqh,var(--gap-sm)) min(3cqw,var(--gap-sm));align-content:center;border-left:4px solid var(--a1-7);border-bottom:8px solid var(--n-3)}
+.card[data-el="rise-block-card"]>.parts:has(>.kick):has(>.mark):not(:has(>.fig)){--rise-block-card-note-lines:5}
+.card[data-el="rise-block-card"]>.parts:has(>.kick){--rise-block-card-kick:calc(var(--type-12)*var(--label-line))}
+.card[data-el="rise-block-card"]>.parts:has(>.mark):not(:has(>.fig)){--rise-block-card-hero:min(18cqh,var(--type-64))}
+.card[data-el="rise-block-card"]>.parts:has(>.fig):not(:has(>.mark)){--rise-block-card-hero:calc(clamp(var(--type-24),20cqh,var(--type-56))*var(--figure-line))}
+.card[data-el="rise-block-card"]>.parts:has(>.fig):has(>.mark){--rise-block-card-hero:max(calc(clamp(var(--type-24),20cqh,var(--type-56))*var(--figure-line)),min(18cqh,var(--type-64)))}
+.card[data-el="rise-block-card"]>.parts>.kick{grid-column:1/-1;grid-row:1;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.card[data-el="rise-block-card"]>.parts>.fig{grid-column:1/-1;grid-row:2;align-self:start;font-size:var(--rise-block-card-figure);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-7)}
+.card[data-el="rise-block-card"]>.parts>.fig small{font-size:clamp(var(--type-10),3cqw,var(--type-16));line-height:var(--label-line)}
+.card[data-el="rise-block-card"]>.parts>.mark{grid-column:1;grid-row:2;align-self:start;justify-self:start;display:flex;align-items:center;justify-content:center;width:var(--rise-block-card-mark);height:var(--rise-block-card-mark);font-size:var(--type-16);font-weight:var(--label-weight);background:var(--a1-7);color:var(--page);border:0}
+.card[data-el="rise-block-card"]>.parts:has(>.fig)>.mark{grid-column:2;align-self:start}
+.card[data-el="rise-block-card"]>.parts:has(>.mark)>.fig{grid-column:1}
+.card[data-el="rise-block-card"]>.parts>.mark>.icon{display:block;width:55%;height:55%}
+.card[data-el="rise-block-card"]>.parts>.mark>.seat.icon{width:100%;height:100%;background:var(--n-2);color:var(--n-7)}
+.card[data-el="rise-block-card"]>.parts>.name{grid-column:1/-1;grid-row:3;align-self:start;font-size:var(--rise-block-card-name);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.card[data-el="rise-block-card"]>.parts>.note{grid-column:1/-1;grid-row:4;align-self:center;font-size:var(--rise-block-card-note);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7)}
+.card[data-el="rise-block-card"].quiet{background:var(--n-1)}
+.card[data-el="rise-block-card"].line{border:1px solid var(--a1-7)}
+.card[data-el="rise-block-card"].tone-1>.parts{border-bottom-color:var(--a1-7)}
+.card[data-el="rise-block-card"].tone-2>.parts{border-bottom-color:var(--a2-7)}
+.card[data-el="rise-block-card"].tone-3>.parts{border-bottom-color:var(--a3-7)}
+.card[data-el="rise-block-card"].tone-4>.parts{border-bottom-color:var(--a4-7)}
+.card[data-el="rise-block-card"].tone-5>.parts{border-bottom-color:var(--n-3)}
+.card[data-el="rise-block-card"].on{background:var(--a1-7);color:var(--page)}
+.card[data-el="rise-block-card"].on>.parts{border-left-color:var(--a1-9);border-bottom-color:var(--a1-9)}
+.card[data-el="rise-block-card"].on>.parts>:is(.name,.note,.kick,.fig){color:var(--page)}
+.card[data-el="rise-block-card"].on>.parts>.mark{background:var(--page);color:var(--a1-7)}

@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A shared beam suspends two labelled pans around a central verdict. Its own painted parts include polygon-clipped faces. Container queries adapt the element’s own parts, while shared type roles preserve the text hierarchy.

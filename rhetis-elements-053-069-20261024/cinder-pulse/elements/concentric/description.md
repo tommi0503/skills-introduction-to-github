@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Nested sets share a fitted centre and leave exposed bands for their own names, figures and notes. Its own painted parts include rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

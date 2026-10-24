@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Sequential steps group their marks, headings and notes inside one complete process. Its own painted parts include square-edged faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

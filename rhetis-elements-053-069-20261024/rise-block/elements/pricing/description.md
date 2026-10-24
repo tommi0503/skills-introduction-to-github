@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Each plan groups its name, price, supporting note and feature list within the complete plan set. Its own painted parts include square-edged faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

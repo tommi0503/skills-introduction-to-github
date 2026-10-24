@@ -1,0 +1,1 @@
+Observed on page 04. Overlapping sets retain their names and supporting copy around a shared intersection. Two overlapping gray circles, orange lens and centered CORE VALUE; MISSION and VISION each contain heading/body text inside the source circle. Type uses bounded container-relative sizing, with shared weight and line-height roles.

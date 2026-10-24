@@ -1,0 +1,14 @@
+/* Source slide_18 supported bare metric row220×34.8: label20px at0/5.8,
+   figure24px at116.22/0. The surrounding gray KPI card is not painted by this bare figure. */
+:is(.stat,.stats)[data-el="cinder-pulse-metric"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] *{box-sizing:border-box;min-width:0;margin:0}
+.stats[data-el="cinder-pulse-metric"]{display:flex;align-items:center;gap:var(--gap-sm);height:100%}
+.stats[data-el="cinder-pulse-metric"]>.stat{position:relative;container-type:size;min-width:0;min-height:0;flex:1;height:100%;display:flex;align-items:center}
+.stat[data-el="cinder-pulse-metric"]{display:flex;align-items:center;height:100%}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] .stat+.stat{border-left:1px solid var(--n-3)}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] .parts{position:relative;width:100%;height:calc(clamp(var(--type-14),10.909091cqw,var(--type-52))*1.45)}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] .fig{position:absolute;left:52.827273%;top:0;font-size:clamp(var(--type-14),10.909091cqw,var(--type-52));font-weight:var(--figure-weight);line-height:calc(var(--body-line)*.966667);color:var(--a1-7)}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] .fig small{font-size:var(--type-16)}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] .name{position:absolute;left:0;top:calc(clamp(var(--type-14),10.909091cqw,var(--type-52))*.241667);width:52.827273%;font-size:clamp(var(--type-12),9.090909cqw,var(--type-40));font-weight:var(--body-weight);line-height:calc(var(--body-line)*.966667);color:var(--ink)}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] .note{position:absolute;left:0;top:calc(clamp(var(--type-14),10.909091cqw,var(--type-52))*1.45 + var(--gap-sm)*.5);width:100%;font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7)}
+:is(.stat,.stats)[data-el="cinder-pulse-metric"] .parts:has(>.note:not(:empty)){height:calc(clamp(var(--type-14),10.909091cqw,var(--type-52))*1.45 + var(--gap-sm)*.5 + var(--type-12)*4.5)}

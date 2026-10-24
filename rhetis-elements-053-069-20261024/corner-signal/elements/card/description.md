@@ -1,0 +1,1 @@
+Observed on pages 05 and 13: the base is a 359×382 white panel with a clipped upper-right corner, title at(49,36),84 px medallion at(37,168), supporting copy at(49,268) and a low rule at y 354. The numeric form uses its actual figure children rather than a new page-specific class. Child-relative geometry and bounded type preserve the same panel grammar at supported sizes.

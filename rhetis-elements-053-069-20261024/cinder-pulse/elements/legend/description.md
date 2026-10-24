@@ -1,0 +1,1 @@
+Observed on page 10: a left-aligned 320×23 key group uses 12 px labels, a neutral bar key and an accent line key. Small round swatches remain attached to their own labels with the source spacing. The group wraps through its own layout rather than relying on an external chart.

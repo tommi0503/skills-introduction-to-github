@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. The complete cycle owns its repeated nodes, their circular arrangement and their connecting path. Its own painted parts include rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

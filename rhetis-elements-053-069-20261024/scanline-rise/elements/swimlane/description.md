@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Owner rows contain workflow nodes, with directional connectors spanning the gaps between adjacent members. Its own painted parts include polygon-clipped faces, rounded marks or label ends. Container queries adapt the element’s own parts, while shared type roles preserve the text hierarchy.

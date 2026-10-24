@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Flat accent ribbons and neutral duration strips form a compact operational register. Narrow terminal bands and strong lower rules echo the deck’s report panels.

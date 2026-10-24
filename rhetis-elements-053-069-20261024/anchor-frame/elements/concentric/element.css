@@ -1,0 +1,21 @@
+/* No direct source instance; deck grammar from 069/01.
+Nested empty selection frames preserve a centred fit frame and exposed label bands. */
+.orbit[data-el="anchor-frame-concentric"] {position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);display:flex;align-items:center;justify-content:center}
+.orbit[data-el="anchor-frame-concentric"]>.ring{position:absolute;width:min(92cqw,92cqh);height:min(92cqw,92cqh);border-radius:999px;background:var(--a1-2-soft);container-type:size;text-align:center}
+.orbit[data-el="anchor-frame-concentric"]>.ring:nth-child(2){width:min(66cqw,66cqh);height:min(66cqw,66cqh);background:var(--a1-4-soft)}
+.orbit[data-el="anchor-frame-concentric"]>.ring:nth-child(3){width:min(40cqw,40cqh);height:min(40cqw,40cqh);background:var(--a1-7);color:var(--page)}
+.orbit[data-el="anchor-frame-concentric"]>.ring:nth-child(4){width:min(22cqw,22cqh);height:min(22cqw,22cqh);background:var(--a1-9);color:var(--page)}
+.orbit[data-el="anchor-frame-concentric"] .name{position:absolute;left:15%;right:45%;bottom:calc(5% + clamp(var(--type-8),2.2cqw,var(--type-14))*var(--body-line) + var(--gap-sm)/4);margin:0;font-size:clamp(var(--type-8),3cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.orbit[data-el="anchor-frame-concentric"] .fig{position:absolute;left:60%;right:20%;bottom:calc(5% + clamp(var(--type-8),2.2cqw,var(--type-14))*var(--body-line) + var(--gap-sm)/4);font-size:clamp(var(--type-10),4cqw,var(--type-28));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.orbit[data-el="anchor-frame-concentric"] .note{position:absolute;left:5%;right:5%;bottom:5%;margin:0;font-size:clamp(var(--type-8),2.2cqw,var(--type-14));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.orbit[data-el="anchor-frame-concentric"]>.ring:last-child>.name{left:5%;right:5%;bottom:55%} .orbit[data-el="anchor-frame-concentric"]>.ring:last-child>.fig{left:5%;right:5%;bottom:25%} .orbit[data-el="anchor-frame-concentric"]>.ring:last-child>.note{bottom:10%}
+@container(max-width:240px){.orbit[data-el="anchor-frame-concentric"]>.ring>.note{display:none}}
+
+.orbit[data-el="anchor-frame-concentric"]>.ring.on{background:var(--a1-7);color:var(--page)} .orbit[data-el="anchor-frame-concentric"]>.ring:nth-child(4).on{background:var(--a1-9)}
+
+@container(max-width:240px){.orbit[data-el="anchor-frame-concentric"]>.ring:not(:last-child)>:is(.name,.fig){bottom:5%}}
+
+.orbit[data-el="anchor-frame-concentric"]>.ring:last-child>.name{font-size:clamp(var(--type-8),min(12cqw,14cqh),var(--type-18))} .orbit[data-el="anchor-frame-concentric"]>.ring:last-child>.fig{font-size:clamp(var(--type-12),min(18cqw,18cqh),var(--type-28))}
+
+/* DECK PART CONSTRUCTION */
+.orbit[data-el="anchor-frame-concentric"]>.ring:nth-child(n){border-radius:0;background:var(--page);color:var(--ink);border:1px solid var(--a1-3-soft)}.orbit[data-el="anchor-frame-concentric"]>.ring:nth-child(n).on{background:linear-gradient(var(--a1-7),var(--a1-7)) left top/4px 4px no-repeat,linear-gradient(var(--a1-7),var(--a1-7)) right top/4px 4px no-repeat,linear-gradient(var(--a1-7),var(--a1-7)) left bottom/4px 4px no-repeat,linear-gradient(var(--a1-7),var(--a1-7)) right bottom/4px 4px no-repeat,var(--page);color:var(--ink);border-color:var(--a1-7)}

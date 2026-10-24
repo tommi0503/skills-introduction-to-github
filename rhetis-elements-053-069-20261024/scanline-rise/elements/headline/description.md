@@ -1,0 +1,1 @@
+Observed base 03 is a 22 px bold subheading in a 562×26 field, with an 18 px left inset and a 7×8 accent square. Other mapped instances retain their actual line breaks and inline emphasis. The heading and optional supporting parts use shared type roles with bounded container-relative sizing.

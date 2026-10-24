@@ -1,0 +1,1 @@
+Observed on page 05. The frame owns its image placeholder, framing edges and optional caption. 283 px circular portrait placeholder, no separate card surface. Container-relative dimensions scale the internal arrangement, while text uses the shared type roles.

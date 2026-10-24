@@ -1,0 +1,1 @@
+An inferred profile extension: compact rounded neutral panel, soft portrait corners and a thin name divider. Every person has the same fixed media row and name-row start; different biographies only consume the note row. Portraits preserve 3:4 and avatars 1:1, while optional lists reserve a separate text row.

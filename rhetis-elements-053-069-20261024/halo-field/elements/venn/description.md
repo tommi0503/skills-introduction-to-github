@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Overlapping sets retain their names and supporting copy around a shared intersection. Its own painted parts include polygon-clipped faces, rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

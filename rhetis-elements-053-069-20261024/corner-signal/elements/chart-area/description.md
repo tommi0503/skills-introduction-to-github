@@ -1,0 +1,1 @@
+Observed on pages 12,14. One translucent straight-segment area with very thin ridge, small solid markers, values above, plain numeric y-axis and five year labels. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

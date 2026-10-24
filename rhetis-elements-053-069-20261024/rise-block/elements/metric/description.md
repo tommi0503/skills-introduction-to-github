@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A bare numeric figure pairs with its label and optional note without borrowing the surrounding card surface. Its own painted parts include explicit framing or divider rules. Type uses bounded container-relative sizing, with shared weight and line-height roles.

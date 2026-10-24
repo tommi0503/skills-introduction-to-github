@@ -1,0 +1,1 @@
+Observed on page 08: six round-top accent columns occupy a 535×422 chart field, with values attached to their own bars and year labels under the shared baseline. This root owns the bar series and category axis; the overlaid line remains a separate complete chart root. Plot insets, bar width and bounded type scale from the received box.

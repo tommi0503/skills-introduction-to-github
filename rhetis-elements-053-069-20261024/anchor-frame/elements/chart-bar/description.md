@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Numeric bar members share a baseline and keep their figures and category labels with their own columns. Its own painted parts include square-edged faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

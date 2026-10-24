@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Chamfered duration plates use a heavy top accent and a small diagonal face. Unfilled period headings and bold owner labels repeat the deck’s corner-cut information panels.

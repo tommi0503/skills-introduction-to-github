@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. White floating owner labels accompany gently rounded duration ribbons ending in a folded pointer. Fine dotted rules and round milestone pins continue the deck’s circles and light connectors.

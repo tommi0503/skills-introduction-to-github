@@ -1,0 +1,1 @@
+Observed on page 02. Ordered entries group an index, a heading and supporting copy. Its own painted parts include rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

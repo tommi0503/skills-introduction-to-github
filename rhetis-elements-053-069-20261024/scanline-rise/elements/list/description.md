@@ -1,0 +1,1 @@
+Observed source 12: pale 323.33×102 list, 26 px top and 20 px side insets, with two 16 px/19 px lines. The thin marker retains its measured 8 px offset. Supporting-note extensions share the first-line marker grid and center the complete text group.

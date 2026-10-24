@@ -1,0 +1,14 @@
+/* Inferred bare metric: the source numeric surfaces are owned by card.fig.
+   Side captions retain the clipped-flag numeric hierarchy without owning a filled panel. */
+:is(.stat,.stats)[data-el="corner-signal-metric"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);}
+:is(.stat,.stats)[data-el="corner-signal-metric"] *{box-sizing:border-box;min-width:0;margin:0;}
+.stats[data-el="corner-signal-metric"]{display:flex;align-items:center;gap:var(--gap);height:100%;}
+.stat[data-el="corner-signal-metric"]{display:flex;align-items:center;height:100%;}
+.stats[data-el="corner-signal-metric"]>.stat{position:relative;container-type:size;min-width:0;min-height:0;flex:1;height:100%;display:flex;align-items:center;}
+:is(.stat,.stats)[data-el="corner-signal-metric"] .parts{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,55fr);align-items:center;gap:0 var(--gap-sm);width:100%;}
+:is(.stat,.stats)[data-el="corner-signal-metric"] .fig{position:relative;grid-row:span 2;font-size:clamp(var(--type-24),17.454545cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-7);padding-bottom:var(--gap-sm);}
+:is(.stat,.stats)[data-el="corner-signal-metric"] .fig::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;border-bottom:1px solid var(--n-3);border-right:1px solid var(--n-3);transform:skewX(40deg);transform-origin:bottom right;}
+:is(.stat,.stats)[data-el="corner-signal-metric"] .name{grid-column:2;font-size:clamp(var(--type-12),6.181818cqw,var(--type-18));font-weight:var(--body-weight);line-height:var(--name-line);color:var(--ink);}
+:is(.stat,.stats)[data-el="corner-signal-metric"] .note{grid-column:2;font-size:clamp(var(--type-12),6.181818cqw,var(--type-18));font-weight:var(--lead-weight);line-height:var(--body-line);color:var(--n-7);}
+:is(.stat,.stats)[data-el="corner-signal-metric"] .fig small{font-size:var(--type-16);}
+:is(.stat,.stats)[data-el="corner-signal-metric"] :is(.name,.note){overflow-wrap:anywhere;}

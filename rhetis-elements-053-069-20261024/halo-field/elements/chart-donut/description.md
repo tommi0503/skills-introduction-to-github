@@ -1,0 +1,1 @@
+Observed on page 15: three 334 px upper-half arcs use 50 px strokes and round end caps, leaving the lower half open around the name and 52 px figure. A hollow marker and dotted leader extend below each measure without a rectangular card. Member-relative sizing fits the complete row and bounds its typography.

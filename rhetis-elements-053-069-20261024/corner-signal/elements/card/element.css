@@ -1,0 +1,65 @@
+/* Source slide_05, white card bbox(846,255,359,382).
+   Clipped top-right; title(49,36), medallion(37,168,84,84), copy(49,268), rule(39,354). */
+.card[data-el="corner-signal-card"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;box-sizing:border-box;background:none;color:var(--ink);isolation:isolate;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.card[data-el="corner-signal-card"] *{box-sizing:border-box;min-width:0}
+.card[data-el="corner-signal-card"]>.parts{position:relative;z-index:0;width:100%;height:100%}
+.card[data-el="corner-signal-card"] :is(p,.mark){margin:0}
+.card[data-el="corner-signal-card"] .name{position:absolute;left:13.649%;top:9.424%;width:77.994%;font-size:clamp(var(--type-14),min(6.9638cqw,6.544503cqh),var(--type-26));font-weight:var(--name-weight);line-height:calc(var(--name-line)*26/27);letter-spacing:calc(var(--name-track)*.8);overflow-wrap:anywhere}
+.card[data-el="corner-signal-card"] .mark{position:absolute;left:10.3064%;top:43.979%;width:min(23.3983cqw,21.989529cqh);height:min(23.3983cqw,21.989529cqh);border-radius:50%;background:var(--n-7);color:var(--page);display:flex;align-items:center;justify-content:center}
+.card[data-el="corner-signal-card"] .mark>.icon{display:block;width:66.666667%;height:66.666667%}
+.card[data-el="corner-signal-card"] .mark>.icon>svg{fill:none;stroke-width:calc(var(--stroke)*.7);transform:translateX(calc(var(--stroke)*-1))}
+.card[data-el="corner-signal-card"] .note{position:absolute;left:13.649%;top:70.157%;width:79.387%;font-size:clamp(var(--type-12),min(4.1783cqw,3.926702cqh),var(--type-16));font-weight:calc(var(--body-weight)*.75);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);overflow-wrap:anywhere}
+.card[data-el="corner-signal-card"]>.parts::after{content:"";position:absolute;left:10.8635%;right:7.799443%;top:92.6702%;border-top:1px solid var(--n-3)}
+.card[data-el="corner-signal-card"] .kick{position:absolute;left:13.649%;top:5%;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line)}
+.card[data-el="corner-signal-card"] .fig{position:absolute;left:13.649%;top:38%;font-size:clamp(var(--type-24),12cqw,var(--type-52));font-weight:var(--figure-weight);line-height:var(--figure-line)}
+.card[data-el="corner-signal-card"] .fig small{font-size:var(--type-16)}
+.card[data-el="corner-signal-card"] .parts:has(>.kick)>.name{top:16%}
+.card[data-el="corner-signal-card"].on{background:none;color:var(--page)}
+.card[data-el="corner-signal-card"].on .note{color:var(--page)}
+.card[data-el="corner-signal-card"].on .mark{background:var(--page);color:var(--a1-7)}
+.card[data-el="corner-signal-card"].quiet{background:none;color:var(--page)}
+.card[data-el="corner-signal-card"].quiet .note{color:var(--page)}
+.card[data-el="corner-signal-card"].quiet .mark{background:var(--page);color:var(--ink)}
+.card[data-el="corner-signal-card"].line{background:var(--page);outline:1px solid var(--a1-7);outline-offset:-1px}
+
+/* Source05 colored siblings: title/copy x43, circle x32/84, rule x34..326.
+The white base has x49/x37/x39..331; these are existing on/quiet parts. */
+.card[data-el="corner-signal-card"]:is(.on,.quiet)>.parts:not(:has(>.fig))>.name{left:11.944444%;width:77.777778%}
+.card[data-el="corner-signal-card"]:is(.on,.quiet)>.parts:not(:has(>.fig))>.note{left:11.944444%;width:79.166667%}
+.card[data-el="corner-signal-card"]:is(.on,.quiet)>.parts:not(:has(>.fig))>.mark{left:8.888889%}
+.card[data-el="corner-signal-card"]:is(.on,.quiet)>.parts:not(:has(>.fig))::after{left:9.444444%;right:9.444444%}
+
+.card[data-el="corner-signal-card"].tone-1{background:none}
+.card[data-el="corner-signal-card"].tone-2{background:none}
+.card[data-el="corner-signal-card"].tone-3{background:none}
+.card[data-el="corner-signal-card"].tone-4{background:none}
+.card[data-el="corner-signal-card"].tone-5{background:none}
+@container(max-height:260px){
+.card[data-el="corner-signal-card"] .mark{top:36%;width:min(18cqw,25cqh);height:min(18cqw,25cqh)}
+.card[data-el="corner-signal-card"] .note{top:65%;font-size:var(--type-12)}
+}
+.card[data-el="corner-signal-card"]>.parts::before{content:"";position:absolute;inset:0;background:var(--page);clip-path:polygon(0 0,calc(100% - min(18.9415cqw,29.67033cqh)) 0,100% min(18.9415cqw,29.67033cqh),100% 100%,0 100%);z-index:-1}
+.card[data-el="corner-signal-card"].on>.parts::before{background:var(--a1-7)}
+.card[data-el="corner-signal-card"].quiet>.parts::before{background:var(--n-7)}
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)::after{display:none}
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.fig{left:8.363636%;top:17.582418%;width:76.363636%;font-size:clamp(var(--type-24),17.454545cqw,var(--type-48));font-weight:var(--figure-weight);line-height:calc(var(--body-line)*.8);letter-spacing:calc(var(--figure-track)*1.666667);color:var(--n-7)}
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.name{left:48.727273%;top:25.274725%;width:50.181818%;font-size:clamp(var(--type-12),6.181818cqw,var(--type-18));font-weight:var(--lead-weight);line-height:calc(var(--body-line)*.933333);letter-spacing:var(--body-track);color:var(--n-7)}
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.note{left:48.727273%;top:51.428571%;width:50.181818%;font-size:clamp(var(--type-12),6.181818cqw,var(--type-18));font-weight:var(--lead-weight);line-height:calc(var(--body-line)*.933333);color:var(--n-7)}
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.mark{left:auto;right:var(--gap-sm);top:var(--gap-sm);width:24px;height:24px}
+.card[data-el="corner-signal-card"].quiet:has(>.parts>.fig){color:var(--n-7)}
+.card[data-el="corner-signal-card"].quiet>.parts:has(>.fig)::before{background:var(--page)}
+.card[data-el="corner-signal-card"].on>.parts:has(>.fig)>:is(.name,.note,.fig){color:var(--page)}
+.card[data-el="corner-signal-card"].tone-1>.parts::before{background:var(--a1-1-soft)}
+.card[data-el="corner-signal-card"].tone-2>.parts::before{background:var(--a1-2-soft)}
+.card[data-el="corner-signal-card"].tone-3>.parts::before{background:var(--a1-3-soft)}
+.card[data-el="corner-signal-card"].tone-4>.parts::before{background:var(--n-1)}
+.card[data-el="corner-signal-card"].tone-5>.parts::before{background:var(--n-2)}
+@container(max-height:85px){
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.fig{font-size:clamp(var(--type-24),64cqh,var(--type-48))}
+}
+@container(min-height:200px){
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.fig{top:10%}
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.name{left:13.649%;top:40%;width:79.387%}
+.card[data-el="corner-signal-card"]>.parts:has(>.fig)>.note{left:13.649%;top:55%;width:79.387%}
+}
+.card[data-el="corner-signal-card"].tone-3 .note{color:var(--ink);}

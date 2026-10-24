@@ -1,0 +1,1 @@
+Observed on pages 07,16. Sequential events keep their date or mark, heading and supporting copy attached to the same event. Four orange date capsules above a 6 px horizontal line, 24 px outlined points on the line, name and multiline note below. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A source divides into proportional branch-owned bands, with a further split remaining inside the complete flow. Its own painted parts include polygon-clipped faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

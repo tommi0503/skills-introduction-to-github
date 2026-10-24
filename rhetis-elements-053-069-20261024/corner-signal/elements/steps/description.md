@@ -1,0 +1,1 @@
+Observed on page 06. Sequential steps group their marks, headings and notes inside one complete process. Four tall clipped-corner process panels, header labels at 266, title 433, note 510; small arrows connect consecutive process headers. Type uses bounded container-relative sizing, with shared weight and line-height roles.

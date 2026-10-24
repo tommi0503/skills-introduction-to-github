@@ -1,0 +1,9 @@
+/* Unobserved leaf, new design. Source motif: 334px arc with50px stroke and113.3px rounded columns; no existing collection CSS is reused. */
+.meter[data-el="halo-field-gauge"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);border-top:1px solid var(--a1-7);border-radius:var(--radius);width:100%;height:min(100%,128px);align-self:center;isolation:isolate}
+.meter[data-el="halo-field-gauge"] *{box-sizing:border-box}
+.meter[data-el="halo-field-gauge"] :is(b,p,span,small){margin:0}
+.meter[data-el="halo-field-gauge"]>.name{position:absolute;left:calc(var(--pad)*.5);top:10%;width:58%;font-size:clamp(var(--type-10),calc(100cqh*.25),var(--type-20));font-weight:var(--body-weight);line-height:var(--name-line);color:var(--ink);border-bottom:1px solid var(--a1-7)}
+.meter[data-el="halo-field-gauge"]>.fig{position:absolute;right:calc(var(--pad)*.5);top:5%;font-size:clamp(var(--type-14),calc(100cqh*.45),var(--type-36));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--ink)}
+.meter[data-el="halo-field-gauge"]::before,.meter[data-el="halo-field-gauge"]::after{content:'';position:absolute;left:calc(var(--pad)*.5);bottom:12%;height:min(12cqh,16px);border-radius:999px}
+.meter[data-el="halo-field-gauge"]::before{right:calc(var(--pad)*.5);background:var(--n-3)}
+.meter[data-el="halo-field-gauge"]::after{width:calc((100cqw - var(--pad))*var(--v)/100);background:var(--a1-7)}

@@ -1,0 +1,17 @@
+{
+  "schema": "rhetis.design-library-element-source/1",
+  "contract": "cycle.nodes@1",
+  "registrations": {},
+  "tokenDefaults": {
+    "--cinder-pulse-cycle-unit": "min(calc(100cqw / 1140),calc(100cqh / 444))",
+    "--cinder-pulse-cycle-n": "6",
+    "--cinder-pulse-cycle-i": "0",
+    "--cinder-pulse-cycle-ring": "min(28.9474cqw,74.3243cqh)",
+    "--cinder-pulse-cycle-node": "min(10.1754cqw,26.1261cqh)",
+    "--cinder-pulse-cycle-core": "min(14.7368cqw,37.8378cqh)",
+    "--cinder-pulse-cycle-rows": "round(up,calc(var(--cinder-pulse-cycle-n)/2),1)",
+    "--cinder-pulse-cycle-col": "round(down,calc(var(--cinder-pulse-cycle-i)/var(--cinder-pulse-cycle-rows)),1)",
+    "--cinder-pulse-cycle-row": "mod(var(--cinder-pulse-cycle-i),var(--cinder-pulse-cycle-rows))",
+    "--cinder-pulse-cycle-a": "calc(-90deg + var(--cinder-pulse-cycle-i)*360deg/var(--cinder-pulse-cycle-n))"
+  }
+}

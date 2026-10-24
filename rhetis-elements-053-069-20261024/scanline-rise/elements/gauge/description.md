@@ -1,0 +1,1 @@
+Measured source 07 striped progress meter: natural-width label at left, a nineteen-pixel segmented track anchored between the root’s own label and figure, and the percentage at right. Long labels may wrap within 30% of the received width. Shared palette roles provide track and progress colors.

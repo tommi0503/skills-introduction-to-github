@@ -1,0 +1,1 @@
+Observed on pages 08,13. Four neutral columns with 4 px top corners and a fine four-band neutral grid. Quarter labels belong under the shared baseline. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

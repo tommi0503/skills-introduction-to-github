@@ -1,0 +1,1 @@
+An inferred profile extension: solid square face, a hard accent plinth under the portrait and a heavy name. Every person has the same fixed media row and name-row start; different biographies only consume the note row. Portraits preserve 3:4 and avatars 1:1, while optional lists reserve a separate text row.

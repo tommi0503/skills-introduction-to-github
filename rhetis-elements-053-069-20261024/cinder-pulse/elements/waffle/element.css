@@ -1,0 +1,15 @@
+/* Unobserved leaf, new design. Source motif: 670×444.75 table and rounded11px white panels; no existing collection CSS is reused. */
+.waffle[data-el="cinder-pulse-waffle"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);background:var(--page);border:1px solid var(--n-3);border-radius:var(--radius-sm);display:grid;grid-template-rows:minmax(0,1fr) auto auto;justify-items:center;align-items:center;gap:var(--gap-sm);padding:var(--pad)}
+.waffle[data-el="cinder-pulse-waffle"] *{box-sizing:border-box}
+.waffle[data-el="cinder-pulse-waffle"] :is(b,p,span,small){margin:0}
+.waffle[data-el="cinder-pulse-waffle"]>.units{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:calc(var(--gap-sm)*.3);width:min(100%,66cqh);max-height:66cqh}
+.waffle[data-el="cinder-pulse-waffle"]>.units>.u{--cinder-pulse-waffle-unit-fill:var(--n-3);display:block;position:relative;aspect-ratio:1;background:var(--cinder-pulse-waffle-unit-fill);border-radius:var(--radius-sm)}
+.waffle[data-el="cinder-pulse-waffle"]>.units>.u.on{--cinder-pulse-waffle-unit-fill:var(--a1)}
+.waffle[data-el="cinder-pulse-waffle"]>.units>.u.tone-2{--cinder-pulse-waffle-unit-fill:var(--a2-7)}
+.waffle[data-el="cinder-pulse-waffle"]>.fig{font-size:clamp(var(--type-14),calc(100cqw * 0.0400000000),var(--type-28));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--ink);text-align:center}
+.waffle[data-el="cinder-pulse-waffle"]>.name{font-size:clamp(var(--type-8),calc(100cqw * 0.0200000000),var(--type-14));font-weight:var(--body-weight);line-height:var(--name-line);color:var(--ink);text-align:center;overflow-wrap:anywhere}
+.waffle[data-el="cinder-pulse-waffle"]:has(>.units>.u:nth-child(10):last-child)>.units{grid-template-columns:repeat(5,minmax(0,1fr))}
+.waffle[data-el="cinder-pulse-waffle"].figures>.units>.u{background:none}
+.waffle[data-el="cinder-pulse-waffle"].figures>.units>.u::before{content:'';position:absolute;left:35%;top:0;width:30%;height:30%;border-radius:999px;background:var(--cinder-pulse-waffle-unit-fill)}
+.waffle[data-el="cinder-pulse-waffle"].figures>.units>.u::after{content:'';position:absolute;left:20%;top:35%;width:60%;height:60%;border-radius:30% 30% 8% 8%;background:var(--cinder-pulse-waffle-unit-fill)}
+.waffle[data-el="cinder-pulse-waffle"]:not(.figures)>.units>.u{border-radius:999px}

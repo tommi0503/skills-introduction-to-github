@@ -1,0 +1,1 @@
+Observed on page 17. Sequential events keep their date or mark, heading and supporting copy attached to the same event. Four dated phase milestones rise by 56 px, with arrow-ended header plates, vertical drop markers, year/title block and distinct goal/strategy notes beneath. Type uses bounded container-relative sizing, with shared weight and line-height roles.

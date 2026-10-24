@@ -1,0 +1,20 @@
+/* Source12 supported list:541×178, four white541×40 rows/gap6.
+Marker/name/support use one first-line grid; measured x10/x26/x135 are preserved. */
+.list[data-el="cinder-pulse-list"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;display:flex;flex-direction:column;gap:calc(var(--gap-sm)*.428571429);counter-reset:item;font-family:var(--font-body);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+.list[data-el="cinder-pulse-list"] *{box-sizing:border-box;min-width:0;margin:0}
+.list[data-el="cinder-pulse-list"]>.item{position:relative;container-type:size;flex:1;min-height:0;display:grid;grid-template-columns:4.805915% 20.147874% 73.197782%;align-content:center;background:var(--page);border-radius:calc(var(--radius-sm)*2.75);counter-increment:item;font-size:clamp(var(--type-12),2.957486cqw,var(--type-16));line-height:calc(var(--body-line)*.966667)}
+.list[data-el="cinder-pulse-list"]>.item>.name{grid-column:2;grid-row:1;width:95.412844%;font-size:inherit;font-weight:var(--figure-weight);line-height:inherit;color:var(--ink)}
+.list[data-el="cinder-pulse-list"]>.item>.note{grid-column:3;grid-row:1;font-size:inherit;font-weight:var(--body-weight);line-height:inherit;color:var(--n-7)}
+.list[data-el="cinder-pulse-list"]>.item::before{content:"";grid-column:1;grid-row:1;justify-self:center;align-self:start;width:7px;height:7px;margin-top:calc((1lh - 7px)/2);border-radius:50%;background:var(--ink)}
+.list[data-el="cinder-pulse-list"].num>.item::before{content:counter(item);width:18px;height:1lh;margin-top:0;display:flex;align-items:center;justify-content:center;background:none;color:var(--a1-7);border-radius:0;font-size:inherit;font-weight:var(--label-weight)}
+.list[data-el="cinder-pulse-list"].check>.item::before{width:10px;height:6px;margin-top:calc((1lh - 6px)/2);border-left:2px solid var(--a1-7);border-bottom:2px solid var(--a1-7);background:none;border-radius:0;rotate:-45deg}
+.list[data-el="cinder-pulse-list"].divided>.item{border-bottom:1px solid var(--n-3)}
+.list[data-el="cinder-pulse-list"]>.item>.mark{grid-column:1;grid-row:1;align-self:start;justify-self:center;width:20px;height:20px;margin-top:calc((1lh - 20px)/2);color:var(--a1-7)}
+.list[data-el="cinder-pulse-list"]>.item>.mark>.icon{width:100%;height:100%;display:block}
+.list[data-el="cinder-pulse-list"]>.item:has(>.mark)::before{content:none}
+.list[data-el="cinder-pulse-list"]:not(:has(>.item>.note:not(:empty))){gap:0;justify-content:space-around}
+.list[data-el="cinder-pulse-list"]:not(:has(>.item>.note:not(:empty)))>.item{container-type:inline-size;flex:none;grid-template-columns:calc(var(--gap-sm)*.75) minmax(0,1fr);padding-right:0;background:none;border-radius:0;font-size:clamp(var(--type-12),6.896552cqw,var(--type-16))}
+.list[data-el="cinder-pulse-list"]:not(:has(>.item>.note:not(:empty)))>.item::before{justify-self:start;width:3px;height:3px;margin-top:calc((1lh - 3px)/2)}
+.list[data-el="cinder-pulse-list"]:not(:has(>.item>.note:not(:empty)))>.item>.name{width:100%;font-weight:var(--body-weight)}
+.list[data-el="cinder-pulse-list"].num:not(:has(>.item>.note:not(:empty)))>.item{container-type:inline-size;flex:none;grid-template-columns:24px minmax(0,1fr)}
+.list[data-el="cinder-pulse-list"].num:not(:has(>.item>.note:not(:empty)))>.item::before{width:18px;height:1lh;margin-top:0;background:none}

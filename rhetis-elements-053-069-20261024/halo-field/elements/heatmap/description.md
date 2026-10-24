@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A row-and-column matrix presents independently toned cells with their associated labels. Its own painted parts include shared-radius corners. Type uses bounded container-relative sizing, with shared weight and line-height roles.

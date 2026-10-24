@@ -1,0 +1,1 @@
+Observed on pages 08 and 11: bottom-aligned keys use 16 px bold labels,15 px round swatches,5 px within-key spacing and 10 px between keys in the base form. Each mapped fixture preserves its own key count and label-length shape. Shared type and spacing roles keep the labels and swatches together as available width changes.

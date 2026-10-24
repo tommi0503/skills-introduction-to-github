@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Nine ordered cells occupy a three-by-three field between explicit axis labels. Its own painted parts include polygon-clipped faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Each point owns its marker and the segment to the preceding point, keeping the complete series inside one chart. Its own painted parts include polygon-clipped faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

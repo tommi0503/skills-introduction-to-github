@@ -1,0 +1,1 @@
+Thin accent polyline and six filled round markers separated from the original whole-chart viewport; internal point positions preserve the source coordinates within the shared bar/line allocation field. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

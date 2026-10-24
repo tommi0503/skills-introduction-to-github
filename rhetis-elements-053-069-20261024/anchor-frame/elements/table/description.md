@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Semantic header and body cells share column widths, row rules and alignment for numeric values. Its own painted parts include explicit framing or divider rules. Type uses bounded container-relative sizing, with shared weight and line-height roles.

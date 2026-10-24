@@ -1,0 +1,1 @@
+An inferred profile extension: crisp outlined profile with an actual filled accent name band. Every person has the same fixed media row and name-row start; different biographies only consume the note row. Portraits preserve 3:4 and avatars 1:1, while optional lists reserve a separate text row.

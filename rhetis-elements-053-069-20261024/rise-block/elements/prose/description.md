@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Paragraphs preserve their reading order, inline emphasis and supported lead, quiet or column arrangements. Its own painted parts include explicit framing or divider rules. Type uses bounded container-relative sizing, with shared weight and line-height roles.

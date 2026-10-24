@@ -1,0 +1,14 @@
+/* No observed independent list. Markers share the first name line box; the item group remains vertically centered. */
+.list[data-el="rise-block-list"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink);counter-reset:item;display:flex;flex-direction:column;padding:0 var(--gap)}
+.list[data-el="rise-block-list"] *{box-sizing:border-box;min-width:0;margin:0}
+.list[data-el="rise-block-list"]>.item{position:relative;display:grid;align-content:center;counter-increment:item;grid-template-columns:var(--gap) minmax(0,1fr);font-size:var(--type-18);line-height:calc(var(--type-18)*var(--name-line));flex:1}
+.list[data-el="rise-block-list"]>.item>.name{grid-column:2;grid-row:1;font-size:inherit;font-weight:var(--name-weight);line-height:inherit}
+.list[data-el="rise-block-list"]>.item>.note{grid-column:2;grid-row:2;font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7)}
+.list[data-el="rise-block-list"]>.item::before{content:"";grid-column:1;grid-row:1;align-self:start;width:5px;height:5px;margin-top:calc((1lh - 5px)/2);background:var(--a1-7)}
+.list[data-el="rise-block-list"].num>.item::before{content:counter(item);width:18px;height:1lh;margin-top:0;display:flex;align-items:center;justify-content:center;font-size:inherit;font-weight:var(--label-weight);background:var(--a1-7);border:0;color:var(--page)}
+.list[data-el="rise-block-list"].check>.item::before{width:10px;height:6px;margin-top:calc((1lh - 6px)/2);border:0;border-left:2px solid var(--a1-7);border-bottom:2px solid var(--a1-7);background:none;border-radius:0;clip-path:none;rotate:-45deg}
+.list[data-el="rise-block-list"].divided>.item+.item{border-top:1px solid var(--n-3)}
+.list[data-el="rise-block-list"]>.item>.mark{grid-column:1;grid-row:1;align-self:start;width:18px;height:18px;margin-top:calc((1lh - 18px)/2);color:var(--a1-7)}
+.list[data-el="rise-block-list"]>.item>.mark>.icon{width:100%;height:100%;display:block}
+.list[data-el="rise-block-list"]>.item:has(>.mark)::before{content:none}
+@container(max-height:350px){.list[data-el="rise-block-list"]>.item{font-size:var(--type-16);line-height:calc(var(--type-16)*var(--name-line))}.list[data-el="rise-block-list"]>.item>.note{font-size:var(--type-12)}}

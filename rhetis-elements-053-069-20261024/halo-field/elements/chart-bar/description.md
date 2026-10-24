@@ -1,0 +1,1 @@
+Observed on page 04: four wide round-top accent columns have values inside and category labels beneath the baseline in a 689.34375×213 field. The bar root owns its full series; the dotted trend is a separate chart-line element. Plot insets, column proportions and bounded type scale with the received box.

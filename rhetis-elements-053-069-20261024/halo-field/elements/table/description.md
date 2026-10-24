@@ -1,0 +1,1 @@
+Observed on page 13. Wide four-column editorial guide table: accent fine rules, strong header labels, long wrapped cells and generous row height. No enclosing rounded card. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

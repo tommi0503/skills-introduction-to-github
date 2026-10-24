@@ -1,0 +1,1 @@
+Observed on page 05. A central hub and its surrounding named nodes share one owned connector field. Four P/E/S/T petal circles surround a central white PEST disc; each member owns its quadrant pale note panel. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+An explicit inline highlight preserves its surrounding text size, line height and tracking, adding only the accent foreground and strong weight. The inferred compact label uses a thin outline, a lightly tinted face and the deck’s small rounded corners.

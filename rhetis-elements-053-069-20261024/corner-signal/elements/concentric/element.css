@@ -1,0 +1,37 @@
+/* Source 067/07: three included regular pentagons, exposed lower label bands and a common horizontal centre. Four-set extensions use four evenly nested scales. */
+.orbit[data-el="corner-signal-concentric"] {position:relative;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body)}
+.orbit[data-el="corner-signal-concentric"]>.ring{position:absolute;left:50%;transform:translateX(-50%);width:min(100cqw,105.2545cqh);height:min(95.0078cqw,100cqh);top:calc((100% - min(95.0078cqw,100cqh))/2);clip-path:polygon(50% 0,100% 38.26%,80.81% 100%,19.19% 100%,0 38.26%);background:var(--a1-2-soft);text-align:center;color:var(--a1-7)}
+.orbit[data-el="corner-signal-concentric"]>.ring:nth-child(2){width:min(64.27cqw,67.648cqh);height:min(60.995cqw,64.2cqh);top:calc((100% - min(95.0078cqw,100cqh))/2 + min(18.878cqw,19.87cqh));background:var(--a1-5);color:var(--ink)}
+.orbit[data-el="corner-signal-concentric"]>.ring:nth-child(3){width:min(29.33cqw,30.87cqh);height:min(27.77cqw,29.23cqh);top:calc((100% - min(95.0078cqw,100cqh))/2 + min(37.595cqw,39.57cqh));background:var(--a1-7);color:var(--page)}
+.orbit[data-el="corner-signal-concentric"]>.ring.on{background:var(--a1-7);color:var(--page)}
+.orbit[data-el="corner-signal-concentric"] .name{position:absolute;left:8%;right:8%;bottom:6.4%;margin:0;font-size:clamp(var(--type-8),min(4.368cqw,4.5976cqh),var(--type-28));font-weight:var(--figure-weight);line-height:calc(var(--name-line)*1.214285714/1.35);letter-spacing:var(--body-track)}
+.orbit[data-el="corner-signal-concentric"] .note{position:absolute;left:5%;right:5%;bottom:2.6%;margin:0;font-size:clamp(var(--type-8),min(2.496cqw,2.627cqh),var(--type-16));font-weight:var(--lead-weight);line-height:calc(var(--body-line)*1.4375/1.5);letter-spacing:var(--body-track)}
+.orbit[data-el="corner-signal-concentric"] .fig{position:absolute;left:5%;right:5%;top:38%;font-size:clamp(var(--type-14),min(3.74cqw,3.936cqh),var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line)}
+.orbit[data-el="corner-signal-concentric"] .fig:empty{display:none}
+.orbit[data-el="corner-signal-concentric"]>.ring:nth-child(2) .name{bottom:9%} .orbit[data-el="corner-signal-concentric"]>.ring:nth-child(2) .note{bottom:3%}
+.orbit[data-el="corner-signal-concentric"]>.ring:nth-child(3) .name{bottom:37%} .orbit[data-el="corner-signal-concentric"]>.ring:nth-child(3) .note{bottom:24%}
+@container(max-width:360px){.orbit[data-el="corner-signal-concentric"] .note{display:none} .orbit[data-el="corner-signal-concentric"] .name{bottom:8%;font-size:var(--type-12)}}
+@container(max-height:220px){.orbit[data-el="corner-signal-concentric"] .note{display:none}}
+.orbit[data-el="corner-signal-concentric"]>.ring:has(>.fig:not(:empty)){container-type:size}
+.orbit[data-el="corner-signal-concentric"]>.ring:has(>.fig:not(:empty))>.name{bottom:12%;font-size:clamp(var(--type-8),min(4cqw,4.21cqh),var(--type-16));line-height:calc(var(--body-line)/1.5)}
+.orbit[data-el="corner-signal-concentric"]>.ring:has(>.fig:not(:empty))>.fig{top:auto;bottom:7%;font-size:clamp(var(--type-8),min(4cqw,4.21cqh),var(--type-16));line-height:calc(var(--body-line)/1.5)}
+.orbit[data-el="corner-signal-concentric"]>.ring:has(>.fig:not(:empty))>.note{display:block;bottom:2%;font-size:clamp(var(--type-8),min(2.2cqw,2.31cqh),var(--type-10));line-height:calc(var(--body-line)/1.5)}
+.orbit[data-el="corner-signal-concentric"]>.ring:last-child:has(>.fig:not(:empty))>.name{bottom:55%;font-size:clamp(var(--type-8),min(9cqw,9.47cqh),var(--type-16))}
+.orbit[data-el="corner-signal-concentric"]>.ring:last-child:has(>.fig:not(:empty))>.fig{bottom:30%;font-size:clamp(var(--type-10),min(11cqw,11.58cqh),var(--type-20))}
+.orbit[data-el="corner-signal-concentric"]>.ring:last-child:has(>.fig:not(:empty))>.note{bottom:10%}
+@container(max-height:60px){.orbit[data-el="corner-signal-concentric"]>.ring:has(>.fig:not(:empty))>.note{display:none}}
+
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(2){width:min(75.0cqw,78.94087499999999cqh);height:min(71.25585000000001cqw,75.0cqh);top:calc((100% - min(95.0078cqw,100cqh))/2 + min(11.875975cqw,12.5cqh))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(3){width:min(50.0cqw,52.62725cqh);height:min(47.5039cqw,50.0cqh);top:calc((100% - min(95.0078cqw,100cqh))/2 + min(23.75195cqw,25.0cqh))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(4){width:min(25.0cqw,26.313625cqh);height:min(23.75195cqw,25.0cqh);top:calc((100% - min(95.0078cqw,100cqh))/2 + min(35.627925000000005cqw,37.5cqh))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(4){background:var(--a1-9);color:var(--page)}
+
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(1):has(>.fig:not(:empty))>.name{bottom:8.0%;font-size:clamp(var(--type-8),min(3cqw,3.157cqh),var(--type-16))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(1):has(>.fig:not(:empty))>.fig{bottom:4.0%;font-size:clamp(var(--type-8),min(3cqw,3.157cqh),var(--type-16))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(1):has(>.fig:not(:empty))>.note{bottom:0.5%;font-size:clamp(var(--type-8),min(2cqw,2.1cqh),var(--type-10))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(2):has(>.fig:not(:empty))>.name{bottom:10.666666666666666%;font-size:clamp(var(--type-8),min(3cqw,3.157cqh),var(--type-16))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(2):has(>.fig:not(:empty))>.fig{bottom:5.333333333333333%;font-size:clamp(var(--type-8),min(3cqw,3.157cqh),var(--type-16))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(2):has(>.fig:not(:empty))>.note{bottom:0.6666666666666666%;font-size:clamp(var(--type-8),min(2cqw,2.1cqh),var(--type-10))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(3):has(>.fig:not(:empty))>.name{bottom:16.0%;font-size:clamp(var(--type-8),min(3cqw,3.157cqh),var(--type-16))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(3):has(>.fig:not(:empty))>.fig{bottom:8.0%;font-size:clamp(var(--type-8),min(3cqw,3.157cqh),var(--type-16))}
+.orbit[data-el="corner-signal-concentric"]:has(>.ring:nth-child(4))>.ring:nth-child(3):has(>.fig:not(:empty))>.note{bottom:1.0%;font-size:clamp(var(--type-8),min(2cqw,2.1cqh),var(--type-10))}

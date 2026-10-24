@@ -1,0 +1,1 @@
+Observed on page 10. Six neutral square bars with a dotted horizontal grid and labels below baseline; no printed numeric bar values. The bar element owns all six members and its grid/axis. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

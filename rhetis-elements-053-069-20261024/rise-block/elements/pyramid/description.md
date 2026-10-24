@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Ordered levels widen downward and retain a separate name and supporting note for every level. Its own painted parts include explicit framing or divider rules. Type uses bounded container-relative sizing, with shared weight and line-height roles.

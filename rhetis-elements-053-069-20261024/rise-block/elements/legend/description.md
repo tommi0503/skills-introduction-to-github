@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Each key pairs a small swatch with its own label in a shared key group. Its own painted parts include explicit framing or divider rules. Shared typography and spacing roles control the text hierarchy and the gaps between its own parts.

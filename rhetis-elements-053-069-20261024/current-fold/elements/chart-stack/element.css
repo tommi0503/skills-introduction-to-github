@@ -1,0 +1,17 @@
+/* Unobserved leaf, new design. Source motif: 81/116/206px circles and20px chart figures; no existing collection CSS is reused. */
+.stacks[data-el="current-fold-chart-stack"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);border-bottom:1px solid var(--n-3);--current-fold-chart-stack-ph:calc(100cqh - var(--pad)*2);--current-fold-chart-stack-denom:var(--max,100);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:var(--gap-sm);align-items:end;padding:0 var(--pad) var(--pad)}
+.stacks[data-el="current-fold-chart-stack"] *{box-sizing:border-box}
+.stacks[data-el="current-fold-chart-stack"] :is(b,p,span,small){margin:0}
+.stacks[data-el="current-fold-chart-stack"].pct{--current-fold-chart-stack-denom:100}
+.stacks[data-el="current-fold-chart-stack"]>.sbar{height:var(--current-fold-chart-stack-ph);position:relative;display:flex;flex-direction:column-reverse;justify-content:start;align-items:center;min-width:0}
+.stacks[data-el="current-fold-chart-stack"]>.sbar>.seg{--current-fold-chart-stack-seg-fill:var(--a1-7);--current-fold-chart-stack-seg-on:var(--page);position:relative;flex:0 0 calc(100%*var(--v)/var(--current-fold-chart-stack-denom));width:75%;max-width:140px;background:var(--current-fold-chart-stack-seg-fill);border:1px solid var(--page);border-radius:var(--radius-sm)}
+.stacks[data-el="current-fold-chart-stack"]>.sbar>.seg.tone-2{--current-fold-chart-stack-seg-fill:var(--a2-7);--current-fold-chart-stack-seg-on:var(--page)}
+.stacks[data-el="current-fold-chart-stack"]>.sbar>.seg.tone-3{--current-fold-chart-stack-seg-fill:var(--a3-7);--current-fold-chart-stack-seg-on:var(--page)}
+.stacks[data-el="current-fold-chart-stack"]>.sbar>.seg.tone-4{--current-fold-chart-stack-seg-fill:var(--a4-7);--current-fold-chart-stack-seg-on:var(--page)}
+.stacks[data-el="current-fold-chart-stack"]>.sbar>.seg>b{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);font-size:clamp(var(--type-8),calc(100cqw * 0.0200000000),var(--type-14));font-weight:var(--name-weight);line-height:var(--label-line);text-align:center;color:var(--current-fold-chart-stack-seg-on);white-space:nowrap}
+.stacks[data-el="current-fold-chart-stack"]>.sbar>span{position:absolute;left:0;right:0;top:100%;font-size:clamp(var(--type-8),calc(100cqw*.02),var(--type-16));line-height:var(--label-line);text-align:center;white-space:nowrap;color:var(--page);padding:0 calc(var(--gap-sm)*.3);border-radius:999px;background:var(--a1-9)}
+.stacks[data-el="current-fold-chart-stack"]>.sbar.on{border-bottom:3px solid var(--a1-7)}
+.stacks[data-el="current-fold-chart-stack"].h{display:flex;flex-direction:column;justify-content:space-around;padding:var(--pad) var(--pad) var(--pad) 23%;gap:var(--gap-sm)}
+.stacks[data-el="current-fold-chart-stack"].h>.sbar{height:auto;flex:1;min-height:0;width:100%;flex-direction:row;justify-content:start;align-items:center}
+.stacks[data-el="current-fold-chart-stack"].h>.sbar>.seg{flex:0 0 calc(100%*var(--v)/var(--current-fold-chart-stack-denom));width:auto;max-width:none;height:80%}
+.stacks[data-el="current-fold-chart-stack"].h>.sbar>span{top:50%;transform:translateY(-50%);left:-27cqw;right:auto;width:20cqw;text-align:left;white-space:normal}

@@ -1,0 +1,1 @@
+Observed on page 17. Sequential steps group their marks, headings and notes inside one complete process. Four staircase columns with 49 px tinted headers,32 px numbered circles and gray downward continuation lines; main sequence only. Type uses bounded container-relative sizing, with shared weight and line-height roles.

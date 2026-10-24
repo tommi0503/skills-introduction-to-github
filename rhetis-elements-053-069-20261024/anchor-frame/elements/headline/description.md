@@ -1,0 +1,1 @@
+An inferred heading extension encloses the title in a thin rectangular frame with a 6 px square at its lower-right corner. Kicker and supporting note remain outside that title frame in the same centered column. The base heading scales between 24 px and 48 px, while the big variant scales between 32 px and 72 px using the received width.

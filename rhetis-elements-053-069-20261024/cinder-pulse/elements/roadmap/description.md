@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Grey caption pills and smoothly capped duration bars form a light planning surface. A single filled capsule emphasizes the primary assignment while soft owner tabs keep the diagram readable.

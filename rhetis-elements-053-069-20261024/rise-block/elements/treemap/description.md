@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Weighted rectangular cells partition a shared area and retain their own names and figures. Its own painted parts include shared-radius corners. Type uses bounded container-relative sizing, with shared weight and line-height roles.

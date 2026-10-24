@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Thin empty duration frames sit on a quiet planning grid. The emphasized frame retains a white interior and four genuine corner handles, applying the deck’s selection-frame language to dates.

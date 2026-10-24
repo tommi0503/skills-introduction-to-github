@@ -1,0 +1,1 @@
+Observed on page 19. Sequential events keep their date or mark, heading and supporting copy attached to the same event. The internal spacing and placement are owned by this element rather than a surrounding page. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+Compact narrative paragraphs with native hanging discs and the source 16/24 rhythm. Font size is capped at 16 and depends on available height per paragraph, so a narrow 230 px field does not shrink its copy merely because the base was wider. Lead, quiet, and two-column variants retain the same typography grammar.

@@ -1,0 +1,1 @@
+Observed on page 03. The complete cycle owns its repeated nodes, their circular arrangement and their connecting path. Three 85 px accent circles on a 302 px pale disk,124 px white center. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,29 @@
+/* No observed card; deck grammar 069/01. Unobserved extension. Open selection frames and precise corner handles.
+Kick, hero, name and note have independent rows. A fixed logical note row keeps the complete grid centered without moving the title or figure when copy length changes. */
+.card[data-el="anchor-frame-card"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);background:var(--page);border:1px solid var(--a1-3-soft)}
+.card[data-el="anchor-frame-card"] *{box-sizing:border-box;min-width:0;margin:0}
+.card[data-el="anchor-frame-card"]>.parts{--anchor-frame-card-name-reserve:clamp(var(--type-14),6cqh,var(--type-26));--anchor-frame-card-note-reserve:clamp(var(--type-12),6cqh,var(--type-16));--anchor-frame-card-name:clamp(var(--type-14),min(6cqw,6cqh),var(--type-26));--anchor-frame-card-figure:clamp(var(--type-24),min(13cqw,20cqh),var(--type-56));--anchor-frame-card-mark:min(22cqw,18cqh,var(--type-64));--anchor-frame-card-note:clamp(var(--type-12),min(3.5cqw,6cqh),var(--type-16));--anchor-frame-card-note-lines:4;--anchor-frame-card-kick:0px;--anchor-frame-card-hero:0px;position:relative;width:100%;height:100%;padding:min(5cqh,var(--gap)) min(6cqw,var(--gap));display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:var(--anchor-frame-card-kick) var(--anchor-frame-card-hero) calc(var(--anchor-frame-card-name-reserve)*var(--name-line)*2) calc(var(--anchor-frame-card-note-reserve)*var(--body-line)*var(--anchor-frame-card-note-lines));gap:min(2cqh,var(--gap-sm)) min(3cqw,var(--gap-sm));align-content:center;border:0}
+.card[data-el="anchor-frame-card"]>.parts:has(>.kick):has(>.mark):not(:has(>.fig)){--anchor-frame-card-note-lines:5}
+.card[data-el="anchor-frame-card"]>.parts:has(>.kick){--anchor-frame-card-kick:calc(var(--type-12)*var(--label-line))}
+.card[data-el="anchor-frame-card"]>.parts:has(>.mark):not(:has(>.fig)){--anchor-frame-card-hero:min(18cqh,var(--type-64))}
+.card[data-el="anchor-frame-card"]>.parts:has(>.fig):not(:has(>.mark)){--anchor-frame-card-hero:calc(clamp(var(--type-24),20cqh,var(--type-56))*var(--figure-line))}
+.card[data-el="anchor-frame-card"]>.parts:has(>.fig):has(>.mark){--anchor-frame-card-hero:max(calc(clamp(var(--type-24),20cqh,var(--type-56))*var(--figure-line)),min(18cqh,var(--type-64)))}
+.card[data-el="anchor-frame-card"]>.parts>.kick{grid-column:1/-1;grid-row:1;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.card[data-el="anchor-frame-card"]>.parts>.fig{grid-column:1/-1;grid-row:2;align-self:start;font-size:var(--anchor-frame-card-figure);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-7)}
+.card[data-el="anchor-frame-card"]>.parts>.fig small{font-size:clamp(var(--type-10),3cqw,var(--type-16));line-height:var(--label-line)}
+.card[data-el="anchor-frame-card"]>.parts>.mark{grid-column:1;grid-row:2;align-self:start;justify-self:start;display:flex;align-items:center;justify-content:center;width:var(--anchor-frame-card-mark);height:var(--anchor-frame-card-mark);font-size:var(--type-16);font-weight:var(--label-weight);background:var(--page);color:var(--a1-7);border:1px solid var(--a1-7)}
+.card[data-el="anchor-frame-card"]>.parts:has(>.fig)>.mark{grid-column:2;align-self:start}
+.card[data-el="anchor-frame-card"]>.parts:has(>.mark)>.fig{grid-column:1}
+.card[data-el="anchor-frame-card"]>.parts>.mark>.icon{display:block;width:55%;height:55%}
+.card[data-el="anchor-frame-card"]>.parts>.mark>.seat.icon{width:100%;height:100%;background:var(--n-2);color:var(--n-7)}
+.card[data-el="anchor-frame-card"]>.parts>.name{grid-column:1/-1;grid-row:3;align-self:start;font-size:var(--anchor-frame-card-name);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.card[data-el="anchor-frame-card"]>.parts>.note{grid-column:1/-1;grid-row:4;align-self:center;font-size:var(--anchor-frame-card-note);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7)}
+.card[data-el="anchor-frame-card"].quiet{background:var(--n-1)}
+.card[data-el="anchor-frame-card"].line{border:1px solid var(--a1-7)}
+.card[data-el="anchor-frame-card"].tone-1{border-color:var(--a1-7)}
+.card[data-el="anchor-frame-card"].tone-2{border-color:var(--a2-7)}
+.card[data-el="anchor-frame-card"].tone-3{border-color:var(--a3-7)}
+.card[data-el="anchor-frame-card"].tone-4{border-color:var(--a4-7)}
+.card[data-el="anchor-frame-card"].tone-5{border-color:var(--n-3)}
+.card[data-el="anchor-frame-card"].on{border-color:var(--a1-7)}
+.card[data-el="anchor-frame-card"].on::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(var(--a1-7),var(--a1-7)) left top/4px 4px no-repeat,linear-gradient(var(--a1-7),var(--a1-7)) right top/4px 4px no-repeat,linear-gradient(var(--a1-7),var(--a1-7)) left bottom/4px 4px no-repeat,linear-gradient(var(--a1-7),var(--a1-7)) right bottom/4px 4px no-repeat}

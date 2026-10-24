@@ -1,0 +1,1 @@
+Observed on page 12. Three light-weight full rings with neutral remainder, large thin accent percent centered inside, bold names beneath; fine full-height vertical separators between members. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

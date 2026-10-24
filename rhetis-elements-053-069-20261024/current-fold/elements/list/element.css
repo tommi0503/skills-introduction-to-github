@@ -1,0 +1,37 @@
+/* Source06:628×422, four85px medallion rows27.333px apart.
+Own mark preserves source81px circle,44px icon,name(101,3)/20,note(101,37)/16.
+Unmarked inferred rows put marker and name first line in one grid. */
+.list[data-el="current-fold-list"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;display:flex;flex-direction:column;justify-content:space-between;counter-reset:item;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}
+.list[data-el="current-fold-list"] *{box-sizing:border-box;min-width:0;margin:0}
+.list[data-el="current-fold-list"]>.item{position:relative;container-type:size;height:20.14218cqh;counter-increment:item}
+.list[data-el="current-fold-list"]>.item>.mark{position:absolute;left:0;top:2.352941%;width:min(12.89809cqw,95.294118cqh);height:min(12.89809cqw,95.294118cqh);display:flex;align-items:center;justify-content:center;background:var(--a2);color:var(--page);border-radius:50%}
+.list[data-el="current-fold-list"]>.item>.mark>.icon{display:block;width:54.320988%;height:54.320988%}
+.list[data-el="current-fold-list"]>.item:nth-child(2)>.mark{background:var(--a1-5)}
+.list[data-el="current-fold-list"]>.item:nth-child(3)>.mark{background:var(--a1-7)}
+.list[data-el="current-fold-list"]>.item:nth-child(4)>.mark{background:var(--a1-9)}
+.list[data-el="current-fold-list"]>.item:has(>.mark)>.name{position:absolute;left:calc(min(12.89809cqw,95.294118cqh) + var(--gap-sm)*1.666667);top:3.529412%;width:calc(100% - min(12.89809cqw,95.294118cqh) - var(--gap-sm)*1.666667);font-size:clamp(var(--type-14),3.184713cqw,var(--type-20));font-weight:var(--figure-weight);line-height:var(--name-line);color:var(--a1-9)}
+.list[data-el="current-fold-list"]>.item:has(>.mark)>.note{position:absolute;left:calc(min(12.89809cqw,95.294118cqh) + var(--gap-sm)*1.666667);top:43.529412%;width:calc(100% - min(12.89809cqw,95.294118cqh) - var(--gap-sm)*1.666667);font-size:clamp(var(--type-12),2.547771cqw,var(--type-16));font-weight:var(--body-weight);line-height:var(--body-line);color:var(--ink)}
+.list[data-el="current-fold-list"]>.item:not(:has(>.mark)){height:auto;flex:1;display:grid;grid-template-columns:28px minmax(0,1fr);align-content:center;font-size:var(--type-20);line-height:calc(var(--type-20)*var(--name-line))}
+.list[data-el="current-fold-list"]>.item:not(:has(>.mark))>.name{grid-column:2;grid-row:1;font-size:inherit;line-height:inherit;font-weight:var(--figure-weight);color:var(--a1-9)}
+.list[data-el="current-fold-list"]>.item:not(:has(>.mark))>.note{grid-column:2;grid-row:2;font-size:var(--type-16);line-height:var(--body-line);color:var(--ink)}
+.list[data-el="current-fold-list"]>.item:not(:has(>.mark))::before{content:"";grid-column:1;grid-row:1;align-self:start;width:6px;height:6px;margin-top:calc((1lh - 6px)/2);border-radius:50%;background:var(--a1-7)}
+.list[data-el="current-fold-list"].num>.item:not(:has(>.mark))::before{content:counter(item);width:22px;height:1lh;margin-top:0;display:flex;align-items:center;justify-content:center;background:var(--a1-1-soft);color:var(--a1-7);font-size:inherit;font-weight:var(--label-weight)}
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark))::before{width:20px;height:20px;margin:0;position:absolute;left:0;top:1px;background:var(--a1-7);border:0;border-radius:50%;rotate:none}
+.list[data-el="current-fold-list"].divided>.item+.item{border-top:1px solid var(--n-3)}
+.list[data-el="current-fold-list"]:has(>.item:nth-child(5):last-child)>.item{height:auto;flex:1}
+.list[data-el="current-fold-list"]:has(>.item:nth-child(5):last-child)>.item:not(:has(>.mark)){font-size:var(--type-16);line-height:calc(var(--type-16)*var(--name-line));row-gap:calc(var(--gap-sm)*.333333)}
+.list[data-el="current-fold-list"]:has(>.item:nth-child(5):last-child)>.item:not(:has(>.mark))>.note{font-size:var(--type-12)}
+
+/* Source12 genuine check variant: 18/27 text, 20px filled checks, 24px rows and 8px gaps. */
+.list[data-el="current-fold-list"].check:not(:has(>.item>.mark)){gap:calc(var(--gap-sm)*2/3);justify-content:flex-start}
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark)){flex:none;height:24px;min-height:24px;display:block;padding-left:27px;font-size:var(--type-18);line-height:var(--body-line)}
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark))>.name{font-size:var(--type-18);line-height:var(--body-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink);white-space:nowrap}
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark))>.note:empty{display:none}
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark))::after{content:"";position:absolute;left:5px;top:6px;width:10px;height:6px;border-left:1.5px solid var(--page);border-bottom:1.5px solid var(--page);rotate:-45deg}
+
+/* A check item with its own supporting note needs a second line; source12 empty-note rows retain24px. */
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark)):has(>.note:not(:empty)){height:auto;min-height:calc(var(--type-18)*var(--body-line) + var(--type-16)*var(--body-line));flex:1;align-content:start}
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark)):has(>.note:not(:empty))>.note{display:block}
+
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark)):has(>.note:not(:empty))::before{top:calc((var(--type-18)*var(--body-line) - var(--type-20))/2)}
+.list[data-el="current-fold-list"].check>.item:not(:has(>.mark)):has(>.note:not(:empty))::after{top:calc((var(--type-18)*var(--body-line) - var(--type-20))/2 + 5px)}

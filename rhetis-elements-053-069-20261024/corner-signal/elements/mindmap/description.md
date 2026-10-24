@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A central idea connects to surrounding branches and their optional subordinate leaves. Its own painted parts include polygon-clipped faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

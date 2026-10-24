@@ -1,0 +1,44 @@
+/* Page furniture and the fixed 1280 × 720 contract grid. Element roots are never selected here. */
+.slide{position:relative;width:1280px;height:720px;overflow:hidden;box-sizing:border-box;background:var(--page);color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);container-type:size}
+.slide *{box-sizing:border-box}.slide :is(h1,h2,p,blockquote){margin:0}
+.slide>.page{position:relative;width:100%;height:100%;isolation:isolate}
+.slide .body{position:absolute;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:var(--gap-sm);min-width:0;min-height:0}
+.slide .body>*{min-width:0;min-height:0}
+.slide .head{position:absolute;z-index:2}.slide .head.center{text-align:center}
+.slide .title{font-family:var(--font-display);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track)}
+.slide .title b{color:var(--a1-7);font-weight:var(--weight-display)}
+.slide .kicker{font-size:var(--type-16);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--a1-7)}
+.slide .lead{font-size:var(--type-18);font-weight:var(--lead-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track);color:var(--n-7)}
+.slide .group{display:flex;gap:var(--gap-sm);min-width:0;min-height:0}.slide .group>*{flex:1;min-width:0;min-height:0}
+.slide .group.col,.slide .stack{display:flex;flex-direction:column;gap:var(--gap-sm);min-width:0;min-height:0}.slide .stack>*{flex:1;min-width:0;min-height:0}
+.slide .group.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.slide .group.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.slide .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--gap);min-width:0;min-height:0}.slide .split.wide-left{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.slide .seat{position:relative;min-width:0;min-height:0;display:grid;place-items:center;aspect-ratio:1;background:var(--n-2);color:var(--n-7);font-size:var(--type-18)}
+.slide .seat:empty:after{content:attr(data-ph)}.slide .seat.avatar{border-radius:50%}.slide .seat.portrait{aspect-ratio:3/4}.slide .seat.logo{aspect-ratio:1.2}
+.slide .icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;flex:none}.slide .icon>svg{width:100%;height:100%}
+.slide .top,.slide .rail,.slide .foot{position:absolute;z-index:2}.slide .foot{font-size:var(--type-12);line-height:var(--label-line);font-weight:var(--lead-weight);color:var(--n-7);display:flex;justify-content:space-between}
+.slide .deco{position:absolute;pointer-events:none;z-index:-1}.slide.cover .lockup{position:absolute;z-index:1}.slide.cover .meta{position:absolute;font-size:var(--type-16);line-height:var(--body-line);font-weight:var(--body-weight);color:var(--n-7)}
+.slide.cover .seat.back{position:absolute;aspect-ratio:auto;z-index:0}.slide.cover .lockup>.lead{margin-top:var(--gap)}
+.slide .body{left:71px;top:28px;width:1134px;height:614px}
+.slide .head{left:77px;top:54px;width:1128px;height:130px}
+/* Replica 02–21: 77px left margin, 56px split-colour title and small running footer. */
+.slide{background:var(--n-1)}.slide .title{font-size:var(--type-56);line-height:var(--title-line)}.slide .title>.label{font-family:var(--font-body)}.slide .head .lead{font-size:clamp(var(--type-14),1.171875cqw,var(--type-16));margin-top:32px;color:var(--n-7);line-height:var(--lead-line)}
+.slide .foot{left:77px;right:77px;top:661.5px;font-size:clamp(var(--type-10),.890625cqw,var(--type-12));letter-spacing:var(--label-track-latin)}
+.slide.on{background:var(--a1-9);color:var(--page)}.slide.on .title,.slide.on .title b,.slide.on .lead{color:var(--page)}
+.slide.cover{background:var(--page)}.slide.cover .lockup.at-top-left{left:77px;top:110px}.slide.cover .title{font-family:var(--font-body);font-size:var(--type-112);font-weight:var(--weight-display);line-height:var(--title-line);letter-spacing:var(--tracking-display);color:var(--a1-7)}
+.slide.cover .title b{display:table;background:var(--a1-7);color:var(--page);padding:0 var(--gap-sm);clip-path:polygon(0 0,92% 0,100% 28%,100% 100%,0 100%);font-weight:var(--weight-display)}.slide.cover .lead{font-size:clamp(var(--type-20),1.640625cqw,var(--type-22));margin-top:var(--gap)}.slide.cover .meta{left:85px;top:600px;font-size:var(--type-18)}.slide.cover .seat.back{left:675px;top:238px;width:605px;height:482px}
+
+/* Vector furniture uses the full page coordinate field; geometry belongs to source data. */
+.slide svg.deco,.slide.cover svg.deco{inset:0;width:100%;height:100%;display:block;border:0;border-radius:0;background:none;transform:none;z-index:-1}
+
+.slide .head>.title b{font-weight:var(--name-weight)}.slide .head>.title>.label b{font-weight:var(--title-weight)}.slide .head>.lead{position:absolute;left:0;top:84px;margin:0;font-weight:var(--body-weight)}
+
+.slide.on .foot{color:var(--page)}
+
+.slide.on .page>.top{left:500px;top:470px;width:280px;height:26px;text-align:center;font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--figure-weight);line-height:calc(var(--label-line)*1.3/1.25);letter-spacing:var(--body-track);color:var(--page)}
+
+/* A stacked placement keeps its own picture ratio instead of flex-stretching into a strip. */
+.slide .body>.stack:has(>.seat){container-type:size}
+.slide .body>.stack>.seat{flex:none;width:min(100cqw,42cqh);height:auto;align-self:center}
+.slide .body>.stack>.seat.portrait{width:min(100cqw,31.5cqh)}
+.slide .body>.stack>.seat.logo{width:min(100cqw,50.4cqh)}

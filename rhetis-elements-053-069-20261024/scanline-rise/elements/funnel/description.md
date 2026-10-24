@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Successive stages narrow through the member sequence while preserving each stage name and value. Its own painted parts include shared-radius corners. Type uses bounded container-relative sizing, with shared weight and line-height roles.

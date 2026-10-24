@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Sequential positive and negative changes form a cumulative value path between category labels. Its own painted parts include rounded marks or label ends, dotted or dashed rules. Type uses bounded container-relative sizing, with shared weight and line-height roles.

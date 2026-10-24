@@ -1,0 +1,13 @@
+/* Unobserved leaf, new design. Source motif: 0.6px ridges and13px axis labels; no existing collection CSS is reused. */
+.tablebox[data-el="corner-signal-table"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);border-top:calc(var(--pad)*.45) solid var(--a1-7);background:linear-gradient(135deg,var(--a1-7) 0 45%,transparent 46%) top left/28px 28px no-repeat;padding:var(--pad)}
+.tablebox[data-el="corner-signal-table"] *{box-sizing:border-box}
+.tablebox[data-el="corner-signal-table"] :is(b,p,span,small){margin:0}
+.tablebox[data-el="corner-signal-table"]>.table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:clamp(var(--type-10),calc(100cqh*.045),var(--type-13));line-height:var(--body-line)}
+.tablebox[data-el="corner-signal-table"]>.table :is(th,td){padding:calc(var(--pad)*.35);border-bottom:0.8px solid var(--n-3);text-align:left;color:var(--ink);overflow-wrap:anywhere}
+.tablebox[data-el="corner-signal-table"]>.table>thead th{font-weight:var(--name-weight);background:var(--a1-7);color:var(--page)}
+.tablebox[data-el="corner-signal-table"]>.table .num{text-align:right;font-variant-numeric:tabular-nums}
+.tablebox[data-el="corner-signal-table"]>.table .pick{background:var(--a1-1-soft);color:var(--ink);font-weight:var(--name-weight)}
+.tablebox[data-el="corner-signal-table"]>.table>tbody>tr:nth-child(even){background:var(--n-1)}
+.tablebox[data-el="corner-signal-table"]>.table:has(>thead>tr>th:nth-child(3):last-child)>thead th:nth-child(1){width:24%}
+.tablebox[data-el="corner-signal-table"]>.table:has(>thead>tr>th:nth-child(3):last-child)>thead th:nth-child(2){width:56%}
+.tablebox[data-el="corner-signal-table"]>.table:has(>thead>tr>th:nth-child(3):last-child)>thead th:nth-child(3){width:20%}

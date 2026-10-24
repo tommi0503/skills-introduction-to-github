@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Parent and child groups form a hierarchy whose connecting rules belong to the complete group. Its own painted parts include rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

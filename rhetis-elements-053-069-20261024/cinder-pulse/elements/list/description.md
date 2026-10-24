@@ -1,0 +1,1 @@
+Observed source 12: four 541×40 rounded white rows in a 541×178 list, with 6 px gaps. A shared first-line grid preserves the measured marker/name/support x positions of 10/26/135. Rows without supporting notes keep the compact source text-list treatment.

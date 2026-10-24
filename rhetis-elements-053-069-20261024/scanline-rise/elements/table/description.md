@@ -1,0 +1,1 @@
+Observed on pages 09,15. Four columns including gray row keys; accent rounded header for three projects; fine horizontal rules. Last row embeds three native area elements rather than raster mini-charts. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

@@ -1,0 +1,1 @@
+Observed on page 06. Layered groups arrange named system parts and their internal members. One 990×125 accent band split into 3 layer columns, each with 136×35 white floating name capsule and three white chips. Type uses bounded container-relative sizing, with shared weight and line-height roles.

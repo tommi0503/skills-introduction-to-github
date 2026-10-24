@@ -1,0 +1,1 @@
+An inferred heading extension uses a heavy lower divider beneath the title and a solid accent rectangle behind inline emphasis. Optional kicker and note share a vertically centered column. The base heading scales between 24 px and 48 px, while the big variant scales between 32 px and 72 px using the received width.

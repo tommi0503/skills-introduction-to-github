@@ -1,0 +1,1 @@
+Observed on page 06. Parent and child groups form a hierarchy whose connecting rules belong to the complete group. Horizontal mirrored two-branch hierarchy: central performance root, one intermediate pale category each side, two outer gray leaves per category. Type uses bounded container-relative sizing, with shared weight and line-height roles.

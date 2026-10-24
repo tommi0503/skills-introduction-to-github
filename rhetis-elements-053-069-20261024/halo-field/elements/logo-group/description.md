@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Repeated empty logo seats preserve a consistent grid and the spacing between marks. Its own painted parts include explicit framing or divider rules. Container-relative dimensions scale the internal arrangement, while text uses the shared type roles.

@@ -1,0 +1,17 @@
+/* Source12:323.33×102, padding26/20, two16px/19px name rows; preserve the measured base. */
+.list[data-el="scanline-rise-list"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink);counter-reset:item;display:block;padding:calc(var(--gap-sm)*2.166667) calc(var(--gap-sm)*1.666667);background:var(--a1-1-soft);border-bottom:1px solid var(--a1-7)}
+.list[data-el="scanline-rise-list"] *{box-sizing:border-box;min-width:0;margin:0}
+.list[data-el="scanline-rise-list"]>.item{position:relative;display:grid;align-content:center;counter-increment:item;grid-template-columns:10px minmax(0,1fr);font-size:clamp(var(--type-12),4.948536cqw,var(--type-16));line-height:calc(var(--body-line)*.791667)}
+.list[data-el="scanline-rise-list"]>.item>.name{grid-column:2;grid-row:1;font-size:inherit;font-weight:var(--body-weight);line-height:inherit}
+.list[data-el="scanline-rise-list"]>.item>.note{grid-column:2;grid-row:2;font-size:var(--type-14);font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7)}
+.list[data-el="scanline-rise-list"]>.item::before{content:"";grid-column:1;grid-row:1;align-self:start;width:5px;height:1px;margin-top:calc(.5lh - 1.5px);background:var(--ink)}
+.list[data-el="scanline-rise-list"].num>.item::before{content:counter(item);width:18px;height:1lh;margin-top:0;display:flex;align-items:center;justify-content:center;font-size:inherit;font-weight:var(--label-weight);background:var(--a1-7);border:0;color:var(--page)}
+.list[data-el="scanline-rise-list"].check>.item::before{width:10px;height:6px;margin-top:calc((1lh - 6px)/2);border:0;border-left:2px solid var(--a1-7);border-bottom:2px solid var(--a1-7);background:none;border-radius:0;clip-path:none;rotate:-45deg}
+.list[data-el="scanline-rise-list"].divided>.item+.item{border-top:1px solid var(--n-3)}
+.list[data-el="scanline-rise-list"]>.item>.mark{grid-column:1;grid-row:1;align-self:start;width:18px;height:18px;margin-top:calc((1lh - 18px)/2);color:var(--a1-7)}
+.list[data-el="scanline-rise-list"]>.item>.mark>.icon{width:100%;height:100%;display:block}
+.list[data-el="scanline-rise-list"]>.item:has(>.mark)::before{content:none}
+.list[data-el="scanline-rise-list"]:has(>.item>.note:not(:empty)){display:flex;flex-direction:column;padding-top:0;padding-bottom:0}
+.list[data-el="scanline-rise-list"]:has(>.item>.note:not(:empty))>.item{flex:1}
+.list[data-el="scanline-rise-list"].num>.item,.list[data-el="scanline-rise-list"]>.item:has(>.mark){grid-template-columns:24px minmax(0,1fr)}
+@container(max-width:600px){.list[data-el="scanline-rise-list"]>.item>.note{font-size:var(--type-12)}}

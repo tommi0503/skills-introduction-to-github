@@ -1,0 +1,1 @@
+Observed on page 04: a fine dotted ridge joins 10 px open round markers, with values above the points in a 689.34375×213 field. The separate bar chart owns the category axis. Each point owns its preceding connection, and the plotting proportions respond to the received box.

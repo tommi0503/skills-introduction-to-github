@@ -1,0 +1,1 @@
+Observed on page 04: a 22 px, weight 700 heading starts at y 2 in a 689.34375×44 field, with a 12 px right-aligned unit note at y 10 and a fine lower rule. Large and centered arrangements are inferred extensions rather than additional source forms. Heading size responds to its own box; the base note retains its separate right-side position.

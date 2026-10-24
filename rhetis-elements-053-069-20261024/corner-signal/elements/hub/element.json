@@ -1,0 +1,17 @@
+{
+  "schema": "rhetis.design-library-element-source/1",
+  "contract": "hub.spokes@1",
+  "registrations": {},
+  "tokenDefaults": {
+    "--corner-signal-hub-unit": "min(calc(100cqw / 1128),calc(100cqh / 393))",
+    "--corner-signal-hub-n": "6",
+    "--corner-signal-hub-i": "0",
+    "--corner-signal-hub-rows": "round(up,calc(var(--corner-signal-hub-n)/2),1)",
+    "--corner-signal-hub-x": "calc((100cqw - var(--corner-signal-hub-unit)*1128)/2)",
+    "--corner-signal-hub-y": "calc((100cqh - var(--corner-signal-hub-unit)*393)/2)",
+    "--corner-signal-hub-col": "round(down,calc(var(--corner-signal-hub-i)/var(--corner-signal-hub-rows)),1)",
+    "--corner-signal-hub-row": "mod(var(--corner-signal-hub-i),var(--corner-signal-hub-rows))",
+    "--corner-signal-hub-first": "max(0,calc(1 - var(--corner-signal-hub-row)))",
+    "--corner-signal-hub-line": "calc(75 + var(--corner-signal-hub-first)*81 + var(--corner-signal-hub-col)*(1 - var(--corner-signal-hub-first)))"
+  }
+}

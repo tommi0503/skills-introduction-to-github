@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A solid period band sits above square duration blocks, each resting on a short stepped plinth. Broad neutral owner plates and a strong filled duration continue the deck’s architectural massing.

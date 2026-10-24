@@ -1,0 +1,32 @@
+/* No direct source instance; deck grammar from 069/01.
+Unobserved contract: member-owned proportional flow bands extend from one source to separately named branches. */
+.sankey[data-el="anchor-frame-sankey"] {position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;display:flex;flex-direction:column;gap:var(--gap-sm);font-family:var(--font-body);color:var(--ink)}
+.sankey[data-el="anchor-frame-sankey"] :is(.name,.fig){margin:0;line-height:var(--name-line);letter-spacing:var(--body-track)} .sankey[data-el="anchor-frame-sankey"] .name{font-size:clamp(var(--type-12),2cqw,var(--type-20));font-weight:var(--name-weight)} .sankey[data-el="anchor-frame-sankey"] .fig{font-size:clamp(var(--type-14),2.5cqw,var(--type-28));font-weight:var(--figure-weight)}
+.sankey[data-el="anchor-frame-sankey"]>.source{position:absolute;left:0;top:0;width:25%;height:100%;background:var(--n-2);border-left:2px solid var(--a1-7);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);border-radius:0px}
+.sankey[data-el="anchor-frame-sankey"]>.branch{position:relative;flex:var(--v) 1 0;min-height:0;margin-left:25%;width:75%;container-type:size}
+ 
+.sankey[data-el="anchor-frame-sankey"]>.branch:before{content:'';position:absolute;left:0;right:27%;top:0;bottom:0;background:var(--n-3);clip-path:polygon(0 25%,70% 0,100% 0,100% 100%,70% 100%,0 75%)}
+.sankey[data-el="anchor-frame-sankey"]>.branch.on:before{background:var(--a1-7)} .sankey[data-el="anchor-frame-sankey"]>.branch.out:before{background:var(--n-2)}
+.sankey[data-el="anchor-frame-sankey"]>.branch>.name{position:absolute;left:75%;right:0;bottom:52%;text-align:center;font-size:clamp(var(--type-8),min(3cqw,24cqh),var(--type-20))} .sankey[data-el="anchor-frame-sankey"]>.branch>.fig{position:absolute;left:75%;right:0;top:52%;text-align:center;font-size:clamp(var(--type-10),min(4cqw,32cqh),var(--type-28))}
+   
+.sankey[data-el="anchor-frame-sankey"]>.branch>.branch{position:relative;margin-left:75%;padding-left:var(--gap-sm);border-left:1px solid var(--n-3)}
+
+/* DECK PART CONSTRUCTION */
+.sankey[data-el="anchor-frame-sankey"]>.source{background:var(--page);color:var(--ink);border:1px solid var(--a1-3-soft);border-radius:0;}.sankey[data-el="anchor-frame-sankey"] .branch:before{clip-path:none;border:1px solid var(--a1-3-soft);background:var(--page);box-sizing:border-box}.sankey[data-el="anchor-frame-sankey"] .branch.on:before{border-color:var(--a1-7);box-shadow:inset 0 0 0 1px var(--a1-7)}.sankey[data-el="anchor-frame-sankey"] .branch.on:after{content:"";position:absolute;left:0;top:0;width:5px;height:5px;box-sizing:border-box;border:1px solid var(--a1-7);background:var(--page);box-shadow:calc(73cqw - 5px) 0 0 -1px var(--page),calc(73cqw - 5px) 0 0 0 var(--a1-7),0 calc(100cqh - 5px) 0 -1px var(--page),0 calc(100cqh - 5px) 0 0 var(--a1-7),calc(73cqw - 5px) calc(100cqh - 5px) 0 -1px var(--page),calc(73cqw - 5px) calc(100cqh - 5px) 0 0 var(--a1-7)}
+
+/* SECOND SPLIT */
+.sankey[data-el="anchor-frame-sankey"]:has(>.branch>.branch)>.source{width:20%}
+.sankey[data-el="anchor-frame-sankey"]:has(>.branch>.branch)>.branch{margin-left:20%;width:80%}
+.sankey[data-el="anchor-frame-sankey"]:has(>.branch>.branch)>.branch:before{right:65%}
+.sankey[data-el="anchor-frame-sankey"]:has(>.branch>.branch)>.branch>.name,.sankey[data-el="anchor-frame-sankey"]:has(>.branch>.branch)>.branch>.fig{left:35%;right:40%}
+.sankey[data-el="anchor-frame-sankey"]>.branch:has(>.branch){display:flex;flex-direction:column;gap:calc(var(--gap-sm)/2)}
+.sankey[data-el="anchor-frame-sankey"]>.branch>.branch{position:relative;inset:auto;flex:var(--v) 1 0;min-height:0;margin-left:60%;width:40%;padding:0;border:0;container-type:size}
+.sankey[data-el="anchor-frame-sankey"]>.branch>.branch:before{content:'';position:absolute;left:0;right:27%;top:0;bottom:0;background:var(--n-3)}
+.sankey[data-el="anchor-frame-sankey"]>.branch>.branch>.name{position:absolute;left:75%;right:0;bottom:52%;margin:0;text-align:center;font-family:var(--font-body);font-size:clamp(var(--type-8),3cqw,var(--type-14));font-weight:var(--name-weight);line-height:var(--name-line)}
+.sankey[data-el="anchor-frame-sankey"]>.branch>.branch>.fig{position:absolute;left:75%;right:0;top:52%;text-align:center;font-size:clamp(var(--type-10),4cqw,var(--type-18));font-weight:var(--figure-weight);line-height:var(--figure-line)}
+.sankey[data-el="anchor-frame-sankey"]>.branch>.branch.on:before{background:var(--a1-7)}
+.sankey[data-el="anchor-frame-sankey"]:has(>.branch>.branch)>.branch.on:after{box-shadow:calc(35cqw - 5px) 0 0 -1px var(--page),calc(35cqw - 5px) 0 0 0 var(--a1-7),0 calc(100cqh - 5px) 0 -1px var(--page),0 calc(100cqh - 5px) 0 0 var(--a1-7),calc(35cqw - 5px) calc(100cqh - 5px) 0 -1px var(--page),calc(35cqw - 5px) calc(100cqh - 5px) 0 0 var(--a1-7)}
+.sankey[data-el="anchor-frame-sankey"]>.branch>.branch:before{background:var(--page)} .sankey[data-el="anchor-frame-sankey"]>.branch>.branch.on:before{background:var(--page)}
+
+/* SPLIT NODE PLATE */
+.sankey[data-el="anchor-frame-sankey"]>.branch:has(>.branch)>.name{z-index:2}.sankey[data-el="anchor-frame-sankey"]>.branch:has(>.branch)>.fig{z-index:3}.sankey[data-el="anchor-frame-sankey"]>.branch:has(>.branch)>.branch{z-index:1}.sankey[data-el="anchor-frame-sankey"]>.branch:has(>.branch)>.name:before{content:"";position:absolute;left:0;right:0;top:calc(100% - 48cqh);height:100cqh;box-sizing:border-box;z-index:-1;background:var(--page);border:1px solid var(--a1-3-soft);}.sankey[data-el="anchor-frame-sankey"]>.branch:has(>.branch).on>.name:before{border-color:var(--a1-7)}.sankey[data-el="anchor-frame-sankey"]>.branch:has(>.branch).on>.name:after{content:"";position:absolute;left:0;top:calc(100% - 48cqh);width:5px;height:5px;box-sizing:border-box;border:1px solid var(--a1-7);background:var(--page);box-shadow:calc(25cqw - 5px) 0 0 -1px var(--page),calc(25cqw - 5px) 0 0 0 var(--a1-7),0 calc(100cqh - 5px) 0 -1px var(--page),0 calc(100cqh - 5px) 0 0 var(--a1-7),calc(25cqw - 5px) calc(100cqh - 5px) 0 -1px var(--page),calc(25cqw - 5px) calc(100cqh - 5px) 0 0 var(--a1-7)}

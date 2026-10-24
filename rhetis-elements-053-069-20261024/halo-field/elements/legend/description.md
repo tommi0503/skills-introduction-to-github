@@ -1,0 +1,1 @@
+Observed on page 04: a 689.34×32 group uses 14 px labels and keys,2 px within-key spacing and 12 px between keys. The first key is square and the second is an outlined circle. The group keeps swatches with their own labels as its internal layout responds to the received width.

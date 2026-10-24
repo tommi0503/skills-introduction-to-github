@@ -1,0 +1,1 @@
+Observed on page 18. A bare numeric figure pairs with its label and optional note without borrowing the surrounding card surface. name=[0, 5.8, 116.22, 29]; fig=[116.22, 0, 103.78, 34.8]; fontName=20; fontFigure=24. Type uses bounded container-relative sizing, with shared weight and line-height roles.

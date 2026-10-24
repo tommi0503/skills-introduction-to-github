@@ -1,0 +1,1 @@
+An airy open field is organized by a fine running rule, floating capsules, small accent dots and precise folded planes. The source pyramid retains the tier widths, 34px return folds and dotted label links; the cycle owns its orbit arrows. Three vertically aligned circles and two open rules form the cover decoration. Extensions retain this light structural grammar.

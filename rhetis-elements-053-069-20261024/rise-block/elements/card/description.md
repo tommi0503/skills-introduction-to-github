@@ -1,0 +1,1 @@
+An inferred card extension: hard rectangular planes, a solid left edge and a lower plinth define its face. Independent rows reserve optional kicker, media or figure, name and supporting copy, so longer notes do not move the name. The complete row group is centered and constrained by both box dimensions, with portrait media preserving its aspect ratio.

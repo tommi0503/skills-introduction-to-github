@@ -1,0 +1,14 @@
+/* No direct source instance; deck grammar from 067/05,07,11.
+Unobserved contract: actual line, qualitative track and separate target marker; each row owns all quantitative marks. */
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"] {position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);box-sizing:border-box}
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullets{display:flex;flex-direction:column;gap:var(--gap-sm)} :is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullets>.bullet{height:auto;flex:1;min-height:0}
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet{display:grid;grid-template-columns:1fr auto;align-content:start;padding-top:calc(var(--gap-sm)/3);padding-bottom:var(--gap-lg)}
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet:before{content:'';position:absolute;left:0;right:0;bottom:18px;height:10px;background:linear-gradient(90deg,var(--n-2) 0 calc(var(--low,40)*1%),var(--n-3) 0 calc(var(--high,75)*1%),var(--n-4) 0)}
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet:after{content:'';position:absolute;left:0;bottom:21px;width:calc(var(--v)*1%);height:4px;background:var(--a1-7)}
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet>.name{margin:0;font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)} :is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet>.fig{font-size:var(--type-28);font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet>.note{position:absolute;left:calc(var(--target)*1%);bottom:0;transform:translateX(-50%);margin:0;width:auto;white-space:nowrap;font-size:var(--type-10);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet>.note:before{content:'';position:absolute;left:50%;bottom:100%;height:20px;border-left:2px solid var(--ink)}
+@container(max-height:90px){:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet>.name{font-size:var(--type-14)} :is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet>.fig{font-size:var(--type-20)}}
+
+/* DECK PART CONSTRUCTION */
+:is(.bullet,.bullets)[data-el="corner-signal-bullet"].bullet>.name{width:max-content;max-width:95%;padding-top:calc(var(--gap-sm)/6);border-top:3px solid var(--a1-7)}

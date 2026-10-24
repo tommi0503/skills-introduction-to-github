@@ -1,0 +1,1 @@
+Observed on page 08: a fine ridge joins six 8 px filled point markers, with values above their points in a 535×422 field. Each point owns the connection to its predecessor; the separate bar root supplies the shared year labels. Plot proportions and bounded type respond to the received box.

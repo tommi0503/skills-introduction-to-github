@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Layered groups arrange named system parts and their internal members. Its own painted parts include polygon-clipped faces, rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

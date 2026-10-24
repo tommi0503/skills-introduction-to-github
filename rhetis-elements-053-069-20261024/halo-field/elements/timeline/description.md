@@ -1,0 +1,1 @@
+Observed on page 10. Sequential events keep their date or mark, heading and supporting copy attached to the same event. Four quarter capsules on a long horizontal baseline with arrow at right; each quarter owns title and multiple notes beneath. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Before and after figures form one comparison with a directional separator and supporting labels. Its own painted parts include polygon-clipped faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

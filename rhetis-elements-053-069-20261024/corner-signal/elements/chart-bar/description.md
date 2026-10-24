@@ -1,0 +1,1 @@
+Observed on pages 13,14,20. Six wide square-top contiguous columns with small even gaps; white thin large values inside higher bars, year labels under baseline, sparse plain y-axis. The first bar has no printed value. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

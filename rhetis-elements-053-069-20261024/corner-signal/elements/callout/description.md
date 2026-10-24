@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. A single message keeps optional leading icon and inline emphasis inside one owned text panel. Its own painted parts include polygon-clipped faces. Type uses bounded container-relative sizing, with shared weight and line-height roles.

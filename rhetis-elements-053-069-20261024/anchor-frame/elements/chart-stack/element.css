@@ -1,0 +1,18 @@
+/* Unobserved leaf, new design. Source motif: 266×478 and343×294 thin selection frames; no existing collection CSS is reused. */
+.stacks[data-el="anchor-frame-chart-stack"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);border:1px solid var(--a1-3-soft);background:linear-gradient(var(--a1-7) 0 0) top left/6px 6px no-repeat,linear-gradient(var(--a1-7) 0 0) top right/6px 6px no-repeat,linear-gradient(var(--a1-7) 0 0) bottom left/6px 6px no-repeat,linear-gradient(var(--a1-7) 0 0) bottom right/6px 6px no-repeat;--anchor-frame-chart-stack-ph:calc(100cqh - var(--pad)*2);--anchor-frame-chart-stack-denom:var(--max,100);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:var(--gap-sm);align-items:end;padding:0 var(--pad) var(--pad)}
+.stacks[data-el="anchor-frame-chart-stack"] *{box-sizing:border-box}
+.stacks[data-el="anchor-frame-chart-stack"] :is(b,p,span,small){margin:0}
+.stacks[data-el="anchor-frame-chart-stack"].pct{--anchor-frame-chart-stack-denom:100}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar{height:var(--anchor-frame-chart-stack-ph);position:relative;display:flex;flex-direction:column-reverse;justify-content:start;align-items:center;min-width:0}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar>.seg{--anchor-frame-chart-stack-seg-fill:var(--a1-7);--anchor-frame-chart-stack-seg-on:var(--page);position:relative;flex:0 0 calc(100%*var(--v)/var(--anchor-frame-chart-stack-denom));width:75%;max-width:140px;background:var(--page);border:1px solid var(--anchor-frame-chart-stack-seg-fill);border-radius:0;background-image:linear-gradient(var(--anchor-frame-chart-stack-seg-fill) 0 0);background-position:right top;background-size:4px 4px;background-repeat:no-repeat}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar>.seg.tone-2{--anchor-frame-chart-stack-seg-fill:var(--a2-7);--anchor-frame-chart-stack-seg-on:var(--page)}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar>.seg.tone-3{--anchor-frame-chart-stack-seg-fill:var(--a3-7);--anchor-frame-chart-stack-seg-on:var(--page)}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar>.seg.tone-4{--anchor-frame-chart-stack-seg-fill:var(--a4-7);--anchor-frame-chart-stack-seg-on:var(--page)}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar>.seg>b{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);font-size:clamp(var(--type-8),calc(100cqw * 0.0200000000),var(--type-14));font-weight:var(--body-weight);line-height:var(--label-line);text-align:center;color:var(--ink);white-space:nowrap}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar>span{position:absolute;left:0;right:0;top:100%;font-size:clamp(var(--type-8),calc(100cqw * 0.0257142857),var(--type-18));line-height:var(--label-line);text-align:center;white-space:nowrap;color:var(--ink)}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar.on{border-bottom:3px solid var(--a1-7)}
+.stacks[data-el="anchor-frame-chart-stack"].h{display:flex;flex-direction:column;justify-content:space-around;padding:var(--pad) var(--pad) var(--pad) 23%;gap:var(--gap-sm)}
+.stacks[data-el="anchor-frame-chart-stack"].h>.sbar{height:auto;flex:1;min-height:0;width:100%;flex-direction:row;justify-content:start;align-items:center}
+.stacks[data-el="anchor-frame-chart-stack"].h>.sbar>.seg{flex:0 0 calc(100%*var(--v)/var(--anchor-frame-chart-stack-denom));width:auto;max-width:none;height:80%}
+.stacks[data-el="anchor-frame-chart-stack"].h>.sbar>span{top:50%;transform:translateY(-50%);left:-27cqw;right:auto;width:20cqw;text-align:left;white-space:normal}
+.stacks[data-el="anchor-frame-chart-stack"]>.sbar.on>.seg{background-color:var(--a1-1-soft)}

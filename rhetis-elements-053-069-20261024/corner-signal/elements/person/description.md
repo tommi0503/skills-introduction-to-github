@@ -1,0 +1,1 @@
+Observed on page 19: a 218×395 profile includes an 8 px upper stripe, portrait area, role at y 207, name at y 238 and body at y 290. These source rows keep the name independent of biography length. The own profile box controls media proportions and bounded typography.

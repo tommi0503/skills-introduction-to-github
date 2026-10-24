@@ -1,0 +1,1 @@
+Observed on page 09. Sequential steps group their marks, headings and notes inside one complete process. Four separate stage cards with small ascent in top edge, bottom-aligned at 534 and standalone orange chevron connectors in gaps. Type uses bounded container-relative sizing, with shared weight and line-height roles.

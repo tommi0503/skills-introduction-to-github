@@ -1,0 +1,1 @@
+Observed on page 14: each 377.333×401 profile places its 158.48×245 portrait at(166,52), role at y 225, name at y 249 and body at y 315. The small decorative mark and the asymmetric portrait/text arrangement remain part of the profile itself. Container-relative coordinates and bounded type retain the measured alignment across the complete people group.

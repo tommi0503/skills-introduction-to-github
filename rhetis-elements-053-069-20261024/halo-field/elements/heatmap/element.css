@@ -1,0 +1,13 @@
+/* Unobserved leaf, new design. Source motif: 334px arc with50px stroke and113.3px rounded columns; no existing collection CSS is reused. */
+.heat[data-el="halo-field-heatmap"]{position:relative;box-sizing:border-box;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);border-top:1px solid var(--a1-7);border-radius:var(--radius);display:flex;flex-direction:column;padding:var(--pad);gap:calc(var(--gap-sm)*.4)}
+.heat[data-el="halo-field-heatmap"] *{box-sizing:border-box}
+.heat[data-el="halo-field-heatmap"] :is(b,p,span,small){margin:0}
+.heat[data-el="halo-field-heatmap"]>.heads{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding-left:24%;gap:calc(var(--gap-sm)*.4)}
+.heat[data-el="halo-field-heatmap"]>.heads>span{text-align:center;font-size:clamp(var(--type-8),calc(100cqw * 0.0285714286),var(--type-20));font-weight:var(--body-weight);line-height:var(--label-line);color:var(--n-7)}
+.heat[data-el="halo-field-heatmap"]>.row{display:grid;grid-template-columns:24% repeat(var(--cols),minmax(0,1fr));gap:calc(var(--gap-sm)*.4);flex:1;min-height:0}
+.heat[data-el="halo-field-heatmap"]>.row>.name{display:flex;align-items:center;font-size:clamp(var(--type-8),calc(100cqw * 0.0285714286),var(--type-20));font-weight:var(--body-weight);line-height:var(--name-line);color:var(--ink);overflow-wrap:anywhere}
+.heat[data-el="halo-field-heatmap"]>.row>.cell{position:relative;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--a1-3-soft) calc(var(--v)*1%),var(--n-1));border:0;border-radius:var(--radius);min-width:0;min-height:0}
+.heat[data-el="halo-field-heatmap"]>.row>.cell>b{font-size:clamp(var(--type-8),calc(100cqw * 0.0200000000),var(--type-14));font-weight:var(--body-weight);line-height:var(--label-line);color:var(--ink)}
+.heat[data-el="halo-field-heatmap"].calendar>.heads{padding-left:0}
+.heat[data-el="halo-field-heatmap"].calendar>.row{grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+.heat[data-el="halo-field-heatmap"]>.row>.cell::after{content:"";position:absolute;right:0;top:0;width:8px;height:8px;background:linear-gradient(225deg,var(--n-3) 0 49%,transparent 50%)}

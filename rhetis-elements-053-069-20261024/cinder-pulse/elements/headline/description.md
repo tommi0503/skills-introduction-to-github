@@ -1,0 +1,1 @@
+Observed base 05 is a two-line 34 px/47.6 statement in a 720×96 field, with a medium-weight neutral sentence and an accent phrase. The approved on form follows page 06’s centered 22 px heading band with slightly rounded upper corners. Bounded type and both available box dimensions control the heading while preserving inline emphasis.

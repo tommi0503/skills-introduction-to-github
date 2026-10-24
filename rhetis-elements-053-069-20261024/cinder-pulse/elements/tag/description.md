@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Inline highlighting preserves the surrounding text rhythm, while the compact label mode owns its own small face. Its own painted parts include square-edged faces. Shared typography and spacing roles control the text hierarchy and the gaps between its own parts.

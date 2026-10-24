@@ -1,0 +1,1 @@
+Observed on page 10. A compact label and optional mark share one aligned label box. Its own painted parts include rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

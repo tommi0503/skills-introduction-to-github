@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. The frame owns its image placeholder, framing edges and optional caption. Its own painted parts include explicit framing or divider rules. Container-relative dimensions scale the internal arrangement, while text uses the shared type roles.

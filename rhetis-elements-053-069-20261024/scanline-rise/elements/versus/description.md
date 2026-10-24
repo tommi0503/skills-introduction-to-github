@@ -1,0 +1,1 @@
+Observed on page 14. Two opposed sides keep their headings, marks and supporting items around one comparison centre. Two before/after 202 px panels with 49 px title strip, two 82 px icon boxes per side and bidirectional work connectors; gray before, accent-on after. Type uses bounded container-relative sizing, with shared weight and line-height roles.

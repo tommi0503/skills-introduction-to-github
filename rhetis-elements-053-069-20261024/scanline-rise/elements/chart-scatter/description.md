@@ -1,0 +1,1 @@
+An inferred extension: no independent source instance is mapped for this element. Numeric x/y coordinates place independent points in one bounded plotting field. Its own painted parts include rounded marks or label ends. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+Two or three overlapping chamfered neutral planes with inset accent labels and an optional intersection core. This is an inferred element: source05 supplies the clipped corner and fine-rule language, while translucent set planes make overlap explicit. Member count alone controls two-set or triangular geometry. Both box axes constrain size, and labels wrap within their own set.
