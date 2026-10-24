@@ -4,6 +4,8 @@
 
 최종 검수 결과와 산출물 해시는 각각 [verification.json](verification.json), [artifacts.json](artifacts.json)을 기준으로 확인하세요. 이 문서는 검수 성공이나 배포 완료를 대신 선언하지 않습니다. 패키징 전에는 해당 파일 또는 ZIP 링크가 아직 없을 수 있습니다.
 
+최종 확인: 392개 요소 · 1,093개 fixture · 11,000개 크기/테마 상태 · 조립95장 · PNG1,152개. ZIP14개를 GitHub에서 실제로 다시 다운로드해 SHA-256·CRC·PNG 크기와 조립 HTML 의존성 경로를 검사했습니다. [다운로드 검증 기록](download-verification.json). 계약 미지원103개와 격자 투영 차이는 [전체 목록](UNEXPRESSIBLE.md)과 각 검수 기록에 남깁니다.
+
 ## 컬렉션과 다운로드
 
 | 덱 | 컬렉션 소스 | 페이지 | 다운로드 | 검수 자료 |
