@@ -1,0 +1,1 @@
+Quiet duration lanes share a period grid and a left-hand label rail. Strong rectangular bars occupy exactly their start and exclusive end periods; fine milestone stems remain moments rather than fabricated durations.

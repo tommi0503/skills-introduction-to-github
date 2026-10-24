@@ -1,0 +1,1 @@
+A tree owns its parent, branch and leaf connections. A compact tree places one capsule parent above its children; trees with explanatory leaves spread into measured horizontal stages, using a tall neutral vision capsule, accent strategy circles and quiet action circles.

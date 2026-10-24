@@ -1,0 +1,31 @@
+/* Inferred only: this deck has no directly admissible simple-bar base. Thin rules, rounded bar caps, neutral surfaces and type hierarchy come from the deck language; grouped source charts remain gaps. */
+.bars[data-el="seedmark-chart-bar"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.bars[data-el="seedmark-chart-bar"] *{box-sizing:border-box;}
+.bars[data-el="seedmark-chart-bar"] :is(p,h2,h3,blockquote){margin:0;}
+.bars[data-el="seedmark-chart-bar"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.bars[data-el="seedmark-chart-bar"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.bars[data-el="seedmark-chart-bar"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.bars[data-el="seedmark-chart-bar"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.bars[data-el="seedmark-chart-bar"] .seat:after{content:attr(data-ph);}
+.bars[data-el="seedmark-chart-bar"]{display:flex;align-items:stretch;gap:var(--gap-sm);padding:var(--pad) var(--gap) var(--gap-lg);isolation:isolate;}
+.bars[data-el="seedmark-chart-bar"]:before{content:'';position:absolute;inset:var(--pad) var(--gap) var(--gap-lg);background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%);z-index:-1;}
+.bars[data-el="seedmark-chart-bar"] .bar{position:relative;flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;}
+.bars[data-el="seedmark-chart-bar"] .bar:before{content:'';position:absolute;bottom:0;width:70%;height:calc(var(--v)/var(--max)*100%);border-radius:var(--radius-sm) var(--radius-sm) 0 0;background:var(--n-4);}
+.bars[data-el="seedmark-chart-bar"] .bar.on:before,.bars[data-el="seedmark-chart-bar"] .bar.tone-1:before{background:var(--a1)}
+.bars[data-el="seedmark-chart-bar"] .bar.tone-2:before{background:var(--a2)}
+.bars[data-el="seedmark-chart-bar"] .bar.tone-3:before{background:var(--a3)}
+.bars[data-el="seedmark-chart-bar"] .bar.tone-4:before{background:var(--a4)}
+.bars[data-el="seedmark-chart-bar"] .bar.tone-5:before{background:var(--n-3)}
+.bars[data-el="seedmark-chart-bar"] .bar>b{position:absolute;left:50%;bottom:calc(var(--v)/var(--max)*100% + var(--gap-sm)/2);transform:translateX(-50%);font-size:var(--type-16);font-weight:var(--figure-weight);line-height:var(--label-line);white-space:nowrap;}
+.bars[data-el="seedmark-chart-bar"] .bar>span{position:absolute;left:50%;top:100%;transform:translateX(-50%);font-size:var(--type-12);line-height:var(--label-line);padding-top:var(--gap-sm);white-space:nowrap;}
+.bars[data-el="seedmark-chart-bar"].h{flex-direction:column;padding:var(--gap) var(--gap-lg);}
+.bars[data-el="seedmark-chart-bar"].h:before{display:none}
+.bars[data-el="seedmark-chart-bar"].h .bar{display:block;margin-left:calc(var(--pad)*5.5);margin-right:var(--gap);}
+.bars[data-el="seedmark-chart-bar"].h .bar:before{left:0;top:20%;bottom:20%;width:calc(var(--v)/var(--max)*100%);height:auto;border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+.bars[data-el="seedmark-chart-bar"].h .bar>span{left:auto;right:calc(100% + var(--gap-sm));top:50%;transform:translateY(-50%);padding:0;width:calc(var(--pad)*5);max-width:calc(var(--pad)*5);white-space:normal;text-align:right;overflow-wrap:anywhere;}
+.bars[data-el="seedmark-chart-bar"].h .bar>b{left:calc(var(--v)/var(--max)*100% + var(--gap-sm));bottom:auto;top:50%;transform:translateY(-50%);}
+@container(max-width:650px){.bars[data-el="seedmark-chart-bar"] .bar>b{font-size:var(--type-12)}
+.bars[data-el="seedmark-chart-bar"] .bar>span{font-size:var(--type-10)}
+.bars[data-el="seedmark-chart-bar"].h .bar>span{visibility:visible;}}
+@container(max-width:450px){.bars[data-el="seedmark-chart-bar"] .bar:nth-child(even of .bar:has(>span:not(:empty))):not(:last-child)>span{visibility:hidden;}
+.bars[data-el="seedmark-chart-bar"].h .bar>span{visibility:visible;}}

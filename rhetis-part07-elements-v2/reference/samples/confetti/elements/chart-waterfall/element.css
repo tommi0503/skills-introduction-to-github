@@ -1,0 +1,31 @@
+:is(.body, .group, .split, .stack) > :is(.waterfall[data-el="confetti-chart-waterfall"]) { container: member / size; }
+.stack > :is(.waterfall[data-el="confetti-chart-waterfall"]) { flex: 1 1 0; min-height: 96px; }
+.waterfall[data-el="confetti-chart-waterfall"] { background: var(--n-2); border-radius: var(--radius); padding: clamp(calc(var(--pad) * 12 / 28), 4%, calc(var(--pad) * 32 / 28)) clamp(calc(var(--pad) * 14 / 28), 4.5%, calc(var(--pad) * 40 / 28)) clamp(calc(var(--pad) * 10 / 28), 3%, calc(var(--pad) * 24 / 28)); --confetti-ground: var(--n-2); --grid: color-mix(in srgb, var(--n-8) 30%, var(--confetti-ground)); display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; column-gap: 0; min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--a1) 60%, var(--page)); --bf: var(--type-16); --bl: var(--type-16); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move { display: contents; --c: var(--a1); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move.up { --c: color-mix(in srgb, var(--a1) 45%, var(--confetti-ground)); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move.down { --c: color-mix(in srgb, var(--n-8) 45%, var(--confetti-ground)); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move.total { --c: var(--a1); --from: 0; }
+.waterfall[data-el="confetti-chart-waterfall"] > .move > b { container: col / size; grid-row: 1; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: calc(var(--gap) * 6 / 24); font-size: var(--bf); line-height: 1.2; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--n-9); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move > b::after { content: ""; flex: none; width: 58%; --plot: calc(100cqh - 1.2em - 6px); height: max(2px, max(var(--to) - var(--from), var(--from) - var(--to)) / var(--max, 100) * var(--plot)); margin-bottom: calc(min(var(--to), var(--from)) / var(--max, 100) * var(--plot)); background: var(--c); border-radius: 0; }
+.waterfall[data-el="confetti-chart-waterfall"] > .move.total > b::after { border-radius: 0; }
+.waterfall[data-el="confetti-chart-waterfall"] > .move:not(:last-child) > b::before { content: ""; position: absolute; left: 79%; width: 42%; --plot: calc(100cqh - 1.2em - 6px); bottom: calc(var(--to) / var(--max, 100) * var(--plot) - 1px); height: 0; border-top: 1px dashed var(--wire); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move.down > b { color: var(--n-9); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move.total > b { color: var(--a1); }
+.waterfall[data-el="confetti-chart-waterfall"] > .move > span { grid-row: 2; padding: calc(var(--pad) * 8 / 28) calc(var(--pad) * 4 / 28) 0; border-top: 1px solid var(--grid); text-align: center; font-size: var(--bl); font-weight: var(--body-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-8); text-wrap: balance; }
+.waterfall[data-el="confetti-chart-waterfall"] > .move.total > span { color: var(--a1); }
+@container member (min-width: 520px) and (min-height: 260px) {
+.waterfall[data-el="confetti-chart-waterfall"] > .move { --bf: var(--type-20); --bl: var(--type-16); }
+}
+@container member (min-width: 760px) and (min-height: 360px) {
+.waterfall[data-el="confetti-chart-waterfall"] > .move { --bf: var(--type-24); --bl: var(--type-20); }
+}
+@container member (min-width: 1000px) and (min-height: 440px) {
+.waterfall[data-el="confetti-chart-waterfall"]:not(:has(> .move:nth-child(8))) > .move { --bf: var(--type-32); --bl: var(--type-24); }
+}
+@container member (max-width: 519px) {
+.waterfall[data-el="confetti-chart-waterfall"]:has(> .move:nth-child(7)) > .move { --bf: var(--type-14); --bl: var(--type-14); }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-chart-waterfall"][data-el="confetti-chart-waterfall"][data-el="confetti-chart-waterfall"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-chart-waterfall"][data-el="confetti-chart-waterfall"][data-el="confetti-chart-waterfall"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}

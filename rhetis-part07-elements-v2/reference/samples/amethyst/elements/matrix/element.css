@@ -1,0 +1,84 @@
+:is(.body, .group, .split, .stack) > :is(.matrix[data-el="amethyst-matrix"]) { container-type: size; }
+.stack > :is(.matrix[data-el="amethyst-matrix"]) { flex: 1 1 0; min-height: 96px; }
+:is(.matrix[data-el="amethyst-matrix"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); }
+:where(.matrix)[data-el="amethyst-matrix"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.matrix[data-el="amethyst-matrix"]) > :nth-child(5n/**/+1 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-7); }
+:is(.matrix[data-el="amethyst-matrix"]) > :nth-child(5n/**/+2 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-5); }
+:is(.matrix[data-el="amethyst-matrix"]) > :nth-child(5n/**/+3 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a2-1); }
+:is(.matrix[data-el="amethyst-matrix"]) > :nth-child(5n/**/+4 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-4-soft); }
+:is(.matrix[data-el="amethyst-matrix"]) > :nth-child(5n of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-8-soft); }
+:is(.matrix[data-el="amethyst-matrix"]) > :is(.node, .spoke, .stage, .level, .set, .layer, .branch) { --tint: color-mix(in srgb, var(--t, var(--a1)) 12%, var(--page)); --edge: color-mix(in srgb, var(--t, var(--a1)) 40%, var(--page)); }
+:is(.matrix[data-el="amethyst-matrix"] > .cell) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-8); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.matrix[data-el="amethyst-matrix"] > .cell) > .note { display: block; }
+}
+:is(.matrix[data-el="amethyst-matrix"] > .cell).on > .note { color: inherit; }
+.matrix[data-el="amethyst-matrix"] { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) auto; gap: var(--gap-sm); }
+.matrix[data-el="amethyst-matrix"] > .axis-y { grid-column: 1; grid-row: 1 / 3; display: flex; flex-direction: column; gap: var(--gap-sm); min-height: 0; }
+.matrix[data-el="amethyst-matrix"] > .axis-x { grid-column: 2 / 4; grid-row: 3; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap-sm); }
+.matrix[data-el="amethyst-matrix"] > :is(.axis-x, .axis-y) > * { display: flex; align-items: center; justify-content: center; text-align: center; min-width: 0; min-height: 0; font-size: var(--type-16); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); }
+.matrix[data-el="amethyst-matrix"] > .axis-y > * { flex: 1 1 0; writing-mode: vertical-rl; text-orientation: sideways; rotate: 180deg; }
+.matrix[data-el="amethyst-matrix"] > .cell { justify-content: flex-start; padding-top: clamp(calc(var(--pad) * 10 / 28), 8cqh, calc(var(--pad) * 28 / 28)); background: var(--page); border: 1px solid var(--a1-2-muted); border-radius: var(--radius); color: var(--ink); }
+@container (max-height: 99px) {
+.matrix[data-el="amethyst-matrix"] > .cell { justify-content: center; padding-top: 0; }
+}
+.matrix[data-el="amethyst-matrix"] > .cell:nth-child(1 of .cell) { grid-area: 1 / 2; }
+.matrix[data-el="amethyst-matrix"] > .cell:nth-child(2 of .cell) { grid-area: 1 / 3; }
+.matrix[data-el="amethyst-matrix"] > .cell:nth-child(3 of .cell) { grid-area: 2 / 2; }
+.matrix[data-el="amethyst-matrix"] > .cell:nth-child(4 of .cell) { grid-area: 2 / 3; }
+.matrix[data-el="amethyst-matrix"] > .cell.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+@container (max-height: 199px) {
+.matrix[data-el="amethyst-matrix"] > .axis-y > * { writing-mode: horizontal-tb; rotate: none; }
+}
+@container (min-width: 800px) and (min-height: 400px) {
+.matrix[data-el="amethyst-matrix"] > :is(.axis-x, .axis-y) > * { font-size: var(--type-20); }
+}
+.matrix[data-el="amethyst-matrix"].swot { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); }
+.matrix[data-el="amethyst-matrix"].swot > .cell { justify-content: flex-start; gap: calc(var(--gap) * 6 / 24); padding: clamp(calc(var(--pad) * 10 / 28), 7cqh, calc(var(--pad) * 24 / 28)) 0 0; overflow: hidden; background: color-mix(in srgb, var(--t) 8%, var(--page)); border-color: color-mix(in srgb, var(--t) 34%, var(--page)); --t: var(--a1-7); }
+.matrix[data-el="amethyst-matrix"].swot > .cell:nth-child(1 of .cell) { grid-area: 1 / 1; --t: var(--a1-7); }
+.matrix[data-el="amethyst-matrix"].swot > .cell:nth-child(2 of .cell) { grid-area: 1 / 2; --t: var(--a1-4-soft); }
+.matrix[data-el="amethyst-matrix"].swot > .cell:nth-child(3 of .cell) { grid-area: 2 / 1; --t: var(--a1-5); }
+.matrix[data-el="amethyst-matrix"].swot > .cell:nth-child(4 of .cell) { grid-area: 2 / 2; --t: var(--a2-1); }
+.matrix[data-el="amethyst-matrix"].swot > .cell > .kick { position: absolute; top: clamp(calc(var(--pad) * 8 / 28), 6cqh, calc(var(--pad) * 20 / 28)); right: clamp(calc(var(--gap) * 10 / 24), 6cqw, calc(var(--gap) * 24 / 24)); margin: 0; font-family: var(--font-display), sans-serif; font-size: var(--kk, var(--type-40)); font-weight: var(--figure-weight); line-height: 1; letter-spacing: var(--figure-track); color: var(--t); }
+.matrix[data-el="amethyst-matrix"].swot > .cell > .name { padding-right: 1.6em; }
+.matrix[data-el="amethyst-matrix"].swot > .cell > .list { display: flex; flex-direction: column; gap: calc(var(--gap) * 3 / 24); margin-block: 0; padding: 0; background: none; border: 0; container-type: normal; }
+.matrix[data-el="amethyst-matrix"].swot > .cell > .list > .item { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 0.5em; align-items: start; min-width: 0; margin: 0; padding: 0; background: none; border: 0; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); color: var(--n-8); }
+.matrix[data-el="amethyst-matrix"].swot > .cell > .list > .item::before { content: ""; position: static; grid-column: 1; grid-row: 1; width: 0.36em; height: 0.36em; margin: 0.62em 0 0; border: 0; border-radius: 50%; background: var(--t); }
+.matrix[data-el="amethyst-matrix"].swot > .cell > .list > .item > * { grid-column: 2; margin: 0; min-width: 0; font-size: inherit; font-weight: inherit; line-height: inherit; color: inherit; }
+.matrix[data-el="amethyst-matrix"].swot > .cell.on:nth-child(n of .cell) { background: var(--a1); border-color: var(--a1); color: var(--a1-on); --t: var(--a1-on); }
+.matrix[data-el="amethyst-matrix"].swot > .cell.on > .list > .item { color: inherit; }
+@container (max-height: 159px) {
+.matrix[data-el="amethyst-matrix"].swot > .cell > .list > .item:nth-child(n + 3) { display: none; }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+.matrix[data-el="amethyst-matrix"].swot > .cell > .kick { --kk: var(--type-56); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-matrix"][data-el="amethyst-matrix"][data-el="amethyst-matrix"] { color:var(--ink); }
+[data-el="amethyst-matrix"][data-el="amethyst-matrix"][data-el="amethyst-matrix"] .cell { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-matrix"][data-el="amethyst-matrix"][data-el="amethyst-matrix"] .cell.on { background:var(--a1); color:var(--a1-on); --ink:var(--a1-on); --ink-2:var(--a1-on); --mute:var(--a1-on); }

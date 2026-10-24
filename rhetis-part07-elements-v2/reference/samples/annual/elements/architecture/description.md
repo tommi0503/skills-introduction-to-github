@@ -1,0 +1,1 @@
+Stacked layers as rows of flat square-cornered blocks parted by thin gaps: each layer opens with a solid accent block naming it in the condensed squared display face, then pale warm chips with bold accent text share the rest of the row.

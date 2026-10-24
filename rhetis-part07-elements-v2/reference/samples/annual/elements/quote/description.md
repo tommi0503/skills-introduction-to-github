@@ -1,0 +1,1 @@
+A quote set large in a medium secondary weight, its key words bold in the accent, between two very large heavy quotation marks drawn pale behind the text: the opening mark at the top-left, the closing mark at the right edge. The speaker line below pairs a round portrait, a bold name in the accent and a light note.

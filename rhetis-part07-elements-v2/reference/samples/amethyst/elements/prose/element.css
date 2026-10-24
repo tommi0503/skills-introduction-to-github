@@ -1,0 +1,29 @@
+.stack > :is(.prose[data-el="amethyst-prose"]) { flex: 1 1 0; min-height: 0; }
+.prose[data-el="amethyst-prose"] { container: member / size; min-width: 0; min-height: 0; color: var(--ink); }
+.prose[data-el="amethyst-prose"] > p { font-size: var(--type-16); line-height: var(--body-line); font-weight: var(--body-weight); letter-spacing: var(--body-track); max-width: 40em; text-wrap: pretty; }
+.prose[data-el="amethyst-prose"] > p + p { margin-top: var(--gap-sm); }
+.prose[data-el="amethyst-prose"] b { font-weight: var(--title-weight); color: var(--ink); }
+.prose[data-el="amethyst-prose"].lead > p { font-size: var(--type-20); line-height: var(--lead-line); font-weight: var(--lead-weight); letter-spacing: var(--lead-track); }
+.prose[data-el="amethyst-prose"].lead b { color: var(--a1); }
+.prose[data-el="amethyst-prose"].cols { columns: 14em 2; column-gap: var(--gap-lg); column-rule: var(--hair) solid var(--a1-2-muted); column-fill: balance; }
+.prose[data-el="amethyst-prose"].cols > p { break-inside: avoid; }
+.prose[data-el="amethyst-prose"].quiet { color: var(--n-8); }
+.prose[data-el="amethyst-prose"].quiet b { font-weight: var(--name-weight); color: var(--n-8); }
+@container member (min-width: 500px) and (min-height: 260px) {
+.prose[data-el="amethyst-prose"] > p { font-size: var(--type-20); }
+.prose[data-el="amethyst-prose"].lead > p { font-size: var(--type-24); }
+.prose[data-el="amethyst-prose"].quiet > p { font-size: var(--type-16); }
+.prose[data-el="amethyst-prose"] > p + p { margin-top: var(--gap); }
+}
+@container member (min-width: 700px) and (min-height: 300px) {
+.prose[data-el="amethyst-prose"].lead > p { font-size: var(--type-28); }
+.prose[data-el="amethyst-prose"].quiet > p { font-size: var(--type-20); }
+}
+@container member (min-width: 900px) and (min-height: 400px) {
+.prose[data-el="amethyst-prose"] > p { font-size: var(--type-24); }
+.prose[data-el="amethyst-prose"].lead > p { font-size: var(--type-32); }
+.prose[data-el="amethyst-prose"].quiet > p { font-size: var(--type-20); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-prose"][data-el="amethyst-prose"][data-el="amethyst-prose"] { color:var(--ink); }

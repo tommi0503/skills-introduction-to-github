@@ -1,0 +1,1 @@
+A circular core sits between balanced columns of pill-headed branches. Fine curved links extend toward the core, and subordinate ideas appear as short text rows against a pale rule. The source deck’s clean circles, organization capsules and modest spacing guide this inferred radial form.

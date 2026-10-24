@@ -1,0 +1,59 @@
+:is(.body, .group, .split, .stack) > :is(.sankey[data-el="confetti-sankey"]) { container: member / size; }
+.stack > :is(.sankey[data-el="confetti-sankey"]) { flex: 1 1 0; min-height: 140px; }
+.sankey[data-el="confetti-sankey"] { display: flex; flex-direction: column; gap: var(--g); min-width: 0; min-height: 0; isolation: isolate; --g: 10px; --ground: var(--page); }
+.sankey[data-el="confetti-sankey"] * { --fs: var(--type-16); --ns: var(--type-14); }
+.sankey[data-el="confetti-sankey"] > * { --sw: clamp(70px, 12cqw, 180px); --bw: clamp(8px, 1.1cqw, 14px); --ew: clamp(120px, 26cqw, 340px); --lw: 0px; --f1: calc(100cqw - var(--sw) - 2 * var(--bw) - var(--ew)); --f2: 0px; --g: 10px; --g2: 6px; }
+.sankey[data-el="confetti-sankey"]:has(.branch .branch) > * { --lw: clamp(72px, 13cqw, 180px); --f1: calc((100cqw - var(--sw) - 3 * var(--bw) - var(--lw) - var(--ew)) / 2); --f2: var(--f1); }
+.sankey[data-el="confetti-sankey"] > .branch:nth-child(1 of .branch), .sankey[data-el="confetti-sankey"] .branch > .branch:nth-child(1 of .branch) { --i: 0; }
+.sankey[data-el="confetti-sankey"] > .branch:nth-child(2 of .branch), .sankey[data-el="confetti-sankey"] .branch > .branch:nth-child(2 of .branch) { --i: 1; }
+.sankey[data-el="confetti-sankey"] > .branch:nth-child(3 of .branch), .sankey[data-el="confetti-sankey"] .branch > .branch:nth-child(3 of .branch) { --i: 2; }
+.sankey[data-el="confetti-sankey"] > .branch:nth-child(4 of .branch), .sankey[data-el="confetti-sankey"] .branch > .branch:nth-child(4 of .branch) { --i: 3; }
+.sankey[data-el="confetti-sankey"] > .branch:nth-child(5 of .branch), .sankey[data-el="confetti-sankey"] .branch > .branch:nth-child(5 of .branch) { --i: 4; }
+.sankey[data-el="confetti-sankey"] > .branch:nth-child(6 of .branch), .sankey[data-el="confetti-sankey"] .branch > .branch:nth-child(6 of .branch) { --i: 5; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(2 of .branch)) > .branch { --n: 2; }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch:nth-child(2 of .branch)) > .branch { --n: 2; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(3 of .branch)) > .branch { --n: 3; }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch:nth-child(3 of .branch)) > .branch { --n: 3; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(4 of .branch)) > .branch { --n: 4; }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch:nth-child(4 of .branch)) > .branch { --n: 4; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(5 of .branch)) > .branch { --n: 5; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(6 of .branch)) > .branch { --n: 6; }
+.sankey[data-el="confetti-sankey"] > .branch { --gg: var(--g); --fw: var(--f1); }
+.sankey[data-el="confetti-sankey"] .branch > .branch { --gg: var(--g2); --fw: calc(var(--f2) + var(--lw)); }
+.sankey[data-el="confetti-sankey"] > .source { position: absolute; left: 0; top: calc((var(--n, 2) - 1) * var(--g) / 2); bottom: calc((var(--n, 2) - 1) * var(--g) / 2); width: calc(var(--sw) + var(--bw)); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2px; padding-right: calc(var(--bw) + var(--gap-sm)); background: linear-gradient(var(--sc), var(--sc)) right / var(--bw) 100% no-repeat; --sc: var(--a1); }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(2 of .branch)) > .source { --n: 2; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(3 of .branch)) > .source { --n: 3; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(4 of .branch)) > .source { --n: 4; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(5 of .branch)) > .source { --n: 5; }
+.sankey[data-el="confetti-sankey"]:has(> .branch:nth-child(6 of .branch)) > .source { --n: 6; }
+.sankey[data-el="confetti-sankey"] .branch { flex: var(--v) 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2px; padding-left: calc(var(--bw) + var(--gap-sm)); background: linear-gradient(var(--c), var(--c)) left / var(--bw) 100% no-repeat; --c: color-mix(in srgb, var(--a1) 45%, var(--n-2)); --band: color-mix(in srgb, var(--a1) 16%, transparent); }
+.sankey[data-el="confetti-sankey"] .branch:not(:has(> .branch)) { flex-direction: row; align-items: center; justify-content: flex-start; column-gap: calc(var(--gap) * 8 / 24); }
+.sankey[data-el="confetti-sankey"] .branch:not(:has(> .branch)) > .name { min-width: 0; flex: 0 1 auto; }
+.sankey[data-el="confetti-sankey"] > .branch { margin-left: calc(var(--sw) + var(--bw) + var(--f1)); }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch) { gap: var(--g2); padding-left: calc(var(--bw) + var(--lw) + var(--f2)); align-items: stretch; }
+.sankey[data-el="confetti-sankey"] .branch.on { --c: var(--a1); --band: color-mix(in srgb, var(--a1) 30%, transparent); }
+.sankey[data-el="confetti-sankey"] .branch.out { --c: color-mix(in srgb, var(--n-8) 40%, var(--ink)); --band: color-mix(in srgb, var(--n-8) 12%, transparent); }
+.sankey[data-el="confetti-sankey"] .branch::before { content: ""; position: absolute; z-index: -1; pointer-events: none; right: 100%; width: var(--fw); --K: calc((var(--n, 2) - 1) * var(--gg)); --d: calc(var(--gg) * (var(--i, 0) * -1 + (var(--n, 2) - 1) / 2) * -1); top: calc(var(--K) * -1); bottom: calc(var(--K) * -1); background: var(--band); clip-path: polygon(0% calc(var(--K) - var(--d) * 1.0000), 10% calc(var(--K) - var(--d) * 0.9720), 20% calc(var(--K) - var(--d) * 0.8960), 30% calc(var(--K) - var(--d) * 0.7840), 40% calc(var(--K) - var(--d) * 0.6480), 50% calc(var(--K) - var(--d) * 0.5000), 60% calc(var(--K) - var(--d) * 0.3520), 70% calc(var(--K) - var(--d) * 0.2160), 80% calc(var(--K) - var(--d) * 0.1040), 90% calc(var(--K) - var(--d) * 0.0280), 100% calc(var(--K) - var(--d) * 0.0000), 100% calc(100% - var(--K) - var(--d) * 0.0000), 90% calc(100% - var(--K) - var(--d) * 0.0280), 80% calc(100% - var(--K) - var(--d) * 0.1040), 70% calc(100% - var(--K) - var(--d) * 0.2160), 60% calc(100% - var(--K) - var(--d) * 0.3520), 50% calc(100% - var(--K) - var(--d) * 0.5000), 40% calc(100% - var(--K) - var(--d) * 0.6480), 30% calc(100% - var(--K) - var(--d) * 0.7840), 20% calc(100% - var(--K) - var(--d) * 0.8960), 10% calc(100% - var(--K) - var(--d) * 0.9720), 0% calc(100% - var(--K) - var(--d) * 1.0000)); }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch)::before { left: calc(var(--fw) * -1); right: auto; }
+.sankey[data-el="confetti-sankey"] :is(.source, .branch) > .name { margin: 0; font-size: var(--ns); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.sankey[data-el="confetti-sankey"] :is(.source, .branch) > .fig { order: -1; margin: 0; font-size: var(--fs); line-height: 1.1; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+.sankey[data-el="confetti-sankey"] :is(.source, .branch) > .fig small { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.06em; }
+.sankey[data-el="confetti-sankey"] .branch.on > :is(.name, .fig) { color: var(--a1); }
+.sankey[data-el="confetti-sankey"] .branch.out > :is(.name, .fig) { color: var(--n-8); }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch) > :is(.name, .fig) { position: absolute; left: calc(var(--bw) + var(--gap) * 6 / 24); max-width: calc(var(--lw) - var(--gap) * 6 / 24); paint-order: stroke fill; -webkit-text-stroke: 4px var(--ground); }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch) > .fig { top: calc(50% - 1.1em); }
+.sankey[data-el="confetti-sankey"] .branch:has(> .branch) > .name { top: 50%; }
+@container member (min-width: 640px) and (min-height: 320px) {
+.sankey[data-el="confetti-sankey"] * { --fs: var(--type-24); --ns: var(--type-16); }
+}
+@container member (min-width: 900px) and (min-height: 440px) {
+.sankey[data-el="confetti-sankey"] * { --fs: var(--type-32); --ns: var(--type-20); }
+.sankey[data-el="confetti-sankey"] > * { --g: 14px; --g2: 8px; }
+}
+@container member (max-height: 219px) {
+.sankey[data-el="confetti-sankey"] .branch > .fig { display: none; }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-sankey"][data-el="confetti-sankey"][data-el="confetti-sankey"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-sankey"][data-el="confetti-sankey"][data-el="confetti-sankey"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}

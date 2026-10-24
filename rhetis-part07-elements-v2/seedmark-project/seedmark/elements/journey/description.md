@@ -1,0 +1,1 @@
+Names, touchpoint notes and pain points sit beneath an emotion curve. Each stage owns the segment to its declared next mood, producing continuous rising, falling and flat connections across the inter-stage gap. A single accent point marks the focal experience.

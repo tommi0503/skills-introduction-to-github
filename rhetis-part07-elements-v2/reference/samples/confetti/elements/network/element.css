@@ -1,0 +1,33 @@
+:is(.body, .group, .split, .stack) > :is(.network[data-el="confetti-network"]) { container: member / size; }
+.stack > :is(.network[data-el="confetti-network"]) { flex: 1 1 0; min-height: 160px; }
+.network[data-el="confetti-network"] { min-width: 0; min-height: 0; isolation: isolate; --wire: color-mix(in srgb, var(--a1) 60%, var(--page)); }
+.network[data-el="confetti-network"] > * { --mx: clamp(48px, 9cqw, 110px); --my: clamp(20px, 7cqh, 44px); --ns: var(--type-14); --pw: calc(100cqw - 2 * var(--mx)); --ph: calc(100cqh - 2 * var(--my)); }
+.network[data-el="confetti-network"] > .link { position: absolute; z-index: -1; left: calc(var(--mx) + var(--x1) / 100 * var(--pw)); top: calc(var(--my) + var(--y1) / 100 * var(--ph) - var(--s) / 2); --s: var(--stroke); --dx: calc((var(--x2) - var(--x1)) / 100 * var(--pw)); --dy: calc((var(--y2) - var(--y1)) / 100 * var(--ph)); width: hypot(var(--dx), var(--dy)); height: var(--s); transform-origin: 0 50%; rotate: atan2(var(--dy), var(--dx)); background: var(--wire); border-radius: 2px; }
+.network[data-el="confetti-network"] > .link.strong { --s: calc(var(--stroke) * 2.5); background: color-mix(in srgb, var(--a1) 60%, var(--ink)); }
+.network[data-el="confetti-network"] > .node { position: absolute; left: calc(var(--mx) + var(--x) / 100 * var(--pw)); top: calc(var(--my) + var(--y) / 100 * var(--ph)); translate: -50% -50%; max-width: calc(var(--mx) * 2 + 40px); padding: calc(var(--pad) * 6 / 28) calc(var(--pad) * 14 / 28); border-radius: 999px; background: var(--n-1); border: 1px solid var(--ink); box-shadow: 0 0 0 4px var(--page); color: var(--ink); text-align: center; --t: var(--a1); }
+.network[data-el="confetti-network"] > .node[class*="tone-"] { background: color-mix(in srgb, var(--t) 14%, var(--n-1)); border-color: color-mix(in srgb, var(--t) 45%, var(--n-1)); }
+.network[data-el="confetti-network"] > .node.tone-1 { --t: var(--a1-6); }
+.network[data-el="confetti-network"] > .node.tone-2 { --t: var(--a3-5); }
+.network[data-el="confetti-network"] > .node.tone-3 { --t: var(--a2-2); }
+.network[data-el="confetti-network"] > .node.tone-4 { --t: var(--a2-3-soft); }
+.network[data-el="confetti-network"] > .node.tone-5 { --t: var(--a2-4); }
+.network[data-el="confetti-network"] > .node.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); padding: calc(var(--pad) * 10 / 28) calc(var(--pad) * 20 / 28); }
+.network[data-el="confetti-network"] > .node > .name { margin: 0; font-size: var(--ns); font-weight: var(--name-weight); line-height: 1.25; letter-spacing: var(--name-track); text-wrap: balance; }
+@container member (min-width: 560px) and (min-height: 320px) {
+.network[data-el="confetti-network"] > * { --ns: var(--type-16); }
+}
+@container member (min-width: 860px) and (min-height: 440px) {
+.network[data-el="confetti-network"] > * { --ns: var(--type-20); }
+}
+.network[data-el="confetti-network"] > .link { --s: 1.5px; }
+.network[data-el="confetti-network"] > .link.strong { --s: calc(var(--stroke) * 1.5); background: var(--a1); }
+.network[data-el="confetti-network"] > .node { background: var(--page); border-color: color-mix(in srgb, var(--a1) 50%, var(--page)); color: var(--a1); }
+.network[data-el="confetti-network"] > .node[class*="tone-"] { background: var(--page); border-color: color-mix(in srgb, var(--t) 75%, var(--page)); }
+.network[data-el="confetti-network"] > .node.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-network"][data-el="confetti-network"][data-el="confetti-network"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-network"][data-el="confetti-network"][data-el="confetti-network"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-network"][data-el="confetti-network"][data-el="confetti-network"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf){border:var(--stroke) solid var(--ink);border-radius:var(--radius);background-color:var(--a2-3-soft);color:var(--ink);box-shadow:4px 5px 0 var(--ink);}
+[data-el="confetti-network"][data-el="confetti-network"][data-el="confetti-network"] :is(.core,.root,.node.on,.node.end){background:var(--a3-5);color:var(--ink);}
+[data-el="confetti-network"][data-el="confetti-network"][data-el="confetti-network"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf,.root) :is(.name,.note,.kick){color:inherit;}

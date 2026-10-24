@@ -1,0 +1,49 @@
+.stack > :is(.logos[data-el="amethyst-logo-group"]) { flex: 1 1 0; min-height: 0; }
+:is(.logos[data-el="amethyst-logo-group"]) { --n: 1; --half: 1; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(2)) { --n: 2; --half: 1; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(3)) { --n: 3; --half: 2; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(4)) { --n: 4; --half: 2; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(5)) { --n: 5; --half: 3; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(6)) { --n: 6; --half: 3; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(7)) { --n: 7; --half: 4; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(8)) { --n: 8; --half: 4; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(9)) { --n: 9; --half: 5; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(10)) { --n: 10; --half: 5; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(11)) { --n: 11; --half: 6; }
+:is(.logos[data-el="amethyst-logo-group"]):has(> :nth-child(12)) { --n: 12; --half: 6; }
+:is(.logos[data-el="amethyst-logo-group"]) { container: set / size; display: flex; flex-wrap: wrap; align-content: stretch; --cg: var(--gap); --rg: var(--gap); gap: var(--rg) var(--cg); min-width: 0; min-height: 0; }
+:is(.logos[data-el="amethyst-logo-group"]) > * { --k: var(--n); flex: 1 1 calc((100% - (var(--k) - 1) * var(--cg)) / var(--k) - 1px); max-width: calc((100% - (var(--k) - 1) * var(--cg)) / var(--k)); min-width: 0; min-height: 0; }
+.logos[data-el="amethyst-logo-group"] { justify-content: center; }
+@container set (max-aspect-ratio: 12/10) and style(--n: 2) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 1; }
+}
+@container set (max-aspect-ratio: 2/1) and style(--n: 3) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 1; }
+}
+@container set (max-aspect-ratio: 35/10) and style(--n: 4) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 2; }
+}
+@container set (max-aspect-ratio: 45/10) and style(--n: 5) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 3; }
+}
+@container set (max-aspect-ratio: 5/1) and style(--n: 6) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 3; }
+}
+@container set (max-aspect-ratio: 6/1) and (style(--n: 7) or style(--n: 8)) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 4; }
+}
+@container set (max-aspect-ratio: 16/10) and (style(--n: 5) or style(--n: 6)) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 2; }
+}
+@container set (max-aspect-ratio: 2/1) and (style(--n: 7) or style(--n: 8)) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 2; }
+}
+@container set (max-aspect-ratio: 7/10) and (style(--n: 4) or style(--n: 5) or style(--n: 6) or style(--n: 7) or style(--n: 8)) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 1; }
+}
+@container set (max-aspect-ratio: 11/10) and (min-height: 300px) and style(--n: 4) {
+.logos[data-el="amethyst-logo-group"] > * { --k: 1; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-logo-group"][data-el="amethyst-logo-group"][data-el="amethyst-logo-group"] { color:var(--ink); }

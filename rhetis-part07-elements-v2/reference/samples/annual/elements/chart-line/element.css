@@ -1,0 +1,31 @@
+.stack > :is(.lines[data-el="annual-chart-line"]) { flex: 1 1 0; min-height: 0; }
+.lines[data-el="annual-chart-line"] { container: lines / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); anchor-scope: all; color: var(--n-6); }
+.lines[data-el="annual-chart-line"]::before { content: ""; position: absolute; left: 0; right: 0; bottom: clamp(26px, 10cqh, 40px); border-bottom: var(--stroke) solid var(--n-6); }
+.lines[data-el="annual-chart-line"] > .pt { --hd: clamp(44px, 14cqh, 76px); --lb: clamp(26px, 10cqh, 40px); --hp: calc(100cqh - var(--hd) - var(--lb)); --vh: calc(var(--hp) * var(--v) / var(--max, 100)); --s: 2.5px; --dot: 14px; --bf: var(--type-16); --bl: var(--type-14); position: static; display: grid; grid-template-rows: minmax(0, 1fr) var(--lb); min-width: 0; }
+.lines[data-el="annual-chart-line"] > .pt > b { grid-row: 1; align-self: start; justify-self: center; height: 0; margin-top: calc(var(--hd) + var(--hp) - var(--vh)); anchor-name: var(--self); display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 16px; paint-order: stroke fill; -webkit-text-stroke: 5px var(--page); font-family: var(--font-display), sans-serif; font-size: var(--bf); line-height: 1; font-weight: var(--figure-weight); color: var(--a1); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lines[data-el="annual-chart-line"] > .pt > b::after { content: ""; position: absolute; z-index: 2; left: calc(50% - var(--dot) / 2); top: calc(var(--dot) / -2); width: var(--dot); height: var(--dot); border-radius: 50%; background: var(--a1); }
+.lines[data-el="annual-chart-line"] > .pt.on > b { font-size: calc(var(--bf) * 1.5); padding-bottom: 22px; }
+.lines[data-el="annual-chart-line"] > .pt.on > b::after { box-shadow: 0 0 0 8px var(--annual-deco); }
+.lines[data-el="annual-chart-line"] > .pt > span { grid-row: 2; align-self: center; justify-self: center; max-width: 100%; font-size: var(--bl); line-height: 1.2; font-weight: var(--label-weight); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lines[data-el="annual-chart-line"] > .pt::before { content: ""; position: absolute; z-index: 1; pointer-events: none; left: anchor(var(--prev) center); right: anchor(var(--self) center); top: calc(anchor(var(--prev) top) - var(--hp)); bottom: var(--lb); background: var(--a1); clip-path: polygon(0 calc(var(--hp) - var(--s) / 2), 100% calc(100% - var(--vh) - var(--s) / 2), 100% calc(100% - var(--vh) + var(--s) / 2), 0 calc(var(--hp) + var(--s) / 2)); }
+.lines[data-el="annual-chart-line"] > .pt::after { content: ""; position: absolute; z-index: 0; pointer-events: none; left: anchor(var(--prev) center); right: anchor(var(--self) center); top: calc(anchor(var(--prev) top) - var(--hp)); bottom: var(--lb); background: color-mix(in srgb, var(--annual-deco) 70%, transparent); clip-path: polygon(0 var(--hp), 100% calc(100% - var(--vh)), 100% 100%, 0 100%); }
+.lines[data-el="annual-chart-line"] > .pt:first-child::before, .lines[data-el="annual-chart-line"] > .pt:first-child::after { content: none; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(1) { --self: --al-1; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(2) { --self: --al-2; --prev: --al-1; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(3) { --self: --al-3; --prev: --al-2; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(4) { --self: --al-4; --prev: --al-3; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(5) { --self: --al-5; --prev: --al-4; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(6) { --self: --al-6; --prev: --al-5; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(7) { --self: --al-7; --prev: --al-6; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(8) { --self: --al-8; --prev: --al-7; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(9) { --self: --al-9; --prev: --al-8; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(10) { --self: --al-10; --prev: --al-9; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(11) { --self: --al-11; --prev: --al-10; }
+.lines[data-el="annual-chart-line"] > .pt:nth-child(12) { --self: --al-12; --prev: --al-11; }
+
+@container lines (min-height: 320px) and (min-width: 560px) {
+.lines[data-el="annual-chart-line"] > .pt { --bf: var(--type-20); --bl: var(--type-16); --dot: 18px; }
+}
+@container lines (max-width: 479px) {
+.lines[data-el="annual-chart-line"]:has(> .pt:nth-child(8)) > .pt:not(.on) > b { color: transparent; }
+}

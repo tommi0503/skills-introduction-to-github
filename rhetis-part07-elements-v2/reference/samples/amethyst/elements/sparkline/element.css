@@ -1,0 +1,42 @@
+:is(.body, .group, .split, .stack) > :is(.spark[data-el="amethyst-sparkline"]) { container: member / size; align-self: center; height: min(100%, 160px); }
+.stack > :is(.spark[data-el="amethyst-sparkline"]) { flex: 1 1 0; min-height: 32px; }
+.parts > .spark[data-el="amethyst-sparkline"] { height: clamp(28px, 2.4em, 72px); margin-block: calc(var(--gap) * 4 / 24); }
+.spark[data-el="amethyst-sparkline"] { container-type: size; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); align-items: end; min-width: 48px; min-height: 0; anchor-scope: all; isolation: isolate; --c: var(--a1); --s: var(--stroke); --g: var(--page); --fill: color-mix(in srgb, var(--c) 14%, var(--g)); }
+.card > .parts > .spark[data-el="amethyst-sparkline"] { --g: var(--page); }
+.spark[data-el="amethyst-sparkline"].up { --c: var(--good); }
+.spark[data-el="amethyst-sparkline"].down { --c: var(--bad); }
+.spark[data-el="amethyst-sparkline"] > span { position: static; justify-self: center; width: 2px; --h: calc(var(--v) / var(--max, 100) * (100cqh - 8px) + 4px); height: var(--h); }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(1) { anchor-name: --spark-1; --self: --spark-1; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(2) { anchor-name: --spark-2; --self: --spark-2; --prev: --spark-1; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(3) { anchor-name: --spark-3; --self: --spark-3; --prev: --spark-2; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(4) { anchor-name: --spark-4; --self: --spark-4; --prev: --spark-3; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(5) { anchor-name: --spark-5; --self: --spark-5; --prev: --spark-4; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(6) { anchor-name: --spark-6; --self: --spark-6; --prev: --spark-5; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(7) { anchor-name: --spark-7; --self: --spark-7; --prev: --spark-6; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(8) { anchor-name: --spark-8; --self: --spark-8; --prev: --spark-7; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(9) { anchor-name: --spark-9; --self: --spark-9; --prev: --spark-8; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(10) { anchor-name: --spark-10; --self: --spark-10; --prev: --spark-9; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(11) { anchor-name: --spark-11; --self: --spark-11; --prev: --spark-10; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(12) { anchor-name: --spark-12; --self: --spark-12; --prev: --spark-11; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(13) { anchor-name: --spark-13; --self: --spark-13; --prev: --spark-12; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(14) { anchor-name: --spark-14; --self: --spark-14; --prev: --spark-13; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(15) { anchor-name: --spark-15; --self: --spark-15; --prev: --spark-14; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(16) { anchor-name: --spark-16; --self: --spark-16; --prev: --spark-15; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(17) { anchor-name: --spark-17; --self: --spark-17; --prev: --spark-16; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(18) { anchor-name: --spark-18; --self: --spark-18; --prev: --spark-17; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(19) { anchor-name: --spark-19; --self: --spark-19; --prev: --spark-18; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(20) { anchor-name: --spark-20; --self: --spark-20; --prev: --spark-19; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(21) { anchor-name: --spark-21; --self: --spark-21; --prev: --spark-20; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(22) { anchor-name: --spark-22; --self: --spark-22; --prev: --spark-21; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(23) { anchor-name: --spark-23; --self: --spark-23; --prev: --spark-22; }
+.spark[data-el="amethyst-sparkline"] > span:nth-child(24) { anchor-name: --spark-24; --self: --spark-24; --prev: --spark-23; }
+.spark[data-el="amethyst-sparkline"]:not(.bars) > span:not(:first-child)::before, .spark[data-el="amethyst-sparkline"]:not(.bars) > span:not(:first-child)::after { content: ""; position: absolute; pointer-events: none; left: anchor(var(--prev) center); right: anchor(var(--self) center); top: calc(anchor(var(--prev) top) - 100cqh); bottom: 0; }
+.spark[data-el="amethyst-sparkline"]:not(.bars) > span::before { margin-left: -1px; background: var(--fill); clip-path: polygon(0 100cqh, 100% calc(100% - var(--h)), 100% 100%, 0 100%); }
+.spark[data-el="amethyst-sparkline"]:not(.bars) > span::after { z-index: 1; background: var(--c); clip-path: polygon(0 calc(100cqh - var(--s) / 2), 100% calc(100% - var(--h) - var(--s) / 2), 100% calc(100% - var(--h) + var(--s) / 2), 0 calc(100cqh + var(--s) / 2)); }
+.spark[data-el="amethyst-sparkline"]:not(.bars) > span:last-child { z-index: 2; width: 8px; height: calc(var(--h) + 4px); background: radial-gradient(circle 4px at 50% 4px, var(--c) 3.4px, transparent 4px) no-repeat; }
+.spark[data-el="amethyst-sparkline"].bars { column-gap: 2%; }
+.spark[data-el="amethyst-sparkline"].bars > span { width: 100%; max-width: 24px; background: color-mix(in srgb, var(--c) 38%, var(--g)); border-radius: min(var(--radius-sm), 2px) min(var(--radius-sm), 2px) 0 0; }
+.spark[data-el="amethyst-sparkline"].bars > span:last-child { background: var(--c); }
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-sparkline"][data-el="amethyst-sparkline"][data-el="amethyst-sparkline"] { color:var(--ink); }

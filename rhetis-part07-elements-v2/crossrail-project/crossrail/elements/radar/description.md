@@ -1,0 +1,1 @@
+Measured polygons share a quiet radial frame. Every vertex follows the corresponding series value on its own spoke. Axis names remain outside the polygon and series names occupy a separate upper legend.

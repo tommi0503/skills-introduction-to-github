@@ -1,0 +1,1 @@
+A share drawn as a thick ring round a plain face: the counted arc solid in the accent from the top, the remainder in a pale warm tone. Inside, a small light secondary label sits over the figure in the condensed squared display face in the accent. Several rings stand in a row.

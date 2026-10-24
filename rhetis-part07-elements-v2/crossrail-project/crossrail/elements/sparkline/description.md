@@ -1,0 +1,1 @@
+A genuinely continuous compact polyline follows every supplied value, including flat runs. Its bar form replaces the line with discrete columns, while positive and negative trends use semantic state roles.

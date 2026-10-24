@@ -1,0 +1,1 @@
+A plain, thin-edged seat fills the receiving image rectangle, with a width ceiling proportional to the493:330 media field of replica18. Portrait and avatar children retain their own aspect. The source04 portrait extending above the body is explicitly unexpressible as a page placement.

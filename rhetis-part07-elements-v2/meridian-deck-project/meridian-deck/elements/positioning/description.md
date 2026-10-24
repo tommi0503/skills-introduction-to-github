@@ -1,0 +1,1 @@
+A quiet gradient field and fine crossing axes hold value-positioned competitors. Their small rectangular labels remain inside the plot, with one accent label identifying the focal organisation. Axis endpoints use a separate external register.

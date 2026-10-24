@@ -1,0 +1,59 @@
+.stack > :is(.quote[data-el="amethyst-quote"]) { flex: 1 1 0; min-height: 0; }
+.quote[data-el="amethyst-quote"] { container: member / size; border-top: var(--stroke) solid var(--a1-2-muted); padding-top: var(--gap); display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) auto; justify-items: start; min-width: 0; min-height: 0; }
+.quote[data-el="amethyst-quote"]::before { content: "“"; height: 0.5em; margin-bottom: var(--gap-sm); font-family: var(--font-display), sans-serif; font-size: var(--type-48); line-height: 1; font-weight: var(--title-weight); color: var(--a1); }
+.quote[data-el="amethyst-quote"] > blockquote { grid-row: 2; align-self: start; min-width: 0; font-size: var(--type-16); line-height: var(--lead-line); font-weight: var(--lead-weight); letter-spacing: var(--lead-track); text-wrap: balance; }
+.quote[data-el="amethyst-quote"] > .by { grid-row: 3; min-width: 0; margin-top: var(--gap-sm); display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: var(--gap-sm); align-items: center; }
+.by > .seat.avatar:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { grid-column: 1; grid-row: 1 / span 2; width: 40px; }
+.by > .name:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { grid-column: 2; align-self: end; font-size: var(--type-16); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.by > .note:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { grid-column: 2; align-self: start; font-size: var(--type-16); line-height: var(--name-line); font-weight: var(--body-weight); color: var(--n-8); }
+.by > .name:only-of-type:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *), .by > .name:last-child:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { grid-row: 1 / span 2; align-self: center; }
+.quote[data-el="amethyst-quote"].big { justify-items: center; text-align: center; }
+.quote[data-el="amethyst-quote"].big > blockquote { text-wrap: balance; align-self: center; }
+.quote[data-el="amethyst-quote"].big > .by { text-align: left; }
+@container member (max-height: 199px) {
+.quote[data-el="amethyst-quote"]::before { display: none; }
+}
+@container member ((min-width: 340px) and (min-height: 220px)) or ((min-width: 500px) and (min-height: 140px)) {
+.quote[data-el="amethyst-quote"] > blockquote { font-size: var(--type-20); }
+.by > .seat.avatar:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { width: 48px; }
+}
+@container member ((min-width: 240px) and (min-height: 400px)) or ((min-width: 520px) and (min-height: 220px)) or ((min-width: 900px) and (min-height: 140px)) {
+.quote[data-el="amethyst-quote"] > blockquote { font-size: var(--type-24); }
+.quote[data-el="amethyst-quote"]::before { font-size: var(--type-64); }
+.by > .name:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { font-size: var(--type-20); }
+.by > .seat.avatar:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { width: 56px; }
+}
+@container member ((min-width: 340px) and (min-height: 400px)) or ((min-width: 900px) and (min-height: 220px)) {
+.quote[data-el="amethyst-quote"] > blockquote { font-size: var(--type-28); }
+.quote[data-el="amethyst-quote"].big > blockquote { font-size: var(--type-32); }
+}
+@container member ((min-width: 500px) and (min-height: 400px)) or ((min-width: 1000px) and (min-height: 300px)) {
+.quote[data-el="amethyst-quote"] > blockquote { font-size: var(--type-36); }
+.quote[data-el="amethyst-quote"].big > blockquote { font-size: var(--type-40); }
+.quote[data-el="amethyst-quote"]::before { font-size: var(--type-80); margin-bottom: var(--gap); }
+.by > .seat.avatar:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { width: 64px; }
+.by > .name:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { font-size: var(--type-24); }
+.by > .note:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { font-size: var(--type-20); }
+}
+@container member (min-width: 700px) and (min-height: 400px) {
+.quote[data-el="amethyst-quote"] > blockquote { font-size: var(--type-40); }
+.quote[data-el="amethyst-quote"].big > blockquote { font-size: var(--type-48); }
+.quote[data-el="amethyst-quote"] > .by { column-gap: var(--gap); }
+.by > .seat.avatar:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { width: 72px; }
+}
+@container member (min-width: 1000px) and (min-height: 400px) {
+.quote[data-el="amethyst-quote"] > blockquote { font-size: var(--type-48); }
+.quote[data-el="amethyst-quote"].big > blockquote { font-size: var(--type-56); }
+.quote[data-el="amethyst-quote"]::before { font-size: var(--type-96); }
+.by > .name:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { font-size: var(--type-28); }
+.by > .note:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { font-size: var(--type-20); }
+.by > .seat.avatar:is([data-el="amethyst-quote"], [data-el="amethyst-quote"] *) { width: 80px; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-quote"][data-el="amethyst-quote"][data-el="amethyst-quote"] { color:var(--ink); }
+[data-el="amethyst-quote"][data-el="amethyst-quote"][data-el="amethyst-quote"] { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-quote"][data-el="amethyst-quote"][data-el="amethyst-quote"] { border-top:0; padding:var(--pad); }
+[data-el="amethyst-quote"][data-el="amethyst-quote"][data-el="amethyst-quote"] blockquote { font-weight:800; line-height:1.25; }
+[data-el="amethyst-quote"][data-el="amethyst-quote"][data-el="amethyst-quote"]::before { color:var(--a1); }
+[data-el="amethyst-quote"][data-el="amethyst-quote"][data-el="amethyst-quote"] .by > .name { color:var(--a1); font-weight:800; }

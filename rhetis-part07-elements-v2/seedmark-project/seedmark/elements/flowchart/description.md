@@ -1,0 +1,1 @@
+An explicit grid owns all nodes and arrow connectors. Start/end nodes are ink capsules, questions use a soft accent and ordinary nodes have thin rounded outlines. Registered nested elements and foundation groups retain their own appearance without a second node surface. Arrow direction classes describe the actual relationship.

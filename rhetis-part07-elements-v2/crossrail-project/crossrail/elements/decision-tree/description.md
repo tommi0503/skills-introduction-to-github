@@ -1,0 +1,1 @@
+Rounded questions open into fine branch rules and compact rectangular outcomes. Branch conditions sit above the next question or final outcome, and the recommended ending receives a single deep accent surface.

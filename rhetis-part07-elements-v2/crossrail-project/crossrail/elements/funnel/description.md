@@ -1,0 +1,1 @@
+Independent tapered stages narrow to their given percentage width. Two alternating accent depths separate neighbouring stages while keeping one clear vertical reading direction. Figures share the label baseline.

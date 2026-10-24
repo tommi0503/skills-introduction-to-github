@@ -1,0 +1,1 @@
+A quiet rounded source panel uses a real monospaced font. An optional small file name leads into preserved code lines, with keywords, strings, comments and numbers using deep readable palette roles. Numbered code reserves a line-number gutter, and shallow snippets reduce type without hiding their source.

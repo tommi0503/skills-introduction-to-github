@@ -1,0 +1,1 @@
+Bare figures preserve the name–number–note hierarchy of replica17. A short vertical rule separates members; a compact column substitutes horizontal rules while retaining every name and figure. The original gray panel is deliberately recorded as an unsupported container.

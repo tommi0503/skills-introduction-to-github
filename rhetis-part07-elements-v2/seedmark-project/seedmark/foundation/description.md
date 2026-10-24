@@ -1,0 +1,1 @@
+The page is a twelve by six grid within broad margins. Small top labels, a centred capsule kicker and a light display heading form the page furniture. A fine horizontal rule closes the heading. Groups, stacks and splits only place children; they never inspect or restyle element roots. The cover uses one large phrase highlight and a pale media seat with an open capsule edge.

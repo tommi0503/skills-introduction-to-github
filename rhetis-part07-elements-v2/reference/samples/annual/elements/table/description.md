@@ -1,0 +1,1 @@
+An open table without a frame: column heads in the condensed squared display face in the accent over a two-pixel accent rule, rows of light secondary text split by hairlines, the first column bold in the accent and numbers set right. The column that is the point is washed with a pale square-cornered band, its head solid accent.

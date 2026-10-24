@@ -1,0 +1,23 @@
+.stack > :is(.list[data-el="annual-list"]) { flex: 1 1 0; min-height: 0; }
+.list[data-el="annual-list"] { container: member / size; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: clamp(6px, 4cqh, var(--gap)); counter-reset: item; color: var(--ink); }
+.list[data-el="annual-list"] > .item { --nm: var(--type-16); --nt: var(--type-14); --dot: 8px; }
+.list[data-el="annual-list"] > .item { counter-increment: item; display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; column-gap: clamp(10px, 2.4cqw, var(--gap)); row-gap: 2px; align-items: start; min-width: 0; }
+.list[data-el="annual-list"] > .item::before { content: ""; grid-column: 1; grid-row: 1; width: var(--dot); height: var(--dot); margin-top: calc(var(--nm) * 0.62 - var(--dot) / 2); border-radius: 50%; background: var(--a1); }
+.list[data-el="annual-list"] > .item > :not(.mark) { grid-column: 2; min-width: 0; margin: 0; }
+.list[data-el="annual-list"] > .item > .mark { display: none; }
+.list[data-el="annual-list"] > .item > .name { font-size: var(--nm); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); color: var(--a1); }
+.list[data-el="annual-list"] > .item > .note { font-size: var(--nt); line-height: 1.6; font-weight: var(--lead-weight); letter-spacing: var(--body-track); color: var(--n-6); }
+.list[data-el="annual-list"].check > .item::before { width: calc(var(--dot) * 2.4); height: calc(var(--dot) * 2.4); margin-top: calc(var(--nm) * 0.65 - var(--dot) * 1.2); background: var(--a1); clip-path: polygon(14% 52%, 26% 40%, 42% 55%, 76% 18%, 88% 30%, 42% 79%); border-radius: 0; }
+.list[data-el="annual-list"].num > .item::before { content: counter(item); width: auto; min-width: 1.6em; height: auto; margin-top: 0; padding-left: 0.55em; background: radial-gradient(circle at 0.62em 46%, var(--annual-deco) 0.62em, transparent calc(0.62em + 1px)); border-radius: 0; font-family: var(--font-body), sans-serif; font-size: calc(var(--nm) * 1.25); line-height: 1.05; font-weight: 300; color: var(--a1); }
+.list[data-el="annual-list"].divided { gap: 0; }
+.list[data-el="annual-list"].divided > .item { padding-block: clamp(6px, 3cqh, var(--gap-sm)); border-top: var(--hair) solid var(--n-3); }
+.list[data-el="annual-list"].divided > .item:last-child { border-bottom: var(--hair) solid var(--n-3); }
+@container member (min-width: 360px) and (min-height: 260px) {
+.list[data-el="annual-list"] > .item { --nm: var(--type-20); --nt: var(--type-16); --dot: 9px; }
+}
+@container member (min-width: 600px) and (min-height: 380px) {
+.list[data-el="annual-list"] > .item { --nm: var(--type-28); --nt: var(--type-16); --dot: 10px; }
+}
+@container member (max-height: 199px) {
+.list[data-el="annual-list"]:has(> .item:nth-child(4)) > .item > .note { display: none; }
+}

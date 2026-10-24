@@ -1,0 +1,1 @@
+Curved branch elbows spread left and right from a central outline capsule. Branch names carry a quiet lower rule, with short leaves below. The tree remains free-form without borrowing the strict hierarchy connectors.

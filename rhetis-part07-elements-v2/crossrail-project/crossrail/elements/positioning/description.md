@@ -1,0 +1,1 @@
+Round competitors occupy an inset two-axis plot. The centre crossing establishes relative position while a stronger frame holds the labels. One accent circle identifies the selected organization; logos remain contained square seats.

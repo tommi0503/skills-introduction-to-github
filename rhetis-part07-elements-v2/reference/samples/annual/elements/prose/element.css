@@ -1,0 +1,18 @@
+.stack > :is(.prose[data-el="annual-prose"]) { flex: 1 1 0; min-height: 0; }
+.prose[data-el="annual-prose"] { container: member / inline-size; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 1.6em; color: var(--ink); }
+.prose[data-el="annual-prose"] > p { --pf: var(--type-16); margin: 0; font-size: var(--pf); line-height: 2; font-weight: var(--body-weight); letter-spacing: var(--body-track); text-wrap: pretty; }
+.prose[data-el="annual-prose"] > p b, .prose[data-el="annual-prose"] > p strong { font-weight: var(--name-weight); color: var(--a1); }
+.prose[data-el="annual-prose"].quiet > p { color: var(--n-6); font-weight: var(--lead-weight); line-height: 1.75; }
+.prose[data-el="annual-prose"].quiet > p b { color: var(--n-6); }
+.prose[data-el="annual-prose"].lead > p:first-child { --pf: var(--type-24); line-height: 1.5; font-weight: var(--lead-weight); letter-spacing: -0.04em; color: var(--n-6); }
+.prose[data-el="annual-prose"].lead > p:first-child b { color: var(--a1); }
+.prose[data-el="annual-prose"].cols { display: block; column-count: 2; column-gap: var(--gap-lg); }
+.prose[data-el="annual-prose"].cols > p { break-inside: avoid; margin-bottom: 1.2em; }
+@container member (min-width: 720px) {
+.prose[data-el="annual-prose"] > p { --pf: var(--type-18); }
+.prose[data-el="annual-prose"].lead > p:first-child { --pf: var(--type-32); }
+}
+@container member (max-width: 320px) {
+.prose[data-el="annual-prose"] > p { --pf: var(--type-14); }
+.prose[data-el="annual-prose"].lead > p:first-child { --pf: var(--type-20); }
+}

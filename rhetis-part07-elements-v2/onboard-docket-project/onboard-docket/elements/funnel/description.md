@@ -1,0 +1,1 @@
+A centred sequence of proportionate bands narrows with the actual data share, including zero. Paper-backed names and figures stay readable beside the shape instead of forcing a false minimum width. Fine downward notches carry the sequence in the measured step-row language.

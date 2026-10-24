@@ -1,0 +1,1 @@
+Square floating steps show the change between consecutive running totals, joined at each previous total by fine horizontal rules. Upward changes use the primary accent, downward changes use a neutral fill and total columns stand on the common baseline. Figures stay above each step and names sit in the lower band.

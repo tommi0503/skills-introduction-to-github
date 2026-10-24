@@ -1,0 +1,55 @@
+:is(.body, .group, .split, .stack) > :is(.slope[data-el="amethyst-slope"]) { container: member / size; }
+.stack > :is(.slope[data-el="amethyst-slope"]) { flex: 1 1 0; min-height: 140px; }
+.slope[data-el="amethyst-slope"] { min-width: 0; min-height: 0; isolation: isolate; --ground: var(--page); }
+.slope[data-el="amethyst-slope"] > * { --bl: var(--type-14); --bf: var(--type-16); --hh: calc(var(--bl) * 1.35 + var(--gap-sm) + 8px); --dot: 10px; --vw: calc(var(--bf) * 3.6); --lw: clamp(120px, 30cqw, 360px); --rw: clamp(64px, 14cqw, 160px); --s: var(--stroke); }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads { position: absolute; inset: 0; z-index: -1; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads > span { position: absolute; top: 0; font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); white-space: nowrap; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads > span:first-child { left: var(--lw); translate: -50% 0; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads > span:last-child { right: var(--rw); translate: 50% 0; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads::before, .slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads::after { content: ""; position: absolute; top: calc(var(--hh) - 8px); bottom: 0; width: var(--s); background: var(--a1-2-muted); }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads::before { left: calc(var(--lw) - var(--s) / 2); }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .heads::after { right: calc(var(--rw) - var(--s) / 2); }
+.slope[data-el="amethyst-slope"] > .pair { --c: color-mix(in srgb, var(--a1) 34%, var(--a1-2-muted)); --ya: calc(var(--dot) / 2 + (1 - var(--a) / var(--max, 100)) * (100% - var(--dot))); --yb: calc(var(--dot) / 2 + (1 - var(--b) / var(--max, 100)) * (100% - var(--dot))); }
+.slope[data-el="amethyst-slope"]:not(:has(> .pair.on)) > .pair, .slope[data-el="amethyst-slope"] > .pair.on { --c: var(--a1); }
+.slope[data-el="amethyst-slope"] > .pair.on { z-index: 1; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .pair { position: absolute; left: 0; right: 0; top: calc(var(--hh) - var(--dot) / 2); bottom: calc(var(--dot) / -2 + 6px); pointer-events: none; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .pair::before { content: ""; position: absolute; top: 0; bottom: 0; left: var(--lw); right: var(--rw); background: var(--c); clip-path: polygon(0 calc(var(--ya) - var(--s) * 0.75), 100% calc(var(--yb) - var(--s) * 0.75), 100% calc(var(--yb) + var(--s) * 0.75), 0 calc(var(--ya) + var(--s) * 0.75)); }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .pair::after { content: ""; position: absolute; top: 0; bottom: 0; left: calc(var(--lw) - var(--dot) / 2); right: calc(var(--rw) - var(--dot) / 2); background: radial-gradient(closest-side, var(--c) 0 92%, transparent) 0 calc((1 - var(--a) / var(--max, 100)) * 100%) / var(--dot) var(--dot) no-repeat, radial-gradient(closest-side, var(--c) 0 92%, transparent) 100% calc((1 - var(--b) / var(--max, 100)) * 100%) / var(--dot) var(--dot) no-repeat; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .pair > * { position: absolute; margin: 0; translate: 0 -50%; white-space: nowrap; line-height: 1.2; }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .pair > .name { right: calc(100% - var(--lw) + var(--vw) + 12px); top: var(--ya); max-width: calc(var(--lw) - var(--vw) - 12px); overflow: hidden; text-overflow: ellipsis; text-align: right; font-size: var(--bl); font-weight: var(--name-weight); letter-spacing: var(--name-track); color: var(--n-8); }
+.slope[data-el="amethyst-slope"] > .pair > :is(b.a, b.b) { font-size: var(--bf); font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; color: var(--ink); }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .pair > b.a { right: calc(100% - var(--lw) + 12px); top: var(--ya); }
+.slope[data-el="amethyst-slope"]:not(.dumbbell) > .pair > b.b { left: calc(100% - var(--rw) + 12px); top: var(--yb); }
+.slope[data-el="amethyst-slope"] > .pair.on > :is(.name, b.a, b.b) { color: var(--a1); }
+.slope[data-el="amethyst-slope"].dumbbell { display: grid; grid-template-columns: fit-content(32%) minmax(0, 1fr) auto auto; grid-auto-rows: minmax(0, 1fr); grid-template-rows: auto; column-gap: var(--gap-sm); align-items: center; }
+.slope[data-el="amethyst-slope"].dumbbell > .heads { grid-column: 1 / -1; display: flex; gap: var(--gap); padding-bottom: calc(var(--gap) * 6 / 24); font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); color: var(--n-6); }
+.slope[data-el="amethyst-slope"].dumbbell > .heads > span { display: inline-flex; align-items: center; gap: 6px; }
+.slope[data-el="amethyst-slope"].dumbbell > .heads > span::before { content: ""; width: var(--dot); height: var(--dot); border-radius: 50%; box-sizing: border-box; border: var(--s) solid var(--a1); }
+.slope[data-el="amethyst-slope"].dumbbell > .heads > span:last-child::before { background: var(--a1); }
+.slope[data-el="amethyst-slope"].dumbbell > .pair { display: contents; }
+.slope[data-el="amethyst-slope"].dumbbell > .pair > .name { grid-column: 1; margin: 0; font-size: var(--bl); font-weight: var(--name-weight); line-height: var(--name-line); color: var(--ink); text-align: right; }
+.slope[data-el="amethyst-slope"].dumbbell > .pair::after { content: ""; grid-column: 2; align-self: stretch; --pa: calc(var(--a) / var(--max, 100) * 100%); --pb: calc(var(--b) / var(--max, 100) * 100%); background: radial-gradient(closest-side, var(--ground) 0 calc(50% - 2px), var(--c) calc(50% - 1.5px) 92%, transparent) calc(var(--a) / var(--max, 100) * 100%) 50% / var(--dot) var(--dot) no-repeat, radial-gradient(closest-side, var(--c) 0 92%, transparent) calc(var(--b) / var(--max, 100) * 100%) 50% / var(--dot) var(--dot) no-repeat, linear-gradient(to right, transparent calc(min(var(--pa), var(--pb))), var(--c) calc(min(var(--pa), var(--pb))) calc(max(var(--pa), var(--pb))), transparent calc(max(var(--pa), var(--pb)))) 50% 50% / calc(100% - var(--dot)) var(--s) no-repeat, linear-gradient(var(--a1-2-muted), var(--a1-2-muted)) 0 50% / 100% 1px no-repeat; }
+.slope[data-el="amethyst-slope"].dumbbell > .pair > b.a { grid-column: 3; color: var(--n-6); }
+.slope[data-el="amethyst-slope"].dumbbell > .pair > b.b { grid-column: 4; }
+.slope[data-el="amethyst-slope"].dumbbell > .pair.on > b.a { color: var(--n-6); }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(1 of .pair) { --r: 2; }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(2 of .pair) { --r: 3; }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(3 of .pair) { --r: 4; }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(4 of .pair) { --r: 5; }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(5 of .pair) { --r: 6; }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(6 of .pair) { --r: 7; }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(7 of .pair) { --r: 8; }
+.slope[data-el="amethyst-slope"] > .pair:nth-child(8 of .pair) { --r: 9; }
+.slope[data-el="amethyst-slope"].dumbbell > .pair > *, .slope[data-el="amethyst-slope"].dumbbell > .pair::after { grid-row: var(--r); }
+@container member (min-width: 560px) and (min-height: 300px) {
+.slope[data-el="amethyst-slope"] > * { --bl: var(--type-16); --bf: var(--type-20); --dot: 12px; }
+}
+@container member (min-width: 860px) and (min-height: 420px) {
+.slope[data-el="amethyst-slope"] > * { --bl: var(--type-20); --bf: var(--type-24); --dot: 14px; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-slope"][data-el="amethyst-slope"][data-el="amethyst-slope"] { color:var(--ink); }
+
+[data-el="amethyst-slope"][data-el="amethyst-slope"][data-el="amethyst-slope"]:not(.dumbbell) > .pair > :is(.name,b.a) { top:calc(var(--ya) + var(--amethyst-slope-label-a)); }
+[data-el="amethyst-slope"][data-el="amethyst-slope"][data-el="amethyst-slope"]:not(.dumbbell) > .pair > b.b { top:calc(var(--yb) + var(--amethyst-slope-label-b)); }

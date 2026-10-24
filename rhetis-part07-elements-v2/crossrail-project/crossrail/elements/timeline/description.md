@@ -1,0 +1,1 @@
+Outline date capsules sit on one thin continuous time axis. The alternate form places whole events above and below that axis; the vertical form gives dates a separate label column so longer event descriptions remain aligned.

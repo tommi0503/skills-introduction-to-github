@@ -1,0 +1,16 @@
+.stack > :is(.journey[data-el="annual-journey"]) { flex: 1 1 0; min-height: 0; }
+.journey[data-el="annual-journey"] { container: journey / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: 0; color: var(--a1); }
+.journey[data-el="annual-journey"] > .stage { --hc: min(42cqh, 220px); --ym: calc(var(--hc) * (1 - var(--mood) / 100) + 12px); --yn: calc(var(--hc) * (1 - var(--next, var(--mood)) / 100) + 12px); --s: 2.5px; display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: calc(var(--hc) + 40px) clamp(8px, 1.6cqw, 18px) 0; border-left: var(--hair) solid var(--n-3); }
+.journey[data-el="annual-journey"] > .stage:first-child { border-left: 0; }
+.journey[data-el="annual-journey"] > .stage::before { content: ""; position: absolute; left: 50%; width: 100%; top: 0; height: calc(var(--hc) + 24px); background: var(--a1); clip-path: polygon(0 calc(var(--ym) - var(--s) / 2), 100% calc(var(--yn) - var(--s) / 2), 100% calc(var(--yn) + var(--s) / 2), 0 calc(var(--ym) + var(--s) / 2)); }
+.journey[data-el="annual-journey"] > .stage:last-child::before { content: none; }
+.journey[data-el="annual-journey"] > .stage::after { content: ""; position: absolute; z-index: 1; left: calc(50% - 9px); top: calc(var(--ym) - 9px); width: 18px; height: 18px; border-radius: 50%; background: var(--a1); }
+.journey[data-el="annual-journey"] > .stage.on::after { box-shadow: 0 0 0 8px var(--annual-deco); }
+.journey[data-el="annual-journey"]::before { content: ""; position: absolute; left: 0; right: 0; top: calc(min(42cqh, 220px) + 26px); border-top: var(--stroke) dotted var(--a1); }
+.journey[data-el="annual-journey"] > .stage > .name { font-size: var(--jf, var(--type-16)); line-height: 1.25; font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.journey[data-el="annual-journey"] > .stage > .note { font-size: var(--jt, var(--type-14)); line-height: 1.5; font-weight: var(--lead-weight); color: var(--n-6); }
+.journey[data-el="annual-journey"] > .stage > .pain { align-self: flex-start; margin-top: 4px; padding: 2px 8px; background: var(--annual-deco); font-size: var(--type-12); line-height: 1.4; font-weight: var(--label-weight); color: var(--n-6); }
+.journey[data-el="annual-journey"] > .stage.on { background: linear-gradient(to bottom, transparent calc(min(42cqh, 220px) + 26px), color-mix(in srgb, var(--annual-deco) 55%, transparent) 0); }
+@container journey (min-width: 800px) and (min-height: 380px) {
+.journey[data-el="annual-journey"] > .stage { --jf: var(--type-20); --jt: var(--type-16); }
+}

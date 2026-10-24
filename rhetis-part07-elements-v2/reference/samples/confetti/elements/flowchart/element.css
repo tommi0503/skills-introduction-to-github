@@ -1,0 +1,59 @@
+:is(.body, .group, .split, .stack) > :is(.flowchart[data-el="confetti-flowchart"]) { container-type: size; }
+.stack > :is(.flowchart[data-el="confetti-flowchart"]) { flex: 1 1 0; min-height: 96px; }
+:is(.flowchart[data-el="confetti-flowchart"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--a1) 60%, var(--page)); --edge: color-mix(in srgb, var(--a1) 50%, var(--page)); --quiet: color-mix(in srgb, var(--n-8) 30%, var(--n-2)); --hair: color-mix(in srgb, var(--a1) 40%, transparent); }
+:where(.flowchart)[data-el="confetti-flowchart"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.flowchart[data-el="confetti-flowchart"] > .node) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-9); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.flowchart[data-el="confetti-flowchart"] > .node) > .note { display: block; }
+}
+:is(.flowchart[data-el="confetti-flowchart"] > .node).on > .note { color: inherit; }
+.flowchart[data-el="confetti-flowchart"] { display: grid; align-content: stretch; grid-auto-columns: minmax(0, 1fr); grid-auto-rows: minmax(0, 1fr); column-gap: clamp(calc(var(--gap) * 24 / 24), 4%, calc(var(--gap) * 48 / 24)); row-gap: clamp(calc(var(--gap) * 20 / 24), 7%, calc(var(--gap) * 40 / 24)); }
+.flowchart[data-el="confetti-flowchart"] > .node { --dg-w: clamp(24px, 4cqw, 48px); --dg-g: clamp(20px, 7cqh, 40px); align-items: stretch; text-align: center; background: var(--page); border: 1px solid var(--edge); border-radius: var(--radius); color: var(--ink); }
+.flowchart[data-el="confetti-flowchart"] > .node.start { border-radius: calc(var(--radius) * 3); border: var(--stroke) solid var(--a1); color: var(--a1); }
+.flowchart[data-el="confetti-flowchart"] > .node.end { border-radius: calc(var(--radius) * 3); background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.flowchart[data-el="confetti-flowchart"] > .node:is(.end, .on) > .note { color: inherit; }
+.flowchart[data-el="confetti-flowchart"] > .node.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.flowchart[data-el="confetti-flowchart"] > .node.ask { background: none; border-color: transparent; color: var(--a1); }
+.flowchart[data-el="confetti-flowchart"] > .node.ask > * { margin-inline: 22%; }
+.flowchart[data-el="confetti-flowchart"] > .node.ask::before { content: ""; position: absolute; inset: 0; z-index: -1; --e: transparent calc(50% - 0.8px), var(--a1) calc(50% - 0.6px), var(--a1) calc(50% + 0.6px), transparent calc(50% + 0.8px); background: linear-gradient(to bottom right, var(--e)) left top / 50% 50% no-repeat, linear-gradient(to bottom left, var(--e)) right top / 50% 50% no-repeat,
+    linear-gradient(to top right, var(--e)) left bottom / 50% 50% no-repeat, linear-gradient(to top left, var(--e)) right bottom / 50% 50% no-repeat; }
+.flowchart[data-el="confetti-flowchart"] { isolation: isolate; }
+.flowchart[data-el="confetti-flowchart"] > .node::after { content: ""; position: absolute; pointer-events: none; inset: calc(-1px - var(--dg-g)) calc(-1px - var(--dg-w)); --r1: none; --r2: none; --d1: none; --d2: none; --l1: none; --l2: none; --u1: none; --u2: none; background: var(--r1), var(--r2), var(--d1), var(--d2), var(--l1), var(--l2), var(--u1), var(--u2); }
+.flowchart[data-el="confetti-flowchart"] > .node.to-r::after { --r1: conic-gradient(from 240deg at 100% 50%, var(--wire) 60deg, transparent 0) right 2px top 50% / 10px 12px no-repeat; --r2: linear-gradient(var(--wire), var(--wire)) right 8px top 50% / calc(var(--dg-w) - 8px) var(--stroke) no-repeat; }
+.flowchart[data-el="confetti-flowchart"] > .node.to-d::after { --d1: conic-gradient(from 330deg at 50% 100%, var(--wire) 60deg, transparent 0) left 50% bottom 2px / 12px 10px no-repeat; --d2: linear-gradient(var(--wire), var(--wire)) left 50% bottom 8px / var(--stroke) calc(var(--dg-g) - 8px) no-repeat; }
+.flowchart[data-el="confetti-flowchart"] > .node.to-l::after { --l1: conic-gradient(from 60deg at 0 50%, var(--wire) 60deg, transparent 0) left 2px top 50% / 10px 12px no-repeat; --l2: linear-gradient(var(--wire), var(--wire)) left 8px top 50% / calc(var(--dg-w) - 8px) var(--stroke) no-repeat; }
+.flowchart[data-el="confetti-flowchart"] > .node.to-u::after { --u1: conic-gradient(from 150deg at 50% 0, var(--wire) 60deg, transparent 0) left 50% top 2px / 12px 10px no-repeat; --u2: linear-gradient(var(--wire), var(--wire)) left 50% top 8px / var(--stroke) calc(var(--dg-g) - 8px) no-repeat; }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-flowchart"][data-el="confetti-flowchart"][data-el="confetti-flowchart"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-flowchart"][data-el="confetti-flowchart"][data-el="confetti-flowchart"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-flowchart"][data-el="confetti-flowchart"][data-el="confetti-flowchart"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf){border:var(--stroke) solid var(--ink);border-radius:var(--radius);background-color:var(--a2-3-soft);color:var(--ink);box-shadow:4px 5px 0 var(--ink);}
+[data-el="confetti-flowchart"][data-el="confetti-flowchart"][data-el="confetti-flowchart"] :is(.core,.root,.node.on,.node.end){background:var(--a3-5);color:var(--ink);}
+[data-el="confetti-flowchart"][data-el="confetti-flowchart"][data-el="confetti-flowchart"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf,.root) :is(.name,.note,.kick){color:inherit;}
+
+/* Copy remains visible when members get smaller. */
+[data-el="confetti-flowchart"][data-el="confetti-flowchart"][data-el="confetti-flowchart"] .note{display:block}

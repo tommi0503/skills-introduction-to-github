@@ -1,0 +1,1 @@
+Fine vertical divisions and small lower ticks establish a restrained moment track. Names or explicitly nested media frames sit above date capsules and supporting notes. The alternating form exchanges the upper and lower text positions; the column form turns dates into a left column. Grouped duration bands are deliberately outside this contract.

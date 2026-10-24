@@ -1,0 +1,1 @@
+A normal two-by-two grid uses quiet surfaces and fine borders. The SWOT variant places four large diamond letter badges beside the corresponding category names and explanations, using a primary accent plus a graded neutral scale.

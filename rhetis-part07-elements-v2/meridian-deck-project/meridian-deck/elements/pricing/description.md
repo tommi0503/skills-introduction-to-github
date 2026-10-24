@@ -1,0 +1,1 @@
+Plans use the same open panel, modest corner and title register as the source cards. A large figure is followed by an attached unit and a readable feature list. The recommended plan adds one accent border and a compact capsule label.

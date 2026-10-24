@@ -1,0 +1,1 @@
+A filled capsule root branches through a fine shared trunk into smaller neutral capsule departments. Rounded pale leaves connect down the same centre line, retaining the source organization chart’s narrow labels and quiet spacing while respecting the admitted branch count.

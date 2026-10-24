@@ -1,0 +1,1 @@
+True concentric circles express successive subsets with fine outlines and restrained accent fills. Set names, large figures and optional explanatory notes occupy an aligned caption column outside the circles. A selected inner set gains a stronger fill and stroke while preserving the inclusion order.

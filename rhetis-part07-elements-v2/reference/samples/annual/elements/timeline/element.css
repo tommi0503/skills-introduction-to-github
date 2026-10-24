@@ -1,0 +1,23 @@
+.stack > :is(.track[data-el="annual-timeline"]) { flex: 1 1 0; min-height: 0; }
+.track[data-el="annual-timeline"] { container: track / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: clamp(8px, 2cqw, var(--gap)); align-items: start; color: var(--a1); }
+.track[data-el="annual-timeline"]::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: var(--stroke) dotted var(--a1); }
+.track[data-el="annual-timeline"] > .stop { --kf: var(--type-24); --nf: var(--type-16); --tf: var(--type-14); --dot: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; height: 100%; padding-top: calc(50cqh + var(--dot) / 2 + 14px); }
+.track[data-el="annual-timeline"] > .stop::before { content: ""; position: absolute; left: 0; top: calc(50cqh - var(--dot) / 2); width: var(--dot); height: var(--dot); border-radius: 50%; background: var(--a1); }
+.track[data-el="annual-timeline"] > .stop.on::before { box-shadow: 0 0 0 8px var(--annual-deco); }
+.track[data-el="annual-timeline"] > .stop > .kick { font-family: var(--font-display), sans-serif; font-size: var(--kf); line-height: 1; font-weight: var(--figure-weight); color: var(--a1); white-space: nowrap; }
+.track[data-el="annual-timeline"] > .stop.on > .kick { font-size: calc(var(--kf) * 1.4); }
+.track[data-el="annual-timeline"] > .stop > .name { font-size: var(--nf); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.track[data-el="annual-timeline"] > .stop > .note { font-size: var(--tf); line-height: 1.6; font-weight: var(--lead-weight); letter-spacing: var(--body-track); color: var(--n-6); }
+.track[data-el="annual-timeline"].alt > .stop:nth-child(odd) { padding-top: 0; padding-bottom: calc(50cqh + var(--dot) / 2 + 14px); justify-content: flex-end; }
+.track[data-el="annual-timeline"].col { grid-auto-flow: row; grid-auto-rows: minmax(0, 1fr); grid-auto-columns: auto; row-gap: 0; }
+.track[data-el="annual-timeline"].col::before { left: 8px; right: auto; top: 0; bottom: 0; border-top: 0; border-left: var(--stroke) dotted var(--a1); }
+.track[data-el="annual-timeline"].col > .stop { height: auto; display: grid; grid-template-columns: minmax(0, 0.28fr) minmax(0, 1fr); grid-template-rows: auto auto; column-gap: var(--gap); row-gap: 2px; align-content: center; padding: 0 0 0 calc(var(--dot) + 24px); }
+.track[data-el="annual-timeline"].col > .stop::before { left: 0; top: calc(50% - var(--dot) / 2); }
+.track[data-el="annual-timeline"].col > .stop > .kick { grid-row: 1 / span 2; align-self: center; }
+.track[data-el="annual-timeline"].col > .stop > :not(.kick) { grid-column: 2; }
+@container track (min-width: 800px) and (min-height: 360px) {
+.track[data-el="annual-timeline"] > .stop { --kf: var(--type-32); --nf: var(--type-20); --tf: var(--type-16); --dot: 20px; }
+}
+@container track (max-height: 239px) {
+.track[data-el="annual-timeline"]:not(.col) > .stop > .note { display: none; }
+}

@@ -1,0 +1,1 @@
+A small unlabelled trend uses actual connected data points with the same fine stroke as the line chart. The bar variant replaces the path with measured columns; up and down variants apply semantic good and bad roles without adding axes or labels.

@@ -1,0 +1,20 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.quote[data-el="seedmark-quote"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.quote[data-el="seedmark-quote"] *{box-sizing:border-box;}
+.quote[data-el="seedmark-quote"] :is(p,h2,h3,blockquote){margin:0;}
+.quote[data-el="seedmark-quote"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.quote[data-el="seedmark-quote"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.quote[data-el="seedmark-quote"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.quote[data-el="seedmark-quote"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.quote[data-el="seedmark-quote"] .seat:after{content:attr(data-ph);}
+.quote[data-el="seedmark-quote"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--pad);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+.quote[data-el="seedmark-quote"] blockquote{font-size:var(--type-32);font-weight:var(--title-weight);line-height:var(--lead-line);}
+.quote[data-el="seedmark-quote"] blockquote:before{content:'“';display:block;font-size:var(--type-60);font-weight:var(--name-weight);line-height:var(--figure-line);}
+.quote[data-el="seedmark-quote"].big blockquote{font-size:var(--type-44);}
+.quote[data-el="seedmark-quote"] .by{display:grid;grid-template-columns:56px minmax(0,1fr);grid-template-rows:auto auto;gap:calc(var(--gap-sm)/3) var(--gap-sm);align-items:center;}
+.quote[data-el="seedmark-quote"] .by>.seat{grid-row:1/span 2;width:56px;height:56px;border-radius:50%;}
+.quote[data-el="seedmark-quote"] .by>.name{font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);}
+.quote[data-el="seedmark-quote"] .by>.note{font-size:var(--type-14);color:var(--n-7);line-height:var(--label-line);}
+@container(max-height:350px){.quote[data-el="seedmark-quote"] blockquote,.quote[data-el="seedmark-quote"].big blockquote{font-size:var(--type-24)}
+.quote[data-el="seedmark-quote"] blockquote:before{font-size:var(--type-36)}
+.quote[data-el="seedmark-quote"] .by>.seat{width:48px;height:48px}}

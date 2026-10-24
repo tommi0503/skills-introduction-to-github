@@ -1,0 +1,7 @@
+from pathlib import Path
+P=Path(__file__).parent/'meridian-deck/elements'
+def add(leaf,s):
+ p=P/leaf/'element.css';p.write_text(p.read_text()+'\n'+s+'\n')
+add('heatmap','.heat[data-el="meridian-deck-heatmap"].calendar>.row>.cell{width:min(100%,calc((100cqh - var(--gap-sm)*10)/7));height:auto;align-self:center;aspect-ratio:1}')
+add('venn','.venn[data-el="meridian-deck-venn"]:has(>.set:nth-child(3 of .set))>.set:first-child>.name{left:5%;right:55%}.venn[data-el="meridian-deck-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(2)>.name{left:55%;right:5%}')
+add('timeline','.track[data-el="meridian-deck-timeline"].alt:has(>.stop:nth-child(6):last-child)>.stop{--meridian-deck-stop-diameter:min(18cqw,45cqh,calc((100cqw - var(--gap-sm)*5)/6))}.track[data-el="meridian-deck-timeline"].alt:has(>.stop:nth-child(6):last-child)>.stop::before{width:var(--meridian-deck-stop-diameter);height:var(--meridian-deck-stop-diameter)}.track[data-el="meridian-deck-timeline"].alt:has(>.stop:nth-child(6):last-child)>.stop>.kick{top:calc(26% + var(--meridian-deck-stop-diameter)*.17)}.track[data-el="meridian-deck-timeline"].alt:has(>.stop:nth-child(6):last-child)>.stop>.name{top:calc(26% + var(--meridian-deck-stop-diameter)*.64)}.track[data-el="meridian-deck-timeline"].alt:has(>.stop:nth-child(6):last-child)>.stop:nth-child(even)>.kick{top:calc(32% + var(--meridian-deck-stop-diameter)*.17)}.track[data-el="meridian-deck-timeline"].alt:has(>.stop:nth-child(6):last-child)>.stop:nth-child(even)>.name{top:calc(32% + var(--meridian-deck-stop-diameter)*.64)}')

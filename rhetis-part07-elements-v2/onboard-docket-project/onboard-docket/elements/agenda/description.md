@@ -1,0 +1,1 @@
+Pale pill-shaped entries carry a leading filled number circle. The eight-item arrangement of replica02 fills four rows down each column, with its original circle-to-row ratio and open inter-column space. Narrower boxes step down typography without losing entries.

@@ -1,0 +1,1 @@
+Thin paired comparisons connect actual before and after coordinates. Value capsules sit at the two endpoints, with the item name reserved outside the plot. The dumbbell form converts the same data to separate horizontal rows.

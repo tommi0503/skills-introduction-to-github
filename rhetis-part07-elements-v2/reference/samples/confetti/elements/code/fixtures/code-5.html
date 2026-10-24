@@ -1,0 +1,8 @@
+<!-- min: 6x3 -->
+<div class="code" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="confetti-code"><p class="name">orders.ts</p><div class="lines">
+<p><span class="k">export async function</span> fetchOrders(userId: <span class="k">string</span>) {</p>
+<p>  <span class="k">const</span> res = <span class="k">await</span> fetch(<span class="s">`/api/orders?user=${userId}`</span>);</p>
+<p>  <span class="k">if</span> (!res.ok) <span class="k">throw new</span> Error(<span class="s">"주문 조회 실패"</span>);</p>
+<p>  <span class="k">return</span> res.json(); <span class="c">// 최근 30일 주문</span></p>
+<p>}</p>
+</div></div>

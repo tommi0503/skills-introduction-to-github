@@ -1,0 +1,1 @@
+A grid of flat square-cornered cells parted by thin gaps, each washed from a pale warm tone toward the solid accent by its value, values in the condensed display face turning to the background colour on strong cells. Row names bold in the accent at the left, small secondary column heads above; a calendar sets square day cells without names.

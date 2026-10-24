@@ -1,0 +1,1 @@
+Measured rows of pale cells use accent strength as density. Values sit on small paper insets so every density remains readable in both modes. Calendar cells retain the same rounded geometry without row names.

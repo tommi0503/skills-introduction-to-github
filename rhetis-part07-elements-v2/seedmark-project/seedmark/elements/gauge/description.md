@@ -1,0 +1,1 @@
+A compact name and figure sit above a rounded progress track. The actual share fills from the left in the primary accent. Stacked meters retain their own containers and reduce their text overhead at shallow heights, so each figure stays inside its assigned member box.

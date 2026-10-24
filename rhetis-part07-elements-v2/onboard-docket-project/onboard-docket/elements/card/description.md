@@ -1,0 +1,1 @@
+A quiet rounded surface separates a narrow name bay from the explanatory bay with an inset vertical rule. An optional mark belongs to the same card and moves to a compact upper row when narrow; accent and quiet variants retain the measured paper language.

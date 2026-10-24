@@ -1,0 +1,1 @@
+A bare figure with no surface: a large numeral in the condensed squared display face in the accent with its unit at half size, a bold name in the accent and a light secondary note, ranged left. A row of figures is split by hairline upright rules.

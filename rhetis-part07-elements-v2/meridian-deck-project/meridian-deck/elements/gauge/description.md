@@ -1,0 +1,1 @@
+A compact figure-and-name register sits above a rounded progress track. The accent fill has exactly the supplied percentage and the residual track stays quiet. The mark remains legible as an independent short row or within a vertical stack.

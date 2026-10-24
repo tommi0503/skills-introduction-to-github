@@ -1,0 +1,1 @@
+Straight stacks use a clear neutral-to-accent ordinal scale with readable labels in each segment. Supplied values determine segment heights; percentage and horizontal variants preserve the same ordering, baseline and external category register.

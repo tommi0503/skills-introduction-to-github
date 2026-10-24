@@ -1,0 +1,70 @@
+:is(.body, .group, .split, .stack) > :is(.treemap[data-el="confetti-treemap"]) { container: member / size; }
+.stack > :is(.treemap[data-el="confetti-treemap"]) { flex: 1 1 0; min-height: 120px; }
+.treemap[data-el="confetti-treemap"] { display: flex; gap: var(--tg, 4px); min-width: 0; min-height: 0; }
+.treemap[data-el="confetti-treemap"] > .branch { flex: var(--v) 1 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 4px; --t: var(--a1-6); --ti: var(--page); }
+.treemap[data-el="confetti-treemap"] > .branch:nth-child(2 of .branch) { --t: var(--a3-5); --ti: var(--ink); }
+.treemap[data-el="confetti-treemap"] > .branch:nth-child(3 of .branch) { --t: var(--a2-2); --ti: var(--ink); }
+.treemap[data-el="confetti-treemap"] > .branch:nth-child(4 of .branch) { --t: var(--a2-3-soft); --ti: var(--ink); }
+.treemap[data-el="confetti-treemap"] > .branch:nth-child(5 of .branch) { --t: var(--a2-4); --ti: var(--ink); }
+.treemap[data-el="confetti-treemap"] > .branch > .name { flex: none; margin: 0; padding: 0 2px calc(var(--gap) * 2 / 24); border-bottom: var(--stroke) solid var(--t); font-size: var(--bl, var(--type-14)); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-9); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.treemap[data-el="confetti-treemap"] > .branch:only-child { flex-direction: row; flex-wrap: nowrap; }
+.treemap[data-el="confetti-treemap"] > .branch:only-child > .name { display: none; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile { container-type: size; flex: var(--v) 1 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; padding: 0; overflow: hidden; border-radius: min(var(--radius-sm), 6px); background: color-mix(in srgb, var(--t) var(--k, 100%), var(--n-1)); color: var(--ti); }
+.treemap[data-el="confetti-treemap"] > .branch > .tile:nth-child(2 of .tile) { --k: 84%; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile:nth-child(3 of .tile) { --k: 70%; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile:nth-child(n + 4 of .tile) { --k: 58%; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile:nth-child(n + 2 of .tile) { color: var(--ink); }
+.treemap[data-el="confetti-treemap"]:has(.tile.on) > .branch > .tile:not(.on) { --k: 30%; color: var(--ink); }
+.treemap[data-el="confetti-treemap"] > .branch > .tile.on { --t: var(--a1); --ti: var(--a1-on); --k: 100%; color: var(--a1-on); }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > :is(.name, .fig) { margin: 0 clamp(6px, 6cqmin, 18px); min-width: 0; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .name { margin-bottom: clamp(6px, 6cqmin, 18px); }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .fig { order: -1; font-size: var(--type-16); line-height: 1.1; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .fig small { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.06em; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .name { font-size: var(--type-14); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+@container (max-height: 39px) or (max-width: 59px) {
+.treemap[data-el="confetti-treemap"] > .branch > .tile > * { display: none; }
+}
+@container (max-height: 63px) {
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .name { display: none; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .fig { margin-bottom: clamp(6px, 6cqmin, 18px); }
+}
+@container (min-width: 140px) and (min-height: 100px) {
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .fig { font-size: var(--type-24); }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .name { font-size: var(--type-16); }
+}
+@container (min-width: 220px) and (min-height: 160px) {
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .fig { font-size: var(--type-36); }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .name { font-size: var(--type-20); }
+}
+@container member (min-width: 640px) and (min-height: 360px) {
+.treemap[data-el="confetti-treemap"] > .branch { --bl: var(--type-16); }
+}
+.treemap[data-el="confetti-treemap"] > .branch > .name { border-bottom-width: 1px; font-weight: var(--name-weight); color: var(--a1); }
+.treemap[data-el="confetti-treemap"] > .branch > .tile { border-radius: 2px; }
+.treemap[data-el="confetti-treemap"] > .branch > .tile > .name { font-weight: var(--body-weight); }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"] .tile{border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm)}
+
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile{background:var(--t);color:var(--ti)}
+
+/* Dense nested shares keep every label in a compact band below the area plot. */
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]:has(>.branch:nth-child(2)){padding-bottom:calc(var(--type-14)*5)}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]:has(>.branch>.tile:nth-child(8 of .tile)){padding-bottom:calc(var(--type-14)*12)}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]:has(>.branch:nth-child(2))>.branch>.tile{position:static;container-type:normal;overflow:visible}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]:has(>.branch:nth-child(2))>.branch>.tile>:is(.name,.fig){position:absolute;top:calc(100% + var(--type-14)*1.4*var(--li));display:block;margin:0;font-size:var(--type-14);line-height:1.4;color:var(--ink);white-space:nowrap}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]:has(>.branch:nth-child(2))>.branch>.tile>.name{left:0}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]:has(>.branch:nth-child(2))>.branch>.tile>.fig{right:0}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(1 of .tile){--li:0}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(2 of .tile){--li:1}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(3 of .tile){--li:2}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(4 of .tile){--li:3}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(5 of .tile){--li:4}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(6 of .tile){--li:5}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(7 of .tile){--li:6}
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch>.tile:nth-child(8 of .tile){--li:7}
+
+[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]:not(:has(>.branch:nth-child(2))){padding-top:var(--gap)}[data-el="confetti-treemap"][data-el="confetti-treemap"][data-el="confetti-treemap"]>.branch:only-child>.name{display:block;position:absolute;top:calc(-1*var(--gap));left:0;right:0;border:0;white-space:nowrap;font-size:var(--type-14)}

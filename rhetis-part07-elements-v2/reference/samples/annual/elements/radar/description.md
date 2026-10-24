@@ -1,0 +1,1 @@
+Filled translucent polygons over a round chart: hairline rings and spokes in a pale neutral inside a dotted accent orbit, a soft wide pale ring round the middle. The first series is filled with the accent and later ones in grey and a light tone, overlapping; axis names stand bold in the accent just outside the orbit, the first at the top.

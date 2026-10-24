@@ -1,0 +1,1 @@
+A narrow actual bar sits on three quiet qualitative bands. The target is a separate dark cross-track marker positioned from its own value. Labels, figure, and target note each retain a dedicated row or column.

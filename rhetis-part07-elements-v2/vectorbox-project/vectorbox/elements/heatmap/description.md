@@ -1,0 +1,1 @@
+A flat grid uses ranked density fills and small centered values on contrasting page-colored tabs. A fixed name gutter aligns ordinary row headings with the column headers. Calendar cells are true squares sized from both available dimensions, with equal week spacing and no weekday-name gutter.

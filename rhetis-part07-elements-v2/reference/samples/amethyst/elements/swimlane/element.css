@@ -1,0 +1,38 @@
+:is(.body, .group, .split, .stack) > :is(.swimlane[data-el="amethyst-swimlane"]) { container: member / size; }
+.stack > :is(.swimlane[data-el="amethyst-swimlane"]) { flex: 1 1 0; min-height: 160px; }
+.swimlane[data-el="amethyst-swimlane"] { display: grid; grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); grid-auto-columns: minmax(0, max-content); grid-auto-rows: minmax(0, 1fr); column-gap: 36px; row-gap: 20px; min-width: 0; min-height: 0; isolation: isolate; overflow: hidden; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); --gx: 36px; --gy: 20px; }
+.swimlane[data-el="amethyst-swimlane"] > .lane { display: contents; }
+.swimlane[data-el="amethyst-swimlane"] > .lane > .name { grid-column: span 1 / 1; grid-row: inherit; align-self: center; max-width: 168px; margin: 0 var(--gap-sm) 0 0; font-size: var(--ns, var(--type-16)); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); color: var(--ink); text-wrap: balance; }
+.swimlane[data-el="amethyst-swimlane"] > .lane { --band: transparent; }
+.swimlane[data-el="amethyst-swimlane"] > .lane:nth-child(odd of .lane) { --band: var(--n-1); }
+.swimlane[data-el="amethyst-swimlane"] > .lane > .name { padding-left: calc(var(--pad) * 12 / 28); }
+.swimlane[data-el="amethyst-swimlane"] > .lane::before { content: ""; grid-row: inherit; grid-column: span calc(var(--cols, 4) + 1) / -1; margin: calc(var(--gy) / -2) 0; z-index: -2; background: var(--band); border-top: 1px solid var(--a1-2-muted); }
+.swimlane[data-el="amethyst-swimlane"] > .lane:nth-child(1 of .lane)::before { margin-top: 0; }
+.swimlane[data-el="amethyst-swimlane"] > .node { container-type: size; display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 0; min-height: 0; text-align: center; color: var(--ink); --sh: min(100cqh, 84px); }
+.swimlane[data-el="amethyst-swimlane"] > .node::before { content: ""; position: absolute; z-index: -1; left: 0; right: 0; top: calc(50cqh - var(--sh) / 2); height: var(--sh); background: var(--page); border: 1px solid var(--a1-2-muted); border-radius: var(--radius); }
+.swimlane[data-el="amethyst-swimlane"] > .node.start::before { border-radius: 999px; background:var(--a1-1-muted); border-color: var(--a1-2-muted); }
+.swimlane[data-el="amethyst-swimlane"] > .node.end::before { border-radius: 999px; background: var(--a1); border-color: var(--a1); }
+.swimlane[data-el="amethyst-swimlane"] > .node.end { color: var(--a1-on); }
+.swimlane[data-el="amethyst-swimlane"] > .node.ask::before { border: 0; border-radius: 0; background: color-mix(in srgb, var(--a2-1) 22%, var(--page)); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.swimlane[data-el="amethyst-swimlane"] > .node.on::before { background: var(--a1); border-color: var(--a1); }
+.swimlane[data-el="amethyst-swimlane"] > .node.on { color: var(--a1-on); }
+.swimlane[data-el="amethyst-swimlane"] > .node > * { margin: 0 clamp(8px, 8cqw, 20px); max-height: var(--sh); overflow: hidden; }
+.swimlane[data-el="amethyst-swimlane"] > .node.ask > * { margin-inline: 22%; }
+.swimlane[data-el="amethyst-swimlane"] > .node > .name { font-size: var(--type-14); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+@container (min-width: 140px) and (min-height: 52px) {
+.swimlane[data-el="amethyst-swimlane"] > .node > .name { font-size: var(--type-16); }
+}
+@container (min-width: 200px) and (min-height: 64px) {
+.swimlane[data-el="amethyst-swimlane"] > .node > .name { font-size: var(--type-20); }
+}
+.swimlane[data-el="amethyst-swimlane"] > .node::after { content: ""; position: absolute; z-index: -1; pointer-events: none; --sl: calc(50cqh - var(--sh) / 2); inset: calc(-1 * (var(--gy) + var(--sl))) calc(-1 * var(--gx)); --r1: none; --r2: none; --d1: none; --d2: none; --l1: none; --l2: none; --u1: none; --u2: none; background: var(--r1), var(--r2), var(--d1), var(--d2), var(--l1), var(--l2), var(--u1), var(--u2); }
+.swimlane[data-el="amethyst-swimlane"] > .node.to-r::after { --r1: conic-gradient(from 240deg at 100% 50%, var(--wire) 60deg, transparent 0) right 2px top 50% / 10px 12px no-repeat; --r2: linear-gradient(var(--wire), var(--wire)) right 8px top 50% / calc(var(--gx) - 8px) var(--stroke) no-repeat; }
+.swimlane[data-el="amethyst-swimlane"] > .node.to-l::after { --l1: conic-gradient(from 60deg at 0 50%, var(--wire) 60deg, transparent 0) left 2px top 50% / 10px 12px no-repeat; --l2: linear-gradient(var(--wire), var(--wire)) left 8px top 50% / calc(var(--gx) - 8px) var(--stroke) no-repeat; }
+.swimlane[data-el="amethyst-swimlane"] > .node.to-d::after { --d1: conic-gradient(from 330deg at 50% 100%, var(--wire) 60deg, transparent 0) left 50% bottom 2px / 12px 10px no-repeat; --d2: linear-gradient(var(--wire), var(--wire)) left 50% bottom 8px / var(--stroke) calc(var(--gy) + var(--sl) * 2 - 8px) no-repeat; }
+.swimlane[data-el="amethyst-swimlane"] > .node.to-u::after { --u1: conic-gradient(from 150deg at 50% 0, var(--wire) 60deg, transparent 0) left 50% top 2px / 12px 10px no-repeat; --u2: linear-gradient(var(--wire), var(--wire)) left 50% top 8px / var(--stroke) calc(var(--gy) + var(--sl) * 2 - 8px) no-repeat; }
+@container member (min-width: 640px) and (min-height: 320px) {
+.swimlane[data-el="amethyst-swimlane"] > .lane > .name { --ns: var(--type-20); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-swimlane"][data-el="amethyst-swimlane"][data-el="amethyst-swimlane"] { color:var(--ink); }

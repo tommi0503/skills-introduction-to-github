@@ -1,0 +1,1 @@
+Four quiet rounded quadrants are separated by deliberate gaps. Axis labels sit outside the cells, and one selected cell uses a soft accent. The SWOT form replaces the axes with strong S/W/O/T kickers, names and compact local lists; all text stays within the cell surfaces.

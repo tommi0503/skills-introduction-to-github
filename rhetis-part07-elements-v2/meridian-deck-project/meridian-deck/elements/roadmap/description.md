@@ -1,0 +1,1 @@
+Periods form a quiet grid behind horizontal capsule durations. Each lane has a separate owner label, task bars follow their supplied start and exclusive end, and a small vertical marker identifies milestones without changing the duration scale.

@@ -1,0 +1,1 @@
+A broad panel aligns a prominent figure or circular mark against a title, with a fine rule and supporting note. Quiet columns reserve an upper pause for their kicker. Line cards expose open accent rules and a secondary note without an enclosing box.

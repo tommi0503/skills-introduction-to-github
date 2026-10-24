@@ -1,0 +1,1 @@
+Dates, names and notes align around a fine track. The alternating design uses circular accent event badges, short stems and external descriptions above and below; the vertical design retains a single ruled spine and three aligned text registers.

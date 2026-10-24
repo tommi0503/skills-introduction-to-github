@@ -1,0 +1,1 @@
+Capsule questions and softly outlined outcomes branch along hairline links. Small answer labels sit between the connected levels, a deeper neutral question distinguishes each later decision, and one pale accent outcome marks the recommended route without imitating a full page scene.

@@ -1,0 +1,26 @@
+:is(.body, .group, .split, .stack) > :is(.bullet[data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"]) { container: member / size; }
+.stack > :is(.bullet[data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"]) { flex: 1 1 0; min-height: 64px; }
+.bullets[data-el="amethyst-bullet"] { display: flex; flex-direction: column; justify-content: space-evenly; gap: calc(var(--gap) * 6 / 24); min-width: 0; min-height: 0; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-rows: auto auto; align-content: center; align-items: baseline; column-gap: var(--gap-sm); min-width: 0; min-height: 0; --c: var(--a1); }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > * { --ns: var(--type-16); --fs: var(--type-24); --th: 16px; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *)::before, .bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *)::after { content: ""; grid-column: 1 / -1; grid-row: 2; align-self: center; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *)::before { height: calc(var(--th, 16px) + 10px); margin-block: calc(var(--gap) * 3 / 24) 0; background: linear-gradient(var(--ink), var(--ink)) calc(var(--target, 0) * 1%) 0 / 3px 100% no-repeat, linear-gradient(to right, color-mix(in srgb, var(--n-6) 34%, var(--n-1)) 0 calc(var(--low, 0) * 1%), color-mix(in srgb, var(--n-6) 20%, var(--n-1)) calc(var(--low, 0) * 1%) calc(var(--high, 0) * 1%), color-mix(in srgb, var(--n-6) 9%, var(--n-1)) calc(var(--high, 0) * 1%)) 0 50% / 100% var(--th, 16px) no-repeat; border-radius: 2px; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *)::after { justify-self: start; width: calc(var(--v) * 1%); height: calc(var(--th, 16px) * 0.42); min-width: 4px; background: var(--c); border-radius: 0 min(var(--radius-sm), 3px) min(var(--radius-sm), 3px) 0; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > .name { grid-column: 1; grid-row: 1; margin: 0; font-size: var(--ns); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); color: var(--ink); text-wrap: balance; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > .fig { grid-column: 3; grid-row: 1; margin: 0; font-size: var(--fs); line-height: 1.1; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > .fig small { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.06em; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > .note { grid-column: 2; grid-row: 1; margin: 0; font-size: var(--type-14); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); white-space: nowrap; }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *).on > .fig { color: var(--a1); }
+@container member (min-width: 420px) and (min-height: 90px) {
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > * { --ns: var(--type-20); --fs: var(--type-32); }
+}
+@container member (min-width: 640px) and (min-height: 140px) {
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > * { --ns: var(--type-24); --fs: var(--type-40); }
+.bullet:is([data-el="amethyst-bullet"], .bullets[data-el="amethyst-bullet"] > *) > .note { font-size: var(--type-16); }
+}
+@container member (min-width: 420px) and (min-height: 300px) {
+.bullets[data-el="amethyst-bullet"] > .bullet > * { --ns: var(--type-20); --fs: var(--type-28); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-bullet"][data-el="amethyst-bullet"][data-el="amethyst-bullet"] { color:var(--ink); }

@@ -1,0 +1,1 @@
+Thin gutters and quiet row names organize a density grid. Tint intensity follows each value without sacrificing dark text contrast. The calendar form computes a genuinely square day cell from both available width and height.

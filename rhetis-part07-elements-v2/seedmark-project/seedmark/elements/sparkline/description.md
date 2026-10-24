@@ -1,0 +1,1 @@
+A small unlabelled trend joins all declared values with the same positive-rectangle geometry as the main line chart. The bars form replaces each point with a rounded mini bar. Up and down variants use semantic status roles without adding axes or decorative labels.

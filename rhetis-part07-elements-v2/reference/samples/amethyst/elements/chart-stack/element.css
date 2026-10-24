@@ -1,0 +1,74 @@
+:is(.body, .group, .split, .stack) > :is(.stacks[data-el="amethyst-chart-stack"]) { container: member / size; }
+.stack > :is(.stacks[data-el="amethyst-chart-stack"]) { flex: 1 1 0; min-height: 96px; }
+.stacks[data-el="amethyst-chart-stack"] { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); column-gap: clamp(calc(var(--gap) * 6 / 24), 2.4cqw, var(--gap)); min-width: 0; min-height: 0; --ground: var(--page); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar { container: bar / size; display: flex; flex-direction: column-reverse; align-items: center; min-width: 0; min-height: 0; }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > * { --bl: min(var(--bl-w, var(--type-16)), var(--bl-h, var(--type-16))); --lh: calc(var(--bl) * 2.7 + var(--pad) * 10 / 28); --plot: calc(100cqh - var(--lh)); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg:nth-child(1 of .seg) { margin-bottom: var(--lh); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > span { position: absolute; left: 0; right: 0; bottom: 0; height: var(--lh); padding: calc(var(--pad) * 8 / 28) calc(var(--pad) * 2 / 28) 0; border-top: var(--stroke) solid var(--a1-2-muted); text-align: center; font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); text-wrap: balance; overflow: hidden; }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg { container: seg / size; flex: none; box-sizing: border-box; width: clamp(12px, 62%, 132px); height: calc(var(--v) / var(--max, 100) * var(--plot)); display: grid; place-items: center; border-top: var(--stroke) solid var(--ground); background: var(--c); color: var(--ci); --c: var(--a1-7); --ci: var(--page); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg:nth-child(1 of .seg) { border-top-width: 0; }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg:last-child { border-radius: min(var(--radius-sm), 8cqw) min(var(--radius-sm), 8cqw) 0 0; }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg:nth-child(2 of .seg) { --c: var(--a1-5); --ci: var(--n-9); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg:nth-child(3 of .seg) { --c: var(--a2-1); --ci: var(--n-9); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg:nth-child(4 of .seg) { --c: var(--a1-4-soft); --ci: var(--n-9); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg:nth-child(5 of .seg) { --c: var(--a1-8-soft); --ci: var(--page); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg.tone-1 { --c: var(--a1-7); --ci: var(--page); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg.tone-2 { --c: var(--a1-5); --ci: var(--n-9); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg.tone-3 { --c: var(--a2-1); --ci: var(--n-9); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg.tone-4 { --c: var(--a1-4-soft); --ci: var(--n-9); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg.tone-5 { --c: var(--a1-8-soft); --ci: var(--page); }
+.stacks[data-el="amethyst-chart-stack"]:has(> .sbar.on) > .sbar:not(.on) > .seg { background: color-mix(in srgb, var(--c) 34%, var(--ground)); color: var(--ink); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar.on > span { color: var(--ink); }
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg > b { display: none; font-size: var(--type-14); line-height: 1.1; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; }
+@container seg (min-height: 22px) and (min-width: 40px) {
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg > b { display: block; }
+}
+@container seg (min-height: 30px) and (min-width: 60px) {
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg > b { font-size: var(--type-16); }
+}
+@container seg (min-height: 40px) and (min-width: 84px) {
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg > b { font-size: var(--type-20); }
+}
+@container seg (min-height: 48px) and (min-width: 104px) {
+.stacks[data-el="amethyst-chart-stack"] > .sbar > .seg > b { font-size: var(--type-24); }
+}
+@container member (min-height: 300px) {
+.stacks[data-el="amethyst-chart-stack"]:not(.h) > .sbar { --bl-h: var(--type-20); }
+}
+@container member (min-height: 440px) {
+.stacks[data-el="amethyst-chart-stack"]:not(.h) > .sbar { --bl-h: var(--type-24); }
+}
+@container bar (min-width: 88px) {
+.stacks[data-el="amethyst-chart-stack"]:not(.h) > .sbar > * { --bl-w: var(--type-20); }
+}
+@container bar (min-width: 150px) {
+.stacks[data-el="amethyst-chart-stack"]:not(.h) > .sbar > * { --bl-w: var(--type-24); }
+}
+.stacks[data-el="amethyst-chart-stack"].h { grid-auto-flow: row; grid-auto-rows: minmax(0, 1fr); grid-template-rows: none; grid-template-columns: minmax(0, 1fr); row-gap: clamp(calc(var(--gap) * 4 / 24), 2cqh, calc(var(--gap) * 14 / 24)); column-gap: 0; }
+.stacks[data-el="amethyst-chart-stack"].h > .sbar { flex-direction: row; align-items: center; }
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > * { --lw: clamp(76px, 24cqw, 240px); --plot: calc(100cqw - var(--lw)); }
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > .seg:nth-child(1 of .seg) { margin: 0 0 0 var(--lw); }
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > span { left: 0; right: auto; top: 0; bottom: 0; width: var(--lw); height: auto; display: flex; align-items: center; justify-content: flex-end; padding: 0 var(--gap-sm) 0 0; border-top: 0; border-right: var(--stroke) solid var(--a1-2-muted); text-align: right; }
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > .seg { width: calc(var(--v) / var(--max, 100) * var(--plot)); height: clamp(12px, 64%, 56px); border-top: 0; border-left: var(--stroke) solid var(--ground); }
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > .seg:nth-child(1 of .seg) { border-left-width: 0; }
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > .seg:last-child { border-radius: 0 min(var(--radius-sm), 20cqh) min(var(--radius-sm), 20cqh) 0; }
+@container bar (min-height: 44px) {
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > * { --bl-h: var(--type-20); }
+}
+@container bar (min-height: 72px) {
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > * { --bl-h: var(--type-24); }
+}
+@container bar (min-width: 520px) {
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > * { --bl-w: var(--type-20); }
+}
+@container bar (min-width: 760px) {
+.stacks[data-el="amethyst-chart-stack"].h > .sbar > * { --bl-w: var(--type-24); }
+}
+.stacks[data-el="amethyst-chart-stack"].pct > .sbar > .seg { height: calc(var(--v) / 100 * var(--plot)); }
+.stacks[data-el="amethyst-chart-stack"].pct.h > .sbar > .seg { width: calc(var(--v) / 100 * var(--plot)); height: clamp(12px, 64%, 56px); }
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-chart-stack"][data-el="amethyst-chart-stack"][data-el="amethyst-chart-stack"] { color:var(--ink); }
+
+/* Content remains visible at the declared minimum; numeric geometry is unchanged. */
+[data-el="amethyst-chart-stack"][data-el="amethyst-chart-stack"][data-el="amethyst-chart-stack"] > .sbar > .seg > b { display:block; }

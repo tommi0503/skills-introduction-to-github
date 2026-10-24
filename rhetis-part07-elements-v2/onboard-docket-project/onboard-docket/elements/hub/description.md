@@ -1,0 +1,1 @@
+The complete radial relationship uses pale rounded members around a dark circular centre. Fine spokes meet each member’s mark and labels. The closed ellipse or independent centre-to-member spokes persist at compact sizes; only supporting notes are suppressed in shallow slots.

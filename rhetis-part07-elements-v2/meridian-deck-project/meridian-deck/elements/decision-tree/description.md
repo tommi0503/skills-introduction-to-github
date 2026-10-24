@@ -1,0 +1,1 @@
+Questions and outcomes use the same restrained rounded boxes and accent recommendations as the rest of the collection. Answer labels sit on owned branch lines, and nested option groups preserve complete connector ownership across three question depths.

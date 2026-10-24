@@ -1,0 +1,1 @@
+One concluding sentence set light and secondary, its key phrase bold in the accent, starting over the lower-right of a pale square of decoration offset behind its first line; an optional pictogram sits in a solid accent disc before it.

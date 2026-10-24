@@ -1,0 +1,21 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.dtree[data-el="seedmark-decision-tree"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.dtree[data-el="seedmark-decision-tree"] *{box-sizing:border-box;}
+.dtree[data-el="seedmark-decision-tree"] :is(p,h2,h3,blockquote){margin:0;}
+.dtree[data-el="seedmark-decision-tree"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.dtree[data-el="seedmark-decision-tree"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.dtree[data-el="seedmark-decision-tree"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.dtree[data-el="seedmark-decision-tree"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.dtree[data-el="seedmark-decision-tree"] .seat:after{content:attr(data-ph);}
+.dtree[data-el="seedmark-decision-tree"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-lg);padding:var(--gap-sm);}
+.dtree[data-el="seedmark-decision-tree"] .q{align-self:center;max-width:70%;padding:var(--gap-sm) var(--gap);border:var(--stroke) solid var(--ink);border-radius:999px;background:var(--n-1);position:relative;text-align:center;}
+.dtree[data-el="seedmark-decision-tree"] .q:after{content:'';position:absolute;left:50%;top:100%;height:var(--gap-lg);width:var(--stroke);background:var(--n-3);}
+.dtree[data-el="seedmark-decision-tree"] .opts{display:flex;gap:var(--gap);min-width:0;}
+.dtree[data-el="seedmark-decision-tree"] .opt{position:relative;flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:var(--gap-sm);}
+.dtree[data-el="seedmark-decision-tree"] .opt:before{content:'';position:absolute;left:0;right:0;top:calc(var(--gap-lg)*-1);height:var(--gap-lg);border-top:var(--stroke) solid var(--n-3);border-left:var(--stroke) solid var(--n-3);}
+.dtree[data-el="seedmark-decision-tree"] .cond{font-size:var(--type-14);line-height:var(--label-line);color:var(--n-7);}
+.dtree[data-el="seedmark-decision-tree"] .end{padding:var(--gap);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);background:var(--page);text-align:center;}
+.dtree[data-el="seedmark-decision-tree"] .end.on{background:var(--a1);color:var(--a1-on);border-color:var(--a1)}
+.dtree[data-el="seedmark-decision-tree"] .name{font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);}
+@container(max-width:700px){.dtree[data-el="seedmark-decision-tree"] .name{font-size:var(--type-14)}
+.dtree[data-el="seedmark-decision-tree"] .cond{font-size:var(--type-12)}}

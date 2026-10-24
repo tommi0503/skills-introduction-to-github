@@ -1,0 +1,62 @@
+:is(.body, .group, .split, .stack) > :is(.treemap[data-el="amethyst-treemap"]) { container: member / size; }
+.stack > :is(.treemap[data-el="amethyst-treemap"]) { flex: 1 1 0; min-height: 120px; }
+.treemap[data-el="amethyst-treemap"] { display: flex; gap: var(--tg, 4px); min-width: 0; min-height: 0; }
+.treemap[data-el="amethyst-treemap"] > .branch { flex: var(--v) 1 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 4px; --t: var(--a1-7); --ti: var(--page); }
+.treemap[data-el="amethyst-treemap"] > .branch:nth-child(2 of .branch) { --t: var(--a1-5); --ti: var(--n-9); }
+.treemap[data-el="amethyst-treemap"] > .branch:nth-child(3 of .branch) { --t: var(--a2-1); --ti: var(--n-9); }
+.treemap[data-el="amethyst-treemap"] > .branch:nth-child(4 of .branch) { --t: var(--a1-4-soft); --ti: var(--n-9); }
+.treemap[data-el="amethyst-treemap"] > .branch:nth-child(5 of .branch) { --t: var(--a1-8-soft); --ti: var(--page); }
+.treemap[data-el="amethyst-treemap"] > .branch > .name { flex: none; margin: 0; padding: 0 2px calc(var(--gap) * 2 / 24); border-bottom: var(--stroke) solid var(--t); font-size: var(--bl, var(--type-14)); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.treemap[data-el="amethyst-treemap"] > .branch:only-child { flex-direction: row; flex-wrap: nowrap; }
+.treemap[data-el="amethyst-treemap"] > .branch:only-child > .name { display: none; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile { container-type: size; flex: var(--v) 1 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; padding: 0; overflow: hidden; border-radius: min(var(--radius-sm), 6px); background: color-mix(in srgb, var(--t) var(--k, 100%), var(--page)); color: var(--ti); }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile:nth-child(2 of .tile) { --k: 84%; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile:nth-child(3 of .tile) { --k: 70%; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile:nth-child(n + 4 of .tile) { --k: 58%; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile:nth-child(n + 2 of .tile) { color: var(--ink); }
+.treemap[data-el="amethyst-treemap"]:has(.tile.on) > .branch > .tile:not(.on) { --k: 30%; color: var(--ink); }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile.on { --t: var(--a1); --ti: var(--a1-on); --k: 100%; color: var(--a1-on); }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > :is(.name, .fig) { margin: 0 clamp(6px, 6cqmin, 18px); min-width: 0; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .name { margin-bottom: clamp(6px, 6cqmin, 18px); }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .fig { order: -1; font-size: var(--type-16); line-height: 1.1; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .fig small { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.06em; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .name { font-size: var(--type-14); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+@container (max-height: 39px) or (max-width: 59px) {
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > * { display: none; }
+}
+@container (max-height: 63px) {
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .name { display: none; }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .fig { margin-bottom: clamp(6px, 6cqmin, 18px); }
+}
+@container (min-width: 140px) and (min-height: 100px) {
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .fig { font-size: var(--type-24); }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .name { font-size: var(--type-16); }
+}
+@container (min-width: 220px) and (min-height: 160px) {
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .fig { font-size: var(--type-36); }
+.treemap[data-el="amethyst-treemap"] > .branch > .tile > .name { font-size: var(--type-20); }
+}
+@container member (min-width: 640px) and (min-height: 360px) {
+.treemap[data-el="amethyst-treemap"] > .branch { --bl: var(--type-16); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] { color:var(--ink); }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile { --k:22%; color:var(--ink); }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile:nth-child(2 of .tile) { --k:17%; }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile:nth-child(3 of .tile) { --k:12%; }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile:nth-child(n + 4 of .tile) { --k:8%; }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile.on { --k:100%; color:var(--a1-on); }
+
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile.on { background:var(--a1); color:var(--a1-on); }
+
+/* Content remains visible at the declared minimum; numeric geometry is unchanged. */
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch:only-child { padding-top:calc(var(--type-16) + var(--gap-sm)); }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch:only-child > .name { display:block; position:absolute; left:0; right:0; top:0; }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile > :is(.name,.fig) { display:block; }
+@container (max-height:63px) {
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile { flex-direction:row; align-items:center; justify-content:space-between; padding-inline:calc(var(--gap-sm) / 2); gap:2px; }
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch > .tile > :is(.name,.fig) { margin:0; font-size:var(--type-12); line-height:1; white-space:nowrap; }
+}
+
+[data-el="amethyst-treemap"][data-el="amethyst-treemap"][data-el="amethyst-treemap"] > .branch:has(> .tile:nth-child(8 of .tile)) > .tile { flex-direction:row; align-items:center; justify-content:space-between; }

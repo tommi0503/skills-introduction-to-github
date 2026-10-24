@@ -1,0 +1,1 @@
+Stage headings align above a fine emotion curve whose points follow the supplied moods. Touchpoint notes and optional pain lines occupy separate lower registers. The owner connects every consecutive stage and uses one accent point for emphasis.

@@ -1,0 +1,29 @@
+/* Tokens (KIT-CONTRACT §1). Light is the default: a warm cream page, one deep accent for titles, rings, discs and
+   panels, a mid grey for secondary text, a pale warm square of decoration behind the start of a block. .slide.dark is
+   the deck's accent panel world (the cover's lower band, the quote page's side panel): the page takes the accent, and
+   the cream that was the page becomes the ink and the accent. Nothing else in the kit states a colour, a face, a
+   radius or a space. */
+.slide {
+  --page: #F7F1EE;   --ink: #0E6F6F;
+  --font-display: 'Do Hyeon'; --font-body: 'Noto Sans KR'; --weight-display: 400; --weight-body: 400; --tracking-display: -0.01em;
+  --radius: 16px; --radius-sm: 6px; --stroke: 2px;
+  --text-min: 12px;   /* the smallest text a page of this kit may carry (a rung of the ladder) */
+  --margin-x: 72px; --margin-y: 48px; --gap: 24px; --gap-sm: 12px; --gap-lg: 40px; --pad: 28px;
+  /* furniture (KIT-CONTRACT §2): the header band holds the large outlined section numeral, the page title set beside
+     it on its foot; the footer is a quiet label line; the rail a column of outlined numerals */
+  --furn-edge: 28px; --top-h: 120px; --foot-h: 32px; --furn-gap: 28px; --rail-w: 96px; --rail-gap: 48px;
+  /* the kit's own: the pale square set behind the start of a heading or a text block, the cover's lower band and its
+     ink, and the hairline that outlines the big numerals */
+     --outline: 1.5px;
+  /* Type roles (KIT-TYPE.md). Every text takes ONE role; a component chooses only the size per container step. */
+  --title-weight: 400;  --title-line: 1.15; --title-track: -0.01em;    /* the condensed display face: titles, display names */
+  --lead-weight: 300;   --lead-line: 1.5;   --lead-track: -0.02em;     /* the light lead under a title, a quote's body */
+  --figure-weight: 400; --figure-line: 1;   --figure-track: -0.01em;   /* figures and numerals in the display face */
+  --name-weight: 700;   --name-line: 1.3;   --name-track: -0.03em;     /* a member's bold name, a table's first column */
+  --body-weight: 400;   --body-line: 1.75;  --body-track: -0.04em;     /* notes and running text, tightly tracked */
+  --label-weight: 500;  --label-line: 1.3;  --label-track: -0.02em;    /* kickers, table heads, axis labels, chrome */
+  --label-track-latin: 0.02em;                                         /* only for :lang(en) / all-Latin labels */
+}
+.slide.dark {
+  --page: #0F7A7A;   --ink: #FFFFFF;
+}

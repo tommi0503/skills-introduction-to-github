@@ -1,0 +1,20 @@
+/* Measured base: page 2, bbox [603, 221, 616, 417]. Own-container geometry; no page or fixture condition. */
+.agenda[data-el="seedmark-agenda"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.agenda[data-el="seedmark-agenda"] *{box-sizing:border-box;}
+.agenda[data-el="seedmark-agenda"] :is(p,h2,h3,blockquote){margin:0;}
+.agenda[data-el="seedmark-agenda"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.agenda[data-el="seedmark-agenda"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.agenda[data-el="seedmark-agenda"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.agenda[data-el="seedmark-agenda"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.agenda[data-el="seedmark-agenda"] .seat:after{content:attr(data-ph);}
+.agenda[data-el="seedmark-agenda"]{display:grid;grid-template-columns:1fr;grid-auto-rows:minmax(0,1fr);padding:0;}
+.agenda[data-el="seedmark-agenda"] .entry{display:grid;grid-template-columns:26px minmax(0,1fr);align-content:center;gap:var(--gap-sm);border-top:var(--stroke) solid var(--n-3);padding:calc(var(--gap-sm)/2) 0;min-height:0;}
+.agenda[data-el="seedmark-agenda"] .mark{font-size:var(--type-14);line-height:var(--label-line);font-weight:var(--label-weight);}
+.agenda[data-el="seedmark-agenda"] .name{font-size:var(--type-24);line-height:var(--name-line);font-weight:var(--body-weight);}
+.agenda[data-el="seedmark-agenda"] .note{grid-column:2;font-size:var(--type-16);color:var(--n-7);line-height:var(--body-line);}
+.agenda[data-el="seedmark-agenda"] .entry.on{border-top:2px solid var(--ink);font-weight:var(--name-weight);}
+.agenda[data-el="seedmark-agenda"]:has(>.entry:nth-child(7)){grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));grid-auto-flow:column;column-gap:var(--gap-lg);}
+@container(max-width:600px){.agenda[data-el="seedmark-agenda"] .name{font-size:var(--type-18)}
+.agenda[data-el="seedmark-agenda"] .note{font-size:var(--type-14)}}
+@container(max-height:220px){.agenda[data-el="seedmark-agenda"] .name{font-size:var(--type-16)}
+.agenda[data-el="seedmark-agenda"] .mark{font-size:var(--type-12)}}

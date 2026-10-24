@@ -1,0 +1,20 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.tablebox[data-el="seedmark-table"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.tablebox[data-el="seedmark-table"] *{box-sizing:border-box;}
+.tablebox[data-el="seedmark-table"] :is(p,h2,h3,blockquote){margin:0;}
+.tablebox[data-el="seedmark-table"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.tablebox[data-el="seedmark-table"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.tablebox[data-el="seedmark-table"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.tablebox[data-el="seedmark-table"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.tablebox[data-el="seedmark-table"] .seat:after{content:attr(data-ph);}
+.tablebox[data-el="seedmark-table"]{display:flex;align-items:center;padding:var(--gap-sm);}
+.tablebox[data-el="seedmark-table"] .table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:var(--type-18);line-height:var(--body-line);}
+.tablebox[data-el="seedmark-table"] th,.tablebox[data-el="seedmark-table"] td{padding:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-3);text-align:left;overflow-wrap:anywhere;}
+.tablebox[data-el="seedmark-table"] th{background:var(--ink);color:var(--page);font-weight:var(--name-weight);}
+.tablebox[data-el="seedmark-table"] .num{text-align:right;font-variant-numeric:tabular-nums;}
+.tablebox[data-el="seedmark-table"] td.pick{background:var(--a1-2-soft);font-weight:var(--name-weight)}
+.tablebox[data-el="seedmark-table"] th.pick{background:var(--a1);color:var(--a1-on);}
+@container(max-width:800px){.tablebox[data-el="seedmark-table"] .table{font-size:var(--type-14)}
+.tablebox[data-el="seedmark-table"] th,.tablebox[data-el="seedmark-table"] td{padding:calc(var(--gap-sm)/2)}}
+@container(max-height:400px){.tablebox[data-el="seedmark-table"] .table{font-size:var(--type-14);line-height:var(--label-line)}
+.tablebox[data-el="seedmark-table"] th,.tablebox[data-el="seedmark-table"] td{padding:calc(var(--gap-sm)/2)}}

@@ -1,0 +1,74 @@
+:is(.body, .group, .split, .stack) > :is(.cycle[data-el="amethyst-cycle"]) { container-type: size; }
+.stack > :is(.cycle[data-el="amethyst-cycle"]) { flex: 1 1 0; min-height: 96px; }
+:is(.cycle[data-el="amethyst-cycle"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); }
+:where(.cycle)[data-el="amethyst-cycle"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(5n/**/+1 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-7); }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(5n/**/+2 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-5); }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(5n/**/+3 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a2-1); }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(5n/**/+4 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-4-soft); }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(5n of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-8-soft); }
+:is(.cycle[data-el="amethyst-cycle"]) > :is(.node, .spoke, .stage, .level, .set, .layer, .branch) { --tint: color-mix(in srgb, var(--t, var(--a1)) 12%, var(--page)); --edge: color-mix(in srgb, var(--t, var(--a1)) 40%, var(--page)); }
+:is(.cycle[data-el="amethyst-cycle"] > .node), :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.cycle[data-el="amethyst-cycle"] > .node) > .name, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.cycle[data-el="amethyst-cycle"] > .node) > .note, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-8); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > *, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.cycle[data-el="amethyst-cycle"] > .node) > .note, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core) > .note { display: block; }
+}
+:is(.cycle[data-el="amethyst-cycle"] > .node).on > .note, :is(:is(.cycle[data-el="amethyst-cycle"], .hub) > .core).on > .note { color: inherit; }
+:is(.cycle[data-el="amethyst-cycle"]) { position: relative; isolation: isolate; }
+:is(.cycle[data-el="amethyst-cycle"]) > * { --n: 3; --a0: -90deg; --kx: 0.866; --up: 1; --dn: 0.5; --fw: 0.47; --fh: 0.28; --fcw: 0.5; --fch: 0.28; --gx: clamp(12px, 8cqh, 32px); --nw: clamp(min(88px, 44cqw), var(--fw) * 100cqw - 6px, 380px); --nh: clamp(min(48px, 34cqh), var(--fh) * 100cqh, 180px); --cw: min(var(--fcw) * 100cqw, 320px); --ch: clamp(min(40px, 30cqh), var(--fch) * 100cqh, 160px); --amethyst-dg-rx: calc((100cqw - var(--nw)) / 2 / var(--kx)); --amethyst-dg-ry: calc((100cqh - var(--nh)) / (var(--up) + var(--dn))); }
+:is(.cycle[data-el="amethyst-cycle"]):has(> :nth-child(4 of .node, .spoke)) > * { --n: 4; --a0: -135deg; --kx: 0.7071; --up: 0.7071; --dn: 0.7071; --fh: 0.3; --fch: 0.24; --cw: min(100cqw - var(--nw) - 24px, 320px); }
+:is(.cycle[data-el="amethyst-cycle"]):has(> :nth-child(5 of .node, .spoke)) > * { --n: 5; --a0: -90deg; --kx: 0.9511; --up: 1; --dn: 0.809; --fw: 0.37; --fh: 0.24; --fch: 0.13; --cw: min(1.1 * var(--nw), 320px); }
+:is(.cycle[data-el="amethyst-cycle"]):has(> :nth-child(6 of .node, .spoke)) > * { --n: 6; --a0: -90deg; --kx: 0.866; --up: 1; --dn: 1; --fw: 0.47; --fh: 0.17; --fch: 0.14; --cw: min(var(--nw) - 8px, 320px); }
+.cycle[data-el="amethyst-cycle"]:not(:has(> .node:nth-child(4 of .node))) > .core { --cw: clamp(56px, 0.5 * (100cqw - var(--nw)) - 20px, 320px); border-radius: 999px; }
+@container (min-width: 600px) and (min-aspect-ratio: 5/4) {
+:is(.cycle[data-el="amethyst-cycle"]):has(> :nth-child(5 of .node, .spoke)):not(:has(> :nth-child(6 of .node, .spoke))) > * { --fw: 0.3; --fh: 0.27; --fch: 0.3; --cw: min(100cqw - 2 * var(--nw) - 2 * var(--gx) - 12px, 320px); }
+}
+@container (min-aspect-ratio: 3/2) {
+:is(.cycle[data-el="amethyst-cycle"]):has(> :nth-child(6 of .node, .spoke)) > * { --a0: -120deg; --kx: 1; --up: 0.866; --dn: 0.866; --fw: 0.29; --fh: 0.28; --fch: 0.3; --cw: min(26cqw, 320px); }
+}
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(1 of .node, .spoke) { --i: 0; }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(2 of .node, .spoke) { --i: 1; }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(3 of .node, .spoke) { --i: 2; }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(4 of .node, .spoke) { --i: 3; }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(5 of .node, .spoke) { --i: 4; }
+:is(.cycle[data-el="amethyst-cycle"]) > :nth-child(6 of .node, .spoke) { --i: 5; }
+:is(.cycle[data-el="amethyst-cycle"]) > :is(.node, .spoke) { --a: calc(var(--a0) + 360deg / var(--n) * var(--i)); position: absolute; width: var(--nw); height: var(--nh); left: calc(50% - var(--nw) / 2 + cos(var(--a)) * var(--amethyst-dg-rx)); top: calc(var(--up) * var(--amethyst-dg-ry) + sin(var(--a)) * var(--amethyst-dg-ry)); border-radius: var(--radius); color: var(--ink); }
+.cycle[data-el="amethyst-cycle"] > .node { background: var(--tint); }
+:is(.cycle[data-el="amethyst-cycle"]) > :is(.node, .spoke).on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+:is(.cycle[data-el="amethyst-cycle"]) > .core { position: absolute; width: var(--cw); height: var(--ch); left: calc(50% - var(--cw) / 2); top: calc(var(--nh) / 2 + var(--up) * var(--amethyst-dg-ry) - var(--ch) / 2); background: var(--a1); color: var(--a1-on); border-radius: var(--radius); text-align: center; }
+:is(.cycle[data-el="amethyst-cycle"]) > .core > .note { color: inherit; }
+:is(.cycle[data-el="amethyst-cycle"]):has(> .on) > .core { background: var(--page); color: var(--ink); box-shadow: inset 0 0 0 var(--stroke) var(--a1); }
+:is(.cycle[data-el="amethyst-cycle"]):has(> .on) > .core > .note { color: var(--n-8); }
+.cycle[data-el="amethyst-cycle"] > .node { text-align: center; --amethyst-dg-dx: calc((cos(var(--a) + 360deg / var(--n)) - cos(var(--a))) * var(--amethyst-dg-rx)); --amethyst-dg-dy: calc((sin(var(--a) + 360deg / var(--n)) - sin(var(--a))) * var(--amethyst-dg-ry)); }
+.cycle[data-el="amethyst-cycle"] > .node::before { content: ""; position: absolute; z-index: -1; pointer-events: none; left: 50%; top: calc(50% - var(--stroke) / 2); width: hypot(var(--amethyst-dg-dx), var(--amethyst-dg-dy)); height: var(--stroke); transform-origin: 0 50%; rotate: atan2(var(--amethyst-dg-dy), var(--amethyst-dg-dx)); background: var(--wire); }
+.cycle[data-el="amethyst-cycle"] > .node::after { content: ""; position: absolute; z-index: -1; pointer-events: none; left: calc(50% + var(--amethyst-dg-dx) / 2 - 7px); top: calc(50% + var(--amethyst-dg-dy) / 2 - 7px); width: 14px; height: 14px; rotate: atan2(var(--amethyst-dg-dy), var(--amethyst-dg-dx)); background: var(--wire); clip-path: polygon(0 0, 100% 50%, 0 100%, 22% 50%); }
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-cycle"][data-el="amethyst-cycle"][data-el="amethyst-cycle"] { color:var(--ink); }
+[data-el="amethyst-cycle"][data-el="amethyst-cycle"][data-el="amethyst-cycle"] :is(.node,.spoke,.q,.end,.step) { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-cycle"][data-el="amethyst-cycle"][data-el="amethyst-cycle"] :is(.core,.root) { background:linear-gradient(115deg,var(--a1-5),var(--a1)); color:var(--a1-on); border:0; border-radius:var(--radius); }
+
+[data-el="amethyst-cycle"][data-el="amethyst-cycle"][data-el="amethyst-cycle"]:not(:has(> .node:nth-child(4 of .node))) > .core { --fch:.14; }

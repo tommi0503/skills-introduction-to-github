@@ -1,0 +1,1 @@
+A neutral statement panel sits between two fine accent rules. The quotation carries the visual weight and its bold words use the deep accent role. A compact circular portrait and a two-line attribution form a separate register below the statement.

@@ -1,0 +1,77 @@
+:is(.body, .group, .split, .stack) > :is(.stacks[data-el="confetti-chart-stack"]) { container: member / size; }
+.stack > :is(.stacks[data-el="confetti-chart-stack"]) { flex: 1 1 0; min-height: 96px; }
+.stacks[data-el="confetti-chart-stack"] { background: var(--n-2); border-radius: var(--radius); padding: clamp(calc(var(--pad) * 12 / 28), 4%, calc(var(--pad) * 32 / 28)) clamp(calc(var(--pad) * 14 / 28), 4.5%, calc(var(--pad) * 40 / 28)) clamp(calc(var(--pad) * 10 / 28), 3%, calc(var(--pad) * 24 / 28)); --confetti-ground: var(--n-2); --grid: color-mix(in srgb, var(--n-8) 30%, var(--confetti-ground)); display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); column-gap: clamp(calc(var(--gap) * 6 / 24), 2.4cqw, var(--gap)); min-width: 0; min-height: 0; --ground: var(--confetti-ground); }
+.stacks[data-el="confetti-chart-stack"] > .sbar { container: bar / size; display: flex; flex-direction: column-reverse; align-items: center; min-width: 0; min-height: 0; }
+.stacks[data-el="confetti-chart-stack"] > .sbar > * { --bl: min(var(--bl-w, var(--type-16)), var(--bl-h, var(--type-16))); --lh: calc(var(--bl) * 2.7 + var(--pad) * 10 / 28); --plot: calc(100cqh - var(--lh)); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg:nth-child(1 of .seg) { margin-bottom: var(--lh); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > span { position: absolute; left: 0; right: 0; bottom: 0; height: var(--lh); padding: calc(var(--pad) * 8 / 28) calc(var(--pad) * 2 / 28) 0; border-top: 1px solid var(--grid); text-align: center; font-size: var(--bl); font-weight: var(--body-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-8); text-wrap: balance; overflow: hidden; }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg { container: seg / size; flex: none; box-sizing: border-box; width: clamp(12px, 62%, 132px); height: calc(var(--v) / var(--max, 100) * var(--plot)); display: grid; place-items: center; border-top: var(--stroke) solid var(--ground); background: var(--c); color: var(--ci); --c: var(--a1-6); --ci: var(--page); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg:nth-child(1 of .seg) { border-top-width: 0; }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg:last-child { border-radius: 0; }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg:nth-child(2 of .seg) { --c: var(--a3-5); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg:nth-child(3 of .seg) { --c: var(--a2-2); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg:nth-child(4 of .seg) { --c: var(--a2-3-soft); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg:nth-child(5 of .seg) { --c: var(--a2-4); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg.tone-1 { --c: var(--a1-6); --ci: var(--page); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg.tone-2 { --c: var(--a3-5); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg.tone-3 { --c: var(--a2-2); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg.tone-4 { --c: var(--a2-3-soft); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg.tone-5 { --c: var(--a2-4); --ci: var(--ink); }
+.stacks[data-el="confetti-chart-stack"]:has(> .sbar.on) > .sbar:not(.on) > .seg { background: color-mix(in srgb, var(--c) 30%, var(--ground)); color: var(--n-9); }
+.stacks[data-el="confetti-chart-stack"] > .sbar.on > span { color: var(--a1); }
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg > b { display: none; font-size: var(--type-14); line-height: 1.1; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; }
+@container seg (min-height: 22px) and (min-width: 40px) {
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg > b { display: block; }
+}
+@container seg (min-height: 30px) and (min-width: 60px) {
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg > b { font-size: var(--type-16); }
+}
+@container seg (min-height: 40px) and (min-width: 84px) {
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg > b { font-size: var(--type-20); }
+}
+@container seg (min-height: 48px) and (min-width: 104px) {
+.stacks[data-el="confetti-chart-stack"] > .sbar > .seg > b { font-size: var(--type-24); }
+}
+@container member (min-height: 300px) {
+.stacks[data-el="confetti-chart-stack"]:not(.h) > .sbar { --bl-h: var(--type-20); }
+}
+@container member (min-height: 440px) {
+.stacks[data-el="confetti-chart-stack"]:not(.h) > .sbar { --bl-h: var(--type-24); }
+}
+@container bar (min-width: 88px) {
+.stacks[data-el="confetti-chart-stack"]:not(.h) > .sbar > * { --bl-w: var(--type-20); }
+}
+@container bar (min-width: 150px) {
+.stacks[data-el="confetti-chart-stack"]:not(.h) > .sbar > * { --bl-w: var(--type-24); }
+}
+.stacks[data-el="confetti-chart-stack"].h { grid-auto-flow: row; grid-auto-rows: minmax(0, 1fr); grid-template-rows: none; grid-template-columns: minmax(0, 1fr); row-gap: clamp(calc(var(--gap) * 4 / 24), 2cqh, calc(var(--gap) * 14 / 24)); column-gap: 0; }
+.stacks[data-el="confetti-chart-stack"].h > .sbar { flex-direction: row; align-items: center; }
+.stacks[data-el="confetti-chart-stack"].h > .sbar > * { --lw: clamp(76px, 24cqw, 240px); --plot: calc(100cqw - var(--lw)); }
+.stacks[data-el="confetti-chart-stack"].h > .sbar > .seg:nth-child(1 of .seg) { margin: 0 0 0 var(--lw); }
+.stacks[data-el="confetti-chart-stack"].h > .sbar > span { left: 0; right: auto; top: 0; bottom: 0; width: var(--lw); height: auto; display: flex; align-items: center; justify-content: flex-end; padding: 0 var(--gap-sm) 0 0; border-top: 0; border-right: 1px solid var(--grid); text-align: right; }
+.stacks[data-el="confetti-chart-stack"].h > .sbar > .seg { width: calc(var(--v) / var(--max, 100) * var(--plot)); height: clamp(12px, 64%, 56px); border-top: 0; border-left: var(--stroke) solid var(--ground); }
+.stacks[data-el="confetti-chart-stack"].h > .sbar > .seg:nth-child(1 of .seg) { border-left-width: 0; }
+.stacks[data-el="confetti-chart-stack"].h > .sbar > .seg:last-child { border-radius: 0; }
+@container bar (min-height: 44px) {
+.stacks[data-el="confetti-chart-stack"].h > .sbar > * { --bl-h: var(--type-20); }
+}
+@container bar (min-height: 72px) {
+.stacks[data-el="confetti-chart-stack"].h > .sbar > * { --bl-h: var(--type-24); }
+}
+@container bar (min-width: 520px) {
+.stacks[data-el="confetti-chart-stack"].h > .sbar > * { --bl-w: var(--type-20); }
+}
+@container bar (min-width: 760px) {
+.stacks[data-el="confetti-chart-stack"].h > .sbar > * { --bl-w: var(--type-24); }
+}
+.stacks[data-el="confetti-chart-stack"].pct > .sbar > .seg { height: calc(var(--v) / 100 * var(--plot)); }
+.stacks[data-el="confetti-chart-stack"].pct.h > .sbar > .seg { width: calc(var(--v) / 100 * var(--plot)); height: clamp(12px, 64%, 56px); }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-chart-stack"][data-el="confetti-chart-stack"][data-el="confetti-chart-stack"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-chart-stack"][data-el="confetti-chart-stack"][data-el="confetti-chart-stack"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-chart-stack"][data-el="confetti-chart-stack"][data-el="confetti-chart-stack"] >.sbar:not(.on)>.seg{opacity:1;}
+
+[data-el="confetti-chart-stack"][data-el="confetti-chart-stack"][data-el="confetti-chart-stack"]>.sbar>.seg>b{display:block}@container seg (max-height:22px) or (max-width:40px){[data-el="confetti-chart-stack"][data-el="confetti-chart-stack"][data-el="confetti-chart-stack"]>.sbar>.seg>b{font-size:var(--type-10)}}
+
+@container seg (max-height:12px){[data-el="confetti-chart-stack"][data-el="confetti-chart-stack"][data-el="confetti-chart-stack"]>.sbar>.seg:last-child>b{translate:0 calc(-1*var(--gap-sm));color:var(--ink);background:var(--n-1)}}

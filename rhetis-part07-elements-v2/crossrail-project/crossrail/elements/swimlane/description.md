@@ -1,0 +1,1 @@
+The flow grid gains quiet horizontal owner lanes and a separate owner label rail. Nodes and directional arrows retain the same shapes as the flowchart, while ownership remains visible behind the path.

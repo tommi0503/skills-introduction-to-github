@@ -1,0 +1,34 @@
+.stack > :is(.stacks[data-el="annual-chart-stack"]) { flex: 1 1 0; min-height: 0; }
+.stacks[data-el="annual-chart-stack"] { container: stacks / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: clamp(10px, 4cqw, 48px); padding-left: clamp(12px, 2.4cqw, 28px); color: var(--n-6); }
+.stacks[data-el="annual-chart-stack"]::before { content: ""; position: absolute; left: 0; top: 0; bottom: clamp(26px, 10cqh, 40px); border-left: var(--stroke) solid var(--n-6); }
+.stacks[data-el="annual-chart-stack"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: clamp(26px, 10cqh, 40px); border-bottom: var(--stroke) solid var(--n-6); }
+.stacks[data-el="annual-chart-stack"] > .sbar { --lb: clamp(26px, 10cqh, 40px); --tr: calc(100cqh - var(--lb) - 8px); --tot: var(--max, 100); display: flex; flex-direction: column-reverse; justify-content: flex-start; align-items: center; min-width: 0; padding-bottom: var(--lb); }
+.stacks[data-el="annual-chart-stack"].pct > .sbar { --tot: 100; }
+.stacks[data-el="annual-chart-stack"] > .sbar > span { position: absolute; left: 0; right: 0; bottom: 0; height: var(--lb); display: grid; place-items: center; font-size: var(--type-14); line-height: 1.2; font-weight: var(--label-weight); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg { --c: var(--a1-7); --ci: var(--page); flex: none; width: min(100%, 76px); height: calc(var(--tr) * var(--v) / var(--tot)); margin-top: 3px; display: grid; place-items: center; overflow: hidden; background: var(--c); color: var(--ci); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg:nth-of-type(2) { --c: var(--a1-4-soft); --ci: var(--a1-8-soft); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg:nth-of-type(3) { --c: var(--n-6); --ci: var(--page); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg:nth-of-type(4) { --c: var(--n-3); --ci: var(--n-8); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg:nth-of-type(5) { --c: var(--a1-8-soft); --ci: var(--page); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg.tone-1 { --c: var(--a1-7); --ci: var(--page); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg.tone-2 { --c: var(--n-6); --ci: var(--page); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg.tone-3 { --c: var(--a1-4-soft); --ci: var(--a1-8-soft); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg.tone-4 { --c: var(--a1-8-soft); --ci: var(--page); }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg.tone-5 { --c: var(--n-3); --ci: var(--n-8); }
+
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg:last-of-type { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg > b { font-family: var(--font-display), sans-serif; font-size: var(--type-14); line-height: 1; font-weight: var(--figure-weight); white-space: nowrap; }
+.stacks[data-el="annual-chart-stack"]:has(> .sbar.on) > .sbar:not(.on) { opacity: 0.55; }
+.stacks[data-el="annual-chart-stack"].h { grid-auto-flow: row; grid-auto-rows: minmax(0, 1fr); row-gap: clamp(8px, 3cqh, 24px); padding: 0 0 clamp(8px, 3cqh, 20px) 0; }
+.stacks[data-el="annual-chart-stack"].h::before { left: clamp(64px, 16cqw, 160px); bottom: 0; }
+.stacks[data-el="annual-chart-stack"].h::after { content: none; }
+.stacks[data-el="annual-chart-stack"].h > .sbar { --lw: clamp(64px, 16cqw, 160px); --tr: calc(100cqw - var(--lw) - 20px); flex-direction: row; align-items: center; padding: 0 0 0 calc(var(--lw) + 2px); }
+.stacks[data-el="annual-chart-stack"].h > .sbar > span { right: auto; top: 0; width: var(--lw); height: auto; place-items: center end; padding-right: 14px; }
+.stacks[data-el="annual-chart-stack"].h > .sbar > .seg { width: calc(var(--tr) * var(--v) / var(--tot)); height: min(100%, 40px); margin: 0 0 0 3px; }
+.stacks[data-el="annual-chart-stack"].h > .sbar > .seg:last-of-type { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+@container stacks (min-height: 360px) and (min-width: 600px) {
+.stacks[data-el="annual-chart-stack"] > .sbar > .seg > b { font-size: var(--type-18); }
+}
+@container stacks (max-width: 459px) {
+.stacks[data-el="annual-chart-stack"]:not(.h) > .sbar > .seg > b { display: none; }
+}

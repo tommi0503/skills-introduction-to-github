@@ -1,0 +1,1 @@
+A plain business list draws its own dot, numbered or check marker. Divided lists place fine neutral rules between equally weighted rows; icon-bearing rows reserve a separate ink-circle column. Long names and notes wrap within the text column, and compact heights reduce the local type and inter-row spacing.

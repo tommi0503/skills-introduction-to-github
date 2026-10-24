@@ -1,0 +1,1 @@
+A one-line capsule on a flat pale ground: a solid accent disc at its left end holds a numeral in the condensed display face or a pictogram, then a bold name in the accent and a light secondary note that trails off. Emphasis fills the capsule with the accent; quiet and outlined capsules are hairline rings on the page.

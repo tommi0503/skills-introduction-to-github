@@ -1,0 +1,1 @@
+Two rounded pans rest on a fine neutral beam. The data-driven tilt lowers the heavier side, while compact capsule headings echo the organization labels and a light triangular support carries the verdict. Emphasis belongs to the selected pan rather than to extra decoration.

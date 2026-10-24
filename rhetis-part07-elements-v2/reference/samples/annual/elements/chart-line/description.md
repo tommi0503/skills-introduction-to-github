@@ -1,0 +1,1 @@
+A line over equal steps drawn as a thin accent stroke joining solid accent dots, a pale warm wash filling the ground beneath it. Values in the condensed squared display face stand above each dot, small secondary labels sit under a two-pixel secondary baseline; the marked point is larger, its dot ringed by a wide pale halo.

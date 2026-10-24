@@ -1,0 +1,1 @@
+Before and after figures sit on one line with a small drawn arrow between them. The earlier value is a deeper neutral and the later value uses normal ink. Bounded figure sizing keeps both values inside narrow slots without changing the semantic direction.

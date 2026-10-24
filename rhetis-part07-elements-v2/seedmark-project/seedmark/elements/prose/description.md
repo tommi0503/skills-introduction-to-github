@@ -1,0 +1,1 @@
+Unboxed paragraphs use an even business-text rhythm and deliberate paragraph gaps. Bold text remains an inline emphasis. Lead copy grows within a bounded type range, secondary copy uses a deeper neutral, and the two-column form returns paragraphs to a single column when its own width becomes narrow.

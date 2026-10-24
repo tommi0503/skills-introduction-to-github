@@ -1,0 +1,39 @@
+.stack > :is(.delta[data-el="confetti-delta"]) { flex: 1 1 0; min-height: 0; }
+.delta[data-el="confetti-delta"] { container: member / size; display: flex; flex-wrap: wrap; align-items: baseline; align-content: center; justify-content: center; gap: var(--gap-sm) var(--gap); min-width: 0; min-height: 0; background-color: var(--n-2); border-radius: var(--radius); font-family: var(--font-display), sans-serif; font-variant-numeric: tabular-nums; letter-spacing: var(--figure-track); line-height: var(--figure-line); white-space: nowrap; }
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-20); font-weight: var(--lead-weight); color: var(--n-9); }
+.delta[data-el="confetti-delta"] > .to { display: flex; align-items: baseline; gap: var(--gap); font-size: var(--type-32); font-weight: var(--figure-weight); color: var(--a1); }
+.delta[data-el="confetti-delta"] > .to::before { content: ""; flex: none; align-self: center; width: 0.6em; height: 0.4em; background: var(--n-8); clip-path: polygon(0 42%, 62% 42%, 62% 0, 100% 50%, 62% 100%, 62% 58%, 0 58%); }
+@container member (min-width: 340px) and (min-height: 100px) {
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-24); }
+.delta[data-el="confetti-delta"] > .to { font-size: var(--type-40); }
+}
+@container member (min-width: 500px) and (min-height: 140px) {
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-32); }
+.delta[data-el="confetti-delta"] > .to { font-size: var(--type-56); }
+}
+@container member (min-width: 500px) and (min-height: 300px) {
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-40); }
+.delta[data-el="confetti-delta"] > .to { font-size: var(--type-72); }
+}
+@container member (min-width: 700px) and (min-height: 200px) {
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-48); }
+.delta[data-el="confetti-delta"] > .to { font-size: var(--type-80); }
+}
+@container member (min-width: 1000px) and (min-height: 220px) {
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-56); }
+.delta[data-el="confetti-delta"] > .to { font-size: var(--type-96); }
+.delta[data-el="confetti-delta"] { gap: var(--gap) var(--gap-lg); }
+}
+@container member (max-width: 339px) and (min-height: 300px) {
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-32); flex-basis: 100%; text-align: center; }
+.delta[data-el="confetti-delta"] > .to { font-size: var(--type-56); }
+.delta[data-el="confetti-delta"] > .to::before { display: none; }
+.delta[data-el="confetti-delta"] > .from::after { content: ""; display: block; width: 0.5em; height: 0.7em; margin: var(--gap-sm) auto 0; background: var(--n-8); clip-path: polygon(42% 0, 58% 0, 58% 62%, 100% 62%, 50% 100%, 0 62%, 42% 62%); }
+}
+@container member (min-width: 340px) and (max-width: 499px) and (min-height: 400px) {
+.delta[data-el="confetti-delta"] > .from { font-size: var(--type-36); flex-basis: 100%; text-align: center; }
+.delta[data-el="confetti-delta"] > .to { font-size: var(--type-64); }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-delta"][data-el="confetti-delta"][data-el="confetti-delta"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}

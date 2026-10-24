@@ -1,0 +1,99 @@
+.item > .mark:is([data-el="amethyst-versus"], [data-el="amethyst-versus"] *) { grid-column: 1; grid-row: 1 / span 3; font-size: var(--name-size, var(--type-20)); width: 1.3em; height: 1.3em; display: grid; place-items: center; color: var(--mark-ink); font-weight: var(--label-weight); }
+.item > .mark > .icon:is([data-el="amethyst-versus"], [data-el="amethyst-versus"] *), .item > .mark.icon:is([data-el="amethyst-versus"], [data-el="amethyst-versus"] *) { width: 1em; height: 1em; }
+@container member style(--sized: 1) and (((min-width: 300px) and (min-height: 124px)) or ((min-width: 480px) and (min-height: 80px)) or ((min-width: 800px) and (min-height: 64px))) {
+.item > .mark:is([data-el="amethyst-versus"], [data-el="amethyst-versus"] *) { --name-size: var(--type-24); }
+}
+@container member style(--sized: 1) and (((min-width: 560px) and (min-height: 100px)) or ((min-width: 900px) and (min-height: 70px))) {
+.item > .mark:is([data-el="amethyst-versus"], [data-el="amethyst-versus"] *) { --name-size: var(--type-28); }
+}
+@container member style(--sized: 1) and (((min-width: 700px) and (min-height: 117px)) or ((min-width: 1000px) and (min-height: 81px))) {
+.item > .mark:is([data-el="amethyst-versus"], [data-el="amethyst-versus"] *) { --name-size: var(--type-32); }
+}
+@container member style(--sized: 1) and (min-width: 1000px) and (min-height: 140px) {
+.item > .mark:is([data-el="amethyst-versus"], [data-el="amethyst-versus"] *) { --name-size: var(--type-40); }
+}
+:is(.body, .group, .split, .stack) > :is(.versus[data-el="amethyst-versus"]) { container-type: size; }
+.stack > :is(.versus[data-el="amethyst-versus"]) { flex: 1 1 0; min-height: 96px; }
+:is(.versus[data-el="amethyst-versus"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); }
+:where(.versus)[data-el="amethyst-versus"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.versus[data-el="amethyst-versus"]) > :nth-child(5n/**/+1 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-7); }
+:is(.versus[data-el="amethyst-versus"]) > :nth-child(5n/**/+2 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-5); }
+:is(.versus[data-el="amethyst-versus"]) > :nth-child(5n/**/+3 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a2-1); }
+:is(.versus[data-el="amethyst-versus"]) > :nth-child(5n/**/+4 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-4-soft); }
+:is(.versus[data-el="amethyst-versus"]) > :nth-child(5n of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-8-soft); }
+:is(.versus[data-el="amethyst-versus"]) > :is(.node, .spoke, .stage, .level, .set, .layer, .branch) { --tint: color-mix(in srgb, var(--t, var(--a1)) 12%, var(--page)); --edge: color-mix(in srgb, var(--t, var(--a1)) 40%, var(--page)); }
+:is(.versus[data-el="amethyst-versus"] > .side) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.versus[data-el="amethyst-versus"] > .side) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.versus[data-el="amethyst-versus"] > .side) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.versus[data-el="amethyst-versus"] > .side) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-8); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.versus[data-el="amethyst-versus"] > .side) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.versus[data-el="amethyst-versus"] > .side) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.versus[data-el="amethyst-versus"] > .side) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.versus[data-el="amethyst-versus"] > .side) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.versus[data-el="amethyst-versus"] > .side) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.versus[data-el="amethyst-versus"] > .side) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.versus[data-el="amethyst-versus"] > .side) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.versus[data-el="amethyst-versus"] > .side) > .note { display: block; }
+}
+:is(.versus[data-el="amethyst-versus"] > .side).on > .note { color: inherit; }
+.versus[data-el="amethyst-versus"] { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); grid-auto-rows: minmax(0, 1fr) auto; gap: var(--gap-sm); }
+.versus[data-el="amethyst-versus"] > .side { grid-row: 1; grid-column: 1; justify-content: center; gap: clamp(calc(var(--gap) * 8 / 24), 4cqh, calc(var(--gap) * 24 / 24)); background: var(--page); border: 1px solid var(--a1-2-muted); border-radius: var(--radius); color: var(--ink); }
+.versus[data-el="amethyst-versus"] > .side ~ .side { grid-column: 3; }
+.versus[data-el="amethyst-versus"] > .side.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.versus[data-el="amethyst-versus"] > .side > .name { padding-bottom: clamp(calc(var(--pad) * 8 / 28), 3cqh, calc(var(--pad) * 20 / 28)); border-bottom: 1px solid color-mix(in srgb, currentColor 22%, transparent); }
+.versus[data-el="amethyst-versus"] > .vs, .versus[data-el="amethyst-versus"]:not(:has(> .vs))::before { grid-row: 1; grid-column: 2; place-self: center; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--page); font-size: var(--type-16); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); letter-spacing: var(--label-track-latin); line-height: 1; }
+.versus[data-el="amethyst-versus"]:not(:has(> .vs))::before { content: "VS"; }
+.versus[data-el="amethyst-versus"] > .side > * { --it: var(--type-16); }
+.versus[data-el="amethyst-versus"] > .side .list { display: flex; flex-direction: column; gap: clamp(calc(var(--gap) * 4 / 24), 2.4cqh, calc(var(--gap) * 16 / 24)); min-width: 0; padding: 0; background: none; border: 0; container-type: normal; --name-size: var(--it); --note-size: var(--type-16); --mark-ink: currentColor; --note-ink: currentColor; }
+.versus[data-el="amethyst-versus"] > .side .list > .item { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 0.5em; align-items: start; min-width: 0; padding: 0; margin: 0; background: none; border: 0; font-size: var(--it); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-8); color: inherit; }
+.versus[data-el="amethyst-versus"] > .side .list > .item::before { content: ""; position: static; grid-column: 1; grid-row: 1; font-size: inherit; width: 0.36em; height: 0.36em; margin: 0.6em 0 0; border: 0; border-radius: 50%; background: currentColor; opacity: 0.5; }
+.versus[data-el="amethyst-versus"] > .side .list > .item:has(> .mark)::before { content: none; }
+.versus[data-el="amethyst-versus"] > .side .list > .item > * { grid-column: 2; margin: 0; min-width: 0; font-size: inherit; line-height: inherit; color: inherit; }
+.versus[data-el="amethyst-versus"] > .side .list > .item > .mark { grid-column: 1; grid-row: 1; }
+.versus[data-el="amethyst-versus"] > .side .list > .item > .name { font-weight: var(--body-weight); }
+.versus[data-el="amethyst-versus"] > .side .list > .item > .note { display: none; }
+@container (min-width: 260px) and (min-height: 220px) {
+.versus[data-el="amethyst-versus"] > .side > * { --it: var(--type-20); }
+}
+@container (min-width: 400px) and (min-height: 320px) {
+.versus[data-el="amethyst-versus"] > .side > * { --it: var(--type-24); }
+}
+@container (min-width: 440px) and (min-height: 400px) {
+.versus[data-el="amethyst-versus"] > .side .list > .item > .note { display: block; font-size: var(--type-16); opacity: 0.85; }
+}
+@container (max-aspect-ratio: 6/5) {
+.versus[data-el="amethyst-versus"] > .side, .versus[data-el="amethyst-versus"] > .side ~ .side { grid-column: 1 / -1; grid-row: 1; }
+.versus[data-el="amethyst-versus"] > .side ~ .side { grid-row: 3; }
+.versus[data-el="amethyst-versus"] > .vs, .versus[data-el="amethyst-versus"]:not(:has(> .vs))::before { grid-column: 1 / -1; grid-row: 2; width: 36px; height: 36px; }
+}
+@container (max-height: 180px) and (min-width: 800px) {
+.versus[data-el="amethyst-versus"] > .side { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr); align-items: center; column-gap: 0; }
+.versus[data-el="amethyst-versus"] > .side > .name { padding-bottom: 0; border-bottom: 0; }
+.versus[data-el="amethyst-versus"] > .side > .list { margin-left: 0; }
+}
+@container (max-height: 180px) and (min-width: 380px) {
+.versus[data-el="amethyst-versus"] > .side .list { gap: 2px; }
+}
+@container (min-width: 900px) and (min-height: 400px) {
+.versus[data-el="amethyst-versus"] > .vs, .versus[data-el="amethyst-versus"]:not(:has(> .vs))::before { width: 56px; height: 56px; font-size: var(--type-20); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-versus"][data-el="amethyst-versus"][data-el="amethyst-versus"] { color:var(--ink); }
+[data-el="amethyst-versus"][data-el="amethyst-versus"][data-el="amethyst-versus"] .side { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-versus"][data-el="amethyst-versus"][data-el="amethyst-versus"] .side.on { background:var(--a1); color:var(--a1-on); --ink:var(--a1-on); --ink-2:var(--a1-on); --mute:var(--a1-on); }

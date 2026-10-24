@@ -1,0 +1,13 @@
+.stack > :is(.versus[data-el="annual-versus"]) { flex: 1 1 0; min-height: 0; }
+.versus[data-el="annual-versus"] { container: versus / size; min-width: 0; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; color: var(--a1); }
+.versus[data-el="annual-versus"] > .side { display: flex; flex-direction: column; justify-content: center; gap: clamp(8px, 3cqh, 20px); min-width: 0; padding: clamp(16px, 5cqh, 44px) clamp(16px, 4cqw, 44px); background: var(--n-2); }
+.versus[data-el="annual-versus"] > .side.on { background: var(--a1); color: var(--a1-on); }
+.versus[data-el="annual-versus"] > .side > .name { font-family: var(--font-display), sans-serif; font-size: var(--vf, var(--type-28)); line-height: 1.15; font-weight: var(--title-weight); }
+.versus[data-el="annual-versus"] > .side > .list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: var(--vt, var(--type-14)); line-height: 1.6; font-weight: var(--lead-weight); color: var(--n-6); }
+.versus[data-el="annual-versus"] > .side.on > .list { color: color-mix(in srgb, var(--a1-on) 86%, var(--a1)); }
+.versus[data-el="annual-versus"] > .side > .list > li { padding-left: 16px; }
+.versus[data-el="annual-versus"] > .side > .list > li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.versus[data-el="annual-versus"] > .vs { align-self: center; z-index: 1; display: grid; place-items: center; width: clamp(48px, 13cqh, 84px); aspect-ratio: 1; margin-inline: calc(clamp(48px, 13cqh, 84px) / -2); border-radius: 50%; background: var(--page); box-shadow: inset 0 0 0 var(--stroke) var(--a1); font-family: var(--font-display), sans-serif; font-size: var(--type-24); line-height: 1; font-weight: var(--figure-weight); color: var(--a1); }
+@container versus (min-width: 800px) and (min-height: 360px) {
+.versus[data-el="annual-versus"] > .side > * { --vf: var(--type-40); --vt: var(--type-18); }
+}

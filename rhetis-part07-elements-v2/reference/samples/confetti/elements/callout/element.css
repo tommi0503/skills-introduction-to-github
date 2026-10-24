@@ -1,0 +1,14 @@
+.stack > :is(.callout[data-el="confetti-callout"]) { flex: 0 0 auto; align-self: stretch; }
+.callout[data-el="confetti-callout"] { container: member / inline-size; min-width: 0; align-self: center; display: flex; align-items: center; justify-content: center; text-align: center; gap: var(--gap-sm); padding: var(--gap-sm) var(--gap); background: var(--a2-2); border: var(--stroke) solid var(--ink); border-radius: var(--radius); box-shadow: 4px 5px 0 var(--ink); color: var(--ink); }
+.callout[data-el="confetti-callout"] > * { --cf: var(--type-16); }
+.callout[data-el="confetti-callout"] > .icon { flex: none; width: 2.2em; height: 2.2em; padding: 0.5em; border-radius: 50%; background: var(--ink); color: var(--page); font-size: var(--cf); }
+.callout[data-el="confetti-callout"] > p { min-width: 0; font-size: var(--cf); line-height: 1.6; font-weight: 800; text-wrap: pretty; }
+.callout[data-el="confetti-callout"] > p b, .callout[data-el="confetti-callout"] > p strong { font-weight: 900; color: var(--ink); }
+.callout[data-el="confetti-callout"].plain { background: var(--n-1); border-radius: var(--radius-sm); box-shadow: 4px 5px 0 var(--a3-5); }
+@container member (min-width: 520px) {
+.callout[data-el="confetti-callout"] > * { --cf: var(--type-20); }
+}
+@container member (min-width: 860px) {
+.callout[data-el="confetti-callout"] > * { --cf: var(--type-24); }
+}
+.stack:has(> .callout[data-el="confetti-callout"]) > .seat { flex: 1 1 0; min-height: 0; }

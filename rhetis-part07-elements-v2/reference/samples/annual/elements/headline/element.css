@@ -1,0 +1,31 @@
+.stack > :is(.headline[data-el="annual-headline"]) { flex: 0 0 auto; align-self: stretch; }
+.headline[data-el="annual-headline"] { container: member / inline-size; min-width: 0; align-self: center; display: flex; flex-direction: column; align-items: flex-start; gap: calc(var(--gap) * 8 / 24); padding: calc(var(--gap) * 22 / 24) 0 calc(var(--gap) * 8 / 24) calc(var(--gap) * 34 / 24); isolation: isolate; color: var(--a1); }
+.headline[data-el="annual-headline"]::before { content: ""; position: absolute; z-index: -1; left: 0; top: 0; width: 84px; height: 84px; background: var(--annual-deco); }
+.headline[data-el="annual-headline"] > * { --hf: var(--type-40); --kf: var(--type-16); --nf: var(--type-16); margin: 0; max-width: 100%; }
+.headline[data-el="annual-headline"] > .kick { font-size: var(--kf); line-height: var(--label-line); font-weight: 300; letter-spacing: -0.02em; color: var(--n-6); }
+.headline[data-el="annual-headline"] > h2 { font-family: var(--font-display), sans-serif; font-size: var(--hf); line-height: var(--title-line); font-weight: var(--title-weight); letter-spacing: var(--title-track); color: var(--a1); text-wrap: balance; }
+.headline[data-el="annual-headline"] > h2:has(b) { color: var(--n-6); }
+.headline[data-el="annual-headline"] > h2 b { font-weight: inherit; color: var(--a1); }
+.headline[data-el="annual-headline"] > .note { font-size: var(--nf); line-height: 1.6; font-weight: var(--lead-weight); letter-spacing: var(--lead-track); color: var(--n-6); text-wrap: pretty; }
+.headline[data-el="annual-headline"].big > * { --hf: var(--type-56); --kf: var(--type-20); --nf: var(--type-20); }
+.headline[data-el="annual-headline"].center { align-items: center; text-align: center; padding-left: 0; }
+.headline[data-el="annual-headline"].center::before { content: none; }
+.headline[data-el="annual-headline"].center > h2 { padding-bottom: 0.3em; }
+.headline[data-el="annual-headline"].center > h2::after { content: ""; position: absolute; left: calc(50% - 53px); bottom: 0; width: 106px; height: 4px; background: var(--a1); }
+.headline[data-el="annual-headline"].on { padding: calc(var(--gap) * 36 / 24) calc(var(--gap) * 40 / 24); background: var(--a1); }
+.headline[data-el="annual-headline"].on::before { content: none; }
+.headline[data-el="annual-headline"].on > h2, .headline[data-el="annual-headline"].on > h2 b { color: var(--a1-on); }
+.headline[data-el="annual-headline"].on > h2:has(b) { color: color-mix(in srgb, var(--a1-on) 70%, var(--a1)); }
+.headline[data-el="annual-headline"].on > :is(.kick, .note) { color: color-mix(in srgb, var(--a1-on) 84%, var(--a1)); }
+.headline[data-el="annual-headline"].on.center > h2::after { background: var(--a1-on); }
+@container member (min-width: 640px) {
+.headline[data-el="annual-headline"] > * { --hf: var(--type-56); --kf: var(--type-20); --nf: var(--type-20); }
+.headline[data-el="annual-headline"].big > * { --hf: var(--type-88); --kf: var(--type-28); --nf: var(--type-24); }
+}
+@container member (min-width: 960px) {
+.headline[data-el="annual-headline"].big > * { --hf: var(--type-104); --kf: var(--type-36); }
+}
+@container member (max-width: 359px) {
+.headline[data-el="annual-headline"] > * { --hf: var(--type-28); --kf: var(--type-14); --nf: var(--type-14); }
+.headline[data-el="annual-headline"].big > * { --hf: var(--type-40); }
+}

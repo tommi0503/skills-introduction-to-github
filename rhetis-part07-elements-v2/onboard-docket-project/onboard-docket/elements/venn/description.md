@@ -1,0 +1,1 @@
+Plain named sets overlap through translucent paper fields, separately from the source’s icon-circle illustration. Names sit on exposed outer arcs and remain above every field; a compact paper capsule identifies the shared intersection.

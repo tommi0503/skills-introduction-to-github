@@ -1,0 +1,1 @@
+An ink header row and fine horizontal rules establish a quiet financial table. Highlighted column cells use a soft accent surface, while its header uses an accent and matching on-colour. Numeric cells align right; compact tables reduce padding and body type rather than clipping headers.

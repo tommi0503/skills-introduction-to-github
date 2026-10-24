@@ -1,0 +1,1 @@
+Counted square units form a compact ten-column grid above a figure and name. Filled units use ranked palette roles; remaining units stay neutral. The figures form shapes the units as small person silhouettes. Width and height jointly limit the grid so the figure and caption retain their own space.

@@ -1,0 +1,1 @@
+Floating bars connect consecutive running totals with fine horizontal rules. Positive movements use the accent, deductions remain neutral, and total bars stand from zero in the darkest neutral. Figures sit above each range and category labels stay below the plot.

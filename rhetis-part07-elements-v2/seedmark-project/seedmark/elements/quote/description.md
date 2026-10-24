@@ -1,0 +1,1 @@
+A light rounded outline surrounds the quotation, with a small opening quote mark above it. The author sits below in an avatar/name/note grid. The large variant enlarges the quotation rather than adding decoration; shallow slots step the quotation down while keeping the author readable.

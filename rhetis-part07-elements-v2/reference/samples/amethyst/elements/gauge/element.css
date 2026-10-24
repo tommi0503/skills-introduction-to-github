@@ -1,0 +1,67 @@
+.meter[data-el="amethyst-gauge"] { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-content: center; align-items: baseline; gap: calc(var(--gap) * 8 / 24) var(--gap-sm); min-width: 0; min-height: 0; container-type: inline-size; --c: var(--a1); }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"], :is(.body, .group, .split) > .stack > .meter[data-el="amethyst-gauge"] { container-type: size; }
+:is(.body, .group, .split) > .stack > .meter[data-el="amethyst-gauge"] { flex: 1 1 0; }
+.meter[data-el="amethyst-gauge"] > .name { grid-column: 1; grid-row: 1; margin: 0; font-size: var(--type-16); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; color: var(--ink); }
+.meter[data-el="amethyst-gauge"] > .fig { grid-column: 2; grid-row: 1; margin: 0; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; font-size: var(--type-24); line-height: 1.1; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--ink); }
+.meter[data-el="amethyst-gauge"] > .fig small { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.06em; }
+.meter[data-el="amethyst-gauge"]::before, .meter[data-el="amethyst-gauge"]::after { content: ""; grid-column: 1 / -1; grid-row: 2; align-self: center; height: 8px; border-radius: 999px; }
+.meter[data-el="amethyst-gauge"]::before { background: var(--a1-2-muted); }
+.meter[data-el="amethyst-gauge"]::after { justify-self: start; width: calc(var(--v) * 1%); min-width: 8px; background: var(--c); }
+.meter[data-el="amethyst-gauge"].tone-1 { --c: var(--a1-7); }
+.meter[data-el="amethyst-gauge"].tone-2 { --c: var(--a1-5); }
+.meter[data-el="amethyst-gauge"].tone-3 { --c: var(--a2-1); }
+.meter[data-el="amethyst-gauge"].tone-4 { --c: var(--a1-4-soft); }
+.meter[data-el="amethyst-gauge"].tone-5 { --c: var(--a1-8-soft); }
+@container (min-width: 320px) and (min-height: 72px) {
+.meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-20); }
+.meter[data-el="amethyst-gauge"] > .fig { font-size: var(--type-32); }
+.meter[data-el="amethyst-gauge"]::before, .meter[data-el="amethyst-gauge"]::after { height: 10px; }
+}
+@container (min-width: 420px) and (min-height: 88px) {
+.meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-24); }
+.meter[data-el="amethyst-gauge"] > .fig { font-size: var(--type-40); }
+.meter[data-el="amethyst-gauge"]::before, .meter[data-el="amethyst-gauge"]::after { height: 14px; }
+}
+@container (min-width: 640px) and (min-height: 130px) {
+.meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-28); }
+.meter[data-el="amethyst-gauge"] > .fig { font-size: var(--type-48); }
+.meter[data-el="amethyst-gauge"]::before, .meter[data-el="amethyst-gauge"]::after { height: 18px; }
+}
+@container (min-width: 800px) and (min-height: 134px) {
+.meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-36); }
+.meter[data-el="amethyst-gauge"] > .fig { font-size: var(--type-96); }
+.meter[data-el="amethyst-gauge"]::before, .meter[data-el="amethyst-gauge"]::after { height: 20px; }
+}
+@container (min-height: 200px) {
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > * { --mf: 56px; --mt: 16px; }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > .fig { grid-row: 2; grid-column: 1 / -1; justify-self: end; font-size: var(--mf); line-height: 1.1; }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > .name { grid-row: 1; grid-column: 1 / -1; display: flex; align-items: flex-start; min-height: calc(100cqh - var(--mf) * 1.1 - var(--mt) - 16px); font-size: var(--type-20); }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"]::before, :is(.body, .group, .split) > .meter[data-el="amethyst-gauge"]::after { grid-row: 3; height: 16px; }
+@container (min-width: 300px) {
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > * { --mf: 72px; --mt: 20px; }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-24); }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"]::before, :is(.body, .group, .split) > .meter[data-el="amethyst-gauge"]::after { height: 20px; }
+}
+@container (min-width: 480px) {
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > * { --mf: 96px; --mt: 28px; }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-32); }
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"]::before, :is(.body, .group, .split) > .meter[data-el="amethyst-gauge"]::after { height: 28px; }
+}
+@container (min-width: 800px) and (min-height: 400px) {
+:is(.body, .group, .split) > .meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-40); }
+}
+}
+@container (max-height: 63px) and (min-width: 700px) {
+.meter[data-el="amethyst-gauge"] > .name { width: 30%; align-self: center; }
+.meter[data-el="amethyst-gauge"] > .fig { min-width: 3.4em; text-align: right; align-self: center; }
+.meter[data-el="amethyst-gauge"]::before, .meter[data-el="amethyst-gauge"]::after { grid-row: 1; grid-column: 1; margin-left: calc(30% + var(--gap-sm)); }
+.meter[data-el="amethyst-gauge"]::after { width: calc((70% - var(--gap-sm)) * var(--v) / 100); }
+@container (min-height: 40px) {
+.meter[data-el="amethyst-gauge"] > .name { font-size: var(--type-20); }
+.meter[data-el="amethyst-gauge"] > .fig { font-size: var(--type-32); }
+.meter[data-el="amethyst-gauge"]::before, .meter[data-el="amethyst-gauge"]::after { height: 10px; }
+}
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-gauge"][data-el="amethyst-gauge"][data-el="amethyst-gauge"] { color:var(--ink); }

@@ -1,0 +1,1 @@
+An ink core connects to outlined member surfaces on radial spokes. Connector length and angle follow the actual width and height rather than assuming a square slot; the core covers their inner ends. Small circular marks, strong names and quiet notes maintain the same Seedmark hierarchy.

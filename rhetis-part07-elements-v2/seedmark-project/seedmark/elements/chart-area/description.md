@@ -1,0 +1,2 @@
+Data points draw interpolated filled areas rather than rectangular steps. Each series owns anchored point geometry, a separate name column above the plot and the same period axis. Stacked values are accepted as cumulative totals. Soft ranked fills stay behind the ink outline and value labels.
+ A shared30px footer reserve separates the complete plot and axis from neighbouring captions, derived from the source213px chart inside the fixed grid allocation.

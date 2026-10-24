@@ -1,0 +1,4 @@
+from pathlib import Path
+P=Path(__file__).parent/'meridian-deck/elements'
+f=P/'timeline/element.css';s=f.read_text()+'''\n.track.alt[data-el="meridian-deck-timeline"]>.stop>.note{top:80%;font-size:clamp(var(--type-10),1.2cqw,var(--type-14))}.track.alt[data-el="meridian-deck-timeline"]>.stop>.note>b{margin-bottom:calc(var(--gap-sm)/2);font-size:clamp(var(--type-12),1.4cqw,var(--type-18))}.track.alt[data-el="meridian-deck-timeline"]>.stop:nth-child(even)>.note{top:0}\n''';f.write_text(s)
+f=P/'hierarchy/element.css';s=f.read_text()+'''\n.org[data-el="meridian-deck-hierarchy"]:has(>.branch>.leaf)>.branch{align-self:stretch;align-items:stretch}.org[data-el="meridian-deck-hierarchy"]:has(>.branch>.leaf)>.branch>.node,.org[data-el="meridian-deck-hierarchy"]:has(>.branch>.leaf)>.branch>.leaf{height:100%;max-height:100%;min-height:0}\n''';f.write_text(s)

@@ -1,0 +1,1 @@
+Proportional branches divide a rounded tile field into columns, and each branch distributes its own shares vertically. Fine boundaries keep nested areas legible. Strong names and figures sit on quiet or accent surfaces; narrow tiles use compact local type rather than changing their values.

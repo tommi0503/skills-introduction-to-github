@@ -1,0 +1,1 @@
+Each bar contains proportional segments in their data order. Ordinal segments receive distinct accent or soft-series roles even when no explicit tone class is present. Numeric labels are centred within the segments and category labels sit beyond the baseline. Horizontal and percentage forms retain the same data meaning.

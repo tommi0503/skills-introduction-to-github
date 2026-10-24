@@ -1,0 +1,1 @@
+Quiet rectangular processing nodes and rounded start/end capsules join through fine straight arrows. The complete graph owns each connector direction. An optional pale diamond denotes a decision without adding a new class.

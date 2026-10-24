@@ -1,0 +1,1 @@
+A quiet, fully rounded conclusion band uses the measured48px optical height of replica06. The optional icon precedes the sentence and bold fragments identify the conclusion inside the neutral capsule.

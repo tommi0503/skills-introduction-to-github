@@ -1,0 +1,1 @@
+Actual against target in one row: a bold name in the accent at the left, then a slim pale neutral track filled solid with the accent up to the actual value over a pale warm band marking the qualitative range, a short upright secondary tick at the target with its small note below, and the figure in the condensed squared display face at the right.

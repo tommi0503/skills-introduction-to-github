@@ -1,0 +1,1 @@
+Two quiet pans sit above a fine tilting beam and a simple triangular fulcrum. Supplied tilt moves the heavier left pan downward for negative values and the right pan downward for positive values. Compact capsule items and an optional verdict remain distinct from the scale geometry.

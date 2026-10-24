@@ -1,0 +1,1 @@
+Floating flat bars over a two-pixel secondary baseline: rises solid in the accent, falls in secondary grey, totals standing from the base in a deep tone; a dotted accent line carries each running total across the gap to the next bar. Values in the condensed squared display face sit over the bars and small labels below.

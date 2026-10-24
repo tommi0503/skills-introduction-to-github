@@ -1,0 +1,1 @@
+Each share is drawn as a circular ring with a large open centre. Its figure and name sit inside the hole, with a registered tag available as an explicit nested label. A row keeps separate honest circular donuts and a quiet shared grouping rule. Very small row members use compact figure and label steps while preserving both parts.

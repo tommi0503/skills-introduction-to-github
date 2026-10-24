@@ -1,0 +1,1 @@
+Before/after values join across a two-moment plot using a data-derived strip, including rising, falling and flat pairs. Names begin at the earlier value and the selected pair uses an accent line. Dumbbells turn the same values into horizontal interval rows with figures backed by the page colour.

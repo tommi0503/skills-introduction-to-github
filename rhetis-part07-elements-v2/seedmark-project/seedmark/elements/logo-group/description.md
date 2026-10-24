@@ -1,0 +1,1 @@
+A row of equal pale square logo seats uses the same rounded boundary and shared gaps as other modules. Member count determines its columns, and the seats retain square proportions even when the assigned cell is tall.

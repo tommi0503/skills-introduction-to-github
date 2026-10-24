@@ -1,0 +1,1 @@
+A quiet panel with a fine filename rule presents monospaced source lines. Optional line numbers occupy their own left register and syntax uses deep palette roles with sufficient text contrast. Leading spaces remain intact rather than being converted into layout elements.

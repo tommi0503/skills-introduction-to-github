@@ -1,0 +1,1 @@
+A compact ruled matrix uses aligned row names and column headers around rounded density cells. Each cell mixes the primary accent with a quiet base from its supplied intensity. Calendar mode removes row labels and keeps square day cells.

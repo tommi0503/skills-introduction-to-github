@@ -1,0 +1,24 @@
+.stack > :is(.pyramid[data-el="annual-pyramid"]) { flex: 1 1 0; min-height: 0; }
+.pyramid[data-el="annual-pyramid"] { container: pyramid / size; min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 4px; color: var(--a1); }
+.pyramid[data-el="annual-pyramid"] > :nth-child(1 of .level) { --i: 0; }
+.pyramid[data-el="annual-pyramid"] > :nth-child(2 of .level) { --i: 1; }
+.pyramid[data-el="annual-pyramid"] > :nth-child(3 of .level) { --i: 2; }
+.pyramid[data-el="annual-pyramid"] > :nth-child(4 of .level) { --i: 3; }
+.pyramid[data-el="annual-pyramid"] > :nth-child(5 of .level) { --i: 4; }
+.pyramid[data-el="annual-pyramid"]:has(> :nth-child(2 of .level)) > * { --n: 2; }
+.pyramid[data-el="annual-pyramid"]:has(> :nth-child(3 of .level)) > * { --n: 3; }
+.pyramid[data-el="annual-pyramid"]:has(> :nth-child(4 of .level)) > * { --n: 4; }
+.pyramid[data-el="annual-pyramid"]:has(> :nth-child(5 of .level)) > * { --n: 5; }
+
+.pyramid[data-el="annual-pyramid"] > .level { --P: min(52cqw, 100cqh * 1.25); flex: 1 1 0; min-height: 0; display: grid; grid-template-columns: var(--P) minmax(0, 1fr); grid-template-rows: auto auto; column-gap: clamp(16px, 4cqw, 48px); align-content: center; }
+.pyramid[data-el="annual-pyramid"] > .level::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: var(--P); background: color-mix(in srgb, var(--a1) calc(100% - var(--i) * 70% / max(var(--n) - 1, 1)), var(--annual-deco)); clip-path: polygon(calc(50% - var(--i) / var(--n) * 50%) 0, calc(50% + var(--i) / var(--n) * 50%) 0, calc(50% + (var(--i) + 1) / var(--n) * 50%) 100%, calc(50% - (var(--i) + 1) / var(--n) * 50%) 100%); }
+.pyramid[data-el="annual-pyramid"] > .level::after { content: ""; position: absolute; left: calc(var(--P) * (0.5 + (var(--i) + 0.6) / var(--n) * 0.5) + 6px); right: calc(100% - var(--P) - clamp(16px, 4cqw, 48px) + 8px); top: 50%; border-top: var(--hair) solid var(--a1); }
+.pyramid[data-el="annual-pyramid"] > .level > * { grid-column: 2; min-width: 0; margin: 0; }
+.pyramid[data-el="annual-pyramid"] > .level > .name { font-size: var(--pf, var(--type-16)); line-height: 1.25; font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.pyramid[data-el="annual-pyramid"] > .level > .note { font-size: var(--pt, var(--type-14)); line-height: 1.5; font-weight: var(--lead-weight); color: var(--n-6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@container pyramid (min-width: 700px) and (min-height: 380px) {
+.pyramid[data-el="annual-pyramid"] > .level { --pf: var(--type-24); --pt: var(--type-16); }
+}
+@container pyramid (max-height: 239px) {
+.pyramid[data-el="annual-pyramid"] > .level > .note { display: none; }
+}

@@ -1,0 +1,31 @@
+.stack > :is(.grid9[data-el="annual-matrix-nine"]) { flex: 1 1 0; min-height: 0; }
+.grid9[data-el="annual-matrix-nine"] { container: nine / size; min-width: 0; min-height: 0; display: grid; grid-template-columns: 28px repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)) 28px; gap: 4px; color: var(--a1); }
+.grid9[data-el="annual-matrix-nine"]:not(:has(> .axis-y)) { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.grid9[data-el="annual-matrix-nine"] > .axis-y { grid-column: 1; grid-row: 1 / span 3; display: flex; flex-direction: column-reverse; justify-content: space-around; align-items: center; border-right: var(--stroke) solid var(--n-6); }
+.grid9[data-el="annual-matrix-nine"] > .axis-y > * { writing-mode: vertical-rl; text-orientation: sideways; rotate: 180deg; font-size: var(--type-12); line-height: 1; font-weight: var(--label-weight); color: var(--n-6); white-space: nowrap; }
+.grid9[data-el="annual-matrix-nine"] > .axis-x { grid-column: 2 / span 3; grid-row: 4; display: flex; justify-content: space-around; align-items: center; border-top: var(--stroke) solid var(--n-6); font-size: var(--type-12); line-height: 1; font-weight: var(--label-weight); color: var(--n-6); }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(1 of .cell) { --t: 0.5; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(2 of .cell) { --t: 0.75; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(3 of .cell) { --t: 1.0; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(4 of .cell) { --t: 0.25; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(5 of .cell) { --t: 0.5; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(6 of .cell) { --t: 0.75; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(7 of .cell) { --t: 0.0; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(8 of .cell) { --t: 0.25; }
+.grid9[data-el="annual-matrix-nine"] > :nth-child(9 of .cell) { --t: 0.5; }
+
+.grid9[data-el="annual-matrix-nine"] > .cell { --c: color-mix(in srgb, var(--a1) calc(var(--t) * 62%), var(--annual-deco)); min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: clamp(8px, 2.4cqmin, 20px); overflow: hidden; background: var(--c); color: var(--a1); }
+.grid9[data-el="annual-matrix-nine"] > .cell.on { --c: var(--a1); color: var(--a1-on); }
+.grid9[data-el="annual-matrix-nine"] > .cell.tone-1 { --c: var(--a1-7); color: var(--page); }
+.grid9[data-el="annual-matrix-nine"] > .cell.tone-2 { --c: var(--n-6); color: var(--page); }
+.grid9[data-el="annual-matrix-nine"] > .cell.tone-3 { --c: var(--a1-4-soft); color: var(--a1-8-soft); }
+.grid9[data-el="annual-matrix-nine"] > .cell.tone-4 { --c: var(--a1-8-soft); color: var(--page); }
+.grid9[data-el="annual-matrix-nine"] > .cell.tone-5 { --c: var(--n-3); color: var(--n-8); }
+.grid9[data-el="annual-matrix-nine"] > .cell > .name { font-size: var(--gf, var(--type-14)); line-height: 1.25; font-weight: var(--name-weight); }
+.grid9[data-el="annual-matrix-nine"] > .cell > .note { font-size: var(--type-12); line-height: 1.4; font-weight: var(--lead-weight); opacity: 0.85; }
+@container nine (min-width: 700px) and (min-height: 400px) {
+.grid9[data-el="annual-matrix-nine"] > .cell > .name { --gf: var(--type-18); }
+}
+@container nine (max-height: 279px) {
+.grid9[data-el="annual-matrix-nine"] > .cell > .note { display: none; }
+}

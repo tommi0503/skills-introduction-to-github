@@ -1,0 +1,25 @@
+.stack > :is(.steps[data-el="annual-steps"]) { flex: 1 1 0; min-height: 0; }
+.steps[data-el="annual-steps"] { container: steps / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: clamp(8px, 2cqw, var(--gap)); align-content: center; color: var(--a1); }
+.steps[data-el="annual-steps"] > .step { --m: clamp(52px, 14cqh, 116px); --nf: var(--type-16); --tf: var(--type-14); display: flex; flex-direction: column; align-items: center; gap: clamp(6px, 2cqh, 14px); min-width: 0; text-align: center; }
+.steps[data-el="annual-steps"] > .step::before { content: ""; position: absolute; z-index: -1; top: calc(var(--m) / 2); left: calc(clamp(8px, 2cqw, var(--gap)) / -2); right: calc(clamp(8px, 2cqw, var(--gap)) / -2); border-top: var(--hair) solid var(--a1); }
+.steps[data-el="annual-steps"] > .step:first-child::before { left: -100vw; }
+.steps[data-el="annual-steps"] > .step:last-child::before { right: -100vw; }
+.steps[data-el="annual-steps"] { overflow: clip; }
+.steps[data-el="annual-steps"] > .step > .mark { flex: none; display: grid; place-items: center; width: var(--m); height: var(--m); margin-bottom: clamp(4px, 2cqh, 14px); border-radius: 50%; background: var(--a1); color: var(--page); font-family: var(--font-display), sans-serif; font-size: calc(var(--m) * 0.42); line-height: 1; font-weight: var(--figure-weight); }
+.steps[data-el="annual-steps"] > .step > .mark > .icon { width: 50%; height: 50%; }
+.steps[data-el="annual-steps"] > .step > .name { font-size: var(--nf); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); text-wrap: balance; }
+.steps[data-el="annual-steps"] > .step > .note { max-width: 15em; font-size: var(--tf); line-height: 1.72; font-weight: var(--lead-weight); letter-spacing: -0.05em; color: var(--n-6); text-wrap: balance; }
+.steps[data-el="annual-steps"] > .step.on > .mark { box-shadow: 0 0 0 8px var(--annual-deco); }
+.steps[data-el="annual-steps"].col { grid-auto-flow: row; grid-auto-rows: minmax(0, auto); row-gap: clamp(8px, 3cqh, 24px); align-content: center; }
+.steps[data-el="annual-steps"].col > .step { --m: clamp(40px, 11cqh, 72px); display: grid; grid-template-columns: var(--m) minmax(0, 1fr); grid-template-rows: auto auto; column-gap: var(--gap); row-gap: 2px; align-items: center; text-align: left; }
+.steps[data-el="annual-steps"].col > .step::before { top: calc(clamp(8px, 3cqh, 24px) / -2); bottom: calc(clamp(8px, 3cqh, 24px) / -2); left: calc(var(--m) / 2); right: auto; border-top: 0; border-left: var(--hair) solid var(--a1); }
+.steps[data-el="annual-steps"].col > .step:first-child::before { top: calc(var(--m) / 2); left: calc(var(--m) / 2); }
+.steps[data-el="annual-steps"].col > .step:last-child::before { bottom: calc(100% - var(--m) / 2); right: auto; }
+.steps[data-el="annual-steps"].col > .step > .mark { grid-column: 1; grid-row: 1 / span 2; margin: 0; }
+.steps[data-el="annual-steps"].col > .step > :not(.mark) { grid-column: 2; max-width: none; }
+@container steps (min-width: 700px) and (min-height: 340px) {
+.steps[data-el="annual-steps"] > .step { --nf: var(--type-24); --tf: var(--type-16); }
+}
+@container steps (max-height: 239px) {
+.steps[data-el="annual-steps"]:not(.col) > .step > .note { display: none; }
+}

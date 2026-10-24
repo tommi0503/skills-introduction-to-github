@@ -1,0 +1,1 @@
+A decision tree read left to right: each question is a solid square-cornered accent block, two-pixel accent brackets branch from it with the answer small and secondary on each branch, nested questions are deep-toned blocks and outcomes are pale warm tiles with bold accent text; the recommended outcome is outlined in the accent with a small solid dot at its corner.

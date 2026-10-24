@@ -1,0 +1,1 @@
+A single photographic capsule follows the measured200×121 source17 frame with fully rounded ends. Its one seat preserves that proportion inside any assigned slot, with a quiet neutral fill and no added outlined box or inset square. Numbered fixtures retain their seat data, while source reassembly leaves the image placeholder blank.

@@ -1,0 +1,1 @@
+Two ruled title bays compare operational approaches. The recommended side receives the same pale accent surface as source cards, while a small dark circular VS joins the pair without creating a separate scene.

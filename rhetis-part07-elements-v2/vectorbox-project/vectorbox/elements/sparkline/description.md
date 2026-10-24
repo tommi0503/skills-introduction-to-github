@@ -1,0 +1,1 @@
+An unlabelled hairline trend joins equal-step observations with no axis furniture. Miniature square-ended bars use a shared bottom baseline. The up and down variants change the semantic status color while preserving the same point spacing and compact construction.

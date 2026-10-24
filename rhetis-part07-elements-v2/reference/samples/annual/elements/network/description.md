@@ -1,0 +1,1 @@
+Members as small rings with a thick accent rim and a plain face, the marked one solid with a pale halo, each named bold in the accent below; relations are dotted accent lines between them and strong ties solid three-pixel lines.

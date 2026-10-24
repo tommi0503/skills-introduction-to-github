@@ -1,0 +1,1 @@
+A full source column distributes into proportional branch bands. Branch heights follow their shares and the joining bands meet the source edge. Quiet and drop-off branches are distinguished by neutral surfaces; compact rows place name and figure beside one another to preserve all values.

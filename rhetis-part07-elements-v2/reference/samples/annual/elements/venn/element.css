@@ -1,0 +1,16 @@
+.stack > :is(.venn[data-el="annual-venn"]) { flex: 1 1 0; min-height: 0; }
+.venn[data-el="annual-venn"] { container: venn / size; min-width: 0; min-height: 0; color: var(--a1); }
+.venn[data-el="annual-venn"] > * { --D: min(76cqh, 46cqw, 440px); }
+.venn[data-el="annual-venn"]:has(> :nth-child(3 of .set)) > * { --D: min(60cqh, 40cqw, 380px); }
+.venn[data-el="annual-venn"] > .set { position: absolute; width: var(--D); height: var(--D); display: grid; padding: calc(var(--D) * 0.18); border-radius: 50%; border: var(--stroke) solid var(--a1); background: color-mix(in srgb, var(--a1) 12%, transparent); font-size: var(--vf, var(--type-18)); line-height: 1.25; font-weight: var(--name-weight); }
+.venn[data-el="annual-venn"] > .set.on { background: color-mix(in srgb, var(--a1) 34%, transparent); }
+.venn[data-el="annual-venn"] > :nth-child(1 of .set) { left: calc(50% - var(--D) * 0.86); top: calc(50% - var(--D) / 2); place-items: center start; }
+.venn[data-el="annual-venn"] > :nth-child(2 of .set) { left: calc(50% - var(--D) * 0.14); top: calc(50% - var(--D) / 2); place-items: center end; text-align: right; }
+.venn[data-el="annual-venn"]:has(> :nth-child(3 of .set)) > :nth-child(1 of .set) { left: calc(50% - var(--D) * 0.8); top: calc(50% - var(--D) * 0.78); place-items: start start; }
+.venn[data-el="annual-venn"]:has(> :nth-child(3 of .set)) > :nth-child(2 of .set) { left: calc(50% - var(--D) * 0.2); top: calc(50% - var(--D) * 0.78); place-items: start end; }
+.venn[data-el="annual-venn"] > :nth-child(3 of .set) { left: calc(50% - var(--D) / 2); top: calc(50% - var(--D) * 0.26); place-items: end center; text-align: center; }
+.venn[data-el="annual-venn"] > .core { position: absolute; z-index: 2; left: 50%; top: 50%; translate: -50% -50%; max-width: calc(var(--D) * 0.36); text-align: center; font-family: var(--font-display), sans-serif; font-size: var(--vc, var(--type-20)); line-height: 1.15; font-weight: var(--title-weight); color: var(--a1); padding: 4px 10px; background: color-mix(in srgb, var(--page) 82%, transparent); }
+.venn[data-el="annual-venn"]:has(> :nth-child(3 of .set)) > .core { top: calc(50% - var(--D) * 0.08); }
+@container venn (min-width: 700px) and (min-height: 400px) {
+.venn[data-el="annual-venn"] > * { --vf: var(--type-24); --vc: var(--type-32); }
+}

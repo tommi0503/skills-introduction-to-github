@@ -1,0 +1,20 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.waterfall[data-el="seedmark-chart-waterfall"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.waterfall[data-el="seedmark-chart-waterfall"] *{box-sizing:border-box;}
+.waterfall[data-el="seedmark-chart-waterfall"] :is(p,h2,h3,blockquote){margin:0;}
+.waterfall[data-el="seedmark-chart-waterfall"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.waterfall[data-el="seedmark-chart-waterfall"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.waterfall[data-el="seedmark-chart-waterfall"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.waterfall[data-el="seedmark-chart-waterfall"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.waterfall[data-el="seedmark-chart-waterfall"] .seat:after{content:attr(data-ph);}
+.waterfall[data-el="seedmark-chart-waterfall"]{display:flex;gap:var(--gap);padding:var(--pad) var(--gap) var(--gap-lg);isolation:isolate;}
+.waterfall[data-el="seedmark-chart-waterfall"]:before{content:'';position:absolute;inset:var(--pad) var(--gap) var(--gap-lg);background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 25%);z-index:-1;}
+.waterfall[data-el="seedmark-chart-waterfall"] .move{position:relative;flex:1;min-width:0;}
+.waterfall[data-el="seedmark-chart-waterfall"] .move:before{content:'';position:absolute;left:10%;right:10%;bottom:calc(min(var(--from),var(--to))/var(--max)*100%);height:calc(abs(var(--to) - var(--from))/var(--max)*100%);background:var(--a1-2-soft);border:var(--stroke) solid var(--n-4);border-radius:var(--radius-sm);}
+.waterfall[data-el="seedmark-chart-waterfall"] .move.down:before{background:var(--n-2)}
+.waterfall[data-el="seedmark-chart-waterfall"] .move.total:before{bottom:0;height:calc(var(--to)/var(--max)*100%);background:var(--a1);border-color:var(--a1)}
+.waterfall[data-el="seedmark-chart-waterfall"] .move:not(:last-child):after{content:'';position:absolute;left:90%;width:calc(var(--gap) + 20%);bottom:calc(var(--to)/var(--max)*100%);height:1px;background:var(--n-5);}
+.waterfall[data-el="seedmark-chart-waterfall"] .move>b{position:absolute;left:50%;bottom:calc(max(var(--from),var(--to))/var(--max)*100% + var(--gap-sm)/2);transform:translateX(-50%);font-size:var(--type-14);line-height:var(--label-line);white-space:nowrap;}
+.waterfall[data-el="seedmark-chart-waterfall"] .move>span{position:absolute;left:50%;top:calc(100% + var(--gap-sm)/2);transform:translateX(-50%);font-size:var(--type-12);line-height:var(--label-line);white-space:nowrap;}
+@container(max-width:650px){.waterfall[data-el="seedmark-chart-waterfall"] .move>b{font-size:var(--type-12)}
+.waterfall[data-el="seedmark-chart-waterfall"] .move>span{font-size:var(--type-10)}}

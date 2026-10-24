@@ -1,0 +1,1 @@
+A tall neutral source feeds proportionate rounded bands into a vertical set of destinations. One pale accent route indicates the principal flow and a quieter band represents loss; nested destination rows retain the same share-based hierarchy rather than adding a separate scene or chart type.

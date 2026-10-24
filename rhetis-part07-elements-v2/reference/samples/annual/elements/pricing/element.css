@@ -1,0 +1,14 @@
+.plans[data-el="annual-pricing"] { container: member / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: var(--gap); align-items: stretch; }
+.stack > :is(.plan[data-el="annual-pricing"], .plans[data-el="annual-pricing"]) { flex: 1 1 0; min-height: 0; }
+.plan[data-el="annual-pricing"] { min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: clamp(8px, 2.4cqh, 16px); padding: clamp(18px, 5cqh, 40px) clamp(16px, 2.4cqw, 32px); isolation: isolate; color: var(--a1); border: var(--hair) solid color-mix(in srgb, var(--a1) 45%, var(--page)); }
+.plan[data-el="annual-pricing"].on { background: var(--a1); color: var(--a1-on); border-color: var(--a1); }
+.plan[data-el="annual-pricing"] > .name { font-size: var(--type-18); line-height: 1.25; font-weight: var(--name-weight); }
+.plan[data-el="annual-pricing"] > .price { display: flex; align-items: baseline; gap: 4px; padding-bottom: clamp(8px, 2.4cqh, 16px); border-bottom: var(--hair) solid currentColor; }
+.plan[data-el="annual-pricing"] > .price > .fig { font-family: var(--font-display), sans-serif; font-size: var(--type-48); line-height: 1; font-weight: var(--figure-weight); }
+.plan[data-el="annual-pricing"] > .price > small { font-size: var(--type-14); font-weight: var(--lead-weight); opacity: 0.8; }
+.plan[data-el="annual-pricing"] > .list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: var(--type-14); line-height: 1.5; font-weight: var(--lead-weight); color: var(--n-6); }
+.plan[data-el="annual-pricing"].on > .list { color: color-mix(in srgb, var(--a1-on) 86%, var(--a1)); }
+.plan[data-el="annual-pricing"] > .list > li { padding-left: 22px; }
+.plan[data-el="annual-pricing"] > .list > li::before { content: ""; position: absolute; left: 0; top: 0.3em; width: 14px; height: 14px; background: var(--a1); clip-path: polygon(14% 52%, 26% 40%, 42% 55%, 76% 18%, 88% 30%, 42% 79%); }
+.plan[data-el="annual-pricing"].on > .list > li::before { background: var(--a1-on); }
+.plan[data-el="annual-pricing"] > .tag { position: absolute; top: 0; right: 0; padding: 4px 12px; background: var(--annual-deco); color: var(--a1); font-size: var(--type-12); line-height: 1.3; font-weight: var(--name-weight); }

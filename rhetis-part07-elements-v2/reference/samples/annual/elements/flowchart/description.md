@@ -1,0 +1,1 @@
+Steps as flat pale square-cornered tiles with bold accent text, the start a solid accent capsule, the end a capsule outlined in the accent, a decision a pale diamond; two-pixel accent connectors with solid triangular heads run straight between neighbouring cells.

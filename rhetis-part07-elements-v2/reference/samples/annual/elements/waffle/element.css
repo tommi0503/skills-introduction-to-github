@@ -1,0 +1,28 @@
+.group > :is(.waffle[data-el="annual-waffle"]) { flex: 1 1 0; }
+.stack > :is(.waffle[data-el="annual-waffle"]) { flex: 1 1 0; min-height: 0; }
+.waffle[data-el="annual-waffle"] { container: member / size; min-width: 0; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr) auto; grid-template-areas: "units units" "name fig"; column-gap: var(--gap); row-gap: var(--gap-sm); align-items: center; color: var(--a1); }
+.waffle[data-el="annual-waffle"] > .units { grid-area: units; min-width: 0; min-height: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); align-content: end; gap: clamp(3px, 1.2cqw, 10px); }
+.waffle[data-el="annual-waffle"] > .units > .u { --u: var(--n-3); aspect-ratio: 1; max-height: 100%; border-radius: 50%; background: var(--u); }
+.waffle[data-el="annual-waffle"] > .units > .u.on { --u: var(--a1); }
+.waffle[data-el="annual-waffle"] > .units > .u.tone-1 { --u: var(--a1-7); }
+.waffle[data-el="annual-waffle"] > .units > .u.tone-2 { --u: var(--n-6); }
+.waffle[data-el="annual-waffle"] > .units > .u.tone-3 { --u: var(--a1-4-soft); }
+.waffle[data-el="annual-waffle"] > .units > .u.tone-4 { --u: var(--a1-8-soft); }
+.waffle[data-el="annual-waffle"] > .units > .u.tone-5 { --u: var(--n-3); }
+.waffle[data-el="annual-waffle"] > .fig { grid-area: fig; --ff: var(--type-36); font-family: var(--font-display), sans-serif; font-size: var(--ff); line-height: 1; font-weight: var(--figure-weight); color: var(--a1); white-space: nowrap; }
+.waffle[data-el="annual-waffle"] > .name { grid-area: name; --nf: var(--type-16); min-width: 0; font-size: var(--nf); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); color: var(--a1); }
+.waffle[data-el="annual-waffle"] > .name small, .waffle[data-el="annual-waffle"] > .note { display: block; font-size: var(--type-14); font-weight: var(--lead-weight); color: var(--n-6); }
+.waffle[data-el="annual-waffle"].figures > .units { height: 100%; align-content: stretch; grid-auto-rows: minmax(0, 1fr); }
+.waffle[data-el="annual-waffle"].figures > .units > .u { aspect-ratio: 5 / 12; width: auto; height: 100%; max-width: 100%; max-height: 120px; justify-self: center; align-self: center; border-radius: 0; background: radial-gradient(circle closest-side, var(--u) 94%, transparent) 50% 0 / 42% 19% no-repeat, linear-gradient(var(--u) 0 0) 50% 35.5% / 58% 38% no-repeat, linear-gradient(var(--u) 0 0) 0 33% / 13% 34% no-repeat, linear-gradient(var(--u) 0 0) 100% 33% / 13% 34% no-repeat, linear-gradient(var(--u) 0 0) 30% 100% / 21% 44% no-repeat, linear-gradient(var(--u) 0 0) 70% 100% / 21% 44% no-repeat; }
+.waffle[data-el="annual-waffle"].figures > .units:not(:has(> .u:nth-child(11))) { grid-template-columns: repeat(10, minmax(0, 1fr)); max-width: calc(100cqh * 2.6); }
+.stack > .waffle[data-el="annual-waffle"] { grid-template-columns: minmax(0, 0.3fr) minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr); grid-template-areas: "name units fig"; }
+.stack > .waffle[data-el="annual-waffle"] > .units { align-content: center; }
+@container member (min-width: 300px) and (min-height: 240px) {
+.waffle[data-el="annual-waffle"] > .fig { --ff: var(--type-56); }
+.waffle[data-el="annual-waffle"] > .name { --nf: var(--type-20); }
+}
+@container member (min-aspect-ratio: 3/1) and (min-height: 110px) {
+.waffle[data-el="annual-waffle"] > .units { align-content: center; }
+.waffle[data-el="annual-waffle"] > .fig { --ff: var(--type-48); }
+.waffle[data-el="annual-waffle"] > .name { --nf: var(--type-24); }
+}

@@ -1,0 +1,1 @@
+Stages stacked as flat centred bands narrowing with their value and parted by thin gaps, the widest solid in the accent and each lower one paler toward a warm tone; a bold name sits at each band's left and the figure in the condensed squared display face at its right.

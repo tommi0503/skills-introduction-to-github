@@ -1,0 +1,1 @@
+Operational stages own a continuous emotion curve above their touchpoint notes. A single accent dot marks the decisive step; compact rows remove secondary pain text while retaining stage names and touchpoints.

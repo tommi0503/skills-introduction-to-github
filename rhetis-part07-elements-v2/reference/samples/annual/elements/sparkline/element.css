@@ -1,0 +1,9 @@
+.spark[data-el="annual-sparkline"] { --c: var(--a1); min-width: 0; height: 44px; display: flex; align-items: flex-end; gap: 2px; }
+.body > .spark[data-el="annual-sparkline"] { height: auto; min-height: 44px; align-self: center; aspect-ratio: 4 / 1; }
+.spark[data-el="annual-sparkline"].up { --c: var(--good); }
+.spark[data-el="annual-sparkline"].down { --c: var(--bad); }
+.spark[data-el="annual-sparkline"] > span { flex: 1 1 0; min-width: 0; height: 100%; background: radial-gradient(circle closest-side, var(--c) 92%, transparent) 50% calc((1 - var(--v) / var(--max)) * 100%) / 7px 7px no-repeat, linear-gradient(var(--n-3) 0 0) 50% 100% / 1px calc((100% - 7px) * var(--v) / var(--max)) no-repeat; }
+.spark[data-el="annual-sparkline"] > span:last-child { background: radial-gradient(circle closest-side, var(--c) 92%, transparent) 50% calc((1 - var(--v) / var(--max)) * 100%) / 11px 11px no-repeat, linear-gradient(var(--n-3) 0 0) 50% 100% / 1px calc((100% - 11px) * var(--v) / var(--max)) no-repeat; }
+.spark[data-el="annual-sparkline"].bars { gap: 3px; }
+.spark[data-el="annual-sparkline"].bars > span, .spark[data-el="annual-sparkline"].bars > span:last-child { height: calc(100% * var(--v) / var(--max)); min-height: 3px; border-radius: var(--radius-sm) var(--radius-sm) 0 0; background: color-mix(in srgb, var(--c) 45%, transparent); }
+.spark[data-el="annual-sparkline"].bars > span:last-child { background: var(--c); }

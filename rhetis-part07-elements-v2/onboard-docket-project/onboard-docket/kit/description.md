@@ -1,0 +1,1 @@
+A rounded paper docket beneath a slender binder rail. Split capsules pair an assertive numbered label with a quiet explanation; fine rules, spacious text and pale circular icon fields keep the educational material orderly. All chromatic decisions are palette roles.

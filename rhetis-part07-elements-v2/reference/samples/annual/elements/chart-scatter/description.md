@@ -1,0 +1,1 @@
+Points on two value axes drawn as solid round dots like orbit nodes, small secondary labels beside them, the marked point ringed with a wide pale halo. A two-pixel secondary axis rules the left and the foot; the axis names run small along them, the vertical one turned upright. Bubbles grow with their value and carry their label inside.

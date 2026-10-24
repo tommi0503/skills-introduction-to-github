@@ -1,0 +1,1 @@
+Each labelled pair compares two moments through a fine sloped connector with figures at both ends. The dumbbell variant places open circular endpoints along a shared horizontal value scale, with understated row dividers. Emphasis changes one pair to the primary accent without changing its data positions.

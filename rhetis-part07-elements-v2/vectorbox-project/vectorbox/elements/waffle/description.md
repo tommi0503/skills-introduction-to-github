@@ -1,0 +1,1 @@
+A counted field of small, evenly spaced units sits beside a bold figure and compact name. Active units use the primary accent and uncounted units remain quiet. The figures variant constructs each unit as a simple person silhouette without introducing pictorial assets or decorative labels.

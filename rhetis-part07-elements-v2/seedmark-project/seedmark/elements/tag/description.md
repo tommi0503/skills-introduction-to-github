@@ -1,0 +1,1 @@
+A small thin outlined label centres its text within a rounded rectangle. The inline highlight uses a soft accent ground, vertical ink ticks and two circular endpoints. Standalone labels keep their measured compact width and align with the start of their slot; inline labels follow the surrounding text.

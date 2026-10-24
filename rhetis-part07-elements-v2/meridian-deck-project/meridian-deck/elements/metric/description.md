@@ -1,0 +1,1 @@
+A bare accent figure sits above its aligned name and supporting note. Groups share the same figure register and fine vertical dividers. Unit text remains attached to the figure without inheriting a preview interface colour.

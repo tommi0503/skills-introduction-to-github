@@ -1,0 +1,1 @@
+An ink root capsule branches into two to four columns. Fine orthogonal links connect it to outlined nodes and leaf boxes. Each branch distributes its own children vertically, while compact widths reduce the local name sizes.

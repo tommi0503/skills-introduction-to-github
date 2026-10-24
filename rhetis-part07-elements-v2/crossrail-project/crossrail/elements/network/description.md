@@ -1,0 +1,1 @@
+Circular nodes occupy a reserved inner canvas so edge positions remain contained. Every link uses the actual vector between its two normalized coordinates; strong relations gain a second pixel and the primary accent.

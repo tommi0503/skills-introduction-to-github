@@ -1,0 +1,1 @@
+The complete radial relationship uses pale rounded members around a dark circular centre. A thin circular track and directional wedges preserve the sequence around the centre. The closed ellipse or independent centre-to-member spokes persist at compact sizes; only supporting notes are suppressed in shallow slots.

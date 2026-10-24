@@ -1,0 +1,1 @@
+A fine two-axis plot holds data-positioned dots with labels above their markers. The focal dot uses the primary accent and comparison dots use quieter roles. Bubble size follows the declared radius data; grid lines remain subdued so they do not compete with point labels.

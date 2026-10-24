@@ -1,0 +1,1 @@
+A column of items, each a bold name in the accent over a light secondary note, hung from a marker the element draws: a small solid accent dot, a drawn tick, or a light numeral set half over a pale disc of decoration; a divided list rules the items apart with hairlines.

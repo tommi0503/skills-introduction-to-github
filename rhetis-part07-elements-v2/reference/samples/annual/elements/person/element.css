@@ -1,0 +1,14 @@
+.people[data-el="annual-person"] { container: member / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: var(--gap); align-items: center; }
+.stack > :is(.person[data-el="annual-person"], .people[data-el="annual-person"]) { flex: 1 1 0; min-height: 0; }
+.person[data-el="annual-person"] { min-width: 0; min-height: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; color: var(--a1); }
+.person[data-el="annual-person"] > .seat { width: min(100%, 180px); aspect-ratio: 1; flex: none; height: auto; margin-bottom: 8px; }
+.person[data-el="annual-person"] > .seat.avatar { box-shadow: 0 0 0 10px var(--annual-deco); }
+.person[data-el="annual-person"] > .seat.portrait { width: min(100%, 220px); aspect-ratio: 3 / 4; }
+.person[data-el="annual-person"] > .name { font-size: var(--type-20); line-height: 1.25; font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.person[data-el="annual-person"] > .note { font-size: var(--type-14); line-height: 1.5; font-weight: var(--lead-weight); color: var(--n-6); }
+.person[data-el="annual-person"] > .list { margin: 4px 0 0; padding: 0; list-style: none; font-size: var(--type-14); line-height: 1.6; font-weight: var(--lead-weight); color: var(--n-6); }
+.person[data-el="annual-person"]:not(.people[data-el="annual-person"] > *) { display: grid; grid-template-columns: min(40%, 240px) minmax(0, 1fr); grid-auto-rows: auto; column-gap: var(--gap-lg); row-gap: 6px; align-content: center; justify-items: start; text-align: left; }
+.person[data-el="annual-person"]:not(.people[data-el="annual-person"] > *) > .seat { grid-row: 1 / span 4; width: 100%; margin: 0; align-self: center; }
+.person[data-el="annual-person"]:not(.people[data-el="annual-person"] > *) > :not(.seat) { grid-column: 2; }
+.person[data-el="annual-person"]:not(.people[data-el="annual-person"] > *) > .name { font-size: var(--type-28); }
+.person[data-el="annual-person"]:not(.people[data-el="annual-person"] > *) > :is(.note, .list) { font-size: var(--type-16); }

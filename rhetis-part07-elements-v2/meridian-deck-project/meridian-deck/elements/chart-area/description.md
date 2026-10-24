@@ -1,0 +1,1 @@
+Actual point anchors define contiguous filled trapezoids across equal data steps. A separate top legend register and lower axis reserve text space. Cumulative series paint in reverse depth order so each stacked band remains visible; ordinary overlays retain restrained transparency.

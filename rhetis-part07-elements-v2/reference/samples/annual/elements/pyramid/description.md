@@ -1,0 +1,1 @@
+A flat triangle sliced into levels by thin gaps, the apex solid in the accent and each lower slice paler toward a warm tone; a hairline accent leader runs from each slice's edge to its bold name and light secondary note set in a column at the right.

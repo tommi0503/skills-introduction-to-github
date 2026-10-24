@@ -1,0 +1,2 @@
+<!-- min:8x4 -->
+<div class="code numbered" data-el="crossrail-code" style="grid-column:1 / span 12;grid-row:1 / span 6"><p class="name">pickup-log.js</p><div class="lines"><p><span class="c">// 입고된 부품만 반출 목록에 넣습니다.</span></p><p><span class="k">function</span> selectBins(bins) {</p><p>  <span class="k">return</span> bins.filter(bin =&gt; bin.count &gt; <span class="n">0</span>);</p><p>}</p><p><span class="k">const</span> ready = selectBins(stock);</p><p>dispatch(ready);</p></div></div>

@@ -1,0 +1,68 @@
+:is(.body, .group, .split, .stack) > :is(.arch[data-el="amethyst-architecture"]) { container-type: size; }
+.stack > :is(.arch[data-el="amethyst-architecture"]) { flex: 1 1 0; min-height: 96px; }
+:is(.arch[data-el="amethyst-architecture"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); }
+:where(.arch)[data-el="amethyst-architecture"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.arch[data-el="amethyst-architecture"]) > :nth-child(5n/**/+1 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-7); }
+:is(.arch[data-el="amethyst-architecture"]) > :nth-child(5n/**/+2 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-5); }
+:is(.arch[data-el="amethyst-architecture"]) > :nth-child(5n/**/+3 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a2-1); }
+:is(.arch[data-el="amethyst-architecture"]) > :nth-child(5n/**/+4 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-4-soft); }
+:is(.arch[data-el="amethyst-architecture"]) > :nth-child(5n of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-8-soft); }
+:is(.arch[data-el="amethyst-architecture"]) > :is(.node, .spoke, .stage, .level, .set, .layer, .branch) { --tint: color-mix(in srgb, var(--t, var(--a1)) 12%, var(--page)); --edge: color-mix(in srgb, var(--t, var(--a1)) 40%, var(--page)); }
+:is(.arch[data-el="amethyst-architecture"] > .layer) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.arch[data-el="amethyst-architecture"] > .layer) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.arch[data-el="amethyst-architecture"] > .layer) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-8); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.arch[data-el="amethyst-architecture"] > .layer) > .note { display: block; }
+}
+:is(.arch[data-el="amethyst-architecture"] > .layer).on > .note { color: inherit; }
+.arch[data-el="amethyst-architecture"] { display: grid; grid-auto-rows: minmax(0, 1fr); row-gap: var(--gap-sm); }
+.arch[data-el="amethyst-architecture"] > .layer { flex-direction: row; flex-wrap: wrap; align-items: center; align-content: center; justify-content: flex-start; gap: calc(var(--gap) * 6 / 24) calc(var(--gap) * 8 / 24); padding: 0 calc(var(--pad) * 16 / 28) 0 28%; overflow: hidden; background: var(--tint); border-radius: var(--radius); color: var(--ink); }
+.arch[data-el="amethyst-architecture"] > .layer::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--t); }
+.arch[data-el="amethyst-architecture"] > .layer > :is(.name, .chip) { margin-inline: 0; }
+.arch[data-el="amethyst-architecture"] > .layer > .name { position: absolute; left: clamp(18px, 3cqw, 32px); width: calc(28% - clamp(18px, 3cqw, 32px) - 12px); top: 0; bottom: 0; display: flex; align-items: center; }
+.arch[data-el="amethyst-architecture"] > .layer > .chip { flex: none; max-width: calc(100% - 12px); padding: 0.25em 0.75em; border-radius: 999px; background: var(--page); box-shadow: inset 0 0 0 1px var(--edge); font-size: var(--cf, var(--type-16)); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-8); line-height: 1.3; color: var(--ink); }
+.arch[data-el="amethyst-architecture"] > .layer.on { background: var(--a1); color: var(--a1-on); }
+.arch[data-el="amethyst-architecture"] > .layer.on::before { background: var(--a1); }
+@container (min-width: 500px) and (min-height: 80px) {
+.arch[data-el="amethyst-architecture"] > .layer > .chip { --cf: var(--type-20); }
+}
+@container (min-width: 760px) and (min-height: 104px) {
+.arch[data-el="amethyst-architecture"] > .layer > .chip { --cf: var(--type-24); }
+}
+@container (max-height: 63px) {
+.arch[data-el="amethyst-architecture"] > .layer > .name { --nm: var(--type-16); }
+}
+@container (max-width: 479px) {
+.arch[data-el="amethyst-architecture"] > .layer { --stack: 1; padding-left: calc(var(--pad) * 20 / 28); }
+}
+@container style(--stack: 1) {
+.arch[data-el="amethyst-architecture"] > .layer > .name { position: relative; left: auto; width: auto; flex: 0 0 100%; }
+}
+@container style(--stack: 1) and (max-height: 103px) {
+.arch[data-el="amethyst-architecture"] > .layer > .name { flex: 0 1 auto; --nm: var(--type-16); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-architecture"][data-el="amethyst-architecture"][data-el="amethyst-architecture"] { color:var(--ink); }

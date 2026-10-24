@@ -1,0 +1,1 @@
+A hairline axis connects rounded date capsules and modest point markers. Clear name and note tracks retain an even reading rhythm, with one accented milestone; alternating and vertical arrangements reuse the same source-derived capsule, neutral rule and quiet text hierarchy.

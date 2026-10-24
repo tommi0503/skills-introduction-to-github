@@ -1,0 +1,1 @@
+One measured share occupies a clean ring with an open central figure and a separate caption. The ring derives from replica06 while preserving the semantic distinction between one share and the unsupported three-way annotated ring.

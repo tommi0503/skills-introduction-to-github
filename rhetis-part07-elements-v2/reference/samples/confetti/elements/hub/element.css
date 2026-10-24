@@ -1,0 +1,113 @@
+:is(.body, .group, .split, .stack) > :is(.hub[data-el="confetti-hub"]) { container-type: size; }
+.stack > :is(.hub[data-el="confetti-hub"]) { flex: 1 1 0; min-height: 96px; }
+:is(.hub[data-el="confetti-hub"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--a1) 60%, var(--page)); --edge: color-mix(in srgb, var(--a1) 50%, var(--page)); --quiet: color-mix(in srgb, var(--n-8) 30%, var(--n-2)); --hair: color-mix(in srgb, var(--a1) 40%, transparent); }
+:where(.hub)[data-el="confetti-hub"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.hub[data-el="confetti-hub"] > .spoke) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.hub[data-el="confetti-hub"] > .spoke) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.hub[data-el="confetti-hub"] > .spoke) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-9); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.hub[data-el="confetti-hub"] > .spoke) > .note { display: block; }
+}
+:is(.hub[data-el="confetti-hub"] > .spoke).on > .note { color: inherit; }
+:is(.hub[data-el="confetti-hub"]) { position: relative; isolation: isolate; }
+:is(.hub[data-el="confetti-hub"]) > * { --n: 3; --a0: -90deg; --kx: 0.866; --up: 1; --dn: 0.5; --fw: 0.47; --fh: 0.28; --fcw: 0.5; --fch: 0.28; --gx: clamp(12px, 8cqh, 32px); --nw: clamp(min(88px, 44cqw), var(--fw) * 100cqw - 6px, 380px); --nh: clamp(min(48px, 34cqh), var(--fh) * 100cqh, 180px); --cw: min(var(--fcw) * 100cqw, 320px); --ch: clamp(min(40px, 30cqh), var(--fch) * 100cqh, 160px); --dg-rx: calc((100cqw - var(--nw)) / 2 / var(--kx)); --dg-ry: calc((100cqh - var(--nh)) / (var(--up) + var(--dn))); }
+:is(.hub[data-el="confetti-hub"]):has(> :nth-child(4 of .node, .spoke)) > * { --n: 4; --a0: -135deg; --kx: 0.7071; --up: 0.7071; --dn: 0.7071; --fh: 0.3; --fch: 0.24; --cw: min(100cqw - var(--nw) - 24px, 320px); }
+:is(.hub[data-el="confetti-hub"]):has(> :nth-child(5 of .node, .spoke)) > * { --n: 5; --a0: -90deg; --kx: 0.9511; --up: 1; --dn: 0.809; --fw: 0.37; --fh: 0.24; --fch: 0.13; --cw: min(1.1 * var(--nw), 320px); }
+:is(.hub[data-el="confetti-hub"]):has(> :nth-child(6 of .node, .spoke)) > * { --n: 6; --a0: -90deg; --kx: 0.866; --up: 1; --dn: 1; --fw: 0.47; --fh: 0.17; --fch: 0.14; --cw: min(var(--nw) - 8px, 320px); }
+@container (min-width: 600px) and (min-aspect-ratio: 5/4) {
+:is(.hub[data-el="confetti-hub"]):has(> :nth-child(5 of .node, .spoke)):not(:has(> :nth-child(6 of .node, .spoke))) > * { --fw: 0.3; --fh: 0.27; --fch: 0.3; --cw: min(100cqw - 2 * var(--nw) - 2 * var(--gx) - 12px, 320px); }
+}
+@container (min-aspect-ratio: 3/2) {
+:is(.hub[data-el="confetti-hub"]):has(> :nth-child(6 of .node, .spoke)) > * { --a0: -120deg; --kx: 1; --up: 0.866; --dn: 0.866; --fw: 0.29; --fh: 0.28; --fch: 0.3; --cw: min(26cqw, 320px); }
+}
+:is(.hub[data-el="confetti-hub"]) > :nth-child(1 of .node, .spoke) { --i: 0; }
+:is(.hub[data-el="confetti-hub"]) > :nth-child(2 of .node, .spoke) { --i: 1; }
+:is(.hub[data-el="confetti-hub"]) > :nth-child(3 of .node, .spoke) { --i: 2; }
+:is(.hub[data-el="confetti-hub"]) > :nth-child(4 of .node, .spoke) { --i: 3; }
+:is(.hub[data-el="confetti-hub"]) > :nth-child(5 of .node, .spoke) { --i: 4; }
+:is(.hub[data-el="confetti-hub"]) > :nth-child(6 of .node, .spoke) { --i: 5; }
+:is(.hub[data-el="confetti-hub"]) > :is(.node, .spoke) { --a: calc(var(--a0) + 360deg / var(--n) * var(--i)); position: absolute; width: var(--nw); height: var(--nh); left: calc(50% - var(--nw) / 2 + cos(var(--a)) * var(--dg-rx)); top: calc(var(--up) * var(--dg-ry) + sin(var(--a)) * var(--dg-ry)); border-radius: var(--radius); color: var(--a1); background: var(--page); border: 1px solid var(--edge); }
+:is(.hub[data-el="confetti-hub"]) > :is(.node, .spoke).on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+:is(.hub[data-el="confetti-hub"]) > .core { position: absolute; width: var(--cw); height: var(--ch); left: calc(50% - var(--cw) / 2); top: calc(var(--nh) / 2 + var(--up) * var(--dg-ry) - var(--ch) / 2); background: var(--a1); color: var(--a1-on); border-radius: var(--radius); text-align: center; }
+:is(.hub[data-el="confetti-hub"]) > .core > .note { color: inherit; }
+:is(.hub[data-el="confetti-hub"]):has(> .on) > .core { background: var(--page); color: var(--a1); box-shadow: inset 0 0 0 var(--stroke) var(--a1); }
+:is(.hub[data-el="confetti-hub"]):has(> .on) > .core > .note { color: var(--n-9); }
+.hub[data-el="confetti-hub"] > .spoke { --dg-dx: calc(-1 * cos(var(--a)) * var(--dg-rx)); --dg-dy: calc(-1 * sin(var(--a)) * var(--dg-ry)); }
+.hub[data-el="confetti-hub"] > .spoke::before { content: ""; position: absolute; z-index: -1; pointer-events: none; left: 50%; top: calc(50% - var(--stroke) / 2); width: hypot(var(--dg-dx), var(--dg-dy)); height: var(--stroke); transform-origin: 0 50%; rotate: atan2(var(--dg-dy), var(--dg-dx)); background: var(--wire); }
+.hub[data-el="confetti-hub"] > .spoke { display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: center; align-items: center; column-gap: clamp(calc(var(--gap) * 8 / 24), 4cqw, calc(var(--gap) * 20 / 24)); row-gap: calc(var(--gap) * 4 / 24); }
+.hub[data-el="confetti-hub"] > .spoke > :is(.name, .note) { grid-column: 2; margin-left: 0; }
+.hub[data-el="confetti-hub"] > .spoke > .mark { grid-column: 1; grid-row: 1 / span 2; align-self: center; margin-right: 0; min-width: 0.62em; padding-right: clamp(calc(var(--pad) * 6 / 28), 3cqw, calc(var(--pad) * 16 / 28)); border-right: 1px solid var(--edge); text-align: center; color: var(--a1); font-size: var(--mk, var(--type-20)); font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); line-height: var(--figure-line); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; }
+.hub[data-el="confetti-hub"] > .spoke.on > .mark { border-right-color: color-mix(in srgb, var(--a1-on) 50%, transparent); }
+.hub[data-el="confetti-hub"] > .spoke:not(:has(> .note)) > .mark, .hub[data-el="confetti-hub"] > .spoke > .mark:has(+ .name:last-child) { grid-row: 1; }
+.hub[data-el="confetti-hub"] > .spoke.on > .mark { color: inherit; }
+@container (max-width: 139px) {
+.hub[data-el="confetti-hub"] > .spoke > .mark { display: none; }
+.hub[data-el="confetti-hub"] > .spoke > :is(.name, .note) { grid-column: 1 / -1; }
+}
+@container (min-width: 200px) and (min-height: 72px) {
+.hub[data-el="confetti-hub"] > .spoke > .mark { --mk: var(--type-28); }
+}
+@container (min-width: 280px) and (min-height: 112px) {
+.hub[data-el="confetti-hub"] > .spoke > .mark { --mk: var(--type-40); }
+}
+@container (min-width: 360px) and (min-height: 140px) {
+.hub[data-el="confetti-hub"] > .spoke > .mark { --mk: var(--type-48); }
+}
+@container not (((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px))) {
+.hub[data-el="confetti-hub"] > .spoke > .mark { grid-row: 1; }
+}
+.hub[data-el="confetti-hub"] > * { --L: 2; }
+.hub[data-el="confetti-hub"]:has(> :nth-child(5 of .spoke)) > * { --L: 3; }
+@container (min-aspect-ratio: 11/10) and (min-width: 340px) {
+.hub[data-el="confetti-hub"] > * { --hc: min(22cqw, 64cqh, 240px); --hx: clamp(16px, 5cqw, 72px); --rg: clamp(8px, 4cqh, 20px); --nw: min((100cqw - var(--hc) - 2 * var(--hx)) / 2, 400px); --nh: min((100cqh - (var(--L) - 1) * var(--rg)) / var(--L), 150px); }
+.hub[data-el="confetti-hub"] > .core { width: var(--hc); height: var(--hc); left: calc(50% - var(--hc) / 2); top: calc(50% - var(--hc) / 2); border-radius: 50%; outline: 1px solid var(--edge); outline-offset: clamp(5px, 1.2cqw, 12px); }
+.hub[data-el="confetti-hub"] > .spoke { --s: clamp(0, var(--i) - var(--L) + 1, 1); --j: calc(var(--i) - var(--s) * var(--L)); --k: calc(var(--L) - var(--s) * (2 * var(--L) - var(--n))); left: calc(var(--s) * (100cqw - var(--nw))); top: calc(100cqh * (var(--j) + 0.5) / var(--k) - var(--nh) / 2); --dg-dx: calc((1 - 2 * var(--s)) * (50cqw - var(--nw) / 2)); --dg-dy: calc(50cqh - 100cqh * (var(--j) + 0.5) / var(--k)); }
+}
+@container (min-aspect-ratio: 99/100) and (max-aspect-ratio: 101/100) {
+.hub[data-el="confetti-hub"] > .core > * { margin-inline: 14%; }
+}
+@container (min-aspect-ratio: 99/100) and (max-aspect-ratio: 101/100) and (min-width: 150px) {
+.hub[data-el="confetti-hub"] > .core > * { --nm: var(--type-28); }
+}
+@container (min-aspect-ratio: 99/100) and (max-aspect-ratio: 101/100) and (min-width: 200px) {
+.hub[data-el="confetti-hub"] > .core > * { --nm: var(--type-32); }
+}
+@container (max-aspect-ratio: 4/5) {
+.hub[data-el="confetti-hub"] > * { --rg: clamp(8px, 2.4cqh, 16px); --hc: clamp(48px, 16cqh, 112px); --nw: 100cqw; --nh: calc((100cqh - var(--hc) - var(--n) * var(--rg)) / var(--n)); }
+.hub[data-el="confetti-hub"] > .core { width: 100cqw; height: var(--hc); left: 0; top: 0; }
+.hub[data-el="confetti-hub"] > .spoke { left: 0; top: calc(var(--hc) + var(--rg) + var(--i) * (var(--nh) + var(--rg))); --dg-dx: 0px; --dg-dy: calc(var(--hc) / -2 - var(--rg) - var(--i) * (var(--nh) + var(--rg)) - var(--nh) / 2); }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf){border:var(--stroke) solid var(--ink);border-radius:var(--radius);background-color:var(--a2-3-soft);color:var(--ink);box-shadow:4px 5px 0 var(--ink);}
+[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"] :is(.core,.root,.node.on,.node.end){background:var(--a3-5);color:var(--ink);}
+[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf,.root) :is(.name,.note,.kick){color:inherit;}
+
+[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"]>.spoke.on{background:var(--a3-5);color:var(--ink)}[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"]>.spoke.on :is(.name,.note,.mark){color:inherit}
+
+/* Copy remains visible when members get smaller. */
+[data-el="confetti-hub"][data-el="confetti-hub"][data-el="confetti-hub"] .note{display:block}

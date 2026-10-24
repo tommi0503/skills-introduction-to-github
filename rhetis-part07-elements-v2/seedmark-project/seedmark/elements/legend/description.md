@@ -1,0 +1,1 @@
+Small square swatches lead a vertical list of chart keys. Type and swatch dimensions follow the measured compact two-row legend. Long series names wrap naturally; the primary series uses an accent role and quiet comparison series use neutral or secondary palette roles.

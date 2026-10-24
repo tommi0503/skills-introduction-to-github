@@ -1,0 +1,1 @@
+A fine continuous stroke joins circular observations over equal intervals. Figures sit above their own observations and categories share a separate lower band; an emphasized point has a small open halo. The connector geometry handles rising, falling and equal adjacent values without changing the supplied data.

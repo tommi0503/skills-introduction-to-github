@@ -1,0 +1,1 @@
+Upright segmented columns share a quiet ruled plot and a consistent baseline. Ordered accent depths distinguish the components, with thin paper seams between them; percentage and horizontal forms retain the same plain labels, proportionate data geometry and restrained rounded-paper setting.

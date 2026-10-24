@@ -1,0 +1,85 @@
+:is(.body, .group, .split, .stack) > :is(.bars[data-el="confetti-chart-bar"]) { container-type: size; }
+.stack > :is(.bars[data-el="confetti-chart-bar"]) { flex: 1 1 0; min-height: 96px; }
+:is(.bars[data-el="confetti-chart-bar"]) { --confetti-ground: var(--n-2); background: var(--n-2); border-radius: var(--radius); padding: clamp(calc(var(--pad) * 12 / 28), 4%, calc(var(--pad) * 32 / 28)) clamp(calc(var(--pad) * 14 / 28), 4.5%, calc(var(--pad) * 40 / 28)) clamp(calc(var(--pad) * 10 / 28), 3%, calc(var(--pad) * 24 / 28)); }
+.bars[data-el="confetti-chart-bar"] { display: grid; grid-auto-flow: column; grid-template-columns: auto; grid-auto-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; min-width: 0; min-height: 0; --n: 6; --s: max(1, round(down, var(--max, 100) / 4, 1)); counter-reset: ax0 0 ax1 var(--s) ax2 calc(2 * var(--s)) ax3 calc(3 * var(--s)) ax4 calc(4 * var(--s)); --bar: color-mix(in srgb, var(--n-8) 72%, var(--n-2)); --bar-on: var(--a1); --grid: color-mix(in srgb, var(--n-8) 30%, var(--confetti-ground)); }
+.bars[data-el="confetti-chart-bar"]:not(:has(> .bar.on)) { --bar: var(--a1); }
+.bars[data-el="confetti-chart-bar"] > .bar { display: contents; --bf: min(var(--bf-w, 16px), var(--bf-h, 16px)); --bl: min(var(--bl-w, var(--type-16)), var(--bl-h, var(--type-16))); }
+.bars[data-el="confetti-chart-bar"] > .bar > b { grid-row: 1; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: calc(var(--gap) * 6 / 24); font-size: var(--bf); line-height: 1.2; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--n-9); background: linear-gradient(to top, var(--confetti-ground) calc(1.2em + 6px), transparent 0) center top / min(100%, 3.4em) calc(100% - var(--v) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) no-repeat, linear-gradient(var(--grid), var(--grid)) left 0 bottom calc(0 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) / 100% 1px no-repeat, linear-gradient(var(--grid), var(--grid)) left 0 bottom calc(1 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) / 100% 1px no-repeat, linear-gradient(var(--grid), var(--grid)) left 0 bottom calc(2 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) / 100% 1px no-repeat, linear-gradient(var(--grid), var(--grid)) left 0 bottom calc(3 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) / 100% 1px no-repeat, linear-gradient(var(--grid), var(--grid)) left 0 bottom calc(4 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) / 100% 1px no-repeat; }
+.bars[data-el="confetti-chart-bar"] > .bar > b::after { content: ""; flex: none; width: clamp(10px, 62%, 120px); min-height: 2px; height: calc(var(--v) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)); background: var(--bar); }
+.bars[data-el="confetti-chart-bar"] > .bar > span { grid-row: 2; padding: calc(var(--pad) * 8 / 28) 2px 0; text-align: center; font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); font-weight: var(--body-weight); color: var(--n-8); }
+.bars[data-el="confetti-chart-bar"] > .bar.on > b::after { background: var(--bar-on); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bar-on) 55%, var(--n-2)); }
+.bars[data-el="confetti-chart-bar"] > .bar.tone-1 > b::after { background: var(--a1-6); }
+.bars[data-el="confetti-chart-bar"] > .bar.tone-2 > b::after { background: var(--a3-5); }
+.bars[data-el="confetti-chart-bar"] > .bar.tone-3 > b::after { background: var(--a2-2); }
+.bars[data-el="confetti-chart-bar"] > .bar.tone-4 > b::after { background: var(--a2-3-soft); }
+.bars[data-el="confetti-chart-bar"] > .bar.tone-5 > b::after { background: var(--a2-4); }
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar:is(:nth-child(-n/**/+3))::before, .bars[data-el="confetti-chart-bar"]:not(.h) > .bar:is(:nth-child(-n/**/+2))::after { grid-column: 1; grid-row: 1; align-self: end; justify-self: end; padding-right: clamp(calc(var(--pad) * 6 / 28), 1.4cqw, calc(var(--pad) * 14 / 28)); font-size: var(--bl); line-height: 1; font-weight: var(--body-weight); letter-spacing: var(--body-track); font-variant-numeric: tabular-nums; color: var(--n-8); }
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(1)::before { content: counter(ax0); height: calc(calc(0 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) + 0.5em); }
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(1)::after { content: counter(ax1); height: calc(calc(1 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) + 0.5em); }
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(2)::before { content: counter(ax2); height: calc(calc(2 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) + 0.5em); }
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(2)::after { content: counter(ax3); height: calc(calc(3 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) + 0.5em); }
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(3)::before { content: counter(ax4); height: calc(calc(4 * var(--s) / var(--max, 100) * (100% - 1.2 * var(--bf) - 6px)) + 0.5em); }
+@container (max-height: 179px) {
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(1)::after, .bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(2)::before, .bars[data-el="confetti-chart-bar"]:not(.h) > .bar:nth-child(2)::after { content: none; }
+}
+@container (max-height: 99px) {
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar::before, .bars[data-el="confetti-chart-bar"]:not(.h) > .bar::after { content: none; }
+}
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(2):last-child) { --n: 2; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(3):last-child) { --n: 3; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(4):last-child) { --n: 4; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(5):last-child) { --n: 5; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(6):last-child) { --n: 6; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(7):last-child) { --n: 7; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(8):last-child) { --n: 8; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(9):last-child) { --n: 9; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(10):last-child) { --n: 10; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(11):last-child) { --n: 11; }
+:is(.bars[data-el="confetti-chart-bar"]):has(> *:nth-child(12):last-child) { --n: 12; }
+@container (min-height: 400px) {
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar { --bf-h: 20px; --bl-h: var(--type-20); }
+}
+@container (min-height: 520px) {
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar { --bf-h: 24px; --bl-h: var(--type-20); }
+}
+@container (style(--n: 2) and (min-width: 300px)) or (style(--n: 3) and (min-width: 450px)) or (style(--n: 4) and (min-width: 600px)) or (style(--n: 5) and (min-width: 750px)) or (style(--n: 6) and (min-width: 900px)) or (style(--n: 7) and (min-width: 1050px)) or (style(--n: 8) and (min-width: 1200px)) or (style(--n: 9) and (min-width: 1350px)) or (style(--n: 10) and (min-width: 1500px)) or (style(--n: 11) and (min-width: 1650px)) or (style(--n: 12) and (min-width: 1800px)) {
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar { --bf-w: 20px; --bl-w: var(--type-20); }
+}
+@container (style(--n: 2) and (min-width: 440px)) or (style(--n: 3) and (min-width: 660px)) or (style(--n: 4) and (min-width: 880px)) or (style(--n: 5) and (min-width: 1100px)) or (style(--n: 6) and (min-width: 1320px)) or (style(--n: 7) and (min-width: 1540px)) or (style(--n: 8) and (min-width: 1760px)) or (style(--n: 9) and (min-width: 1980px)) or (style(--n: 10) and (min-width: 2200px)) or (style(--n: 11) and (min-width: 2420px)) or (style(--n: 12) and (min-width: 2640px)) {
+.bars[data-el="confetti-chart-bar"]:not(.h) > .bar { --bf-w: 24px; --bl-w: var(--type-20); }
+}
+.bars[data-el="confetti-chart-bar"].h { grid-auto-flow: row dense; grid-template-rows: none; grid-auto-rows: minmax(0, 1fr); grid-template-columns: fit-content(36%) minmax(0, 1fr); column-gap: var(--gap-sm); }
+.bars[data-el="confetti-chart-bar"].h > .bar > span { grid-row: auto; grid-column: 1; align-self: center; padding: 0; text-align: right; }
+.bars[data-el="confetti-chart-bar"].h > .bar > b { grid-row: auto; grid-column: 2; flex-direction: row-reverse; justify-content: flex-end; gap: calc(var(--gap) * 10 / 24); background: linear-gradient(var(--grid), var(--grid)) left / 1px 100% no-repeat; }
+.bars[data-el="confetti-chart-bar"].h > .bar > b::after { width: calc(var(--v) / var(--max, 100) * (100% - 4.2em)); min-width: 2px; height: clamp(8px, 46%, 40px); }
+@container (min-width: 440px) {
+.bars[data-el="confetti-chart-bar"].h > .bar { --bf-w: 20px; --bl-w: var(--type-20); }
+}
+@container (min-width: 760px) {
+.bars[data-el="confetti-chart-bar"].h > .bar { --bf-w: 24px; --bl-w: var(--type-20); }
+}
+@container (style(--n: 2) and (min-height: 100px)) or (style(--n: 3) and (min-height: 150px)) or (style(--n: 4) and (min-height: 200px)) or (style(--n: 5) and (min-height: 250px)) or (style(--n: 6) and (min-height: 300px)) or (style(--n: 7) and (min-height: 350px)) or (style(--n: 8) and (min-height: 400px)) or (style(--n: 9) and (min-height: 450px)) or (style(--n: 10) and (min-height: 500px)) or (style(--n: 11) and (min-height: 550px)) or (style(--n: 12) and (min-height: 600px)) {
+.bars[data-el="confetti-chart-bar"].h > .bar { --bf-h: 20px; --bl-h: var(--type-20); }
+}
+@container (style(--n: 2) and (min-height: 160px)) or (style(--n: 3) and (min-height: 240px)) or (style(--n: 4) and (min-height: 320px)) or (style(--n: 5) and (min-height: 400px)) or (style(--n: 6) and (min-height: 480px)) or (style(--n: 7) and (min-height: 560px)) or (style(--n: 8) and (min-height: 640px)) or (style(--n: 9) and (min-height: 720px)) or (style(--n: 10) and (min-height: 800px)) or (style(--n: 11) and (min-height: 880px)) or (style(--n: 12) and (min-height: 960px)) {
+.bars[data-el="confetti-chart-bar"].h > .bar { --bf-h: 24px; --bl-h: var(--type-20); }
+}
+@container (max-width: 319px) {
+.bars[data-el="confetti-chart-bar"].h > .bar { display: flex; flex-direction: column-reverse; justify-content: center; gap: calc(var(--gap) * 4 / 24); grid-column: 1 / -1; min-height: 0; }
+.bars[data-el="confetti-chart-bar"].h > .bar > span { text-align: left; align-self: stretch; }
+.bars[data-el="confetti-chart-bar"].h > .bar > b { height: clamp(12px, 28cqh / var(--n), 28px); background: none; }
+.bars[data-el="confetti-chart-bar"].h > .bar > b::after { height: 100%; }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"] {padding:var(--pad);--bar:var(--a1-6);border:0;box-shadow:none;background:transparent;}
+[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"] >.bar>b::after{border-radius:var(--radius) var(--radius) 0 0;}
+[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"].h >.bar>b::after{border-radius:0 var(--radius) var(--radius) 0;}
+
+[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"] {--confetti-ground:var(--page)}
+
+[data-el="confetti-chart-bar"].report{padding:var(--pad);padding-bottom:var(--gap-sm)}[data-el="confetti-chart-bar"].report>.bar>b{background:none;border-bottom:5px solid var(--ink);font-size:var(--type-24)}[data-el="confetti-chart-bar"].report>.bar>b::after{width:87px}[data-el="confetti-chart-bar"].report>.bar::before,[data-el="confetti-chart-bar"].report>.bar::after{content:none}[data-el="confetti-chart-bar"].report>.bar>span{font-size:var(--type-20);color:var(--ink)}
+
+[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"].report>.bar::before,[data-el="confetti-chart-bar"][data-el="confetti-chart-bar"][data-el="confetti-chart-bar"].report>.bar::after{display:none;content:none}

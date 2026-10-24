@@ -1,0 +1,1 @@
+A plain portrait or circular avatar sits above an aligned name and restrained business note. The profile is open rather than encased in a generic card, retaining the source letter’s calm signature treatment.

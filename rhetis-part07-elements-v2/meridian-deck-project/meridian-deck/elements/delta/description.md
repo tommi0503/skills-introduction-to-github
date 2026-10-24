@@ -1,0 +1,1 @@
+A plain-text before state and a stronger after state flank one fading horizontal arrow. The same measured horizontal comparison is retained in wide and narrow boxes; it never becomes a second stacked-capsule design. Shared separators between several comparisons and a vertical count-transition connector require additional named owner contracts and are disclosed as gaps.

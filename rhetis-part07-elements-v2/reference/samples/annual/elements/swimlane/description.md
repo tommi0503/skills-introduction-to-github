@@ -1,0 +1,1 @@
+A flowchart in horizontal bands, one per owner, alternate bands lightly washed and parted by hairlines; each owner's bold name stands at the band's left behind a short thick accent bar. Steps are flat pale tiles, the start a solid accent capsule, the end an accent-outlined capsule, a decision a pale diamond, joined by two-pixel accent connectors with solid triangular heads.

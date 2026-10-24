@@ -1,0 +1,1 @@
+Precisely counted square units sit beside a large figure and short name. The pictogram form replaces each square with a simple CSS person while keeping the same count and lattice; the chosen share carries one strong accent.

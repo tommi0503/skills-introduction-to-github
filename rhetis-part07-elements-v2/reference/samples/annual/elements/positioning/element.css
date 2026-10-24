@@ -1,0 +1,18 @@
+.stack > :is(.posmap[data-el="annual-positioning"]) { flex: 1 1 0; min-height: 0; }
+.posmap[data-el="annual-positioning"] { container: pos / size; min-width: 0; min-height: 0; color: var(--a1); }
+.posmap[data-el="annual-positioning"]::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: var(--stroke) solid var(--n-6); }
+.posmap[data-el="annual-positioning"]::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; border-left: var(--stroke) solid var(--n-6); }
+.posmap[data-el="annual-positioning"] > .axis-x { position: absolute; left: 0; right: 0; top: calc(50% + 6px); display: flex; justify-content: space-between; font-size: var(--type-12); line-height: 1.2; font-weight: var(--label-weight); color: var(--n-6); }
+.posmap[data-el="annual-positioning"] > .axis-y { position: absolute; top: 0; bottom: 0; left: calc(50% + 8px); display: flex; flex-direction: column-reverse; justify-content: space-between; font-size: var(--type-12); line-height: 1.2; font-weight: var(--label-weight); color: var(--n-6); }
+.posmap[data-el="annual-positioning"] > .mark { position: absolute; z-index: 1; left: calc(6% + var(--x) * 0.88%); top: calc(94% - var(--y) * 0.88%); translate: -50% -50%; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.posmap[data-el="annual-positioning"] > .mark::before { content: ""; width: 18px; height: 18px; border-radius: 50%; background: color-mix(in srgb, var(--a1) 55%, var(--page)); }
+.posmap[data-el="annual-positioning"] > .mark:has(> .seat.logo)::before { content: none; }
+.posmap[data-el="annual-positioning"] > .mark > .seat.logo { width: clamp(56px, 10cqw, 96px); height: clamp(24px, 6cqh, 40px); background: var(--n-2); }
+.posmap[data-el="annual-positioning"] > .mark.on::before { width: 64px; height: 64px; background: var(--page); box-shadow: inset 0 0 0 8px var(--a1); }
+.posmap[data-el="annual-positioning"] > .mark.on > .seat.logo { box-shadow: 0 0 0 3px var(--a1); }
+.posmap[data-el="annual-positioning"] > .mark > .name { font-size: var(--pf, var(--type-14)); line-height: 1.2; font-weight: var(--name-weight); color: var(--n-6); white-space: nowrap; }
+.posmap[data-el="annual-positioning"] > .mark.on > .name { color: var(--a1); }
+.posmap[data-el="annual-positioning"] > .mark.on > .name { position: absolute; top: 18px; }
+@container pos (min-width: 800px) and (min-height: 400px) {
+.posmap[data-el="annual-positioning"] > .mark > .name { --pf: var(--type-16); }
+}

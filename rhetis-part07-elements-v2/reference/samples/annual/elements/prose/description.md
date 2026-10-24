@@ -1,0 +1,1 @@
+Running text set small and tightly tracked with very open double line spacing in the foreground colour, key phrases bold in the accent; quiet text is light and secondary with tighter spacing. A lead paragraph is larger, light and secondary; two-column text flows across a wide gutter.

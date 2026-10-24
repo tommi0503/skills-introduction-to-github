@@ -1,0 +1,16 @@
+.stack > :is(.tablebox[data-el="annual-table"]) { flex: 1 1 0; min-height: 0; }
+.tablebox[data-el="annual-table"] { container: member / size; min-width: 0; min-height: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+.tablebox[data-el="annual-table"] > .table { --tf: var(--type-14); --hf: var(--type-16); width: 100%; border-collapse: collapse; color: var(--ink); font-size: var(--tf); line-height: 1.4; }
+.tablebox[data-el="annual-table"] > .table th, .tablebox[data-el="annual-table"] > .table td { padding: clamp(6px, 2.2cqh, 14px) clamp(8px, 2cqw, 18px); text-align: left; vertical-align: middle; }
+.tablebox[data-el="annual-table"] > .table thead th { font-family: var(--font-display), sans-serif; font-size: var(--hf); font-weight: var(--title-weight); letter-spacing: var(--title-track); color: var(--a1); border-bottom: var(--stroke) solid var(--a1); }
+.tablebox[data-el="annual-table"] > .table tbody td { font-weight: var(--lead-weight); color: var(--n-6); border-bottom: var(--hair) solid var(--n-3); }
+.tablebox[data-el="annual-table"] > .table tbody td:first-child { font-weight: var(--name-weight); color: var(--a1); }
+.tablebox[data-el="annual-table"] > .table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.tablebox[data-el="annual-table"] > .table thead .pick { background: var(--a1); color: var(--a1-on); border-bottom-color: var(--a1); }
+.tablebox[data-el="annual-table"] > .table tbody .pick { background: var(--annual-deco); color: var(--a1); font-weight: var(--name-weight); }
+@container member (min-width: 640px) and (min-height: 300px) {
+.tablebox[data-el="annual-table"] > .table { --tf: var(--type-16); --hf: var(--type-20); }
+}
+@container member (min-width: 900px) and (min-height: 420px) {
+.tablebox[data-el="annual-table"] > .table { --tf: var(--type-18); --hf: var(--type-24); }
+}

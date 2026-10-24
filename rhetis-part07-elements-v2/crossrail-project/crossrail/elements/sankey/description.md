@@ -1,0 +1,1 @@
+Share-weighted destination blocks occupy a common split column with a clear source at left. The primary path carries the deep accent and drop-offs remain neutral. Flow bands require positive-height anchor geometry; nested destinations retain their parent ownership.

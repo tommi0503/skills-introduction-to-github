@@ -1,0 +1,42 @@
+:is(.body, .group, .split, .stack) > :is(.posmap[data-el="confetti-positioning"]) { container: member / size; }
+.stack > :is(.posmap[data-el="confetti-positioning"]) { flex: 1 1 0; min-height: 160px; }
+.posmap[data-el="confetti-positioning"] { min-width: 0; min-height: 0; isolation: isolate; --ground: var(--page); }
+.posmap[data-el="confetti-positioning"] > * { --bl: var(--type-14); --ns: var(--type-14); --lh: calc(var(--bl) * 1.4 + 8px); --d: 12px; }
+.posmap[data-el="confetti-positioning"]::before, .posmap[data-el="confetti-positioning"]::after { content: ""; position: absolute; z-index: -1; background: var(--ink); }
+.posmap[data-el="confetti-positioning"]::before { left: 0; right: 0; top: calc(50% - var(--stroke) / 2); height: var(--stroke); }
+.posmap[data-el="confetti-positioning"]::after { top: 0; bottom: 0; left: calc(50% - var(--stroke) / 2); width: var(--stroke); }
+.posmap[data-el="confetti-positioning"] > :is(.axis-x, .axis-y) { position: absolute; inset: 0; pointer-events: none; }
+.posmap[data-el="confetti-positioning"] > :is(.axis-x, .axis-y) > * { position: absolute; font-size: var(--bl); font-weight: var(--label-weight); line-height: 1.3; letter-spacing: var(--label-track); color: var(--n-8); white-space: nowrap; padding: 2px 6px; background: var(--ground); }
+.posmap[data-el="confetti-positioning"] > .axis-x > :first-child { left: 0; top: calc(50% + 6px); padding-left: 0; }
+.posmap[data-el="confetti-positioning"] > .axis-x > :last-child { right: 0; top: calc(50% + 6px); padding-right: 0; }
+.posmap[data-el="confetti-positioning"] > .axis-y > :first-child { left: calc(50% + 6px); bottom: 0; }
+.posmap[data-el="confetti-positioning"] > .axis-y > :last-child { left: calc(50% + 6px); top: 0; }
+.posmap[data-el="confetti-positioning"] > .mark { position: absolute; z-index: 1; left: calc(var(--lh) + var(--x) / 100 * (100cqw - 2 * var(--lh))); top: calc(var(--lh) + (1 - var(--y) / 100) * (100cqh - 2 * var(--lh))); width: 0; height: 0; display: flex; justify-content: center; align-items: center; }
+.posmap[data-el="confetti-positioning"] > .mark::before { content: ""; position: absolute; left: calc(var(--d) / -2); top: calc(var(--d) / -2); width: var(--d); height: var(--d); border-radius: 50%; background: color-mix(in srgb, var(--a1) 34%, var(--ink)); }
+.posmap[data-el="confetti-positioning"] > .mark.on::before { background: var(--a1); box-shadow: 0 0 0 calc(var(--d) / 2) color-mix(in srgb, var(--a1) 22%, transparent); }
+.posmap[data-el="confetti-positioning"] > .mark:has(> .seat)::before { display: none; }
+.posmap[data-el="confetti-positioning"] > .mark > .name { position: absolute; left: calc(var(--d) / 2 + 6px); top: 0; translate: 0 -50%; margin: 0; font-size: var(--ns); font-weight: var(--name-weight); line-height: 1.2; letter-spacing: var(--name-track); color: var(--n-9); white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke: 4px var(--ground); --flip: clamp(0, (var(--x) - 74) * 100, 1); translate: calc(var(--flip) * (-100% - var(--d) - 12px)) -50%; }
+.posmap[data-el="confetti-positioning"] > .mark.on > .name { color: var(--a1); }
+.posmap[data-el="confetti-positioning"] > .mark > .seat { flex: none; width: clamp(56px, 11cqw, 128px); height: clamp(24px, 5.5cqw, 52px); translate: 0 0; border: 1px solid var(--ink); box-shadow: 0 0 0 3px var(--ground); }
+.posmap[data-el="confetti-positioning"] > .mark.on > .seat { border: var(--stroke) solid var(--a1); }
+@container member (min-width: 560px) and (min-height: 320px) {
+.posmap[data-el="confetti-positioning"] > * { --bl: var(--type-16); --ns: var(--type-16); --d: 14px; }
+}
+@container member (min-width: 860px) and (min-height: 440px) {
+.posmap[data-el="confetti-positioning"] > * { --bl: var(--type-20); --ns: var(--type-20); --d: 16px; }
+}
+.posmap[data-el="confetti-positioning"]::before, .posmap[data-el="confetti-positioning"]::after { background: color-mix(in srgb, var(--a1) 40%, var(--page)); }
+.posmap[data-el="confetti-positioning"]::before { height: 1px; top: 50%; }
+.posmap[data-el="confetti-positioning"]::after { width: 1px; left: 50%; }
+.posmap[data-el="confetti-positioning"] > :is(.axis-x, .axis-y) > * { font-weight: var(--body-weight); color: var(--a1); }
+.posmap[data-el="confetti-positioning"] > .mark::before { box-sizing: border-box; background: var(--page); border: var(--stroke) solid color-mix(in srgb, var(--a1) 55%, var(--page)); }
+.posmap[data-el="confetti-positioning"] > .mark.on::before { background: var(--a1); border-color: var(--a1); }
+.posmap[data-el="confetti-positioning"] > .mark > .name { font-weight: var(--body-weight); }
+.posmap[data-el="confetti-positioning"] > .mark.on > .name { font-weight: var(--name-weight); }
+.posmap[data-el="confetti-positioning"] > .mark > .seat { border-color: color-mix(in srgb, var(--a1) 50%, var(--page)); border-radius: var(--radius-sm); }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-positioning"][data-el="confetti-positioning"][data-el="confetti-positioning"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-positioning"][data-el="confetti-positioning"][data-el="confetti-positioning"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+
+[data-el="confetti-positioning"][data-el="confetti-positioning"][data-el="confetti-positioning"]>.dot{border:var(--stroke) solid var(--ink)}

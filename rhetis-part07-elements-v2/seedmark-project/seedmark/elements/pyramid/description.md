@@ -1,0 +1,1 @@
+Increasing rounded tier widths establish a stepped pyramid. A strong accent at the top identifies the governing layer; later layers are quiet. Each tier centres a name and note with compact type steps in narrow slots.

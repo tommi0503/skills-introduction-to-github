@@ -1,0 +1,67 @@
+:is(.body, .group, .split, .stack) > :is(.org[data-el="confetti-hierarchy"]) { container-type: size; }
+.stack > :is(.org[data-el="confetti-hierarchy"]) { flex: 1 1 0; min-height: 96px; }
+:is(.org[data-el="confetti-hierarchy"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--a1) 60%, var(--page)); --edge: color-mix(in srgb, var(--a1) 50%, var(--page)); --quiet: color-mix(in srgb, var(--n-8) 30%, var(--n-2)); --hair: color-mix(in srgb, var(--a1) 40%, transparent); }
+:where(.org)[data-el="confetti-hierarchy"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.org[data-el="confetti-hierarchy"] > .root), :is(.branch > :is(.node, .leaf)):is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.org[data-el="confetti-hierarchy"] > .root) > .name, :is(.branch > :is(.node, .leaf)) > .name:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.org[data-el="confetti-hierarchy"] > .root) > .note, :is(.branch > :is(.node, .leaf)) > .note:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-9); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > *, :is(.branch > :is(.node, .leaf)) > *:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.org[data-el="confetti-hierarchy"] > .root) > .note, :is(.branch > :is(.node, .leaf)) > .note:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { display: block; }
+}
+:is(.org[data-el="confetti-hierarchy"] > .root).on > .note, :is(.branch > :is(.node, .leaf)).on > .note:is([data-el="confetti-hierarchy"], [data-el="confetti-hierarchy"] *) { color: inherit; }
+.org[data-el="confetti-hierarchy"] { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-auto-rows: minmax(0, 1fr); column-gap: var(--gap-sm); row-gap: clamp(calc(var(--gap) * 12 / 24), 5%, calc(var(--gap) * 28 / 24)); --n: 2; }
+.org[data-el="confetti-hierarchy"]:has(> .branch:nth-child(3 of .branch)) { --n: 3; }
+.org[data-el="confetti-hierarchy"]:has(> .branch:nth-child(4 of .branch)) { --n: 4; }
+.org[data-el="confetti-hierarchy"] > .root { grid-row: 1; grid-column: 1 / span var(--n); justify-self: center; width: min(100%, max(36%, 260px)); background: var(--a1); color: var(--a1-on); border-radius: var(--radius); text-align: center; }
+.org[data-el="confetti-hierarchy"] > .root > .note { color: inherit; }
+.org[data-el="confetti-hierarchy"] > .branch { display: contents; }
+.org[data-el="confetti-hierarchy"] > .branch:nth-child(1 of .branch) > * { grid-column: 1; }
+.org[data-el="confetti-hierarchy"] > .branch:nth-child(2 of .branch) > * { grid-column: 2; }
+.org[data-el="confetti-hierarchy"] > .branch:nth-child(3 of .branch) > * { grid-column: 3; }
+.org[data-el="confetti-hierarchy"] > .branch:nth-child(4 of .branch) > * { grid-column: 4; }
+.org[data-el="confetti-hierarchy"] > .root, .org[data-el="confetti-hierarchy"] > .branch > * { --dg-g: clamp(12px, 5cqh, 28px); }
+.org[data-el="confetti-hierarchy"] > .branch > * { text-align: center; border-radius: var(--radius); color: var(--ink); }
+.org[data-el="confetti-hierarchy"] > .branch > .node { background: var(--page); border: 1px solid var(--edge); color: var(--a1); }
+.org[data-el="confetti-hierarchy"] > .branch > .leaf { background: var(--page); border: 1px solid color-mix(in srgb, var(--n-8) 40%, var(--page)); }
+.org[data-el="confetti-hierarchy"] > .branch > .leaf > .name { font-size: max(var(--type-16), var(--nm) - 4px); color: var(--n-9); }
+.org[data-el="confetti-hierarchy"] > .branch > .on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); box-shadow: none; }
+.org[data-el="confetti-hierarchy"] > .branch > .leaf.on > .name { color: inherit; }
+.org[data-el="confetti-hierarchy"] > .root::after, .org[data-el="confetti-hierarchy"] > .branch > *::after { content: ""; position: absolute; pointer-events: none; left: calc(50% - var(--stroke) / 2); width: var(--stroke); background: var(--wire); }
+.org[data-el="confetti-hierarchy"] > .root::after { top: 100%; height: calc(var(--dg-g) / 2 + var(--stroke) / 2); }
+.org[data-el="confetti-hierarchy"] > .branch > .node::after { bottom: 100%; height: calc(var(--dg-g) / 2); }
+.org[data-el="confetti-hierarchy"] > .branch > .leaf::after { bottom: calc(100% + 1px); height: var(--dg-g); }
+.org[data-el="confetti-hierarchy"] > .branch > .node::before { content: ""; position: absolute; pointer-events: none; top: calc(var(--dg-g) / -2 - var(--stroke) / 2); height: var(--stroke); left: calc(var(--gap-sm) / -2 - 1px); right: calc(var(--gap-sm) / -2 - 1px); background: var(--wire); }
+.org[data-el="confetti-hierarchy"] > .branch:nth-child(1 of .branch) > .node::before { left: calc(50% - var(--stroke) / 2); }
+.org[data-el="confetti-hierarchy"] > .branch:nth-last-child(1 of .branch) > .node::before { right: calc(50% - var(--stroke) / 2); }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-hierarchy"][data-el="confetti-hierarchy"][data-el="confetti-hierarchy"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-hierarchy"][data-el="confetti-hierarchy"][data-el="confetti-hierarchy"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-hierarchy"][data-el="confetti-hierarchy"][data-el="confetti-hierarchy"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf){border:var(--stroke) solid var(--ink);border-radius:var(--radius);background-color:var(--a2-3-soft);color:var(--ink);box-shadow:4px 5px 0 var(--ink);}
+[data-el="confetti-hierarchy"][data-el="confetti-hierarchy"][data-el="confetti-hierarchy"] :is(.core,.root,.node.on,.node.end){background:var(--a3-5);color:var(--ink);}
+[data-el="confetti-hierarchy"][data-el="confetti-hierarchy"][data-el="confetti-hierarchy"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf,.root) :is(.name,.note,.kick){color:inherit;}
+
+/* Copy remains visible when members get smaller. */
+[data-el="confetti-hierarchy"][data-el="confetti-hierarchy"][data-el="confetti-hierarchy"] .note{display:block}

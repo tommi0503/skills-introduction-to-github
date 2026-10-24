@@ -1,0 +1,1 @@
+Horizontal quiet layers use an accent owner block at the left and one-line neutral chips across the remaining width. Fine lower rules and consistent rounded chips connect the architecture to the source header-band vocabulary.

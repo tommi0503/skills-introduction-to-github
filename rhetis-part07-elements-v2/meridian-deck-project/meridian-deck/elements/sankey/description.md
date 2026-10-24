@@ -1,0 +1,1 @@
+A dark source block owns a proportional set of outgoing bands. Band thickness follows each supplied share and connects to the corresponding quiet or accent destination block. Nested branches retain the same name-and-figure register for a second split.

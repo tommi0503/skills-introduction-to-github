@@ -1,0 +1,1 @@
+Stacked trapezoids widen from a pointed accent apex to a broad quiet base. Each level contains an aligned name and a short note inside the geometric safe area. Small containers reduce type and spacing while preserving every level.

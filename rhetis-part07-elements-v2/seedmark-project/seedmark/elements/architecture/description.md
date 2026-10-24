@@ -1,0 +1,1 @@
+Rounded horizontal layers align a strong name column with outlined service chips. Equal layer tracks, fine borders and quiet surfaces keep the hierarchy readable. Compact widths reduce chip type and inner gaps while preserving every exposed chip.

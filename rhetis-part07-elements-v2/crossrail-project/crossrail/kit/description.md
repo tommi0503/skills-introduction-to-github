@@ -1,0 +1,1 @@
+Fine intersecting rules structure broad neutral panels. Angular sequence heads, circular relationship nodes and restrained capsules share a compact typographic hierarchy. Emphasis is carried by one strong surface, never by unrelated ornaments. Spacing follows a small shared scale; local graphic dimensions follow the element box.

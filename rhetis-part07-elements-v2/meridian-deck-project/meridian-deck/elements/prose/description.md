@@ -1,0 +1,1 @@
+Plain paragraphs use measured line spacing and a quiet foreground without a decorative card. Bold phrases carry the accent role. Lead, secondary and two-column variants preserve a common rhythm, with smaller containers stepping down before any optional secondary content is removed.

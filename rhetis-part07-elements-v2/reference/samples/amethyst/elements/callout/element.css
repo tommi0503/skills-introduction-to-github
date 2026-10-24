@@ -1,0 +1,12 @@
+.stack > .callout[data-el="amethyst-callout"] { flex: 0 0 auto; align-self: stretch; }
+.callout[data-el="amethyst-callout"] { container: member / inline-size; min-width: 0; align-self: center; display: flex; align-items: center; justify-content: flex-start; gap: clamp(12px, 3cqw, var(--gap)); padding: var(--gap) calc(var(--gap) * 1.5); background: linear-gradient(100deg, var(--a1-2-muted), var(--page)); border-radius: var(--radius); color: var(--ink); }
+.callout[data-el="amethyst-callout"] > * { --cf: var(--type-16); }
+.callout[data-el="amethyst-callout"] > .icon { flex: none; width: 2.2em; height: 2.2em; padding: 0.5em; border-radius: 50%; background: var(--a1-3-soft); color: var(--a1); font-size: var(--cf); }
+.callout[data-el="amethyst-callout"] > p { min-width: 0; font-size: var(--cf); line-height: 1.6; font-weight: 300; letter-spacing: var(--body-track); text-wrap: pretty; }
+.callout[data-el="amethyst-callout"] > p b, .callout[data-el="amethyst-callout"] > p strong { font-weight: 800; color: var(--a1); }
+@container member (min-width: 520px) {
+.callout[data-el="amethyst-callout"] > * { --cf: var(--type-20); }
+}
+@container member (min-width: 860px) {
+.callout[data-el="amethyst-callout"] > * { --cf: var(--type-24); }
+}

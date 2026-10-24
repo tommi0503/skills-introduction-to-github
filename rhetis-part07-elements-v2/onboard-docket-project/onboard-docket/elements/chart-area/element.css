@@ -1,0 +1,39 @@
+/* Inferred from replica17 open numbers and replica16 hairline rules.
+Filled data intervals share the thin-rule language; all segments belong to one series. */
+.areas[data-el="onboard-docket-chart-area"]{container-type:size;container-name:od-areas;position:relative;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);padding:40px 3% 32px;min-width:0;min-height:0;color:var(--ink)}
+.areas[data-el="onboard-docket-chart-area"]>.series{position:static;anchor-scope:all;grid-column:1;grid-row:1;display:grid;grid-template-columns:repeat(var(--od-points),minmax(0,1fr));grid-template-rows:minmax(0,1fr);min-width:0;min-height:0;--od-points:6}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt::before{z-index:4}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(2)>.pt::before{z-index:3}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(3)>.pt::before{z-index:2}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(4)>.pt::before{z-index:1}
+.areas[data-el="onboard-docket-chart-area"]>.series>.name{position:absolute;top:6px;left:3%;width:23%;margin:0;font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--body-track);color:var(--a1-7)}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(2)>.name{left:27%}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(3)>.name{left:51%}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(4)>.name{left:75%}
+.areas[data-el="onboard-docket-chart-area"]>.axis{position:absolute;left:3%;right:3%;bottom:0;display:flex;align-items:flex-start;justify-content:space-around;height:26px;font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);color:var(--n-7)}.areas[data-el="onboard-docket-chart-area"]>.axis>span{flex:1;text-align:center;white-space:nowrap}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt{position:static;grid-column:var(--od-point-i);grid-row:1;justify-self:center;align-self:start;margin-top:calc(100cqh*(1 - var(--v)/var(--max)));width:0;height:0}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt::before{content:"";position:absolute;left:anchor(var(--od-prev) center);right:anchor(var(--od-self) center);top:calc(anchor(var(--od-prev) center) - 100cqh);bottom:32px;background:var(--a1-2-soft);clip-path:polygon(0 100cqh,100% calc(100% - 100cqh*var(--v)/var(--max)),100% 100%,0 100%)}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt>b{position:absolute;left:anchor(var(--od-self) center);top:calc(anchor(var(--od-self) center) - 8px);transform:translate(-50%,-100%);font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink);background:var(--page);padding:0 2px;z-index:8}
+.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(2)>.name{color:var(--a2-7)}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(2)>.pt::before{background:var(--a2-2-soft)}
+.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(3)>.name{color:var(--a3-7)}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(3)>.pt::before{background:var(--a3-2-soft)}
+.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(4)>.name{color:var(--a4-7)}.areas[data-el="onboard-docket-chart-area"]>.series:nth-child(4)>.pt::before{background:var(--a4-2-soft)}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(2):last-child){--od-points:1}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(2){--od-point-i:1;--od-self:--od-p1;--od-prev:--od-p0;anchor-name:--od-p1}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(3):last-child){--od-points:2}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(3){--od-point-i:2;--od-self:--od-p2;--od-prev:--od-p1;anchor-name:--od-p2}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(4):last-child){--od-points:3}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(4){--od-point-i:3;--od-self:--od-p3;--od-prev:--od-p2;anchor-name:--od-p3}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(5):last-child){--od-points:4}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(5){--od-point-i:4;--od-self:--od-p4;--od-prev:--od-p3;anchor-name:--od-p4}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(6):last-child){--od-points:5}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(6){--od-point-i:5;--od-self:--od-p5;--od-prev:--od-p4;anchor-name:--od-p5}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(7):last-child){--od-points:6}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(7){--od-point-i:6;--od-self:--od-p6;--od-prev:--od-p5;anchor-name:--od-p6}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(8):last-child){--od-points:7}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(8){--od-point-i:7;--od-self:--od-p7;--od-prev:--od-p6;anchor-name:--od-p7}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(9):last-child){--od-points:8}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(9){--od-point-i:8;--od-self:--od-p8;--od-prev:--od-p7;anchor-name:--od-p8}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(10):last-child){--od-points:9}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(10){--od-point-i:9;--od-self:--od-p9;--od-prev:--od-p8;anchor-name:--od-p9}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(11):last-child){--od-points:10}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(11){--od-point-i:10;--od-self:--od-p10;--od-prev:--od-p9;anchor-name:--od-p10}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(12):last-child){--od-points:11}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(12){--od-point-i:11;--od-self:--od-p11;--od-prev:--od-p10;anchor-name:--od-p11}
+.areas[data-el="onboard-docket-chart-area"]>.series:has(>.pt:nth-child(13):last-child){--od-points:12}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(13){--od-point-i:12;--od-self:--od-p12;--od-prev:--od-p11;anchor-name:--od-p12}
+.areas[data-el="onboard-docket-chart-area"]>.series>.pt:nth-child(2)::before{display:none}
+@container od-areas (max-width:500px){.areas[data-el="onboard-docket-chart-area"]:has(>.axis>span:nth-child(10))>.axis>span:not(:nth-child(3n + 1)):not(:last-child){visibility:hidden}}

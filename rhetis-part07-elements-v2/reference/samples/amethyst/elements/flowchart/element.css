@@ -1,0 +1,62 @@
+:is(.body, .group, .split, .stack) > :is(.flowchart[data-el="amethyst-flowchart"]) { container-type: size; }
+.stack > :is(.flowchart[data-el="amethyst-flowchart"]) { flex: 1 1 0; min-height: 96px; }
+:is(.flowchart[data-el="amethyst-flowchart"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); }
+:where(.flowchart)[data-el="amethyst-flowchart"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.flowchart[data-el="amethyst-flowchart"]) > :nth-child(5n/**/+1 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-7); }
+:is(.flowchart[data-el="amethyst-flowchart"]) > :nth-child(5n/**/+2 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-5); }
+:is(.flowchart[data-el="amethyst-flowchart"]) > :nth-child(5n/**/+3 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a2-1); }
+:is(.flowchart[data-el="amethyst-flowchart"]) > :nth-child(5n/**/+4 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-4-soft); }
+:is(.flowchart[data-el="amethyst-flowchart"]) > :nth-child(5n of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-8-soft); }
+:is(.flowchart[data-el="amethyst-flowchart"]) > :is(.node, .spoke, .stage, .level, .set, .layer, .branch) { --tint: color-mix(in srgb, var(--t, var(--a1)) 12%, var(--page)); --edge: color-mix(in srgb, var(--t, var(--a1)) 40%, var(--page)); }
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-8); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.flowchart[data-el="amethyst-flowchart"] > .node) > .note { display: block; }
+}
+:is(.flowchart[data-el="amethyst-flowchart"] > .node).on > .note { color: inherit; }
+.flowchart[data-el="amethyst-flowchart"] { display: grid; align-content: center; grid-auto-columns: minmax(0, 1fr); grid-auto-rows: minmax(0, 168px); column-gap: clamp(calc(var(--gap) * 24 / 24), 4%, calc(var(--gap) * 48 / 24)); row-gap: clamp(calc(var(--gap) * 20 / 24), 7%, calc(var(--gap) * 40 / 24)); }
+.flowchart[data-el="amethyst-flowchart"] > .node { --amethyst-dg-w: clamp(24px, 4cqw, 48px); --amethyst-dg-g: clamp(20px, 7cqh, 40px); align-items: stretch; text-align: center; background: var(--page); border: 1px solid var(--a1-2-muted); border-radius: var(--radius); color: var(--ink); }
+.flowchart[data-el="amethyst-flowchart"] > .node.start { border-radius: calc(var(--radius) * 3); background:var(--a1-1-muted); border-color: var(--a1-2-muted); }
+.flowchart[data-el="amethyst-flowchart"] > .node.end { border-radius: calc(var(--radius) * 3); background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.flowchart[data-el="amethyst-flowchart"] > .node.end > .note { color: inherit; }
+.flowchart[data-el="amethyst-flowchart"] > .node.ask { background: none; border-color: transparent; }
+.flowchart[data-el="amethyst-flowchart"] > .node.ask > * { margin-inline: 22%; }
+.flowchart[data-el="amethyst-flowchart"] > .node.ask::before { content: ""; position: absolute; inset: 0; z-index: -1; background: color-mix(in srgb, var(--a2-1) 22%, var(--page)); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.flowchart[data-el="amethyst-flowchart"] { isolation: isolate; }
+.flowchart[data-el="amethyst-flowchart"] > .node::after { content: ""; position: absolute; pointer-events: none; inset: calc(-1px - var(--amethyst-dg-g)) calc(-1px - var(--amethyst-dg-w)); --r1: none; --r2: none; --d1: none; --d2: none; --l1: none; --l2: none; --u1: none; --u2: none; background: var(--r1), var(--r2), var(--d1), var(--d2), var(--l1), var(--l2), var(--u1), var(--u2); }
+.flowchart[data-el="amethyst-flowchart"] > .node.to-r::after { --r1: conic-gradient(from 240deg at 100% 50%, var(--wire) 60deg, transparent 0) right 2px top 50% / 10px 12px no-repeat; --r2: linear-gradient(var(--wire), var(--wire)) right 8px top 50% / calc(var(--amethyst-dg-w) - 8px) var(--stroke) no-repeat; }
+.flowchart[data-el="amethyst-flowchart"] > .node.to-d::after { --d1: conic-gradient(from 330deg at 50% 100%, var(--wire) 60deg, transparent 0) left 50% bottom 2px / 12px 10px no-repeat; --d2: linear-gradient(var(--wire), var(--wire)) left 50% bottom 8px / var(--stroke) calc(var(--amethyst-dg-g) - 8px) no-repeat; }
+.flowchart[data-el="amethyst-flowchart"] > .node.to-l::after { --l1: conic-gradient(from 60deg at 0 50%, var(--wire) 60deg, transparent 0) left 2px top 50% / 10px 12px no-repeat; --l2: linear-gradient(var(--wire), var(--wire)) left 8px top 50% / calc(var(--amethyst-dg-w) - 8px) var(--stroke) no-repeat; }
+.flowchart[data-el="amethyst-flowchart"] > .node.to-u::after { --u1: conic-gradient(from 150deg at 50% 0, var(--wire) 60deg, transparent 0) left 50% top 2px / 12px 10px no-repeat; --u2: linear-gradient(var(--wire), var(--wire)) left 50% top 8px / var(--stroke) calc(var(--amethyst-dg-g) - 8px) no-repeat; }
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-flowchart"][data-el="amethyst-flowchart"][data-el="amethyst-flowchart"] { color:var(--ink); }
+[data-el="amethyst-flowchart"][data-el="amethyst-flowchart"][data-el="amethyst-flowchart"] :is(.node,.spoke,.q,.end,.step) { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-flowchart"][data-el="amethyst-flowchart"][data-el="amethyst-flowchart"] :is(.core,.root) { background:linear-gradient(115deg,var(--a1-5),var(--a1)); color:var(--a1-on); border:0; border-radius:var(--radius); }
+
+[data-el="amethyst-flowchart"][data-el="amethyst-flowchart"][data-el="amethyst-flowchart"] :is(.node.on,.end.on,.spoke.on) { background:linear-gradient(115deg,var(--a1-5),var(--a1)); color:var(--a1-on); }
+
+[data-el="amethyst-flowchart"][data-el="amethyst-flowchart"][data-el="amethyst-flowchart"] > .node.end { background:linear-gradient(115deg,var(--a1-5),var(--a1)); color:var(--a1-on); }

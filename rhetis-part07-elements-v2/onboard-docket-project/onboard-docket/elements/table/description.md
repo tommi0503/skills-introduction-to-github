@@ -1,0 +1,1 @@
+A neutral header band and alternating quiet rows translate the ruled lists of replica16 into a proper table. The selected column takes a pale accent surface and deep accent text; numeric cells align to the right.

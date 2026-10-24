@@ -1,0 +1,143 @@
+.stack > :is(.steps[data-el="confetti-steps"]) { flex: 1 1 0; min-height: 0; }
+:is(.steps[data-el="confetti-steps"]) { --n: 1; --half: 1; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(2)) { --n: 2; --half: 1; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(3)) { --n: 3; --half: 2; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(4)) { --n: 4; --half: 2; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(5)) { --n: 5; --half: 3; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(6)) { --n: 6; --half: 3; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(7)) { --n: 7; --half: 4; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(8)) { --n: 8; --half: 4; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(9)) { --n: 9; --half: 5; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(10)) { --n: 10; --half: 5; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(11)) { --n: 11; --half: 6; }
+:is(.steps[data-el="confetti-steps"]):has(> :nth-child(12)) { --n: 12; --half: 6; }
+:is(.steps[data-el="confetti-steps"]) { container: set / size; display: flex; flex-wrap: wrap; align-content: stretch; --cg: var(--gap); --rg: var(--gap); gap: var(--rg) var(--cg); min-width: 0; min-height: 0; }
+:is(.steps[data-el="confetti-steps"]) > * { --k: var(--n); flex: 1 1 calc((100% - (var(--k) - 1) * var(--cg)) / var(--k) - 1px); max-width: calc((100% - (var(--k) - 1) * var(--cg)) / var(--k)); min-width: 0; min-height: 0; }
+:is(.steps[data-el="confetti-steps"]) > * { container: member / size; }
+.steps[data-el="confetti-steps"] { --cg: var(--gap-lg); --rg: var(--gap); }
+.steps[data-el="confetti-steps"] > .step { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto auto minmax(0, 1fr); align-content: start; justify-items: start; border-top: var(--stroke) solid var(--confetti-brand-line); }
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-24); --pt: clamp(calc(var(--gap) * 6 / 24), 6cqh, var(--gap)); grid-column: 1 / -1; min-width: 0; max-width: 100%; }
+.step > .mark:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { flex: none; margin-top: var(--pt); font-family: var(--font-display), sans-serif; font-size: var(--m); line-height: var(--figure-line); font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; color: var(--a1); }
+.step > .mark > .icon:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { width: 1em; height: 1em; }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { margin-top: var(--gap-sm); font-size: var(--type-16); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); text-wrap: balance; }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { margin-top: calc(var(--gap-sm) / 2); font-size: var(--type-16); line-height: var(--body-line); font-weight: var(--body-weight); letter-spacing: var(--body-track); color: var(--n-9); text-wrap: pretty; display: none; }
+.steps[data-el="confetti-steps"] { --arrow-size: 18px; --arrow-ink: var(--confetti-brand); --arrow: polygon(0 0, 0 14%, 36% 50%, 0 86%, 0 100%, 50% 50%, 0 0, 50% 0, 50% 14%, 86% 50%, 50% 86%, 50% 100%, 100% 50%, 50% 0); }
+.steps[data-el="confetti-steps"] > .step + .step::before { content: ""; position: absolute; left: calc(var(--cg) / -2 - 8px); top: calc(var(--stroke) / -2 - 8px); width: var(--arrow-size); height: var(--arrow-size); background: var(--arrow-ink); clip-path: var(--arrow); }
+@container member not (min-aspect-ratio: 3/1) {
+@container member (min-width: 160px) and (min-height: 110px) {
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-20); }
+}
+@container member (min-width: 170px) and (min-height: 140px) {
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { display: block; }
+}
+@container member (min-width: 300px) and (min-height: 140px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-32); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-24); }
+}
+@container member (min-height: 200px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-40); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { margin-top: max(var(--gap-sm), 40cqh - var(--m) - var(--pt)); }
+@container member (min-width: 180px) {
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-24); }
+}
+@container member (min-width: 180px) and (min-height: 260px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-48); }
+}
+@container member (min-width: 300px) and (min-height: 260px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-56); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-28); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-20); }
+}
+@container member (min-width: 160px) and (min-height: 400px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-56); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-24); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-16); }
+}
+@container member (min-width: 180px) and (min-height: 400px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-64); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-28); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-20); }
+}
+@container member (min-width: 300px) and (min-height: 400px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-72); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-32); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-20); }
+}
+@container member (min-width: 500px) and (min-height: 400px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-80); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-40); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-24); }
+}
+}
+}
+@container member (min-aspect-ratio: 3/1) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --pt: clamp(calc(var(--gap) * 4 / 24), 10cqh, var(--gap-sm)); }
+.step > .mark:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { grid-column: 1; grid-row: 1 / span 2; min-width: 1.3em; margin-right: var(--gap-sm); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { grid-column: 2; grid-row: 1; font-size: var(--type-20); margin-top: max(var(--pt), calc(var(--pt) + (var(--m) - 1lh) / 2)); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { grid-column: 2; grid-row: 2; margin-top: 0; }
+@container member (max-width: 199px) {
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-16); }
+}
+@container member (min-height: 50px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-28); }
+}
+@container member ((min-width: 300px) and (min-height: 96px)) or ((min-width: 480px) and (min-height: 72px)) or ((min-width: 600px) and (min-height: 60px)) {
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { display: block; }
+}
+@container member (min-width: 400px) and (min-height: 64px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-32); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-24); }
+}
+@container member (min-width: 500px) and (min-height: 80px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-32); }
+.step > .mark:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { margin-right: var(--gap); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-24); }
+}
+@container member (min-width: 400px) and (min-height: 124px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-40); }
+.step > .mark:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { margin-right: var(--gap); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-28); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-20); }
+}
+@container member (min-width: 700px) and (min-height: 96px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-40); }
+.step > .mark:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { margin-right: var(--gap); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-28); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-20); }
+}
+@container member (min-width: 900px) and (min-height: 140px) {
+.step > *:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { --m: var(--type-48); }
+.step > .name:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-32); }
+.step > .note:is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { font-size: var(--type-20); }
+}
+}
+.steps[data-el="confetti-steps"].col > .step { --k: 1; --dir: col; }
+@container set (max-width: 299px) and style(--n: 2) {
+.steps[data-el="confetti-steps"] > .step { --k: 1; --dir: col; }
+}
+@container set (max-width: 469px) and style(--n: 3) {
+.steps[data-el="confetti-steps"] > .step { --k: 1; --dir: col; }
+}
+@container set (max-width: 619px) and style(--n: 4) {
+.steps[data-el="confetti-steps"] > .step { --k: 1; --dir: col; }
+}
+@container set (max-width: 779px) and style(--n: 5) {
+.steps[data-el="confetti-steps"] > .step { --k: 1; --dir: col; }
+}
+@container set (max-width: 929px) and style(--n: 6) {
+.steps[data-el="confetti-steps"] > .step { --k: 1; --dir: col; }
+}
+@container member style(--dir: col) {
+.steps[data-el="confetti-steps"] > .step + .step::before { content: none; }
+.steps[data-el="confetti-steps"] > .step:not(:last-child)::after { content: ""; grid-column: 1 / -1; align-self: start; justify-self: start; width: var(--arrow-size); height: var(--arrow-size); margin-top: var(--gap-sm); background: var(--arrow-ink); clip-path: var(--arrow); rotate: 90deg; }
+}
+.step > .mark:has(> .seat.icon):is([data-el="confetti-steps"], [data-el="confetti-steps"] *) { width: clamp(40px, 60cqh, 72px); height: clamp(40px, 60cqh, 72px); }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+
+[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] >.step{border:var(--stroke) solid var(--ink);border-radius:var(--radius);background:var(--a2-3-soft);color:var(--ink);box-shadow:4px 5px 0 var(--ink);padding:var(--gap-sm)}[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] >.step:nth-child(2n){background:var(--a3-5);color:var(--ink)}[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] >.step :is(.name,.note,.mark){color:inherit}
+
+[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] > .step > .note{display:block}
+@container member (max-width:240px){[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] > .step > .note{font-size:var(--type-14)}[data-el="confetti-steps"][data-el="confetti-steps"][data-el="confetti-steps"] > .step > .name{font-size:var(--type-18)}}

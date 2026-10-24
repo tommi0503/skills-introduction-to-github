@@ -1,0 +1,1 @@
+Flows drawn as straight translucent accent bands fanning from one solid upright bar at the left to a column of solid upright bars at the right, each band as thick as its share; the main path is a stronger band and a drop-off turns secondary grey. Names are bold and figures in the condensed squared display face beside each bar; a second split fans again from its bar.

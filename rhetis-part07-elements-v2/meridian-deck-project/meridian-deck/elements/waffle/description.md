@@ -1,0 +1,1 @@
+Counted square units form a regular ten-column grid above a bare figure and name. Accent units indicate the counted share and neutral units the remainder. The figures variant clips each unit into a simple person silhouette without replacing it with a text glyph.

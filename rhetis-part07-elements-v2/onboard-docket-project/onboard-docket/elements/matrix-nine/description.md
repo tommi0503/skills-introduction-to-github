@@ -1,0 +1,1 @@
+Rounded neutral paper bays extend the reference’s divided explanation panels into an axis comparison. A pale accent bay denotes priority; separate names and short notes retain the measured Noto hierarchy. The SWOT form uses real nested list elements and independent list slots.

@@ -1,0 +1,1 @@
+A 1280 by 720 frame carries a fine top and bottom rule, a restrained brand line and a tall title rail. A twelve by six content grid separates page placement from independent elements. Named cover lockups and quiet photographic seats supply page furniture without changing element roots.

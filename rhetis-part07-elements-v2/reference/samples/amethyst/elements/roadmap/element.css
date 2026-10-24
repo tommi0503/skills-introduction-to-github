@@ -1,0 +1,29 @@
+:is(.body, .group, .split, .stack) > :is(.roadmap[data-el="amethyst-roadmap"]) { container: member / size; }
+.stack > :is(.roadmap[data-el="amethyst-roadmap"]) { flex: 1 1 0; min-height: 140px; }
+.roadmap[data-el="amethyst-roadmap"] { display: grid; grid-template-columns: fit-content(22%) repeat(var(--cols, 4), minmax(0, 1fr)); grid-template-rows: auto; grid-auto-rows: minmax(0, 1fr); min-width: 0; min-height: 0; overflow: hidden; isolation: isolate; }
+.roadmap[data-el="amethyst-roadmap"] > * { --bl: var(--type-14); --ns: var(--type-16); }
+.roadmap[data-el="amethyst-roadmap"] > .heads { display: contents; }
+.roadmap[data-el="amethyst-roadmap"] > .heads::before { content: ""; grid-row: 1; grid-column: 1; }
+.roadmap[data-el="amethyst-roadmap"] > .heads > span { grid-row: 1; padding: 0 calc(var(--pad) * 8 / 28) calc(var(--pad) * 8 / 28); border-bottom: var(--stroke) solid var(--a1-2-muted); font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); white-space: nowrap; }
+.roadmap[data-el="amethyst-roadmap"] > .heads > span::after { content: ""; position: absolute; z-index: -1; left: 0; top: 0; height: 100cqh; width: 1px; background: color-mix(in srgb, var(--a1-2-muted) 70%, transparent); }
+.roadmap[data-el="amethyst-roadmap"] > .lane { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; grid-template-rows: minmax(0, 1fr); align-items: center; border-bottom: 1px solid var(--a1-2-muted); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .name { grid-column: 1; grid-row: 1; margin: 0; padding-right: var(--gap); font-size: var(--ns); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); color: var(--ink); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar { grid-row: 1; grid-column: calc(var(--from) + 2) / calc(var(--to) + 2); height: clamp(24px, 62%, 64px); margin-inline: 3px; display: flex; align-items: center; min-width: 0; padding: 0 calc(var(--pad) * 10 / 28); overflow: hidden; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--t) 14%, var(--page)); border: 1px solid color-mix(in srgb, var(--t) 40%, var(--page)); color: var(--ink); --t: var(--a1); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar.tone-1 { --t: var(--a1-7); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar.tone-2 { --t: var(--a1-5); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar.tone-3 { --t: var(--a2-1); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar.tone-4 { --t: var(--a1-4-soft); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar.tone-5 { --t: var(--a1-8-soft); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .bar > span { font-size: var(--bl); font-weight: var(--label-weight); line-height: 1.25; letter-spacing: var(--label-track); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .mile { grid-row: 1; grid-column: 2 / -1; justify-self: start; align-self: end; z-index: 1; margin: 0 0 4px calc(var(--at) / var(--cols, 4) * 100% - 8px); display: flex; align-items: center; gap: 6px; font-size: var(--bl); font-weight: var(--label-weight); line-height: 1.2; color: var(--ink); white-space: nowrap; }
+.roadmap[data-el="amethyst-roadmap"] > .lane > .mile::before { content: ""; flex: none; width: 12px; height: 12px; margin-left: 2px; rotate: 45deg; border-radius: 2px; background: var(--ink); box-shadow: 0 0 0 2px var(--page); }
+@container member (min-width: 640px) and (min-height: 300px) {
+.roadmap[data-el="amethyst-roadmap"] > * { --bl: var(--type-16); --ns: var(--type-20); }
+}
+@container member (min-width: 960px) and (min-height: 440px) {
+.roadmap[data-el="amethyst-roadmap"] > * { --bl: var(--type-20); --ns: var(--type-24); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-roadmap"][data-el="amethyst-roadmap"][data-el="amethyst-roadmap"] { color:var(--ink); }

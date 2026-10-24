@@ -1,0 +1,1 @@
+Two fine crossing axes locate capsule alternatives on explicit x/y coordinates. Labels use quiet neutral material, one accent capsule indicates the focal option, and optional logo seats preserve a square image area within the same mark contract.

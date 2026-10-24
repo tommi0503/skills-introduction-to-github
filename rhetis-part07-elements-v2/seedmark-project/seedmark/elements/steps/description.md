@@ -1,0 +1,1 @@
+Ink circles, small outlined label capsules and centred notes form the measured sequence. The row has a thin enclosing capsule surface behind its members and element-owned directional links. The column form uses outlined capsules with an icon, a name column and a note column. Member counts determine tracks; no surrounding page determines the drawing.

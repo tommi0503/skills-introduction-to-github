@@ -1,0 +1,1 @@
+A stack of straight-sided trapezoid stages narrows according to each supplied percentage. Names and figures remain centred within each stage; the entry stage carries the single accent and later stages remain neutral.

@@ -1,0 +1,89 @@
+:is(.body, .group, .split, .stack) > :is(.bars[data-el="amethyst-chart-bar"]) { container-type: size; }
+.stack > :is(.bars[data-el="amethyst-chart-bar"]) { flex: 1 1 0; min-height: 96px; }
+:is(.bars[data-el="amethyst-chart-bar"]) { --ground: var(--page); }
+.bars[data-el="amethyst-chart-bar"] { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; min-width: 0; min-height: 0; --n: 6; --bar: color-mix(in srgb, var(--a1) 34%, var(--a1-2-muted)); --bar-on: var(--a1); }
+.bars[data-el="amethyst-chart-bar"]:not(:has(> .bar.on)) { --bar: var(--a1); }
+.bars[data-el="amethyst-chart-bar"] > .bar { display: contents; --bf: min(var(--bf-w, var(--type-16)), var(--bf-h, var(--type-16))); --bl: min(var(--bl-w, var(--type-16)), var(--bl-h, var(--type-16))); }
+.bars[data-el="amethyst-chart-bar"] > .bar > b { grid-row: 1; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: calc(var(--gap) * 6 / 24); font-size: var(--bf); line-height: 1.2; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); }
+.bars[data-el="amethyst-chart-bar"] > .bar > b::after { content: ""; flex: none; width: clamp(12px, 58%, 120px); min-height: 2px; height: calc(var(--v) / var(--max, 100) * (100% - 1.2em - 6px)); background: var(--bar); border-radius: min(var(--radius-sm), 20cqw / var(--n)) min(var(--radius-sm), 20cqw / var(--n)) 0 0; }
+.bars[data-el="amethyst-chart-bar"] > .bar > span { grid-row: 2; padding: calc(var(--pad) * 8 / 28) calc(var(--pad) * 4 / 28) 0; border-top: var(--stroke) solid var(--a1-2-muted); text-align: center; font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); }
+.bars[data-el="amethyst-chart-bar"] > .bar.on > b { color: var(--a1); }
+.bars[data-el="amethyst-chart-bar"] > .bar.on > b::after { background: var(--bar-on); }
+.bars[data-el="amethyst-chart-bar"] > .bar.on > span { color: var(--ink); }
+.bars[data-el="amethyst-chart-bar"] > .bar.tone-1 > b::after { background: var(--a1-7); }
+.bars[data-el="amethyst-chart-bar"] > .bar.tone-2 > b::after { background: var(--a1-5); }
+.bars[data-el="amethyst-chart-bar"] > .bar.tone-3 > b::after { background: var(--a2-1); }
+.bars[data-el="amethyst-chart-bar"] > .bar.tone-4 > b::after { background: var(--a1-4-soft); }
+.bars[data-el="amethyst-chart-bar"] > .bar.tone-5 > b::after { background: var(--a1-8-soft); }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(2):last-child) { --n: 2; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(3):last-child) { --n: 3; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(4):last-child) { --n: 4; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(5):last-child) { --n: 5; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(6):last-child) { --n: 6; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(7):last-child) { --n: 7; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(8):last-child) { --n: 8; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(9):last-child) { --n: 9; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(10):last-child) { --n: 10; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(11):last-child) { --n: 11; }
+:is(.bars[data-el="amethyst-chart-bar"]):has(> *:nth-child(12):last-child) { --n: 12; }
+@container (min-height: 200px) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-h: var(--type-20); --bl-h: var(--type-16); }
+}
+@container (min-height: 280px) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-h: var(--type-24); --bl-h: var(--type-20); }
+}
+@container (min-height: 400px) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-h: var(--type-32); --bl-h: var(--type-24); }
+}
+@container (min-height: 440px) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-h: var(--type-40); --bl-h: var(--type-24); }
+}
+@container (style(--n: 2) and (min-width: 152px)) or (style(--n: 3) and (min-width: 228px)) or (style(--n: 4) and (min-width: 304px)) or (style(--n: 5) and (min-width: 380px)) or (style(--n: 6) and (min-width: 456px)) or (style(--n: 7) and (min-width: 532px)) or (style(--n: 8) and (min-width: 608px)) or (style(--n: 9) and (min-width: 684px)) or (style(--n: 10) and (min-width: 760px)) or (style(--n: 11) and (min-width: 836px)) or (style(--n: 12) and (min-width: 912px)) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-w: var(--type-20); --bl-w: var(--type-16); }
+}
+@container (style(--n: 2) and (min-width: 192px)) or (style(--n: 3) and (min-width: 288px)) or (style(--n: 4) and (min-width: 384px)) or (style(--n: 5) and (min-width: 480px)) or (style(--n: 6) and (min-width: 576px)) or (style(--n: 7) and (min-width: 672px)) or (style(--n: 8) and (min-width: 768px)) or (style(--n: 9) and (min-width: 864px)) or (style(--n: 10) and (min-width: 960px)) or (style(--n: 11) and (min-width: 1056px)) or (style(--n: 12) and (min-width: 1152px)) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-w: var(--type-24); --bl-w: var(--type-16); }
+}
+@container (style(--n: 2) and (min-width: 272px)) or (style(--n: 3) and (min-width: 408px)) or (style(--n: 4) and (min-width: 544px)) or (style(--n: 5) and (min-width: 680px)) or (style(--n: 6) and (min-width: 816px)) or (style(--n: 7) and (min-width: 952px)) or (style(--n: 8) and (min-width: 1088px)) or (style(--n: 9) and (min-width: 1224px)) or (style(--n: 10) and (min-width: 1360px)) or (style(--n: 11) and (min-width: 1496px)) or (style(--n: 12) and (min-width: 1632px)) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-w: var(--type-28); --bl-w: var(--type-20); }
+}
+@container (style(--n: 2) and (min-width: 360px)) or (style(--n: 3) and (min-width: 540px)) or (style(--n: 4) and (min-width: 720px)) or (style(--n: 5) and (min-width: 900px)) or (style(--n: 6) and (min-width: 1080px)) or (style(--n: 7) and (min-width: 1260px)) or (style(--n: 8) and (min-width: 1440px)) or (style(--n: 9) and (min-width: 1620px)) or (style(--n: 10) and (min-width: 1800px)) or (style(--n: 11) and (min-width: 1980px)) or (style(--n: 12) and (min-width: 2160px)) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-w: var(--type-32); --bl-w: var(--type-20); }
+}
+@container (style(--n: 2) and (min-width: 480px)) or (style(--n: 3) and (min-width: 720px)) or (style(--n: 4) and (min-width: 960px)) or (style(--n: 5) and (min-width: 1200px)) or (style(--n: 6) and (min-width: 1440px)) or (style(--n: 7) and (min-width: 1680px)) or (style(--n: 8) and (min-width: 1920px)) or (style(--n: 9) and (min-width: 2160px)) or (style(--n: 10) and (min-width: 2400px)) or (style(--n: 11) and (min-width: 2640px)) or (style(--n: 12) and (min-width: 2880px)) {
+.bars[data-el="amethyst-chart-bar"]:not(.h) > .bar { --bf-w: var(--type-40); --bl-w: var(--type-24); }
+}
+.bars[data-el="amethyst-chart-bar"].h { grid-auto-flow: row dense; grid-template-rows: none; grid-auto-rows: minmax(0, 1fr); grid-template-columns: fit-content(36%) minmax(0, 1fr); column-gap: var(--gap-sm); }
+.bars[data-el="amethyst-chart-bar"].h > .bar > span { grid-row: auto; grid-column: 1; align-self: center; padding: 0; border-top: 0; text-align: right; }
+.bars[data-el="amethyst-chart-bar"].h > .bar > b { grid-row: auto; grid-column: 2; flex-direction: row-reverse; justify-content: flex-end; gap: calc(var(--gap) * 10 / 24); border-left: var(--stroke) solid var(--a1-2-muted); }
+.bars[data-el="amethyst-chart-bar"].h > .bar > b::after { width: calc(var(--v) / var(--max, 100) * (100% - 4.2em)); min-width: 2px; height: clamp(10px, 56%, 52px); border-radius: 0 min(var(--radius-sm), 20cqh / var(--n)) min(var(--radius-sm), 20cqh / var(--n)) 0; }
+@container (min-width: 440px) {
+.bars[data-el="amethyst-chart-bar"].h > .bar { --bf-w: var(--type-20); --bl-w: var(--type-20); }
+}
+@container (min-width: 640px) {
+.bars[data-el="amethyst-chart-bar"].h > .bar { --bf-w: var(--type-24); --bl-w: var(--type-20); }
+}
+@container (min-width: 900px) {
+.bars[data-el="amethyst-chart-bar"].h > .bar { --bf-w: var(--type-28); --bl-w: var(--type-24); }
+}
+@container (style(--n: 2) and (min-height: 100px)) or (style(--n: 3) and (min-height: 150px)) or (style(--n: 4) and (min-height: 200px)) or (style(--n: 5) and (min-height: 250px)) or (style(--n: 6) and (min-height: 300px)) or (style(--n: 7) and (min-height: 350px)) or (style(--n: 8) and (min-height: 400px)) or (style(--n: 9) and (min-height: 450px)) or (style(--n: 10) and (min-height: 500px)) or (style(--n: 11) and (min-height: 550px)) or (style(--n: 12) and (min-height: 600px)) {
+.bars[data-el="amethyst-chart-bar"].h > .bar { --bf-h: var(--type-20); --bl-h: var(--type-20); }
+}
+@container (style(--n: 2) and (min-height: 144px)) or (style(--n: 3) and (min-height: 216px)) or (style(--n: 4) and (min-height: 288px)) or (style(--n: 5) and (min-height: 360px)) or (style(--n: 6) and (min-height: 432px)) or (style(--n: 7) and (min-height: 504px)) or (style(--n: 8) and (min-height: 576px)) or (style(--n: 9) and (min-height: 648px)) or (style(--n: 10) and (min-height: 720px)) or (style(--n: 11) and (min-height: 792px)) or (style(--n: 12) and (min-height: 864px)) {
+.bars[data-el="amethyst-chart-bar"].h > .bar { --bf-h: var(--type-24); --bl-h: var(--type-20); }
+}
+@container (style(--n: 2) and (min-height: 192px)) or (style(--n: 3) and (min-height: 288px)) or (style(--n: 4) and (min-height: 384px)) or (style(--n: 5) and (min-height: 480px)) or (style(--n: 6) and (min-height: 576px)) or (style(--n: 7) and (min-height: 672px)) or (style(--n: 8) and (min-height: 768px)) or (style(--n: 9) and (min-height: 864px)) or (style(--n: 10) and (min-height: 960px)) or (style(--n: 11) and (min-height: 1056px)) or (style(--n: 12) and (min-height: 1152px)) {
+.bars[data-el="amethyst-chart-bar"].h > .bar { --bf-h: var(--type-28); --bl-h: var(--type-24); }
+}
+@container (max-width: 319px) {
+.bars[data-el="amethyst-chart-bar"].h > .bar { display: flex; flex-direction: column-reverse; justify-content: center; gap: calc(var(--gap) * 4 / 24); grid-column: 1 / -1; min-height: 0; }
+.bars[data-el="amethyst-chart-bar"].h > .bar > span { text-align: left; align-self: stretch; }
+.bars[data-el="amethyst-chart-bar"].h > .bar > b { height: clamp(12px, 28cqh / var(--n), 28px); }
+.bars[data-el="amethyst-chart-bar"].h > .bar > b::after { height: 100%; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"] { color:var(--ink); }
+[data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"] { --bar:var(--a1-2-muted); --bar-on:var(--a1); }
+[data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"] .bar > b::after { border-radius:var(--radius-sm) var(--radius-sm) 0 0; }
+[data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"][data-el="amethyst-chart-bar"] .bar.on > b::after { background:linear-gradient(115deg,var(--amethyst-growth-light),var(--amethyst-growth-dark)); }

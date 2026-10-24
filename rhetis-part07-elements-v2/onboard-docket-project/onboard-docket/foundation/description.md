@@ -1,0 +1,1 @@
+A1188×590 paper at46,92 sits below the49px binder rail. The header pairs a58px chapter figure with a48px title, and the body is a twelve-by-six grid. Cover lockups and an optional vertical rail use the same paper and typography.

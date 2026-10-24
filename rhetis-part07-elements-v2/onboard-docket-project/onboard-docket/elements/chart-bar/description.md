@@ -1,0 +1,1 @@
+Rounded caps extend the source’s capsule vocabulary into data bars. Quiet neutral members keep one accent bar legible, and labels stay outside the marks. Horizontal bars reserve independent name and value lanes.

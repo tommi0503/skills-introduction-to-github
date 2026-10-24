@@ -1,0 +1,1 @@
+Quiet row surfaces identify owners while explicit grid nodes show work moving across periods. Ink start/end capsules, pale questions and fine directional arrows follow the flowchart language. The lane name has a dedicated side reserve so it cannot collide with a node.

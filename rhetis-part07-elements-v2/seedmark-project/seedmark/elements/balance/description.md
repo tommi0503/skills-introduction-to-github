@@ -1,0 +1,1 @@
+Two rounded pans sit above a fine tilted beam and a small triangular fulcrum. Negative tilt lowers the left pan and positive tilt lowers the right pan. A soft accent identifies the preferred pan; strong names and compact item rows remain upright.

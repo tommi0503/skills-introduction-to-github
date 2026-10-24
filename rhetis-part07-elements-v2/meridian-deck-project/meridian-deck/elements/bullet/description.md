@@ -1,0 +1,1 @@
+A name, qualitative track and bare figure form one target row. The actual accent fill and a dark target tick share the reserved plot area; an optional target note sits in a separate register. Multiple rows retain aligned labels and figures.

@@ -1,0 +1,103 @@
+.item > .mark:is([data-el="confetti-versus"], [data-el="confetti-versus"] *) { grid-column: 1; grid-row: 1 / span 3; font-size: var(--name-size, var(--type-20)); width: 1.3em; height: 1.3em; display: grid; place-items: center; color: var(--mark-ink); font-weight: var(--label-weight); }
+.item > .mark > .icon:is([data-el="confetti-versus"], [data-el="confetti-versus"] *), .item > .mark.icon:is([data-el="confetti-versus"], [data-el="confetti-versus"] *) { width: 1em; height: 1em; }
+@container member style(--sized: 1) and (((min-width: 300px) and (min-height: 124px)) or ((min-width: 480px) and (min-height: 80px)) or ((min-width: 800px) and (min-height: 64px))) {
+.item > .mark:is([data-el="confetti-versus"], [data-el="confetti-versus"] *) { --name-size: var(--type-24); }
+}
+@container member style(--sized: 1) and (((min-width: 560px) and (min-height: 100px)) or ((min-width: 900px) and (min-height: 70px))) {
+.item > .mark:is([data-el="confetti-versus"], [data-el="confetti-versus"] *) { --name-size: var(--type-28); }
+}
+@container member style(--sized: 1) and (((min-width: 700px) and (min-height: 117px)) or ((min-width: 1000px) and (min-height: 81px))) {
+.item > .mark:is([data-el="confetti-versus"], [data-el="confetti-versus"] *) { --name-size: var(--type-32); }
+}
+@container member style(--sized: 1) and (min-width: 1000px) and (min-height: 140px) {
+.item > .mark:is([data-el="confetti-versus"], [data-el="confetti-versus"] *) { --name-size: var(--type-40); }
+}
+:is(.body, .group, .split, .stack) > :is(.versus[data-el="confetti-versus"]) { container-type: size; }
+.stack > :is(.versus[data-el="confetti-versus"]) { flex: 1 1 0; min-height: 96px; }
+:is(.versus[data-el="confetti-versus"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--a1) 60%, var(--page)); --edge: color-mix(in srgb, var(--a1) 50%, var(--page)); --quiet: color-mix(in srgb, var(--n-8) 30%, var(--n-2)); --hair: color-mix(in srgb, var(--a1) 40%, transparent); }
+:where(.versus)[data-el="confetti-versus"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.versus[data-el="confetti-versus"] > .side) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.versus[data-el="confetti-versus"] > .side) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.versus[data-el="confetti-versus"] > .side) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.versus[data-el="confetti-versus"] > .side) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-9); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.versus[data-el="confetti-versus"] > .side) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.versus[data-el="confetti-versus"] > .side) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.versus[data-el="confetti-versus"] > .side) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.versus[data-el="confetti-versus"] > .side) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.versus[data-el="confetti-versus"] > .side) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.versus[data-el="confetti-versus"] > .side) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.versus[data-el="confetti-versus"] > .side) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.versus[data-el="confetti-versus"] > .side) > .note { display: block; }
+}
+:is(.versus[data-el="confetti-versus"] > .side).on > .note { color: inherit; }
+.versus[data-el="confetti-versus"] { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); grid-auto-rows: minmax(0, 1fr) auto; gap: var(--gap-sm); }
+.versus[data-el="confetti-versus"] { gap: var(--gap); }
+.versus[data-el="confetti-versus"] > .side { grid-row: 1; grid-column: 1; justify-content: center; gap: clamp(calc(var(--gap) * 8 / 24), 4cqh, calc(var(--gap) * 24 / 24)); background: var(--page); border: 1px solid var(--edge); border-radius: calc(var(--radius) * 1.5); color: var(--n-9); }
+.versus[data-el="confetti-versus"] > .side ~ .side { grid-column: 3; }
+.versus[data-el="confetti-versus"]:has(> .side.on) > .side:not(.on) { border-color: color-mix(in srgb, var(--n-8) 45%, var(--page)); }
+.versus[data-el="confetti-versus"] > .side.on { border: var(--stroke) solid var(--a1); }
+.versus[data-el="confetti-versus"] > .side > .name { align-self: stretch; padding-bottom: clamp(calc(var(--pad) * 8 / 28), 3cqh, calc(var(--pad) * 20 / 28)); text-align: center; color: var(--a1); font-weight: var(--title-weight); font-size: min(var(--nm), var(--type-28)); background: linear-gradient(var(--edge), var(--edge)) center bottom / calc(100% - 2 * clamp(0px, 4cqw, 24px)) 1px no-repeat; }
+.versus[data-el="confetti-versus"] > .side.on > .name { background-image: linear-gradient(var(--a1), var(--a1)); }
+.versus[data-el="confetti-versus"] > .vs, .versus[data-el="confetti-versus"]:not(:has(> .vs))::before { grid-row: 1; grid-column: 2; place-self: center; position: relative; width: 52px; height: 16px; overflow: hidden; font-size: var(--type-12); scale: var(--vs-k, 1); }
+.versus[data-el="confetti-versus"] > .vs { visibility: hidden; color: var(--a1); letter-spacing: -1em; }
+.versus[data-el="confetti-versus"] > .vs::before { content: ""; visibility: visible; position: absolute; inset: 0; }
+.versus[data-el="confetti-versus"] > .vs::before, .versus[data-el="confetti-versus"]:not(:has(> .vs))::before { content: ""; background: var(--a1); clip-path: path("M22 0 H18.6 L11 8 L18.6 16 H22 L14.4 8 Z M11 0 H7.6 L0 8 L7.6 16 H11 L3.4 8 Z M30 0 H33.4 L41 8 L33.4 16 H30 L37.6 8 Z M41 0 H44.4 L52 8 L44.4 16 H41 L48.6 8 Z"); }
+.versus[data-el="confetti-versus"] > .side > * { --it: var(--type-16); }
+.versus[data-el="confetti-versus"] > .side .list { display: flex; flex-direction: column; gap: clamp(calc(var(--gap) * 4 / 24), 2.4cqh, calc(var(--gap) * 16 / 24)); min-width: 0; padding: 0; background: none; border: 0; container-type: normal; --name-size: var(--it); --note-size: var(--type-16); --mark-ink: currentColor; --note-ink: currentColor; }
+.versus[data-el="confetti-versus"] > .side .list > .item { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 0.5em; align-items: start; min-width: 0; padding: 0; margin: 0; background: none; border: 0; font-size: var(--it); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-9); color: inherit; }
+.versus[data-el="confetti-versus"] > .side .list > .item::before { content: ""; position: static; grid-column: 1; grid-row: 1; font-size: inherit; width: 0.36em; height: 0.36em; margin: 0.6em 0 0; border: 0; border-radius: 50%; background: currentColor; opacity: 0.5; }
+.versus[data-el="confetti-versus"] > .side .list > .item:has(> .mark)::before { content: none; }
+.versus[data-el="confetti-versus"] > .side .list > .item > * { grid-column: 2; margin: 0; min-width: 0; font-size: inherit; line-height: inherit; color: inherit; }
+.versus[data-el="confetti-versus"] > .side .list > .item > .mark { grid-column: 1; grid-row: 1; }
+.versus[data-el="confetti-versus"] > .side .list > .item > .name { font-weight: var(--body-weight); }
+.versus[data-el="confetti-versus"] > .side .list > .item > .note { display: none; }
+@container (min-width: 480px) and (min-height: 360px) {
+.versus[data-el="confetti-versus"] > .side > * { --it: var(--type-20); }
+}
+@container (min-width: 640px) and (min-height: 440px) {
+.versus[data-el="confetti-versus"] > .side > * { --it: var(--type-24); }
+}
+@container (min-width: 440px) and (min-height: 400px) {
+.versus[data-el="confetti-versus"] > .side .list > .item > .note { display: block; font-size: var(--type-16); opacity: 0.85; }
+}
+@container (max-aspect-ratio: 6/5) {
+.versus[data-el="confetti-versus"] > .side, .versus[data-el="confetti-versus"] > .side ~ .side { grid-column: 1 / -1; grid-row: 1; }
+.versus[data-el="confetti-versus"] > .side ~ .side { grid-row: 3; }
+.versus[data-el="confetti-versus"] > .vs, .versus[data-el="confetti-versus"]:not(:has(> .vs))::before { grid-column: 1 / -1; grid-row: 2; rotate: 90deg; margin-block: calc(var(--gap) * 18 / 24); }
+}
+@container (max-height: 180px) and (min-width: 800px) {
+.versus[data-el="confetti-versus"] > .side { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr); align-items: center; column-gap: 0; }
+.versus[data-el="confetti-versus"] > .side > .name { padding-bottom: 0; background: none; }
+.versus[data-el="confetti-versus"] > .side > .list { margin-left: 0; }
+}
+@container (max-height: 180px) and (min-width: 380px) {
+.versus[data-el="confetti-versus"] > .side .list { gap: 2px; }
+}
+@container (min-width: 900px) and (min-height: 400px) {
+.versus[data-el="confetti-versus"] > .vs, .versus[data-el="confetti-versus"]:not(:has(> .vs))::before { --vs-k: 1.25; }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-versus"][data-el="confetti-versus"][data-el="confetti-versus"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-versus"][data-el="confetti-versus"][data-el="confetti-versus"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-versus"][data-el="confetti-versus"][data-el="confetti-versus"] :is(.plan,.side){background:var(--n-1);border:var(--stroke) solid var(--ink);border-radius:var(--radius);color:var(--ink);box-shadow:4px 5px 0 var(--ink);}
+[data-el="confetti-versus"][data-el="confetti-versus"][data-el="confetti-versus"] :is(.plan.on,.side.on){background:var(--a3-5);color:var(--ink);}
+[data-el="confetti-versus"][data-el="confetti-versus"][data-el="confetti-versus"] :is(.plan.on,.side.on) :is(.name,.note,.fig,.price,.list,.item){color:inherit;}
+
+/* Copy remains visible when members get smaller. */
+[data-el="confetti-versus"][data-el="confetti-versus"][data-el="confetti-versus"] .note{display:block}

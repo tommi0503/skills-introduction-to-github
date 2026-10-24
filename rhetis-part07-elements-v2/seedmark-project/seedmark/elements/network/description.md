@@ -1,0 +1,1 @@
+Positioned rounded nodes connect through true Euclidean links computed from the supplied endpoints. Strong links use ink and ordinary links stay neutral. The focal node is an ink capsule; node footprints stay consistent rather than inferring dimensions from the surrounding page.

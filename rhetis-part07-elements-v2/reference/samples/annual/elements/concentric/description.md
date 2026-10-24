@@ -1,0 +1,1 @@
+Nested discs standing on one base, each inside the last: the outermost a solid accent disc circled by a dotted accent orbit, each inner disc paler toward a warm tone. Each disc's bold name and its figure in the condensed squared display face sit centred in its upper band, the innermost in its middle; a marked disc is ringed by a thin accent line.

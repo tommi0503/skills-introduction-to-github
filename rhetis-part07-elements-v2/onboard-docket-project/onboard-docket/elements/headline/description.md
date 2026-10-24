@@ -1,0 +1,1 @@
+A dark, one-line capsule labels a restrained statement. Its open space and line rhythm are measured from replica12. Big emphasis and centred subheads change hierarchy without introducing a second decorative system.

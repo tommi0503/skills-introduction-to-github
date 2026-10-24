@@ -1,0 +1,1 @@
+Four pale circular illustration fields connect with slim triangular arrows. Names and supporting copy sit beneath each field. The downward col variant uses solid rectangular mark blocks with a narrow notch connecting each complete row.

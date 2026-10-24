@@ -1,0 +1,1 @@
+Stacked quiet rows retain the rectangular step rhythm of replica10. A ruled title bay follows replica18 and the service chips use compact capsules; the first layer receives only a pale emphasis surface.

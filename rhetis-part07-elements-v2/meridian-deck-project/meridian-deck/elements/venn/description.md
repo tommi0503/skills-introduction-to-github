@@ -1,0 +1,1 @@
+Two or three translucent circular sets overlap around an optional intersection label. Their contours remain fine and the highlighted set uses the accent role. The overlap is visible without implying either a cycle or set inclusion.

@@ -1,0 +1,1 @@
+Open concentric outlines communicate inclusion without opaque layers. Each name and figure share one baseline on the upper annulus, calculated from the actual ring count; the innermost subset is centred. The small optional note remains visible.

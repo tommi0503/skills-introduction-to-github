@@ -1,0 +1,1 @@
+Each comparison is a restrained small panel with a named pair of numeric endpoints joined by a genuinely rising, falling or flat line. The horizontal dumbbell version shares the same data scale and paper-backed number markers, using one accent route against neutral rules.

@@ -1,0 +1,1 @@
+A progress row: a bold name in the accent at the left and the figure in the condensed squared display face at the right, over a track of thirty small upright rounded tablets, the counted ones solid in the accent and the rest in a pale neutral.

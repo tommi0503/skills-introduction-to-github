@@ -1,0 +1,1 @@
+A full-height ruled table uses a deep accent heading and calm neutral body cells. Numeric columns align right. Emphasized columns retain one continuous accent stripe; row labels may use semantic row headers without inventing a visible column heading.

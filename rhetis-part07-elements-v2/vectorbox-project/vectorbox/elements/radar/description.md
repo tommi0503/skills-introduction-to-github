@@ -1,0 +1,1 @@
+Fine circular guide rings and radial spokes frame filled polygons over three to eight axes. Axis names sit beyond the guide field and compact ranked color keys identify the series above it. Each polygon vertex follows its corresponding value and the first spoke starts at the top.

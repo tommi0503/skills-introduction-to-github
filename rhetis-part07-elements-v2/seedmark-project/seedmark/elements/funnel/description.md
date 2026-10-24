@@ -1,0 +1,1 @@
+Proportional-width stage surfaces narrow through a vertical sequence. The largest stage uses the primary accent and later stages use neutral surfaces. Labels remain in the full-width stage track outside the shape clipping, so a small conversion percentage does not destroy its name.

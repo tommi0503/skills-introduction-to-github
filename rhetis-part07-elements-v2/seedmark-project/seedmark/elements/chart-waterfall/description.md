@@ -1,0 +1,1 @@
+Rounded floating bars show each movement between its declared starting and ending total. Fine connectors meet consecutive totals; positive, negative and total moves have separate quiet/accent treatments. The baseline and period labels remain outside the coloured bars.

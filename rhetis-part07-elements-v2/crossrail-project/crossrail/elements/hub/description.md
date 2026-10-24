@@ -1,0 +1,1 @@
+A thin-rule radial hub connects independent peer fields to a circular central core. Three to six members retain their own labels and notes; the central core can contain a short name or an empty icon mark. The original semicircular peer track is not a radial hub and is recorded as an unsupported arc-track composition in GAPS.md.

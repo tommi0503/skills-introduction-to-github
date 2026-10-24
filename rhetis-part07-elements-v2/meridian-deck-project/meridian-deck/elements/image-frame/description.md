@@ -1,0 +1,1 @@
+A fine outlined picture frame encloses a quiet photographic seat. A small accent medallion with a plus sits at the upper corner, fully inside the assigned component box. Its inset and line weight match the measured picture-led cards.

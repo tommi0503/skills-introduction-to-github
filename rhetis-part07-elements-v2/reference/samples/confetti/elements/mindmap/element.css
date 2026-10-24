@@ -1,0 +1,68 @@
+:is(.body, .group, .split, .stack) > :is(.mindmap[data-el="confetti-mindmap"]) { container: member / size; }
+.stack > :is(.mindmap[data-el="confetti-mindmap"]) { flex: 1 1 0; min-height: 160px; }
+.mindmap[data-el="confetti-mindmap"] { display: grid; grid-template-columns: minmax(0, 1fr) fit-content(26%) minmax(0, 1fr); grid-template-rows: repeat(6, minmax(0, 1fr)); column-gap: 7%; min-width: 0; min-height: 0; isolation: isolate; --wire: color-mix(in srgb, var(--a1) 45%, var(--page)); }
+.mindmap[data-el="confetti-mindmap"] > * { --ns: var(--type-16); --ls: var(--type-14); --s: 1.5px; }
+.mindmap[data-el="confetti-mindmap"] > .core { grid-column: 2; grid-row: 1 / -1; align-self: center; z-index: 1; padding: calc(var(--pad) * 14 / 28) calc(var(--pad) * 24 / 28); border-radius: var(--radius); background: var(--a1); color: var(--a1-on); text-align: center; }
+.mindmap[data-el="confetti-mindmap"] > .core > .name { margin: 0; font-size: calc(var(--ns) * 1.25); font-weight: var(--title-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+.mindmap[data-el="confetti-mindmap"] > .branch { display: grid; grid-template-columns: auto minmax(0, max-content); align-content: center; align-items: center; justify-content: start; min-width: 0; min-height: 0; --cnt: 1; --j: 1; --t: var(--a1-6); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(1 of .branch) { --t: var(--a1-6); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(2 of .branch) { --t: var(--a3-5); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(3 of .branch) { --t: var(--a2-2); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(4 of .branch) { --t: var(--a2-3-soft); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(5 of .branch) { --t: var(--a2-4); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(6 of .branch) { --t: var(--a1-6); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(odd of .branch) { grid-column: 3; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(even of .branch) { grid-column: 1; grid-template-columns: minmax(0, max-content) auto; justify-content: end; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(2 of .branch)):not(:has(> .branch:nth-child(3 of .branch))) > .branch:nth-child(1 of .branch) { grid-row: 1 / span 6; --cnt: 1; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(2 of .branch)):not(:has(> .branch:nth-child(3 of .branch))) > .branch:nth-child(2 of .branch) { grid-row: 1 / span 6; --cnt: 1; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(3 of .branch)):not(:has(> .branch:nth-child(4 of .branch))) > .branch:nth-child(1 of .branch) { grid-row: 1 / span 3; --cnt: 2; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(3 of .branch)):not(:has(> .branch:nth-child(4 of .branch))) > .branch:nth-child(2 of .branch) { grid-row: 1 / span 6; --cnt: 1; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(3 of .branch)):not(:has(> .branch:nth-child(4 of .branch))) > .branch:nth-child(3 of .branch) { grid-row: 4 / span 3; --cnt: 2; --j: 2; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(4 of .branch)):not(:has(> .branch:nth-child(5 of .branch))) > .branch:nth-child(1 of .branch) { grid-row: 1 / span 3; --cnt: 2; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(4 of .branch)):not(:has(> .branch:nth-child(5 of .branch))) > .branch:nth-child(2 of .branch) { grid-row: 1 / span 3; --cnt: 2; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(4 of .branch)):not(:has(> .branch:nth-child(5 of .branch))) > .branch:nth-child(3 of .branch) { grid-row: 4 / span 3; --cnt: 2; --j: 2; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(4 of .branch)):not(:has(> .branch:nth-child(5 of .branch))) > .branch:nth-child(4 of .branch) { grid-row: 4 / span 3; --cnt: 2; --j: 2; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(5 of .branch)):not(:has(> .branch:nth-child(6 of .branch))) > .branch:nth-child(1 of .branch) { grid-row: 1 / span 2; --cnt: 3; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(5 of .branch)):not(:has(> .branch:nth-child(6 of .branch))) > .branch:nth-child(2 of .branch) { grid-row: 1 / span 3; --cnt: 2; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(5 of .branch)):not(:has(> .branch:nth-child(6 of .branch))) > .branch:nth-child(3 of .branch) { grid-row: 3 / span 2; --cnt: 3; --j: 2; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(5 of .branch)):not(:has(> .branch:nth-child(6 of .branch))) > .branch:nth-child(4 of .branch) { grid-row: 4 / span 3; --cnt: 2; --j: 2; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(5 of .branch)):not(:has(> .branch:nth-child(6 of .branch))) > .branch:nth-child(5 of .branch) { grid-row: 5 / span 2; --cnt: 3; --j: 3; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(6 of .branch)) > .branch:nth-child(1 of .branch) { grid-row: 1 / span 2; --cnt: 3; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(6 of .branch)) > .branch:nth-child(2 of .branch) { grid-row: 1 / span 2; --cnt: 3; --j: 1; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(6 of .branch)) > .branch:nth-child(3 of .branch) { grid-row: 3 / span 2; --cnt: 3; --j: 2; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(6 of .branch)) > .branch:nth-child(4 of .branch) { grid-row: 3 / span 2; --cnt: 3; --j: 2; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(6 of .branch)) > .branch:nth-child(5 of .branch) { grid-row: 5 / span 2; --cnt: 3; --j: 3; }
+.mindmap[data-el="confetti-mindmap"]:has(> .branch:nth-child(6 of .branch)) > .branch:nth-child(6 of .branch) { grid-row: 5 / span 2; --cnt: 3; --j: 3; }
+.mindmap[data-el="confetti-mindmap"] > .branch > .name { grid-row: 1 / span 4; margin: 0; padding: calc(var(--pad) * 8 / 28) calc(var(--pad) * 16 / 28); border-radius: var(--radius); font-size: var(--ns); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); white-space: nowrap; background: var(--page); border: var(--s) solid var(--wire); color: var(--a1); }}
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(odd of .branch) > .name { grid-column: 1; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(even of .branch) > .name { grid-column: 2; }
+.mindmap[data-el="confetti-mindmap"] > .branch.on > .name { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.mindmap[data-el="confetti-mindmap"] > .branch > .leaf { margin: 0; padding: 3px 0 3px 26px; font-size: var(--ls); font-weight: var(--body-weight); line-height: 1.35; color: var(--n-9); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: linear-gradient(var(--wire), var(--wire)) 12px 0 / 1px 100% no-repeat, linear-gradient(var(--wire), var(--wire)) 12px 50% / 10px 1px no-repeat; }
+.mindmap[data-el="confetti-mindmap"] > .branch > .leaf:nth-child(1 of .leaf) { background: linear-gradient(var(--wire), var(--wire)) 12px 100% / 1px 50% no-repeat, linear-gradient(var(--wire), var(--wire)) 0 50% / 22px 1px no-repeat; }
+.mindmap[data-el="confetti-mindmap"] > .branch > .leaf:nth-last-child(1 of .leaf) { background: linear-gradient(var(--wire), var(--wire)) 12px 0 / 1px 50% no-repeat, linear-gradient(var(--wire), var(--wire)) 12px 50% / 10px 1px no-repeat; }
+.mindmap[data-el="confetti-mindmap"] > .branch > .leaf:nth-child(1 of .leaf):nth-last-child(1 of .leaf) { background: linear-gradient(var(--wire), var(--wire)) 0 50% / 22px 1px no-repeat; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(odd of .branch) > .leaf { grid-column: 2; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(even of .branch) > .leaf { grid-column: 1; padding: 3px 26px 3px 0; text-align: right; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(even of .branch) > .leaf { background-position-x: right 12px, right 12px; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(even of .branch) > .leaf:nth-child(1 of .leaf) { background-position-x: right 12px, right 0; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(even of .branch) > .leaf:nth-child(1 of .leaf):nth-last-child(1 of .leaf) { background-position-x: right 0; }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(odd of .branch)::before { content: ""; position: absolute; z-index: -1; pointer-events: none; right: 100%; width: 7cqw; top: calc(50% - 50cqh); height: 100cqh; --dy: calc(((var(--j) - 0.5) / var(--cnt) - 0.5) * 100cqh); background: var(--wire); clip-path: polygon(0% calc(50% - var(--dy) * 1.0000 - var(--s) / 2), 10% calc(50% - var(--dy) * 0.9720 - var(--s) / 2), 20% calc(50% - var(--dy) * 0.8960 - var(--s) / 2), 30% calc(50% - var(--dy) * 0.7840 - var(--s) / 2), 40% calc(50% - var(--dy) * 0.6480 - var(--s) / 2), 50% calc(50% - var(--dy) * 0.5000 - var(--s) / 2), 60% calc(50% - var(--dy) * 0.3520 - var(--s) / 2), 70% calc(50% - var(--dy) * 0.2160 - var(--s) / 2), 80% calc(50% - var(--dy) * 0.1040 - var(--s) / 2), 90% calc(50% - var(--dy) * 0.0280 - var(--s) / 2), 100% calc(50% - var(--dy) * 0.0000 - var(--s) / 2), 100% calc(50% - var(--dy) * 0.0000 + var(--s) / 2), 90% calc(50% - var(--dy) * 0.0280 + var(--s) / 2), 80% calc(50% - var(--dy) * 0.1040 + var(--s) / 2), 70% calc(50% - var(--dy) * 0.2160 + var(--s) / 2), 60% calc(50% - var(--dy) * 0.3520 + var(--s) / 2), 50% calc(50% - var(--dy) * 0.5000 + var(--s) / 2), 40% calc(50% - var(--dy) * 0.6480 + var(--s) / 2), 30% calc(50% - var(--dy) * 0.7840 + var(--s) / 2), 20% calc(50% - var(--dy) * 0.8960 + var(--s) / 2), 10% calc(50% - var(--dy) * 0.9720 + var(--s) / 2), 0% calc(50% - var(--dy) * 1.0000 + var(--s) / 2)); }
+.mindmap[data-el="confetti-mindmap"] > .branch:nth-child(even of .branch)::before { content: ""; position: absolute; z-index: -1; pointer-events: none; left: 100%; width: 7cqw; top: calc(50% - 50cqh); height: 100cqh; --dy: calc(((var(--j) - 0.5) / var(--cnt) - 0.5) * 100cqh); background: var(--wire); clip-path: polygon(100% calc(50% - var(--dy) * 1.0000 - var(--s) / 2), 90% calc(50% - var(--dy) * 0.9720 - var(--s) / 2), 80% calc(50% - var(--dy) * 0.8960 - var(--s) / 2), 70% calc(50% - var(--dy) * 0.7840 - var(--s) / 2), 60% calc(50% - var(--dy) * 0.6480 - var(--s) / 2), 50% calc(50% - var(--dy) * 0.5000 - var(--s) / 2), 40% calc(50% - var(--dy) * 0.3520 - var(--s) / 2), 30% calc(50% - var(--dy) * 0.2160 - var(--s) / 2), 20% calc(50% - var(--dy) * 0.1040 - var(--s) / 2), 10% calc(50% - var(--dy) * 0.0280 - var(--s) / 2), 0% calc(50% - var(--dy) * 0.0000 - var(--s) / 2), 0% calc(50% - var(--dy) * 0.0000 + var(--s) / 2), 10% calc(50% - var(--dy) * 0.0280 + var(--s) / 2), 20% calc(50% - var(--dy) * 0.1040 + var(--s) / 2), 30% calc(50% - var(--dy) * 0.2160 + var(--s) / 2), 40% calc(50% - var(--dy) * 0.3520 + var(--s) / 2), 50% calc(50% - var(--dy) * 0.5000 + var(--s) / 2), 60% calc(50% - var(--dy) * 0.6480 + var(--s) / 2), 70% calc(50% - var(--dy) * 0.7840 + var(--s) / 2), 80% calc(50% - var(--dy) * 0.8960 + var(--s) / 2), 90% calc(50% - var(--dy) * 0.9720 + var(--s) / 2), 100% calc(50% - var(--dy) * 1.0000 + var(--s) / 2)); }
+@container member (min-width: 720px) and (min-height: 360px) {
+.mindmap[data-el="confetti-mindmap"] > * { --ns: var(--type-20); --ls: var(--type-16); }
+}
+@container member (min-width: 1000px) and (min-height: 480px) {
+.mindmap[data-el="confetti-mindmap"] > * { --ns: var(--type-24); --ls: var(--type-20); }
+}
+@container member (max-height: 239px) {
+.mindmap[data-el="confetti-mindmap"] > .branch > .leaf { display: none; }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-mindmap"][data-el="confetti-mindmap"][data-el="confetti-mindmap"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-mindmap"][data-el="confetti-mindmap"][data-el="confetti-mindmap"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+[data-el="confetti-mindmap"][data-el="confetti-mindmap"][data-el="confetti-mindmap"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf){border:var(--stroke) solid var(--ink);border-radius:var(--radius);background-color:var(--a2-3-soft);color:var(--ink);box-shadow:4px 5px 0 var(--ink);}
+[data-el="confetti-mindmap"][data-el="confetti-mindmap"][data-el="confetti-mindmap"] :is(.core,.root,.node.on,.node.end){background:var(--a3-5);color:var(--ink);}
+[data-el="confetti-mindmap"][data-el="confetti-mindmap"][data-el="confetti-mindmap"] :is(.node,.spoke,.core,.q,.end,.layer,.leaf,.root) :is(.name,.note,.kick){color:inherit;}
+
+[data-el="confetti-mindmap"][data-el="confetti-mindmap"][data-el="confetti-mindmap"]>.branch>.leaf:nth-child(n of .leaf),[data-el="confetti-mindmap"][data-el="confetti-mindmap"][data-el="confetti-mindmap"]>.branch>.leaf:nth-child(1 of .leaf):nth-last-child(1 of .leaf){background-color:var(--a2-3-soft);color:var(--ink)}

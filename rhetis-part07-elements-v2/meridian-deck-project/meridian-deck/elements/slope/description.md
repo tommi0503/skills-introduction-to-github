@@ -1,0 +1,1 @@
+Two moments share aligned before and after headings. Each pair draws a true diagonal between its measured endpoints, with open and filled circular value labels. The dumbbell variant turns the same pair into one horizontal row and reserves a genuine name gutter.

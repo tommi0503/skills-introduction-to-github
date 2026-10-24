@@ -1,0 +1,27 @@
+/* Fresh Crossrail design. Source measurements: ../../../../source-measurements.json; map ownership: ../../../../map.json. */
+.hub[data-el="crossrail-hub"]{box-sizing:border-box;container-type:size;position:relative;isolation:isolate;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);color:var(--ink);line-height:var(--body-line)}
+.hub[data-el="crossrail-hub"]>.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(24cqw,32cqh);height:min(24cqw,32cqh);border:1px solid var(--n-3);border-radius:50%;background:var(--page);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2}
+.hub[data-el="crossrail-hub"]>.core>.name{font-size:var(--type-24);line-height:var(--name-line);font-weight:var(--name-weight)}.hub[data-el="crossrail-hub"]>.core>.icon{width:35%;height:35%}
+.hub[data-el="crossrail-hub"]>.spoke{position:absolute;left:var(--crossrail-spoke-x);top:var(--crossrail-spoke-y);transform:translate(-50%,-50%);width:29%;height:29%;display:grid;grid-template-columns:var(--type-24) minmax(0,1fr);align-content:center;gap:calc(var(--gap-sm)/2);background:var(--page);box-sizing:border-box}
+.hub[data-el="crossrail-hub"]>.spoke::before{content:"";position:absolute;left:50%;top:50%;width:hypot(calc(50cqw - var(--crossrail-spoke-x)),calc(50cqh - var(--crossrail-spoke-y)));height:1px;background:var(--n-4);transform-origin:0 50%;transform:rotate(atan2(calc(50cqh - var(--crossrail-spoke-y)),calc(50cqw - var(--crossrail-spoke-x))));z-index:-1}
+.hub[data-el="crossrail-hub"]>.spoke>.mark{width:var(--type-24);height:var(--type-24);border:1px solid var(--n-3);border-radius:50%;display:flex;align-items:center;justify-content:center}.hub[data-el="crossrail-hub"]>.spoke>.mark>.icon{width:70%;height:70%}
+.hub[data-el="crossrail-hub"]>.spoke>.name{margin:0;align-self:center;font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line)}.hub[data-el="crossrail-hub"]>.spoke>.note{margin:0;grid-column:1/-1;font-size:var(--type-14);line-height:var(--body-line);color:var(--n-7)}
+@container(max-width:650px){.hub[data-el="crossrail-hub"]>.core>.name{font-size:var(--type-18)}.hub[data-el="crossrail-hub"]>.spoke>.name{font-size:var(--type-16)}.hub[data-el="crossrail-hub"]>.spoke>.note{font-size:var(--type-12)}}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(3 of .spoke):last-child)>.spoke:nth-child(1 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:18cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(3 of .spoke):last-child)>.spoke:nth-child(2 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:82cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(3 of .spoke):last-child)>.spoke:nth-child(3 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:50cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(4 of .spoke):last-child)>.spoke:nth-child(1 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:18cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(4 of .spoke):last-child)>.spoke:nth-child(2 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:82cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(4 of .spoke):last-child)>.spoke:nth-child(3 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:18cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(4 of .spoke):last-child)>.spoke:nth-child(4 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:82cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(5 of .spoke):last-child)>.spoke:nth-child(1 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:18cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(5 of .spoke):last-child)>.spoke:nth-child(2 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:50cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(5 of .spoke):last-child)>.spoke:nth-child(3 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:82cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(5 of .spoke):last-child)>.spoke:nth-child(4 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:18cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(5 of .spoke):last-child)>.spoke:nth-child(5 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:82cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(6 of .spoke):last-child)>.spoke:nth-child(1 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:18cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(6 of .spoke):last-child)>.spoke:nth-child(2 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:50cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(6 of .spoke):last-child)>.spoke:nth-child(3 of .spoke){--crossrail-spoke-x:15cqw;--crossrail-spoke-y:82cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(6 of .spoke):last-child)>.spoke:nth-child(4 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:18cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(6 of .spoke):last-child)>.spoke:nth-child(5 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:50cqh}
+.hub[data-el="crossrail-hub"]:has(>.spoke:nth-child(6 of .spoke):last-child)>.spoke:nth-child(6 of .spoke){--crossrail-spoke-x:85cqw;--crossrail-spoke-y:82cqh}

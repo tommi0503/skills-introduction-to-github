@@ -1,0 +1,1 @@
+An ink central capsule distributes into balanced left and right branch columns. Curved element-owned links use actual core and branch anchors; branch count determines rows and connector direction. Leaf text is separated by quiet rules within the branch surface.

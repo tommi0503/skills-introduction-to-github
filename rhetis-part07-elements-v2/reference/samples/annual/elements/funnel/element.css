@@ -1,0 +1,20 @@
+.stack > :is(.funnel[data-el="annual-funnel"]) { flex: 1 1 0; min-height: 0; }
+.funnel[data-el="annual-funnel"] { container: funnel / size; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+.funnel[data-el="annual-funnel"] > :nth-child(1 of .stage) { --i: 0; }
+.funnel[data-el="annual-funnel"] > :nth-child(2 of .stage) { --i: 1; }
+.funnel[data-el="annual-funnel"] > :nth-child(3 of .stage) { --i: 2; }
+.funnel[data-el="annual-funnel"] > :nth-child(4 of .stage) { --i: 3; }
+.funnel[data-el="annual-funnel"] > :nth-child(5 of .stage) { --i: 4; }
+.funnel[data-el="annual-funnel"] > :nth-child(6 of .stage) { --i: 5; }
+.funnel[data-el="annual-funnel"]:has(> :nth-child(2 of .stage)) > * { --n: 2; }
+.funnel[data-el="annual-funnel"]:has(> :nth-child(3 of .stage)) > * { --n: 3; }
+.funnel[data-el="annual-funnel"]:has(> :nth-child(4 of .stage)) > * { --n: 4; }
+.funnel[data-el="annual-funnel"]:has(> :nth-child(5 of .stage)) > * { --n: 5; }
+.funnel[data-el="annual-funnel"]:has(> :nth-child(6 of .stage)) > * { --n: 6; }
+
+.funnel[data-el="annual-funnel"] > .stage { flex: 1 1 0; min-height: 0; max-height: 96px; align-self: center; width: max(calc(var(--v) * 1%), 30%); display: flex; align-items: center; justify-content: space-between; gap: var(--gap-sm); padding: 0 clamp(12px, 3cqw, 32px); background: color-mix(in srgb, var(--a1) calc(100% - var(--i) * 70% / max(var(--n) - 1, 1)), var(--annual-deco)); color: color-mix(in srgb, var(--a1-on) calc(round(down, 1.55 - var(--i) / max(var(--n) - 1, 1), 1) * 100%), var(--a1)); }
+.funnel[data-el="annual-funnel"] > .stage > .name { min-width: 0; font-size: var(--ff, var(--type-14)); line-height: 1.25; font-weight: var(--name-weight); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.funnel[data-el="annual-funnel"] > .stage > .fig { font-family: var(--font-display), sans-serif; font-size: var(--fg, var(--type-24)); line-height: 1; font-weight: var(--figure-weight); white-space: nowrap; }
+@container funnel (min-width: 600px) and (min-height: 340px) {
+.funnel[data-el="annual-funnel"] > .stage { --ff: var(--type-18); --fg: var(--type-32); }
+}

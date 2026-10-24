@@ -1,0 +1,1 @@
+Plans as tall panels outlined by a pale accent hairline, the marked plan solid accent: a bold name, the price large in the condensed squared display face with a small light unit over a hairline, then a list of light lines each led by a drawn tick; a small pale square label can sit in the top right corner.

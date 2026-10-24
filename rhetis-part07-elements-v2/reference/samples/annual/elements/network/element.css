@@ -1,0 +1,17 @@
+.stack > :is(.network[data-el="annual-network"]) { flex: 1 1 0; min-height: 0; }
+.network[data-el="annual-network"] { container: net / size; min-width: 0; min-height: 0; color: var(--a1); }
+.network[data-el="annual-network"] > * { --W: calc(100cqw - 120px); --H: calc(100cqh - 80px); }
+.network[data-el="annual-network"] > .link { position: absolute; z-index: 0; --dx: calc((var(--x2) - var(--x1)) * var(--W) / 100); --dy: calc((var(--y2) - var(--y1)) * var(--H) / 100); left: calc(60px + var(--x1) * var(--W) / 100); top: calc(36px + var(--y1) * var(--H) / 100); width: hypot(var(--dx), var(--dy)); height: 0; border-top: var(--stroke) dotted var(--a1); transform-origin: 0 0; rotate: atan2(var(--dy), var(--dx)); }
+.network[data-el="annual-network"] > .link.strong { border-top: 3px solid var(--a1); }
+.network[data-el="annual-network"] > .node { --c: var(--a1); position: absolute; z-index: 1; left: calc(60px + var(--x) * var(--W) / 100); top: calc(36px + var(--y) * var(--H) / 100); width: 0; height: 0; }
+.network[data-el="annual-network"] > .node::before { content: ""; position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; border-radius: 50%; background: var(--page); box-shadow: inset 0 0 0 7px var(--c); }
+.network[data-el="annual-network"] > .node.on::before { background: var(--c); box-shadow: 0 0 0 8px var(--annual-deco); }
+.network[data-el="annual-network"] > .node.tone-1 { --c: var(--a1-7); }
+.network[data-el="annual-network"] > .node.tone-2 { --c: var(--n-6); }
+.network[data-el="annual-network"] > .node.tone-3 { --c: var(--a1-4-soft); }
+.network[data-el="annual-network"] > .node.tone-4 { --c: var(--a1-8-soft); }
+.network[data-el="annual-network"] > .node.tone-5 { --c: var(--n-3); }
+.network[data-el="annual-network"] > .node > .name { position: absolute; left: 0; top: 28px; translate: -50% 0; padding: 0 4px; background: color-mix(in srgb, var(--page) 80%, transparent); font-size: var(--nf, var(--type-14)); line-height: 1.2; font-weight: var(--name-weight); color: var(--a1); white-space: nowrap; }
+@container net (min-width: 800px) and (min-height: 400px) {
+.network[data-el="annual-network"] > .node > .name { --nf: var(--type-16); }
+}

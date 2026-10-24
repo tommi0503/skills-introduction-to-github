@@ -1,0 +1,21 @@
+.stack > :is(.swimlane[data-el="annual-swimlane"]) { flex: 1 1 0; min-height: 0; }
+.swimlane[data-el="annual-swimlane"] { container: swim / size; min-width: 0; min-height: 0; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); grid-auto-rows: minmax(0, 1fr); padding-left: clamp(90px, 15cqw, 170px); color: var(--a1); }
+.swimlane[data-el="annual-swimlane"] > .lane { grid-column: 1 / -1; margin-left: calc(-1 * clamp(90px, 15cqw, 170px)); display: flex; align-items: center; padding-left: 4px; border-top: var(--hair) solid var(--n-3); }
+.swimlane[data-el="annual-swimlane"] > .lane:nth-child(odd of .lane) { background: color-mix(in srgb, var(--annual-deco) 45%, transparent); }
+.swimlane[data-el="annual-swimlane"] > .lane:nth-last-child(1 of .lane) { border-bottom: var(--hair) solid var(--n-3); }
+.swimlane[data-el="annual-swimlane"] > .lane > .name { width: calc(clamp(90px, 15cqw, 170px) - 16px); padding-left: 10px; border-left: 4px solid var(--a1); font-size: var(--ff, var(--type-14)); line-height: 1.25; font-weight: var(--name-weight); color: var(--a1); }
+
+.swimlane[data-el="annual-swimlane"] > .node { --c: var(--a1); align-self: center; justify-self: center; width: 80%; height: 60%; min-width: 0; min-height: 0; display: grid; place-items: center; padding: 4px 10px; background: var(--annual-deco); color: var(--a1); text-align: center; font-size: var(--ff, var(--type-14)); line-height: 1.25; font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.swimlane[data-el="annual-swimlane"] > .node > .name { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.swimlane[data-el="annual-swimlane"] > .node.start { border-radius: 999px; background: var(--a1); color: var(--a1-on); }
+.swimlane[data-el="annual-swimlane"] > .node.end { border-radius: 999px; background: var(--page); box-shadow: inset 0 0 0 var(--stroke) var(--a1); }
+.swimlane[data-el="annual-swimlane"] > .node.ask { padding: 4px 20%; background: linear-gradient(to bottom right, transparent 49.5%, var(--annual-deco) 50%) 0 0 / 50% 50% no-repeat, linear-gradient(to bottom left, transparent 49.5%, var(--annual-deco) 50%) 100% 0 / 50% 50% no-repeat, linear-gradient(to top right, transparent 49.5%, var(--annual-deco) 50%) 0 100% / 50% 50% no-repeat, linear-gradient(to top left, transparent 49.5%, var(--annual-deco) 50%) 100% 100% / 50% 50% no-repeat; }
+.swimlane[data-el="annual-swimlane"] > :is(.node.to-r, .node.to-l)::before, .swimlane[data-el="annual-swimlane"] > :is(.node.to-d, .node.to-u)::after { content: ""; position: absolute; z-index: 1; pointer-events: none; background: var(--c); }
+.swimlane[data-el="annual-swimlane"] > .node.to-r::before { left: 100%; top: calc(50% - 6px); width: 25%; height: 12px; clip-path: polygon(0 calc(50% - 1px), calc(100% - 10px) calc(50% - 1px), calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, calc(100% - 10px) calc(50% + 1px), 0 calc(50% + 1px)); }
+.swimlane[data-el="annual-swimlane"] > .node.to-l::before { right: 100%; top: calc(50% - 6px); width: 25%; height: 12px; clip-path: polygon(100% calc(50% - 1px), 10px calc(50% - 1px), 10px 0, 0 50%, 10px 100%, 10px calc(50% + 1px), 100% calc(50% + 1px)); }
+.swimlane[data-el="annual-swimlane"] > .node.to-d::after { top: 100%; left: calc(50% - 6px); height: 66.67%; width: 12px; clip-path: polygon(calc(50% - 1px) 0, calc(50% - 1px) calc(100% - 10px), 0 calc(100% - 10px), 50% 100%, 100% calc(100% - 10px), calc(50% + 1px) calc(100% - 10px), calc(50% + 1px) 0); }
+.swimlane[data-el="annual-swimlane"] > .node.to-u::after { bottom: 100%; left: calc(50% - 6px); height: 66.67%; width: 12px; clip-path: polygon(calc(50% - 1px) 100%, calc(50% - 1px) 10px, 0 10px, 50% 0, 100% 10px, calc(50% + 1px) 10px, calc(50% + 1px) 100%); }
+
+@container swim (min-width: 800px) and (min-height: 360px) {
+.swimlane[data-el="annual-swimlane"] > * { --ff: var(--type-16); }
+}

@@ -1,0 +1,1 @@
+Two quiet panels face each other across a small VS register. Their headings align and their lists retain a steady rhythm. A pale accent treatment distinguishes the highlighted side while the common thin rule holds both sides together.

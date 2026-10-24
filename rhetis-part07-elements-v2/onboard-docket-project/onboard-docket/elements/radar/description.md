@@ -1,0 +1,1 @@
+Thin circular guides and evenly spaced spokes frame transparent data polygons. Compact axis captions stay outside the circle and series names form a separate lower legend. Ranked accent roles distinguish overlapping profiles while preserving the deck’s large simple circles and unembellished fine lines.

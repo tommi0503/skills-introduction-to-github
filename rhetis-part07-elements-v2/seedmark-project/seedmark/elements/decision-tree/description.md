@@ -1,0 +1,1 @@
+Outlined question capsules connect through compact condition labels to outcomes or deeper questions. Fine branch rules belong to the whole tree. Recommended outcomes use a matching accent/on-colour pair; nested choices retain the same question rhythm.

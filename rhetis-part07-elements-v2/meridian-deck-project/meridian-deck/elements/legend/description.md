@@ -1,0 +1,1 @@
+Two vertically ordered keys retain the measured 42 by 8 line swatches and small ten-point labels at every container size. The swatch is always distinct from its label; widening the box never converts a chart key into a filled capsule. Tone classes colour only the swatches.

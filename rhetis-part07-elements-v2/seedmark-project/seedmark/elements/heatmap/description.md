@@ -1,0 +1,1 @@
+Compact header labels and row names frame a neutral grid whose cells vary by value through soft accent strength. The calendar form omits row labels and computes a shared square cell size from both available dimensions and its own row/column counts.

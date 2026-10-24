@@ -1,0 +1,1 @@
+Square stacked columns expose each numeric segment beside its own vertical center. Categories share a lower label band and one outlined column can mark the focus. Percentage bars use a fixed whole, while the horizontal variant moves figures below their corresponding segments and keeps categories at the left.

@@ -1,0 +1,27 @@
+<!-- min: 3x6 -->
+<div class="code numbered" style="grid-column:1 / span 12; grid-row:1 / span 6" data-el="confetti-code"><p class="name">deploy.yaml</p><div class="lines">
+<p><span class="c"># 배포 설정</span></p>
+<p>service: <span class="s">billing-api</span></p>
+<p>region: <span class="s">ap-northeast-2</span></p>
+<p>replicas: <span class="n">3</span></p>
+<p>resources:</p>
+<p>  cpu: <span class="s">500m</span></p>
+<p>  memory: <span class="s">1Gi</span></p>
+<p>env:</p>
+<p>  - name: DB_POOL</p>
+<p>    value: <span class="s">"20"</span></p>
+<p>  - name: CACHE_TTL</p>
+<p>    value: <span class="s">"300"</span></p>
+<p>healthcheck:</p>
+<p>  path: <span class="s">/health</span></p>
+<p>  interval: <span class="s">10s</span></p>
+<p>  timeout: <span class="s">2s</span></p>
+<p>autoscale:</p>
+<p>  min: <span class="n">3</span></p>
+<p>  max: <span class="n">12</span></p>
+<p>  cpu_target: <span class="n">65</span></p>
+<p>alerts:</p>
+<p>  - error_rate &gt; 1%</p>
+<p>  - p95_latency &gt; 400ms</p>
+<p><span class="c"># 마지막 수정 2026-10-12</span></p>
+</div></div>

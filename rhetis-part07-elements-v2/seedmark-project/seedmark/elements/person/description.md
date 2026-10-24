@@ -1,0 +1,1 @@
+A large circular avatar or portrait rectangle leads each profile. Strong names, quiet roles and an optional left-aligned career list sit below. Avatar size is limited by both the member width and the text space beneath it, so a row remains inside its slots.

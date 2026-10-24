@@ -1,0 +1,1 @@
+Rectangular bands preserve segment order and a stable label baseline. Ordinal series use distinct palette ranks even without explicit tone classes; percent and horizontal forms retain the same division grammar.

@@ -1,0 +1,1 @@
+The metric uses a single scalable Vectorbox construction: hairline geometry, circular emphasis and aligned sans-serif type. Contract variants change their stated emphasis or direction, while the same rules govern all fixture content.

@@ -1,0 +1,1 @@
+A central accent capsule relates to quiet branches on both sides. Branch headings and leaves remain separate text registers, while the complete root owns the connecting paths to the centre. Member count changes the number of rows rather than the semantics.

@@ -1,0 +1,22 @@
+/* Measured base: page 3, bbox [84, 329, 465, 247]. Own-container geometry; no page or fixture condition. */
+.prose[data-el="seedmark-prose"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.prose[data-el="seedmark-prose"] *{box-sizing:border-box;}
+.prose[data-el="seedmark-prose"] :is(p,h2,h3,blockquote){margin:0;}
+.prose[data-el="seedmark-prose"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.prose[data-el="seedmark-prose"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.prose[data-el="seedmark-prose"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.prose[data-el="seedmark-prose"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.prose[data-el="seedmark-prose"] .seat:after{content:attr(data-ph);}
+.prose[data-el="seedmark-prose"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:0;}
+.prose[data-el="seedmark-prose"] p{font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere;}
+.prose[data-el="seedmark-prose"] b{font-weight:var(--name-weight)}
+.prose[data-el="seedmark-prose"].lead p{font-size:clamp(var(--type-18),min(24cqw,65cqh),var(--type-28));font-weight:var(--lead-weight);line-height:var(--lead-line)}
+.prose[data-el="seedmark-prose"].quiet{color:var(--n-7)}
+.prose[data-el="seedmark-prose"].cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap-lg);align-content:center;}
+.prose[data-el="seedmark-prose"].cols p{grid-column:auto;}
+@container(max-width:500px){.prose[data-el="seedmark-prose"] p{font-size:var(--type-16)}
+.prose[data-el="seedmark-prose"].lead p{font-size:clamp(var(--type-18),min(24cqw,65cqh),var(--type-28));}
+.prose[data-el="seedmark-prose"].cols p{grid-column:span 2}}
+@container(max-height:150px){.prose[data-el="seedmark-prose"] p{font-size:var(--type-14)}
+.prose[data-el="seedmark-prose"].lead p{font-size:clamp(var(--type-18),min(24cqw,65cqh),var(--type-28));}}
+@container(max-height:250px){.prose[data-el="seedmark-prose"] p:has(>br:nth-of-type(6)){margin-bottom:auto;font-size:var(--type-14);}}

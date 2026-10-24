@@ -1,0 +1,20 @@
+.stack > :is(.pill[data-el="annual-pill"]) { flex: 0 0 auto; align-self: stretch; }
+.pill[data-el="annual-pill"] { container: member / inline-size; min-width: 0; align-self: center; color: var(--ink); --disc: var(--a1); --disc-ink: var(--page); }
+.pill[data-el="annual-pill"] > .parts { --nm: var(--type-16); --nt: var(--type-14); display: flex; align-items: center; gap: clamp(8px, 3cqw, var(--gap-sm)); min-width: 0; min-height: 44px; padding: 4px clamp(14px, 4cqw, var(--pad)) 4px 4px; border-radius: 999px; background: var(--n-2); }
+.pill[data-el="annual-pill"] > .parts:not(:has(> .mark)) { padding-left: clamp(14px, 4cqw, var(--pad)); }
+.pill[data-el="annual-pill"].on > .parts { background: var(--a1); color: var(--a1-on); --disc: var(--a1-on); --disc-ink: var(--a1); }
+.pill[data-el="annual-pill"].quiet > .parts { background: transparent; box-shadow: inset 0 0 0 var(--hair) var(--n-3); }
+.pill[data-el="annual-pill"].line > .parts { background: transparent; box-shadow: inset 0 0 0 var(--hair) var(--a1); }
+.pill[data-el="annual-pill"] > .parts > .mark { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--disc); color: var(--disc-ink); font-family: var(--font-display), sans-serif; font-size: var(--type-20); line-height: 1; }
+.pill[data-el="annual-pill"] > .parts > .mark > .icon { width: 55%; height: 55%; }
+.pill[data-el="annual-pill"] > .parts > .name { flex: none; max-width: 60%; font-size: var(--nm); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); color: var(--a1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pill[data-el="annual-pill"].on > .parts > .name { color: var(--a1-on); }
+.pill[data-el="annual-pill"] > .parts > .note { flex: 1 1 auto; min-width: 0; font-size: var(--nt); line-height: var(--label-line); font-weight: var(--lead-weight); color: var(--n-6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pill[data-el="annual-pill"].on > .parts > .note { color: color-mix(in srgb, var(--a1-on) 84%, var(--a1)); }
+@container member (min-width: 420px) {
+.pill[data-el="annual-pill"] > .parts { --nm: var(--type-20); --nt: var(--type-16); min-height: 56px; }
+.pill[data-el="annual-pill"] > .parts > .mark { width: 48px; height: 48px; font-size: var(--type-24); }
+}
+@container member (max-width: 220px) {
+.pill[data-el="annual-pill"] > .parts > .note { display: none; }
+}

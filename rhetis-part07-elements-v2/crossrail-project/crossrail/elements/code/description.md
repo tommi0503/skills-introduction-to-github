@@ -1,0 +1,1 @@
+A monospaced listing sits between a strong top rule and a quiet lower rule. A separate file label, preserved indentation, and optional counter-generated line numbers keep source readable; token colour remains subordinate to the text.

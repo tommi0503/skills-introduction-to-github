@@ -1,0 +1,1 @@
+A fine elliptical track connects compact outlined nodes around a central accent core. Own node count determines the angular positions. The nodes keep a fixed share of the allotted footprint, and their names step down when the whole cycle narrows.

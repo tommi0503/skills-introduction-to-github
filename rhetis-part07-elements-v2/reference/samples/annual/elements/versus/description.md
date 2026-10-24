@@ -1,0 +1,1 @@
+Two flat square-cornered panels side by side, the left pale and the right solid accent when marked, each with a name in the condensed squared display face over a dotted light list; between them a round mark outlined in the accent overlaps both edges and carries the vs in the display face.

@@ -1,0 +1,1 @@
+Small inline capsules mark status while a separate running highlight applies a pale accent behind selected words. Both use the same modest weight and rounded edge as larger labels, preserving the surrounding sentence flow.

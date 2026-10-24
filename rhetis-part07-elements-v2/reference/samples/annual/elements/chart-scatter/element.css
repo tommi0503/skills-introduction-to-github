@@ -1,0 +1,24 @@
+.stack > :is(.scatter[data-el="annual-chart-scatter"]) { flex: 1 1 0; min-height: 0; }
+.scatter[data-el="annual-chart-scatter"] { container: scatter / size; min-width: 0; min-height: 0; color: var(--n-6); }
+.scatter[data-el="annual-chart-scatter"] > * { --l: 30px; --b: 30px; --pw: calc(100cqw - var(--l) - 16px); --ph: calc(100cqh - var(--b) - 16px); }
+.scatter[data-el="annual-chart-scatter"]::before { content: ""; position: absolute; left: 30px; top: 0; bottom: 30px; border-left: var(--stroke) solid var(--n-6); }
+.scatter[data-el="annual-chart-scatter"]::after { content: ""; position: absolute; left: 30px; right: 0; bottom: 30px; border-bottom: var(--stroke) solid var(--n-6); }
+.scatter[data-el="annual-chart-scatter"] > .axis-x { position: absolute; right: 0; bottom: 0; height: 30px; display: grid; place-items: center end; font-size: var(--type-12); line-height: 1; font-weight: var(--label-weight); white-space: nowrap; }
+.scatter[data-el="annual-chart-scatter"] > .axis-y { position: absolute; left: 0; top: 0; width: 30px; writing-mode: vertical-rl; display: grid; place-items: start center; font-size: var(--type-12); line-height: 1; font-weight: var(--label-weight); white-space: nowrap; }
+.scatter[data-el="annual-chart-scatter"] > .dot { --d: 18px; --c: var(--a1); position: absolute; left: calc(var(--l) + 8px + var(--pw) * var(--x) / var(--xmax) - var(--d) / 2); bottom: calc(var(--b) + 8px + var(--ph) * var(--y) / var(--ymax) - var(--d) / 2); width: var(--d); height: var(--d); border-radius: 50%; background: var(--c); }
+.scatter[data-el="annual-chart-scatter"] > .dot.on { box-shadow: 0 0 0 8px var(--annual-deco); }
+.scatter[data-el="annual-chart-scatter"] > .dot.tone-1 { --c: var(--a1-7); }
+.scatter[data-el="annual-chart-scatter"] > .dot.tone-2 { --c: var(--n-6); }
+.scatter[data-el="annual-chart-scatter"] > .dot.tone-3 { --c: var(--a1-4-soft); }
+.scatter[data-el="annual-chart-scatter"] > .dot.tone-4 { --c: var(--a1-8-soft); }
+.scatter[data-el="annual-chart-scatter"] > .dot.tone-5 { --c: var(--n-3); }
+
+.scatter[data-el="annual-chart-scatter"] > .dot > span { position: absolute; left: calc(100% + 6px); bottom: 70%; font-size: var(--type-12); line-height: 1.2; font-weight: var(--label-weight); color: var(--n-6); white-space: nowrap; }
+.scatter[data-el="annual-chart-scatter"] > .dot.on > span { color: var(--a1); font-weight: var(--name-weight); }
+.scatter[data-el="annual-chart-scatter"].bubble > .dot { --d: calc(16px + min(var(--pw), var(--ph)) * 0.28 * var(--r) / 100); background: color-mix(in srgb, var(--c) 78%, transparent); }
+.scatter[data-el="annual-chart-scatter"].bubble > .dot > span { left: 50%; bottom: 50%; translate: -50% 50%; color: var(--a1-on); }
+@container scatter (min-width: 600px) and (min-height: 360px) {
+.scatter[data-el="annual-chart-scatter"] > * { --l: 36px; }
+.scatter[data-el="annual-chart-scatter"] > .dot { --d: 22px; }
+.scatter[data-el="annual-chart-scatter"] > .dot > span { font-size: var(--type-14); }
+}

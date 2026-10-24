@@ -1,0 +1,1 @@
+Nested rectangles follow the supplied branch and tile shares. Each branch owns a quiet heading register and its vertically stacked proportional tiles; one primary tile receives an accent fill while names and figures stay inside their rectangles.

@@ -1,0 +1,1 @@
+Square-ended bars grow from a shared hairline baseline. Values sit beyond each end and category labels occupy a separate band; the horizontal variant reserves a left gutter for names. A single solid accent bar provides emphasis, with quiet bars and ranked tones retaining the same width and alignment.

@@ -1,0 +1,1 @@
+Source text on a flat pale square-cornered panel ruled with a thick accent top edge, the file name in the condensed squared display face over a hairline; lines are small and light with leading spaces kept, keywords bold in the accent, strings in a deep tone, comments muted and slanted, numbers in the accent; numbered blocks set muted line numbers at the left.

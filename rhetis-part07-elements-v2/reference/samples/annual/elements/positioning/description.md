@@ -1,0 +1,1 @@
+Competitors placed on two axes crossing at the centre as two-pixel secondary rules with small end labels: rivals are small pale accent dots with secondary names, our mark a large ring with a thick accent rim and plain face, named in the accent inside; logos sit on flat pale tiles.

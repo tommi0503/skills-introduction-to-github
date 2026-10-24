@@ -1,0 +1,30 @@
+:is(.body, .group, .split, .stack) > :is(.code[data-el="amethyst-code"]) { container: member / size; }
+.stack > :is(.code[data-el="amethyst-code"]) { flex: 1 1 0; min-height: 96px; }
+.code[data-el="amethyst-code"] { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; background: var(--page); border: 1px solid var(--a1-2-muted); border-radius: var(--radius); }
+.code[data-el="amethyst-code"] > * { --cs: var(--type-14); }
+.code[data-el="amethyst-code"] > .name { flex: none; display: flex; align-items: center; gap: calc(var(--gap) * 8 / 24); margin: 0; padding: calc(var(--pad) * 8 / 28) calc(var(--pad) * 18 / 28); border-bottom: 1px solid var(--a1-2-muted); background: var(--n-1); font-size: var(--type-14); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-8); }
+.code[data-el="amethyst-code"] > .name::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 3px; background: var(--a1); }
+.code[data-el="amethyst-code"] > .lines { flex: 1 1 auto; min-height: 0; padding: calc(var(--pad) * 14 / 28) calc(var(--pad) * 20 / 28); counter-reset: ln; font-family: 'Nanum Gothic Coding'; font-size: var(--cs); line-height: 1.6; color: var(--ink); font-variant-ligatures: none; tab-size: 4; }
+.code[data-el="amethyst-code"] > .lines > p { margin: 0; min-height: 1.6em; white-space: pre; overflow: hidden; text-overflow: ellipsis; }
+.code[data-el="amethyst-code"] > .lines .k { color: var(--a1); font-weight: 600; }
+.code[data-el="amethyst-code"] > .lines .s { color: color-mix(in srgb, var(--a1-5) 80%, var(--ink)); }
+.code[data-el="amethyst-code"] > .lines .n { color: color-mix(in srgb, var(--a1-8-soft) 85%, var(--ink)); }
+.code[data-el="amethyst-code"] > .lines .c { color: var(--n-6); font-style: italic; }
+.code[data-el="amethyst-code"].numbered > .lines > p { counter-increment: ln; }
+.code[data-el="amethyst-code"].numbered > .lines > p::before { content: counter(ln); display: inline-block; width: 2.4em; margin-right: 1.2em; padding-right: 0.8em; border-right: 1px solid var(--a1-2-muted); text-align: right; color: var(--n-6); font-style: normal; font-weight: 400; }
+@container member (min-height: 300px) and (min-width: 520px) {
+.code[data-el="amethyst-code"] > * { --cs: var(--type-16); }
+}
+@container member (min-height: 520px) and (min-width: 760px) {
+.code[data-el="amethyst-code"]:not(:has(> .lines > p:nth-child(16))) > * { --cs: var(--type-20); }
+}
+@container member (max-height: 400px) {
+.code[data-el="amethyst-code"]:has(> .lines > p:nth-child(13)) > * { --cs: var(--type-12); }
+}
+@container member (min-height: 300px) {
+.code[data-el="amethyst-code"]:has(> .lines > p:nth-child(19)) > * { --cs: var(--type-14); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-code"][data-el="amethyst-code"][data-el="amethyst-code"] { color:var(--ink); }
+[data-el="amethyst-code"][data-el="amethyst-code"][data-el="amethyst-code"] { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }

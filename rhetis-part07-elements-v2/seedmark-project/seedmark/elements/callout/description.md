@@ -1,0 +1,2 @@
+A restrained pale rounded strip centres one complete sentence. The essential phrase receives a soft accent highlight and two fine vertical boundaries. An optional icon has a fixed compact footprint beside the sentence. Width and height queries reduce the sentence through discrete readable steps.
+ The source conclusion strip is bounded to its measured78px height and aligned at the end of its assigned slot. It keeps full width inside a stack instead of stretching into a large panel.

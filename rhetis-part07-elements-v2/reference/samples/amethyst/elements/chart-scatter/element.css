@@ -1,0 +1,31 @@
+:is(.body, .group, .split, .stack) > :is(.scatter[data-el="amethyst-chart-scatter"]) { container: member / size; }
+.stack > :is(.scatter[data-el="amethyst-chart-scatter"]) { flex: 1 1 0; min-height: 120px; }
+.scatter[data-el="amethyst-chart-scatter"] { min-width: 0; min-height: 0; isolation: isolate; --ground: var(--page); }
+.scatter[data-el="amethyst-chart-scatter"] > * { --bl: var(--type-14); --pt: calc(var(--bl) * 1.35 + var(--gap-sm)); --pb: calc(var(--bl) * 1.35 + var(--gap-sm)); --m: 14px; --d: 12px; }
+.scatter[data-el="amethyst-chart-scatter"] > :is(.axis-x, .axis-y) { position: absolute; font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); white-space: nowrap; }
+.scatter[data-el="amethyst-chart-scatter"] > .axis-y { left: 0; top: 0; right: 0; height: var(--pt); }
+.scatter[data-el="amethyst-chart-scatter"] > .axis-y::after { content: ""; position: absolute; left: 0; top: var(--pt); height: calc(100cqh - var(--pt) - var(--pb)); width: var(--stroke); background: var(--a1-2-muted); }
+.scatter[data-el="amethyst-chart-scatter"] > .axis-x { left: 0; right: 0; bottom: 0; height: var(--pb); display: flex; align-items: flex-end; justify-content: flex-end; border-top: var(--stroke) solid var(--a1-2-muted); }
+.scatter[data-el="amethyst-chart-scatter"] > .axis-x::after { content: "0"; position: absolute; left: 0; top: calc(var(--gap) * 2 / 24); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot { position: absolute; z-index: 1; width: var(--d); height: var(--d); left: calc(var(--m) + var(--x) / var(--xmax, 100) * (100cqw - 2 * var(--m)) - var(--d) / 2); bottom: calc(var(--pb) + var(--m) + var(--y) / var(--ymax, 100) * (100cqh - var(--pt) - var(--pb) - 2 * var(--m)) - var(--d) / 2); border-radius: 50%; background: var(--c); --c: color-mix(in srgb, var(--a1) 34%, var(--a1-2-muted)); }
+.scatter[data-el="amethyst-chart-scatter"]:not(:has(> .dot.on)) > .dot { --c: var(--a1); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot.tone-1 { --c: var(--a1-7); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot.tone-2 { --c: var(--a1-5); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot.tone-3 { --c: var(--a2-1); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot.tone-4 { --c: var(--a1-4-soft); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot.tone-5 { --c: var(--a1-8-soft); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot.on { z-index: 2; --c: var(--a1); box-shadow: 0 0 0 calc(var(--d) / 2) color-mix(in srgb, var(--a1) 24%, transparent); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot > span { position: absolute; left: calc(100% + var(--gap) * 6 / 24); top: 50%; --flip: clamp(0, (var(--x) / var(--xmax, 100) - 0.72) * 100, 1); translate: calc(var(--flip) * (-100% - var(--d) - var(--gap) * 12 / 24)) -50%; font-size: var(--bl); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-8); white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke: 4px var(--ground); }
+.scatter[data-el="amethyst-chart-scatter"] > .dot.on > span { color: var(--a1); }
+.scatter[data-el="amethyst-chart-scatter"].bubble > .dot { --dmax: min(96px, 18cqh, 12cqw); --d: calc(14px + sqrt(var(--r, 0) / 100) * var(--dmax)); background: color-mix(in srgb, var(--c) 72%, transparent); border: var(--stroke) solid var(--ground); }
+.scatter[data-el="amethyst-chart-scatter"].bubble > .dot.on { background: var(--c); box-shadow: none; }
+.scatter[data-el="amethyst-chart-scatter"].bubble > .dot > span { left: 50%; top: 50%; translate: -50% -50%; color: var(--ink); }
+@container member (min-width: 480px) and (min-height: 300px) {
+.scatter[data-el="amethyst-chart-scatter"] > * { --bl: var(--type-16); --d: 14px; --m: 20px; }
+}
+@container member (min-width: 760px) and (min-height: 420px) {
+.scatter[data-el="amethyst-chart-scatter"] > * { --bl: var(--type-20); --d: 16px; --m: 28px; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-chart-scatter"][data-el="amethyst-chart-scatter"][data-el="amethyst-chart-scatter"] { color:var(--ink); }

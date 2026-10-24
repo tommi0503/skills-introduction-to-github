@@ -1,0 +1,1 @@
+A calm plot carries a thin continuous polyline and small round points. Values sit above their exact data positions and category names sit beneath the baseline. A positive-height anchor rectangle draws every segment, including flat runs, directly from the point values.

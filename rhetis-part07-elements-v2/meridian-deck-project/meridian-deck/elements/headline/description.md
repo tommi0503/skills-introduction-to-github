@@ -1,0 +1,1 @@
+A body heading uses a fine underline and a restrained, aligned text register. The large variant opens into a statement with an optional chapter index, the centred variant removes the underline, and the on variant supplies an accent ground with its matching foreground role.

@@ -1,0 +1,1 @@
+Nested square-cornered rectangles preserve branch and tile shares. Branch headings sit above their own field; tile names and figures share a compact horizontal layout, switching to a vertical arrangement inside portrait-shaped tiles. Fine boundaries separate the fields and a solid accent marks one selected tile.

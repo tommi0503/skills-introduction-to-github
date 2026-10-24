@@ -1,0 +1,1 @@
+A row of square logo seats sits within fine neutral outlines. Shared gaps and modest corners leave the marks room to breathe. Narrow containers wrap the seats into balanced rows without stretching them into horizontal strips.

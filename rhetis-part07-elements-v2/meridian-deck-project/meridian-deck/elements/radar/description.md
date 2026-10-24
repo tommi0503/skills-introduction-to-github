@@ -1,0 +1,1 @@
+Three to eight spokes share one circular plot, regardless of the received rectangle. Each value series forms a filled polygon inside the same scale, with a separate top name register and external axis labels. Fine concentric guides retain the source circle language.

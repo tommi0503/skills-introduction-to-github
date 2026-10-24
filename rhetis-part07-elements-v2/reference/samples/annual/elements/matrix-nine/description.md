@@ -1,0 +1,1 @@
+A nine-box of flat square-cornered cells parted by thin gaps, washed from a pale warm tone at the lower left toward a deeper accent at the upper right; each cell has a bold accent name and a small light note, and a marked cell is solid accent. Axis labels run small along two-pixel secondary rules at the left and the foot.

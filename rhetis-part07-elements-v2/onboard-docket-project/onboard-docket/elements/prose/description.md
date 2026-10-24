@@ -1,0 +1,1 @@
+Plain paragraphs preserve the generous leading and slightly tight tracking of replica05. The lead variant carries the accent role and quiet passages step down in hierarchy; columns collapse by moving the actual paragraph children.

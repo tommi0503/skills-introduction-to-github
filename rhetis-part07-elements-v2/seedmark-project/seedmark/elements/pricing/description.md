@@ -1,0 +1,1 @@
+Aligned plan columns use a reserved recommendation row, a shared name track and a shared price track. A fine rule leads into a compact local feature list. The selected plan uses a soft accent surface; list padding and type stay compact enough for the honest minimum.

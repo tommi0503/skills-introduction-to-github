@@ -1,0 +1,1 @@
+Circular entity badges sit at their supplied coordinates and fine links join the actual endpoint coordinates. Strong connections take the primary accent while the rest remain neutral. The owner reserves an internal boundary so even edge-valued nodes stay inside the component.

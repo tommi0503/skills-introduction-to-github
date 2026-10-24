@@ -1,0 +1,1 @@
+A large pale disc stands in the middle with the whole named in the condensed squared display face; members stand in two text columns at the left and right, each a bold name in the accent over a light secondary note, and from a solid accent dot on each member's inner side a straight two-pixel accent line runs into the disc.

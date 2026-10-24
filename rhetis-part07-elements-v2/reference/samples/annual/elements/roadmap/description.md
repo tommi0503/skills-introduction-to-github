@@ -1,0 +1,1 @@
+Durations on tracks: period heads in the condensed squared display face over columns ruled by hairlines, each track named bold in the accent at the left, and each span a rounded capsule in a paler accent carrying its label in the background colour, the marked span solid accent. Milestones are solid accent dots wearing a pale halo, labelled above.

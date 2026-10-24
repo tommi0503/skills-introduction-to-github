@@ -1,0 +1,15 @@
+/* Fresh Crossrail partner row. The allocation of each square is computed from the actual member count. */
+.logos[data-el="crossrail-logo-group"]{box-sizing:border-box;container-type:size;display:flex;align-items:center;justify-content:space-evenly;gap:var(--gap);padding:var(--pad);border-block:1px solid var(--n-3);min-width:0;min-height:0;--crossrail-logo-count:6}
+.logos[data-el="crossrail-logo-group"]>.seat.logo{box-sizing:border-box;width:min(calc((100cqw - var(--pad)*2 - (var(--crossrail-logo-count) - 1)*var(--gap))/var(--crossrail-logo-count)),calc(100cqh - var(--pad)*2));height:min(calc((100cqw - var(--pad)*2 - (var(--crossrail-logo-count) - 1)*var(--gap))/var(--crossrail-logo-count)),calc(100cqh - var(--pad)*2));border:1px solid var(--n-3);flex:none}
+@container(max-width:500px){.logos[data-el="crossrail-logo-group"]>.seat.logo{font-size:var(--type-16)}}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(2):last-child){--crossrail-logo-count:2}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(3):last-child){--crossrail-logo-count:3}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(4):last-child){--crossrail-logo-count:4}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(5):last-child){--crossrail-logo-count:5}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(6):last-child){--crossrail-logo-count:6}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(7):last-child){--crossrail-logo-count:7}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(8):last-child){--crossrail-logo-count:8}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(9):last-child){--crossrail-logo-count:9}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(10):last-child){--crossrail-logo-count:10}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(11):last-child){--crossrail-logo-count:11}
+.logos[data-el="crossrail-logo-group"]:has(>.seat:nth-child(12):last-child){--crossrail-logo-count:12}

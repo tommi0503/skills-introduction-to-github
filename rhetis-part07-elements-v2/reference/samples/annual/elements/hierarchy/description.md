@@ -1,0 +1,1 @@
+A tree joined by two-pixel accent connectors: the root is a solid accent block named in the condensed squared display face, a bracket drops to a row of pale warm square-cornered blocks holding each branch's bold name, and the leaves hang below each branch as light secondary lines along a hairline, each with a small solid dot.

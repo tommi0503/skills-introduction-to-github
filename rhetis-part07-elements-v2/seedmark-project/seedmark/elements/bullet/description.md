@@ -1,0 +1,1 @@
+Actual values fill a fine rounded track over qualitative background bands, with a thin target tick on the same baseline. Names and figures share a row, and target notes sit beneath. Stacked bullets reduce their gap and text overhead so shallow members remain readable.

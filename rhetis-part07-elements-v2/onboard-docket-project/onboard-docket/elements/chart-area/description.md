@@ -1,0 +1,1 @@
+Open numeric labels sit above equal time steps. Each interval is built from the actual neighbouring point anchors, so rises, declines and flat values remain continuous without extra data. Fine rules and pale fills extend the source’s measured docket language.

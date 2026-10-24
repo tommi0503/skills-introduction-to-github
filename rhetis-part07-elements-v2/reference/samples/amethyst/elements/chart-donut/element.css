@@ -1,0 +1,198 @@
+:is(.body, .group, .split, .stack) > :is(.donut[data-el="amethyst-chart-donut"]), :is(.body, .group, .split, .stack) > :is(.donuts[data-el="amethyst-chart-donut"]) { container-type: size; }
+.stack > :is(.donut[data-el="amethyst-chart-donut"]), .stack > :is(.donuts[data-el="amethyst-chart-donut"]) { flex: 1 1 0; min-height: 96px; }
+.donut[data-el="amethyst-chart-donut"] { display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: center; align-items: center; justify-items: center; min-width: 0; min-height: 0; --c: var(--a1); }
+.donuts[data-el="amethyst-chart-donut"] > .donut { container-type: size; }
+.donut[data-el="amethyst-chart-donut"] > * { --d: 160px; --df: var(--type-32); --in: 0px; --d-max: 360px; }
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --d-max: 260px; }
+:where(.donuts)[data-el="amethyst-chart-donut"] > .donut > *, :where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --d: max(64px, min(var(--d-max), 100cqw, 100cqh - var(--cap, 54px))); --df: var(--type-24); }
+.donut[data-el="amethyst-chart-donut"] > .fig { grid-column: 1 / -1; grid-row: 1; box-sizing: border-box; width: var(--d); height: var(--d); margin: 0; padding-bottom: var(--in); border: calc(var(--d) * 0.125) solid var(--a1-2-muted); border-radius: 50%; display: block; text-align: center; white-space: nowrap; font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; font-size: min(var(--df), var(--d) * 0.3); line-height: calc(var(--d) * 0.75 - var(--in)); color: var(--ink); font-variant-numeric: tabular-nums; }
+.donut[data-el="amethyst-chart-donut"] > .fig small { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.06em; }
+.donut[data-el="amethyst-chart-donut"] > .fig::before, .donut[data-el="amethyst-chart-donut"] > .fig::after { content: ""; position: absolute; inset: calc(var(--d) * -0.125); border-radius: 50%; pointer-events: none; }
+.donut[data-el="amethyst-chart-donut"] > .fig::before { background: radial-gradient(closest-side, var(--c) 96%, transparent) 50% 0 / 12.5% 12.5% no-repeat, conic-gradient(var(--c) calc(var(--v) * 1%), transparent 0); -webkit-mask: radial-gradient(farthest-side, transparent calc(75% - 0.7px), var(--ink) 75%); mask: radial-gradient(farthest-side, transparent calc(75% - 0.7px), var(--ink) 75%); }
+.donut[data-el="amethyst-chart-donut"] > .fig::after { background: radial-gradient(closest-side, var(--c) 96%, transparent) 50% 0 / 12.5% 12.5% no-repeat; rotate: calc(var(--v) * 3.6deg); }
+.donut[data-el="amethyst-chart-donut"] > .name { grid-column: 1 / -1; grid-row: 2; margin: calc(var(--gap) * 10 / 24) 0 0; text-align: center; font-size: var(--type-16); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; color: var(--ink); }
+@container not (min-aspect-ratio: 4/3) {
+@container (min-width: 88px) and (min-height: 142px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-24); --cap: 54px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-16); }
+}
+@container (min-width: 104px) and (min-height: 158px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-32); --cap: 54px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-16); }
+}
+@container (min-width: 136px) and (min-height: 190px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-32); --cap: 54px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-16); }
+}
+@container (min-width: 152px) and (min-height: 216px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-40); --cap: 64px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-20); }
+}
+@container (min-width: 172px) and (min-height: 236px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-40); --cap: 64px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-20); }
+}
+@container (min-width: 204px) and (min-height: 268px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-48); --cap: 64px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-20); }
+}
+@container (min-width: 236px) and (min-height: 310px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-56); --cap: 74px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-24); }
+}
+@container (min-width: 272px) and (min-height: 346px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-64); --cap: 74px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-24); }
+}
+@container (min-width: 304px) and (min-height: 378px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-72); --cap: 74px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-24); }
+}
+@container (min-width: 340px) and (min-height: 425px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-80); --cap: 85px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-28); }
+}
+@container (min-width: 404px) and (min-height: 499px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-96); --cap: 95px; }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-32); }
+}
+@container (min-aspect-ratio: 17/20) and (min-width: 200px) and (min-height: 200px) {
+.donut[data-el="amethyst-chart-donut"] > * { --cap: 0px; --in: calc(var(--d) * 0.16); }
+.donut[data-el="amethyst-chart-donut"] > .name { grid-row: 1; align-self: start; max-width: calc(var(--d) * 0.54); margin: calc(var(--d) * 0.42 + var(--df) * 0.56) 0 0; }
+@container (max-width: 235px) or (max-height: 235px) {
+.donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-40); }
+.donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-16); }
+}
+}
+}
+@container (min-aspect-ratio: 7/6) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --d: max(64px, min(var(--d-max), 100cqh, max(50cqw, 75cqh))); --cap: 0px; --in: 0px; }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .fig { grid-column: 1; }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { grid-column: 2; grid-row: 1; justify-self: start; align-self: center; max-width: none; margin: 0 0 0 clamp(calc(var(--gap) * 12 / 24), 4cqw, calc(var(--gap) * 28 / 24)); text-align: left; text-wrap: wrap; }
+@container (min-height: 88px) and ((min-width: 176px) or (min-height: 118px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-24); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-20); }
+}
+@container (min-height: 104px) and ((min-width: 208px) or (min-height: 139px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-32); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-20); }
+}
+@container (min-height: 136px) and ((min-width: 272px) or (min-height: 182px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-32); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-20); }
+}
+@container (min-height: 152px) and ((min-width: 304px) or (min-height: 203px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-40); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-24); }
+}
+@container (min-height: 172px) and ((min-width: 344px) or (min-height: 230px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-40); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-24); }
+}
+@container (min-height: 204px) and ((min-width: 408px) or (min-height: 272px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-48); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-24); }
+}
+@container (min-height: 236px) and ((min-width: 472px) or (min-height: 315px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-56); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-28); }
+}
+@container (min-height: 272px) and ((min-width: 544px) or (min-height: 363px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-64); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-28); }
+}
+@container (min-height: 304px) and ((min-width: 608px) or (min-height: 406px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-72); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-28); }
+}
+@container (min-height: 340px) and ((min-width: 680px) or (min-height: 454px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-80); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-36); }
+}
+@container (min-height: 404px) and ((min-width: 808px) or (min-height: 539px)) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > * { --df: var(--type-96); }
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-40); }
+}
+@container (min-aspect-ratio: 7/2) and (min-height: 200px) {
+:where(.body, .group, .split, .stack) > .donut[data-el="amethyst-chart-donut"] > .name { font-size: var(--type-48); margin-left: clamp(calc(var(--gap) * 28 / 24), calc(var(--d) * 0.25), calc(var(--gap) * 64 / 24)); }
+}
+}
+@container (min-aspect-ratio: 4/3) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --d: max(64px, min(var(--d-max), 100cqh, 50cqw)); --cap: 0px; --in: 0px; }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .fig { grid-column: 1; }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { grid-column: 2; grid-row: 1; justify-self: start; align-self: center; max-width: none; margin: 0 0 0 clamp(calc(var(--gap) * 12 / 24), 4cqw, calc(var(--gap) * 28 / 24)); text-align: left; text-wrap: wrap; }
+@container (min-height: 88px) and (min-width: 176px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-24); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-20); }
+}
+@container (min-height: 104px) and (min-width: 208px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-32); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-20); }
+}
+@container (min-height: 136px) and (min-width: 272px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-32); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-20); }
+}
+@container (min-height: 152px) and (min-width: 304px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-40); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-24); }
+}
+@container (min-height: 172px) and (min-width: 344px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-40); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-24); }
+}
+@container (min-height: 204px) and (min-width: 408px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-48); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-24); }
+}
+@container (min-height: 236px) and (min-width: 472px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-56); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-28); }
+}
+@container (min-height: 272px) and (min-width: 544px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-64); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-28); }
+}
+@container (min-height: 304px) and (min-width: 608px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-72); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-28); }
+}
+@container (min-height: 340px) and (min-width: 680px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-80); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-36); }
+}
+@container (min-height: 404px) and (min-width: 808px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > * { --df: var(--type-96); }
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-40); }
+}
+@container (min-aspect-ratio: 7/2) and (min-height: 200px) {
+.donuts[data-el="amethyst-chart-donut"] > .donut > .name { font-size: var(--type-48); margin-left: clamp(calc(var(--gap) * 28 / 24), calc(var(--d) * 0.25), calc(var(--gap) * 64 / 24)); }
+}
+}
+.donuts[data-el="amethyst-chart-donut"] { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-auto-rows: minmax(0, 1fr); gap: var(--gap); min-width: 0; min-height: 0; }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(5n/**/+1) { --c: var(--a1-7); }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(5n/**/+2) { --c: var(--a1-5); }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(5n/**/+3) { --c: var(--a2-1); }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(5n/**/+4) { --c: var(--a1-4-soft); }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(5n) { --c: var(--a1-8-soft); }
+.donut[data-el="amethyst-chart-donut"].on { --c: var(--a1); }
+@container (min-aspect-ratio: 3/4) and (max-aspect-ratio: 8/5) {
+.donuts[data-el="amethyst-chart-donut"]:not(:has(> .donut:nth-child(3):last-child)) > .donut:nth-child(odd) { grid-column: 1; }
+.donuts[data-el="amethyst-chart-donut"]:not(:has(> .donut:nth-child(3):last-child)) > .donut:nth-child(even) { grid-column: 2; }
+.donuts[data-el="amethyst-chart-donut"]:not(:has(> .donut:nth-child(3):last-child)) > .donut:nth-child(-n/**/+2) { grid-row: 1; }
+.donuts[data-el="amethyst-chart-donut"]:not(:has(> .donut:nth-child(3):last-child)) > .donut:nth-child(n/**/+3) { grid-row: 2; }
+.donuts[data-el="amethyst-chart-donut"]:not(:has(> .donut:nth-child(3):last-child)) > .donut:nth-child(n/**/+5) { grid-row: 3; }
+.donuts[data-el="amethyst-chart-donut"]:not(:has(> .donut:nth-child(3):last-child)) > .donut:nth-child(odd):last-child { grid-column: 1 / span 2; }
+}
+@container (max-aspect-ratio: 3/4) {
+.donuts[data-el="amethyst-chart-donut"] > .donut { grid-column: 1; }
+}
+@container (min-aspect-ratio: 1/2) and (max-aspect-ratio: 5/2) {
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(1):nth-last-child(4), .donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(3):nth-last-child(2) { grid-column: 1; }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(2):nth-last-child(3), .donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(4):last-child { grid-column: 2; }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(1):nth-last-child(4), .donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(2):nth-last-child(3) { grid-row: 1; }
+.donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(3):nth-last-child(2), .donuts[data-el="amethyst-chart-donut"] > .donut:nth-child(4):last-child { grid-row: 2; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-chart-donut"][data-el="amethyst-chart-donut"][data-el="amethyst-chart-donut"] { color:var(--ink); }

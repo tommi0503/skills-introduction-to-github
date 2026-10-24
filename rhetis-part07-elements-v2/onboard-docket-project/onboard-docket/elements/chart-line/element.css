@@ -1,0 +1,35 @@
+/* Inferred from replica17 bare figures, replica16 fine rules and replica15 linked sequences.
+The whole plot owns every interval, including flat and declining intervals. */
+.lines[data-el="onboard-docket-chart-line"]{container-type:size;container-name:od-lines;position:relative;anchor-scope:all;display:grid;grid-template-columns:repeat(var(--od-points),minmax(0,1fr));grid-template-rows:minmax(0,1fr);padding:28px 3% 36px;min-width:0;min-height:0;--od-points:6;color:var(--ink)}
+.lines[data-el="onboard-docket-chart-line"]>.pt{position:static;grid-column:var(--od-point-i);grid-row:1;justify-self:center;align-self:start;margin-top:calc(100cqh*(1 - var(--v)/var(--max)));width:0;height:0}
+.lines[data-el="onboard-docket-chart-line"]>.pt::before{content:"";position:absolute;left:anchor(var(--od-prev) center);right:anchor(var(--od-self) center);top:calc(anchor(var(--od-prev) center) - 100cqh);bottom:36px;background:var(--a1-7);clip-path:polygon(0 100cqh,100% calc(100% - 100cqh*var(--v)/var(--max)),100% calc(100% - 100cqh*var(--v)/var(--max) + 2px),0 calc(100cqh + 2px))}
+.lines[data-el="onboard-docket-chart-line"]>.pt::after{content:"";position:absolute;left:calc(anchor(var(--od-self) center) - 3px);top:calc(anchor(var(--od-self) center) - 3px);width:6px;height:6px;border-radius:50%;background:var(--page);border:2px solid var(--a1-7)}
+.lines[data-el="onboard-docket-chart-line"]>.pt.on::after{background:var(--a1);width:8px;height:8px;left:calc(anchor(var(--od-self) center) - 4px);top:calc(anchor(var(--od-self) center) - 4px)}
+.lines[data-el="onboard-docket-chart-line"]>.pt>span{position:absolute;left:anchor(var(--od-self) center);bottom:0;transform:translateX(-50%);height:28px;font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);white-space:nowrap;color:var(--n-7)}
+.lines[data-el="onboard-docket-chart-line"]>.pt>b{position:absolute;left:anchor(var(--od-self) center);top:calc(anchor(var(--od-self) center) - 8px);transform:translate(-50%,-100%);font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink);z-index:8}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(1):last-child){--od-points:1}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(1){--od-point-i:1;--od-self:--od-p1;--od-prev:--od-p0;anchor-name:--od-p1}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(2):last-child){--od-points:2}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(2){--od-point-i:2;--od-self:--od-p2;--od-prev:--od-p1;anchor-name:--od-p2}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(3):last-child){--od-points:3}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(3){--od-point-i:3;--od-self:--od-p3;--od-prev:--od-p2;anchor-name:--od-p3}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(4):last-child){--od-points:4}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(4){--od-point-i:4;--od-self:--od-p4;--od-prev:--od-p3;anchor-name:--od-p4}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(5):last-child){--od-points:5}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(5){--od-point-i:5;--od-self:--od-p5;--od-prev:--od-p4;anchor-name:--od-p5}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(6):last-child){--od-points:6}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(6){--od-point-i:6;--od-self:--od-p6;--od-prev:--od-p5;anchor-name:--od-p6}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(7):last-child){--od-points:7}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(7){--od-point-i:7;--od-self:--od-p7;--od-prev:--od-p6;anchor-name:--od-p7}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(8):last-child){--od-points:8}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(8){--od-point-i:8;--od-self:--od-p8;--od-prev:--od-p7;anchor-name:--od-p8}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(9):last-child){--od-points:9}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(9){--od-point-i:9;--od-self:--od-p9;--od-prev:--od-p8;anchor-name:--od-p9}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(10):last-child){--od-points:10}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(10){--od-point-i:10;--od-self:--od-p10;--od-prev:--od-p9;anchor-name:--od-p10}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(11):last-child){--od-points:11}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(11){--od-point-i:11;--od-self:--od-p11;--od-prev:--od-p10;anchor-name:--od-p11}
+.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(12):last-child){--od-points:12}
+.lines[data-el="onboard-docket-chart-line"]>.pt:nth-child(12){--od-point-i:12;--od-self:--od-p12;--od-prev:--od-p11;anchor-name:--od-p12}
+.lines[data-el="onboard-docket-chart-line"]>.pt:first-child::before{display:none}
+@container od-lines (max-width:600px){.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(10))>.pt:not(:nth-child(3n + 1)):not(:last-child)>span{visibility:hidden}.lines[data-el="onboard-docket-chart-line"]:has(>.pt:nth-child(10))>.pt:not(:nth-child(2n)):not(:last-child)>b{visibility:hidden}}

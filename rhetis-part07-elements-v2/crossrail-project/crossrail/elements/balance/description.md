@@ -1,0 +1,1 @@
+A fine beam visibly tips toward the heavier side. Pan centres follow the same beam endpoints, so a negative tilt lowers the left pan. Compact lists remain inside quiet trays and the verdict sits beneath the central fulcrum.

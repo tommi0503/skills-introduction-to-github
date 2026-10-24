@@ -1,0 +1,1 @@
+A mini trend with no axes: a row of small solid dots, each standing on a hairline stem at its value, the latest dot larger; as mini bars it is a row of slim round-topped bars, pale except the last one solid. Good and bad trends take their own colour.

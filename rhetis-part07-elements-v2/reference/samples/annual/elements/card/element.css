@@ -1,0 +1,58 @@
+.stack > :is(.card[data-el="annual-card"]) { flex: 1 1 0; min-height: 0; }
+.card[data-el="annual-card"] { container: member / size; min-width: 0; min-height: 0; isolation: isolate; color: var(--ink); --name-ink: var(--a1); --note-ink: var(--n-6); --fig-ink: var(--a1); --kick-ink: var(--n-6); --disc: var(--a1); --disc-ink: var(--page); --sq: clamp(36px, 24cqmin, 104px); --bar: var(--a1); }
+.card[data-el="annual-card"].on { background: var(--a1); --name-ink: var(--a1-on); --note-ink: color-mix(in srgb, var(--a1-on) 84%, var(--a1)); --fig-ink: var(--a1-on); --kick-ink: var(--a1-on); --disc: var(--a1-on); --disc-ink: var(--a1); --bar: var(--a1-on); }
+.card[data-el="annual-card"].quiet { background: var(--n-2); --name-ink: var(--n-6); }
+.card[data-el="annual-card"].line::after { content: ""; position: absolute; z-index: -1; inset: 0; border: var(--hair) solid color-mix(in srgb, var(--a1) 45%, var(--page)); }
+.card[data-el="annual-card"].tone-1 { --disc: var(--a1-7); --disc-ink: var(--page); --bar: var(--a1-7); }
+.card[data-el="annual-card"].tone-2 { --disc: var(--n-6); --disc-ink: var(--page); --bar: var(--n-6); }
+.card[data-el="annual-card"].tone-3 { --disc: var(--a1-4-soft); --disc-ink: var(--a1-8-soft); --bar: var(--a1-4-soft); }
+.card[data-el="annual-card"].tone-4 { --disc: var(--a1-8-soft); --disc-ink: var(--page); --bar: var(--a1-8-soft); }
+.card[data-el="annual-card"].tone-5 { --disc: var(--n-3); --disc-ink: var(--n-8); --bar: var(--n-3); }
+.card[data-el="annual-card"] > .parts { --kick: var(--type-14); --name: var(--type-16); --note: var(--type-14); --fig: var(--type-32); --m: 48px; --mf: var(--type-28); width: 100%; height: 100%; min-width: 0; min-height: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: clamp(4px, 2.4cqh, var(--gap-sm)); padding: clamp(12px, 8cqh, var(--pad)) clamp(10px, 6cqw, var(--pad)); text-align: left; }
+.card[data-el="annual-card"]:is(.on, .quiet) > .parts { padding: clamp(12px, 9cqh, var(--gap-lg)) clamp(12px, 8cqw, var(--gap-lg)); }
+.card[data-el="annual-card"].line > .parts { padding: clamp(12px, 8cqh, var(--pad)) clamp(12px, 7cqw, var(--pad)); }
+.card[data-el="annual-card"] > .parts:has(> .mark) { align-items: center; text-align: center; padding-top: clamp(6px, 4cqh, var(--pad)); }
+.card[data-el="annual-card"].line > .parts:has(> .mark) { padding-top: clamp(8px, 5cqh, var(--pad)); }
+.card[data-el="annual-card"] > .parts > * { min-width: 0; max-width: 100%; margin: 0; }
+.card[data-el="annual-card"] > .parts > .kick { font-size: var(--kick); line-height: var(--label-line); font-weight: var(--lead-weight); letter-spacing: var(--label-track); color: var(--kick-ink); }
+.card[data-el="annual-card"] > .parts > .fig { font-family: var(--font-display), sans-serif; font-size: var(--fig); line-height: var(--figure-line); font-weight: var(--figure-weight); letter-spacing: var(--figure-track); color: var(--fig-ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.card[data-el="annual-card"] > .parts > .fig small { font-size: 0.5em; margin-left: 0.08em; }
+.card[data-el="annual-card"] > .parts > .name { font-size: var(--name); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); color: var(--name-ink); text-wrap: balance; }
+.card[data-el="annual-card"] > .parts > .name::after { content: ""; display: block; width: 2.4em; height: 3px; margin-top: 0.35em; background: var(--bar); }
+.card[data-el="annual-card"] > .parts:has(> .mark) > .name::after { margin-inline: auto; }
+.card[data-el="annual-card"]:not(:is(.tone-1, .tone-2, .tone-3, .tone-4, .tone-5)) > .parts > .name::after { content: none; }
+.card[data-el="annual-card"] > .parts > .note { font-size: var(--note); line-height: var(--body-line); font-weight: var(--lead-weight); letter-spacing: var(--body-track); color: var(--note-ink); text-wrap: pretty; }
+.card[data-el="annual-card"] > .parts > .mark { flex: none; display: grid; place-items: center; width: var(--m); height: var(--m); margin-bottom: clamp(2px, 2cqh, var(--gap-sm)); border-radius: 50%; background: var(--disc); color: var(--disc-ink); font-family: var(--font-display), sans-serif; font-size: var(--mf); line-height: 1; font-weight: var(--figure-weight); }
+.card[data-el="annual-card"] > .parts > .mark > .icon { width: 52%; height: 52%; }
+.card[data-el="annual-card"] > .parts > .mark:has(> .seat.icon) { background: transparent; }
+.card[data-el="annual-card"] > .parts > .mark > .seat.icon { width: 100%; height: 100%; }
+@container member (min-width: 220px) and (min-height: 200px) {
+.card[data-el="annual-card"] > .parts { --kick: var(--type-14); --name: var(--type-20); --note: var(--type-16); --fig: var(--type-48); --m: 72px; --mf: var(--type-32); }
+}
+@container member (min-width: 320px) and (min-height: 300px) {
+.card[data-el="annual-card"] > .parts { --kick: var(--type-16); --name: var(--type-24); --note: var(--type-16); --fig: var(--type-64); --m: 96px; --mf: var(--type-48); }
+}
+@container member (min-width: 480px) and (min-height: 400px) {
+.card[data-el="annual-card"] > .parts { --kick: var(--type-18); --name: var(--type-32); --note: var(--type-18); --fig: var(--type-88); --m: 116px; --mf: var(--type-56); }
+}
+@container member (max-height: 159px) or (max-width: 149px) {
+.card[data-el="annual-card"] > .parts:has(> .name) > .note { display: none; }
+}
+@container member (max-height: 119px) {
+.card[data-el="annual-card"] > .parts:has(> .name, > .fig) > .kick { display: none; }
+.card[data-el="annual-card"] > .parts > .mark { --m: 36px; }
+}
+@container member (min-aspect-ratio: 5/2) {
+.card[data-el="annual-card"] > .parts, .card[data-el="annual-card"] > .parts:has(> .mark) { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-auto-flow: dense; align-content: center; align-items: center; column-gap: clamp(12px, 4cqw, var(--gap-lg)); row-gap: 2px; text-align: left; }
+.card[data-el="annual-card"] > .parts > * { grid-column: 2; }
+.card[data-el="annual-card"] > .parts > :is(.mark, .fig) { grid-column: 1; grid-row: 1 / span 3; margin: 0; }
+.card[data-el="annual-card"] > .parts:has(> .mark) > .name::after { margin-inline: 0; }
+.card[data-el="annual-card"] > .parts > .mark { --m: min(76cqh, 96px); }
+}
+.group:has(> .card[data-el="annual-card"] > .parts > .mark) { container: marks / inline-size; flex-wrap: wrap; align-content: stretch; }
+@container marks (max-width: 559px) {
+.group > .card[data-el="annual-card"]:has(> .parts > .mark) { flex: 1 1 calc(50% - var(--gap)); }
+}
+@container marks (max-width: 279px) {
+.group > .card[data-el="annual-card"]:has(> .parts > .mark) { flex: 1 1 100%; }
+}

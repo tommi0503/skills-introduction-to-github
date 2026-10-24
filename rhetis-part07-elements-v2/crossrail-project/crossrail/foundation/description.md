@@ -1,0 +1,3 @@
+A full-width upper band meets a fine outer rail. Large page headings stand over a twelve by six content grid with generous shared margins. Covers use a restrained intersecting rule and diagonal hatch; optional photographic seats remain flat neutral placements. The foundation styles only page devices and layout holders.
+
+The normal-page bottom-left header variant keeps its kicker near the top of a full-height left rail and anchors a large closing title at the bottom. Its independent right body remains a twelve-by-six grid. This is page furniture, with no element roots inside the foundation definition.

@@ -1,0 +1,13 @@
+.stack > :is(.waterfall[data-el="annual-chart-waterfall"]) { flex: 1 1 0; min-height: 0; }
+.waterfall[data-el="annual-chart-waterfall"] { container: fall / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); column-gap: clamp(10px, 3.4cqw, 40px); color: var(--n-6); }
+.waterfall[data-el="annual-chart-waterfall"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: clamp(26px, 10cqh, 40px); border-bottom: var(--stroke) solid var(--n-6); }
+.waterfall[data-el="annual-chart-waterfall"] > .move { --lb: clamp(26px, 10cqh, 40px); --hd: clamp(26px, 9cqh, 40px); --hp: calc(100cqh - var(--lb) - var(--hd)); --lo: min(var(--from), var(--to)); --hi: max(var(--from), var(--to)); --c: var(--a1); --gp: clamp(10px, 3.4cqw, 40px); min-width: 0; }
+.waterfall[data-el="annual-chart-waterfall"] > .move.down { --c: var(--n-6); }
+.waterfall[data-el="annual-chart-waterfall"] > .move.total { --lo: 0; --hi: var(--to); --c: var(--a1-8-soft); }
+.waterfall[data-el="annual-chart-waterfall"] > .move::before { content: ""; position: absolute; left: 12%; right: 12%; bottom: calc(var(--lb) + var(--hp) * var(--lo) / var(--max)); height: max(3px, calc(var(--hp) * (var(--hi) - var(--lo)) / var(--max))); background: var(--c); }
+.waterfall[data-el="annual-chart-waterfall"] > .move:not(:last-child)::after { content: ""; position: absolute; left: 88%; width: calc(24% + var(--gp)); bottom: calc(var(--lb) + var(--hp) * var(--to) / var(--max) - 1px); border-top: var(--stroke) dotted var(--a1); }
+.waterfall[data-el="annual-chart-waterfall"] > .move > b { position: absolute; left: 0; right: 0; bottom: calc(var(--lb) + var(--hp) * var(--hi) / var(--max) + 8px); text-align: center; font-family: var(--font-display), sans-serif; font-size: var(--wf, var(--type-16)); line-height: 1; font-weight: var(--figure-weight); color: var(--c); white-space: nowrap; }
+.waterfall[data-el="annual-chart-waterfall"] > .move > span { position: absolute; left: 0; right: 0; bottom: 0; height: var(--lb); display: grid; place-items: center; font-size: var(--type-14); line-height: 1.2; font-weight: var(--label-weight); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@container fall (min-height: 340px) and (min-width: 600px) {
+.waterfall[data-el="annual-chart-waterfall"] > .move { --wf: var(--type-20); }
+}

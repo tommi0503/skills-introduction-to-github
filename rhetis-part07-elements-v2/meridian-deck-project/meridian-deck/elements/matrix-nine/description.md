@@ -1,0 +1,1 @@
+Nine quiet cells form a regular three-by-three with low-to-high axes. Names and notes share a central register in every cell. One accent square marks the strategic point without adding a second ornamental system.

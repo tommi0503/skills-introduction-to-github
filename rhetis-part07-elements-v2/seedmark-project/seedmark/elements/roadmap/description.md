@@ -1,0 +1,1 @@
+Period headings align with proportional duration capsules on named lanes. Start/end period data controls width and offset; milestones are fine dotted vertical markers. Neutral rules and restrained rounded bars extend the source capsule grammar to schedules.

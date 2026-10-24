@@ -1,0 +1,22 @@
+/* Measured base: page 19, bbox [79, 304, 221, 345]. Own-container geometry; no page or fixture condition. */
+.person[data-el="seedmark-person"],.people[data-el="seedmark-person"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.person[data-el="seedmark-person"] *,.people[data-el="seedmark-person"] *{box-sizing:border-box;}
+.person[data-el="seedmark-person"] :is(p,h2,h3,blockquote),.people[data-el="seedmark-person"] :is(p,h2,h3,blockquote){margin:0;}
+.person[data-el="seedmark-person"] .icon,.people[data-el="seedmark-person"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.person[data-el="seedmark-person"] .fig,.people[data-el="seedmark-person"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.person[data-el="seedmark-person"] .fig small,.people[data-el="seedmark-person"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.person[data-el="seedmark-person"] .seat,.people[data-el="seedmark-person"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.person[data-el="seedmark-person"] .seat:after,.people[data-el="seedmark-person"] .seat:after{content:attr(data-ph);}
+.people[data-el="seedmark-person"]{display:flex;align-items:stretch;gap:var(--gap);}
+.people[data-el="seedmark-person"]>.person{flex:1;min-width:0;min-height:0;container-type:size;}
+.person[data-el="seedmark-person"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--gap-sm)/3);text-align:center;padding:var(--gap-sm) 0;}
+.person[data-el="seedmark-person"]>.seat{width:min(100cqw,100cqh - var(--pad)*4.10625);height:min(100cqw,100cqh - var(--pad)*4.10625);aspect-ratio:1;border:8px solid var(--n-2);flex:none;}
+.person[data-el="seedmark-person"]>.seat.avatar{border-radius:50%;}
+.person[data-el="seedmark-person"]>.seat.portrait{border-radius:var(--radius);height:min(125cqw,100cqh - var(--pad)*4.10625);}
+.person[data-el="seedmark-person"]>.name{font-size:clamp(var(--type-16),min(14cqw,7.4cqh),var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);}
+.person[data-el="seedmark-person"]>.note{font-size:var(--type-14);line-height:var(--label-line);color:var(--n-7);}
+.person[data-el="seedmark-person"]>.list{width:100%;min-height:0;height:62px;flex:none;}
+@container(max-width:250px){.person[data-el="seedmark-person"] .person>.note,.people[data-el="seedmark-person"] .person>.note{font-size:var(--type-12)}}
+.person[data-el="seedmark-person"]>.list{text-align:left;}
+.person[data-el="seedmark-person"]>.note:nth-child(2 of .note){height:62px;width:100%;flex:none;text-align:left;color:var(--ink);font-size:var(--type-12);line-height:var(--body-line);}
+.person[data-el="seedmark-person"]>.note:nth-child(2 of .note)>.icon{display:inline-flex;width:var(--type-12);height:var(--type-12);vertical-align:middle;margin-right:calc(var(--gap-sm)/3);}

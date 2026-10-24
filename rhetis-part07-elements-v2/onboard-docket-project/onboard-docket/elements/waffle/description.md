@@ -1,0 +1,1 @@
+Counted circles extend the orderly numbering language of replica02. Accent units show the counted share; the figures variant draws simple person silhouettes with the same rounded head and restrained body geometry.

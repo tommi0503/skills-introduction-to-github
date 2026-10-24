@@ -1,0 +1,16 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.network[data-el="seedmark-network"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.network[data-el="seedmark-network"] *{box-sizing:border-box;}
+.network[data-el="seedmark-network"] :is(p,h2,h3,blockquote){margin:0;}
+.network[data-el="seedmark-network"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.network[data-el="seedmark-network"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.network[data-el="seedmark-network"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.network[data-el="seedmark-network"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.network[data-el="seedmark-network"] .seat:after{content:attr(data-ph);}
+.network[data-el="seedmark-network"]{isolation:isolate;}
+.network[data-el="seedmark-network"] .node{position:absolute;left:calc(10% + var(--x)*.8%);top:calc(10% + var(--y)*.8%);transform:translate(-50%,-50%);width:20%;min-height:14%;padding:var(--gap-sm);display:flex;align-items:center;justify-content:center;text-align:center;border:var(--stroke) solid var(--n-3);border-radius:var(--radius);background:var(--page);z-index:1;}
+.network[data-el="seedmark-network"] .node.on{background:var(--ink);border-color:var(--ink);color:var(--page);}
+.network[data-el="seedmark-network"] .node>.name{font-size:var(--type-18);line-height:var(--name-line);font-weight:var(--name-weight);}
+.network[data-el="seedmark-network"] .link{position:absolute;left:calc(10% + var(--x1)*.8%);top:calc(10% + var(--y1)*.8%);width:hypot(calc((var(--x2) - var(--x1))*.8cqw),calc((var(--y2) - var(--y1))*.8cqh));height:var(--stroke);transform-origin:left center;rotate:atan2(calc((var(--y2) - var(--y1))*.8cqh),calc((var(--x2) - var(--x1))*.8cqw));background:var(--n-4);}
+.network[data-el="seedmark-network"] .link.strong{background:var(--ink);height:2px;}
+@container(max-width:650px){.network[data-el="seedmark-network"] .node>.name{font-size:var(--type-12)}}

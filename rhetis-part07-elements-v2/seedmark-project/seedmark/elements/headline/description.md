@@ -1,0 +1,1 @@
+Light display typography carries the body heading, and bold phrases receive the measured soft highlight with dot-ended vertical ticks. The big variant uses stronger statement typography; centre and accent-ground variants preserve the same phrase treatment. The original three-line statement is the measured base; shorter body subheads respond to a shallow container.

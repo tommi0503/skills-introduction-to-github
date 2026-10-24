@@ -1,0 +1,10 @@
+.stack > :is(.arch[data-el="annual-architecture"]) { flex: 1 1 0; min-height: 0; }
+.arch[data-el="annual-architecture"] { container: arch / size; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; color: var(--a1); }
+.arch[data-el="annual-architecture"] > .layer { flex: 1 1 0; max-height: 120px; min-height: 0; display: grid; grid-template-columns: clamp(110px, 22cqw, 240px) minmax(0, 1fr); align-items: center; column-gap: 6px; }
+.arch[data-el="annual-architecture"] > .layer > .name { align-self: stretch; display: flex; align-items: center; padding: 0 clamp(12px, 2cqw, 24px); background: var(--a1); color: var(--a1-on); font-family: var(--font-display), sans-serif; font-size: var(--af, var(--type-18)); line-height: 1.15; font-weight: var(--title-weight); }
+.arch[data-el="annual-architecture"] > .layer { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-columns: clamp(110px, 22cqw, 240px); }
+.arch[data-el="annual-architecture"] > .layer > .chip { align-self: stretch; display: grid; place-items: center; min-width: 0; padding: 4px 8px; background: var(--annual-deco); text-align: center; font-size: var(--cf, var(--type-14)); line-height: 1.25; font-weight: var(--name-weight); color: var(--a1); overflow: hidden; }
+.arch[data-el="annual-architecture"] > .layer:nth-child(even) > .name { background: color-mix(in srgb, var(--a1) 78%, var(--page)); }
+@container arch (min-width: 800px) and (min-height: 360px) {
+.arch[data-el="annual-architecture"] > .layer > * { --af: var(--type-24); --cf: var(--type-16); }
+}

@@ -1,0 +1,1 @@
+Circular peer badges surround a smaller neutral core on a fine circular route. The owner positions three to six members from their count and draws directional arrowheads along the route. One accent badge creates emphasis without changing the other circles.

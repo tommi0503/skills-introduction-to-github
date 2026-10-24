@@ -1,0 +1,20 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.treemap[data-el="seedmark-treemap"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.treemap[data-el="seedmark-treemap"] *{box-sizing:border-box;}
+.treemap[data-el="seedmark-treemap"] :is(p,h2,h3,blockquote){margin:0;}
+.treemap[data-el="seedmark-treemap"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.treemap[data-el="seedmark-treemap"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.treemap[data-el="seedmark-treemap"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.treemap[data-el="seedmark-treemap"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.treemap[data-el="seedmark-treemap"] .seat:after{content:attr(data-ph);}
+.treemap[data-el="seedmark-treemap"]{display:flex;gap:var(--gap-sm);padding:var(--gap-sm);}
+.treemap[data-el="seedmark-treemap"] .branch{flex:var(--v) 0 0;min-width:0;min-height:0;display:flex;flex-direction:column;gap:calc(var(--gap-sm)/3);}
+.treemap[data-el="seedmark-treemap"] .branch>.name{font-size:var(--type-14);line-height:var(--label-line);font-weight:var(--name-weight);flex:none;}
+.treemap[data-el="seedmark-treemap"] .tile{flex:var(--v) 0 0;min-height:0;min-width:0;container-type:size;padding:calc(var(--gap-sm)/2);display:flex;align-items:center;justify-content:center;gap:calc(var(--gap-sm)/2);background:var(--n-1);border:var(--stroke) solid var(--n-3);border-radius:var(--radius-sm);}
+.treemap[data-el="seedmark-treemap"] .tile.on{background:var(--a1);border-color:var(--a1);color:var(--a1-on);}
+.treemap[data-el="seedmark-treemap"] .tile>.name{font-size:var(--type-16);line-height:var(--name-line);font-weight:var(--name-weight);}
+.treemap[data-el="seedmark-treemap"] .tile>.fig{font-size:var(--type-24);line-height:var(--name-line);font-weight:var(--figure-weight);}
+@container(max-width:150px){.treemap[data-el="seedmark-treemap"] .tile>.name{font-size:var(--type-10)}
+.treemap[data-el="seedmark-treemap"] .tile>.fig{font-size:var(--type-14)}}
+@container(max-height:50px){.treemap[data-el="seedmark-treemap"] .tile>.name{font-size:var(--type-10)}
+.treemap[data-el="seedmark-treemap"] .tile>.fig{font-size:var(--type-12)}}

@@ -1,0 +1,95 @@
+.stack > :is(.plan[data-el="amethyst-pricing"]), .stack > :is(.plans[data-el="amethyst-pricing"]) { flex: 1 1 0; min-height: 0; }
+:is(.plans[data-el="amethyst-pricing"]) { --n: 1; --half: 1; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(2)) { --n: 2; --half: 1; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(3)) { --n: 3; --half: 2; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(4)) { --n: 4; --half: 2; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(5)) { --n: 5; --half: 3; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(6)) { --n: 6; --half: 3; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(7)) { --n: 7; --half: 4; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(8)) { --n: 8; --half: 4; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(9)) { --n: 9; --half: 5; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(10)) { --n: 10; --half: 5; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(11)) { --n: 11; --half: 6; }
+:is(.plans[data-el="amethyst-pricing"]):has(> :nth-child(12)) { --n: 12; --half: 6; }
+:is(.plans[data-el="amethyst-pricing"]) { container: set / size; display: flex; flex-wrap: wrap; align-content: stretch; --cg: var(--gap); --rg: var(--gap); gap: var(--rg) var(--cg); min-width: 0; min-height: 0; }
+:is(.plans[data-el="amethyst-pricing"]) > * { --k: var(--n); flex: 1 1 calc((100% - (var(--k) - 1) * var(--cg)) / var(--k) - 1px); max-width: calc((100% - (var(--k) - 1) * var(--cg)) / var(--k)); min-width: 0; min-height: 0; }
+:is(.plans[data-el="amethyst-pricing"]) > * { container: member / size; }
+.plan[data-el="amethyst-pricing"] > .list > .item > .name { font-weight: var(--body-weight); }
+.plan[data-el="amethyst-pricing"] { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto minmax(0, 1fr); background-color: var(--page); color: var(--ink); border-radius: var(--radius); box-shadow: inset 0 0 0 var(--hair) var(--a1-2-muted); }
+.plan[data-el="amethyst-pricing"].on { background-color: var(--a1); color: var(--a1-on); box-shadow: none; }
+.plan[data-el="amethyst-pricing"] > * { --px: clamp(14px, 8cqw, var(--pad)); --py: clamp(calc(var(--pad) * 12 / 28), 6cqh, var(--gap-lg)); grid-column: 1 / -1; min-width: 0; margin-left: var(--px); margin-right: var(--px); }
+.plan[data-el="amethyst-pricing"] > .name { grid-column: 1; grid-row: 1; margin-top: var(--py); font-size: var(--type-16); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.plan[data-el="amethyst-pricing"] > .tag { grid-column: 2; grid-row: 1; align-self: start; margin-top: calc(var(--py) - calc(var(--gap) * 4 / 24)); margin-bottom: calc(var(--gap) * -8 / 24); margin-left: 0; }
+.plan[data-el="amethyst-pricing"] > .name:has(~ .tag) { margin-right: var(--gap-sm); }
+.plan[data-el="amethyst-pricing"] > .price { grid-row: 2; margin-top: calc(var(--gap-sm) / 2); display: flex; flex-wrap: wrap; align-items: baseline; column-gap: calc(var(--gap-sm) / 2); }
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-family: var(--font-display), sans-serif; font-size: var(--type-28); line-height: 1.2; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.price > small:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-16); line-height: var(--label-line); font-weight: var(--label-weight); color: var(--n-8); white-space: nowrap; }
+.plan[data-el="amethyst-pricing"].on > .price > small { color: var(--a1-on); }
+.plan[data-el="amethyst-pricing"] > .list { grid-row: 3; align-self: start; margin-top: var(--gap-sm); margin-bottom: var(--py); padding-top: var(--gap-sm); border-top: var(--hair) solid var(--a1-2-muted); gap: calc(var(--gap-sm) / 2); --name-size: var(--type-16); --note-size: var(--type-16); }
+.plan[data-el="amethyst-pricing"] > .list > .item { font-size: var(--type-16); font-weight: var(--body-weight); column-gap: calc(var(--gap-sm) * 0.75); }
+.plan[data-el="amethyst-pricing"].on > .list { --mark-ink: var(--a1-on); --note-ink: var(--a1-on); border-top-color: var(--a1-on); }
+@container member (min-height: 300px) {
+@container member (min-width: 220px) {
+.plan[data-el="amethyst-pricing"] > .name { font-size: var(--type-20); }
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-32); }
+}
+@container member (min-width: 220px) and (min-height: 400px) {
+.plan[data-el="amethyst-pricing"] > .name { font-size: var(--type-24); }
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-40); }
+.plan[data-el="amethyst-pricing"] > .price { margin-top: var(--gap-sm); }
+.plan[data-el="amethyst-pricing"] > .list { margin-top: var(--gap); padding-top: var(--gap); gap: clamp(var(--gap-sm), 3.4cqh, var(--gap)); }
+.plan[data-el="amethyst-pricing"] > .list, .plan[data-el="amethyst-pricing"] > .list > .item { --name-size: var(--type-20); font-size: var(--type-20); }
+}
+@container member (min-width: 340px) and (min-height: 400px) {
+.plan[data-el="amethyst-pricing"] > .name { font-size: var(--type-28); }
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-56); }
+.price > small:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-20); }
+.plan[data-el="amethyst-pricing"] > .list, .plan[data-el="amethyst-pricing"] > .list > .item { --name-size: var(--type-24); font-size: var(--type-24); }
+}
+@container member (min-width: 500px) and (min-height: 400px) {
+.plan[data-el="amethyst-pricing"] > .name { font-size: var(--type-36); }
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-80); }
+.price > small:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-24); }
+.plan[data-el="amethyst-pricing"] > .list, .plan[data-el="amethyst-pricing"] > .list > .item { --name-size: var(--type-28); font-size: var(--type-28); }
+}
+}
+@container member (max-height: 299px) {
+.plan[data-el="amethyst-pricing"] > .name { grid-column: 1; margin-right: 0; font-size: var(--type-20); }
+.plan[data-el="amethyst-pricing"] > .price { grid-column: 1; margin-right: 0; }
+.plan[data-el="amethyst-pricing"] > .tag { grid-column: 1; grid-row: 3; align-self: start; justify-self: start; margin: var(--gap-sm) 0 0 var(--px); }
+.plan[data-el="amethyst-pricing"] > .list { grid-column: 2; grid-row: 1 / span 3; align-self: center; width: 50cqw; margin: var(--py) var(--px) var(--py) var(--gap-sm); padding: 0 0 0 var(--gap); border-top: 0; border-left: var(--hair) solid var(--a1-2-muted); }
+.plan[data-el="amethyst-pricing"].on > .list { border-left-color: var(--a1-on); }
+@container member (min-width: 500px) {
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-36); }
+.plan[data-el="amethyst-pricing"] > .name { font-size: var(--type-24); }
+}
+@container member (min-width: 500px) and (min-height: 200px) {
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-48); }
+.plan[data-el="amethyst-pricing"] > .list, .plan[data-el="amethyst-pricing"] > .list > .item { --name-size: var(--type-20); font-size: var(--type-20); }
+.plan[data-el="amethyst-pricing"] > .list { gap: var(--gap-sm); }
+}
+@container member (min-width: 900px) and (min-height: 200px) {
+.plan[data-el="amethyst-pricing"] > .name { font-size: var(--type-32); }
+.price > .fig:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-72); }
+.price > small:is([data-el="amethyst-pricing"], [data-el="amethyst-pricing"] *) { font-size: var(--type-24); }
+.plan[data-el="amethyst-pricing"] > .list, .plan[data-el="amethyst-pricing"] > .list > .item { --name-size: var(--type-24); font-size: var(--type-24); }
+}
+}
+@container set (max-width: 439px) and style(--n: 2) {
+.plans[data-el="amethyst-pricing"] > .plan { --k: 1; }
+}
+@container set (max-width: 659px) and style(--n: 3) {
+.plans[data-el="amethyst-pricing"] > .plan { --k: 1; }
+}
+@container set (max-width: 879px) and style(--n: 4) {
+.plans[data-el="amethyst-pricing"] > .plan { --k: 2; }
+}
+@container set (max-width: 439px) and style(--n: 4) {
+.plans[data-el="amethyst-pricing"] > .plan { --k: 1; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-pricing"][data-el="amethyst-pricing"][data-el="amethyst-pricing"] { color:var(--ink); }
+[data-el="amethyst-pricing"][data-el="amethyst-pricing"][data-el="amethyst-pricing"] .plan { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-pricing"][data-el="amethyst-pricing"][data-el="amethyst-pricing"] .plan.on { background:var(--a1); color:var(--a1-on); --ink:var(--a1-on); --ink-2:var(--a1-on); --mute:var(--a1-on); }
+[data-el="amethyst-pricing"][data-el="amethyst-pricing"][data-el="amethyst-pricing"] .plan.on .tag { background:var(--a1-on); color:var(--a1); }

@@ -1,0 +1,1 @@
+A thin actual-value bar overlays stepped neutral qualitative bands, with a fine target tick at its exact percentage. Names align in a left gutter and bold figures align at the right; target notes use the quiet upper band when space permits. Single bullets and stacked bullet rows share the same construction.

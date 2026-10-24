@@ -1,0 +1,22 @@
+.stack > :is(.treemap[data-el="annual-treemap"]) { flex: 1 1 0; min-height: 0; }
+.treemap[data-el="annual-treemap"] { container: tree / size; min-width: 0; min-height: 0; display: flex; gap: 4px; color: var(--a1-on); }
+.treemap[data-el="annual-treemap"] > .branch { --c: var(--a1); --ci: var(--a1-on); flex: var(--v) 1 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 4px; }
+.treemap[data-el="annual-treemap"] > .branch:nth-of-type(2) { --c: var(--a1-8-soft); --ci: var(--page); }
+.treemap[data-el="annual-treemap"] > .branch:nth-of-type(3) { --c: var(--n-6); --ci: var(--page); }
+.treemap[data-el="annual-treemap"] > .branch:nth-of-type(4) { --c: var(--a1-4-soft); --ci: var(--a1-8-soft); }
+.treemap[data-el="annual-treemap"] > .branch:nth-of-type(5) { --c: var(--n-3); --ci: var(--n-8); }
+.treemap[data-el="annual-treemap"] > .branch > .name { flex: none; padding: 2px 0 2px 0; font-size: var(--type-14); line-height: 1.2; font-weight: var(--name-weight); color: var(--n-6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.treemap[data-el="annual-treemap"] > .branch:only-of-type > .name { display: none; }
+.treemap[data-el="annual-treemap"] > .branch:only-of-type { flex-flow: row wrap; }
+.treemap[data-el="annual-treemap"] > .branch > .tile { container: tile / size; flex: var(--v) 1 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; padding: clamp(6px, 4cqmin, 18px); overflow: hidden; background: color-mix(in srgb, var(--c) 82%, var(--page)); color: var(--ci); }
+.treemap[data-el="annual-treemap"] > .branch > .tile:first-of-type { background: var(--c); }
+.treemap[data-el="annual-treemap"] > .branch:only-of-type > .tile { flex-basis: calc(var(--v) * 1% - 4px); }
+.treemap[data-el="annual-treemap"] > .branch > .tile.on { background: var(--a1); color: var(--a1-on); box-shadow: inset 0 0 0 3px var(--annual-deco); }
+.treemap[data-el="annual-treemap"] > .branch > .tile > .name { font-size: var(--tf, var(--type-12)); line-height: 1.25; font-weight: var(--name-weight); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.treemap[data-el="annual-treemap"] > .branch > .tile > .fig { font-family: var(--font-display), sans-serif; font-size: var(--tg, var(--type-20)); line-height: 1; font-weight: var(--figure-weight); white-space: nowrap; }
+@container tile (min-width: 160px) and (min-height: 110px) {
+.treemap[data-el="annual-treemap"] > .branch > .tile > * { --tf: var(--type-16); --tg: var(--type-32); }
+}
+@container tile (max-width: 79px) or (max-height: 59px) {
+.treemap[data-el="annual-treemap"] > .branch > .tile > .fig { display: none; }
+}

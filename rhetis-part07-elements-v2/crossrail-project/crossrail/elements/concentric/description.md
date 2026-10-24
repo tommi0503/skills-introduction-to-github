@@ -1,0 +1,1 @@
+Genuinely circular nested sets retain a common centre and generous visible bands. Names and figures occupy the exposed upper band; the innermost set receives the central label. A selected ring uses a stronger outline rather than an unrelated badge.

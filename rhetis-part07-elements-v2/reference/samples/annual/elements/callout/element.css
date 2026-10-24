@@ -1,0 +1,13 @@
+.stack > :is(.callout[data-el="annual-callout"]) { flex: 0 0 auto; align-self: stretch; }
+.callout[data-el="annual-callout"] { container: member / inline-size; min-width: 0; align-self: center; display: flex; align-items: center; gap: clamp(12px, 3cqw, var(--gap)); padding: var(--gap) 0 var(--gap) calc(var(--gap) * 44 / 24); isolation: isolate; color: var(--a1); }
+.callout[data-el="annual-callout"]::before { content: ""; position: absolute; z-index: -1; left: 0; top: 0; width: 84px; height: 84px; background: var(--annual-deco); }
+.callout[data-el="annual-callout"] > * { --cf: var(--type-16); }
+.callout[data-el="annual-callout"] > .icon { flex: none; width: 2.2em; height: 2.2em; padding: 0.5em; border-radius: 50%; background: var(--a1); color: var(--page); font-size: var(--cf); }
+.callout[data-el="annual-callout"] > p { min-width: 0; font-size: var(--cf); line-height: 1.7; font-weight: var(--lead-weight); letter-spacing: var(--body-track); color: var(--n-6); text-wrap: pretty; }
+.callout[data-el="annual-callout"] > p b, .callout[data-el="annual-callout"] > p strong { font-weight: var(--name-weight); color: var(--a1); }
+@container member (min-width: 520px) {
+.callout[data-el="annual-callout"] > * { --cf: var(--type-20); }
+}
+@container member (min-width: 860px) {
+.callout[data-el="annual-callout"] > * { --cf: var(--type-24); }
+}

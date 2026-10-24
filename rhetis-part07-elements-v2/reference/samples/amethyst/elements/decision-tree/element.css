@@ -1,0 +1,29 @@
+:is(.body, .group, .split, .stack) > :is(.dtree[data-el="amethyst-decision-tree"]) { container: member / size; }
+.stack > :is(.dtree[data-el="amethyst-decision-tree"]) { flex: 1 1 0; min-height: 160px; }
+.dtree[data-el="amethyst-decision-tree"] { display: flex; align-items: center; min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); }
+.dtree[data-el="amethyst-decision-tree"] * { --ns: var(--type-14); --cs: var(--type-14); --bk: 16px; --tick: 18px; }
+.dtree[data-el="amethyst-decision-tree"] :is(.q, .end) { flex: none; min-width: 0; max-width: 220px; margin: 0; padding: calc(var(--pad) * 8 / 28) calc(var(--pad) * 14 / 28); border-radius: var(--radius-sm); background: var(--page); border: 1px solid var(--a1-2-muted); color: var(--ink); }
+.dtree[data-el="amethyst-decision-tree"] .q { flex: 0 1 auto; min-width: 6.5em; border-color: color-mix(in srgb, var(--a1) 40%, var(--page)); background: color-mix(in srgb, var(--a1) 8%, var(--page)); }
+.dtree[data-el="amethyst-decision-tree"] .end { border-radius: 999px; padding-inline: calc(var(--pad) * 16 / 28); }
+.dtree[data-el="amethyst-decision-tree"] .end.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.dtree[data-el="amethyst-decision-tree"] :is(.q, .end) > .name { margin: 0; font-size: var(--ns); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+.dtree[data-el="amethyst-decision-tree"] .opts { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; align-self: stretch; padding-left: var(--bk); background: linear-gradient(var(--wire), var(--wire)) 0 50% / var(--bk) var(--stroke) no-repeat; }
+.dtree[data-el="amethyst-decision-tree"] .opt { flex: 1 1 auto; display: flex; align-items: center; min-width: 0; padding: calc(var(--gap) * 4 / 24) 0 calc(var(--gap) * 4 / 24) var(--tick); background: linear-gradient(var(--wire), var(--wire)) 0 0 / var(--stroke) 100% no-repeat, linear-gradient(var(--wire), var(--wire)) 0 50% / var(--tick) var(--stroke) no-repeat; }
+.dtree[data-el="amethyst-decision-tree"] .opt:first-child { background: linear-gradient(var(--wire), var(--wire)) 0 100% / var(--stroke) 50% no-repeat, linear-gradient(var(--wire), var(--wire)) 0 50% / var(--tick) var(--stroke) no-repeat; }
+.dtree[data-el="amethyst-decision-tree"] .opt:last-child { background: linear-gradient(var(--wire), var(--wire)) 0 0 / var(--stroke) 50% no-repeat, linear-gradient(var(--wire), var(--wire)) 0 50% / var(--tick) var(--stroke) no-repeat; }
+.dtree[data-el="amethyst-decision-tree"] .opt > .cond { flex: 1 1 0; align-self: center; min-width: 3.2em; max-width: 200px; margin: 0; padding: 0 calc(var(--pad) * 10 / 28) 4px 4px; translate: 0 calc(-50% + var(--stroke) / 2); border-bottom: var(--stroke) solid var(--wire); font-size: var(--cs); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); white-space: nowrap; }
+.dtree[data-el="amethyst-decision-tree"] .opt:has(> .end.on) > .cond { color: var(--a1); border-bottom-color: var(--a1); }
+.dtree[data-el="amethyst-decision-tree"] .opt > .end { margin-left: 0; }
+@container member (min-width: 720px) and (min-height: 320px) {
+.dtree[data-el="amethyst-decision-tree"] * { --ns: var(--type-16); --cs: var(--type-16); --bk: 24px; --tick: 24px; }
+}
+@container member (min-width: 1000px) and (min-height: 440px) {
+.dtree[data-el="amethyst-decision-tree"] * { --ns: var(--type-20); --cs: var(--type-16); --bk: 32px; --tick: 28px; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"] { color:var(--ink); }
+[data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"] :is(.node,.spoke,.q,.end,.step) { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"] :is(.core,.root) { background:linear-gradient(115deg,var(--a1-5),var(--a1)); color:var(--a1-on); border:0; border-radius:var(--radius); }
+
+[data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"][data-el="amethyst-decision-tree"] :is(.node.on,.end.on,.spoke.on) { background:linear-gradient(115deg,var(--a1-5),var(--a1)); color:var(--a1-on); }

@@ -1,0 +1,16 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.arch[data-el="seedmark-architecture"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.arch[data-el="seedmark-architecture"] *{box-sizing:border-box;}
+.arch[data-el="seedmark-architecture"] :is(p,h2,h3,blockquote){margin:0;}
+.arch[data-el="seedmark-architecture"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.arch[data-el="seedmark-architecture"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.arch[data-el="seedmark-architecture"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.arch[data-el="seedmark-architecture"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.arch[data-el="seedmark-architecture"] .seat:after{content:attr(data-ph);}
+.arch[data-el="seedmark-architecture"]{display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--gap-sm);}
+.arch[data-el="seedmark-architecture"] .layer{flex:1;min-height:0;display:flex;align-items:center;gap:var(--gap);padding:var(--gap-sm) var(--gap);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);background:var(--n-1);}
+.arch[data-el="seedmark-architecture"] .name{width:28%;flex:none;font-size:var(--type-22);line-height:var(--name-line);font-weight:var(--name-weight);}
+.arch[data-el="seedmark-architecture"] .chip{display:flex;align-items:center;justify-content:center;min-width:0;flex:1;min-height:32px;padding:calc(var(--gap-sm)/2);border:var(--stroke) solid var(--n-3);border-radius:var(--radius-sm);background:var(--page);font-size:var(--type-16);line-height:var(--label-line);text-align:center;}
+@container(max-width:650px){.arch[data-el="seedmark-architecture"] .layer{gap:var(--gap-sm);padding:var(--gap-sm)}
+.arch[data-el="seedmark-architecture"] .name{font-size:var(--type-16)}
+.arch[data-el="seedmark-architecture"] .chip{font-size:var(--type-12)}}

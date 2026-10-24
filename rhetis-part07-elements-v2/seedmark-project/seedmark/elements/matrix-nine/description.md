@@ -1,0 +1,1 @@
+Nine rounded cells form a quiet three-by-three portfolio grid. Axis labels sit outside the grid and each cell centres a name plus optional note. The focus uses the primary accent; comparison tones use softer ranked surfaces.

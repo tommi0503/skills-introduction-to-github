@@ -1,0 +1,206 @@
+.stack > :is(.stat[data-el="amethyst-metric"]), .stack > :is(.stats[data-el="amethyst-metric"]) { flex: 1 1 0; min-height: 0; }
+:is(.stats[data-el="amethyst-metric"]) { --n: 1; --half: 1; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(2)) { --n: 2; --half: 1; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(3)) { --n: 3; --half: 2; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(4)) { --n: 4; --half: 2; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(5)) { --n: 5; --half: 3; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(6)) { --n: 6; --half: 3; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(7)) { --n: 7; --half: 4; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(8)) { --n: 8; --half: 4; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(9)) { --n: 9; --half: 5; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(10)) { --n: 10; --half: 5; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(11)) { --n: 11; --half: 6; }
+:is(.stats[data-el="amethyst-metric"]):has(> :nth-child(12)) { --n: 12; --half: 6; }
+:is(.stats[data-el="amethyst-metric"]) { container: set / size; display: flex; flex-wrap: wrap; align-content: stretch; --cg: var(--gap); --rg: var(--gap); gap: var(--rg) var(--cg); min-width: 0; min-height: 0; }
+:is(.stats[data-el="amethyst-metric"]) > * { --k: var(--n); flex: 1 1 calc((100% - (var(--k) - 1) * var(--cg)) / var(--k) - 1px); max-width: calc((100% - (var(--k) - 1) * var(--cg)) / var(--k)); min-width: 0; min-height: 0; }
+:is(.stats[data-el="amethyst-metric"]) > * { container: member / size; }
+.stat[data-el="amethyst-metric"] { container: member / size; min-width: 0; min-height: 0; }
+.stat[data-el="amethyst-metric"] { --kick-ink: var(--a1); --note-ink: var(--n-8); --fig-ink: var(--a1); --mark-bg: var(--a1-2-muted); --mark-ink: var(--a1); --icon-ink: var(--a1); --num-ink: var(--a1); }
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --px: clamp(14px, 8cqw, var(--pad)); --py: clamp(calc(var(--pad) * 10 / 28), 8cqh, var(--pad)); --g: clamp(calc(var(--gap) * 4 / 24), 2.4cqh, var(--gap-sm)); --fig: var(--type-32); --name: var(--type-16); --note: var(--type-16); --kick: var(--type-16); --m: 32px; --mf: 20px; width: 100%; height: 100%; min-width: 0; min-height: 0; padding: var(--py) var(--px); display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: var(--g); text-align: left; }
+.parts > *:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { min-width: 0; }
+.parts > .kick:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { font-size: var(--kick); line-height: var(--label-line); font-weight: var(--label-weight); letter-spacing: var(--label-track); color: var(--kick-ink); }
+.parts > .fig:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); line-height: var(--figure-line); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; font-size: var(--fig); white-space: nowrap; color: var(--fig-ink); }
+.parts > .fig small:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.1em; }
+.parts > .name:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { font-size: var(--name); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); text-wrap: balance; }
+.parts > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { font-size: var(--note); line-height: var(--body-line); font-weight: var(--body-weight); letter-spacing: var(--body-track); color: var(--note-ink); text-wrap: pretty; }
+@container member not (min-aspect-ratio: 5/2) {
+@container member (min-width: 200px) and (min-height: 150px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-40); --name: var(--type-20); --m: 40px; --mf: 24px; }
+}
+@container member (min-width: 240px) and (min-height: 220px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-40); --name: var(--type-24); --m: 48px; --mf: 32px; }
+}
+@container member (min-width: 340px) and (min-height: 220px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-48); }
+}
+@container member (min-width: 180px) and (min-height: 260px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --name: var(--type-24); --m: 48px; --mf: 32px; }
+}
+@container member (min-width: 340px) and (min-height: 260px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-56); --name: var(--type-28); --note: var(--type-20); --m: 56px; --mf: 40px; }
+}
+@container member (min-width: 500px) and (min-height: 220px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-64); --name: var(--type-28); --note: var(--type-20); --m: 56px; --mf: 40px; }
+}
+@container member (min-width: 160px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-40); --name: var(--type-24); --note: var(--type-16); --m: 48px; --mf: 40px; }
+}
+@container member (min-width: 220px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-48); --name: var(--type-28); --note: var(--type-20); --kick: var(--type-20); --m: 56px; --mf: 48px; }
+}
+@container member (min-width: 340px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-72); --name: var(--type-32); --note: var(--type-20); --m: 64px; --mf: 56px; }
+}
+@container member (min-width: 500px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-96); --name: var(--type-40); --note: var(--type-24); --kick: var(--type-20); --m: 80px; --mf: 64px; }
+}
+@container member (min-width: 900px) and (min-height: 300px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-96); --name: var(--type-40); --note: var(--type-24); --kick: var(--type-24); --m: 80px; --mf: 72px; }
+}
+@container member (max-height: 149px) or (max-width: 189px) {
+.parts:has(> .fig, > .mark) > .kick:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+@container member (max-height: 169px) or (max-width: 159px) {
+.parts:has(> .fig, > .mark):has(> .name) > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+@container member (max-height: 199px) {
+.parts:has(> .fig):has(> .kick):has(> .name) > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+@container member (max-height: 259px) and (max-width: 339px) {
+.parts:has(> .fig):has(> .name):has(> .note) > .kick:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+@container member (max-height: 229px) and (max-width: 189px) {
+.parts:has(> .fig, > .mark):has(> .name) > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+}
+@container member (min-aspect-ratio: 5/2) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --px: clamp(12px, 4.2cqw, var(--pad)); --py: clamp(calc(var(--pad) * 8 / 28), 11cqh, var(--pad)); --fig: var(--type-32); --name: var(--type-16); --m: 32px; --mf: 24px; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto auto auto minmax(0, 1fr); align-items: center; column-gap: clamp(calc(var(--gap) * 12 / 24), 3cqw, var(--gap-lg)); row-gap: 0; }
+.parts > .kick:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { grid-row: 2; margin-bottom: clamp(1px, 1.6cqh, calc(var(--gap) * 6 / 24)); }
+.parts > .name:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { grid-row: 3; }
+.parts > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { grid-row: 4; margin-top: clamp(1px, 1.6cqh, calc(var(--gap) * 6 / 24)); }
+.parts > .fig:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { grid-row: 1 / -1; align-self: center; }
+.parts:has(> .fig):is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { grid-template-columns: minmax(calc(var(--fig) * 2), max-content) minmax(0, 1fr); }
+.parts:has(> .fig) > .fig:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { grid-column: 1; }
+.parts:has(> .fig) > :not(.fig, .mark):is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { grid-column: 2; }
+@container member (min-height: 60px) and (min-width: 460px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --name: var(--type-20); --m: 40px; }
+}
+@container member (min-height: 80px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-40); --m: 40px; --mf: 32px; }
+}
+@container member (min-height: 80px) and (min-width: 300px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --name: var(--type-20); }
+}
+@container member (min-height: 80px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-48); --name: var(--type-24); --m: 48px; --mf: 40px; }
+}
+@container member (min-height: 104px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --name: var(--type-28); --note: var(--type-20); }
+}
+@container member (min-height: 140px) and (min-width: 500px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-56); --name: var(--type-28); --note: var(--type-20); --m: 56px; --mf: 40px; }
+}
+@container member (min-height: 140px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-64); --name: var(--type-32); --note: var(--type-20); --m: 64px; --mf: 48px; }
+}
+@container member (min-height: 220px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-80); --name: var(--type-36); --note: var(--type-24); --kick: var(--type-20); --m: 72px; --mf: 64px; }
+}
+@container member (min-height: 220px) and (min-width: 1000px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-96); --name: var(--type-40); --note: var(--type-24); --kick: var(--type-20); --m: 80px; --mf: 72px; }
+}
+@container member (min-height: 104px) and (max-height: 149px) and (min-width: 500px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --name: var(--type-28); --note: var(--type-20); }
+.parts:has(> .fig):is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-56); }
+}
+@container member (min-height: 104px) and (max-height: 139px) and (min-width: 500px) {
+.parts:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --name: var(--type-24); --note: var(--type-16); }
+.parts:has(> .fig):is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { --fig: var(--type-48); }
+}
+@container member (max-height: 149px) {
+.parts > .kick:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+@container member (max-height: 79px) or (max-width: 339px) {
+.parts:has(> .name) > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+@container member (max-height: 159px) and (max-width: 499px) {
+.parts:has(> .fig):has(> .name) > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+@container member (max-height: 95px) and (max-width: 499px) {
+.parts:has(> .name) > .note:is([data-el="amethyst-metric"], [data-el="amethyst-metric"] *) { display: none; }
+}
+}
+.stat[data-el="amethyst-metric"] { border-top: var(--hair) solid var(--a1-2-muted); border-bottom: var(--hair) solid var(--a1-2-muted); }
+.stat[data-el="amethyst-metric"] > .parts { --px: 0px; --py: clamp(calc(var(--pad) * 6 / 28), 6cqh, var(--gap)); justify-content: center; }
+.stats[data-el="amethyst-metric"] { --cg: calc(var(--gap) * 2); overflow: clip; border-top: var(--hair) solid var(--a1-2-muted); border-bottom: var(--hair) solid var(--a1-2-muted); }
+.stats[data-el="amethyst-metric"] > .stat { border: 0; --fig-ink: var(--ink); }
+.stats[data-el="amethyst-metric"] > .stat::before { content: ""; position: absolute; left: calc(var(--gap) * -1); top: 12%; bottom: 12%; width: var(--hair); background: var(--a1-2-muted); }
+.stats[data-el="amethyst-metric"] > .stat::after { content: ""; position: absolute; left: 0; right: 0; top: calc(var(--rg) * -0.5); height: var(--hair); background: var(--a1-2-muted); }
+@container member not (min-aspect-ratio: 5/2) {
+@container member (min-width: 200px) and (min-height: 160px) {
+.stat[data-el="amethyst-metric"] > .parts { --fig: var(--type-48); --name: var(--type-20); }
+}
+@container member (min-width: 240px) and (min-height: 200px) {
+.stat[data-el="amethyst-metric"] > .parts { --fig: var(--type-56); --name: var(--type-24); --note: var(--type-16); }
+}
+@container member (min-width: 300px) and (min-height: 220px) {
+.stat[data-el="amethyst-metric"] > .parts { --fig: var(--type-64); }
+}
+@container member (min-width: 340px) and (min-height: 220px) {
+.stat[data-el="amethyst-metric"] > .parts { --fig: var(--type-72); --name: var(--type-28); --note: var(--type-20); }
+}
+@container member (min-width: 500px) and (min-height: 200px) {
+.stat[data-el="amethyst-metric"] > .parts { --fig: var(--type-96); --name: var(--type-32); --note: var(--type-20); --kick: var(--type-20); }
+}
+@container member (min-width: 900px) and (min-height: 300px) {
+.stat[data-el="amethyst-metric"] > .parts { --name: var(--type-40); --note: var(--type-24); --kick: var(--type-24); }
+}
+@container member (min-height: 240px) {
+.stat[data-el="amethyst-metric"] > .parts { justify-content: flex-start; padding-top: var(--gap); padding-bottom: var(--gap); }
+.stat[data-el="amethyst-metric"] > .parts > .name, .stat[data-el="amethyst-metric"] > .parts:not(:has(> .name)) > .note { margin-top: auto; }
+}
+}
+@container member (min-aspect-ratio: 5/2) and (min-height: 220px) {
+.stat[data-el="amethyst-metric"] > .parts { display: flex; --fig: var(--type-96); --name: var(--type-32); --note: var(--type-20); --kick: var(--type-20); --g: var(--gap-sm); }
+.stat[data-el="amethyst-metric"] > .parts > .fig { margin-block: calc(var(--gap-sm) / 2) var(--gap-sm); }
+.stat[data-el="amethyst-metric"] > .parts > * { margin: 0; }
+@container member (min-width: 900px) and (min-height: 280px) {
+.stat[data-el="amethyst-metric"] > .parts { --name: var(--type-40); --note: var(--type-24); --kick: var(--type-24); }
+}
+}
+@container set (max-width: 359px) and style(--n: 2) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 1; }
+}
+@container set (max-width: 499px) and style(--n: 3) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 1; }
+}
+@container set (max-width: 699px) and (min-height: 360px) and style(--n: 3) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 1; }
+}
+@container set (max-width: 699px) and style(--n: 4) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 2; }
+}
+@container set (min-height: 360px) and style(--n: 4) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 2; }
+}
+@container set (min-height: 360px) and (style(--n: 5) or style(--n: 6)) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 3; }
+}
+@container set (max-width: 439px) and (min-height: 360px) and style(--n: 4) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 1; }
+}
+@container set (max-width: 879px) and style(--n: 5) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 3; }
+}
+@container set (max-width: 1039px) and style(--n: 6) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 3; }
+}
+@container set (max-width: 539px) and (style(--n: 5) or style(--n: 6)) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 2; }
+}
+@container set (max-width: 359px) and (min-height: 420px) and (style(--n: 5) or style(--n: 6)) {
+.stats[data-el="amethyst-metric"] > .stat { --k: 1; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-metric"][data-el="amethyst-metric"][data-el="amethyst-metric"] { color:var(--ink); }

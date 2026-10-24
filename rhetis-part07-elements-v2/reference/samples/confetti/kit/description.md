@@ -1,0 +1,3 @@
+# Confetti
+
+Graph paper under a broad accent title band, with black outlines, two accent pop blocks, peach desktop-window bars and hard offset shadows. Rounded target panels, pill-shaped agenda buttons, chunky profile cards and starburst timeline markers preserve the informal workshop character. Montserrat 900 replaces the unavailable condensed Bebas Neue, with wider letterforms; Pretendard Variable supplies native Korean 400/700/900 weights. Nanum Gothic Coding 400/700 is used only for code. Dark mode is a derived graph-paper reversal that retains the accent title strip and vivid stickers.

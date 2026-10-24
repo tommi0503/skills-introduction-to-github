@@ -1,0 +1,1 @@
+A thin circular track joins equally spaced round members around one central idea. Small directional arrowheads follow the track between members; the member circles and optional notes remain separate from the connecting line.

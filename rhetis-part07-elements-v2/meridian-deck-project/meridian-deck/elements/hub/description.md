@@ -1,0 +1,1 @@
+A large circular centre relates to a measured set of captioned spokes. Three spokes form a staggered right-hand register with circular icon badges; four members surround the central circle and place ruled notes beyond their badges. Connectors remain owned by the hub, and circle sizes derive from the received box.

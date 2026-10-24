@@ -1,0 +1,61 @@
+:is(.body, .group, .split, .stack) > :is(.grid9[data-el="confetti-matrix-nine"]) { container: member / size; }
+.stack > :is(.grid9[data-el="confetti-matrix-nine"]) { flex: 1 1 0; min-height: 160px; }
+.grid9[data-el="confetti-matrix-nine"] { display: grid; grid-template-columns: auto repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)) auto; gap: calc(var(--gap) * 8 / 24); min-width: 0; min-height: 0; }
+.grid9[data-el="confetti-matrix-nine"] > * { --nm: var(--type-14); --nt: var(--type-14); --ax: var(--type-14); }
+.grid9[data-el="confetti-matrix-nine"] > .axis-y { grid-column: 1; grid-row: 1 / 4; display: flex; flex-direction: column-reverse; gap: calc(var(--gap) * 8 / 24); min-height: 0; }
+.grid9[data-el="confetti-matrix-nine"] > .axis-x { grid-column: 2 / 5; grid-row: 4; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(var(--gap) * 8 / 24); }
+.grid9[data-el="confetti-matrix-nine"] > :is(.axis-x, .axis-y) > * { display: flex; align-items: center; justify-content: center; text-align: center; min-width: 0; min-height: 0; font-size: var(--ax); font-weight: var(--body-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-8); }
+.grid9[data-el="confetti-matrix-nine"] > .axis-y > * { flex: 1 1 0; writing-mode: vertical-rl; text-orientation: sideways; rotate: 180deg; }
+.grid9[data-el="confetti-matrix-nine"] > .cell { container-type: size; display: flex; flex-direction: column; justify-content: flex-start; gap: calc(var(--gap) * 3 / 24); min-width: 0; min-height: 0; padding: clamp(6px, 8cqmin, 20px) clamp(8px, 8cqmin, 20px); overflow: hidden; background: var(--n-1); border: 1px solid var(--ink); border-radius: var(--radius); color: var(--ink); }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(1 of .cell) { grid-area: 1 / 2; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(2 of .cell) { grid-area: 1 / 3; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(3 of .cell) { grid-area: 1 / 4; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(4 of .cell) { grid-area: 2 / 2; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(5 of .cell) { grid-area: 2 / 3; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(6 of .cell) { grid-area: 2 / 4; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(7 of .cell) { grid-area: 3 / 2; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(8 of .cell) { grid-area: 3 / 3; }
+.grid9[data-el="confetti-matrix-nine"] > .cell:nth-child(9 of .cell) { grid-area: 3 / 4; }
+.grid9[data-el="confetti-matrix-nine"] > .cell[class*="tone-"] { background: color-mix(in srgb, var(--t) 14%, var(--n-1)); border-color: color-mix(in srgb, var(--t) 40%, var(--n-1)); }
+.grid9[data-el="confetti-matrix-nine"] > .cell.tone-1 { --t: var(--a1-6); }
+.grid9[data-el="confetti-matrix-nine"] > .cell.tone-2 { --t: var(--a3-5); }
+.grid9[data-el="confetti-matrix-nine"] > .cell.tone-3 { --t: var(--a2-2); }
+.grid9[data-el="confetti-matrix-nine"] > .cell.tone-4 { --t: var(--a2-3-soft); }
+.grid9[data-el="confetti-matrix-nine"] > .cell.tone-5 { --t: var(--a2-4); }
+.grid9[data-el="confetti-matrix-nine"] > .cell.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.grid9[data-el="confetti-matrix-nine"] > .cell > :is(.name, .note) { margin: 0; min-width: 0; }
+.grid9[data-el="confetti-matrix-nine"] > .cell > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+.grid9[data-el="confetti-matrix-nine"] > .cell > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); color: var(--n-9); text-wrap: pretty; }
+.grid9[data-el="confetti-matrix-nine"] > .cell.on > .note { color: inherit; }
+@container (min-width: 150px) and (min-height: 64px) {
+.grid9[data-el="confetti-matrix-nine"] > .cell > .name { font-size: var(--type-16); }
+}
+@container (min-width: 180px) and (min-height: 92px) {
+.grid9[data-el="confetti-matrix-nine"] > .cell > .note { display: block; }
+}
+@container (min-width: 240px) and (min-height: 120px) {
+.grid9[data-el="confetti-matrix-nine"] > .cell > .name { font-size: var(--type-20); }
+.grid9[data-el="confetti-matrix-nine"] > .cell > .note { font-size: var(--type-16); }
+}
+@container (min-width: 300px) and (min-height: 150px) {
+.grid9[data-el="confetti-matrix-nine"] > .cell > .name { font-size: var(--type-24); }
+}
+@container member (max-height: 299px) {
+.grid9[data-el="confetti-matrix-nine"] > .axis-y > * { writing-mode: horizontal-tb; rotate: none; }
+}
+@container member (min-width: 720px) and (min-height: 400px) {
+.grid9[data-el="confetti-matrix-nine"] > * { --ax: var(--type-16); }
+}
+.grid9[data-el="confetti-matrix-nine"] > .cell { background: var(--page); border-color: color-mix(in srgb, var(--a1) 50%, var(--page)); color: var(--a1); }
+.grid9[data-el="confetti-matrix-nine"] > .cell[class*="tone-"] { background: color-mix(in srgb, var(--t) 8%, var(--page)); border-color: color-mix(in srgb, var(--t) 70%, var(--page)); }
+.grid9[data-el="confetti-matrix-nine"] > .cell.on { background: var(--a1); border-color: var(--a1); color: var(--a1-on); }
+.grid9[data-el="confetti-matrix-nine"] > :is(.axis-x, .axis-y) > * { font-weight: var(--body-weight); }
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+
+[data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"]>.cell{border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);background:var(--n-1);color:var(--ink)}[data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"]>.cell.on{background:var(--a3-5);color:var(--ink)}
+
+/* Copy remains visible when members get smaller. */
+[data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"][data-el="confetti-matrix-nine"] .note{display:block}

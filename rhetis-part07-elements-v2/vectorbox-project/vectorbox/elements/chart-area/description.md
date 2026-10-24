@@ -1,0 +1,1 @@
+Continuous polygon bands carry the plot while compact ruled keys identify each series above it. Normal areas overlap with translucent ranked fills; stacked areas paint cumulative totals from the back forward so each visible band represents its own contribution. Point figures and equal-step axis labels stay outside the filled field.

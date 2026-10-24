@@ -1,0 +1,1 @@
+Nested circles share a lower centre to communicate inclusion. Their quiet neutral surfaces grow darker toward the inner set, with one accent ring for the immediate opportunity. Names and figures occupy distinct upper arcs rather than the shared centre.

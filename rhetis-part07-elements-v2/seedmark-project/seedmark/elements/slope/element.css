@@ -1,0 +1,24 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.slope[data-el="seedmark-slope"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.slope[data-el="seedmark-slope"] *{box-sizing:border-box;}
+.slope[data-el="seedmark-slope"] :is(p,h2,h3,blockquote){margin:0;}
+.slope[data-el="seedmark-slope"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.slope[data-el="seedmark-slope"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.slope[data-el="seedmark-slope"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.slope[data-el="seedmark-slope"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.slope[data-el="seedmark-slope"] .seat:after{content:attr(data-ph);}
+.slope[data-el="seedmark-slope"]{isolation:isolate;padding:var(--gap-lg) var(--pad);}
+.slope[data-el="seedmark-slope"] .heads{position:absolute;left:var(--pad);right:var(--pad);top:calc(var(--gap-sm)/2);display:flex;justify-content:space-between;font-size:var(--type-14);line-height:var(--label-line);}
+.slope[data-el="seedmark-slope"] .pair{position:absolute;inset:var(--gap-lg) var(--pad);}
+.slope[data-el="seedmark-slope"] .pair:before{content:'';position:absolute;inset:0;background:var(--n-4);clip-path:polygon(0 calc((1 - var(--a)/var(--max))*100%),100% calc((1 - var(--b)/var(--max))*100%),100% calc((1 - var(--b)/var(--max))*100% + 2px),0 calc((1 - var(--a)/var(--max))*100% + 2px));}
+.slope[data-el="seedmark-slope"] .pair.on:before{background:var(--a1);}
+.slope[data-el="seedmark-slope"] .pair>.a,.slope[data-el="seedmark-slope"] .pair>.b{position:absolute;font-size:var(--type-14);line-height:var(--label-line);font-weight:var(--figure-weight);padding:0 calc(var(--gap-sm)/4);background:var(--page);}
+.slope[data-el="seedmark-slope"] .pair>.a{left:0;bottom:calc(var(--a)/var(--max)*100%);transform:translate(-50%,50%);}
+.slope[data-el="seedmark-slope"] .pair>.b{right:0;bottom:calc(var(--b)/var(--max)*100%);transform:translate(50%,50%);}
+.slope[data-el="seedmark-slope"] .pair>.name{position:absolute;left:var(--gap-sm);bottom:calc(var(--a)/var(--max)*100%);font-size:var(--type-12);line-height:var(--label-line);transform:translateY(-50%);}
+.slope[data-el="seedmark-slope"].dumbbell{display:flex;flex-direction:column;gap:var(--gap-sm);}
+.slope[data-el="seedmark-slope"].dumbbell .pair{position:relative;inset:auto;flex:1;margin-left:calc(var(--pad)*3);margin-right:var(--gap);}
+.slope[data-el="seedmark-slope"].dumbbell .pair:before{left:calc(min(var(--a),var(--b))/var(--max)*100%);width:calc(abs(var(--a) - var(--b))/var(--max)*100%);right:auto;top:50%;height:2px;background:var(--n-4);clip-path:none;}
+.slope[data-el="seedmark-slope"].dumbbell .pair>.name{left:calc(var(--pad)*-3);bottom:50%;max-width:calc(var(--pad)*2.5);}
+.slope[data-el="seedmark-slope"].dumbbell .pair>.a{left:calc(var(--a)/var(--max)*100%);bottom:50%;}
+.slope[data-el="seedmark-slope"].dumbbell .pair>.b{right:auto;left:calc(var(--b)/var(--max)*100%);bottom:50%;transform:translate(-50%,50%);}

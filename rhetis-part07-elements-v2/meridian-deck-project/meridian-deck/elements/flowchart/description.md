@@ -1,0 +1,1 @@
+Simple rounded nodes sit on a regular grid. Start and end nodes become accent capsules while decision nodes use a pale surface. Directional connector classes produce owned lines and visible arrowheads through the reserved grid gaps.

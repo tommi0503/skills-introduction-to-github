@@ -1,0 +1,1 @@
+Quiet horizontal ownership bands sit behind grid-positioned process nodes. Accent capsules mark endpoints and fine arrows connect nodes in their declared directions. Owner names remain in a dedicated left gutter outside the process columns.

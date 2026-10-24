@@ -1,0 +1,1 @@
+Thin coordinate-based links connect quiet capsule nodes. Euclidean distance and atan2 calculate every link from its two public endpoints, with the same reserved margins as the nodes. Labels remain above links and one relationship uses a stronger accent rule.

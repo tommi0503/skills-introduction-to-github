@@ -1,0 +1,39 @@
+/* Independently inferred from the measured onboard paper, capsule and circle language. */
+.sankey[data-el="onboard-docket-sankey"]{container-type:size;box-sizing:border-box;position:relative;min-width:0;min-height:0;font-family:var(--font-body);color:var(--ink);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}.sankey[data-el="onboard-docket-sankey"] *{box-sizing:border-box;min-width:0} .sankey[data-el="onboard-docket-sankey"] .name,.sankey[data-el="onboard-docket-sankey"] .note,.sankey[data-el="onboard-docket-sankey"] .kick,.sankey[data-el="onboard-docket-sankey"] .fig{margin:0} .sankey[data-el="onboard-docket-sankey"] .name{font-weight:var(--name-weight)}
+.sankey[data-el="onboard-docket-sankey"]{display:flex;flex-direction:column;justify-content:space-evenly;gap:var(--gap-sm);padding:var(--gap-sm);padding-left:34%;padding-right:var(--gap-sm)}
+.sankey[data-el="onboard-docket-sankey"]>.source{position:absolute;left:var(--gap-sm);width:22%;top:var(--gap-sm);bottom:var(--gap-sm);border-radius:var(--radius);background:var(--n-8);color:var(--page);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);z-index:2}
+.sankey[data-el="onboard-docket-sankey"] .name{font-size:var(--type-18);line-height:var(--name-line)}.sankey[data-el="onboard-docket-sankey"] .fig{font-size:var(--type-28);line-height:var(--figure-line);font-weight:var(--figure-weight)}
+.sankey[data-el="onboard-docket-sankey"] .branch{position:relative;flex:var(--v);min-height:0;border-radius:var(--radius-sm);background:var(--n-2);padding:calc(var(--gap-sm)/2) var(--gap-sm);display:grid;grid-template-columns:1fr auto;align-items:center;gap:calc(var(--gap-sm)/2);z-index:1}
+.sankey[data-el="onboard-docket-sankey"]>.branch::before{content:"";position:absolute;right:100%;width:calc(20% + var(--gap-sm));height:100%;background:var(--n-3);border-radius:50% 0 0 50%;z-index:-1}
+.sankey[data-el="onboard-docket-sankey"] .branch.on{background:var(--a1-2-soft);color:var(--a1-8)}.sankey[data-el="onboard-docket-sankey"]>.branch.on::before{background:var(--a1-3-soft)}.sankey[data-el="onboard-docket-sankey"] .branch.out{background:var(--n-1);color:var(--n-8)}.sankey[data-el="onboard-docket-sankey"]>.branch.out::before{background:var(--n-2)}
+.sankey[data-el="onboard-docket-sankey"] .branch:has(>.branch){grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:calc(var(--gap-sm)/2)}
+.sankey[data-el="onboard-docket-sankey"] .branch>.branch{grid-column:2;grid-row:auto;font-size:var(--type-14)}.sankey[data-el="onboard-docket-sankey"] .branch>.branch .name{font-size:var(--type-14)}.sankey[data-el="onboard-docket-sankey"] .branch>.branch .fig{font-size:var(--type-18)}
+@container (height<350px){.sankey[data-el="onboard-docket-sankey"] .name{font-size:var(--type-14)}.sankey[data-el="onboard-docket-sankey"] .fig{font-size:var(--type-20)}.sankey[data-el="onboard-docket-sankey"] .branch>.branch .name,.sankey[data-el="onboard-docket-sankey"] .branch>.branch .fig{font-size:var(--type-12)}.sankey[data-el="onboard-docket-sankey"] .branch{padding:calc(var(--gap-sm)/3) calc(var(--gap-sm)/2)}}
+
+.sankey[data-el="onboard-docket-sankey"] .branch:has(>.branch){display:flex;flex-direction:column;align-items:stretch;justify-content:stretch;padding-left:48%;gap:calc(var(--gap-sm)/2)}
+.sankey[data-el="onboard-docket-sankey"] .branch:has(>.branch)>.name{position:absolute;left:var(--gap-sm);width:40%;top:25%}
+.sankey[data-el="onboard-docket-sankey"] .branch:has(>.branch)>.fig{position:absolute;left:var(--gap-sm);width:40%;top:52%}
+.sankey[data-el="onboard-docket-sankey"] .branch>.branch{width:100%;flex:var(--v);min-height:0;display:flex;justify-content:space-between}
+
+.sankey[data-el="onboard-docket-sankey"] .branch{container-type:size;padding-top:0;padding-bottom:0}
+.sankey[data-el="onboard-docket-sankey"] .branch>.fig{font-size:clamp(var(--type-12),60cqh,var(--type-28))}
+.sankey[data-el="onboard-docket-sankey"] .branch>.name{font-size:clamp(var(--type-12),50cqh,var(--type-18))}
+.sankey[data-el="onboard-docket-sankey"] .branch>.branch>.fig{font-size:clamp(var(--type-12),60cqh,var(--type-18))}
+.sankey[data-el="onboard-docket-sankey"] .branch>.branch>.name{font-size:clamp(var(--type-12),50cqh,var(--type-14))}
+
+.sankey[data-el="onboard-docket-sankey"]{--branches:3}
+.sankey[data-el="onboard-docket-sankey"]>.source{top:calc(var(--gap-sm) + (var(--branches) - 1)*var(--gap-sm)/2);bottom:calc(var(--gap-sm) + (var(--branches) - 1)*var(--gap-sm)/2)}
+.sankey[data-el="onboard-docket-sankey"]>.branch{--shift:calc((var(--branches) - 1)*var(--gap-sm)/2 - (var(--index) - 1)*var(--gap-sm))}
+.sankey[data-el="onboard-docket-sankey"]>.branch:before{width:calc((100% + var(--gap-sm))*2/11 - var(--gap-sm));top:min(0px,var(--shift));height:calc(100% + abs(var(--shift)));border-radius:0;clip-path:polygon(0 max(0px,var(--shift)),100% max(0px,calc(-1*var(--shift))),100% calc(100% - max(0px,var(--shift))),0 calc(100% - max(0px,calc(-1*var(--shift)))))}
+.sankey[data-el="onboard-docket-sankey"] .branch:has(>.branch){gap:0}
+.sankey[data-el="onboard-docket-sankey"]:has(>.branch:nth-child(3)):not(:has(>.branch:nth-child(4))){--branches:2}
+.sankey[data-el="onboard-docket-sankey"]:has(>.branch:nth-child(4)):not(:has(>.branch:nth-child(5))){--branches:3}
+.sankey[data-el="onboard-docket-sankey"]:has(>.branch:nth-child(5)):not(:has(>.branch:nth-child(6))){--branches:4}
+.sankey[data-el="onboard-docket-sankey"]:has(>.branch:nth-child(6)):not(:has(>.branch:nth-child(7))){--branches:5}
+.sankey[data-el="onboard-docket-sankey"]:has(>.branch:nth-child(7)):not(:has(>.branch:nth-child(8))){--branches:6}
+.sankey[data-el="onboard-docket-sankey"]>.branch:nth-child(2){--index:1}
+.sankey[data-el="onboard-docket-sankey"]>.branch:nth-child(3){--index:2}
+.sankey[data-el="onboard-docket-sankey"]>.branch:nth-child(4){--index:3}
+.sankey[data-el="onboard-docket-sankey"]>.branch:nth-child(5){--index:4}
+.sankey[data-el="onboard-docket-sankey"]>.branch:nth-child(6){--index:5}
+.sankey[data-el="onboard-docket-sankey"]>.branch:nth-child(7){--index:6}

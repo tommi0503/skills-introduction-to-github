@@ -1,0 +1,1 @@
+Two or three large circles drawn with a two-pixel accent outline over a faint accent wash, overlapping so the shared part deepens; each set's bold name sits in its own outer part and the overlap names the core in the condensed squared display face. The marked set takes a stronger wash.

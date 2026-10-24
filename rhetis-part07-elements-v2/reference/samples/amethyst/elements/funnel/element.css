@@ -1,0 +1,55 @@
+:is(.body, .group, .split, .stack) > :is(.funnel[data-el="amethyst-funnel"]) { container-type: size; }
+.stack > :is(.funnel[data-el="amethyst-funnel"]) { flex: 1 1 0; min-height: 96px; }
+:is(.funnel[data-el="amethyst-funnel"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--n-6) 70%, var(--a1-2-muted)); }
+:where(.funnel)[data-el="amethyst-funnel"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.funnel[data-el="amethyst-funnel"]) > :nth-child(5n/**/+1 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-7); }
+:is(.funnel[data-el="amethyst-funnel"]) > :nth-child(5n/**/+2 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-5); }
+:is(.funnel[data-el="amethyst-funnel"]) > :nth-child(5n/**/+3 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a2-1); }
+:is(.funnel[data-el="amethyst-funnel"]) > :nth-child(5n/**/+4 of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-4-soft); }
+:is(.funnel[data-el="amethyst-funnel"]) > :nth-child(5n of .node, .spoke, .stage, .level, .set, .layer, .branch) { --t: var(--a1-8-soft); }
+:is(.funnel[data-el="amethyst-funnel"]) > :is(.node, .spoke, .stage, .level, .set, .layer, .branch) { --tint: color-mix(in srgb, var(--t, var(--a1)) 12%, var(--page)); --edge: color-mix(in srgb, var(--t, var(--a1)) 40%, var(--page)); }
+.funnel[data-el="amethyst-funnel"] { display: grid; grid-template-columns: fit-content(38%) minmax(0, 1fr); grid-auto-rows: minmax(0, 1fr); column-gap: var(--gap); row-gap: clamp(2px, 2.5%, calc(var(--gap) * 6 / 24)); --n: 4; }
+.funnel[data-el="amethyst-funnel"]:has(> .stage:nth-child(3):last-child) { --n: 3; }
+.funnel[data-el="amethyst-funnel"]:has(> .stage:nth-child(4):last-child) { --n: 4; }
+.funnel[data-el="amethyst-funnel"]:has(> .stage:nth-child(5):last-child) { --n: 5; }
+.funnel[data-el="amethyst-funnel"]:has(> .stage:nth-child(6):last-child) { --n: 6; }
+.funnel[data-el="amethyst-funnel"] > .stage { display: contents; --ff: min(var(--ff-w, var(--type-16)), var(--ff-h, var(--type-16))); --fn: min(var(--fn-w, var(--type-16)), var(--fn-h, var(--type-16))); }
+.funnel[data-el="amethyst-funnel"] > .stage > .name { grid-column: 1; align-self: center; text-align: right; font-size: var(--fn); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; color: var(--ink); }
+.funnel[data-el="amethyst-funnel"] > .stage > .fig { grid-column: 2; justify-self: center; width: max(calc(var(--v) * 1%), 4.4em); min-height: 0; display: flex; flex-wrap: wrap; align-items: baseline; align-content: center; justify-content: center; background: color-mix(in srgb, var(--t) 22%, var(--page)); border-radius: var(--radius-sm); font-size: var(--ff); font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); line-height: var(--figure-line); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); }
+.funnel[data-el="amethyst-funnel"] > .stage > .fig small { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.06em; }
+.funnel[data-el="amethyst-funnel"] > .stage.on > .fig { background: var(--a1); color: var(--a1-on); }
+@container (min-width: 340px) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-w: var(--type-24); --fn-w: var(--type-16); }
+}
+@container (min-width: 460px) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-w: var(--type-32); --fn-w: var(--type-20); }
+}
+@container (min-width: 640px) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-w: var(--type-40); --fn-w: var(--type-24); }
+}
+@container (min-width: 900px) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-w: var(--type-48); --fn-w: var(--type-28); }
+}
+@container (style(--n: 3) and (min-height: 132px)) or (style(--n: 4) and (min-height: 176px)) or (style(--n: 5) and (min-height: 220px)) or (style(--n: 6) and (min-height: 264px)) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-h: var(--type-24); --fn-h: var(--type-16); }
+}
+@container (style(--n: 3) and (min-height: 186px)) or (style(--n: 4) and (min-height: 248px)) or (style(--n: 5) and (min-height: 310px)) or (style(--n: 6) and (min-height: 372px)) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-h: var(--type-32); --fn-h: var(--type-20); }
+}
+@container (style(--n: 3) and (min-height: 240px)) or (style(--n: 4) and (min-height: 320px)) or (style(--n: 5) and (min-height: 400px)) or (style(--n: 6) and (min-height: 480px)) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-h: var(--type-40); --fn-h: var(--type-24); }
+}
+@container (style(--n: 3) and (min-height: 300px)) or (style(--n: 4) and (min-height: 400px)) or (style(--n: 5) and (min-height: 500px)) or (style(--n: 6) and (min-height: 600px)) {
+.funnel[data-el="amethyst-funnel"] > .stage { --ff-h: var(--type-48); --fn-h: var(--type-28); }
+}
+@container (max-width: 339px) {
+.funnel[data-el="amethyst-funnel"] > .stage { display: flex; flex-direction: column; justify-content: center; gap: calc(var(--gap) * 4 / 24); grid-column: 1 / -1; min-height: 0; }
+.funnel[data-el="amethyst-funnel"] > .stage > .name { align-self: stretch; text-align: center; }
+.funnel[data-el="amethyst-funnel"] > .stage > .fig { align-self: center; height: 1.8em; }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-funnel"][data-el="amethyst-funnel"][data-el="amethyst-funnel"] { color:var(--ink); }
+
+/* Exact proportions; figures may extend beyond narrow bars. */
+[data-el="amethyst-funnel"][data-el="amethyst-funnel"][data-el="amethyst-funnel"] > .stage > .fig { width:calc(var(--v) * 1%); min-width:0; flex-wrap:nowrap; align-items:center; color:var(--ink); paint-order:stroke fill; -webkit-text-stroke:4px var(--page); }

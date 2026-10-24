@@ -1,0 +1,23 @@
+.stack > :is(.org[data-el="annual-hierarchy"]) { flex: 1 1 0; min-height: 0; }
+.org[data-el="annual-hierarchy"] { container: org / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); column-gap: clamp(10px, 2.4cqw, 28px); row-gap: clamp(28px, 10cqh, 64px); align-content: center; color: var(--a1); }
+.org[data-el="annual-hierarchy"] > :nth-child(1 of .branch) { --i: 0; }
+.org[data-el="annual-hierarchy"] > :nth-child(2 of .branch) { --i: 1; }
+.org[data-el="annual-hierarchy"] > :nth-child(3 of .branch) { --i: 2; }
+.org[data-el="annual-hierarchy"] > :nth-child(4 of .branch) { --i: 3; }
+.org[data-el="annual-hierarchy"]:has(> :nth-child(2 of .branch)) > * { --n: 2; }
+.org[data-el="annual-hierarchy"]:has(> :nth-child(3 of .branch)) > * { --n: 3; }
+.org[data-el="annual-hierarchy"]:has(> :nth-child(4 of .branch)) > * { --n: 4; }
+
+.org[data-el="annual-hierarchy"] > .root { grid-column: 1 / -1; grid-row: 1; justify-self: center; display: grid; place-items: center; min-width: min(40%, 320px); padding: clamp(10px, 3cqh, 20px) clamp(20px, 4cqw, 48px); background: var(--a1); color: var(--a1-on); text-align: center; font-family: var(--font-display), sans-serif; font-size: var(--of, var(--type-20)); line-height: 1.2; font-weight: var(--title-weight); }
+.org[data-el="annual-hierarchy"] > .root::after { content: ""; position: absolute; left: 50%; top: 100%; height: calc(clamp(28px, 10cqh, 64px) / 2); border-left: var(--stroke) solid var(--a1); }
+.org[data-el="annual-hierarchy"] > .branch { grid-row: 2; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.org[data-el="annual-hierarchy"] > .branch::before { content: ""; position: absolute; left: calc(var(--i) / -1 * 0px + 50%); bottom: 100%; height: calc(clamp(28px, 10cqh, 64px) / 2); border-left: var(--stroke) solid var(--a1); }
+.org[data-el="annual-hierarchy"] > .branch::after { content: ""; position: absolute; top: calc(clamp(28px, 10cqh, 64px) / -2); left: calc(-1 * clamp(10px, 2.4cqw, 28px) / 2); right: calc(-1 * clamp(10px, 2.4cqw, 28px) / 2); border-top: var(--stroke) solid var(--a1); }
+.org[data-el="annual-hierarchy"] > :nth-child(1 of .branch)::after { left: 50%; }
+.org[data-el="annual-hierarchy"] > .branch:last-child::after { right: 50%; }
+.org[data-el="annual-hierarchy"] > .branch > .node { padding: clamp(8px, 2.4cqh, 16px) 10px; background: var(--annual-deco); text-align: center; font-size: var(--nf, var(--type-16)); line-height: 1.25; font-weight: var(--name-weight); letter-spacing: var(--name-track); }
+.org[data-el="annual-hierarchy"] > .branch > .leaf { padding: 4px 0 4px 14px; border-left: var(--hair) solid var(--a1); margin-left: 12px; font-size: var(--lf, var(--type-14)); line-height: 1.35; font-weight: var(--lead-weight); color: var(--n-6); }
+.org[data-el="annual-hierarchy"] > .branch > .leaf::before { content: ""; position: absolute; left: -4px; top: calc(50% - 3.5px); width: 7px; height: 7px; border-radius: 50%; background: var(--a1); }
+@container org (min-width: 800px) and (min-height: 380px) {
+.org[data-el="annual-hierarchy"] > * { --of: var(--type-28); --nf: var(--type-20); --lf: var(--type-16); }
+}

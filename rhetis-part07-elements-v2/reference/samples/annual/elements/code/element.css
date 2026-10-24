@@ -1,0 +1,17 @@
+.stack > :is(.code[data-el="annual-code"]) { flex: 1 1 0; min-height: 0; }
+.code[data-el="annual-code"] { container: code / size; min-width: 0; min-height: 0; display: flex; flex-direction: column; overflow: hidden; background: var(--n-2); border-top: 4px solid var(--a1); color: var(--ink); }
+.code[data-el="annual-code"] > .name { flex: none; padding: 10px 20px 8px; font-family: var(--font-display), sans-serif; font-size: var(--type-16); line-height: 1.2; font-weight: var(--title-weight); color: var(--a1); border-bottom: var(--hair) solid var(--n-3); }
+.code[data-el="annual-code"] > .lines { flex: 1 1 0; min-height: 0; padding: 14px 20px; counter-reset: ln; font-variant-numeric: tabular-nums; }
+.code[data-el="annual-code"] > .lines > p { margin: 0; white-space: pre; overflow: hidden; text-overflow: ellipsis; font-size: var(--cf, var(--type-14)); line-height: 1.6; font-weight: var(--lead-weight); letter-spacing: 0; color: var(--ink); }
+.code[data-el="annual-code"] .k { font-weight: var(--name-weight); color: var(--a1); }
+.code[data-el="annual-code"] .s { color: var(--a1-8-soft); }
+.code[data-el="annual-code"] .c { color: var(--n-5); font-style: italic; }
+.code[data-el="annual-code"] .n { color: var(--a1); font-weight: var(--label-weight); }
+.code[data-el="annual-code"].numbered > .lines > p { counter-increment: ln; padding-left: 3.2em; }
+.code[data-el="annual-code"].numbered > .lines > p::before { content: counter(ln); position: absolute; left: 0; width: 2.2em; text-align: right; color: var(--n-5); font-weight: var(--lead-weight); }
+@container code (min-width: 700px) and (min-height: 360px) {
+.code[data-el="annual-code"] > .lines > p { --cf: var(--type-16); }
+}
+@container code (max-height: 220px) {
+.code[data-el="annual-code"] > .lines > p { --cf: var(--type-12); }
+}

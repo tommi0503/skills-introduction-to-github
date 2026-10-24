@@ -1,0 +1,1 @@
+A person as a round portrait wearing a wide pale halo, or a square-cornered tall portrait, over a bold name in the accent and a light secondary note, centred; a row sets several side by side. On its own the portrait leads at the left with the text beside it.

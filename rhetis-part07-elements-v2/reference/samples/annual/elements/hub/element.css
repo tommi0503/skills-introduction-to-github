@@ -1,0 +1,33 @@
+.stack > :is(.hub[data-el="annual-hub"]) { flex: 1 1 0; min-height: 0; }
+.hub[data-el="annual-hub"] { container: hub / size; min-width: 0; min-height: 0; isolation: isolate; color: var(--a1); }
+.hub[data-el="annual-hub"] > * { --hc: min(84cqh, 34cqw, 360px); --nw: calc((100cqw - var(--hc)) / 2 - clamp(40px, 9cqw, 130px)); --L: round(up, var(--n) / 2, 1); --nh: calc(100cqh / var(--L)); --dot: 20px; --nf: var(--type-20); --tf: var(--type-14); }
+.hub[data-el="annual-hub"] > :nth-child(1 of .spoke) { --i: 0; }
+.hub[data-el="annual-hub"] > :nth-child(2 of .spoke) { --i: 1; }
+.hub[data-el="annual-hub"] > :nth-child(3 of .spoke) { --i: 2; }
+.hub[data-el="annual-hub"] > :nth-child(4 of .spoke) { --i: 3; }
+.hub[data-el="annual-hub"] > :nth-child(5 of .spoke) { --i: 4; }
+.hub[data-el="annual-hub"] > :nth-child(6 of .spoke) { --i: 5; }
+.hub[data-el="annual-hub"]:has(> :nth-child(2 of .spoke)) > * { --n: 2; }
+.hub[data-el="annual-hub"]:has(> :nth-child(3 of .spoke)) > * { --n: 3; }
+.hub[data-el="annual-hub"]:has(> :nth-child(4 of .spoke)) > * { --n: 4; }
+.hub[data-el="annual-hub"]:has(> :nth-child(5 of .spoke)) > * { --n: 5; }
+.hub[data-el="annual-hub"]:has(> :nth-child(6 of .spoke)) > * { --n: 6; }
+
+.hub[data-el="annual-hub"] > .core { position: absolute; z-index: 1; left: calc(50% - var(--hc) / 2); top: calc(50% - var(--hc) / 2); width: var(--hc); height: var(--hc); display: grid; place-items: center; padding: calc(var(--hc) * 0.16); border-radius: 50%; background: var(--annual-deco); text-align: center; }
+.hub[data-el="annual-hub"] > .core > * { margin: 0; font-family: var(--font-display), sans-serif; font-size: var(--cf, var(--type-24)); line-height: 1.15; font-weight: var(--title-weight); color: var(--a1); }
+.hub[data-el="annual-hub"] > .core > .icon { width: 56%; height: 56%; }
+.hub[data-el="annual-hub"] > .spoke { --s: clamp(0, var(--i) - var(--L) + 1, 1); --j: calc(var(--i) - var(--s) * var(--L)); --k: calc(var(--L) - var(--s) * (2 * var(--L) - var(--n))); position: absolute; left: calc(var(--s) * (100cqw - var(--nw))); top: calc(100cqh * (var(--j) + 0.5) / var(--k) - var(--nh) / 2); width: var(--nw); height: var(--nh); display: flex; flex-direction: column; justify-content: center; gap: 2px; text-align: left; --px: calc(var(--nw) + 26px); --dx: calc((1 - 2 * var(--s)) * (50cqw - var(--nw) - 26px) ); --dy: calc(50cqh - 100cqh * (var(--j) + 0.5) / var(--k)); }
+.hub[data-el="annual-hub"] > .spoke::after { content: ""; position: absolute; top: calc(50% - var(--dot) / 2); left: calc(var(--s) * (-26px - var(--dot) / 2) + (1 - var(--s)) * (100% + 26px - var(--dot) / 2)); width: var(--dot); height: var(--dot); border-radius: 50%; background: var(--a1); }
+.hub[data-el="annual-hub"] > .spoke::before { content: ""; position: absolute; z-index: -1; top: calc(50% - 1px); left: calc(var(--s) * -26px + (1 - var(--s)) * (100% + 26px)); width: hypot(var(--dx), var(--dy)); height: var(--stroke); transform-origin: 0 50%; rotate: atan2(var(--dy), var(--dx)); background: var(--a1); }
+.hub[data-el="annual-hub"] > .spoke.on > .name { color: var(--a1); text-decoration: underline 3px; text-underline-offset: 6px; }
+.hub[data-el="annual-hub"] > .spoke > .mark { display: none; }
+.hub[data-el="annual-hub"] > .spoke > .name { font-size: var(--nf); line-height: 1.2; font-weight: var(--name-weight); letter-spacing: var(--name-track); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hub[data-el="annual-hub"] > .spoke > .note { font-size: var(--tf); line-height: 1.5; font-weight: var(--lead-weight); letter-spacing: -0.04em; color: var(--n-6); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@container hub (min-width: 900px) and (min-height: 380px) {
+.hub[data-el="annual-hub"] > * { --nf: var(--type-32); --tf: var(--type-16); --cf: var(--type-36); --dot: 22px; }
+}
+@container hub (max-height: 259px) {
+.hub[data-el="annual-hub"] > .spoke > .note { -webkit-line-clamp: 1; }
+}
+
+.hub[data-el="annual-hub"] > .spoke { align-items: flex-start; }

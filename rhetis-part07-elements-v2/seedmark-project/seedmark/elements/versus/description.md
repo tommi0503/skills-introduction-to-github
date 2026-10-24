@@ -1,0 +1,1 @@
+Two outlined or quiet side panels face one another with a small VS marker in the gap. Strong names sit above local business lists. The selected side uses an ink boundary rather than a different silhouette, so either side may carry the emphasis.

@@ -1,0 +1,1 @@
+Equal-step filled series use the same exact segment geometry as the line chart. Restrained transparent fills retain overlapping trends, while cumulative series paint as ordered opaque bands. Legends and optional values remain above the plot.

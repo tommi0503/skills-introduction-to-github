@@ -1,0 +1,29 @@
+.stats[data-el="annual-metric"] { container: member / size; min-width: 0; min-height: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); align-items: center; }
+.stats[data-el="annual-metric"] > .stat[data-el="annual-metric"] { padding-inline: clamp(12px, 3cqw, var(--gap-lg)); }
+.stats[data-el="annual-metric"] > .stat[data-el="annual-metric"] + .stat[data-el="annual-metric"] { border-left: var(--hair) solid var(--n-3); }
+.stack > :is(.stat[data-el="annual-metric"], .stats[data-el="annual-metric"]) { flex: 1 1 0; min-height: 0; }
+.stat[data-el="annual-metric"] { min-width: 0; min-height: 0; color: var(--a1); }
+.stat[data-el="annual-metric"]:not(.stats[data-el="annual-metric"] > *) { container: member / size; display: grid; align-content: center; }
+.stat[data-el="annual-metric"] > .parts { --ff: var(--type-48); --nf: var(--type-16); --tf: var(--type-14); display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
+.stat[data-el="annual-metric"] > .parts > * { margin: 0; max-width: 100%; min-width: 0; }
+.stat[data-el="annual-metric"] > .parts > .fig { font-family: var(--font-display), sans-serif; font-size: var(--ff); line-height: 1; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); color: var(--a1); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.stat[data-el="annual-metric"] > .parts > .fig small { font-size: 0.5em; margin-left: 0.06em; }
+.stat[data-el="annual-metric"] > .parts > .name { font-size: var(--nf); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); color: var(--a1); }
+.stat[data-el="annual-metric"] > .parts > .note { font-size: var(--tf); line-height: 1.55; font-weight: var(--lead-weight); letter-spacing: var(--body-track); color: var(--n-6); }
+.stat[data-el="annual-metric"] > .parts > .spark { width: 100%; }
+@container member (min-height: 160px) {
+.stat[data-el="annual-metric"] > .parts { --ff: var(--type-64); --nf: var(--type-20); --tf: var(--type-16); }
+}
+@container member (min-height: 220px) and (min-width: 360px) {
+.stat[data-el="annual-metric"] > .parts { --ff: var(--type-88); --nf: var(--type-20); }
+}
+@container member (min-height: 260px) and (min-width: 600px) {
+.stat[data-el="annual-metric"] > .parts { --ff: var(--type-96); --nf: var(--type-24); --tf: var(--type-16); }
+}
+@container member (min-height: 260px) and (min-width: 1000px) {
+.stat[data-el="annual-metric"] > .parts { --ff: var(--type-120); --nf: var(--type-28); --tf: var(--type-18); }
+}
+@container member (max-height: 109px) {
+.stat[data-el="annual-metric"] > .parts { --ff: var(--type-36); }
+.stat[data-el="annual-metric"] > .parts > .note { display: none; }
+}

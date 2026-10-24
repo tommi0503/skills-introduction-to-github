@@ -1,0 +1,194 @@
+.stack > :is(.card[data-el="amethyst-card"]) { flex: 1 1 0; min-height: 0; }
+.card[data-el="amethyst-card"] { container: member / size; min-width: 0; min-height: 0; }
+.card[data-el="amethyst-card"] { background-color: var(--page); color: var(--ink); border-radius: var(--radius); box-shadow: inset 0 0 0 var(--hair) var(--a1-2-muted); --kick-ink: var(--a1); --note-ink: var(--n-8); --fig-ink: var(--ink); --mark-bg: var(--a1-2-muted); --mark-ink: var(--a1); --icon-ink: var(--a1); --num-ink: var(--a1); }
+.card[data-el="amethyst-card"].quiet { background-color: var(--n-1); box-shadow: none; --kick-ink: var(--n-8); --mark-bg: var(--page); }
+.card[data-el="amethyst-card"].line { background-color: transparent; box-shadow: none; border: var(--stroke) solid var(--a1-2-muted); }
+.card[data-el="amethyst-card"].on { background-color: var(--a1); color: var(--a1-on); box-shadow: none; --kick-ink: var(--a1-on); --note-ink: var(--a1-on); --fig-ink: var(--a1-on); --mark-bg: var(--a1-on); --mark-ink: var(--a1); --icon-ink: var(--a1-on); --num-ink: var(--a1-on); }
+.card[data-el="amethyst-card"].tone-1 { --tone: var(--a1-7); --tone-ink: var(--page); }
+.card[data-el="amethyst-card"].tone-2 { --tone: var(--a1-5); --tone-ink: var(--n-9); }
+.card[data-el="amethyst-card"].tone-3 { --tone: var(--a2-1); --tone-ink: var(--n-9); }
+.card[data-el="amethyst-card"].tone-4 { --tone: var(--a1-4-soft); --tone-ink: var(--n-9); }
+.card[data-el="amethyst-card"].tone-5 { --tone: var(--a1-8-soft); --tone-ink: var(--page); }
+.card[data-el="amethyst-card"]:is(.tone-1, .tone-2, .tone-3, .tone-4, .tone-5) { box-shadow: inset 0 0 0 var(--hair) color-mix(in srgb, var(--tone) 36%, transparent); background-image: linear-gradient(color-mix(in srgb, var(--tone) 10%, transparent), color-mix(in srgb, var(--tone) 10%, transparent)); --kick-ink: var(--n-8); --mark-bg: var(--tone); --mark-ink: var(--tone-ink); --icon-ink: var(--tone); }
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --px: clamp(14px, 8cqw, var(--pad)); --py: clamp(calc(var(--pad) * 10 / 28), 8cqh, var(--pad)); --g: clamp(calc(var(--gap) * 4 / 24), 2.4cqh, var(--gap-sm)); --fig: var(--type-32); --name: var(--type-16); --note: var(--type-16); --kick: var(--type-16); --m: 32px; --mf: var(--type-20); width: 100%; height: 100%; min-width: 0; min-height: 0; padding: var(--py) var(--px); display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: var(--g); text-align: left; }
+.parts > *:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { min-width: 0; }
+.parts > .kick:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { font-size: var(--kick); line-height: var(--label-line); font-weight: var(--label-weight); letter-spacing: var(--label-track); color: var(--kick-ink); }
+.parts > .fig:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { font-family: var(--font-display), sans-serif; font-weight: var(--figure-weight); line-height: var(--figure-line); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; font-size: var(--fig); white-space: nowrap; color: var(--fig-ink); }
+.parts > .fig small:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { font-size: 0.5em; font-weight: var(--label-weight); letter-spacing: 0; margin-left: 0.1em; }
+.parts > .name:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { font-size: var(--name); line-height: var(--name-line); font-weight: var(--name-weight); letter-spacing: var(--name-track); text-wrap: balance; }
+.parts > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { font-size: var(--note); line-height: var(--body-line); font-weight: var(--body-weight); letter-spacing: var(--body-track); color: var(--note-ink); text-wrap: pretty; }
+.parts > .mark:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { flex: none; align-self: flex-start; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.parts > .mark:is(.icon, :has(> .icon)):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { width: var(--m); height: var(--m); border-radius: var(--radius-sm); background-color: var(--mark-bg); color: var(--mark-ink); }
+.parts > .mark.icon:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { padding: calc(var(--m) * 0.24); }
+.parts > .mark > .icon:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { width: calc(var(--m) * 0.52); height: calc(var(--m) * 0.52); }
+.parts > .mark:not(.icon, :has(> .icon)):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { place-items: start; font-family: var(--font-display), sans-serif; font-size: var(--mf); line-height: var(--figure-line); font-weight: var(--figure-weight); letter-spacing: var(--figure-track); color: var(--num-ink); }
+.card[data-el="amethyst-card"]:is(.tone-1, .tone-2, .tone-3, .tone-4, .tone-5) > .parts > .mark:not(.icon, :has(> .icon)) { width: var(--m); height: var(--m); place-items: center; border-radius: 50%; font-size: calc(var(--m) / 2); letter-spacing: 0; background-color: var(--mark-bg); color: var(--mark-ink); }
+@container member not (min-aspect-ratio: 5/2) {
+.parts:has(> .mark) > .mark:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { margin-bottom: clamp(0px, 4cqh, var(--gap)); }
+.card[data-el="amethyst-card"] > .parts:not(:has(> .mark, > .kick, > .fig)) { justify-content: center; }
+@container member (min-width: 200px) and (min-height: 150px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-40); --name: var(--type-20); --m: 40px; --mf: var(--type-24); }
+}
+@container member (min-width: 240px) and (min-height: 220px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-40); --name: var(--type-24); --m: 48px; --mf: var(--type-32); }
+}
+@container member (min-width: 340px) and (min-height: 220px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-48); }
+}
+@container member (min-width: 180px) and (min-height: 260px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --name: var(--type-24); --m: 48px; --mf: var(--type-32); }
+}
+@container member (min-width: 340px) and (min-height: 260px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-56); --name: var(--type-28); --note: var(--type-20); --m: 56px; --mf: var(--type-40); }
+}
+@container member (min-width: 500px) and (min-height: 220px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-64); --name: var(--type-28); --note: var(--type-20); --m: 56px; --mf: var(--type-40); }
+}
+@container member (min-width: 160px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-40); --name: var(--type-24); --note: var(--type-16); --m: 48px; --mf: var(--type-40); }
+}
+@container member (min-width: 220px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-48); --name: var(--type-28); --note: var(--type-20); --kick: var(--type-20); --m: 56px; --mf: var(--type-48); }
+}
+@container member (min-width: 340px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-72); --name: var(--type-32); --note: var(--type-20); --m: 64px; --mf: var(--type-56); }
+}
+@container member (min-width: 500px) and (min-height: 400px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-96); --name: var(--type-40); --note: var(--type-24); --kick: var(--type-20); --m: 80px; --mf: var(--type-64); }
+}
+@container member (min-width: 900px) and (min-height: 300px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-96); --name: var(--type-40); --note: var(--type-24); --kick: var(--type-24); --m: 80px; --mf: var(--type-72); }
+}
+@container member (min-width: 240px) and (min-height: 220px) {
+.card[data-el="amethyst-card"] > .parts > .mark:is(.icon, :has(> .icon)) { width: calc(var(--m) * 0.75); height: calc(var(--m) * 0.75); padding: 0; background-color: transparent; color: var(--icon-ink); border-radius: 0; }
+.card[data-el="amethyst-card"] > .parts > .mark > .icon { width: 100%; height: 100%; }
+}
+@container member (min-height: 240px) and (min-width: 180px) {
+.card[data-el="amethyst-card"] > .parts > .mark + *, .card[data-el="amethyst-card"] > .parts:not(:has(> .mark)) > .kick + * { margin-top: auto; }
+@container member (max-width: 189px) {
+.card[data-el="amethyst-card"] > .parts > .mark + .kick + * { margin-top: auto; }
+}
+.card[data-el="amethyst-card"] > .parts:has(> .mark, > .kick) > .mark { margin-bottom: var(--gap); }
+.card[data-el="amethyst-card"] > .parts:has(> .mark, > .kick) > .note { min-height: 2lh; }
+}
+@container member (max-height: 149px) or (max-width: 189px) {
+.parts:has(> .fig, > .mark) > .kick:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 169px) or (max-width: 159px) {
+.parts:has(> .fig, > .mark):has(> .name) > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 199px) {
+.parts:has(> .fig):has(> .kick):has(> .name) > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 259px) and (max-width: 339px) {
+.parts:has(> .fig):has(> .name):has(> .note) > .kick:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 229px) and (max-width: 189px) {
+.parts:has(> .fig, > .mark):has(> .name) > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *), .parts:not(:has(> .fig, > .mark)):has(> .name) > .kick:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 219px) {
+.parts:not(:has(> .fig, > .mark)):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { justify-content: center; }
+}
+@container member (max-height: 119px) or (max-width: 159px) {
+.parts:not(:has(> .fig, > .mark)) > .kick:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 99px) or (max-width: 139px) {
+.parts:not(:has(> .fig, > .mark)):has(> .name) > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+}
+@container member (min-aspect-ratio: 5/2) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --px: clamp(12px, 4.2cqw, var(--pad)); --py: clamp(calc(var(--pad) * 8 / 28), 11cqh, var(--pad)); --fig: var(--type-32); --name: var(--type-16); --m: 32px; --mf: var(--type-24); display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto auto auto minmax(0, 1fr); align-items: center; column-gap: clamp(calc(var(--gap) * 12 / 24), 3cqw, var(--gap-lg)); row-gap: 0; }
+.parts > .kick:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-row: 2; margin-bottom: clamp(1px, 1.6cqh, calc(var(--gap) * 6 / 24)); }
+.parts > .name:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-row: 3; }
+.parts > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-row: 4; margin-top: clamp(1px, 1.6cqh, calc(var(--gap) * 6 / 24)); }
+.parts > .fig:is([data-el="amethyst-card"], [data-el="amethyst-card"] *), .parts > .mark:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-row: 1 / -1; align-self: center; }
+.parts > .mark:not(.icon, :has(> .icon)):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { min-width: 1.2em; }
+.parts:has(> .fig):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-template-columns: minmax(calc(var(--fig) * 2), max-content) minmax(0, 1fr); }
+.parts:has(> .fig) > .fig:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-column: 1; }
+.parts:has(> .fig) > :not(.fig, .mark):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-column: 2; }
+.parts:has(> .mark):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-template-columns: auto minmax(0, 1fr); }
+.parts:has(> .mark) > .mark:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-column: 1; }
+.parts:has(> .mark) > :not(.fig, .mark):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-column: 2; }
+.parts:has(> .mark):has(> .fig):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-template-columns: auto minmax(0, 1fr) max-content; }
+.parts:has(> .mark) > .fig:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { grid-column: 3; }
+@container member (min-height: 60px) and (min-width: 460px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --name: var(--type-20); --m: 40px; }
+}
+@container member (min-height: 80px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-40); --m: 40px; --mf: var(--type-32); }
+}
+@container member (min-height: 80px) and (min-width: 300px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --name: var(--type-20); }
+}
+@container member (min-height: 80px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-48); --name: var(--type-24); --m: 48px; --mf: var(--type-40); }
+}
+@container member (min-height: 104px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --name: var(--type-28); --note: var(--type-20); }
+}
+@container member (min-height: 140px) and (min-width: 500px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-56); --name: var(--type-28); --note: var(--type-20); --m: 56px; --mf: var(--type-40); }
+}
+@container member (min-height: 140px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-64); --name: var(--type-32); --note: var(--type-20); --m: 64px; --mf: var(--type-48); }
+}
+@container member (min-height: 220px) and (min-width: 700px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-80); --name: var(--type-36); --note: var(--type-24); --kick: var(--type-20); --m: 72px; --mf: var(--type-64); }
+}
+@container member (min-height: 220px) and (min-width: 1000px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-96); --name: var(--type-40); --note: var(--type-24); --kick: var(--type-20); --m: 80px; --mf: var(--type-72); }
+}
+@container member (min-height: 104px) and (min-width: 500px) {
+.card[data-el="amethyst-card"] > .parts > .mark:is(.icon, :has(> .icon)) { width: calc(var(--m) * 0.75); height: calc(var(--m) * 0.75); padding: 0; background-color: transparent; color: var(--icon-ink); border-radius: 0; }
+.card[data-el="amethyst-card"] > .parts > .mark > .icon { width: 100%; height: 100%; }
+}
+@container member (min-height: 104px) and (max-height: 149px) and (min-width: 500px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --name: var(--type-28); --note: var(--type-20); }
+.parts:has(> .fig):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-56); }
+}
+@container member (min-height: 104px) and (max-height: 139px) and (min-width: 500px) {
+.parts:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --name: var(--type-24); --note: var(--type-16); }
+.parts:has(> .fig):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { --fig: var(--type-48); }
+}
+@container member (max-height: 149px) {
+.parts > .kick:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 79px) or (max-width: 339px) {
+.parts:has(> .name) > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 159px) and (max-width: 499px) {
+.parts:has(> .fig):has(> .name) > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+@container member (max-height: 95px) and (max-width: 499px) {
+.parts:has(> .name) > .note:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { display: none; }
+}
+}
+:is(.card[data-el="amethyst-card"]) :is(.bars), :is(.card[data-el="amethyst-card"]) :is(.lines) { --ground: var(--page); }
+.mark:has(> .seat.icon):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { background-color: transparent !important; padding: 0 !important; }
+.parts > .mark:has(> .seat.icon):is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { width: clamp(48px, 30cqmin, 120px) !important; height: clamp(48px, 30cqmin, 120px) !important; }
+.mark > .seat.icon:is([data-el="amethyst-card"], [data-el="amethyst-card"] *) { width: 100%; height: 100%; aspect-ratio: 1; border-radius: var(--radius-sm); }
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] > .parts { justify-content:flex-start; }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] { color:var(--ink); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] { background:var(--page); border:0; border-radius:var(--radius); box-shadow:0 9px 17px color-mix(in oklch, var(--ink) 14%, transparent); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] > .parts { text-align:left; align-items:stretch; justify-content:flex-start; gap:var(--gap-sm); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] > .parts > :is(.name,.kick) { color:var(--a1-5); font-weight:850; line-height:1.08; }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] > .parts > .note { border-top:var(--stroke) solid var(--a1-2-muted); padding-top:var(--gap-sm); color:var(--ink); font-weight:500; }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] > .parts > .note small { display:block; margin-top:var(--gap-sm); color:var(--n-6); font-size:var(--type-16); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].on { background:var(--a1); --ink:var(--a1-on); --ink-2:var(--a1-on); --mute:var(--a1-on); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].on > .parts > :is(.name,.kick) { color:var(--a1-on); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].quiet { background:var(--n-1); box-shadow:none; }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].line { background:var(--page); border:var(--stroke) solid var(--a1-2-muted); box-shadow:none; }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-1 { background:var(--a1-7); --ink:var(--page); --ink-2:var(--page); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-1 > .parts > :is(.name,.kick) { color:var(--page); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-2 { background:var(--a1-5); --ink:var(--n-9); --ink-2:var(--n-9); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-2 > .parts > :is(.name,.kick) { color:var(--n-9); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-3 { background:var(--a2-1); --ink:var(--n-9); --ink-2:var(--n-9); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-3 > .parts > :is(.name,.kick) { color:var(--n-9); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-4 { background:var(--a1-4-soft); --ink:var(--n-9); --ink-2:var(--n-9); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-4 > .parts > :is(.name,.kick) { color:var(--n-9); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-5 { background:var(--a1-8-soft); --ink:var(--page); --ink-2:var(--page); }
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"].tone-5 > .parts > :is(.name,.kick) { color:var(--page); }
+
+[data-el="amethyst-card"][data-el="amethyst-card"][data-el="amethyst-card"] > .parts > .note { font-size:var(--type-18); line-height:1.25; }

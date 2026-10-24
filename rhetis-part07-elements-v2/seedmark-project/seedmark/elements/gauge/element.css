@@ -1,0 +1,18 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.meter[data-el="seedmark-gauge"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.meter[data-el="seedmark-gauge"] *{box-sizing:border-box;}
+.meter[data-el="seedmark-gauge"] :is(p,h2,h3,blockquote){margin:0;}
+.meter[data-el="seedmark-gauge"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.meter[data-el="seedmark-gauge"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.meter[data-el="seedmark-gauge"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.meter[data-el="seedmark-gauge"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.meter[data-el="seedmark-gauge"] .seat:after{content:attr(data-ph);}
+.meter[data-el="seedmark-gauge"]{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto;align-content:center;gap:calc(var(--gap-sm)/2);padding:calc(var(--gap-sm)/3) var(--gap-sm) calc(var(--gap-sm)*2);}
+.meter[data-el="seedmark-gauge"] .name{font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);}
+.meter[data-el="seedmark-gauge"] .fig{font-size:var(--type-24);line-height:var(--figure-line);font-weight:var(--figure-weight);}
+.meter[data-el="seedmark-gauge"]:before,.meter[data-el="seedmark-gauge"]:after{content:'';position:absolute;left:var(--gap-sm);right:var(--gap-sm);top:calc(50% + var(--gap-sm));height:12px;border-radius:999px;background:var(--n-2);}
+.meter[data-el="seedmark-gauge"]:after{right:auto;width:calc((100cqw - var(--gap-sm)*2)*var(--v)/100);background:var(--a1);}
+@container(max-width:500px){.meter[data-el="seedmark-gauge"] .name{font-size:var(--type-16)}
+.meter[data-el="seedmark-gauge"] .fig{font-size:var(--type-20)}}
+@container(max-height:100px){.meter[data-el="seedmark-gauge"] .name{font-size:var(--type-12);line-height:var(--label-line);}
+.meter[data-el="seedmark-gauge"] .fig{font-size:var(--type-14);line-height:var(--label-line);}}

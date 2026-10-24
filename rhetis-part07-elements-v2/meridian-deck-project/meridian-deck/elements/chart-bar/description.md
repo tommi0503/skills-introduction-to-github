@@ -1,0 +1,1 @@
+Straight neutral columns rise from one baseline, with one accent column taking emphasis. Values remain above the paint and labels below the plot. The horizontal variant reserves a genuine left label gutter and an external value register; dense narrow axes reduce alternating labels.

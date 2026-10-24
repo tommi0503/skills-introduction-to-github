@@ -1,0 +1,57 @@
+:is(.body, .group, .split, .stack) > :is(.tablebox[data-el="amethyst-table"]) { container-type: size; }
+.stack > :is(.tablebox[data-el="amethyst-table"]) { flex: 1 1 0; min-height: 96px; }
+:is(.tablebox[data-el="amethyst-table"]) :is(.bars), :is(.tablebox[data-el="amethyst-table"]) :is(.lines) { --ground: var(--page); }
+.tablebox[data-el="amethyst-table"] { display: flex; min-width: 0; min-height: 0; overflow: hidden; background: var(--page); border: 1px solid var(--a1-2-muted); border-radius: var(--radius); --r: 5; --c: 4; }
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { flex: 1; width: 100%; height: 100%; border-collapse: collapse; table-layout: auto; color: var(--n-8); line-height: 1.2; font-size: min(var(--tf-r, var(--type-16)), var(--tf-c, var(--type-16))); --th: min(var(--th-r, var(--type-16)), var(--th-c, var(--type-16))); --ty: clamp(2px, calc(100cqh / var(--r) * 0.1), calc(var(--pad) * 20 / 28)); --tx: clamp(calc(var(--pad) * 8 / 28), calc(100cqw / var(--c) * 0.09), calc(var(--pad) * 28 / 28)); }
+.table :is(th, td):is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { padding: var(--ty) var(--tx); text-align: left; vertical-align: middle; font-weight: var(--body-weight); letter-spacing: var(--body-track); border-bottom: 1px solid var(--a1-2-muted); }
+.table tbody th:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { color: var(--ink); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+.table td.num:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { color: var(--ink); }
+.table tbody tr:last-child > *:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { border-bottom: 0; }
+.table thead th:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { font-size: var(--th); font-weight: var(--label-weight); line-height: var(--label-line); letter-spacing: var(--label-track); color: var(--n-6); border-bottom: var(--stroke) solid var(--ink); }
+.table .num:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.table tbody .pick:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { background:var(--a1-1-muted); color: var(--ink); font-weight: var(--name-weight); border-bottom-color: color-mix(in oklab, var(--a1) 38%, var(--a1-2-muted)); }
+.table thead .pick:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { background: var(--a1); color: var(--a1-on); border-bottom-color: var(--a1); }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(1):last-child) { --r: 2; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(2):last-child) { --r: 3; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(3):last-child) { --r: 4; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(4):last-child) { --r: 5; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(5):last-child) { --r: 6; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(6):last-child) { --r: 7; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(7):last-child) { --r: 8; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(8):last-child) { --r: 9; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(9):last-child) { --r: 10; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(10):last-child) { --r: 11; }
+.tablebox[data-el="amethyst-table"]:has(tbody > tr:nth-child(11):last-child) { --r: 12; }
+.tablebox[data-el="amethyst-table"]:has(tr:first-child > :nth-child(2):last-child) { --c: 2; }
+.tablebox[data-el="amethyst-table"]:has(tr:first-child > :nth-child(3):last-child) { --c: 3; }
+.tablebox[data-el="amethyst-table"]:has(tr:first-child > :nth-child(4):last-child) { --c: 4; }
+.tablebox[data-el="amethyst-table"]:has(tr:first-child > :nth-child(5):last-child) { --c: 5; }
+.tablebox[data-el="amethyst-table"]:has(tr:first-child > :nth-child(6):last-child) { --c: 6; }
+.tablebox[data-el="amethyst-table"]:has(tr:first-child > :nth-child(7):last-child) { --c: 7; }
+.tablebox[data-el="amethyst-table"]:has(tr:first-child > :nth-child(8):last-child) { --c: 8; }
+@container (style(--r: 2) and (min-height: 68px)) or (style(--r: 3) and (min-height: 102px)) or (style(--r: 4) and (min-height: 136px)) or (style(--r: 5) and (min-height: 170px)) or (style(--r: 6) and (min-height: 204px)) or (style(--r: 7) and (min-height: 238px)) or (style(--r: 8) and (min-height: 272px)) or (style(--r: 9) and (min-height: 306px)) or (style(--r: 10) and (min-height: 340px)) or (style(--r: 11) and (min-height: 374px)) or (style(--r: 12) and (min-height: 408px)) {
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { line-height: 1.35; --ty: clamp(calc(var(--pad) * 4 / 28), calc(100cqh / var(--r) * 0.16), calc(var(--pad) * 20 / 28)); }
+}
+@container (style(--r: 2) and (min-height: 88px)) or (style(--r: 3) and (min-height: 132px)) or (style(--r: 4) and (min-height: 176px)) or (style(--r: 5) and (min-height: 220px)) or (style(--r: 6) and (min-height: 264px)) or (style(--r: 7) and (min-height: 308px)) or (style(--r: 8) and (min-height: 352px)) or (style(--r: 9) and (min-height: 396px)) or (style(--r: 10) and (min-height: 440px)) or (style(--r: 11) and (min-height: 484px)) or (style(--r: 12) and (min-height: 528px)) {
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { --tf-r: var(--type-20); --th-r: var(--type-16); }
+}
+@container (style(--r: 2) and (min-height: 120px)) or (style(--r: 3) and (min-height: 180px)) or (style(--r: 4) and (min-height: 240px)) or (style(--r: 5) and (min-height: 300px)) or (style(--r: 6) and (min-height: 360px)) or (style(--r: 7) and (min-height: 420px)) or (style(--r: 8) and (min-height: 480px)) or (style(--r: 9) and (min-height: 540px)) or (style(--r: 10) and (min-height: 600px)) or (style(--r: 11) and (min-height: 660px)) or (style(--r: 12) and (min-height: 720px)) {
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { --tf-r: var(--type-24); --th-r: var(--type-20); }
+}
+@container (style(--r: 2) and (min-height: 160px)) or (style(--r: 3) and (min-height: 240px)) or (style(--r: 4) and (min-height: 320px)) or (style(--r: 5) and (min-height: 400px)) or (style(--r: 6) and (min-height: 480px)) or (style(--r: 7) and (min-height: 560px)) or (style(--r: 8) and (min-height: 640px)) or (style(--r: 9) and (min-height: 720px)) or (style(--r: 10) and (min-height: 800px)) or (style(--r: 11) and (min-height: 880px)) or (style(--r: 12) and (min-height: 960px)) {
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { --tf-r: var(--type-28); --th-r: var(--type-20); }
+}
+@container (style(--c: 2) and (min-width: 280px)) or (style(--c: 3) and (min-width: 420px)) or (style(--c: 4) and (min-width: 560px)) or (style(--c: 5) and (min-width: 700px)) or (style(--c: 6) and (min-width: 840px)) or (style(--c: 7) and (min-width: 980px)) or (style(--c: 8) and (min-width: 1120px)) {
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { --tf-c: var(--type-20); --th-c: var(--type-16); }
+}
+@container (style(--c: 2) and (min-width: 380px)) or (style(--c: 3) and (min-width: 570px)) or (style(--c: 4) and (min-width: 760px)) or (style(--c: 5) and (min-width: 950px)) or (style(--c: 6) and (min-width: 1140px)) or (style(--c: 7) and (min-width: 1330px)) or (style(--c: 8) and (min-width: 1520px)) {
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { --tf-c: var(--type-24); --th-c: var(--type-20); }
+}
+@container (style(--c: 2) and (min-width: 500px)) or (style(--c: 3) and (min-width: 750px)) or (style(--c: 4) and (min-width: 1000px)) or (style(--c: 5) and (min-width: 1250px)) or (style(--c: 6) and (min-width: 1500px)) or (style(--c: 7) and (min-width: 1750px)) or (style(--c: 8) and (min-width: 2000px)) {
+.table:is([data-el="amethyst-table"], [data-el="amethyst-table"] *) { --tf-c: var(--type-28); --th-c: var(--type-20); }
+}
+
+/* Amethyst: source034 floating cards and thin/heavy type. */
+[data-el="amethyst-table"][data-el="amethyst-table"][data-el="amethyst-table"] { color:var(--ink); }
+[data-el="amethyst-table"][data-el="amethyst-table"][data-el="amethyst-table"] { border-radius:var(--radius); border:var(--stroke) solid var(--a1-2-muted); box-shadow:none; }
+[data-el="amethyst-table"][data-el="amethyst-table"][data-el="amethyst-table"] .table thead th { background:var(--a1-2-muted); color:var(--a1); font-weight:800; }

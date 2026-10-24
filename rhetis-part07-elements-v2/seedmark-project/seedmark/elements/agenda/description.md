@@ -1,0 +1,1 @@
+Numbered entries align a small mark with a strong name and optional note. Fine rules give each entry a consistent beginning. More than six entries form two columns in reading order, matching the measured contents page; the first entry may use a stronger top rule.

@@ -1,0 +1,1 @@
+Two fine axes and quiet horizontal guides contain circular value-positioned marks. One accent point provides emphasis, labels sit above the marks, and bubble variants scale their circular areas from the supplied radius data.

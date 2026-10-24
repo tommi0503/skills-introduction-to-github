@@ -1,0 +1,15 @@
+.stack > :is(.delta[data-el="annual-delta"]) { flex: 0 0 auto; align-self: stretch; }
+.delta[data-el="annual-delta"] { container: member / inline-size; min-width: 0; align-self: center; display: flex; align-items: baseline; flex-wrap: nowrap; gap: 0; color: var(--a1); }
+.delta[data-el="annual-delta"] > * { --df: var(--type-40); white-space: nowrap; font-family: var(--font-display), sans-serif; line-height: 1; font-weight: var(--figure-weight); letter-spacing: var(--figure-track); font-variant-numeric: tabular-nums; }
+.delta[data-el="annual-delta"] > .from { font-size: calc(var(--df) * 0.6); color: var(--n-6); }
+.delta[data-el="annual-delta"] > .to { font-size: var(--df); color: var(--a1); }
+.delta[data-el="annual-delta"] > .to::before { content: ""; display: inline-block; width: 1.5em; height: 0.4em; margin: 0 0.35em 0 0.4em; vertical-align: 0.2em; background: linear-gradient(var(--a1) 0 0) left 50% / calc(100% - 0.3em) var(--stroke) no-repeat, linear-gradient(var(--a1) 0 0) right 50% / 0.4em 0.4em no-repeat; clip-path: polygon(0 calc(50% - 1px), calc(100% - 0.4em) calc(50% - 1px), calc(100% - 0.4em) 0, 100% 50%, calc(100% - 0.4em) 100%, calc(100% - 0.4em) calc(50% + 1px), 0 calc(50% + 1px)); }
+@container member (min-width: 420px) {
+.delta[data-el="annual-delta"] > * { --df: var(--type-64); }
+}
+@container member (min-width: 720px) {
+.delta[data-el="annual-delta"] > * { --df: var(--type-96); }
+}
+@container member (max-width: 240px) {
+.delta[data-el="annual-delta"] > * { --df: var(--type-28); }
+}

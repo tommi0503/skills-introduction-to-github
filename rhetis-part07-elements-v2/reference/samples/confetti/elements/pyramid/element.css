@@ -1,0 +1,58 @@
+:is(.body, .group, .split, .stack) > :is(.pyramid[data-el="confetti-pyramid"]) { container-type: size; }
+.stack > :is(.pyramid[data-el="confetti-pyramid"]) { flex: 1 1 0; min-height: 96px; }
+:is(.pyramid[data-el="confetti-pyramid"]) { min-width: 0; min-height: 0; --wire: color-mix(in srgb, var(--a1) 60%, var(--page)); --edge: color-mix(in srgb, var(--a1) 50%, var(--page)); --quiet: color-mix(in srgb, var(--n-8) 30%, var(--n-2)); --hair: color-mix(in srgb, var(--a1) 40%, transparent); }
+:where(.pyramid)[data-el="confetti-pyramid"] :where(.name, .note, .fig, .mark) { margin: 0; min-width: 0; }
+:is(.pyramid[data-el="confetti-pyramid"] > .level) { container-type: size; display: flex; flex-direction: column; justify-content: safe center; gap: calc(var(--gap) * 4 / 24); min-width: 0; min-height: 0; }
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { margin-inline: clamp(calc(var(--gap) * 10 / 24), 7cqw, calc(var(--gap) * 24 / 24)); --nm: var(--type-16); --nt: var(--type-16); }
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > .name { font-size: var(--nm); font-weight: var(--name-weight); line-height: var(--name-line); letter-spacing: var(--name-track); text-wrap: balance; }
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > .note { display: none; font-size: var(--nt); font-weight: var(--body-weight); line-height: var(--body-line); letter-spacing: var(--body-track); text-wrap: pretty; color: var(--n-9); }
+@container (min-width: 140px) and (min-height: 52px) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { --nm: var(--type-20); }
+}
+@container (min-width: 240px) and (min-height: 52px) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { --nm: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { --nm: var(--type-24); --nt: var(--type-16); }
+}
+@container ((min-width: 260px) and (min-height: 120px)) or ((min-width: 440px) and (min-height: 96px)) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { --nm: var(--type-28); --nt: var(--type-16); }
+}
+@container ((min-width: 330px) and (min-height: 124px)) or ((min-width: 560px) and (min-height: 116px)) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { --nm: var(--type-32); --nt: var(--type-20); }
+}
+@container (min-width: 420px) and (min-height: 200px) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { --nm: var(--type-36); --nt: var(--type-24); }
+}
+@container (min-width: 520px) and (min-height: 270px) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > * { --nm: var(--type-40); --nt: var(--type-24); }
+}
+@container ((min-width: 180px) and (min-height: 104px)) or ((min-width: 400px) and (min-height: 76px)) {
+:is(.pyramid[data-el="confetti-pyramid"] > .level) > .note { display: block; }
+}
+:is(.pyramid[data-el="confetti-pyramid"] > .level).on > .note { color: inherit; }
+.pyramid[data-el="confetti-pyramid"] { display: flex; flex-direction: column; justify-content: center; gap: calc(var(--gap) * 4 / 24); }
+.pyramid[data-el="confetti-pyramid"] > .level { flex: 0 1 calc(var(--dg-w) * 2.4 / var(--n)); background: linear-gradient(var(--hair), var(--hair)) right bottom / calc(100% - var(--dg-w) - var(--gp)) 1px no-repeat; padding-right: calc(var(--pad) * 16 / 28); color: var(--ink); --n: 3; --dg-w: min(42cqw, 104cqh); --gp: clamp(calc(var(--pad) * 16 / 28), 4cqw, calc(var(--pad) * 40 / 28)); padding-left: calc(var(--dg-w) + var(--gp)); --tw: calc((var(--i) - 1) / var(--n) * 50%); --bw: calc(var(--i) / var(--n) * 50%); }
+.pyramid[data-el="confetti-pyramid"]:has(> .level:nth-child(4)) > .level { --n: 4; }
+.pyramid[data-el="confetti-pyramid"]:has(> .level:nth-child(5)) > .level { --n: 5; }
+.pyramid[data-el="confetti-pyramid"] > .level:nth-child(1) { --i: 1; }
+.pyramid[data-el="confetti-pyramid"] > .level:nth-child(2) { --i: 2; }
+.pyramid[data-el="confetti-pyramid"] > .level:nth-child(3) { --i: 3; }
+.pyramid[data-el="confetti-pyramid"] > .level:nth-child(4) { --i: 4; }
+.pyramid[data-el="confetti-pyramid"] > .level:nth-child(5) { --i: 5; }
+.pyramid[data-el="confetti-pyramid"] > .level > :is(.name, .note) { margin-inline: 0; }
+.pyramid[data-el="confetti-pyramid"] > .level::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: var(--dg-w); background: var(--quiet); clip-path: polygon(calc(50% - var(--tw)) 0, calc(50% + var(--tw)) 0, calc(50% + var(--bw)) 100%, calc(50% - var(--bw)) 100%); }
+.pyramid[data-el="confetti-pyramid"] > .level.on::before, .pyramid[data-el="confetti-pyramid"]:not(:has(> .level.on)) > .level:first-child::before { background: var(--a1); }
+.pyramid[data-el="confetti-pyramid"] > .level.on > .name, .pyramid[data-el="confetti-pyramid"]:not(:has(> .level.on)) > .level:first-child > .name { color: var(--a1); }
+@container (max-aspect-ratio: 1/1) {
+.pyramid[data-el="confetti-pyramid"] > .level { --dg-w: min(46cqw, 104cqh); --gp: calc(var(--pad) * 14 / 28); }
+}
+
+/* Deck 022: outlined desktop and sticker treatment. */
+[data-el="confetti-pyramid"][data-el="confetti-pyramid"][data-el="confetti-pyramid"] {--confetti-brand:var(--a1);--confetti-brand-line:var(--ink);--ground:var(--page);}
+[data-el="confetti-pyramid"][data-el="confetti-pyramid"][data-el="confetti-pyramid"] {background-color:var(--page);border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);box-shadow:6px 8px 0 var(--a3-5);}
+
+[data-el="confetti-pyramid"][data-el="confetti-pyramid"][data-el="confetti-pyramid"] {--wire:var(--ink);--hair:var(--ink)}[data-el="confetti-pyramid"][data-el="confetti-pyramid"][data-el="confetti-pyramid"]>.level::before{background:var(--a1-6)}[data-el="confetti-pyramid"][data-el="confetti-pyramid"][data-el="confetti-pyramid"]>.level:nth-child(3n+2)::before{background:var(--a3-5)}[data-el="confetti-pyramid"][data-el="confetti-pyramid"][data-el="confetti-pyramid"]>.level:nth-child(3n)::before{background:var(--a2-3-soft)}
+
+/* Copy remains visible when members get smaller. */
+[data-el="confetti-pyramid"][data-el="confetti-pyramid"][data-el="confetti-pyramid"] .note{display:block}

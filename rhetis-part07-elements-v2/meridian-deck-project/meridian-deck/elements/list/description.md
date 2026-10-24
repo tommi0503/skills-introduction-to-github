@@ -1,0 +1,1 @@
+A measured vertical list owns its dot, check or counter marker. Names align independently of note length, and divided rows use fine rules. The divided capsule design assigns a stable category column to the left and allows a complete nested list in the right note register. Compact containers reduce shared spacing and type without writing marker numbers into the data.

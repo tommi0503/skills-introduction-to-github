@@ -1,0 +1,1 @@
+The cover layers outlined desktop windows and a circular face sticker above a large tightly spaced title; inner pages carry a centred bold title in the top area.

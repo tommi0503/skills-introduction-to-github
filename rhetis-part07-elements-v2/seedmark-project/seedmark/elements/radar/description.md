@@ -1,0 +1,1 @@
+A circular grid and data-scaled polygons share a square drawing footprint inside any slot. Axis count determines each angle, and series names occupy separate columns above the plot. Explicit tones and neutral comparisons keep multiple filled polygons distinguishable in both modes.

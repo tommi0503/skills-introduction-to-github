@@ -1,0 +1,2 @@
+Equal-width data steps are joined by a true interpolating line, including flat intervals. Each point anchors a positive-height segment rectangle, so both rising and falling values remain drawable without fixture-value conditions. Values sit above the dots, labels beneath the plot, and alternate labels are thinned in a narrow chart.
+ A shared30px footer reserve separates the complete plot and axis from neighbouring captions, derived from the source213px chart inside the fixed grid allocation.

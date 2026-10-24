@@ -1,0 +1,1 @@
+A contents list of numerals in the condensed squared display face in the accent, each followed by a light secondary entry title and a small muted note; the current entry turns bold in the accent and its numeral stands over a pale square of decoration.

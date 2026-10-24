@@ -1,0 +1,18 @@
+/* Inferred from the Seedmark outline, capsule and typographic grammar. Own-container geometry; no page or fixture condition. */
+.versus[data-el="seedmark-versus"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);}
+.versus[data-el="seedmark-versus"] *{box-sizing:border-box;}
+.versus[data-el="seedmark-versus"] :is(p,h2,h3,blockquote){margin:0;}
+.versus[data-el="seedmark-versus"] .icon{display:inline-flex;flex:none;width:32px;height:32px;}
+.versus[data-el="seedmark-versus"] .fig{font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.versus[data-el="seedmark-versus"] .fig small{font-size:var(--type-20);color:inherit;margin:0;}
+.versus[data-el="seedmark-versus"] .seat{display:flex;align-items:center;justify-content:center;aspect-ratio:1;background:var(--n-1);color:var(--n-7);font-size:var(--type-14);border-radius:var(--radius);}
+.versus[data-el="seedmark-versus"] .seat:after{content:attr(data-ph);}
+.versus[data-el="seedmark-versus"]{display:grid;grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr);gap:var(--gap-sm);padding:var(--gap-sm);}
+.versus[data-el="seedmark-versus"] .side{min-width:0;min-height:0;padding:var(--gap);display:flex;flex-direction:column;justify-content:center;gap:var(--gap);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);background:var(--n-1);}
+.versus[data-el="seedmark-versus"] .side.on{border-color:var(--ink);background:var(--page);}
+.versus[data-el="seedmark-versus"] .side>.name{font-size:var(--type-28);line-height:var(--name-line);font-weight:var(--name-weight);}
+.versus[data-el="seedmark-versus"] .side>.list{min-height:0;}
+.versus[data-el="seedmark-versus"] .vs{display:flex;align-items:center;justify-content:center;font-size:var(--type-20);font-weight:var(--label-weight);line-height:var(--label-line);}
+@container(max-width:650px){.versus[data-el="seedmark-versus"] .side{padding:var(--gap-sm)}
+.versus[data-el="seedmark-versus"] .side>.name{font-size:var(--type-20)}}
+.versus[data-el="seedmark-versus"] .side>.list{flex:1;align-self:stretch;}

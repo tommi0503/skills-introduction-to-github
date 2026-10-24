@@ -1,0 +1,1 @@
+A continuous emotion curve passes through equal stage columns. Each stage owns the segment to its next public mood value. Touchpoints and optional pain points occupy separate lower rows rather than sitting on the curve.

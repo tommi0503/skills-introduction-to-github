@@ -1,0 +1,1 @@
+A before and after pair in the condensed squared display face: the earlier value smaller and secondary, a thin accent arrow drawn as a line ending in a solid triangle, then the later value large in the accent, all on one baseline.

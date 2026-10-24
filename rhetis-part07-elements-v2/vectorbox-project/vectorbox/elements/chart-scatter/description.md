@@ -1,0 +1,1 @@
+Small circular observations sit on two understated perpendicular value axes. The bubble variant preserves circular shape while scaling diameter from the supplied radius. Labels choose the inward side of their own mark, including observations at the exact midpoint, while a single solid accent point provides emphasis.
