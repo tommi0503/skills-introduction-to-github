@@ -1,15 +1,13 @@
 /* Source14: 547×422 wall, three columns/rows with 1px dotted dividers.
 Each tile has a 70px square at y24 and its centered 18px index at y43.
-Optional admitted label children sit below the square at y99,18px/700. */
+Editable logo captions are outside logos.row@1 and remain in GAPS. */
 .logos[data-el="current-fold-logo-group"]{position:relative;container-type:size;min-width:0;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:0;font-family:var(--font-body);color:var(--n-7)}
 .logos[data-el="current-fold-logo-group"]>.seat.logo{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;aspect-ratio:auto;padding:0;background:none;border:0;border-right:1px dotted var(--n-4);border-bottom:1px dotted var(--n-4)}
 .logos[data-el="current-fold-logo-group"]>.seat.logo::before{content:"";position:absolute;left:50%;top:5.687204cqh;width:min(12.797075cqw,16.587678cqh);height:min(12.797075cqw,16.587678cqh);transform:translateX(-50%);background:var(--n-2)}
 .logos[data-el="current-fold-logo-group"]>.seat.logo::after{content:attr(data-ph);position:absolute;left:0;right:0;top:10.189573cqh;text-align:center;font-size:clamp(var(--type-12),3.290676cqw,var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);color:var(--n-6)}
-.logos[data-el="current-fold-logo-group"]>.seat.logo>.label{position:absolute;left:0;right:0;top:23.459716cqh;margin:0;text-align:center;font-size:clamp(var(--type-12),3.290676cqw,var(--type-18));font-weight:var(--figure-weight);line-height:calc(var(--label-line)*1.3/1.25);letter-spacing:var(--body-track);color:var(--ink);overflow-wrap:anywhere}
 .logos[data-el="current-fold-logo-group"]>.seat.logo:nth-child(3n){border-right:0}
 .logos[data-el="current-fold-logo-group"]>.seat.logo:nth-last-child(-n+3){border-bottom:0}
 .logos[data-el="current-fold-logo-group"]:has(>.seat:nth-child(6):last-child){grid-template-rows:repeat(2,minmax(0,1fr))}
 .logos[data-el="current-fold-logo-group"]:has(>.seat:nth-child(6):last-child)>.seat.logo::before{top:8.530806cqh}
 .logos[data-el="current-fold-logo-group"]:has(>.seat:nth-child(6):last-child)>.seat.logo::after{top:13.033175cqh}
 
-.logos[data-el="current-fold-logo-group"]:has(>.seat:nth-child(6):last-child)>.seat.logo>.label{top:26.303318cqh}

@@ -74,7 +74,7 @@
 
 - bbox: `[54.0, 360.0, 279.5, 310.0]`
 - 디자인: font="Pretendard Variable"; size=20px; weight=400; line=28px; track=normal; color=rgb(7, 11, 9); background=rgb(255, 255, 255); border=1px solid rgba(0, 0, 0, 0); borderRadius=22px; padding=24px; gap=normal; display=block
-- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. Phase2 전 부모 판단 필요.
+- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. 최종 통합 검수에서 의미 없는 변형을 추가하지 않고 unexpressible로 유지하기로 결정했습니다.
 
 현재 컬렉션에 임의의 변형을 추가하지 않았습니다. 다음은 필요한 계약 확장을 검토하기 위한 마크업이며, 조립본에 넣지 않았습니다.
 
@@ -86,7 +86,7 @@
 
 - bbox: `[351.5, 360.0, 279.5, 310.0]`
 - 디자인: font="Pretendard Variable"; size=20px; weight=400; line=28px; track=normal; color=rgb(7, 11, 9); background=rgb(255, 255, 255); border=1px solid rgba(0, 0, 0, 0); borderRadius=22px; padding=24px; gap=normal; display=block
-- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. Phase2 전 부모 판단 필요.
+- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. 최종 통합 검수에서 의미 없는 변형을 추가하지 않고 unexpressible로 유지하기로 결정했습니다.
 
 현재 컬렉션에 임의의 변형을 추가하지 않았습니다. 다음은 필요한 계약 확장을 검토하기 위한 마크업이며, 조립본에 넣지 않았습니다.
 
@@ -98,7 +98,7 @@
 
 - bbox: `[649.0, 360.0, 279.5, 310.0]`
 - 디자인: font="Pretendard Variable"; size=20px; weight=400; line=28px; track=normal; color=rgb(7, 11, 9); background=rgb(255, 255, 255); border=1px solid rgba(0, 0, 0, 0); borderRadius=22px; padding=24px; gap=normal; display=block
-- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. Phase2 전 부모 판단 필요.
+- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. 최종 통합 검수에서 의미 없는 변형을 추가하지 않고 unexpressible로 유지하기로 결정했습니다.
 
 현재 컬렉션에 임의의 변형을 추가하지 않았습니다. 다음은 필요한 계약 확장을 검토하기 위한 마크업이며, 조립본에 넣지 않았습니다.
 
@@ -110,7 +110,7 @@
 
 - bbox: `[946.5, 360.0, 279.5, 310.0]`
 - 디자인: font="Pretendard Variable"; size=20px; weight=400; line=28px; track=normal; color=rgb(7, 11, 9); background=rgb(255, 255, 255); border=1px solid rgba(0, 0, 0, 0); borderRadius=22px; padding=24px; gap=normal; display=block
-- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. Phase2 전 부모 판단 필요.
+- 이유: base와 시각적 레이아웃 계열이 다르다. 비율 차이만으로 계약 .on/.quiet/.line/.tone을 의미 없는 레이아웃 스위치로 쓰지 않음. 최종 통합 검수에서 의미 없는 변형을 추가하지 않고 unexpressible로 유지하기로 결정했습니다.
 
 현재 컬렉션에 임의의 변형을 추가하지 않았습니다. 다음은 필요한 계약 확장을 검토하기 위한 마크업이며, 조립본에 넣지 않았습니다.
 
