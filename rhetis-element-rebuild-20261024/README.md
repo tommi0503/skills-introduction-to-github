@@ -25,3 +25,7 @@
 - `reviews/*/html`, `reassembled`, `assets`:검수 HTML과글꼴·아이콘 자산. 내려받아HTTP서버로 열면 렌더할 수 있다.
 - `tools`:측정·지도·시트·검사·패키징 도구. 원본 작업 환경의 `/workspace/work/reference`, `/workspace/work/delivery`, `/workspace/work/rebuild` 경로를 사용한다. 재실행 시 같은 구조로 준비하거나 도구의 ROOT 경로를 변경한다. bootstrap/foundation 생성기는 최초 골격 기록으로, 최종 요소 CSS에 다시 실행하지 않는다.
 - 같은6자 문구 검사에서 계약 모범fixture의 한 일반문장과 충돌한 최소 문구 변경 등 예외는 required-fixture 감사에 명시한다.
+
+## 원격 재다운로드 검증
+
+ZIP을 포함한 커밋 `b839af3bba34a69a2a7de57c30819a0954ac67ea`에서14개파일을실제로다시내려받아HTTP200·SHA-256·CRC·파일목록일치를확인했다. [검증기록](publication-verification.json). ZIP은동일바이트이므로검사한PNG크기와컬렉션최상위폴더/확장자제약도그대로보존된다. 기존브랜치에일반push로만추가했다.
