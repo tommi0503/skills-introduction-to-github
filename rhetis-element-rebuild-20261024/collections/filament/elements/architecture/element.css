@@ -1,0 +1,14 @@
+/* Absent from replica:07's178×121service panels supply12px rounds,
+   14/15px insets,25px light headings,17px bold labels and6px intervals. */
+.arch[data-el="filament-architecture"]{box-sizing:border-box;position:relative;display:grid;grid-template-rows:repeat(var(--filament-arch-layers),minmax(0,1fr));gap:calc(100% * .049586777 / (var(--filament-arch-layers) + .049586777 * (var(--filament-arch-layers) - 1)));width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--a1-on)}
+.arch[data-el="filament-architecture"]:has(>.layer:nth-child(2):last-child){--filament-arch-layers:2}
+.arch[data-el="filament-architecture"]:has(>.layer:nth-child(4):last-child){--filament-arch-layers:4}
+.arch[data-el="filament-architecture"]:has(>.layer:nth-child(5):last-child){--filament-arch-layers:5}
+.arch[data-el="filament-architecture"]>.layer{box-sizing:border-box;position:relative;display:grid;grid-template-columns:repeat(var(--filament-arch-chips),minmax(0,1fr));grid-template-rows:minmax(0,1fr) minmax(0,1fr);column-gap:3%;align-content:space-between;min-width:0;min-height:0;padding:2% 3%;border-radius:min(var(--radius),9.917355cqh);container-type:size;background:var(--a1);color:var(--a1-on)}
+.arch[data-el="filament-architecture"]>.layer>.name{grid-column:1/-1;box-sizing:border-box;display:flex;align-items:center;min-width:0;min-height:0;margin:0;font-size:clamp(var(--type-16),calc(100cqh * .20661157),var(--type-32));font-weight:var(--weight-display);line-height:var(--figure-line);letter-spacing:calc(var(--body-track)*1.6);word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="filament-architecture"]>.layer>.chip{grid-row:2;box-sizing:border-box;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;margin:0;padding:1cqh .8cqw;font-size:clamp(var(--type-12),calc(100cqh * .140495868),var(--type-22));font-weight:calc(var(--body-weight)*1.75);line-height:var(--label-line);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="filament-architecture"]>.layer:has(>.chip:nth-child(2):last-child){--filament-arch-chips:1}
+.arch[data-el="filament-architecture"]>.layer:has(>.chip:nth-child(3):last-child){--filament-arch-chips:2}
+.arch[data-el="filament-architecture"]>.layer:has(>.chip:nth-child(5):last-child){--filament-arch-chips:4}
+.arch[data-el="filament-architecture"]>.layer:has(>.chip:nth-child(6):last-child){--filament-arch-chips:5}
+@container(max-width:650px){.arch[data-el="filament-architecture"]>.layer>.name{font-size:var(--type-16)}.arch[data-el="filament-architecture"]>.layer>.chip{font-size:var(--type-12)}}

@@ -1,0 +1,110 @@
+/* No source profile: independently inferred from the deck's measured materials.
+    Replica05:268px square,28px chamfer,18px/650 name and16px/1.45 note. */
+.people[data-el="cutfield-person"] {
+  container-type: size;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: var(--gap);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.people[data-el="cutfield-person"]:has(>.person:nth-child(2):last-child) {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+.person[data-el="cutfield-person"],.people[data-el="cutfield-person"]>.person {
+  container-type: size;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--gap-sm);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  padding: min(10.448%,var(--pad));
+}
+.person[data-el="cutfield-person"]>:where(.seat,.name,.note,.list),.people[data-el="cutfield-person"]>.person>:where(.seat,.name,.note,.list) {
+  margin: 0;
+  min-width: 0;
+  flex: none;
+}
+.person[data-el="cutfield-person"]>.seat,.people[data-el="cutfield-person"]>.person>.seat {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  background: var(--n-2);
+  color: var(--n-7);
+  font-size: var(--type-14);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  width: min(100cqw,42cqh);
+  aspect-ratio: 1;
+  clip-path: polygon(0 0,100% 0,100% calc(100% - min(10.448cqw,28px)),calc(100% - min(10.448cqw,28px)) 100%,0 100%);
+  margin-bottom: var(--gap-sm);
+}
+.person[data-el="cutfield-person"]>.seat::after,.people[data-el="cutfield-person"]>.person>.seat::after {
+  content: attr(data-ph);
+}
+.person[data-el="cutfield-person"]>.name,.people[data-el="cutfield-person"]>.person>.name {
+  font-family: var(--font-body);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  font-size: clamp(var(--type-14),calc(min(6.7164cqw,4.8cqh)),var(--type-28));
+  font-weight: var(--name-weight);
+  line-height: calc(var(--name-line)*.9230769231);
+  letter-spacing: var(--name-track);
+}
+.person[data-el="cutfield-person"]>.note,.people[data-el="cutfield-person"]>.person>.note {
+  font-family: var(--font-body);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+  font-size: clamp(var(--type-12),calc(min(5.9701cqw,3.8cqh)),var(--type-20));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*.875);
+}
+.person[data-el="cutfield-person"]>.note>p,.people[data-el="cutfield-person"]>.person>.note>p {
+  margin: 0;
+}
+.person[data-el="cutfield-person"]>.note>p+p,.people[data-el="cutfield-person"]>.person>.note>p+p {
+  margin-top: var(--gap-sm);
+}
+.person[data-el="cutfield-person"]>.list,.people[data-el="cutfield-person"]>.person>.list {
+  height: auto;
+  min-height: 0;
+  margin-top: var(--gap-sm);
+}
+.person[data-el="cutfield-person"]::before,.people[data-el="cutfield-person"]>.person::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--page);
+  clip-path: polygon(0 0,100% 0,100% calc(100% - min(10.448cqw,28px)),calc(100% - min(10.448cqw,28px)) 100%,0 100%);
+}
+@container (max-height:330px) {
+  .person[data-el="cutfield-person"],.people[data-el="cutfield-person"]>.person {
+    gap: calc(var(--gap-sm)*.5);
+  }
+  .person[data-el="cutfield-person"]>.seat,.people[data-el="cutfield-person"]>.person>.seat {
+    width: min(70cqw,28cqh);
+    margin-block: calc(var(--gap-sm)*.5);
+  }
+  .person[data-el="cutfield-person"]>.name,.people[data-el="cutfield-person"]>.person>.name {
+    font-size: var(--type-14);
+  }
+  .person[data-el="cutfield-person"]>.note,.people[data-el="cutfield-person"]>.person>.note {
+    font-size: var(--type-12);
+  }
+}
+@container (max-width:620px) {
+  .people[data-el="cutfield-person"]:has(>.person:nth-child(3)) {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}

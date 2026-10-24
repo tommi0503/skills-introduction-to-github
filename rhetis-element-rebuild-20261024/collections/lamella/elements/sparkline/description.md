@@ -1,0 +1,1 @@
+An axis-free equal-step trend inferred from replica 17:0.7px series strokes and6px data dots. Its point carriers, stroke, bar ends and framing follow this deck rather than a generic card. The element owns the complete point-to-point line; the bars variant uses the same scale, while up and down apply semantic good/bad roles. No source instance is claimed.

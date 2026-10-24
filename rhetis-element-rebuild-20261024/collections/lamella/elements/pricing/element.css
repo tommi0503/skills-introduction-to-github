@@ -1,0 +1,26 @@
+/* Absent pricing; inferred from replica03/06/13: 217×30 leaf caps with opposite upper-right/lower-left corners,19px inset and1px vertical rail.
+   No mapped source instance or previous element stylesheet is reused. */
+.plans[data-el="lamella-pricing"]{--lamella-pricing-count:1;container-type:size;display:flex;flex-wrap:wrap;align-items:stretch;align-content:stretch;gap:var(--gap);width:100%;height:100%;min-width:0;min-height:0;padding:var(--gap-sm)}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan){container-type:size;position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr);align-content:start;row-gap:var(--gap-sm);width:100%;height:100%;min-width:0;min-height:0;padding:var(--pad);color:var(--ink);font-family:var(--font-body)}
+.plans[data-el="lamella-pricing"]>.plan{flex:1 1 calc((100% - (var(--lamella-pricing-count) - 1)*var(--gap))/var(--lamella-pricing-count));width:auto;height:auto}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.name{margin:0;min-width:0;font-size:clamp(var(--type-16),8cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.price{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:var(--gap-sm);margin:0;min-width:0}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.price>.fig{min-width:0;font-size:clamp(var(--type-24),18cqw,var(--type-32));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.price>small{font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.list{margin:0;min-height:0;min-width:0;width:100%;height:100%}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.tag{position:absolute;right:var(--gap-sm);top:var(--gap-sm);display:grid;place-items:center;height:var(--type-24);white-space:nowrap;width:calc(var(--type-12)*6.5);max-width:calc(100% - var(--gap-sm)*2)}
+.plan[data-el="lamella-pricing"]:has(>.tag),.plans[data-el="lamella-pricing"]:has(>.plan>.tag)>.plan{padding-top:calc(var(--pad) + var(--type-24))}
+.plans[data-el="lamella-pricing"]:has(>.plan:nth-child(2):last-child){--lamella-pricing-count:2}
+.plans[data-el="lamella-pricing"]:has(>.plan:nth-child(3):last-child){--lamella-pricing-count:3}
+.plans[data-el="lamella-pricing"]:has(>.plan:nth-child(4):last-child){--lamella-pricing-count:4}
+.plans[data-el="lamella-pricing"]:has(>.plan:nth-child(5):last-child){--lamella-pricing-count:5}
+.plans[data-el="lamella-pricing"]:has(>.plan:nth-child(6):last-child){--lamella-pricing-count:6}
+.plans[data-el="lamella-pricing"]:has(>.plan:nth-child(7):last-child){--lamella-pricing-count:7}
+.plans[data-el="lamella-pricing"]:has(>.plan:nth-child(8):last-child){--lamella-pricing-count:8}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan){border-left:var(--stroke) solid var(--n-5);padding-left:calc(var(--pad)*.95);background:transparent}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.name{background:var(--n-3);color:var(--ink);padding:var(--gap-sm);border-radius:0 var(--radius) 0 var(--radius)}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan).on{background:var(--a1);color:var(--a1-on);border-color:var(--a1)}
+:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan).on{background:var(--a1-1-soft);color:var(--ink)}:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan).on>.name{background:var(--a1);color:var(--a1-on)}
+@container(max-width:480px){.plans[data-el="lamella-pricing"]>.plan{flex-basis:100%}}
+@container(max-height:250px){:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan){padding:var(--gap-sm)}:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.name{font-size:var(--type-16)}:is(.plan[data-el="lamella-pricing"],.plans[data-el="lamella-pricing"]>.plan)>.price>.fig{font-size:var(--type-24)}}
+

@@ -1,0 +1,1 @@
+An independently inferred closing sentence, using replica07’s continuous accent service face and12px corners; body rhythm comes from replica04’s16px/1.4 text and the key phrase takes the service footer’s700 weight. There is no replica callout claim.

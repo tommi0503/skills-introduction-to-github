@@ -1,0 +1,13 @@
+/* Absent from replica. Replica11 uses square phase bands, sand-role compartments and1px dividers.
+   This new progress contract adapts those measured primitives; it is not a mapped source instance. */
+.meter[data-el="portico-gauge"]{box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--portico-gauge-inset:0px;--portico-gauge-rail:clamp(24px,20cqh,160px)}
+.meter[data-el="portico-gauge"]>.name{box-sizing:border-box;position:absolute;left:var(--portico-gauge-inset);bottom:calc(50cqh + var(--gap));width:calc(62cqw - var(--portico-gauge-inset) - var(--gap-sm));margin:0;font-size:clamp(var(--type-14),calc(3.6cqw),var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.meter[data-el="portico-gauge"]>.fig{box-sizing:border-box;position:absolute;right:var(--portico-gauge-inset);bottom:calc(50cqh + var(--gap));width:max-content;min-width:calc(32cqw - var(--portico-gauge-inset));margin:0;font-family:var(--font-display);font-size:clamp(var(--type-22),calc(min(11cqw,32cqh)),var(--type-128));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);text-align:right;white-space:nowrap;color:var(--ink)}
+.meter[data-el="portico-gauge"]::before,.meter[data-el="portico-gauge"]::after{content:"";box-sizing:border-box;position:absolute;left:var(--portico-gauge-inset);top:50%;height:var(--portico-gauge-rail);pointer-events:none}
+.meter[data-el="portico-gauge"]::before{right:var(--portico-gauge-inset);background:var(--n-3)}
+.meter[data-el="portico-gauge"]::after{width:calc((100cqw - var(--portico-gauge-inset)*2)*var(--v)/100);background:var(--a1)}
+.meter[data-el="portico-gauge"]{--portico-gauge-inset:var(--gap-sm);border-bottom:1px solid var(--n-4)}
+.meter[data-el="portico-gauge"]::before{background:var(--n-3);border:1px solid var(--n-4)}
+.meter[data-el="portico-gauge"]>.name{font-weight:var(--name-weight)}
+@container(max-width:400px){.meter[data-el="portico-gauge"]>.name{font-size:var(--type-14)}.meter[data-el="portico-gauge"]>.fig{font-size:var(--type-22)}}
+@container(max-height:220px){.meter[data-el="portico-gauge"]>.name{font-size:var(--type-14)}.meter[data-el="portico-gauge"]>.fig{font-size:var(--type-22)}}

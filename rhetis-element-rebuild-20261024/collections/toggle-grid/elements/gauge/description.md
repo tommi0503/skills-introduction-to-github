@@ -1,0 +1,1 @@
+The long track is a dark capsule with a thin outline and a rounded primary fill. A condensed display percentage and a lighter business label echo the switch and header grammar. This progress element is inferred from replica 02; there is no source gauge instance. Names and figures remain visible at the declared minimum.

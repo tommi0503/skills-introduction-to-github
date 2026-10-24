@@ -1,0 +1,53 @@
+/* Slope pairs are absent from replica; inferred from replica05:white21px-ended panels, round carriers and pale thick connectors.
+   Each owned pair connects its actual before/after values; dumbbells retain a full named row. */
+.slope[data-el="tide-tab-slope"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--tide-tab-slope-count:2;--tide-tab-slope-left:max(100px,min(30cqw,300px));--tide-tab-slope-right:max(40px,6cqw);--tide-tab-slope-width:calc(100cqw - var(--tide-tab-slope-left) - var(--tide-tab-slope-right));--tide-tab-slope-head:max(48px,10cqh);--tide-tab-slope-foot:max(24px,5cqh);--tide-tab-slope-height:calc(100cqh - var(--tide-tab-slope-head) - var(--tide-tab-slope-foot));--tide-tab-slope-point:5px;--tide-tab-slope-stroke:var(--stroke)}
+.slope[data-el="tide-tab-slope"]:has(>.pair:nth-child(2 of .pair):last-child){--tide-tab-slope-count:2}
+.slope[data-el="tide-tab-slope"]:has(>.pair:nth-child(3 of .pair):last-child){--tide-tab-slope-count:3}
+.slope[data-el="tide-tab-slope"]:has(>.pair:nth-child(4 of .pair):last-child){--tide-tab-slope-count:4}
+.slope[data-el="tide-tab-slope"]:has(>.pair:nth-child(5 of .pair):last-child){--tide-tab-slope-count:5}
+.slope[data-el="tide-tab-slope"]:has(>.pair:nth-child(6 of .pair):last-child){--tide-tab-slope-count:6}
+.slope[data-el="tide-tab-slope"]:has(>.pair:nth-child(7 of .pair):last-child){--tide-tab-slope-count:7}
+.slope[data-el="tide-tab-slope"]:has(>.pair:nth-child(8 of .pair):last-child){--tide-tab-slope-count:8}
+.slope[data-el="tide-tab-slope"]::before,.slope[data-el="tide-tab-slope"]::after{content:"";position:absolute;top:var(--tide-tab-slope-head);bottom:var(--tide-tab-slope-foot);width:1px;background:var(--n-3);pointer-events:none}
+.slope[data-el="tide-tab-slope"]::before{left:var(--tide-tab-slope-left)}
+.slope[data-el="tide-tab-slope"]::after{right:var(--tide-tab-slope-right)}
+.slope[data-el="tide-tab-slope"]>.heads{position:static}
+.slope[data-el="tide-tab-slope"]>.heads>span{box-sizing:border-box;position:absolute;top:var(--gap-sm);margin:0;font-size:clamp(var(--type-12),calc(min(3cqw,4cqh)),var(--type-20));font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;text-align:center;color:var(--ink)}
+.slope[data-el="tide-tab-slope"]>.heads>span:first-child{left:var(--tide-tab-slope-left);transform:translateX(-50%)}
+.slope[data-el="tide-tab-slope"]>.heads>span:last-child{right:var(--tide-tab-slope-right);transform:translateX(50%)}
+.slope[data-el="tide-tab-slope"]>.pair{position:static;--tide-tab-slope-color:var(--n-5);--tide-tab-slope-y-a:calc(var(--tide-tab-slope-head) + var(--tide-tab-slope-height)*(1 - var(--a)/var(--max)));--tide-tab-slope-y-b:calc(var(--tide-tab-slope-head) + var(--tide-tab-slope-height)*(1 - var(--b)/var(--max)))}
+.slope[data-el="tide-tab-slope"]>.pair.on{--tide-tab-slope-color:var(--a1);--tide-tab-slope-stroke:calc(var(--stroke)*2)}
+.slope[data-el="tide-tab-slope"]>.pair::before{content:"";position:absolute;z-index:-1;left:var(--tide-tab-slope-left);right:var(--tide-tab-slope-right);top:0;height:100%;background:var(--tide-tab-slope-color);clip-path:polygon(0 calc(var(--tide-tab-slope-y-a) - var(--tide-tab-slope-stroke)/2),100% calc(var(--tide-tab-slope-y-b) - var(--tide-tab-slope-stroke)/2),100% calc(var(--tide-tab-slope-y-b) + var(--tide-tab-slope-stroke)/2),0 calc(var(--tide-tab-slope-y-a) + var(--tide-tab-slope-stroke)/2));pointer-events:none}
+.slope[data-el="tide-tab-slope"]>.pair::after{content:"";box-sizing:border-box;position:absolute;left:calc(var(--tide-tab-slope-left) - var(--tide-tab-slope-point)/2);top:calc(var(--tide-tab-slope-y-a) - var(--tide-tab-slope-point)/2);width:var(--tide-tab-slope-point);height:var(--tide-tab-slope-point);background:var(--tide-tab-slope-color);box-shadow:var(--tide-tab-slope-width) calc(var(--tide-tab-slope-y-b) - var(--tide-tab-slope-y-a)) 0 0 var(--tide-tab-slope-color);pointer-events:none}
+.slope[data-el="tide-tab-slope"]>.pair>.name{box-sizing:border-box;position:absolute;left:var(--gap-sm);top:var(--tide-tab-slope-y-a);transform:translateY(-50%);width:calc(var(--tide-tab-slope-left) - max(48px,5cqw) - var(--gap-sm));margin:0;font-size:clamp(var(--type-12),calc(min(3cqw,4cqh)),var(--type-20));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.slope[data-el="tide-tab-slope"]>.pair>b{box-sizing:border-box;position:absolute;margin:0;padding:0 2px;background:var(--page);font-size:clamp(var(--type-12),calc(min(3cqw,4cqh)),var(--type-24));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink)}
+.slope[data-el="tide-tab-slope"]>.pair>b.a{left:calc(var(--tide-tab-slope-left) - var(--gap-sm));top:var(--tide-tab-slope-y-a);transform:translate(-100%,-50%)}
+.slope[data-el="tide-tab-slope"]>.pair>b.b{left:calc(100cqw - var(--tide-tab-slope-right) + var(--gap-sm));top:var(--tide-tab-slope-y-b);transform:translateY(-50%)}
+.slope[data-el="tide-tab-slope"]>.pair.on>.name,.slope[data-el="tide-tab-slope"]>.pair.on>b{font-weight:var(--name-weight)}
+.slope[data-el="tide-tab-slope"]{background:var(--page);border:1px solid var(--n-2);border-radius:0 var(--radius) var(--radius) var(--radius);--tide-tab-slope-point:7px;--tide-tab-slope-stroke:calc(var(--stroke)*3)}
+.slope[data-el="tide-tab-slope"]>.pair::after{border-radius:50%}
+.slope[data-el="tide-tab-slope"]>.pair.on{--tide-tab-slope-stroke:calc(var(--stroke)*4)}
+.slope[data-el="tide-tab-slope"]>.pair.on>b{color:var(--a1-7)}
+.slope[data-el="tide-tab-slope"].dumbbell{--tide-tab-slope-left:max(140px,min(40cqw,360px));display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:calc(var(--gap-sm)*5) repeat(var(--tide-tab-slope-count),minmax(0,1fr))}
+.slope[data-el="tide-tab-slope"].dumbbell::before,.slope[data-el="tide-tab-slope"].dumbbell::after{content:none}
+.slope[data-el="tide-tab-slope"].dumbbell>.heads{position:relative;grid-row:1}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair{position:relative;min-width:0;min-height:0;--tide-tab-slope-dx:calc(var(--tide-tab-slope-width)*(var(--b) - var(--a))/var(--max))}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(1 of .pair){grid-row:2}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(2 of .pair){grid-row:3}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(3 of .pair){grid-row:4}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(4 of .pair){grid-row:5}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(5 of .pair){grid-row:6}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(6 of .pair){grid-row:7}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(7 of .pair){grid-row:8}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair:nth-child(8 of .pair){grid-row:9}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair::before{left:calc(var(--tide-tab-slope-left) + var(--tide-tab-slope-width)*min(var(--a),var(--b))/var(--max));right:auto;top:50%;width:calc(var(--tide-tab-slope-width)*abs(var(--b) - var(--a))/var(--max));height:var(--tide-tab-slope-stroke);transform:translateY(-50%);clip-path:none}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair::after{left:calc(var(--tide-tab-slope-left) + var(--tide-tab-slope-width)*var(--a)/var(--max) - var(--tide-tab-slope-point)/2);top:calc(50% - var(--tide-tab-slope-point)/2);background:var(--page);border:1px solid var(--tide-tab-slope-color);box-shadow:var(--tide-tab-slope-dx) 0 0 0 var(--tide-tab-slope-color)}
+.slope[data-el="tide-tab-slope"].dumbbell>.heads>span:first-child{transform:none}
+.slope[data-el="tide-tab-slope"].dumbbell>.heads>span:last-child{transform:none}
+.slope[data-el="tide-tab-slope"].dumbbell>.heads>span::before{content:"";box-sizing:border-box;display:inline-block;width:7px;height:7px;margin-right:4px;border:1px solid var(--ink);vertical-align:middle;background:var(--page)}
+.slope[data-el="tide-tab-slope"].dumbbell>.heads>span:last-child::before{background:var(--ink)}
+.slope[data-el="tide-tab-slope"].dumbbell>.heads>span::before{border-radius:50%}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair>.name{top:50%}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair>b.a{left:calc(var(--tide-tab-slope-left) + var(--tide-tab-slope-width)*var(--a)/var(--max));top:calc(50% - var(--tide-tab-slope-point)/2 - var(--gap-sm));transform:translate(-50%,-100%)}
+.slope[data-el="tide-tab-slope"].dumbbell>.pair>b.b{left:calc(var(--tide-tab-slope-left) + var(--tide-tab-slope-width)*var(--b)/var(--max));top:calc(50% + var(--tide-tab-slope-point)/2 + var(--gap-sm));transform:translateX(-50%)}
+@container(max-width:550px){.slope[data-el="tide-tab-slope"]>.heads>span,.slope[data-el="tide-tab-slope"]>.pair>.name,.slope[data-el="tide-tab-slope"]>.pair>b{font-size:var(--type-12)}}

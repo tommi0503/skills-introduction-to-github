@@ -1,0 +1,9 @@
+/* replica03 opposite upper-right/lower-left cap corners and fine vertical rails.
+   This contract is absent; inferred from the measured material, not from an old kit. */
+.legend[data-el="lamella-legend"]{container-type:size;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;align-content:center;gap:var(--gap-sm) var(--gap);width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body)}
+.legend[data-el="lamella-legend"]>.key{--lamella-legend-fill:var(--a1);position:relative;display:flex;align-items:center;gap:var(--gap-sm);max-width:100%;min-width:0;font-size:clamp(var(--type-12),2.2cqw,var(--type-20));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);overflow-wrap:anywhere}
+.legend[data-el="lamella-legend"]>.key::before{content:"";display:block;flex:none;width:min(var(--type-16),6cqw);aspect-ratio:1;background:var(--lamella-legend-fill)}
+.legend[data-el="lamella-legend"]>.key.tone-1{--lamella-legend-fill:var(--a1)}.legend[data-el="lamella-legend"]>.key.tone-2{--lamella-legend-fill:var(--a2)}.legend[data-el="lamella-legend"]>.key.tone-3{--lamella-legend-fill:var(--n-5)}.legend[data-el="lamella-legend"]>.key.tone-4{--lamella-legend-fill:var(--n-8)}.legend[data-el="lamella-legend"]>.key.tone-5{--lamella-legend-fill:var(--n-3)}
+.legend[data-el="lamella-legend"]>.key::before{width:min(var(--type-24),8cqw);aspect-ratio:1.8;border-radius:0 70% 0 70%;border-left:var(--stroke) solid var(--n-5)}
+@container(max-width:240px){.legend[data-el="lamella-legend"]{column-gap:var(--gap-sm)}.legend[data-el="lamella-legend"]>.key{font-size:var(--type-12)}}
+

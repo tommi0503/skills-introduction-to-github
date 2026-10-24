@@ -1,0 +1,1 @@
+Inferred from replica05/10 lower-right chamfers, light figures and fine rising arrows. Two figures occupy equal measured faces with a connector owned by their common root. Narrow portrait cells turn the pair downward; both figures stay visible.

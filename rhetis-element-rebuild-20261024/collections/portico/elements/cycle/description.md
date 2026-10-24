@@ -1,0 +1,1 @@
+One rectangular clockwise circuit extends replica11 matrix rules. Count-derived sand header nodes sit on the complete shared path. Source08 white95-unit round carriers hold straight muted arrows between nodes. The centre retains10 highlighted168-unit disc and15-unit neutral rim. This is a sharp orthogonal cyclic relationship, rather than a circular chain of floating cards.

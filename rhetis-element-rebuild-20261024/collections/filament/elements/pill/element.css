@@ -1,0 +1,76 @@
+/* Inferred pill; no expressible source instance.
+   Measured deck primitives: 07 service178×121 tile,12px corners,25px/300 name and17px bold footer;06 light90px display. */
+.pill[data-el="filament-pill"] {
+  container-type: size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+}
+.pill[data-el="filament-pill"]>.parts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  white-space: nowrap;
+  padding: min(var(--pad),12cqh) var(--pad);
+  background: var(--n-1);
+  color: var(--ink);
+  border-radius: var(--radius);
+}
+.pill[data-el="filament-pill"] .parts>:where(.name,.note,.mark) {
+  margin: 0;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.pill[data-el="filament-pill"] .name {
+  font-size: clamp(var(--type-14),calc(min(3cqw,22cqh)),var(--type-32));
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  white-space: nowrap;
+  flex-shrink: 0;
+  overflow-wrap: normal;
+}
+.pill[data-el="filament-pill"] .note {
+  font-size: var(--type-12);
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  white-space: nowrap;
+  flex-shrink: 0;
+  overflow-wrap: normal;
+}
+.pill[data-el="filament-pill"] .mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: min(10cqw,40cqh,40px);
+  aspect-ratio: 1;
+  border: var(--stroke) solid currentColor;
+  border-radius: var(--radius);
+  font-size: var(--type-16);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+}
+.pill[data-el="filament-pill"] .mark>.icon,.pill[data-el="filament-pill"] .mark>.seat {
+  width: 56%;
+  height: 56%;
+}
+.pill[data-el="filament-pill"].on>.parts {
+  background: var(--a1);
+  color: var(--a1-on);
+}
+.pill[data-el="filament-pill"].quiet>.parts {
+  background: var(--n-2);
+}
+.pill[data-el="filament-pill"].line>.parts {
+  background: transparent;
+  border: var(--stroke) solid var(--n-5);
+}

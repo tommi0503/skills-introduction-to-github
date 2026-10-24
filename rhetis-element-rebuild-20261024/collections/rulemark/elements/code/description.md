@@ -1,0 +1,1 @@
+Inferred from replica05 black table heads and replica09 circle/chevron direction markers. A readable monospaced business snippet with its filename and optional true line counters. The header, enclosure and rules use this deck’s source material; token colours retain contrast in both modes. Narrow cells wrap at spaces without hiding source lines.

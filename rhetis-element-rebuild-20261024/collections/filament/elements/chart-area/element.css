@@ -1,0 +1,74 @@
+/* No area source instance; inferred from replica05:fine accent contours and open cream fields.
+   Each complete series owns its equal-step filled wedges and connectors; cumulative bands paint bottom first. */
+.areas[data-el="filament-chart-area"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--filament-area-font:clamp(var(--type-12),calc(2cqh),var(--type-16));--filament-area-left:max(40px,4cqw,calc(var(--filament-area-font)*(.65*(round(down,log(max(1,var(--max)),10)) + 1) + .4)));--filament-area-right:var(--gap-sm);--filament-area-head:max(72px,14cqh);--filament-area-foot:max(32px,6cqh);--filament-area-height:calc(100cqh - var(--filament-area-head) - var(--filament-area-foot));--filament-area-count:1;--filament-area-stroke:var(--stroke);--filament-area-point:4px;--filament-area-grid:var(--n-3);--filament-area-alpha:25%;--filament-area-text:var(--ink)}
+.areas[data-el="filament-chart-area"]::before{content:counter(filament-ay5) "\a " counter(filament-ay4) "\a " counter(filament-ay3) "\a " counter(filament-ay2) "\a " counter(filament-ay1);counter-reset:filament-ay5 round(var(--max)) filament-ay4 round(calc(var(--max)*.8)) filament-ay3 round(calc(var(--max)*.6)) filament-ay2 round(calc(var(--max)*.4)) filament-ay1 round(calc(var(--max)*.2));position:absolute;left:var(--gap-sm);top:calc(var(--filament-area-head) - var(--filament-area-height)/10);width:calc(var(--filament-area-left) - var(--gap-sm) - 4px);height:var(--filament-area-height);font-size:clamp(var(--type-12),calc(2cqh),var(--type-16));font-weight:var(--body-weight);line-height:calc(var(--filament-area-height)/5);letter-spacing:var(--label-track);text-align:right;white-space:pre;color:var(--filament-area-text)}
+.areas[data-el="filament-chart-area"]::after{content:"";position:absolute;z-index:-3;left:var(--filament-area-left);right:var(--filament-area-right);top:var(--filament-area-head);bottom:var(--filament-area-foot);border-left:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,var(--filament-area-grid) 0 1px,transparent 1px 20%);pointer-events:none}
+.areas[data-el="filament-chart-area"]>.series{position:absolute;left:var(--filament-area-left);right:var(--filament-area-right);top:0;bottom:var(--filament-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);isolation:isolate;anchor-scope:all;--filament-area-index:0;--filament-area-color:var(--a1)}
+.areas[data-el="filament-chart-area"]>.series>.name{box-sizing:border-box;position:absolute;left:calc(var(--filament-area-index)*(100cqw - var(--filament-area-left) - var(--filament-area-right))/var(--filament-area-count));top:var(--gap-sm);width:calc((100cqw - var(--filament-area-left) - var(--filament-area-right))/var(--filament-area-count));margin:0;padding:0 var(--gap-sm) 0 calc(var(--gap-sm)*1.5);font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--filament-area-text)}
+.areas[data-el="filament-chart-area"]>.series>.name:empty{display:none}
+.areas[data-el="filament-chart-area"]>.series>.name::before{content:"";position:absolute;left:0;top:.45em;width:var(--gap-sm);height:var(--filament-area-stroke);background:var(--filament-area-color)}
+.areas[data-el="filament-chart-area"]>.series>.pt{position:static;align-self:start;justify-self:center;width:var(--filament-area-point);height:var(--filament-area-point);margin-top:calc(var(--filament-area-head) + var(--filament-area-height) - var(--filament-area-value) - var(--filament-area-point)/2);background:var(--filament-area-color);anchor-name:var(--filament-area-self);--filament-area-value:calc(var(--filament-area-height)*var(--v)/var(--max))}
+.areas[data-el="filament-chart-area"]>.series>.pt::before,.areas[data-el="filament-chart-area"]>.series>.pt::after{content:"";position:absolute;left:anchor(var(--filament-area-prev) center);right:anchor(var(--filament-area-self) center);top:calc(anchor(var(--filament-area-prev) center) - var(--filament-area-height));bottom:0;pointer-events:none}
+.areas[data-el="filament-chart-area"]>.series>.pt::before{z-index:-2;left:calc(anchor(var(--filament-area-prev) center) - 1px);right:calc(anchor(var(--filament-area-self) center) - 1px);mix-blend-mode:plus-lighter;background:color-mix(in srgb,var(--filament-area-color) var(--filament-area-alpha),transparent);clip-path:polygon(1px var(--filament-area-height),calc(100% - 1px) calc(100% - var(--filament-area-value)),calc(100% - 1px) 100%,1px 100%)}
+.areas[data-el="filament-chart-area"]>.series>.pt::after{z-index:-1;background:var(--filament-area-color);clip-path:polygon(0 calc(var(--filament-area-height) - var(--filament-area-stroke)/2),100% calc(100% - var(--filament-area-value) - var(--filament-area-stroke)/2),100% calc(100% - var(--filament-area-value) + var(--filament-area-stroke)/2),0 calc(var(--filament-area-height) + var(--filament-area-stroke)/2))}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(1 of .pt)::before,.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(1 of .pt)::after{content:none}
+.areas[data-el="filament-chart-area"]>.series>.pt>b{position:absolute;z-index:20;left:anchor(var(--filament-area-self) center);top:anchor(var(--filament-area-self) center);transform:translate(-50%,calc(-100% - var(--gap-sm)));margin:0;padding:0 2px;background:var(--page);font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--filament-area-text)}
+.areas[data-el="filament-chart-area"]>.axis{box-sizing:border-box;position:absolute;left:var(--filament-area-left);right:var(--filament-area-right);bottom:0;height:var(--filament-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:start;padding-top:var(--gap-sm)}
+.areas[data-el="filament-chart-area"]>.axis>span{box-sizing:border-box;position:relative;width:max-content;justify-self:center;margin:0;font-size:clamp(var(--type-12),calc(2cqh),var(--type-16));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);text-align:center;white-space:nowrap;color:var(--filament-area-text)}
+.areas[data-el="filament-chart-area"]:has(>.series:nth-child(1 of .series):nth-last-child(1 of .series)){--filament-area-count:1}
+.areas[data-el="filament-chart-area"]>.series:nth-child(1 of .series){--filament-area-index:0;--filament-area-color:var(--a1);z-index:1}
+.areas[data-el="filament-chart-area"].stacked>.series:nth-child(1 of .series){z-index:4}
+.areas[data-el="filament-chart-area"]:has(>.series:nth-child(2 of .series):nth-last-child(1 of .series)){--filament-area-count:2}
+.areas[data-el="filament-chart-area"]>.series:nth-child(2 of .series){--filament-area-index:1;--filament-area-color:var(--a2);z-index:2}
+.areas[data-el="filament-chart-area"].stacked>.series:nth-child(2 of .series){z-index:3}
+.areas[data-el="filament-chart-area"]:has(>.series:nth-child(3 of .series):nth-last-child(1 of .series)){--filament-area-count:3}
+.areas[data-el="filament-chart-area"]>.series:nth-child(3 of .series){--filament-area-index:2;--filament-area-color:var(--a3);z-index:3}
+.areas[data-el="filament-chart-area"].stacked>.series:nth-child(3 of .series){z-index:2}
+.areas[data-el="filament-chart-area"]:has(>.series:nth-child(4 of .series):nth-last-child(1 of .series)){--filament-area-count:4}
+.areas[data-el="filament-chart-area"]>.series:nth-child(4 of .series){--filament-area-index:3;--filament-area-color:var(--a4);z-index:4}
+.areas[data-el="filament-chart-area"].stacked>.series:nth-child(4 of .series){z-index:1}
+.areas[data-el="filament-chart-area"]>.series.tone-1{--filament-area-color:var(--a1)}
+.areas[data-el="filament-chart-area"]>.series.tone-2{--filament-area-color:var(--a2)}
+.areas[data-el="filament-chart-area"]>.series.tone-3{--filament-area-color:var(--a3)}
+.areas[data-el="filament-chart-area"]>.series.tone-4{--filament-area-color:var(--a4)}
+.areas[data-el="filament-chart-area"]>.series.tone-5{--filament-area-color:var(--n-5)}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(1 of .pt){--filament-area-self:--filament-ap1;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(2 of .pt){--filament-area-self:--filament-ap2;--filament-area-prev:--filament-ap1;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(3 of .pt){--filament-area-self:--filament-ap3;--filament-area-prev:--filament-ap2;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(4 of .pt){--filament-area-self:--filament-ap4;--filament-area-prev:--filament-ap3;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(5 of .pt){--filament-area-self:--filament-ap5;--filament-area-prev:--filament-ap4;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(6 of .pt){--filament-area-self:--filament-ap6;--filament-area-prev:--filament-ap5;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(7 of .pt){--filament-area-self:--filament-ap7;--filament-area-prev:--filament-ap6;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(8 of .pt){--filament-area-self:--filament-ap8;--filament-area-prev:--filament-ap7;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(9 of .pt){--filament-area-self:--filament-ap9;--filament-area-prev:--filament-ap8;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(10 of .pt){--filament-area-self:--filament-ap10;--filament-area-prev:--filament-ap9;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(11 of .pt){--filament-area-self:--filament-ap11;--filament-area-prev:--filament-ap10;}
+.areas[data-el="filament-chart-area"]>.series>.pt:nth-child(12 of .pt){--filament-area-self:--filament-ap12;--filament-area-prev:--filament-ap11;}
+.areas[data-el="filament-chart-area"]{--filament-area-stroke:calc(var(--stroke)*.7);--filament-area-alpha:12%;--filament-area-text:var(--a1-8);--filament-area-grid:var(--a1-2-soft)}
+.areas[data-el="filament-chart-area"]>.series>.pt{border-radius:50%;background:var(--page);box-shadow:inset 0 0 0 1px var(--filament-area-color)}
+.areas[data-el="filament-chart-area"]::after{border-color:var(--a1-8);border-width:calc(var(--stroke)*.7)}
+.areas[data-el="filament-chart-area"].stacked>.series>.pt::before{mix-blend-mode:normal;left:calc(anchor(var(--filament-area-prev) center) - 1px);right:anchor(var(--filament-area-self) center);background:var(--filament-area-color);clip-path:polygon(0 var(--filament-area-height),100% calc(100% - var(--filament-area-value)),100% 100%,0 100%)}
+@container(max-width:700px){.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:not(:nth-child(3n + 1)):not(:last-child),.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:nth-last-child(-n + 3):not(:last-child){display:none}.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:first-child{justify-self:start}.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:last-child{justify-self:end}}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(1){grid-column:1;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(2){grid-column:2;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(3){grid-column:3;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(4){grid-column:4;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(5){grid-column:5;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(6){grid-column:6;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(7){grid-column:7;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(8){grid-column:8;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(9){grid-column:9;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(10){grid-column:10;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(11){grid-column:11;grid-row:1}
+.areas[data-el="filament-chart-area"]>.axis>span:nth-child(12){grid-column:12;grid-row:1}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(3):last-child)>.axis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(4):last-child)>.axis{grid-template-columns:repeat(4,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(5):last-child)>.axis{grid-template-columns:repeat(5,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(6):last-child)>.axis{grid-template-columns:repeat(6,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(7):last-child)>.axis{grid-template-columns:repeat(7,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(8):last-child)>.axis{grid-template-columns:repeat(8,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(9):last-child)>.axis{grid-template-columns:repeat(9,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(10):last-child)>.axis{grid-template-columns:repeat(10,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(11):last-child)>.axis{grid-template-columns:repeat(11,minmax(0,1fr))}
+.areas[data-el="filament-chart-area"]:has(>.axis>span:nth-child(12):last-child)>.axis{grid-template-columns:repeat(12,minmax(0,1fr))}
+@container(max-width:550px){.areas[data-el="filament-chart-area"]>.series>.name,.areas[data-el="filament-chart-area"]>.series>.pt>b,.areas[data-el="filament-chart-area"]>.axis>span{font-size:var(--type-12)}}

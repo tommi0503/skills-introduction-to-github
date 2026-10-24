@@ -1,0 +1,50 @@
+/* Replica17:701x480 plot in723x502 bounds;0.7px series;6px dots; a fading40% fill.
+   Its two6-point series share a1px L-axis. Separate badges/tabs are not chart data. */
+.areas[data-el="lamella-chart-area"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--ink);--lamella-area-font:clamp(var(--type-10),calc(1.95cqh),var(--type-16));--lamella-area-left:max(3.043cqw,22px,calc(var(--lamella-area-font)*(.6*(round(down,log(max(1,var(--max)),10)) + 1) + .4)));--lamella-area-head:max(4px,.797cqh);--lamella-area-foot:max(18px,3.586cqh);--lamella-area-height:calc(100cqh - var(--lamella-area-head) - var(--lamella-area-foot))}
+.areas[data-el="lamella-chart-area"]:has(>.series>.pt>b:not(:empty)){--lamella-area-head:max(40px,8cqh)}
+.areas[data-el="lamella-chart-area"]:has(>.series>.name:not(:empty)){--lamella-area-head:max(64px,12cqh)}
+.areas[data-el="lamella-chart-area"]::before{content:counter(lamella-y5) "\a " counter(lamella-y4) "\a " counter(lamella-y3) "\a " counter(lamella-y2) "\a " counter(lamella-y1);counter-reset:lamella-y5 round(var(--max)) lamella-y4 round(calc(var(--max)*.8)) lamella-y3 round(calc(var(--max)*.6)) lamella-y2 round(calc(var(--max)*.4)) lamella-y1 round(calc(var(--max)*.2));position:absolute;left:0;top:calc(var(--lamella-area-head) - var(--lamella-area-height)/10);width:calc(var(--lamella-area-left) - 4px);height:var(--lamella-area-height);font-size:clamp(var(--type-10),calc(1.95cqh),var(--type-16));font-weight:var(--body-weight);line-height:calc(var(--lamella-area-height)/5);text-align:right;white-space:pre;color:var(--ink)}
+.areas[data-el="lamella-chart-area"]::after{content:"";position:absolute;left:var(--lamella-area-left);right:0;top:var(--lamella-area-head);bottom:var(--lamella-area-foot);border-left:1px solid var(--n-4);border-bottom:1px solid var(--n-4);pointer-events:none}
+.areas[data-el="lamella-chart-area"]>.series{position:absolute;left:calc(var(--lamella-area-left) - .0484094053cqw);right:.1590594744cqw;top:0;bottom:var(--lamella-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);anchor-scope:all;--lamella-area-fill:var(--a1)}
+.areas[data-el="lamella-chart-area"]>.series>.name{box-sizing:border-box;position:absolute;z-index:10;left:calc(var(--lamella-area-index)*(100cqw - var(--lamella-area-left))/var(--lamella-area-count));top:0;width:calc((100cqw - var(--lamella-area-left))/var(--lamella-area-count));margin:0;padding:0 var(--gap-sm) 0 calc(var(--gap) + var(--gap-sm));font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.areas[data-el="lamella-chart-area"]>.series>.name:empty{display:none}
+.areas[data-el="lamella-chart-area"]>.series>.name::before{content:"";position:absolute;left:0;top:.6em;width:var(--gap);height:calc(var(--stroke)*.7);background:var(--lamella-area-fill)}
+.areas[data-el="lamella-chart-area"]>.series>.pt{position:static;align-self:start;justify-self:center;width:6px;height:6px;margin-top:calc(var(--lamella-area-head) + var(--lamella-area-height) - var(--lamella-area-value-height) - 3px);border-radius:50%;background:var(--lamella-area-fill);anchor-name:var(--lamella-area-self);--lamella-area-value-height:calc(var(--lamella-area-height)*var(--v)/var(--max))}
+.areas[data-el="lamella-chart-area"]>.series>.pt::before,.areas[data-el="lamella-chart-area"]>.series>.pt::after{content:"";position:absolute;left:anchor(var(--lamella-area-prev) center);right:anchor(var(--lamella-area-self) center);top:calc(anchor(var(--lamella-area-prev) center) - var(--lamella-area-height));bottom:0;pointer-events:none}
+.areas[data-el="lamella-chart-area"]>.series>.pt::before{z-index:-2;left:calc(anchor(var(--lamella-area-prev) center) - .4px);background:linear-gradient(to bottom,color-mix(in srgb,var(--a1) 30.23622047%,transparent),transparent);background-size:100% var(--lamella-area-height);background-position:bottom;background-repeat:no-repeat;clip-path:polygon(0 var(--lamella-area-height),100% calc(100% - var(--lamella-area-value-height)),100% 100%,0 100%)}
+.areas[data-el="lamella-chart-area"]>.series>.pt::after{z-index:-1;background:var(--lamella-area-fill);clip-path:polygon(0 calc(var(--lamella-area-height) - var(--stroke)*.35),100% calc(100% - var(--lamella-area-value-height) - var(--stroke)*.35),100% calc(100% - var(--lamella-area-value-height) + var(--stroke)*.35),0 calc(var(--lamella-area-height) + var(--stroke)*.35))}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(1 of .pt)::before,.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(1 of .pt)::after{content:none}
+.areas[data-el="lamella-chart-area"]>.series>.pt>b{position:absolute;z-index:20;left:anchor(var(--lamella-area-self) center);top:anchor(var(--lamella-area-self) center);transform:translate(-50%,calc(-100% - var(--gap-sm)));margin:0;white-space:nowrap;font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);color:var(--ink);text-shadow:0 0 2px var(--page)}
+.areas[data-el="lamella-chart-area"]>.axis{box-sizing:border-box;position:absolute;left:var(--lamella-area-left);right:0;bottom:0;height:var(--lamella-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:start;padding-top:1cqh}
+.areas[data-el="lamella-chart-area"]>.axis>span{text-align:center;font-size:clamp(var(--type-10),calc(1.95cqh),var(--type-16));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink)}
+.areas[data-el="lamella-chart-area"].stacked>.series>.pt::before{background:var(--lamella-area-fill)}
+.areas[data-el="lamella-chart-area"]:has(>.series:nth-child(1 of .series):nth-last-child(1 of .series)){--lamella-area-count:1}
+.areas[data-el="lamella-chart-area"]>.series:nth-child(1 of .series){--lamella-area-index:0;--lamella-area-fill:var(--a1);z-index:1}
+.areas[data-el="lamella-chart-area"].stacked>.series:nth-child(1 of .series){z-index:4}
+.areas[data-el="lamella-chart-area"]:has(>.series:nth-child(2 of .series):nth-last-child(1 of .series)){--lamella-area-count:2}
+.areas[data-el="lamella-chart-area"]>.series:nth-child(2 of .series){--lamella-area-index:1;--lamella-area-fill:var(--a2);z-index:2}
+.areas[data-el="lamella-chart-area"].stacked>.series:nth-child(2 of .series){z-index:3}
+.areas[data-el="lamella-chart-area"]:has(>.series:nth-child(3 of .series):nth-last-child(1 of .series)){--lamella-area-count:3}
+.areas[data-el="lamella-chart-area"]>.series:nth-child(3 of .series){--lamella-area-index:2;--lamella-area-fill:var(--a3);z-index:3}
+.areas[data-el="lamella-chart-area"].stacked>.series:nth-child(3 of .series){z-index:2}
+.areas[data-el="lamella-chart-area"]:has(>.series:nth-child(4 of .series):nth-last-child(1 of .series)){--lamella-area-count:4}
+.areas[data-el="lamella-chart-area"]>.series:nth-child(4 of .series){--lamella-area-index:3;--lamella-area-fill:var(--a4);z-index:4}
+.areas[data-el="lamella-chart-area"].stacked>.series:nth-child(4 of .series){z-index:1}
+.areas[data-el="lamella-chart-area"]>.series.tone-1{--lamella-area-fill:var(--a1)}
+.areas[data-el="lamella-chart-area"]>.series.tone-2{--lamella-area-fill:var(--a2)}
+.areas[data-el="lamella-chart-area"]>.series.tone-3{--lamella-area-fill:var(--a3)}
+.areas[data-el="lamella-chart-area"]>.series.tone-4{--lamella-area-fill:var(--a4)}
+.areas[data-el="lamella-chart-area"]>.series.tone-5{--lamella-area-fill:var(--n-5)}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(1 of .pt){--lamella-area-self:--lamella-ap1;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(2 of .pt){--lamella-area-self:--lamella-ap2;--lamella-area-prev:--lamella-ap1;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(3 of .pt){--lamella-area-self:--lamella-ap3;--lamella-area-prev:--lamella-ap2;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(4 of .pt){--lamella-area-self:--lamella-ap4;--lamella-area-prev:--lamella-ap3;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(5 of .pt){--lamella-area-self:--lamella-ap5;--lamella-area-prev:--lamella-ap4;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(6 of .pt){--lamella-area-self:--lamella-ap6;--lamella-area-prev:--lamella-ap5;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(7 of .pt){--lamella-area-self:--lamella-ap7;--lamella-area-prev:--lamella-ap6;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(8 of .pt){--lamella-area-self:--lamella-ap8;--lamella-area-prev:--lamella-ap7;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(9 of .pt){--lamella-area-self:--lamella-ap9;--lamella-area-prev:--lamella-ap8;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(10 of .pt){--lamella-area-self:--lamella-ap10;--lamella-area-prev:--lamella-ap9;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(11 of .pt){--lamella-area-self:--lamella-ap11;--lamella-area-prev:--lamella-ap10;}
+.areas[data-el="lamella-chart-area"]>.series>.pt:nth-child(12 of .pt){--lamella-area-self:--lamella-ap12;--lamella-area-prev:--lamella-ap11;}
+@container(max-width:550px){.areas[data-el="lamella-chart-area"]>.series>.name{padding-left:calc(var(--gap-sm)*1.5);padding-right:0;font-size:var(--type-12)}.areas[data-el="lamella-chart-area"]>.series>.name::before{width:var(--gap-sm)}.areas[data-el="lamella-chart-area"]>.series>.pt>b{font-size:var(--type-12)}}

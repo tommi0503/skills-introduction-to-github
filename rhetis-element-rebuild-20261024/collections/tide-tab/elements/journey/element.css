@@ -1,0 +1,26 @@
+/* Absent customer journey; replica05 supplies attached accent tabs,16/21 rounded white fields and28/16.1 hierarchy.
+   One element owns the data-driven mood points and all connecting curve segments. */
+.journey[data-el="tide-tab-journey"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:repeat(var(--tide-tab-journey-count),minmax(0,1fr));width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--tide-tab-journey-count:3}
+.journey[data-el="tide-tab-journey"]>.stage{box-sizing:border-box;position:relative;display:grid;grid-template-rows:44% auto minmax(0,1fr) auto;min-width:0;min-height:0;padding:0 min(1cqw,1.5cqh) min(1cqw,1.5cqh);container-type:size;isolation:isolate}
+.journey[data-el="tide-tab-journey"]>.stage::before{content:"";position:absolute;z-index:4;left:50%;top:calc(10% + (100 - var(--mood,50)) * .3%);width:clamp(calc(var(--stroke)*7),8cqw,calc(var(--stroke)*16));aspect-ratio:1;transform:translate(-50%,-50%);background:var(--a1);border-radius:50%;pointer-events:none}
+.journey[data-el="tide-tab-journey"]>.stage::after{content:"";position:absolute;z-index:3;left:50%;top:10%;width:100%;height:30%;background:var(--a1-7);clip-path:polygon(0 calc(100% - var(--mood,50)*1% - var(--stroke)),100% calc(100% - var(--next,50)*1% - var(--stroke)),100% calc(100% - var(--next,50)*1% + var(--stroke)),0 calc(100% - var(--mood,50)*1% + var(--stroke)));pointer-events:none}
+.journey[data-el="tide-tab-journey"]>.stage>.name{box-sizing:border-box;z-index:1;grid-row:2;display:block;min-width:0;margin:0;padding:.4em .6em;font-size:clamp(var(--type-14),calc(min(100cqw*.12,100cqh*.045)),var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere}
+.journey[data-el="tide-tab-journey"]>.stage>.note{box-sizing:border-box;z-index:auto;grid-row:3;display:block;min-width:0;margin:0;padding:.75em .7em;font-size:clamp(var(--type-12),calc(min(100cqw*.085,100cqh*.035)),var(--type-22));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.journey[data-el="tide-tab-journey"]>.stage>.note::before{content:"";position:absolute;z-index:-1;top:44%;right:min(1cqw,1.5cqh);bottom:0;left:min(1cqw,1.5cqh);background:var(--n-1);pointer-events:none}
+.journey[data-el="tide-tab-journey"]>.stage>.pain{box-sizing:border-box;z-index:1;grid-row:4;display:block;min-width:0;margin:0;padding:.5em .7em;font-size:clamp(var(--type-12),calc(min(100cqw*.075,100cqh*.025)),var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(3):last-child){--tide-tab-journey-count:3}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(3):last-child)>.stage:nth-child(3)::after{display:none}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(4):last-child){--tide-tab-journey-count:4}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(4)::after{display:none}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(5):last-child){--tide-tab-journey-count:5}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(5)::after{display:none}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(6):last-child){--tide-tab-journey-count:6}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(6)::after{display:none}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(7):last-child){--tide-tab-journey-count:7}
+.journey[data-el="tide-tab-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(7)::after{display:none}
+.journey[data-el="tide-tab-journey"]{background:var(--a1-1-soft)}
+.journey[data-el="tide-tab-journey"]>.stage>.name{width:fit-content;max-width:100%;background:var(--a1);color:var(--a1-on);border-radius:min(var(--radius),8cqw) min(var(--radius),8cqw) 0 0}
+.journey[data-el="tide-tab-journey"]>.stage>.note::before{border-radius:0 min(var(--radius),10cqw) min(var(--radius),10cqw) min(var(--radius),10cqw)}
+.journey[data-el="tide-tab-journey"]>.stage.on>.name{background:var(--a2);color:var(--a2-on)}
+.journey[data-el="tide-tab-journey"]>.stage.on>.note::before{background:var(--a1-2-soft)}
+.journey[data-el="tide-tab-journey"]>.stage>.pain{color:var(--a1-8);border-top:var(--stroke) solid var(--n-3)}

@@ -1,0 +1,323 @@
+/* Replica04: unboxed editorial feature490×140,20px title,16px note at+51/+21.
+   Replica03 on,05 kick,06 fig and10 quiet extend the same editorial panels. */
+.card[data-el="portico-card"] {
+  container-type: size;
+  position: relative;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  --portico-card-face: transparent;
+  --portico-card-fg: var(--ink);
+  background: var(--portico-card-face);
+}
+.card[data-el="portico-card"]>.parts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 0;
+  gap: min(16.429cqh,var(--gap-lg));
+  color: var(--portico-card-fg);
+}
+.card[data-el="portico-card"] .parts>:where(.kick,.mark,.fig,.name,.note) {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.card[data-el="portico-card"]>.parts>.name {
+  font-size: clamp(var(--type-16),calc(min(4.0816cqw,14.2857cqh)),var(--type-40));
+  font-weight: var(--figure-weight);
+  line-height: calc(var(--name-line)*1.0769230769);
+  letter-spacing: calc(var(--body-track)*.7);
+  text-wrap: balance;
+  word-break: keep-all;
+}
+.card[data-el="portico-card"]>.parts>.note {
+  font-size: clamp(var(--type-12),calc(min(3.2653cqw,11.4286cqh)),var(--type-28));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*.875);
+  text-wrap: pretty;
+  word-break: keep-all;
+}
+.card[data-el="portico-card"]>.parts>.mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: max(4.286cqw,var(--type-24));
+  height: max(min(20cqh,6cqw),var(--type-24));
+  font-size: clamp(var(--type-16),calc(4.286cqw),var(--type-32));
+  font-weight: var(--figure-weight);
+  line-height: var(--label-line);
+  color: var(--a1-7);
+}
+.card[data-el="portico-card"]>.parts>.mark>.icon,.card[data-el="portico-card"]>.parts>.mark>.seat {
+  width: 100%;
+  height: 100%;
+}
+.card[data-el="portico-card"]>.parts>.mark:has(>.icon) {
+  width: clamp(12px,3.0612244898cqw,22px);
+  height: clamp(12px,3.0612244898cqw,22px);
+  top: 5.859375cqh;
+}
+.card[data-el="portico-card"]>.parts:has(>.mark>.icon)>.name {
+  margin-left: 4.0816326531cqw;
+}
+.card[data-el="portico-card"]>.parts:has(>.mark)>.name {
+  margin-left: max(6.735cqw,var(--type-32));
+  color: var(--a1-7);
+}
+.card[data-el="portico-card"]>.parts:has(>.mark)>.note {
+  margin-left: 4.286cqw;
+}
+.card[data-el="portico-card"]>.parts>.kick {
+  align-self: stretch;
+  display: block;
+  flex: none;
+  width: 100%;
+  height: calc(var(--pad)*1.0833333333);
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: inherit;
+}
+.card[data-el="portico-card"]>.parts:has(>.kick) {
+  gap: 0;
+  padding-top: .235849cqh;
+}
+.card[data-el="portico-card"]>.parts:has(>.kick)>.name {
+  margin-top: min(6.132075cqh,calc(var(--gap-sm)*1.625));
+  font-size: clamp(var(--type-20),calc(min(7.092198cqw,9.434cqh)),var(--type-40));
+  letter-spacing: calc(var(--body-track)*.7);
+  text-wrap: balance;
+}
+.card[data-el="portico-card"]>.parts:has(>.kick)>.note {
+  margin-top: min(10.377358cqh,calc(var(--gap)*.9166666667));
+  font-size: clamp(var(--type-16),calc(min(5.673759cqw,7.5472cqh)),var(--type-28));
+  letter-spacing: calc(var(--body-track)*.875);
+}
+.card[data-el="portico-card"]>.parts:has(>.note>p):has(>.kick)>.name {
+  margin-top: min(4.1841cqh,calc(var(--gap-sm)*1.25));
+}
+.card[data-el="portico-card"]>.parts:has(>.note>p):has(>.kick)>.note {
+  margin-top: min(7.53138cqh,calc(var(--gap)*.75));
+}
+.card[data-el="portico-card"]>.parts>.note>p {
+  margin: 0;
+}
+.card[data-el="portico-card"]>.parts>.note>p+p {
+  margin-top: calc(var(--gap)*.8333333333);
+  font-size: var(--type-14);
+  line-height: var(--label-line);
+}
+.card[data-el="portico-card"]>.parts>.fig {
+  font-size: clamp(var(--type-28),calc(min(8cqw,24cqh)),var(--type-80));
+  font-weight: var(--figure-weight);
+  line-height: var(--figure-line);
+  letter-spacing: var(--figure-track);
+}
+.card[data-el="portico-card"]>.parts>.fig small {
+  font-size: clamp(var(--type-12),calc(3cqw),var(--type-24));
+  font-weight: var(--body-weight);
+}
+.card[data-el="portico-card"]>.parts:has(>.fig) {
+  display: grid;
+  grid-template-columns: minmax(0,18.2943603851cqw) minmax(0,1fr);
+  grid-template-rows: max-content auto;
+  column-gap: 0;
+  row-gap: min(calc(var(--gap-sm)*.25),1.5000375009cqh);
+  align-content: start;
+  padding: 26.2506562664cqh 10.1788170564cqw 0;
+  border-bottom: var(--stroke) solid var(--n-4);
+}
+.card[data-el="portico-card"]>.parts:has(>.fig)>.fig {
+  position: absolute;
+  left: 10.1788170564cqw;
+  top: 26.2506562664cqh;
+  width: 18.2943603851cqw;
+  align-self: start;
+  font-size: clamp(var(--type-28),calc(min(5.5020632737cqw,30.0007500188cqh)),var(--type-80));
+  font-weight: var(--figure-weight);
+  line-height: calc(var(--figure-line)*1.4285714286);
+  letter-spacing: calc(var(--body-track)*.35);
+  color: var(--a1-7);
+}
+.card[data-el="portico-card"]>.parts:has(>.fig)>.name {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 3.7500937523cqh;
+  font-size: clamp(var(--type-14),calc(min(2.7510316369cqw,15.0003750094cqh)),var(--type-32));
+}
+.card[data-el="portico-card"]>.parts:has(>.fig)>.note {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: clamp(var(--type-14),calc(min(2.0632737276cqw,11.250281257cqh)),var(--type-24));
+  letter-spacing: calc(var(--body-track)*.9333333333);
+}
+.card[data-el="portico-card"]:is(.on,.tone-1,.tone-2,.tone-3,.tone-4,.tone-5)>.parts:has(>.fig)>.fig {
+  color: var(--portico-card-fg);
+}
+.card[data-el="portico-card"].on {
+  --portico-card-face: var(--a1);
+  --portico-card-fg: var(--a1-on);
+}
+.card[data-el="portico-card"]:is(.on,.tone-1,.tone-2,.tone-3,.tone-4,.tone-5) .mark {
+  color: var(--portico-card-fg);
+}
+.card[data-el="portico-card"].on .name {
+  font-size: clamp(var(--type-16),calc(min(3.93cqw,12.414cqh)),var(--type-40));
+}
+.card[data-el="portico-card"].on .note {
+  font-size: clamp(var(--type-12),calc(min(3.057cqw,9.655cqh)),var(--type-28));
+}
+.card[data-el="portico-card"]:is(.on,.tone-1,.tone-2,.tone-3,.tone-4,.tone-5)>.parts:has(>.mark)>.name {
+  color: var(--portico-card-fg);
+}
+.card[data-el="portico-card"].on>.parts:has(>.mark) {
+  gap: 12.9655172414cqh;
+}
+.card[data-el="portico-card"].on>.parts>.mark:has(>.icon) {
+  width: clamp(12px,4.8034934498cqw,30px);
+  height: clamp(12px,4.8034934498cqw,30px);
+  top: 1.2068965517cqh;
+}
+.card[data-el="portico-card"].on>.parts:has(>.mark)>.name {
+  margin-left: 7.2052401747cqw;
+  letter-spacing: calc(var(--body-track)*.7777777778);
+}
+.card[data-el="portico-card"].on>.parts:has(>.mark)>.note {
+  margin-left: 7.2052401747cqw;
+  letter-spacing: var(--body-track);
+  word-break:normal;
+  text-wrap:wrap;
+}
+.card[data-el="portico-card"].quiet {
+  --portico-card-face: var(--n-3);
+}
+.card[data-el="portico-card"].quiet>.parts:not(:has(>.fig)) {
+  padding: var(--pad);
+}
+.card[data-el="portico-card"].quiet>.parts:not(:has(>.fig)):not(:has(>.kick)):not(:has(>.mark)) {
+  padding: min(24.5614035088cqh,calc(var(--pad)*1.75)) min(7.4509803922cqw,calc(var(--pad)*1.5833333333));
+  gap: min(7.0175438596cqh,calc(var(--gap)*.5));
+}
+.card[data-el="portico-card"].quiet>.parts:not(:has(>.fig)):not(:has(>.kick)):not(:has(>.mark))>.name {
+  position: relative;
+  max-width: calc(55.6862745098cqw - var(--gap-sm));
+  font-size: clamp(var(--type-16),calc(min(3.9215686275cqw,11.6959064327cqh)),var(--type-40));
+}
+.card[data-el="portico-card"].quiet>.parts:not(:has(>.fig)):not(:has(>.kick)):not(:has(>.mark))>.note {
+  font-size: clamp(var(--type-12),calc(min(3.137254902cqw,9.3567251462cqh)),var(--type-28));
+}
+.card[data-el="portico-card"].quiet>.parts:not(:has(>.fig)):not(:has(>.kick)):not(:has(>.mark))>.name::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + var(--gap-sm));
+  top: calc(var(--gap-sm)*-.75);
+  width: min(3.137254902cqw,calc(var(--gap-sm)*2));
+  aspect-ratio: 1;
+  background: radial-gradient(circle at 50% 50%,var(--page) 0 2px,transparent 2.2px),radial-gradient(circle at 50% 10%,var(--page) 0 2px,transparent 2.2px),radial-gradient(circle at 85% 30%,var(--page) 0 2px,transparent 2.2px),radial-gradient(circle at 85% 70%,var(--page) 0 2px,transparent 2.2px),radial-gradient(circle at 50% 90%,var(--page) 0 2px,transparent 2.2px),radial-gradient(circle at 15% 70%,var(--page) 0 2px,transparent 2.2px),radial-gradient(circle at 15% 30%,var(--page) 0 2px,transparent 2.2px);
+}
+.card[data-el="portico-card"].line {
+  border: var(--stroke) solid var(--n-4);
+}
+.card[data-el="portico-card"].tone-1 {
+  --portico-card-face: var(--a1);
+  --portico-card-fg: var(--a1-on);
+}
+.card[data-el="portico-card"].tone-2 {
+  --portico-card-face: var(--a2);
+  --portico-card-fg: var(--a2-on);
+}
+.card[data-el="portico-card"].tone-3 {
+  --portico-card-face: var(--a3-7);
+  --portico-card-fg: var(--page);
+}
+.card[data-el="portico-card"].tone-4 {
+  --portico-card-face: var(--a4);
+  --portico-card-fg: var(--a4-on);
+}
+.card[data-el="portico-card"].tone-5 {
+  --portico-card-face: var(--n-8);
+  --portico-card-fg: var(--page);
+}
+@container (min-height:300px) {
+  .card[data-el="portico-card"]>.parts:has(>.mark>.icon)>.name,
+ .card[data-el="portico-card"].on>.parts:has(>.mark)>.name {
+    margin-left: 0;
+  }
+  .card[data-el="portico-card"]>.parts:not(:has(>.fig)) {
+    justify-content: center;
+  }
+  .card[data-el="portico-card"]>.parts:has(>.mark):not(:has(>.fig)) {
+    display: grid;
+    grid-template-columns: max(4.286cqw,var(--type-24)) 1fr;
+    grid-template-rows: auto auto;
+    column-gap: var(--gap-sm);
+    row-gap: var(--gap-lg);
+    align-content: center;
+  }
+  .card[data-el="portico-card"]>.parts:has(>.mark)>.mark {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .card[data-el="portico-card"]>.parts:has(>.mark)>.name {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 0;
+  }
+  .card[data-el="portico-card"]>.parts:has(>.mark)>.note {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-left: 4.286cqw;
+  }
+}
+@container (max-width:320px) {
+  .card[data-el="portico-card"]>.parts:not(:has(>.kick)):not(:has(>.fig)) {
+    gap: var(--gap);
+  }
+}
+@container (max-height:100px) {
+  .card[data-el="portico-card"]>.parts:not(:has(>.kick)):not(:has(>.fig)) {
+    gap: var(--gap-sm);
+  }
+}
+.card[data-el="portico-card"]>.parts>.kick:not(:has(>[data-el])) {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 calc(var(--pad)*.5);
+  background: var(--a1);
+  color: var(--a1-on);
+  border-radius: calc(var(--pad)*10);
+  font-size: clamp(var(--type-10),calc(3.985507cqw),var(--type-20));
+  line-height: calc(var(--label-line)*.8333333333);
+}
+.card[data-el="portico-card"]>.parts>.note>p:has(>.tag[data-el="portico-tag"]) {
+  line-height: max(calc(1em * var(--body-line)),calc(var(--type-14)*var(--label-line) + var(--gap-sm) + var(--stroke)));
+}
+@container (max-width:450px) {
+  .card[data-el="portico-card"]>.parts:has(>.fig) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: var(--gap-sm);
+    padding: var(--pad);
+  }
+  .card[data-el="portico-card"]>.parts:has(>.fig)>.fig,.card[data-el="portico-card"]>.parts:has(>.fig)>.name,.card[data-el="portico-card"]>.parts:has(>.fig)>.note {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 0;
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+  }
+}

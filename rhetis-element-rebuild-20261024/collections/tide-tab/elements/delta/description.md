@@ -1,0 +1,1 @@
+Inferred from replica05 attached tabs and replica06 floating faces, rounded carriers and broad soft connectors. Two figures occupy equal measured faces with a connector owned by their common root. Narrow portrait cells turn the pair downward; both figures stay visible.

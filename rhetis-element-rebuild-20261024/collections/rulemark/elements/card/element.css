@@ -1,0 +1,162 @@
+/* Replica13:367×373 square white evidence card; inset28, fig40/750 at y84, note18/26.667 at y172.
+   Replica06 quiet adds a32px kick,24px name;08 wide quiet follows the same title/explanation hierarchy. */
+.card[data-el="rulemark-card"] {
+  container-type: size;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background: var(--n-1);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.card[data-el="rulemark-card"]>.parts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: min(7.507cqh,var(--gap-lg));
+  height: 100%;
+  padding: 22.52cqh 7.629cqw 7.507cqh;
+}
+.card[data-el="rulemark-card"] .parts>:where(.kick,.mark,.fig,.name,.note) {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.card[data-el="rulemark-card"] .fig {
+  font-size: clamp(var(--type-28),calc(min(10.899cqw,10.724cqh)),var(--type-80));
+  font-weight: calc(var(--body-weight)*1.875);
+  line-height: calc(var(--figure-line)*1.4285714286);
+  letter-spacing: var(--body-track);
+}
+.card[data-el="rulemark-card"] .fig small {
+  font-size: clamp(var(--type-12),calc(4cqw),var(--type-28));
+  font-weight: var(--body-weight);
+}
+.card[data-el="rulemark-card"] .name {
+  font-size: clamp(var(--type-16),calc(min(6.54cqw,6.435cqh)),var(--type-40));
+  font-weight: var(--figure-weight);
+  line-height: calc(var(--name-line)*1.1538461538);
+  letter-spacing: var(--body-track);
+  word-break: keep-all;
+  text-wrap: balance;
+}
+.card[data-el="rulemark-card"] .note {
+  font-size: clamp(var(--type-12),calc(min(4.905cqw,4.826cqh)),var(--type-28));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--body-line)*.9876543210);
+  letter-spacing: var(--body-track);
+  word-break: normal;
+  text-wrap: wrap;
+}
+.card[data-el="rulemark-card"] .note>span {
+  white-space: pre;
+}
+.card[data-el="rulemark-card"] .note:not(:has(br)) {
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+.card[data-el="rulemark-card"] .kick {
+  font-size: clamp(var(--type-18),calc(min(9.302cqw,9.412cqh)),var(--type-48));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--name-line)*1.1538461538);
+  letter-spacing: var(--body-track);
+}
+.card[data-el="rulemark-card"] .mark {
+  display: grid;
+  place-items: center;
+  width: min(16cqw,14cqh);
+  aspect-ratio: 1;
+  border: var(--stroke) solid currentColor;
+  font-size: clamp(var(--type-12),calc(7cqw),var(--type-28));
+  font-weight: var(--figure-weight);
+  line-height: var(--label-line);
+}
+.card[data-el="rulemark-card"] .mark>.icon,.card[data-el="rulemark-card"] .mark>.seat {
+  width: 56%;
+  height: 56%;
+}
+.card[data-el="rulemark-card"]:not(.quiet)>.parts:has(>.kick),.card[data-el="rulemark-card"]:not(.quiet)>.parts:has(>.mark) {
+  justify-content: center;
+  padding: var(--pad);
+}
+.card[data-el="rulemark-card"].quiet {
+  background: transparent;
+}
+.card[data-el="rulemark-card"].quiet>.parts {
+  padding: 0;
+  justify-content: flex-start;
+  gap: min(5.294cqh,var(--gap-lg));
+}
+.card[data-el="rulemark-card"].quiet>.parts:has(>.kick)>.note {
+  margin-top: min(9.412cqh,var(--gap-lg));
+}
+.card[data-el="rulemark-card"].quiet .name {
+  font-size: clamp(var(--type-16),calc(min(6.9767cqw,7.059cqh)),var(--type-40));
+}
+.card[data-el="rulemark-card"].quiet .note {
+  font-size: clamp(var(--type-12),calc(min(5.2326cqw,5.294cqh)),var(--type-28));
+}
+.card[data-el="rulemark-card"].on {
+  background: var(--a1);
+  color: var(--a1-on);
+}
+.card[data-el="rulemark-card"].line {
+  background: transparent;
+  border: var(--stroke) solid var(--n-5);
+}
+.card[data-el="rulemark-card"].tone-1 {
+  background: var(--a1);
+  color: var(--a1-on);
+}
+.card[data-el="rulemark-card"].tone-2 {
+  background: var(--a2);
+  color: var(--a2-on);
+}
+.card[data-el="rulemark-card"].tone-3 {
+  background: var(--a3-7);
+  color: var(--page);
+}
+.card[data-el="rulemark-card"].tone-4 {
+  background: var(--a4);
+  color: var(--a4-on);
+}
+.card[data-el="rulemark-card"].tone-5 {
+  background: var(--n-8);
+  color: var(--page);
+}
+@container (min-aspect-ratio:3/1) {
+  .card[data-el="rulemark-card"].quiet>.parts:not(:has(>.kick)):not(:has(>.fig)):not(:has(>.mark)) {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: calc(var(--gap)*1.4166666667);
+    align-content: start;
+  }
+  .card[data-el="rulemark-card"].quiet .name {
+    font-size: clamp(var(--type-16),calc(2.277cqw),var(--type-32));
+  }
+  .card[data-el="rulemark-card"].quiet .note {
+    font-size: clamp(var(--type-12),calc(1.708cqw),var(--type-24));
+  }
+}
+@container (max-height:280px) {
+  .card[data-el="rulemark-card"]>.parts {
+    gap: var(--gap-sm);
+    padding: var(--pad);
+  }
+  .card[data-el="rulemark-card"] .note {
+    font-size: var(--type-12);
+  }
+  .card[data-el="rulemark-card"].quiet>.parts {
+    padding: 0;
+    gap: var(--gap-sm);
+  }
+  .card[data-el="rulemark-card"].quiet>.parts:has(>.kick)>.note {
+    margin-top: var(--gap-sm);
+  }
+}
+@container (max-width:320px) {
+  .card[data-el="rulemark-card"] .note>span {
+    white-space: normal;
+  }
+}

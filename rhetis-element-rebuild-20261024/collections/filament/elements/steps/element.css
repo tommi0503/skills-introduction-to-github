@@ -1,0 +1,22 @@
+/* Absent from replica:06's90px light display and03's open18/16 text become numbered steps.
+   Fine curved joins extend01/08's continuous hairlines; no card or number carrier is added. */
+.steps[data-el="filament-steps"]{position:relative;container-type:size;display:grid;grid-template-columns:repeat(var(--filament-steps-n),1fr);width:100%;height:100%;min-width:0;min-height:0;color:var(--a1-8);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--filament-steps-n:3;--filament-steps-u:min(calc(100cqw / var(--filament-steps-n) / 210),calc(100cqh / 360),1px)}
+.steps[data-el="filament-steps"] *,.steps[data-el="filament-steps"] *::before,.steps[data-el="filament-steps"] *::after{box-sizing:border-box;min-width:0}
+.steps[data-el="filament-steps"]>.step{position:relative;padding:calc(18 * var(--filament-steps-u));min-height:0}
+.steps[data-el="filament-steps"]>.step:not(:last-child)::before{content:"";position:absolute;left:calc(116 * var(--filament-steps-u));right:calc(8 * var(--filament-steps-u));top:calc(50 * var(--filament-steps-u));height:calc(38 * var(--filament-steps-u));border-top:var(--stroke) solid currentColor;border-radius:50% 50% 0 0}
+.steps[data-el="filament-steps"]>.step:not(:last-child)::after{content:"";position:absolute;right:calc(7 * var(--filament-steps-u));top:calc(64 * var(--filament-steps-u));width:calc(7 * var(--filament-steps-u));height:calc(7 * var(--filament-steps-u));border-right:var(--stroke) solid currentColor;border-bottom:var(--stroke) solid currentColor;transform:rotate(20deg)}
+.steps[data-el="filament-steps"]>.step>.mark{display:block;height:calc(112 * var(--filament-steps-u));margin:0;font-size:clamp(var(--type-40),calc(90 * var(--filament-steps-u)),var(--type-92));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.steps[data-el="filament-steps"]>.step>.name{display:block;margin:calc(24 * var(--filament-steps-u)) 0 0;font-size:clamp(var(--type-16),calc(18 * var(--filament-steps-u)),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.steps[data-el="filament-steps"]>.step>.note{margin:calc(14 * var(--filament-steps-u)) 0 0;font-size:clamp(var(--type-12),calc(16 * var(--filament-steps-u)),var(--type-16));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.steps[data-el="filament-steps"].col{grid-template-columns:1fr;grid-template-rows:repeat(var(--filament-steps-n),1fr);--filament-steps-u:min(calc(100cqw / 370),calc(100cqh / var(--filament-steps-n) / 150),1px)}
+.steps[data-el="filament-steps"].col>.step{padding:calc(16 * var(--filament-steps-u)) calc(16 * var(--filament-steps-u)) calc(16 * var(--filament-steps-u)) 30cqw}
+.steps[data-el="filament-steps"].col>.step>.mark{position:absolute;left:calc(16 * var(--filament-steps-u));top:calc(12 * var(--filament-steps-u));height:auto;font-size:clamp(var(--type-32),calc(56 * var(--filament-steps-u)),var(--type-56))}
+.steps[data-el="filament-steps"].col>.step>.name{margin:0}
+.steps[data-el="filament-steps"].col>.step:not(:last-child)::before{left:calc(44 * var(--filament-steps-u));right:auto;top:calc(84 * var(--filament-steps-u));bottom:calc(-8 * var(--filament-steps-u));width:calc(12 * var(--filament-steps-u));height:auto;border-top:0;border-left:var(--stroke) solid currentColor;border-radius:50% 0 0 50%}
+.steps[data-el="filament-steps"].col>.step:not(:last-child)::after{left:calc(45 * var(--filament-steps-u));right:auto;top:auto;bottom:calc(-7 * var(--filament-steps-u));transform:rotate(45deg)}
+.steps[data-el="filament-steps"]:has(>.step:nth-child(2):last-child){--filament-steps-n:2}
+.steps[data-el="filament-steps"]:has(>.step:nth-child(3):last-child){--filament-steps-n:3}
+.steps[data-el="filament-steps"]:has(>.step:nth-child(4):last-child){--filament-steps-n:4}
+.steps[data-el="filament-steps"]:has(>.step:nth-child(5):last-child){--filament-steps-n:5}
+.steps[data-el="filament-steps"]:has(>.step:nth-child(6):last-child){--filament-steps-n:6}
+@container(max-width:650px){.steps[data-el="filament-steps"]>.step>.name{font-size:var(--type-16)}}

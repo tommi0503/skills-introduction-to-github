@@ -1,0 +1,37 @@
+/* No source sparkline instance; inferred from replica12:straight monochrome rules and solid rectangular plot marks.
+   Equal-step data owns every connector; up/down are semantic status roles. */
+.spark[data-el="rulemark-sparkline"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:start;anchor-scope:all;--rulemark-spark-color:var(--a1);--rulemark-spark-head:8px;--rulemark-spark-foot:8px;--rulemark-spark-height:calc(100cqh - var(--rulemark-spark-head) - var(--rulemark-spark-foot));--rulemark-spark-point:4px;--rulemark-spark-stroke:var(--stroke)}
+.spark[data-el="rulemark-sparkline"]>span{position:static;justify-self:center;width:var(--rulemark-spark-point);height:var(--rulemark-spark-point);margin-top:calc(var(--rulemark-spark-head) + var(--rulemark-spark-height)*(1 - var(--v)/var(--max)) - var(--rulemark-spark-point)/2);background:var(--rulemark-spark-color);border-radius:50%;anchor-name:var(--rulemark-spark-self);--rulemark-spark-rise:calc(var(--rulemark-spark-height)*var(--v)/var(--max))}
+.spark[data-el="rulemark-sparkline"]>span::after{content:"";position:absolute;z-index:-1;left:anchor(var(--rulemark-spark-prev) center);right:anchor(var(--rulemark-spark-self) center);top:calc(anchor(var(--rulemark-spark-prev) center) - var(--rulemark-spark-height));bottom:var(--rulemark-spark-foot);background:var(--rulemark-spark-color);clip-path:polygon(0 calc(var(--rulemark-spark-height) - var(--rulemark-spark-stroke)/2),100% calc(100% - var(--rulemark-spark-rise) - var(--rulemark-spark-stroke)/2),100% calc(100% - var(--rulemark-spark-rise) + var(--rulemark-spark-stroke)/2),0 calc(var(--rulemark-spark-height) + var(--rulemark-spark-stroke)/2));pointer-events:none}
+.spark[data-el="rulemark-sparkline"]>span:first-child::after{content:none}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(1){--rulemark-spark-self:--rulemark-sp1;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(2){--rulemark-spark-self:--rulemark-sp2;--rulemark-spark-prev:--rulemark-sp1;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(3){--rulemark-spark-self:--rulemark-sp3;--rulemark-spark-prev:--rulemark-sp2;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(4){--rulemark-spark-self:--rulemark-sp4;--rulemark-spark-prev:--rulemark-sp3;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(5){--rulemark-spark-self:--rulemark-sp5;--rulemark-spark-prev:--rulemark-sp4;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(6){--rulemark-spark-self:--rulemark-sp6;--rulemark-spark-prev:--rulemark-sp5;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(7){--rulemark-spark-self:--rulemark-sp7;--rulemark-spark-prev:--rulemark-sp6;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(8){--rulemark-spark-self:--rulemark-sp8;--rulemark-spark-prev:--rulemark-sp7;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(9){--rulemark-spark-self:--rulemark-sp9;--rulemark-spark-prev:--rulemark-sp8;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(10){--rulemark-spark-self:--rulemark-sp10;--rulemark-spark-prev:--rulemark-sp9;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(11){--rulemark-spark-self:--rulemark-sp11;--rulemark-spark-prev:--rulemark-sp10;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(12){--rulemark-spark-self:--rulemark-sp12;--rulemark-spark-prev:--rulemark-sp11;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(13){--rulemark-spark-self:--rulemark-sp13;--rulemark-spark-prev:--rulemark-sp12;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(14){--rulemark-spark-self:--rulemark-sp14;--rulemark-spark-prev:--rulemark-sp13;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(15){--rulemark-spark-self:--rulemark-sp15;--rulemark-spark-prev:--rulemark-sp14;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(16){--rulemark-spark-self:--rulemark-sp16;--rulemark-spark-prev:--rulemark-sp15;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(17){--rulemark-spark-self:--rulemark-sp17;--rulemark-spark-prev:--rulemark-sp16;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(18){--rulemark-spark-self:--rulemark-sp18;--rulemark-spark-prev:--rulemark-sp17;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(19){--rulemark-spark-self:--rulemark-sp19;--rulemark-spark-prev:--rulemark-sp18;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(20){--rulemark-spark-self:--rulemark-sp20;--rulemark-spark-prev:--rulemark-sp19;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(21){--rulemark-spark-self:--rulemark-sp21;--rulemark-spark-prev:--rulemark-sp20;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(22){--rulemark-spark-self:--rulemark-sp22;--rulemark-spark-prev:--rulemark-sp21;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(23){--rulemark-spark-self:--rulemark-sp23;--rulemark-spark-prev:--rulemark-sp22;}
+.spark[data-el="rulemark-sparkline"]>span:nth-child(24){--rulemark-spark-self:--rulemark-sp24;--rulemark-spark-prev:--rulemark-sp23;}
+.spark[data-el="rulemark-sparkline"].bars>span{align-self:end;width:72%;height:calc(var(--rulemark-spark-height)*var(--v)/var(--max));margin-top:0;margin-bottom:var(--rulemark-spark-foot);border-radius:0}
+.spark[data-el="rulemark-sparkline"].bars>span::after{content:none}
+.spark[data-el="rulemark-sparkline"]{--rulemark-spark-color:var(--ink);--rulemark-spark-point:4px;--rulemark-spark-stroke:calc(var(--stroke)*2);border-bottom:1px solid var(--ink)}
+.spark[data-el="rulemark-sparkline"]>span{border-radius:0}
+.spark[data-el="rulemark-sparkline"].bars>span{width:76.25%}
+.spark[data-el="rulemark-sparkline"].up{--rulemark-spark-color:var(--good)}
+.spark[data-el="rulemark-sparkline"].down{--rulemark-spark-color:var(--bad)}

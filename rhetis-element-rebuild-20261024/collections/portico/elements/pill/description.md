@@ -1,0 +1,1 @@
+Replica05 supplies a small teal metadata capsule with11px source type and12px side inset. The library uses a12px readable lower bound. It has no extra symbol unless an actual mark child is present. Quiet, filled and outlined forms follow the same geometry.

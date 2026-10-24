@@ -1,0 +1,20 @@
+/* Absent from replica:01/08's unfilled fine outlines extend into an open pyramid wireframe.
+   Page03's plain18-unit labels and16-unit supporting copy remain outside the narrowing top. */
+.pyramid[data-el="filament-pyramid"]{position:relative;container-type:size;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;color:var(--a1-8);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);display:block;box-sizing:border-box;--filament-pyramid-n:3;--filament-pyramid-u:min(calc(100cqw / 800),calc(100cqh / 600),1px)}
+.pyramid[data-el="filament-pyramid"] *,.pyramid[data-el="filament-pyramid"] *::before,.pyramid[data-el="filament-pyramid"] *::after{box-sizing:border-box;min-width:0}
+.pyramid[data-el="filament-pyramid"]::before,.pyramid[data-el="filament-pyramid"]::after{content:"";position:absolute;left:21cqw;top:4cqh;width:hypot(21cqw,92cqh);height:var(--stroke);background:currentColor;transform-origin:left center;pointer-events:none}
+.pyramid[data-el="filament-pyramid"]::before{transform:rotate(atan2(92cqh,-21cqw))}
+.pyramid[data-el="filament-pyramid"]::after{transform:rotate(atan2(92cqh,21cqw))}
+.pyramid[data-el="filament-pyramid"]>.level{position:absolute;left:0;right:0;top:calc(4cqh + (var(--filament-pyramid-i) - 1) * 92cqh / var(--filament-pyramid-n));height:calc(92cqh / var(--filament-pyramid-n));display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:52cqw;padding-right:2cqw;min-width:0;min-height:0;--filament-pyramid-i:1}
+.pyramid[data-el="filament-pyramid"]>.level::before{content:"";position:absolute;left:calc(21cqw - 21cqw * var(--filament-pyramid-i) / var(--filament-pyramid-n));bottom:0;width:calc(42cqw * var(--filament-pyramid-i) / var(--filament-pyramid-n));height:var(--stroke);background:currentColor}
+.pyramid[data-el="filament-pyramid"]>.level>.name{margin:0;font-size:clamp(var(--type-16),calc(18 * var(--filament-pyramid-u)),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.pyramid[data-el="filament-pyramid"]>.level>.note{margin:calc(9 * var(--filament-pyramid-u)) 0 0;font-size:clamp(var(--type-12),calc(16 * var(--filament-pyramid-u)),var(--type-16));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.pyramid[data-el="filament-pyramid"]:has(>.level:nth-child(3):last-child){--filament-pyramid-n:3}
+.pyramid[data-el="filament-pyramid"]:has(>.level:nth-child(4):last-child){--filament-pyramid-n:4}
+.pyramid[data-el="filament-pyramid"]:has(>.level:nth-child(5):last-child){--filament-pyramid-n:5}
+.pyramid[data-el="filament-pyramid"]>.level:nth-child(1){--filament-pyramid-i:1}
+.pyramid[data-el="filament-pyramid"]>.level:nth-child(2){--filament-pyramid-i:2}
+.pyramid[data-el="filament-pyramid"]>.level:nth-child(3){--filament-pyramid-i:3}
+.pyramid[data-el="filament-pyramid"]>.level:nth-child(4){--filament-pyramid-i:4}
+.pyramid[data-el="filament-pyramid"]>.level:nth-child(5){--filament-pyramid-i:5}
+@container(max-width:650px){.pyramid[data-el="filament-pyramid"]>.level>.name{font-size:var(--type-16)}}

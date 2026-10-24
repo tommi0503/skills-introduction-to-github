@@ -1,0 +1,69 @@
+/* Replica02: Short left-aligned paragraphs,17px on457px,25px line pitch and no panel.
+   Ratios are measured source font/box width; small Korean text floors at12 for legibility. */
+.prose[data-el="cutfield-prose"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: min(8cqh,var(--gap));
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: inherit;
+  font-family: var(--font-body);
+}
+.prose[data-el="cutfield-prose"]>p {
+  margin: 0;
+  font-size: clamp(var(--type-16),calc(3.719755cqw),var(--type-18));
+  font-weight: var(--cutfield-prose-weight);
+  line-height: var(--cutfield-prose-line);
+  letter-spacing: var(--cutfield-prose-track);
+  overflow-wrap: anywhere;
+}
+.prose[data-el="cutfield-prose"]>p>b {
+  font-weight: var(--cutfield-prose-bold);
+}
+.prose[data-el="cutfield-prose"].lead>p {
+  font-size: clamp(var(--type-14),calc(4.18472cqw),var(--type-36));
+  font-weight: var(--lead-weight);
+}
+.prose[data-el="cutfield-prose"].quiet>p {
+  font-size: clamp(var(--type-12),calc(3.16179cqw),var(--type-24));
+  color: var(--n-7);
+}
+.prose[data-el="cutfield-prose"].cols {
+  display: block;
+  column-count: 2;
+  column-gap: var(--gap-lg);
+  column-fill: balance;
+}
+.prose[data-el="cutfield-prose"].cols>p {
+  break-inside: avoid;
+  margin: 0 0 var(--gap);
+  font-size: clamp(var(--type-12),calc(2.15745cqw),var(--type-24));
+}
+@container (max-width:480px) {
+  .prose[data-el="cutfield-prose"].cols {
+    display: flex;
+    column-count: auto;
+    gap: var(--gap-sm);
+  }
+  .prose[data-el="cutfield-prose"].cols>p {
+    margin: 0;
+    font-size: var(--type-12);
+  }
+}
+@container (max-height:240px) {
+  .prose[data-el="cutfield-prose"] {
+    gap: var(--gap-sm);
+  }
+}
+@container (max-height:360px) {
+  .prose[data-el="cutfield-prose"].quiet>p {
+    font-size: var(--type-12);
+  }
+}
+.prose[data-el="cutfield-prose"]>p:has(>br:nth-of-type(2)) {
+  font-size: clamp(var(--type-16),calc(min(3.719755cqw,24.285714cqh)),var(--type-18));
+}

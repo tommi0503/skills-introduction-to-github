@@ -1,0 +1,111 @@
+/* No source profile: independently inferred from the deck's measured materials.
+    Replica07:178×121 service tile,12px corner,25px/300 title and17px/700 footer. */
+.people[data-el="filament-person"] {
+  container-type: size;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: var(--gap);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.people[data-el="filament-person"]:has(>.person:nth-child(2):last-child) {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+.person[data-el="filament-person"],.people[data-el="filament-person"]>.person {
+  container-type: size;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  overflow: visible;
+}
+.person[data-el="filament-person"]>:where(.seat,.name,.note,.list),.people[data-el="filament-person"]>.person>:where(.seat,.name,.note,.list) {
+  margin: 0;
+  min-width: 0;
+  flex: none;
+}
+.person[data-el="filament-person"]>.seat,.people[data-el="filament-person"]>.person>.seat {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  background: var(--n-2);
+  color: var(--n-7);
+  font-size: var(--type-14);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  width: min(100cqw,45cqh);
+  aspect-ratio: 1;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-bottom: var(--gap-sm);
+}
+.person[data-el="filament-person"]>.seat::after,.people[data-el="filament-person"]>.person>.seat::after {
+  content: attr(data-ph);
+}
+.person[data-el="filament-person"]>.name,.people[data-el="filament-person"]>.person>.name {
+  font-family: var(--font-display),var(--font-body);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  padding: calc(var(--pad)*.7) calc(var(--pad)*.75) var(--gap-sm);
+  background: var(--a1);
+  color: var(--a1-on);
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-size: clamp(var(--type-18),calc(min(8.8cqw,5cqh)),var(--type-40));
+  font-weight: calc(var(--body-weight)*.75);
+  line-height: calc(var(--name-line)*.7538461538);
+  letter-spacing: calc(var(--body-track)*1.6);
+}
+.person[data-el="filament-person"]>.note,.people[data-el="filament-person"]>.person>.note {
+  font-family: var(--font-body);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+  flex: 1;
+  padding: var(--gap-sm) calc(var(--pad)*.75) calc(var(--pad)*.7);
+  background: var(--a1);
+  color: var(--a1-on);
+  border-radius: 0 0 var(--radius) var(--radius);
+  font-size: clamp(var(--type-12),calc(min(6cqw,3.4cqh)),var(--type-20));
+  font-weight: calc(var(--body-weight)*1.75);
+  line-height: var(--label-line);
+  letter-spacing: calc(var(--body-track)*0);
+}
+.person[data-el="filament-person"]>.note>p,.people[data-el="filament-person"]>.person>.note>p {
+  margin: 0;
+}
+.person[data-el="filament-person"]>.note>p+p,.people[data-el="filament-person"]>.person>.note>p+p {
+  margin-top: var(--gap-sm);
+}
+.person[data-el="filament-person"]>.list,.people[data-el="filament-person"]>.person>.list {
+  height: auto;
+  min-height: 0;
+  margin-top: var(--gap-sm);
+}
+@container (max-height:330px) {
+  .person[data-el="filament-person"],.people[data-el="filament-person"]>.person {
+    gap: 0;
+  }
+  .person[data-el="filament-person"]>.seat,.people[data-el="filament-person"]>.person>.seat {
+    width: min(70cqw,28cqh);
+    margin-block: calc(var(--gap-sm)*.5);
+  }
+  .person[data-el="filament-person"]>.name,.people[data-el="filament-person"]>.person>.name {
+    font-size: var(--type-14);
+  }
+  .person[data-el="filament-person"]>.note,.people[data-el="filament-person"]>.person>.note {
+    font-size: var(--type-12);
+  }
+}
+@container (max-width:620px) {
+  .people[data-el="filament-person"]:has(>.person:nth-child(3)) {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}

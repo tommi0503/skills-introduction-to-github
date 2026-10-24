@@ -1,0 +1,54 @@
+/* Inferred headline; no expressible source instance.
+   Measured deck primitives: 05 attached-tab779×261 panel,235×52 label and21px corners;08 central53.33px declaration. */
+.headline[data-el="tide-tab-headline"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  text-align: center;
+  color: var(--ink);
+  font-family: var(--font-display),var(--font-body);
+}
+.headline[data-el="tide-tab-headline"]>h2 {
+  margin: 0;
+  font-size: clamp(var(--type-24),calc(min(4.556cqw,13cqh)),var(--type-80));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--title-line)*1.1428571429);
+  letter-spacing: var(--title-track);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.headline[data-el="tide-tab-headline"]>h2>b {
+  color: var(--a1-8);
+  font-weight: var(--weight-display);
+}
+.headline[data-el="tide-tab-headline"]>.kick {
+  margin: 0;
+  font-size: var(--type-14);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+}
+.headline[data-el="tide-tab-headline"]>.note {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(var(--type-12),calc(min(1.6cqw,5cqh)),var(--type-24));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: var(--body-track);
+}
+.headline[data-el="tide-tab-headline"].big>h2 {
+  font-size: clamp(var(--type-32),calc(min(6cqw,14cqh)),var(--type-96));
+}
+.headline[data-el="tide-tab-headline"].on {
+  background: var(--a1);
+  color: var(--a1-on);
+  padding: var(--pad);
+}
+.headline[data-el="tide-tab-headline"].on>h2>b {
+  color: var(--a1-on);
+}

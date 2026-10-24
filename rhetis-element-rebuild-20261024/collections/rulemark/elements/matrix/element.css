@@ -1,0 +1,35 @@
+/* Absent matrix contract; replica05 supplies 57ink heading/171group rows,1.3closed rules,20/17type.
+   Quadrants and SWOT preserve that measured face and type grammar. */
+.matrix[data-el="rulemark-matrix"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:8% repeat(2,minmax(0,1fr));grid-template-rows:8% repeat(2,minmax(0,1fr)) 8%;gap:1.2cqh 1cqw;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.matrix[data-el="rulemark-matrix"]>.axis-x{grid-column:2 / 4;grid-row:4;display:flex;align-items:center;justify-content:space-around;min-width:0;min-height:0}
+.matrix[data-el="rulemark-matrix"]>.axis-y{grid-column:1;grid-row:2 / 4;display:flex;flex-direction:column-reverse;justify-content:space-around;min-width:0;min-height:0}
+.matrix[data-el="rulemark-matrix"]>.axis-x>span,.matrix[data-el="rulemark-matrix"]>.axis-y>span{box-sizing:border-box;margin:0;max-width:100%;padding:.15em;text-align:center;font-size:clamp(var(--type-12),calc(min(100cqw*.017,100cqh*.04)),var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="rulemark-matrix"]>.cell{box-sizing:border-box;position:relative;display:grid;grid-template-rows:auto auto;align-content:center;gap:3cqh;min-width:0;min-height:0;padding:6%;container-type:size;isolation:isolate}
+.matrix[data-el="rulemark-matrix"]>.cell:nth-child(1 of .cell){grid-column:2;grid-row:2}
+.matrix[data-el="rulemark-matrix"]>.cell:nth-child(2 of .cell){grid-column:3;grid-row:2}
+.matrix[data-el="rulemark-matrix"]>.cell:nth-child(3 of .cell){grid-column:2;grid-row:3}
+.matrix[data-el="rulemark-matrix"]>.cell:nth-child(4 of .cell){grid-column:3;grid-row:3}
+.matrix[data-el="rulemark-matrix"]>.cell::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--n-1);pointer-events:none}
+.matrix[data-el="rulemark-matrix"]>.cell>.name{box-sizing:border-box;position:relative;display:block;min-width:0;margin:0;font-size:clamp(var(--type-14),calc(min(100cqw*.085,100cqh*.16)),var(--type-32));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="rulemark-matrix"]>.cell>.note{box-sizing:border-box;position:relative;display:block;min-width:0;margin:0;font-size:clamp(var(--type-12),calc(min(100cqw*.055,100cqh*.1)),var(--type-22));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="rulemark-matrix"]>.cell.on::before{background:var(--a1)}
+.matrix[data-el="rulemark-matrix"]>.cell.on{color:var(--a1-on)}
+.matrix[data-el="rulemark-matrix"].swot{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+.matrix[data-el="rulemark-matrix"].swot>.cell{grid-template-rows:auto auto minmax(0,1fr);align-content:stretch;gap:1cqh;padding:3%;}
+.matrix[data-el="rulemark-matrix"].swot>.cell:nth-child(1 of .cell){grid-column:1;grid-row:1}
+.matrix[data-el="rulemark-matrix"].swot>.cell:nth-child(2 of .cell){grid-column:2;grid-row:1}
+.matrix[data-el="rulemark-matrix"].swot>.cell:nth-child(3 of .cell){grid-column:1;grid-row:2}
+.matrix[data-el="rulemark-matrix"].swot>.cell:nth-child(4 of .cell){grid-column:2;grid-row:2}
+.matrix[data-el="rulemark-matrix"].swot>.cell>.kick{display:block;min-width:0;margin:0;font-size:clamp(var(--type-16),calc(min(100cqw*.1,100cqh*.14)),var(--type-36));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.matrix[data-el="rulemark-matrix"].swot>.cell>.name{font-size:clamp(var(--type-14),calc(min(100cqw*.065,100cqh*.1)),var(--type-24))}
+.matrix[data-el="rulemark-matrix"].swot>.cell>.list{box-sizing:border-box;grid-column:1;grid-row:3;min-width:0;min-height:0;width:100%;height:100%;margin:0}
+.matrix[data-el="rulemark-matrix"]{gap:0;border:var(--stroke) solid var(--ink)}
+.matrix[data-el="rulemark-matrix"]>.axis-x{border-top:var(--stroke) solid var(--ink)}
+.matrix[data-el="rulemark-matrix"]>.axis-y{border-right:var(--stroke) solid var(--ink)}
+.matrix[data-el="rulemark-matrix"]>.cell{padding:0;gap:0;grid-template-rows:auto minmax(0,1fr);border-top:var(--stroke) solid var(--ink);border-right:var(--stroke) solid var(--ink)}
+.matrix[data-el="rulemark-matrix"]>.cell::before{background:var(--page)}
+.matrix[data-el="rulemark-matrix"]>.cell>.name{padding:.5em .75em;background:var(--ink);color:var(--page);font-size:clamp(var(--type-14),calc(min(100cqw*.07,100cqh*.12)),var(--type-28));font-weight:calc(var(--body-weight)*1.75)}
+.matrix[data-el="rulemark-matrix"]>.cell>.note{align-self:center;padding:.8em 1.2em;font-size:clamp(var(--type-12),calc(min(100cqw*.0595,100cqh*.102)),var(--type-24));line-height:var(--body-line)}
+.matrix[data-el="rulemark-matrix"]>.cell.on::before{background:var(--n-1)}
+.matrix[data-el="rulemark-matrix"]>.cell.on{color:var(--ink)}
+.matrix[data-el="rulemark-matrix"].swot>.cell{padding:3%;gap:1cqh}

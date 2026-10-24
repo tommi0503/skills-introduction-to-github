@@ -1,0 +1,23 @@
+/* Absent from replica:06's21px floating white fields and restrained primary fills frame a tiered hierarchy.
+   The complete pyramid draws its aligned triangle bands; external rounded notes remain readable at the apex. */
+.pyramid[data-el="tide-tab-pyramid"]{position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);--tide-tab-pyramid-n:3;--tide-tab-pyramid-dh:calc(var(--tide-tab-pyramid-n) * 150 + (var(--tide-tab-pyramid-n) - 1) * 12);--tide-tab-pyramid-u:min(calc(100cqh / var(--tide-tab-pyramid-dh)),1px);--tide-tab-pyramid-y:calc(50cqh - var(--tide-tab-pyramid-dh) * var(--tide-tab-pyramid-u) / 2)}
+.pyramid[data-el="tide-tab-pyramid"] *,.pyramid[data-el="tide-tab-pyramid"] *::before,.pyramid[data-el="tide-tab-pyramid"] *::after{box-sizing:border-box;min-width:0}
+.pyramid[data-el="tide-tab-pyramid"]>.level{position:absolute;isolation:isolate;left:0;top:calc(var(--tide-tab-pyramid-y) + var(--tide-tab-pyramid-i) * 162 * var(--tide-tab-pyramid-u));width:100%;height:calc(150 * var(--tide-tab-pyramid-u));display:grid;grid-template-columns:66% minmax(0,1fr);align-content:center;--tide-tab-pyramid-i:0;--tide-tab-pyramid-face:var(--a1-2-soft)}
+.pyramid[data-el="tide-tab-pyramid"]>.level::before{content:"";position:absolute;z-index:-1;left:0;top:0;width:60cqw;height:100%;background:var(--tide-tab-pyramid-face);clip-path:polygon(calc(50% - var(--tide-tab-pyramid-i) * 50% / var(--tide-tab-pyramid-n)) 0,calc(50% + var(--tide-tab-pyramid-i) * 50% / var(--tide-tab-pyramid-n)) 0,calc(50% + (var(--tide-tab-pyramid-i) + 1) * 50% / var(--tide-tab-pyramid-n)) 100%,calc(50% - (var(--tide-tab-pyramid-i) + 1) * 50% / var(--tide-tab-pyramid-n)) 100%)}
+.pyramid[data-el="tide-tab-pyramid"]>.level::after{content:"";position:absolute;z-index:-1;left:64cqw;right:0;top:0;bottom:0;border-radius:min(var(--radius),calc(21 * var(--tide-tab-pyramid-u)));background:var(--n-1)}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(2){--tide-tab-pyramid-face:var(--a1-3-soft)}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(3){--tide-tab-pyramid-face:var(--a1-4-soft)}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(4){--tide-tab-pyramid-face:var(--a1-5-soft)}
+.pyramid[data-el="tide-tab-pyramid"]>.level:last-child{--tide-tab-pyramid-face:var(--a1)}
+.pyramid[data-el="tide-tab-pyramid"]>.level>.name{display:block;grid-column:2;margin:0;padding-right:calc(20 * var(--tide-tab-pyramid-u));font-size:clamp(var(--type-16),calc(2.5cqw),var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.pyramid[data-el="tide-tab-pyramid"]>.level>.note{display:block;grid-column:2;padding-right:calc(20 * var(--tide-tab-pyramid-u));margin:calc(8 * var(--tide-tab-pyramid-u)) 0 0;font-size:clamp(var(--type-12),calc(16 * var(--tide-tab-pyramid-u)),var(--type-16));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.pyramid[data-el="tide-tab-pyramid"]:has(>.level:nth-child(3):last-child){--tide-tab-pyramid-n:3}
+.pyramid[data-el="tide-tab-pyramid"]:has(>.level:nth-child(4):last-child){--tide-tab-pyramid-n:4}
+.pyramid[data-el="tide-tab-pyramid"]:has(>.level:nth-child(5):last-child){--tide-tab-pyramid-n:5}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(1){--tide-tab-pyramid-i:0}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(2){--tide-tab-pyramid-i:1}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(3){--tide-tab-pyramid-i:2}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(4){--tide-tab-pyramid-i:3}
+.pyramid[data-el="tide-tab-pyramid"]>.level:nth-child(5){--tide-tab-pyramid-i:4}
+@container(max-width:650px){.pyramid[data-el="tide-tab-pyramid"]>.level>.name{font-size:var(--type-16)}.pyramid[data-el="tide-tab-pyramid"]>.level>.note{line-height:var(--name-line)}}
+@container(max-height:350px){.pyramid[data-el="tide-tab-pyramid"]>.level>.note{font-size:var(--type-12);line-height:var(--label-line)}}

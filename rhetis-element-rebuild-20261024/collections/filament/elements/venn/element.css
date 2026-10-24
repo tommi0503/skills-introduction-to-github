@@ -1,0 +1,19 @@
+/* Absent from replica:01/08's fine curve outlines and145×100 seal ellipse become intersecting open sets.
+   No card face or shadow is added;18px bold labels sit in exclusive sectors around an unfilled common region. */
+.venn[data-el="filament-venn"]{position:relative;isolation:isolate;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--a1-8);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--filament-venn-u:min(calc(100cqw / 720),calc(100cqh / 600),1px);--filament-venn-x:calc(50cqw - 360 * var(--filament-venn-u));--filament-venn-y:calc(50cqh - 300 * var(--filament-venn-u));--filament-venn-sy:160}
+.venn[data-el="filament-venn"] *,.venn[data-el="filament-venn"] *::before,.venn[data-el="filament-venn"] *::after{box-sizing:border-box;min-width:0}
+.venn[data-el="filament-venn"]>.set{position:absolute;left:var(--filament-venn-x);top:calc(var(--filament-venn-y) + var(--filament-venn-sy) * var(--filament-venn-u));width:calc(400 * var(--filament-venn-u));height:calc(280 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]>.set::before{content:"";position:absolute;inset:0;border:var(--stroke) solid currentColor;border-radius:50%;pointer-events:none}
+.venn[data-el="filament-venn"]>.set.on::before{border-width:calc(var(--stroke) * 2)}
+.venn[data-el="filament-venn"]>.set:nth-child(2){left:calc(var(--filament-venn-x) + 320 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]>.set>.name{position:absolute;left:calc(56 * var(--filament-venn-u));top:calc(130 * var(--filament-venn-u));width:calc(150 * var(--filament-venn-u));margin:0;font-size:clamp(var(--type-16),calc(18 * var(--filament-venn-u)),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.venn[data-el="filament-venn"]>.set:nth-child(2)>.name{left:auto;right:calc(56 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]>.core{position:absolute;z-index:3;left:calc(var(--filament-venn-x) + 300 * var(--filament-venn-u));top:calc(var(--filament-venn-y) + 270 * var(--filament-venn-u));width:calc(120 * var(--filament-venn-u));height:calc(60 * var(--filament-venn-u));display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(var(--type-18),calc(20 * var(--filament-venn-u)),var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.venn[data-el="filament-venn"]:has(>.set:nth-child(3)){--filament-venn-sy:20}
+.venn[data-el="filament-venn"]:has(>.set:nth-child(3))>.set:nth-child(1){left:calc(var(--filament-venn-x) + 40 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]:has(>.set:nth-child(3))>.set:nth-child(2){left:calc(var(--filament-venn-x) + 240 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]:has(>.set:nth-child(3))>.set>.name{top:calc(70 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]:has(>.set:nth-child(3))>.set:nth-child(3){left:calc(var(--filament-venn-x) + 140 * var(--filament-venn-u));top:calc(var(--filament-venn-y) + 180 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]:has(>.set:nth-child(3))>.set:nth-child(3)>.name{left:calc(80 * var(--filament-venn-u));right:auto;top:calc(190 * var(--filament-venn-u));width:calc(240 * var(--filament-venn-u))}
+.venn[data-el="filament-venn"]:has(>.set:nth-child(3))>.core{left:calc(var(--filament-venn-x) + 280 * var(--filament-venn-u));top:calc(var(--filament-venn-y) + 200 * var(--filament-venn-u))}
+@container(max-width:650px){.venn[data-el="filament-venn"]>.set>.name{font-size:var(--type-16)}}

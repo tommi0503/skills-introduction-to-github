@@ -1,0 +1,28 @@
+/* Absent from replica:06's rounded floating fields and thick soft connectors become a conversion stack.
+   Filled field widths follow --v exactly; figures and names occupy a stable outside text column. */
+.funnel[data-el="tide-tab-funnel"]{position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);--tide-tab-funnel-n:3;--tide-tab-funnel-dh:calc(var(--tide-tab-funnel-n) * 100 + (var(--tide-tab-funnel-n) - 1) * 28);--tide-tab-funnel-u:min(calc(100cqh / var(--tide-tab-funnel-dh)),1px);--tide-tab-funnel-y:calc(50cqh - var(--tide-tab-funnel-dh) * var(--tide-tab-funnel-u) / 2)}
+.funnel[data-el="tide-tab-funnel"] *,.funnel[data-el="tide-tab-funnel"] *::before,.funnel[data-el="tide-tab-funnel"] *::after{box-sizing:border-box;min-width:0}
+.funnel[data-el="tide-tab-funnel"]::before{content:"";position:absolute;z-index:-1;left:calc(35cqw - 4 * var(--tide-tab-funnel-u));top:calc(var(--tide-tab-funnel-y) + 50 * var(--tide-tab-funnel-u));width:calc(8 * var(--tide-tab-funnel-u));height:calc((var(--tide-tab-funnel-dh) - 100) * var(--tide-tab-funnel-u));background:var(--a1-3-soft);border-radius:999px}
+.funnel[data-el="tide-tab-funnel"]>.stage{position:absolute;left:0;top:calc(var(--tide-tab-funnel-y) + var(--tide-tab-funnel-i) * 128 * var(--tide-tab-funnel-u));width:100%;height:calc(100 * var(--tide-tab-funnel-u));display:grid;grid-template-columns:73% minmax(0,1fr);align-content:center;align-items:center;padding-right:calc(12 * var(--tide-tab-funnel-u));--tide-tab-funnel-i:0;--tide-tab-funnel-face:var(--a1-2-soft)}
+.funnel[data-el="tide-tab-funnel"]>.stage::before{content:"";position:absolute;z-index:-1;left:calc(35cqw - 35cqw * var(--v) / 100);top:0;width:calc(70cqw * var(--v) / 100);height:100%;border-radius:min(var(--radius),calc(21 * var(--tide-tab-funnel-u)));background:var(--tide-tab-funnel-face)}
+.funnel[data-el="tide-tab-funnel"]>.stage::after{content:"";position:absolute;left:calc(35cqw - 8 * var(--tide-tab-funnel-u));top:calc(100% + 7 * var(--tide-tab-funnel-u));width:calc(16 * var(--tide-tab-funnel-u));height:calc(14 * var(--tide-tab-funnel-u));background:var(--a1-6);clip-path:polygon(0 0,50% 55%,100% 0,100% 35%,50% 100%,0 35%)}
+.funnel[data-el="tide-tab-funnel"]>.stage:last-child::after{display:none}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(2){--tide-tab-funnel-face:var(--a1-3-soft)}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(3){--tide-tab-funnel-face:var(--a1-4-soft)}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(4){--tide-tab-funnel-face:var(--a1-5-soft)}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(5){--tide-tab-funnel-face:var(--a1-6-soft)}
+.funnel[data-el="tide-tab-funnel"]>.stage:last-child{--tide-tab-funnel-face:var(--a1)}
+.funnel[data-el="tide-tab-funnel"]>.stage>.name{grid-column:2;display:block;margin:0;font-size:clamp(var(--type-16),calc(2.5cqw),var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.funnel[data-el="tide-tab-funnel"]>.stage>.fig{grid-column:2;display:block;margin:calc(4 * var(--tide-tab-funnel-u)) 0 0;font-size:clamp(var(--type-24),calc(32 * var(--tide-tab-funnel-u)),var(--type-32));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.funnel[data-el="tide-tab-funnel"]:has(>.stage:nth-child(3):last-child){--tide-tab-funnel-n:3}
+.funnel[data-el="tide-tab-funnel"]:has(>.stage:nth-child(4):last-child){--tide-tab-funnel-n:4}
+.funnel[data-el="tide-tab-funnel"]:has(>.stage:nth-child(5):last-child){--tide-tab-funnel-n:5}
+.funnel[data-el="tide-tab-funnel"]:has(>.stage:nth-child(6):last-child){--tide-tab-funnel-n:6}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(1){--tide-tab-funnel-i:0}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(2){--tide-tab-funnel-i:1}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(3){--tide-tab-funnel-i:2}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(4){--tide-tab-funnel-i:3}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(5){--tide-tab-funnel-i:4}
+.funnel[data-el="tide-tab-funnel"]>.stage:nth-child(6){--tide-tab-funnel-i:5}
+@container(max-width:650px){.funnel[data-el="tide-tab-funnel"]>.stage>.name{font-size:var(--type-16);line-height:var(--label-line)}}
+@container(max-height:360px){.funnel[data-el="tide-tab-funnel"]>.stage>.fig{font-size:var(--type-24)}}

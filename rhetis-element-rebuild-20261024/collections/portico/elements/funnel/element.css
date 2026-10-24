@@ -1,0 +1,14 @@
+/* Absent from replica:06's ruled metric rows and09's sharp bar geometry define a quantitative funnel.
+   Source40px bold figures and20px names stay outside the narrowing bars, separated by1px matrix rules. */
+.funnel[data-el="portico-funnel"]{position:relative;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);display:grid;grid-template-rows:repeat(var(--portico-funnel-n),1fr);--portico-funnel-n:3;--portico-funnel-u:min(calc(100cqw / 900),calc(100cqh / 565),1px)}
+.funnel[data-el="portico-funnel"] *,.funnel[data-el="portico-funnel"] *::before{box-sizing:border-box;min-width:0}
+.funnel[data-el="portico-funnel"]>.stage{position:relative;border-bottom:var(--stroke) solid var(--n-4);min-height:0}
+.funnel[data-el="portico-funnel"]>.stage::before{content:"";position:absolute;left:52cqw;top:32%;width:calc(47cqw * var(--v) / 100);height:36%;background:var(--n-7)}
+.funnel[data-el="portico-funnel"]>.stage:first-child::before{background:var(--a1)}
+.funnel[data-el="portico-funnel"]>.stage>.fig{position:absolute;left:2cqw;top:50%;transform:translateY(-50%);width:18cqw;margin:0;color:var(--a1-8);font-size:clamp(var(--type-24),calc(40 * var(--portico-funnel-u)),var(--type-40));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.funnel[data-el="portico-funnel"]>.stage>.name{position:absolute;left:23cqw;top:50%;transform:translateY(-50%);width:26cqw;margin:0;font-size:clamp(var(--type-16),calc(20 * var(--portico-funnel-u)),var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.funnel[data-el="portico-funnel"]:has(>.stage:nth-child(3):last-child){--portico-funnel-n:3}
+.funnel[data-el="portico-funnel"]:has(>.stage:nth-child(4):last-child){--portico-funnel-n:4}
+.funnel[data-el="portico-funnel"]:has(>.stage:nth-child(5):last-child){--portico-funnel-n:5}
+.funnel[data-el="portico-funnel"]:has(>.stage:nth-child(6):last-child){--portico-funnel-n:6}
+@container(max-width:650px){.funnel[data-el="portico-funnel"]>.stage>.name{font-size:var(--type-16)}}

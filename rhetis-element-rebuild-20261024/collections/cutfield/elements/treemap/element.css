@@ -1,0 +1,16 @@
+/* Absent from replica:09's65px coloured table headers and1px rules combine with05/10's54px light metrics.
+   Sharp allocation rectangles keep exact data areas; figures lead compact names with the source left alignment. */
+.treemap[data-el="cutfield-treemap"]{position:relative;isolation:isolate;container-type:size;width:100%;height:100%;min-width:0;min-height:0;display:flex;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--cutfield-treemap-head:65px;--cutfield-treemap-plot:calc(100cqh - var(--cutfield-treemap-head))}
+.treemap[data-el="cutfield-treemap"] *,.treemap[data-el="cutfield-treemap"] *::before,.treemap[data-el="cutfield-treemap"] *::after{box-sizing:border-box;min-width:0}
+.treemap[data-el="cutfield-treemap"]::after{content:"";position:absolute;z-index:4;inset:0;border:var(--stroke) solid var(--n-4);pointer-events:none}
+.treemap[data-el="cutfield-treemap"]>.branch{position:relative;flex:0 0 calc(var(--v) * 1%);display:flex;flex-direction:column;height:100%;padding:0}
+.treemap[data-el="cutfield-treemap"]>.branch::after{content:"";position:absolute;z-index:3;top:0;bottom:0;right:0;width:var(--stroke);background:var(--n-4)}
+.treemap[data-el="cutfield-treemap"]>.branch>.name{display:flex;align-items:center;flex:0 0 var(--cutfield-treemap-head);height:var(--cutfield-treemap-head);margin:0;padding:12px 28px;background:var(--a1);color:var(--a1-on);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--label-line);text-align:left;word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="cutfield-treemap"]>.branch:nth-child(even)>.name{background:var(--a2);color:var(--a2-on)}
+.treemap[data-el="cutfield-treemap"]>.branch>.tile{position:relative;flex:0 0 calc(var(--v) * var(--cutfield-treemap-plot) / 100);height:calc(var(--v) * var(--cutfield-treemap-plot) / 100);padding:clamp(8px,2cqh,28px);display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:4px;background:var(--n-1);--cutfield-treemap-th:calc(var(--v) * var(--cutfield-treemap-plot) / 100)}
+.treemap[data-el="cutfield-treemap"]>.branch:nth-child(even)>.tile{background:var(--n-3)}
+.treemap[data-el="cutfield-treemap"]>.branch>.tile::after{content:"";position:absolute;z-index:2;left:0;right:0;bottom:0;height:var(--stroke);background:var(--n-4)}
+.treemap[data-el="cutfield-treemap"]>.branch>.tile.on{background:var(--a1-2-soft);color:var(--ink)}
+.treemap[data-el="cutfield-treemap"]>.branch>.tile>.name{display:block;width:100%;margin:0;font-size:clamp(var(--type-16),calc(3cqh),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="cutfield-treemap"]>.branch>.tile>.fig{display:block;order:-1;width:100%;margin:0;font-size:clamp(var(--type-24),calc(var(--cutfield-treemap-th) * .35),var(--type-56));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+@container(max-width:650px){.treemap[data-el="cutfield-treemap"]>.branch>.name{padding-inline:16px}}

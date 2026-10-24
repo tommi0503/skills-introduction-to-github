@@ -1,0 +1,14 @@
+/* Absent from replica. Replica05 panels use0/21px corners, clear primary/secondary accents and a pale supporting surface.
+   This new progress contract adapts those measured primitives; it is not a mapped source instance. */
+.meter[data-el="tide-tab-gauge"]{box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--tide-tab-gauge-inset:0px;--tide-tab-gauge-rail:clamp(24px,20cqh,160px)}
+.meter[data-el="tide-tab-gauge"]>.name{box-sizing:border-box;position:absolute;left:var(--tide-tab-gauge-inset);bottom:calc(50cqh + var(--gap));width:calc(62cqw - var(--tide-tab-gauge-inset) - var(--gap-sm));margin:0;font-size:clamp(var(--type-14),calc(3.6cqw),var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.meter[data-el="tide-tab-gauge"]>.fig{box-sizing:border-box;position:absolute;right:var(--tide-tab-gauge-inset);bottom:calc(50cqh + var(--gap));width:max-content;min-width:calc(32cqw - var(--tide-tab-gauge-inset));margin:0;font-family:var(--font-display);font-size:clamp(var(--type-22),calc(min(11cqw,32cqh)),var(--type-128));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);text-align:right;white-space:nowrap;color:var(--ink)}
+.meter[data-el="tide-tab-gauge"]::before,.meter[data-el="tide-tab-gauge"]::after{content:"";box-sizing:border-box;position:absolute;left:var(--tide-tab-gauge-inset);top:50%;height:var(--tide-tab-gauge-rail);pointer-events:none}
+.meter[data-el="tide-tab-gauge"]::before{right:var(--tide-tab-gauge-inset);background:var(--n-3)}
+.meter[data-el="tide-tab-gauge"]::after{width:calc((100cqw - var(--tide-tab-gauge-inset)*2)*var(--v)/100);background:var(--a1)}
+.meter[data-el="tide-tab-gauge"]{--tide-tab-gauge-inset:6cqw;background:var(--page);border:1px solid var(--n-2);border-radius:0 var(--radius) var(--radius) var(--radius);box-shadow:inset 0 -6px 0 var(--n-2)}
+.meter[data-el="tide-tab-gauge"]::before{background:var(--a1-1-soft);border-radius:999px}
+.meter[data-el="tide-tab-gauge"]::after{background:linear-gradient(90deg,var(--a1),var(--a2));border-radius:999px}
+.meter[data-el="tide-tab-gauge"]>.fig{color:var(--a1-7)}
+@container(max-width:400px){.meter[data-el="tide-tab-gauge"]>.name{font-size:var(--type-14)}.meter[data-el="tide-tab-gauge"]>.fig{font-size:var(--type-22)}}
+@container(max-height:220px){.meter[data-el="tide-tab-gauge"]>.name{font-size:var(--type-14)}.meter[data-el="tide-tab-gauge"]>.fig{font-size:var(--type-22)}}

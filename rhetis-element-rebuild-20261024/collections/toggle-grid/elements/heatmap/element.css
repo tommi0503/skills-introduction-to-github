@@ -1,0 +1,28 @@
+/* No source heatmap instance; inferred from replica02:thin ink outlines, ink heading bands and condensed figures.
+   Density remains data-driven; calendar members keep equal square day cells. */
+.heat[data-el="toggle-grid-heatmap"]{box-sizing:border-box;width:100%;height:100%;min-width:0;min-height:0;container-type:size;display:flex;flex-direction:column;gap:var(--gap-sm);font-family:var(--font-body);color:var(--ink);--toggle-grid-heat-head:clamp(48px,14cqh,100px);--toggle-grid-heat-name:24cqw;--toggle-grid-heat-rows:2;--toggle-grid-heat-density:var(--a1-4-soft);--toggle-grid-heat-scale:1}
+.heat[data-el="toggle-grid-heatmap"]>.heads,.heat[data-el="toggle-grid-heatmap"]>.row{box-sizing:border-box;min-width:0;min-height:0;width:100%;flex:1;display:grid;grid-template-columns:var(--toggle-grid-heat-name) repeat(var(--cols),minmax(0,1fr));gap:var(--gap-sm)}
+.heat[data-el="toggle-grid-heatmap"]>.heads{flex:0 0 var(--toggle-grid-heat-head);padding-left:calc(var(--toggle-grid-heat-name) + var(--gap-sm));grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+.heat[data-el="toggle-grid-heatmap"]>.heads>span{box-sizing:border-box;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(var(--type-12),calc(min(2.2cqw,4cqh)),var(--type-20));font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--label-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.heat[data-el="toggle-grid-heatmap"]>.row>.name{box-sizing:border-box;min-width:0;min-height:0;display:flex;align-items:center;margin:0;font-size:clamp(var(--type-12),calc(min(2.2cqw,4cqh)),var(--type-20));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.heat[data-el="toggle-grid-heatmap"]>.row>.cell{box-sizing:border-box;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--toggle-grid-heat-density) calc(var(--v)*var(--toggle-grid-heat-scale)*1%),var(--page));color:var(--ink)}
+.heat[data-el="toggle-grid-heatmap"]>.row>.cell>b{margin:0;font-family:var(--font-display);font-size:clamp(var(--type-12),calc(min(10cqw / var(--cols),6cqh)),var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--label-track);white-space:nowrap;color:inherit}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(2 of .row):last-child){--toggle-grid-heat-rows:2}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(3 of .row):last-child){--toggle-grid-heat-rows:3}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(4 of .row):last-child){--toggle-grid-heat-rows:4}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(5 of .row):last-child){--toggle-grid-heat-rows:5}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(6 of .row):last-child){--toggle-grid-heat-rows:6}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(7 of .row):last-child){--toggle-grid-heat-rows:7}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(8 of .row):last-child){--toggle-grid-heat-rows:8}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(9 of .row):last-child){--toggle-grid-heat-rows:9}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(10 of .row):last-child){--toggle-grid-heat-rows:10}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(11 of .row):last-child){--toggle-grid-heat-rows:11}
+.heat[data-el="toggle-grid-heatmap"]:has(>.row:nth-child(12 of .row):last-child){--toggle-grid-heat-rows:12}
+.heat[data-el="toggle-grid-heatmap"].calendar{align-items:center;--toggle-grid-heat-calendar-side:max(1px,min(calc((100cqw - var(--gap-sm)*(var(--cols) - 1))/var(--cols)),calc((100cqh - var(--toggle-grid-heat-head) - var(--gap-sm)*var(--toggle-grid-heat-rows))/var(--toggle-grid-heat-rows))))}
+.heat[data-el="toggle-grid-heatmap"].calendar>.heads,.heat[data-el="toggle-grid-heatmap"].calendar>.row{width:calc(var(--toggle-grid-heat-calendar-side)*var(--cols) + var(--gap-sm)*(var(--cols) - 1));padding-left:0;grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+.heat[data-el="toggle-grid-heatmap"].calendar>.row{flex:0 0 var(--toggle-grid-heat-calendar-side);height:var(--toggle-grid-heat-calendar-side)}
+.heat[data-el="toggle-grid-heatmap"].calendar>.row>.cell{aspect-ratio:1}
+.heat[data-el="toggle-grid-heatmap"]>.heads>span{background:var(--ink);color:var(--page)}
+.heat[data-el="toggle-grid-heatmap"]>.row>.cell{border:1px solid var(--ink)}
+.heat[data-el="toggle-grid-heatmap"]>.row>.cell>b{box-sizing:border-box;display:flex;align-items:center;justify-content:center;flex:0 0 clamp(28px,calc(24cqw / var(--cols)),60px);width:clamp(28px,calc(24cqw / var(--cols)),60px);height:clamp(28px,calc(24cqw / var(--cols)),60px);border:1px solid var(--ink);border-radius:50%;background:var(--page);font-weight:var(--weight-display)}
+@container(max-width:500px){.heat[data-el="toggle-grid-heatmap"]>.heads>span,.heat[data-el="toggle-grid-heatmap"]>.row>.name{font-size:var(--type-12)}.heat[data-el="toggle-grid-heatmap"]>.row>.cell>b{font-size:var(--type-12)}}

@@ -1,0 +1,1 @@
+Logo carriers infer the replica06 circular40px marks and capsule outlines, with exposed black rules. Member count determines equal openings; tall allocations wrap into two rows and narrow allocations into two columns. All placeholders keep their numbers centered. The picture material stays neutral; corners, rules and enclosure treatment distinguish this collection.

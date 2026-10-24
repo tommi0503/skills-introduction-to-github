@@ -1,0 +1,14 @@
+/* Absent from replica:03's unboxed label/value rows and01/08's hairline outlines define plain allocation rectangles.
+   Page06's light display figure sits beside its bold label; no background faces or shadows are introduced. */
+.treemap[data-el="filament-treemap"]{position:relative;container-type:size;isolation:isolate;display:flex;width:100%;height:100%;min-width:0;min-height:0;color:var(--a1-8);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--filament-treemap-head:44px;--filament-treemap-plot:calc(100cqh - var(--filament-treemap-head))}
+.treemap[data-el="filament-treemap"] *,.treemap[data-el="filament-treemap"] *::after{box-sizing:border-box;min-width:0}
+.treemap[data-el="filament-treemap"]::after{content:"";position:absolute;inset:0;border:var(--stroke) solid currentColor;pointer-events:none;z-index:4}
+.treemap[data-el="filament-treemap"]>.branch{position:relative;flex:0 0 calc(var(--v) * 1%);height:100%;display:flex;flex-direction:column}
+.treemap[data-el="filament-treemap"]>.branch::after{content:"";position:absolute;right:0;top:0;bottom:0;width:var(--stroke);background:currentColor;z-index:3}
+.treemap[data-el="filament-treemap"]>.branch>.name{display:flex;align-items:center;margin:0;flex:0 0 var(--filament-treemap-head);height:var(--filament-treemap-head);padding:8px 20px;border-bottom:var(--stroke) solid currentColor;font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="filament-treemap"]>.branch>.tile{position:relative;flex:0 0 calc(var(--v) * var(--filament-treemap-plot) / 100);height:calc(var(--v) * var(--filament-treemap-plot) / 100);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(10px,2cqw,24px);padding:clamp(12px,2cqw,28px);--filament-treemap-h:calc(var(--v) * var(--filament-treemap-plot) / 100)}
+.treemap[data-el="filament-treemap"]>.branch>.tile::after{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--stroke);background:currentColor;z-index:2}
+.treemap[data-el="filament-treemap"]>.branch>.tile.on{outline:calc(var(--stroke) * 2) solid currentColor;outline-offset:calc(var(--stroke) * -2)}
+.treemap[data-el="filament-treemap"]>.branch>.tile>.name{grid-column:2;grid-row:1;margin:0;font-size:clamp(var(--type-16),calc(3cqh),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="filament-treemap"]>.branch>.tile>.fig{grid-column:1;grid-row:1;margin:0;font-size:clamp(var(--type-28),calc(var(--filament-treemap-h) * .32),var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+@container(max-width:500px){.treemap[data-el="filament-treemap"]>.branch>.name{padding-inline:12px}.treemap[data-el="filament-treemap"]>.branch>.tile{column-gap:12px}}

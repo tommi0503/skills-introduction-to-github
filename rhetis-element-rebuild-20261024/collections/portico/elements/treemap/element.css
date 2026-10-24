@@ -1,0 +1,15 @@
+/* Absent from replica:11's54px sand header strips and12's sharp alternating matrix planes define allocations.
+   Source13's40px bold centred metrics and20px labels fit inside exact quantitative rectangles. */
+.treemap[data-el="portico-treemap"]{position:relative;container-type:size;isolation:isolate;display:flex;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--portico-treemap-head:54px;--portico-treemap-plot:calc(100cqh - var(--portico-treemap-head))}
+.treemap[data-el="portico-treemap"] *,.treemap[data-el="portico-treemap"] *::after{box-sizing:border-box;min-width:0}
+.treemap[data-el="portico-treemap"]::after{content:"";position:absolute;inset:0;border:var(--stroke) solid var(--n-4);z-index:4;pointer-events:none}
+.treemap[data-el="portico-treemap"]>.branch{position:relative;flex:0 0 calc(var(--v) * 1%);height:100%;display:flex;flex-direction:column}
+.treemap[data-el="portico-treemap"]>.branch::after{content:"";position:absolute;right:0;top:0;bottom:0;width:var(--stroke);background:var(--n-4);z-index:3}
+.treemap[data-el="portico-treemap"]>.branch>.name{flex:0 0 var(--portico-treemap-head);height:var(--portico-treemap-head);margin:0;padding:8px 20px;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--n-3);color:var(--ink);font-size:var(--type-18);font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="portico-treemap"]>.branch>.tile{position:relative;flex:0 0 calc(var(--v) * var(--portico-treemap-plot) / 100);height:calc(var(--v) * var(--portico-treemap-plot) / 100);padding:clamp(8px,1.5cqh,20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--n-1);text-align:center;--portico-treemap-h:calc(var(--v) * var(--portico-treemap-plot) / 100)}
+.treemap[data-el="portico-treemap"]>.branch:nth-child(even)>.tile{background:var(--n-2)}
+.treemap[data-el="portico-treemap"]>.branch>.tile::after{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--stroke);background:var(--n-4);z-index:2}
+.treemap[data-el="portico-treemap"]>.branch>.tile.on{background:var(--a1);color:var(--a1-on)}
+.treemap[data-el="portico-treemap"]>.branch>.tile>.fig{order:-1;margin:0;font-size:clamp(var(--type-24),calc(var(--portico-treemap-h) * .25),var(--type-40));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.treemap[data-el="portico-treemap"]>.branch>.tile>.name{margin:0;font-size:clamp(var(--type-14),calc(3.2cqh),var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+@container(max-width:500px){.treemap[data-el="portico-treemap"]>.branch>.name{padding-inline:12px;font-size:var(--type-16)}}

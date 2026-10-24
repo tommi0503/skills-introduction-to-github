@@ -1,0 +1,7027 @@
+{
+  "collection": "lamella",
+  "generator": "reference/tools/preview.py:sheet",
+  "font_href": "assets/fonts/fonts.css",
+  "expected_fixtures": 187,
+  "source_hashes": {
+    "/workspace/work/rebuild/lamella/lamella/elements/agenda/element.css": "732312f433885bee5906c9adee7614ff9f9a1c69e645ff8213de4501693a512d",
+    "/workspace/work/rebuild/lamella/lamella/elements/agenda/element.json": "ea6d747ea600371ce697b8379cd2bba6371fa33756b80e9fbf32b232126e226d",
+    "/workspace/work/rebuild/lamella/lamella/elements/agenda/fixtures/agenda-five.html": "2c4af50f90e1b78162028c864f839659c19d2ac9bbd94c0d6bec151b38d0229b",
+    "/workspace/work/rebuild/lamella/lamella/elements/agenda/fixtures/agenda-four.html": "feb327faaeb51820f41727b0ec2809f993cdb2783342991fd775ab9598b6930c",
+    "/workspace/work/rebuild/lamella/lamella/elements/architecture/element.css": "1a332f7e0865cda5c51f8414122916ec39fc51bf52f94e630375a42a8ee1e7a6",
+    "/workspace/work/rebuild/lamella/lamella/elements/architecture/element.json": "7550a9a5e507c1f2d657bba5ae291dbde8c10fd8201c3f77ec60861401180c4b",
+    "/workspace/work/rebuild/lamella/lamella/elements/architecture/fixtures/layers-3.html": "2a42d3967a33e586b4e74a42aefc9468782f05d1f6fec9b179f7d7e2685b73f7",
+    "/workspace/work/rebuild/lamella/lamella/elements/architecture/fixtures/layers-5-long-modules.html": "ae8f3552eacf300d0b616de4184fbde56d9510a68a42d78d82e88fea6dd8ce56",
+    "/workspace/work/rebuild/lamella/lamella/elements/balance/element.css": "a5c358477afe0db97ca7476add2db0c5e78a043e9d656ac29aa617b93fd7064f",
+    "/workspace/work/rebuild/lamella/lamella/elements/balance/element.json": "11fc9449262172c50af4b2f02af132da57e7a7706718e03c14b3a8be6ec6fb6a",
+    "/workspace/work/rebuild/lamella/lamella/elements/balance/fixtures/balance-even.html": "2372267483e6f90fe7b118f9ede45c518330ae6e688147a870cca353b843fdc2",
+    "/workspace/work/rebuild/lamella/lamella/elements/balance/fixtures/balance-left-long.html": "07cd469dea2acf3422b12fb84f3a8c2434e0f8d3b5b381580d1a397f1d9e74ba",
+    "/workspace/work/rebuild/lamella/lamella/elements/balance/fixtures/balance-right.html": "cc9babde83a72555e0bb5771ad613012658143cec3897d23721185303d176443",
+    "/workspace/work/rebuild/lamella/lamella/elements/bullet/element.css": "ec9ccb46afa842deef8ff73305ae823762bf3c8c683f38d8d2d103f6b864f6e4",
+    "/workspace/work/rebuild/lamella/lamella/elements/bullet/element.json": "e86c604abb59121aca545afefb582ff3b358ba5927874d7f2fbab71fa2cfe06e",
+    "/workspace/work/rebuild/lamella/lamella/elements/bullet/fixtures/bullet-0.html": "532446cd25fb3e795ffe454db1b313af14b15ab24e49f3e4d9838f0f05877867",
+    "/workspace/work/rebuild/lamella/lamella/elements/bullet/fixtures/bullet-100.html": "1773de47a67b451f90fc8b81a8d95c6d376880566c148d681585acb8bfc9add9",
+    "/workspace/work/rebuild/lamella/lamella/elements/bullet/fixtures/bullet-long-note.html": "cc93156a364a113ab0748165cb276aad1421e178db0bafc88076c2d0d26ba10d",
+    "/workspace/work/rebuild/lamella/lamella/elements/bullet/fixtures/bullets-4.html": "c76b68448f3448734830af8554f0951adbc929fe5c2db9886509965f7466d3c6",
+    "/workspace/work/rebuild/lamella/lamella/elements/callout/element.css": "459f8d444d4c79c7e2a67c33b6b7ae3166f3078ccf62b66db5dfacb83e23db48",
+    "/workspace/work/rebuild/lamella/lamella/elements/callout/element.json": "df957e780cf468ecc28f1953f54888731635c7239a09050f00b1c0c46f5b23fd",
+    "/workspace/work/rebuild/lamella/lamella/elements/callout/fixtures/callout-icon.html": "384e64ddf5d6bfe27751eab952c37765d13f17d34941b14f09686e7c5c63a692",
+    "/workspace/work/rebuild/lamella/lamella/elements/callout/fixtures/callout-long.html": "cfb3bf74212a27eef120e54ec86d26e34104f16dba994a4d8060e12e44e2c7bd",
+    "/workspace/work/rebuild/lamella/lamella/elements/callout/fixtures/callout-stack.html": "5cafdb91924a8b40a4d0f32bbae1a401dc5bc9963893ce26acb347b2fd42ff05",
+    "/workspace/work/rebuild/lamella/lamella/elements/callout/fixtures/callout.html": "4765f8e5c2a47d79c68d021ebf2406f615dc8a01b98ee02798786f987093352c",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/element.css": "cde44a4f481d26ff6b1eb734179e61011821e45a9d26c19c00f5299396594ece",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/element.json": "d4ec7161c6755fd2eeb9db37ed2e89dbb98d88cdc6a181997a94a735217a1d01",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/card-2-quiet.html": "b60c97c6a16fa7bfe9e488ca27c4f1af63a986f3466a7ded3eb5c2b3ebefd023",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/card-3-icon3d.html": "b15af35400d722eb9dd6cd7bd2d8c0b0bb5a44110a2b1d7f314047c56e8f2350",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/card-3-line.html": "5b455cf430610adbace6c1deb06697ba52b3d72d8715b9f5833e70b9d2ae55f4",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/card-3-on.html": "da41d6ccaa46503dfe765cf6892f2e07f0df3d372bddb85c8613b7de79fd33be",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/card-4.html": "3c898be2bced53510202550b016fe8191c7eb7ba8695a020c8d3bce43c1668b3",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/card-5-tone.html": "b12bdb381f60da225e44d66532c76b11856ce333478ded094ef4fc99396328c2",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/driver-rich-inferred.html": "6292d941916b43199328fd2d96d3632c0a7786ebe3102d2b9ade53aae84bc200",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/replica-03.html": "79aa8a5eb8e85064057eacd0203fa80795e651da9e4113f7c528e3e6914f2ead",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/replica-04.html": "6c70ebdf20cb38ceeab99c25d7b34c364713e12a011d05ab8c3868a744b7ddc5",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/replica-08.html": "e0281db59287c26cc6ac473cc2d22b138af477922b0cb67c600ce89410b2590a",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/replica-11.html": "728c1a8b3186326ff85de27dd8686feae9d087dd845706db7dd10dccab7c510e",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/replica-12-on.html": "6e90f65c7d7b7c6fa3161ce748bab495dbc226f6c48a6e823d03ff4c726934d5",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/replica-12.html": "18abf20f7be2137c468b1c3a48606ac94d7ccc9e99d71edb813062f6d05580a0",
+    "/workspace/work/rebuild/lamella/lamella/elements/card/fixtures/replica-13.html": "a6dac02a0de72b274c13e980168c6669451c7a7bda909f4bcfb6d2c6a6e790ac",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/element.css": "20cc0461e00576e318a08770caaf1953368ccff3687f8efbac4da6ad1aa55be1",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/element.json": "8cbe64cf8808506b924c2db5c5640bf743d7c7bda34c10fdd624ad1f9b5797a3",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/fixtures/area-1.html": "f34dbb4be3fd9c01f93cd6a124cb28e68941fabe440d19a02f814a4903d580e3",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/fixtures/area-3pt.html": "dbc50c32eba7b05b8ac5233cd9fbff77523b5ed880b6198f0265d88cc651fea4",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/fixtures/areas-2.html": "15b07d0bc537ae5b680f13814330590aad4fcd1e3a7f556d49e6e31602217800",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/fixtures/areas-stacked-3.html": "2cf954451c387f4d2ab76b8b5a4577a6e348d450da28b2163897a56acf5afedc",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/fixtures/replica-17.html": "0d102224d79e9fdfa5dbf7ce2137167a075b31e5f2e747ad4d4332a8ec76204a",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-area/fixtures/review-long-series.html": "91272cc24577167f30d62a4d141981d023cbe3dedaa4aaa56c7b0a8db92e1ccb",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/element.css": "e277d0eef7cf676079da0fbb999ba56e5c2c12c3f4db043e469ceb6af5d3de64",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/element.json": "6afa779c978d65b079f5a5d6f627a749c30327e33c7a01dd82859cbcce9aec9c",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/bars-12.html": "d9ba59028ec1859b8eeea56d545de725d9f0e83b9d8270e150ffbe6d4af99d2c",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/bars-2.html": "c06b5430c2b67eedd8dfb57408b4d3a6a181eb8140406f75baaa359268585b2f",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/bars-3.html": "5669a7f0b218b04eaff97a60ad640f79a90d7765e6c3f9cf9d3c653812577a07",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/bars-6.html": "37630a0e0fa40bdd2d2877143ce19fb6dfaa33704881b8b6dde4f566d1da4fea",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/bars-h-5.html": "893807e07797e0f439ac4efef98b999904ba0aabefa939bcaccd9cab07314ee5",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/bars-h-8.html": "b4c541cf7ce5416d36776f2e156b85a13dc590491aa28683da87a7c0c814a62b",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/replica-11.html": "4beb1a1bedb54adf2294674c7666911db7920f2b9c911cb09930a364055477a7",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-bar/fixtures/review-long-name.html": "c998d19debd64909754c6cf6db034d1968afea7692fb49168667abfad79b22d8",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/element.css": "dbe2eadca644d340577f9e2f8b8b1418018ce3b15259ccef303a4c231520d35f",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/element.json": "0fa6a12bd577c8e5fae3509984beea8788c9cb318cb346d45bbcf681e5b416f8",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/donut-0.html": "d5d0d28832fbff0219283022a8d9699d48e292612b11aa8998ef711e447895ad",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/donut-100.html": "b931b69a7d5d6ab851a0eb234b7cfe6abf09187586a38860b95fa9e1571cd62f",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/donut.html": "2912d70fb48408ac8025e14aa0d22f59b55f334b89c154c47c0a688f3e1c5cb8",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/donuts-3.html": "f65ad495c838ab6920d28df160128e10691c571cade65fd61c65331f24cb9244",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/donuts-4.html": "599bf26d38684561f6cd2fc4bd927b5ff495e99517d5991b2f17867b3d8c4f82",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/replica-14.html": "1e32c8d1542acb5b283d0e15e2d32491faec1598b32f01f11ff0111cd83461e0",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/review-long-name.html": "113b83ed3ebac76ffa84b3facabcb0c6d2b192629f9464b5e06c55d6dbf9bbc6",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-donut/fixtures/review-two-members.html": "bc47793550890cc3d0fa3bfd63aa75a7fe1361c112a675384144258604fa1800",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/element.css": "87cb81943c788baa181831243deac27caf8dc61f06cdc04ab695d582ccb22ef9",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/element.json": "2ac0a7c4fbc1d001f043a97a26f411d928d0c7b62ec06d368da946ad707fed37",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/fixtures/line-boundaries.html": "13c7ddd7c1e2921ea6a9ad86d523932f9b6679f8d493c66ffe5f21b9144fccbe",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/fixtures/line-long-periods.html": "2ca53e8682c1c4cdf201210d6485fb40f2ea4529c7a8b2a1aac14e88ae33e80e",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/fixtures/lines-12.html": "0271473a67469ec7509f79b9e720673fcb2a34081aa4567f7acb5861c22410ea",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/fixtures/lines-3.html": "efdb9a6dd975a2c13d566bcada90f07cfdc0c3349aa88c359ec77804fb4c8ac9",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/fixtures/lines-6.html": "7737c3fa291c3ef2f55b41e7b69c31f690a352c0eb507da580e9c2e5c30a19fa",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-line/fixtures/lines-flat.html": "0dab3a44ce83c2a5f62c2e483762a4fbabff2959a46d72faad7adc2273c1e413",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/element.css": "8868d3ec8c33219914be592732bdd2d93d19cf3a202c37cdce100d7e8a8e2e06",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/element.json": "fb85e85c7885c255e27f4fc99352c7f599ae373515a91bb6aeda321c1a48ae9d",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/fixtures/scatter-24.html": "9fcd18682d855223e0b6bf0b4aad989d2c4e9fc760c273edda1da2461601751e",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/fixtures/scatter-boundaries.html": "e2ca2b7164cff23f75c14bd1a9ac517e8954e3009882701c6a457539ce168835",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/fixtures/scatter-bubbles.html": "b2d5daa7eab258191ed9ac6b20378c00db6d40a95b84794042976569543506a6",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/fixtures/scatter-long-names.html": "cde65b7352f6e93cf5eda2fc42545a13a2a087a698d1b717aca9db39b8db68f7",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/fixtures/scatter-six.html": "a3c5053ee12c0b82290c8c6a2d23c04ce2be29ff6c2e1f2527b9d47b821e9f9f",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-scatter/fixtures/scatter-three.html": "e52bb367930cdc16b1465052cbcb1b1f6788830dd7406e55c6f7546feb3ceec1",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-stack/element.css": "6a94a2b0357573d9201fa6502a110d3f6a82612e2411eff23b95671636f639a7",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-stack/element.json": "5e297b4c51bcbe2ecd54913cbd2c380b7e283767dae72646ba99bb71103f47a4",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-stack/fixtures/stack-12-h.html": "008041faeac76789fb8aecd0fd5947eb80bfaeea2b6e97b7367b3576367ab710",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-stack/fixtures/stack-2-long.html": "b4702edc7d79f2fdad4281d0480e6bad5edd41d496b5766a197f5784d8b27732",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-stack/fixtures/stack-6-pct.html": "2c79b3855d22dd26b30aea51881a3916255acaed31857e1ce10901aa5581912a",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-waterfall/element.css": "48bc1925dcfd62defcc74efbb194d21119b14c2bb88241472bd9becaf74f27bd",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-waterfall/element.json": "b03c2051b045aa2efa826bab006b74eeb3fa6f526b9cb106045f6ccbf4bbd53a",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-waterfall/fixtures/waterfall-long-names.html": "127116cbcea4952d95c7b9a296877ada02dead9f25aa7b20abfa86a2e4c19d4c",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-waterfall/fixtures/waterfall-six.html": "4d385b0135953877a4898de587d380a428f47fe0aad64efafcb98300363dacf0",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-waterfall/fixtures/waterfall-ten.html": "ea68c86bb83a189efd60edd5b7c65aee2bcf62d1250bff8c615231cc273b58bf",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-waterfall/fixtures/waterfall-three.html": "e9eb27e625556433e017c901d55ce94bd8009afdcc94fa6a618ff060959b33e3",
+    "/workspace/work/rebuild/lamella/lamella/elements/chart-waterfall/fixtures/waterfall-zero-full.html": "d932117c1b9515b267ef301b995ddcc6c5e333b04f72da6491248e594c7e9201",
+    "/workspace/work/rebuild/lamella/lamella/elements/code/element.css": "bc9c99360af5def1a795a436202a35e44efa2a7fa0b574725f0d54ec2d233611",
+    "/workspace/work/rebuild/lamella/lamella/elements/code/element.json": "215747830779e5c9c63907eb2086983d9a2e2a9440e9343cafe1fbefcd28eec3",
+    "/workspace/work/rebuild/lamella/lamella/elements/code/fixtures/cargo.html": "65bffdb540540d1f35cb8e5332579f4fb6cf56b5bdea533de3ed34ab9550f0b7",
+    "/workspace/work/rebuild/lamella/lamella/elements/code/fixtures/hub-query-numbered.html": "658f8737633ab0f9a7f117d5faa260c90ac441969cdd656d64b4c5eb8dee6a0b",
+    "/workspace/work/rebuild/lamella/lamella/elements/concentric/element.css": "6afe68b9ae929d629e5e90c567d1886cf334d73f7b172c071cb28126f60d73d1",
+    "/workspace/work/rebuild/lamella/lamella/elements/concentric/element.json": "3e69fdea8db6838bd66fe07a0c2599d8dcbfc53d268fc77d89206cde3e6542be",
+    "/workspace/work/rebuild/lamella/lamella/elements/concentric/fixtures/replica-10.html": "f2691c4188232ef0979b97706d923aa8fd5b370a2b52506a3440bfe4d52b5812",
+    "/workspace/work/rebuild/lamella/lamella/elements/concentric/fixtures/rings-2-long.html": "cb5a19c282426850af8df362ff2fc692c86ff2b11e72c55239231b22b4d3d2e1",
+    "/workspace/work/rebuild/lamella/lamella/elements/concentric/fixtures/rings-4.html": "ac74ff9034512e5585597201030f602b7d1f4909c12d09974ba5d763166a127a",
+    "/workspace/work/rebuild/lamella/lamella/elements/cycle/element.css": "5cc5086038b3d7bad94bc49696ffe6ff52b876a25a56ac49507bea58dd2f97c3",
+    "/workspace/work/rebuild/lamella/lamella/elements/cycle/element.json": "237f3d25d9bc80b396cfabcce30b615c77286d5d6366f44dd52b5bfd6daddb03",
+    "/workspace/work/rebuild/lamella/lamella/elements/cycle/fixtures/cycle-3-long.html": "294accbcf38d99be5e566926b65139af555c2115bc071316d20c7ea58fa95766",
+    "/workspace/work/rebuild/lamella/lamella/elements/cycle/fixtures/cycle-6.html": "1e71869f2f4830d734c1d770d04afa4670bf054338c5141e8e6abc15be96ea6a",
+    "/workspace/work/rebuild/lamella/lamella/elements/decision-tree/element.css": "3921fe6078ec17ef9fbb9157dc2c86a84b54c665d80db0950e77c6e634b41ec5",
+    "/workspace/work/rebuild/lamella/lamella/elements/decision-tree/element.json": "036946931b1d61ac0a77d90115d7ac3d8d7841c738d964501be547a646ebdc74",
+    "/workspace/work/rebuild/lamella/lamella/elements/decision-tree/fixtures/approval-depth-3.html": "c49325642e04ea69b3a88a8e2f3036d51f6d67f85b9ee5caa2621581508fbc2a",
+    "/workspace/work/rebuild/lamella/lamella/elements/decision-tree/fixtures/route-3.html": "e2bc27dada634186c18b32c0f8002c9d7b0c5b2a9669aa4d0b8f1f2b67a630ad",
+    "/workspace/work/rebuild/lamella/lamella/elements/delta/element.css": "1c9ca0dce5082b2491d76d89c825ab9e036496a0e2aed9dcc68e3713585ca60c",
+    "/workspace/work/rebuild/lamella/lamella/elements/delta/element.json": "2d71791df6ddd710a1ed6327071f08c6e2381f15e7924704844af866a240ed58",
+    "/workspace/work/rebuild/lamella/lamella/elements/delta/fixtures/hours.html": "8e305fd48ffdf0b23ba528dac10c5b6a405f190ca4817ecb285a2d5e3ea6ff50",
+    "/workspace/work/rebuild/lamella/lamella/elements/delta/fixtures/long-units.html": "c1d0d08926bec943de26eb02301c33fb9005763bc145b349e255cff8a1fda299",
+    "/workspace/work/rebuild/lamella/lamella/elements/flowchart/element.css": "b8ec4e928c2e7eed376f814411aa928daf42777ff65a1d14e70112a5cb390fda",
+    "/workspace/work/rebuild/lamella/lamella/elements/flowchart/element.json": "1b5a39cbcdf5a116a962064353eeb13ffb49d7247d6cce167e576fdb7fd1c625",
+    "/workspace/work/rebuild/lamella/lamella/elements/flowchart/fixtures/dispatch-6.html": "010f8f5cee569e61f6759ff868b31bdc30d595c62840591e9052bf5c6ee11159",
+    "/workspace/work/rebuild/lamella/lamella/elements/flowchart/fixtures/review-loop-4.html": "dc7a337b4b3fe3a5fa67f9080151baad17f5b4def5d443dbe449cf25fb058f7f",
+    "/workspace/work/rebuild/lamella/lamella/elements/funnel/element.css": "69eb057f5091d1ada41d91780ee8c8db1113e112c850716d445a31f3ae787977",
+    "/workspace/work/rebuild/lamella/lamella/elements/funnel/element.json": "966d1a6ead6d5900c8bb98b983ed514a030b5850bba26c62b0d0a5fab2b4e4a2",
+    "/workspace/work/rebuild/lamella/lamella/elements/funnel/fixtures/funnel-3-long.html": "dbbeec08cc336a420739f141f683fc63bdd1bab61ab5ad5a13a30177a2b94333",
+    "/workspace/work/rebuild/lamella/lamella/elements/funnel/fixtures/funnel-6.html": "52908f27095ec18b9f1e1306605fe096cc96216ce3521ca3cf655df80053a1d6",
+    "/workspace/work/rebuild/lamella/lamella/elements/gauge/element.css": "7eeda4657e2268bbe5381f51414f38a74647e54ebf2a0a3042ee97bf7e82c0f4",
+    "/workspace/work/rebuild/lamella/lamella/elements/gauge/element.json": "2bde43fcbfd74323369213980cbe435772b7a3c3b6c238e7fc6be4f25c2e5e7c",
+    "/workspace/work/rebuild/lamella/lamella/elements/gauge/fixtures/meter-0.html": "25469c782b3e2a1b4bb1638f6bb7fe424dd28d20bb9470f883ea0ac5cd73b0a0",
+    "/workspace/work/rebuild/lamella/lamella/elements/gauge/fixtures/meter-100.html": "895be0d93ddc57d98f60f9408431ba9858f9d5934d1a7544a344103f7ad894d3",
+    "/workspace/work/rebuild/lamella/lamella/elements/gauge/fixtures/meter-64.html": "8ea5077987201c09ea58a1bba1d4e1aa12291391b631fe1cc82aa8356f277e68",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/element.css": "0ba5ccf69fc329170b543e18eca364cbff4c021e59de4b37da6eb853fbe13735",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/element.json": "f0dfc0264962f87203c40eae7e43a45c050427ef53768e76dc81850a279fb67f",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/fixtures/replica-10.html": "5bf746222653bd833a253b455137dfa87cc1419d6b295e3fa73b73e20e978eac",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/fixtures/replica-14.html": "452fc42bc38c5b7da7498ac9bfd7479c55612db0843f8d848467e23dca0d72ea",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/fixtures/replica-17.html": "ece552991c7e5c134a9d8d0ffc70ec2033fed56485afbefa712d0fda9a3d336b",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/fixtures/replica-20.html": "d79d90f3b57b90a26a63b7536d91749165bb537f6898f05de6e5713893720254",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/fixtures/replica-22.html": "57f04c53148e0dad84c8f659ee97de71c9cfc68d1204d317122b5e8460c1149e",
+    "/workspace/work/rebuild/lamella/lamella/elements/headline/fixtures/statement-long.html": "2518f4466f99a17112d506ffc4bff5db449ad6c56db429a9b463ff3932560d7c",
+    "/workspace/work/rebuild/lamella/lamella/elements/heatmap/element.css": "fe53a26b99d5653a9b142136fbba3e4dcfdb0d6d424780aca2f61f6464482a91",
+    "/workspace/work/rebuild/lamella/lamella/elements/heatmap/element.json": "70e89c6533b3d3636a740e203ffaf83db81b714a9764eacf3d01f71b85ad60d0",
+    "/workspace/work/rebuild/lamella/lamella/elements/heatmap/fixtures/heat-3x5.html": "b468947efdf6d484ac6832440f9a7ab2731db45f7d658ac4d54513c61f1ef022",
+    "/workspace/work/rebuild/lamella/lamella/elements/heatmap/fixtures/heat-calendar.html": "f6cff30e9e61108b1ea4dd7e25212fba7d824432ff0c3c60c71417fb9a49f6ea",
+    "/workspace/work/rebuild/lamella/lamella/elements/heatmap/fixtures/heat-long-names.html": "e27d3558188577cb68d22e49bdd130cb7bae38ade3f58e21a08d67d3c37c2b5f",
+    "/workspace/work/rebuild/lamella/lamella/elements/hierarchy/element.css": "9bc3aa79480cb9137803cdf926b407921bb6cceb2161da56ceb9e8d632b31fad",
+    "/workspace/work/rebuild/lamella/lamella/elements/hierarchy/element.json": "68145103112cb2b0b728d2abfe55a610e2251be4466ee9368f9aa7215b6f9ad0",
+    "/workspace/work/rebuild/lamella/lamella/elements/hierarchy/fixtures/hierarchy-2-long.html": "05e11d6ee14bfaa0c8edf5c57709c4a5af35d71561b6ee1bce63f68257aed456",
+    "/workspace/work/rebuild/lamella/lamella/elements/hierarchy/fixtures/hierarchy-4.html": "32653de03716921db1d8b4a414fa2db2b3e4f2bf6a864523e359e7fd793a2b9f",
+    "/workspace/work/rebuild/lamella/lamella/elements/hub/element.css": "c70b63c5f1ff02af6b2192abb4c0e5bbcd274f24576d9a4316506f42704d9900",
+    "/workspace/work/rebuild/lamella/lamella/elements/hub/element.json": "4a7db83517a34e2dded102eb042d696b0e5cdd516a094ef45f317ed1a4273683",
+    "/workspace/work/rebuild/lamella/lamella/elements/hub/fixtures/hub-3-long.html": "b6a75da54a6760695c663d4673d673c4d835084834ff2fda990ffe346bed63f1",
+    "/workspace/work/rebuild/lamella/lamella/elements/hub/fixtures/hub-6.html": "a2f9901225bacba3af35512311540a0ea827430f65ddcb202502cebbf1f3591e",
+    "/workspace/work/rebuild/lamella/lamella/elements/image-frame/element.css": "e59da8ee6c9411105c3e466e4d08e432beea88a96c74c8614c8885b830104391",
+    "/workspace/work/rebuild/lamella/lamella/elements/image-frame/element.json": "da3ffcdb72a250eda69a4b19e9f2e4daa5e39073b16d678054a348fe1fbbc0a1",
+    "/workspace/work/rebuild/lamella/lamella/elements/image-frame/fixtures/picture-secondary.html": "05be432ed1f5c9c2c005e2a87e641e9cfd23c3469082d78949a35dafa990b6d8",
+    "/workspace/work/rebuild/lamella/lamella/elements/image-frame/fixtures/replica-04.html": "e2029a76f891272dffe10067c44e8d81cf3aefdd4562d55b2a2654d565ef1d62",
+    "/workspace/work/rebuild/lamella/lamella/elements/image-frame/fixtures/replica-07.html": "e2029a76f891272dffe10067c44e8d81cf3aefdd4562d55b2a2654d565ef1d62",
+    "/workspace/work/rebuild/lamella/lamella/elements/journey/element.css": "146ef5d48cf0c0521237c39f443f5513cff6560c0eb8682d746604a40f254c55",
+    "/workspace/work/rebuild/lamella/lamella/elements/journey/element.json": "a95d2d92d285ec22b0735ab00dd3c39078a560d1e173f6533e07652472cf9567",
+    "/workspace/work/rebuild/lamella/lamella/elements/journey/fixtures/intake-3.html": "c1a29c05db264e84e7b2e1f8b6c6819330cae98e471e5a8a935f61e0955c3c45",
+    "/workspace/work/rebuild/lamella/lamella/elements/journey/fixtures/retention-7.html": "d0db48abece14ac0b87d8f31576c0101c903a4784d9702a973adaac270bb6950",
+    "/workspace/work/rebuild/lamella/lamella/elements/legend/element.css": "c86975b42d83fbb6944ec3893623f41fb229c13bc112d965d11b8f77ffb5e110",
+    "/workspace/work/rebuild/lamella/lamella/elements/legend/element.json": "179212ac117f8c538e8e1d76bbee52964aed606f36aabffee0aefb1732c0c21e",
+    "/workspace/work/rebuild/lamella/lamella/elements/legend/fixtures/keys-five.html": "9de9233955577500d8a1dd3a330f115fc1aeb08795a0b2942b2d4ae16dd80ced",
+    "/workspace/work/rebuild/lamella/lamella/elements/legend/fixtures/keys-long.html": "e79f085888a07d914976139886c011815feec379b82cd10466c5a900d82d3e3a",
+    "/workspace/work/rebuild/lamella/lamella/elements/legend/fixtures/keys-three.html": "8bbaebca961857eee9a15f029e7dffa53dbb100c7a445aee60489d61ebbb3406",
+    "/workspace/work/rebuild/lamella/lamella/elements/list/element.css": "7185aae27b14387ae44b0397cbb72900c8deb5c22bd60ab3df986cbad606169d",
+    "/workspace/work/rebuild/lamella/lamella/elements/list/element.json": "369cb9a92ff54b41d99fa96d575e6b056f5f6611bbe0b1f6841c548ac433ae9b",
+    "/workspace/work/rebuild/lamella/lamella/elements/list/fixtures/points-check.html": "dc48d330c73365d9519e7b0eabcf99400383dd825527788aea8ca7d0d9cb9ef4",
+    "/workspace/work/rebuild/lamella/lamella/elements/list/fixtures/points-five.html": "c7927f86bb77e2e133e3e95b7b7c0ee75a5c70f091dfc5213d1fb855e0eab0be",
+    "/workspace/work/rebuild/lamella/lamella/elements/list/fixtures/points-three.html": "3bce15dd325cb266fd03c9ac965b67872d53d7f4e98a8dfaa9acb3ece1bcd144",
+    "/workspace/work/rebuild/lamella/lamella/elements/logo-group/element.css": "09e2465ea106a0fa0c635ac994257fbf0092ddca21af209a44cff7ac6c51d5a8",
+    "/workspace/work/rebuild/lamella/lamella/elements/logo-group/element.json": "fcab32cd75f75dfbfede23dcd05171f8af4d924b54be58a84482a623130ce34b",
+    "/workspace/work/rebuild/lamella/lamella/elements/logo-group/fixtures/logos-four.html": "61e2556b19e45b1c67d028eea636aa2125781054ca9ede61f0e0faaab4560779",
+    "/workspace/work/rebuild/lamella/lamella/elements/logo-group/fixtures/logos-six.html": "f80987186b0b35aae45ac0144ed21aa25d93925a5788c542f89a08bda4defc78",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix/element.css": "ebf8b1dfa6dbb3d709b6c935a69f37579282a2fb1521d984f8708f61d2b5eae3",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix/element.json": "fdc1ee844172052faaccfee75fcb092195765b40c39f47ac0257687929a08700",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix/fixtures/dispatch-4.html": "853e075811b3722b565cddbdf69b7812b17a8bb8fb643a560ddd6b9842a97fd1",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix/fixtures/swot-dispatch.html": "4f8eebf4e9c609c381c6880cb1d5ecd52c51ecd5fc346a66ce7e3414f03608d2",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix-nine/element.css": "a9259639217db53126ad6e3e8b7380e77330b0ebf9c874dbdbaca121f09ca046",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix-nine/element.json": "ac087fb6a9e2e5cde31956d76edc07344998fa1fd4889f3862307544e4d210cb",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix-nine/fixtures/allocation-9.html": "8d4e20bc490ac537a37388c7e5550a51c17737b8705821a32fdc894981e09650",
+    "/workspace/work/rebuild/lamella/lamella/elements/matrix-nine/fixtures/regions-9-long-notes.html": "03c3a055e98c6f34663ee85245033d82c5e6858eff6d30af5c6dbb8202916b0e",
+    "/workspace/work/rebuild/lamella/lamella/elements/metric/element.css": "139be7b338fe33a09d447ae7fdca5fad2690ec768345690fa77503e1aed514e4",
+    "/workspace/work/rebuild/lamella/lamella/elements/metric/element.json": "7b76ef1190548ef1cf4ad01b74c3c154b408fdbbf0790f1fb45eba839f7418a7",
+    "/workspace/work/rebuild/lamella/lamella/elements/metric/fixtures/metric-bare.html": "bbdd1cce664dca70f06f30cf0d0b6d20fd9f80547a03e88f57a3723b60543fbd",
+    "/workspace/work/rebuild/lamella/lamella/elements/metric/fixtures/metric-extended.html": "6884f0867352051ee09e49895af2b5a424ba806cb6d0e3c6ce0dcc5677c62d28",
+    "/workspace/work/rebuild/lamella/lamella/elements/metric/fixtures/metrics-three.html": "eccde9ad292e8e6e920cb144bf30ae13deac6013b36f4cd7007cb858fbeb3032",
+    "/workspace/work/rebuild/lamella/lamella/elements/mindmap/element.css": "91892be59f84eb6fb214448833eba42200799280f77078b9cb9b4dd695e30f10",
+    "/workspace/work/rebuild/lamella/lamella/elements/mindmap/element.json": "26f0fcadee28c58fac4c71d5f7b55c1799bd8d320b0b50c67fc251a7e1e6ff56",
+    "/workspace/work/rebuild/lamella/lamella/elements/mindmap/fixtures/mindmap-2-long.html": "c938ecf0dc0b1d68116384f2be46620fe32e03ef09598f756843b83f7510c47e",
+    "/workspace/work/rebuild/lamella/lamella/elements/mindmap/fixtures/mindmap-6.html": "0fe873d792d1f23db7f0b2edf8f2dced40db2acd420ac61bbe4368af2bec5229",
+    "/workspace/work/rebuild/lamella/lamella/elements/network/element.css": "9b7988e75d8445c8a27f22c1ad366a836f8b011d929c98ddda885ff3d43dd602",
+    "/workspace/work/rebuild/lamella/lamella/elements/network/element.json": "18e7dbeeee503a568cac01b5bcb1dbefde9671286b7c7819035e7d5acd25f786",
+    "/workspace/work/rebuild/lamella/lamella/elements/network/fixtures/network-5-long.html": "2b81e9dfd3564205bf867eeb0ffbd18d86b3cf1c224e22fcdd52833ee9b43ff1",
+    "/workspace/work/rebuild/lamella/lamella/elements/network/fixtures/network-8.html": "8f3938834b9aae3130e4119901fa19542257b757d52e986d58f65684c3350204",
+    "/workspace/work/rebuild/lamella/lamella/elements/person/element.css": "bf3ff71506744285ceaec215d5e6e314395d7bb8dbdc8aa9e5169e5b6f1a36ef",
+    "/workspace/work/rebuild/lamella/lamella/elements/person/element.json": "910ec1b20c7791211cdb7f77420789b373e911dfe6d7ffc482191a71c6ec7a50",
+    "/workspace/work/rebuild/lamella/lamella/elements/person/fixtures/replica-22.html": "d42fd9fc6e1320dadd16e553f0e43db075800512656709845c27e4c438ae4878",
+    "/workspace/work/rebuild/lamella/lamella/elements/person/fixtures/team-pair.html": "f254040c8e70e00b56e46d11eb4f62fb79bd88f82c1a3ba3f772baed32045cf3",
+    "/workspace/work/rebuild/lamella/lamella/elements/person/fixtures/team-trio.html": "42f14c4212dd76a9db705b92c2a1846b440a69539c864547e3a17dc85bdd8d4d",
+    "/workspace/work/rebuild/lamella/lamella/elements/pill/element.css": "e937d82868cb07c74531a39516940e8f96efaff0c06fb64697c167fa84f860eb",
+    "/workspace/work/rebuild/lamella/lamella/elements/pill/element.json": "3b3a08905aee32627e7d4c718d5337794098c4799bfe1c1753f5c2073d93903b",
+    "/workspace/work/rebuild/lamella/lamella/elements/pill/fixtures/pill-full.html": "1fc89bdf04a6a2c0b1a82f1e7e606488fb1e14e0ed0f0e02057f08230d2fbced",
+    "/workspace/work/rebuild/lamella/lamella/elements/pill/fixtures/pill-line.html": "418328801923d170c629cdd77716cf08f3a8f60cb7883596fbc12f0acb0530a9",
+    "/workspace/work/rebuild/lamella/lamella/elements/pill/fixtures/pill-name.html": "35fc2cc4b89bb1aba54231f90a0ef7e97a4fd88ccd72fe8e73b02b1e7cc9e568",
+    "/workspace/work/rebuild/lamella/lamella/elements/pill/fixtures/pill-quiet.html": "5f6c4eea5de0e970eb7bfa84616780f61e1150a7e6f465196192cc0f89de6554",
+    "/workspace/work/rebuild/lamella/lamella/elements/positioning/element.css": "64cdaf67949ab47a3cb55ed7512c295c12dfce0ab725cbfbbd11484497008f19",
+    "/workspace/work/rebuild/lamella/lamella/elements/positioning/element.json": "6a81f43ec4082ce127deaf6fb976b2fb51c18ca8377e1c085c69c798bd63c2d5",
+    "/workspace/work/rebuild/lamella/lamella/elements/positioning/fixtures/regions-6-long-logo.html": "eebc71a6f619b3b6bd9c5387990bf21df1bcd38b5ce008dcd97a170d453e7e66",
+    "/workspace/work/rebuild/lamella/lamella/elements/positioning/fixtures/route-4.html": "b7cdd72f4a2b6a1b1ec1ccdf410b42bcf9bc598cb6766589f3a3f4418beaf7fb",
+    "/workspace/work/rebuild/lamella/lamella/elements/pricing/element.css": "3c795eccdf06bc5c7050ea7deee078acae7e3c7a4c8d73621bf8c2c32398358b",
+    "/workspace/work/rebuild/lamella/lamella/elements/pricing/element.json": "b81b167169897dc662a63d87a02bf5d12d602f85bd898cac16c271a12448e169",
+    "/workspace/work/rebuild/lamella/lamella/elements/pricing/fixtures/plan-single.html": "5e65611e3aa65015183906ec99cba88d9cfcac3ba8f434f3ce9a05bee8351fd9",
+    "/workspace/work/rebuild/lamella/lamella/elements/pricing/fixtures/plans-three-long.html": "943daddf2dad9c8b402272953ec7b9e8033e6acf4161255744ceb655f86e092d",
+    "/workspace/work/rebuild/lamella/lamella/elements/pricing/fixtures/plans-two.html": "a0f2bc509ec548b7b128ac5635fdaf9913fbd6072769a6fdc3c6c336866af312",
+    "/workspace/work/rebuild/lamella/lamella/elements/prose/element.css": "46070d666c98f8cd8b2a7b604843e3967eb19c9eee53356affa0a62527e092ff",
+    "/workspace/work/rebuild/lamella/lamella/elements/prose/element.json": "4be49b679c431acb892f6076bd759da91e0815a4fe2044f4895a3a82874825fd",
+    "/workspace/work/rebuild/lamella/lamella/elements/prose/fixtures/reading-long.html": "7ad952707822f210e90da782ba7e8b7e09220bc06ccc0b6f9e81a0a9ee2eeea0",
+    "/workspace/work/rebuild/lamella/lamella/elements/prose/fixtures/replica-07.html": "6981ae2e9b06e5687ae2c07e6630196d822f7cf93bc83a95af149b723f849f4b",
+    "/workspace/work/rebuild/lamella/lamella/elements/prose/fixtures/replica-14.html": "8bd81b0b2c9a9fefa7984cbb165fec56d60477dfcafb3cc15f90314bf860b1d7",
+    "/workspace/work/rebuild/lamella/lamella/elements/prose/fixtures/replica-22-quiet.html": "ea9c91da1e4a161990bb7072404b74703cfe385da609377fbc6c2ff055347051",
+    "/workspace/work/rebuild/lamella/lamella/elements/prose/fixtures/replica-23-quiet.html": "e8189bd45c5101f3166dfe5ec637f0a1b81dbb2138679540fc48bac6b366ff4b",
+    "/workspace/work/rebuild/lamella/lamella/elements/pyramid/element.css": "bc2e2c54ae548cee382a1b5a398d6152ed4a5dbace39c71d718d7c55dc3e11a3",
+    "/workspace/work/rebuild/lamella/lamella/elements/pyramid/element.json": "8bc07347fed955e6d7d9d0c67fe18e669ea5a47186d4e66971de69f875bf618d",
+    "/workspace/work/rebuild/lamella/lamella/elements/pyramid/fixtures/pyramid-3-long.html": "e991556e2e6e462826e140e7c8fcc1a24617a7e4d471d782d6bd8bb583587a90",
+    "/workspace/work/rebuild/lamella/lamella/elements/pyramid/fixtures/pyramid-5.html": "6f9cc617b51d4372f288fb972306992df3ad0a53c76feb9f31c1c968d4a9752b",
+    "/workspace/work/rebuild/lamella/lamella/elements/quote/element.css": "a32dbba0622aa13b127e1e62796ff9c7007d5db0e355c9f108f380e87eb7c615",
+    "/workspace/work/rebuild/lamella/lamella/elements/quote/element.json": "9b374eaeb0924af10c2d7f3fb334d9760bda8b521bfa9803b066ecc1b99e8bc7",
+    "/workspace/work/rebuild/lamella/lamella/elements/quote/fixtures/replica-05.html": "56d026adafa47d66e4390d9f896d9eeb7962bc087c10e64dd795e575b81d4164",
+    "/workspace/work/rebuild/lamella/lamella/elements/quote/fixtures/replica-18.html": "3ba9d3aa848310e2ead415c00d88f5a1114171b9db3b2ff25bd919fc012ccd57",
+    "/workspace/work/rebuild/lamella/lamella/elements/radar/element.css": "7414b801543561fd0c9d056601c9edd41d60dc198e76ec15954747d07310fb23",
+    "/workspace/work/rebuild/lamella/lamella/elements/radar/element.json": "0c61b88600adc8cf2e417d023dc924510b36db7e83681384647831f5ad83ea38",
+    "/workspace/work/rebuild/lamella/lamella/elements/radar/fixtures/radar-eight-long.html": "9da3eddb55966058b5d8eb9145d0fea9ad429ad61257da54c995cbcb63df1e2d",
+    "/workspace/work/rebuild/lamella/lamella/elements/radar/fixtures/radar-five-two.html": "31c3640a64b384c74f0bb83521708f9ed7a6437022ce246c30e13209297c2d92",
+    "/workspace/work/rebuild/lamella/lamella/elements/radar/fixtures/radar-three.html": "8f8cf3282f848f1c010885d967190086fcb2674ffb2c6ab8d1c3c505194c0620",
+    "/workspace/work/rebuild/lamella/lamella/elements/roadmap/element.css": "5bc5fcf1a527614b0e176cc753ac841ff70ad2b08bf01ffb0ff62e5971405be4",
+    "/workspace/work/rebuild/lamella/lamella/elements/roadmap/element.json": "f5ff6f78a73128129322b627cfbe5d35aa16864887b9518bfeadcf54decee860",
+    "/workspace/work/rebuild/lamella/lamella/elements/roadmap/fixtures/handoff-2-lanes-on-mile.html": "631f824c53d936fce7e18f8dfb6074f84b1433102b5d345d80ac95b8a182371f",
+    "/workspace/work/rebuild/lamella/lamella/elements/roadmap/fixtures/replica-19.html": "68ec00b83813328f4b64b0910f2df8a8cd4f142c6f642c926694f1910e337ad1",
+    "/workspace/work/rebuild/lamella/lamella/elements/sankey/element.css": "1d3ba75ab6abe4f78f3478cb40cd9c780aaca0660ebb773d813e5d26a5aff16f",
+    "/workspace/work/rebuild/lamella/lamella/elements/sankey/element.json": "4facf4405e448a925c0a096e185b8b5306829dc2f23cd3d66021403159969337",
+    "/workspace/work/rebuild/lamella/lamella/elements/sankey/fixtures/nested-4-2.html": "f4cde419ad8c954daeb47c58784c52d90868072232e1ad4ca17c962783517a0f",
+    "/workspace/work/rebuild/lamella/lamella/elements/sankey/fixtures/routes-6.html": "d3031d0247bfb187538865c411b18ff4f3711ab661580ed53fd49a9ccc840dfa",
+    "/workspace/work/rebuild/lamella/lamella/elements/slope/element.css": "8f1591aabf67d98aadde6c3b341329bca432ad4795106899ce93ef20559b7eea",
+    "/workspace/work/rebuild/lamella/lamella/elements/slope/element.json": "324924568b2092c95fc9e9db3c7fea02e41cc189ca2896ac65496d6215c47a60",
+    "/workspace/work/rebuild/lamella/lamella/elements/slope/fixtures/slope-dumbbell-long.html": "5e2fd04697b6499ec6d6d8e861b6d8d1f738ca7ed8948545bb4e41e15a73b425",
+    "/workspace/work/rebuild/lamella/lamella/elements/slope/fixtures/slope-six.html": "1502aae04115c582980ba9423da46c3841f61b94cce858e263c89e6acbaf563f",
+    "/workspace/work/rebuild/lamella/lamella/elements/slope/fixtures/slope-three.html": "887a86893034528c9816dda72c74f6ac5d5ab09dafa5cc0d226e0d50f87ecf4b",
+    "/workspace/work/rebuild/lamella/lamella/elements/slope/fixtures/slope-zero-full.html": "12c33d23abd46a604b7e3a1529a9658b63fd7fe6e5eadf0b0d2de26749277eb0",
+    "/workspace/work/rebuild/lamella/lamella/elements/sparkline/element.css": "cb2dc7f41b1cfd12f01ed460e71a10e58a47833e2ea19154e8957e8b58469523",
+    "/workspace/work/rebuild/lamella/lamella/elements/sparkline/element.json": "78799ac82cd4df2c9c6e145f2a5c5e335ca0ce65055dd44965a2a318d315b0c0",
+    "/workspace/work/rebuild/lamella/lamella/elements/sparkline/fixtures/trend-12.html": "6323ae5dd8d5cdf6b02967464fb7a29b0dd07f213116958afba66f2c4340f992",
+    "/workspace/work/rebuild/lamella/lamella/elements/sparkline/fixtures/trend-5.html": "e1a24f886688c592a8a34ec2d325e19726bce56ab56e54c7aa860d81e0a0b1d9",
+    "/workspace/work/rebuild/lamella/lamella/elements/sparkline/fixtures/trend-bars-24.html": "f155d4a2a2068d91fcaa5dc051625207d07cbfe1fea2775b3ad7d74c3b473171",
+    "/workspace/work/rebuild/lamella/lamella/elements/sparkline/fixtures/trend-flat.html": "79b351f25bdc696aea563b9fc59dcc175f8b4472daba3fe98c06e906279343e6",
+    "/workspace/work/rebuild/lamella/lamella/elements/steps/element.css": "faa9aa7a64f771bce87dab349a765fa1c6277a3a84e684936f23c6d77d849b63",
+    "/workspace/work/rebuild/lamella/lamella/elements/steps/element.json": "1139105e6498aeae5e94784919caf8293d7e44b682d49877541bd8e892afa62e",
+    "/workspace/work/rebuild/lamella/lamella/elements/steps/fixtures/steps-3-long.html": "23967c81862e090a4e154cbe0385833a31f1fcf17a590121dc42dc7b1c058027",
+    "/workspace/work/rebuild/lamella/lamella/elements/steps/fixtures/steps-5.html": "e23b7c5acf7d76270834e3179581fc63f0792bfc0bac0bbecc44b95ec0710b67",
+    "/workspace/work/rebuild/lamella/lamella/elements/steps/fixtures/steps-col.html": "ac3b5d4b6128c15d1a8551577d6f9130213184cd2dae060b86ee92cee6f2e7a5",
+    "/workspace/work/rebuild/lamella/lamella/elements/swimlane/element.css": "7ee6f67e6aa40409cee2e599f03bd19762c79813c90944593b4b677407e31291",
+    "/workspace/work/rebuild/lamella/lamella/elements/swimlane/element.json": "0877d352bb720e6b87b28181c337111b670e97f2abc79e62b4e4d0752706055a",
+    "/workspace/work/rebuild/lamella/lamella/elements/swimlane/fixtures/dispatch-3.html": "da05eef07ba13ca9f186bb5b66f19e86c08dd64f4bca7b8f8b86433e679e77ea",
+    "/workspace/work/rebuild/lamella/lamella/elements/swimlane/fixtures/handover-2.html": "08697414c5697e59db88d4fe07ae62415463a30906c67ee7e4cffa9179b570c9",
+    "/workspace/work/rebuild/lamella/lamella/elements/table/element.css": "8ede15da6d1161f9a02033cd8f487372cdad33798b18dbc6f079c7fa1842f982",
+    "/workspace/work/rebuild/lamella/lamella/elements/table/element.json": "154ed73920933c1fd2756516fbe7f65cbaf9e5ad619e8f34755b9712652d8f56",
+    "/workspace/work/rebuild/lamella/lamella/elements/table/fixtures/districts-3-rows-4.html": "e32900599b74e38334825b049abe2730e12ff4c170153a6da84b3b41e0f613b8",
+    "/workspace/work/rebuild/lamella/lamella/elements/table/fixtures/replica-16.html": "b8c47c58eb85f9df090e1c12c1ebab995be59649bd9000b1dbfe1d532a7ebaed",
+    "/workspace/work/rebuild/lamella/lamella/elements/tag/element.css": "adc5dd8d72018db80687667c727b08b0c27367b179b8514afb1ce424e29592f2",
+    "/workspace/work/rebuild/lamella/lamella/elements/tag/element.json": "af355b7985fbc5036533665cf4968f1a2d71fa82442bca8da91b5dc9538b7dcc",
+    "/workspace/work/rebuild/lamella/lamella/elements/tag/fixtures/labels-long.html": "3ae38641a32d55d12f5be01a45125e068ca4972586c0f01a6da211af5103ea1f",
+    "/workspace/work/rebuild/lamella/lamella/elements/tag/fixtures/replica-21.html": "a7bf62c26de2a345e2b6233e53c4c3991c9253a1f57b8bdb14997565cb597f43",
+    "/workspace/work/rebuild/lamella/lamella/elements/timeline/element.css": "66c87e49e3440922c5ed2400ae52a4a4776303e3d39315be8540f7cb528bf17f",
+    "/workspace/work/rebuild/lamella/lamella/elements/timeline/element.json": "3b2c6ad949ac7c8a886a915c95a1a64bf4466031a3491620538548956026fd23",
+    "/workspace/work/rebuild/lamella/lamella/elements/timeline/fixtures/timeline-3-long.html": "0ec618d8abf21f458756b7c75686d6db496833b0080cc78a78752980af4f1a3c",
+    "/workspace/work/rebuild/lamella/lamella/elements/timeline/fixtures/timeline-5.html": "18ff6377e92e77c65cd032bc5aab3cd02564636f974f4a9df1cf32f283c72e72",
+    "/workspace/work/rebuild/lamella/lamella/elements/timeline/fixtures/timeline-alt.html": "9e1e62989b219490e33d6edf1c9a7ff7733c9644ce931308118098969e81b850",
+    "/workspace/work/rebuild/lamella/lamella/elements/timeline/fixtures/timeline-col.html": "5b8285679853f3b596e730f8dd7397005a493e67ce129048223848da33b8f5c9",
+    "/workspace/work/rebuild/lamella/lamella/elements/treemap/element.css": "fe40dd06bed3a05819e729d0489b19d9e828d486e7976d10407e3c4721a4b709",
+    "/workspace/work/rebuild/lamella/lamella/elements/treemap/element.json": "91a656debd38f42249848ad77355a8b1582f8ce036110896f4b619b6cc9fc3b3",
+    "/workspace/work/rebuild/lamella/lamella/elements/treemap/fixtures/treemap-1.html": "317e77b1c7a438e032fce587eab21c75965e98cd2cc0e3a6064bb3e967bba06d",
+    "/workspace/work/rebuild/lamella/lamella/elements/treemap/fixtures/treemap-2-long.html": "ef1fa79cc7aef1c6e47d6cccd63e28fb0f039039d2930d64fe4b812771d91aec",
+    "/workspace/work/rebuild/lamella/lamella/elements/venn/element.css": "4fd2e255ab14f343c9c241c1809db97ecb3e09cc159683a2936c8f602d0c6910",
+    "/workspace/work/rebuild/lamella/lamella/elements/venn/element.json": "ca114477dc2b8b61fa276f9c4a18e44a88e7c8f3b955452654abace5a3b89489",
+    "/workspace/work/rebuild/lamella/lamella/elements/venn/fixtures/venn-2.html": "7f7b89ed5eaeba84ad5848ebd5259b37ea4c1efaf5b6713e86d2135f0896e567",
+    "/workspace/work/rebuild/lamella/lamella/elements/venn/fixtures/venn-3-long.html": "acf87e757b3f7230a53f9b25dcc9671089f4617639f2ddc5cd91319efc689057",
+    "/workspace/work/rebuild/lamella/lamella/elements/versus/element.css": "94d636fc2b8b97b7947c3db4e3f8dfb61ea74fe1ef72772e2f2ef2719b291f44",
+    "/workspace/work/rebuild/lamella/lamella/elements/versus/element.json": "fc715938ace58f1cb96e14024e20d03c9e09b9a26cc554b7447613acd514b8be",
+    "/workspace/work/rebuild/lamella/lamella/elements/versus/fixtures/pair-four-long.html": "cb22914632538688671bb9c5f249de505756db558811f0a88934bdad5b8875c2",
+    "/workspace/work/rebuild/lamella/lamella/elements/versus/fixtures/pair-three.html": "61fa27147a56b825c08952002b7818a4fb3849be4c21b28b0a87e986d3551b9e",
+    "/workspace/work/rebuild/lamella/lamella/elements/waffle/element.css": "5e8c52cfd1ce868be54ed811bdac1148a305e1d9d3ac0399260a59cdd290cc9a",
+    "/workspace/work/rebuild/lamella/lamella/elements/waffle/element.json": "3081df83f49882e94362d6050689f0561539e945b822f7f9e5c0ed2e379f2204",
+    "/workspace/work/rebuild/lamella/lamella/elements/waffle/fixtures/waffle-100.html": "81650a55e9254ee26c06901463a6b1fafa26ecac90682fbd628d8c324e5bc1e3",
+    "/workspace/work/rebuild/lamella/lamella/elements/waffle/fixtures/waffle-50-shares.html": "4c7d08897ce2fbe9887929abe080716b5af2802b2c3e71dd63cb80128ef500db",
+    "/workspace/work/rebuild/lamella/lamella/elements/waffle/fixtures/waffle-people-20.html": "83772d142374c82f3e5a5ed803a5b5a59b037aecba3b8c38746b37bb827a722c",
+    "/workspace/work/rebuild/lamella/lamella/foundation/fixtures/cover.html": "bc1964d3fa56a49ce8af07659b149c476685fe1660cb7a1fb25d7dab9f750f6e",
+    "/workspace/work/rebuild/lamella/lamella/foundation/fixtures/headed-page.html": "608bc1e8142563f8be05bcf50e6b6ff6aba15b93181498bda477692d2159d72d",
+    "/workspace/work/rebuild/lamella/lamella/foundation/fixtures/seat.html": "344a75ee24c209481ff8213b1e6e506fb77acb928f2d2d9b201ff1ae5ef2d403",
+    "/workspace/work/rebuild/lamella/lamella/foundation/foundation.css": "198d524f2c4e99cd730fbb1c43f66a3f320ffde241accef4bf6fdae88c4b33e1",
+    "/workspace/work/rebuild/lamella/lamella/foundation/foundation.json": "f58d0c02e41827e8f027ab83055202c6b4cce18f1c52601fa270b402cad9b442",
+    "/workspace/work/rebuild/lamella/lamella/kit/css/tokens.css": "00ecb7971b11d438e379b2384b58d140a84545490424927eebacc689a26944a7",
+    "/workspace/work/rebuild/lamella/lamella/kit/kit.json": "10a953a758ed31dae6e072386ed6340500eabc62dcff5bdf4673f840f6612609",
+    "/workspace/work/reference/tools/preview.py": "92b0339d1f705734c1171fe26b4d2b022c5995711cbf869168e8b3dc4296ffbc",
+    "/workspace/work/reference/contract/type-steps.json": "dd1f4bd45a6b4eab41c0da133743e96d45af17bd205c6ae80b7b71099089c9ea",
+    "/workspace/work/reference/contract/palette.json": "8c9154b42efd8e0e0efee4443ebb22c39aadd828586a58b026711ae5bc4bc755",
+    "/workspace/work/rebuild/lamella/review/assets/fonts/DoHyeon.woff2": "73d94fffa544880572eb712219595b1d45841bc1e143c94d249474c555826fe3",
+    "/workspace/work/rebuild/lamella/review/assets/fonts/Mono.woff2": "a4f186ed13052b6efc88aaf97d7aaf92e24ad44e4bd006ea1a8dee20a21edfa2",
+    "/workspace/work/rebuild/lamella/review/assets/fonts/Montserrat.woff2": "e1e0bc905c92d1912216090015e0b0eff9a2e96ba35228592045ade5589ee784",
+    "/workspace/work/rebuild/lamella/review/assets/fonts/PV.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+    "/workspace/work/rebuild/lamella/review/assets/fonts/fonts.css": "a72299dae77d8ab705443e0bc3f7c713ba1565f020d8043e9c98c948f31b00f4"
+  },
+  "modes": [
+    {
+      "article_count": 187,
+      "slide_count": 187,
+      "titles": [
+        "foundation / cover",
+        "foundation / headed-page",
+        "foundation / seat",
+        "agenda / agenda-five",
+        "agenda / agenda-four",
+        "architecture / layers-3",
+        "architecture / layers-5-long-modules",
+        "balance / balance-even",
+        "balance / balance-left-long",
+        "balance / balance-right",
+        "bullet / bullet-0",
+        "bullet / bullet-100",
+        "bullet / bullet-long-note",
+        "bullet / bullets-4",
+        "callout / callout-icon",
+        "callout / callout-long",
+        "callout / callout-stack",
+        "callout / callout",
+        "card / card-2-quiet",
+        "card / card-3-icon3d",
+        "card / card-3-line",
+        "card / card-3-on",
+        "card / card-4",
+        "card / card-5-tone",
+        "card / driver-rich-inferred",
+        "card / replica-03",
+        "card / replica-04",
+        "card / replica-08",
+        "card / replica-11",
+        "card / replica-12-on",
+        "card / replica-12",
+        "card / replica-13",
+        "chart-area / area-1",
+        "chart-area / area-3pt",
+        "chart-area / areas-2",
+        "chart-area / areas-stacked-3",
+        "chart-area / replica-17",
+        "chart-area / review-long-series",
+        "chart-bar / bars-12",
+        "chart-bar / bars-2",
+        "chart-bar / bars-3",
+        "chart-bar / bars-6",
+        "chart-bar / bars-h-5",
+        "chart-bar / bars-h-8",
+        "chart-bar / replica-11",
+        "chart-bar / review-long-name",
+        "chart-donut / donut-0",
+        "chart-donut / donut-100",
+        "chart-donut / donut",
+        "chart-donut / donuts-3",
+        "chart-donut / donuts-4",
+        "chart-donut / replica-14",
+        "chart-donut / review-long-name",
+        "chart-donut / review-two-members",
+        "chart-line / line-boundaries",
+        "chart-line / line-long-periods",
+        "chart-line / lines-12",
+        "chart-line / lines-3",
+        "chart-line / lines-6",
+        "chart-line / lines-flat",
+        "chart-scatter / scatter-24",
+        "chart-scatter / scatter-boundaries",
+        "chart-scatter / scatter-bubbles",
+        "chart-scatter / scatter-long-names",
+        "chart-scatter / scatter-six",
+        "chart-scatter / scatter-three",
+        "chart-stack / stack-12-h",
+        "chart-stack / stack-2-long",
+        "chart-stack / stack-6-pct",
+        "chart-waterfall / waterfall-long-names",
+        "chart-waterfall / waterfall-six",
+        "chart-waterfall / waterfall-ten",
+        "chart-waterfall / waterfall-three",
+        "chart-waterfall / waterfall-zero-full",
+        "code / cargo",
+        "code / hub-query-numbered",
+        "concentric / replica-10",
+        "concentric / rings-2-long",
+        "concentric / rings-4",
+        "cycle / cycle-3-long",
+        "cycle / cycle-6",
+        "decision-tree / approval-depth-3",
+        "decision-tree / route-3",
+        "delta / hours",
+        "delta / long-units",
+        "flowchart / dispatch-6",
+        "flowchart / review-loop-4",
+        "funnel / funnel-3-long",
+        "funnel / funnel-6",
+        "gauge / meter-0",
+        "gauge / meter-100",
+        "gauge / meter-64",
+        "headline / replica-10",
+        "headline / replica-14",
+        "headline / replica-17",
+        "headline / replica-20",
+        "headline / replica-22",
+        "headline / statement-long",
+        "heatmap / heat-3x5",
+        "heatmap / heat-calendar",
+        "heatmap / heat-long-names",
+        "hierarchy / hierarchy-2-long",
+        "hierarchy / hierarchy-4",
+        "hub / hub-3-long",
+        "hub / hub-6",
+        "image-frame / picture-secondary",
+        "image-frame / replica-04",
+        "image-frame / replica-07",
+        "journey / intake-3",
+        "journey / retention-7",
+        "legend / keys-five",
+        "legend / keys-long",
+        "legend / keys-three",
+        "list / points-check",
+        "list / points-five",
+        "list / points-three",
+        "logo-group / logos-four",
+        "logo-group / logos-six",
+        "matrix / dispatch-4",
+        "matrix / swot-dispatch",
+        "matrix-nine / allocation-9",
+        "matrix-nine / regions-9-long-notes",
+        "metric / metric-bare",
+        "metric / metric-extended",
+        "metric / metrics-three",
+        "mindmap / mindmap-2-long",
+        "mindmap / mindmap-6",
+        "network / network-5-long",
+        "network / network-8",
+        "person / replica-22",
+        "person / team-pair",
+        "person / team-trio",
+        "pill / pill-full",
+        "pill / pill-line",
+        "pill / pill-name",
+        "pill / pill-quiet",
+        "positioning / regions-6-long-logo",
+        "positioning / route-4",
+        "pricing / plan-single",
+        "pricing / plans-three-long",
+        "pricing / plans-two",
+        "prose / reading-long",
+        "prose / replica-07",
+        "prose / replica-14",
+        "prose / replica-22-quiet",
+        "prose / replica-23-quiet",
+        "pyramid / pyramid-3-long",
+        "pyramid / pyramid-5",
+        "quote / replica-05",
+        "quote / replica-18",
+        "radar / radar-eight-long",
+        "radar / radar-five-two",
+        "radar / radar-three",
+        "roadmap / handoff-2-lanes-on-mile",
+        "roadmap / replica-19",
+        "sankey / nested-4-2",
+        "sankey / routes-6",
+        "slope / slope-dumbbell-long",
+        "slope / slope-six",
+        "slope / slope-three",
+        "slope / slope-zero-full",
+        "sparkline / trend-12",
+        "sparkline / trend-5",
+        "sparkline / trend-bars-24",
+        "sparkline / trend-flat",
+        "steps / steps-3-long",
+        "steps / steps-5",
+        "steps / steps-col",
+        "swimlane / dispatch-3",
+        "swimlane / handover-2",
+        "table / districts-3-rows-4",
+        "table / replica-16",
+        "tag / labels-long",
+        "tag / replica-21",
+        "timeline / timeline-3-long",
+        "timeline / timeline-5",
+        "timeline / timeline-alt",
+        "timeline / timeline-col",
+        "treemap / treemap-1",
+        "treemap / treemap-2-long",
+        "venn / venn-2",
+        "venn / venn-3-long",
+        "versus / pair-four-long",
+        "versus / pair-three",
+        "waffle / waffle-100",
+        "waffle / waffle-50-shares",
+        "waffle / waffle-people-20"
+      ],
+      "slides": [
+        {
+          "fixture": "foundation / cover",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / headed-page",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / seat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "agenda / agenda-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "agenda / agenda-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "architecture / layers-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "architecture / layers-5-long-modules",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "balance / balance-even",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "balance / balance-left-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "balance / balance-right",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullet-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullet-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullet-long-note",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullets-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout-icon",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout-stack",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-2-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-3-icon3d",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-3-line",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-3-on",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-5-tone",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / driver-rich-inferred",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-12-on",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / area-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / area-3pt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / areas-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / areas-stacked-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / replica-17",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / review-long-series",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-h-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-h-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / review-long-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donut-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donut-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donut",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donuts-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donuts-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / replica-14",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / review-long-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / review-two-members",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / line-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / line-long-periods",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-bubbles",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-stack / stack-12-h",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-stack / stack-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-stack / stack-6-pct",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-ten",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "code / cargo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "code / hub-query-numbered",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "concentric / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "concentric / rings-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "concentric / rings-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "cycle / cycle-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "cycle / cycle-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "decision-tree / approval-depth-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "decision-tree / route-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "delta / hours",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "delta / long-units",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "flowchart / dispatch-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "flowchart / review-loop-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "funnel / funnel-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "funnel / funnel-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "gauge / meter-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "gauge / meter-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "gauge / meter-64",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-14",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-17",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-20",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-22",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / statement-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "heatmap / heat-3x5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "heatmap / heat-calendar",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "heatmap / heat-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hierarchy / hierarchy-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hierarchy / hierarchy-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hub / hub-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hub / hub-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / picture-secondary",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "journey / intake-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "journey / retention-7",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "legend / keys-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "legend / keys-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "legend / keys-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / points-check",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / points-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / points-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "logo-group / logos-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "logo-group / logos-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix / dispatch-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix / swot-dispatch",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix-nine / allocation-9",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix-nine / regions-9-long-notes",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / metric-bare",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / metric-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / metrics-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "mindmap / mindmap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "mindmap / mindmap-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "network / network-5-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "network / network-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / replica-22",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / team-pair",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / team-trio",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-line",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "positioning / regions-6-long-logo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "positioning / route-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pricing / plan-single",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pricing / plans-three-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pricing / plans-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / reading-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / replica-14",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / replica-22-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / replica-23-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pyramid / pyramid-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pyramid / pyramid-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "quote / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "quote / replica-18",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "radar / radar-eight-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "radar / radar-five-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "radar / radar-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "roadmap / handoff-2-lanes-on-mile",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "roadmap / replica-19",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sankey / nested-4-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sankey / routes-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-dumbbell-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-bars-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "steps / steps-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "steps / steps-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "steps / steps-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "swimlane / dispatch-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "swimlane / handover-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "table / districts-3-rows-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "table / replica-16",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "tag / labels-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "tag / replica-21",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-alt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "treemap / treemap-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "treemap / treemap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "venn / venn-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "venn / venn-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "versus / pair-four-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "versus / pair-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "waffle / waffle-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "waffle / waffle-50-shares",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "waffle / waffle-people-20",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        }
+      ],
+      "size_errors": [],
+      "font_faces": [
+        {
+          "family": "Pretendard Variable",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Do Hyeon",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Nanum Gothic Coding",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        }
+      ],
+      "font_checks": [
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "600",
+          "style": "normal",
+          "script": "ko",
+          "sample": "권역별 출고 진단",
+          "descriptor": "normal 600 20px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\", \"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "포장의 기준",
+          "descriptor": "normal 400 88.4px \"Pretendard Variable\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "완충재 전환 이후의 적재량과 파손 접수 추이를 살펴봅니다.",
+          "descriptor": "normal 400 18px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "600",
+          "style": "normal",
+          "script": "other",
+          "sample": "04",
+          "descriptor": "normal 600 12px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "01",
+          "descriptor": "normal 400 42.24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "500",
+          "style": "normal",
+          "script": "ko",
+          "sample": "부서마다 다른 도구로 흩어진 업무 기록",
+          "descriptor": "normal 500 21.4391px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "other",
+          "sample": "1,284",
+          "descriptor": "normal 700 45.6787px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "other",
+          "sample": "86%",
+          "descriptor": "normal 650 24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "ko",
+          "sample": "90건",
+          "descriptor": "normal 650 24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "latin",
+          "sample": "const",
+          "descriptor": "normal 700 23.68px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "latin",
+          "sample": "cargo = {",
+          "descriptor": "normal 400 23.68px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\", \"Pretendard Variable\"",
+          "weight": "500",
+          "style": "normal",
+          "script": "ko",
+          "sample": "분기 운영 지표",
+          "descriptor": "normal 500 76.2581px \"Pretendard Variable\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "499.75",
+          "style": "normal",
+          "script": "ko",
+          "sample": "분산된 운영 기록",
+          "descriptor": "normal 499.75 24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "1,000건",
+          "descriptor": "normal 700 24.2264px \"Pretendard Variable\"",
+          "loaded": true
+        }
+      ],
+      "font_load_errors": [],
+      "font_check_errors": [],
+      "fonts_href": "assets/fonts/fonts.css",
+      "icons": 7,
+      "mode": "light",
+      "html_sha256": "ee8d0673ce94f62e96f417917920c274a05b0d233d848358480ac438caae0568",
+      "request_failures": [],
+      "http_errors": [],
+      "script_errors": [],
+      "external_requests": []
+    },
+    {
+      "article_count": 187,
+      "slide_count": 187,
+      "titles": [
+        "foundation / cover",
+        "foundation / headed-page",
+        "foundation / seat",
+        "agenda / agenda-five",
+        "agenda / agenda-four",
+        "architecture / layers-3",
+        "architecture / layers-5-long-modules",
+        "balance / balance-even",
+        "balance / balance-left-long",
+        "balance / balance-right",
+        "bullet / bullet-0",
+        "bullet / bullet-100",
+        "bullet / bullet-long-note",
+        "bullet / bullets-4",
+        "callout / callout-icon",
+        "callout / callout-long",
+        "callout / callout-stack",
+        "callout / callout",
+        "card / card-2-quiet",
+        "card / card-3-icon3d",
+        "card / card-3-line",
+        "card / card-3-on",
+        "card / card-4",
+        "card / card-5-tone",
+        "card / driver-rich-inferred",
+        "card / replica-03",
+        "card / replica-04",
+        "card / replica-08",
+        "card / replica-11",
+        "card / replica-12-on",
+        "card / replica-12",
+        "card / replica-13",
+        "chart-area / area-1",
+        "chart-area / area-3pt",
+        "chart-area / areas-2",
+        "chart-area / areas-stacked-3",
+        "chart-area / replica-17",
+        "chart-area / review-long-series",
+        "chart-bar / bars-12",
+        "chart-bar / bars-2",
+        "chart-bar / bars-3",
+        "chart-bar / bars-6",
+        "chart-bar / bars-h-5",
+        "chart-bar / bars-h-8",
+        "chart-bar / replica-11",
+        "chart-bar / review-long-name",
+        "chart-donut / donut-0",
+        "chart-donut / donut-100",
+        "chart-donut / donut",
+        "chart-donut / donuts-3",
+        "chart-donut / donuts-4",
+        "chart-donut / replica-14",
+        "chart-donut / review-long-name",
+        "chart-donut / review-two-members",
+        "chart-line / line-boundaries",
+        "chart-line / line-long-periods",
+        "chart-line / lines-12",
+        "chart-line / lines-3",
+        "chart-line / lines-6",
+        "chart-line / lines-flat",
+        "chart-scatter / scatter-24",
+        "chart-scatter / scatter-boundaries",
+        "chart-scatter / scatter-bubbles",
+        "chart-scatter / scatter-long-names",
+        "chart-scatter / scatter-six",
+        "chart-scatter / scatter-three",
+        "chart-stack / stack-12-h",
+        "chart-stack / stack-2-long",
+        "chart-stack / stack-6-pct",
+        "chart-waterfall / waterfall-long-names",
+        "chart-waterfall / waterfall-six",
+        "chart-waterfall / waterfall-ten",
+        "chart-waterfall / waterfall-three",
+        "chart-waterfall / waterfall-zero-full",
+        "code / cargo",
+        "code / hub-query-numbered",
+        "concentric / replica-10",
+        "concentric / rings-2-long",
+        "concentric / rings-4",
+        "cycle / cycle-3-long",
+        "cycle / cycle-6",
+        "decision-tree / approval-depth-3",
+        "decision-tree / route-3",
+        "delta / hours",
+        "delta / long-units",
+        "flowchart / dispatch-6",
+        "flowchart / review-loop-4",
+        "funnel / funnel-3-long",
+        "funnel / funnel-6",
+        "gauge / meter-0",
+        "gauge / meter-100",
+        "gauge / meter-64",
+        "headline / replica-10",
+        "headline / replica-14",
+        "headline / replica-17",
+        "headline / replica-20",
+        "headline / replica-22",
+        "headline / statement-long",
+        "heatmap / heat-3x5",
+        "heatmap / heat-calendar",
+        "heatmap / heat-long-names",
+        "hierarchy / hierarchy-2-long",
+        "hierarchy / hierarchy-4",
+        "hub / hub-3-long",
+        "hub / hub-6",
+        "image-frame / picture-secondary",
+        "image-frame / replica-04",
+        "image-frame / replica-07",
+        "journey / intake-3",
+        "journey / retention-7",
+        "legend / keys-five",
+        "legend / keys-long",
+        "legend / keys-three",
+        "list / points-check",
+        "list / points-five",
+        "list / points-three",
+        "logo-group / logos-four",
+        "logo-group / logos-six",
+        "matrix / dispatch-4",
+        "matrix / swot-dispatch",
+        "matrix-nine / allocation-9",
+        "matrix-nine / regions-9-long-notes",
+        "metric / metric-bare",
+        "metric / metric-extended",
+        "metric / metrics-three",
+        "mindmap / mindmap-2-long",
+        "mindmap / mindmap-6",
+        "network / network-5-long",
+        "network / network-8",
+        "person / replica-22",
+        "person / team-pair",
+        "person / team-trio",
+        "pill / pill-full",
+        "pill / pill-line",
+        "pill / pill-name",
+        "pill / pill-quiet",
+        "positioning / regions-6-long-logo",
+        "positioning / route-4",
+        "pricing / plan-single",
+        "pricing / plans-three-long",
+        "pricing / plans-two",
+        "prose / reading-long",
+        "prose / replica-07",
+        "prose / replica-14",
+        "prose / replica-22-quiet",
+        "prose / replica-23-quiet",
+        "pyramid / pyramid-3-long",
+        "pyramid / pyramid-5",
+        "quote / replica-05",
+        "quote / replica-18",
+        "radar / radar-eight-long",
+        "radar / radar-five-two",
+        "radar / radar-three",
+        "roadmap / handoff-2-lanes-on-mile",
+        "roadmap / replica-19",
+        "sankey / nested-4-2",
+        "sankey / routes-6",
+        "slope / slope-dumbbell-long",
+        "slope / slope-six",
+        "slope / slope-three",
+        "slope / slope-zero-full",
+        "sparkline / trend-12",
+        "sparkline / trend-5",
+        "sparkline / trend-bars-24",
+        "sparkline / trend-flat",
+        "steps / steps-3-long",
+        "steps / steps-5",
+        "steps / steps-col",
+        "swimlane / dispatch-3",
+        "swimlane / handover-2",
+        "table / districts-3-rows-4",
+        "table / replica-16",
+        "tag / labels-long",
+        "tag / replica-21",
+        "timeline / timeline-3-long",
+        "timeline / timeline-5",
+        "timeline / timeline-alt",
+        "timeline / timeline-col",
+        "treemap / treemap-1",
+        "treemap / treemap-2-long",
+        "venn / venn-2",
+        "venn / venn-3-long",
+        "versus / pair-four-long",
+        "versus / pair-three",
+        "waffle / waffle-100",
+        "waffle / waffle-50-shares",
+        "waffle / waffle-people-20"
+      ],
+      "slides": [
+        {
+          "fixture": "foundation / cover",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / headed-page",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / seat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "agenda / agenda-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "agenda / agenda-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "architecture / layers-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "architecture / layers-5-long-modules",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "balance / balance-even",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "balance / balance-left-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "balance / balance-right",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullet-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullet-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullet-long-note",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullets-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout-icon",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout-stack",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-2-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-3-icon3d",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-3-line",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-3-on",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-5-tone",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / driver-rich-inferred",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-12-on",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / area-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / area-3pt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / areas-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / areas-stacked-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / replica-17",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / review-long-series",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-h-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-h-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / review-long-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donut-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donut-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donut",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donuts-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donuts-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / replica-14",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / review-long-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / review-two-members",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / line-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / line-long-periods",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-bubbles",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-stack / stack-12-h",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-stack / stack-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-stack / stack-6-pct",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-ten",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "code / cargo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "code / hub-query-numbered",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "concentric / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "concentric / rings-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "concentric / rings-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "cycle / cycle-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "cycle / cycle-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "decision-tree / approval-depth-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "decision-tree / route-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "delta / hours",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "delta / long-units",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "flowchart / dispatch-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "flowchart / review-loop-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "funnel / funnel-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "funnel / funnel-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "gauge / meter-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "gauge / meter-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "gauge / meter-64",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-14",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-17",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-20",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-22",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / statement-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "heatmap / heat-3x5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "heatmap / heat-calendar",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "heatmap / heat-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hierarchy / hierarchy-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hierarchy / hierarchy-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hub / hub-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hub / hub-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / picture-secondary",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "journey / intake-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "journey / retention-7",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "legend / keys-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "legend / keys-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "legend / keys-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / points-check",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / points-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / points-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "logo-group / logos-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "logo-group / logos-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix / dispatch-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix / swot-dispatch",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix-nine / allocation-9",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix-nine / regions-9-long-notes",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / metric-bare",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / metric-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / metrics-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "mindmap / mindmap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "mindmap / mindmap-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "network / network-5-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "network / network-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / replica-22",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / team-pair",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / team-trio",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-line",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "positioning / regions-6-long-logo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "positioning / route-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pricing / plan-single",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pricing / plans-three-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pricing / plans-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / reading-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / replica-14",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / replica-22-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / replica-23-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pyramid / pyramid-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pyramid / pyramid-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "quote / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "quote / replica-18",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "radar / radar-eight-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "radar / radar-five-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "radar / radar-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "roadmap / handoff-2-lanes-on-mile",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "roadmap / replica-19",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sankey / nested-4-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sankey / routes-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-dumbbell-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-bars-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "steps / steps-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "steps / steps-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "steps / steps-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "swimlane / dispatch-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "swimlane / handover-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "table / districts-3-rows-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "table / replica-16",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "tag / labels-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "tag / replica-21",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-alt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "treemap / treemap-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "treemap / treemap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "venn / venn-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "venn / venn-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "versus / pair-four-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "versus / pair-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "waffle / waffle-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "waffle / waffle-50-shares",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "waffle / waffle-people-20",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        }
+      ],
+      "size_errors": [],
+      "font_faces": [
+        {
+          "family": "Pretendard Variable",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Do Hyeon",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Nanum Gothic Coding",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        }
+      ],
+      "font_checks": [
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "600",
+          "style": "normal",
+          "script": "ko",
+          "sample": "권역별 출고 진단",
+          "descriptor": "normal 600 20px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\", \"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "포장의 기준",
+          "descriptor": "normal 400 88.4px \"Pretendard Variable\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "완충재 전환 이후의 적재량과 파손 접수 추이를 살펴봅니다.",
+          "descriptor": "normal 400 18px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "600",
+          "style": "normal",
+          "script": "other",
+          "sample": "04",
+          "descriptor": "normal 600 12px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "01",
+          "descriptor": "normal 400 42.24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "500",
+          "style": "normal",
+          "script": "ko",
+          "sample": "부서마다 다른 도구로 흩어진 업무 기록",
+          "descriptor": "normal 500 21.4391px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "other",
+          "sample": "1,284",
+          "descriptor": "normal 700 45.6787px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "other",
+          "sample": "86%",
+          "descriptor": "normal 650 24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "ko",
+          "sample": "90건",
+          "descriptor": "normal 650 24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "latin",
+          "sample": "const",
+          "descriptor": "normal 700 23.68px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "latin",
+          "sample": "cargo = {",
+          "descriptor": "normal 400 23.68px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\", \"Pretendard Variable\"",
+          "weight": "500",
+          "style": "normal",
+          "script": "ko",
+          "sample": "분기 운영 지표",
+          "descriptor": "normal 500 76.2581px \"Pretendard Variable\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "499.75",
+          "style": "normal",
+          "script": "ko",
+          "sample": "분산된 운영 기록",
+          "descriptor": "normal 499.75 24px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "1,000건",
+          "descriptor": "normal 700 24.2264px \"Pretendard Variable\"",
+          "loaded": true
+        }
+      ],
+      "font_load_errors": [],
+      "font_check_errors": [],
+      "fonts_href": "assets/fonts/fonts.css",
+      "icons": 7,
+      "mode": "dark",
+      "html_sha256": "0102521b02ed22c5a879736bdbc74354b8edc5473854121aab4f7487f6460b79",
+      "request_failures": [],
+      "http_errors": [],
+      "script_errors": [],
+      "external_requests": []
+    }
+  ],
+  "issues": [],
+  "passed": true
+}

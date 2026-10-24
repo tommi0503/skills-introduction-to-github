@@ -1,0 +1,25 @@
+/* Absent flowchart contract; replica07 supplies 178x121 red service faces,12 radius,25 light and17 bold copy.
+   One element owns all nodes and explicit directional connectors. */
+.flowchart[data-el="filament-flowchart"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10%;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--filament-flowchart-x:37.5%;--filament-flowchart-y:22.222222%}
+.flowchart[data-el="filament-flowchart"]:has(>.node:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr));--filament-flowchart-x:22.222222%}
+.flowchart[data-el="filament-flowchart"]:has(>.node:nth-child(3):last-child){grid-template-rows:minmax(0,1fr);--filament-flowchart-y:0%}
+.flowchart[data-el="filament-flowchart"]>.node{box-sizing:border-box;position:relative;display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:0;padding:min(2cqw,3cqh);container-type:size;isolation:isolate}
+.flowchart[data-el="filament-flowchart"]>.node::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--n-1);pointer-events:none}
+.flowchart[data-el="filament-flowchart"]>.node>b{position:relative;box-sizing:border-box;display:block;min-width:0;margin:0;font-size:clamp(var(--type-14),calc(min(100cqw*.13,100cqh*.2)),var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere}
+.flowchart[data-el="filament-flowchart"]>.node>p{box-sizing:border-box;position:relative;display:block;min-width:0;margin:.5em 0 0;font-size:clamp(var(--type-12),calc(min(100cqw*.087,100cqh*.14)),var(--type-22));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.flowchart[data-el="filament-flowchart"]>.node.end::before{background:var(--a1)}
+.flowchart[data-el="filament-flowchart"]>.node.end{color:var(--a1-on)}
+.flowchart[data-el="filament-flowchart"]>.node.ask::before{background:var(--a1-2-soft)}
+.flowchart[data-el="filament-flowchart"]>.node.ask{color:var(--ink)}
+.flowchart[data-el="filament-flowchart"]>.node:is(.to-r,.to-d,.to-l,.to-u)::after{content:"";position:absolute;z-index:5;pointer-events:none;background:var(--ink)}
+.flowchart[data-el="filament-flowchart"]>.node.to-r::after{left:100%;top:50%;width:var(--filament-flowchart-x);height:calc(var(--stroke)*8);clip-path:polygon(0 42%,85% 42%,85% 0,100% 50%,85% 100%,85% 58%,0 58%);transform:translateY(-50%)}
+.flowchart[data-el="filament-flowchart"]>.node.to-l::after{right:100%;top:50%;width:var(--filament-flowchart-x);height:calc(var(--stroke)*8);clip-path:polygon(0 50%,15% 0,15% 42%,100% 42%,100% 58%,15% 58%,15% 100%);transform:translateY(-50%)}
+.flowchart[data-el="filament-flowchart"]>.node.to-d::after{left:50%;top:100%;height:var(--filament-flowchart-y);width:calc(var(--stroke)*8);clip-path:polygon(42% 0,58% 0,58% 85%,100% 85%,50% 100%,0 85%,42% 85%);transform:translateX(-50%)}
+.flowchart[data-el="filament-flowchart"]>.node.to-u::after{left:50%;bottom:100%;height:var(--filament-flowchart-y);width:calc(var(--stroke)*8);clip-path:polygon(0 15%,50% 0,100% 15%,58% 15%,58% 100%,42% 100%,42% 15%);transform:translateX(-50%)}
+.flowchart[data-el="filament-flowchart"]>.node{padding:min(2cqw,3cqh);justify-content:space-between;color:var(--a1-on)}
+.flowchart[data-el="filament-flowchart"]>.node::before{background:var(--a1);border-radius:min(var(--radius),6.741573cqw,9.917355cqh)}
+.flowchart[data-el="filament-flowchart"]>.node>b{font-weight:calc(var(--body-weight)*.75);font-size:clamp(var(--type-16),calc(min(100cqw*.16,100cqh*.24)),var(--type-36));line-height:calc(var(--figure-line)*.933333333);letter-spacing:calc(var(--body-track)*1.6)}
+.flowchart[data-el="filament-flowchart"]>.node>p{font-weight:calc(var(--body-weight)*1.75);line-height:var(--label-line)}
+.flowchart[data-el="filament-flowchart"]>.node.ask{color:var(--a1-8)}
+.flowchart[data-el="filament-flowchart"]>.node.ask::before{background:var(--page);box-shadow:inset 0 0 0 calc(var(--stroke)*2) var(--a1-8)}
+.flowchart[data-el="filament-flowchart"]>.node:is(.to-r,.to-d,.to-l,.to-u)::after{background:var(--a1-8)}

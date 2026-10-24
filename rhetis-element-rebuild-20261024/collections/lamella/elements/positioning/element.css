@@ -1,0 +1,23 @@
+/* Absent positioning contract: replica15 supplies round98px competitor and176px own faces,lavender/blue emphasis; rich notes and named axes remain a gap.
+   Standard endpoint axes are inferred; no missing source fields are faked. */
+.posmap[data-el="lamella-positioning"]{box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.posmap[data-el="lamella-positioning"]>.axis-x{position:absolute;left:8%;top:50%;width:84%;height:var(--stroke);background:var(--n-4)}
+.posmap[data-el="lamella-positioning"]>.axis-y{position:absolute;left:50%;top:8%;height:84%;width:var(--stroke);background:var(--n-4)}
+.posmap[data-el="lamella-positioning"]>.axis-x>span,.posmap[data-el="lamella-positioning"]>.axis-y>span{box-sizing:border-box;position:absolute;z-index:1;display:flex;align-items:center;min-width:0;margin:0;padding:0 .2em;background:var(--page);font-size:clamp(var(--type-12),calc(min(100cqw*.016,100cqh*.055)),var(--type-20));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.posmap[data-el="lamella-positioning"]>.axis-x>span{top:1.5cqh;width:23cqw}
+.posmap[data-el="lamella-positioning"]>.axis-x>span:first-child{left:-8cqw;text-align:left}
+.posmap[data-el="lamella-positioning"]>.axis-x>span:last-child{right:-8cqw;justify-content:flex-end;text-align:right}
+.posmap[data-el="lamella-positioning"]>.axis-y>span{left:0;width:24cqw;height:8cqh;transform:translateX(-50%);justify-content:center;text-align:center}
+.posmap[data-el="lamella-positioning"]>.axis-y>span:first-child{bottom:-8cqh}
+.posmap[data-el="lamella-positioning"]>.axis-y>span:last-child{top:-8cqh}
+.posmap[data-el="lamella-positioning"]>.mark{box-sizing:border-box;position:absolute;z-index:2;left:calc(8% + var(--x)*.84%);top:calc(92% - var(--y)*.84%);width:min(60px,8cqw,12cqh);aspect-ratio:1;transform:translate(-50%,-50%);background:var(--a1);border-radius:50%}
+.posmap[data-el="lamella-positioning"]>.mark>.name{box-sizing:border-box;position:absolute;top:calc(100% + 1.4cqh);left:50%;transform:translateX(-50%);width:max-content;max-width:23cqw;min-width:0;margin:0;padding:0 .2em;background:var(--page);font-size:clamp(var(--type-12),calc(100cqw*.022),var(--type-22));font-weight:var(--label-weight);line-height:var(--name-line);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.posmap[data-el="lamella-positioning"]>.mark:has(>.seat.logo){background:var(--n-2);border:var(--stroke) solid var(--n-4)}
+.posmap[data-el="lamella-positioning"]>.mark>.seat.logo{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:var(--n-2);color:var(--n-7);font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--label-line)}
+.posmap[data-el="lamella-positioning"]>.mark>.seat.logo::after{content:attr(data-ph)}
+.posmap[data-el="lamella-positioning"]>.axis-x,.posmap[data-el="lamella-positioning"]>.axis-y{background:var(--n-5)}
+.posmap[data-el="lamella-positioning"]>.mark{width:min(98px,10cqw,14cqh);background:var(--a1-3-soft)}
+.posmap[data-el="lamella-positioning"]>.mark>.name{font-weight:var(--body-weight);font-size:clamp(var(--type-12),calc(100cqw*.019467213),var(--type-18))}
+.posmap[data-el="lamella-positioning"]>.mark.on{width:min(176px,17cqw,24cqh);background:var(--a1)}
+.posmap[data-el="lamella-positioning"]>.mark.on>.name{font-weight:var(--label-weight);color:var(--a1-7)}
+.posmap[data-el="lamella-positioning"]>.mark>.seat.logo{border-radius:50%}

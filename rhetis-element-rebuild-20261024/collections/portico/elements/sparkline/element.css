@@ -1,0 +1,37 @@
+/* No source sparkline instance; inferred from replica09:straight plot compartments and evenly spaced horizontal rules.
+   Equal-step data owns every connector; up/down are semantic status roles. */
+.spark[data-el="portico-sparkline"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:start;anchor-scope:all;--portico-spark-color:var(--a1);--portico-spark-head:8px;--portico-spark-foot:8px;--portico-spark-height:calc(100cqh - var(--portico-spark-head) - var(--portico-spark-foot));--portico-spark-point:4px;--portico-spark-stroke:var(--stroke)}
+.spark[data-el="portico-sparkline"]>span{position:static;justify-self:center;width:var(--portico-spark-point);height:var(--portico-spark-point);margin-top:calc(var(--portico-spark-head) + var(--portico-spark-height)*(1 - var(--v)/var(--max)) - var(--portico-spark-point)/2);background:var(--portico-spark-color);border-radius:50%;anchor-name:var(--portico-spark-self);--portico-spark-rise:calc(var(--portico-spark-height)*var(--v)/var(--max))}
+.spark[data-el="portico-sparkline"]>span::after{content:"";position:absolute;z-index:-1;left:anchor(var(--portico-spark-prev) center);right:anchor(var(--portico-spark-self) center);top:calc(anchor(var(--portico-spark-prev) center) - var(--portico-spark-height));bottom:var(--portico-spark-foot);background:var(--portico-spark-color);clip-path:polygon(0 calc(var(--portico-spark-height) - var(--portico-spark-stroke)/2),100% calc(100% - var(--portico-spark-rise) - var(--portico-spark-stroke)/2),100% calc(100% - var(--portico-spark-rise) + var(--portico-spark-stroke)/2),0 calc(var(--portico-spark-height) + var(--portico-spark-stroke)/2));pointer-events:none}
+.spark[data-el="portico-sparkline"]>span:first-child::after{content:none}
+.spark[data-el="portico-sparkline"]>span:nth-child(1){--portico-spark-self:--portico-sp1;}
+.spark[data-el="portico-sparkline"]>span:nth-child(2){--portico-spark-self:--portico-sp2;--portico-spark-prev:--portico-sp1;}
+.spark[data-el="portico-sparkline"]>span:nth-child(3){--portico-spark-self:--portico-sp3;--portico-spark-prev:--portico-sp2;}
+.spark[data-el="portico-sparkline"]>span:nth-child(4){--portico-spark-self:--portico-sp4;--portico-spark-prev:--portico-sp3;}
+.spark[data-el="portico-sparkline"]>span:nth-child(5){--portico-spark-self:--portico-sp5;--portico-spark-prev:--portico-sp4;}
+.spark[data-el="portico-sparkline"]>span:nth-child(6){--portico-spark-self:--portico-sp6;--portico-spark-prev:--portico-sp5;}
+.spark[data-el="portico-sparkline"]>span:nth-child(7){--portico-spark-self:--portico-sp7;--portico-spark-prev:--portico-sp6;}
+.spark[data-el="portico-sparkline"]>span:nth-child(8){--portico-spark-self:--portico-sp8;--portico-spark-prev:--portico-sp7;}
+.spark[data-el="portico-sparkline"]>span:nth-child(9){--portico-spark-self:--portico-sp9;--portico-spark-prev:--portico-sp8;}
+.spark[data-el="portico-sparkline"]>span:nth-child(10){--portico-spark-self:--portico-sp10;--portico-spark-prev:--portico-sp9;}
+.spark[data-el="portico-sparkline"]>span:nth-child(11){--portico-spark-self:--portico-sp11;--portico-spark-prev:--portico-sp10;}
+.spark[data-el="portico-sparkline"]>span:nth-child(12){--portico-spark-self:--portico-sp12;--portico-spark-prev:--portico-sp11;}
+.spark[data-el="portico-sparkline"]>span:nth-child(13){--portico-spark-self:--portico-sp13;--portico-spark-prev:--portico-sp12;}
+.spark[data-el="portico-sparkline"]>span:nth-child(14){--portico-spark-self:--portico-sp14;--portico-spark-prev:--portico-sp13;}
+.spark[data-el="portico-sparkline"]>span:nth-child(15){--portico-spark-self:--portico-sp15;--portico-spark-prev:--portico-sp14;}
+.spark[data-el="portico-sparkline"]>span:nth-child(16){--portico-spark-self:--portico-sp16;--portico-spark-prev:--portico-sp15;}
+.spark[data-el="portico-sparkline"]>span:nth-child(17){--portico-spark-self:--portico-sp17;--portico-spark-prev:--portico-sp16;}
+.spark[data-el="portico-sparkline"]>span:nth-child(18){--portico-spark-self:--portico-sp18;--portico-spark-prev:--portico-sp17;}
+.spark[data-el="portico-sparkline"]>span:nth-child(19){--portico-spark-self:--portico-sp19;--portico-spark-prev:--portico-sp18;}
+.spark[data-el="portico-sparkline"]>span:nth-child(20){--portico-spark-self:--portico-sp20;--portico-spark-prev:--portico-sp19;}
+.spark[data-el="portico-sparkline"]>span:nth-child(21){--portico-spark-self:--portico-sp21;--portico-spark-prev:--portico-sp20;}
+.spark[data-el="portico-sparkline"]>span:nth-child(22){--portico-spark-self:--portico-sp22;--portico-spark-prev:--portico-sp21;}
+.spark[data-el="portico-sparkline"]>span:nth-child(23){--portico-spark-self:--portico-sp23;--portico-spark-prev:--portico-sp22;}
+.spark[data-el="portico-sparkline"]>span:nth-child(24){--portico-spark-self:--portico-sp24;--portico-spark-prev:--portico-sp23;}
+.spark[data-el="portico-sparkline"].bars>span{align-self:end;width:72%;height:calc(var(--portico-spark-height)*var(--v)/var(--max));margin-top:0;margin-bottom:var(--portico-spark-foot);border-radius:0}
+.spark[data-el="portico-sparkline"].bars>span::after{content:none}
+.spark[data-el="portico-sparkline"]{--portico-spark-point:4px;background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%);border-bottom:1px solid var(--n-4)}
+.spark[data-el="portico-sparkline"]>span{border-radius:0}
+.spark[data-el="portico-sparkline"].bars>span{width:66.8%}
+.spark[data-el="portico-sparkline"].up{--portico-spark-color:var(--good)}
+.spark[data-el="portico-sparkline"].down{--portico-spark-color:var(--bad)}

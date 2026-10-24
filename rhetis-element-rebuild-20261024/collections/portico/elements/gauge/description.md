@@ -1,0 +1,1 @@
+A sand-role rectangular track, square primary fill and thin divider establish a measured compartment. The figure uses the deck display face, while the name keeps its strong body hierarchy. This progress element is inferred from replica 11; there is no source gauge instance. Names and figures remain visible at the declared minimum.

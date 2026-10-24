@@ -1,0 +1,35 @@
+/* Absent matrix contract; replica05 supplies 235×52tab,779×209white field,16/21corners,28/16.1hierarchy.
+   Quadrants and SWOT preserve that measured face and type grammar. */
+.matrix[data-el="tide-tab-matrix"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:8% repeat(2,minmax(0,1fr));grid-template-rows:8% repeat(2,minmax(0,1fr)) 8%;gap:1.2cqh 1cqw;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.matrix[data-el="tide-tab-matrix"]>.axis-x{grid-column:2 / 4;grid-row:4;display:flex;align-items:center;justify-content:space-around;min-width:0;min-height:0}
+.matrix[data-el="tide-tab-matrix"]>.axis-y{grid-column:1;grid-row:2 / 4;display:flex;flex-direction:column-reverse;justify-content:space-around;min-width:0;min-height:0}
+.matrix[data-el="tide-tab-matrix"]>.axis-x>span,.matrix[data-el="tide-tab-matrix"]>.axis-y>span{box-sizing:border-box;margin:0;max-width:100%;padding:.15em;text-align:center;font-size:clamp(var(--type-12),calc(min(100cqw*.017,100cqh*.04)),var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="tide-tab-matrix"]>.cell{box-sizing:border-box;position:relative;display:grid;grid-template-rows:auto auto;align-content:center;gap:3cqh;min-width:0;min-height:0;padding:6%;container-type:size;isolation:isolate}
+.matrix[data-el="tide-tab-matrix"]>.cell:nth-child(1 of .cell){grid-column:2;grid-row:2}
+.matrix[data-el="tide-tab-matrix"]>.cell:nth-child(2 of .cell){grid-column:3;grid-row:2}
+.matrix[data-el="tide-tab-matrix"]>.cell:nth-child(3 of .cell){grid-column:2;grid-row:3}
+.matrix[data-el="tide-tab-matrix"]>.cell:nth-child(4 of .cell){grid-column:3;grid-row:3}
+.matrix[data-el="tide-tab-matrix"]>.cell::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--n-1);pointer-events:none}
+.matrix[data-el="tide-tab-matrix"]>.cell>.name{box-sizing:border-box;position:relative;display:block;min-width:0;margin:0;font-size:clamp(var(--type-14),calc(min(100cqw*.085,100cqh*.16)),var(--type-32));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="tide-tab-matrix"]>.cell>.note{box-sizing:border-box;position:relative;display:block;min-width:0;margin:0;font-size:clamp(var(--type-12),calc(min(100cqw*.055,100cqh*.1)),var(--type-22));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="tide-tab-matrix"]>.cell.on::before{background:var(--a1)}
+.matrix[data-el="tide-tab-matrix"]>.cell.on{color:var(--a1-on)}
+.matrix[data-el="tide-tab-matrix"].swot{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}
+.matrix[data-el="tide-tab-matrix"].swot>.cell{grid-template-rows:auto auto minmax(0,1fr);align-content:stretch;gap:1cqh;padding:3%;}
+.matrix[data-el="tide-tab-matrix"].swot>.cell:nth-child(1 of .cell){grid-column:1;grid-row:1}
+.matrix[data-el="tide-tab-matrix"].swot>.cell:nth-child(2 of .cell){grid-column:2;grid-row:1}
+.matrix[data-el="tide-tab-matrix"].swot>.cell:nth-child(3 of .cell){grid-column:1;grid-row:2}
+.matrix[data-el="tide-tab-matrix"].swot>.cell:nth-child(4 of .cell){grid-column:2;grid-row:2}
+.matrix[data-el="tide-tab-matrix"].swot>.cell>.kick{display:block;min-width:0;margin:0;font-size:clamp(var(--type-16),calc(min(100cqw*.1,100cqh*.14)),var(--type-36));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.matrix[data-el="tide-tab-matrix"].swot>.cell>.name{font-size:clamp(var(--type-14),calc(min(100cqw*.065,100cqh*.1)),var(--type-24))}
+.matrix[data-el="tide-tab-matrix"].swot>.cell>.list{box-sizing:border-box;grid-column:1;grid-row:3;min-width:0;min-height:0;width:100%;height:100%;margin:0}
+.matrix[data-el="tide-tab-matrix"]{background:var(--a1-1-soft)}
+.matrix[data-el="tide-tab-matrix"]>.cell{padding:0;gap:0;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);align-content:stretch}
+.matrix[data-el="tide-tab-matrix"]>.cell::before{grid-column:1;grid-row:2;inset:0;border-radius:0 min(var(--radius),8cqw) min(var(--radius),8cqw) min(var(--radius),8cqw)}
+.matrix[data-el="tide-tab-matrix"]>.cell>.name{width:fit-content;min-width:30.1669%;max-width:100%;padding:.25em .7em;background:var(--a1);color:var(--a1-on);border-radius:min(var(--radius),6cqw) min(var(--radius),6cqw) 0 0;font-size:clamp(var(--type-14),calc(min(100cqw*.09,100cqh*.15)),var(--type-32))}
+.matrix[data-el="tide-tab-matrix"]>.cell>.note{align-self:center;padding:1em 7%;font-size:clamp(var(--type-12),calc(min(100cqw*.052,100cqh*.086)),var(--type-22))}
+.matrix[data-el="tide-tab-matrix"]>.cell.on::before{background:var(--a1-2-soft)}
+.matrix[data-el="tide-tab-matrix"]>.cell.on{color:var(--ink)}
+.matrix[data-el="tide-tab-matrix"].swot>.cell{padding:3%;gap:1cqh}
+.matrix[data-el="tide-tab-matrix"].swot>.cell>.name{padding:.2em .6em}
+.matrix[data-el="tide-tab-matrix"].swot>.cell::before{grid-row:3}

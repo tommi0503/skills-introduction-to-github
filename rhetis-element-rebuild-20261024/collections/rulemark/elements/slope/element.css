@@ -1,0 +1,50 @@
+/* Slope pairs are absent from replica; inferred from replica12:monochrome square plot marks, straight1px rules and one strong emphasis.
+   Each owned pair connects its actual before/after values; dumbbells retain a full named row. */
+.slope[data-el="rulemark-slope"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--rulemark-slope-count:2;--rulemark-slope-left:max(100px,min(30cqw,300px));--rulemark-slope-right:max(40px,6cqw);--rulemark-slope-width:calc(100cqw - var(--rulemark-slope-left) - var(--rulemark-slope-right));--rulemark-slope-head:max(48px,10cqh);--rulemark-slope-foot:max(24px,5cqh);--rulemark-slope-height:calc(100cqh - var(--rulemark-slope-head) - var(--rulemark-slope-foot));--rulemark-slope-point:5px;--rulemark-slope-stroke:var(--stroke)}
+.slope[data-el="rulemark-slope"]:has(>.pair:nth-child(2 of .pair):last-child){--rulemark-slope-count:2}
+.slope[data-el="rulemark-slope"]:has(>.pair:nth-child(3 of .pair):last-child){--rulemark-slope-count:3}
+.slope[data-el="rulemark-slope"]:has(>.pair:nth-child(4 of .pair):last-child){--rulemark-slope-count:4}
+.slope[data-el="rulemark-slope"]:has(>.pair:nth-child(5 of .pair):last-child){--rulemark-slope-count:5}
+.slope[data-el="rulemark-slope"]:has(>.pair:nth-child(6 of .pair):last-child){--rulemark-slope-count:6}
+.slope[data-el="rulemark-slope"]:has(>.pair:nth-child(7 of .pair):last-child){--rulemark-slope-count:7}
+.slope[data-el="rulemark-slope"]:has(>.pair:nth-child(8 of .pair):last-child){--rulemark-slope-count:8}
+.slope[data-el="rulemark-slope"]::before,.slope[data-el="rulemark-slope"]::after{content:"";position:absolute;top:var(--rulemark-slope-head);bottom:var(--rulemark-slope-foot);width:1px;background:var(--n-3);pointer-events:none}
+.slope[data-el="rulemark-slope"]::before{left:var(--rulemark-slope-left)}
+.slope[data-el="rulemark-slope"]::after{right:var(--rulemark-slope-right)}
+.slope[data-el="rulemark-slope"]>.heads{position:static}
+.slope[data-el="rulemark-slope"]>.heads>span{box-sizing:border-box;position:absolute;top:var(--gap-sm);margin:0;font-size:clamp(var(--type-12),calc(min(3cqw,4cqh)),var(--type-20));font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;text-align:center;color:var(--ink)}
+.slope[data-el="rulemark-slope"]>.heads>span:first-child{left:var(--rulemark-slope-left);transform:translateX(-50%)}
+.slope[data-el="rulemark-slope"]>.heads>span:last-child{right:var(--rulemark-slope-right);transform:translateX(50%)}
+.slope[data-el="rulemark-slope"]>.pair{position:static;--rulemark-slope-color:var(--n-5);--rulemark-slope-y-a:calc(var(--rulemark-slope-head) + var(--rulemark-slope-height)*(1 - var(--a)/var(--max)));--rulemark-slope-y-b:calc(var(--rulemark-slope-head) + var(--rulemark-slope-height)*(1 - var(--b)/var(--max)))}
+.slope[data-el="rulemark-slope"]>.pair.on{--rulemark-slope-color:var(--a1);--rulemark-slope-stroke:calc(var(--stroke)*2)}
+.slope[data-el="rulemark-slope"]>.pair::before{content:"";position:absolute;z-index:-1;left:var(--rulemark-slope-left);right:var(--rulemark-slope-right);top:0;height:100%;background:var(--rulemark-slope-color);clip-path:polygon(0 calc(var(--rulemark-slope-y-a) - var(--rulemark-slope-stroke)/2),100% calc(var(--rulemark-slope-y-b) - var(--rulemark-slope-stroke)/2),100% calc(var(--rulemark-slope-y-b) + var(--rulemark-slope-stroke)/2),0 calc(var(--rulemark-slope-y-a) + var(--rulemark-slope-stroke)/2));pointer-events:none}
+.slope[data-el="rulemark-slope"]>.pair::after{content:"";box-sizing:border-box;position:absolute;left:calc(var(--rulemark-slope-left) - var(--rulemark-slope-point)/2);top:calc(var(--rulemark-slope-y-a) - var(--rulemark-slope-point)/2);width:var(--rulemark-slope-point);height:var(--rulemark-slope-point);background:var(--rulemark-slope-color);box-shadow:var(--rulemark-slope-width) calc(var(--rulemark-slope-y-b) - var(--rulemark-slope-y-a)) 0 0 var(--rulemark-slope-color);pointer-events:none}
+.slope[data-el="rulemark-slope"]>.pair>.name{box-sizing:border-box;position:absolute;left:var(--gap-sm);top:var(--rulemark-slope-y-a);transform:translateY(-50%);width:calc(var(--rulemark-slope-left) - max(48px,5cqw) - var(--gap-sm));margin:0;font-size:clamp(var(--type-12),calc(min(3cqw,4cqh)),var(--type-20));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.slope[data-el="rulemark-slope"]>.pair>b{box-sizing:border-box;position:absolute;margin:0;padding:0 2px;background:var(--page);font-size:clamp(var(--type-12),calc(min(3cqw,4cqh)),var(--type-24));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink)}
+.slope[data-el="rulemark-slope"]>.pair>b.a{left:calc(var(--rulemark-slope-left) - var(--gap-sm));top:var(--rulemark-slope-y-a);transform:translate(-100%,-50%)}
+.slope[data-el="rulemark-slope"]>.pair>b.b{left:calc(100cqw - var(--rulemark-slope-right) + var(--gap-sm));top:var(--rulemark-slope-y-b);transform:translateY(-50%)}
+.slope[data-el="rulemark-slope"]>.pair.on>.name,.slope[data-el="rulemark-slope"]>.pair.on>b{font-weight:var(--name-weight)}
+.slope[data-el="rulemark-slope"]>.pair.on{--rulemark-slope-color:var(--ink);--rulemark-slope-point:7px}
+.slope[data-el="rulemark-slope"]>.heads>span{border-bottom:1px solid var(--ink);padding-bottom:var(--gap-sm)}
+.slope[data-el="rulemark-slope"].dumbbell{--rulemark-slope-left:max(140px,min(40cqw,360px));display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:calc(var(--gap-sm)*5) repeat(var(--rulemark-slope-count),minmax(0,1fr))}
+.slope[data-el="rulemark-slope"].dumbbell::before,.slope[data-el="rulemark-slope"].dumbbell::after{content:none}
+.slope[data-el="rulemark-slope"].dumbbell>.heads{position:relative;grid-row:1}
+.slope[data-el="rulemark-slope"].dumbbell>.pair{position:relative;min-width:0;min-height:0;--rulemark-slope-dx:calc(var(--rulemark-slope-width)*(var(--b) - var(--a))/var(--max))}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(1 of .pair){grid-row:2}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(2 of .pair){grid-row:3}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(3 of .pair){grid-row:4}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(4 of .pair){grid-row:5}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(5 of .pair){grid-row:6}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(6 of .pair){grid-row:7}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(7 of .pair){grid-row:8}
+.slope[data-el="rulemark-slope"].dumbbell>.pair:nth-child(8 of .pair){grid-row:9}
+.slope[data-el="rulemark-slope"].dumbbell>.pair::before{left:calc(var(--rulemark-slope-left) + var(--rulemark-slope-width)*min(var(--a),var(--b))/var(--max));right:auto;top:50%;width:calc(var(--rulemark-slope-width)*abs(var(--b) - var(--a))/var(--max));height:var(--rulemark-slope-stroke);transform:translateY(-50%);clip-path:none}
+.slope[data-el="rulemark-slope"].dumbbell>.pair::after{left:calc(var(--rulemark-slope-left) + var(--rulemark-slope-width)*var(--a)/var(--max) - var(--rulemark-slope-point)/2);top:calc(50% - var(--rulemark-slope-point)/2);background:var(--page);border:1px solid var(--rulemark-slope-color);box-shadow:var(--rulemark-slope-dx) 0 0 0 var(--rulemark-slope-color)}
+.slope[data-el="rulemark-slope"].dumbbell>.heads>span:first-child{transform:none}
+.slope[data-el="rulemark-slope"].dumbbell>.heads>span:last-child{transform:none}
+.slope[data-el="rulemark-slope"].dumbbell>.heads>span::before{content:"";box-sizing:border-box;display:inline-block;width:7px;height:7px;margin-right:4px;border:1px solid var(--ink);vertical-align:middle;background:var(--page)}
+.slope[data-el="rulemark-slope"].dumbbell>.heads>span:last-child::before{background:var(--ink)}
+.slope[data-el="rulemark-slope"].dumbbell>.pair>.name{top:50%}
+.slope[data-el="rulemark-slope"].dumbbell>.pair>b.a{left:calc(var(--rulemark-slope-left) + var(--rulemark-slope-width)*var(--a)/var(--max));top:calc(50% - var(--rulemark-slope-point)/2 - var(--gap-sm));transform:translate(-50%,-100%)}
+.slope[data-el="rulemark-slope"].dumbbell>.pair>b.b{left:calc(var(--rulemark-slope-left) + var(--rulemark-slope-width)*var(--b)/var(--max));top:calc(50% + var(--rulemark-slope-point)/2 + var(--gap-sm));transform:translateX(-50%)}
+@container(max-width:550px){.slope[data-el="rulemark-slope"]>.heads>span,.slope[data-el="rulemark-slope"]>.pair>.name,.slope[data-el="rulemark-slope"]>.pair>b{font-size:var(--type-12)}}

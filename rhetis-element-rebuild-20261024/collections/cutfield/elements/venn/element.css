@@ -1,0 +1,18 @@
+/* Absent from replica:05/10's broad square planes,28-of269 lower-right chamfer and left-aligned18px labels form overlapping sets.
+   Real translucent intersections preserve set semantics while keeping the deck's sharp geometry. */
+.venn[data-el="cutfield-venn"]{position:relative;isolation:isolate;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--cutfield-venn-u:min(calc(100cqw / 720),calc(100cqh / 600),1px);--cutfield-venn-x:calc(50cqw - 360 * var(--cutfield-venn-u));--cutfield-venn-y:calc(50cqh - 300 * var(--cutfield-venn-u));--cutfield-venn-sy:140}
+.venn[data-el="cutfield-venn"] *,.venn[data-el="cutfield-venn"] *::before,.venn[data-el="cutfield-venn"] *::after{box-sizing:border-box;min-width:0}
+.venn[data-el="cutfield-venn"]>.set{position:absolute;isolation:isolate;left:calc(var(--cutfield-venn-x) + 80 * var(--cutfield-venn-u));top:calc(var(--cutfield-venn-y) + var(--cutfield-venn-sy) * var(--cutfield-venn-u));width:calc(320 * var(--cutfield-venn-u));height:calc(320 * var(--cutfield-venn-u));--cutfield-venn-face:var(--n-3)}
+.venn[data-el="cutfield-venn"]>.set::before{content:"";position:absolute;z-index:-1;inset:0;background:color-mix(in srgb,var(--cutfield-venn-face) 74%,transparent);clip-path:polygon(0 0,100% 0,100% 89.5911%,89.5911% 100%,0 100%)}
+.venn[data-el="cutfield-venn"]>.set:nth-child(2){left:calc(var(--cutfield-venn-x) + 320 * var(--cutfield-venn-u));--cutfield-venn-face:var(--a2-2-soft)}
+.venn[data-el="cutfield-venn"]>.set.on{--cutfield-venn-face:var(--a1-3-soft)}
+.venn[data-el="cutfield-venn"]>.set>.name{position:absolute;left:calc(28 * var(--cutfield-venn-u));top:calc(130 * var(--cutfield-venn-u));width:calc(180 * var(--cutfield-venn-u));margin:0;font-size:clamp(var(--type-16),calc(18 * var(--cutfield-venn-u)),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);text-align:left;word-break:keep-all;overflow-wrap:anywhere}
+.venn[data-el="cutfield-venn"]>.set:nth-child(2)>.name{left:auto;right:calc(28 * var(--cutfield-venn-u))}
+.venn[data-el="cutfield-venn"]>.core{position:absolute;z-index:4;left:calc(var(--cutfield-venn-x) + 330 * var(--cutfield-venn-u));top:calc(var(--cutfield-venn-y) + 270 * var(--cutfield-venn-u));width:calc(60 * var(--cutfield-venn-u));height:calc(60 * var(--cutfield-venn-u));padding:calc(4 * var(--cutfield-venn-u));display:flex;align-items:center;justify-content:center;background:var(--n-1);font-size:var(--type-14);font-weight:var(--name-weight);line-height:var(--name-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere;clip-path:polygon(0 0,100% 0,100% 89.5911%,89.5911% 100%,0 100%)}
+.venn[data-el="cutfield-venn"]:has(>.set:nth-child(3)){--cutfield-venn-sy:20}
+.venn[data-el="cutfield-venn"]:has(>.set:nth-child(3))>.set>.name{top:calc(70 * var(--cutfield-venn-u))}
+.venn[data-el="cutfield-venn"]:has(>.set:nth-child(3))>.set:nth-child(3){left:calc(var(--cutfield-venn-x) + 200 * var(--cutfield-venn-u));top:calc(var(--cutfield-venn-y) + 260 * var(--cutfield-venn-u));--cutfield-venn-face:var(--a1-2-soft)}
+.venn[data-el="cutfield-venn"]:has(>.set:nth-child(3))>.set:nth-child(3)>.name{left:calc(28 * var(--cutfield-venn-u));right:auto;top:calc(230 * var(--cutfield-venn-u));width:calc(264 * var(--cutfield-venn-u))}
+.venn[data-el="cutfield-venn"]:has(>.set:nth-child(3))>.core{left:calc(var(--cutfield-venn-x) + 320 * var(--cutfield-venn-u));top:calc(var(--cutfield-venn-y) + 260 * var(--cutfield-venn-u))}
+.venn[data-el="cutfield-venn"]:has(>.set:nth-child(3))>.set.on{--cutfield-venn-face:var(--a1-4-soft)}
+@container(max-width:650px){.venn[data-el="cutfield-venn"]>.set>.name{font-size:var(--type-16)}}

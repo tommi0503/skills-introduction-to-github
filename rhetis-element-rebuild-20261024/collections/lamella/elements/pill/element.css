@@ -1,0 +1,75 @@
+/* Inferred pill; no expressible source instance.
+   Measured deck primitives: 03 leaf217×30 cap,opposite30px corners andfine vertical rail;22 portrait217px profile. */
+.pill[data-el="lamella-pill"] {
+  container-type: size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+}
+.pill[data-el="lamella-pill"]>.parts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  white-space: nowrap;
+  padding: min(var(--pad),12cqh) var(--pad);
+  background: var(--n-1);
+  color: var(--ink);
+  border-radius: 0 var(--radius) 0 var(--radius);
+}
+.pill[data-el="lamella-pill"] .parts>:where(.name,.note,.mark) {
+  margin: 0;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.pill[data-el="lamella-pill"] .name {
+  font-size: clamp(var(--type-14),calc(min(3cqw,22cqh)),var(--type-32));
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  white-space: nowrap;
+  flex-shrink: 0;
+  overflow-wrap: normal;
+}
+.pill[data-el="lamella-pill"] .note {
+  font-size: var(--type-12);
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  white-space: nowrap;
+  flex-shrink: 0;
+  overflow-wrap: normal;
+}
+.pill[data-el="lamella-pill"] .mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: min(10cqw,40cqh,40px);
+  aspect-ratio: 1;
+  border: var(--stroke) solid currentColor;
+  font-size: var(--type-16);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+}
+.pill[data-el="lamella-pill"] .mark>.icon,.pill[data-el="lamella-pill"] .mark>.seat {
+  width: 56%;
+  height: 56%;
+}
+.pill[data-el="lamella-pill"].on>.parts {
+  background: var(--a1);
+  color: var(--a1-on);
+}
+.pill[data-el="lamella-pill"].quiet>.parts {
+  background: var(--n-2);
+}
+.pill[data-el="lamella-pill"].line>.parts {
+  background: transparent;
+  border: var(--stroke) solid var(--n-5);
+}

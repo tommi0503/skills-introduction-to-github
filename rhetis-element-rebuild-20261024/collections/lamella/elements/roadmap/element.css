@@ -1,0 +1,32 @@
+/* Replica19:1162×450 roadmap,33px heads,166px owners,4×104px lanes and3stacked21px bars.
+   Month subdivisions and single rounded upper-right corners belong to this complete duration element. */
+.roadmap[data-el="lamella-roadmap"]{position:relative;box-sizing:border-box;display:grid;grid-template-rows:7.333333% repeat(var(--lamella-roadmap-lanes),minmax(0,1fr));width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body)}
+.roadmap[data-el="lamella-roadmap"]:has(>.lane:nth-child(3):last-child){--lamella-roadmap-lanes:2}
+.roadmap[data-el="lamella-roadmap"]:has(>.lane:nth-child(4):last-child){--lamella-roadmap-lanes:3}
+.roadmap[data-el="lamella-roadmap"]:has(>.lane:nth-child(6):last-child){--lamella-roadmap-lanes:5}
+.roadmap[data-el="lamella-roadmap"]:has(>.lane:nth-child(7):last-child){--lamella-roadmap-lanes:6}
+.roadmap[data-el="lamella-roadmap"]>.heads{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));margin-inline-start:14.285714%;min-width:0;align-items:center;text-align:center;font-size:clamp(var(--type-10),calc(100cqh * .026666667),var(--type-18));font-weight:var(--body-weight);line-height:var(--name-line);letter-spacing:calc(var(--body-track) * 0)}
+.roadmap[data-el="lamella-roadmap"]>.heads::after{content:"";position:absolute;z-index:2;left:0;right:0;top:7.333333%;border-top:calc(var(--stroke)*.7) solid var(--n-5);pointer-events:none}
+.roadmap[data-el="lamella-roadmap"]>.heads>span{min-width:0;overflow-wrap:anywhere}
+.roadmap[data-el="lamella-roadmap"]>.lane{position:relative;display:grid;grid-template-columns:14.285714% minmax(0,1fr);grid-template-rows:repeat(var(--lamella-roadmap-bars),minmax(0,1fr));row-gap:calc(100cqh * .926666667 / var(--lamella-roadmap-lanes) * .086538462);padding-block-start:calc(100cqh * .926666667 / var(--lamella-roadmap-lanes) * .115384615);padding-block-end:calc(100cqh * .926666667 / var(--lamella-roadmap-lanes) * .105769231);border-bottom:calc(var(--stroke) * .7) solid var(--n-5);min-width:0;min-height:0}
+.roadmap[data-el="lamella-roadmap"]>.lane::before{content:"";position:absolute;inset:0 0 0 14.285714%;background:repeating-linear-gradient(90deg,var(--n-5) 0,var(--n-5) calc(var(--stroke) * .7),transparent calc(var(--stroke) * .7),transparent calc(100% / (var(--cols) * 3)));border-inline-end:calc(var(--stroke) * .7) solid var(--n-5);pointer-events:none}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.bar){--lamella-roadmap-bars:1}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.bar:nth-child(2 of .bar)){--lamella-roadmap-bars:2}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.bar:nth-child(3 of .bar)){--lamella-roadmap-bars:3}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.bar:nth-child(4 of .bar)){--lamella-roadmap-bars:4}
+.roadmap[data-el="lamella-roadmap"]>.lane>.name{position:absolute;z-index:1;inset:0 auto 0 0;width:14.285714%;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;padding:.516351cqw;background:var(--a1-2-soft);color:var(--ink);font-size:clamp(var(--type-12),calc(100cqh * .031111111),var(--type-24));font-weight:calc(var(--label-weight) * .833333);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.roadmap[data-el="lamella-roadmap"]>.lane>.bar{position:relative;z-index:1;box-sizing:border-box;grid-column:2;min-width:0;min-height:0;align-self:center;height:100%;max-height:calc(100cqh * .926666667 / var(--lamella-roadmap-lanes) * .201923077);width:calc((var(--to) - var(--from)) / var(--cols) * 100%);margin-inline-start:calc(var(--from) / var(--cols) * 100%);display:flex;align-items:center;justify-content:center;padding:0 .516351cqw;background:var(--a1-2-soft);color:var(--ink);border-radius:0 calc(100cqh * .926666667 / var(--lamella-roadmap-lanes) * .230769231) 0 0;font-size:clamp(var(--type-10),calc(100cqh * .024444444),var(--type-18));font-weight:calc(var(--label-weight) * .833333);line-height:calc(var(--body-line) * .827586207);letter-spacing:calc(var(--body-track) * 1.090909);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.roadmap[data-el="lamella-roadmap"]>.lane>.bar>span{min-width:0;max-width:100%}
+.roadmap[data-el="lamella-roadmap"]>.lane>.bar.tone-1{background:var(--a1-2-soft);color:var(--ink)}
+.roadmap[data-el="lamella-roadmap"]>.lane>.bar.tone-2{background:var(--a1-4-soft);color:var(--ink)}
+.roadmap[data-el="lamella-roadmap"]>.lane>.bar.tone-3{background:var(--a1);color:var(--a1-on)}
+.roadmap[data-el="lamella-roadmap"]>.lane>.bar.tone-4{background:var(--a2);color:var(--a2-on)}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.bar.tone-2)>.name{background:var(--a1-4-soft);color:var(--ink)}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.bar.tone-3)>.name{background:var(--a1);color:var(--a1-on)}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.bar.tone-4)>.name{background:var(--a2);color:var(--a2-on)}
+.roadmap[data-el="lamella-roadmap"]>.lane>.bar.on{background:var(--a1);color:var(--a1-on);box-shadow:inset 0 0 0 calc(var(--stroke) * 2) var(--ink)}
+.roadmap[data-el="lamella-roadmap"]>.lane:has(>.mile){padding-block-end:calc(100cqh * .926666667 / var(--lamella-roadmap-lanes) * .24)}
+.roadmap[data-el="lamella-roadmap"]>.lane>.mile{position:absolute;z-index:2;left:calc(14.285714% + var(--at) / var(--cols) * 85.714286%);bottom:0;height:20%;border-inline-start:var(--stroke) solid var(--n-5);font-size:var(--type-10);line-height:var(--name-line);font-weight:var(--body-weight);letter-spacing:var(--body-track);color:var(--ink)}
+.roadmap[data-el="lamella-roadmap"]>.lane>.mile::before{content:"";position:absolute;top:0;left:0;width:.516351cqw;height:.516351cqw;min-width:var(--stroke);min-height:var(--stroke);transform:translate(-50%,-50%);border-radius:50%;background:var(--ink)}
+.roadmap[data-el="lamella-roadmap"]>.lane>.mile>span{position:absolute;bottom:0;left:0;transform:translateX(-50%);background:var(--page);padding:.12cqh .3cqw;white-space:nowrap}
+@container(max-width:900px){.roadmap[data-el="lamella-roadmap"]>.lane>.bar{font-size:var(--type-10)}.roadmap[data-el="lamella-roadmap"]>.lane>.name{font-size:var(--type-12)}}

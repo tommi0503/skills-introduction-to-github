@@ -1,0 +1,51 @@
+/* No bare bar source instance; inferred from replica04:43px bars on52px pitch, fine axes and13px650 value labels; grouped chart remains a gap.
+   Normalized single-series bars retain slot-independent labels and a full member-owned plot. */
+.bars[data-el="cutfield-chart-bar"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;padding:0 var(--gap-sm);container-type:size;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);font-family:var(--font-body);color:var(--ink);--cutfield-bar-count:2;--cutfield-bar-head:max(38px,9cqh);--cutfield-bar-foot:max(44px,12cqh);--cutfield-bar-plot:calc(100cqh - var(--cutfield-bar-head) - var(--cutfield-bar-foot));--cutfield-bar-width:65%;--cutfield-bar-row:min(50px,calc(70cqh/var(--cutfield-bar-count)));--cutfield-bar-name:min(32cqw,300px);--cutfield-bar-end:max(48px,8cqw);--cutfield-bar-hplot:calc(100cqw - var(--cutfield-bar-name) - var(--cutfield-bar-end) - var(--gap-sm)*2)}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(1):last-child){--cutfield-bar-count:1}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(2):last-child){--cutfield-bar-count:2}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(3):last-child){--cutfield-bar-count:3}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(4):last-child){--cutfield-bar-count:4}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(5):last-child){--cutfield-bar-count:5}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(6):last-child){--cutfield-bar-count:6}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(7):last-child){--cutfield-bar-count:7}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(8):last-child){--cutfield-bar-count:8}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(9):last-child){--cutfield-bar-count:9}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(10):last-child){--cutfield-bar-count:10}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(11):last-child){--cutfield-bar-count:11}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(12):last-child){--cutfield-bar-count:12}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(13):last-child){--cutfield-bar-count:13}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(14):last-child){--cutfield-bar-count:14}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(15):last-child){--cutfield-bar-count:15}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(16):last-child){--cutfield-bar-count:16}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(17):last-child){--cutfield-bar-count:17}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(18):last-child){--cutfield-bar-count:18}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(19):last-child){--cutfield-bar-count:19}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(20):last-child){--cutfield-bar-count:20}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(21):last-child){--cutfield-bar-count:21}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(22):last-child){--cutfield-bar-count:22}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(23):last-child){--cutfield-bar-count:23}
+.bars[data-el="cutfield-chart-bar"]:has(>.bar:nth-child(24):last-child){--cutfield-bar-count:24}
+.bars[data-el="cutfield-chart-bar"]::before{content:"";position:absolute;z-index:-2;left:var(--gap-sm);right:var(--gap-sm);top:var(--cutfield-bar-head);bottom:var(--cutfield-bar-foot);border-left:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4);pointer-events:none}
+.bars[data-el="cutfield-chart-bar"]>.bar{box-sizing:border-box;position:relative;min-width:0;height:100%;--cutfield-bar-color:var(--n-3)}
+.bars[data-el="cutfield-chart-bar"]>.bar::before{content:"";box-sizing:border-box;position:absolute;left:50%;bottom:var(--cutfield-bar-foot);transform:translateX(-50%);width:var(--cutfield-bar-width);height:max(1px,calc(var(--cutfield-bar-plot)*var(--v)/var(--max)));background:var(--cutfield-bar-color);pointer-events:none}
+.bars[data-el="cutfield-chart-bar"]>.bar>b{box-sizing:border-box;position:absolute;left:50%;bottom:calc(var(--cutfield-bar-foot) + var(--cutfield-bar-plot)*var(--v)/var(--max) + var(--gap-sm));transform:translateX(-50%);margin:0;padding:0 2px;max-width:none;background:var(--page);font-size:clamp(var(--type-12),calc(min(4cqh,70cqw/var(--cutfield-bar-count))),var(--type-24));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink)}
+.bars[data-el="cutfield-chart-bar"]>.bar>b:empty{display:none}
+.bars[data-el="cutfield-chart-bar"]>.bar>span{box-sizing:border-box;position:absolute;top:calc(100cqh - var(--cutfield-bar-foot) + var(--gap-sm));left:50%;transform:translateX(-50%);margin:0;width:max-content;font-size:clamp(var(--type-12),calc(min(2.8cqh,12cqw/var(--cutfield-bar-count))),var(--type-16));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;text-align:center;color:var(--ink)}
+.bars[data-el="cutfield-chart-bar"]>.bar.on{--cutfield-bar-color:var(--a1)}
+.bars[data-el="cutfield-chart-bar"]>.bar.on>b{font-weight:var(--name-weight)}
+.bars[data-el="cutfield-chart-bar"]>.bar.tone-1{--cutfield-bar-color:var(--a1-9)}
+.bars[data-el="cutfield-chart-bar"]>.bar.tone-2{--cutfield-bar-color:var(--a2)}
+.bars[data-el="cutfield-chart-bar"]>.bar.tone-3{--cutfield-bar-color:var(--a1)}
+.bars[data-el="cutfield-chart-bar"]>.bar.tone-4{--cutfield-bar-color:var(--n-8)}
+.bars[data-el="cutfield-chart-bar"]>.bar.tone-5{--cutfield-bar-color:var(--n-5)}
+.bars[data-el="cutfield-chart-bar"]{--cutfield-bar-width:82.69230769%}
+.bars[data-el="cutfield-chart-bar"]>.bar{--cutfield-bar-color:var(--a1-9)}
+.bars[data-el="cutfield-chart-bar"]>.bar>b{font-weight:calc(var(--body-weight)*1.625)}
+.bars[data-el="cutfield-chart-bar"]>.bar.on{--cutfield-bar-color:var(--a1)}
+.bars[data-el="cutfield-chart-bar"].h{grid-auto-flow:row;grid-template-columns:minmax(0,1fr);grid-auto-rows:minmax(0,1fr)}
+.bars[data-el="cutfield-chart-bar"].h::before{left:calc(var(--cutfield-bar-name) + var(--gap-sm));right:var(--cutfield-bar-end);top:var(--gap-sm);bottom:var(--gap-sm);border-bottom:0;background:none}
+.bars[data-el="cutfield-chart-bar"].h>.bar::before{left:var(--cutfield-bar-name);bottom:auto;top:50%;transform:translateY(-50%);width:max(1px,calc(var(--cutfield-bar-hplot)*var(--v)/var(--max)));height:var(--cutfield-bar-row);border-radius:0}
+.bars[data-el="cutfield-chart-bar"].h>.bar>b{left:calc(var(--cutfield-bar-name) + var(--cutfield-bar-hplot)*var(--v)/var(--max) + 4px);top:50%;bottom:auto;transform:translateY(-50%);font-size:clamp(var(--type-12),calc(min(3cqw,35cqh/var(--cutfield-bar-count))),var(--type-24))}
+.bars[data-el="cutfield-chart-bar"].h>.bar>span{left:0;top:50%;transform:translateY(-50%);width:calc(var(--cutfield-bar-name) - var(--gap-sm));margin:0;padding:0;border:0;font-size:clamp(var(--type-12),calc(min(3cqw,35cqh/var(--cutfield-bar-count))),var(--type-20));white-space:normal;word-break:keep-all;overflow-wrap:anywhere;text-align:left}
+@container(max-width:700px){.bars[data-el="cutfield-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:not(:nth-child(3n + 1)):not(:last-child)>span,.bars[data-el="cutfield-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:nth-last-child(-n + 3):not(:last-child)>span{display:none}.bars[data-el="cutfield-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:first-child>span{left:0;transform:none;text-align:left}.bars[data-el="cutfield-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:last-child>span{left:auto;right:0;transform:none;text-align:right}}
+@container(max-width:500px){.bars[data-el="cutfield-chart-bar"]>.bar>b,.bars[data-el="cutfield-chart-bar"]>.bar>span,.bars[data-el="cutfield-chart-bar"].h>.bar>b,.bars[data-el="cutfield-chart-bar"].h>.bar>span{font-size:var(--type-12)}}

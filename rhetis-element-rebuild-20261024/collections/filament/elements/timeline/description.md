@@ -1,0 +1,1 @@
+The open dated track uses replica03 information rows and06 light display contrast. A continuous fine line and hollow points retain the unfilled01/08 outline grammar. Dates stay light while names stay bold. Named alternating and downward variants preserve the same hierarchy and connector ownership without adding panels, badges, or shadows.

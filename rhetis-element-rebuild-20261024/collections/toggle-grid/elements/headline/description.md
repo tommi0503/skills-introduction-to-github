@@ -1,0 +1,1 @@
+330×45 outline label,28px centred condensed headline,1px straight border. The heading is transferred as an element, independent of page placement. Ratios follow the source heading box. Emphasis, centred and statement-size variants retain the same typography and material. Small cells tighten gaps and let the heading wrap without losing its name.

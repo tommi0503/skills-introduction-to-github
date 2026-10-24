@@ -1,0 +1,1 @@
+An independently inferred closing sentence on the same white28/268 chamfer plate as replica05. It retains the deck’s left-aligned18/16px hierarchy and restrained dark accent words; optional Lucide symbols use the90:70 source13 symbol proportion. No replica closing-sentence source is claimed.

@@ -1,0 +1,1 @@
+Replica04 provides small square chart keys and plain labels, transcribed from the actual swatch/label geometry. The source contains four20XX keys:7px squares,8px text and34px pitch. The earlier three-category interpretation was a mapping error. Longer labels wrap with no invented badge or card face.

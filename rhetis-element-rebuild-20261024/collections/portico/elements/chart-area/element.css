@@ -1,0 +1,75 @@
+/* No area source instance; inferred from replica09:square plot compartments,1px horizontal rules and strong labels; grouped plot stays a gap.
+   Each complete series owns its equal-step filled wedges and connectors; cumulative bands paint bottom first. */
+.areas[data-el="portico-chart-area"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--portico-area-font:clamp(var(--type-12),calc(2cqh),var(--type-16));--portico-area-left:max(40px,4cqw,calc(var(--portico-area-font)*(.65*(round(down,log(max(1,var(--max)),10)) + 1) + .4)));--portico-area-right:var(--gap-sm);--portico-area-head:max(72px,14cqh);--portico-area-foot:max(32px,6cqh);--portico-area-height:calc(100cqh - var(--portico-area-head) - var(--portico-area-foot));--portico-area-count:1;--portico-area-stroke:var(--stroke);--portico-area-point:4px;--portico-area-grid:var(--n-3);--portico-area-alpha:25%;--portico-area-text:var(--ink)}
+.areas[data-el="portico-chart-area"]::before{content:counter(portico-ay5) "\a " counter(portico-ay4) "\a " counter(portico-ay3) "\a " counter(portico-ay2) "\a " counter(portico-ay1);counter-reset:portico-ay5 round(var(--max)) portico-ay4 round(calc(var(--max)*.8)) portico-ay3 round(calc(var(--max)*.6)) portico-ay2 round(calc(var(--max)*.4)) portico-ay1 round(calc(var(--max)*.2));position:absolute;left:var(--gap-sm);top:calc(var(--portico-area-head) - var(--portico-area-height)/10);width:calc(var(--portico-area-left) - var(--gap-sm) - 4px);height:var(--portico-area-height);font-size:clamp(var(--type-12),calc(2cqh),var(--type-16));font-weight:var(--body-weight);line-height:calc(var(--portico-area-height)/5);letter-spacing:var(--label-track);text-align:right;white-space:pre;color:var(--portico-area-text)}
+.areas[data-el="portico-chart-area"]::after{content:"";position:absolute;z-index:-3;left:var(--portico-area-left);right:var(--portico-area-right);top:var(--portico-area-head);bottom:var(--portico-area-foot);border-left:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,var(--portico-area-grid) 0 1px,transparent 1px 20%);pointer-events:none}
+.areas[data-el="portico-chart-area"]>.series{position:absolute;left:var(--portico-area-left);right:var(--portico-area-right);top:0;bottom:var(--portico-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);isolation:isolate;anchor-scope:all;--portico-area-index:0;--portico-area-color:var(--a1)}
+.areas[data-el="portico-chart-area"]>.series>.name{box-sizing:border-box;position:absolute;left:calc(var(--portico-area-index)*(100cqw - var(--portico-area-left) - var(--portico-area-right))/var(--portico-area-count));top:var(--gap-sm);width:calc((100cqw - var(--portico-area-left) - var(--portico-area-right))/var(--portico-area-count));margin:0;padding:0 var(--gap-sm) 0 calc(var(--gap-sm)*1.5);font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--portico-area-text)}
+.areas[data-el="portico-chart-area"]>.series>.name:empty{display:none}
+.areas[data-el="portico-chart-area"]>.series>.name::before{content:"";position:absolute;left:0;top:.45em;width:var(--gap-sm);height:var(--portico-area-stroke);background:var(--portico-area-color)}
+.areas[data-el="portico-chart-area"]>.series>.pt{position:static;align-self:start;justify-self:center;width:var(--portico-area-point);height:var(--portico-area-point);margin-top:calc(var(--portico-area-head) + var(--portico-area-height) - var(--portico-area-value) - var(--portico-area-point)/2);background:var(--portico-area-color);anchor-name:var(--portico-area-self);--portico-area-value:calc(var(--portico-area-height)*var(--v)/var(--max))}
+.areas[data-el="portico-chart-area"]>.series>.pt::before,.areas[data-el="portico-chart-area"]>.series>.pt::after{content:"";position:absolute;left:anchor(var(--portico-area-prev) center);right:anchor(var(--portico-area-self) center);top:calc(anchor(var(--portico-area-prev) center) - var(--portico-area-height));bottom:0;pointer-events:none}
+.areas[data-el="portico-chart-area"]>.series>.pt::before{z-index:-2;left:calc(anchor(var(--portico-area-prev) center) - 1px);right:calc(anchor(var(--portico-area-self) center) - 1px);mix-blend-mode:plus-lighter;background:color-mix(in srgb,var(--portico-area-color) var(--portico-area-alpha),transparent);clip-path:polygon(1px var(--portico-area-height),calc(100% - 1px) calc(100% - var(--portico-area-value)),calc(100% - 1px) 100%,1px 100%)}
+.areas[data-el="portico-chart-area"]>.series>.pt::after{z-index:-1;background:var(--portico-area-color);clip-path:polygon(0 calc(var(--portico-area-height) - var(--portico-area-stroke)/2),100% calc(100% - var(--portico-area-value) - var(--portico-area-stroke)/2),100% calc(100% - var(--portico-area-value) + var(--portico-area-stroke)/2),0 calc(var(--portico-area-height) + var(--portico-area-stroke)/2))}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(1 of .pt)::before,.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(1 of .pt)::after{content:none}
+.areas[data-el="portico-chart-area"]>.series>.pt>b{position:absolute;z-index:20;left:anchor(var(--portico-area-self) center);top:anchor(var(--portico-area-self) center);transform:translate(-50%,calc(-100% - var(--gap-sm)));margin:0;padding:0 2px;background:var(--page);font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--portico-area-text)}
+.areas[data-el="portico-chart-area"]>.axis{box-sizing:border-box;position:absolute;left:var(--portico-area-left);right:var(--portico-area-right);bottom:0;height:var(--portico-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:start;padding-top:var(--gap-sm)}
+.areas[data-el="portico-chart-area"]>.axis>span{box-sizing:border-box;position:relative;width:max-content;justify-self:center;margin:0;font-size:clamp(var(--type-12),calc(2cqh),var(--type-16));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);text-align:center;white-space:nowrap;color:var(--portico-area-text)}
+.areas[data-el="portico-chart-area"]:has(>.series:nth-child(1 of .series):nth-last-child(1 of .series)){--portico-area-count:1}
+.areas[data-el="portico-chart-area"]>.series:nth-child(1 of .series){--portico-area-index:0;--portico-area-color:var(--a1);z-index:1}
+.areas[data-el="portico-chart-area"].stacked>.series:nth-child(1 of .series){z-index:4}
+.areas[data-el="portico-chart-area"]:has(>.series:nth-child(2 of .series):nth-last-child(1 of .series)){--portico-area-count:2}
+.areas[data-el="portico-chart-area"]>.series:nth-child(2 of .series){--portico-area-index:1;--portico-area-color:var(--a2);z-index:2}
+.areas[data-el="portico-chart-area"].stacked>.series:nth-child(2 of .series){z-index:3}
+.areas[data-el="portico-chart-area"]:has(>.series:nth-child(3 of .series):nth-last-child(1 of .series)){--portico-area-count:3}
+.areas[data-el="portico-chart-area"]>.series:nth-child(3 of .series){--portico-area-index:2;--portico-area-color:var(--a3);z-index:3}
+.areas[data-el="portico-chart-area"].stacked>.series:nth-child(3 of .series){z-index:2}
+.areas[data-el="portico-chart-area"]:has(>.series:nth-child(4 of .series):nth-last-child(1 of .series)){--portico-area-count:4}
+.areas[data-el="portico-chart-area"]>.series:nth-child(4 of .series){--portico-area-index:3;--portico-area-color:var(--a4);z-index:4}
+.areas[data-el="portico-chart-area"].stacked>.series:nth-child(4 of .series){z-index:1}
+.areas[data-el="portico-chart-area"]>.series.tone-1{--portico-area-color:var(--a1)}
+.areas[data-el="portico-chart-area"]>.series.tone-2{--portico-area-color:var(--a2)}
+.areas[data-el="portico-chart-area"]>.series.tone-3{--portico-area-color:var(--a3)}
+.areas[data-el="portico-chart-area"]>.series.tone-4{--portico-area-color:var(--a4)}
+.areas[data-el="portico-chart-area"]>.series.tone-5{--portico-area-color:var(--n-5)}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(1 of .pt){--portico-area-self:--portico-ap1;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(2 of .pt){--portico-area-self:--portico-ap2;--portico-area-prev:--portico-ap1;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(3 of .pt){--portico-area-self:--portico-ap3;--portico-area-prev:--portico-ap2;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(4 of .pt){--portico-area-self:--portico-ap4;--portico-area-prev:--portico-ap3;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(5 of .pt){--portico-area-self:--portico-ap5;--portico-area-prev:--portico-ap4;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(6 of .pt){--portico-area-self:--portico-ap6;--portico-area-prev:--portico-ap5;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(7 of .pt){--portico-area-self:--portico-ap7;--portico-area-prev:--portico-ap6;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(8 of .pt){--portico-area-self:--portico-ap8;--portico-area-prev:--portico-ap7;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(9 of .pt){--portico-area-self:--portico-ap9;--portico-area-prev:--portico-ap8;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(10 of .pt){--portico-area-self:--portico-ap10;--portico-area-prev:--portico-ap9;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(11 of .pt){--portico-area-self:--portico-ap11;--portico-area-prev:--portico-ap10;}
+.areas[data-el="portico-chart-area"]>.series>.pt:nth-child(12 of .pt){--portico-area-self:--portico-ap12;--portico-area-prev:--portico-ap11;}
+.areas[data-el="portico-chart-area"]{--portico-area-alpha:30%}
+.areas[data-el="portico-chart-area"]:has(>.series:nth-child(3 of .series)){--portico-area-head:max(96px,18cqh)}
+.areas[data-el="portico-chart-area"]>.series>.name{background:var(--n-3);border-bottom:1px solid var(--n-4);padding-top:var(--gap-sm);padding-bottom:var(--gap-sm);font-weight:var(--name-weight)}
+.areas[data-el="portico-chart-area"]>.series>.name::before{top:calc(var(--gap-sm) + .45em)}
+.areas[data-el="portico-chart-area"].stacked>.series>.pt::before{mix-blend-mode:normal;left:calc(anchor(var(--portico-area-prev) center) - 1px);right:anchor(var(--portico-area-self) center);background:var(--portico-area-color);clip-path:polygon(0 var(--portico-area-height),100% calc(100% - var(--portico-area-value)),100% 100%,0 100%)}
+@container(max-width:700px){.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:not(:nth-child(3n + 1)):not(:last-child),.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:nth-last-child(-n + 3):not(:last-child){display:none}.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:first-child{justify-self:start}.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:last-child{justify-self:end}}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(1){grid-column:1;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(2){grid-column:2;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(3){grid-column:3;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(4){grid-column:4;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(5){grid-column:5;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(6){grid-column:6;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(7){grid-column:7;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(8){grid-column:8;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(9){grid-column:9;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(10){grid-column:10;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(11){grid-column:11;grid-row:1}
+.areas[data-el="portico-chart-area"]>.axis>span:nth-child(12){grid-column:12;grid-row:1}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(3):last-child)>.axis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(4):last-child)>.axis{grid-template-columns:repeat(4,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(5):last-child)>.axis{grid-template-columns:repeat(5,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(6):last-child)>.axis{grid-template-columns:repeat(6,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(7):last-child)>.axis{grid-template-columns:repeat(7,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(8):last-child)>.axis{grid-template-columns:repeat(8,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(9):last-child)>.axis{grid-template-columns:repeat(9,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(10):last-child)>.axis{grid-template-columns:repeat(10,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(11):last-child)>.axis{grid-template-columns:repeat(11,minmax(0,1fr))}
+.areas[data-el="portico-chart-area"]:has(>.axis>span:nth-child(12):last-child)>.axis{grid-template-columns:repeat(12,minmax(0,1fr))}
+@container(max-width:550px){.areas[data-el="portico-chart-area"]>.series>.name,.areas[data-el="portico-chart-area"]>.series>.pt>b,.areas[data-el="portico-chart-area"]>.axis>span{font-size:var(--type-12)}}

@@ -1,0 +1,1 @@
+Two fine rules frame the field; an outlined empty rectangle and a solid ink value create an explicit monochrome measure. The bold figure is placed above the track with a firm category label. This progress element is inferred from replica 11; there is no source gauge instance. Names and figures remain visible at the declared minimum.

@@ -1,0 +1,14 @@
+/* Absent from replica:01/08's very fine flowing curves become open oval stage contours.
+   Page06's light display numerals stay outside the quantitative plot beside bold18-unit labels. */
+.funnel[data-el="filament-funnel"]{position:relative;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--a1-8);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);display:grid;grid-template-rows:repeat(var(--filament-funnel-n),1fr);--filament-funnel-n:3;--filament-funnel-u:min(calc(100cqw / 900),calc(100cqh / 540),1px)}
+.funnel[data-el="filament-funnel"] *,.funnel[data-el="filament-funnel"] *::before{box-sizing:border-box;min-width:0}
+.funnel[data-el="filament-funnel"]>.stage{position:relative;min-width:0;min-height:0}
+.funnel[data-el="filament-funnel"]>.stage::before{content:"";position:absolute;left:calc(27.5cqw - 55cqw * var(--v) / 200);top:20%;width:calc(55cqw * var(--v) / 100);height:60%;border:var(--stroke) solid currentColor;border-radius:50%}
+.funnel[data-el="filament-funnel"]>.stage>.fig{position:absolute;left:60cqw;top:50%;transform:translateY(-50%);width:14cqw;margin:0;font-size:clamp(var(--type-28),calc(56 * var(--filament-funnel-u)),var(--type-56));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap;text-align:left}
+.funnel[data-el="filament-funnel"]>.stage>.name{position:absolute;left:77cqw;top:50%;transform:translateY(-50%);width:22cqw;margin:0;font-size:clamp(var(--type-16),calc(18 * var(--filament-funnel-u)),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.funnel[data-el="filament-funnel"]:has(>.stage:nth-child(3):last-child){--filament-funnel-n:3}
+.funnel[data-el="filament-funnel"]:has(>.stage:nth-child(4):last-child){--filament-funnel-n:4}
+.funnel[data-el="filament-funnel"]:has(>.stage:nth-child(5):last-child){--filament-funnel-n:5}
+.funnel[data-el="filament-funnel"]:has(>.stage:nth-child(6):last-child){--filament-funnel-n:6}
+@container(max-width:650px){.funnel[data-el="filament-funnel"]>.stage>.name{font-size:var(--type-16)}}
+@container(max-width:450px){.funnel[data-el="filament-funnel"]>.stage>.name{left:80cqw;width:19cqw}}

@@ -1,0 +1,32 @@
+/* Absent from replica:01/08's fine curved outlines become branching relationships.
+   Page06's light display root and03's bold18/regular16 text remain unboxed throughout the tree. */
+.org[data-el="filament-hierarchy"]{position:relative;container-type:size;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;color:var(--a1-8);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--filament-hierarchy-n:2;--filament-hierarchy-u:min(calc(100cqw / 880),calc(100cqh / 640),1px);--filament-hierarchy-y:calc(50cqh - 320 * var(--filament-hierarchy-u))}
+.org[data-el="filament-hierarchy"] *,.org[data-el="filament-hierarchy"] *::before,.org[data-el="filament-hierarchy"] *::after{box-sizing:border-box;min-width:0}
+.org[data-el="filament-hierarchy"]>.root{position:absolute;left:calc(50cqw - 150 * var(--filament-hierarchy-u));top:var(--filament-hierarchy-y);width:calc(300 * var(--filament-hierarchy-u));height:calc(100 * var(--filament-hierarchy-u));display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(var(--type-24),calc(40 * var(--filament-hierarchy-u)),var(--type-40));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);word-break:keep-all;overflow-wrap:anywhere}
+.org[data-el="filament-hierarchy"]>.branch{position:absolute;top:calc(var(--filament-hierarchy-y) + 180 * var(--filament-hierarchy-u));left:calc(var(--filament-hierarchy-i) * 100cqw / var(--filament-hierarchy-n));width:calc(100cqw / var(--filament-hierarchy-n));height:calc(440 * var(--filament-hierarchy-u));--filament-hierarchy-i:0;--filament-hierarchy-leaves:1;--filament-hierarchy-dx:calc(50cqw - (var(--filament-hierarchy-i) + .5) * 100cqw / var(--filament-hierarchy-n))}
+.org[data-el="filament-hierarchy"]>.branch::before{content:"";position:absolute;left:50%;top:calc(-80 * var(--filament-hierarchy-u));height:calc(80 * var(--filament-hierarchy-u));width:var(--filament-hierarchy-dx);border-top:var(--stroke) solid currentColor;border-left:var(--stroke) solid currentColor;border-radius:100% 0 0 0}
+.org[data-el="filament-hierarchy"]>.branch::after{content:"";position:absolute;left:15%;top:calc(80 * var(--filament-hierarchy-u));height:calc((52 + (var(--filament-hierarchy-leaves) - 1) * 80) * var(--filament-hierarchy-u));width:35%;border-top:var(--stroke) solid currentColor;border-left:var(--stroke) solid currentColor;border-radius:calc(20 * var(--filament-hierarchy-u)) 0 0 0}
+.org[data-el="filament-hierarchy"]>.branch>.node{height:calc(80 * var(--filament-hierarchy-u));margin:0;padding:calc(8 * var(--filament-hierarchy-u));display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(var(--type-16),calc(18 * var(--filament-hierarchy-u)),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.org[data-el="filament-hierarchy"]>.branch>.leaf{position:relative;display:flex;align-items:center;height:calc(64 * var(--filament-hierarchy-u));margin:calc(16 * var(--filament-hierarchy-u)) 0 0;padding:0 8% 0 30%;font-size:clamp(var(--type-12),calc(16 * var(--filament-hierarchy-u)),var(--type-16));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.org[data-el="filament-hierarchy"]>.branch>.leaf:nth-child(2){margin-top:calc(20 * var(--filament-hierarchy-u))}
+.org[data-el="filament-hierarchy"]>.branch>.leaf::before{content:"";position:absolute;left:15%;top:50%;width:12%;height:var(--stroke);background:currentColor}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(3):last-child){--filament-hierarchy-n:2}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(3):last-child)>.branch:nth-child(2){--filament-hierarchy-i:0}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(3):last-child)>.branch:nth-child(3){--filament-hierarchy-i:1}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(3):last-child)>.branch:nth-child(3)::before{left:auto;right:50%;width:calc(-1 * var(--filament-hierarchy-dx));border-left:0;border-right:var(--stroke) solid currentColor;border-radius:0 100% 0 0}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(4):last-child){--filament-hierarchy-n:3}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(2){--filament-hierarchy-i:0}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(3){--filament-hierarchy-i:1}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(4){--filament-hierarchy-i:2}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(4)::before{left:auto;right:50%;width:calc(-1 * var(--filament-hierarchy-dx));border-left:0;border-right:var(--stroke) solid currentColor;border-radius:0 100% 0 0}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(5):last-child){--filament-hierarchy-n:4}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(2){--filament-hierarchy-i:0}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(3){--filament-hierarchy-i:1}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(4){--filament-hierarchy-i:2}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(4)::before{left:auto;right:50%;width:calc(-1 * var(--filament-hierarchy-dx));border-left:0;border-right:var(--stroke) solid currentColor;border-radius:0 100% 0 0}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(5){--filament-hierarchy-i:3}
+.org[data-el="filament-hierarchy"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(5)::before{left:auto;right:50%;width:calc(-1 * var(--filament-hierarchy-dx));border-left:0;border-right:var(--stroke) solid currentColor;border-radius:0 100% 0 0}
+.org[data-el="filament-hierarchy"]>.branch:has(>.leaf:nth-child(2):last-child){--filament-hierarchy-leaves:1}
+.org[data-el="filament-hierarchy"]>.branch:has(>.leaf:nth-child(3):last-child){--filament-hierarchy-leaves:2}
+.org[data-el="filament-hierarchy"]>.branch:has(>.leaf:nth-child(4):last-child){--filament-hierarchy-leaves:3}
+.org[data-el="filament-hierarchy"]>.branch:has(>.leaf:nth-child(5):last-child){--filament-hierarchy-leaves:4}

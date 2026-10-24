@@ -1,0 +1,1 @@
+Source03/13 measured217-by30 leaf caps and nineteen-unit inset hairlines become parent, branch and open leaf levels. Source16 one-unit matrix lines provide an orthogonal tree rail and branch stems; all links belong to the complete tree. Fourteen-unit regular cap labels and twelve-unit open leaf labels preserve the original light hierarchy without adding heavy panels.

@@ -1,0 +1,5 @@
+# Open key/value table
+
+Replica03 supplies the six-row source: no border, no cell fills, stronger labels, plain values and generous row gaps. The first column has a72/468minimum proportion,or its own longer text,followed by the26/468source gutter. A full-row colspan is a real contact structure whose label column remains intrinsic. Replica08 supplies the same grammar with three rows and a full-width final contact label.
+
+The explicit empty thead is retained. A colspan2 cell spans both columns. Source red text uses accent1 depth8 consistently with the deck. `.pick` increases text emphasis at depth9; `.num` uses tabular figures. Row-count conditions distribute the same typographic rhythm over2–8members. Size caps keep tall narrow cells readable; the source-shaped six-row fixture needs3×3 and the three-row contact fixture needs3×1. No text is hidden. At the exact468×242source box,the base value starts98px from the left. The contact structure keeps its intrinsic label-width offset;at500×120it starts88.125px against the source86px.

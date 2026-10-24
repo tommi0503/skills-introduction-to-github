@@ -1,0 +1,43 @@
+/* No replica mind map:04's288px black core, sharp378x168 grey members and2px dashed links define this radial tree.
+   Curved relations are inferred from those links;06's regular17px open copy supplies the leaf treatment. */
+.mindmap[data-el="rulemark-mindmap"]{position:relative;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--rulemark-mindmap-u:min(calc(100cqw / 1000),calc(100cqh / 620),1px);--rulemark-mindmap-head:clamp(48px,8cqh,64px)}
+.mindmap[data-el="rulemark-mindmap"] *,.mindmap[data-el="rulemark-mindmap"] *::before{box-sizing:border-box;min-width:0}
+.mindmap[data-el="rulemark-mindmap"]>.core{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(100px,24cqw,240px);height:clamp(100px,24cqw,240px);border-radius:50%;display:flex;align-items:center;justify-content:center;padding:16px;background:var(--ink);color:var(--page);text-align:center}
+.mindmap[data-el="rulemark-mindmap"]>.core>.name{font-size:clamp(var(--type-14),calc(24 * var(--rulemark-mindmap-u)),var(--type-24));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.mindmap[data-el="rulemark-mindmap"]>.branch{position:absolute;left:0;top:calc(var(--rulemark-mindmap-y) * 1cqh - var(--rulemark-mindmap-head) / 2);width:28%;display:flex;flex-direction:column;gap:6px;--rulemark-mindmap-y:38;--rulemark-mindmap-d:12}
+.mindmap[data-el="rulemark-mindmap"]>.branch:nth-child(odd){left:auto;right:0}
+.mindmap[data-el="rulemark-mindmap"]>.branch::before{content:"";position:absolute;z-index:0;left:100%;top:calc(var(--rulemark-mindmap-head) / 2);width:22cqw;height:calc(var(--rulemark-mindmap-d) * 1cqh);border-top:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-right:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:0 100% 0 0}
+.mindmap[data-el="rulemark-mindmap"]>.branch:nth-child(odd)::before{left:auto;right:100%;border-right:0;border-left:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:100% 0 0 0}
+.mindmap[data-el="rulemark-mindmap"]>.branch>.name{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-height:var(--rulemark-mindmap-head);padding:8px;border:var(--stroke) solid var(--ink);background:var(--n-2);font-size:clamp(var(--type-12),calc(22 * var(--rulemark-mindmap-u)),var(--type-22));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.mindmap[data-el="rulemark-mindmap"]>.branch.on>.name{background:var(--ink);color:var(--page)}
+.mindmap[data-el="rulemark-mindmap"]>.branch>.leaf{position:relative;z-index:1;padding:3px 7px;min-height:22px;border-bottom:var(--stroke) solid var(--n-5);background:var(--n-1);font-size:clamp(var(--type-12),calc(17 * var(--rulemark-mindmap-u)),var(--type-18));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch{gap:4px}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch>.leaf{padding:2px 7px;font-size:clamp(var(--type-12),calc(14 * var(--rulemark-mindmap-u)),var(--type-14))}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(3):last-child)>.branch:nth-child(2){--rulemark-mindmap-y:38;--rulemark-mindmap-d:12}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(3):last-child)>.branch:nth-child(3){--rulemark-mindmap-y:38;--rulemark-mindmap-d:12}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(2){--rulemark-mindmap-y:18;--rulemark-mindmap-d:32}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(3){--rulemark-mindmap-y:18;--rulemark-mindmap-d:32}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(4){--rulemark-mindmap-y:58;--rulemark-mindmap-d:8}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(4):last-child)>.branch:nth-child(4)::before{top:auto;bottom:calc(100% - var(--rulemark-mindmap-head) / 2);border-top:0;border-bottom:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:0 0 100% 0}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(2){--rulemark-mindmap-y:18;--rulemark-mindmap-d:32}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(3){--rulemark-mindmap-y:18;--rulemark-mindmap-d:32}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(4){--rulemark-mindmap-y:58;--rulemark-mindmap-d:8}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(4)::before{top:auto;bottom:calc(100% - var(--rulemark-mindmap-head) / 2);border-top:0;border-bottom:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:0 0 100% 0}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(5){--rulemark-mindmap-y:58;--rulemark-mindmap-d:8}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(5)::before{top:auto;bottom:calc(100% - var(--rulemark-mindmap-head) / 2);border-top:0;border-bottom:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:0 0 100% 0}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(5):last-child)>.branch:nth-child(5)::before{border-radius:0 0 0 100%}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(6):last-child)>.branch:nth-child(2){--rulemark-mindmap-y:10;--rulemark-mindmap-d:40}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(6):last-child)>.branch:nth-child(3){--rulemark-mindmap-y:10;--rulemark-mindmap-d:40}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(6):last-child)>.branch:nth-child(4){--rulemark-mindmap-y:40;--rulemark-mindmap-d:10}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(6):last-child)>.branch:nth-child(5){--rulemark-mindmap-y:40;--rulemark-mindmap-d:10}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(6):last-child)>.branch:nth-child(6){--rulemark-mindmap-y:70;--rulemark-mindmap-d:20}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(6):last-child)>.branch:nth-child(6)::before{top:auto;bottom:calc(100% - var(--rulemark-mindmap-head) / 2);border-top:0;border-bottom:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:0 0 100% 0}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(2){--rulemark-mindmap-y:10;--rulemark-mindmap-d:40}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(3){--rulemark-mindmap-y:10;--rulemark-mindmap-d:40}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(4){--rulemark-mindmap-y:40;--rulemark-mindmap-d:10}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(5){--rulemark-mindmap-y:40;--rulemark-mindmap-d:10}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(6){--rulemark-mindmap-y:70;--rulemark-mindmap-d:20}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(6)::before{top:auto;bottom:calc(100% - var(--rulemark-mindmap-head) / 2);border-top:0;border-bottom:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:0 0 100% 0}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(7){--rulemark-mindmap-y:70;--rulemark-mindmap-d:20}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(7)::before{top:auto;bottom:calc(100% - var(--rulemark-mindmap-head) / 2);border-top:0;border-bottom:max(1px,calc(2 * var(--rulemark-mindmap-u))) dashed var(--n-7);border-radius:0 0 100% 0}
+.mindmap[data-el="rulemark-mindmap"]:has(>.branch:nth-child(7):last-child)>.branch:nth-child(7)::before{border-radius:0 0 0 100%}

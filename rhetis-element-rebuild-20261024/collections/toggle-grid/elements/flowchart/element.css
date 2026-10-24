@@ -1,0 +1,25 @@
+/* Absent flowchart contract; replica09 supplies 46 orange header,sharp black label and gray body,24/19 hierarchy.
+   One element owns all nodes and explicit directional connectors. */
+.flowchart[data-el="toggle-grid-flowchart"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10%;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--toggle-grid-flowchart-x:37.5%;--toggle-grid-flowchart-y:22.222222%}
+.flowchart[data-el="toggle-grid-flowchart"]:has(>.node:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr));--toggle-grid-flowchart-x:22.222222%}
+.flowchart[data-el="toggle-grid-flowchart"]:has(>.node:nth-child(3):last-child){grid-template-rows:minmax(0,1fr);--toggle-grid-flowchart-y:0%}
+.flowchart[data-el="toggle-grid-flowchart"]>.node{box-sizing:border-box;position:relative;display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:0;padding:min(2cqw,3cqh);container-type:size;isolation:isolate}
+.flowchart[data-el="toggle-grid-flowchart"]>.node::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--n-1);pointer-events:none}
+.flowchart[data-el="toggle-grid-flowchart"]>.node>b{position:relative;box-sizing:border-box;display:block;min-width:0;margin:0;font-size:clamp(var(--type-14),calc(min(100cqw*.13,100cqh*.2)),var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere}
+.flowchart[data-el="toggle-grid-flowchart"]>.node>p{box-sizing:border-box;position:relative;display:block;min-width:0;margin:.5em 0 0;font-size:clamp(var(--type-12),calc(min(100cqw*.087,100cqh*.14)),var(--type-22));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.end::before{background:var(--a1)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.end{color:var(--a1-on)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.ask::before{background:var(--a1-2-soft)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.ask{color:var(--ink)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node:is(.to-r,.to-d,.to-l,.to-u)::after{content:"";position:absolute;z-index:5;pointer-events:none;background:var(--ink)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.to-r::after{left:100%;top:50%;width:var(--toggle-grid-flowchart-x);height:calc(var(--stroke)*8);clip-path:polygon(0 42%,85% 42%,85% 0,100% 50%,85% 100%,85% 58%,0 58%);transform:translateY(-50%)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.to-l::after{right:100%;top:50%;width:var(--toggle-grid-flowchart-x);height:calc(var(--stroke)*8);clip-path:polygon(0 50%,15% 0,15% 42%,100% 42%,100% 58%,15% 58%,15% 100%);transform:translateY(-50%)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.to-d::after{left:50%;top:100%;height:var(--toggle-grid-flowchart-y);width:calc(var(--stroke)*8);clip-path:polygon(42% 0,58% 0,58% 85%,100% 85%,50% 100%,0 85%,42% 85%);transform:translateX(-50%)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.to-u::after{left:50%;bottom:100%;height:var(--toggle-grid-flowchart-y);width:calc(var(--stroke)*8);clip-path:polygon(0 15%,50% 0,100% 15%,58% 15%,58% 100%,42% 100%,42% 15%);transform:translateX(-50%)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node{padding:0;justify-content:start;border:var(--stroke) solid var(--n-5)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node::before{background:var(--n-2)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node>b{padding:.4em .6em;background:var(--ink);color:var(--page);font-weight:calc(var(--body-weight)*1.25)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node>p{margin:auto 0;padding:.5em .8em;color:var(--ink)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.start>b{background:var(--a1);color:var(--a1-on)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.ask::before,.flowchart[data-el="toggle-grid-flowchart"]>.node.end::before{background:var(--n-2)}
+.flowchart[data-el="toggle-grid-flowchart"]>.node.end>b{background:var(--a1);color:var(--a1-on)}

@@ -1,0 +1,1 @@
+Open nested ellipses use the145:100 seal proportion and fine continuous curves measured on replica01/08. All scopes share a lower tangent and truly contain the next. Light display figures contrast with bold18-unit labels as in page06. Scope notes remain plain text, and a selected scope gains a second hairline weight. No filled panel or shadow is introduced.

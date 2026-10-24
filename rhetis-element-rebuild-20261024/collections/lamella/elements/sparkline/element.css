@@ -1,0 +1,36 @@
+/* No source sparkline instance; inferred from replica17:0.7px series strokes and6px data dots.
+   Equal-step data owns every connector; up/down are semantic status roles. */
+.spark[data-el="lamella-sparkline"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:start;anchor-scope:all;--lamella-spark-color:var(--a1);--lamella-spark-head:8px;--lamella-spark-foot:8px;--lamella-spark-height:calc(100cqh - var(--lamella-spark-head) - var(--lamella-spark-foot));--lamella-spark-point:4px;--lamella-spark-stroke:var(--stroke)}
+.spark[data-el="lamella-sparkline"]>span{position:static;justify-self:center;width:var(--lamella-spark-point);height:var(--lamella-spark-point);margin-top:calc(var(--lamella-spark-head) + var(--lamella-spark-height)*(1 - var(--v)/var(--max)) - var(--lamella-spark-point)/2);background:var(--lamella-spark-color);border-radius:50%;anchor-name:var(--lamella-spark-self);--lamella-spark-rise:calc(var(--lamella-spark-height)*var(--v)/var(--max))}
+.spark[data-el="lamella-sparkline"]>span::after{content:"";position:absolute;z-index:-1;left:anchor(var(--lamella-spark-prev) center);right:anchor(var(--lamella-spark-self) center);top:calc(anchor(var(--lamella-spark-prev) center) - var(--lamella-spark-height));bottom:var(--lamella-spark-foot);background:var(--lamella-spark-color);clip-path:polygon(0 calc(var(--lamella-spark-height) - var(--lamella-spark-stroke)/2),100% calc(100% - var(--lamella-spark-rise) - var(--lamella-spark-stroke)/2),100% calc(100% - var(--lamella-spark-rise) + var(--lamella-spark-stroke)/2),0 calc(var(--lamella-spark-height) + var(--lamella-spark-stroke)/2));pointer-events:none}
+.spark[data-el="lamella-sparkline"]>span:first-child::after{content:none}
+.spark[data-el="lamella-sparkline"]>span:nth-child(1){--lamella-spark-self:--lamella-sp1;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(2){--lamella-spark-self:--lamella-sp2;--lamella-spark-prev:--lamella-sp1;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(3){--lamella-spark-self:--lamella-sp3;--lamella-spark-prev:--lamella-sp2;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(4){--lamella-spark-self:--lamella-sp4;--lamella-spark-prev:--lamella-sp3;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(5){--lamella-spark-self:--lamella-sp5;--lamella-spark-prev:--lamella-sp4;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(6){--lamella-spark-self:--lamella-sp6;--lamella-spark-prev:--lamella-sp5;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(7){--lamella-spark-self:--lamella-sp7;--lamella-spark-prev:--lamella-sp6;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(8){--lamella-spark-self:--lamella-sp8;--lamella-spark-prev:--lamella-sp7;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(9){--lamella-spark-self:--lamella-sp9;--lamella-spark-prev:--lamella-sp8;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(10){--lamella-spark-self:--lamella-sp10;--lamella-spark-prev:--lamella-sp9;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(11){--lamella-spark-self:--lamella-sp11;--lamella-spark-prev:--lamella-sp10;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(12){--lamella-spark-self:--lamella-sp12;--lamella-spark-prev:--lamella-sp11;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(13){--lamella-spark-self:--lamella-sp13;--lamella-spark-prev:--lamella-sp12;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(14){--lamella-spark-self:--lamella-sp14;--lamella-spark-prev:--lamella-sp13;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(15){--lamella-spark-self:--lamella-sp15;--lamella-spark-prev:--lamella-sp14;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(16){--lamella-spark-self:--lamella-sp16;--lamella-spark-prev:--lamella-sp15;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(17){--lamella-spark-self:--lamella-sp17;--lamella-spark-prev:--lamella-sp16;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(18){--lamella-spark-self:--lamella-sp18;--lamella-spark-prev:--lamella-sp17;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(19){--lamella-spark-self:--lamella-sp19;--lamella-spark-prev:--lamella-sp18;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(20){--lamella-spark-self:--lamella-sp20;--lamella-spark-prev:--lamella-sp19;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(21){--lamella-spark-self:--lamella-sp21;--lamella-spark-prev:--lamella-sp20;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(22){--lamella-spark-self:--lamella-sp22;--lamella-spark-prev:--lamella-sp21;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(23){--lamella-spark-self:--lamella-sp23;--lamella-spark-prev:--lamella-sp22;}
+.spark[data-el="lamella-sparkline"]>span:nth-child(24){--lamella-spark-self:--lamella-sp24;--lamella-spark-prev:--lamella-sp23;}
+.spark[data-el="lamella-sparkline"].bars>span{align-self:end;width:72%;height:calc(var(--lamella-spark-height)*var(--v)/var(--max));margin-top:0;margin-bottom:var(--lamella-spark-foot);border-radius:0}
+.spark[data-el="lamella-sparkline"].bars>span::after{content:none}
+.spark[data-el="lamella-sparkline"]{--lamella-spark-point:6px;--lamella-spark-stroke:calc(var(--stroke)*.7)}
+.spark[data-el="lamella-sparkline"].bars>span{width:65.84%;background:linear-gradient(to top,color-mix(in srgb,var(--lamella-spark-color) 20%,transparent),var(--lamella-spark-color))}
+.spark[data-el="lamella-sparkline"].up{--lamella-spark-color:var(--good)}
+.spark[data-el="lamella-sparkline"].down{--lamella-spark-color:var(--bad)}

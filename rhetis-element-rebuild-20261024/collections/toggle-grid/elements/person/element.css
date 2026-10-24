@@ -1,0 +1,185 @@
+/* Replica04: three profiles,212px circular photo and262×43 numbered dark capsule,19px name/17px note. */
+.people[data-el="toggle-grid-person"] {
+  container-type: size;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,max(25%,260px)),1fr));
+  grid-auto-rows: 1fr;
+  gap: 0 7.38636%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  position: relative;
+}
+.person[data-el="toggle-grid-person"] {
+  container-type: size;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+.people[data-el="toggle-grid-person"]>.person {
+  container-type: size;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+.people[data-el="toggle-grid-person"]:has(>.person:nth-child(1):last-child) {
+  grid-template-columns: 1fr;
+}
+.people[data-el="toggle-grid-person"]:has(>.person:nth-child(2):last-child) {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+.person[data-el="toggle-grid-person"],
+.people[data-el="toggle-grid-person"]>.person {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.person[data-el="toggle-grid-person"]>:where(.name,.note,.list),
+.people[data-el="toggle-grid-person"]>.person>:where(.name,.note,.list) {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.person[data-el="toggle-grid-person"]>.seat,
+.people[data-el="toggle-grid-person"]>.person>.seat {
+  display: grid;
+  place-items: center;
+  background: var(--n-2);
+  color: var(--n-7);
+  flex: none;
+  font-size: var(--type-14);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  width: min(70.667cqw,51.582cqh);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.person[data-el="toggle-grid-person"]>.seat::after,
+.people[data-el="toggle-grid-person"]>.person>.seat::after {
+  content: attr(data-ph);
+}
+.person[data-el="toggle-grid-person"]>.name,
+.people[data-el="toggle-grid-person"]>.person>.name {
+  font-size: clamp(var(--type-12),calc(min(6.333cqw,4.623cqh)),var(--type-32));
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: calc(var(--body-track)*0);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+  position: relative;
+  width: 87.333cqw;
+  min-height: 10.462cqh;
+  margin-top: 7.786cqh;
+  padding: var(--gap-sm) var(--gap-sm) var(--gap-sm) 20cqw;
+  border-radius: calc(var(--radius)*10);
+  background: var(--ink);
+  color: var(--page);
+}
+.person[data-el="toggle-grid-person"]>.note,
+.people[data-el="toggle-grid-person"]>.person>.note {
+  font-size: clamp(var(--type-12),calc(min(5.667cqw,4.136cqh)),var(--type-24));
+  font-weight: calc(var(--body-weight)*.75);
+  line-height: calc(var(--body-line)*1.0344827586);
+  letter-spacing: calc(var(--body-track)*0);
+  margin-top: 5.352cqh;
+  text-align: center;
+}
+.person[data-el="toggle-grid-person"]>.note>p,
+.people[data-el="toggle-grid-person"]>.person>.note>p {
+  margin: 0;
+}
+.person[data-el="toggle-grid-person"]>.note>b,
+.people[data-el="toggle-grid-person"]>.person>.note>b {
+  display: block;
+  font-size: clamp(var(--type-12),calc(6.912cqw),var(--type-28));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--body-line)*.6896551724);
+  margin-bottom: var(--gap);
+}
+.person[data-el="toggle-grid-person"]>.name>b,
+.people[data-el="toggle-grid-person"]>.person>.name>b {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  left: .667cqw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(13.333cqw,9.732cqh);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--a1);
+  color: var(--a1-on);
+  font-size: clamp(var(--type-16),calc(min(9cqw,6.569cqh)),var(--type-40));
+  font-weight: var(--body-weight);
+  font-family: var(--font-display);
+  line-height: var(--label-line);
+}
+.people[data-el="toggle-grid-person"]:has(>.person:nth-child(3):last-child)::before,.people[data-el="toggle-grid-person"]:has(>.person:nth-child(3):last-child)::after,.people[data-el="toggle-grid-person"]:has(>.person:nth-child(2):last-child)::before {
+  content: "";
+  position: absolute;
+  top: 1.946cqh;
+  height: 84.915cqh;
+  border-left: var(--stroke) solid var(--n-5);
+  pointer-events: none;
+}
+.people[data-el="toggle-grid-person"]:has(>.person:nth-child(3):last-child)::before {
+  left: 32.1023%;
+}
+.people[data-el="toggle-grid-person"]:has(>.person:nth-child(3):last-child)::after {
+  left: 67.8977%;
+}
+.people[data-el="toggle-grid-person"]:has(>.person:nth-child(2):last-child)::before {
+  left: 50%;
+}
+@container (max-width:915px) {
+  .people[data-el="toggle-grid-person"]:has(>.person:nth-child(3):last-child)::before {
+    left: 50%;
+    height: calc(50cqh - var(--gap));
+  }
+  .people[data-el="toggle-grid-person"]:has(>.person:nth-child(3):last-child)::after {
+    display: none;
+  }
+}
+@container (max-width:560px) {
+  .people[data-el="toggle-grid-person"]::before,.people[data-el="toggle-grid-person"]::after {
+    display: none;
+  }
+}
+@container (max-height:350px) {
+  .person[data-el="toggle-grid-person"]>.name,.people[data-el="toggle-grid-person"]>.person>.name {
+    justify-content: center;
+    padding-left: var(--gap-sm);
+    padding-right: var(--gap-sm);
+  }
+}
+@container (max-width:900px) {
+  .people[data-el="toggle-grid-person"] {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: var(--gap);
+  }
+}
+@container (max-width:260px) {
+  .person[data-el="toggle-grid-person"]>.name,.people[data-el="toggle-grid-person"]>.person>.name {
+    font-size: var(--type-12);
+  }
+  .person[data-el="toggle-grid-person"]>.note,.people[data-el="toggle-grid-person"]>.person>.note {
+    font-size: var(--type-12);
+  }
+  .person[data-el="toggle-grid-person"]>.note>b,.people[data-el="toggle-grid-person"]>.person>.note>b {
+    font-size: var(--type-12);
+    margin-bottom: var(--gap-sm);
+  }
+}
+@container (max-height:250px) {
+  .person[data-el="toggle-grid-person"]>.note,.people[data-el="toggle-grid-person"]>.person>.note {
+    font-size: var(--type-12);
+  }
+}

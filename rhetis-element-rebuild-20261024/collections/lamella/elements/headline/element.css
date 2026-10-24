@@ -1,0 +1,73 @@
+/* Replica22: 217×30 soft leaf caption,14px nominal label; opposite corners turn by30px. Runtime fitting6px is a frozen-replica artifact, not a design rule. */
+.headline[data-el="lamella-headline"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: min(2.727cqw,var(--gap));
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--a1-7);
+  font-family: var(--font-display),var(--font-body);
+}
+.headline[data-el="lamella-headline"]>h2 {
+  margin: 0;
+  font-size: clamp(var(--type-12),calc(min(6.451613cqw,60cqh)),var(--type-80));
+  font-weight: var(--lamella-headline-weight);
+  line-height: var(--lamella-headline-line);
+  letter-spacing: var(--lamella-headline-track);
+  overflow-wrap: anywhere;
+  width: 100%;
+  padding: calc((min(100cqh,13.825cqw) - clamp(var(--type-12),calc(min(6.451613cqw,60cqh)),var(--type-80))) / 2) 8.76cqw;
+  background: var(--a1-2-soft);
+  border-radius: 0 13.825cqw 0 13.825cqw;
+}
+.headline[data-el="lamella-headline"]>h2>b {
+  font-weight: var(--figure-weight);
+}
+.headline[data-el="lamella-headline"]>.kick {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(var(--type-12),calc(3.548387cqw),var(--type-20));
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+}
+.headline[data-el="lamella-headline"]>.note {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(var(--type-12),calc(5.069124cqw),var(--type-28));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: var(--body-track);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.headline[data-el="lamella-headline"].center {
+  text-align: center;
+  align-items: center;
+}
+.headline[data-el="lamella-headline"].big>h2 {
+  font-size: clamp(var(--type-24),calc(6.967742cqw),var(--type-128));
+}
+.headline[data-el="lamella-headline"].on {
+  color: var(--a1-on);
+  background: none;
+  padding: 0;
+}
+.headline[data-el="lamella-headline"].on>.note,.headline[data-el="lamella-headline"].on>.kick {
+  color: var(--ink);
+}
+@container (max-width:420px) {
+  .headline[data-el="lamella-headline"] {
+    gap: var(--gap-sm);
+  }
+  .headline[data-el="lamella-headline"]>.note {
+    font-size: var(--type-14);
+  }
+}
+.headline[data-el="lamella-headline"].on>h2 {
+  background: var(--a1);
+}

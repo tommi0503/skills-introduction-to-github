@@ -1,0 +1,1 @@
+A sequence inferred from replica06's243-unit floating white fields,21-unit corners,100-unit circular carriers and8-unit soft connector. Each numbered carrier leads a bold name and dashed separator above a regular note. The complete sequence owns every connector and arrowhead. The contract column variant retains these proportions in an aligned two-column reading layout.

@@ -1,0 +1,21 @@
+/* Absent from replica:05/10's square planes,28-of269 lower-right cut,18px names and54px light figures form nested scopes.
+   Each chamfered field wholly contains its successor; inset top bands carry the outer scope labels. */
+.orbit[data-el="cutfield-concentric"]{position:relative;isolation:isolate;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--cutfield-concentric-u:min(calc(100cqw / 600),calc(100cqh / 600),1px);--cutfield-concentric-n:2;--cutfield-concentric-step:calc(180 * var(--cutfield-concentric-u));--cutfield-concentric-cut:calc(28 * var(--cutfield-concentric-u))}
+.orbit[data-el="cutfield-concentric"] *,.orbit[data-el="cutfield-concentric"] *::before,.orbit[data-el="cutfield-concentric"] *::after{box-sizing:border-box;min-width:0}
+.orbit[data-el="cutfield-concentric"]>.ring{position:absolute;isolation:isolate;left:calc(var(--cutfield-concentric-i) * 40 * var(--cutfield-concentric-u));right:calc(var(--cutfield-concentric-i) * 20 * var(--cutfield-concentric-u));top:calc(var(--cutfield-concentric-i) * var(--cutfield-concentric-step));bottom:calc(var(--cutfield-concentric-i) * 20 * var(--cutfield-concentric-u));display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;gap:8px 16px;align-content:start;align-items:center;padding:clamp(12px,3cqh,28px);--cutfield-concentric-i:0;--cutfield-concentric-face:var(--n-3)}
+.orbit[data-el="cutfield-concentric"]>.ring::before{content:"";position:absolute;z-index:-1;inset:0;background:var(--cutfield-concentric-face);clip-path:polygon(0 0,100% 0,100% calc(100% - var(--cutfield-concentric-cut)),calc(100% - var(--cutfield-concentric-cut)) 100%,0 100%)}
+.orbit[data-el="cutfield-concentric"]>.ring:nth-child(2){--cutfield-concentric-face:var(--n-1)}
+.orbit[data-el="cutfield-concentric"]>.ring:nth-child(3){--cutfield-concentric-face:var(--a1-2-soft)}
+.orbit[data-el="cutfield-concentric"]>.ring.on{--cutfield-concentric-face:var(--a1);color:var(--a1-on)}
+.orbit[data-el="cutfield-concentric"]>.ring>.name{display:block;margin:0;font-size:clamp(var(--type-16),calc(3cqh),var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.orbit[data-el="cutfield-concentric"]>.ring>.fig{display:block;margin:0;font-size:clamp(var(--type-28),calc(100cqh / var(--cutfield-concentric-n) * .28),var(--type-56));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.orbit[data-el="cutfield-concentric"]>.ring>.note{display:block;grid-column:1 / -1;margin:0;font-size:clamp(var(--type-12),calc(1.8cqw),var(--type-16));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.orbit[data-el="cutfield-concentric"]>.ring:last-child{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.orbit[data-el="cutfield-concentric"]:has(>.ring:nth-child(3):last-child){--cutfield-concentric-n:3;--cutfield-concentric-step:calc(140 * var(--cutfield-concentric-u))}
+.orbit[data-el="cutfield-concentric"]:has(>.ring:nth-child(4):last-child){--cutfield-concentric-n:4;--cutfield-concentric-step:calc(110 * var(--cutfield-concentric-u))}
+.orbit[data-el="cutfield-concentric"]:has(>.ring:nth-child(2):last-child):has(>.ring>.note){--cutfield-concentric-step:max(calc(180 * var(--cutfield-concentric-u)),130px)}
+.orbit[data-el="cutfield-concentric"]>.ring:nth-child(1){--cutfield-concentric-i:0}
+.orbit[data-el="cutfield-concentric"]>.ring:nth-child(2){--cutfield-concentric-i:1}
+.orbit[data-el="cutfield-concentric"]>.ring:nth-child(3){--cutfield-concentric-i:2}
+.orbit[data-el="cutfield-concentric"]>.ring:nth-child(4){--cutfield-concentric-i:3}
+@container(max-width:650px){.orbit[data-el="cutfield-concentric"]>.ring{column-gap:8px}.orbit[data-el="cutfield-concentric"]>.ring>.name{font-size:var(--type-16)}}

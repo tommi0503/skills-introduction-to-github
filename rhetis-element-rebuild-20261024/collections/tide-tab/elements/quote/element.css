@@ -1,0 +1,86 @@
+/* Inferred quote; no expressible source instance.
+   Measured deck primitives: 05 attached-tab779×261 panel,235×52 label and21px corners;08 central53.33px declaration. */
+.quote[data-el="tide-tab-quote"] {
+  container-type: size;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-lg);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: var(--pad);
+  font-family: var(--font-body);
+  color: var(--ink);
+  border-radius: var(--radius);
+  background: var(--n-1);
+}
+.quote[data-el="tide-tab-quote"]::before {
+  content: "“";
+  font-size: clamp(var(--type-40),calc(9cqw),var(--type-80));
+  font-weight: var(--figure-weight);
+  line-height: calc(var(--figure-line)*.9523809524);
+  color: var(--a1-8);
+  height: min(20cqh,80px);
+}
+.quote[data-el="tide-tab-quote"]>blockquote {
+  margin: 0;
+  min-width: 0;
+  font-size: clamp(var(--type-18),calc(min(3cqw,7cqh)),var(--type-40));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: var(--body-track);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.quote[data-el="tide-tab-quote"]>.by {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: var(--gap);
+  row-gap: var(--gap-sm);
+  min-width: 0;
+}
+.quote[data-el="tide-tab-quote"]>.by>.seat.avatar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: min(14cqw,15cqh,80px);
+  aspect-ratio: 1;
+  background: var(--n-2);
+  color: var(--n-7);
+  border-radius: 50%;
+}
+.quote[data-el="tide-tab-quote"]>.by>.seat.avatar::after {
+  content: attr(data-ph);
+  font-size: var(--type-12);
+  line-height: var(--label-line);
+}
+.quote[data-el="tide-tab-quote"]>.by>.name {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  font-size: var(--type-18);
+  font-weight: var(--name-weight);
+  line-height: var(--name-line);
+  letter-spacing: var(--name-track);
+}
+.quote[data-el="tide-tab-quote"]>.by>.note {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  font-size: var(--type-12);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: var(--body-track);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.quote[data-el="tide-tab-quote"].big>blockquote {
+  font-size: clamp(var(--type-24),calc(min(4cqw,9cqh)),var(--type-52));
+}
+
+.quote[data-el="tide-tab-quote"]>.by:not(:has(>.seat)){grid-template-columns:minmax(0,1fr)}
+.quote[data-el="tide-tab-quote"]>.by:not(:has(>.seat))>.name,.quote[data-el="tide-tab-quote"]>.by:not(:has(>.seat))>.note{grid-column:1}

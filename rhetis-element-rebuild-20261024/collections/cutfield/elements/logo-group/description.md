@@ -1,0 +1,1 @@
+Logo carriers infer the replica05 lower-right28/268 chamfers and source03 light figures. Member count determines equal openings; tall allocations wrap into two rows and narrow allocations into two columns. All placeholders keep their numbers centered. The picture material stays neutral; corners, rules and enclosure treatment distinguish this collection.

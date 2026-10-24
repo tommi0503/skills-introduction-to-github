@@ -1,0 +1,1 @@
+Inferred from replica03 editorial spacing and replica07 fine rounded outline frames; no new shadow material. Two figures occupy equal measured faces with a connector owned by their common root. Narrow portrait cells turn the pair downward; both figures stay visible.

@@ -1,0 +1,122 @@
+/* No source profile: independently inferred from the deck's measured materials.
+    Replica05:235×52 attached tab,779×261 white panel,21px corner;18.67px body. */
+.people[data-el="tide-tab-person"] {
+  container-type: size;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: var(--gap);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.people[data-el="tide-tab-person"]:has(>.person:nth-child(2):last-child) {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+.person[data-el="tide-tab-person"],.people[data-el="tide-tab-person"]>.person {
+  container-type: size;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--gap-sm);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  padding: 0 min(5.5%,var(--pad)) var(--pad);
+}
+.person[data-el="tide-tab-person"]>:where(.seat,.name,.note,.list),.people[data-el="tide-tab-person"]>.person>:where(.seat,.name,.note,.list) {
+  margin: 0;
+  min-width: 0;
+  flex: none;
+}
+.person[data-el="tide-tab-person"]>.seat,.people[data-el="tide-tab-person"]>.person>.seat {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  background: var(--n-2);
+  color: var(--n-7);
+  font-size: var(--type-14);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  width: min(78cqw,36cqh);
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  margin: var(--gap-sm) 0;
+}
+.person[data-el="tide-tab-person"]>.seat::after,.people[data-el="tide-tab-person"]>.person>.seat::after {
+  content: attr(data-ph);
+}
+.person[data-el="tide-tab-person"]>.name,.people[data-el="tide-tab-person"]>.person>.name {
+  font-family: var(--font-body);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  order: -1;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  min-height: min(14cqh,52px);
+  padding: calc(var(--gap-sm)*.75) var(--gap-sm);
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--a1);
+  color: var(--a1-on);
+  font-size: clamp(var(--type-14),calc(min(7.2cqw,4.8cqh)),var(--type-24));
+  font-weight: calc(var(--body-weight)*1.75);
+  line-height: calc(var(--name-line)*.9230769231);
+  letter-spacing: calc(var(--body-track)*1.1666666667);
+  text-align: center;
+}
+.person[data-el="tide-tab-person"]>.note,.people[data-el="tide-tab-person"]>.person>.note {
+  font-family: var(--font-body);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+  font-size: clamp(var(--type-12),calc(min(5.8cqw,3.1cqh)),var(--type-20));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--body-line)*.9142857143);
+  letter-spacing: var(--body-track);
+}
+.person[data-el="tide-tab-person"]>.note>p,.people[data-el="tide-tab-person"]>.person>.note>p {
+  margin: 0;
+}
+.person[data-el="tide-tab-person"]>.note>p+p,.people[data-el="tide-tab-person"]>.person>.note>p+p {
+  margin-top: var(--gap-sm);
+}
+.person[data-el="tide-tab-person"]>.list,.people[data-el="tide-tab-person"]>.person>.list {
+  height: auto;
+  min-height: 0;
+  margin-top: var(--gap-sm);
+}
+.person[data-el="tide-tab-person"]::before,.people[data-el="tide-tab-person"]>.person::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: min(14cqh,52px) 0 0;
+  background: var(--n-1);
+  border-radius: 0 var(--radius) var(--radius) var(--radius);
+}
+@container (max-height:330px) {
+  .person[data-el="tide-tab-person"],.people[data-el="tide-tab-person"]>.person {
+    gap: calc(var(--gap-sm)*.5);
+  }
+  .person[data-el="tide-tab-person"]>.seat,.people[data-el="tide-tab-person"]>.person>.seat {
+    width: min(70cqw,28cqh);
+    margin-block: calc(var(--gap-sm)*.5);
+  }
+  .person[data-el="tide-tab-person"]>.name,.people[data-el="tide-tab-person"]>.person>.name {
+    font-size: var(--type-14);
+  }
+  .person[data-el="tide-tab-person"]>.note,.people[data-el="tide-tab-person"]>.person>.note {
+    font-size: var(--type-12);
+  }
+}
+@container (max-width:620px) {
+  .people[data-el="tide-tab-person"]:has(>.person:nth-child(3)) {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}

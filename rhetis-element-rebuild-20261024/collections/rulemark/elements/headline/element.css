@@ -1,0 +1,68 @@
+/* Replica05: A bare20px/500 body statement on30px lines; source03 uses the25px big variant. */
+.headline[data-el="rulemark-headline"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: min(2.727cqw,var(--gap));
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--ink);
+  font-family: var(--font-display),var(--font-body);
+}
+.headline[data-el="rulemark-headline"]>h2 {
+  margin: 0;
+  font-size: var(--type-20);
+  font-weight: var(--rulemark-headline-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*.9);
+  overflow-wrap: anywhere;
+}
+.headline[data-el="rulemark-headline"]>h2>b {
+  font-weight: var(--figure-weight);
+}
+.headline[data-el="rulemark-headline"]>.kick {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(var(--type-12),calc(2.163636cqw),var(--type-20));
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+}
+.headline[data-el="rulemark-headline"]>.note {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(var(--type-12),calc(3.090909cqw),var(--type-28));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: var(--body-track);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.headline[data-el="rulemark-headline"].center {
+  text-align: center;
+  align-items: center;
+}
+.headline[data-el="rulemark-headline"].big>h2 {
+  font-size: clamp(var(--type-20),calc(4.807692cqw),var(--type-32));
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*.72);
+}
+.headline[data-el="rulemark-headline"].on {
+  color: var(--a1-on);
+  background: var(--a1);
+  padding: var(--pad);
+}
+.headline[data-el="rulemark-headline"].on>.note,.headline[data-el="rulemark-headline"].on>.kick {
+  color: var(--a1-on);
+}
+@container (max-width:420px) {
+  .headline[data-el="rulemark-headline"] {
+    gap: var(--gap-sm);
+  }
+  .headline[data-el="rulemark-headline"]>.note {
+    font-size: var(--type-14);
+  }
+}

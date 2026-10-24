@@ -1,0 +1,1 @@
+Inferred from replica03 asymmetric leaf caps, vertical hairlines and quiet plot typography. Two figures occupy equal measured faces with a connector owned by their common root. Narrow portrait cells turn the pair downward; both figures stay visible.

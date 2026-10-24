@@ -1,0 +1,30 @@
+/* Absent decision tree; replica07 supplies open service fields,20/16 hierarchy and neutral4 divisions.
+   Question/outcome planes and recursive labeled branching remain one element. */
+.dtree[data-el="portico-decision-tree"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:25% minmax(0,1fr);gap:10%;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.dtree[data-el="portico-decision-tree"]>.q{height:40%;align-self:center}
+.dtree[data-el="portico-decision-tree"] .q,.dtree[data-el="portico-decision-tree"] .end{box-sizing:border-box;position:relative;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;padding:.4em .6em;isolation:isolate;text-align:center}
+.dtree[data-el="portico-decision-tree"] .q::before,.dtree[data-el="portico-decision-tree"] .end::before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:var(--n-1)}
+.dtree[data-el="portico-decision-tree"] .q>.name,.dtree[data-el="portico-decision-tree"] .end>.name{display:block;box-sizing:border-box;min-width:0;margin:0;font-size:clamp(var(--type-12),calc(min(100cqw*.075,100cqh*.15)),var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere}
+.dtree[data-el="portico-decision-tree"]>.q>.name{font-size:clamp(var(--type-14),calc(min(100cqw*.025,100cqh*.055)),var(--type-28))}
+.dtree[data-el="portico-decision-tree"] .end.on{color:var(--a1-on)}
+.dtree[data-el="portico-decision-tree"] .end.on::before{background:var(--a1)}
+.dtree[data-el="portico-decision-tree"] .opts{box-sizing:border-box;position:relative;display:flex;flex-direction:column;gap:10%;min-width:0;min-height:0;container-type:size}
+.dtree[data-el="portico-decision-tree"] .opts::before{content:"";position:absolute;left:0;top:22.5%;width:var(--stroke);height:55%;background:var(--ink);pointer-events:none}
+.dtree[data-el="portico-decision-tree"] .opts::after{content:"";position:absolute;left:-12.5%;top:50%;width:12.5%;height:var(--stroke);background:var(--ink);pointer-events:none}
+.dtree[data-el="portico-decision-tree"]>.opts::after{left:-15.384615%;width:15.384615%}
+.dtree[data-el="portico-decision-tree"] .opts:has(>.opt:nth-child(3):last-child)::before{top:13.333333%;height:73.333334%}
+.dtree[data-el="portico-decision-tree"] .opt{box-sizing:border-box;position:relative;flex:1;display:grid;grid-template-columns:30% minmax(0,1fr);min-width:0;min-height:0;container-type:size}
+.dtree[data-el="portico-decision-tree"] .opt:has(>.opts){grid-template-columns:15% 35% minmax(0,1fr);column-gap:5%}
+.dtree[data-el="portico-decision-tree"] .opt::before{content:"";position:absolute;z-index:0;left:0;top:50%;width:30%;height:var(--stroke);background:var(--ink);pointer-events:none}
+.dtree[data-el="portico-decision-tree"] .opt:has(>.opts)::before{width:20%}
+.dtree[data-el="portico-decision-tree"] .opt>.cond{box-sizing:border-box;position:relative;z-index:2;display:block;align-self:center;justify-self:center;min-width:0;max-width:100%;margin:0;padding:.15em .2em;background:var(--page);font-size:clamp(var(--type-12),calc(min(100cqw*.05,100cqh*.15)),var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.dtree[data-el="portico-decision-tree"] .opt>.q,.dtree[data-el="portico-decision-tree"] .opt>.end{height:60%;align-self:center}
+.dtree[data-el="portico-decision-tree"] .q,.dtree[data-el="portico-decision-tree"] .end{color:var(--a1-7);container-type:size}
+.dtree[data-el="portico-decision-tree"] .q>.name,.dtree[data-el="portico-decision-tree"] .end>.name{font-size:clamp(var(--type-12),calc(min(100cqw*.12,100cqh*.32)),var(--type-24))}
+.dtree[data-el="portico-decision-tree"]>.q>.name{font-size:clamp(var(--type-14),calc(min(100cqw*.1,100cqh*.1375)),var(--type-28))}
+.dtree[data-el="portico-decision-tree"] .q::before,.dtree[data-el="portico-decision-tree"] .end::before{background:var(--page);border:var(--stroke) solid var(--n-4)}
+.dtree[data-el="portico-decision-tree"] .q::before{background:var(--n-3)}
+.dtree[data-el="portico-decision-tree"] .q{color:var(--ink)}
+.dtree[data-el="portico-decision-tree"] .q>.name,.dtree[data-el="portico-decision-tree"] .end>.name{font-weight:calc(var(--body-weight)*1.75)}
+.dtree[data-el="portico-decision-tree"] .end.on::before{background:var(--a1)}
+.dtree[data-el="portico-decision-tree"] .end.on{color:var(--a1-on)}

@@ -1,0 +1,1 @@
+A large light figure and a quiet label sit above a fine outlined rectangular field. The primary fill grows inside that field, using the same broad accent surface and fine edge found in the deck. This progress element is inferred from replica 05; there is no source gauge instance. Names and figures remain visible at the declared minimum.

@@ -1,0 +1,55 @@
+/* Absent Sankey; replica03 supplies 80.0738% leaf tabs and7% inset vertical rules.
+   One source bus owns connected share-proportional bands and a real second split. */
+.sankey[data-el="lamella-sankey"]{box-sizing:border-box;position:relative;display:flex;flex-direction:column;width:100%;height:100%;min-width:0;min-height:0;padding-left:22%;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.sankey[data-el="lamella-sankey"]>.source{box-sizing:border-box;position:absolute;inset:0 auto 0 0;width:22%;min-width:0;min-height:0;container-type:size;isolation:isolate}
+.sankey[data-el="lamella-sankey"]>.source::before{content:"";position:absolute;z-index:-1;inset:20% 0;background:var(--a1);pointer-events:none}
+.sankey[data-el="lamella-sankey"]>.source::after{content:"";position:absolute;left:calc(100% - var(--stroke));top:0;bottom:0;width:var(--stroke);background:var(--a1);pointer-events:none}
+.sankey[data-el="lamella-sankey"]>.source>.name,.sankey[data-el="lamella-sankey"]>.source>.fig{box-sizing:border-box;position:absolute;z-index:1;left:7%;width:86%;margin:0;text-align:center;word-break:keep-all;overflow-wrap:anywhere;color:var(--a1-on)}
+.sankey[data-el="lamella-sankey"]>.source>.name{bottom:51%;font-size:clamp(var(--type-14),calc(min(100cqw*.12,100cqh*.05)),var(--type-28));font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--name-track)}
+.sankey[data-el="lamella-sankey"]>.source>.fig{top:51%;font-size:clamp(var(--type-26),calc(min(100cqw*.25,100cqh*.1)),var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.sankey[data-el="lamella-sankey"] .fig>small{font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line)}
+.sankey[data-el="lamella-sankey"]>.source>.fig>small{font-size:clamp(var(--type-12),calc(min(100cqw*.125,100cqh*.05)),var(--type-32))}
+.sankey[data-el="lamella-sankey"] .branch{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;isolation:isolate;--lamella-child-count:1}
+.sankey[data-el="lamella-sankey"]>.branch{flex:var(--lamella-child-count) 1 0;--lamella-parent-share:var(--v,0)}
+.sankey[data-el="lamella-sankey"] .branch::before{content:"";position:absolute;z-index:-1;left:0;top:50%;width:30%;height:calc(60cqh / var(--lamella-child-count) * var(--v,0) / 100);transform:translateY(-50%);background:var(--n-4);pointer-events:none}
+.sankey[data-el="lamella-sankey"] .branch::after{box-sizing:border-box;content:"";position:absolute;z-index:-1;left:30%;top:5%;width:65%;height:90%;background:var(--n-1);pointer-events:none}
+.sankey[data-el="lamella-sankey"] .branch>.name,.sankey[data-el="lamella-sankey"] .branch>.fig{box-sizing:border-box;position:absolute;z-index:1;left:34%;width:57%;margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.sankey[data-el="lamella-sankey"] .branch>.name{bottom:50%;font-size:clamp(var(--type-12),calc(min(100cqw*.05,100cqh / var(--lamella-child-count) * .18)),var(--type-24));font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--name-track)}
+.sankey[data-el="lamella-sankey"] .branch>.fig{top:51%;font-size:clamp(var(--type-16),calc(min(100cqw*.07,100cqh / var(--lamella-child-count) * .23)),var(--type-36));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.sankey[data-el="lamella-sankey"] .branch.on::before{background:var(--a1)}
+.sankey[data-el="lamella-sankey"] .branch.out::before{background:var(--n-5)}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch){display:grid;grid-template-columns:55% 45%;grid-template-rows:repeat(var(--lamella-child-count),minmax(0,1fr))}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch)::before{width:20%}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch)::after{left:20%;width:30%;top:5%;height:90%}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch)>.name,.sankey[data-el="lamella-sankey"]>.branch:has(>.branch)>.fig{left:22%;width:26%}
+.sankey[data-el="lamella-sankey"]>.branch>.branch{grid-column:2}
+.sankey[data-el="lamella-sankey"]>.branch>.branch::before{left:-11.111111%;width:36.111111%;height:calc(60cqh * var(--lamella-parent-share,0) / 100 * var(--v,0) / 100)}
+.sankey[data-el="lamella-sankey"]>.branch>.branch::after{left:25%;width:75%}
+.sankey[data-el="lamella-sankey"]>.branch>.branch>.name,.sankey[data-el="lamella-sankey"]>.branch>.branch>.fig{left:29%;width:67%}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch:nth-child(4):last-child){--lamella-child-count:2}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch:nth-child(5):last-child){--lamella-child-count:3}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch:nth-child(6):last-child){--lamella-child-count:4}
+.sankey[data-el="lamella-sankey"] .branch>.fig{top:calc(50% + .6em)}
+.sankey[data-el="lamella-sankey"]>.source::before{background:linear-gradient(to right,transparent calc(7% - var(--stroke)/2),var(--n-5) calc(7% - var(--stroke)/2),var(--n-5) calc(7% + var(--stroke)/2),transparent calc(7% + var(--stroke)/2))}
+.sankey[data-el="lamella-sankey"]>.source::after{background:var(--n-5)}
+.sankey[data-el="lamella-sankey"]>.source>.name{left:0;width:80.0738%;background:var(--a1);color:var(--a1-on);padding:.25em .5em;border-radius:0 min(var(--radius),12.546125cqw) 0 min(var(--radius),12.546125cqw)}
+.sankey[data-el="lamella-sankey"]>.source>.fig{color:var(--ink)}
+.sankey[data-el="lamella-sankey"] .branch::after{background:linear-gradient(to right,transparent calc(7% - var(--stroke)/2),var(--n-5) calc(7% - var(--stroke)/2),var(--n-5) calc(7% + var(--stroke)/2),transparent calc(7% + var(--stroke)/2));border-right:var(--stroke) solid var(--n-5)}
+.sankey[data-el="lamella-sankey"] .branch::before{width:34.55%}
+.sankey[data-el="lamella-sankey"] .branch>.name{text-align:center;left:30%;width:52.04797%;background:var(--a1);color:var(--a1-on);padding:.2em .5em;border-radius:0 min(var(--radius),8.154981cqw) 0 min(var(--radius),8.154981cqw)}
+.sankey[data-el="lamella-sankey"] .branch>.fig{left:37.15%;width:55.25%}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch)::before{width:22.1%}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch)>.name{left:20%;width:24.02214%;border-radius:0 min(var(--radius),3.763838cqw) 0 min(var(--radius),3.763838cqw)}
+.sankey[data-el="lamella-sankey"]>.branch:has(>.branch)>.fig{left:23.3%;width:25.5%}
+.sankey[data-el="lamella-sankey"]>.branch>.branch::before{width:41.361111%}
+.sankey[data-el="lamella-sankey"]>.branch>.branch>.name{left:25%;width:60.05535%;border-radius:0 min(var(--radius),9.409594cqw) 0 min(var(--radius),9.409594cqw)}
+.sankey[data-el="lamella-sankey"]>.branch>.branch>.fig{left:33.25%;width:63.75%}
+.sankey[data-el="lamella-sankey"] .branch.on::after{background:var(--a1)}
+.sankey[data-el="lamella-sankey"] .branch.on>.name{width:65%;background:var(--n-1);color:var(--a1-7)}
+.sankey[data-el="lamella-sankey"] .branch.on>.fig{color:var(--a1-on)}
+.sankey[data-el="lamella-sankey"] .branch.on::before{width:30%}
+.sankey[data-el="lamella-sankey"]>.branch.on:has(>.branch)::before{width:20%}
+.sankey[data-el="lamella-sankey"]>.branch.on:has(>.branch)>.name{width:30%}
+.sankey[data-el="lamella-sankey"]>.branch>.branch.on::before{width:36.111111%}
+.sankey[data-el="lamella-sankey"]>.branch>.branch.on>.name{width:75%}
+.sankey[data-el="lamella-sankey"] .branch.out>.name{background:var(--n-3);color:var(--ink)}

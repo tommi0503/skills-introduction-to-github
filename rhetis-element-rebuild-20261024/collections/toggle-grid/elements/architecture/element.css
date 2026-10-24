@@ -1,0 +1,14 @@
+/* Absent from replica:12's102px definition bands supply36.5% black name fields,
+   8px row gaps,24/19px type and sharp gray body surfaces with fine neutral rules. */
+.arch[data-el="toggle-grid-architecture"]{box-sizing:border-box;position:relative;display:grid;grid-template-rows:repeat(var(--toggle-grid-arch-layers),minmax(0,1fr));gap:calc(100% * .078431373 / (var(--toggle-grid-arch-layers) + .078431373 * (var(--toggle-grid-arch-layers) - 1)));width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.arch[data-el="toggle-grid-architecture"]:has(>.layer:nth-child(2):last-child){--toggle-grid-arch-layers:2}
+.arch[data-el="toggle-grid-architecture"]:has(>.layer:nth-child(4):last-child){--toggle-grid-arch-layers:4}
+.arch[data-el="toggle-grid-architecture"]:has(>.layer:nth-child(5):last-child){--toggle-grid-arch-layers:5}
+.arch[data-el="toggle-grid-architecture"]>.layer{box-sizing:border-box;position:relative;display:grid;grid-template-columns:36.5% repeat(var(--toggle-grid-arch-chips),minmax(0,1fr));min-width:0;min-height:0;background:var(--n-2);container-type:size;border:var(--stroke) solid var(--n-5)}
+.arch[data-el="toggle-grid-architecture"]>.layer>.name{box-sizing:border-box;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;margin:0;padding:.3em .6em;background:var(--ink);color:var(--page);font-size:clamp(var(--type-14),calc(100cqh * .235294118),var(--type-24));font-weight:var(--name-weight);line-height:calc(var(--name-line)*.961538461538462);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="toggle-grid-architecture"]>.layer>.chip{box-sizing:border-box;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;margin:0;padding:.5em .45em;border-inline-start:var(--stroke) solid var(--n-5);color:var(--ink);font-size:clamp(var(--type-12),calc(100cqh * .18627451),var(--type-20));font-weight:var(--body-weight);line-height:calc(var(--body-line)*1.013513513513514);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="toggle-grid-architecture"]>.layer:has(>.chip:nth-child(2):last-child){--toggle-grid-arch-chips:1}
+.arch[data-el="toggle-grid-architecture"]>.layer:has(>.chip:nth-child(3):last-child){--toggle-grid-arch-chips:2}
+.arch[data-el="toggle-grid-architecture"]>.layer:has(>.chip:nth-child(5):last-child){--toggle-grid-arch-chips:4}
+.arch[data-el="toggle-grid-architecture"]>.layer:has(>.chip:nth-child(6):last-child){--toggle-grid-arch-chips:5}
+@container(max-width:650px){.arch[data-el="toggle-grid-architecture"]>.layer>.name{font-size:var(--type-14)}.arch[data-el="toggle-grid-architecture"]>.layer>.chip{font-size:var(--type-12)}}

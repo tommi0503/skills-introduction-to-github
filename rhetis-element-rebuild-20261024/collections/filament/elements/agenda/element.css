@@ -1,0 +1,12 @@
+/* No replica agenda; page07 supplies178x121 service fields with12 corners.
+   Light300 names and strong700 footer copy combine with page06 light250 index figures. */
+.agenda[data-el="filament-agenda"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:var(--gap-sm);width:100%;height:100%;padding:var(--gap-sm);min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--a1-on)}
+.agenda[data-el="filament-agenda"]>.entry{box-sizing:border-box;position:relative;display:grid;grid-template-columns:35% minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);min-width:0;min-height:0;container-type:size;isolation:isolate}
+.agenda[data-el="filament-agenda"]>.entry::before{box-sizing:border-box;content:"";position:absolute;z-index:-1;inset:0;background:var(--a1);border-radius:var(--radius)}
+.agenda[data-el="filament-agenda"]>.entry>.mark{box-sizing:border-box;position:absolute;left:8.426966%;top:50%;width:25%;margin:0;transform:translateY(-50%);font-size:clamp(var(--type-24),calc(min(20cqw,30cqh)),var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.agenda[data-el="filament-agenda"]>.entry>.name{grid-column:2;grid-row:1;min-width:0;margin:11.570248cqh 8.426966cqw 0 0;font-size:clamp(var(--type-14),calc(min(8cqw,20.661157cqh)),var(--type-28));font-weight:calc(var(--body-weight)*.75);line-height:calc(var(--figure-line)*.9333333333);letter-spacing:calc(var(--body-track)*1.8);word-break:keep-all;overflow-wrap:anywhere}
+.agenda[data-el="filament-agenda"]>.entry>.note{grid-column:2;grid-row:2;align-self:end;min-width:0;margin:8cqh 8.426966cqw 11.570248cqh 0;font-size:clamp(var(--type-12),calc(min(5.44cqw,14.049587cqh)),var(--type-18));font-weight:calc(var(--body-weight)*1.75);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.agenda[data-el="filament-agenda"]>.entry.on{color:var(--a1-8)}
+.agenda[data-el="filament-agenda"]>.entry.on::before{background:var(--page);box-shadow:inset 0 0 0 calc(var(--stroke)*2) var(--a1-8)}
+@container(max-width:450px){.agenda[data-el="filament-agenda"]>.entry>.name{font-size:var(--type-14)}.agenda[data-el="filament-agenda"]>.entry>.note{font-size:var(--type-12)}}
+@container(max-height:190px){.agenda[data-el="filament-agenda"]>.entry>.name{font-size:var(--type-14)}.agenda[data-el="filament-agenda"]>.entry>.note{font-size:var(--type-12)}}

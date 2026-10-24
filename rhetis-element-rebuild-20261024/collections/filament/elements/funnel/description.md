@@ -1,0 +1,1 @@
+The funnel uses open oval contours extending replica01/08 fine curves. Each stage contour occupies exactly its0–100 width share of a55% quantitative plotting column. Independent light figures and bold labels remain in open columns outside the plot, so a5% final stage does not conceal its text. Source06 weight contrast is retained without adding panels or shadows.

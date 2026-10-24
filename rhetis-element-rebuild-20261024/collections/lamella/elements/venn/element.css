@@ -1,0 +1,18 @@
+/* Absent from replica: source15's 98/176 outlined sets and194-unit three-round/one-square accent bubble become intersecting sets.
+   Source11's one-unit fine curves and source03's regular14-unit labels retain an open, unboxed diagram. */
+.venn[data-el="lamella-venn"]{position:relative;container-type:size;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--lamella-venn-u:min(calc(100cqw / 1000),calc(100cqh / 800),1px)}
+.venn[data-el="lamella-venn"] *,.venn[data-el="lamella-venn"] *::before{box-sizing:border-box;min-width:0}
+.venn[data-el="lamella-venn"]>.set{position:absolute;left:calc(50% + (var(--lamella-venn-x) - 500) * var(--lamella-venn-u));top:calc(50% + (var(--lamella-venn-y) - 400) * var(--lamella-venn-u));width:calc(500 * var(--lamella-venn-u));height:calc(500 * var(--lamella-venn-u));transform:translate(-50%,-50%);border:var(--stroke) solid var(--n-5);border-radius:50%;--lamella-venn-y:400}
+.venn[data-el="lamella-venn"]>.set:first-child{--lamella-venn-x:370}
+.venn[data-el="lamella-venn"]>.set:nth-child(2){--lamella-venn-x:630}
+.venn[data-el="lamella-venn"]>.set.on{background:var(--a1-2-soft);border-color:var(--a1-7);border-radius:50% 50% 0 50%}
+.venn[data-el="lamella-venn"]>.set>.name{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42%;margin:0;text-align:center;font-size:clamp(var(--type-12),calc(14 * var(--lamella-venn-u)),var(--type-14));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.venn[data-el="lamella-venn"]>.set:first-child>.name{left:30%}
+.venn[data-el="lamella-venn"]>.set:nth-child(2)>.name{left:70%}
+.venn[data-el="lamella-venn"]>.core{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:calc(180 * var(--lamella-venn-u));min-width:60px;text-align:center;font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.venn[data-el="lamella-venn"]:has(>.set:nth-child(3))>.set:first-child,.venn[data-el="lamella-venn"]:has(>.set:nth-child(3))>.set:nth-child(2){--lamella-venn-y:470}
+.venn[data-el="lamella-venn"]:has(>.set:nth-child(3))>.set:nth-child(3){--lamella-venn-x:500;--lamella-venn-y:260}
+.venn[data-el="lamella-venn"]:has(>.set:nth-child(3))>.set:first-child>.name{left:30%;top:65%}
+.venn[data-el="lamella-venn"]:has(>.set:nth-child(3))>.set:nth-child(2)>.name{left:70%;top:65%}
+.venn[data-el="lamella-venn"]:has(>.set:nth-child(3))>.set:nth-child(3)>.name{left:50%;top:28%}
+.venn[data-el="lamella-venn"]:has(>.set:nth-child(3))>.core{top:calc(50% - 15 * var(--lamella-venn-u))}

@@ -1,0 +1,1 @@
+Replica07 chevron46-unit parent strip and sharp88-unit input cells form the tree. Branches retain04/06 black43-unit capsule names with02 orange switch marks. The complete org owns its one-unit orthogonal rail and branch stems. A32-unit root floor and40-unit branch floor protect readable type at small cells; leaf geometry and source gaps remain proportional.

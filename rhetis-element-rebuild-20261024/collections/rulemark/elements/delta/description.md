@@ -1,0 +1,1 @@
+Inferred from replica05 black table heads and replica09 circle/chevron direction markers. Two figures occupy equal measured faces with a connector owned by their common root. Narrow portrait cells turn the pair downward; both figures stay visible.

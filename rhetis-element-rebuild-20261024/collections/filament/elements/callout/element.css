@@ -1,0 +1,55 @@
+/* No source callout: replica07 service178×121/12px radius and replica04 16px body with bold footer17px/700. */
+.callout[data-el="filament-callout"] {
+  container-type: size;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: min(3%,var(--gap));
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: min(3%,var(--pad));
+  font-family: var(--font-body);
+  background: var(--a1);
+  color: var(--a1-on);
+  border-radius: var(--radius);
+}
+.callout[data-el="filament-callout"]>p {
+  margin: 0;
+  min-width: 0;
+  font-size: clamp(var(--type-14),calc(min(2.8cqw,14.05cqh)),var(--type-32));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*1);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+.callout[data-el="filament-callout"]>p>b {
+  font-weight: calc(var(--body-weight)*1.75);
+  color: inherit;
+}
+.callout[data-el="filament-callout"]>.icon {
+  display: block;
+  flex: none;
+  width: min(10cqw,30cqh,48px);
+  aspect-ratio: 1;
+  color: inherit;
+}
+@container (max-width:420px) {
+  .callout[data-el="filament-callout"]>p {
+    font-size: var(--type-14);
+  }
+  .callout[data-el="filament-callout"] {
+    gap: var(--gap-sm);
+  }
+}
+@container (max-height:110px) {
+  .callout[data-el="filament-callout"]>p {
+    font-size: var(--type-14);
+  }
+  .callout[data-el="filament-callout"] {
+    padding: var(--gap-sm);
+  }
+}

@@ -1,0 +1,25 @@
+/* Absent positioning contract: replica06 supplies271px ringed hero circles,12px white rims,77/100circle nesting and50px bold copy.
+   Standard endpoint axes are inferred; no missing source fields are faked. */
+.posmap[data-el="tide-tab-positioning"]{box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.posmap[data-el="tide-tab-positioning"]>.axis-x{position:absolute;left:8%;top:50%;width:84%;height:var(--stroke);background:var(--n-4)}
+.posmap[data-el="tide-tab-positioning"]>.axis-y{position:absolute;left:50%;top:8%;height:84%;width:var(--stroke);background:var(--n-4)}
+.posmap[data-el="tide-tab-positioning"]>.axis-x>span,.posmap[data-el="tide-tab-positioning"]>.axis-y>span{box-sizing:border-box;position:absolute;z-index:1;display:flex;align-items:center;min-width:0;margin:0;padding:0 .2em;background:var(--page);font-size:clamp(var(--type-12),calc(100cqw*.016),var(--type-20));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.posmap[data-el="tide-tab-positioning"]>.axis-x>span{top:1.5cqh;width:23cqw}
+.posmap[data-el="tide-tab-positioning"]>.axis-x>span:first-child{left:-8cqw;text-align:left}
+.posmap[data-el="tide-tab-positioning"]>.axis-x>span:last-child{right:-8cqw;justify-content:flex-end;text-align:right}
+.posmap[data-el="tide-tab-positioning"]>.axis-y>span{left:0;width:24cqw;height:8cqh;transform:translateX(-50%);justify-content:center;text-align:center}
+.posmap[data-el="tide-tab-positioning"]>.axis-y>span:first-child{bottom:-8cqh}
+.posmap[data-el="tide-tab-positioning"]>.axis-y>span:last-child{top:-8cqh}
+.posmap[data-el="tide-tab-positioning"]>.mark{box-sizing:border-box;position:absolute;z-index:2;left:calc(8% + var(--x)*.84%);top:calc(92% - var(--y)*.84%);width:min(60px,8cqw,12cqh);aspect-ratio:1;transform:translate(-50%,-50%);background:var(--a1);border-radius:50%}
+.posmap[data-el="tide-tab-positioning"]>.mark>.name{box-sizing:border-box;position:absolute;top:calc(100% + 1.4cqh);left:50%;transform:translateX(-50%);width:max-content;max-width:23cqw;min-width:0;margin:0;padding:0 .2em;background:var(--page);font-size:clamp(var(--type-12),calc(100cqw*.022),var(--type-22));font-weight:var(--label-weight);line-height:var(--name-line);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.posmap[data-el="tide-tab-positioning"]>.mark:has(>.seat.logo){background:var(--n-2);border:var(--stroke) solid var(--n-4)}
+.posmap[data-el="tide-tab-positioning"]>.mark>.seat.logo{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:var(--n-2);color:var(--n-7);font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--label-line)}
+.posmap[data-el="tide-tab-positioning"]>.mark>.seat.logo::after{content:attr(data-ph)}
+.posmap[data-el="tide-tab-positioning"]{background:var(--a1-1-soft)}
+.posmap[data-el="tide-tab-positioning"]>.axis-x>span,.posmap[data-el="tide-tab-positioning"]>.axis-y>span,.posmap[data-el="tide-tab-positioning"]>.mark>.name{background:var(--a1-1-soft)}
+.posmap[data-el="tide-tab-positioning"]>.axis-x,.posmap[data-el="tide-tab-positioning"]>.axis-y{background:var(--n-3)}
+.posmap[data-el="tide-tab-positioning"]>.mark{background:var(--a2);border:calc(min(8cqw,12cqh)*.12) solid var(--n-1);box-shadow:0 .5cqh 1cqh var(--n-2)}
+.posmap[data-el="tide-tab-positioning"]>.mark>.name{color:var(--a1-8);font-weight:var(--name-weight)}
+.posmap[data-el="tide-tab-positioning"]>.mark.on{display:flex;align-items:center;justify-content:center;width:min(240px,22cqw,30cqh);background:linear-gradient(var(--a1-2-soft),var(--a2-2-soft));border:calc(min(240px,22cqw,30cqh)*.04428044) solid var(--n-1)}
+.posmap[data-el="tide-tab-positioning"]>.mark.on>.name{position:static;transform:none;width:85%;padding:0;background:transparent;color:var(--ink);font-size:clamp(var(--type-12),calc(min(22cqw,30cqh)*.18450185),var(--type-40));font-weight:var(--name-weight);line-height:var(--name-line)}
+.posmap[data-el="tide-tab-positioning"]>.mark>.seat.logo{border-radius:50%}

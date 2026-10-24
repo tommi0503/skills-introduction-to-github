@@ -1,0 +1,24 @@
+/* Inferred from replica03:330px square panel,28px Do Hyeon outlined header and20px/350 body.
+   Replica06 supplies the40px accent circular carrier; fixed role tracks align names across unequal notes. */
+.card[data-el="toggle-grid-card"]{container-type:size;box-sizing:border-box;position:relative;width:100%;height:100%;min-width:0;min-height:0;font-family:var(--font-body);color:var(--ink);--toggle-grid-card-face:var(--n-2);--toggle-grid-card-fg:var(--ink);--toggle-grid-card-kick:0px;--toggle-grid-card-fig:0px;--toggle-grid-card-mark:0px;--toggle-grid-card-name:max(112px,24cqh);--toggle-grid-card-note:max(64px,24cqh)}
+.card[data-el="toggle-grid-card"]:has(>.parts>.kick){--toggle-grid-card-kick:calc(var(--type-12)*var(--label-line) + var(--gap-sm))}
+.card[data-el="toggle-grid-card"]:has(>.parts>.fig){--toggle-grid-card-fig:calc(max(60px,16cqh) + var(--gap-sm))}
+.card[data-el="toggle-grid-card"]:has(>.parts>.mark){--toggle-grid-card-mark:calc(min(14cqw,14cqh,48px) + var(--gap))}
+.card[data-el="toggle-grid-card"]>.parts{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:var(--toggle-grid-card-kick) var(--toggle-grid-card-fig) var(--toggle-grid-card-mark) var(--toggle-grid-card-name) var(--toggle-grid-card-note);align-content:center;height:100%;min-height:0;padding:min(var(--pad),4cqh) var(--pad);background:var(--toggle-grid-card-face);color:var(--toggle-grid-card-fg)}
+.card[data-el="toggle-grid-card"]>.parts>:where(.name,.note,.fig,.mark,.kick){box-sizing:border-box;grid-column:1;margin:0;min-width:0;align-self:start;word-break:keep-all;overflow-wrap:anywhere}
+.card[data-el="toggle-grid-card"]>.parts>.name{grid-row:4;padding:var(--gap-sm);background:var(--page);color:var(--ink);border:var(--stroke) solid var(--ink);font-family:var(--font-display),var(--font-body);font-size:clamp(var(--type-16),calc(min(8.4848cqw,10cqh)),var(--type-32));font-weight:var(--weight-display);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.card[data-el="toggle-grid-card"]>.parts>.note{grid-row:5;font-size:clamp(var(--type-12),calc(min(6.0606cqw,6cqh)),var(--type-20));font-weight:calc(var(--body-weight)*.875);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.card[data-el="toggle-grid-card"]>.parts>.fig{grid-row:2;font-family:var(--font-display),var(--font-body);font-size:clamp(var(--type-28),calc(min(18cqw,16cqh)),var(--type-64));font-weight:var(--weight-display);line-height:var(--figure-line);letter-spacing:var(--figure-track)}
+.card[data-el="toggle-grid-card"]>.parts>.fig>small{font-family:var(--font-body);font-size:var(--type-14);font-weight:var(--body-weight)}
+.card[data-el="toggle-grid-card"]>.parts>.kick{grid-row:1;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track)}
+.card[data-el="toggle-grid-card"]>.parts>.mark{grid-row:3;display:grid;place-items:center;width:min(14cqw,14cqh,48px);aspect-ratio:1;border:var(--stroke) solid var(--ink);border-radius:50%;background:var(--a1);color:var(--a1-on);font-family:var(--font-display),var(--font-body);font-size:clamp(var(--type-16),calc(min(8cqw,8cqh)),var(--type-28));font-weight:var(--weight-display);line-height:var(--label-line)}
+.card[data-el="toggle-grid-card"]>.parts>.mark>.icon,.card[data-el="toggle-grid-card"]>.parts>.mark>.seat{width:56%;height:56%}
+.card[data-el="toggle-grid-card"]>.parts>.mark:not(:has(>.icon,>.seat)){padding-top:.16em}
+.card[data-el="toggle-grid-card"].on{--toggle-grid-card-face:var(--a1);--toggle-grid-card-fg:var(--a1-on)}
+.card[data-el="toggle-grid-card"].quiet{--toggle-grid-card-face:var(--page)}
+.card[data-el="toggle-grid-card"].line>.parts{background:transparent;border:var(--stroke) solid var(--ink)}
+.card[data-el="toggle-grid-card"].tone-1{--toggle-grid-card-face:var(--a1);--toggle-grid-card-fg:var(--a1-on)}
+.card[data-el="toggle-grid-card"].tone-2{--toggle-grid-card-face:var(--a2);--toggle-grid-card-fg:var(--a2-on)}
+.card[data-el="toggle-grid-card"].tone-3{--toggle-grid-card-face:var(--a3-7);--toggle-grid-card-fg:var(--page)}
+.card[data-el="toggle-grid-card"].tone-4{--toggle-grid-card-face:var(--a4);--toggle-grid-card-fg:var(--a4-on)}
+.card[data-el="toggle-grid-card"].tone-5{--toggle-grid-card-face:var(--n-8);--toggle-grid-card-fg:var(--page)}

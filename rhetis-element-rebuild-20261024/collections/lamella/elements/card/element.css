@@ -1,0 +1,297 @@
+/* Replica03: 217×30 leaf cap in271×381 column; rule at x19/y64, note atx38.
+   Rich note15px headings /11px body /16px line pitch,18px title-body gap,25px paragraph gap. */
+.card[data-el="lamella-card"] {
+  container-type: size;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--ink);
+  font-family: var(--font-body);
+  --lamella-card-accent: var(--a1);
+  --lamella-card-on: var(--a1-on);
+  --lamella-card-face: var(--n-1);
+}
+.card[data-el="lamella-card"]>.parts {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.card[data-el="lamella-card"]>.parts::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 7.011cqw;
+  top: calc(var(--lamella-card-cap-height) + min(12.55cqw,var(--gap-lg)));
+  bottom: 0;
+  border-left: var(--stroke) solid var(--n-5);
+}
+.card[data-el="lamella-card"] .parts>:where(.name,.note,.kick,.fig) {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.card[data-el="lamella-card"] .name {
+  order: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 80.074%;
+  min-height: var(--lamella-card-cap-height);
+  padding: 0 7.011cqw;
+  border-radius: 0 var(--lamella-card-cap-height) 0 var(--lamella-card-cap-height);
+  background: var(--lamella-card-accent);
+  color: var(--lamella-card-on);
+  font-size: clamp(var(--type-12),calc(5.166cqw),var(--type-24));
+  font-weight: calc(var(--body-weight) * 1.25);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  text-align: center;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+.card[data-el="lamella-card"] .note {
+  order: 2;
+  width: 85.978%;
+  margin-top: min(12.55cqw,var(--gap-lg));
+  margin-left: 14.022cqw;
+  font-size: clamp(var(--type-10),calc(min(4.059cqw,3.03cqh)),var(--type-24));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--body-line) * 1.0031348);
+  letter-spacing: calc(var(--body-track) * 0);
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+.card[data-el="lamella-card"] .note>p {
+  margin: 0 0 min(9.225cqw,var(--gap-lg));
+}
+.card[data-el="lamella-card"] .note>p>span>b {
+  font-size: clamp(var(--type-12),calc(min(5.535cqw,4.134cqh)),var(--type-32));
+  font-weight: var(--body-weight);
+}
+.card[data-el="lamella-card"] .note>p:last-child {
+  margin-bottom: 0;
+}
+.card[data-el="lamella-card"] .note>p>b {
+  display: block;
+  margin-bottom: min(6.642cqw,var(--gap));
+  font-size: clamp(var(--type-12),calc(min(5.535cqw,4.134cqh)),var(--type-32));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--body-line) * 0.68965517);
+}
+.card[data-el="lamella-card"] .kick {
+  order: -2;
+  font-size: clamp(var(--type-10),calc(4.059cqw),var(--type-18));
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  color: var(--ink);
+  margin-left: 7.011cqw;
+  margin-bottom: min(6.2cqw,var(--gap));
+}
+.card[data-el="lamella-card"] .mark {
+  order: -1;
+  display: grid;
+  place-items: center;
+  flex: none;
+  font-size: clamp(var(--type-10),calc(4.059cqw),var(--type-18));
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  color: var(--ink);
+  margin-left: 7.011cqw;
+  margin-bottom: min(6.2cqw,var(--gap));
+}
+.card[data-el="lamella-card"] .mark:has(>.icon),.card[data-el="lamella-card"] .mark:has(>.seat) {
+  width: min(20cqw,16cqh);
+  height: min(20cqw,16cqh);
+  border-radius: 0 50% 0 50%;
+  background: var(--a1-2-soft);
+}
+.card[data-el="lamella-card"] .mark>.icon,.card[data-el="lamella-card"] .mark>.seat {
+  width: 56%;
+  height: 56%;
+  aspect-ratio: 1;
+  color: var(--a1-8);
+}
+.card[data-el="lamella-card"] .fig {
+  order: 1;
+  margin-top: var(--gap);
+  margin-left: 14.022cqw;
+  font-size: clamp(var(--type-32),calc(12cqw),var(--type-80));
+  font-weight: var(--figure-weight);
+  line-height: var(--figure-line);
+  letter-spacing: var(--figure-track);
+}
+.card[data-el="lamella-card"] .fig>small {
+  font-size: clamp(var(--type-12),calc(min(4.059cqw,3.03cqh)),var(--type-24));
+  margin-left: var(--gap-sm);
+  font-weight: var(--label-weight);
+}
+.card[data-el="lamella-card"] .parts:has(>.kick),.card[data-el="lamella-card"] .parts:has(>.mark) {
+  --lamella-card-prefix-space: calc(clamp(var(--type-10),calc(4.059cqw),var(--type-18)) * var(--label-line) + min(6.2cqw,var(--gap)));
+}
+.card[data-el="lamella-card"] .parts:has(>.kick)>.note,.card[data-el="lamella-card"] .parts:has(>.mark)>.note {
+  margin-top: min(8.12cqw,var(--gap));
+}
+.card[data-el="lamella-card"] .parts:has(>.kick)::before {
+  top: calc(var(--lamella-card-cap-height) + min(10.85cqw,var(--gap-lg)));
+}
+.card[data-el="lamella-card"] .parts:has(>.mark)::before {
+  top: calc(var(--lamella-card-cap-height) + min(23.6cqw,calc(var(--gap-lg) * 2)));
+}
+.card[data-el="lamella-card"] .parts:has(>.mark)>.name {
+  width: 62.73%;
+}
+.card[data-el="lamella-card"] .parts:has(>.kick) .note>p,.card[data-el="lamella-card"] .parts:has(>.mark) .note>p {
+  margin-bottom: min(4cqw,var(--gap));
+}
+.card[data-el="lamella-card"] .note:not(:has(>p>b))>p {
+  margin-bottom: 0;
+}
+.card[data-el="lamella-card"] .parts:has(>.kick) .note>p>b,.card[data-el="lamella-card"] .parts:has(>.mark) .note>p>b {
+  font-size: inherit;
+  font-weight: var(--body-weight);
+  line-height: inherit;
+  margin-bottom: calc(var(--gap-sm) * 0.75);
+}
+.card[data-el="lamella-card"].quiet>.parts::after,.card[data-el="lamella-card"].on>.parts::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: calc(var(--lamella-card-cap-height) + var(--lamella-card-prefix-space)) 0 11.197916667cqh;
+  background: var(--lamella-card-face);
+}
+.card[data-el="lamella-card"].quiet .note,.card[data-el="lamella-card"].on .note {
+  margin-left: 7.011cqw;
+  width: 85.978%;
+  margin-top: min(5.16605166cqw,calc(var(--gap) * 0.7));
+}
+.card[data-el="lamella-card"].quiet .name {
+  width: 100%;
+  font-size: clamp(var(--type-10),3.6900369cqw,var(--type-24));
+  letter-spacing: calc(var(--body-track) * -5.98456);
+  line-height: calc(var(--label-line) * 0.8333333333);
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+.card[data-el="lamella-card"].on .name {
+  width: 100%;
+  font-size: clamp(var(--type-12),5.16605166cqw,var(--type-24));
+  letter-spacing: calc(var(--body-track) * 0.8571428571);
+  border-radius: 0 var(--lamella-card-cap-height) 0 0;
+  line-height: var(--label-line);
+  background: var(--n-1);
+  color: var(--a1-7);
+}
+.card[data-el="lamella-card"].quiet .note>p,.card[data-el="lamella-card"].on .note>p {
+  margin-bottom: min(4.42804428cqw,calc(var(--gap-sm) * 1.5));
+}
+.card[data-el="lamella-card"].quiet .note>p:first-child {
+  margin-bottom: min(2.58302583cqw,calc(var(--gap-sm) * 0.875));
+}
+.card[data-el="lamella-card"].on .note>p:first-child {
+  margin-bottom: min(2.21402214cqw,calc(var(--gap-sm) * 0.75));
+}
+.card[data-el="lamella-card"].quiet .note>p>b,.card[data-el="lamella-card"].on .note>p>b {
+  font-size: inherit;
+  font-weight: var(--body-weight);
+  line-height: inherit;
+  margin-bottom: calc(var(--gap-sm) * 0.75);
+}
+.card[data-el="lamella-card"].quiet .note>p>b {
+  line-height: calc(var(--body-line) * 0.6896551724);
+  margin-bottom: min(3.32103321cqw,calc(var(--gap-sm) * 1.125));
+}
+.card[data-el="lamella-card"].quiet>.parts::before,.card[data-el="lamella-card"].on>.parts::before {
+  top: calc(var(--lamella-card-cap-height) + var(--lamella-card-prefix-space));
+}
+.card[data-el="lamella-card"].on {
+  --lamella-card-face: var(--lamella-card-accent);
+  color: var(--lamella-card-on);
+}
+.card[data-el="lamella-card"].on>.parts::before {
+  border-color: var(--page);
+}
+.card[data-el="lamella-card"].line>.parts::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: var(--lamella-card-cap-height) 0 0;
+  border: var(--stroke) solid var(--n-4);
+}
+.card[data-el="lamella-card"].tone-1 {
+  --lamella-card-accent: var(--a1);
+  --lamella-card-on: var(--a1-on);
+}
+.card[data-el="lamella-card"].tone-2 {
+  --lamella-card-accent: var(--a2);
+  --lamella-card-on: var(--a2-on);
+}
+.card[data-el="lamella-card"].tone-3 {
+  --lamella-card-accent: var(--a3-7);
+  --lamella-card-on: var(--page);
+}
+.card[data-el="lamella-card"].tone-4 {
+  --lamella-card-accent: var(--a4);
+  --lamella-card-on: var(--a4-on);
+}
+.card[data-el="lamella-card"].tone-5 {
+  --lamella-card-accent: var(--n-8);
+  --lamella-card-on: var(--page);
+}
+@container (max-width:300px) {
+  .card[data-el="lamella-card"].quiet .name,.card[data-el="lamella-card"].on .name {
+    width: 100%;
+  }
+  .card[data-el="lamella-card"].quiet>.parts::after,.card[data-el="lamella-card"].on>.parts::after {
+    bottom: 11.197916667cqh;
+  }
+}
+@container (min-width:320px) {
+  .card[data-el="lamella-card"].quiet .note>p>b {
+    line-height: calc(var(--body-line) * 0.6896551724);
+    margin-bottom: min(3.32103321cqw,calc(var(--gap-sm) * 1.125));
+  }
+  .card[data-el="lamella-card"].quiet>.parts::before,.card[data-el="lamella-card"].on>.parts::before {
+    display: none;
+  }
+}
+@container (max-height:370px) {
+  .card[data-el="lamella-card"] .parts:has(>.kick)>.note {
+    margin-left: 7.011cqw;
+    width: 92.989%;
+  }
+}
+@container (max-height:240px) {
+  .card[data-el="lamella-card"] .name {
+    width: 100%;
+  }
+  .card[data-el="lamella-card"] .parts:has(>.kick)>.note {
+    margin-top: var(--gap-sm);
+  }
+  .card[data-el="lamella-card"]>.parts::before,.card[data-el="lamella-card"] .parts:has(>.kick)::before {
+    left: 0;
+    top: 0;
+  }
+  .card[data-el="lamella-card"] .note {
+    margin-left: 7.011cqw;
+    width: 92.989%;
+    margin-top: var(--gap-sm);
+  }
+}
+@container (max-width:240px) {
+  .card[data-el="lamella-card"]>.parts::before {
+    display: none;
+  }
+  .card[data-el="lamella-card"] .name {
+    width: 100%;
+  }
+}

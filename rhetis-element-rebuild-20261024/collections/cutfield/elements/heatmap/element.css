@@ -1,0 +1,28 @@
+/* No source heatmap instance; inferred from replica03/06:chamfered fields, fine square rules and light figures.
+   Density remains data-driven; calendar members keep equal square day cells. */
+.heat[data-el="cutfield-heatmap"]{box-sizing:border-box;width:100%;height:100%;min-width:0;min-height:0;container-type:size;display:flex;flex-direction:column;gap:var(--gap-sm);font-family:var(--font-body);color:var(--ink);--cutfield-heat-head:clamp(48px,14cqh,100px);--cutfield-heat-name:24cqw;--cutfield-heat-rows:2;--cutfield-heat-density:var(--a1-4-soft);--cutfield-heat-scale:1}
+.heat[data-el="cutfield-heatmap"]>.heads,.heat[data-el="cutfield-heatmap"]>.row{box-sizing:border-box;min-width:0;min-height:0;width:100%;flex:1;display:grid;grid-template-columns:var(--cutfield-heat-name) repeat(var(--cols),minmax(0,1fr));gap:var(--gap-sm)}
+.heat[data-el="cutfield-heatmap"]>.heads{flex:0 0 var(--cutfield-heat-head);padding-left:calc(var(--cutfield-heat-name) + var(--gap-sm));grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+.heat[data-el="cutfield-heatmap"]>.heads>span{box-sizing:border-box;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(var(--type-12),calc(min(2.2cqw,4cqh)),var(--type-20));font-weight:var(--name-weight);line-height:var(--label-line);letter-spacing:var(--label-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.heat[data-el="cutfield-heatmap"]>.row>.name{box-sizing:border-box;min-width:0;min-height:0;display:flex;align-items:center;margin:0;font-size:clamp(var(--type-12),calc(min(2.2cqw,4cqh)),var(--type-20));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--ink)}
+.heat[data-el="cutfield-heatmap"]>.row>.cell{box-sizing:border-box;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--cutfield-heat-density) calc(var(--v)*var(--cutfield-heat-scale)*1%),var(--page));color:var(--ink)}
+.heat[data-el="cutfield-heatmap"]>.row>.cell>b{margin:0;font-family:var(--font-display);font-size:clamp(var(--type-12),calc(min(10cqw / var(--cols),6cqh)),var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--label-track);white-space:nowrap;color:inherit}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(2 of .row):last-child){--cutfield-heat-rows:2}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(3 of .row):last-child){--cutfield-heat-rows:3}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(4 of .row):last-child){--cutfield-heat-rows:4}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(5 of .row):last-child){--cutfield-heat-rows:5}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(6 of .row):last-child){--cutfield-heat-rows:6}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(7 of .row):last-child){--cutfield-heat-rows:7}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(8 of .row):last-child){--cutfield-heat-rows:8}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(9 of .row):last-child){--cutfield-heat-rows:9}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(10 of .row):last-child){--cutfield-heat-rows:10}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(11 of .row):last-child){--cutfield-heat-rows:11}
+.heat[data-el="cutfield-heatmap"]:has(>.row:nth-child(12 of .row):last-child){--cutfield-heat-rows:12}
+.heat[data-el="cutfield-heatmap"].calendar{align-items:center;--cutfield-heat-calendar-side:max(1px,min(calc((100cqw - var(--gap-sm)*(var(--cols) - 1))/var(--cols)),calc((100cqh - var(--cutfield-heat-head) - var(--gap-sm)*var(--cutfield-heat-rows))/var(--cutfield-heat-rows))))}
+.heat[data-el="cutfield-heatmap"].calendar>.heads,.heat[data-el="cutfield-heatmap"].calendar>.row{width:calc(var(--cutfield-heat-calendar-side)*var(--cols) + var(--gap-sm)*(var(--cols) - 1));padding-left:0;grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+.heat[data-el="cutfield-heatmap"].calendar>.row{flex:0 0 var(--cutfield-heat-calendar-side);height:var(--cutfield-heat-calendar-side)}
+.heat[data-el="cutfield-heatmap"].calendar>.row>.cell{aspect-ratio:1}
+.heat[data-el="cutfield-heatmap"]>.row>.cell{clip-path:polygon(0 0,100% 0,100% calc(100% - min(12px,4cqh)),calc(100% - min(12px,4cqh)) 100%,0 100%)}
+.heat[data-el="cutfield-heatmap"]>.heads{border-bottom:1px solid var(--n-4)}
+.heat[data-el="cutfield-heatmap"].calendar>.row>.cell{clip-path:polygon(0 0,100% 0,100% 85%,85% 100%,0 100%)}
+@container(max-width:500px){.heat[data-el="cutfield-heatmap"]>.heads>span,.heat[data-el="cutfield-heatmap"]>.row>.name{font-size:var(--type-12)}.heat[data-el="cutfield-heatmap"]>.row>.cell>b{font-size:var(--type-12)}}

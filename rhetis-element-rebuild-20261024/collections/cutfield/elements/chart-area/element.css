@@ -1,0 +1,73 @@
+/* No area source instance; inferred from replica04:rectangular plot marks, fine axes and13px650 value labels; grouped plot stays a gap.
+   Each complete series owns its equal-step filled wedges and connectors; cumulative bands paint bottom first. */
+.areas[data-el="cutfield-chart-area"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--cutfield-area-font:clamp(var(--type-12),calc(2cqh),var(--type-16));--cutfield-area-left:max(40px,4cqw,calc(var(--cutfield-area-font)*(.65*(round(down,log(max(1,var(--max)),10)) + 1) + .4)));--cutfield-area-right:var(--gap-sm);--cutfield-area-head:max(72px,14cqh);--cutfield-area-foot:max(32px,6cqh);--cutfield-area-height:calc(100cqh - var(--cutfield-area-head) - var(--cutfield-area-foot));--cutfield-area-count:1;--cutfield-area-stroke:var(--stroke);--cutfield-area-point:4px;--cutfield-area-grid:var(--n-3);--cutfield-area-alpha:25%;--cutfield-area-text:var(--ink)}
+.areas[data-el="cutfield-chart-area"]::before{content:counter(cutfield-ay5) "\a " counter(cutfield-ay4) "\a " counter(cutfield-ay3) "\a " counter(cutfield-ay2) "\a " counter(cutfield-ay1);counter-reset:cutfield-ay5 round(var(--max)) cutfield-ay4 round(calc(var(--max)*.8)) cutfield-ay3 round(calc(var(--max)*.6)) cutfield-ay2 round(calc(var(--max)*.4)) cutfield-ay1 round(calc(var(--max)*.2));position:absolute;left:var(--gap-sm);top:calc(var(--cutfield-area-head) - var(--cutfield-area-height)/10);width:calc(var(--cutfield-area-left) - var(--gap-sm) - 4px);height:var(--cutfield-area-height);font-size:clamp(var(--type-12),calc(2cqh),var(--type-16));font-weight:var(--body-weight);line-height:calc(var(--cutfield-area-height)/5);letter-spacing:var(--label-track);text-align:right;white-space:pre;color:var(--cutfield-area-text)}
+.areas[data-el="cutfield-chart-area"]::after{content:"";position:absolute;z-index:-3;left:var(--cutfield-area-left);right:var(--cutfield-area-right);top:var(--cutfield-area-head);bottom:var(--cutfield-area-foot);border-left:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,var(--cutfield-area-grid) 0 1px,transparent 1px 20%);pointer-events:none}
+.areas[data-el="cutfield-chart-area"]>.series{position:absolute;left:var(--cutfield-area-left);right:var(--cutfield-area-right);top:0;bottom:var(--cutfield-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);isolation:isolate;anchor-scope:all;--cutfield-area-index:0;--cutfield-area-color:var(--a1)}
+.areas[data-el="cutfield-chart-area"]>.series>.name{box-sizing:border-box;position:absolute;left:calc(var(--cutfield-area-index)*(100cqw - var(--cutfield-area-left) - var(--cutfield-area-right))/var(--cutfield-area-count));top:var(--gap-sm);width:calc((100cqw - var(--cutfield-area-left) - var(--cutfield-area-right))/var(--cutfield-area-count));margin:0;padding:0 var(--gap-sm) 0 calc(var(--gap-sm)*1.5);font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);word-break:keep-all;overflow-wrap:anywhere;color:var(--cutfield-area-text)}
+.areas[data-el="cutfield-chart-area"]>.series>.name:empty{display:none}
+.areas[data-el="cutfield-chart-area"]>.series>.name::before{content:"";position:absolute;left:0;top:.45em;width:var(--gap-sm);height:var(--cutfield-area-stroke);background:var(--cutfield-area-color)}
+.areas[data-el="cutfield-chart-area"]>.series>.pt{position:static;align-self:start;justify-self:center;width:var(--cutfield-area-point);height:var(--cutfield-area-point);margin-top:calc(var(--cutfield-area-head) + var(--cutfield-area-height) - var(--cutfield-area-value) - var(--cutfield-area-point)/2);background:var(--cutfield-area-color);anchor-name:var(--cutfield-area-self);--cutfield-area-value:calc(var(--cutfield-area-height)*var(--v)/var(--max))}
+.areas[data-el="cutfield-chart-area"]>.series>.pt::before,.areas[data-el="cutfield-chart-area"]>.series>.pt::after{content:"";position:absolute;left:anchor(var(--cutfield-area-prev) center);right:anchor(var(--cutfield-area-self) center);top:calc(anchor(var(--cutfield-area-prev) center) - var(--cutfield-area-height));bottom:0;pointer-events:none}
+.areas[data-el="cutfield-chart-area"]>.series>.pt::before{z-index:-2;left:calc(anchor(var(--cutfield-area-prev) center) - 1px);right:calc(anchor(var(--cutfield-area-self) center) - 1px);mix-blend-mode:plus-lighter;background:color-mix(in srgb,var(--cutfield-area-color) var(--cutfield-area-alpha),transparent);clip-path:polygon(1px var(--cutfield-area-height),calc(100% - 1px) calc(100% - var(--cutfield-area-value)),calc(100% - 1px) 100%,1px 100%)}
+.areas[data-el="cutfield-chart-area"]>.series>.pt::after{z-index:-1;background:var(--cutfield-area-color);clip-path:polygon(0 calc(var(--cutfield-area-height) - var(--cutfield-area-stroke)/2),100% calc(100% - var(--cutfield-area-value) - var(--cutfield-area-stroke)/2),100% calc(100% - var(--cutfield-area-value) + var(--cutfield-area-stroke)/2),0 calc(var(--cutfield-area-height) + var(--cutfield-area-stroke)/2))}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(1 of .pt)::before,.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(1 of .pt)::after{content:none}
+.areas[data-el="cutfield-chart-area"]>.series>.pt>b{position:absolute;z-index:20;left:anchor(var(--cutfield-area-self) center);top:anchor(var(--cutfield-area-self) center);transform:translate(-50%,calc(-100% - var(--gap-sm)));margin:0;padding:0 2px;background:var(--page);font-size:clamp(var(--type-12),calc(2.8cqh),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--cutfield-area-text)}
+.areas[data-el="cutfield-chart-area"]>.axis{box-sizing:border-box;position:absolute;left:var(--cutfield-area-left);right:var(--cutfield-area-right);bottom:0;height:var(--cutfield-area-foot);display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:start;padding-top:var(--gap-sm)}
+.areas[data-el="cutfield-chart-area"]>.axis>span{box-sizing:border-box;position:relative;width:max-content;justify-self:center;margin:0;font-size:clamp(var(--type-12),calc(2cqh),var(--type-16));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);text-align:center;white-space:nowrap;color:var(--cutfield-area-text)}
+.areas[data-el="cutfield-chart-area"]:has(>.series:nth-child(1 of .series):nth-last-child(1 of .series)){--cutfield-area-count:1}
+.areas[data-el="cutfield-chart-area"]>.series:nth-child(1 of .series){--cutfield-area-index:0;--cutfield-area-color:var(--a1-9);z-index:1}
+.areas[data-el="cutfield-chart-area"].stacked>.series:nth-child(1 of .series){z-index:4}
+.areas[data-el="cutfield-chart-area"]:has(>.series:nth-child(2 of .series):nth-last-child(1 of .series)){--cutfield-area-count:2}
+.areas[data-el="cutfield-chart-area"]>.series:nth-child(2 of .series){--cutfield-area-index:1;--cutfield-area-color:var(--a2);z-index:2}
+.areas[data-el="cutfield-chart-area"].stacked>.series:nth-child(2 of .series){z-index:3}
+.areas[data-el="cutfield-chart-area"]:has(>.series:nth-child(3 of .series):nth-last-child(1 of .series)){--cutfield-area-count:3}
+.areas[data-el="cutfield-chart-area"]>.series:nth-child(3 of .series){--cutfield-area-index:2;--cutfield-area-color:var(--a1);z-index:3}
+.areas[data-el="cutfield-chart-area"].stacked>.series:nth-child(3 of .series){z-index:2}
+.areas[data-el="cutfield-chart-area"]:has(>.series:nth-child(4 of .series):nth-last-child(1 of .series)){--cutfield-area-count:4}
+.areas[data-el="cutfield-chart-area"]>.series:nth-child(4 of .series){--cutfield-area-index:3;--cutfield-area-color:var(--n-8);z-index:4}
+.areas[data-el="cutfield-chart-area"].stacked>.series:nth-child(4 of .series){z-index:1}
+.areas[data-el="cutfield-chart-area"]>.series.tone-1{--cutfield-area-color:var(--a1-9)}
+.areas[data-el="cutfield-chart-area"]>.series.tone-2{--cutfield-area-color:var(--a2)}
+.areas[data-el="cutfield-chart-area"]>.series.tone-3{--cutfield-area-color:var(--a1)}
+.areas[data-el="cutfield-chart-area"]>.series.tone-4{--cutfield-area-color:var(--n-8)}
+.areas[data-el="cutfield-chart-area"]>.series.tone-5{--cutfield-area-color:var(--n-5)}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(1 of .pt){--cutfield-area-self:--cutfield-ap1;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(2 of .pt){--cutfield-area-self:--cutfield-ap2;--cutfield-area-prev:--cutfield-ap1;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(3 of .pt){--cutfield-area-self:--cutfield-ap3;--cutfield-area-prev:--cutfield-ap2;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(4 of .pt){--cutfield-area-self:--cutfield-ap4;--cutfield-area-prev:--cutfield-ap3;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(5 of .pt){--cutfield-area-self:--cutfield-ap5;--cutfield-area-prev:--cutfield-ap4;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(6 of .pt){--cutfield-area-self:--cutfield-ap6;--cutfield-area-prev:--cutfield-ap5;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(7 of .pt){--cutfield-area-self:--cutfield-ap7;--cutfield-area-prev:--cutfield-ap6;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(8 of .pt){--cutfield-area-self:--cutfield-ap8;--cutfield-area-prev:--cutfield-ap7;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(9 of .pt){--cutfield-area-self:--cutfield-ap9;--cutfield-area-prev:--cutfield-ap8;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(10 of .pt){--cutfield-area-self:--cutfield-ap10;--cutfield-area-prev:--cutfield-ap9;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(11 of .pt){--cutfield-area-self:--cutfield-ap11;--cutfield-area-prev:--cutfield-ap10;}
+.areas[data-el="cutfield-chart-area"]>.series>.pt:nth-child(12 of .pt){--cutfield-area-self:--cutfield-ap12;--cutfield-area-prev:--cutfield-ap11;}
+.areas[data-el="cutfield-chart-area"]{--cutfield-area-point:3px;--cutfield-area-alpha:20%}
+.areas[data-el="cutfield-chart-area"]>.series>.pt>b{font-weight:calc(var(--body-weight)*1.625)}
+.areas[data-el="cutfield-chart-area"].stacked>.series>.pt::before{mix-blend-mode:normal;left:calc(anchor(var(--cutfield-area-prev) center) - 1px);right:anchor(var(--cutfield-area-self) center);background:var(--cutfield-area-color);clip-path:polygon(0 var(--cutfield-area-height),100% calc(100% - var(--cutfield-area-value)),100% 100%,0 100%)}
+@container(max-width:700px){.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:not(:nth-child(3n + 1)):not(:last-child),.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:nth-last-child(-n + 3):not(:last-child){display:none}.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:first-child{justify-self:start}.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(5))>.axis>span:last-child{justify-self:end}}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(1){grid-column:1;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(2){grid-column:2;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(3){grid-column:3;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(4){grid-column:4;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(5){grid-column:5;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(6){grid-column:6;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(7){grid-column:7;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(8){grid-column:8;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(9){grid-column:9;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(10){grid-column:10;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(11){grid-column:11;grid-row:1}
+.areas[data-el="cutfield-chart-area"]>.axis>span:nth-child(12){grid-column:12;grid-row:1}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(3):last-child)>.axis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(4):last-child)>.axis{grid-template-columns:repeat(4,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(5):last-child)>.axis{grid-template-columns:repeat(5,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(6):last-child)>.axis{grid-template-columns:repeat(6,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(7):last-child)>.axis{grid-template-columns:repeat(7,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(8):last-child)>.axis{grid-template-columns:repeat(8,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(9):last-child)>.axis{grid-template-columns:repeat(9,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(10):last-child)>.axis{grid-template-columns:repeat(10,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(11):last-child)>.axis{grid-template-columns:repeat(11,minmax(0,1fr))}
+.areas[data-el="cutfield-chart-area"]:has(>.axis>span:nth-child(12):last-child)>.axis{grid-template-columns:repeat(12,minmax(0,1fr))}
+@container(max-width:550px){.areas[data-el="cutfield-chart-area"]>.series>.name,.areas[data-el="cutfield-chart-area"]>.series>.pt>b,.areas[data-el="cutfield-chart-area"]>.axis>span{font-size:var(--type-12)}}

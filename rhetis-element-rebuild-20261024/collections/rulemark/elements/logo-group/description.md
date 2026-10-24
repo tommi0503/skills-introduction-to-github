@@ -1,0 +1,1 @@
+Logo carriers infer the replica05 straight black rules and source13 square evidence faces. Member count determines equal openings; tall allocations wrap into two rows and narrow allocations into two columns. All placeholders keep their numbers centered. The picture material stays neutral; corners, rules and enclosure treatment distinguish this collection.

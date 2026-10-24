@@ -1,0 +1,1 @@
+The measured lower-right chamfer cuts both the track and its filled value; a large light figure and restrained label sit above the square start of the rail. This progress element is inferred from replica 03 and06; there is no source gauge instance. Names and figures remain visible at the declared minimum.

@@ -1,0 +1,35 @@
+/* Running-total waterfalls are absent from replica; inferred from replica09:square bars,1px rails and strong compartment labels.
+   Every move owns its floating bar, actual running-total connector and separate below-plot label. */
+.waterfall[data-el="portico-chart-waterfall"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--portico-wf-count:3;--portico-wf-left:max(40px,4cqw);--portico-wf-right:var(--gap-sm);--portico-wf-head:max(48px,10cqh);--portico-wf-foot:max(48px,10cqh);--portico-wf-width:calc(100cqw - var(--portico-wf-left) - var(--portico-wf-right));--portico-wf-height:calc(100cqh - var(--portico-wf-head) - var(--portico-wf-foot));--portico-wf-unit:calc(var(--portico-wf-width)/var(--portico-wf-count));--portico-wf-ratio:.66;--portico-wf-stroke:var(--stroke)}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(3):last-child){--portico-wf-count:3}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(4):last-child){--portico-wf-count:4}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(5):last-child){--portico-wf-count:5}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(6):last-child){--portico-wf-count:6}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(7):last-child){--portico-wf-count:7}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(8):last-child){--portico-wf-count:8}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(9):last-child){--portico-wf-count:9}
+.waterfall[data-el="portico-chart-waterfall"]:has(>.move:nth-child(10):last-child){--portico-wf-count:10}
+.waterfall[data-el="portico-chart-waterfall"]::before{content:"";position:absolute;z-index:-2;left:var(--portico-wf-left);right:var(--portico-wf-right);top:var(--portico-wf-head);bottom:var(--portico-wf-foot);border-left:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,var(--n-2) 0 1px,transparent 1px 25%)}
+.waterfall[data-el="portico-chart-waterfall"]::after{content:counter(portico-wy4) "\a " counter(portico-wy3) "\a " counter(portico-wy2) "\a " counter(portico-wy1);counter-reset:portico-wy4 round(var(--max)) portico-wy3 round(calc(var(--max)*.75)) portico-wy2 round(calc(var(--max)*.5)) portico-wy1 round(calc(var(--max)*.25));position:absolute;left:var(--gap-sm);top:calc(var(--portico-wf-head) - var(--portico-wf-height)/8);width:calc(var(--portico-wf-left) - var(--gap-sm) - 4px);height:var(--portico-wf-height);font-size:var(--type-12);font-weight:var(--body-weight);line-height:calc(var(--portico-wf-height)/4);letter-spacing:var(--label-track);text-align:right;white-space:pre;color:var(--ink)}
+.waterfall[data-el="portico-chart-waterfall"]>.move{position:static;--portico-wf-index:0;--portico-wf-from:var(--from);--portico-wf-top:calc(var(--portico-wf-head) + var(--portico-wf-height)*(1 - max(var(--portico-wf-from),var(--to))/var(--max)));--portico-wf-bottom:calc(var(--portico-wf-head) + var(--portico-wf-height)*(1 - min(var(--portico-wf-from),var(--to))/var(--max)));--portico-wf-end:calc(var(--portico-wf-head) + var(--portico-wf-height)*(1 - var(--to)/var(--max)));--portico-wf-color:var(--a1)}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(1){--portico-wf-index:0}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(2){--portico-wf-index:1}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(3){--portico-wf-index:2}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(4){--portico-wf-index:3}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(5){--portico-wf-index:4}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(6){--portico-wf-index:5}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(7){--portico-wf-index:6}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(8){--portico-wf-index:7}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(9){--portico-wf-index:8}
+.waterfall[data-el="portico-chart-waterfall"]>.move:nth-child(10){--portico-wf-index:9}
+.waterfall[data-el="portico-chart-waterfall"]>.move.down{--portico-wf-color:var(--n-5)}
+.waterfall[data-el="portico-chart-waterfall"]>.move.total{--portico-wf-from:0;--portico-wf-color:var(--a1-8)}
+.waterfall[data-el="portico-chart-waterfall"]>.move::before{content:"";box-sizing:border-box;position:absolute;left:calc(var(--portico-wf-left) + var(--portico-wf-unit)*(var(--portico-wf-index) + (1 - var(--portico-wf-ratio))/2));top:var(--portico-wf-top);width:calc(var(--portico-wf-unit)*var(--portico-wf-ratio));height:max(1px,calc(var(--portico-wf-bottom) - var(--portico-wf-top)));background:var(--portico-wf-color)}
+.waterfall[data-el="portico-chart-waterfall"]>.move::after{content:"";position:absolute;z-index:-1;left:calc(var(--portico-wf-left) + var(--portico-wf-unit)*(var(--portico-wf-index) + (1 + var(--portico-wf-ratio))/2));top:var(--portico-wf-end);width:calc(var(--portico-wf-unit)*(1 - var(--portico-wf-ratio)));height:var(--portico-wf-stroke);background:var(--n-4)}
+.waterfall[data-el="portico-chart-waterfall"]>.move:last-child::after{content:none}
+.waterfall[data-el="portico-chart-waterfall"]>.move>b{position:absolute;left:calc(var(--portico-wf-left) + var(--portico-wf-unit)*(var(--portico-wf-index) + .5));top:calc(var(--portico-wf-top) - var(--gap-sm));transform:translate(-50%,-100%);margin:0;padding:0 2px;background:var(--page);font-size:clamp(var(--type-12),calc(min(3cqw,3cqh)),var(--type-24));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink)}
+.waterfall[data-el="portico-chart-waterfall"]>.move>span{box-sizing:border-box;position:absolute;left:calc(var(--portico-wf-left) + var(--portico-wf-unit)*var(--portico-wf-index));top:calc(100cqh - var(--portico-wf-foot) + var(--gap-sm));width:var(--portico-wf-unit);margin:0;padding:0 2px;font-size:clamp(var(--type-12),calc(min(2.5cqw,2.8cqh)),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);text-align:center;white-space:nowrap;color:var(--ink)}
+.waterfall[data-el="portico-chart-waterfall"]>.move.total>b,.waterfall[data-el="portico-chart-waterfall"]>.move.total>span{font-weight:var(--name-weight)}
+.waterfall[data-el="portico-chart-waterfall"]{--portico-wf-ratio:.668}
+.waterfall[data-el="portico-chart-waterfall"]>.move>span{border-top:1px solid var(--n-4);padding-top:var(--gap-sm);font-weight:var(--name-weight)}
+@container(max-width:700px){.waterfall[data-el="portico-chart-waterfall"]>.move>b,.waterfall[data-el="portico-chart-waterfall"]>.move>span{font-size:var(--type-12)}}

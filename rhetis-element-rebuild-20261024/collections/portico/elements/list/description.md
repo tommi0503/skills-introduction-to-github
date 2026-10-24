@@ -1,0 +1,1 @@
+Transcribed from replica10: a set of evenly divided editorial rows with outlined circle-plus markers and bold20px names. The source is divided; plain dot, numbered and check forms are inferred. Compact cells tighten type and vertical rhythm.

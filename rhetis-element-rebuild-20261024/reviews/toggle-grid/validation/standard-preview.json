@@ -1,0 +1,6712 @@
+{
+  "collection": "toggle-grid",
+  "generator": "reference/tools/preview.py:sheet",
+  "font_href": "assets/fonts/fonts.css",
+  "expected_fixtures": 174,
+  "source_hashes": {
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/agenda/element.css": "1d49350f63f4d0ccb337633cc4275d2307d70248ad5b25781110b7463334e197",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/agenda/element.json": "ea6d747ea600371ce697b8379cd2bba6371fa33756b80e9fbf32b232126e226d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/agenda/fixtures/agenda-five.html": "39e0baa205adc0240798a23df863e8a6f9bf445281bf3f8b7312657253ed9b1d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/agenda/fixtures/agenda-four.html": "2519df589008b9eb58fa1bcf7baa8b53a688a267cb1b63fa26f777c175378f72",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/architecture/element.css": "993cc7b8669f6927918074e0769f2729246a55e8c127927f4c2db385dc0a1c43",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/architecture/element.json": "96b21b6ce05265979c3b5e589e6e0e0c862fce5f0528c5ed1d829df0de71cc3c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/architecture/fixtures/layers-3.html": "8821907a53c9a77f352dcbdf26e50eba5bed7bf916f73cbd0c246b6186442715",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/architecture/fixtures/layers-5-long-modules.html": "0b43a6517324b40cc52a3e6cfdd6832a1da078c12f77fdc374e95d40c441f02f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/balance/element.css": "5bfa9b48d254af0fefd85c4185f0a85d4a731150797cf896d9b6c1895d684efa",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/balance/element.json": "1f1ead5fb313e57c802380f6a73a21fe2fb0b64a2c12516d7ed11adbe7c253bd",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/balance/fixtures/balance-even.html": "a36a83e62e6656c1114824fd23d977cac4258e8c37e0cf9671a33207f33a5ee1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/balance/fixtures/balance-left-long.html": "1c305579d11005406574836c060e4c7fe07c8fa46647b5dcf1cf1dad3fe42ebd",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/balance/fixtures/balance-right.html": "a2532be5eaae43de92166df403ba4eab2918201db4994126ea0f45e32439ad8a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/bullet/element.css": "b9cd74ecac185326f31ef2493d330ca98d7376d11cee920d9ce700585f1b15ef",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/bullet/element.json": "758bb1b22cdce2b94a7713980e55d74d6cf35c5983685bd4e517899011307933",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/bullet/fixtures/bullet-0.html": "e547c9abb5c85c3ba1e3cb374c6d13dc07d3dc5e4146c7e9ec90f1a613d85cab",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/bullet/fixtures/bullet-100.html": "817805b472982ccfe869ea145fb95c5c30d5271ddc1466a64b5bee80dae50ce7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/bullet/fixtures/bullet-long-note.html": "f4fcc6c3f87a95b4a9fe0b980d97a4491e19126d35033e27398fef10a339ed20",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/bullet/fixtures/bullets-4.html": "49b75e0145615538ceac01995180650e537d2176f98d7d7f5775efda2134d7c2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/callout/element.css": "b3d721de90832d22fb32e3a0fde4aee3e32e6510f0ccc84fe14e3289e2d4d040",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/callout/element.json": "3a20636e37bd6aeae5728c99fa058c90be0d66ad1654e112f1bc95aeb5ed0005",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/callout/fixtures/callout-icon.html": "032283b3344de1ed1b5310053fa1b44e5ba2270db19a672308980f17f5ffe68a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/callout/fixtures/callout-long.html": "8dd822aa9eae5d40f3880ff453977e7e7d89a0ec50578745bb42f3e1533e90f4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/callout/fixtures/callout-stack.html": "9bf702b4cea31ce7ce4fd1daddcaaba92f28e105388dea45c4f5937d86824049",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/callout/fixtures/callout.html": "2217e9cc4b5b2e0600b3fc54e4f5ba951a1b64f9cfe03161f5f457a765a82a92",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/element.css": "b15a14447c85d8c96d2b4739e1bd16fc01021e7511b4a3968e5201acff858a2e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/element.json": "eb56370559ff612a599f989e96f5edc56387039098102e8b54095a7b5a841ee7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/fixtures/card-2-quiet.html": "6ef7d26845902ba171744cc1211cfaea7157082e835a456d907b761375d863b4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/fixtures/card-3-icon3d.html": "3deae35385d6d761509c31a3dd300deac306796ffba3feff88d7b31334d8eacf",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/fixtures/card-3-line.html": "7366cfb9147f507c7290fa8065bb64956cc46a34a95ebfa5f5fcbea3aac6d88c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/fixtures/card-3-on.html": "038bdde2d14ffaf3a14194f54778572c2245e73803f35152848bfe063127cafb",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/fixtures/card-4.html": "77d9c42d06260a7c39d80326a355331a24ea02e4a29f04f4b5c6c458c731b9be",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/card/fixtures/card-5-tone.html": "dd6a1d747c9bc4b3c8654a113e54d8a6f6ca7acf51a407951ae1c4e64cb9f151",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/element.css": "3c3eed06083129bf9b053228ebf859d2184be64e87961507add081c72a4f00b5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/element.json": "7a98bcd85e55c10d4294cb482095e7773a52cf4d6dc56566e2e4b6eb323501a3",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/fixtures/area-1.html": "d308fb24c42a34d92ec440acd60c319d9b292d8fac4986c72b71fb8f51bff20f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/fixtures/area-3pt.html": "003dfee4b519f4f8fed398c7cf2f040d6a0044f975d5636dec96ab2832b98f21",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/fixtures/area-long-names.html": "d7f18526fb59fedeec844868d2391d63c09a5005708156fb15ce6d35a56b61bc",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/fixtures/area-zero-full.html": "c90172b6663007aefc6b3102048fa8743c7a0ba30841dc83a2f8a1fcba0c34ae",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/fixtures/areas-2.html": "451c720cbff548ab882340c2de6b10bdbdcab6c6006b929a42b0ed6a8172d5b2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-area/fixtures/areas-stacked-3.html": "1d29af2fb8477667a541b6f621c125d4f6c68457a4a3cf41fcb069e5320d27d1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/element.css": "e2e98d1ae5d0a89dc8f6bb75f9dbf14dec50872074501f073a8b9e0ab282b31c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/element.json": "6afa779c978d65b079f5a5d6f627a749c30327e33c7a01dd82859cbcce9aec9c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-12.html": "a94fce48e02ea9ba348b6d8ea0980a9f9930de6ef115c2f263796dd7239014ad",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-2.html": "8e27deb955ef8a14671918612897238cac936bb45ad033f1743e8078d5862ad6",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-3.html": "193e65177ef66274303bfd0ef6b960d493ca0ed76b8753267e1d9c4883545f91",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-6.html": "22296a027ebfa3f97abdb4090f9a5b68e5aebf88812aa1235a20f3d0e8056439",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-h-5.html": "10d2c9da1d28817fc5c6b10606527b36d2f65db9d3c96b1c2e7d6952e30d3414",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-h-8.html": "c875e818b8b7089b45778badf668149c4c3cf0186a9c2a2d3bd7e723b3570287",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-long-names.html": "16112cb9aeb334f2b80405bc1726fdd1fb420c397d071f98b7d329c068961ff9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-bar/fixtures/bars-zero-full.html": "75d42d8c797733b1bf09c7dd368ae083952cba42941dce5119334d5d2660a55e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/element.css": "b9213686b28f48d4c3196430b995f51db8cbe0269ae1820f36a91e96a52ca780",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/element.json": "201e9491eca868475b237a69cbd655f8620de61c25e0458461ff66986faa271e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/fixtures/donut-0.html": "d01b6efdc0740939f93158ebbb8807e78e24586ff53d009905a2026638cf3524",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/fixtures/donut-100.html": "8adec5b339828c7fa83e6f06e0221eacb8b12aa58e99e047f811a804b2b47920",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/fixtures/donut-long.html": "0ff63bbaf982c9f0c12ef6a29bf5983889104a1295dc822974d3ae09d081903d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/fixtures/donut.html": "651aa448be171a8fa66b7b17fa43dc3e274ed792cbfec745370396608fe54392",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/fixtures/donuts-3.html": "bf6b1fa095bfd46374db6c720c525bdc7d4b9ca7298dba9fd68976e2630c39f5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/fixtures/donuts-4.html": "f842dc2b5fb920abd4ed9093654c45e08f68efc67f904d12898163720e8b4d43",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-donut/fixtures/donuts-two.html": "dd4973cb5d726ca19f05b7109cdae31c0e7534eaca9d0b597d4cf4aa7d97637b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/element.css": "69b8523149b368da0693d098722f9f61a4abab2d7a46e9f87803b58b060bca01",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/element.json": "2ac0a7c4fbc1d001f043a97a26f411d928d0c7b62ec06d368da946ad707fed37",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/fixtures/line-boundaries.html": "37b51547fd00ddbed9964ad5ae50edfce1c551d98053c49e57db0facb8564132",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/fixtures/line-long-periods.html": "70fb505ac2e4189038fe453e991224c92b296b6f0fdaf42f5dd908c8959f3f55",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/fixtures/lines-12.html": "5c76874045c79b90465c9e87cc2b6015444223dfb38f4aca784d86767936babc",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/fixtures/lines-3.html": "98d0b481d8ef0c6ce7a8bff20cc3f84c906798de6d5aec8f0d3dec4db803e7c9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/fixtures/lines-6.html": "fe21028707ae451f97725627dfbf3850ef737216e66ae7ea91c3f7d4d0a7fcdf",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-line/fixtures/lines-flat.html": "43e03cfaf195cf42c620ebd69d5c566d34c930d72f2009afd78c7bd78bc80e4d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/element.css": "5d9e0100085ba35e6b40293fe94c2e5bcfc18a049f352e5b6f3de7897a558bba",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/element.json": "fb85e85c7885c255e27f4fc99352c7f599ae373515a91bb6aeda321c1a48ae9d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/fixtures/scatter-24.html": "ecac4a8afd576fd1c1b185a0fa7ea64cfb32e90a6f46d9f16c5dd8f40ed480c3",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/fixtures/scatter-boundaries.html": "4f57e63546fd38159dec00e6e616314a55ac4765ec88f41ba6b8ef40a92281ef",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/fixtures/scatter-bubbles.html": "2af6de163e53b32a8c7499937e8dafd766e78422adabc1cb17bad7e4aa90a8b8",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/fixtures/scatter-long-names.html": "8f0f2a37f11de72ab3ed4d568928af8a126676ae415ab33e2c5cf00fb467d13e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/fixtures/scatter-six.html": "1d89fcd69cc44d28c9f487c8c5964ac98f3134063a0b6bc804f9faeb3c6f9820",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-scatter/fixtures/scatter-three.html": "92470e287dc04f80e1f26efbbe57b66aa4dd96f2f2f62df685d16d57b06159c3",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-stack/element.css": "f52c848c246425fd4284984e83030e9905b252511d6258916a1e69b29088b8b1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-stack/element.json": "7976255d4aab21ddaf89ccf974d62403b58e59534e24c10fc68cc0c404b04086",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-stack/fixtures/stack-12-h.html": "723b70d8ea702b7cbee17e1c2dc70d68d3e52da8d31a69d51b00e74e3b0c06d2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-stack/fixtures/stack-2-long.html": "9595c75c4daa80f29893eefb04bcc23a8853ba5f722ecf04a328e8540b9ab2d7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-stack/fixtures/stack-6-pct.html": "d2b1359d85b94e3ad12acbb8cdf05505e0d6ecfbc609da46181b72e238ea7070",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-waterfall/element.css": "aecc689e62204e21f975032d88f20da29b0b3b4c8bd68c14cd89f7cde22dbecb",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-waterfall/element.json": "b03c2051b045aa2efa826bab006b74eeb3fa6f526b9cb106045f6ccbf4bbd53a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-waterfall/fixtures/waterfall-long-names.html": "2dd30d1288eb91ab6ec70ff3776273d10a576b30a2858d25ebf492fd06f26885",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-waterfall/fixtures/waterfall-six.html": "d39fc640db3ea5e5cff08ed29ba8eb3aab767eb3955d2df2f1f5cca5183ae5c0",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-waterfall/fixtures/waterfall-ten.html": "bfb5a0a0aece2c369f79f7b809e25369c8e969bc0bef0775c3c342401304704d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-waterfall/fixtures/waterfall-three.html": "da2f2b09f42bf9692322859834af5661bfee9e48e56ca2c78109d0344f62e344",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/chart-waterfall/fixtures/waterfall-zero-full.html": "eaba384ee0d2e6a5a416b87cc55c2ae9f59f24781cbdc2d78e0d1f3dd39b71cc",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/code/element.css": "494f712cc00feba7c2652f87fff108731acc9885ad2dc5f8b12b5fceb56b9a01",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/code/element.json": "215747830779e5c9c63907eb2086983d9a2e2a9440e9343cafe1fbefcd28eec3",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/code/fixtures/cargo.html": "2be28c49ee54b2889ca65cab43a4281cebfb31b4da5a83b4892ac45a24aa3b28",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/code/fixtures/hub-query-numbered.html": "3c0e5e295b7cdcbad742d66bb45dd36f177e654f3115ef82db78929fc46e6da7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/concentric/element.css": "22ed7a80d597145f400cdd13180dd7f9fcd4b2ee340574ba8beeddd17b494b89",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/concentric/element.json": "9904652033a90757140b108e4108c5d2e62c0f94886dade56e8120346f8f11e1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/concentric/fixtures/concentric-2-long.html": "49570ad28fd042df20107f796b3dc83fd2626bc650af165af4eb62e0552ce3d6",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/concentric/fixtures/concentric-4.html": "13d1d5162461420ec8cee83ef93ae0bff906153fc019a31d83e2e6b1dd723395",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/cycle/element.css": "2785850ef51590596701f45d7dd812d3d2a75db7871f13f9d2606f815e2873fe",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/cycle/element.json": "e9ee413d6d3f2ddc0d02e5afb7b3638a7210ab61eb14ea9ab6d6ad3fe41cfcf2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/cycle/fixtures/cycle-3-long.html": "bec416ae88dd68dcffe0ec3cd8cd5e43853d507f97cdeb96f0c24fbc2a7a5d8d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/cycle/fixtures/cycle-6.html": "9d281d33d269ea9383f37ea1d37adf41e9a833543c95d4c54c9b7df17c7ef276",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/decision-tree/element.css": "e9fb793549269bd734a519c38a378983e3c1f2742c9693a1da51af08124dffe7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/decision-tree/element.json": "036946931b1d61ac0a77d90115d7ac3d8d7841c738d964501be547a646ebdc74",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/decision-tree/fixtures/approval-depth-3.html": "ca71f4042e015dc45640f3f28510b1f1bd898f43919240216081189d1c1987f5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/decision-tree/fixtures/route-3.html": "17a7527ee6e110a3cc097c8f9e35671771bef663cd6539d5f848818e87685168",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/delta/element.css": "241ac6316505043dfc73aaa1902633b90d6172cffa0edd15a7de91cfb35aa5d0",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/delta/element.json": "2d71791df6ddd710a1ed6327071f08c6e2381f15e7924704844af866a240ed58",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/delta/fixtures/hours.html": "ef34145fe4f2376af18abf233024a212f7c471eb2f31471dd771add4ae620166",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/delta/fixtures/long-units.html": "45359a6b2b02723b843140abe43659837532ca1874806f6cbc14560a703763d7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/flowchart/element.css": "f4faa2e711e43a9a40df5a47d446b2cfaf3d173bcea7566f1711bc4200553a07",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/flowchart/element.json": "1b5a39cbcdf5a116a962064353eeb13ffb49d7247d6cce167e576fdb7fd1c625",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/flowchart/fixtures/dispatch-6.html": "88be6d764137e705d9beaae6469936afd2d35cac678f4093310ff2609c2622bf",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/flowchart/fixtures/review-loop-4.html": "6f0eaae4d57606124d57c61e983984845186176d9131f8131fed318710de7d44",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/funnel/element.css": "40f121ae94a7f925561ac4fdc774aa6bbe15998df479e604578a452f34a3894a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/funnel/element.json": "f0466c80a13c8c97672d42484d5dbca6f32de97f3be13731b53a4d2e254bb7f8",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/funnel/fixtures/funnel-3-long.html": "82581d54b8909bd97206e2461bac747596cd90a44e75b3e2a5f3488e9936d8e9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/funnel/fixtures/funnel-6.html": "522b8e17f79606a79f889256176d76638c6f81178c01362e4e42cfe752dabe27",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/gauge/element.css": "25344e84530fa338d51586076a278d7724d500f5ceb6afa0f34d292bc72d3910",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/gauge/element.json": "2bde43fcbfd74323369213980cbe435772b7a3c3b6c238e7fc6be4f25c2e5e7c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/gauge/fixtures/meter-0.html": "995bef247743afa5da2d3eec8b949676a0c7c20e15ac43afe970436e5c9b36ce",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/gauge/fixtures/meter-100.html": "e7993dd617866b694296ea2f0a0aaac3e285d45f81ce88dfe73ab5ee999dce41",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/gauge/fixtures/meter-64.html": "16d295f0b9b75c5db6e89d7077293180627917659f8faf6f295af523ce50027e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/headline/element.css": "ecd37d510dbff4ed27432e5493f2cb6fe1950ce5ba0cdb6627458f5127274d4b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/headline/element.json": "8e31dd85e6e2cbd5771f4494d876a34a2508fc4419a1d2fec0797484ab9acda8",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/headline/fixtures/replica-03.html": "7774b8533d710cec6c7264e31eea808aaf921b24857466f1411fc0bdbb989358",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/headline/fixtures/statement-long.html": "21817d0377474efe28a31bdbb418ec27570c4dc984d0d55da869b5f6a4248a29",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/heatmap/element.css": "46d8437cff9949effbf2be9fa4be39687b5ad18bc28ac322944365c6065d7cf6",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/heatmap/element.json": "70e89c6533b3d3636a740e203ffaf83db81b714a9764eacf3d01f71b85ad60d0",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/heatmap/fixtures/heat-3x5.html": "d5ee32e79c275f60415796a8aec2dcafae7b53f9db1b5742f6ff8a80dd61a187",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/heatmap/fixtures/heat-calendar.html": "1f0deafbf87565d68ab5edbb3b42d9766c7456cb23ac2bd395136a2cc75370b2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/heatmap/fixtures/heat-long-names.html": "386f37a8a63a09d9fc1010c5c9cddb72cec1613a778aaeb93af8c4037f7b061d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hierarchy/element.css": "0df309585a5c4281cfa9f618c00ae4494de3efc7822a4cf19c0edae376d3a143",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hierarchy/element.json": "5e97fd8bd5b1a601989e0b068c43029f12bde3feab0ad88ae2c3852c9de2a47b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hierarchy/fixtures/hierarchy-2-long.html": "03a528d4cb243bb1eeccd20b0a5512aeef3f8f7e4f5299456ed3d00745b2f393",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hierarchy/fixtures/hierarchy-4.html": "83f2908431ce676a159e9e7173089420e36d9ccf74e46f35fd5b24b462c5d224",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hub/element.css": "ffc93f8e2f6351b16b3a70ff525c62e3db8d94c8fa110a987995ac8caff31b1a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hub/element.json": "a9fb0c57877a8380baa674e28d4600d06de074abf47813f2d63a4366a7d6fb56",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hub/fixtures/replica-12.html": "8372a5a615c29987148375c1f3758049f61e79f290732c6b00f76f419dbfdf88",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hub/fixtures/spokes-3.html": "ea361044c50069a43a902c606a53134ff8b208ee8ceb73019ffc975aa554a0c8",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/hub/fixtures/spokes-4-long.html": "59e8848b24a620688aeaa4058063f663e1e975a88e9d61f652e908a9822b1424",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/image-frame/element.css": "90a4a03e7010a59c3af873de1ab2ee8b058409d7d17c271314eda0228609a228",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/image-frame/element.json": "da3ffcdb72a250eda69a4b19e9f2e4daa5e39073b16d678054a348fe1fbbc0a1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/image-frame/fixtures/picture-secondary.html": "0d9958d098b587a04b5c4d0734fe833bd66e001e3fc84c873e8875dfc3d228c8",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/image-frame/fixtures/replica-06.html": "3ee6c6fe1e8403a43c34eaade39a04ab2cf9d14326138854b4921ddc9a2e3156",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/journey/element.css": "3cd12d280125f76e3139b713d0d0486865c3c10fb8274ba4dfa259ede8aea03c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/journey/element.json": "a95d2d92d285ec22b0735ab00dd3c39078a560d1e173f6533e07652472cf9567",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/journey/fixtures/intake-3.html": "c65329a6c50de51b282d909d8e9b5edeb8f3846b7d5d555bbc227d0605ef9979",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/journey/fixtures/retention-7.html": "f4edb9220294e9b7f2b8571a73683ef716641b6ebce3a4d6df5ddb774d4dbfd2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/legend/element.css": "df6980c1b84a40fb6bba9373d327b5f2a80b1f39ae52885d0e3953c1e506bd11",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/legend/element.json": "179212ac117f8c538e8e1d76bbee52964aed606f36aabffee0aefb1732c0c21e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/legend/fixtures/keys-five.html": "88484903dec9c3a06a8270a906992a235d765b14cd3433e785b3c9c22254796b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/legend/fixtures/keys-long.html": "3152e4c4eb3541e4ba0c0cf94d1c2999024a8fdcf92bb63698f518fd2eeb3a87",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/legend/fixtures/keys-three.html": "898925f85864e744f1d84344a9dca26540730a4f2703fbd7e25c13dd9f4b6994",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/list/element.css": "697b5868643849c210633d8acf7d73f81615d7637ad3ab1f448e3866e9de736d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/list/element.json": "5ef38feba284dd35cd47e6f07cf6ae985fe89cc4dbcddc8d07d6f2c5025087ec",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/list/fixtures/list-extended.html": "8cae7dcfdf8558fb0071af3e9fd45a66559ca54396f98f6a4111d77af83dbcf5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/list/fixtures/list-two-long-inferred.html": "fe5eb49f047a6a8e647a7566e53efbb8c67c967647e9fa8e0c7750426d36767d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/list/fixtures/replica-03-three.html": "e020c3781f4a7dfccf46c1a16a50d9310832553d9ba583d4b0851dde45d74843",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/list/fixtures/replica-03.html": "0e0a228c5ffa251a93cfeae052b0654de15db96685e91a359392fcbef60c81f9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/logo-group/element.css": "1be19a94245604485b87d14f4ad44c23b3ff6bd6e2d5fef4d25aad6359af0d99",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/logo-group/element.json": "fcab32cd75f75dfbfede23dcd05171f8af4d924b54be58a84482a623130ce34b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/logo-group/fixtures/logos-four.html": "11d057a79f6dc3277db9fb1932e9f0ee7bc1add96c2c9735b13754dedef3ce0d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/logo-group/fixtures/logos-six.html": "1329c705dff4a06458a42d7e21bb3a5c9ca9cca821ebbfe85b15c196682bad36",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix/element.css": "9fe32b8a496ae3f4f33a14b82eddd2b65eace3eba162d5dbb730b5021a8f1ed1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix/element.json": "fdc1ee844172052faaccfee75fcb092195765b40c39f47ac0257687929a08700",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix/fixtures/dispatch-4.html": "e2b600733f1d9d1b58f5e00c136bc54b6788973a86d139df7a48ddfb02b1a76f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix/fixtures/swot-dispatch.html": "e52241c3915e0fdee5f13f4051c6e5ec838b90ec041faf04292701ee64a3bf70",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix-nine/element.css": "0b0374dd3a32dee5ce5f5758a947b4d64e6f60695f6dcb29ecea55b726076ec1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix-nine/element.json": "ac087fb6a9e2e5cde31956d76edc07344998fa1fd4889f3862307544e4d210cb",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix-nine/fixtures/allocation-9.html": "c058771744bea72d57772f121e8cae9cfa6ff9a810c6c9401ae910c715e9008e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/matrix-nine/fixtures/regions-9-long-notes.html": "f1d969f465b678031eb4233965e877c833fa45b67a397105bac30fff465c32ae",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/metric/element.css": "01659f6e252ab784aa8aaccd74223f0ad370e7994a09d2f8fdfaa89138ea404e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/metric/element.json": "7b76ef1190548ef1cf4ad01b74c3c154b408fdbbf0790f1fb45eba839f7418a7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/metric/fixtures/metric-bare.html": "d0079aee798e864899b7185391056d1aa16519ec9abfee6acaa6854222d8a589",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/metric/fixtures/metric-extended.html": "bc59740582b2574a7085e38186d16c00237cddaaff3732e785003e35bf26b4d9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/metric/fixtures/metrics-three.html": "2a69b0523408ae544f2705f02ed71ae3f0ecd2725c5b14c1d260a9934c75c2b2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/mindmap/element.css": "c441608ac7476ef6cb224ec3f02feb9c6dc557ebfcabe526ef6cc01ecb44e783",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/mindmap/element.json": "82e9424cb2433f1b5de80395b93359ef19a195df833f1237412263df62fa066c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/mindmap/fixtures/mindmap-2-long.html": "8aaaf1f8c0b33181ec0a95aeda8f9dbc9ac06eabb29c4883987afedd9e915fde",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/mindmap/fixtures/mindmap-6.html": "da45551036b714d0d1c9cbc658bd536948475df9f9f0935cb3c160600594b9c5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/network/element.css": "5a3f2663a9e90c1e079e3c30ef4c561a84c067d13d89d5a3318cf4dd3b289bb4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/network/element.json": "710cb19e8315b880eb95e279a99abe34d9166e73d518560662805dd71c685615",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/network/fixtures/network-4-long.html": "02c62d880489449fb2611f77188507430344b3c97491201fafa0676537bf273f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/network/fixtures/network-8.html": "03b459522b814393f5672ab31ae8c4d4be530aca61006807e4a856e84578ccbc",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/person/element.css": "60837b5b4522a66e981f907c3c8ae4563f1a74a22f6ab273cd49a2b34a3ebc2f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/person/element.json": "910ec1b20c7791211cdb7f77420789b373e911dfe6d7ffc482191a71c6ec7a50",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/person/fixtures/replica-04.html": "79984e7f4e1f33d673370215e141bb83e6fdbb664743e8ad33c0ba9a6ef1b3df",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/person/fixtures/team-pair.html": "91989aebae2a77e3335634bd90baa950155a2f45b89140ba66e7f2ebf21a1928",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/person/fixtures/team-trio.html": "4efcc242739866c38a1045c860a338b9d1129a1d9acb2e01da806543f57102ad",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pill/element.css": "87aff8048576aff29175700f98e207e675b0b769a06a16497d84bfc33605d0fa",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pill/element.json": "3b3a08905aee32627e7d4c718d5337794098c4799bfe1c1753f5c2073d93903b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pill/fixtures/pill-long.html": "247eedbb603ba7ef9dc953737604df7c1bef20d4afd0371b167b00109efc1441",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pill/fixtures/pill-quiet.html": "764ae93d55d7cdfb2bbdef6aea15ad2d9c59e62bdbd79a82594e8e3a9e7938b3",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pill/fixtures/replica-06.html": "68cec55736f70a1e953f53e857985dc80fa5f71d5804b8f86945788e97cb52b9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/positioning/element.css": "19ec873708b4225d9571a9f6e6423cb64f812a59660367176492e5acff46e0f9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/positioning/element.json": "6a81f43ec4082ce127deaf6fb976b2fb51c18ca8377e1c085c69c798bd63c2d5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/positioning/fixtures/regions-6-long-logo.html": "415832311ee6bd8c0a6942a20a3a2c3476ac91f493449f994e4ad810dfcec3e4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/positioning/fixtures/route-4.html": "fc9ae78b56898a5a8cff999e99eed317e9f0007a49e6470055891533fb3aee70",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pricing/element.css": "9531375ce2c68ada85f5bc07d81fe13a2de8f6f66c02442ebf65b317bde9228e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pricing/element.json": "b81b167169897dc662a63d87a02bf5d12d602f85bd898cac16c271a12448e169",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pricing/fixtures/plan-single.html": "1bb658ecc982e732636d2d8e2478293ffeed93e42f8b033901aca758f4af030c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pricing/fixtures/plans-three-long.html": "b02e3291a5f782a8731259a1220eba53eb4fe991a8a83aa5b4c5dd3dedcdf28a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pricing/fixtures/plans-two.html": "6840afe9f0525bf1f55a54829a0fd78ade40622bccbadb76a3b5e6b3004c28cd",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/prose/element.css": "c773f81d6aef99bbb56219e8a8d6d61d4524b94ac20a0f66631be162b9e93ff9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/prose/element.json": "e65bffcc7e6dabe2a11e2d3b8a14bf6e774b3830975c836b57ed51490455fc86",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/prose/fixtures/reading-long.html": "d0a406c1367ef665e6702e37920a62142a0ffd42abeb54ed130ae12df92d45de",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/prose/fixtures/replica-06.html": "048603ff469af36786c33f2136a2fad46a32c4afb85bfbf296a43e7ccc927f0e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pyramid/element.css": "522af51c2a2ce1d56023da924955c4d6df37f9d558ea32d626111fc5cf091866",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pyramid/element.json": "228583d65b2d6c258eaa64649956d73f248702c65bd6036be96e63eecd7f09d6",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pyramid/fixtures/pyramid-3-long.html": "8eb679e5fc589ab9bfb669c546de0c214a52c0b209a2cbad13f348c28115351d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/pyramid/fixtures/pyramid-5.html": "8e8d3d34ea23ec571981b8548579fde063a1759c6fe9ccb4388e563a8dcc315d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/quote/element.css": "fdbbc0051973fbb81c662c7e780f6ea7fd89f9486f99acaea6794e9b3f51f4e3",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/quote/element.json": "9b374eaeb0924af10c2d7f3fb334d9760bda8b521bfa9803b066ecc1b99e8bc7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/quote/fixtures/quote-avatar.html": "9276b94a69a0cda21816e39b82fa2f28bcd063258d1927684be9467e282d1ac5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/quote/fixtures/quote-voice.html": "d831f681ca2ead6fd6e622cb5b194809e20fae677f36ce33c61dbe5eb75bb5f0",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/radar/element.css": "86b11db2c41759e16712478d4a9c93c94c4efcb48fa6e448d05d8e44e195297e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/radar/element.json": "0c61b88600adc8cf2e417d023dc924510b36db7e83681384647831f5ad83ea38",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/radar/fixtures/radar-eight-long.html": "36e042f4ae9093481b708b54227a0ee3f19b70d355685ac893ab6e6b0ae6477f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/radar/fixtures/radar-five-two.html": "02f41b6f8cf30e5ac773b53c23cd6075679c7e5826a85f8e28972d2bb116a2ce",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/radar/fixtures/radar-three.html": "c83d9f5182bb28f8e2fdf08d945812f4a71f938b5742ae4d8fcaaeeac42d9c9a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/roadmap/element.css": "fb0aefe85887a8fcf550b491b072e8edb45bd9d12ba6734acf2e844f9d3768ad",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/roadmap/element.json": "5f0f85adb6d482216877f52e56027173575de1b37facdd032b60b17429cb5d90",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/roadmap/fixtures/handoff-2.html": "31250fbab31c79ac27f08cd6afbce404f65512e31ba3586a899710881193ba3b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/roadmap/fixtures/handoff-4-long-notes.html": "4c7bd54a892231f57f3375df765d1c814710fcfe4e8c2531c933e34b4947fe0f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sankey/element.css": "fef1dc3ea95cdc9437ff17b034c2b826decab86b4da0e1c0b71b732e5ac2dc95",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sankey/element.json": "4facf4405e448a925c0a096e185b8b5306829dc2f23cd3d66021403159969337",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sankey/fixtures/nested-4-2.html": "51d577653bbc8351fe152c54ff01ffc558f1fa04d6556a4596807d8a60012aaf",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sankey/fixtures/routes-6.html": "3d9e3193d7382a173b133059d59be776d44c702205d69f0bea7a0324ace91893",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/slope/element.css": "20170b9fa8f1255890220ce4d94c1b328b9fb4ee6e8f9add82d88fb99b371104",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/slope/element.json": "324924568b2092c95fc9e9db3c7fea02e41cc189ca2896ac65496d6215c47a60",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/slope/fixtures/slope-dumbbell-long.html": "a63227fb78bb728fc13a23b0ce2b00707be98a522dce614fcdca39a246b81463",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/slope/fixtures/slope-six.html": "17a739f64a3dfb147194b65b3fcb782bbb99f6ea23d1884d825b2e4231786cdb",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/slope/fixtures/slope-three.html": "17cab810dda0cbf8635de155fdeeb2ca2d3a3c7ff761c931eabbeb97fddadd0e",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/slope/fixtures/slope-zero-full.html": "0bd2aadc06354385d7cfd00905b8da50a4ae196e47e4b013e87ad8f9e73d03d4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sparkline/element.css": "87d92f027979e7814117041b6dcfb25b6e34cc71cee4a14dc8e80f651b4729a2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sparkline/element.json": "78799ac82cd4df2c9c6e145f2a5c5e335ca0ce65055dd44965a2a318d315b0c0",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sparkline/fixtures/trend-12.html": "6debb59b44fb40d7051374ec93eaaffc6081b0ed48656b5cfea06306f34031ef",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sparkline/fixtures/trend-5.html": "926ce3ad3edb96afe558d2ee4cb4a7bdcf75dfdf02abeee548442a543ef7bbf7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sparkline/fixtures/trend-bars-24.html": "fd64f50d706843deaefab905db1ae484eae0b1283c1d09d04884d6bfa5c84165",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/sparkline/fixtures/trend-flat.html": "b4e3a314978dd083ad08c7548569548edacd79f504b49cda2a48676ef818466a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/steps/element.css": "035603f1a0ca657f3086c3dcaa3413d49287b99290a2c577db7f08780babe3ff",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/steps/element.json": "5ccca90f25d8d90cadcd946117f0bd44dcba96d50b9621e99856dfba7ffd8529",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/steps/fixtures/steps-3-long.html": "3c88fca5d37da0ae899b862ee729fc5ddfe8a04d285d161c68063fb0906a4b7d",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/steps/fixtures/steps-5.html": "09980266ba297325f6bbb4d0be281bef8aaa9914f8e953c76f578b7751745f41",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/steps/fixtures/steps-col.html": "b245c55363b9ac2436e0df5f2f1dc93ef46bec83212ea3b39cf2fcb96a60cb9f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/swimlane/element.css": "a1439ca543eeb6f7cde2d7b8fb08c582a504addc482e3cc3efcb2038f5abfb8f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/swimlane/element.json": "0877d352bb720e6b87b28181c337111b670e97f2abc79e62b4e4d0752706055a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/swimlane/fixtures/dispatch-3.html": "352c42dfd3888f083e21045b132b9f7dee5e0c433b1ea83520caf9c8ca98832b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/swimlane/fixtures/handover-2.html": "0fd915db413037a9e08a1130b2899fa6ebcc59d06385eea6ad73ef737ac35cbb",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/table/element.css": "ba4ed9211dbe2ebf87447c951b27c7e52a3ed566eddf31ebdb82cafa637418ca",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/table/element.json": "bb879d7075d62473524ee4aa921cafa71007e75dba4976f2b948bc80a498cbf4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/table/fixtures/replica-08.html": "7e87b2e6ba14753815205997a0da981eb8146c3781fb195f55bedc79539f533a",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/table/fixtures/replica-09.html": "3ad0a686a21389267c13ef46eeb0c35c2c372b4a8b95c82e900296269ab12322",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/table/fixtures/replica-11.html": "928701200b81f2efb7537bd25489f07fe79d3cbaf0d544aa966c90467e11e3cf",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/tag/element.css": "3294a851a5c3f1a12d3932060fcd6b55f2cd25360b51f8d6b6bcb2c214223fe2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/tag/element.json": "af355b7985fbc5036533665cf4968f1a2d71fa82442bca8da91b5dc9538b7dcc",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/tag/fixtures/highlight-in-sentence.html": "a00b2b8e8d63b0ff2c45deaef51a3e0111f58f46aecced85df6ea59e559fcf14",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/tag/fixtures/label-in-sentence.html": "239117e520bf823a623e024ff35ef6d23ecfbe68e9108844fe328de433e5c6ff",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/timeline/element.css": "d6d75b011723511e18a763b846b6edf18fcf884ade042182cfe83e1c46f8f4da",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/timeline/element.json": "1617d7b72e20a177f2328728b98f6119c9eb051900830dd6872c2e43b104b1c4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/timeline/fixtures/timeline-3-long.html": "bd0ff37e84879784ae80aeaefc1960ec3e8ff127d9cd4eb70111bf0b582f3596",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/timeline/fixtures/timeline-5.html": "63eb33d70ce4d622e06d45986dae25c935f45775e89a4735ec0365b4cb0ea9c2",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/timeline/fixtures/timeline-alt.html": "b0628e7ce2ec98b1d54b8740efbf1138808ea3785786373c05f640e00f973d37",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/timeline/fixtures/timeline-col.html": "75aa691d5bea2d3990c6873107459ef5b0f760a6a82d4240e970a57706070b3b",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/treemap/element.css": "89a45573e27745a6bb52d4a57d8b15de9a728ab61b60613c237d3d6572a168a9",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/treemap/element.json": "df71043cf3ba2a29e9dfa7af3dca8904d5a0401d9a82a14be59f08e7d310714c",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/treemap/fixtures/treemap-1.html": "852cace91d8b1b75c81527aebc002bbbc533589ad8524df6c3cbd98ec4c9b9e1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/treemap/fixtures/treemap-2-long.html": "2df9353acdc18756fbb66978b5a0546d770a0cd82e8fba51e685d6ad12c511b1",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/venn/element.css": "1e20acf96ad158f58650a212161331bd5d52a963a0e3724fdd8814b837366df7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/venn/element.json": "1909b4e038ddac7b2e4b6684e39b00ea5fa7e7e06eca41f2a72dcbea5b9ac5a5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/venn/fixtures/venn-2.html": "47400a9c510db9319d39636f0fc0fc7972a18b2c018c659809f188dff53582b3",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/venn/fixtures/venn-3-long.html": "07229908ee1b942bff49116202beaf55fa429408c4e625d9fee592d666f93221",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/versus/element.css": "4337cada2137ba87fa9d110b276ee6d958e226c7bf385bdda55880b2206b9dc5",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/versus/element.json": "fc715938ace58f1cb96e14024e20d03c9e09b9a26cc554b7447613acd514b8be",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/versus/fixtures/pair-four-long.html": "07b6de271bc2d6d9a221edc48034430c1b65ae2e6de858a20ecae96dddf35e92",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/versus/fixtures/pair-three.html": "9a407fb381101a78ead2265e8051557c981647e2aaaad43b0674bdda8fc0153f",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/waffle/element.css": "d272411dcf04006bd1a4861a0fea786243dbe1beefbb78f4b52f0299cb8c4563",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/waffle/element.json": "3081df83f49882e94362d6050689f0561539e945b822f7f9e5c0ed2e379f2204",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/waffle/fixtures/waffle-100.html": "80d255211d9bee1596d85d77e58389abcb583a17ee7930dd83404a4a321f9fa4",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/waffle/fixtures/waffle-50-shares.html": "dba3d7b275dae4848568aade630f0fb6683d7e1b42a13daefd61a995f039e232",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/elements/waffle/fixtures/waffle-people-20.html": "1cda9a044d0e2ae8e6db28dd8c8f543fb02114dade9a6c04515e2b4b114291ff",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/fixtures/cover-ruled.html": "4ac73541d38aca75ba79bf2c06926b6409cb204f3e3cfae9ded1274345920168",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/fixtures/cover.html": "ac024cc663fb23f455d7c248a9a51a876e3ee9f45411ddfc656677da27ca2860",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/fixtures/headed-page.html": "bd4af4fa0260d8cef842a0913b14d942372e17ffec2abfe7e22e615f65d995d7",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/fixtures/headed-short.html": "308964d69483a6c978ac5b2c0ad4ce51f161a5aa57eaf312cee8b213b32040df",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/fixtures/reading-rail.html": "9c0c441eb02903ae10861d1a30c2062014ca3580862e986230bed8b986cb5ca8",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/fixtures/seat.html": "344a75ee24c209481ff8213b1e6e506fb77acb928f2d2d9b201ff1ae5ef2d403",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/foundation.css": "e29de2afcbc2eca7de936f32377db5ccb270655b41d981aa2ee27e2c883c5b52",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/foundation/foundation.json": "72c43b3eb5fe6287dc29c3476353983e8a91a1b6d05061b395a0712e46eb9de0",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/kit/css/tokens.css": "7867cfa67ecdee026d6c20566008970e67ea864da9ed6baf8b3cc978547a1074",
+    "/workspace/work/rebuild/toggle-grid/toggle-grid/kit/kit.json": "0a65fb3f4f98e5e6ada0ede04923a001c65989a9db7b89422df0cff5825f1d98",
+    "/workspace/work/reference/tools/preview.py": "92b0339d1f705734c1171fe26b4d2b022c5995711cbf869168e8b3dc4296ffbc",
+    "/workspace/work/reference/contract/type-steps.json": "dd1f4bd45a6b4eab41c0da133743e96d45af17bd205c6ae80b7b71099089c9ea",
+    "/workspace/work/reference/contract/palette.json": "8c9154b42efd8e0e0efee4443ebb22c39aadd828586a58b026711ae5bc4bc755",
+    "/workspace/work/rebuild/toggle-grid/review/assets/fonts/DoHyeon.woff2": "73d94fffa544880572eb712219595b1d45841bc1e143c94d249474c555826fe3",
+    "/workspace/work/rebuild/toggle-grid/review/assets/fonts/Mono.woff2": "a4f186ed13052b6efc88aaf97d7aaf92e24ad44e4bd006ea1a8dee20a21edfa2",
+    "/workspace/work/rebuild/toggle-grid/review/assets/fonts/Montserrat.woff2": "e1e0bc905c92d1912216090015e0b0eff9a2e96ba35228592045ade5589ee784",
+    "/workspace/work/rebuild/toggle-grid/review/assets/fonts/NotoSansWidth-license.md": "8e8b13c9cf1c6d49a677ce8541f7484ca9958d4f437cc0a05f696c9c390b9e52",
+    "/workspace/work/rebuild/toggle-grid/review/assets/fonts/NotoSansWidth.ttf": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
+    "/workspace/work/rebuild/toggle-grid/review/assets/fonts/PV.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+    "/workspace/work/rebuild/toggle-grid/review/assets/fonts/fonts.css": "1271b86e8553358074bb6f26b455735eef28903e07ed3856b1bade5dcc33139c"
+  },
+  "modes": [
+    {
+      "article_count": 174,
+      "slide_count": 174,
+      "titles": [
+        "foundation / cover-ruled",
+        "foundation / cover",
+        "foundation / headed-page",
+        "foundation / headed-short",
+        "foundation / reading-rail",
+        "foundation / seat",
+        "agenda / agenda-five",
+        "agenda / agenda-four",
+        "architecture / layers-3",
+        "architecture / layers-5-long-modules",
+        "balance / balance-even",
+        "balance / balance-left-long",
+        "balance / balance-right",
+        "bullet / bullet-0",
+        "bullet / bullet-100",
+        "bullet / bullet-long-note",
+        "bullet / bullets-4",
+        "callout / callout-icon",
+        "callout / callout-long",
+        "callout / callout-stack",
+        "callout / callout",
+        "card / card-2-quiet",
+        "card / card-3-icon3d",
+        "card / card-3-line",
+        "card / card-3-on",
+        "card / card-4",
+        "card / card-5-tone",
+        "chart-area / area-1",
+        "chart-area / area-3pt",
+        "chart-area / area-long-names",
+        "chart-area / area-zero-full",
+        "chart-area / areas-2",
+        "chart-area / areas-stacked-3",
+        "chart-bar / bars-12",
+        "chart-bar / bars-2",
+        "chart-bar / bars-3",
+        "chart-bar / bars-6",
+        "chart-bar / bars-h-5",
+        "chart-bar / bars-h-8",
+        "chart-bar / bars-long-names",
+        "chart-bar / bars-zero-full",
+        "chart-donut / donut-0",
+        "chart-donut / donut-100",
+        "chart-donut / donut-long",
+        "chart-donut / donut",
+        "chart-donut / donuts-3",
+        "chart-donut / donuts-4",
+        "chart-donut / donuts-two",
+        "chart-line / line-boundaries",
+        "chart-line / line-long-periods",
+        "chart-line / lines-12",
+        "chart-line / lines-3",
+        "chart-line / lines-6",
+        "chart-line / lines-flat",
+        "chart-scatter / scatter-24",
+        "chart-scatter / scatter-boundaries",
+        "chart-scatter / scatter-bubbles",
+        "chart-scatter / scatter-long-names",
+        "chart-scatter / scatter-six",
+        "chart-scatter / scatter-three",
+        "chart-stack / stack-12-h",
+        "chart-stack / stack-2-long",
+        "chart-stack / stack-6-pct",
+        "chart-waterfall / waterfall-long-names",
+        "chart-waterfall / waterfall-six",
+        "chart-waterfall / waterfall-ten",
+        "chart-waterfall / waterfall-three",
+        "chart-waterfall / waterfall-zero-full",
+        "code / cargo",
+        "code / hub-query-numbered",
+        "concentric / concentric-2-long",
+        "concentric / concentric-4",
+        "cycle / cycle-3-long",
+        "cycle / cycle-6",
+        "decision-tree / approval-depth-3",
+        "decision-tree / route-3",
+        "delta / hours",
+        "delta / long-units",
+        "flowchart / dispatch-6",
+        "flowchart / review-loop-4",
+        "funnel / funnel-3-long",
+        "funnel / funnel-6",
+        "gauge / meter-0",
+        "gauge / meter-100",
+        "gauge / meter-64",
+        "headline / replica-03",
+        "headline / statement-long",
+        "heatmap / heat-3x5",
+        "heatmap / heat-calendar",
+        "heatmap / heat-long-names",
+        "hierarchy / hierarchy-2-long",
+        "hierarchy / hierarchy-4",
+        "hub / replica-12",
+        "hub / spokes-3",
+        "hub / spokes-4-long",
+        "image-frame / picture-secondary",
+        "image-frame / replica-06",
+        "journey / intake-3",
+        "journey / retention-7",
+        "legend / keys-five",
+        "legend / keys-long",
+        "legend / keys-three",
+        "list / list-extended",
+        "list / list-two-long-inferred",
+        "list / replica-03-three",
+        "list / replica-03",
+        "logo-group / logos-four",
+        "logo-group / logos-six",
+        "matrix / dispatch-4",
+        "matrix / swot-dispatch",
+        "matrix-nine / allocation-9",
+        "matrix-nine / regions-9-long-notes",
+        "metric / metric-bare",
+        "metric / metric-extended",
+        "metric / metrics-three",
+        "mindmap / mindmap-2-long",
+        "mindmap / mindmap-6",
+        "network / network-4-long",
+        "network / network-8",
+        "person / replica-04",
+        "person / team-pair",
+        "person / team-trio",
+        "pill / pill-long",
+        "pill / pill-quiet",
+        "pill / replica-06",
+        "positioning / regions-6-long-logo",
+        "positioning / route-4",
+        "pricing / plan-single",
+        "pricing / plans-three-long",
+        "pricing / plans-two",
+        "prose / reading-long",
+        "prose / replica-06",
+        "pyramid / pyramid-3-long",
+        "pyramid / pyramid-5",
+        "quote / quote-avatar",
+        "quote / quote-voice",
+        "radar / radar-eight-long",
+        "radar / radar-five-two",
+        "radar / radar-three",
+        "roadmap / handoff-2",
+        "roadmap / handoff-4-long-notes",
+        "sankey / nested-4-2",
+        "sankey / routes-6",
+        "slope / slope-dumbbell-long",
+        "slope / slope-six",
+        "slope / slope-three",
+        "slope / slope-zero-full",
+        "sparkline / trend-12",
+        "sparkline / trend-5",
+        "sparkline / trend-bars-24",
+        "sparkline / trend-flat",
+        "steps / steps-3-long",
+        "steps / steps-5",
+        "steps / steps-col",
+        "swimlane / dispatch-3",
+        "swimlane / handover-2",
+        "table / replica-08",
+        "table / replica-09",
+        "table / replica-11",
+        "tag / highlight-in-sentence",
+        "tag / label-in-sentence",
+        "timeline / timeline-3-long",
+        "timeline / timeline-5",
+        "timeline / timeline-alt",
+        "timeline / timeline-col",
+        "treemap / treemap-1",
+        "treemap / treemap-2-long",
+        "venn / venn-2",
+        "venn / venn-3-long",
+        "versus / pair-four-long",
+        "versus / pair-three",
+        "waffle / waffle-100",
+        "waffle / waffle-50-shares",
+        "waffle / waffle-people-20"
+      ],
+      "slides": [
+        {
+          "fixture": "foundation / cover-ruled",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / cover",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / headed-page",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / headed-short",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / reading-rail",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / seat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "agenda / agenda-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "agenda / agenda-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "architecture / layers-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "architecture / layers-5-long-modules",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "balance / balance-even",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "balance / balance-left-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "balance / balance-right",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullet-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullet-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullet-long-note",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "bullet / bullets-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout-icon",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout-stack",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "callout / callout",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-2-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-3-icon3d",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-3-line",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-3-on",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / card-5-tone",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / area-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / area-3pt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / area-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / area-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / areas-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-area / areas-stacked-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-h-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-h-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar / bars-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donut-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donut-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donut-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donut",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donuts-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donuts-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / donuts-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / line-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / line-long-periods",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-line / lines-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-bubbles",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-scatter / scatter-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-stack / stack-12-h",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-stack / stack-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-stack / stack-6-pct",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-ten",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "code / cargo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "code / hub-query-numbered",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "concentric / concentric-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "concentric / concentric-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "cycle / cycle-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "cycle / cycle-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "decision-tree / approval-depth-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "decision-tree / route-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "delta / hours",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "delta / long-units",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "flowchart / dispatch-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "flowchart / review-loop-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "funnel / funnel-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "funnel / funnel-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "gauge / meter-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "gauge / meter-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "gauge / meter-64",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / statement-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "heatmap / heat-3x5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "heatmap / heat-calendar",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "heatmap / heat-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hierarchy / hierarchy-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hierarchy / hierarchy-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hub / replica-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hub / spokes-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "hub / spokes-4-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / picture-secondary",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "journey / intake-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "journey / retention-7",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "legend / keys-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "legend / keys-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "legend / keys-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / list-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / list-two-long-inferred",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / replica-03-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "logo-group / logos-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "logo-group / logos-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix / dispatch-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix / swot-dispatch",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix-nine / allocation-9",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "matrix-nine / regions-9-long-notes",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / metric-bare",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / metric-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / metrics-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "mindmap / mindmap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "mindmap / mindmap-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "network / network-4-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "network / network-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / team-pair",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / team-trio",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "positioning / regions-6-long-logo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "positioning / route-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pricing / plan-single",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pricing / plans-three-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pricing / plans-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / reading-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pyramid / pyramid-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pyramid / pyramid-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "quote / quote-avatar",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "quote / quote-voice",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "radar / radar-eight-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "radar / radar-five-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "radar / radar-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "roadmap / handoff-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "roadmap / handoff-4-long-notes",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sankey / nested-4-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sankey / routes-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-dumbbell-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "slope / slope-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-bars-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "sparkline / trend-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "steps / steps-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "steps / steps-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "steps / steps-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "swimlane / dispatch-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "swimlane / handover-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "table / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "table / replica-09",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "table / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "tag / highlight-in-sentence",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "tag / label-in-sentence",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-alt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / timeline-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "treemap / treemap-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "treemap / treemap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "venn / venn-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "venn / venn-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "versus / pair-four-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "versus / pair-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "waffle / waffle-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "waffle / waffle-50-shares",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "waffle / waffle-people-20",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        }
+      ],
+      "size_errors": [],
+      "font_faces": [
+        {
+          "family": "Pretendard Variable",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Do Hyeon",
+          "status": "loaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Nanum Gothic Coding",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Noto Sans",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        }
+      ],
+      "font_checks": [
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "출고 운영안",
+          "descriptor": "normal 400 15px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "（2034）",
+          "descriptor": "normal 400 15px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "누리로지스",
+          "descriptor": "normal 700 15px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "900",
+          "style": "normal",
+          "script": "ko",
+          "sample": "권역별 포장 실행안",
+          "descriptor": "normal 900 122px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "300",
+          "style": "normal",
+          "script": "ko",
+          "sample": "다음 분기 적용 일정",
+          "descriptor": "normal 300 30px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "850",
+          "style": "normal",
+          "script": "ko",
+          "sample": "거점별 포장 전략",
+          "descriptor": "normal 850 51.9983px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "350",
+          "style": "normal",
+          "script": "ko",
+          "sample": "현장 실행 지침",
+          "descriptor": "normal 350 28.9992px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans\", \"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "latin",
+          "sample": "DEPOT CHECK",
+          "descriptor": "normal 700 79px \"Noto Sans\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "ko",
+          "sample": "포장 점검",
+          "descriptor": "normal 650 18px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "300",
+          "style": "normal",
+          "script": "other",
+          "sample": "07",
+          "descriptor": "normal 300 14px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "01",
+          "descriptor": "normal 400 28px \"Do Hyeon\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "조건을 함께 대조",
+          "descriptor": "normal 400 23.8235px \"Do Hyeon\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\", \"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "0%",
+          "descriptor": "normal 400 125.84px \"Do Hyeon\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "600",
+          "style": "normal",
+          "script": "ko",
+          "sample": "현재",
+          "descriptor": "normal 600 12px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\", \"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "부서마다 다른 도구로 흩어진 업무 기록",
+          "descriptor": "normal 400 32px \"Do Hyeon\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "other",
+          "sample": "20",
+          "descriptor": "normal 700 12px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "latin",
+          "sample": "const",
+          "descriptor": "normal 700 21.89px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "latin",
+          "sample": "cargo = {",
+          "descriptor": "normal 400 21.89px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "500",
+          "style": "normal",
+          "script": "ko",
+          "sample": "증빙 내역이 일치하는가?",
+          "descriptor": "normal 500 26.4406px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\", \"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "빠른 현장 대응",
+          "descriptor": "normal 700 64px \"Do Hyeon\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "499.75",
+          "style": "normal",
+          "script": "ko",
+          "sample": "접　　수",
+          "descriptor": "normal 499.75 36px \"Pretendard Variable\"",
+          "loaded": true
+        }
+      ],
+      "font_load_errors": [],
+      "font_check_errors": [],
+      "fonts_href": "assets/fonts/fonts.css",
+      "icons": 20,
+      "mode": "light",
+      "html_sha256": "b42a38b3db054e094f73714c3b95418a71d92315259301046e4b09afab1c5f1c",
+      "request_failures": [],
+      "http_errors": [],
+      "script_errors": [],
+      "external_requests": []
+    },
+    {
+      "article_count": 174,
+      "slide_count": 174,
+      "titles": [
+        "foundation / cover-ruled",
+        "foundation / cover",
+        "foundation / headed-page",
+        "foundation / headed-short",
+        "foundation / reading-rail",
+        "foundation / seat",
+        "agenda / agenda-five",
+        "agenda / agenda-four",
+        "architecture / layers-3",
+        "architecture / layers-5-long-modules",
+        "balance / balance-even",
+        "balance / balance-left-long",
+        "balance / balance-right",
+        "bullet / bullet-0",
+        "bullet / bullet-100",
+        "bullet / bullet-long-note",
+        "bullet / bullets-4",
+        "callout / callout-icon",
+        "callout / callout-long",
+        "callout / callout-stack",
+        "callout / callout",
+        "card / card-2-quiet",
+        "card / card-3-icon3d",
+        "card / card-3-line",
+        "card / card-3-on",
+        "card / card-4",
+        "card / card-5-tone",
+        "chart-area / area-1",
+        "chart-area / area-3pt",
+        "chart-area / area-long-names",
+        "chart-area / area-zero-full",
+        "chart-area / areas-2",
+        "chart-area / areas-stacked-3",
+        "chart-bar / bars-12",
+        "chart-bar / bars-2",
+        "chart-bar / bars-3",
+        "chart-bar / bars-6",
+        "chart-bar / bars-h-5",
+        "chart-bar / bars-h-8",
+        "chart-bar / bars-long-names",
+        "chart-bar / bars-zero-full",
+        "chart-donut / donut-0",
+        "chart-donut / donut-100",
+        "chart-donut / donut-long",
+        "chart-donut / donut",
+        "chart-donut / donuts-3",
+        "chart-donut / donuts-4",
+        "chart-donut / donuts-two",
+        "chart-line / line-boundaries",
+        "chart-line / line-long-periods",
+        "chart-line / lines-12",
+        "chart-line / lines-3",
+        "chart-line / lines-6",
+        "chart-line / lines-flat",
+        "chart-scatter / scatter-24",
+        "chart-scatter / scatter-boundaries",
+        "chart-scatter / scatter-bubbles",
+        "chart-scatter / scatter-long-names",
+        "chart-scatter / scatter-six",
+        "chart-scatter / scatter-three",
+        "chart-stack / stack-12-h",
+        "chart-stack / stack-2-long",
+        "chart-stack / stack-6-pct",
+        "chart-waterfall / waterfall-long-names",
+        "chart-waterfall / waterfall-six",
+        "chart-waterfall / waterfall-ten",
+        "chart-waterfall / waterfall-three",
+        "chart-waterfall / waterfall-zero-full",
+        "code / cargo",
+        "code / hub-query-numbered",
+        "concentric / concentric-2-long",
+        "concentric / concentric-4",
+        "cycle / cycle-3-long",
+        "cycle / cycle-6",
+        "decision-tree / approval-depth-3",
+        "decision-tree / route-3",
+        "delta / hours",
+        "delta / long-units",
+        "flowchart / dispatch-6",
+        "flowchart / review-loop-4",
+        "funnel / funnel-3-long",
+        "funnel / funnel-6",
+        "gauge / meter-0",
+        "gauge / meter-100",
+        "gauge / meter-64",
+        "headline / replica-03",
+        "headline / statement-long",
+        "heatmap / heat-3x5",
+        "heatmap / heat-calendar",
+        "heatmap / heat-long-names",
+        "hierarchy / hierarchy-2-long",
+        "hierarchy / hierarchy-4",
+        "hub / replica-12",
+        "hub / spokes-3",
+        "hub / spokes-4-long",
+        "image-frame / picture-secondary",
+        "image-frame / replica-06",
+        "journey / intake-3",
+        "journey / retention-7",
+        "legend / keys-five",
+        "legend / keys-long",
+        "legend / keys-three",
+        "list / list-extended",
+        "list / list-two-long-inferred",
+        "list / replica-03-three",
+        "list / replica-03",
+        "logo-group / logos-four",
+        "logo-group / logos-six",
+        "matrix / dispatch-4",
+        "matrix / swot-dispatch",
+        "matrix-nine / allocation-9",
+        "matrix-nine / regions-9-long-notes",
+        "metric / metric-bare",
+        "metric / metric-extended",
+        "metric / metrics-three",
+        "mindmap / mindmap-2-long",
+        "mindmap / mindmap-6",
+        "network / network-4-long",
+        "network / network-8",
+        "person / replica-04",
+        "person / team-pair",
+        "person / team-trio",
+        "pill / pill-long",
+        "pill / pill-quiet",
+        "pill / replica-06",
+        "positioning / regions-6-long-logo",
+        "positioning / route-4",
+        "pricing / plan-single",
+        "pricing / plans-three-long",
+        "pricing / plans-two",
+        "prose / reading-long",
+        "prose / replica-06",
+        "pyramid / pyramid-3-long",
+        "pyramid / pyramid-5",
+        "quote / quote-avatar",
+        "quote / quote-voice",
+        "radar / radar-eight-long",
+        "radar / radar-five-two",
+        "radar / radar-three",
+        "roadmap / handoff-2",
+        "roadmap / handoff-4-long-notes",
+        "sankey / nested-4-2",
+        "sankey / routes-6",
+        "slope / slope-dumbbell-long",
+        "slope / slope-six",
+        "slope / slope-three",
+        "slope / slope-zero-full",
+        "sparkline / trend-12",
+        "sparkline / trend-5",
+        "sparkline / trend-bars-24",
+        "sparkline / trend-flat",
+        "steps / steps-3-long",
+        "steps / steps-5",
+        "steps / steps-col",
+        "swimlane / dispatch-3",
+        "swimlane / handover-2",
+        "table / replica-08",
+        "table / replica-09",
+        "table / replica-11",
+        "tag / highlight-in-sentence",
+        "tag / label-in-sentence",
+        "timeline / timeline-3-long",
+        "timeline / timeline-5",
+        "timeline / timeline-alt",
+        "timeline / timeline-col",
+        "treemap / treemap-1",
+        "treemap / treemap-2-long",
+        "venn / venn-2",
+        "venn / venn-3-long",
+        "versus / pair-four-long",
+        "versus / pair-three",
+        "waffle / waffle-100",
+        "waffle / waffle-50-shares",
+        "waffle / waffle-people-20"
+      ],
+      "slides": [
+        {
+          "fixture": "foundation / cover-ruled",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / cover",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / headed-page",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / headed-short",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / reading-rail",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / seat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "agenda / agenda-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "agenda / agenda-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "architecture / layers-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "architecture / layers-5-long-modules",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "balance / balance-even",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "balance / balance-left-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "balance / balance-right",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullet-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullet-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullet-long-note",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "bullet / bullets-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout-icon",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout-stack",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "callout / callout",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-2-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-3-icon3d",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-3-line",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-3-on",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / card-5-tone",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / area-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / area-3pt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / area-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / area-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / areas-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-area / areas-stacked-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-h-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-h-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar / bars-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donut-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donut-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donut-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donut",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donuts-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donuts-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / donuts-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / line-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / line-long-periods",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-line / lines-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-boundaries",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-bubbles",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-scatter / scatter-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-stack / stack-12-h",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-stack / stack-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-stack / stack-6-pct",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-ten",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-waterfall / waterfall-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "code / cargo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "code / hub-query-numbered",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "concentric / concentric-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "concentric / concentric-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "cycle / cycle-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "cycle / cycle-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "decision-tree / approval-depth-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "decision-tree / route-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "delta / hours",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "delta / long-units",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "flowchart / dispatch-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "flowchart / review-loop-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "funnel / funnel-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "funnel / funnel-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "gauge / meter-0",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "gauge / meter-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "gauge / meter-64",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / statement-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "heatmap / heat-3x5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "heatmap / heat-calendar",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "heatmap / heat-long-names",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hierarchy / hierarchy-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hierarchy / hierarchy-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hub / replica-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hub / spokes-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "hub / spokes-4-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / picture-secondary",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "journey / intake-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "journey / retention-7",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "legend / keys-five",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "legend / keys-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "legend / keys-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / list-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / list-two-long-inferred",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / replica-03-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "logo-group / logos-four",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "logo-group / logos-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix / dispatch-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix / swot-dispatch",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix-nine / allocation-9",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "matrix-nine / regions-9-long-notes",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / metric-bare",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / metric-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / metrics-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "mindmap / mindmap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "mindmap / mindmap-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "network / network-4-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "network / network-8",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / team-pair",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / team-trio",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "positioning / regions-6-long-logo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "positioning / route-4",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pricing / plan-single",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pricing / plans-three-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pricing / plans-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / reading-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pyramid / pyramid-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pyramid / pyramid-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "quote / quote-avatar",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "quote / quote-voice",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "radar / radar-eight-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "radar / radar-five-two",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "radar / radar-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "roadmap / handoff-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "roadmap / handoff-4-long-notes",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sankey / nested-4-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sankey / routes-6",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-dumbbell-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-six",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "slope / slope-zero-full",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-bars-24",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "sparkline / trend-flat",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "steps / steps-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "steps / steps-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "steps / steps-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "swimlane / dispatch-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "swimlane / handover-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "table / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "table / replica-09",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "table / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "tag / highlight-in-sentence",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "tag / label-in-sentence",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-alt",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / timeline-col",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "treemap / treemap-1",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "treemap / treemap-2-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "venn / venn-2",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "venn / venn-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "versus / pair-four-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "versus / pair-three",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "waffle / waffle-100",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "waffle / waffle-50-shares",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "waffle / waffle-people-20",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        }
+      ],
+      "size_errors": [],
+      "font_faces": [
+        {
+          "family": "Pretendard Variable",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Do Hyeon",
+          "status": "loaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Nanum Gothic Coding",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Noto Sans",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        }
+      ],
+      "font_checks": [
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "출고 운영안",
+          "descriptor": "normal 400 15px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "（2034）",
+          "descriptor": "normal 400 15px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "누리로지스",
+          "descriptor": "normal 700 15px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "900",
+          "style": "normal",
+          "script": "ko",
+          "sample": "권역별 포장 실행안",
+          "descriptor": "normal 900 122px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "300",
+          "style": "normal",
+          "script": "ko",
+          "sample": "다음 분기 적용 일정",
+          "descriptor": "normal 300 30px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "850",
+          "style": "normal",
+          "script": "ko",
+          "sample": "거점별 포장 전략",
+          "descriptor": "normal 850 51.9983px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "350",
+          "style": "normal",
+          "script": "ko",
+          "sample": "현장 실행 지침",
+          "descriptor": "normal 350 28.9992px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans\", \"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "latin",
+          "sample": "DEPOT CHECK",
+          "descriptor": "normal 700 79px \"Noto Sans\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "ko",
+          "sample": "포장 점검",
+          "descriptor": "normal 650 18px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "300",
+          "style": "normal",
+          "script": "other",
+          "sample": "07",
+          "descriptor": "normal 300 14px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "01",
+          "descriptor": "normal 400 28px \"Do Hyeon\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "조건을 함께 대조",
+          "descriptor": "normal 400 23.8235px \"Do Hyeon\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\", \"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "other",
+          "sample": "0%",
+          "descriptor": "normal 400 125.84px \"Do Hyeon\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "600",
+          "style": "normal",
+          "script": "ko",
+          "sample": "현재",
+          "descriptor": "normal 600 12px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\", \"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "부서마다 다른 도구로 흩어진 업무 기록",
+          "descriptor": "normal 400 32px \"Do Hyeon\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "other",
+          "sample": "20",
+          "descriptor": "normal 700 12px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "latin",
+          "sample": "const",
+          "descriptor": "normal 700 21.89px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "latin",
+          "sample": "cargo = {",
+          "descriptor": "normal 400 21.89px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "500",
+          "style": "normal",
+          "script": "ko",
+          "sample": "증빙 내역이 일치하는가?",
+          "descriptor": "normal 500 26.4406px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Do Hyeon\", \"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "빠른 현장 대응",
+          "descriptor": "normal 700 64px \"Do Hyeon\", \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "499.75",
+          "style": "normal",
+          "script": "ko",
+          "sample": "접　　수",
+          "descriptor": "normal 499.75 36px \"Pretendard Variable\"",
+          "loaded": true
+        }
+      ],
+      "font_load_errors": [],
+      "font_check_errors": [],
+      "fonts_href": "assets/fonts/fonts.css",
+      "icons": 20,
+      "mode": "dark",
+      "html_sha256": "8ee94f038b0fae394529f2ac10a35489af1191a00359c9c683f762b09ca5a5de",
+      "request_failures": [],
+      "http_errors": [],
+      "script_errors": [],
+      "external_requests": []
+    }
+  ],
+  "issues": [],
+  "passed": true
+}

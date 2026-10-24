@@ -1,0 +1,80 @@
+/* Inferred pill; no expressible source instance.
+   Measured deck primitives: 05 square268px card with28px chamfer and54px/250 index;03 light100px evidence figures. */
+.pill[data-el="cutfield-pill"] {
+  container-type: size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+}
+.pill[data-el="cutfield-pill"]>.parts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  white-space: nowrap;
+  padding: min(var(--pad),12cqh) var(--pad);
+  background: var(--page);
+  color: var(--ink);
+  border: var(--stroke) solid var(--ink);
+  --cutfield-pill-cut: min(4cqw,16px);
+  clip-path: polygon(0 0,100% 0,100% calc(100% - var(--cutfield-pill-cut)),calc(100% - var(--cutfield-pill-cut)) 100%,0 100%);
+}
+.pill[data-el="cutfield-pill"] .parts>:where(.name,.note,.mark) {
+  margin: 0;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.pill[data-el="cutfield-pill"] .name {
+  font-size: clamp(var(--type-14),calc(min(3cqw,22cqh)),var(--type-32));
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  white-space: nowrap;
+  flex-shrink: 0;
+  overflow-wrap: normal;
+}
+.pill[data-el="cutfield-pill"] .note {
+  font-size: var(--type-12);
+  font-weight: var(--body-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  white-space: nowrap;
+  flex-shrink: 0;
+  overflow-wrap: normal;
+}
+.pill[data-el="cutfield-pill"] .mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: min(10cqw,40cqh,40px);
+  aspect-ratio: 1;
+  border: var(--stroke) solid currentColor;
+  font-size: var(--type-16);
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+}
+.pill[data-el="cutfield-pill"] .mark>.icon,.pill[data-el="cutfield-pill"] .mark>.seat {
+  width: 56%;
+  height: 56%;
+}
+.pill[data-el="cutfield-pill"].on>.parts {
+  background: var(--a1);
+  color: var(--a1-on);
+}
+.pill[data-el="cutfield-pill"].quiet>.parts {
+  background: var(--n-2);
+}
+.pill[data-el="cutfield-pill"].line>.parts {
+  background: transparent;
+  border: var(--stroke) solid var(--n-5);
+}
+
+.pill[data-el="cutfield-pill"]>.parts::after {content:"";position:absolute;right:0;bottom:var(--cutfield-pill-cut);width:calc(var(--cutfield-pill-cut)*1.41421356);height:var(--stroke);background:currentColor;transform:rotate(-45deg);transform-origin:100% 100%;pointer-events:none}
+.pill[data-el="cutfield-pill"].line>.parts::after {background:var(--n-5)}

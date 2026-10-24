@@ -1,0 +1,12 @@
+/* No replica agenda; page03 provides217x30 leaf tabs on271-wide fields,
+   opposite34px corners,14.64/12.2 hierarchy and7% inset fine rules. */
+.agenda[data-el="lamella-agenda"]{box-sizing:border-box;position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:var(--gap);padding:var(--gap-sm);width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.agenda[data-el="lamella-agenda"]>.entry{box-sizing:border-box;position:relative;display:flex;flex-direction:column;min-width:0;min-height:0;container-type:size;isolation:isolate}
+.agenda[data-el="lamella-agenda"]>.entry::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(to right,transparent calc(7% - var(--stroke)/2),var(--n-5) calc(7% - var(--stroke)/2),var(--n-5) calc(7% + var(--stroke)/2),transparent calc(7% + var(--stroke)/2))}
+.agenda[data-el="lamella-agenda"]>.entry>.name{box-sizing:border-box;order:-1;flex:none;display:flex;align-items:center;justify-content:center;width:80.073801%;min-height:2.04918em;margin:0;padding:.25em .8em;border-radius:0 2.322404em 0 2.322404em;background:var(--a1);color:var(--a1-on);font-size:clamp(var(--type-14),calc(min(5.402214cqw,10cqh)),var(--type-20));font-weight:var(--label-weight);line-height:calc(var(--name-line)*.961538461538462);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.agenda[data-el="lamella-agenda"]>.entry>.mark{display:block;flex:none;margin:7cqh 8% 0 11%;font-size:clamp(var(--type-24),calc(min(14cqw,22cqh)),var(--type-56));font-weight:var(--body-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);color:var(--a1-7)}
+.agenda[data-el="lamella-agenda"]>.entry>.note{flex:none;min-width:0;margin:auto 8% 5cqh 11%;padding-top:5cqh;font-size:clamp(var(--type-12),calc(min(4.501845cqw,7cqh)),var(--type-18));font-weight:var(--body-weight);line-height:calc(var(--body-line)*.910344827586207);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.agenda[data-el="lamella-agenda"]>.entry.on{background:var(--a1);color:var(--a1-on)}
+.agenda[data-el="lamella-agenda"]>.entry.on::before{background:none}
+.agenda[data-el="lamella-agenda"]>.entry.on>.name{width:100%;background:var(--page);color:var(--a1-7)}
+.agenda[data-el="lamella-agenda"]>.entry.on>.mark{color:var(--a1-on)}

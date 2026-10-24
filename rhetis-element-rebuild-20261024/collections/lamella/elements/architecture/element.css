@@ -1,0 +1,20 @@
+/* Absent stacked architecture:03 supplies217×30leaf tabs over271px columns,
+   0/34/0/34corners, inset fine rules and14.64/12.2px title/body hierarchy. */
+.arch[data-el="lamella-architecture"]{box-sizing:border-box;position:relative;display:grid;grid-template-rows:repeat(var(--lamella-arch-layers),minmax(0,1fr));row-gap:calc(100% * .06779661 / (var(--lamella-arch-layers) + .06779661 * (var(--lamella-arch-layers) - 1)));width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink)}
+.arch[data-el="lamella-architecture"]:has(>.layer:nth-child(2):last-child){--lamella-arch-layers:2}
+.arch[data-el="lamella-architecture"]:has(>.layer:nth-child(4):last-child){--lamella-arch-layers:4}
+.arch[data-el="lamella-architecture"]:has(>.layer:nth-child(5):last-child){--lamella-arch-layers:5}
+.arch[data-el="lamella-architecture"]>.layer{box-sizing:border-box;position:relative;display:grid;grid-template-columns:7% repeat(var(--lamella-arch-chips),minmax(0,1fr));grid-template-rows:auto minmax(0,1fr);row-gap:11.864407%;min-width:0;min-height:0;container-type:size}
+.arch[data-el="lamella-architecture"]>.layer::after{content:"";grid-column:2/-1;grid-row:2;border-inline-start:var(--stroke) solid var(--n-5);pointer-events:none}
+.arch[data-el="lamella-architecture"]>.layer>.name{box-sizing:border-box;grid-column:1/-1;display:flex;align-items:center;justify-content:center;min-width:80.073801%;max-width:100%;min-height:2.04918em;width:fit-content;margin:0;padding:.25em .8em;border-radius:0 2.322404em 0 2.322404em;background:var(--a1);color:var(--a1-on);font-size:clamp(var(--type-12),calc(100cqh * .0732),var(--type-18));font-weight:var(--label-weight);line-height:calc(var(--name-line)*.961538461538462);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="lamella-architecture"]>.layer>.chip{box-sizing:border-box;grid-row:2;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;margin:0;padding:.4em 1cqw;color:var(--ink);font-size:clamp(var(--type-12),calc(100cqh * .061),var(--type-16));font-weight:var(--body-weight);line-height:calc(var(--body-line)*.910344827586207);letter-spacing:var(--body-track);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="lamella-architecture"]>.layer>.chip:nth-child(2){grid-column:2}
+.arch[data-el="lamella-architecture"]>.layer>.chip:nth-child(3){grid-column:3}
+.arch[data-el="lamella-architecture"]>.layer>.chip:nth-child(4){grid-column:4}
+.arch[data-el="lamella-architecture"]>.layer>.chip:nth-child(5){grid-column:5}
+.arch[data-el="lamella-architecture"]>.layer>.chip:nth-child(6){grid-column:6}
+.arch[data-el="lamella-architecture"]>.layer:has(>.chip:nth-child(2):last-child){--lamella-arch-chips:1}
+.arch[data-el="lamella-architecture"]>.layer:has(>.chip:nth-child(3):last-child){--lamella-arch-chips:2}
+.arch[data-el="lamella-architecture"]>.layer:has(>.chip:nth-child(5):last-child){--lamella-arch-chips:4}
+.arch[data-el="lamella-architecture"]>.layer:has(>.chip:nth-child(6):last-child){--lamella-arch-chips:5}
+@container(max-height:100px){.arch[data-el="lamella-architecture"]>.layer>.name{font-size:var(--type-12)}.arch[data-el="lamella-architecture"]>.layer>.chip{font-size:var(--type-12);padding-block:.2em}}

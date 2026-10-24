@@ -1,0 +1,44 @@
+/* Replica09:112px interlocking chevrons,225px stride, thirteen-pixel gutter and173px shared note face.
+   Each rich note preserves the actual source b + p hierarchy and fine heading rule. */
+.steps[data-el="rulemark-steps"]{position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);--rulemark-steps-n:5;--rulemark-steps-dh:298;--rulemark-steps-note-h:173;--rulemark-steps-dw:calc((var(--rulemark-steps-n) - 1) * 225 + 246);--rulemark-steps-u:min(calc(100cqw / var(--rulemark-steps-dw)),calc(100cqh / var(--rulemark-steps-dh)),1px);--rulemark-steps-x:calc(50cqw - var(--rulemark-steps-dw) * var(--rulemark-steps-u) / 2);--rulemark-steps-y:calc(50cqh - var(--rulemark-steps-dh) * var(--rulemark-steps-u) / 2)}
+.steps[data-el="rulemark-steps"] *,.steps[data-el="rulemark-steps"] *::before,.steps[data-el="rulemark-steps"] *::after{box-sizing:border-box;min-width:0}
+.steps[data-el="rulemark-steps"]::before{content:"";position:absolute;z-index:-1;left:var(--rulemark-steps-x);top:calc(var(--rulemark-steps-y) + 125 * var(--rulemark-steps-u));width:calc(var(--rulemark-steps-dw) * var(--rulemark-steps-u));height:calc(var(--rulemark-steps-note-h) * var(--rulemark-steps-u));background:var(--n-1)}
+.steps[data-el="rulemark-steps"]>.step{position:absolute;top:var(--rulemark-steps-y);width:calc(246 * var(--rulemark-steps-u));height:calc(var(--rulemark-steps-dh) * var(--rulemark-steps-u));text-align:center;--rulemark-steps-i:0;--rulemark-steps-face:var(--n-3);--rulemark-steps-on:var(--ink)}
+.steps[data-el="rulemark-steps"]>.step::before{content:"";position:absolute;z-index:-1;left:calc(var(--rulemark-steps-i) * -1.5 * var(--rulemark-steps-u));top:0;width:calc(256 * var(--rulemark-steps-u));height:calc(112 * var(--rulemark-steps-u));background:var(--rulemark-steps-face);clip-path:polygon(5.46875% 0,89.84375% 0,100% 50%,89.84375% 100%,5.46875% 100%,16.015625% 50%)}
+.steps[data-el="rulemark-steps"]>.step:first-child::before{clip-path:polygon(0 0,89.84375% 0,100% 50%,89.84375% 100%,0 100%)}
+.steps[data-el="rulemark-steps"]>.step:last-child::before{width:calc(246 * var(--rulemark-steps-u));clip-path:polygon(5.691057% 0,100% 0,100% 100%,5.691057% 100%,16.666667% 50%)}
+.steps[data-el="rulemark-steps"]>.step:nth-child(2){--rulemark-steps-face:var(--n-4)}
+.steps[data-el="rulemark-steps"]>.step:nth-child(3){--rulemark-steps-face:var(--n-5)}
+.steps[data-el="rulemark-steps"]>.step:nth-child(4){--rulemark-steps-face:var(--n-7);--rulemark-steps-on:var(--page)}
+.steps[data-el="rulemark-steps"]>.step:last-child{--rulemark-steps-face:var(--ink);--rulemark-steps-on:var(--page);width:calc((246 - (var(--rulemark-steps-n) - 1) * 1.5) * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step>.mark{display:block;position:absolute;left:0;top:calc(33 * var(--rulemark-steps-u));width:100%;margin:0;color:var(--rulemark-steps-on);font-size:clamp(var(--type-10),calc(12 * var(--rulemark-steps-u)),var(--type-12));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:calc(var(--label-track) * 0)}
+.steps[data-el="rulemark-steps"]>.step>.name{display:block;position:absolute;left:0;top:calc(54 * var(--rulemark-steps-u));width:100%;margin:0;padding:0 calc(18 * var(--rulemark-steps-u));color:var(--rulemark-steps-on);font-size:clamp(var(--type-16),calc(21 * var(--rulemark-steps-u)),var(--type-22));font-weight:var(--figure-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.steps[data-el="rulemark-steps"]>.step>.note{display:block;position:absolute;left:0;top:calc(125 * var(--rulemark-steps-u));width:100%;height:calc(var(--rulemark-steps-note-h) * var(--rulemark-steps-u));margin:0;padding:calc(24 * var(--rulemark-steps-u));font-size:clamp(var(--type-12),calc(17 * var(--rulemark-steps-u)),var(--type-18));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.steps[data-el="rulemark-steps"]>.step>.note>b{display:block;margin:0 0 calc(9 * var(--rulemark-steps-u));padding-bottom:calc(10 * var(--rulemark-steps-u));border-bottom:var(--stroke) solid var(--n-5);font-size:clamp(var(--type-14),calc(18 * var(--rulemark-steps-u)),var(--type-18));font-weight:var(--figure-weight);line-height:var(--body-line)}
+.steps[data-el="rulemark-steps"]>.step>.note>p{margin:0;font:inherit}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(2):last-child){--rulemark-steps-n:2}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(3):last-child){--rulemark-steps-n:3}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(4):last-child){--rulemark-steps-n:4}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(5):last-child){--rulemark-steps-n:5}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(6):last-child){--rulemark-steps-n:6}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(7):last-child){--rulemark-steps-n:7}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(8):last-child){--rulemark-steps-n:8}
+.steps[data-el="rulemark-steps"]>.step:nth-child(1){--rulemark-steps-i:0;left:calc(var(--rulemark-steps-x) + 0 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step:nth-child(2){--rulemark-steps-i:1;left:calc(var(--rulemark-steps-x) + 1 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step:nth-child(3){--rulemark-steps-i:2;left:calc(var(--rulemark-steps-x) + 2 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step:nth-child(4){--rulemark-steps-i:3;left:calc(var(--rulemark-steps-x) + 3 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step:nth-child(5){--rulemark-steps-i:4;left:calc(var(--rulemark-steps-x) + 4 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step:nth-child(6){--rulemark-steps-i:5;left:calc(var(--rulemark-steps-x) + 5 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step:nth-child(7){--rulemark-steps-i:6;left:calc(var(--rulemark-steps-x) + 6 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]>.step:nth-child(8){--rulemark-steps-i:7;left:calc(var(--rulemark-steps-x) + 7 * 226.5 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"]:has(>.step:nth-child(3):last-child){--rulemark-steps-dh:325;--rulemark-steps-note-h:200}
+.steps[data-el="rulemark-steps"].col{--rulemark-steps-u:min(calc(100cqw / 600),calc(100cqh / (var(--rulemark-steps-n) * 190 - 10)),1px);--rulemark-steps-y:calc(50cqh - (var(--rulemark-steps-n) * 190 - 10) * var(--rulemark-steps-u) / 2)}
+.steps[data-el="rulemark-steps"].col::before{left:calc(50cqw - 300 * var(--rulemark-steps-u));top:var(--rulemark-steps-y);width:calc(600 * var(--rulemark-steps-u));height:calc((var(--rulemark-steps-n) * 190 - 10) * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"].col>.step,.steps[data-el="rulemark-steps"].col>.step:last-child{left:calc(50cqw - 300 * var(--rulemark-steps-u));top:calc(var(--rulemark-steps-y) + var(--rulemark-steps-i) * 190 * var(--rulemark-steps-u));width:calc(600 * var(--rulemark-steps-u));height:calc(180 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"].col>.step::before{left:0;top:0;width:calc(160 * var(--rulemark-steps-u));height:calc(190 * var(--rulemark-steps-u));clip-path:polygon(0 0,50% 10.5263%,100% 0,100% 89.4737%,50% 100%,0 89.4737%)}
+.steps[data-el="rulemark-steps"].col>.step:first-child::before{clip-path:polygon(0 0,100% 0,100% 89.4737%,50% 100%,0 89.4737%)}
+.steps[data-el="rulemark-steps"].col>.step:last-child::before{height:calc(180 * var(--rulemark-steps-u));clip-path:polygon(0 0,50% 11.1111%,100% 0,100% 100%,0 100%)}
+.steps[data-el="rulemark-steps"].col>.step>.mark{width:calc(160 * var(--rulemark-steps-u));top:calc(58 * var(--rulemark-steps-u))}
+.steps[data-el="rulemark-steps"].col>.step>.name{width:calc(160 * var(--rulemark-steps-u));top:calc(81 * var(--rulemark-steps-u));font-size:clamp(var(--type-16),calc(3.5cqw),var(--type-22))}
+.steps[data-el="rulemark-steps"].col>.step>.note{left:calc(180 * var(--rulemark-steps-u));top:0;width:calc(420 * var(--rulemark-steps-u));height:100%;font-size:clamp(var(--type-12),calc(2.8cqw),var(--type-18))}
+@container(max-width:950px){.steps[data-el="rulemark-steps"]>.step>.note{line-height:var(--name-line)}}

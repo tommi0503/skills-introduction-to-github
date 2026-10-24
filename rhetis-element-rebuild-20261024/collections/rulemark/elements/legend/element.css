@@ -1,0 +1,11 @@
+/* Replica12:150×48 stacked legend,14px/400 text and18.2px row pitch.
+   Nine-pixel CSS squares replace the source square glyph; quiet label depth increases for contrast. */
+.legend[data-el="rulemark-legend"]{container-type:size;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%;height:100%;min-width:0;min-height:0;padding-bottom:calc(var(--gap-sm)*1.45);gap:0;color:var(--ink);font-family:var(--font-body)}
+.legend[data-el="rulemark-legend"]>.key{display:flex;align-items:center;gap:min(var(--gap-sm),5.3333333333cqw);max-width:100%;min-width:0;font-size:clamp(var(--type-12),9.3333333333cqw,var(--type-24));font-weight:var(--body-weight);line-height:calc(var(--body-line)*.8666666667);letter-spacing:calc(var(--body-track)*1.2857142857);overflow-wrap:anywhere;--rulemark-legend-fill:var(--n-5)}
+.legend[data-el="rulemark-legend"]>.key::before{content:"";flex:none;width:min(6cqw,var(--type-16));aspect-ratio:1;background:var(--rulemark-legend-fill)}
+.legend[data-el="rulemark-legend"]>.key.tone-1{color:var(--n-7);--rulemark-legend-fill:var(--n-5)}
+.legend[data-el="rulemark-legend"]>.key.tone-2{--rulemark-legend-fill:var(--ink)}
+.legend[data-el="rulemark-legend"]>.key.tone-3{--rulemark-legend-fill:var(--n-3)}
+.legend[data-el="rulemark-legend"]>.key.tone-4{--rulemark-legend-fill:var(--n-7)}
+.legend[data-el="rulemark-legend"]>.key.tone-5{--rulemark-legend-fill:var(--n-9)}
+@container(max-width:120px){.legend[data-el="rulemark-legend"]>.key{font-size:var(--type-12)}}

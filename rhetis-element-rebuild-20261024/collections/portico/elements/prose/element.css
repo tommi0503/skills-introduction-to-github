@@ -1,0 +1,70 @@
+/* Replica06: An editorial explanatory block,16px on579px,23.2px line pitch, no surface.
+   Ratios are measured source font/box width; small Korean text floors at12 for legibility. */
+.prose[data-el="portico-prose"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: min(8cqh,var(--gap));
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.prose[data-el="portico-prose"]>p {
+  margin: 0;
+  font-size: clamp(var(--type-12),calc(2.76339cqw),var(--type-32));
+  font-weight: var(--portico-prose-weight);
+  line-height: var(--portico-prose-line);
+  letter-spacing: var(--portico-prose-track);
+  overflow-wrap: anywhere;
+}
+.prose[data-el="portico-prose"]>p>b {
+  font-weight: var(--portico-prose-bold);
+}
+.prose[data-el="portico-prose"].lead>p {
+  font-size: clamp(var(--type-14),calc(3.10881cqw),var(--type-36));
+  font-weight: var(--figure-weight);
+  color: var(--n-7);
+}
+.prose[data-el="portico-prose"].quiet>p {
+  font-size: clamp(var(--type-12),calc(2.34888cqw),var(--type-24));
+  color: var(--n-7);
+}
+.prose[data-el="portico-prose"].cols {
+  display: block;
+  column-count: 2;
+  column-gap: var(--gap-lg);
+  column-fill: balance;
+}
+.prose[data-el="portico-prose"].cols>p {
+  break-inside: avoid;
+  margin: 0 0 var(--gap);
+  font-size: clamp(var(--type-12),calc(1.60276cqw),var(--type-24));
+}
+@container (max-width:480px) {
+  .prose[data-el="portico-prose"].cols {
+    display: flex;
+    column-count: auto;
+    gap: var(--gap-sm);
+  }
+  .prose[data-el="portico-prose"].cols>p {
+    margin: 0;
+    font-size: var(--type-12);
+  }
+}
+@container (max-height:240px) {
+  .prose[data-el="portico-prose"] {
+    gap: var(--gap-sm);
+  }
+}
+@container (max-height:360px) {
+  .prose[data-el="portico-prose"].quiet>p {
+    font-size: var(--type-12);
+  }
+}
+.prose[data-el="portico-prose"]>p:has(>.tag[data-el="portico-tag"]) {
+  line-height: max(calc(1em * var(--body-line)),calc(var(--type-14)*var(--label-line) + var(--gap-sm) + var(--stroke)));
+}

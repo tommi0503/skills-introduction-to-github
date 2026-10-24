@@ -1,0 +1,1 @@
+A fine continuous open circular path extends replica01/08 curve grammar. Three to six plain bold labels sit outside the path, with clockwise arrowheads at count-derived mid-arc positions. The large light core uses06 display contrast. No node carrier, filled card, gradient, or shadow is added. The whole cycle owns the shared path and every directional head.

@@ -1,0 +1,16 @@
+/* Absent from replica:03/06's217x30 asymmetric leaf tabs become exact-width funnel bars.
+   Source03's19-unit left inset and one-unit vertical rail frame14-unit names;10's regular18-unit quantities stay outside narrow stages. */
+.funnel[data-el="lamella-funnel"]{position:relative;container-type:size;display:flex;flex-direction:column;justify-content:center;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--lamella-funnel-n:3;--lamella-funnel-u:min(calc(100cqw / 1000),calc(100cqh / (var(--lamella-funnel-n) * 96)),1px)}
+.funnel[data-el="lamella-funnel"] *,.funnel[data-el="lamella-funnel"] *::before{box-sizing:border-box;min-width:0}
+.funnel[data-el="lamella-funnel"]::before{content:"";position:absolute;left:calc(19 * var(--lamella-funnel-u));top:0;bottom:0;width:var(--stroke);background:var(--n-5)}
+.funnel[data-el="lamella-funnel"]>.stage{position:relative;display:flex;align-items:center;width:100%;height:calc(100% / var(--lamella-funnel-n));max-height:96px}
+.funnel[data-el="lamella-funnel"]>.stage::before{content:"";position:absolute;left:53cqw;top:50%;transform:translateY(-50%);width:calc(47cqw * clamp(0,var(--v),100) / 100);height:max(12px,calc(30 * var(--lamella-funnel-u)));border-radius:0 calc(34 * var(--lamella-funnel-u)) 0 calc(34 * var(--lamella-funnel-u));background:var(--a1-2-soft)}
+.funnel[data-el="lamella-funnel"]>.stage:not(:first-child)::before{border:var(--stroke) solid var(--a1-7)}
+.funnel[data-el="lamella-funnel"]>.stage:first-child::before{background:var(--a1)}
+.funnel[data-el="lamella-funnel"]>.stage:nth-child(2)::before{background:var(--a1-3-soft)}
+.funnel[data-el="lamella-funnel"]>.stage>.name{display:block;width:31cqw;margin:0;padding-left:calc(38 * var(--lamella-funnel-u));font-size:clamp(var(--type-12),calc(14 * var(--lamella-funnel-u)),var(--type-14));font-weight:var(--body-weight);line-height:var(--name-line);word-break:keep-all;overflow-wrap:anywhere}
+.funnel[data-el="lamella-funnel"]>.stage>.fig{position:absolute;left:35cqw;width:14cqw;display:block;text-align:center;margin:0;white-space:nowrap;font-size:clamp(var(--type-12),calc(18 * var(--lamella-funnel-u)),var(--type-18));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--figure-track)}
+.funnel[data-el="lamella-funnel"]:has(>.stage:nth-child(3):last-child){--lamella-funnel-n:3}
+.funnel[data-el="lamella-funnel"]:has(>.stage:nth-child(4):last-child){--lamella-funnel-n:4}
+.funnel[data-el="lamella-funnel"]:has(>.stage:nth-child(5):last-child){--lamella-funnel-n:5}
+.funnel[data-el="lamella-funnel"]:has(>.stage:nth-child(6):last-child){--lamella-funnel-n:6}

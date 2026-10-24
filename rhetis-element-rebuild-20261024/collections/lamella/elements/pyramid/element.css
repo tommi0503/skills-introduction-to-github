@@ -1,0 +1,20 @@
+/* No replica pyramid: source03/13 leaf tabs (217x30, 0/34/0/34) label literal triangular tiers.
+   Source03's one-unit inset rail and source12's sharp tonal planes keep regular fourteen/twelve-unit copy outside the triangle. */
+.pyramid[data-el="lamella-pyramid"]{position:relative;container-type:size;display:flex;flex-direction:column;justify-content:center;width:100%;height:100%;min-width:0;min-height:0;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);--lamella-pyramid-n:3;--lamella-pyramid-u:min(calc(100cqw / 1000),calc(100cqh / (var(--lamella-pyramid-n) * 108)),1px)}
+.pyramid[data-el="lamella-pyramid"]::before{content:"";position:absolute;z-index:1;pointer-events:none;left:0;top:50%;transform:translateY(-50%);width:46cqw;height:min(100cqh,calc(var(--lamella-pyramid-n) * 108px));background:var(--a1-7);clip-path:polygon(evenodd,50% 0,100% 100%,0 100%,50% 0,50% 2px,2px calc(100% - 1px),calc(100% - 2px) calc(100% - 1px),50% 2px)}
+.pyramid[data-el="lamella-pyramid"] *,.pyramid[data-el="lamella-pyramid"] *::before{box-sizing:border-box;min-width:0}
+.pyramid[data-el="lamella-pyramid"]>.level{position:relative;display:flex;flex-direction:column;justify-content:center;height:calc(100% / var(--lamella-pyramid-n));max-height:108px;padding-left:53cqw;gap:calc(7 * var(--lamella-pyramid-u))}
+.pyramid[data-el="lamella-pyramid"]>.level::before{content:"";position:absolute;left:0;top:0;width:46cqw;height:100%;background:var(--a1-2-soft);clip-path:polygon(calc(50% - 50% * (var(--lamella-pyramid-i) - 1) / var(--lamella-pyramid-n)) 0,calc(50% + 50% * (var(--lamella-pyramid-i) - 1) / var(--lamella-pyramid-n)) 0,calc(50% + 50% * var(--lamella-pyramid-i) / var(--lamella-pyramid-n)) 100%,calc(50% - 50% * var(--lamella-pyramid-i) / var(--lamella-pyramid-n)) 100%);border-bottom:var(--stroke) solid var(--page)}
+.pyramid[data-el="lamella-pyramid"]>.level:first-child::before{background:var(--a1)}
+.pyramid[data-el="lamella-pyramid"]>.level:nth-child(2)::before{background:var(--a1-3-soft)}
+.pyramid[data-el="lamella-pyramid"]>.level::after{content:"";position:absolute;left:calc(53cqw + 19 * var(--lamella-pyramid-u));top:calc(50% + 15 * var(--lamella-pyramid-u));bottom:0;width:var(--stroke);background:var(--n-5)}
+.pyramid[data-el="lamella-pyramid"]>.level>.name{position:relative;display:flex;align-items:center;width:100%;min-height:max(24px,calc(30 * var(--lamella-pyramid-u)));padding:calc(3 * var(--lamella-pyramid-u)) calc(18 * var(--lamella-pyramid-u));background:var(--a1-2-soft);border:var(--stroke) solid var(--a1-7);border-radius:0 calc(34 * var(--lamella-pyramid-u)) 0 calc(34 * var(--lamella-pyramid-u));margin:0;font-size:clamp(var(--type-12),calc(14 * var(--lamella-pyramid-u)),var(--type-14));font-weight:var(--body-weight);line-height:var(--name-line);overflow-wrap:anywhere;word-break:keep-all}
+.pyramid[data-el="lamella-pyramid"]>.level>.note{position:relative;margin:0;padding-left:calc(38 * var(--lamella-pyramid-u));font-size:var(--type-12);font-weight:var(--body-weight);line-height:var(--body-line);overflow-wrap:anywhere;word-break:keep-all}
+.pyramid[data-el="lamella-pyramid"]:has(>.level:nth-child(3):last-child){--lamella-pyramid-n:3}
+.pyramid[data-el="lamella-pyramid"]:has(>.level:nth-child(4):last-child){--lamella-pyramid-n:4}
+.pyramid[data-el="lamella-pyramid"]:has(>.level:nth-child(5):last-child){--lamella-pyramid-n:5}
+.pyramid[data-el="lamella-pyramid"]>.level:nth-child(1){--lamella-pyramid-i:1}
+.pyramid[data-el="lamella-pyramid"]>.level:nth-child(2){--lamella-pyramid-i:2}
+.pyramid[data-el="lamella-pyramid"]>.level:nth-child(3){--lamella-pyramid-i:3}
+.pyramid[data-el="lamella-pyramid"]>.level:nth-child(4){--lamella-pyramid-i:4}
+.pyramid[data-el="lamella-pyramid"]>.level:nth-child(5){--lamella-pyramid-i:5}

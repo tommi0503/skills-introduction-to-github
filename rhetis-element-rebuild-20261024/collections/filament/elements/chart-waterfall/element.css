@@ -1,0 +1,36 @@
+/* Running-total waterfalls are absent from replica; inferred from replica05:fine accent contours and open cream fields.
+   Every move owns its floating bar, actual running-total connector and separate below-plot label. */
+.waterfall[data-el="filament-chart-waterfall"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);color:var(--ink);--filament-wf-count:3;--filament-wf-left:max(40px,4cqw);--filament-wf-right:var(--gap-sm);--filament-wf-head:max(48px,10cqh);--filament-wf-foot:max(48px,10cqh);--filament-wf-width:calc(100cqw - var(--filament-wf-left) - var(--filament-wf-right));--filament-wf-height:calc(100cqh - var(--filament-wf-head) - var(--filament-wf-foot));--filament-wf-unit:calc(var(--filament-wf-width)/var(--filament-wf-count));--filament-wf-ratio:.66;--filament-wf-stroke:var(--stroke)}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(3):last-child){--filament-wf-count:3}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(4):last-child){--filament-wf-count:4}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(5):last-child){--filament-wf-count:5}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(6):last-child){--filament-wf-count:6}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(7):last-child){--filament-wf-count:7}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(8):last-child){--filament-wf-count:8}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(9):last-child){--filament-wf-count:9}
+.waterfall[data-el="filament-chart-waterfall"]:has(>.move:nth-child(10):last-child){--filament-wf-count:10}
+.waterfall[data-el="filament-chart-waterfall"]::before{content:"";position:absolute;z-index:-2;left:var(--filament-wf-left);right:var(--filament-wf-right);top:var(--filament-wf-head);bottom:var(--filament-wf-foot);border-left:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,var(--n-2) 0 1px,transparent 1px 25%)}
+.waterfall[data-el="filament-chart-waterfall"]::after{content:counter(filament-wy4) "\a " counter(filament-wy3) "\a " counter(filament-wy2) "\a " counter(filament-wy1);counter-reset:filament-wy4 round(var(--max)) filament-wy3 round(calc(var(--max)*.75)) filament-wy2 round(calc(var(--max)*.5)) filament-wy1 round(calc(var(--max)*.25));position:absolute;left:var(--gap-sm);top:calc(var(--filament-wf-head) - var(--filament-wf-height)/8);width:calc(var(--filament-wf-left) - var(--gap-sm) - 4px);height:var(--filament-wf-height);font-size:var(--type-12);font-weight:var(--body-weight);line-height:calc(var(--filament-wf-height)/4);letter-spacing:var(--label-track);text-align:right;white-space:pre;color:var(--ink)}
+.waterfall[data-el="filament-chart-waterfall"]>.move{position:static;--filament-wf-index:0;--filament-wf-from:var(--from);--filament-wf-top:calc(var(--filament-wf-head) + var(--filament-wf-height)*(1 - max(var(--filament-wf-from),var(--to))/var(--max)));--filament-wf-bottom:calc(var(--filament-wf-head) + var(--filament-wf-height)*(1 - min(var(--filament-wf-from),var(--to))/var(--max)));--filament-wf-end:calc(var(--filament-wf-head) + var(--filament-wf-height)*(1 - var(--to)/var(--max)));--filament-wf-color:var(--a1)}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(1){--filament-wf-index:0}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(2){--filament-wf-index:1}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(3){--filament-wf-index:2}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(4){--filament-wf-index:3}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(5){--filament-wf-index:4}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(6){--filament-wf-index:5}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(7){--filament-wf-index:6}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(8){--filament-wf-index:7}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(9){--filament-wf-index:8}
+.waterfall[data-el="filament-chart-waterfall"]>.move:nth-child(10){--filament-wf-index:9}
+.waterfall[data-el="filament-chart-waterfall"]>.move.down{--filament-wf-color:var(--n-5)}
+.waterfall[data-el="filament-chart-waterfall"]>.move.total{--filament-wf-from:0;--filament-wf-color:var(--a1-8)}
+.waterfall[data-el="filament-chart-waterfall"]>.move::before{content:"";box-sizing:border-box;position:absolute;left:calc(var(--filament-wf-left) + var(--filament-wf-unit)*(var(--filament-wf-index) + (1 - var(--filament-wf-ratio))/2));top:var(--filament-wf-top);width:calc(var(--filament-wf-unit)*var(--filament-wf-ratio));height:max(1px,calc(var(--filament-wf-bottom) - var(--filament-wf-top)));background:var(--filament-wf-color)}
+.waterfall[data-el="filament-chart-waterfall"]>.move::after{content:"";position:absolute;z-index:-1;left:calc(var(--filament-wf-left) + var(--filament-wf-unit)*(var(--filament-wf-index) + (1 + var(--filament-wf-ratio))/2));top:var(--filament-wf-end);width:calc(var(--filament-wf-unit)*(1 - var(--filament-wf-ratio)));height:var(--filament-wf-stroke);background:var(--n-4)}
+.waterfall[data-el="filament-chart-waterfall"]>.move:last-child::after{content:none}
+.waterfall[data-el="filament-chart-waterfall"]>.move>b{position:absolute;left:calc(var(--filament-wf-left) + var(--filament-wf-unit)*(var(--filament-wf-index) + .5));top:calc(var(--filament-wf-top) - var(--gap-sm));transform:translate(-50%,-100%);margin:0;padding:0 2px;background:var(--page);font-size:clamp(var(--type-12),calc(min(3cqw,3cqh)),var(--type-24));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink)}
+.waterfall[data-el="filament-chart-waterfall"]>.move>span{box-sizing:border-box;position:absolute;left:calc(var(--filament-wf-left) + var(--filament-wf-unit)*var(--filament-wf-index));top:calc(100cqh - var(--filament-wf-foot) + var(--gap-sm));width:var(--filament-wf-unit);margin:0;padding:0 2px;font-size:clamp(var(--type-12),calc(min(2.5cqw,2.8cqh)),var(--type-18));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);text-align:center;white-space:nowrap;color:var(--ink)}
+.waterfall[data-el="filament-chart-waterfall"]>.move.total>b,.waterfall[data-el="filament-chart-waterfall"]>.move.total>span{font-weight:var(--name-weight)}
+.waterfall[data-el="filament-chart-waterfall"]{--filament-wf-ratio:.44;--filament-wf-stroke:calc(var(--stroke)*.7)}
+.waterfall[data-el="filament-chart-waterfall"]>.move::before{background:color-mix(in srgb,var(--filament-wf-color) 12%,var(--page));border:var(--filament-wf-stroke) solid var(--filament-wf-color)}
+.waterfall[data-el="filament-chart-waterfall"]>.move>b,.waterfall[data-el="filament-chart-waterfall"]>.move>span{color:var(--a1-8)}
+@container(max-width:700px){.waterfall[data-el="filament-chart-waterfall"]>.move>b,.waterfall[data-el="filament-chart-waterfall"]>.move>span{font-size:var(--type-12)}}

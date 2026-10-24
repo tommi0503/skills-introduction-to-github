@@ -1,0 +1,50 @@
+/* No bare bar source instance; inferred from replica09:33px bars on49.4px pitch,1px rules and13px labels; grouped chart remains a gap.
+   Normalized single-series bars retain slot-independent labels and a full member-owned plot. */
+.bars[data-el="portico-chart-bar"]{box-sizing:border-box;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;padding:0 var(--gap-sm);container-type:size;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);font-family:var(--font-body);color:var(--ink);--portico-bar-count:2;--portico-bar-head:max(38px,9cqh);--portico-bar-foot:max(44px,12cqh);--portico-bar-plot:calc(100cqh - var(--portico-bar-head) - var(--portico-bar-foot));--portico-bar-width:65%;--portico-bar-row:min(50px,calc(70cqh/var(--portico-bar-count)));--portico-bar-name:min(32cqw,300px);--portico-bar-end:max(48px,8cqw);--portico-bar-hplot:calc(100cqw - var(--portico-bar-name) - var(--portico-bar-end) - var(--gap-sm)*2)}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(1):last-child){--portico-bar-count:1}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(2):last-child){--portico-bar-count:2}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(3):last-child){--portico-bar-count:3}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(4):last-child){--portico-bar-count:4}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(5):last-child){--portico-bar-count:5}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(6):last-child){--portico-bar-count:6}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(7):last-child){--portico-bar-count:7}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(8):last-child){--portico-bar-count:8}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(9):last-child){--portico-bar-count:9}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(10):last-child){--portico-bar-count:10}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(11):last-child){--portico-bar-count:11}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(12):last-child){--portico-bar-count:12}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(13):last-child){--portico-bar-count:13}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(14):last-child){--portico-bar-count:14}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(15):last-child){--portico-bar-count:15}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(16):last-child){--portico-bar-count:16}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(17):last-child){--portico-bar-count:17}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(18):last-child){--portico-bar-count:18}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(19):last-child){--portico-bar-count:19}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(20):last-child){--portico-bar-count:20}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(21):last-child){--portico-bar-count:21}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(22):last-child){--portico-bar-count:22}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(23):last-child){--portico-bar-count:23}
+.bars[data-el="portico-chart-bar"]:has(>.bar:nth-child(24):last-child){--portico-bar-count:24}
+.bars[data-el="portico-chart-bar"]::before{content:"";position:absolute;z-index:-2;left:var(--gap-sm);right:var(--gap-sm);top:var(--portico-bar-head);bottom:var(--portico-bar-foot);border-left:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4);pointer-events:none}
+.bars[data-el="portico-chart-bar"]>.bar{box-sizing:border-box;position:relative;min-width:0;height:100%;--portico-bar-color:var(--n-3)}
+.bars[data-el="portico-chart-bar"]>.bar::before{content:"";box-sizing:border-box;position:absolute;left:50%;bottom:var(--portico-bar-foot);transform:translateX(-50%);width:var(--portico-bar-width);height:max(1px,calc(var(--portico-bar-plot)*var(--v)/var(--max)));background:var(--portico-bar-color);pointer-events:none}
+.bars[data-el="portico-chart-bar"]>.bar>b{box-sizing:border-box;position:absolute;left:50%;bottom:calc(var(--portico-bar-foot) + var(--portico-bar-plot)*var(--v)/var(--max) + var(--gap-sm));transform:translateX(-50%);margin:0;padding:0 2px;max-width:none;background:var(--page);font-size:clamp(var(--type-12),calc(min(4cqh,70cqw/var(--portico-bar-count))),var(--type-24));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;color:var(--ink)}
+.bars[data-el="portico-chart-bar"]>.bar>b:empty{display:none}
+.bars[data-el="portico-chart-bar"]>.bar>span{box-sizing:border-box;position:absolute;top:calc(100cqh - var(--portico-bar-foot) + var(--gap-sm));left:50%;transform:translateX(-50%);margin:0;width:max-content;font-size:clamp(var(--type-12),calc(min(2.8cqh,12cqw/var(--portico-bar-count))),var(--type-16));font-weight:var(--body-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap;text-align:center;color:var(--ink)}
+.bars[data-el="portico-chart-bar"]>.bar.on{--portico-bar-color:var(--a1)}
+.bars[data-el="portico-chart-bar"]>.bar.on>b{font-weight:var(--name-weight)}
+.bars[data-el="portico-chart-bar"]>.bar.tone-1{--portico-bar-color:var(--a1)}
+.bars[data-el="portico-chart-bar"]>.bar.tone-2{--portico-bar-color:var(--a2)}
+.bars[data-el="portico-chart-bar"]>.bar.tone-3{--portico-bar-color:var(--a3)}
+.bars[data-el="portico-chart-bar"]>.bar.tone-4{--portico-bar-color:var(--a4)}
+.bars[data-el="portico-chart-bar"]>.bar.tone-5{--portico-bar-color:var(--n-5)}
+.bars[data-el="portico-chart-bar"]{--portico-bar-width:66.80161943%}
+.bars[data-el="portico-chart-bar"]::before{background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 20%)}
+.bars[data-el="portico-chart-bar"]>.bar>span{border-top:1px solid var(--n-4);padding-top:var(--gap-sm)}
+.bars[data-el="portico-chart-bar"].h{grid-auto-flow:row;grid-template-columns:minmax(0,1fr);grid-auto-rows:minmax(0,1fr)}
+.bars[data-el="portico-chart-bar"].h::before{left:calc(var(--portico-bar-name) + var(--gap-sm));right:var(--portico-bar-end);top:var(--gap-sm);bottom:var(--gap-sm);border-bottom:0;background:none}
+.bars[data-el="portico-chart-bar"].h>.bar::before{left:var(--portico-bar-name);bottom:auto;top:50%;transform:translateY(-50%);width:max(1px,calc(var(--portico-bar-hplot)*var(--v)/var(--max)));height:var(--portico-bar-row);border-radius:0}
+.bars[data-el="portico-chart-bar"].h>.bar>b{left:calc(var(--portico-bar-name) + var(--portico-bar-hplot)*var(--v)/var(--max) + 4px);top:50%;bottom:auto;transform:translateY(-50%);font-size:clamp(var(--type-12),calc(min(3cqw,35cqh/var(--portico-bar-count))),var(--type-24))}
+.bars[data-el="portico-chart-bar"].h>.bar>span{left:0;top:50%;transform:translateY(-50%);width:calc(var(--portico-bar-name) - var(--gap-sm));margin:0;padding:0;border:0;font-size:clamp(var(--type-12),calc(min(3cqw,35cqh/var(--portico-bar-count))),var(--type-20));white-space:normal;word-break:keep-all;overflow-wrap:anywhere;text-align:left}
+@container(max-width:700px){.bars[data-el="portico-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:not(:nth-child(3n + 1)):not(:last-child)>span,.bars[data-el="portico-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:nth-last-child(-n + 3):not(:last-child)>span{display:none}.bars[data-el="portico-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:first-child>span{left:0;transform:none;text-align:left}.bars[data-el="portico-chart-bar"]:not(.h):has(>.bar:nth-child(5))>.bar:last-child>span{left:auto;right:0;transform:none;text-align:right}}
+@container(max-width:500px){.bars[data-el="portico-chart-bar"]>.bar>b,.bars[data-el="portico-chart-bar"]>.bar>span,.bars[data-el="portico-chart-bar"].h>.bar>b,.bars[data-el="portico-chart-bar"].h>.bar>span{font-size:var(--type-12)}}

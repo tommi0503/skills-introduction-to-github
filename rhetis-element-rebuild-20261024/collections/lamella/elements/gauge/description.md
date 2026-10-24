@@ -1,0 +1,1 @@
+The rail and value share the source tab silhouette: square top-left and bottom-right corners with opposite deep arcs. Light figure type and a restrained name leave the filled tab dominant. This progress element is inferred from replica 09; there is no source gauge instance. Names and figures remain visible at the declared minimum.
