@@ -4,7 +4,7 @@ from playwright.async_api import async_playwright
 P=Path('/workspace/work/publish/rhetis-component-rebuild-20261024')
 async def main():
  async with async_playwright()as p:
-  b=await p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox']);page=await b.new_page(viewport={'width':1440,'height':1000});errors=[];page.on('pageerror',lambda e:errors.append(str(e)));await page.goto('http://127.0.0.1:8768/preview.html');rows=[]
+  b=await p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox']);page=await b.new_page(viewport={'width':1440,'height':1000});errors=[];page.on('pageerror',lambda e:errors.append(str(e)));await page.goto('http://127.0.0.1:8769/preview.html');assert await page.locator('#delivery-status').inner_text()=='ZIP 무결성 검증 통과';rows=[]
   async def ready():
    await page.wait_for_function("document.querySelector('#artifact').complete && document.querySelector('#artifact').naturalWidth>0");await page.wait_for_timeout(30)
   for n in ['nocturne','inflexion','diecut','afterglow','dockside','confluence']:

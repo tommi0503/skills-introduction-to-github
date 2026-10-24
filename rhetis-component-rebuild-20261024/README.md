@@ -1,8 +1,10 @@
 # Rhetis component rebuild · 2026-10-24
 
+![최종 검수 미리보기](preview-desktop.png)
+
 6개 덱을 각각 하나의 컬렉션으로 다시 설계했습니다. 각 컬렉션은 56개 계약 요소, 키트와 페이지 foundation을 포함합니다. 총 88개 페이지의 원본·고정 replica·재조립 결과를 비교할 수 있습니다.
 
-[정적 검수 뷰어 열기](preview.html) · [요소별 replica 출처](element-origins.md) · [납품 검증 결과](delivery-validation.json) · [replica 불변 검증](replica-freeze-validation.json)
+[정적 검수 뷰어 소스](preview.html) · [요소별 replica 출처](element-origins.md) · [납품 검증 결과](delivery-validation.json) · [GitHub 재다운로드 검증](github-download-verification.json) · [replica 불변 검증](replica-freeze-validation.json)
 
 | 컬렉션 | 페이지 | 컬렉션 ZIP | 검수 ZIP | 소스 | 계약 한계 |
 |---|---:|---|---|---|---|
