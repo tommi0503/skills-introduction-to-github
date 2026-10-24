@@ -1,0 +1,1 @@
+Replica 01 supplies an actual 148 by 41 capsule with a centered 20px word. The transparent size container owns an intrinsically sized parts capsule rather than stretching the button into an oval. Emphasized section captions use the source 18px word and 3px vertical inset; quiet is the dark neutral companion.

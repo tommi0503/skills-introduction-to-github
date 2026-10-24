@@ -1,0 +1,1 @@
+A soft inset glass field, a restrained accent quotation mark and an overlapping portrait-and-name signature extend replicas06/19. The big variant changes type hierarchy only. Long Korean testimony wraps in balanced readable lines and retains a full author note.

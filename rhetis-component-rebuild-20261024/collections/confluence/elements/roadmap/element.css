@@ -1,0 +1,17 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.roadmap[data-el="confluence-roadmap"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.roadmap[data-el="confluence-roadmap"]{display:flex;flex-direction:column;gap:var(--gap);padding:var(--gap);}
+.roadmap[data-el="confluence-roadmap"]>.heads{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding-left:20%;font-size:var(--type-14);text-align:center;}
+.roadmap[data-el="confluence-roadmap"]>.lane{position:relative;flex:1;min-height:0;background:var(--n-1);border-bottom:var(--stroke) solid var(--n-3);margin-left:20%;}
+.roadmap[data-el="confluence-roadmap"]>.lane>.name{position:absolute;right:103%;top:30%;font-size:var(--type-14);white-space:nowrap;}
+.roadmap[data-el="confluence-roadmap"] .bar{position:absolute;left:calc(var(--from)/var(--cols)*100%);width:calc((var(--to) - var(--from))/var(--cols)*100%);height:55%;top:22%;background:var(--a1-2-soft);color:var(--ink);border-radius:var(--radius-sm);display:grid;place-items:center;padding:var(--gap-sm);font-size:var(--type-12);}
+.roadmap[data-el="confluence-roadmap"] .bar.on{background:var(--a1);color:var(--a1-on);}
+.roadmap[data-el="confluence-roadmap"] .mile{position:absolute;left:calc(var(--at)/var(--cols)*100%);top:0;bottom:0;border-left:2px solid var(--a2);font-size:var(--type-12);}
+.roadmap[data-el="confluence-roadmap"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.roadmap[data-el="confluence-roadmap"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.roadmap[data-el="confluence-roadmap"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.roadmap[data-el="confluence-roadmap"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.roadmap[data-el="confluence-roadmap"]>.lane{background:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}

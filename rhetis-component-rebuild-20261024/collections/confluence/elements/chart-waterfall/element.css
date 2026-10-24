@@ -1,0 +1,18 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.waterfall[data-el="confluence-chart-waterfall"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.waterfall[data-el="confluence-chart-waterfall"]{display:flex;align-items:stretch;gap:2%;padding:var(--gap) var(--gap-sm) calc(var(--gap-lg) + var(--type-16));border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,transparent 0 calc(25% - 1px),var(--n-2) calc(25% - 1px) 25%);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move{flex:1;min-width:0;position:relative;display:flex;align-items:stretch;justify-content:flex-end;flex-direction:column;}
+.waterfall[data-el="confluence-chart-waterfall"]>.move::before{content:"";position:absolute;left:10%;right:10%;bottom:calc(min(var(--from),var(--to))/var(--max,100)*82%);height:calc(abs(var(--to) - var(--from))/var(--max,100)*82%);background:var(--a1);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move.down::before{background:var(--n-5);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move.total::before{bottom:0;height:calc(var(--to)/var(--max,100)*82%);background:var(--a2);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move>b{position:absolute;bottom:calc(max(var(--from),var(--to))/var(--max,100)*82% + 5px);width:100%;text-align:center;font-size:var(--type-14);font-weight:var(--figure-weight);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move>span{position:absolute;top:calc(100% + var(--gap-sm));font-size:var(--type-12);text-align:center;width:100%;}
+.waterfall[data-el="confluence-chart-waterfall"]>.move:not(:last-child)::after{content:"";position:absolute;left:90%;width:calc(20% + 2cqw);bottom:calc(var(--to)/var(--max,100)*82%);border-top:var(--stroke) dashed var(--n-5);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.waterfall[data-el="confluence-chart-waterfall"]{background-color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}

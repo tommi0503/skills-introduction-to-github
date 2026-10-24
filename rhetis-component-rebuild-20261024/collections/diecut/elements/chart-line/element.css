@@ -1,0 +1,58 @@
+/* Replica 05, eight connected observations sharing the measured 544.8×470.8 crop. Point anchors are at source x 662+63i and y 602−v/150×425.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.lines[data-el="diecut-chart-line"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.lines[data-el="diecut-chart-line"] *,.lines[data-el="diecut-chart-line"] *::before,.lines[data-el="diecut-chart-line"] *::after{box-sizing:border-box}
+.lines[data-el="diecut-chart-line"] :is(p,h2,blockquote){margin:0}
+
+.lines[data-el="diecut-chart-line"] {container-name:diecut-lines;anchor-scope:all;--diecut-plot-h:calc(100cqh - max(3.781cqh,calc(72px - 20cqh)) - max(5.947cqh,24px));display:flex;justify-content:space-between;align-items:flex-end;padding:0 5.874% 0 13.18%}
+.lines[data-el="diecut-chart-line"] > .pt{position:static;flex:none;width:1px;height:1px;margin-bottom:calc(max(5.947cqh,24px) + var(--v)/var(--max,100)*var(--diecut-plot-h));anchor-name:var(--diecut-own);border-radius:50%;box-shadow:0 0 0 clamp(2px,.826cqw,5px) var(--ink)}
+.lines[data-el="diecut-chart-line"] > .pt > b{position:absolute;left:anchor(var(--diecut-own) center);top:max(.8cqh,calc(anchor(var(--diecut-own) top) - 2.974cqh - 1em));transform:translateX(-50%);font-size:clamp(var(--type-10),min(3.304cqw,3.824cqh),var(--type-24));line-height:var(--diecut-chart-value-line);font-weight:var(--body-weight);white-space:nowrap}
+.lines[data-el="diecut-chart-line"] > .pt > span{position:absolute;left:anchor(var(--diecut-own) center);bottom:0;transform:translateX(-50%);height:max(5.947cqh,24px);display:flex;align-items:center;justify-content:center;font-size:clamp(var(--type-10),min(2.5cqw,3.824cqh),var(--type-20));line-height:var(--diecut-chart-label-line);white-space:normal;width:calc(80.946cqw / max(1,var(--diecut-line-n,8) - 1) * .9);text-align:center}
+.lines[data-el="diecut-chart-line"] > .pt::before{content:"";position:absolute;left:anchor(var(--diecut-prev) center);right:anchor(var(--diecut-own) center);top:calc(anchor(var(--diecut-prev) top) - .75px);bottom:calc(anchor(var(--diecut-own) top) - .75px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--ink) calc(50% - .75px),var(--ink) calc(50% + .75px),transparent calc(50% + 1px))}
+.lines[data-el="diecut-chart-line"] > .pt::after{content:"";position:absolute;left:anchor(var(--diecut-prev) center);right:anchor(var(--diecut-own) center);top:calc(anchor(var(--diecut-own) top) - .75px);bottom:calc(anchor(var(--diecut-prev) top) - .75px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--ink) calc(50% - .75px),var(--ink) calc(50% + .75px),transparent calc(50% + 1px))}
+.lines[data-el="diecut-chart-line"] > .pt:first-child::before,.lines[data-el="diecut-chart-line"] > .pt:first-child::after{content:none}
+.lines[data-el="diecut-chart-line"] > .pt.on{box-shadow:0 0 0 clamp(3px,1cqw,6px) var(--a1)}.lines[data-el="diecut-chart-line"] > .pt.on > b{color:var(--a1-8);font-weight:var(--figure-weight)}
+@container diecut-lines (max-width:650px){.lines[data-el="diecut-chart-line"] > .pt > b,.lines[data-el="diecut-chart-line"] > .pt > span{font-size:var(--type-12)}}
+
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(1){--diecut-own:--diecut-pt-1;--diecut-prev:--diecut-pt-0}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(2){--diecut-own:--diecut-pt-2;--diecut-prev:--diecut-pt-1}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(3){--diecut-own:--diecut-pt-3;--diecut-prev:--diecut-pt-2}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(4){--diecut-own:--diecut-pt-4;--diecut-prev:--diecut-pt-3}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(5){--diecut-own:--diecut-pt-5;--diecut-prev:--diecut-pt-4}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(6){--diecut-own:--diecut-pt-6;--diecut-prev:--diecut-pt-5}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(7){--diecut-own:--diecut-pt-7;--diecut-prev:--diecut-pt-6}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(8){--diecut-own:--diecut-pt-8;--diecut-prev:--diecut-pt-7}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(9){--diecut-own:--diecut-pt-9;--diecut-prev:--diecut-pt-8}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(10){--diecut-own:--diecut-pt-10;--diecut-prev:--diecut-pt-9}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(11){--diecut-own:--diecut-pt-11;--diecut-prev:--diecut-pt-10}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(12){--diecut-own:--diecut-pt-12;--diecut-prev:--diecut-pt-11}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(13){--diecut-own:--diecut-pt-13;--diecut-prev:--diecut-pt-12}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(14){--diecut-own:--diecut-pt-14;--diecut-prev:--diecut-pt-13}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(15){--diecut-own:--diecut-pt-15;--diecut-prev:--diecut-pt-14}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(16){--diecut-own:--diecut-pt-16;--diecut-prev:--diecut-pt-15}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(17){--diecut-own:--diecut-pt-17;--diecut-prev:--diecut-pt-16}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(18){--diecut-own:--diecut-pt-18;--diecut-prev:--diecut-pt-17}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(19){--diecut-own:--diecut-pt-19;--diecut-prev:--diecut-pt-18}
+.lines[data-el="diecut-chart-line"]>.pt:nth-child(20){--diecut-own:--diecut-pt-20;--diecut-prev:--diecut-pt-19}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(2):last-child){--diecut-line-n:2}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(3):last-child){--diecut-line-n:3}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(4):last-child){--diecut-line-n:4}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(5):last-child){--diecut-line-n:5}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(6):last-child){--diecut-line-n:6}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(7):last-child){--diecut-line-n:7}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(8):last-child){--diecut-line-n:8}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(9):last-child){--diecut-line-n:9}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(10):last-child){--diecut-line-n:10}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(11):last-child){--diecut-line-n:11}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(12):last-child){--diecut-line-n:12}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(13):last-child){--diecut-line-n:13}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(14):last-child){--diecut-line-n:14}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(15):last-child){--diecut-line-n:15}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(16):last-child){--diecut-line-n:16}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(17):last-child){--diecut-line-n:17}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(18):last-child){--diecut-line-n:18}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(19):last-child){--diecut-line-n:19}
+.lines[data-el="diecut-chart-line"]:has(>.pt:nth-child(20):last-child){--diecut-line-n:20}
+
+/* Small plots reserve glyph height before the highest observation. */
+@container diecut-lines (max-height:240px){.lines[data-el="diecut-chart-line"]>.pt>b{top:calc(anchor(var(--diecut-own) top) - 8px);transform:translate(-50%,-100%);}}

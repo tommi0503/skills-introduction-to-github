@@ -1,0 +1,1 @@
+A real grid-based branching flow owns every directional connector and arrowhead. Capsule start/end states and white-rimmed inset process nodes extend the deck controls; decision nodes use the secondary soft role. The two fixtures demonstrate different branch directions without page selectors.

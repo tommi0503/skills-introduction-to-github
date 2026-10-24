@@ -1,0 +1,1 @@
+Counted shares appear as precise circular units with dark counted marks and quiet remaining marks. A figure variant turns each unit into a simple head-and-body pictogram while keeping the same density, spacing and emphasis roles.

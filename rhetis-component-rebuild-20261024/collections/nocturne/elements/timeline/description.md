@@ -1,0 +1,1 @@
+Fine rules and isolated round stops form a restrained timeline. Accent marks identify a single current moment, and alternate and column variants change the reading direction while keeping every connector inside its owner.

@@ -1,0 +1,1 @@
+Equal quiet panels sit beside fine shared axes. Short names and notes are centered within each cell; emphasis fills a complete cell. The SWOT variant replaces axes with compact indexed headings and open lists.

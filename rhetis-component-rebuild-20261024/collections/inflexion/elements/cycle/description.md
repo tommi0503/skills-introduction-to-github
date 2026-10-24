@@ -1,0 +1,1 @@
+A newly designed cyclic relationship keeps the source’s exact-circle discipline, fine orbital rule and single accent core. Three to six nodes share one owned orbit and retain their names in compact boxes.

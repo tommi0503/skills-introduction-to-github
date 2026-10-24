@@ -1,0 +1,1 @@
+Replica 10 supplies five outlined process chevrons, each 171 by 74, in a three-member forward row and two-member return row. Six equal internal columns express the half-node offset directly with contract grid placements. A direction class controls the mirrored chevron; all five members belong to this one flowchart.

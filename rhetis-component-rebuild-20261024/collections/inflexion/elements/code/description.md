@@ -1,0 +1,1 @@
+The new code block uses the same quiet neutral field and restrained accent label as the measured cards, with an actual monospaced kit font. Syntax roles remain palette positions and source spacing is preserved.

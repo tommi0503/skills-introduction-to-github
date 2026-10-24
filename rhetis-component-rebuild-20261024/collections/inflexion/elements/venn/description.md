@@ -1,0 +1,1 @@
+New overlapping sets use exact circles, a very light shared face and a fine accent perimeter. Names sit away from the shared central label; the arrangement represents real set overlap instead of repurposing the source product illustration.

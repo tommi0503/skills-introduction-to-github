@@ -1,0 +1,1 @@
+The price plans are newly designed glass insets derived from the measured portrait cards: bright rims,20px corners, restrained accent figures and compact checklist rows. Recommended plans change the rim and soft fill without changing geometry. All nested lists and tags retain their own contract roots.

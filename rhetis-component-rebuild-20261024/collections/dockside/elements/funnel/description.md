@@ -1,0 +1,1 @@
+The funnel retains genuine decreasing widths from each stage value. Its levels use the deck’s white inset rims, soft glass fills and short corners; large figures receive deep accent text. It is newly designed because no funnel exists in the replica.

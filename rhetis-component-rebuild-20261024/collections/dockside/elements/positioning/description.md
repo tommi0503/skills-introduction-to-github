@@ -1,0 +1,1 @@
+A true centered cross-axis map extends the measured hub and glass field. Marks are compact circular labels or image seats, with the selected carrier filled in the accent role. Each declared x and y controls its plotted position; no quadrant is repurposed as a generic card grid.

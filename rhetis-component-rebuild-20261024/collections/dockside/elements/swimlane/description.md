@@ -1,0 +1,1 @@
+One swimlane root owns the participant lanes, inset process nodes and every directional handoff arrow. Accent capsules identify owners and endpoints; process nodes retain the bright rim and soft corner grammar. Lane membership is declared by grid row, not encoded in page selectors.

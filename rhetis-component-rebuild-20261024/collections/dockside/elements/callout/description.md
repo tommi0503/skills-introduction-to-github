@@ -1,0 +1,1 @@
+A shallow pale capsule contains a dark circular bell and a compact conclusion, preserving replica23. Text itself owns the capsule surface so longer conclusions can increase the band height naturally. A no-icon sentence uses the same rim and type hierarchy without reserving an empty icon slot.

@@ -1,0 +1,23 @@
+/* Replica 19: Three glass persona panels use large circular image seats, overlapping accent name capsules, small person icons and compact check rows.
+   Newly authored ratios; no page selectors or prior stylesheet layers. */
+.person[data-el="dockside-person"],.people[data-el="dockside-person"]{position:relative;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);font-size:var(--type-16);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.person[data-el="dockside-person"] *,.people[data-el="dockside-person"] *{box-sizing:border-box;min-width:0}
+.people[data-el="dockside-person"]{--dockside-n:3;display:grid;grid-template-columns:repeat(var(--dockside-n),minmax(0,1fr));gap:calc(var(--gap)*1.375);width:100%;height:100%;max-width:951px;max-height:436px;align-self:center;justify-self:center;align-items:end}
+.person[data-el="dockside-person"], .people[data-el="dockside-person"]>.person{position:relative;container-type:size;min-height:0;width:100%;height:100%;max-width:295px;max-height:401px;border:2px solid var(--page);border-radius:calc(var(--radius)*1.1);background:linear-gradient(145deg,var(--n-1),var(--page));box-shadow:0 8px 18px var(--n-2)}
+.person[data-el="dockside-person"]{align-self:center;justify-self:center}.people[data-el="dockside-person"]>.person{height:calc(100% - 35px)}.people[data-el="dockside-person"]:has(>.person:nth-child(3):last-child)>.person:nth-child(2){align-self:start}
+.person[data-el="dockside-person"]>.seat,.people[data-el="dockside-person"]>.person>.seat{position:absolute;left:13.2%;top:4.5%;width:71.86%;height:auto;aspect-ratio:1;border-radius:50%;border:2px solid var(--page);box-shadow:0 5px 10px var(--n-2)}
+.person[data-el="dockside-person"]>.seat.portrait,.people[data-el="dockside-person"]>.person>.seat.portrait{left:20%;width:60%;height:46%;aspect-ratio:auto;border-radius:var(--radius-sm)}
+.person[data-el="dockside-person"]>.name,.people[data-el="dockside-person"]>.person>.name{position:absolute;left:13.2%;right:13.2%;top:51%;min-height:13.47%;padding:var(--gap-sm);margin:0;display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);border:2px solid var(--page);border-radius:999px;background:var(--a1);color:var(--a1-on);font-size:clamp(var(--type-12),6.78cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);text-align:center;overflow-wrap:anywhere}
+.person[data-el="dockside-person"]>.name>.icon,.people[data-el="dockside-person"]>.person>.name>.icon{width:min(8.2cqw,24px);height:min(8.2cqw,24px);flex:none}
+.person[data-el="dockside-person"]>.note,.people[data-el="dockside-person"]>.person>.note{position:absolute;left:10%;right:10%;top:67%;margin:0;font-size:clamp(var(--type-10),4.75cqw,var(--type-14));line-height:var(--body-line);color:var(--n-7);text-align:center;overflow-wrap:anywhere}
+.person[data-el="dockside-person"]>.list,.people[data-el="dockside-person"]>.person>.list{position:absolute;left:17.3%;top:69.3%;width:73%;height:26.2%;max-height:none;margin:0;align-self:auto}
+.person[data-el="dockside-person"]:has(>.note:not(:empty))>.list,.people[data-el="dockside-person"]>.person:has(>.note:not(:empty))>.list{top:80%;height:18%}
+.person[data-el="dockside-person"].on,.people[data-el="dockside-person"]>.person.on{border-color:var(--page);background:linear-gradient(145deg,var(--a1-1-soft),var(--page))}
+.person[data-el="dockside-person"]:has(>.note:not(:empty))>.name,.people[data-el="dockside-person"]>.person:has(>.note:not(:empty))>.name{font-size:clamp(var(--type-12),5.4cqw,var(--type-16));gap:6px;padding:8px}
+.people[data-el="dockside-person"]:has(>.person:nth-child(1):last-child){--dockside-n:1;max-width:calc(1*295px + (1 - 1)*33px)}
+.people[data-el="dockside-person"]:has(>.person:nth-child(2):last-child){--dockside-n:2;max-width:calc(2*295px + (2 - 1)*33px)}
+.people[data-el="dockside-person"]:has(>.person:nth-child(3):last-child){--dockside-n:3;max-width:calc(3*295px + (3 - 1)*33px)}
+.people[data-el="dockside-person"]:has(>.person:nth-child(4):last-child){--dockside-n:4;max-width:calc(4*295px + (4 - 1)*33px)}
+.people[data-el="dockside-person"]:has(>.person:nth-child(5):last-child){--dockside-n:5;max-width:calc(5*295px + (5 - 1)*33px)}
+.people[data-el="dockside-person"]:has(>.person:nth-child(6):last-child){--dockside-n:6;max-width:calc(6*295px + (6 - 1)*33px)}
+@container(max-width:220px){.person[data-el="dockside-person"]>.name,.people[data-el="dockside-person"]>.person>.name{padding:6px;gap:6px}.person[data-el="dockside-person"]>.list,.people[data-el="dockside-person"]>.person>.list{left:9%;width:82%}}

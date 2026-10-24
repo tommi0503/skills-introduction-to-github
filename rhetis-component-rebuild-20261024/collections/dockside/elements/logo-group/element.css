@@ -1,0 +1,19 @@
+/* Replica 01/06 dock and inset language; no mapped base: The square gray logo seats, bright2px rims and22px corners are extended from the deck’s dock and image insets.
+   Newly authored ratios; no page selectors or prior stylesheet layers. */
+.logos[data-el="dockside-logo-group"]{position:relative;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);font-size:var(--type-16);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.logos[data-el="dockside-logo-group"] *{box-sizing:border-box;min-width:0}
+.logos[data-el="dockside-logo-group"]{--dockside-n:6;display:grid;grid-template-columns:repeat(var(--dockside-n),minmax(0,1fr));gap:var(--gap);align-items:center;justify-items:center}
+.logos[data-el="dockside-logo-group"]>.seat.logo{width:100%;height:auto;aspect-ratio:1;max-width:120px;max-height:120px;border:2px solid var(--page);border-radius:calc(var(--radius)*1.1);background:var(--n-2);box-shadow:0 7px 14px var(--n-2)}
+@container(max-width:500px){.logos[data-el="dockside-logo-group"]>.seat.logo{border-radius:var(--radius-sm)}}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(1):last-child){--dockside-n:1}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(2):last-child){--dockside-n:2}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(3):last-child){--dockside-n:3}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(4):last-child){--dockside-n:4}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(5):last-child){--dockside-n:5}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(6):last-child){--dockside-n:6}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(7):last-child){--dockside-n:7}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(8):last-child){--dockside-n:8}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(9):last-child){--dockside-n:9}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(10):last-child){--dockside-n:10}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(11):last-child){--dockside-n:11}
+.logos[data-el="dockside-logo-group"]:has(>.seat:nth-child(12):last-child){--dockside-n:12}

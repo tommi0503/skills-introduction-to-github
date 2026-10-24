@@ -1,0 +1,1 @@
+Bare plan names and accent figures sit above quiet rounded feature lists. The recommended plan is picked by a single thin accent rule, maintaining the source hierarchy without adding a second card style.

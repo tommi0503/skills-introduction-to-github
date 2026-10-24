@@ -1,0 +1,1 @@
+The new scatter uses the source positioning board’s understated axes and round points, while preserving quantitative x and y scales. Bubble diameters are data-driven; labels sit above their point and the primary observation is unambiguous.

@@ -1,0 +1,29 @@
+/* Not present as this semantic relationship. Source 03 circular result nodes and shared thin connector define the extension; source 06 supplies the isolated small index disk.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.hub[data-el="diecut-hub"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.hub[data-el="diecut-hub"] *,.hub[data-el="diecut-hub"] *::before,.hub[data-el="diecut-hub"] *::after{box-sizing:border-box}
+.hub[data-el="diecut-hub"] :is(p,h2,blockquote){margin:0}
+
+.hub[data-el="diecut-hub"] {container-name:diecut-radial;isolation:isolate;--diecut-radial-n:4}
+.hub[data-el="diecut-hub"] > .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(28cqw,28cqh);height:min(28cqw,28cqh);display:flex;align-items:center;justify-content:center;padding:12px;border-radius:50%;background:var(--a1);color:var(--a1-on);text-align:center}
+.hub[data-el="diecut-hub"] > .core > .name{font-size:clamp(var(--type-14),min(3cqw,4cqh),var(--type-28));font-weight:var(--name-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.hub[data-el="diecut-hub"] > .spoke{--diecut-angle:-90deg;--diecut-radius:min(34cqw,40cqh);position:absolute;left:calc(50% + var(--diecut-radius)*cos(var(--diecut-angle)));top:calc(50% + var(--diecut-radius)*sin(var(--diecut-angle)));transform:translate(-50%,-50%);width:min(24cqw,28cqh);height:min(16cqw,18cqh);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px;border:var(--stroke) solid var(--ink);border-radius:999px;background:var(--n-1);text-align:center}
+.hub[data-el="diecut-hub"] > .spoke > .name{font-size:clamp(var(--type-12),min(2.5cqw,3cqh),var(--type-22));font-weight:var(--name-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.hub[data-el="diecut-hub"] > .spoke > .note{font-size:clamp(var(--type-10),min(1.8cqw,2cqh),var(--type-16));line-height:var(--note-line);word-break:keep-all;overflow-wrap:anywhere}
+.hub[data-el="diecut-hub"] > .spoke.on{background:var(--a1-2-soft);color:var(--ink);border-color:var(--a1)}
+
+.hub[data-el="diecut-hub"] > .core{z-index:2}
+.hub[data-el="diecut-hub"] > .spoke::after{content:"";position:absolute;inset:1px;border-radius:inherit;background:inherit;z-index:-1}
+.hub[data-el="diecut-hub"] > .spoke::before{content:"";position:absolute;left:50%;top:50%;width:var(--diecut-radius);height:var(--stroke);background:var(--ink);transform-origin:0 50%;transform:rotate(calc(var(--diecut-angle) + 180deg));z-index:-2}
+.hub[data-el="diecut-hub"] > .spoke > .mark{display:flex;align-items:center;justify-content:center;flex:none;width:22px;height:22px;background:var(--a1-2-soft);color:var(--ink);border-radius:50%;font-size:var(--type-14);font-weight:var(--diecut-index-weight);line-height:var(--label-line)}
+.hub[data-el="diecut-hub"] > .spoke:nth-child(1 of .spoke){--diecut-angle:calc(-90deg + 360deg * 0 / var(--diecut-radial-n))}
+.hub[data-el="diecut-hub"] > .spoke:nth-child(2 of .spoke){--diecut-angle:calc(-90deg + 360deg * 1 / var(--diecut-radial-n))}
+.hub[data-el="diecut-hub"] > .spoke:nth-child(3 of .spoke){--diecut-angle:calc(-90deg + 360deg * 2 / var(--diecut-radial-n))}
+.hub[data-el="diecut-hub"] > .spoke:nth-child(4 of .spoke){--diecut-angle:calc(-90deg + 360deg * 3 / var(--diecut-radial-n))}
+.hub[data-el="diecut-hub"] > .spoke:nth-child(5 of .spoke){--diecut-angle:calc(-90deg + 360deg * 4 / var(--diecut-radial-n))}
+.hub[data-el="diecut-hub"] > .spoke:nth-child(6 of .spoke){--diecut-angle:calc(-90deg + 360deg * 5 / var(--diecut-radial-n))}
+.hub[data-el="diecut-hub"]:has(>.spoke:nth-child(3 of .spoke):last-child){--diecut-radial-n:3}
+.hub[data-el="diecut-hub"]:has(>.spoke:nth-child(4 of .spoke):last-child){--diecut-radial-n:4}
+.hub[data-el="diecut-hub"]:has(>.spoke:nth-child(5 of .spoke):last-child){--diecut-radial-n:5}
+.hub[data-el="diecut-hub"]:has(>.spoke:nth-child(6 of .spoke):last-child){--diecut-radial-n:6}
+

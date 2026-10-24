@@ -1,0 +1,41 @@
+/* Replica 13, 539×367 comparison crop; the horizontal plot begins 114px from the crop edge and extends 425px. Each row owns 47px of grid and a centered 31px stripe, with 17px row gaps.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.stacks[data-el="diecut-chart-stack"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.stacks[data-el="diecut-chart-stack"] *,.stacks[data-el="diecut-chart-stack"] *::before,.stacks[data-el="diecut-chart-stack"] *::after{box-sizing:border-box}
+.stacks[data-el="diecut-chart-stack"] :is(p,h2,blockquote){margin:0}
+
+.stacks[data-el="diecut-chart-stack"] {container-name:diecut-stacks;--max:425;--diecut-stack-n:6;display:flex;align-items:flex-end;justify-content:space-around;gap:2%;padding:0 0 34px}
+.stacks[data-el="diecut-chart-stack"] > .sbar{position:relative;flex:1;height:100%;min-width:0;display:flex;flex-direction:column-reverse;align-items:center;justify-content:flex-start}
+.stacks[data-el="diecut-chart-stack"] > .sbar > span{position:absolute;top:calc(100% + 7px);left:0;right:0;text-align:center;font-size:clamp(var(--type-10),min(3.34cqw,4.905cqh),var(--type-20));line-height:var(--diecut-chart-label-line);word-break:keep-all;overflow-wrap:anywhere}
+.stacks[data-el="diecut-chart-stack"] > .sbar > .seg{position:relative;flex:none;height:calc(var(--v)/var(--max)*100%);width:60%;background:var(--n-2);color:var(--ink);display:grid;place-items:center}
+.stacks[data-el="diecut-chart-stack"] > .sbar > .seg:nth-child(3){background:var(--n-9);color:color-mix(in srgb,var(--ink) calc(100% - min(1,var(--v))*100%),var(--page))}.stacks[data-el="diecut-chart-stack"] > .sbar > .seg:nth-child(4){background:var(--a1);color:var(--a1-on)}.stacks[data-el="diecut-chart-stack"] > .sbar > .seg:nth-child(5){background:var(--a2);color:var(--a2-on)}
+.stacks[data-el="diecut-chart-stack"] > .sbar > .seg > b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:clamp(var(--type-10),min(3.34cqw,4.905cqh),var(--type-24));line-height:var(--diecut-chart-value-line);white-space:nowrap;font-weight:var(--body-weight)}
+.stacks[data-el="diecut-chart-stack"].h{flex-direction:column;justify-content:space-between;align-items:stretch;gap:0;padding:0 0 0 21.15%}
+.stacks[data-el="diecut-chart-stack"].h > .sbar{flex:none;flex-direction:row;width:100%;height:calc(100% / var(--diecut-stack-n) * .7684);justify-content:flex-start}
+.stacks[data-el="diecut-chart-stack"].h > .sbar::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to right,var(--n-4) 0 1px,transparent 1px 25%);border-right:1px solid var(--n-4)}
+.stacks[data-el="diecut-chart-stack"].h > .sbar > .seg{height:65.957%;width:calc(var(--v)/var(--max)*100%)}
+.stacks[data-el="diecut-chart-stack"].h > .sbar > span{left:-26.824%;right:calc(100% + 1.67%);top:0;bottom:0;display:flex;align-items:center;justify-content:flex-end;text-align:right}
+.stacks[data-el="diecut-chart-stack"].pct{--max:100}
+.stacks[data-el="diecut-chart-stack"] > .sbar.on > .seg{outline:1px solid var(--ink);outline-offset:-1px}
+.stacks[data-el="diecut-chart-stack"] > .sbar > .seg.tone-1{background:var(--a1);color:var(--a1-on)}.stacks[data-el="diecut-chart-stack"] > .sbar > .seg.tone-2{background:var(--a2);color:var(--a2-on)}.stacks[data-el="diecut-chart-stack"] > .sbar > .seg.tone-4{background:var(--n-7);color:var(--page)}
+@container diecut-stacks (max-width:650px){.stacks[data-el="diecut-chart-stack"] > .sbar > span,.stacks[data-el="diecut-chart-stack"] > .sbar > .seg > b{font-size:var(--type-12)}}
+
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(2):last-child){--diecut-stack-n:2}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(3):last-child){--diecut-stack-n:3}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(4):last-child){--diecut-stack-n:4}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(5):last-child){--diecut-stack-n:5}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(6):last-child){--diecut-stack-n:6}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(7):last-child){--diecut-stack-n:7}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(8):last-child){--diecut-stack-n:8}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(9):last-child){--diecut-stack-n:9}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(10):last-child){--diecut-stack-n:10}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(11):last-child){--diecut-stack-n:11}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(12):last-child){--diecut-stack-n:12}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(13):last-child){--diecut-stack-n:13}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(14):last-child){--diecut-stack-n:14}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(15):last-child){--diecut-stack-n:15}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(16):last-child){--diecut-stack-n:16}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(17):last-child){--diecut-stack-n:17}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(18):last-child){--diecut-stack-n:18}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(19):last-child){--diecut-stack-n:19}
+.stacks[data-el="diecut-chart-stack"]:has(>.sbar:nth-child(20):last-child){--diecut-stack-n:20}

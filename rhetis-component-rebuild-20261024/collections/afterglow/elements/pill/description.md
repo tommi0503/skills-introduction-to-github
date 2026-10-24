@@ -1,0 +1,1 @@
+This independently responsive pill follows afterglow replica No direct counterpart; measured panel, rule and typography grammar. It uses the replica-derived surface hierarchy and proportionate internal spacing, retaining semantic contract variants. It owns its decorative edges and connectors; it has no page-specific or sibling-sensitive placement rule.

@@ -1,0 +1,18 @@
+/* Fresh inferred venn: proportions follow afterglow replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.venn[data-el="afterglow-venn"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.venn[data-el="afterglow-venn"] *{box-sizing:border-box;}
+.venn[data-el="afterglow-venn"] p,.venn[data-el="afterglow-venn"] .name,.venn[data-el="afterglow-venn"] .note,.venn[data-el="afterglow-venn"] .fig,.venn[data-el="afterglow-venn"] .kick{margin:0;}
+.venn[data-el="afterglow-venn"]{display:flex;align-items:center;justify-content:center;}
+.venn[data-el="afterglow-venn"]>.set{position:relative;width:42%;aspect-ratio:1;flex:none;margin-left:-10%;border-radius:50%;border:var(--stroke) solid var(--a1);background:color-mix(in srgb,var(--a1) 16%,var(--page));display:grid;place-items:center;text-align:center;padding:var(--gap);}
+.venn[data-el="afterglow-venn"]>.set.on{background:var(--a1);color:var(--a1-on);}
+.venn[data-el="afterglow-venn"]>.set:first-child{margin-left:0;}
+.venn[data-el="afterglow-venn"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);}
+.venn[data-el="afterglow-venn"]>.core{position:absolute;left:42%;right:42%;top:48%;font-size:var(--type-12);line-height:var(--body-line);text-align:center;z-index:3;background:var(--page);color:var(--ink);padding:4px;border-radius:var(--radius-sm);}
+.venn[data-el="afterglow-venn"]:has(>.set:nth-child(3 of .set)){display:block;}
+.venn[data-el="afterglow-venn"]:has(>.set:nth-child(3 of .set))>.set{position:absolute;width:min(47cqw,60cqh);height:min(47cqw,60cqh);margin:0;display:block;}
+.venn[data-el="afterglow-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(1 of .set){left:17%;top:4%;}
+.venn[data-el="afterglow-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(2 of .set){left:43%;top:4%;}
+.venn[data-el="afterglow-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(3 of .set){left:30%;top:38%;}
+.venn[data-el="afterglow-venn"]:has(>.set:nth-child(3 of .set))>.set>.name{position:absolute;left:10%;right:10%;top:14%;font-size:clamp(var(--type-14),2.6cqw,var(--type-24));}
+.venn[data-el="afterglow-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(3 of .set)>.name{top:auto;bottom:12%;}

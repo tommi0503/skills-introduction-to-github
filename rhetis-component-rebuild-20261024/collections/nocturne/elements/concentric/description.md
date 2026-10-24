@@ -1,0 +1,1 @@
+Nested outlined circles distinguish inclusion from overlap. Their repeated quiet surfaces and accent figures extend the source KPI system; outer labels occupy their annulus and the innermost measure is centered.

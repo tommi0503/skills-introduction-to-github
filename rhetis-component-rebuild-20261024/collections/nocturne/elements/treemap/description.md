@@ -1,0 +1,1 @@
+Nested neutral panels divide the whole into areas proportional to their own shares. Rounded outlines and a single picked tile extend the source panel material, with local type scaling inside each true area.

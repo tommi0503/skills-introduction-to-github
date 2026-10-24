@@ -1,0 +1,1 @@
+A monospaced working note inside the measured rounded outline and dotted header rule. Syntax colors use ranked accent positions, and dense examples reduce the line size according to their own line count.

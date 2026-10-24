@@ -1,0 +1,1 @@
+Floating rounded bars trace a running total, linked by short dotted connectors at each true endpoint. Positive additions use a quiet accent, and total bars use the source emphatic fill without placing text inside the color.

@@ -1,0 +1,1 @@
+Replica 19 supplies the 201px outlined round portrait, 26px centered role and quiet career text. The people root owns the links between four profiles. A single profile uses the same parts; profile notes and nested lists remain separate semantic children.

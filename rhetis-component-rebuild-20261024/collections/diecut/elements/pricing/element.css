@@ -1,0 +1,21 @@
+/* Not present as a pricing contract. The source 04 panel and floating capsule, source 11 checklists and source 03 figure hierarchy define this extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.plan[data-el="diecut-pricing"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.plan[data-el="diecut-pricing"] *,.plan[data-el="diecut-pricing"] *::before,.plan[data-el="diecut-pricing"] *::after{box-sizing:border-box}
+.plan[data-el="diecut-pricing"] :is(p,h2,blockquote){margin:0}
+.plans[data-el="diecut-pricing"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.plans[data-el="diecut-pricing"] *,.plans[data-el="diecut-pricing"] *::before,.plans[data-el="diecut-pricing"] *::after{box-sizing:border-box}
+.plans[data-el="diecut-pricing"] :is(p,h2,blockquote){margin:0}
+
+.plan[data-el="diecut-pricing"]{container-name:diecut-plan;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap);padding:5%;background:var(--n-1);border-radius:var(--radius);text-align:center}
+.plan[data-el="diecut-pricing"] > .name{font-size:clamp(var(--type-16),min(7cqw,6cqh),var(--type-32));font-weight:var(--name-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.plan[data-el="diecut-pricing"] > .tag{position:absolute;top:4%;left:10%;margin:0;flex:none;width:80%;max-width:none}
+.plan[data-el="diecut-pricing"] > .price{display:flex;align-items:baseline;justify-content:center;gap:var(--gap-sm);flex-wrap:wrap}
+.plan[data-el="diecut-pricing"] > .price > .fig{font-size:clamp(var(--type-28),min(16cqw,12cqh),var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.plan[data-el="diecut-pricing"] > .price > small{font-size:clamp(var(--type-12),4cqw,var(--type-18));line-height:var(--note-line)}
+.plan[data-el="diecut-pricing"] > .list{flex:none;width:100%;height:38%;min-height:100px}
+.plan[data-el="diecut-pricing"].on{outline:var(--stroke) solid var(--ink);outline-offset:-1px}
+.plans[data-el="diecut-pricing"]{display:flex;gap:var(--gap);align-items:stretch}
+.plans[data-el="diecut-pricing"] > .plan{flex:1;min-width:0}
+@container diecut-plan (max-height:400px){.plan[data-el="diecut-pricing"] > .name{font-size:var(--type-20)}.plan[data-el="diecut-pricing"] > .price > .fig{font-size:var(--type-36)}}
+

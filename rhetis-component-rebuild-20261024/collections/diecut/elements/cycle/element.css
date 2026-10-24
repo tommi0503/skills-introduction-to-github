@@ -1,0 +1,27 @@
+/* Not present as this semantic relationship. Source 03 circular result nodes and shared thin connector define the extension; source 06 supplies the isolated small index disk.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.cycle[data-el="diecut-cycle"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.cycle[data-el="diecut-cycle"] *,.cycle[data-el="diecut-cycle"] *::before,.cycle[data-el="diecut-cycle"] *::after{box-sizing:border-box}
+.cycle[data-el="diecut-cycle"] :is(p,h2,blockquote){margin:0}
+
+.cycle[data-el="diecut-cycle"] {container-name:diecut-radial;isolation:isolate;--diecut-radial-n:4}
+.cycle[data-el="diecut-cycle"] > .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(28cqw,28cqh);height:min(28cqw,28cqh);display:flex;align-items:center;justify-content:center;padding:12px;border-radius:50%;background:var(--a1);color:var(--a1-on);text-align:center}
+.cycle[data-el="diecut-cycle"] > .core > .name{font-size:clamp(var(--type-14),min(3cqw,4cqh),var(--type-28));font-weight:var(--name-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.cycle[data-el="diecut-cycle"] > .node{--diecut-angle:-90deg;--diecut-radius:min(34cqw,40cqh);position:absolute;left:calc(50% + var(--diecut-radius)*cos(var(--diecut-angle)));top:calc(50% + var(--diecut-radius)*sin(var(--diecut-angle)));transform:translate(-50%,-50%);width:min(24cqw,28cqh);height:min(16cqw,18cqh);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px;border:var(--stroke) solid var(--ink);border-radius:999px;background:var(--n-1);text-align:center}
+.cycle[data-el="diecut-cycle"] > .node > .name{font-size:clamp(var(--type-12),min(2.5cqw,3cqh),var(--type-22));font-weight:var(--name-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.cycle[data-el="diecut-cycle"] > .node > .note{font-size:clamp(var(--type-10),min(1.8cqw,2cqh),var(--type-16));line-height:var(--note-line);word-break:keep-all;overflow-wrap:anywhere}
+.cycle[data-el="diecut-cycle"] > .node.on{background:var(--a1-2-soft);color:var(--ink);border-color:var(--a1)}
+
+.cycle[data-el="diecut-cycle"]::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(68cqw,80cqh);height:min(68cqw,80cqh);border:var(--stroke) solid var(--ink);border-radius:50%;z-index:-2}
+.cycle[data-el="diecut-cycle"] > .node::after{--diecut-mid:calc(var(--diecut-angle) + 180deg/var(--diecut-radial-n));content:"";position:absolute;left:calc(50% + var(--diecut-radius)*(cos(var(--diecut-mid)) - cos(var(--diecut-angle))));top:calc(50% + var(--diecut-radius)*(sin(var(--diecut-mid)) - sin(var(--diecut-angle))));width:8px;height:8px;border-right:var(--stroke) solid var(--ink);border-bottom:var(--stroke) solid var(--ink);transform:translate(-50%,-50%) rotate(calc(var(--diecut-mid) + 45deg))}
+.cycle[data-el="diecut-cycle"] > .node:nth-child(1 of .node){--diecut-angle:calc(-90deg + 360deg * 0 / var(--diecut-radial-n))}
+.cycle[data-el="diecut-cycle"] > .node:nth-child(2 of .node){--diecut-angle:calc(-90deg + 360deg * 1 / var(--diecut-radial-n))}
+.cycle[data-el="diecut-cycle"] > .node:nth-child(3 of .node){--diecut-angle:calc(-90deg + 360deg * 2 / var(--diecut-radial-n))}
+.cycle[data-el="diecut-cycle"] > .node:nth-child(4 of .node){--diecut-angle:calc(-90deg + 360deg * 3 / var(--diecut-radial-n))}
+.cycle[data-el="diecut-cycle"] > .node:nth-child(5 of .node){--diecut-angle:calc(-90deg + 360deg * 4 / var(--diecut-radial-n))}
+.cycle[data-el="diecut-cycle"] > .node:nth-child(6 of .node){--diecut-angle:calc(-90deg + 360deg * 5 / var(--diecut-radial-n))}
+.cycle[data-el="diecut-cycle"]:has(>.node:nth-child(3 of .node):last-child){--diecut-radial-n:3}
+.cycle[data-el="diecut-cycle"]:has(>.node:nth-child(4 of .node):last-child){--diecut-radial-n:4}
+.cycle[data-el="diecut-cycle"]:has(>.node:nth-child(5 of .node):last-child){--diecut-radial-n:5}
+.cycle[data-el="diecut-cycle"]:has(>.node:nth-child(6 of .node):last-child){--diecut-radial-n:6}
+

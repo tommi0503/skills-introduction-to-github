@@ -1,0 +1,13 @@
+/* Fresh inferred bullet: proportions follow afterglow replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.bullet[data-el="afterglow-bullet"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.bullet[data-el="afterglow-bullet"] *{box-sizing:border-box;}
+.bullet[data-el="afterglow-bullet"] p,.bullet[data-el="afterglow-bullet"] .name,.bullet[data-el="afterglow-bullet"] .note,.bullet[data-el="afterglow-bullet"] .fig,.bullet[data-el="afterglow-bullet"] .kick{margin:0;}
+.bullets[data-el="afterglow-bullet"]{position:relative;container-type:size;display:flex;flex-direction:column;gap:var(--gap);min-height:0;}
+.bullets[data-el="afterglow-bullet"]>.bullet{flex:1;min-height:0;width:100%;}
+.bullet[data-el="afterglow-bullet"]{padding:0;}
+.bullet[data-el="afterglow-bullet"]>.name{position:absolute;left:0;top:50%;transform:translateY(-50%);width:26%;font-size:clamp(var(--type-12),3cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);}
+.bullet[data-el="afterglow-bullet"]>.fig{position:absolute;left:32%;top:9%;font-size:clamp(var(--type-16),4cqw,var(--type-28));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-8);}
+.bullet[data-el="afterglow-bullet"]>.note{position:absolute;left:32%;right:0;bottom:5%;font-size:var(--type-12);line-height:var(--label-line);}
+.bullet[data-el="afterglow-bullet"]::before{content:"";position:absolute;left:32%;right:3%;top:51%;height:16%;min-height:8px;max-height:24px;border-radius:var(--radius-sm);background-image:linear-gradient(var(--a1),var(--a1)),linear-gradient(to right,var(--n-2) 0 calc(var(--low,40)*1%),var(--n-3) calc(var(--low,40)*1%) calc(var(--high,75)*1%),var(--n-4) calc(var(--high,75)*1%) 100%);background-size:calc(var(--v)*1%) 40%,100% 100%;background-position:left center,left top;background-repeat:no-repeat;}
+.bullet[data-el="afterglow-bullet"]::after{content:"";position:absolute;left:calc(32% + var(--target)*.65%);top:45%;height:28%;border-left:3px solid var(--ink);}

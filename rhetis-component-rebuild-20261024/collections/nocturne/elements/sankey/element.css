@@ -1,0 +1,44 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.sankey[data-el="nocturne-sankey"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.sankey[data-el="nocturne-sankey"] *, .sankey[data-el="nocturne-sankey"]::before, .sankey[data-el="nocturne-sankey"]::after{box-sizing:border-box}
+.sankey[data-el="nocturne-sankey"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.sankey[data-el="nocturne-sankey"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.sankey[data-el="nocturne-sankey"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.sankey[data-el="nocturne-sankey"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.sankey[data-el="nocturne-sankey"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.sankey[data-el="nocturne-sankey"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.sankey[data-el="nocturne-sankey"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.sankey[data-el="nocturne-sankey"]{isolation:isolate;--nocturne-flow-n:3;--nocturne-source-d:min(28cqw,62cqh,300px);--nocturne-flow-row:calc(100cqh/var(--nocturne-flow-n))}
+.sankey[data-el="nocturne-sankey"]>.source{position:absolute;z-index:1;left:2%;top:50%;translate:0 -50%;width:var(--nocturne-source-d);height:var(--nocturne-source-d);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);border:calc(var(--stroke)*3) solid var(--n-4);border-radius:50%;background:var(--n-1);padding:var(--gap-sm);text-align:center}
+.sankey[data-el="nocturne-sankey"]>.source>.name{font-size:clamp(var(--type-14),calc(var(--nocturne-source-d)*.11),var(--type-32))}
+.sankey[data-el="nocturne-sankey"]>.source>.fig{font-size:clamp(var(--type-24),calc(var(--nocturne-source-d)*.19),var(--type-56));color:var(--a1-7)}
+.sankey[data-el="nocturne-sankey"]>.branch{position:absolute;left:44%;top:calc((var(--nocturne-flow-i) - .5)*100%/var(--nocturne-flow-n));translate:0 -50%;width:18%;height:min(64px,calc(var(--nocturne-flow-row)*.55));--nocturne-parent-share:var(--v);--nocturne-child-n:2;--nocturne-flow-dy:calc((var(--nocturne-flow-i) - .5)*var(--nocturne-flow-row) - 50cqh);--nocturne-flow-dx:calc(42cqw - var(--nocturne-source-d)/2)}
+.sankey[data-el="nocturne-sankey"] .branch{display:flex;align-items:center;justify-content:center;gap:calc(var(--gap-sm)/2);border:calc(var(--stroke)*2) solid var(--n-4);border-radius:999px;background:var(--n-1);padding:0 calc(var(--gap-sm)/2);text-align:center}
+.sankey[data-el="nocturne-sankey"] .branch>.name{font-size:clamp(var(--type-12),1.6cqw,var(--type-18));line-height:var(--name-line);max-width:60%}
+.sankey[data-el="nocturne-sankey"] .branch>.fig{font-size:clamp(var(--type-12),1.8cqw,var(--type-22));line-height:var(--figure-line);color:var(--a1-7);white-space:nowrap}
+.sankey[data-el="nocturne-sankey"] .branch.on{border-color:var(--a1-7);background:var(--a1-1-soft)}
+.sankey[data-el="nocturne-sankey"] .branch.out{border-style:dotted}
+.sankey[data-el="nocturne-sankey"]>.branch::before{content:'';position:absolute;z-index:-1;left:calc(0px - var(--nocturne-flow-dx));top:calc(50% - var(--nocturne-flow-dy));translate:0 -50%;width:hypot(var(--nocturne-flow-dx),var(--nocturne-flow-dy));height:calc(var(--nocturne-source-d)*var(--v)/100);transform-origin:left center;rotate:atan2(var(--nocturne-flow-dy),var(--nocturne-flow-dx));background:color-mix(in srgb,var(--a1) 25%,var(--page));border-top:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4)}
+.sankey[data-el="nocturne-sankey"]>.branch.on::before{background:var(--a1-2-soft)}
+.sankey[data-el="nocturne-sankey"]>.branch.out::before{background:var(--n-2)}
+.sankey[data-el="nocturne-sankey"]>.branch>.branch{position:absolute;left:30cqw;top:calc(50% + var(--nocturne-child-dy));translate:0 -50%;width:18cqw;height:min(42px,calc(var(--nocturne-flow-row)*.72/var(--nocturne-child-n)));--nocturne-child-dy:calc((var(--nocturne-child-i) - (var(--nocturne-child-n) + 1)/2)*var(--nocturne-flow-row)*.85/var(--nocturne-child-n))}
+.sankey[data-el="nocturne-sankey"]>.branch>.branch::before{content:'';position:absolute;z-index:-1;left:-12cqw;top:calc(50% - var(--nocturne-child-dy));translate:0 -50%;width:hypot(12cqw,var(--nocturne-child-dy));height:calc(var(--nocturne-source-d)*var(--nocturne-parent-share)*var(--v)/10000);transform-origin:left center;rotate:atan2(var(--nocturne-child-dy),12cqw);background:var(--a1-2-soft);border-top:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4)}
+.sankey[data-el="nocturne-sankey"]:has(>.branch:nth-child(2 of .branch):last-child){--nocturne-flow-n:2}
+.sankey[data-el="nocturne-sankey"]:has(>.branch:nth-child(3 of .branch):last-child){--nocturne-flow-n:3}
+.sankey[data-el="nocturne-sankey"]:has(>.branch:nth-child(4 of .branch):last-child){--nocturne-flow-n:4}
+.sankey[data-el="nocturne-sankey"]:has(>.branch:nth-child(5 of .branch):last-child){--nocturne-flow-n:5}
+.sankey[data-el="nocturne-sankey"]:has(>.branch:nth-child(6 of .branch):last-child){--nocturne-flow-n:6}
+.sankey[data-el="nocturne-sankey"]>.branch:nth-child(1 of .branch){--nocturne-flow-i:1}
+.sankey[data-el="nocturne-sankey"]>.branch:nth-child(2 of .branch){--nocturne-flow-i:2}
+.sankey[data-el="nocturne-sankey"]>.branch:nth-child(3 of .branch){--nocturne-flow-i:3}
+.sankey[data-el="nocturne-sankey"]>.branch:nth-child(4 of .branch){--nocturne-flow-i:4}
+.sankey[data-el="nocturne-sankey"]>.branch:nth-child(5 of .branch){--nocturne-flow-i:5}
+.sankey[data-el="nocturne-sankey"]>.branch:nth-child(6 of .branch){--nocturne-flow-i:6}
+.sankey[data-el="nocturne-sankey"]>.branch:has(>.branch:nth-child(2 of .branch):last-child){--nocturne-child-n:2}
+.sankey[data-el="nocturne-sankey"]>.branch:has(>.branch:nth-child(3 of .branch):last-child){--nocturne-child-n:3}
+.sankey[data-el="nocturne-sankey"]>.branch:has(>.branch:nth-child(4 of .branch):last-child){--nocturne-child-n:4}
+.sankey[data-el="nocturne-sankey"]>.branch>.branch:nth-child(1 of .branch){--nocturne-child-i:1}
+.sankey[data-el="nocturne-sankey"]>.branch>.branch:nth-child(2 of .branch){--nocturne-child-i:2}
+.sankey[data-el="nocturne-sankey"]>.branch>.branch:nth-child(3 of .branch){--nocturne-child-i:3}
+.sankey[data-el="nocturne-sankey"]>.branch>.branch:nth-child(4 of .branch){--nocturne-child-i:4}
+

@@ -1,0 +1,1 @@
+Capsule stage labels, dark divider lines and accent circular markers extend the dock and circle grammar. Each mood point and every connecting segment is drawn by this one journey element from its declared current and next moods. Notes and pain labels remain below the chart.

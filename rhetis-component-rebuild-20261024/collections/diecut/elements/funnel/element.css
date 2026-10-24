@@ -1,0 +1,13 @@
+/* Not present as a funnel. Squared source 13 comparison bars provide the fill language; narrowing measured widths add the required stage semantics without new ornament.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.funnel[data-el="diecut-funnel"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.funnel[data-el="diecut-funnel"] *,.funnel[data-el="diecut-funnel"] *::before,.funnel[data-el="diecut-funnel"] *::after{box-sizing:border-box}
+.funnel[data-el="diecut-funnel"] :is(p,h2,blockquote){margin:0}
+
+.funnel[data-el="diecut-funnel"] {container-name:diecut-funnel;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm)}
+.funnel[data-el="diecut-funnel"] > .stage{flex:1;min-height:0;max-height:110px;width:calc(var(--v)*1%);min-width:20%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:4px 10px;background:var(--n-1);clip-path:polygon(0 0,100% 0,92% 100%,8% 100%);text-align:center}
+.funnel[data-el="diecut-funnel"] > .stage > .name{font-size:clamp(var(--type-12),min(3cqw,5cqh),var(--type-24));font-weight:var(--label-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.funnel[data-el="diecut-funnel"] > .stage > .fig{font-size:clamp(var(--type-16),min(4cqw,6cqh),var(--type-32));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.funnel[data-el="diecut-funnel"] > .stage.on{background:var(--a1);color:var(--a1-on)}
+@container diecut-funnel (max-height:400px){.funnel[data-el="diecut-funnel"] > .stage > .name{font-size:var(--type-12)}.funnel[data-el="diecut-funnel"] > .stage > .fig{font-size:var(--type-18)}}
+

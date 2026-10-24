@@ -1,0 +1,15 @@
+/* Not present as source code. The source 03 black capsule and source 04 white panel define a quiet code surface; the contract adds a real monospace family and numbered lines.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.code[data-el="diecut-code"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.code[data-el="diecut-code"] *,.code[data-el="diecut-code"] *::before,.code[data-el="diecut-code"] *::after{box-sizing:border-box}
+.code[data-el="diecut-code"] :is(p,h2,blockquote){margin:0}
+
+.code[data-el="diecut-code"] {container-name:diecut-code;display:flex;flex-direction:column;gap:var(--gap);padding:3%;background:var(--n-1);border-radius:var(--radius)}
+.code[data-el="diecut-code"] > .name{flex:none;align-self:flex-start;max-width:100%;padding:8px 24px;background:var(--n-9);color:var(--page);border-radius:999px;font-family:var(--font-body);font-size:clamp(var(--type-12),2cqw,var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);overflow-wrap:anywhere}
+.code[data-el="diecut-code"] > .lines{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:center;counter-reset:diecut-code-line;font-family:var(--diecut-font-code);font-size:clamp(var(--type-12),min(2cqw,3cqh),var(--type-24));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.code[data-el="diecut-code"] > .lines > p{position:relative;white-space:pre-wrap;overflow-wrap:anywhere;line-height:inherit;counter-increment:diecut-code-line}
+.code[data-el="diecut-code"].numbered > .lines > p{padding-left:3em}
+.code[data-el="diecut-code"].numbered > .lines > p::before{content:counter(diecut-code-line,decimal-leading-zero);position:absolute;left:0;top:0;width:2em;text-align:right;color:var(--n-7);font-family:inherit}
+.code[data-el="diecut-code"] > .lines .k{font-weight:var(--name-weight);color:var(--a1-8)}.code[data-el="diecut-code"] > .lines .s{color:var(--a2-8)}.code[data-el="diecut-code"] > .lines .c{color:var(--n-7)}.code[data-el="diecut-code"] > .lines .n{font-weight:var(--name-weight);color:var(--ink)}
+@container diecut-code (max-height:350px){.code[data-el="diecut-code"] > .lines{font-size:var(--type-12)}.code[data-el="diecut-code"] > .name{font-size:var(--type-12)}}
+

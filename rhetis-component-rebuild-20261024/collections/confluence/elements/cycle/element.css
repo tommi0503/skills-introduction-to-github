@@ -1,0 +1,38 @@
+/* Fresh inferred cycle: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.cycle[data-el="confluence-cycle"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.cycle[data-el="confluence-cycle"] *{box-sizing:border-box;}
+.cycle[data-el="confluence-cycle"] p,.cycle[data-el="confluence-cycle"] .name,.cycle[data-el="confluence-cycle"] .note,.cycle[data-el="confluence-cycle"] .fig,.cycle[data-el="confluence-cycle"] .kick{margin:0;}
+.cycle[data-el="confluence-cycle"]{--cycle-count:3;}
+.cycle[data-el="confluence-cycle"]::before{content:"";position:absolute;inset:16%;border-radius:50%;border:var(--stroke) dashed var(--a1);}
+.cycle[data-el="confluence-cycle"]>.core{position:absolute;left:50%;top:50%;width:min(24cqw,24cqh);height:min(24cqw,24cqh);transform:translate(-50%,-50%);border-radius:50%;background:var(--a1);color:var(--a1-on);display:grid;place-items:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);}
+.cycle[data-el="confluence-cycle"]>.node{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:absolute;left:calc(50% + sin(var(--node-angle))*34%);top:calc(50% - cos(var(--node-angle))*34%);transform:translate(-50%,-50%);width:25%;height:23%;padding:var(--gap-sm);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:var(--gap-sm);}
+.cycle[data-el="confluence-cycle"] .name{font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);}
+.cycle[data-el="confluence-cycle"] .note{font-size:var(--type-12);line-height:var(--body-line);}
+.cycle[data-el="confluence-cycle"]>.node::after{content:"";position:absolute;left:calc(50% + (sin(var(--node-angle) + 180deg/var(--cycle-count)) - sin(var(--node-angle)))*34cqw);top:calc(50% - (cos(var(--node-angle) + 180deg/var(--cycle-count)) - cos(var(--node-angle)))*34cqh);width:12px;height:12px;background:var(--a1);clip-path:polygon(0 0,100% 50%,0 100%);transform:translate(-50%,-50%) rotate(calc(var(--node-angle) + 180deg/var(--cycle-count)));}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node))){--cycle-count:3;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node)))>.node:nth-child(2 of .node){--node-angle:120.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node)))>.node:nth-child(3 of .node){--node-angle:240.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node))){--cycle-count:4;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(2 of .node){--node-angle:90.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(3 of .node){--node-angle:180.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(4 of .node){--node-angle:270.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node))){--cycle-count:5;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(2 of .node){--node-angle:72.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(3 of .node){--node-angle:144.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(4 of .node){--node-angle:216.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(5 of .node){--node-angle:288.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node))){--cycle-count:6;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(2 of .node){--node-angle:60.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(3 of .node){--node-angle:120.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(4 of .node){--node-angle:180.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(5 of .node){--node-angle:240.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(6 of .node){--node-angle:300.0deg;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.cycle[data-el="confluence-cycle"]>.core{border:clamp(4px,1cqw,12px) solid var(--page);background:var(--a1-7);color:var(--page);}
+.cycle[data-el="confluence-cycle"]>.node>.name{align-self:stretch;background:var(--a2-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4);}

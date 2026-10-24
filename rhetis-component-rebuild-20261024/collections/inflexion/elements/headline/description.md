@@ -1,0 +1,1 @@
+Replica 03 supplies the bare two-line body heading: a measured 27px line in an 83.69px-high box, with only the carrying clause emphasized. Big and centered headings follow the actual statement and caption examples in 05 and 15.

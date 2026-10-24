@@ -1,0 +1,30 @@
+/* Replica 10, five equal 256px stages, 58px neutral strip, 58px accent chevrons, 30px stage index, 21px name and 13px body.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.steps[data-el="diecut-steps"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.steps[data-el="diecut-steps"] *,.steps[data-el="diecut-steps"] *::before,.steps[data-el="diecut-steps"] *::after{box-sizing:border-box}
+.steps[data-el="diecut-steps"] :is(p,h2,blockquote){margin:0}
+
+.steps[data-el="diecut-steps"] {container-name:diecut-steps;display:flex;align-items:center;--diecut-steps-n:5}
+.steps[data-el="diecut-steps"] > .step{position:relative;flex:1;min-width:0;height:min(100cqh,calc(88.745cqw / var(--diecut-steps-n)));container-type:size}
+.steps[data-el="diecut-steps"] > .step::before{content:'';position:absolute;left:0;right:0;top:0;height:25.53%;background:var(--n-2)}
+.steps[data-el="diecut-steps"] > .step:not(:last-child)::after{content:'';position:absolute;z-index:2;left:calc(100% - 11.328cqw);top:0;width:22.656%;height:25.53%;background:var(--a1);clip-path:polygon(0 0,51.724% 0,100% 50%,51.724% 100%,0 100%,48.276% 50%)}
+.steps[data-el="diecut-steps"] > .step > .mark{position:absolute;top:4.842%;left:29.297%;width:70%;font-size:clamp(var(--type-16),11.719cqw,var(--type-40));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--diecut-step-track);white-space:nowrap}
+.steps[data-el="diecut-steps"] > .step > .name{position:absolute;top:49.739%;left:29.297%;right:0;font-size:clamp(var(--type-12),8.203cqw,var(--type-28));font-weight:var(--label-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+.steps[data-el="diecut-steps"] > .step > .note{position:absolute;top:69.105%;left:23.438%;right:0;font-size:clamp(var(--type-10),5.078cqw,var(--type-18));font-weight:var(--body-weight);line-height:var(--diecut-steps-note-line);word-break:keep-all;overflow-wrap:anywhere}
+.steps[data-el="diecut-steps"].col{flex-direction:column}
+.steps[data-el="diecut-steps"].col > .step{width:100%;height:auto;flex:1;min-height:0}
+.steps[data-el="diecut-steps"].col > .step::before{top:0;bottom:0;left:0;width:20%;height:100%}
+.steps[data-el="diecut-steps"].col > .step:not(:last-child)::after{left:0;top:calc(100% - 10px);width:20%;height:20px;transform:none;clip-path:polygon(0 0,50% 45%,100% 0,100% 55%,50% 100%,0 55%)}
+.steps[data-el="diecut-steps"].col > .step > .mark{left:0;top:34%;width:20%;text-align:center;font-size:clamp(var(--type-14),min(3.5cqw,24cqh),var(--type-24))}
+.steps[data-el="diecut-steps"].col > .step > .name{left:25%;right:2%;top:12%;font-size:clamp(var(--type-14),min(5cqw,24cqh),var(--type-26))}
+.steps[data-el="diecut-steps"].col > .step > .note{left:25%;right:2%;top:48%;font-size:clamp(var(--type-12),min(3cqw,12cqh),var(--type-20))}
+@container diecut-steps (max-width:850px){.steps[data-el="diecut-steps"]:not(.col) > .step{height:min(100cqh,calc(150cqw / var(--diecut-steps-n)))}.steps[data-el="diecut-steps"]:not(.col) > .step > .name{left:12%;right:8%;top:42%;font-size:clamp(var(--type-12),8cqw,var(--type-20))}.steps[data-el="diecut-steps"]:not(.col) > .step > .note{left:12%;right:8%;top:63%;font-size:var(--type-10)}.steps[data-el="diecut-steps"]:not(.col) > .step > .mark{left:12%;font-size:clamp(var(--type-14),10cqw,var(--type-26))}}
+@container diecut-steps (max-width:600px){.steps[data-el="diecut-steps"]:not(.col) > .step{height:min(100cqh,calc(225cqw / var(--diecut-steps-n)))}.steps[data-el="diecut-steps"]:not(.col) > .step > .name{top:43%;font-size:var(--type-12)}.steps[data-el="diecut-steps"]:not(.col) > .step > .mark{font-size:var(--type-12)}}
+
+.steps[data-el="diecut-steps"]:has(>.step:nth-child(2):last-child){--diecut-steps-n:2}
+.steps[data-el="diecut-steps"]:has(>.step:nth-child(3):last-child){--diecut-steps-n:3}
+.steps[data-el="diecut-steps"]:has(>.step:nth-child(4):last-child){--diecut-steps-n:4}
+.steps[data-el="diecut-steps"]:has(>.step:nth-child(5):last-child){--diecut-steps-n:5}
+.steps[data-el="diecut-steps"]:has(>.step:nth-child(6):last-child){--diecut-steps-n:6}
+.steps[data-el="diecut-steps"]:has(>.step:nth-child(7):last-child){--diecut-steps-n:7}
+.steps[data-el="diecut-steps"]:has(>.step:nth-child(8):last-child){--diecut-steps-n:8}

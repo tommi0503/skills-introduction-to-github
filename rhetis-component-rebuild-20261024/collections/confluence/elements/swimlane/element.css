@@ -1,0 +1,20 @@
+/* Fresh inferred swimlane: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.swimlane[data-el="confluence-swimlane"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.swimlane[data-el="confluence-swimlane"] *{box-sizing:border-box;}
+.swimlane[data-el="confluence-swimlane"] p,.swimlane[data-el="confluence-swimlane"] .name,.swimlane[data-el="confluence-swimlane"] .note,.swimlane[data-el="confluence-swimlane"] .fig,.swimlane[data-el="confluence-swimlane"] .kick{margin:0;}
+.swimlane[data-el="confluence-swimlane"]{display:grid;grid-template-columns:none;grid-template-rows:none;grid-auto-columns:minmax(0,1fr);grid-auto-rows:minmax(0,1fr);gap:var(--gap-lg);padding:var(--gap);}
+.swimlane[data-el="confluence-swimlane"]>.node{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;min-height:0;min-width:0;display:grid;place-items:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-14);font-weight:var(--name-weight);line-height:var(--name-line);}
+.swimlane[data-el="confluence-swimlane"]>.node.start,.swimlane[data-el="confluence-swimlane"]>.node.end{border-radius:999px;background:var(--a1);color:var(--a1-on);}
+.swimlane[data-el="confluence-swimlane"]>.node.ask{border:0;border-radius:0;padding:0;background:none;}
+.swimlane[data-el="confluence-swimlane"]>.node.ask>.name{width:100%;height:100%;display:grid;place-items:center;padding:var(--gap);background:var(--page);color:var(--ink);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);}
+.swimlane[data-el="confluence-swimlane"]>.node.to-r::after{content:"";position:absolute;left:100%;top:calc(50% - 6px);width:var(--gap-lg);height:12px;background:var(--a1);clip-path:polygon(0 45%,calc(100% - 8px) 45%,calc(100% - 8px) 0,100% 50%,calc(100% - 8px) 100%,calc(100% - 8px) 55%,0 55%);}
+.swimlane[data-el="confluence-swimlane"]>.node.to-l::after{content:"";position:absolute;right:100%;top:calc(50% - 6px);width:var(--gap-lg);height:12px;background:var(--a1);clip-path:polygon(0 50%,8px 0,8px 45%,100% 45%,100% 55%,8px 55%,8px 100%);}
+.swimlane[data-el="confluence-swimlane"]>.node.to-d::before{content:"";position:absolute;left:calc(50% - 6px);top:100%;height:var(--gap-lg);width:12px;background:var(--a1);clip-path:polygon(45% 0,55% 0,55% calc(100% - 8px),100% calc(100% - 8px),50% 100%,0 calc(100% - 8px),45% calc(100% - 8px));}
+.swimlane[data-el="confluence-swimlane"]>.node.to-u::before{content:"";position:absolute;left:calc(50% - 6px);bottom:100%;height:var(--gap-lg);width:12px;background:var(--a1);clip-path:polygon(45% 8px,0 8px,50% 0,100% 8px,55% 8px,55% 100%,45% 100%);}
+.swimlane[data-el="confluence-swimlane"]{grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding-left:128px;}
+.swimlane[data-el="confluence-swimlane"]>.lane{grid-column:1 / -1;position:relative;margin-left:-112px;z-index:-1;background:var(--n-1);display:flex;align-items:center;padding-left:8px;font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);}
+.swimlane[data-el="confluence-swimlane"]>.lane>.name{width:96px;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.swimlane[data-el="confluence-swimlane"]>.node.start,.swimlane[data-el="confluence-swimlane"]>.node.end{border:6px solid var(--page);box-shadow:0 0 0 1px var(--a1);background:var(--a1-7);color:var(--page);}

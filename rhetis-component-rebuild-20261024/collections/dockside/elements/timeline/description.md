@@ -1,0 +1,1 @@
+Five slim glass cards rise across a single track. A lifted accent icon, small date line, dark label, muted detail and short rounded underline reproduce the measured stair sequence. Count-aware spacing, a true vertical track and an alternating track support other schedules without page-specific rules.

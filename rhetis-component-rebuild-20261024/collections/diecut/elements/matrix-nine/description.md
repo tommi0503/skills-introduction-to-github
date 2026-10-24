@@ -1,0 +1,1 @@
+Equal quiet panels sit beside fine shared axes. Short names and notes are centered within each cell; emphasis fills a complete cell. The nine-box preserves all three axis labels and all nine cell names.

@@ -1,0 +1,41 @@
+/* Not present as filled areas. Replica 05 straight observation connectors and replica 13 pale/dark comparison fills define the extension. Anchor geometry follows the shared new chart technique; no legacy CSS is imported.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.areas[data-el="diecut-chart-area"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.areas[data-el="diecut-chart-area"] *,.areas[data-el="diecut-chart-area"] *::before,.areas[data-el="diecut-chart-area"] *::after{box-sizing:border-box}
+.areas[data-el="diecut-chart-area"] :is(p,h2,blockquote){margin:0}
+
+.areas[data-el="diecut-chart-area"] {container-name:diecut-areas;anchor-scope:all;--diecut-area-h:calc(100cqh - 80px);isolation:isolate}
+.areas[data-el="diecut-chart-area"]::before{content:"";position:absolute;inset:48px 4% 32px;border-bottom:var(--stroke) solid var(--ink);background:repeating-linear-gradient(to top,var(--n-4) 0 1px,transparent 1px 25%);z-index:-2}
+.areas[data-el="diecut-chart-area"] > .series{position:absolute;inset:48px 4% 32px;display:flex;align-items:flex-end;justify-content:space-between;anchor-scope:all;--diecut-area-fill:var(--n-2);--diecut-area-line:var(--ink)}
+.areas[data-el="diecut-chart-area"] > .series > .name{position:absolute;top:-40px;left:calc(var(--diecut-series-i)*25%);width:24%;font-size:clamp(var(--type-12),1.8cqw,var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.areas[data-el="diecut-chart-area"] > .series > .pt{position:static;flex:none;width:1px;height:1px;margin-bottom:calc(var(--v)/var(--max)*var(--diecut-area-h));anchor-name:var(--diecut-area-own);box-shadow:0 0 0 2px var(--diecut-area-line);border-radius:50%}
+.areas[data-el="diecut-chart-area"] > .series > .pt > b{position:absolute;left:anchor(var(--diecut-area-own) center);top:calc(anchor(var(--diecut-area-own) top) - 8px);transform:translate(-50%,-100%);font-size:clamp(var(--type-12),1.8cqw,var(--type-20));font-weight:var(--figure-weight);line-height:var(--figure-line);white-space:nowrap}
+.areas[data-el="diecut-chart-area"] > .series > .pt::before,.areas[data-el="diecut-chart-area"] > .series > .pt::after{content:"";position:absolute;left:anchor(var(--diecut-area-prev) center);right:anchor(var(--diecut-area-own) center);top:calc(anchor(var(--diecut-area-prev) top) - var(--diecut-area-h));bottom:0}
+.areas[data-el="diecut-chart-area"] > .series > .pt::before{z-index:-2;background:color-mix(in srgb,var(--diecut-area-fill) 60%,transparent);clip-path:polygon(0 var(--diecut-area-h),100% calc(100% - var(--v)/var(--max)*var(--diecut-area-h)),100% 100%,0 100%)}
+.areas[data-el="diecut-chart-area"] > .series > .pt::after{z-index:-1;background:var(--diecut-area-line);clip-path:polygon(0 calc(var(--diecut-area-h) - .75px),100% calc(100% - var(--v)/var(--max)*var(--diecut-area-h) - .75px),100% calc(100% - var(--v)/var(--max)*var(--diecut-area-h) + .75px),0 calc(var(--diecut-area-h) + .75px))}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(1 of .pt)::before,.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(1 of .pt)::after{content:none}
+.areas[data-el="diecut-chart-area"] > .axis{position:absolute;bottom:0;left:4%;right:4%;height:28px;display:flex;align-items:center;justify-content:space-between}
+.areas[data-el="diecut-chart-area"] > .axis > span{flex:1;min-width:0;text-align:center;font-size:clamp(var(--type-12),1.6cqw,var(--type-18));line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.areas[data-el="diecut-chart-area"] > .series:nth-child(1 of .series){--diecut-series-i:0;--diecut-area-fill:var(--n-2);--diecut-area-line:var(--ink)}
+.areas[data-el="diecut-chart-area"] > .series:nth-child(2 of .series){--diecut-series-i:1;--diecut-area-fill:var(--a1-2-soft);--diecut-area-line:var(--a1-8)}
+.areas[data-el="diecut-chart-area"] > .series:nth-child(3 of .series){--diecut-series-i:2;--diecut-area-fill:var(--a2-2-soft);--diecut-area-line:var(--a2-8)}
+.areas[data-el="diecut-chart-area"] > .series:nth-child(4 of .series){--diecut-series-i:3;--diecut-area-fill:var(--n-4);--diecut-area-line:var(--ink)}
+.areas[data-el="diecut-chart-area"].stacked > .series > .pt::before{background:var(--diecut-area-fill);opacity:1}
+.areas[data-el="diecut-chart-area"] > .series > .name::before{content:"";display:inline-block;width:12px;height:12px;margin-right:6px;border:var(--stroke) solid var(--diecut-area-line);border-radius:50%;background:var(--diecut-area-fill)}
+.areas[data-el="diecut-chart-area"].stacked > .series:nth-child(1 of .series){z-index:4}
+.areas[data-el="diecut-chart-area"].stacked > .series:nth-child(2 of .series){z-index:3}
+.areas[data-el="diecut-chart-area"].stacked > .series:nth-child(3 of .series){z-index:2}
+.areas[data-el="diecut-chart-area"].stacked > .series:nth-child(4 of .series){z-index:1}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(1 of .pt){--diecut-area-own:--diecut-area-1;--diecut-area-prev:--diecut-area-0}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(2 of .pt){--diecut-area-own:--diecut-area-2;--diecut-area-prev:--diecut-area-1}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(3 of .pt){--diecut-area-own:--diecut-area-3;--diecut-area-prev:--diecut-area-2}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(4 of .pt){--diecut-area-own:--diecut-area-4;--diecut-area-prev:--diecut-area-3}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(5 of .pt){--diecut-area-own:--diecut-area-5;--diecut-area-prev:--diecut-area-4}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(6 of .pt){--diecut-area-own:--diecut-area-6;--diecut-area-prev:--diecut-area-5}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(7 of .pt){--diecut-area-own:--diecut-area-7;--diecut-area-prev:--diecut-area-6}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(8 of .pt){--diecut-area-own:--diecut-area-8;--diecut-area-prev:--diecut-area-7}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(9 of .pt){--diecut-area-own:--diecut-area-9;--diecut-area-prev:--diecut-area-8}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(10 of .pt){--diecut-area-own:--diecut-area-10;--diecut-area-prev:--diecut-area-9}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(11 of .pt){--diecut-area-own:--diecut-area-11;--diecut-area-prev:--diecut-area-10}
+.areas[data-el="diecut-chart-area"] > .series > .pt:nth-child(12 of .pt){--diecut-area-own:--diecut-area-12;--diecut-area-prev:--diecut-area-11}
+

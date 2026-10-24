@@ -1,0 +1,1 @@
+A fine beam tilts with the supplied balance value while two quiet curved pans keep their labels upright. The selected side gains a soft accent, and a compact capsule verdict sits beneath the central support.

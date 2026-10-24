@@ -1,0 +1,21 @@
+/* Not present as a share chart. The source 03 circular nodes define the outline, centered figure and label; a precise concentric progress arc supplies the contract-specific quantitative geometry.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.donut[data-el="diecut-chart-donut"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.donut[data-el="diecut-chart-donut"] *,.donut[data-el="diecut-chart-donut"] *::before,.donut[data-el="diecut-chart-donut"] *::after{box-sizing:border-box}
+.donut[data-el="diecut-chart-donut"] :is(p,h2,blockquote){margin:0}
+.donuts[data-el="diecut-chart-donut"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.donuts[data-el="diecut-chart-donut"] *,.donuts[data-el="diecut-chart-donut"] *::before,.donuts[data-el="diecut-chart-donut"] *::after{box-sizing:border-box}
+.donuts[data-el="diecut-chart-donut"] :is(p,h2,blockquote){margin:0}
+
+.donut[data-el="diecut-chart-donut"]{container-name:diecut-donut;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);isolation:isolate;text-align:center}
+.donut[data-el="diecut-chart-donut"]::before,.donut[data-el="diecut-chart-donut"]::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;z-index:-1}
+.donut[data-el="diecut-chart-donut"]::before{width:min(88cqw,88cqh);height:min(88cqw,88cqh);background:conic-gradient(var(--ink) calc(var(--v)*1%),var(--n-2) 0)}
+.donut[data-el="diecut-chart-donut"]::after{width:min(75cqw,75cqh);height:min(75cqw,75cqh);background:var(--page);border:var(--stroke) solid var(--n-4)}
+.donut[data-el="diecut-chart-donut"] > .fig{font-size:clamp(var(--type-24),min(20cqw,20cqh),var(--type-80));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.donut[data-el="diecut-chart-donut"] > .fig > small{font-size:clamp(var(--type-12),min(8cqw,8cqh),var(--type-32));font-weight:var(--label-weight)}
+.donut[data-el="diecut-chart-donut"] > .name{max-width:62%;font-size:clamp(var(--type-12),min(6cqw,6cqh),var(--type-24));line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.donut[data-el="diecut-chart-donut"].on::before{background:conic-gradient(var(--a1) calc(var(--v)*1%),var(--n-2) 0)}
+.donuts[data-el="diecut-chart-donut"]{display:flex;align-items:stretch;gap:var(--gap)}
+.donuts[data-el="diecut-chart-donut"] > .donut{flex:1;min-width:0}
+@container diecut-donut (max-width:180px){.donut[data-el="diecut-chart-donut"] > .name{position:absolute;top:calc(50% + min(44cqw,44cqh) + 8px);left:0;right:0;max-width:100%;font-size:var(--type-12)}.donut[data-el="diecut-chart-donut"] > .fig{font-size:var(--type-24)}}
+

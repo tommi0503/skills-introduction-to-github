@@ -1,0 +1,33 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.lines[data-el="confluence-chart-line"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.lines[data-el="confluence-chart-line"]{--chart-head:64px;--chart-foot:36px;--plot-h:calc(100cqh - var(--chart-head) - var(--chart-foot));--plot-color:var(--a1);--plot-ink:var(--a1-8);position:relative;anchor-scope:all;}
+.lines[data-el="confluence-chart-line"]{display:flex;justify-content:space-between;align-items:flex-end;padding:0 8%;}
+.lines[data-el="confluence-chart-line"]>.pt{position:static;flex:none;width:1px;height:1px;margin-bottom:calc(var(--chart-foot) + var(--v)/var(--max,100)*var(--plot-h));anchor-name:var(--own);box-shadow:0 0 0 3px var(--plot-color);border-radius:50%;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(1 of .pt){--own:--confluence-line-1;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(2 of .pt){--own:--confluence-line-2;--previous:--confluence-line-1;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(3 of .pt){--own:--confluence-line-3;--previous:--confluence-line-2;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(4 of .pt){--own:--confluence-line-4;--previous:--confluence-line-3;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(5 of .pt){--own:--confluence-line-5;--previous:--confluence-line-4;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(6 of .pt){--own:--confluence-line-6;--previous:--confluence-line-5;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(7 of .pt){--own:--confluence-line-7;--previous:--confluence-line-6;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(8 of .pt){--own:--confluence-line-8;--previous:--confluence-line-7;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(9 of .pt){--own:--confluence-line-9;--previous:--confluence-line-8;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(10 of .pt){--own:--confluence-line-10;--previous:--confluence-line-9;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(11 of .pt){--own:--confluence-line-11;--previous:--confluence-line-10;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(12 of .pt){--own:--confluence-line-12;--previous:--confluence-line-11;}
+.lines[data-el="confluence-chart-line"]>.pt>b{position:absolute;left:anchor(var(--own) center);top:calc(anchor(var(--own) top) - 12px);transform:translate(-50%,-100%);white-space:nowrap;font-size:clamp(var(--type-12),1.5cqw,var(--type-18));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--plot-ink);}
+.lines[data-el="confluence-chart-line"]>.pt>span{position:absolute;left:anchor(var(--own) center);bottom:0;transform:translateX(-50%);height:var(--chart-foot);display:flex;align-items:center;font-size:var(--type-12);line-height:var(--label-line);white-space:nowrap;color:var(--ink);}
+.lines[data-el="confluence-chart-line"]>.pt::before{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--previous) top) - .7px);bottom:calc(anchor(var(--own) top) - .7px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--plot-color) calc(50% - .6px),var(--plot-color) calc(50% + .6px),transparent calc(50% + 1px));}
+.lines[data-el="confluence-chart-line"]>.pt::after{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--own) top) - .7px);bottom:calc(anchor(var(--previous) top) - .7px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--plot-color) calc(50% - .6px),var(--plot-color) calc(50% + .6px),transparent calc(50% + 1px));}
+.lines[data-el="confluence-chart-line"]>.pt:first-child::before,.lines[data-el="confluence-chart-line"]>.pt:first-child::after{content:none;}
+@container (max-width:650px){.lines[data-el="confluence-chart-line"]>.axis>span:nth-child(even){visibility:hidden;}
+}
+.lines[data-el="confluence-chart-line"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.lines[data-el="confluence-chart-line"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.lines[data-el="confluence-chart-line"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.lines[data-el="confluence-chart-line"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.lines[data-el="confluence-chart-line"]{background-color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+.lines[data-el="confluence-chart-line"]>.pt{box-shadow:0 0 0 3px var(--plot-color),0 0 0 5px var(--page);}

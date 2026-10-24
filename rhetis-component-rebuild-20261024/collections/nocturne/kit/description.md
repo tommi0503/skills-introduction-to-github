@@ -1,0 +1,1 @@
+Nocturne derives proportions from the frozen slide replica. Its 16-pixel reference corners, 22-pixel reference spacing, and Pretendard Variable hierarchy define the component grammar. All surfaces and emphasis use semantic palette roles; no brand hue is owned by the design.

@@ -1,0 +1,1 @@
+A dark source node feeds exactly weighted pale or accent bands into quiet result nodes. Node gaps affect only vertical offsets, preserving each band thickness. A second split retains the parent scale and draws its own proportional branches.

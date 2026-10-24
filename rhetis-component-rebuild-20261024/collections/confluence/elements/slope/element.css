@@ -1,0 +1,19 @@
+/* Fresh inferred slope from confluence measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.slope[data-el="confluence-slope"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.slope[data-el="confluence-slope"] *{box-sizing:border-box;}
+.slope[data-el="confluence-slope"] p,.slope[data-el="confluence-slope"] .name,.slope[data-el="confluence-slope"] .note,.slope[data-el="confluence-slope"] .fig{margin:0;}
+.slope[data-el="confluence-slope"]{display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--gap-sm);}
+.slope[data-el="confluence-slope"]>.heads{height:24px;flex:none;display:flex;justify-content:space-between;padding-left:30%;font-size:var(--type-12);line-height:var(--label-line);}
+.slope[data-el="confluence-slope"]>.pair{position:relative;container:confluence-pair / size;flex:1;min-height:0;min-width:0;border-bottom:var(--stroke) solid var(--n-3);}
+.slope[data-el="confluence-slope"]>.pair>.name{position:absolute;left:0;top:50%;transform:translateY(-50%);width:24%;font-size:var(--type-14);line-height:var(--name-line);font-weight:var(--name-weight);}
+.slope[data-el="confluence-slope"]>.pair>b.a,.slope[data-el="confluence-slope"]>.pair>b.b{position:absolute;transform:translate(-50%,-100%);font-size:var(--type-12);line-height:var(--label-line);font-weight:var(--figure-weight);color:var(--a1-8);white-space:nowrap;z-index:1;}
+.slope[data-el="confluence-slope"]>.pair>b.a{left:36%;top:calc(88% - var(--a)/var(--max,100)*56%);}
+.slope[data-el="confluence-slope"]>.pair>b.b{left:93%;top:calc(88% - var(--b)/var(--max,100)*56%);}
+.slope[data-el="confluence-slope"]>.pair::before{content:"";position:absolute;left:36%;top:calc(88% - var(--a)/var(--max,100)*56%);width:hypot(57cqw,calc((var(--a) - var(--b))/var(--max,100)*56cqh));height:var(--stroke);transform-origin:0 50%;transform:rotate(atan2(calc((var(--a) - var(--b))/var(--max,100)*56cqh),57cqw));background:var(--n-5);}
+.slope[data-el="confluence-slope"]>.pair.on::before{height:3px;background:var(--a1);}
+.slope[data-el="confluence-slope"]>.pair>b.a::after,.slope[data-el="confluence-slope"]>.pair>b.b::after{content:"";position:absolute;left:50%;bottom:-3px;width:5px;height:5px;border-radius:50%;background:var(--a1);transform:translateX(-50%);}
+.slope[data-el="confluence-slope"].dumbbell>.pair>b.a{left:calc(29% + var(--a)/var(--max,100)*65%);top:64%;transform:translate(-50%,-100%);}
+.slope[data-el="confluence-slope"].dumbbell>.pair>b.b{left:calc(29% + var(--b)/var(--max,100)*65%);top:64%;transform:translate(-50%,3px);}
+.slope[data-el="confluence-slope"].dumbbell>.pair>b.b::after{bottom:auto;top:-6px;}
+.slope[data-el="confluence-slope"].dumbbell>.pair::before{left:calc(29% + min(var(--a),var(--b))/var(--max,100)*65%);top:64%;width:calc(abs(var(--b) - var(--a))/var(--max,100)*65%);transform:none;}

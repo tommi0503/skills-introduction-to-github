@@ -1,0 +1,13 @@
+/* Fresh inferred balance: afterglow source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.balance[data-el="afterglow-balance"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.balance[data-el="afterglow-balance"] *{box-sizing:border-box;}
+.balance[data-el="afterglow-balance"] .name,.balance[data-el="afterglow-balance"] .leaf,.balance[data-el="afterglow-balance"] .item{margin:0;}
+.balance[data-el="afterglow-balance"]{display:flex;align-items:center;gap:16%;padding:0;}
+.balance[data-el="afterglow-balance"]>.pan{background:var(--n-9);color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);width:42%;min-height:40%;position:relative;display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--gap);text-align:center;transform:translateY(calc(var(--tilt)*-.15cqh));}
+.balance[data-el="afterglow-balance"]>.pan:nth-child(2){transform:translateY(calc(var(--tilt)*.15cqh));}
+.balance[data-el="afterglow-balance"]>.pan>.name{font-size:clamp(var(--type-16),2.8cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);color:var(--a1-2);}
+.balance[data-el="afterglow-balance"]>.pan>.item{font-size:var(--type-14);line-height:var(--body-line);}
+.balance[data-el="afterglow-balance"]>.pan.on{border-top:5px solid var(--a1);}
+.balance[data-el="afterglow-balance"]>.fulcrum{position:absolute;left:40%;right:40%;bottom:6%;height:24%;background:var(--a1);color:var(--a1-on);clip-path:polygon(50% 0,100% 100%,0 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:var(--gap-sm);font-size:var(--type-12);line-height:var(--label-line);}
+.balance[data-el="afterglow-balance"]::before{content:"";position:absolute;left:8%;right:8%;top:67%;border-top:3px solid var(--a1);transform:rotate(calc(var(--tilt)*.12deg));z-index:-1;}

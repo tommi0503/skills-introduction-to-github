@@ -1,0 +1,27 @@
+/* Fresh inferred pyramid: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.pyramid[data-el="confluence-pyramid"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.pyramid[data-el="confluence-pyramid"] *{box-sizing:border-box;}
+.pyramid[data-el="confluence-pyramid"] p,.pyramid[data-el="confluence-pyramid"] .name,.pyramid[data-el="confluence-pyramid"] .note,.pyramid[data-el="confluence-pyramid"] .fig,.pyramid[data-el="confluence-pyramid"] .kick{margin:0;}
+.pyramid[data-el="confluence-pyramid"]{--levels:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);padding:0;}
+.pyramid[data-el="confluence-pyramid"]:has(>.level:nth-child(3):last-child){--levels:3;}
+.pyramid[data-el="confluence-pyramid"]:has(>.level:nth-child(4):last-child){--levels:4;}
+.pyramid[data-el="confluence-pyramid"]:has(>.level:nth-child(5):last-child){--levels:5;}
+.pyramid[data-el="confluence-pyramid"]>.level{position:relative;container:confluence-level / size;width:calc(var(--level-index)/var(--levels)*94%);flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;padding:var(--gap-sm);background:var(--a1-7);color:var(--page);clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);}
+.pyramid[data-el="confluence-pyramid"] .name{font-size:clamp(var(--type-14),9cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.pyramid[data-el="confluence-pyramid"] .note{font-size:clamp(var(--type-12),4cqw,var(--type-16));line-height:var(--body-line);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(1){--level-index:1;background:var(--a1-9);color:var(--page);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(2){--level-index:2;background:var(--a1-8);color:var(--page);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(3){--level-index:3;background:var(--a1-7);color:var(--page);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(4){--level-index:4;background:var(--a1-3);color:var(--ink);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(5){--level-index:5;background:var(--a1-2);color:var(--ink);}
+@container confluence-level (max-width:240px){.pyramid[data-el="confluence-pyramid"]>.level>.note{display:none;}
+}
+@container confluence-level (max-height:94px){.pyramid[data-el="confluence-pyramid"]>.level>.note{display:none;}
+}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.pyramid[data-el="confluence-pyramid"]>.level{position:relative;background:var(--a1-7);color:var(--ink);}
+.pyramid[data-el="confluence-pyramid"]>.level::before{content:"";position:absolute;inset:2px;background:var(--page);clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);}
+.pyramid[data-el="confluence-pyramid"]>.level>.name,.pyramid[data-el="confluence-pyramid"]>.level>.note{position:relative;z-index:1;}
+.pyramid[data-el="confluence-pyramid"]>.level>.name{color:var(--a2-7);}

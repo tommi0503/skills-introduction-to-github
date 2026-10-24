@@ -1,0 +1,1 @@
+Quiet rounded cells encode density with a single ranked accent depth. The outlined grid extends the source panel without introducing saturated blocks, keeping all printed values on a high-contrast pale ground.

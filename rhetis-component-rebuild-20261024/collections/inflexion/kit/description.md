@@ -1,0 +1,1 @@
+Inflexion derives proportions from the frozen slide replica. Its 24-pixel reference corners, 20-pixel reference spacing, and Pretendard Variable hierarchy define the component grammar. All surfaces and emphasis use semantic palette roles; no brand hue is owned by the design.

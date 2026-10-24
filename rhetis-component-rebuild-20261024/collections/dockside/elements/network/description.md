@@ -1,0 +1,1 @@
+Circular inset nodes extend the measured hub24. Every edge belongs to this single network root and joins its two declared coordinates through CSS length and angle math. Strong edges use the accent role; peripheral nodes use the same restrained white rim and circle language.

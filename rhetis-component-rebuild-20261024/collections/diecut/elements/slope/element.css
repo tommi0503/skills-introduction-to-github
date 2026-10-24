@@ -1,0 +1,27 @@
+/* Not present as a two-moment comparison. Source 05 fine straight point connectors and source 03 circle/capsule emphasis define slope and dumbbell variants.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.slope[data-el="diecut-slope"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.slope[data-el="diecut-slope"] *,.slope[data-el="diecut-slope"] *::before,.slope[data-el="diecut-slope"] *::after{box-sizing:border-box}
+.slope[data-el="diecut-slope"] :is(p,h2,blockquote){margin:0}
+
+.slope[data-el="diecut-slope"] {container-name:diecut-slope;isolation:isolate}
+.slope[data-el="diecut-slope"] > .heads{position:absolute;left:20%;right:20%;top:0;height:12%;display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);font-size:clamp(var(--type-12),2cqw,var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line)}
+.slope[data-el="diecut-slope"] > .pair{position:static}
+.slope[data-el="diecut-slope"] > .pair > .name{position:absolute;left:0;width:15%;top:calc(85% - var(--a)/var(--max)*70%);transform:translateY(-50%);font-size:clamp(var(--type-12),1.8cqw,var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);text-align:right;word-break:keep-all;overflow-wrap:anywhere}
+.slope[data-el="diecut-slope"] > .pair > .a,.slope[data-el="diecut-slope"] > .pair > .b{position:absolute;top:calc(85% - var(--a)/var(--max)*70%);transform:translateY(-50%);font-size:clamp(var(--type-12),2.2cqw,var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line);white-space:nowrap}
+.slope[data-el="diecut-slope"] > .pair > .a{right:75%;padding-right:12px}
+.slope[data-el="diecut-slope"] > .pair > .b{left:75%;top:calc(85% - var(--b)/var(--max)*70%);padding-left:12px}
+.slope[data-el="diecut-slope"] > .pair > .a::after,.slope[data-el="diecut-slope"] > .pair > .b::before{content:"";position:absolute;right:-4px;top:50%;transform:translateY(-50%);width:8px;height:8px;border:var(--stroke) solid var(--ink);border-radius:50%;background:var(--page)}
+.slope[data-el="diecut-slope"] > .pair > .b::before{right:auto;left:-4px;background:var(--ink)}
+.slope[data-el="diecut-slope"] > .pair::before{content:"";position:absolute;left:25%;right:25%;top:0;height:100%;background:var(--ink);clip-path:polygon(0 calc(85% - var(--a)/var(--max)*70% - .75px),100% calc(85% - var(--b)/var(--max)*70% - .75px),100% calc(85% - var(--b)/var(--max)*70% + .75px),0 calc(85% - var(--a)/var(--max)*70% + .75px));z-index:-1}
+.slope[data-el="diecut-slope"] > .pair.on > .b{color:var(--a1-8)}.slope[data-el="diecut-slope"] > .pair.on > .b::before{background:var(--a1);border-color:var(--a1)}
+.slope[data-el="diecut-slope"].dumbbell{display:flex;flex-direction:column;padding-top:40px;gap:var(--gap-sm)}
+.slope[data-el="diecut-slope"].dumbbell > .heads{left:25%;right:5%;height:32px}
+.slope[data-el="diecut-slope"].dumbbell > .pair{position:relative;flex:1;min-height:0}
+.slope[data-el="diecut-slope"].dumbbell > .pair > .name{left:0;width:20%;top:50%}
+.slope[data-el="diecut-slope"].dumbbell > .pair > .a,.slope[data-el="diecut-slope"].dumbbell > .pair > .b{left:calc(25% + var(--a)/var(--max)*65%);right:auto;top:50%;width:32px;height:32px;transform:translate(-50%,-50%);padding:0;display:flex;align-items:center;justify-content:center;border:var(--stroke) solid var(--ink);border-radius:50%;background:var(--page);font-size:var(--type-12)}
+.slope[data-el="diecut-slope"].dumbbell > .pair > .b{left:calc(25% + var(--b)/var(--max)*65%);background:var(--n-9);color:var(--page)}
+.slope[data-el="diecut-slope"].dumbbell > .pair > .a::after,.slope[data-el="diecut-slope"].dumbbell > .pair > .b::before{content:none}
+.slope[data-el="diecut-slope"].dumbbell > .pair::before{left:calc(25% + min(var(--a),var(--b))/var(--max)*65%);right:auto;top:50%;height:var(--stroke);width:calc(abs(var(--a) - var(--b))/var(--max)*65%);clip-path:none}
+.slope[data-el="diecut-slope"].dumbbell > .pair.on > .b{background:var(--a1);color:var(--a1-on);border-color:var(--a1)}
+

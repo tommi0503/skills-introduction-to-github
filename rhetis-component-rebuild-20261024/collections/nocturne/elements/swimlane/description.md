@@ -1,0 +1,1 @@
+Rounded quiet process nodes connect with thin directional arrows owned by the complete flow. Start and end nodes become capsules; a dotted decision outline carries the source statement-rule language into conditional work.

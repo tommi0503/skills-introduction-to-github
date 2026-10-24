@@ -1,0 +1,1 @@
+Quiet process boxes and capsule endpoints connect through thin open arrows. Decisions use a soft diamond face, and the complete grid owns every connector. Swimlane names and fine row rules define responsibility without adding filled lanes.

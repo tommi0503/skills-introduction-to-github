@@ -1,0 +1,42 @@
+/* Replica 08, 620×482 nine-row six-column specification table, 18px type, 53.5px rows and 1px grid.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.tablebox[data-el="diecut-table"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.tablebox[data-el="diecut-table"] *,.tablebox[data-el="diecut-table"] *::before,.tablebox[data-el="diecut-table"] *::after{box-sizing:border-box}
+.tablebox[data-el="diecut-table"] :is(p,h2,blockquote){margin:0}
+
+.tablebox[data-el="diecut-table"] {display:grid;align-items:center;border-radius:calc(var(--radius-sm)*1.429);overflow:hidden}
+.tablebox[data-el="diecut-table"] > .table{display:grid;grid-template-rows:repeat(var(--diecut-table-rows),minmax(0,1fr));border-collapse:collapse;table-layout:fixed;width:100%;height:100%;border:var(--stroke) solid var(--n-4);font-size:clamp(var(--type-12),min(2.903cqw,3.734cqh),var(--type-24));line-height:var(--diecut-table-line);text-align:center;border-radius:inherit}
+.tablebox[data-el="diecut-table"] > .table :is(th,td){border:var(--stroke) solid var(--n-4);padding:calc(var(--gap-sm)*.4);font-weight:var(--body-weight);overflow-wrap:anywhere;word-break:keep-all;background:var(--n-1)}
+.tablebox[data-el="diecut-table"] > .table :is(thead,tbody){display:contents}
+.tablebox[data-el="diecut-table"] > .table tr{display:grid;grid-template-columns:repeat(var(--diecut-table-cols),minmax(0,1fr));min-height:0}
+.tablebox[data-el="diecut-table"] > .table :is(th,td){display:grid;place-content:center;border-width:0 var(--stroke) var(--stroke) 0}
+.tablebox[data-el="diecut-table"] > .table .num{justify-content:end}
+.tablebox[data-el="diecut-table"] > .table th,.tablebox[data-el="diecut-table"] > .table td:first-child{background:var(--n-2)}
+.tablebox[data-el="diecut-table"] > .table .pick{background:var(--a1-2-soft);font-weight:var(--name-weight);color:var(--ink)}
+.tablebox[data-el="diecut-table"] > .table .num{font-variant-numeric:tabular-nums;text-align:right;padding-right:var(--gap-sm)}
+@container(max-width:500px){.tablebox[data-el="diecut-table"] > .table{font-size:var(--type-12)}.tablebox[data-el="diecut-table"] > .table :is(th,td){padding:calc(var(--gap-sm)*.3)}}
+@container(max-height:250px){.tablebox[data-el="diecut-table"] > .table{font-size:var(--type-12)}}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(1):last-child){--diecut-table-rows:2}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(2):last-child){--diecut-table-rows:3}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(3):last-child){--diecut-table-rows:4}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(4):last-child){--diecut-table-rows:5}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(5):last-child){--diecut-table-rows:6}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(6):last-child){--diecut-table-rows:7}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(7):last-child){--diecut-table-rows:8}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(8):last-child){--diecut-table-rows:9}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(9):last-child){--diecut-table-rows:10}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(10):last-child){--diecut-table-rows:11}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(11):last-child){--diecut-table-rows:12}
+.tablebox[data-el="diecut-table"]:has(> .table > tbody > tr:nth-child(12):last-child){--diecut-table-rows:13}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(1):last-child){--diecut-table-cols:1}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(2):last-child){--diecut-table-cols:2}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(3):last-child){--diecut-table-cols:3}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(4):last-child){--diecut-table-cols:4}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(5):last-child){--diecut-table-cols:5}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(6):last-child){--diecut-table-cols:6}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(7):last-child){--diecut-table-cols:7}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(8):last-child){--diecut-table-cols:8}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(9):last-child){--diecut-table-cols:9}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(10):last-child){--diecut-table-cols:10}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(11):last-child){--diecut-table-cols:11}
+.tablebox[data-el="diecut-table"]:has(> .table > thead > tr > th:nth-child(12):last-child){--diecut-table-cols:12}

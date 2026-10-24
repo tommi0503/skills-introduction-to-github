@@ -1,0 +1,1 @@
+Replica 13 supplies the six fully rounded columns with 14px values and 16px years. Replica 07 is the meaningful horizontal variant: touching 106px gradient strips, small left years and 44px internal percentages, scaled from the measured 593 by 421 bounding box.

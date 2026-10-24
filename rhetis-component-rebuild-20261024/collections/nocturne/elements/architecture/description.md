@@ -1,0 +1,1 @@
+Layer bands use the same rounded neutral outline as the source statement panel, while their chips reuse the capsule vocabulary. The element groups related capabilities without adding ornamental connectors.

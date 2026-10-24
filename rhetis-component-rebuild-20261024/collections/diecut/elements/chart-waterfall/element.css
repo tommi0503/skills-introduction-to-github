@@ -1,0 +1,16 @@
+/* Not present as a waterfall. Replica 05 squared chart blocks and fine straight rules define the increment, decrement and total extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.waterfall[data-el="diecut-chart-waterfall"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.waterfall[data-el="diecut-chart-waterfall"] *,.waterfall[data-el="diecut-chart-waterfall"] *::before,.waterfall[data-el="diecut-chart-waterfall"] *::after{box-sizing:border-box}
+.waterfall[data-el="diecut-chart-waterfall"] :is(p,h2,blockquote){margin:0}
+
+.waterfall[data-el="diecut-chart-waterfall"] {container-name:diecut-waterfall;display:flex;align-items:flex-end;justify-content:space-around;padding:0 4%;isolation:isolate}
+.waterfall[data-el="diecut-chart-waterfall"] > .move{position:relative;flex:1;min-width:0;height:calc(100% - 80px);margin-bottom:40px}
+.waterfall[data-el="diecut-chart-waterfall"] > .move::before{content:"";position:absolute;left:25%;width:50%;bottom:calc(min(var(--from),var(--to))/var(--max)*100%);height:calc((max(var(--from),var(--to)) - min(var(--from),var(--to)))/var(--max)*100%);background:var(--n-9)}
+.waterfall[data-el="diecut-chart-waterfall"] > .move::after{content:"";position:absolute;left:75%;width:50%;bottom:calc(var(--to)/var(--max)*100%);height:var(--stroke);background:var(--n-4);z-index:-1}
+.waterfall[data-el="diecut-chart-waterfall"] > .move:last-child::after{content:none}
+.waterfall[data-el="diecut-chart-waterfall"] > .move.up::before{background:var(--a1)}.waterfall[data-el="diecut-chart-waterfall"] > .move.down::before{background:var(--n-4)}
+.waterfall[data-el="diecut-chart-waterfall"] > .move > b{position:absolute;left:0;right:0;bottom:calc(max(var(--from),var(--to))/var(--max)*100% + 8px);font-size:clamp(var(--type-12),min(2.5cqw,3.5cqh),var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line);text-align:center;white-space:nowrap}
+.waterfall[data-el="diecut-chart-waterfall"] > .move > span{position:absolute;left:0;right:0;top:calc(100% + 8px);font-size:clamp(var(--type-12),min(2cqw,3cqh),var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+@container diecut-waterfall (max-width:650px){.waterfall[data-el="diecut-chart-waterfall"] > .move > b,.waterfall[data-el="diecut-chart-waterfall"] > .move > span{font-size:var(--type-12)}}
+

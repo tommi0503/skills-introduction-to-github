@@ -1,0 +1,21 @@
+/* Not present as a two-axis contract. The source 13 fine grid and source 03 solid points/capsules define the plane, data marks and emphasis.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.posmap[data-el="diecut-positioning"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.posmap[data-el="diecut-positioning"] *,.posmap[data-el="diecut-positioning"] *::before,.posmap[data-el="diecut-positioning"] *::after{box-sizing:border-box}
+.posmap[data-el="diecut-positioning"] :is(p,h2,blockquote){margin:0}
+
+.posmap[data-el="diecut-positioning"] {container-name:diecut-xy;isolation:isolate}
+.posmap[data-el="diecut-positioning"]::before{content:"";position:absolute;inset:10% 10% 15%;border-left:var(--stroke) solid var(--ink);border-bottom:var(--stroke) solid var(--ink);background:repeating-linear-gradient(to right,transparent 0 calc(25% - 1px),var(--n-4) calc(25% - 1px) 25%),repeating-linear-gradient(to top,transparent 0 calc(25% - 1px),var(--n-4) calc(25% - 1px) 25%);z-index:-1}
+.posmap[data-el="diecut-positioning"] > .axis-x{position:absolute;left:10%;right:10%;bottom:0;height:12%;display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--label-line)}
+.posmap[data-el="diecut-positioning"] > .axis-y{position:absolute;left:0;top:10%;bottom:15%;width:8%;display:flex;flex-direction:column-reverse;align-items:center;justify-content:space-between;gap:var(--gap-sm);font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.posmap[data-el="diecut-positioning"] > .axis-x > span:only-child{width:100%;text-align:center}
+.posmap[data-el="diecut-positioning"] > .axis-y > span:only-child{margin:auto;writing-mode:vertical-rl}
+
+.posmap[data-el="diecut-positioning"]::before{border:0}
+.posmap[data-el="diecut-positioning"]::after{content:"";position:absolute;inset:10% 10% 15%;background:linear-gradient(to right,transparent calc(50% - .5px),var(--ink) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(to top,transparent calc(50% - .5px),var(--ink) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px));z-index:-1}
+
+.posmap[data-el="diecut-positioning"] > .mark{position:absolute;left:calc(10% + var(--x)*.8%);top:calc(85% - var(--y)*.75%);transform:translate(-50%,-50%);width:18%;max-width:180px;min-height:32px;height:12%;display:flex;align-items:center;justify-content:center;padding:4px 8px;border:var(--stroke) solid var(--ink);border-radius:999px;background:var(--n-1);text-align:center}
+.posmap[data-el="diecut-positioning"] > .mark > .name{font-size:clamp(var(--type-12),2.2cqw,var(--type-22));font-weight:var(--label-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.posmap[data-el="diecut-positioning"] > .mark.on{border-color:var(--a1);background:var(--a1);color:var(--a1-on)}
+.posmap[data-el="diecut-positioning"] > .mark > .seat.logo{width:auto;height:80%;aspect-ratio:1;max-width:90%;border:0;border-radius:0;background:var(--n-2)}
+

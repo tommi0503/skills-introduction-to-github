@@ -1,0 +1,1 @@
+The new comparison keeps two neutral rounded fields, a quiet VS and one accent perimeter. Embedded lists retain the same bullet language as the source profiles rather than receiving unrelated check-box styling.

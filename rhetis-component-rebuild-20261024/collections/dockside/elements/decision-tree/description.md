@@ -1,0 +1,1 @@
+Questions, conditions and outcomes form one nested decision tree with owned orthogonal branches. Accent capsules emphasize the initial question and selected outcome; all other nodes use the measured inset glass language. The deeper tree has an honest full-slide minimum so no question disappears.

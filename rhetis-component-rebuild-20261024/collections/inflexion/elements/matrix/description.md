@@ -1,0 +1,1 @@
+The new quadrant matrix follows the deck’s neutral rounded panels and one clearly emphasized region. Its axis labels remain outside the text fields; SWOT drops the axes and keeps all four named quadrants in contract order.

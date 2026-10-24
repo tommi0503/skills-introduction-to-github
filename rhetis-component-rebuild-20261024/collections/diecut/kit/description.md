@@ -1,0 +1,1 @@
+Diecut derives proportions from the frozen slide replica. Its 28-pixel reference corners, 20-pixel reference spacing, and SUITE hierarchy define the component grammar. All surfaces and emphasis use semantic palette roles; no brand hue is owned by the design.

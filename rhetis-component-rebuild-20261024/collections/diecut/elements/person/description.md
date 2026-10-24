@@ -1,0 +1,1 @@
+Plain portrait placeholders sit in quiet white panels, with centered names and compact supporting copy. The avatar modifier changes only the portrait geometry while repeated people retain equal panel widths.

@@ -1,0 +1,1 @@
+Quiet crossing axes frame circular competitor marks, extending the source disc language to a strategic map. The emphasized position uses a pale accent surface while all labels stay inside their own bounded marks.

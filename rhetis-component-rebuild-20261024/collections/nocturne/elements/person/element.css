@@ -1,0 +1,33 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.person[data-el="nocturne-person"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.person[data-el="nocturne-person"] *, .person[data-el="nocturne-person"]::before, .person[data-el="nocturne-person"]::after{box-sizing:border-box}
+.person[data-el="nocturne-person"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.person[data-el="nocturne-person"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.person[data-el="nocturne-person"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.person[data-el="nocturne-person"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.person[data-el="nocturne-person"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.person[data-el="nocturne-person"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.person[data-el="nocturne-person"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.people[data-el="nocturne-person"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.people[data-el="nocturne-person"] *, .people[data-el="nocturne-person"]::before, .people[data-el="nocturne-person"]::after{box-sizing:border-box}
+.people[data-el="nocturne-person"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.people[data-el="nocturne-person"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.people[data-el="nocturne-person"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.people[data-el="nocturne-person"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.people[data-el="nocturne-person"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.people[data-el="nocturne-person"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.people[data-el="nocturne-person"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.person[data-el="nocturne-person"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);text-align:center}
+.person[data-el="nocturne-person"]>.seat{width:min(65cqw,55cqh,260px);height:min(65cqw,55cqh,260px);aspect-ratio:1;border:calc(var(--stroke)*3) solid var(--n-4);background:var(--n-1)}
+.person[data-el="nocturne-person"]>.seat.avatar{border-radius:50%}
+.person[data-el="nocturne-person"]>.seat.portrait{width:min(65cqw,44cqh,240px);height:min(81.25cqw,55cqh,300px);aspect-ratio:4/5;border-radius:var(--radius)}
+.person[data-el="nocturne-person"]>.name{font-size:clamp(var(--type-14),5cqw,var(--type-28));max-width:90%}
+.person[data-el="nocturne-person"]>.note{font-size:clamp(var(--type-12),3cqw,var(--type-18));max-width:90%}
+.person[data-el="nocturne-person"]>.list{width:90%;max-height:32%}
+.people[data-el="nocturne-person"]{display:grid;grid-template-columns:repeat(var(--nocturne-people-n,3),minmax(0,1fr));gap:var(--gap)}
+.people[data-el="nocturne-person"]:has(>.person:nth-child(2):last-child){--nocturne-people-n:2}
+.people[data-el="nocturne-person"]:has(>.person:nth-child(3):last-child){--nocturne-people-n:3}
+.people[data-el="nocturne-person"]:has(>.person:nth-child(4):last-child){--nocturne-people-n:4}
+.people[data-el="nocturne-person"]:has(>.person:nth-child(5):last-child){--nocturne-people-n:5}
+.people[data-el="nocturne-person"]:has(>.person:nth-child(6):last-child){--nocturne-people-n:6}
+@container(max-height:250px){.person[data-el="nocturne-person"]>.note{display:none}}

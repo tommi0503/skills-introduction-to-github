@@ -1,0 +1,15 @@
+/* Not present as a layered system. Source 03 black and accent capsules, source 04 white panels and the shared thin hierarchy connector define this extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.arch[data-el="diecut-architecture"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.arch[data-el="diecut-architecture"] *,.arch[data-el="diecut-architecture"] *::before,.arch[data-el="diecut-architecture"] *::after{box-sizing:border-box}
+.arch[data-el="diecut-architecture"] :is(p,h2,blockquote){margin:0}
+
+.arch[data-el="diecut-architecture"] {container-name:diecut-arch;display:flex;flex-direction:column;justify-content:center;gap:var(--gap);isolation:isolate}
+.arch[data-el="diecut-architecture"] > .layer{position:relative;flex:1;max-height:130px;min-height:0;display:flex;align-items:center;gap:var(--gap-sm)}
+.arch[data-el="diecut-architecture"] > .layer > .name{flex:none;display:flex;align-items:center;justify-content:center;min-height:40px;width:22%;max-height:90%;padding:8px 12px;background:var(--n-9);color:var(--page);border-radius:999px;font-size:clamp(var(--type-14),min(2.5cqw,5cqh),var(--type-26));font-weight:var(--label-weight);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="diecut-architecture"] > .layer > .chip{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;min-height:40px;height:60%;max-height:90%;padding:6px 10px;border:var(--stroke) solid var(--ink);border-radius:999px;background:var(--n-1);font-size:clamp(var(--type-12),min(2cqw,4cqh),var(--type-22));font-weight:var(--label-weight);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.arch[data-el="diecut-architecture"] > .layer::after{content:"";position:absolute;left:61%;top:100%;width:var(--stroke);height:var(--gap);background:var(--ink);z-index:-1}
+.arch[data-el="diecut-architecture"] > .layer::before{content:"";position:absolute;left:calc(61% - 3px);top:calc(100% + var(--gap) - 6px);width:7px;height:7px;border-bottom:var(--stroke) solid var(--ink);border-right:var(--stroke) solid var(--ink);transform:rotate(45deg);z-index:-1}
+.arch[data-el="diecut-architecture"] > .layer:last-child::before,.arch[data-el="diecut-architecture"] > .layer:last-child::after{content:none}
+.arch[data-el="diecut-architecture"] > .layer.on > .name{background:var(--a1);color:var(--a1-on)}
+

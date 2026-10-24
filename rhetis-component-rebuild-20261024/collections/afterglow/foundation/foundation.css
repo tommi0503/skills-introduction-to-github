@@ -1,0 +1,50 @@
+/* Fresh foundation: page furniture and a 12 by 6 allocation grid. */
+.slide{position:relative;width:1280px;height:720px;overflow:hidden;background:var(--page);color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.slide *{box-sizing:border-box}.slide .page{position:absolute;inset:var(--margin-y) var(--margin-x);display:flex;flex-direction:column;gap:var(--furn-gap);min-width:0;min-height:0;z-index:1}
+.slide .head{flex:0 0 auto;min-height:0;position:relative;display:flex;flex-direction:column;gap:var(--gap-sm)}
+.slide .head.center{text-align:center;align-items:center}.slide .kicker{margin:0;font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin)}
+.slide .title{margin:0;font-size:var(--type-32);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track)}.slide .title b{color:var(--a1);font-weight:inherit}
+.slide .lead{margin:0;font-size:var(--type-18);font-weight:var(--lead-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track)}
+.slide .body{position:relative;flex:1;min-height:0;min-width:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:var(--gap);isolation:isolate}
+.slide .body>*{min-width:0;min-height:0}.slide .group{display:flex;align-items:stretch;justify-content:center;gap:var(--gap);min-width:0;min-height:0}.slide .group>*{flex:1;min-width:0;min-height:0}.slide .group.col,.slide .stack{display:flex;flex-direction:column;gap:var(--gap);min-width:0;min-height:0}.slide .stack>*{flex:1;min-height:0;min-width:0}.slide .group.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.slide .group.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.slide .split{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:var(--gap);min-width:0;min-height:0}.slide .split.wide-left{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+.slide .seat{display:grid;place-items:center;min-width:0;min-height:0;background:var(--n-2);color:var(--n-7);font-size:var(--type-14);font-weight:var(--label-weight);border-radius:var(--radius-sm);aspect-ratio:1}.slide .seat.avatar{border-radius:50%}.slide .seat.logo{aspect-ratio:1;max-height:100%}.slide .seat.back{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;z-index:-1}
+.slide .top{display:flex;align-items:center;justify-content:space-between;gap:var(--gap);font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);flex:0 0 var(--top-h);position:relative}.slide .deck,.slide .sec{display:flex;align-items:center;gap:var(--gap-sm)}.slide .top .seat{width:28px;height:28px}.slide .foot{display:flex;align-items:center;justify-content:space-between;font-size:var(--type-12);line-height:var(--label-line);position:absolute;bottom:0;left:0;right:0}.slide .rail{position:absolute;left:calc(-1 * (var(--rail-w) + var(--rail-gap)));top:0;bottom:0;width:var(--rail-w);display:flex;flex-direction:column;justify-content:space-evenly;gap:var(--gap-sm)}.slide .rail .seat{width:100%;aspect-ratio:1}.slide .rail .on{outline:var(--stroke) solid var(--a1)}.slide:has(.rail) .page{left:calc(var(--rail-w) + var(--rail-gap) + var(--furn-edge))}
+.slide.cover .page{display:block}.slide .lockup{position:absolute;display:flex;flex-direction:column;gap:var(--gap)}.slide .lockup .title{font-size:var(--type-80)}.slide .at-center{top:50%;left:50%;width:100%;transform:translate(-50%,-50%);text-align:center}.slide .at-left{top:50%;left:0;transform:translateY(-50%);max-width:70%}.slide .at-bottom-left{bottom:0;left:0;max-width:80%}.slide .at-top-left{top:0;left:0;max-width:80%}.slide .meta{position:absolute;bottom:0;right:0;font-size:var(--type-14);line-height:var(--label-line)}.slide .deco{position:absolute;inset:0;z-index:-1;pointer-events:none}
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source frame, three-part top line, split covers and central closing. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source frame, three-part top line, split covers and central closing. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source frame, three-part top line, split covers and central closing. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source frame, three-part top line, split covers and central closing. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source frame, three-part top line, split covers and central closing. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source frame, three-part top line, split covers and central closing. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source frame, three-part top line, split covers and central closing. */
+.slide{background:var(--n-5)}
+.slide .page{inset:27px;border:var(--stroke) solid var(--ink);border-radius:var(--radius);padding:100px 32px 32px;background:linear-gradient(to top,var(--a1),var(--n-2) 30px,var(--page) 64px);box-shadow:16px 19px 25px color-mix(in srgb,var(--n-9) 32%,transparent);overflow:hidden;gap:0}
+.slide .top{position:absolute;top:17px;left:32px;right:32px;height:14px;font-size:var(--type-12);font-weight:var(--body-weight);letter-spacing:var(--afterglow-header-track);color:var(--a1)}
+.slide .top .sec{position:absolute;left:50%;transform:translateX(-50%)}
+.slide .head{gap:12px;height:320px;flex:none;padding-top:30px}.slide .head .title{font-size:clamp(var(--type-44),3.59375cqw,var(--type-48));font-weight:var(--afterglow-cover-weight);line-height:var(--afterglow-cover-line);letter-spacing:var(--afterglow-cover-track);color:var(--ink)}.slide .head .title b{font-weight:var(--afterglow-cover-boldweight);color:inherit}
+.slide .head:has(>.lead){position:absolute;left:32px;right:32px;top:130px;height:100px;padding-top:0;gap:0}
+.slide .head:has(>.lead) .title{font-size:var(--type-56);line-height:var(--afterglow-section-line);letter-spacing:var(--afterglow-section-track);font-weight:var(--body-weight)}
+.slide .head:has(>.lead) .lead{font-size:var(--type-32);line-height:var(--afterglow-section-line)}.slide .head:has(>.title:empty) .lead{margin-top:134px}
+.slide .head:has(>.lead)+.body{margin-top:0}
+.slide.cover .lockup{left:32px;top:130px;transform:none;max-width:100%;gap:0;display:block}
+.slide.cover .lockup>.title{font-size:clamp(var(--type-44),3.59375cqw,var(--type-48));font-weight:var(--afterglow-cover-weight);line-height:var(--afterglow-cover-line);letter-spacing:var(--afterglow-cover-track);color:var(--ink)}
+.slide.cover .lockup>.title b{font-weight:var(--afterglow-cover-boldweight);color:inherit}
+.slide.cover .body{position:absolute;left:32px;right:32px;top:421px;bottom:32px;border-top:var(--stroke) solid var(--n-6)}
+.slide.on .page{background:var(--a1);color:var(--a1-on)}.slide.on .top{color:var(--a1-on)}.slide.on .head .title{color:var(--a1-on)}
+.slide .head:not(:has(>.lead))+.body::before{content:"";position:absolute;left:-32px;right:-32px;top:0;border-top:var(--stroke) solid var(--n-6)}
+.slide .foot:has(>.src:only-child){left:0;right:0;top:489px;bottom:auto;justify-content:center;text-align:center;font-size:var(--type-14);line-height:var(--afterglow-meta-line)}
+.slide:has(.head>.lead) .body::before,.slide:has(.foot>.src:only-child) .body::before{content:"";position:absolute;left:-32px;right:-32px;top:321px;border-top:var(--stroke) solid var(--n-6)}

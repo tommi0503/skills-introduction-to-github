@@ -1,0 +1,12 @@
+/* Fresh inferred treemap from afterglow measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.treemap[data-el="afterglow-treemap"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.treemap[data-el="afterglow-treemap"] *{box-sizing:border-box;}
+.treemap[data-el="afterglow-treemap"] p,.treemap[data-el="afterglow-treemap"] .name,.treemap[data-el="afterglow-treemap"] .note,.treemap[data-el="afterglow-treemap"] .fig{margin:0;}
+.treemap[data-el="afterglow-treemap"]{display:flex;gap:var(--gap-sm);padding:0;}
+.treemap[data-el="afterglow-treemap"]>.branch{position:relative;flex:var(--v) 1 0;min-width:0;min-height:0;display:flex;flex-direction:column;gap:var(--gap-sm);padding-top:28px;}
+.treemap[data-el="afterglow-treemap"]>.branch>.name{position:absolute;left:0;top:0;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);}
+.treemap[data-el="afterglow-treemap"] .tile{background:var(--n-9);color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;flex:var(--v) 1 0;min-height:0;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);padding:4px var(--gap-sm);}
+.treemap[data-el="afterglow-treemap"] .tile.on{background:var(--a1);color:var(--a1-on);}
+.treemap[data-el="afterglow-treemap"] .tile>.name{font-size:clamp(var(--type-12),1.5cqw,var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);}
+.treemap[data-el="afterglow-treemap"] .tile>.fig{font-size:clamp(var(--type-14),2cqw,var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line);}

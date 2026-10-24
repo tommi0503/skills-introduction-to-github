@@ -1,0 +1,1 @@
+A proper layered pyramid is newly designed from expanding rounded strips and thin dividing rules. It represents hierarchy only; it deliberately does not imitate the unsupported overlapping source mountains.

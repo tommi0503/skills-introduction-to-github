@@ -1,0 +1,1 @@
+This independently responsive agenda follows confluence replica 02. It uses the replica-derived surface hierarchy and proportionate internal spacing, retaining semantic contract variants. It owns its decorative edges and connectors; it has no page-specific or sibling-sensitive placement rule.

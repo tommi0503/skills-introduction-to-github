@@ -1,0 +1,1 @@
+A small dark capsule reproduces the measured102-by34 statistical annotation with a centered light label and a restrained lifted shadow. The inline highlight applies a pale accent wash to a short phrase without turning it into another panel.

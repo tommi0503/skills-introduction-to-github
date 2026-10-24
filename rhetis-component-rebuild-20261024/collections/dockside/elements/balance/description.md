@@ -1,0 +1,1 @@
+A real beam tilts with the declared signed value and carries two suspended inset pans. Negative tilt lowers the left pan as the contract requires. The scale, posts and suspension lines belong to one element. Accent capsule verdicts and soft white-rimmed pans extend the deck language.

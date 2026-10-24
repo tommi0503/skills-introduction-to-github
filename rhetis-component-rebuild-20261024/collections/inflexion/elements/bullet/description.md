@@ -1,0 +1,1 @@
+New target bars combine the source capsule track with a separate dark target tick. Actual value and target remain readable above and below the qualitative bands; multiple metrics stack with aligned starts.

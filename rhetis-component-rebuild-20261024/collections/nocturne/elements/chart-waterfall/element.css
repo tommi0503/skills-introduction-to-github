@@ -1,0 +1,30 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.waterfall[data-el="nocturne-chart-waterfall"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.waterfall[data-el="nocturne-chart-waterfall"] *, .waterfall[data-el="nocturne-chart-waterfall"]::before, .waterfall[data-el="nocturne-chart-waterfall"]::after{box-sizing:border-box}
+.waterfall[data-el="nocturne-chart-waterfall"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.waterfall[data-el="nocturne-chart-waterfall"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.waterfall[data-el="nocturne-chart-waterfall"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.waterfall[data-el="nocturne-chart-waterfall"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.waterfall[data-el="nocturne-chart-waterfall"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.waterfall[data-el="nocturne-chart-waterfall"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.waterfall[data-el="nocturne-chart-waterfall"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.waterfall[data-el="nocturne-chart-waterfall"]{anchor-scope:all;display:flex;gap:min(3cqw,var(--gap));align-items:stretch;padding:var(--type-48) var(--type-24) var(--type-44);--nocturne-water-h:100cqh;--nocturne-water-n:6}
+.waterfall[data-el="nocturne-chart-waterfall"]::before{content:'';position:absolute;left:var(--type-24);right:var(--type-24);bottom:var(--type-44);border-top:calc(var(--stroke)*2) solid var(--n-4)}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move{position:relative;flex:1;min-width:0;isolation:isolate}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move::before{content:'';position:absolute;left:0;right:0;top:calc(var(--nocturne-water-h)*(1 - max(var(--from),var(--to))/var(--max)));height:calc(var(--nocturne-water-h)*abs(var(--to) - var(--from))/var(--max));min-height:2px;border:calc(var(--stroke)*2) solid var(--n-4);border-radius:var(--radius-sm);background:var(--n-2);z-index:-1}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move.up::before{background:var(--a1-2-soft);border-color:var(--a1-7)}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move.down::before{background:var(--n-2);border-color:var(--n-6)}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move.total::before{top:calc(var(--nocturne-water-h)*(1 - var(--to)/var(--max)));height:calc(var(--nocturne-water-h)*var(--to)/var(--max));background:var(--a1);border-color:var(--a1-7)}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move:not(:last-child)::after{content:'';position:absolute;left:100%;width:min(3cqw,var(--gap));top:calc(var(--nocturne-water-h)*(1 - var(--to)/var(--max)));border-top:calc(var(--stroke)*2) dotted var(--n-4)}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move>b{position:absolute;left:50%;top:calc(var(--nocturne-water-h)*(1 - max(var(--from),var(--to))/var(--max)) - var(--gap-sm));translate:-50% -100%;font-size:clamp(var(--type-12),calc(70cqw/var(--nocturne-water-n)/4),var(--type-24));line-height:var(--figure-line);font-weight:var(--figure-weight);white-space:nowrap}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move.total>b{top:calc(var(--nocturne-water-h)*(1 - var(--to)/var(--max)) - var(--gap-sm))}
+.waterfall[data-el="nocturne-chart-waterfall"]>.move>span{position:absolute;top:calc(100% + var(--gap-sm));left:50%;translate:-50% 0;font-size:clamp(var(--type-12),calc(70cqw/var(--nocturne-water-n)/5),var(--type-18));line-height:var(--label-line);white-space:nowrap;color:var(--n-7)}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(3 of .move):last-child){--nocturne-water-n:3}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(4 of .move):last-child){--nocturne-water-n:4}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(5 of .move):last-child){--nocturne-water-n:5}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(6 of .move):last-child){--nocturne-water-n:6}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(7 of .move):last-child){--nocturne-water-n:7}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(8 of .move):last-child){--nocturne-water-n:8}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(9 of .move):last-child){--nocturne-water-n:9}
+.waterfall[data-el="nocturne-chart-waterfall"]:has(>.move:nth-child(10 of .move):last-child){--nocturne-water-n:10}
+

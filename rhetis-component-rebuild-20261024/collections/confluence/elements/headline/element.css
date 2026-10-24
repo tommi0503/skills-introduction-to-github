@@ -1,0 +1,21 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.headline[data-el="confluence-headline"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.headline[data-el="confluence-headline"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:0;height:100%;align-self:start;}
+.headline[data-el="confluence-headline"]>.kick{margin:0;font-size:clamp(var(--type-14),3.7cqw,var(--type-22));font-weight:var(--label-weight);line-height:var(--label-line);}
+.headline[data-el="confluence-headline"]>h2{margin:0;color:var(--a1-7);font-size:clamp(var(--type-24),5.8cqw,var(--type-32));font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track);overflow-wrap:anywhere;}
+.headline[data-el="confluence-headline"]>h2>b{font-weight:inherit;}
+.headline[data-el="confluence-headline"]>.note{margin:0;font-size:clamp(var(--type-12),2.8cqw,var(--type-18));line-height:var(--body-line);}
+.headline[data-el="confluence-headline"].center{text-align:center;align-items:center;}
+.headline[data-el="confluence-headline"].big>h2{font-size:clamp(var(--type-40),9cqw,var(--type-96));}
+.headline[data-el="confluence-headline"].on{background:var(--a1);border-radius:var(--radius);padding:var(--pad);color:var(--a1-on);}
+.headline[data-el="confluence-headline"].on>h2{color:inherit;}
+@container (max-height:90px){.headline[data-el="confluence-headline"]>.kick{font-size:var(--type-12);}
+.headline[data-el="confluence-headline"]>h2{font-size:var(--type-24);}
+.headline[data-el="confluence-headline"]>.note{font-size:var(--type-12);}
+}
+.headline[data-el="confluence-headline"]:not(:has(>.note)):not(.big){max-height:120px;}
+.headline[data-el="confluence-headline"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.headline[data-el="confluence-headline"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.headline[data-el="confluence-headline"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.headline[data-el="confluence-headline"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}

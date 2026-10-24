@@ -1,0 +1,19 @@
+/* Not present as a heatmap. Squared source 13 grids and the rounded source 04 panels define this extension; density is encoded by a soft accent mix.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.heat[data-el="diecut-heatmap"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.heat[data-el="diecut-heatmap"] *,.heat[data-el="diecut-heatmap"] *::before,.heat[data-el="diecut-heatmap"] *::after{box-sizing:border-box}
+.heat[data-el="diecut-heatmap"] :is(p,h2,blockquote){margin:0}
+
+.heat[data-el="diecut-heatmap"] {container-name:diecut-heat;display:flex;flex-direction:column;gap:var(--gap-sm);--diecut-heat-rows:3}
+.heat[data-el="diecut-heatmap"] > .heads,.heat[data-el="diecut-heatmap"] > .row{display:grid;grid-template-columns:18% repeat(var(--cols),minmax(0,1fr));gap:var(--gap-sm);min-width:0;min-height:0}
+.heat[data-el="diecut-heatmap"] > .heads{flex:none;height:40px;align-items:center;text-align:center}
+.heat[data-el="diecut-heatmap"] > .heads::before{content:""}
+.heat[data-el="diecut-heatmap"] > .heads > span{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);word-break:keep-all}
+.heat[data-el="diecut-heatmap"] > .row{flex:1;align-items:stretch}
+.heat[data-el="diecut-heatmap"] > .row > .name{display:flex;align-items:center;justify-content:flex-end;font-size:clamp(var(--type-12),2.5cqw,var(--type-22));font-weight:var(--label-weight);line-height:var(--label-line);text-align:right;word-break:keep-all;overflow-wrap:anywhere;padding-right:4px}
+.heat[data-el="diecut-heatmap"] > .row > .cell{display:grid;place-items:center;min-width:0;min-height:0;border:var(--stroke) solid var(--n-4);border-radius:var(--radius-sm);background:color-mix(in srgb,var(--a1-2-soft) calc(var(--v)*1%),var(--page));color:var(--ink);font-size:clamp(var(--type-12),3cqw,var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line)}
+.heat[data-el="diecut-heatmap"].calendar > .heads,.heat[data-el="diecut-heatmap"].calendar > .row{grid-template-columns:repeat(var(--cols),minmax(0,1fr))}
+.heat[data-el="diecut-heatmap"].calendar > .heads::before{content:none}
+.heat[data-el="diecut-heatmap"].calendar > .row > .cell{border-radius:0;aspect-ratio:1;align-self:center;max-height:100%}
+@container diecut-heat (max-height:250px){.heat[data-el="diecut-heatmap"] > .heads{height:24px}.heat[data-el="diecut-heatmap"] > .heads > span,.heat[data-el="diecut-heatmap"] > .row > .name,.heat[data-el="diecut-heatmap"] > .row > .cell{font-size:var(--type-12)}}
+

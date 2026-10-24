@@ -1,0 +1,1 @@
+Two moment labels anchor exact before-and-after lines, with open starting dots and solid ending dots. The dumbbell variant rotates the quantitative comparison into aligned rows while preserving thin connectors and circular observations.

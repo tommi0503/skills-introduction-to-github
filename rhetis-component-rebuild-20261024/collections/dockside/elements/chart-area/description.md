@@ -1,0 +1,1 @@
+A bright-rimmed plot uses a restrained accent stroke, round white-edged observations and clear labels. Equal-step connections are calculated from the observation anchors; filled areas use translucent series roles.

@@ -1,0 +1,1 @@
+The new many-to-many graph uses the source’s circular nodes and fine, explicit links. Each link is computed from its declared endpoints, and one stronger path can carry the accent without altering node placement.

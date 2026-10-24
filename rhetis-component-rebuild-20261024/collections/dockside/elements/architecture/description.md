@@ -1,0 +1,1 @@
+No architecture base appears in the replica. Bright2px inset rims,20px corners, short accent labels and centered outlined capsules extend the card and dock language. One owner draws the vertical links between layers; only its layer count changes the grid.

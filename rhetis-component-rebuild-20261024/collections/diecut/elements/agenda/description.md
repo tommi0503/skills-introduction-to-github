@@ -1,0 +1,1 @@
+Two open tracks connect light numbered entries with black circular stops. Numbers sit above the thin rule and centered section names below it; the current entry gains an accent stop without changing the layout.

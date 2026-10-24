@@ -1,0 +1,1 @@
+A bare before-and-after figure pair extends the large numeric type of replica05. The element owns one dark circular arrow, matching the dock controls of06/26; no arrow is delegated to a neighbouring card. Long currency values keep their full data.

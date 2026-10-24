@@ -1,0 +1,1 @@
+Three bright-rimmed agenda panels reproduce the measured portrait proportions, fine single divider, numbered corner, image seat, two-line title and small dark action circle. Panel count determines the shared horizontal spacing; a bounded scale preserves each panel’s shape in every slot. The active entry changes emphasis without changing geometry.

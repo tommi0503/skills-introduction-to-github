@@ -1,0 +1,43 @@
+/* Fresh inferred journey from confluence measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.journey[data-el="confluence-journey"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.journey[data-el="confluence-journey"] *{box-sizing:border-box;}
+.journey[data-el="confluence-journey"] p,.journey[data-el="confluence-journey"] .name,.journey[data-el="confluence-journey"] .note,.journey[data-el="confluence-journey"] .fig{margin:0;}
+.journey[data-el="confluence-journey"]{display:flex;gap:var(--gap);padding:0;anchor-scope:all;}
+.journey[data-el="confluence-journey"]>.stage{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:static;flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--gap-sm);gap:var(--gap-sm);background:linear-gradient(transparent 0 45%,var(--n-1) 45%);color:var(--ink);}
+.journey[data-el="confluence-journey"]>.stage>.name{font-size:clamp(var(--type-14),2cqw,var(--type-20));line-height:var(--name-line);font-weight:var(--name-weight);}
+.journey[data-el="confluence-journey"]>.stage>.note,.journey[data-el="confluence-journey"]>.stage>.pain{font-size:var(--type-12);line-height:var(--body-line);}
+.journey[data-el="confluence-journey"]>.stage>.pain{color:var(--bad);}
+.journey[data-el="confluence-journey"]>.stage::before{content:"";position:absolute;left:var(--stage-x);top:calc(42% - var(--mood)*.32%);width:7px;height:7px;border-radius:50%;background:var(--a1);anchor-name:var(--stage-self);z-index:2;}
+.journey[data-el="confluence-journey"]>.stage::after{content:"";position:absolute;left:var(--stage-x);top:calc(42% - var(--mood)*.32%);width:hypot(var(--stage-step),calc((var(--mood) - var(--next,var(--mood)))*.32cqh));height:2px;background:var(--a1);transform-origin:0 50%;transform:rotate(atan2(calc((var(--mood) - var(--next,var(--mood)))*.32cqh),var(--stage-step)));}
+.journey[data-el="confluence-journey"]>.stage:last-child::after{content:none;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child){--stage-step:calc((100cqw + var(--gap))/3);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child){--stage-step:calc((100cqw + var(--gap))/4);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child){--stage-step:calc((100cqw + var(--gap))/5);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(5){--stage-x:calc((4 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-5;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child){--stage-step:calc((100cqw + var(--gap))/6);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(5){--stage-x:calc((4 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-5;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(6){--stage-x:calc((5 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-6;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child){--stage-step:calc((100cqw + var(--gap))/7);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(5){--stage-x:calc((4 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-5;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(6){--stage-x:calc((5 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-6;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(7){--stage-x:calc((6 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-7;}

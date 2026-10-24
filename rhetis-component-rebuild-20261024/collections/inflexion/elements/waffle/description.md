@@ -1,0 +1,1 @@
+A counted share is newly represented with small quiet units and one accent count. The optional people figures are actual CSS pictograms for this contract, and a large bare figure anchors the other half of the box.

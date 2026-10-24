@@ -1,0 +1,1 @@
+A new unfilled trend plot borrows the source area chart’s fine equal-step line, small circular data points and calm label hierarchy. It uses contract values and anchor geometry; the source area itself remains a separate element.

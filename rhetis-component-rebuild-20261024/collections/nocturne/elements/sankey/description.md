@@ -1,0 +1,1 @@
+Weighted fan bands connect the source disc to every result capsule, with thickness proportional to the supplied share. A second split continues from the selected result into its actual children, preserving the same quiet ranked fill and measured connector language.

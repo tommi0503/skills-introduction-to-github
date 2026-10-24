@@ -1,0 +1,1 @@
+A quiet pair of statement panels shares a compact circular comparison mark. The selected side receives an accent title, while both sides preserve the source neutral panel and consistent name baseline.

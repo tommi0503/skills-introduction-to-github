@@ -1,0 +1,1 @@
+A fine emotional curve joins round observations above calm touchpoint notes. Quiet dotted rules separate experience detail, and restrained warning grounds identify pain without competing with the picked moment.

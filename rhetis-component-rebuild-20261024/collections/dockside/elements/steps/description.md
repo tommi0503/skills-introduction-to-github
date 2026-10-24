@@ -1,0 +1,1 @@
+Three inset glass circles hold a short accent capsule, a small image seat and a compact label. Dark double chevrons link the whole sequence. Secondary notes sit outside the circles; the vertical variant changes the direction while retaining the circle-and-capsule grammar.

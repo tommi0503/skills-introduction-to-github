@@ -1,0 +1,1 @@
+A true three-by-three assessment grid uses the same inset rim, small rounded corners and two restrained soft palette roles. Axis labels preserve low-to-high order; the selected decision uses the accent fill. Long notes have an honest larger minimum. No nine-box replica base exists.

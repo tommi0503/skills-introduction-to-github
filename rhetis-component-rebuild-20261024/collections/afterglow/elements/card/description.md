@@ -1,0 +1,1 @@
+This independently responsive card follows afterglow replica 05. It uses the replica-derived surface hierarchy and proportionate internal spacing, retaining semantic contract variants. It owns its decorative edges and connectors; it has no page-specific or sibling-sensitive placement rule.

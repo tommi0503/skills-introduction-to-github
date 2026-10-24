@@ -1,0 +1,1 @@
+A new intensity grid keeps the deck’s low neutral surface and fine spacing. Strength is expressed within the soft accent depth, so small labels remain readable in both modes; calendar cells preserve square proportions.

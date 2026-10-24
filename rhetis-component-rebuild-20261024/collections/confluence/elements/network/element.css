@@ -1,0 +1,14 @@
+/* Fresh inferred network: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.network[data-el="confluence-network"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.network[data-el="confluence-network"] *{box-sizing:border-box;}
+.network[data-el="confluence-network"] p,.network[data-el="confluence-network"] .name,.network[data-el="confluence-network"] .note,.network[data-el="confluence-network"] .fig,.network[data-el="confluence-network"] .kick{margin:0;}
+.network[data-el="confluence-network"]>.node{position:absolute;left:calc(8% + var(--x)*.84%);top:calc(8% + var(--y)*.84%);transform:translate(-50%,-50%);width:12%;aspect-ratio:1;border-radius:50%;border:var(--stroke) solid var(--a1);background:var(--page);color:var(--ink);display:grid;place-items:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--name-line);z-index:2;}
+.network[data-el="confluence-network"]>.node.on{background:var(--a1);color:var(--a1-on);}
+.network[data-el="confluence-network"]>.link{position:absolute;left:calc(8% + var(--x1)*.84%);top:calc(8% + var(--y1)*.84%);width:hypot(calc((var(--x2) - var(--x1))*.84cqw),calc((var(--y2) - var(--y1))*.84cqh));height:var(--stroke);background:var(--n-4);transform-origin:0 50%;transform:rotate(atan2(calc((var(--y2) - var(--y1))*.84cqh),calc((var(--x2) - var(--x1))*.84cqw)));}
+.network[data-el="confluence-network"]>.link.strong{height:calc(var(--stroke)*2);background:var(--a1);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.network[data-el="confluence-network"]>.node{border:4px solid var(--page);background:var(--a1-2-soft);color:var(--ink);box-shadow:0 0 0 1px var(--a1);}
+.network[data-el="confluence-network"]>.node.on{background:var(--a1-7);color:var(--page);}
+.network[data-el="confluence-network"]>.link.strong{background:var(--a2);}

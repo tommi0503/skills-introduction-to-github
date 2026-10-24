@@ -1,0 +1,1 @@
+A compact capsule root feeds a fine shared branch line and circular department nodes. Quiet leaf capsules continue below each department, retaining the source rounded language while clearly distinguishing the levels.

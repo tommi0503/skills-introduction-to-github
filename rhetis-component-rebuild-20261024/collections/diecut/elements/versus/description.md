@@ -1,0 +1,1 @@
+Two open comparison columns retain the source wide central breathing space, fixed heading starts and aligned lower checklists. An optional comparison label occupies the center; emphasis underlines one side without adding a new surface.

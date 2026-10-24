@@ -1,0 +1,17 @@
+/* Not present as a journey. Source 05 straight observation connectors and source 15 named process stages define the emotional journey extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.journey[data-el="diecut-journey"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.journey[data-el="diecut-journey"] *,.journey[data-el="diecut-journey"] *::before,.journey[data-el="diecut-journey"] *::after{box-sizing:border-box}
+.journey[data-el="diecut-journey"] :is(p,h2,blockquote){margin:0}
+
+.journey[data-el="diecut-journey"] {container-name:diecut-journey;display:flex;isolation:isolate}
+.journey[data-el="diecut-journey"] > .stage{position:relative;flex:1;min-width:0;height:100%}
+.journey[data-el="diecut-journey"] > .stage > .name{position:absolute;left:3%;right:3%;top:10%;font-size:clamp(var(--type-12),2cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.journey[data-el="diecut-journey"] > .stage > .note{position:absolute;left:3%;right:3%;top:25%;font-size:clamp(var(--type-12),1.6cqw,var(--type-18));line-height:var(--note-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.journey[data-el="diecut-journey"] > .stage > .pain{position:absolute;left:3%;right:3%;bottom:3%;padding:6px;border-radius:var(--radius-sm);background:var(--a1-2-soft);color:var(--ink);font-size:var(--type-12);line-height:var(--note-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.journey[data-el="diecut-journey"] > .stage::before{content:"";position:absolute;left:50%;top:calc(75% - var(--mood)*.4%);transform:translate(-50%,-50%);width:8px;height:8px;background:var(--ink);border-radius:50%}
+.journey[data-el="diecut-journey"] > .stage::after{content:"";position:absolute;left:50%;top:0;width:100%;height:100%;background:var(--ink);clip-path:polygon(0 calc(75% - var(--mood)*.4% - 1px),100% calc(75% - var(--next,var(--mood))*.4% - 1px),100% calc(75% - var(--next,var(--mood))*.4% + 1px),0 calc(75% - var(--mood)*.4% + 1px));z-index:-1}
+.journey[data-el="diecut-journey"] > .stage:last-child::after{content:none}
+.journey[data-el="diecut-journey"] > .stage.on::before{width:12px;height:12px;background:var(--a1);outline:var(--stroke) solid var(--ink);outline-offset:3px}
+.journey[data-el="diecut-journey"] > .stage.on > .name{text-decoration:underline;text-decoration-color:var(--a1);text-underline-offset:.2em}
+

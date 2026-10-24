@@ -1,0 +1,65 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.spark[data-el="nocturne-sparkline"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.spark[data-el="nocturne-sparkline"] *, .spark[data-el="nocturne-sparkline"]::before, .spark[data-el="nocturne-sparkline"]::after{box-sizing:border-box}
+.spark[data-el="nocturne-sparkline"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.spark[data-el="nocturne-sparkline"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.spark[data-el="nocturne-sparkline"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.spark[data-el="nocturne-sparkline"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.spark[data-el="nocturne-sparkline"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.spark[data-el="nocturne-sparkline"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.spark[data-el="nocturne-sparkline"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.spark[data-el="nocturne-sparkline"]{align-self:center;justify-self:center;width:90%;height:min(65cqh,140px);--nocturne-spark-n:12;--nocturne-spark-color:var(--a1);anchor-scope:all}
+.spark[data-el="nocturne-sparkline"]>span{display:contents;--nocturne-spark-x:calc(8px + (100cqw - 16px)*(var(--nocturne-spark-i) - 1)/(var(--nocturne-spark-n) - 1));--nocturne-spark-y:calc(8px + (100cqh - 16px)*(1 - var(--v)/var(--max)))}
+.spark[data-el="nocturne-sparkline"]>span::before{content:'';position:absolute;left:anchor(var(--nocturne-spark-prev) center);right:calc(100cqw - var(--nocturne-spark-x));top:calc(anchor(var(--nocturne-spark-prev) center) - 100cqh);bottom:8px;clip-path:polygon(0 100cqh,100% calc(100% - (100cqh - 16px)*var(--v)/var(--max)),100% calc(100% - (100cqh - 16px)*var(--v)/var(--max) - 3px),0 calc(100cqh - 3px));background:var(--nocturne-spark-color)}
+.spark[data-el="nocturne-sparkline"]>span:first-child::before{display:none}
+.spark[data-el="nocturne-sparkline"]>span::after{content:'';position:absolute;left:var(--nocturne-spark-x);top:var(--nocturne-spark-y);anchor-name:var(--nocturne-spark-anchor);width:0;height:0}.spark[data-el="nocturne-sparkline"]>span:last-child::after{translate:-50% -50%;width:8px;height:8px;background:var(--nocturne-spark-color);border-radius:50%}
+.spark[data-el="nocturne-sparkline"].up{--nocturne-spark-color:var(--good)}
+.spark[data-el="nocturne-sparkline"].down{--nocturne-spark-color:var(--bad)}
+.spark[data-el="nocturne-sparkline"].bars{display:flex;align-items:flex-end;gap:4px}
+.spark[data-el="nocturne-sparkline"].bars>span{display:block;position:relative;left:auto;top:auto;flex:1;min-width:0;width:auto;height:calc(100cqh*var(--v)/var(--max));background:var(--nocturne-spark-color);border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+.spark[data-el="nocturne-sparkline"].bars>span::before,.spark[data-el="nocturne-sparkline"].bars>span::after{display:none}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(5):last-child){--nocturne-spark-n:5}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(6):last-child){--nocturne-spark-n:6}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(7):last-child){--nocturne-spark-n:7}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(8):last-child){--nocturne-spark-n:8}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(9):last-child){--nocturne-spark-n:9}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(10):last-child){--nocturne-spark-n:10}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(11):last-child){--nocturne-spark-n:11}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(12):last-child){--nocturne-spark-n:12}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(13):last-child){--nocturne-spark-n:13}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(14):last-child){--nocturne-spark-n:14}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(15):last-child){--nocturne-spark-n:15}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(16):last-child){--nocturne-spark-n:16}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(17):last-child){--nocturne-spark-n:17}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(18):last-child){--nocturne-spark-n:18}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(19):last-child){--nocturne-spark-n:19}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(20):last-child){--nocturne-spark-n:20}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(21):last-child){--nocturne-spark-n:21}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(22):last-child){--nocturne-spark-n:22}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(23):last-child){--nocturne-spark-n:23}
+.spark[data-el="nocturne-sparkline"]:has(>span:nth-child(24):last-child){--nocturne-spark-n:24}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(1){--nocturne-spark-i:1;--nocturne-spark-anchor:--nocturne-s1;--nocturne-spark-prev:--nocturne-s0}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(2){--nocturne-spark-i:2;--nocturne-spark-anchor:--nocturne-s2;--nocturne-spark-prev:--nocturne-s1}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(3){--nocturne-spark-i:3;--nocturne-spark-anchor:--nocturne-s3;--nocturne-spark-prev:--nocturne-s2}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(4){--nocturne-spark-i:4;--nocturne-spark-anchor:--nocturne-s4;--nocturne-spark-prev:--nocturne-s3}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(5){--nocturne-spark-i:5;--nocturne-spark-anchor:--nocturne-s5;--nocturne-spark-prev:--nocturne-s4}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(6){--nocturne-spark-i:6;--nocturne-spark-anchor:--nocturne-s6;--nocturne-spark-prev:--nocturne-s5}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(7){--nocturne-spark-i:7;--nocturne-spark-anchor:--nocturne-s7;--nocturne-spark-prev:--nocturne-s6}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(8){--nocturne-spark-i:8;--nocturne-spark-anchor:--nocturne-s8;--nocturne-spark-prev:--nocturne-s7}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(9){--nocturne-spark-i:9;--nocturne-spark-anchor:--nocturne-s9;--nocturne-spark-prev:--nocturne-s8}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(10){--nocturne-spark-i:10;--nocturne-spark-anchor:--nocturne-s10;--nocturne-spark-prev:--nocturne-s9}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(11){--nocturne-spark-i:11;--nocturne-spark-anchor:--nocturne-s11;--nocturne-spark-prev:--nocturne-s10}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(12){--nocturne-spark-i:12;--nocturne-spark-anchor:--nocturne-s12;--nocturne-spark-prev:--nocturne-s11}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(13){--nocturne-spark-i:13;--nocturne-spark-anchor:--nocturne-s13;--nocturne-spark-prev:--nocturne-s12}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(14){--nocturne-spark-i:14;--nocturne-spark-anchor:--nocturne-s14;--nocturne-spark-prev:--nocturne-s13}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(15){--nocturne-spark-i:15;--nocturne-spark-anchor:--nocturne-s15;--nocturne-spark-prev:--nocturne-s14}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(16){--nocturne-spark-i:16;--nocturne-spark-anchor:--nocturne-s16;--nocturne-spark-prev:--nocturne-s15}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(17){--nocturne-spark-i:17;--nocturne-spark-anchor:--nocturne-s17;--nocturne-spark-prev:--nocturne-s16}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(18){--nocturne-spark-i:18;--nocturne-spark-anchor:--nocturne-s18;--nocturne-spark-prev:--nocturne-s17}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(19){--nocturne-spark-i:19;--nocturne-spark-anchor:--nocturne-s19;--nocturne-spark-prev:--nocturne-s18}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(20){--nocturne-spark-i:20;--nocturne-spark-anchor:--nocturne-s20;--nocturne-spark-prev:--nocturne-s19}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(21){--nocturne-spark-i:21;--nocturne-spark-anchor:--nocturne-s21;--nocturne-spark-prev:--nocturne-s20}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(22){--nocturne-spark-i:22;--nocturne-spark-anchor:--nocturne-s22;--nocturne-spark-prev:--nocturne-s21}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(23){--nocturne-spark-i:23;--nocturne-spark-anchor:--nocturne-s23;--nocturne-spark-prev:--nocturne-s22}
+.spark[data-el="nocturne-sparkline"]>span:nth-child(24){--nocturne-spark-i:24;--nocturne-spark-anchor:--nocturne-s24;--nocturne-spark-prev:--nocturne-s23}
+

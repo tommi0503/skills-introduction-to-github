@@ -1,0 +1,1 @@
+Replica 11 supplies the three-point filled plot and four equal ordinate intervals. The 488 by 309 source uses 70px left and 50px right reserves; equal steps, point labels and shaded areas come from contract values. The two-series plot in 20 uses the same geometry. Different source tick counts are explicitly gaps.

@@ -1,0 +1,1 @@
+The new multi-axis chart uses fine circular guides and soft data polygons. Axis count determines the trigonometry, each polygon reads only the declared values, and series labels stay above the drawing rather than inside a clipped polygon.

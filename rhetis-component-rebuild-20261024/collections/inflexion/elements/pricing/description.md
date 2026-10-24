@@ -1,0 +1,1 @@
+New price plans use an accent capsule name above a large bare price and the shared quiet checklist. The selected plan is identified by one firmer perimeter; the neutral face preserves legibility in both modes.

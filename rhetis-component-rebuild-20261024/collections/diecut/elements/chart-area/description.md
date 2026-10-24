@@ -1,0 +1,1 @@
+Fine outlined areas fill to the common baseline. Quiet neutral, soft accent and secondary soft fills keep the source restraint. For stacked areas, contract values are cumulative and bottom-first series are painted at higher z-index, so the visible bands are the exact successive differences.

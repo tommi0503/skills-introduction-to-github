@@ -1,0 +1,1 @@
+A dark filename capsule precedes unboxed monospaced source on a white rounded panel. Fine typographic numbering and deep palette syntax colors keep the source mechanical restraint and readable line rhythm.

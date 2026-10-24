@@ -1,0 +1,40 @@
+/* Not present as flow bands. Source 13 proportional rectangular fills and source 03 clear ownership nodes define straight mechanical flow bands. Band thickness equals the supplied share, including a nested second split.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.sankey[data-el="diecut-sankey"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.sankey[data-el="diecut-sankey"] *,.sankey[data-el="diecut-sankey"] *::before,.sankey[data-el="diecut-sankey"] *::after{box-sizing:border-box}
+.sankey[data-el="diecut-sankey"] :is(p,h2,blockquote){margin:0}
+
+.sankey[data-el="diecut-sankey"] {container-name:diecut-sankey;--diecut-sankey-n:3;--diecut-sankey-gap:24px;display:flex;flex-direction:column;justify-content:center;gap:var(--diecut-sankey-gap);padding-left:70%;isolation:isolate}
+.sankey[data-el="diecut-sankey"] > .source{position:absolute;left:0;top:10%;height:80%;width:22%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);padding:10px;background:var(--n-9);color:var(--page);border-radius:var(--radius);text-align:center}
+.sankey[data-el="diecut-sankey"] .branch{--diecut-sankey-i:0;position:relative;flex:none;height:calc(var(--v)*.8cqh);min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:4px;border:var(--stroke) solid var(--ink);border-radius:var(--radius-sm);background:var(--n-1);color:var(--ink);text-align:center;container-type:size}
+.sankey[data-el="diecut-sankey"] > .branch{--diecut-sankey-dy:calc((var(--diecut-sankey-n) - 1)*var(--diecut-sankey-gap)/2 - var(--diecut-sankey-i)*var(--diecut-sankey-gap))}
+.sankey[data-el="diecut-sankey"] .branch::before{content:"";position:absolute;left:-160%;right:100%;top:min(0px,var(--diecut-sankey-dy));height:calc(100% + abs(var(--diecut-sankey-dy)));background:var(--n-2);clip-path:polygon(0 max(0px,var(--diecut-sankey-dy)),100% max(0px,calc(-1*var(--diecut-sankey-dy))),100% calc(100% - max(0px,var(--diecut-sankey-dy))),0 calc(100% - max(0px,calc(-1*var(--diecut-sankey-dy)))));z-index:-1}
+.sankey[data-el="diecut-sankey"] .branch.on::before{background:var(--a1)}.sankey[data-el="diecut-sankey"] .branch.out::before{background:var(--n-4)}
+.sankey[data-el="diecut-sankey"] > .source > .name,.sankey[data-el="diecut-sankey"] .branch > .name{font-size:clamp(var(--type-12),min(8cqw,22cqh),var(--type-24));font-weight:var(--label-weight);line-height:var(--label-line);max-width:95%;word-break:keep-all;overflow-wrap:anywhere}
+.sankey[data-el="diecut-sankey"] > .source > .fig,.sankey[data-el="diecut-sankey"] .branch > .fig{font-size:clamp(var(--type-16),min(12cqw,28cqh),var(--type-36));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.sankey[data-el="diecut-sankey"] > .source > .name{font-size:clamp(var(--type-14),2.5cqw,var(--type-26))}.sankey[data-el="diecut-sankey"] > .source > .fig{font-size:clamp(var(--type-20),3.5cqw,var(--type-40))}
+.sankey[data-el="diecut-sankey"] > .branch:has(>.branch){--diecut-sankey-child-n:2;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 0 0 70%;border:0;background:none}
+.sankey[data-el="diecut-sankey"] > .branch:has(>.branch)::after{content:"";position:absolute;left:0;top:0;width:40%;height:100%;background:var(--n-9);border-radius:var(--radius-sm);z-index:-1}
+.sankey[data-el="diecut-sankey"] > .branch:has(>.branch) > .name,.sankey[data-el="diecut-sankey"] > .branch:has(>.branch) > .fig{position:absolute;left:0;width:40%;max-width:40%;padding:0 3px;color:var(--page);background:var(--n-9)}
+.sankey[data-el="diecut-sankey"] > .branch:has(>.branch) > .name{top:28%;font-size:clamp(var(--type-12),4cqw,var(--type-20))}.sankey[data-el="diecut-sankey"] > .branch:has(>.branch) > .fig{top:55%;font-size:clamp(var(--type-16),5cqw,var(--type-28))}
+.sankey[data-el="diecut-sankey"] > .branch > .branch{--diecut-sankey-child-i:0;--diecut-sankey-dy:calc((var(--diecut-sankey-child-n) - 1)*3px - var(--diecut-sankey-child-i)*6px);height:calc(var(--v)*1cqh);width:100%}
+.sankey[data-el="diecut-sankey"] > .branch > .branch::before{left:-100%}
+.sankey[data-el="diecut-sankey"] > .branch:nth-child(1 of .branch){--diecut-sankey-i:0}
+.sankey[data-el="diecut-sankey"] > .branch:nth-child(2 of .branch){--diecut-sankey-i:1}
+.sankey[data-el="diecut-sankey"] > .branch:nth-child(3 of .branch){--diecut-sankey-i:2}
+.sankey[data-el="diecut-sankey"] > .branch:nth-child(4 of .branch){--diecut-sankey-i:3}
+.sankey[data-el="diecut-sankey"] > .branch:nth-child(5 of .branch){--diecut-sankey-i:4}
+.sankey[data-el="diecut-sankey"] > .branch:nth-child(6 of .branch){--diecut-sankey-i:5}
+.sankey[data-el="diecut-sankey"]:has(>.branch:nth-child(2 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-n:2}
+.sankey[data-el="diecut-sankey"]:has(>.branch:nth-child(3 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-n:3}
+.sankey[data-el="diecut-sankey"]:has(>.branch:nth-child(4 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-n:4}
+.sankey[data-el="diecut-sankey"]:has(>.branch:nth-child(5 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-n:5}
+.sankey[data-el="diecut-sankey"]:has(>.branch:nth-child(6 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-n:6}
+.sankey[data-el="diecut-sankey"] > .branch > .branch:nth-child(1 of .branch){--diecut-sankey-child-i:0}
+.sankey[data-el="diecut-sankey"] > .branch > .branch:nth-child(2 of .branch){--diecut-sankey-child-i:1}
+.sankey[data-el="diecut-sankey"] > .branch > .branch:nth-child(3 of .branch){--diecut-sankey-child-i:2}
+.sankey[data-el="diecut-sankey"] > .branch > .branch:nth-child(4 of .branch){--diecut-sankey-child-i:3}
+.sankey[data-el="diecut-sankey"] > .branch:has(>.branch:nth-child(2 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-child-n:2}
+.sankey[data-el="diecut-sankey"] > .branch:has(>.branch:nth-child(3 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-child-n:3}
+.sankey[data-el="diecut-sankey"] > .branch:has(>.branch:nth-child(4 of .branch):nth-last-child(1 of .branch)){--diecut-sankey-child-n:4}
+

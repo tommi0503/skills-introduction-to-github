@@ -1,0 +1,16 @@
+/* Fresh inferred decision-tree: confluence source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.dtree[data-el="confluence-decision-tree"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.dtree[data-el="confluence-decision-tree"] *{box-sizing:border-box;}
+.dtree[data-el="confluence-decision-tree"] .name,.dtree[data-el="confluence-decision-tree"] .leaf,.dtree[data-el="confluence-decision-tree"] .item{margin:0;}
+.dtree[data-el="confluence-decision-tree"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-lg);padding:var(--gap-sm);}
+.dtree[data-el="confluence-decision-tree"] .q{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;padding:var(--gap-sm);text-align:center;font-size:clamp(var(--type-16),2cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.dtree[data-el="confluence-decision-tree"] .q::after{content:"";position:absolute;left:50%;top:100%;height:var(--gap-lg);border-left:var(--stroke) solid var(--a1);}
+.dtree[data-el="confluence-decision-tree"] .opts{position:relative;display:flex;align-items:stretch;justify-content:center;gap:var(--gap);width:100%;border-top:var(--stroke) solid var(--a1);}
+.dtree[data-el="confluence-decision-tree"] .opt{position:relative;anchor-scope:all;flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:var(--gap);padding-top:var(--gap);}
+.dtree[data-el="confluence-decision-tree"] .opt>:last-child{anchor-name:--confluence-tree-end;}
+.dtree[data-el="confluence-decision-tree"] .opt::after{content:"";position:absolute;left:50%;top:0;bottom:anchor(--confluence-tree-end top);border-left:var(--stroke) solid var(--a1);z-index:-1;}
+.dtree[data-el="confluence-decision-tree"] .opt>.q::after{height:var(--gap);}
+.dtree[data-el="confluence-decision-tree"] .cond{position:relative;background:var(--page);color:var(--a1-8);font-size:var(--type-12);line-height:var(--label-line);padding:0 4px;}
+.dtree[data-el="confluence-decision-tree"] .end{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);padding:var(--gap-sm);text-align:center;font-size:var(--type-14);line-height:var(--name-line);font-weight:var(--name-weight);}
+.dtree[data-el="confluence-decision-tree"] .end.on{background:var(--a1);color:var(--a1-on);}

@@ -1,0 +1,18 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.list[data-el="confluence-list"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.list[data-el="confluence-list"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm);list-style:none;counter-reset:item;}
+.list[data-el="confluence-list"]>.item{position:relative;counter-increment:item;padding-left:calc(var(--gap) + 1em);min-width:0;}
+.list[data-el="confluence-list"]>.item::before{content:"";position:absolute;left:.25em;top:.65em;width:5px;height:5px;border-radius:50%;background:currentColor;}
+.list[data-el="confluence-list"]>.item>.mark{position:absolute;left:0;top:0;display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:var(--a1);color:var(--a1-on);}
+.list[data-el="confluence-list"]>.item:has(>.mark)::before{content:none;}
+.list[data-el="confluence-list"] .mark>.icon{width:55%;height:55%;}
+.list[data-el="confluence-list"] .name{display:block;font-size:clamp(var(--type-14),3.6cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);}
+.list[data-el="confluence-list"] .note{display:block;font-size:clamp(var(--type-12),3.1cqw,var(--type-16));line-height:var(--body-line);margin-top:var(--gap-sm);}
+.list[data-el="confluence-list"].num>.item::before{content:counter(item);width:1.5em;height:1.5em;top:0;left:0;display:grid;place-items:center;border-radius:50%;font-size:var(--type-12);color:var(--a1-on);}
+.list[data-el="confluence-list"].check>.item::before{width:9px;height:5px;border-radius:0;background:none;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);top:.45em;}
+.list[data-el="confluence-list"].divided>.item{padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-3);}
+.list[data-el="confluence-list"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.list[data-el="confluence-list"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.list[data-el="confluence-list"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.list[data-el="confluence-list"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}

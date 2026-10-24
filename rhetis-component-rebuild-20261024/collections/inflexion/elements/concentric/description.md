@@ -1,0 +1,1 @@
+True inclusion is newly shown with nested exact circles and an aligned caption band above. The chart keeps the deck’s circular discipline while refusing to reinterpret overlapping source mountains as nested markets.

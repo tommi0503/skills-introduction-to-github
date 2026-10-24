@@ -1,0 +1,1 @@
+A white equipment panel with a detached accent capsule, a fixed heading start, a centered explanation and an optional ruled summary. Quiet cards become the source arched feature column; outlined and emphasis variants keep their real contract meanings.

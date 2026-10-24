@@ -1,0 +1,1 @@
+Replica 03 supplies the vertical date capsule and understated line, measured at 101px stop intervals. The alternate track in 12 is the real contract alt arrangement: three dated text groups alternate across one shared line; the separate pictures remain image-frame instances.

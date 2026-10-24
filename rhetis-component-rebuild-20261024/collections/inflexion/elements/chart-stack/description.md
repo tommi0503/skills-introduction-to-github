@@ -1,0 +1,1 @@
+Stacked columns are newly designed as flush strips with small, centered segment values. The source’s quiet plot label hierarchy and single emphasis perimeter are kept; horizontal and percentage layouts preserve genuine stack arithmetic.

@@ -1,0 +1,1 @@
+A fresh page shell separates furniture from independent components. The twelve-column, six-row body grid places contract elements without page-specific element corrections. The heading, rail, cover and page surface use the same measured corner, rule and typographic grammar as the frozen replica.

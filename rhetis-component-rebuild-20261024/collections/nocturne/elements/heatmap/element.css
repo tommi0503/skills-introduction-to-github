@@ -1,0 +1,31 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.heat[data-el="nocturne-heatmap"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.heat[data-el="nocturne-heatmap"] *, .heat[data-el="nocturne-heatmap"]::before, .heat[data-el="nocturne-heatmap"]::after{box-sizing:border-box}
+.heat[data-el="nocturne-heatmap"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.heat[data-el="nocturne-heatmap"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.heat[data-el="nocturne-heatmap"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.heat[data-el="nocturne-heatmap"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.heat[data-el="nocturne-heatmap"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.heat[data-el="nocturne-heatmap"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.heat[data-el="nocturne-heatmap"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.heat[data-el="nocturne-heatmap"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);--nocturne-heat-rows:6}
+.heat[data-el="nocturne-heatmap"]>.heads{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));margin-left:20%;gap:var(--gap-sm);font-size:clamp(var(--type-12),1.8cqw,var(--type-18));line-height:var(--label-line);color:var(--n-7);text-align:center}
+.heat[data-el="nocturne-heatmap"]>.row{display:grid;grid-template-columns:20% repeat(var(--cols),minmax(0,1fr));gap:var(--gap-sm);align-items:stretch;height:min(calc(75cqh/var(--nocturne-heat-rows)),70px)}
+.heat[data-el="nocturne-heatmap"]>.row>.name{display:flex;align-items:center;font-size:clamp(var(--type-12),2cqw,var(--type-20));padding-right:var(--gap-sm)}
+.heat[data-el="nocturne-heatmap"] .cell{display:flex;align-items:center;justify-content:center;border:var(--stroke) solid var(--n-4);border-radius:var(--radius-sm);background:color-mix(in srgb,var(--a1-4-soft) calc(var(--v)*1%),var(--page));color:var(--ink)}
+.heat[data-el="nocturne-heatmap"] .cell>b{font-size:clamp(var(--type-12),2cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line)}
+.heat[data-el="nocturne-heatmap"].calendar{width:100%;align-items:center;--nocturne-calendar-w:min(95cqw,calc(75cqh*var(--cols)/var(--nocturne-heat-rows)),600px)}
+.heat[data-el="nocturne-heatmap"].calendar>.heads{width:var(--nocturne-calendar-w);margin-left:0}
+.heat[data-el="nocturne-heatmap"].calendar>.row{width:var(--nocturne-calendar-w);grid-template-columns:repeat(var(--cols),minmax(0,1fr));height:calc((var(--nocturne-calendar-w) - var(--gap-sm)*(var(--cols) - 1))/var(--cols))}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(2 of .row):last-child){--nocturne-heat-rows:2}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(3 of .row):last-child){--nocturne-heat-rows:3}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(4 of .row):last-child){--nocturne-heat-rows:4}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(5 of .row):last-child){--nocturne-heat-rows:5}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(6 of .row):last-child){--nocturne-heat-rows:6}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(7 of .row):last-child){--nocturne-heat-rows:7}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(8 of .row):last-child){--nocturne-heat-rows:8}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(9 of .row):last-child){--nocturne-heat-rows:9}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(10 of .row):last-child){--nocturne-heat-rows:10}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(11 of .row):last-child){--nocturne-heat-rows:11}
+.heat[data-el="nocturne-heatmap"]:has(>.row:nth-child(12 of .row):last-child){--nocturne-heat-rows:12}
+

@@ -1,0 +1,1 @@
+A wide horizontal progress strip pairs a restrained label with a stronger figure. The fill ends squarely, and active progress adopts the source accent capsule color role without changing the geometry.

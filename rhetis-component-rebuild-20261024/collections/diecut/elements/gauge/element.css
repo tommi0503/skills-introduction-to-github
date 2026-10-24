@@ -1,0 +1,15 @@
+/* Not present as a standalone progress meter. The squared pale/dark segment and fine boundary are drawn from replica 13.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.meter[data-el="diecut-gauge"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.meter[data-el="diecut-gauge"] *,.meter[data-el="diecut-gauge"] *::before,.meter[data-el="diecut-gauge"] *::after{box-sizing:border-box}
+.meter[data-el="diecut-gauge"] :is(p,h2,blockquote){margin:0}
+
+.meter[data-el="diecut-gauge"] {container-name:diecut-meter;flex:1;max-height:180px;margin:auto;display:flex;align-items:flex-start;justify-content:space-between;gap:var(--gap-sm);padding:8px 0 36px}
+.meter[data-el="diecut-gauge"] > .name{font-size:clamp(var(--type-14),min(3.2cqw,18cqh),var(--type-32));font-weight:var(--label-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere;max-width:75%}
+.meter[data-el="diecut-gauge"] > .fig{font-size:clamp(var(--type-20),min(5cqw,24cqh),var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);white-space:nowrap}
+.meter[data-el="diecut-gauge"]::before,.meter[data-el="diecut-gauge"]::after{content:"";position:absolute;left:0;bottom:8%;height:18%;max-height:32px;min-height:12px}
+.meter[data-el="diecut-gauge"]::before{right:0;background:var(--n-2);border-top:var(--stroke) solid var(--n-4);border-bottom:var(--stroke) solid var(--n-4)}
+.meter[data-el="diecut-gauge"]::after{width:calc(var(--v)*1%);background:var(--n-9)}
+.meter[data-el="diecut-gauge"].on::after{background:var(--a1)}
+@container diecut-meter (max-height:100px){.meter[data-el="diecut-gauge"] > .name{font-size:var(--type-14)}.meter[data-el="diecut-gauge"] > .fig{font-size:var(--type-24)}}
+

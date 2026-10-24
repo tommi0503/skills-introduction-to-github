@@ -1,0 +1,38 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.mindmap[data-el="nocturne-mindmap"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.mindmap[data-el="nocturne-mindmap"] *, .mindmap[data-el="nocturne-mindmap"]::before, .mindmap[data-el="nocturne-mindmap"]::after{box-sizing:border-box}
+.mindmap[data-el="nocturne-mindmap"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.mindmap[data-el="nocturne-mindmap"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.mindmap[data-el="nocturne-mindmap"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.mindmap[data-el="nocturne-mindmap"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.mindmap[data-el="nocturne-mindmap"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.mindmap[data-el="nocturne-mindmap"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.mindmap[data-el="nocturne-mindmap"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.mindmap[data-el="nocturne-mindmap"]{isolation:isolate;--nocturne-mind-n:4;--nocturne-mind-rows:2;--nocturne-core-d:min(18cqw,25cqh,150px)}
+.mindmap[data-el="nocturne-mindmap"]>.core{position:absolute;left:50%;top:50%;translate:-50% -50%;width:var(--nocturne-core-d);height:var(--nocturne-core-d);border:calc(var(--stroke)*3) solid var(--a1-7);border-radius:50%;background:var(--a1-1-soft);display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);text-align:center}
+.mindmap[data-el="nocturne-mindmap"]>.core>.name{font-size:clamp(var(--type-14),calc(var(--nocturne-core-d)*.17),var(--type-24));color:var(--a1-7)}
+.mindmap[data-el="nocturne-mindmap"]>.branch{position:absolute;left:0;top:calc((var(--nocturne-mind-row) - .5)*100%/var(--nocturne-mind-rows));translate:0 -50%;width:28%;height:min(calc(80cqh/var(--nocturne-mind-rows)),170px);border:calc(var(--stroke)*3) solid var(--n-4);border-radius:var(--radius);background:var(--n-1);display:flex;flex-direction:column;justify-content:center;gap:calc(var(--gap-sm)/2);padding:var(--gap-sm);text-align:center;--nocturne-mind-dy:calc(50cqh - (var(--nocturne-mind-row) - .5)*100cqh/var(--nocturne-mind-rows))}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(even of .branch){left:auto;right:0}
+.mindmap[data-el="nocturne-mindmap"]>.branch::before{content:'';position:absolute;z-index:-1;left:100%;top:calc(50% + min(0px,var(--nocturne-mind-dy)));width:calc(22cqw - var(--nocturne-core-d)/2);height:abs(var(--nocturne-mind-dy));border-right:calc(var(--stroke)*2) solid var(--n-4);border-top:calc(var(--stroke)*2) solid var(--n-4);border-top-right-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(even of .branch)::before{left:auto;right:100%;border-right:0;border-left:calc(var(--stroke)*2) solid var(--n-4);border-top-right-radius:0;border-top-left-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]>.branch>.name{font-size:clamp(var(--type-14),2cqw,var(--type-24));color:var(--a1-7)}
+.mindmap[data-el="nocturne-mindmap"]>.branch>.leaf{font-size:clamp(var(--type-12),1.6cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.mindmap[data-el="nocturne-mindmap"]>.branch.on{border-color:var(--a1-7);background:var(--a1-1-soft)}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(2 of .branch):last-child){--nocturne-mind-n:2;--nocturne-mind-rows:1}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(3 of .branch):last-child){--nocturne-mind-n:3;--nocturne-mind-rows:2}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(3 of .branch):last-child)>.branch:nth-child(3 of .branch)::before{border-top:0;border-bottom:calc(var(--stroke)*2) solid var(--n-4);border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:var(--radius);border-bottom-left-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(4 of .branch):last-child){--nocturne-mind-n:4;--nocturne-mind-rows:2}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(4 of .branch):last-child)>.branch:nth-child(3 of .branch)::before{border-top:0;border-bottom:calc(var(--stroke)*2) solid var(--n-4);border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:var(--radius);border-bottom-left-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(4 of .branch):last-child)>.branch:nth-child(4 of .branch)::before{border-top:0;border-bottom:calc(var(--stroke)*2) solid var(--n-4);border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:var(--radius);border-bottom-left-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(5 of .branch):last-child){--nocturne-mind-n:5;--nocturne-mind-rows:3}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(5 of .branch):last-child)>.branch:nth-child(5 of .branch)::before{border-top:0;border-bottom:calc(var(--stroke)*2) solid var(--n-4);border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:var(--radius);border-bottom-left-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(6 of .branch):last-child){--nocturne-mind-n:6;--nocturne-mind-rows:3}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(6 of .branch):last-child)>.branch:nth-child(5 of .branch)::before{border-top:0;border-bottom:calc(var(--stroke)*2) solid var(--n-4);border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:var(--radius);border-bottom-left-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]:has(>.branch:nth-child(6 of .branch):last-child)>.branch:nth-child(6 of .branch)::before{border-top:0;border-bottom:calc(var(--stroke)*2) solid var(--n-4);border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:var(--radius);border-bottom-left-radius:var(--radius)}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(1 of .branch){--nocturne-mind-row:1}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(2 of .branch){--nocturne-mind-row:1}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(3 of .branch){--nocturne-mind-row:2}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(4 of .branch){--nocturne-mind-row:2}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(5 of .branch){--nocturne-mind-row:3}
+.mindmap[data-el="nocturne-mindmap"]>.branch:nth-child(6 of .branch){--nocturne-mind-row:3}
+

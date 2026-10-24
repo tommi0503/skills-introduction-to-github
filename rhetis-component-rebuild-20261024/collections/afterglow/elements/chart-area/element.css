@@ -1,0 +1,39 @@
+/* Fresh component: afterglow replica 04–08, measured white panels, blue captions and 16px corners.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.areas[data-el="afterglow-chart-area"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.areas[data-el="afterglow-chart-area"]{--chart-head:64px;--chart-foot:36px;--plot-h:calc(100cqh - var(--chart-head) - var(--chart-foot));--plot-color:var(--a1);--plot-ink:var(--a1-8);position:relative;anchor-scope:all;}
+.areas[data-el="afterglow-chart-area"]>.series{position:absolute;inset:var(--chart-head) 4% var(--chart-foot);display:flex;align-items:flex-end;justify-content:space-between;anchor-scope:all;--plot-color:var(--a1);--plot-ink:var(--a1-8);}
+.areas[data-el="afterglow-chart-area"]>.series>.name{position:absolute;top:calc(-1 * var(--chart-head) + 8px);left:calc(var(--series-index,0)*25%);max-width:24%;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--ink);}
+.areas[data-el="afterglow-chart-area"]>.series:nth-child(1 of .series){--series-index:0;--plot-color:var(--a1);--plot-ink:var(--a1-8);z-index:4;}
+.areas[data-el="afterglow-chart-area"]>.series:nth-child(2 of .series){--series-index:1;--plot-color:var(--a2);--plot-ink:var(--a2-8);z-index:3;}
+.areas[data-el="afterglow-chart-area"]>.series:nth-child(3 of .series){--series-index:2;--plot-color:var(--a3);--plot-ink:var(--a3-8);z-index:2;}
+.areas[data-el="afterglow-chart-area"]>.series:nth-child(4 of .series){--series-index:3;--plot-color:var(--a4);--plot-ink:var(--a4-8);z-index:1;}
+.areas[data-el="afterglow-chart-area"]>.axis{position:absolute;bottom:0;left:4%;right:4%;height:var(--chart-foot);display:flex;align-items:center;justify-content:space-between;border-top:var(--stroke) solid var(--n-4);}
+.areas[data-el="afterglow-chart-area"]>.axis>span{flex:1;min-width:0;text-align:center;font-size:var(--type-12);line-height:var(--label-line);}
+.areas[data-el="afterglow-chart-area"]:not(:has(>.axis>span:not(:empty)))>.series{left:3.5px;right:3.5px;}
+.areas[data-el="afterglow-chart-area"]:not(:has(>.series>.name:not(:empty))){--chart-head:3.5px;}
+.areas[data-el="afterglow-chart-area"]:not(:has(>.axis>span:not(:empty))){--chart-foot:0px;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt{position:static;flex:none;width:1px;height:1px;margin-bottom:calc(var(--v)/var(--max,100)*var(--plot-h));anchor-name:var(--own);box-shadow:0 0 0 3px var(--plot-color);border-radius:50%;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(1 of .pt){--own:--afterglow-area-1;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(2 of .pt){--own:--afterglow-area-2;--previous:--afterglow-area-1;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(3 of .pt){--own:--afterglow-area-3;--previous:--afterglow-area-2;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(4 of .pt){--own:--afterglow-area-4;--previous:--afterglow-area-3;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(5 of .pt){--own:--afterglow-area-5;--previous:--afterglow-area-4;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(6 of .pt){--own:--afterglow-area-6;--previous:--afterglow-area-5;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(7 of .pt){--own:--afterglow-area-7;--previous:--afterglow-area-6;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(8 of .pt){--own:--afterglow-area-8;--previous:--afterglow-area-7;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(9 of .pt){--own:--afterglow-area-9;--previous:--afterglow-area-8;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(10 of .pt){--own:--afterglow-area-10;--previous:--afterglow-area-9;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(11 of .pt){--own:--afterglow-area-11;--previous:--afterglow-area-10;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:nth-child(12 of .pt){--own:--afterglow-area-12;--previous:--afterglow-area-11;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt>b{position:absolute;left:anchor(var(--own) center);top:calc(anchor(var(--own) top) - 12px);transform:translate(-50%,-100%);white-space:nowrap;font-size:clamp(var(--type-12),1.5cqw,var(--type-18));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--plot-ink);}
+.areas[data-el="afterglow-chart-area"]>.series>.pt::before{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--previous) top) - var(--plot-h));bottom:0;background:linear-gradient(to top,transparent,color-mix(in srgb,var(--plot-color) 25%,transparent));background-size:100% var(--plot-h);background-position:bottom;clip-path:polygon(0 var(--plot-h),100% calc(100% - var(--v)/var(--max,100)*var(--plot-h)),100% 100%,0 100%);}
+.areas[data-el="afterglow-chart-area"]>.series>.pt::after{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--previous) top) - var(--plot-h));bottom:0;background:var(--plot-color);clip-path:polygon(0 calc(var(--plot-h) - .7px),100% calc(100% - var(--v)/var(--max,100)*var(--plot-h) - .7px),100% calc(100% - var(--v)/var(--max,100)*var(--plot-h) + .7px),0 calc(var(--plot-h) + .7px));}
+.areas[data-el="afterglow-chart-area"].stacked>.series>.pt::before{background:var(--plot-color);opacity:1;}
+.areas[data-el="afterglow-chart-area"]>.series>.pt:first-child::before,.areas[data-el="afterglow-chart-area"]>.series>.pt:first-child::after{content:none;}
+@container (max-width:650px){.areas[data-el="afterglow-chart-area"]>.axis>span:nth-child(even){visibility:hidden;}
+}
+.areas[data-el="afterglow-chart-area"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.areas[data-el="afterglow-chart-area"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.areas[data-el="afterglow-chart-area"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.areas[data-el="afterglow-chart-area"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}

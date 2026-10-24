@@ -1,0 +1,1 @@
+Circular neutral members extend the measured KPI discs. Fine owned links communicate a continuous clockwise cycle, while a single picked member receives the same pale accent used elsewhere in the collection.

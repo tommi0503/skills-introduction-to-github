@@ -1,0 +1,1 @@
+A new experience journey follows the source’s thin point-to-point data line, with stage names above and touchpoints below. The mood curve uses only mood and next values and belongs to the complete journey.

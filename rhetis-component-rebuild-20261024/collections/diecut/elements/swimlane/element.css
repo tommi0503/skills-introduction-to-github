@@ -1,0 +1,25 @@
+/* Not present as a flow contract. Source 03 shared thin connectors, source 10 open arrows and source 04 quiet panels define a process extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.swimlane[data-el="diecut-swimlane"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.swimlane[data-el="diecut-swimlane"] *,.swimlane[data-el="diecut-swimlane"] *::before,.swimlane[data-el="diecut-swimlane"] *::after{box-sizing:border-box}
+.swimlane[data-el="diecut-swimlane"] :is(p,h2,blockquote){margin:0}
+
+.swimlane[data-el="diecut-swimlane"] {container-name:diecut-flow;display:grid;grid-template-columns:repeat(var(--cols,var(--diecut-flow-cols)),minmax(0,1fr));grid-template-rows:repeat(var(--diecut-flow-rows),minmax(0,1fr));grid-auto-columns:minmax(0,1fr);grid-auto-rows:minmax(0,1fr);gap:var(--diecut-flow-gap);isolation:isolate}
+.swimlane[data-el="diecut-swimlane"] > .node{position:relative;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;padding:8%;border:var(--stroke) solid var(--ink);border-radius:var(--radius);background:var(--n-1);text-align:center}
+.swimlane[data-el="diecut-swimlane"] > .node > .name{font-size:clamp(var(--type-12),min(2.2cqw,4cqh),var(--type-24));font-weight:var(--label-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.swimlane[data-el="diecut-swimlane"] > .node.start,.swimlane[data-el="diecut-swimlane"] > .node.end{border-radius:999px}
+.swimlane[data-el="diecut-swimlane"] > .node.ask{border:0;background:var(--a1-2-soft);border-radius:0}
+.swimlane[data-el="diecut-swimlane"] > .node.ask > .name{max-width:60%}
+.swimlane[data-el="diecut-swimlane"] > .node.on{background:var(--a1);color:var(--a1-on);border-color:var(--a1)}
+.swimlane[data-el="diecut-swimlane"] > .node.to-r::before,.swimlane[data-el="diecut-swimlane"] > .node.to-l::before{content:"";position:absolute;left:100%;top:calc(50% - 7px);width:var(--diecut-flow-gap);height:14px;background:var(--ink);clip-path:polygon(0 45%,80% 45%,72% 10%,78% 0,100% 50%,78% 100%,72% 90%,80% 55%,0 55%);z-index:-1}
+.swimlane[data-el="diecut-swimlane"] > .node.to-l::before{left:auto;right:100%;transform:rotate(180deg)}
+.swimlane[data-el="diecut-swimlane"] > .node.to-d::after,.swimlane[data-el="diecut-swimlane"] > .node.to-u::after{content:"";position:absolute;left:calc(50% - 7px);top:100%;height:var(--diecut-flow-gap);width:14px;background:var(--ink);clip-path:polygon(45% 0,55% 0,55% 80%,90% 72%,100% 78%,50% 100%,0 78%,10% 72%,45% 80%);z-index:-1}
+.swimlane[data-el="diecut-swimlane"] > .node.to-u::after{top:auto;bottom:100%;transform:rotate(180deg)}
+
+.swimlane[data-el="diecut-swimlane"] > .node.ask{background:none;border:0}
+.swimlane[data-el="diecut-swimlane"] > .node.ask > .name::before{content:"";position:absolute;inset:0;background:var(--a1-2-soft);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);z-index:-1}
+
+.swimlane[data-el="diecut-swimlane"] {padding-left:16%}
+.swimlane[data-el="diecut-swimlane"] > .lane{position:relative;grid-column:1 / -1;border-bottom:var(--stroke) solid var(--n-4);min-width:0;min-height:0;z-index:-2}
+.swimlane[data-el="diecut-swimlane"] > .lane > .name{position:absolute;left:-19.048%;width:17%;top:50%;transform:translateY(-50%);font-size:clamp(var(--type-12),2cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--label-line);text-align:right;word-break:keep-all;overflow-wrap:anywhere}
+

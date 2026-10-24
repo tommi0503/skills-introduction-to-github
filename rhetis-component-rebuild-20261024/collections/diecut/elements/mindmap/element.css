@@ -1,0 +1,32 @@
+/* Not present as a mind map. Source 03 accent core and fine branching rules define the extension; curved links radiate to both sides as required by the mindmap contract.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.mindmap[data-el="diecut-mindmap"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.mindmap[data-el="diecut-mindmap"] *,.mindmap[data-el="diecut-mindmap"] *::before,.mindmap[data-el="diecut-mindmap"] *::after{box-sizing:border-box}
+.mindmap[data-el="diecut-mindmap"] :is(p,h2,blockquote){margin:0}
+
+.mindmap[data-el="diecut-mindmap"] {container-name:diecut-mindmap;--diecut-map-rows:2;display:grid;grid-template-columns:30% 30% 30%;grid-template-rows:repeat(var(--diecut-map-rows),minmax(0,1fr));gap:var(--gap-sm) 5%;isolation:isolate}
+.mindmap[data-el="diecut-mindmap"] > .core{position:relative;z-index:2;grid-column:2;grid-row:1 / span var(--diecut-map-rows);align-self:center;display:flex;align-items:center;justify-content:center;min-height:80px;padding:12px;border-radius:999px;background:var(--a1);color:var(--a1-on);text-align:center}
+.mindmap[data-el="diecut-mindmap"] > .core > .name{font-size:clamp(var(--type-16),2.5cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.mindmap[data-el="diecut-mindmap"] > .branch{--diecut-map-row:1;--diecut-map-dy:calc(50 - (var(--diecut-map-row) - .5)*100/var(--diecut-map-rows));position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);min-width:0;min-height:0;grid-column:1;grid-row:var(--diecut-map-row)}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(even of .branch){grid-column:3}
+.mindmap[data-el="diecut-mindmap"] > .branch::before{content:"";position:absolute;left:50%;top:50%;width:35cqw;height:calc(abs(var(--diecut-map-dy))*1cqh);border-top:var(--stroke) solid var(--ink);border-right:var(--stroke) solid var(--ink);border-top-right-radius:100%;transform-origin:0 0;transform:scaleY(calc(sign(var(--diecut-map-dy)) + 1 - abs(sign(var(--diecut-map-dy)))));z-index:-1}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(even of .branch)::before{left:auto;right:50%;border-right:0;border-left:var(--stroke) solid var(--ink);border-top-right-radius:0;border-top-left-radius:100%;transform-origin:100% 0}
+.mindmap[data-el="diecut-mindmap"] > .branch > .name{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;flex:none;max-width:100%;min-height:36px;padding:6px 16px;border:var(--stroke) solid var(--ink);border-radius:999px;background:var(--n-1);font-size:clamp(var(--type-12),2cqw,var(--type-22));font-weight:var(--name-weight);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.mindmap[data-el="diecut-mindmap"] > .branch > .leaf{--diecut-leaf-i:0;position:absolute;left:50%;top:calc(50% + 26px + var(--diecut-leaf-i)*28px);transform:translateX(-50%);display:block;max-width:100%;padding:3px 8px;border-radius:var(--radius-sm);background:var(--page);font-size:clamp(var(--type-12),1.7cqw,var(--type-18));line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.mindmap[data-el="diecut-mindmap"] > .branch.on > .name{background:var(--a1);color:var(--a1-on);border-color:var(--a1)}
+.mindmap[data-el="diecut-mindmap"] > .branch > .leaf:nth-child(1 of .leaf){--diecut-leaf-i:0}
+.mindmap[data-el="diecut-mindmap"] > .branch > .leaf:nth-child(2 of .leaf){--diecut-leaf-i:1}
+.mindmap[data-el="diecut-mindmap"] > .branch > .leaf:nth-child(3 of .leaf){--diecut-leaf-i:2}
+.mindmap[data-el="diecut-mindmap"] > .branch > .leaf:nth-child(4 of .leaf){--diecut-leaf-i:3}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(1 of .branch){--diecut-map-row:1}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(2 of .branch){--diecut-map-row:1}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(3 of .branch){--diecut-map-row:2}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(4 of .branch){--diecut-map-row:2}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(5 of .branch){--diecut-map-row:3}
+.mindmap[data-el="diecut-mindmap"] > .branch:nth-child(6 of .branch){--diecut-map-row:3}
+.mindmap[data-el="diecut-mindmap"]:has(>.branch:nth-child(2 of .branch):last-child){--diecut-map-rows:1}
+.mindmap[data-el="diecut-mindmap"]:has(>.branch:nth-child(3 of .branch):last-child){--diecut-map-rows:2}
+.mindmap[data-el="diecut-mindmap"]:has(>.branch:nth-child(4 of .branch):last-child){--diecut-map-rows:2}
+.mindmap[data-el="diecut-mindmap"]:has(>.branch:nth-child(5 of .branch):last-child){--diecut-map-rows:3}
+.mindmap[data-el="diecut-mindmap"]:has(>.branch:nth-child(6 of .branch):last-child){--diecut-map-rows:3}
+

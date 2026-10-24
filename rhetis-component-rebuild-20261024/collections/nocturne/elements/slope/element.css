@@ -1,0 +1,45 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.slope[data-el="nocturne-slope"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.slope[data-el="nocturne-slope"] *, .slope[data-el="nocturne-slope"]::before, .slope[data-el="nocturne-slope"]::after{box-sizing:border-box}
+.slope[data-el="nocturne-slope"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.slope[data-el="nocturne-slope"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.slope[data-el="nocturne-slope"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.slope[data-el="nocturne-slope"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.slope[data-el="nocturne-slope"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.slope[data-el="nocturne-slope"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.slope[data-el="nocturne-slope"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.slope[data-el="nocturne-slope"]{isolation:isolate;--nocturne-slope-h:calc(100cqh - var(--type-64)*2);--nocturne-pair-n:4}
+.slope[data-el="nocturne-slope"]>.heads{position:absolute;left:28%;right:22%;top:var(--type-16);display:flex;justify-content:space-between;font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);color:var(--n-7)}
+.slope[data-el="nocturne-slope"]>.pair{display:contents;--nocturne-pair-color:var(--n-4);--nocturne-ay:calc(var(--type-64) + var(--nocturne-slope-h)*(1 - var(--a)/var(--max)));--nocturne-by:calc(var(--type-64) + var(--nocturne-slope-h)*(1 - var(--b)/var(--max)))}
+.slope[data-el="nocturne-slope"]>.pair::before{content:'';position:absolute;z-index:-1;left:28%;top:var(--nocturne-ay);width:hypot(50cqw,calc(var(--nocturne-by) - var(--nocturne-ay)));height:2px;transform-origin:left center;rotate:atan2(calc(var(--nocturne-by) - var(--nocturne-ay)),50cqw);background:var(--nocturne-pair-color)}
+.slope[data-el="nocturne-slope"]>.pair>.name{position:absolute;left:0;width:20%;top:var(--nocturne-ay);translate:0 -50%;text-align:right;font-size:clamp(var(--type-12),2cqw,var(--type-20))}
+.slope[data-el="nocturne-slope"]>.pair>.a,.slope[data-el="nocturne-slope"]>.pair>.b{position:absolute;left:28%;top:var(--nocturne-ay);translate:-50% -100%;padding-bottom:var(--gap-sm);font-size:clamp(var(--type-12),2cqw,var(--type-22));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--ink)}
+.slope[data-el="nocturne-slope"]>.pair>.b{left:78%;top:var(--nocturne-by)}
+.slope[data-el="nocturne-slope"]>.pair>.a::after,.slope[data-el="nocturne-slope"]>.pair>.b::after{content:'';position:absolute;left:50%;bottom:-6px;translate:-50% 0;width:12px;height:12px;border-radius:50%;border:calc(var(--stroke)*2) solid var(--nocturne-pair-color);background:var(--page)}
+.slope[data-el="nocturne-slope"]>.pair>.b::after{background:var(--nocturne-pair-color)}
+.slope[data-el="nocturne-slope"]>.pair.on{--nocturne-pair-color:var(--a1-7)}
+.slope[data-el="nocturne-slope"]>.pair.on>.b::after{background:var(--a1)}
+.slope[data-el="nocturne-slope"].dumbbell>.heads{left:28%;right:auto;justify-content:flex-start;gap:var(--gap)}
+.slope[data-el="nocturne-slope"].dumbbell>.heads>span{display:flex;align-items:center;gap:calc(var(--gap-sm)/2)}
+.slope[data-el="nocturne-slope"].dumbbell>.heads>span::before{content:'';width:10px;height:10px;border-radius:50%;border:var(--stroke) solid var(--n-4);background:var(--page)}
+.slope[data-el="nocturne-slope"].dumbbell>.heads>span:last-child::before{background:var(--n-4)}
+.slope[data-el="nocturne-slope"].dumbbell>.pair{--nocturne-ay:calc(var(--type-64) + var(--nocturne-slope-h)*(var(--nocturne-pair-i) - .5)/var(--nocturne-pair-n));--nocturne-by:var(--nocturne-ay);--nocturne-ax:calc(28cqw + 65cqw*var(--a)/var(--max));--nocturne-bx:calc(28cqw + 65cqw*var(--b)/var(--max))}
+.slope[data-el="nocturne-slope"].dumbbell>.pair::before{left:min(var(--nocturne-ax),var(--nocturne-bx));top:var(--nocturne-ay);width:abs(calc(var(--nocturne-bx) - var(--nocturne-ax)));rotate:0deg}
+.slope[data-el="nocturne-slope"].dumbbell>.pair>.a{left:var(--nocturne-ax)}
+.slope[data-el="nocturne-slope"].dumbbell>.pair>.b{left:var(--nocturne-bx)}
+.slope[data-el="nocturne-slope"]:has(>.pair:nth-child(2 of .pair):last-child){--nocturne-pair-n:2}
+.slope[data-el="nocturne-slope"]:has(>.pair:nth-child(3 of .pair):last-child){--nocturne-pair-n:3}
+.slope[data-el="nocturne-slope"]:has(>.pair:nth-child(4 of .pair):last-child){--nocturne-pair-n:4}
+.slope[data-el="nocturne-slope"]:has(>.pair:nth-child(5 of .pair):last-child){--nocturne-pair-n:5}
+.slope[data-el="nocturne-slope"]:has(>.pair:nth-child(6 of .pair):last-child){--nocturne-pair-n:6}
+.slope[data-el="nocturne-slope"]:has(>.pair:nth-child(7 of .pair):last-child){--nocturne-pair-n:7}
+.slope[data-el="nocturne-slope"]:has(>.pair:nth-child(8 of .pair):last-child){--nocturne-pair-n:8}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(1 of .pair){--nocturne-pair-i:1}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(2 of .pair){--nocturne-pair-i:2}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(3 of .pair){--nocturne-pair-i:3}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(4 of .pair){--nocturne-pair-i:4}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(5 of .pair){--nocturne-pair-i:5}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(6 of .pair){--nocturne-pair-i:6}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(7 of .pair){--nocturne-pair-i:7}
+.slope[data-el="nocturne-slope"]>.pair:nth-child(8 of .pair){--nocturne-pair-i:8}
+

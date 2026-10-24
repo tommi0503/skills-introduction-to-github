@@ -1,0 +1,29 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.donut[data-el="nocturne-chart-donut"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.donut[data-el="nocturne-chart-donut"] *, .donut[data-el="nocturne-chart-donut"]::before, .donut[data-el="nocturne-chart-donut"]::after{box-sizing:border-box}
+.donut[data-el="nocturne-chart-donut"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.donut[data-el="nocturne-chart-donut"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.donut[data-el="nocturne-chart-donut"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.donut[data-el="nocturne-chart-donut"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.donut[data-el="nocturne-chart-donut"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.donut[data-el="nocturne-chart-donut"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.donut[data-el="nocturne-chart-donut"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.donuts[data-el="nocturne-chart-donut"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.donuts[data-el="nocturne-chart-donut"] *, .donuts[data-el="nocturne-chart-donut"]::before, .donuts[data-el="nocturne-chart-donut"]::after{box-sizing:border-box}
+.donuts[data-el="nocturne-chart-donut"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.donuts[data-el="nocturne-chart-donut"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.donuts[data-el="nocturne-chart-donut"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.donuts[data-el="nocturne-chart-donut"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.donuts[data-el="nocturne-chart-donut"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.donuts[data-el="nocturne-chart-donut"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.donuts[data-el="nocturne-chart-donut"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.donut[data-el="nocturne-chart-donut"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);--nocturne-donut-d:min(85cqw,72cqh,316px)}
+.donut[data-el="nocturne-chart-donut"]::before{content:'';position:absolute;left:50%;top:calc(50% - var(--type-28));translate:-50% -50%;width:var(--nocturne-donut-d);height:var(--nocturne-donut-d);border-radius:50%;background:conic-gradient(var(--a1) calc(clamp(0,var(--v),100)*1%),var(--n-3) 0);mask:radial-gradient(circle,transparent 51%,var(--ink) 52%)}
+.donut[data-el="nocturne-chart-donut"]>.fig{position:absolute;left:50%;top:calc(50% - var(--type-28));translate:-50% -50%;font-size:clamp(var(--type-20),calc(var(--nocturne-donut-d)*.19),var(--type-60));color:var(--a1-7);white-space:nowrap}
+.donut[data-el="nocturne-chart-donut"]>.name{position:absolute;left:5%;right:5%;top:calc(50% - var(--type-28) + var(--nocturne-donut-d)/2 + var(--gap-sm));font-size:clamp(var(--type-14),3.2cqw,var(--type-24));text-align:center}
+.donuts[data-el="nocturne-chart-donut"]{display:grid;grid-template-columns:repeat(var(--nocturne-donut-n,3),minmax(0,1fr));gap:var(--gap)}
+.donuts[data-el="nocturne-chart-donut"]:has(>.donut:nth-child(1):last-child){--nocturne-donut-n:1}
+.donuts[data-el="nocturne-chart-donut"]:has(>.donut:nth-child(2):last-child){--nocturne-donut-n:2}
+.donuts[data-el="nocturne-chart-donut"]:has(>.donut:nth-child(3):last-child){--nocturne-donut-n:3}
+.donuts[data-el="nocturne-chart-donut"]:has(>.donut:nth-child(4):last-child){--nocturne-donut-n:4}
+

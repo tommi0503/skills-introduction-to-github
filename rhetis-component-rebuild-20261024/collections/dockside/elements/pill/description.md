@@ -1,0 +1,1 @@
+A shallow, bright-rimmed capsule places a small dark circular service icon beside a centered single-line label. The on variant uses an accent fill, line keeps a pale outline and accent icon, and quiet accommodates the measured avatar-and-action summary. Local percentages preserve the mark-to-label proportions at smaller widths.

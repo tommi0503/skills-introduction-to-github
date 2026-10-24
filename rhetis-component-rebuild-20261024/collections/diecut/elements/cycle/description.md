@@ -1,0 +1,1 @@
+A centered accent core and quiet peripheral capsules use the source circle-and-line grammar. A single circular track and open arrowheads establish the closed cycle; the complete element owns every connection.

@@ -1,0 +1,1 @@
+A network of outlined discs uses true coordinate geometry and fine neutral links. Opaque quiet node surfaces cover line interiors, so every connection visibly meets the circle edge rather than crossing the label.

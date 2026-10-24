@@ -1,0 +1,20 @@
+/* Not present as a matrix contract. White explanatory panels from replica 04 and precise shared axes from replica 13 provide this extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.matrix[data-el="diecut-matrix"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.matrix[data-el="diecut-matrix"] *,.matrix[data-el="diecut-matrix"] *::before,.matrix[data-el="diecut-matrix"] *::after{box-sizing:border-box}
+.matrix[data-el="diecut-matrix"] :is(p,h2,blockquote){margin:0}
+
+.matrix[data-el="diecut-matrix"] {container-name:diecut-matrix;--diecut-matrix-cols:2;display:grid;grid-template-columns:repeat(var(--diecut-matrix-cols),minmax(0,1fr));grid-template-rows:repeat(var(--diecut-matrix-cols),minmax(0,1fr));gap:var(--gap);padding:0 0 30px 36px}
+.matrix[data-el="diecut-matrix"] > .cell{position:relative;min-width:0;min-height:0;container-type:size;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);padding:6%;border-radius:var(--radius-sm);background:var(--n-1);text-align:center}
+.matrix[data-el="diecut-matrix"] > .cell > .name{font-size:clamp(var(--type-14),min(8cqw,18cqh),var(--type-28));line-height:var(--label-line);font-weight:var(--name-weight);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="diecut-matrix"] > .cell > .note{font-size:clamp(var(--type-12),min(5cqw,10cqh),var(--type-18));line-height:var(--note-line);word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="diecut-matrix"] > .cell.on{background:var(--a1);color:var(--a1-on)}
+.matrix[data-el="diecut-matrix"] > .cell.tone-1{background:var(--a1-2-soft)}.matrix[data-el="diecut-matrix"] > .cell.tone-2{background:var(--a2-2-soft)}.matrix[data-el="diecut-matrix"] > .cell.tone-3{background:var(--n-3)}.matrix[data-el="diecut-matrix"] > .cell.tone-4{background:var(--n-2)}
+.matrix[data-el="diecut-matrix"] > .axis-x{position:absolute;bottom:0;left:36px;right:0;display:flex;align-items:center;justify-content:space-around;height:24px;border-top:var(--stroke) solid var(--ink)}
+.matrix[data-el="diecut-matrix"] > .axis-y{position:absolute;left:0;top:0;bottom:30px;width:30px;display:flex;flex-direction:column-reverse;align-items:center;justify-content:space-around;border-right:var(--stroke) solid var(--ink)}
+.matrix[data-el="diecut-matrix"] > :is(.axis-x,.axis-y) > span{font-size:var(--type-12);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.matrix[data-el="diecut-matrix"].swot{padding:0}
+.matrix[data-el="diecut-matrix"].swot > .cell{align-items:flex-start;text-align:left;gap:var(--gap-sm);padding:4%}
+.matrix[data-el="diecut-matrix"].swot > .cell > .kick{display:flex;align-items:center;justify-content:center;width:30px;height:30px;flex:none;border-radius:50%;background:var(--a1-2-soft);color:var(--ink);font-size:var(--type-20);font-weight:var(--diecut-index-weight);line-height:var(--label-line)}
+.matrix[data-el="diecut-matrix"].swot > .cell > .list{flex:1;width:100%;min-height:0}
+

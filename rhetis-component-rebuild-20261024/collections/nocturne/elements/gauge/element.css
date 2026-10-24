@@ -1,0 +1,16 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.meter[data-el="nocturne-gauge"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.meter[data-el="nocturne-gauge"] *, .meter[data-el="nocturne-gauge"]::before, .meter[data-el="nocturne-gauge"]::after{box-sizing:border-box}
+.meter[data-el="nocturne-gauge"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.meter[data-el="nocturne-gauge"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.meter[data-el="nocturne-gauge"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.meter[data-el="nocturne-gauge"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.meter[data-el="nocturne-gauge"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.meter[data-el="nocturne-gauge"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.meter[data-el="nocturne-gauge"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.meter[data-el="nocturne-gauge"]{isolation:isolate;display:grid;grid-template-columns:1fr auto;align-content:center;column-gap:var(--gap);padding-bottom:22px}
+.meter[data-el="nocturne-gauge"]::before,.meter[data-el="nocturne-gauge"]::after{content:'';position:absolute;left:0;top:calc(50% + 12px);height:10px;border-radius:999px;z-index:-1}
+.meter[data-el="nocturne-gauge"]::before{width:100%;background:var(--n-2);border:var(--stroke) solid var(--n-4)}
+.meter[data-el="nocturne-gauge"]::after{width:calc(clamp(0,var(--v),100)*1%);background:var(--a1)}
+.meter[data-el="nocturne-gauge"]>.name{font-size:clamp(var(--type-14),3cqw,var(--type-28));line-height:var(--name-line)}
+.meter[data-el="nocturne-gauge"]>.fig{font-size:clamp(var(--type-18),4cqw,var(--type-36));color:var(--a1-7);line-height:var(--figure-line)}

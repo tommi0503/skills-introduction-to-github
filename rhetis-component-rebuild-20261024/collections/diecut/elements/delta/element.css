@@ -1,0 +1,14 @@
+/* Not present as a standalone change contract. The light source index and accent outcome capsule derive from replicas 06 and 13.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.delta[data-el="diecut-delta"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.delta[data-el="diecut-delta"] *,.delta[data-el="diecut-delta"] *::before,.delta[data-el="diecut-delta"] *::after{box-sizing:border-box}
+.delta[data-el="diecut-delta"] :is(p,h2,blockquote){margin:0}
+
+.delta[data-el="diecut-delta"] {display:flex;align-items:center;justify-content:center;gap:var(--gap);container-name:diecut-delta}
+.delta[data-el="diecut-delta"] > :is(.from,.to){font-size:clamp(var(--type-16),min(7cqw,34cqh),var(--type-56));line-height:var(--figure-line);font-weight:var(--figure-weight);letter-spacing:var(--figure-track);white-space:nowrap}
+.delta[data-el="diecut-delta"] > .from{font-weight:var(--diecut-index-weight)}
+.delta[data-el="diecut-delta"] > .to{position:relative;display:flex;align-items:center;gap:var(--gap);padding:8px 24px;background:var(--a1);color:var(--a1-on);border-radius:999px}
+.delta[data-el="diecut-delta"] > .to::before{content:"";position:absolute;right:calc(100% + 6px);top:50%;width:calc(var(--gap) - 12px);height:1px;background:var(--ink)}
+.delta[data-el="diecut-delta"] > .from::after{content:"";display:inline-block;width:10px;height:10px;border-top:1px solid var(--ink);border-right:1px solid var(--ink);transform:rotate(45deg);margin-left:8px}
+@container diecut-delta (max-width:400px){.delta[data-el="diecut-delta"] > .to{padding:6px 12px}.delta[data-el="diecut-delta"] > .from::after{width:6px;height:6px;margin-left:2px}.delta[data-el="diecut-delta"] > .to::before{content:none}}
+

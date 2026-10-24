@@ -1,0 +1,14 @@
+/* Not present as a nested area chart. Source 13 squared data rectangles and source 08 thin table rules define its proportional tile extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.treemap[data-el="diecut-treemap"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.treemap[data-el="diecut-treemap"] *,.treemap[data-el="diecut-treemap"] *::before,.treemap[data-el="diecut-treemap"] *::after{box-sizing:border-box}
+.treemap[data-el="diecut-treemap"] :is(p,h2,blockquote){margin:0}
+
+.treemap[data-el="diecut-treemap"] {container-name:diecut-treemap;display:flex;gap:var(--gap-sm)}
+.treemap[data-el="diecut-treemap"] > .branch{flex:var(--v) 1 0;position:relative;min-width:0;min-height:0;display:flex;flex-direction:column;border:var(--stroke) solid var(--ink);background:var(--n-1);padding:36px 0 0}
+.treemap[data-el="diecut-treemap"] > .branch > .name{position:absolute;left:4px;right:4px;top:8px;text-align:center;font-size:clamp(var(--type-12),1.8cqw,var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="diecut-treemap"] > .branch > .tile{flex:none;height:calc(var(--v)*1%);min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);padding:6px;border-top:var(--stroke) solid var(--n-4);background:var(--n-2);text-align:center;container-type:size}
+.treemap[data-el="diecut-treemap"] > .branch > .tile > .name{font-size:clamp(var(--type-12),min(10cqw,18cqh),var(--type-24));font-weight:var(--label-weight);line-height:var(--label-line);max-width:95%;word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="diecut-treemap"] > .branch > .tile > .fig{font-size:clamp(var(--type-16),min(14cqw,24cqh),var(--type-40));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);max-width:95%;word-break:keep-all;overflow-wrap:anywhere}
+.treemap[data-el="diecut-treemap"] > .branch > .tile.on{background:var(--a1);color:var(--a1-on)}
+

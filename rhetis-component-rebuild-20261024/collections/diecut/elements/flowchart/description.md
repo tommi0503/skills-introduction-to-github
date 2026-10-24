@@ -1,0 +1,1 @@
+Quiet process boxes and capsule endpoints connect through thin open arrows. Decisions use a soft diamond face, and the complete grid owns every connector. Grid placement follows only the contract row and column data.

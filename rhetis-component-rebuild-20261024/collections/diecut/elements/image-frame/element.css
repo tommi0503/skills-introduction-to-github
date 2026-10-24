@@ -1,0 +1,10 @@
+/* Replica 07, 220×225 plain equipment-image placeholder. The same unframed material is used for wide photographs and slender image icons.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.frame[data-el="diecut-image-frame"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.frame[data-el="diecut-image-frame"] *,.frame[data-el="diecut-image-frame"] *::before,.frame[data-el="diecut-image-frame"] *::after{box-sizing:border-box}
+.frame[data-el="diecut-image-frame"] :is(p,h2,blockquote){margin:0}
+
+.frame[data-el="diecut-image-frame"] {display:grid;place-items:stretch;overflow:hidden;background:var(--n-2)}
+.frame[data-el="diecut-image-frame"] > .seat{width:100%;height:100%;min-width:0;min-height:0;aspect-ratio:auto;max-width:none;border:0;border-radius:0;background:var(--n-2)}
+@container(max-width:200px){.frame[data-el="diecut-image-frame"] > .seat{font-size:var(--type-12)}}
+

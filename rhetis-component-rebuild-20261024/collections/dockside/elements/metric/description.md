@@ -1,0 +1,1 @@
+No replica base exists for bare figures. The measured52px figure hierarchy, dark dividers and restrained accent text of replicas05/20 are extended without adding card surfaces. Count-aware columns keep long operational labels and muted notes readable.

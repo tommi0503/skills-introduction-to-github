@@ -1,0 +1,18 @@
+/* Fresh inferred sankey: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.sankey[data-el="confluence-sankey"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.sankey[data-el="confluence-sankey"] *{box-sizing:border-box;}
+.sankey[data-el="confluence-sankey"] p,.sankey[data-el="confluence-sankey"] .name,.sankey[data-el="confluence-sankey"] .note,.sankey[data-el="confluence-sankey"] .fig,.sankey[data-el="confluence-sankey"] .kick{margin:0;}
+.sankey[data-el="confluence-sankey"]{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:var(--gap-sm);padding:5% 0 5% 52%;}
+.sankey[data-el="confluence-sankey"]>.source{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:absolute;left:0;top:10%;width:28%;height:80%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap);padding:var(--gap);}
+.sankey[data-el="confluence-sankey"]>.branch{position:relative;flex:var(--v) 1 0;min-height:0;min-width:0;background:var(--n-1);padding:var(--gap-sm);display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);border-left:5px solid var(--a1);}
+.sankey[data-el="confluence-sankey"]>.branch::before{content:"";position:absolute;right:100%;top:0;width:50%;height:100%;background:color-mix(in srgb,var(--a1) 28%,var(--page));clip-path:polygon(0 30%,100% 0,100% 100%,0 70%);}
+.sankey[data-el="confluence-sankey"] .name{font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);}
+.sankey[data-el="confluence-sankey"] .fig{font-size:var(--type-24);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-8);}
+.sankey[data-el="confluence-sankey"]>.source .fig{color:var(--a1-8);}
+.sankey[data-el="confluence-sankey"] .branch>.branch{flex:var(--v) 1 0;min-width:0;background:var(--a1-2-soft);color:var(--ink);font-size:var(--type-12);padding:var(--gap-sm);}
+.sankey[data-el="confluence-sankey"]>.branch.on{background:var(--a1);color:var(--a1-on);}
+.sankey[data-el="confluence-sankey"]>.branch.on>.fig{color:inherit;}
+.sankey[data-el="confluence-sankey"]>.branch.on::before{background:color-mix(in srgb,var(--a1) 65%,var(--page));}
+.sankey[data-el="confluence-sankey"]>.branch.out{background:var(--n-2);border-color:var(--n-6);}
+.sankey[data-el="confluence-sankey"]>.branch.out::before{background:var(--n-3);}

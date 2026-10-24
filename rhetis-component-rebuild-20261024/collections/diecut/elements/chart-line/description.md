@@ -1,0 +1,1 @@
+A fine straight connector links small solid circular observations. Numeric labels sit above each point and category labels share the lower baseline. Each chart owns its complete connection geometry; emphasis enlarges a single accent point without changing the line grammar.

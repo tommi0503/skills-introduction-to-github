@@ -1,0 +1,24 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.matrix[data-el="confluence-matrix"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.matrix[data-el="confluence-matrix"]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:var(--gap);padding:var(--gap-lg);}
+.matrix[data-el="confluence-matrix"]>.cell{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:var(--gap-sm);gap:var(--gap-sm);text-align:center;}
+.matrix[data-el="confluence-matrix"]>.cell.on{background:var(--a1);color:var(--a1-on);}
+.matrix[data-el="confluence-matrix"]>.cell>.name{font-size:clamp(var(--type-14),2cqw,var(--type-24));font-weight:var(--name-weight);}
+.matrix[data-el="confluence-matrix"]>.cell>.note{font-size:clamp(var(--type-12),1.3cqw,var(--type-16));line-height:var(--body-line);}
+.matrix[data-el="confluence-matrix"]>.axis-x,.matrix[data-el="confluence-matrix"]>.axis-y{position:absolute;display:flex;justify-content:space-between;font-size:var(--type-12);}
+.matrix[data-el="confluence-matrix"]>.axis-x{left:var(--gap-lg);right:var(--gap-lg);bottom:0;}
+.matrix[data-el="confluence-matrix"]>.axis-y{top:var(--gap-lg);bottom:var(--gap-lg);left:0;flex-direction:column;}
+.matrix[data-el="confluence-matrix"] .kick{color:var(--a1-8);font-size:var(--type-16);font-weight:var(--label-weight);}
+.matrix[data-el="confluence-matrix"]>.axis-x,.matrix[data-el="confluence-matrix"]>.axis-y{background:var(--page);color:var(--ink);}
+.matrix[data-el="confluence-matrix"]>.cell>.list{width:100%;flex:1;min-height:0;align-self:stretch;padding:var(--gap-sm);color:inherit;}
+.matrix[data-el="confluence-matrix"]>.cell.on .kick{color:inherit;}
+.matrix[data-el="confluence-matrix"]>.cell.on>.list .name{color:inherit;}
+.matrix[data-el="confluence-matrix"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.matrix[data-el="confluence-matrix"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.matrix[data-el="confluence-matrix"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.matrix[data-el="confluence-matrix"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.matrix[data-el="confluence-matrix"]>.cell>.name{align-self:stretch;background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4) var(--gap-sm);}
+.matrix[data-el="confluence-matrix"]>.cell.on>.name{background:var(--a2-7);}

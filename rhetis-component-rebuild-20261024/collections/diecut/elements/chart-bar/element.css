@@ -1,0 +1,42 @@
+/* Replica 05, eight black bars within a 544.8×470.8 measured chart crop. Plot inset 40.8/544.8 horizontally and 17.8/470.8 vertically; 38/63 cell bar width.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.bars[data-el="diecut-chart-bar"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.bars[data-el="diecut-chart-bar"] *,.bars[data-el="diecut-chart-bar"] *::before,.bars[data-el="diecut-chart-bar"] *::after{box-sizing:border-box}
+.bars[data-el="diecut-chart-bar"] :is(p,h2,blockquote){margin:0}
+
+.bars[data-el="diecut-chart-bar"] {--diecut-chart-n:8;--diecut-plot-h:calc(90.272cqh);container-name:diecut-bars;display:flex;align-items:flex-end;padding:0 0 0 7.489%;counter-reset:diecut-max var(--max,100) diecut-mid calc(var(--max,100)*2/3) diecut-low calc(var(--max,100)/3)}
+.bars[data-el="diecut-chart-bar"]::before{content:"";position:absolute;inset:3.781% 0 5.947% 7.489%;background:repeating-linear-gradient(to top,var(--n-4) 0 1px,transparent 1px calc(100% / 3));border-top:1px solid var(--n-4);border-bottom:1px solid var(--n-4)}
+.bars[data-el="diecut-chart-bar"]::after{content:counter(diecut-max) "\A" counter(diecut-mid) "\A" counter(diecut-low) "\A 0";position:absolute;left:0;width:6%;top:calc(3.781% - var(--diecut-plot-h)/6);white-space:pre;text-align:right;font-size:clamp(var(--type-10),3.824cqh,var(--type-20));line-height:calc(var(--diecut-plot-h)/3);font-weight:var(--body-weight)}
+.bars[data-el="diecut-chart-bar"] > .bar{position:relative;flex:1;min-width:0;height:calc(100% - 3.781cqh - max(5.947cqh,24px));margin-bottom:max(5.947cqh,24px);color:var(--page)}
+.bars[data-el="diecut-chart-bar"] > .bar::before{content:"";position:absolute;bottom:0;left:19.84%;width:60.32%;height:calc(var(--v)/var(--max,100)*100%);background:var(--n-9)}
+.bars[data-el="diecut-chart-bar"] > .bar > b{position:absolute;left:3%;right:3%;bottom:calc(var(--v)/var(--max,100)*100% - 3.186cqh - 1em);font-size:clamp(var(--type-10),min(3.304cqw,3.824cqh),var(--type-24));line-height:var(--diecut-chart-value-line);text-align:center;font-weight:var(--body-weight);white-space:nowrap}
+.bars[data-el="diecut-chart-bar"] > .bar > span{position:absolute;top:calc(100% + 1.062cqh);left:0;right:0;font-size:clamp(var(--type-10),min(3.304cqw,3.824cqh),var(--type-20));line-height:var(--diecut-chart-label-line);text-align:center;color:var(--ink);word-break:keep-all;overflow-wrap:anywhere}
+.bars[data-el="diecut-chart-bar"] > .bar.on::before{background:var(--a1)}.bars[data-el="diecut-chart-bar"] > .bar.on > b{color:var(--a1-on);font-weight:var(--figure-weight)}
+.bars[data-el="diecut-chart-bar"] > .bar.tone-1::before{background:var(--a1)}.bars[data-el="diecut-chart-bar"] > .bar.tone-1 > b{color:var(--a1-on)}.bars[data-el="diecut-chart-bar"] > .bar.tone-2::before{background:var(--a2)}.bars[data-el="diecut-chart-bar"] > .bar.tone-2 > b{color:var(--a2-on)}.bars[data-el="diecut-chart-bar"] > .bar.tone-5::before{background:var(--n-6)}
+.bars[data-el="diecut-chart-bar"].h{flex-direction:column;justify-content:space-around;padding:0 0 0 24%;--diecut-plot-h:100cqh}
+.bars[data-el="diecut-chart-bar"].h::before{inset:0 0 0 24%;background:repeating-linear-gradient(to right,var(--n-4) 0 1px,transparent 1px 25%);border:0;border-right:1px solid var(--n-4)}.bars[data-el="diecut-chart-bar"].h::after{content:none}
+.bars[data-el="diecut-chart-bar"].h > .bar{flex:none;width:100%;height:calc(100% / var(--diecut-chart-n) * .65);margin-bottom:0}
+.bars[data-el="diecut-chart-bar"].h > .bar::before{left:0;top:0;width:calc(var(--v)/var(--max,100)*100%);height:100%}
+.bars[data-el="diecut-chart-bar"].h > .bar > b{left:0;right:auto;bottom:0;top:0;width:calc(var(--v)/var(--max,100)*100%);display:flex;align-items:center;justify-content:center;font-size:clamp(var(--type-10),min(2.5cqw,5cqh),var(--type-20))}
+.bars[data-el="diecut-chart-bar"].h > .bar > span{left:-31.58%;right:102%;top:0;bottom:0;display:flex;align-items:center;justify-content:flex-end;font-size:clamp(var(--type-10),min(2.2cqw,4cqh),var(--type-20));text-align:right}
+@container diecut-bars (max-width:650px){.bars[data-el="diecut-chart-bar"] > .bar > b,.bars[data-el="diecut-chart-bar"] > .bar > span{font-size:var(--type-12)}.bars[data-el="diecut-chart-bar"] > .bar > b{bottom:calc(var(--v)/var(--max,100)*100% - 8px - 1em)}}
+
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(2):last-child){--diecut-chart-n:2}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(3):last-child){--diecut-chart-n:3}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(4):last-child){--diecut-chart-n:4}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(5):last-child){--diecut-chart-n:5}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(6):last-child){--diecut-chart-n:6}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(7):last-child){--diecut-chart-n:7}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(8):last-child){--diecut-chart-n:8}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(9):last-child){--diecut-chart-n:9}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(10):last-child){--diecut-chart-n:10}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(11):last-child){--diecut-chart-n:11}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(12):last-child){--diecut-chart-n:12}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(13):last-child){--diecut-chart-n:13}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(14):last-child){--diecut-chart-n:14}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(15):last-child){--diecut-chart-n:15}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(16):last-child){--diecut-chart-n:16}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(17):last-child){--diecut-chart-n:17}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(18):last-child){--diecut-chart-n:18}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(19):last-child){--diecut-chart-n:19}
+.bars[data-el="diecut-chart-bar"]:has(>.bar:nth-child(20):last-child){--diecut-chart-n:20}

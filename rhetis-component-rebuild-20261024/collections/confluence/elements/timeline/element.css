@@ -1,0 +1,23 @@
+/* Fresh inferred timeline: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.track[data-el="confluence-timeline"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.track[data-el="confluence-timeline"] *{box-sizing:border-box;}
+.track[data-el="confluence-timeline"] p,.track[data-el="confluence-timeline"] .name,.track[data-el="confluence-timeline"] .note,.track[data-el="confluence-timeline"] .fig,.track[data-el="confluence-timeline"] .kick{margin:0;}
+.track[data-el="confluence-timeline"]{position:relative;display:flex;align-items:center;gap:var(--gap);padding:var(--gap-sm);}
+.track[data-el="confluence-timeline"]::before{content:"";position:absolute;left:var(--gap-sm);right:var(--gap-sm);top:50%;border-top:var(--stroke) solid var(--a1);}
+.track[data-el="confluence-timeline"]>.stop{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm);border-top:4px solid var(--a1);}
+.track[data-el="confluence-timeline"] .kick{font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-8);}
+.track[data-el="confluence-timeline"] .name{font-size:clamp(var(--type-14),2.4cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.track[data-el="confluence-timeline"] .note{font-size:var(--type-12);line-height:var(--body-line);}
+.track[data-el="confluence-timeline"].alt>.stop{height:48cqh;}
+.track[data-el="confluence-timeline"].alt>.stop:nth-child(odd){transform:translateY(-24cqh);}
+.track[data-el="confluence-timeline"].alt>.stop:nth-child(even){transform:translateY(24cqh);}
+.track[data-el="confluence-timeline"]>.stop.on{background:var(--a1);color:var(--a1-on);}
+.track[data-el="confluence-timeline"]>.stop.on .kick{color:inherit;}
+.track[data-el="confluence-timeline"].col{flex-direction:column;align-items:stretch;}
+.track[data-el="confluence-timeline"].col::before{left:8%;top:var(--gap-sm);bottom:var(--gap-sm);right:auto;border-top:0;border-left:var(--stroke) solid var(--a1);}
+.track[data-el="confluence-timeline"].col>.stop{flex:1;display:grid;grid-template-columns:16% 26% minmax(0,1fr);gap:var(--gap);align-items:center;padding:var(--gap-sm);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.track[data-el="confluence-timeline"]>.stop>.kick{background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4);}
+.track[data-el="confluence-timeline"]>.stop.on>.kick{background:var(--a2-7);color:var(--page);}

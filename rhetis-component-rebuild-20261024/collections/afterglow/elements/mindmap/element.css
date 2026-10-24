@@ -1,0 +1,27 @@
+/* Fresh inferred mindmap: afterglow source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.mindmap[data-el="afterglow-mindmap"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.mindmap[data-el="afterglow-mindmap"] *{box-sizing:border-box;}
+.mindmap[data-el="afterglow-mindmap"] .name,.mindmap[data-el="afterglow-mindmap"] .leaf,.mindmap[data-el="afterglow-mindmap"] .item{margin:0;}
+.mindmap[data-el="afterglow-mindmap"]{--branch-rows:3;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(var(--branch-rows),minmax(0,1fr));gap:var(--gap);padding:0;anchor-scope:all;}
+.mindmap[data-el="afterglow-mindmap"]>.core{position:absolute;left:39%;top:40%;width:22%;height:20%;border-radius:var(--radius);background:var(--a1);color:var(--a1-on);display:grid;place-items:center;text-align:center;padding:var(--gap-sm);z-index:2;font-size:clamp(var(--type-18),2.8cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);anchor-name:--afterglow-mind-core;}
+.mindmap[data-el="afterglow-mindmap"]>.branch{background:var(--n-9);color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;width:72%;padding:var(--gap-sm);display:flex;flex-direction:column;justify-content:center;gap:4px;font-size:var(--type-16);line-height:var(--name-line);font-weight:var(--name-weight);anchor-name:var(--branch-own);}
+.mindmap[data-el="afterglow-mindmap"]>.branch>.leaf{font-size:var(--type-12);line-height:var(--body-line);font-weight:var(--body-weight);}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(odd of .branch){justify-self:start;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(even of .branch){justify-self:end;}
+.mindmap[data-el="afterglow-mindmap"]:has(>.branch:nth-child(2 of .branch)):not(:has(>.branch:nth-child(3 of .branch))){--branch-rows:1;}
+.mindmap[data-el="afterglow-mindmap"]:has(>.branch:nth-child(3 of .branch)):not(:has(>.branch:nth-child(4 of .branch))){--branch-rows:2;}
+.mindmap[data-el="afterglow-mindmap"]:has(>.branch:nth-child(4 of .branch)):not(:has(>.branch:nth-child(5 of .branch))){--branch-rows:2;}
+.mindmap[data-el="afterglow-mindmap"]:has(>.branch:nth-child(5 of .branch)):not(:has(>.branch:nth-child(6 of .branch))){--branch-rows:3;}
+.mindmap[data-el="afterglow-mindmap"]:has(>.branch:nth-child(6 of .branch)):not(:has(>.branch:nth-child(7 of .branch))){--branch-rows:3;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(1 of .branch){--branch-own:--afterglow-mind-1;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(2 of .branch){--branch-own:--afterglow-mind-2;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(3 of .branch){--branch-own:--afterglow-mind-3;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(4 of .branch){--branch-own:--afterglow-mind-4;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(5 of .branch){--branch-own:--afterglow-mind-5;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(6 of .branch){--branch-own:--afterglow-mind-6;}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(odd of .branch)::after{content:"";position:absolute;left:100%;width:calc(19.5cqw - 28%);top:50%;height:0;border-top:var(--stroke) solid var(--a1);}
+.mindmap[data-el="afterglow-mindmap"]>.branch:nth-child(even of .branch)::after{content:"";position:absolute;right:100%;width:calc(19.5cqw - 28%);top:50%;height:0;border-top:var(--stroke) solid var(--a1);}
+.mindmap[data-el="afterglow-mindmap"]::before,.mindmap[data-el="afterglow-mindmap"]::after{content:"";position:absolute;top:16%;bottom:16%;width:5.5%;border:var(--stroke) solid var(--a1);border-radius:var(--radius);z-index:-1;}
+.mindmap[data-el="afterglow-mindmap"]::before{left:35%;border-left:0;}
+.mindmap[data-el="afterglow-mindmap"]::after{right:35%;border-right:0;}

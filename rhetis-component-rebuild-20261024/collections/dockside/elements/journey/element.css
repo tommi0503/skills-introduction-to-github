@@ -1,0 +1,16 @@
+/* Replica 02/20/24 language; no mapped base: Capsule stage labels, dark divider lines and accent circular markers extend the dock and circle grammar.
+   Newly authored ratios; no page selectors or prior stylesheet layers. */
+.journey[data-el="dockside-journey"]{position:relative;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);font-size:var(--type-16);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.journey[data-el="dockside-journey"] *{box-sizing:border-box;min-width:0}
+.journey[data-el="dockside-journey"]{--dockside-n:5;display:grid;grid-template-columns:repeat(var(--dockside-n),minmax(0,1fr));width:100%;height:100%;max-width:1100px;max-height:500px;align-self:center;justify-self:center}
+.journey[data-el="dockside-journey"]>.stage{position:relative;min-width:0;container-type:size;border-right:1px solid var(--n-3);padding:0 12px}.journey[data-el="dockside-journey"]>.stage:last-child{border-right:0}
+.journey[data-el="dockside-journey"]>.stage::before{content:"";position:absolute;left:50%;top:calc(64% - var(--mood)*.34%);translate:-50% -50%;width:20px;height:20px;box-sizing:border-box;border:4px solid var(--page);border-radius:50%;background:var(--a1);box-shadow:0 4px 8px var(--a1-2-soft);z-index:1}
+.journey[data-el="dockside-journey"]>.stage:not(:last-child)::after{content:"";position:absolute;left:50%;top:calc(64% - var(--mood)*.34%);height:2px;width:hypot(calc(100cqw + 25px),calc((var(--mood) - var(--next))*.34cqh));background:var(--a1-4);transform-origin:0 50%;rotate:atan2(calc((var(--mood) - var(--next))*.34cqh),calc(100cqw + 25px))}
+.journey[data-el="dockside-journey"]>.stage>.name{position:absolute;left:10%;right:10%;top:5%;margin:0;display:grid;place-items:center;min-height:44px;padding:8px;border:2px solid var(--page);border-radius:999px;background:var(--page);box-shadow:0 7px 14px var(--n-2);font-size:clamp(var(--type-12),9cqw,var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);text-align:center;word-break:keep-all}
+.journey[data-el="dockside-journey"]>.stage>.note{position:absolute;left:10%;right:10%;top:74%;margin:0;font-size:clamp(var(--type-12),7cqw,var(--type-16));line-height:var(--body-line);color:var(--n-7);word-break:keep-all}.journey[data-el="dockside-journey"]>.stage>.pain{position:absolute;left:10%;right:10%;top:90%;font-size:var(--type-12);line-height:var(--body-line);color:var(--a1-7);word-break:keep-all}.journey[data-el="dockside-journey"]>.stage.on>.name{background:var(--a1);color:var(--a1-on)}
+@container(max-width:180px){.journey[data-el="dockside-journey"]>.stage>.name{font-size:var(--type-12)}.journey[data-el="dockside-journey"]>.stage>.note{font-size:var(--type-12)}}
+.journey[data-el="dockside-journey"]:has(>.stage:nth-child(3):last-child){--dockside-n:3}
+.journey[data-el="dockside-journey"]:has(>.stage:nth-child(4):last-child){--dockside-n:4}
+.journey[data-el="dockside-journey"]:has(>.stage:nth-child(5):last-child){--dockside-n:5}
+.journey[data-el="dockside-journey"]:has(>.stage:nth-child(6):last-child){--dockside-n:6}
+.journey[data-el="dockside-journey"]:has(>.stage:nth-child(7):last-child){--dockside-n:7}

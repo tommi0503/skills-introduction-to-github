@@ -1,0 +1,12 @@
+/* Fresh component: afterglow replica 04–08, measured white panels, blue captions and 16px corners.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.scatter[data-el="afterglow-chart-scatter"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.scatter[data-el="afterglow-chart-scatter"]{padding:var(--gap-lg);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);background:linear-gradient(to right,transparent calc(50% - .5px),var(--n-4) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(to bottom,transparent calc(50% - .5px),var(--n-4) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px));}
+.scatter[data-el="afterglow-chart-scatter"]>.dot{position:absolute;left:calc(10% + var(--x)/var(--xmax,100)*80%);bottom:calc(10% + var(--y)/var(--ymax,100)*80%);transform:translate(-50%,50%);width:clamp(12px,calc(var(--r,18)*.7cqw),80px);aspect-ratio:1;border-radius:50%;background:var(--n-3);color:var(--ink);display:grid;place-items:center;padding:var(--gap-sm);font-size:var(--type-12);}
+.scatter[data-el="afterglow-chart-scatter"]>.dot.on{background:var(--a1);color:var(--a1-on);}
+.scatter[data-el="afterglow-chart-scatter"]>.axis-x{position:absolute;left:5%;right:5%;bottom:2%;display:flex;justify-content:space-between;font-size:var(--type-12);}
+.scatter[data-el="afterglow-chart-scatter"]>.axis-y{position:absolute;top:3%;bottom:10%;left:2%;display:flex;flex-direction:column;justify-content:space-between;font-size:var(--type-12);}
+.scatter[data-el="afterglow-chart-scatter"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.scatter[data-el="afterglow-chart-scatter"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.scatter[data-el="afterglow-chart-scatter"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.scatter[data-el="afterglow-chart-scatter"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}

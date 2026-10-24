@@ -1,0 +1,1 @@
+A circular measurement field extends the source disc geometry into a spoke chart. Fine neutral rings carry quiet ranked polygons, and a separate right-hand legend keeps series names clear of every axis.

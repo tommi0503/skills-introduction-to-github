@@ -1,0 +1,2 @@
+<!-- min: 8x4 -->
+<div class="code numbered" data-el="confluence-code" style="grid-column:1 / span 12;grid-row:1 / span 6"><div class="name">daily_handover.sql</div><div class="lines"><p><span class="c">-- 검수 완료 건을 권역마다 집계합니다.</span></p><p><span class="k">SELECT</span> 권역명, COUNT(*) AS 인계건수</p><p><span class="k">FROM</span> shipment_events</p><p><span class="k">WHERE</span> 검수상태 = <span class="s">&#39;완료&#39;</span></p><p><span class="k">GROUP BY</span> 권역명</p><p><span class="k">ORDER BY</span> 인계건수 DESC;</p></div></div>

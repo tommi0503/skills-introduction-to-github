@@ -1,0 +1,1 @@
+Two circular pans hang from a fine tilting beam, making the trade-off visible in the geometry. Quiet surfaces and accent titles preserve the source disc language while the owned chains meet the true tilted endpoints.

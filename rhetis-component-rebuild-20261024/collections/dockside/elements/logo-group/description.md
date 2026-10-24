@@ -1,0 +1,1 @@
+The square gray logo seats, bright2px rims and22px corners are extended from the deck’s dock and image insets. A shared row gap and bounded120px maximum keep every logo square at varying counts. Logos remain image placeholders.

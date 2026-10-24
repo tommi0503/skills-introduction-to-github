@@ -1,0 +1,1 @@
+A stepped hierarchy grows from a narrow top level to a broad base. The widening levels are separate glass insets with measured corner and rim language, not an unrelated triangle illustration. Each name and note remains visible. No replica pyramid base exists.

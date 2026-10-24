@@ -1,0 +1,1 @@
+Replica 20 supplies the bare investment figure: a caption capsule above, a 120px number with a 52px unit, and a dotted separator above its 17px note. The separate gray backing panel is explicitly a gap rather than smuggled into a metric surface.

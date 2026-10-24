@@ -1,0 +1,52 @@
+/* Replica 04, 345×349 floating accent caption over a white rounded content panel. The quiet feature column comes only from replica 06.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.card[data-el="diecut-card"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.card[data-el="diecut-card"] *,.card[data-el="diecut-card"] *::before,.card[data-el="diecut-card"] *::after{box-sizing:border-box}
+.card[data-el="diecut-card"] :is(p,h2,blockquote){margin:0}
+
+.card[data-el="diecut-card"] {display:grid;place-items:center}
+.card[data-el="diecut-card"] > .parts{position:relative;container-type:size;anchor-scope:all;isolation:isolate;width:min(100cqw,98.854cqh,calc(var(--gap)*26));height:min(100cqh,101.159cqw,calc(var(--gap)*26.3));min-width:0;min-height:0;text-align:center}
+.card[data-el="diecut-card"] > .parts::before{content:'';position:absolute;inset:0;background:var(--n-1);border-radius:var(--radius);z-index:-1}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.kick)::before{top:15.186%}
+.card[data-el="diecut-card"] > .parts > .kick{position:absolute;left:0;right:0;top:0;height:12.034%;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--a1);color:var(--a1-on);font-size:clamp(var(--type-12),7.536cqw,var(--type-32));font-weight:var(--name-weight);line-height:var(--label-line);padding-inline:var(--gap-sm)}
+.card[data-el="diecut-card"] > .parts > .name{position:absolute;left:4.348%;right:4.348%;top:23.496%;anchor-name:--diecut-card-name;display:block;font-size:clamp(var(--type-14),6.377cqw,var(--type-32));font-weight:var(--name-weight);line-height:var(--body-line);letter-spacing:var(--name-track);word-break:keep-all;overflow-wrap:anywhere}
+.card[data-el="diecut-card"] > .parts > .note{position:absolute;left:4.348%;right:4.348%;top:calc(anchor(--diecut-card-name bottom) + 6.36cqh);bottom:8.825%;font-size:clamp(var(--type-12),5.217cqw,var(--type-28));line-height:var(--body-line);color:var(--ink);word-break:keep-all;display:flex;flex-direction:column;justify-content:space-between;min-height:0}
+.card[data-el="diecut-card"] > .parts > .note > *:not(b):not(em){flex:none;width:100%;height:52%;min-height:0}
+.card[data-el="diecut-card"] > .parts > .note > b{flex:none;display:block;padding-top:7.45cqh;border-top:var(--stroke) solid var(--ink);font-size:clamp(var(--type-12),5.217cqw,var(--type-26));font-weight:var(--name-weight);line-height:var(--body-line)}
+.card[data-el="diecut-card"] > .parts > .fig{position:absolute;left:4%;right:4%;top:23%;font-size:clamp(var(--type-24),16.23cqw,var(--type-72));font-weight:var(--figure-weight);line-height:var(--figure-line);font-variant-numeric:tabular-nums;letter-spacing:var(--figure-track);white-space:nowrap}
+.card[data-el="diecut-card"] > .parts > .fig > small{font-size:clamp(var(--type-12),5.8cqw,var(--type-26));font-weight:var(--body-weight)}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.fig) > .name{top:43%}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.fig) > .note{top:calc(anchor(--diecut-card-name bottom) + 3cqh)}
+.card[data-el="diecut-card"] > .parts > .mark{position:absolute;left:39.565%;top:20%;width:20.87%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--a1-2-soft);font-size:clamp(var(--type-14),7cqw,var(--type-32));font-weight:var(--label-weight);line-height:var(--label-line)}
+.card[data-el="diecut-card"] > .parts > .mark > .icon{display:block;width:56%;height:56%}
+.card[data-el="diecut-card"] > .parts > .mark > .seat{display:grid;place-items:center;width:100%;height:100%;aspect-ratio:1;border-radius:0;font-size:clamp(var(--type-12),4cqw,var(--type-20))}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.mark) > .name{top:45%}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.mark) > .note{top:calc(anchor(--diecut-card-name bottom) + 3cqh)}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.fig):has(>.mark) > .mark{top:9%;left:42%;width:16%}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.fig):has(>.mark) > .fig{top:28%}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.fig):has(>.mark) > .name{top:50%}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.fig):has(>.mark) > .note{font-size:clamp(var(--type-12),4.64cqw,var(--type-24))}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.note>em) > .name{top:33%}
+.card[data-el="diecut-card"]:not(.quiet) > .parts:has(>.note>em) > .note{top:60%;bottom:8%;font-size:clamp(var(--type-12),5.217cqw,var(--type-26));display:block}
+.card[data-el="diecut-card"].on > .parts::before,.card[data-el="diecut-card"].on > .parts > .kick{background:var(--a1);color:var(--a1-on)}
+.card[data-el="diecut-card"].on > .parts{color:var(--a1-on)}
+.card[data-el="diecut-card"].on > .parts > .note{color:var(--a1-on)}
+.card[data-el="diecut-card"].line > .parts::before{background:var(--page);border:var(--stroke) solid var(--n-4)}
+.card[data-el="diecut-card"].tone-1 > .parts::before{background:var(--a1-2-soft)}
+.card[data-el="diecut-card"].tone-2 > .parts::before,.card[data-el="diecut-card"].tone-3 > .parts::before,.card[data-el="diecut-card"].tone-4 > .parts::before,.card[data-el="diecut-card"].tone-5 > .parts::before{background:var(--n-2)}
+/* quiet is the actual arched feature column of replica 06. */
+.card[data-el="diecut-card"].quiet > .parts{width:min(100cqw,35.106cqh,calc(var(--gap)*14));height:min(100cqh,284.848cqw,calc(var(--gap)*39.88))}
+.card[data-el="diecut-card"].quiet > .parts::before{inset:0;border:0;border-radius:50% 50% 0 0 / 18% 18% 0 0;background:var(--n-1)}
+.card[data-el="diecut-card"].quiet > .parts > .mark{left:25.455%;top:7.66%;width:49.697%;height:17.447%;aspect-ratio:1;border-radius:0;background:none}
+.card[data-el="diecut-card"].quiet > .parts > .mark > .icon{width:100%;height:100%}
+.card[data-el="diecut-card"].quiet > .parts > .name{left:4.848%;right:4.848%;top:29.787%;font-size:clamp(var(--type-14),13.939cqw,var(--type-32));line-height:var(--diecut-feature-name-line)}
+.card[data-el="diecut-card"].quiet > .parts > .note{left:2.424%;right:2.424%;top:47.447%;bottom:21.5%;font-size:clamp(var(--type-12),9.697cqw,var(--type-24));line-height:var(--body-line);display:block}
+.card[data-el="diecut-card"].quiet > .parts > .fig{left:0;right:0;top:78.51%;font-size:clamp(var(--type-28),35.758cqw,var(--type-80));font-weight:var(--diecut-index-weight);line-height:var(--body-line)}
+.card[data-el="diecut-card"].quiet > .parts > .kick{top:18%;left:10%;right:10%;height:auto;min-height:6%;font-size:clamp(var(--type-12),7cqw,var(--type-20));background:none;color:var(--ink)}
+.card[data-el="diecut-card"].quiet > .parts:not(:has(>.mark)) > .name{top:26%}
+.card[data-el="diecut-card"].quiet > .parts:not(:has(>.mark)) > .note{top:calc(anchor(--diecut-card-name bottom) + 3cqh);bottom:10%}
+@container(max-width:240px){.card[data-el="diecut-card"]:not(.quiet) > .parts > .note{font-size:var(--type-12)}.card[data-el="diecut-card"]:not(.quiet) > .parts > .note>b{font-size:var(--type-12);padding-top:var(--gap-sm)}.card[data-el="diecut-card"]:not(.quiet) > .parts > .kick{font-size:clamp(var(--type-12),6cqw,var(--type-16))}}
+
+
+/* The required model icon remains unchanged, centered inside its allotted icon box. */
+.card[data-el="diecut-card"]>.parts>.mark>.icon{display:grid;place-items:center;line-height:var(--label-line)}

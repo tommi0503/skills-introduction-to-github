@@ -1,0 +1,1 @@
+A thin actual capsule overlays three quiet qualitative bands, with a crisp target stroke. Names and figures remain above the track; the grouped form stacks complete measures without mixing their targets.

@@ -1,0 +1,1 @@
+A strict containment diagram uses truly nested circles. White rims and soft accent washes extend the measured circles of20/24; every label and figure sits in its own annulus. The accent core marks the innermost scope. A larger honest minimum preserves four readable annuli.

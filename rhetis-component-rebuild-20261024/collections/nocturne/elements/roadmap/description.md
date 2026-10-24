@@ -1,0 +1,1 @@
+Measured capsule spans sit on quiet dotted work tracks. Each duration follows the supplied period coordinates, and one accent span marks the execution priority without turning the plan into a second visual style.

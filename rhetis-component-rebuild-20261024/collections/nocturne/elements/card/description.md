@@ -1,0 +1,1 @@
+A filled circular information card measured from the three KPI discs on replica 20. A restrained outline encloses a centered label and accent figure. Optional marks and supporting copy occupy an inscribed square, keeping every part inside the circle; emphasis and quiet states change the material while preserving the disc geometry.

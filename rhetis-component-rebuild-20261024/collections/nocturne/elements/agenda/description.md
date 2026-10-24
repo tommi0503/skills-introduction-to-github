@@ -1,0 +1,1 @@
+A numbered agenda combines the measured circular number language with the dotted rows of the message panel. The active entry receives a single soft accent; long contents lists reduce secondary detail before reducing their names.

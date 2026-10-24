@@ -1,0 +1,1 @@
+Fine radial rules and quiet circular guide rings sit inside a true multi-axis boundary. Each filled polygon follows the contract values clockwise from the top; palette-soft fills keep overlapping series readable.

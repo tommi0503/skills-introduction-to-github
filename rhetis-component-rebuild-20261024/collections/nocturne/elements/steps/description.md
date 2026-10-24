@@ -1,0 +1,1 @@
+A sequence of circular numbered measures joins with a fine neutral rule and compact arrowheads. Names align below the discs, and the column variant rotates the same owned connectors into a vertical reading order.

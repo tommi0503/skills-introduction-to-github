@@ -1,0 +1,1316 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>confluence / flowchart / light</title><link rel="stylesheet" href="../assets/fonts/fonts.css"><style>html,body{margin:0;width:1280px;height:720px;overflow:hidden}.slide{--confluence-cover-note-track:-.040625em;--confluence-center-track:-.0625em;--confluence-side-weight:800;--confluence-head-weight:850;--confluence-cover-subweight:400;--confluence-cover-weight:900;--confluence-tiny-track:0em;--confluence-side-note-track:-.030769em;--confluence-side-line:1;--confluence-sub-line:1.05;--confluence-cover-line:.92;--confluence-side-track:.035em;--confluence-caps-track:.311111em;--confluence-cover-subtrack:-.055319em;--confluence-cover-track:-.0625em;--confluence-font-code:'Nanum Gothic Coding';--page:#ffffff;--ink:#111111;--font-display:'Pretendard Variable';--font-body:'Pretendard Variable';--weight-display:800;--weight-body:400;--tracking-display:-.025em;--radius:17px;--radius-sm:8px;--stroke:1px;--text-min:12px;--margin-x:78px;--margin-y:58px;--gap:20px;--gap-sm:10px;--gap-lg:40px;--pad:24px;--furn-edge:24px;--top-h:74px;--foot-h:28px;--furn-gap:20px;--rail-w:76px;--rail-gap:28px;--title-weight:800;--title-line:1.2;--title-track:-.025em;--lead-weight:500;--lead-line:1.4;--lead-track:-.015em;--figure-weight:800;--figure-line:1.05;--figure-track:-.03em;--name-weight:800;--name-line:1.25;--name-track:-.02em;--body-weight:400;--body-line:1.5;--body-track:-.015em;--label-weight:750;--label-line:1.2;--label-track:0em;--label-track-latin:.02em;}
+.slide.dark{--page:#13110f;--ink:#faf9f6}
+
+/* Fresh foundation: page furniture and a 12 by 6 allocation grid. */
+.slide{position:relative;width:1280px;height:720px;overflow:hidden;background:var(--page);color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.slide *{box-sizing:border-box}.slide .page{position:absolute;inset:var(--margin-y) var(--margin-x);display:flex;flex-direction:column;gap:var(--furn-gap);min-width:0;min-height:0;z-index:1}
+.slide .head{flex:0 0 auto;min-height:0;position:relative;display:flex;flex-direction:column;gap:var(--gap-sm)}
+.slide .head.center{text-align:center;align-items:center}.slide .kicker{margin:0;font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin)}
+.slide .title{margin:0;font-size:var(--type-44);font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track)}.slide .title b{color:var(--a1);font-weight:inherit}
+.slide .lead{margin:0;font-size:var(--type-18);font-weight:var(--lead-weight);line-height:var(--lead-line);letter-spacing:var(--lead-track)}
+.slide .body{position:relative;flex:1;min-height:0;min-width:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:var(--gap);isolation:isolate}
+.slide .body>*{min-width:0;min-height:0}.slide .group{display:flex;align-items:stretch;justify-content:center;gap:var(--gap);min-width:0;min-height:0}.slide .group>*{flex:1;min-width:0;min-height:0}.slide .group.col,.slide .stack{display:flex;flex-direction:column;gap:var(--gap);min-width:0;min-height:0}.slide .stack>*{flex:1;min-height:0;min-width:0}.slide .group.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.slide .group.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.slide .split{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:var(--gap);min-width:0;min-height:0}.slide .split.wide-left{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+.slide .seat{display:grid;place-items:center;min-width:0;min-height:0;background:var(--n-2);color:var(--n-7);font-size:var(--type-14);font-weight:var(--label-weight);border-radius:var(--radius-sm);aspect-ratio:1}.slide .seat.avatar{border-radius:50%}.slide .seat.logo{aspect-ratio:1;max-height:100%}.slide .seat.back{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;z-index:-1}
+.slide .top{display:flex;align-items:center;justify-content:space-between;gap:var(--gap);font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track-latin);flex:0 0 var(--top-h);position:relative}.slide .deck,.slide .sec{display:flex;align-items:center;gap:var(--gap-sm)}.slide .top .seat{width:28px;height:28px}.slide .foot{display:flex;align-items:center;justify-content:space-between;font-size:var(--type-12);line-height:var(--label-line);position:absolute;bottom:0;left:0;right:0}.slide .rail{position:absolute;left:calc(-1 * (var(--rail-w) + var(--rail-gap)));top:0;bottom:0;width:var(--rail-w);display:flex;flex-direction:column;justify-content:space-evenly;gap:var(--gap-sm)}.slide .rail .seat{width:100%;aspect-ratio:1}.slide .rail .on{outline:var(--stroke) solid var(--a1)}.slide:has(.rail) .page{left:calc(var(--rail-w) + var(--rail-gap) + var(--furn-edge))}
+.slide.cover .page{display:block}.slide .lockup{position:absolute;display:flex;flex-direction:column;gap:var(--gap)}.slide .lockup .title{font-size:var(--type-80)}.slide .at-center{top:50%;left:50%;width:100%;transform:translate(-50%,-50%);text-align:center}.slide .at-left{top:50%;left:0;transform:translateY(-50%);max-width:70%}.slide .at-bottom-left{bottom:0;left:0;max-width:80%}.slide .at-top-left{top:0;left:0;max-width:80%}.slide .meta{position:absolute;bottom:0;right:0;font-size:var(--type-14);line-height:var(--label-line)}.slide .deco{position:absolute;inset:0;z-index:-1;pointer-events:none}
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source furniture: cover 01, central head 02, left rail 03. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source furniture: cover 01, central head 02, left rail 03. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source furniture: cover 01, central head 02, left rail 03. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source furniture: cover 01, central head 02, left rail 03. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source furniture: cover 01, central head 02, left rail 03. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source furniture: cover 01, central head 02, left rail 03. */
+
+.slide .seat[data-ph]:empty::after{content:attr(data-ph);font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line)}
+/* Source furniture: cover 01, central head 02, left rail 03. */
+.slide{background:linear-gradient(var(--a1-1-soft),var(--a2-1-soft))}.slide::after{content:"";position:absolute;bottom:0;left:0;right:0;height:8px;background:linear-gradient(to right,var(--a1) 0 50%,var(--a2) 50%)}
+.slide .page{inset:75px 94px;gap:0}
+.slide .head.center{position:absolute;left:0;right:0;top:76px;gap:0}
+.slide .head.center .title{font-size:var(--type-64);font-weight:var(--confluence-head-weight);line-height:var(--title-line);letter-spacing:var(--confluence-center-track);color:var(--a1)}
+.slide .head.center .title b{color:var(--a2)}
+.slide .head.center .kicker{order:2;margin-top:6px;font-size:var(--type-10);letter-spacing:var(--confluence-caps-track);color:var(--n-7)}
+.slide .head.center .seat{position:absolute;left:465px;top:-127px;width:160px;height:126px}
+.slide .head.center::before,.slide .head.center::after{content:"";position:absolute;top:40px;width:36.3%;border-top:var(--stroke) solid var(--n-3)}
+.slide .head.center::before{left:0}.slide .head.center::after{right:0}
+.slide .head.center+.body{margin-top:197px}
+.slide.cover .page{inset:0}
+.slide.cover .lockup{left:701px;top:166px;width:525px;max-width:none;transform:none;gap:0;display:block}
+.slide.cover .lockup>.kicker{font-size:var(--type-8);letter-spacing:var(--confluence-caps-track);color:var(--n-5);margin-bottom:8px}
+.slide.cover .lockup>.lead{font-size:clamp(var(--type-44),3.671875cqw,var(--type-48));line-height:var(--confluence-sub-line);letter-spacing:var(--confluence-cover-subtrack);font-weight:var(--confluence-cover-subweight);color:var(--n-7)}
+.slide.cover .lockup>.title{font-size:var(--type-128);font-weight:var(--confluence-cover-weight);line-height:var(--confluence-cover-line);letter-spacing:var(--confluence-cover-track);height:253px;margin-top:8px;color:var(--ink)}
+.slide.cover .lockup>.title>b{color:var(--a1)}.slide.cover .lockup>.title>b>b{color:var(--a2)}
+.slide.cover .lockup>.label{display:block;font-size:var(--type-16);letter-spacing:var(--confluence-cover-note-track);margin-top:-1.5px;line-height:var(--body-line)}
+.slide.cover .lockup>.src{display:block;margin-top:8px;width:433px;font-size:var(--type-8);line-height:var(--body-line);letter-spacing:var(--confluence-tiny-track);color:var(--n-7)}
+.slide.cover .seat.portrait{position:absolute;left:108px;top:111px;width:510px;height:520px;border-radius:0}
+.slide.cover .seat.logo{position:absolute;right:23px;top:22px;width:35px;height:36px;border-radius:0}
+.slide:has(.rail) .page{left:420px}
+.slide .rail{position:absolute;left:-326px;top:0;bottom:0;width:232px;display:block}
+.slide .rail::after{content:"";position:absolute;left:279px;top:1px;bottom:1px;border-left:var(--stroke) solid var(--n-3)}
+.slide .rail>.seat{width:130px;height:145px;border-radius:0}
+.slide .rail>.title{margin-top:17px;font-size:var(--type-60);font-weight:var(--confluence-side-weight);line-height:var(--confluence-side-line);letter-spacing:var(--confluence-side-track);color:var(--a1);height:125px}
+.slide .rail>.title b{color:var(--a2)}
+.slide .rail>.kicker{font-size:var(--type-10);letter-spacing:var(--confluence-caps-track);margin-top:8px;color:var(--a1-3)}
+.slide .rail>.lead{font-size:clamp(var(--type-12),1.015625cqw,var(--type-14));line-height:var(--body-line);letter-spacing:var(--confluence-side-note-track);margin-top:21px;color:var(--n-7)}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.agenda[data-el="confluence-agenda"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.agenda[data-el="confluence-agenda"]:has(>.entry:nth-child(4)){--agenda-rows:2;}
+.agenda[data-el="confluence-agenda"]:has(>.entry:nth-child(7)){--agenda-rows:3;}
+.agenda[data-el="confluence-agenda"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:6.5% 2.5%;--agenda-rows:1;padding-top:calc(13cqh / var(--agenda-rows));}
+.agenda[data-el="confluence-agenda"]>.entry{position:relative;min-height:0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8%;background:var(--page);border-radius:var(--radius);padding:8% 6%;box-shadow:0 7px 8px color-mix(in srgb,var(--n-6) 13%,transparent);}
+.agenda[data-el="confluence-agenda"] .mark{position:absolute;top:-13%;width:15.3%;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;border:7px solid var(--page);background:var(--a2);color:var(--a2-on);font-size:clamp(var(--type-12),1.65cqw,var(--type-20));font-weight:var(--label-weight);}
+.agenda[data-el="confluence-agenda"]>.entry:nth-child(even) .mark{background:var(--a1);color:var(--a1-on);}
+.agenda[data-el="confluence-agenda"] .name{font-size:clamp(var(--type-16),2.93cqw,var(--type-36));font-weight:var(--name-weight);line-height:var(--name-line);}
+.agenda[data-el="confluence-agenda"] .note{width:100%;border-top:var(--stroke) solid var(--n-3);padding-top:5%;font-size:clamp(var(--type-12),1.2cqw,var(--type-16));line-height:var(--body-line);}
+@container (max-width:720px){.agenda[data-el="confluence-agenda"] .mark{border-width:4px;}
+.agenda[data-el="confluence-agenda"] .name{font-size:var(--type-18);}
+.agenda[data-el="confluence-agenda"] .note{font-size:var(--type-12);}
+}
+.agenda[data-el="confluence-agenda"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.agenda[data-el="confluence-agenda"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.agenda[data-el="confluence-agenda"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.agenda[data-el="confluence-agenda"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+.agenda[data-el="confluence-agenda"] .name{font-weight:var(--confluence-agenda-name-weight);line-height:var(--confluence-agenda-name-line);letter-spacing:var(--confluence-agenda-name-track);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.arch[data-el="confluence-architecture"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.arch[data-el="confluence-architecture"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm);}
+.arch[data-el="confluence-architecture"]>.layer{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;align-items:center;justify-content:space-between;gap:var(--gap);padding:var(--pad);min-height:0;}
+.arch[data-el="confluence-architecture"] .name{font-size:var(--type-20);font-weight:var(--name-weight);}
+.arch[data-el="confluence-architecture"] .chip{padding:var(--gap-sm);border-radius:999px;background:var(--a1-2-soft);color:var(--a1-9);font-size:var(--type-14);}
+.arch[data-el="confluence-architecture"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.arch[data-el="confluence-architecture"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.arch[data-el="confluence-architecture"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.arch[data-el="confluence-architecture"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh inferred balance: confluence source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.balance[data-el="confluence-balance"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.balance[data-el="confluence-balance"] *{box-sizing:border-box;}
+.balance[data-el="confluence-balance"] .name,.balance[data-el="confluence-balance"] .leaf,.balance[data-el="confluence-balance"] .item{margin:0;}
+.balance[data-el="confluence-balance"]{display:flex;align-items:center;gap:16%;padding:0;}
+.balance[data-el="confluence-balance"]>.pan{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);width:42%;min-height:40%;position:relative;display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--gap);text-align:center;transform:translateY(calc(var(--tilt)*-.15cqh));}
+.balance[data-el="confluence-balance"]>.pan:nth-child(2){transform:translateY(calc(var(--tilt)*.15cqh));}
+.balance[data-el="confluence-balance"]>.pan>.name{font-size:clamp(var(--type-16),2.8cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);color:var(--a1-8);}
+.balance[data-el="confluence-balance"]>.pan>.item{font-size:var(--type-14);line-height:var(--body-line);}
+.balance[data-el="confluence-balance"]>.pan.on{border-top:5px solid var(--a1);}
+.balance[data-el="confluence-balance"]>.fulcrum{position:absolute;left:40%;right:40%;bottom:6%;height:24%;background:var(--a1);color:var(--a1-on);clip-path:polygon(50% 0,100% 100%,0 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:var(--gap-sm);font-size:var(--type-12);line-height:var(--label-line);}
+.balance[data-el="confluence-balance"]::before{content:"";position:absolute;left:8%;right:8%;top:67%;border-top:3px solid var(--a1);transform:rotate(calc(var(--tilt)*.12deg));z-index:-1;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.balance[data-el="confluence-balance"]>.pan>.name{background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4);}
+
+/* Fresh inferred bullet: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.bullet[data-el="confluence-bullet"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.bullet[data-el="confluence-bullet"] *{box-sizing:border-box;}
+.bullet[data-el="confluence-bullet"] p,.bullet[data-el="confluence-bullet"] .name,.bullet[data-el="confluence-bullet"] .note,.bullet[data-el="confluence-bullet"] .fig,.bullet[data-el="confluence-bullet"] .kick{margin:0;}
+.bullets[data-el="confluence-bullet"]{position:relative;container-type:size;display:flex;flex-direction:column;gap:var(--gap);min-height:0;}
+.bullets[data-el="confluence-bullet"]>.bullet{flex:1;min-height:0;width:100%;}
+.bullet[data-el="confluence-bullet"]{padding:0;}
+.bullet[data-el="confluence-bullet"]>.name{position:absolute;left:0;top:50%;transform:translateY(-50%);width:26%;font-size:clamp(var(--type-12),3cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);}
+.bullet[data-el="confluence-bullet"]>.fig{position:absolute;left:32%;top:9%;font-size:clamp(var(--type-16),4cqw,var(--type-28));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-8);}
+.bullet[data-el="confluence-bullet"]>.note{position:absolute;left:32%;right:0;bottom:5%;font-size:var(--type-12);line-height:var(--label-line);}
+.bullet[data-el="confluence-bullet"]::before{content:"";position:absolute;left:32%;right:3%;top:51%;height:16%;min-height:8px;max-height:24px;border-radius:var(--radius-sm);background-image:linear-gradient(var(--a1),var(--a1)),linear-gradient(to right,var(--n-2) 0 calc(var(--low,40)*1%),var(--n-3) calc(var(--low,40)*1%) calc(var(--high,75)*1%),var(--n-4) calc(var(--high,75)*1%) 100%);background-size:calc(var(--v)*1%) 40%,100% 100%;background-position:left center,left top;background-repeat:no-repeat;}
+.bullet[data-el="confluence-bullet"]::after{content:"";position:absolute;left:calc(32% + var(--target)*.65%);top:45%;height:28%;border-left:3px solid var(--ink);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.callout[data-el="confluence-callout"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.callout[data-el="confluence-callout"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);}
+.callout[data-el="confluence-callout"]>p{font-size:clamp(var(--type-16),3.1cqw,var(--type-32));line-height:var(--lead-line);font-weight:var(--lead-weight);margin:0;}
+.callout[data-el="confluence-callout"]>p>b{color:var(--a1-8);font-weight:var(--title-weight);}
+.callout[data-el="confluence-callout"]>.icon{width:clamp(24px,8cqw,56px);height:clamp(24px,8cqw,56px);flex:none;color:var(--a1);}
+.callout[data-el="confluence-callout"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.callout[data-el="confluence-callout"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.callout[data-el="confluence-callout"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.callout[data-el="confluence-callout"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.card[data-el="confluence-card"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.card[data-el="confluence-card"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;align-items:stretch;}
+.card[data-el="confluence-card"]>.parts{width:100%;min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(var(--gap-sm),4cqw,var(--pad));gap:clamp(var(--gap-sm),2cqh,var(--gap));}
+.card[data-el="confluence-card"]>.parts{justify-content:flex-start;padding:5%;gap:3cqh;}
+.card[data-el="confluence-card"]>.parts>.kick{width:100%;min-height:16%;display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);border-radius:var(--radius-sm);background:var(--a1);color:var(--a1-on);font-size:clamp(var(--type-16),10.7cqw,var(--type-28));font-weight:var(--label-weight);margin:0;}
+.card[data-el="confluence-card"]>.parts>.name{color:var(--a1-8);font-size:clamp(var(--type-14),8.2cqw,var(--type-24));font-weight:var(--name-weight);margin-top:6cqh;line-height:var(--name-line);}
+.card[data-el="confluence-card"]>.parts>.fig{font-size:clamp(var(--type-28),21.5cqw,var(--type-56));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.card[data-el="confluence-card"]>.parts>.fig:has(br){font-size:clamp(var(--type-18),10cqw,var(--type-24));}
+.card[data-el="confluence-card"]>.parts>.note{width:100%;font-size:clamp(var(--type-12),6.2cqw,var(--type-16));line-height:var(--body-line);border-top:var(--stroke) dashed var(--a1-3);padding-top:7cqh;margin-top:4cqh;}
+.card[data-el="confluence-card"]>.parts>.note p{margin:0 0 3cqh;}
+.card[data-el="confluence-card"]>.parts>.note b{display:block;color:var(--a1-8);font-size:clamp(var(--type-14),8.2cqw,var(--type-20));font-weight:var(--name-weight);}
+.card[data-el="confluence-card"]>.parts>.mark{display:grid;place-items:center;max-width:42%;max-height:34%;aspect-ratio:1;}
+.card[data-el="confluence-card"]>.parts>.mark>.seat{width:100%;height:100%;aspect-ratio:1;}
+.card[data-el="confluence-card"]>.parts>.mark>.icon{width:56%;height:56%;}
+.card[data-el="confluence-card"].quiet{background:var(--n-1);border-color:var(--n-2);}
+.card[data-el="confluence-card"].on{background:var(--a1);color:var(--a1-on);border-color:var(--a1);}
+.card[data-el="confluence-card"].on>.parts>.name,.card[data-el="confluence-card"].on>.parts>.note,.card[data-el="confluence-card"].on>.parts>.fig{color:inherit;}
+.card[data-el="confluence-card"].line{background:none;border-color:var(--a1);color:var(--ink);}
+.card[data-el="confluence-card"].tone-1{background:var(--a1-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-2{background:var(--a2-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-3{background:var(--a3-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-4{background:var(--a4-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-5{background:var(--a1-1-soft);color:var(--ink);}
+@container (max-height:420px){.card[data-el="confluence-card"]>.parts{gap:1cqh;}
+.card[data-el="confluence-card"]>.parts>.name{margin-top:2cqh;font-size:var(--type-18);}
+.card[data-el="confluence-card"]>.parts>.note{padding-top:3cqh;margin-top:2cqh;font-size:var(--type-12);}
+.card[data-el="confluence-card"]>.parts>.fig{font-size:var(--type-36);}
+}
+@container (max-height:220px){.card[data-el="confluence-card"]>.parts{padding:var(--gap-sm);gap:var(--gap-sm);}
+.card[data-el="confluence-card"]>.parts>.note{margin-top:0;padding-top:var(--gap-sm);font-size:var(--type-12);}
+.card[data-el="confluence-card"]>.parts>.mark{max-height:32%;}
+.card[data-el="confluence-card"]>.parts>.name{margin-top:0;}
+}
+.card[data-el="confluence-card"]>.parts>.name,.card[data-el="confluence-card"]>.parts>.note b{font-weight:var(--confluence-field-label-weight);}
+.card[data-el="confluence-card"]>.parts>.kick,.card[data-el="confluence-card"]>.parts>.name,.card[data-el="confluence-card"]>.parts>.note b{letter-spacing:var(--confluence-card-track);}
+
+/* The required model icon remains unchanged, centered inside its allotted icon box. */
+.card[data-el="confluence-card"]>.parts>.mark>.icon{display:grid;place-items:center;line-height:var(--label-line)}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.areas[data-el="confluence-chart-area"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.areas[data-el="confluence-chart-area"]{--chart-head:64px;--chart-foot:36px;--plot-h:calc(100cqh - var(--chart-head) - var(--chart-foot));--plot-color:var(--a1);--plot-ink:var(--a1-8);position:relative;anchor-scope:all;}
+.areas[data-el="confluence-chart-area"]>.series{position:absolute;inset:var(--chart-head) 4% var(--chart-foot);display:flex;align-items:flex-end;justify-content:space-between;anchor-scope:all;--plot-color:var(--a1);--plot-ink:var(--a1-8);}
+.areas[data-el="confluence-chart-area"]>.series>.name{position:absolute;top:calc(-1 * var(--chart-head) + 8px);left:calc(var(--series-index,0)*25%);max-width:24%;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--ink);}
+.areas[data-el="confluence-chart-area"]>.series:nth-child(1 of .series){--series-index:0;--plot-color:var(--a1);--plot-ink:var(--a1-8);z-index:4;}
+.areas[data-el="confluence-chart-area"]>.series:nth-child(2 of .series){--series-index:1;--plot-color:var(--a2);--plot-ink:var(--a2-8);z-index:3;}
+.areas[data-el="confluence-chart-area"]>.series:nth-child(3 of .series){--series-index:2;--plot-color:var(--a3);--plot-ink:var(--a3-8);z-index:2;}
+.areas[data-el="confluence-chart-area"]>.series:nth-child(4 of .series){--series-index:3;--plot-color:var(--a4);--plot-ink:var(--a4-8);z-index:1;}
+.areas[data-el="confluence-chart-area"]>.axis{position:absolute;bottom:0;left:4%;right:4%;height:var(--chart-foot);display:flex;align-items:center;justify-content:space-between;border-top:var(--stroke) solid var(--n-4);}
+.areas[data-el="confluence-chart-area"]>.axis>span{flex:1;min-width:0;text-align:center;font-size:var(--type-12);line-height:var(--label-line);}
+.areas[data-el="confluence-chart-area"]:not(:has(>.axis>span:not(:empty)))>.series{left:3.5px;right:3.5px;}
+.areas[data-el="confluence-chart-area"]:not(:has(>.series>.name:not(:empty))){--chart-head:3.5px;}
+.areas[data-el="confluence-chart-area"]:not(:has(>.axis>span:not(:empty))){--chart-foot:0px;}
+.areas[data-el="confluence-chart-area"]>.series>.pt{position:static;flex:none;width:1px;height:1px;margin-bottom:calc(var(--v)/var(--max,100)*var(--plot-h));anchor-name:var(--own);box-shadow:0 0 0 3px var(--plot-color);border-radius:50%;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(1 of .pt){--own:--confluence-area-1;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(2 of .pt){--own:--confluence-area-2;--previous:--confluence-area-1;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(3 of .pt){--own:--confluence-area-3;--previous:--confluence-area-2;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(4 of .pt){--own:--confluence-area-4;--previous:--confluence-area-3;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(5 of .pt){--own:--confluence-area-5;--previous:--confluence-area-4;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(6 of .pt){--own:--confluence-area-6;--previous:--confluence-area-5;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(7 of .pt){--own:--confluence-area-7;--previous:--confluence-area-6;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(8 of .pt){--own:--confluence-area-8;--previous:--confluence-area-7;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(9 of .pt){--own:--confluence-area-9;--previous:--confluence-area-8;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(10 of .pt){--own:--confluence-area-10;--previous:--confluence-area-9;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(11 of .pt){--own:--confluence-area-11;--previous:--confluence-area-10;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:nth-child(12 of .pt){--own:--confluence-area-12;--previous:--confluence-area-11;}
+.areas[data-el="confluence-chart-area"]>.series>.pt>b{position:absolute;left:anchor(var(--own) center);top:calc(anchor(var(--own) top) - 12px);transform:translate(-50%,-100%);white-space:nowrap;font-size:clamp(var(--type-12),1.5cqw,var(--type-18));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--plot-ink);}
+.areas[data-el="confluence-chart-area"]>.series>.pt::before{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--previous) top) - var(--plot-h));bottom:0;background:linear-gradient(to top,transparent,color-mix(in srgb,var(--plot-color) 25%,transparent));background-size:100% var(--plot-h);background-position:bottom;clip-path:polygon(0 var(--plot-h),100% calc(100% - var(--v)/var(--max,100)*var(--plot-h)),100% 100%,0 100%);}
+.areas[data-el="confluence-chart-area"]>.series>.pt::after{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--previous) top) - var(--plot-h));bottom:0;background:var(--plot-color);clip-path:polygon(0 calc(var(--plot-h) - .7px),100% calc(100% - var(--v)/var(--max,100)*var(--plot-h) - .7px),100% calc(100% - var(--v)/var(--max,100)*var(--plot-h) + .7px),0 calc(var(--plot-h) + .7px));}
+.areas[data-el="confluence-chart-area"].stacked>.series>.pt::before{background:var(--plot-color);opacity:1;}
+.areas[data-el="confluence-chart-area"]>.series>.pt:first-child::before,.areas[data-el="confluence-chart-area"]>.series>.pt:first-child::after{content:none;}
+@container (max-width:650px){.areas[data-el="confluence-chart-area"]>.axis>span:nth-child(even){visibility:hidden;}
+}
+.areas[data-el="confluence-chart-area"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.areas[data-el="confluence-chart-area"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.areas[data-el="confluence-chart-area"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.areas[data-el="confluence-chart-area"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.areas[data-el="confluence-chart-area"]{background-color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+.areas[data-el="confluence-chart-area"]>.series>.name:not(:empty){background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.bars[data-el="confluence-chart-bar"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.bars[data-el="confluence-chart-bar"]{display:flex;align-items:stretch;gap:2%;padding:var(--gap) var(--gap-sm) calc(var(--gap-lg) + var(--type-16));border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,transparent 0 calc(25% - 1px),var(--n-2) calc(25% - 1px) 25%);}
+.bars[data-el="confluence-chart-bar"]>.bar{flex:1;min-width:0;position:relative;display:flex;align-items:stretch;justify-content:flex-end;flex-direction:column;}
+.bars[data-el="confluence-chart-bar"]>.bar::before{content:"";position:absolute;left:15%;right:15%;bottom:0;height:calc(var(--v)/var(--max,100)*85%);background:linear-gradient(var(--a1),var(--a1-2-soft));border-radius:var(--radius-sm) var(--radius-sm) 0 0;}
+.bars[data-el="confluence-chart-bar"]>.bar:not(.on)::before{background:linear-gradient(var(--n-5),var(--n-2));}
+.bars[data-el="confluence-chart-bar"]>.bar>b{position:absolute;bottom:calc(var(--v)/var(--max,100)*85% + 4px);width:100%;text-align:center;font-size:clamp(var(--type-12),1.6cqw,var(--type-20));font-weight:var(--figure-weight);color:var(--a1-8);}
+.bars[data-el="confluence-chart-bar"]>.bar>span{position:absolute;left:0;right:0;top:calc(100% + var(--gap-sm));text-align:center;font-size:clamp(var(--type-12),1.4cqw,var(--type-18));line-height:var(--label-line);}
+.bars[data-el="confluence-chart-bar"].h{flex-direction:column;padding:var(--gap-sm) var(--gap-lg) var(--gap-sm) 22%;}
+.bars[data-el="confluence-chart-bar"].h>.bar::before{left:0;right:auto;bottom:12%;top:12%;width:calc(var(--v)/var(--max,100)*90%);height:auto;border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+.bars[data-el="confluence-chart-bar"].h>.bar>b{left:calc(var(--v)/var(--max,100)*90% + 5px);bottom:auto;top:30%;width:auto;}
+.bars[data-el="confluence-chart-bar"].h>.bar>span{left:-27%;right:auto;top:30%;width:23%;text-align:right;}
+.bars[data-el="confluence-chart-bar"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.bars[data-el="confluence-chart-bar"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.bars[data-el="confluence-chart-bar"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.bars[data-el="confluence-chart-bar"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.bars[data-el="confluence-chart-bar"]{background-color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+.bars[data-el="confluence-chart-bar"]>.bar::before{background:var(--n-3);}
+.bars[data-el="confluence-chart-bar"]>.bar.on::before{background:var(--a1);}
+
+/* Fresh inferred chart-donut: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.donut[data-el="confluence-chart-donut"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.donut[data-el="confluence-chart-donut"] *{box-sizing:border-box;}
+.donut[data-el="confluence-chart-donut"] p,.donut[data-el="confluence-chart-donut"] .name,.donut[data-el="confluence-chart-donut"] .note,.donut[data-el="confluence-chart-donut"] .fig,.donut[data-el="confluence-chart-donut"] .kick{margin:0;}
+.donuts[data-el="confluence-chart-donut"]{position:relative;container-type:size;display:flex;align-items:stretch;gap:var(--gap);min-height:0;}
+.donuts[data-el="confluence-chart-donut"]>.donut{flex:1;min-width:0;min-height:0;}
+.donut[data-el="confluence-chart-donut"]{--diameter:min(76cqw,60cqh);}
+.donut[data-el="confluence-chart-donut"]::before{content:"";position:absolute;left:50%;top:36%;transform:translate(-50%,-50%);width:var(--diameter);height:var(--diameter);border-radius:50%;background:conic-gradient(var(--a1) calc(var(--v)*1%),var(--n-3) 0);mask:radial-gradient(circle,transparent 0 60%,var(--ink) 61%);}
+.donut[data-el="confluence-chart-donut"]>.fig{position:absolute;left:0;right:0;top:36%;transform:translateY(-50%);font-size:clamp(var(--type-24),min(18cqw,22cqh),var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);text-align:center;}
+.donut[data-el="confluence-chart-donut"]>.fig>small{font-size:var(--type-16);}
+.donut[data-el="confluence-chart-donut"]>.name{position:absolute;left:5%;right:5%;top:calc(36cqh + var(--diameter)/2 + var(--gap-sm));font-size:clamp(var(--type-12),4cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);text-align:center;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.donut[data-el="confluence-chart-donut"]::after{content:"";position:absolute;left:50%;top:36%;transform:translate(-50%,-50%);width:calc(var(--diameter) + 12px);height:calc(var(--diameter) + 12px);border:6px solid var(--page);border-radius:50%;pointer-events:none;}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.lines[data-el="confluence-chart-line"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.lines[data-el="confluence-chart-line"]{--chart-head:64px;--chart-foot:36px;--plot-h:calc(100cqh - var(--chart-head) - var(--chart-foot));--plot-color:var(--a1);--plot-ink:var(--a1-8);position:relative;anchor-scope:all;}
+.lines[data-el="confluence-chart-line"]{display:flex;justify-content:space-between;align-items:flex-end;padding:0 8%;}
+.lines[data-el="confluence-chart-line"]>.pt{position:static;flex:none;width:1px;height:1px;margin-bottom:calc(var(--chart-foot) + var(--v)/var(--max,100)*var(--plot-h));anchor-name:var(--own);box-shadow:0 0 0 3px var(--plot-color);border-radius:50%;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(1 of .pt){--own:--confluence-line-1;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(2 of .pt){--own:--confluence-line-2;--previous:--confluence-line-1;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(3 of .pt){--own:--confluence-line-3;--previous:--confluence-line-2;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(4 of .pt){--own:--confluence-line-4;--previous:--confluence-line-3;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(5 of .pt){--own:--confluence-line-5;--previous:--confluence-line-4;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(6 of .pt){--own:--confluence-line-6;--previous:--confluence-line-5;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(7 of .pt){--own:--confluence-line-7;--previous:--confluence-line-6;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(8 of .pt){--own:--confluence-line-8;--previous:--confluence-line-7;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(9 of .pt){--own:--confluence-line-9;--previous:--confluence-line-8;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(10 of .pt){--own:--confluence-line-10;--previous:--confluence-line-9;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(11 of .pt){--own:--confluence-line-11;--previous:--confluence-line-10;}
+.lines[data-el="confluence-chart-line"]>.pt:nth-child(12 of .pt){--own:--confluence-line-12;--previous:--confluence-line-11;}
+.lines[data-el="confluence-chart-line"]>.pt>b{position:absolute;left:anchor(var(--own) center);top:calc(anchor(var(--own) top) - 12px);transform:translate(-50%,-100%);white-space:nowrap;font-size:clamp(var(--type-12),1.5cqw,var(--type-18));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--plot-ink);}
+.lines[data-el="confluence-chart-line"]>.pt>span{position:absolute;left:anchor(var(--own) center);bottom:0;transform:translateX(-50%);height:var(--chart-foot);display:flex;align-items:center;font-size:var(--type-12);line-height:var(--label-line);white-space:nowrap;color:var(--ink);}
+.lines[data-el="confluence-chart-line"]>.pt::before{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--previous) top) - .7px);bottom:calc(anchor(var(--own) top) - .7px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--plot-color) calc(50% - .6px),var(--plot-color) calc(50% + .6px),transparent calc(50% + 1px));}
+.lines[data-el="confluence-chart-line"]>.pt::after{content:"";position:absolute;left:anchor(var(--previous) center);right:anchor(var(--own) center);top:calc(anchor(var(--own) top) - .7px);bottom:calc(anchor(var(--previous) top) - .7px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--plot-color) calc(50% - .6px),var(--plot-color) calc(50% + .6px),transparent calc(50% + 1px));}
+.lines[data-el="confluence-chart-line"]>.pt:first-child::before,.lines[data-el="confluence-chart-line"]>.pt:first-child::after{content:none;}
+@container (max-width:650px){.lines[data-el="confluence-chart-line"]>.axis>span:nth-child(even){visibility:hidden;}
+}
+.lines[data-el="confluence-chart-line"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.lines[data-el="confluence-chart-line"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.lines[data-el="confluence-chart-line"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.lines[data-el="confluence-chart-line"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.lines[data-el="confluence-chart-line"]{background-color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+.lines[data-el="confluence-chart-line"]>.pt{box-shadow:0 0 0 3px var(--plot-color),0 0 0 5px var(--page);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.scatter[data-el="confluence-chart-scatter"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.scatter[data-el="confluence-chart-scatter"]{padding:var(--gap-lg);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);background:linear-gradient(to right,transparent calc(50% - .5px),var(--n-4) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(to bottom,transparent calc(50% - .5px),var(--n-4) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px));}
+.scatter[data-el="confluence-chart-scatter"]>.dot{position:absolute;left:calc(10% + var(--x)/var(--xmax,100)*80%);bottom:calc(10% + var(--y)/var(--ymax,100)*80%);transform:translate(-50%,50%);width:clamp(12px,calc(var(--r,18)*.7cqw),80px);aspect-ratio:1;border-radius:50%;background:var(--n-3);color:var(--ink);display:grid;place-items:center;padding:var(--gap-sm);font-size:var(--type-12);}
+.scatter[data-el="confluence-chart-scatter"]>.dot.on{background:var(--a1);color:var(--a1-on);}
+.scatter[data-el="confluence-chart-scatter"]>.axis-x{position:absolute;left:5%;right:5%;bottom:2%;display:flex;justify-content:space-between;font-size:var(--type-12);}
+.scatter[data-el="confluence-chart-scatter"]>.axis-y{position:absolute;top:3%;bottom:10%;left:2%;display:flex;flex-direction:column;justify-content:space-between;font-size:var(--type-12);}
+.scatter[data-el="confluence-chart-scatter"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.scatter[data-el="confluence-chart-scatter"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.scatter[data-el="confluence-chart-scatter"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.scatter[data-el="confluence-chart-scatter"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.stacks[data-el="confluence-chart-stack"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.stacks[data-el="confluence-chart-stack"]{display:flex;align-items:stretch;gap:2%;padding:var(--gap) var(--gap-sm) calc(var(--gap-lg) + var(--type-16));border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,transparent 0 calc(25% - 1px),var(--n-2) calc(25% - 1px) 25%);}
+.stacks[data-el="confluence-chart-stack"]>.sbar{flex:1;min-width:0;position:relative;display:flex;align-items:stretch;justify-content:flex-end;flex-direction:column;}
+.stacks[data-el="confluence-chart-stack"]>.sbar{justify-content:flex-end;align-items:center;}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg{position:relative;display:flex;align-items:center;justify-content:center;width:76%;height:calc(var(--v)/var(--max,100)*84%);background:var(--series-color,var(--a1));color:var(--series-on,var(--a1-on));flex:none;}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg>b{font-size:var(--type-12);font-weight:var(--figure-weight);}
+.stacks[data-el="confluence-chart-stack"]>.sbar>span{position:absolute;top:calc(100% + var(--gap-sm));font-size:var(--type-12);}
+.stacks[data-el="confluence-chart-stack"].pct>.sbar>.seg{height:calc(var(--v)*.84%);}
+.stacks[data-el="confluence-chart-stack"].h{flex-direction:column;padding-left:20%;}
+.stacks[data-el="confluence-chart-stack"].h>.sbar{flex-direction:row;justify-content:flex-start;}
+.stacks[data-el="confluence-chart-stack"].h>.sbar>.seg{height:76%;width:calc(var(--v)/var(--max,100)*90%);align-self:center;}
+.stacks[data-el="confluence-chart-stack"].h.pct>.sbar>.seg{width:calc(var(--v)*.9%);}
+.stacks[data-el="confluence-chart-stack"].h>.sbar>span{left:-24%;top:30%;}
+.stacks[data-el="confluence-chart-stack"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.stacks[data-el="confluence-chart-stack"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.stacks[data-el="confluence-chart-stack"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.stacks[data-el="confluence-chart-stack"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg:nth-child(1 of .seg){--default-series-color:var(--a1);--default-series-on:var(--a1-on);}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg:nth-child(2 of .seg){--default-series-color:var(--a2);--default-series-on:var(--a2-on);}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg:nth-child(3 of .seg){--default-series-color:var(--a3);--default-series-on:var(--a3-on);}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg:nth-child(4 of .seg){--default-series-color:var(--a4);--default-series-on:var(--a4-on);}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg{background:var(--series-color,var(--default-series-color,var(--a1)));color:var(--series-on,var(--default-series-on,var(--a1-on)));}
+.stacks[data-el="confluence-chart-stack"]>.sbar>.seg>b{background:var(--page);color:var(--ink);padding:1px 3px;border-radius:2px;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.stacks[data-el="confluence-chart-stack"]{background-color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.waterfall[data-el="confluence-chart-waterfall"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.waterfall[data-el="confluence-chart-waterfall"]{display:flex;align-items:stretch;gap:2%;padding:var(--gap) var(--gap-sm) calc(var(--gap-lg) + var(--type-16));border-bottom:var(--stroke) solid var(--n-4);background:repeating-linear-gradient(to top,transparent 0 calc(25% - 1px),var(--n-2) calc(25% - 1px) 25%);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move{flex:1;min-width:0;position:relative;display:flex;align-items:stretch;justify-content:flex-end;flex-direction:column;}
+.waterfall[data-el="confluence-chart-waterfall"]>.move::before{content:"";position:absolute;left:10%;right:10%;bottom:calc(min(var(--from),var(--to))/var(--max,100)*82%);height:calc(abs(var(--to) - var(--from))/var(--max,100)*82%);background:var(--a1);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move.down::before{background:var(--n-5);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move.total::before{bottom:0;height:calc(var(--to)/var(--max,100)*82%);background:var(--a2);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move>b{position:absolute;bottom:calc(max(var(--from),var(--to))/var(--max,100)*82% + 5px);width:100%;text-align:center;font-size:var(--type-14);font-weight:var(--figure-weight);}
+.waterfall[data-el="confluence-chart-waterfall"]>.move>span{position:absolute;top:calc(100% + var(--gap-sm));font-size:var(--type-12);text-align:center;width:100%;}
+.waterfall[data-el="confluence-chart-waterfall"]>.move:not(:last-child)::after{content:"";position:absolute;left:90%;width:calc(20% + 2cqw);bottom:calc(var(--to)/var(--max,100)*82%);border-top:var(--stroke) dashed var(--n-5);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.waterfall[data-el="confluence-chart-waterfall"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.waterfall[data-el="confluence-chart-waterfall"]{background-color:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.code[data-el="confluence-code"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.code[data-el="confluence-code"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--pad);}
+.code[data-el="confluence-code"]>.name{font-size:var(--type-16);font-weight:var(--name-weight);color:var(--a1-8);}
+.code[data-el="confluence-code"]>.lines{display:block;min-height:0;}
+.code[data-el="confluence-code"]>.lines>p{font-family:var(--confluence-font-code);font-size:clamp(var(--type-12),1.5cqw,var(--type-18));line-height:var(--body-line);white-space:pre-wrap;overflow-wrap:anywhere;margin:0;}
+.code[data-el="confluence-code"] .k{color:var(--a1-8);font-weight:var(--label-weight);}
+.code[data-el="confluence-code"] .s{color:var(--a2-8);}
+.code[data-el="confluence-code"] .c{color:var(--n-7);}
+.code[data-el="confluence-code"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.code[data-el="confluence-code"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.code[data-el="confluence-code"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.code[data-el="confluence-code"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+.code[data-el="confluence-code"].numbered>.lines{counter-reset:code-line;}
+.code[data-el="confluence-code"].numbered>.lines>p{counter-increment:code-line;position:relative;padding-left:2.5em;}
+.code[data-el="confluence-code"].numbered>.lines>p::before{content:counter(code-line);position:absolute;left:0;width:1.5em;text-align:right;color:inherit;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.code[data-el="confluence-code"]>.name{background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:var(--gap-sm);}
+
+/* Fresh inferred concentric: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.orbit[data-el="confluence-concentric"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.orbit[data-el="confluence-concentric"] *{box-sizing:border-box;}
+.orbit[data-el="confluence-concentric"] p,.orbit[data-el="confluence-concentric"] .name,.orbit[data-el="confluence-concentric"] .note,.orbit[data-el="confluence-concentric"] .fig,.orbit[data-el="confluence-concentric"] .kick{margin:0;}
+.orbit[data-el="confluence-concentric"]{display:grid;place-items:center;}
+.orbit[data-el="confluence-concentric"]>.ring:nth-child(1){position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(83cqw,83cqh);height:min(83cqw,83cqh);border-radius:50%;background:var(--a1-1-soft);border:var(--stroke) solid var(--a1);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:2px;padding-top:2px;}
+.orbit[data-el="confluence-concentric"]>.ring:nth-child(2){position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(66cqw,66cqh);height:min(66cqw,66cqh);border-radius:50%;background:var(--a1-2-soft);border:var(--stroke) solid var(--a1);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:2px;padding-top:2px;}
+.orbit[data-el="confluence-concentric"]>.ring:nth-child(3){position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(49cqw,49cqh);height:min(49cqw,49cqh);border-radius:50%;background:var(--a1-3-soft);border:var(--stroke) solid var(--a1);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:2px;padding-top:2px;}
+.orbit[data-el="confluence-concentric"]>.ring:nth-child(4){position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(32cqw,32cqh);height:min(32cqw,32cqh);border-radius:50%;background:var(--a1-4-soft);border:var(--stroke) solid var(--a1);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:2px;padding-top:2px;}
+.orbit[data-el="confluence-concentric"] .name{font-size:var(--type-12);line-height:var(--label-line);font-weight:var(--name-weight);}
+.orbit[data-el="confluence-concentric"] .fig{font-size:var(--type-18);line-height:var(--figure-line);font-weight:var(--figure-weight);}
+.orbit[data-el="confluence-concentric"] .note{font-size:var(--type-10);line-height:var(--label-line);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.orbit[data-el="confluence-concentric"]>.ring{border:6px solid var(--page);box-shadow:0 0 0 1px var(--a1);}
+.orbit[data-el="confluence-concentric"]>.ring.on{background:var(--a1-7);color:var(--page);}
+
+/* Fresh inferred cycle: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.cycle[data-el="confluence-cycle"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.cycle[data-el="confluence-cycle"] *{box-sizing:border-box;}
+.cycle[data-el="confluence-cycle"] p,.cycle[data-el="confluence-cycle"] .name,.cycle[data-el="confluence-cycle"] .note,.cycle[data-el="confluence-cycle"] .fig,.cycle[data-el="confluence-cycle"] .kick{margin:0;}
+.cycle[data-el="confluence-cycle"]{--cycle-count:3;}
+.cycle[data-el="confluence-cycle"]::before{content:"";position:absolute;inset:16%;border-radius:50%;border:var(--stroke) dashed var(--a1);}
+.cycle[data-el="confluence-cycle"]>.core{position:absolute;left:50%;top:50%;width:min(24cqw,24cqh);height:min(24cqw,24cqh);transform:translate(-50%,-50%);border-radius:50%;background:var(--a1);color:var(--a1-on);display:grid;place-items:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-20);font-weight:var(--name-weight);line-height:var(--name-line);}
+.cycle[data-el="confluence-cycle"]>.node{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:absolute;left:calc(50% + sin(var(--node-angle))*34%);top:calc(50% - cos(var(--node-angle))*34%);transform:translate(-50%,-50%);width:25%;height:23%;padding:var(--gap-sm);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:var(--gap-sm);}
+.cycle[data-el="confluence-cycle"] .name{font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);}
+.cycle[data-el="confluence-cycle"] .note{font-size:var(--type-12);line-height:var(--body-line);}
+.cycle[data-el="confluence-cycle"]>.node::after{content:"";position:absolute;left:calc(50% + (sin(var(--node-angle) + 180deg/var(--cycle-count)) - sin(var(--node-angle)))*34cqw);top:calc(50% - (cos(var(--node-angle) + 180deg/var(--cycle-count)) - cos(var(--node-angle)))*34cqh);width:12px;height:12px;background:var(--a1);clip-path:polygon(0 0,100% 50%,0 100%);transform:translate(-50%,-50%) rotate(calc(var(--node-angle) + 180deg/var(--cycle-count)));}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node))){--cycle-count:3;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node)))>.node:nth-child(2 of .node){--node-angle:120.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(3 of .node)):not(:has(>.node:nth-child(4 of .node)))>.node:nth-child(3 of .node){--node-angle:240.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node))){--cycle-count:4;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(2 of .node){--node-angle:90.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(3 of .node){--node-angle:180.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(4 of .node)):not(:has(>.node:nth-child(5 of .node)))>.node:nth-child(4 of .node){--node-angle:270.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node))){--cycle-count:5;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(2 of .node){--node-angle:72.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(3 of .node){--node-angle:144.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(4 of .node){--node-angle:216.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(5 of .node)):not(:has(>.node:nth-child(6 of .node)))>.node:nth-child(5 of .node){--node-angle:288.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node))){--cycle-count:6;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(1 of .node){--node-angle:0.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(2 of .node){--node-angle:60.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(3 of .node){--node-angle:120.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(4 of .node){--node-angle:180.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(5 of .node){--node-angle:240.0deg;}
+.cycle[data-el="confluence-cycle"]:has(>.node:nth-child(6 of .node)):not(:has(>.node:nth-child(7 of .node)))>.node:nth-child(6 of .node){--node-angle:300.0deg;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.cycle[data-el="confluence-cycle"]>.core{border:clamp(4px,1cqw,12px) solid var(--page);background:var(--a1-7);color:var(--page);}
+.cycle[data-el="confluence-cycle"]>.node>.name{align-self:stretch;background:var(--a2-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4);}
+
+/* Fresh inferred decision-tree: confluence source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.dtree[data-el="confluence-decision-tree"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.dtree[data-el="confluence-decision-tree"] *{box-sizing:border-box;}
+.dtree[data-el="confluence-decision-tree"] .name,.dtree[data-el="confluence-decision-tree"] .leaf,.dtree[data-el="confluence-decision-tree"] .item{margin:0;}
+.dtree[data-el="confluence-decision-tree"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-lg);padding:var(--gap-sm);}
+.dtree[data-el="confluence-decision-tree"] .q{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;padding:var(--gap-sm);text-align:center;font-size:clamp(var(--type-16),2cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.dtree[data-el="confluence-decision-tree"] .q::after{content:"";position:absolute;left:50%;top:100%;height:var(--gap-lg);border-left:var(--stroke) solid var(--a1);}
+.dtree[data-el="confluence-decision-tree"] .opts{position:relative;display:flex;align-items:stretch;justify-content:center;gap:var(--gap);width:100%;border-top:var(--stroke) solid var(--a1);}
+.dtree[data-el="confluence-decision-tree"] .opt{position:relative;anchor-scope:all;flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:var(--gap);padding-top:var(--gap);}
+.dtree[data-el="confluence-decision-tree"] .opt>:last-child{anchor-name:--confluence-tree-end;}
+.dtree[data-el="confluence-decision-tree"] .opt::after{content:"";position:absolute;left:50%;top:0;bottom:anchor(--confluence-tree-end top);border-left:var(--stroke) solid var(--a1);z-index:-1;}
+.dtree[data-el="confluence-decision-tree"] .opt>.q::after{height:var(--gap);}
+.dtree[data-el="confluence-decision-tree"] .cond{position:relative;background:var(--page);color:var(--a1-8);font-size:var(--type-12);line-height:var(--label-line);padding:0 4px;}
+.dtree[data-el="confluence-decision-tree"] .end{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);padding:var(--gap-sm);text-align:center;font-size:var(--type-14);line-height:var(--name-line);font-weight:var(--name-weight);}
+.dtree[data-el="confluence-decision-tree"] .end.on{background:var(--a1);color:var(--a1-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.delta[data-el="confluence-delta"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.delta[data-el="confluence-delta"]{display:flex;align-items:center;justify-content:center;gap:18%;}
+.delta[data-el="confluence-delta"]>.from,.delta[data-el="confluence-delta"]>.to{font-size:clamp(var(--type-24),10cqw,var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);}
+.delta[data-el="confluence-delta"]>.from{color:var(--n-7);}
+.delta[data-el="confluence-delta"]>.to{color:var(--a1-8);}
+.delta[data-el="confluence-delta"]::after{content:"";position:absolute;left:46%;width:8%;height:12%;background:var(--a1);clip-path:polygon(0 35%,65% 35%,65% 0,100% 50%,65% 100%,65% 65%,0 65%);}
+.delta[data-el="confluence-delta"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.delta[data-el="confluence-delta"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.delta[data-el="confluence-delta"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.delta[data-el="confluence-delta"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.delta[data-el="confluence-delta"]>.from{color:var(--a1-7);}
+.delta[data-el="confluence-delta"]>.to{color:var(--a2-7);}
+.delta[data-el="confluence-delta"]::after{height:0;top:50%;background:none;border-top:var(--stroke) solid var(--a1);}
+.delta[data-el="confluence-delta"]::before{content:"";position:absolute;left:52%;top:calc(50% - 4px);width:8px;height:8px;border-top:var(--stroke) solid var(--a1);border-right:var(--stroke) solid var(--a1);transform:rotate(45deg);}
+
+/* Fresh inferred flowchart: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.flowchart[data-el="confluence-flowchart"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.flowchart[data-el="confluence-flowchart"] *{box-sizing:border-box;}
+.flowchart[data-el="confluence-flowchart"] p,.flowchart[data-el="confluence-flowchart"] .name,.flowchart[data-el="confluence-flowchart"] .note,.flowchart[data-el="confluence-flowchart"] .fig,.flowchart[data-el="confluence-flowchart"] .kick{margin:0;}
+.flowchart[data-el="confluence-flowchart"]{display:grid;grid-template-columns:none;grid-template-rows:none;grid-auto-columns:minmax(0,1fr);grid-auto-rows:minmax(0,1fr);gap:var(--gap-lg);padding:var(--gap);}
+.flowchart[data-el="confluence-flowchart"]>.node{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;min-height:0;min-width:0;display:grid;place-items:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-14);font-weight:var(--name-weight);line-height:var(--name-line);}
+.flowchart[data-el="confluence-flowchart"]>.node.start,.flowchart[data-el="confluence-flowchart"]>.node.end{border-radius:999px;background:var(--a1);color:var(--a1-on);}
+.flowchart[data-el="confluence-flowchart"]>.node.ask{border:0;border-radius:0;padding:0;background:none;}
+.flowchart[data-el="confluence-flowchart"]>.node.ask>.name{width:100%;height:100%;display:grid;place-items:center;padding:var(--gap);background:var(--page);color:var(--ink);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);}
+.flowchart[data-el="confluence-flowchart"]>.node.to-r::after{content:"";position:absolute;left:100%;top:calc(50% - 6px);width:var(--gap-lg);height:12px;background:var(--a1);clip-path:polygon(0 45%,calc(100% - 8px) 45%,calc(100% - 8px) 0,100% 50%,calc(100% - 8px) 100%,calc(100% - 8px) 55%,0 55%);}
+.flowchart[data-el="confluence-flowchart"]>.node.to-l::after{content:"";position:absolute;right:100%;top:calc(50% - 6px);width:var(--gap-lg);height:12px;background:var(--a1);clip-path:polygon(0 50%,8px 0,8px 45%,100% 45%,100% 55%,8px 55%,8px 100%);}
+.flowchart[data-el="confluence-flowchart"]>.node.to-d::before{content:"";position:absolute;left:calc(50% - 6px);top:100%;height:var(--gap-lg);width:12px;background:var(--a1);clip-path:polygon(45% 0,55% 0,55% calc(100% - 8px),100% calc(100% - 8px),50% 100%,0 calc(100% - 8px),45% calc(100% - 8px));}
+.flowchart[data-el="confluence-flowchart"]>.node.to-u::before{content:"";position:absolute;left:calc(50% - 6px);bottom:100%;height:var(--gap-lg);width:12px;background:var(--a1);clip-path:polygon(45% 8px,0 8px,50% 0,100% 8px,55% 8px,55% 100%,45% 100%);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.flowchart[data-el="confluence-flowchart"]>.node.start,.flowchart[data-el="confluence-flowchart"]>.node.end{border:6px solid var(--page);box-shadow:0 0 0 1px var(--a1);background:var(--a1-7);color:var(--page);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.funnel[data-el="confluence-funnel"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.funnel[data-el="confluence-funnel"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm);}
+.funnel[data-el="confluence-funnel"]>.stage{width:calc(var(--v,75)*1%);flex:1;min-height:0;display:flex;align-items:center;justify-content:center;gap:var(--gap);padding:var(--gap-sm);background:var(--a1);color:var(--a1-on);clip-path:polygon(5% 0,95% 0,100% 100%,0 100%);}
+.funnel[data-el="confluence-funnel"] .name{font-size:clamp(var(--type-14),2.8cqw,var(--type-28));font-weight:var(--name-weight);}
+.funnel[data-el="confluence-funnel"] .note{font-size:var(--type-12);}
+.funnel[data-el="confluence-funnel"] .fig{font-size:clamp(var(--type-20),4cqw,var(--type-40));font-weight:var(--figure-weight);}
+.funnel[data-el="confluence-funnel"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.funnel[data-el="confluence-funnel"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.funnel[data-el="confluence-funnel"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.funnel[data-el="confluence-funnel"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.funnel[data-el="confluence-funnel"]>.stage{position:relative;background:var(--a1-7);color:var(--ink);}
+.funnel[data-el="confluence-funnel"]>.stage::before{content:"";position:absolute;inset:2px;background:var(--page);clip-path:polygon(5% 0,95% 0,100% 100%,0 100%);}
+.funnel[data-el="confluence-funnel"]>.stage>.name,.funnel[data-el="confluence-funnel"]>.stage>.fig{position:relative;z-index:1;}
+.funnel[data-el="confluence-funnel"]>.stage>.name{color:var(--a1-7);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.meter[data-el="confluence-gauge"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.meter[data-el="confluence-gauge"]{display:grid;grid-template-columns:minmax(0,1fr) auto;align-content:center;gap:var(--gap-sm);padding:var(--gap-sm);}
+.meter[data-el="confluence-gauge"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-22));font-weight:var(--name-weight);}
+.meter[data-el="confluence-gauge"] .fig{font-size:clamp(var(--type-18),4.5cqw,var(--type-36));font-weight:var(--figure-weight);color:var(--a1-8);}
+.meter[data-el="confluence-gauge"]::before{content:"";grid-column:1 / span 2;grid-row:2;height:18px;border-radius:999px;background:linear-gradient(to right,var(--a1) calc(var(--v)*1%),var(--n-3) 0);}
+.meter[data-el="confluence-gauge"] .note{grid-column:1 / span 2;font-size:var(--type-12);}
+.meter[data-el="confluence-gauge"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.meter[data-el="confluence-gauge"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.meter[data-el="confluence-gauge"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.meter[data-el="confluence-gauge"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.headline[data-el="confluence-headline"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.headline[data-el="confluence-headline"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:0;height:100%;align-self:start;}
+.headline[data-el="confluence-headline"]>.kick{margin:0;font-size:clamp(var(--type-14),3.7cqw,var(--type-22));font-weight:var(--label-weight);line-height:var(--label-line);}
+.headline[data-el="confluence-headline"]>h2{margin:0;color:var(--a1-7);font-size:clamp(var(--type-24),5.8cqw,var(--type-32));font-weight:var(--title-weight);line-height:var(--title-line);letter-spacing:var(--title-track);overflow-wrap:anywhere;}
+.headline[data-el="confluence-headline"]>h2>b{font-weight:inherit;}
+.headline[data-el="confluence-headline"]>.note{margin:0;font-size:clamp(var(--type-12),2.8cqw,var(--type-18));line-height:var(--body-line);}
+.headline[data-el="confluence-headline"].center{text-align:center;align-items:center;}
+.headline[data-el="confluence-headline"].big>h2{font-size:clamp(var(--type-40),9cqw,var(--type-96));}
+.headline[data-el="confluence-headline"].on{background:var(--a1);border-radius:var(--radius);padding:var(--pad);color:var(--a1-on);}
+.headline[data-el="confluence-headline"].on>h2{color:inherit;}
+@container (max-height:90px){.headline[data-el="confluence-headline"]>.kick{font-size:var(--type-12);}
+.headline[data-el="confluence-headline"]>h2{font-size:var(--type-24);}
+.headline[data-el="confluence-headline"]>.note{font-size:var(--type-12);}
+}
+.headline[data-el="confluence-headline"]:not(:has(>.note)):not(.big){max-height:120px;}
+.headline[data-el="confluence-headline"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.headline[data-el="confluence-headline"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.headline[data-el="confluence-headline"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.headline[data-el="confluence-headline"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh inferred heatmap from confluence measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.heat[data-el="confluence-heatmap"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.heat[data-el="confluence-heatmap"] *{box-sizing:border-box;}
+.heat[data-el="confluence-heatmap"] p,.heat[data-el="confluence-heatmap"] .name,.heat[data-el="confluence-heatmap"] .note,.heat[data-el="confluence-heatmap"] .fig{margin:0;}
+.heat[data-el="confluence-heatmap"]{--heat-rows:3;display:flex;flex-direction:column;gap:4px;justify-content:center;}
+.heat[data-el="confluence-heatmap"]>.heads,.heat[data-el="confluence-heatmap"]>.row{display:grid;grid-template-columns:20% repeat(var(--cols),minmax(0,1fr));gap:4px;min-height:0;}
+.heat[data-el="confluence-heatmap"]>.heads{height:24px;align-items:center;}
+.heat[data-el="confluence-heatmap"]>.heads::before{content:"";}
+.heat[data-el="confluence-heatmap"]>.heads>span{font-size:var(--type-12);text-align:center;}
+.heat[data-el="confluence-heatmap"]>.row{flex:1;align-items:stretch;}
+.heat[data-el="confluence-heatmap"] .name{font-size:var(--type-14);line-height:var(--name-line);font-weight:var(--name-weight);display:flex;align-items:center;}
+.heat[data-el="confluence-heatmap"] .cell{display:grid;place-items:center;min-height:0;min-width:0;font-size:var(--type-12);line-height:var(--label-line);background:color-mix(in srgb,var(--a1) calc(var(--v)*.35%),var(--page));border:var(--stroke) solid var(--n-3);color:var(--ink);border-radius:var(--radius-sm);}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(2 of .row)):not(:has(>.row:nth-child(3 of .row))){--heat-rows:2;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(3 of .row)):not(:has(>.row:nth-child(4 of .row))){--heat-rows:3;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(4 of .row)):not(:has(>.row:nth-child(5 of .row))){--heat-rows:4;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(5 of .row)):not(:has(>.row:nth-child(6 of .row))){--heat-rows:5;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(6 of .row)):not(:has(>.row:nth-child(7 of .row))){--heat-rows:6;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(7 of .row)):not(:has(>.row:nth-child(8 of .row))){--heat-rows:7;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(8 of .row)):not(:has(>.row:nth-child(9 of .row))){--heat-rows:8;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(9 of .row)):not(:has(>.row:nth-child(10 of .row))){--heat-rows:9;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(10 of .row)):not(:has(>.row:nth-child(11 of .row))){--heat-rows:10;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(11 of .row)):not(:has(>.row:nth-child(12 of .row))){--heat-rows:11;}
+.heat[data-el="confluence-heatmap"]:has(>.row:nth-child(12 of .row)):not(:has(>.row:nth-child(13 of .row))){--heat-rows:12;}
+.heat[data-el="confluence-heatmap"].calendar{--heat-cell:min(calc((100cqw - (var(--cols) - 1)*4px)/var(--cols)),calc((100cqh - 24px - var(--heat-rows)*4px)/var(--heat-rows)));justify-content:center;align-items:center;}
+.heat[data-el="confluence-heatmap"].calendar>.heads,.heat[data-el="confluence-heatmap"].calendar>.row{grid-template-columns:repeat(var(--cols),var(--heat-cell));width:max-content;flex:none;}
+.heat[data-el="confluence-heatmap"].calendar>.heads::before{content:none;}
+.heat[data-el="confluence-heatmap"].calendar>.row{height:var(--heat-cell);}
+.heat[data-el="confluence-heatmap"].calendar>.row>.name{display:none;}
+
+/* Fresh inferred hierarchy: confluence source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.org[data-el="confluence-hierarchy"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.org[data-el="confluence-hierarchy"] *{box-sizing:border-box;}
+.org[data-el="confluence-hierarchy"] .name,.org[data-el="confluence-hierarchy"] .leaf,.org[data-el="confluence-hierarchy"] .item{margin:0;}
+.org[data-el="confluence-hierarchy"]{--branch-count:3;anchor-scope:all;display:flex;align-items:flex-end;gap:var(--gap);padding:0;}
+.org[data-el="confluence-hierarchy"]:has(>.branch:nth-child(2 of .branch)):not(:has(>.branch:nth-child(3 of .branch))){--branch-count:2;}
+.org[data-el="confluence-hierarchy"]:has(>.branch:nth-child(3 of .branch)):not(:has(>.branch:nth-child(4 of .branch))){--branch-count:3;}
+.org[data-el="confluence-hierarchy"]:has(>.branch:nth-child(4 of .branch)):not(:has(>.branch:nth-child(5 of .branch))){--branch-count:4;}
+.org[data-el="confluence-hierarchy"]>.root{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:absolute;left:35%;right:35%;top:0;height:25%;display:grid;place-items:center;padding:var(--gap-sm);font-size:clamp(var(--type-18),2.8cqw,var(--type-28));line-height:var(--name-line);font-weight:var(--name-weight);text-align:center;border-bottom:4px solid var(--a1);}
+.org[data-el="confluence-hierarchy"]>.root::after{content:"";position:absolute;left:50%;top:100%;height:12cqh;border-left:var(--stroke) solid var(--a1);}
+.org[data-el="confluence-hierarchy"]::before{content:"";position:absolute;left:calc((100% - (var(--branch-count) - 1)*var(--gap))/var(--branch-count)/2);right:calc((100% - (var(--branch-count) - 1)*var(--gap))/var(--branch-count)/2);top:37%;border-top:var(--stroke) solid var(--a1);}
+.org[data-el="confluence-hierarchy"]>.branch{position:relative;flex:1;min-width:0;min-height:0;height:63%;padding-top:8cqh;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--gap-sm);}
+.org[data-el="confluence-hierarchy"]>.branch::after{content:"";position:absolute;left:50%;top:0;bottom:anchor(var(--branch-end) center);border-left:var(--stroke) solid var(--a1);z-index:-1;}
+.org[data-el="confluence-hierarchy"]>.branch>:last-child{anchor-name:var(--branch-end);}
+.org[data-el="confluence-hierarchy"]>.branch>.node{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);padding:var(--gap-sm);min-height:14%;text-align:center;font-size:clamp(var(--type-14),1.9cqw,var(--type-20));line-height:var(--name-line);font-weight:var(--name-weight);}
+.org[data-el="confluence-hierarchy"]>.branch>.leaf{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);padding:var(--gap-sm);text-align:center;font-size:var(--type-12);line-height:var(--body-line);}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(1 of .branch){--branch-end:--confluence-org-end-1;}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(2 of .branch){--branch-end:--confluence-org-end-2;}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(3 of .branch){--branch-end:--confluence-org-end-3;}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(4 of .branch){--branch-end:--confluence-org-end-4;}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.hub[data-el="confluence-hub"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.hub[data-el="confluence-hub"]{padding:0;}
+.hub[data-el="confluence-hub"]::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:var(--stroke) solid var(--n-3);}
+.hub[data-el="confluence-hub"]::after{content:"";position:absolute;top:0;bottom:0;left:50%;border-left:var(--stroke) solid var(--n-3);}
+.hub[data-el="confluence-hub"]>.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34%;aspect-ratio:1;z-index:1;border:clamp(8px,1.57cqw,17px) solid var(--page);border-radius:50%;background:var(--a1-7);color:var(--page);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2%;padding:5%;box-shadow:0 8px 12px color-mix(in srgb,var(--n-6) 18%,transparent);}
+.hub[data-el="confluence-hub"]>.core>.mark{position:absolute;top:-10%;left:31%;width:39%;aspect-ratio:1;}
+.hub[data-el="confluence-hub"]>.core>.mark>.seat{width:100%;height:100%;aspect-ratio:1;}
+.hub[data-el="confluence-hub"]>.core>.name{font-size:clamp(var(--type-28),5.55cqw,var(--type-64));font-weight:var(--name-weight);line-height:var(--figure-line);letter-spacing:var(--name-track);}
+.hub[data-el="confluence-hub"]>.core>.name b{color:var(--a2-2);font-weight:inherit;}
+.hub[data-el="confluence-hub"]>.core>.kick{color:var(--a2-2);font-size:clamp(var(--type-8),.84cqw,var(--type-12));font-weight:var(--label-weight);letter-spacing:var(--label-track-latin);}
+.hub[data-el="confluence-hub"]>.core>.note{font-size:clamp(var(--type-10),1.3cqw,var(--type-16));line-height:var(--body-line);color:var(--a1-1);}
+.hub[data-el="confluence-hub"]>.spoke{position:absolute;width:31%;height:42%;display:flex;flex-direction:column;justify-content:center;gap:2%;padding:0;}
+.hub[data-el="confluence-hub"]>.spoke>.mark{width:23%;aspect-ratio:1;color:var(--a1);}
+.hub[data-el="confluence-hub"] .mark>.icon{display:block;width:100%;height:100%;}
+.hub[data-el="confluence-hub"]>.spoke>.name{font-size:clamp(var(--type-18),3.7cqw,var(--type-40));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track);}
+.hub[data-el="confluence-hub"]>.spoke>.name b{color:var(--a2-7);}
+.hub[data-el="confluence-hub"]>.spoke>.note{font-size:clamp(var(--type-12),1.3cqw,var(--type-16));color:var(--n-7);line-height:var(--body-line);}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(2 of .spoke)>.name b,.hub[data-el="confluence-hub"]>.spoke:nth-child(3 of .spoke)>.name b{color:var(--a1-7);}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(2){left:4.4%;top:2.1%;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(3){left:67.6%;top:2.1%;text-align:right;align-items:flex-end;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(4){left:4.4%;top:58.8%;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(5){left:67.6%;top:58.8%;text-align:right;align-items:flex-end;}
+.hub[data-el="confluence-hub"]>.core>.icon{position:absolute;left:22.5%;top:22.5%;display:block;width:55%;height:55%;}
+.hub[data-el="confluence-hub"]:has(>.spoke:nth-child(5 of .spoke))>.core{width:26%;padding:3%;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(6){left:35%;top:0%;height:18%;text-align:center;align-items:center;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(7){left:35%;top:82%;height:18%;text-align:center;align-items:center;}
+@container (max-height:400px){.hub[data-el="confluence-hub"]>.core>.kick,.hub[data-el="confluence-hub"]>.core>.note{display:none;}
+.hub[data-el="confluence-hub"]>.spoke>.note{font-size:var(--type-12);}
+}
+.hub[data-el="confluence-hub"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.hub[data-el="confluence-hub"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.hub[data-el="confluence-hub"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.hub[data-el="confluence-hub"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+.hub[data-el="confluence-hub"]>.spoke:nth-child(n+6)>.name{font-size:clamp(var(--type-18),3cqw,var(--type-32));}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.frame[data-el="confluence-image-frame"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.frame[data-el="confluence-image-frame"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);--picture-width:min(100cqw,calc(100cqh*1.38));display:grid;place-items:center;padding:0;}
+.frame[data-el="confluence-image-frame"]>.seat{width:var(--picture-width);height:calc(var(--picture-width)/1.38);aspect-ratio:1.38;border-radius:var(--radius-sm);display:grid;place-items:center;background:var(--n-3);color:var(--n-8);font-size:var(--type-14);}
+.frame[data-el="confluence-image-frame"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.frame[data-el="confluence-image-frame"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.frame[data-el="confluence-image-frame"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.frame[data-el="confluence-image-frame"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.frame[data-el="confluence-image-frame"]{background:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);padding:var(--gap-sm);}
+
+/* Fresh inferred journey from confluence measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.journey[data-el="confluence-journey"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.journey[data-el="confluence-journey"] *{box-sizing:border-box;}
+.journey[data-el="confluence-journey"] p,.journey[data-el="confluence-journey"] .name,.journey[data-el="confluence-journey"] .note,.journey[data-el="confluence-journey"] .fig{margin:0;}
+.journey[data-el="confluence-journey"]{display:flex;gap:var(--gap);padding:0;anchor-scope:all;}
+.journey[data-el="confluence-journey"]>.stage{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:static;flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--gap-sm);gap:var(--gap-sm);background:linear-gradient(transparent 0 45%,var(--n-1) 45%);color:var(--ink);}
+.journey[data-el="confluence-journey"]>.stage>.name{font-size:clamp(var(--type-14),2cqw,var(--type-20));line-height:var(--name-line);font-weight:var(--name-weight);}
+.journey[data-el="confluence-journey"]>.stage>.note,.journey[data-el="confluence-journey"]>.stage>.pain{font-size:var(--type-12);line-height:var(--body-line);}
+.journey[data-el="confluence-journey"]>.stage>.pain{color:var(--bad);}
+.journey[data-el="confluence-journey"]>.stage::before{content:"";position:absolute;left:var(--stage-x);top:calc(42% - var(--mood)*.32%);width:7px;height:7px;border-radius:50%;background:var(--a1);anchor-name:var(--stage-self);z-index:2;}
+.journey[data-el="confluence-journey"]>.stage::after{content:"";position:absolute;left:var(--stage-x);top:calc(42% - var(--mood)*.32%);width:hypot(var(--stage-step),calc((var(--mood) - var(--next,var(--mood)))*.32cqh));height:2px;background:var(--a1);transform-origin:0 50%;transform:rotate(atan2(calc((var(--mood) - var(--next,var(--mood)))*.32cqh),var(--stage-step)));}
+.journey[data-el="confluence-journey"]>.stage:last-child::after{content:none;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child){--stage-step:calc((100cqw + var(--gap))/3);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(3):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child){--stage-step:calc((100cqw + var(--gap))/4);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(4):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child){--stage-step:calc((100cqw + var(--gap))/5);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(5):last-child)>.stage:nth-child(5){--stage-x:calc((4 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-5;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child){--stage-step:calc((100cqw + var(--gap))/6);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(5){--stage-x:calc((4 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-5;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(6):last-child)>.stage:nth-child(6){--stage-x:calc((5 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-6;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child){--stage-step:calc((100cqw + var(--gap))/7);}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(1){--stage-x:calc((0 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-1;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(2){--stage-x:calc((1 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-2;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(3){--stage-x:calc((2 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-3;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(4){--stage-x:calc((3 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-4;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(5){--stage-x:calc((4 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-5;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(6){--stage-x:calc((5 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-6;}
+.journey[data-el="confluence-journey"]:has(>.stage:nth-child(7):last-child)>.stage:nth-child(7){--stage-x:calc((6 + .5)*var(--stage-step) - var(--gap)/2);--stage-self:--confluence-journey-7;}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.legend[data-el="confluence-legend"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.legend[data-el="confluence-legend"]{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--gap);padding:var(--gap-sm);}
+.legend[data-el="confluence-legend"]>.key{display:flex;align-items:center;gap:var(--gap-sm);font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);}
+.legend[data-el="confluence-legend"]>.key::before{content:"";width:1.1em;height:1.1em;background:var(--series-color,var(--a1));border-radius:var(--radius-sm);}
+.legend[data-el="confluence-legend"]>.key.tone-5{--series-color:var(--n-6);}
+.legend[data-el="confluence-legend"]>.key.tone-6{--series-color:var(--n-8);}
+.legend[data-el="confluence-legend"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.legend[data-el="confluence-legend"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.legend[data-el="confluence-legend"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.legend[data-el="confluence-legend"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.list[data-el="confluence-list"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.list[data-el="confluence-list"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm);list-style:none;counter-reset:item;}
+.list[data-el="confluence-list"]>.item{position:relative;counter-increment:item;padding-left:calc(var(--gap) + 1em);min-width:0;}
+.list[data-el="confluence-list"]>.item::before{content:"";position:absolute;left:.25em;top:.65em;width:5px;height:5px;border-radius:50%;background:currentColor;}
+.list[data-el="confluence-list"]>.item>.mark{position:absolute;left:0;top:0;display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:var(--a1);color:var(--a1-on);}
+.list[data-el="confluence-list"]>.item:has(>.mark)::before{content:none;}
+.list[data-el="confluence-list"] .mark>.icon{width:55%;height:55%;}
+.list[data-el="confluence-list"] .name{display:block;font-size:clamp(var(--type-14),3.6cqw,var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);}
+.list[data-el="confluence-list"] .note{display:block;font-size:clamp(var(--type-12),3.1cqw,var(--type-16));line-height:var(--body-line);margin-top:var(--gap-sm);}
+.list[data-el="confluence-list"].num>.item::before{content:counter(item);width:1.5em;height:1.5em;top:0;left:0;display:grid;place-items:center;border-radius:50%;font-size:var(--type-12);color:var(--a1-on);}
+.list[data-el="confluence-list"].check>.item::before{width:9px;height:5px;border-radius:0;background:none;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);top:.45em;}
+.list[data-el="confluence-list"].divided>.item{padding-bottom:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-3);}
+.list[data-el="confluence-list"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.list[data-el="confluence-list"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.list[data-el="confluence-list"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.list[data-el="confluence-list"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.logos[data-el="confluence-logo-group"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.logos[data-el="confluence-logo-group"]{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--gap);padding:var(--gap);}
+.logos[data-el="confluence-logo-group"]>.seat.logo{flex:1 1 15%;max-width:23%;max-height:90%;aspect-ratio:1;background:var(--n-2);border:var(--stroke) solid var(--n-3);border-radius:var(--radius-sm);}
+.logos[data-el="confluence-logo-group"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.logos[data-el="confluence-logo-group"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.logos[data-el="confluence-logo-group"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.logos[data-el="confluence-logo-group"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.logos[data-el="confluence-logo-group"]:not(.square)>.seat{border-radius:50%;border:4px solid var(--page);box-shadow:0 0 0 1px var(--n-3);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.matrix[data-el="confluence-matrix"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.matrix[data-el="confluence-matrix"]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:var(--gap);padding:var(--gap-lg);}
+.matrix[data-el="confluence-matrix"]>.cell{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:var(--gap-sm);gap:var(--gap-sm);text-align:center;}
+.matrix[data-el="confluence-matrix"]>.cell.on{background:var(--a1);color:var(--a1-on);}
+.matrix[data-el="confluence-matrix"]>.cell>.name{font-size:clamp(var(--type-14),2cqw,var(--type-24));font-weight:var(--name-weight);}
+.matrix[data-el="confluence-matrix"]>.cell>.note{font-size:clamp(var(--type-12),1.3cqw,var(--type-16));line-height:var(--body-line);}
+.matrix[data-el="confluence-matrix"]>.axis-x,.matrix[data-el="confluence-matrix"]>.axis-y{position:absolute;display:flex;justify-content:space-between;font-size:var(--type-12);}
+.matrix[data-el="confluence-matrix"]>.axis-x{left:var(--gap-lg);right:var(--gap-lg);bottom:0;}
+.matrix[data-el="confluence-matrix"]>.axis-y{top:var(--gap-lg);bottom:var(--gap-lg);left:0;flex-direction:column;}
+.matrix[data-el="confluence-matrix"] .kick{color:var(--a1-8);font-size:var(--type-16);font-weight:var(--label-weight);}
+.matrix[data-el="confluence-matrix"]>.axis-x,.matrix[data-el="confluence-matrix"]>.axis-y{background:var(--page);color:var(--ink);}
+.matrix[data-el="confluence-matrix"]>.cell>.list{width:100%;flex:1;min-height:0;align-self:stretch;padding:var(--gap-sm);color:inherit;}
+.matrix[data-el="confluence-matrix"]>.cell.on .kick{color:inherit;}
+.matrix[data-el="confluence-matrix"]>.cell.on>.list .name{color:inherit;}
+.matrix[data-el="confluence-matrix"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.matrix[data-el="confluence-matrix"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.matrix[data-el="confluence-matrix"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.matrix[data-el="confluence-matrix"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.matrix[data-el="confluence-matrix"]>.cell>.name{align-self:stretch;background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4) var(--gap-sm);}
+.matrix[data-el="confluence-matrix"]>.cell.on>.name{background:var(--a2-7);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.grid9[data-el="confluence-matrix-nine"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.grid9[data-el="confluence-matrix-nine"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--gap);padding:var(--gap-lg);}
+.grid9[data-el="confluence-matrix-nine"]>.cell{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:var(--gap-sm);gap:var(--gap-sm);text-align:center;}
+.grid9[data-el="confluence-matrix-nine"]>.cell.on{background:var(--a1);color:var(--a1-on);}
+.grid9[data-el="confluence-matrix-nine"]>.cell>.name{font-size:clamp(var(--type-14),2cqw,var(--type-24));font-weight:var(--name-weight);}
+.grid9[data-el="confluence-matrix-nine"]>.cell>.note{font-size:clamp(var(--type-12),1.3cqw,var(--type-16));line-height:var(--body-line);}
+.grid9[data-el="confluence-matrix-nine"]>.axis-x,.grid9[data-el="confluence-matrix-nine"]>.axis-y{position:absolute;display:flex;justify-content:space-between;font-size:var(--type-12);}
+.grid9[data-el="confluence-matrix-nine"]>.axis-x{left:var(--gap-lg);right:var(--gap-lg);bottom:0;}
+.grid9[data-el="confluence-matrix-nine"]>.axis-y{top:var(--gap-lg);bottom:var(--gap-lg);left:0;flex-direction:column;}
+.grid9[data-el="confluence-matrix-nine"] .kick{color:var(--a1-8);font-size:var(--type-16);font-weight:var(--label-weight);}
+.grid9[data-el="confluence-matrix-nine"]>.axis-x,.grid9[data-el="confluence-matrix-nine"]>.axis-y{background:var(--page);color:var(--ink);}
+.grid9[data-el="confluence-matrix-nine"]>.cell>.list{width:100%;flex:1;min-height:0;align-self:stretch;padding:var(--gap-sm);color:inherit;}
+.grid9[data-el="confluence-matrix-nine"]>.cell.on .kick{color:inherit;}
+.grid9[data-el="confluence-matrix-nine"]>.cell.on>.list .name{color:inherit;}
+.grid9[data-el="confluence-matrix-nine"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.grid9[data-el="confluence-matrix-nine"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.grid9[data-el="confluence-matrix-nine"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.grid9[data-el="confluence-matrix-nine"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.grid9[data-el="confluence-matrix-nine"]>.cell>.name{align-self:stretch;background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4) var(--gap-sm);}
+.grid9[data-el="confluence-matrix-nine"]>.cell.on>.name{background:var(--a2-7);}
+@container (max-height:420px){.grid9[data-el="confluence-matrix-nine"]>.cell>.note{display:none;}
+}
+
+/* Fresh inferred metric: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.stat[data-el="confluence-metric"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.stat[data-el="confluence-metric"] *{box-sizing:border-box;}
+.stat[data-el="confluence-metric"] p,.stat[data-el="confluence-metric"] .name,.stat[data-el="confluence-metric"] .note,.stat[data-el="confluence-metric"] .fig,.stat[data-el="confluence-metric"] .kick{margin:0;}
+.stats[data-el="confluence-metric"]{position:relative;container-type:size;display:flex;gap:var(--gap);align-items:stretch;min-height:0;}
+.stats[data-el="confluence-metric"]>.stat{flex:1;min-width:0;min-height:0;}
+.stat[data-el="confluence-metric"]{display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);}
+.stat[data-el="confluence-metric"]>.parts{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);text-align:center;min-width:0;max-width:100%;}
+.stat[data-el="confluence-metric"] .fig{font-size:clamp(var(--type-24),min(12cqw,24cqh),var(--type-96));font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-8);white-space:nowrap;}
+.stat[data-el="confluence-metric"] small{font-size:var(--type-14);}
+.stat[data-el="confluence-metric"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.stat[data-el="confluence-metric"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-16));line-height:var(--body-line);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.stat[data-el="confluence-metric"] .fig{color:var(--ink);}
+.stat[data-el="confluence-metric"] .name{color:var(--a1-7);}
+
+/* Fresh inferred mindmap: confluence source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.mindmap[data-el="confluence-mindmap"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.mindmap[data-el="confluence-mindmap"] *{box-sizing:border-box;}
+.mindmap[data-el="confluence-mindmap"] .name,.mindmap[data-el="confluence-mindmap"] .leaf,.mindmap[data-el="confluence-mindmap"] .item{margin:0;}
+.mindmap[data-el="confluence-mindmap"]{--branch-rows:3;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(var(--branch-rows),minmax(0,1fr));gap:var(--gap);padding:0;anchor-scope:all;}
+.mindmap[data-el="confluence-mindmap"]>.core{position:absolute;left:39%;top:40%;width:22%;height:20%;border-radius:var(--radius);background:var(--a1);color:var(--a1-on);display:grid;place-items:center;text-align:center;padding:var(--gap-sm);z-index:2;font-size:clamp(var(--type-18),2.8cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);anchor-name:--confluence-mind-core;}
+.mindmap[data-el="confluence-mindmap"]>.branch{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;width:72%;padding:var(--gap-sm);display:flex;flex-direction:column;justify-content:center;gap:4px;font-size:var(--type-16);line-height:var(--name-line);font-weight:var(--name-weight);anchor-name:var(--branch-own);}
+.mindmap[data-el="confluence-mindmap"]>.branch>.leaf{font-size:var(--type-12);line-height:var(--body-line);font-weight:var(--body-weight);}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(odd of .branch){justify-self:start;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(even of .branch){justify-self:end;}
+.mindmap[data-el="confluence-mindmap"]:has(>.branch:nth-child(2 of .branch)):not(:has(>.branch:nth-child(3 of .branch))){--branch-rows:1;}
+.mindmap[data-el="confluence-mindmap"]:has(>.branch:nth-child(3 of .branch)):not(:has(>.branch:nth-child(4 of .branch))){--branch-rows:2;}
+.mindmap[data-el="confluence-mindmap"]:has(>.branch:nth-child(4 of .branch)):not(:has(>.branch:nth-child(5 of .branch))){--branch-rows:2;}
+.mindmap[data-el="confluence-mindmap"]:has(>.branch:nth-child(5 of .branch)):not(:has(>.branch:nth-child(6 of .branch))){--branch-rows:3;}
+.mindmap[data-el="confluence-mindmap"]:has(>.branch:nth-child(6 of .branch)):not(:has(>.branch:nth-child(7 of .branch))){--branch-rows:3;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(1 of .branch){--branch-own:--confluence-mind-1;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(2 of .branch){--branch-own:--confluence-mind-2;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(3 of .branch){--branch-own:--confluence-mind-3;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(4 of .branch){--branch-own:--confluence-mind-4;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(5 of .branch){--branch-own:--confluence-mind-5;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(6 of .branch){--branch-own:--confluence-mind-6;}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(odd of .branch)::after{content:"";position:absolute;left:100%;width:calc(19.5cqw - 28%);top:50%;height:0;border-top:var(--stroke) solid var(--a1);}
+.mindmap[data-el="confluence-mindmap"]>.branch:nth-child(even of .branch)::after{content:"";position:absolute;right:100%;width:calc(19.5cqw - 28%);top:50%;height:0;border-top:var(--stroke) solid var(--a1);}
+.mindmap[data-el="confluence-mindmap"]::before,.mindmap[data-el="confluence-mindmap"]::after{content:"";position:absolute;top:16%;bottom:16%;width:5.5%;border:var(--stroke) solid var(--a1);border-radius:var(--radius);z-index:-1;}
+.mindmap[data-el="confluence-mindmap"]::before{left:35%;border-left:0;}
+.mindmap[data-el="confluence-mindmap"]::after{right:35%;border-right:0;}
+
+/* Fresh inferred network: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.network[data-el="confluence-network"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.network[data-el="confluence-network"] *{box-sizing:border-box;}
+.network[data-el="confluence-network"] p,.network[data-el="confluence-network"] .name,.network[data-el="confluence-network"] .note,.network[data-el="confluence-network"] .fig,.network[data-el="confluence-network"] .kick{margin:0;}
+.network[data-el="confluence-network"]>.node{position:absolute;left:calc(8% + var(--x)*.84%);top:calc(8% + var(--y)*.84%);transform:translate(-50%,-50%);width:12%;aspect-ratio:1;border-radius:50%;border:var(--stroke) solid var(--a1);background:var(--page);color:var(--ink);display:grid;place-items:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-12);font-weight:var(--name-weight);line-height:var(--name-line);z-index:2;}
+.network[data-el="confluence-network"]>.node.on{background:var(--a1);color:var(--a1-on);}
+.network[data-el="confluence-network"]>.link{position:absolute;left:calc(8% + var(--x1)*.84%);top:calc(8% + var(--y1)*.84%);width:hypot(calc((var(--x2) - var(--x1))*.84cqw),calc((var(--y2) - var(--y1))*.84cqh));height:var(--stroke);background:var(--n-4);transform-origin:0 50%;transform:rotate(atan2(calc((var(--y2) - var(--y1))*.84cqh),calc((var(--x2) - var(--x1))*.84cqw)));}
+.network[data-el="confluence-network"]>.link.strong{height:calc(var(--stroke)*2);background:var(--a1);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.network[data-el="confluence-network"]>.node{border:4px solid var(--page);background:var(--a1-2-soft);color:var(--ink);box-shadow:0 0 0 1px var(--a1);}
+.network[data-el="confluence-network"]>.node.on{background:var(--a1-7);color:var(--page);}
+.network[data-el="confluence-network"]>.link.strong{background:var(--a2);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.person[data-el="confluence-person"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.people[data-el="confluence-person"]{position:relative;container-type:size;display:flex;align-items:stretch;gap:var(--gap);}
+.people[data-el="confluence-person"]>.person{flex:1;min-width:0;min-height:0;}
+.person[data-el="confluence-person"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);text-align:center;}
+.person[data-el="confluence-person"]>.name{font-size:clamp(var(--type-16),3.5cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);}
+.person[data-el="confluence-person"]>.note{font-size:var(--type-14);line-height:var(--body-line);}
+.person[data-el="confluence-person"]>.seat{max-height:42%;max-width:70%;aspect-ratio:1;border-radius:50%;}
+.person[data-el="confluence-person"] .price{display:flex;align-items:baseline;gap:var(--gap-sm);}
+.person[data-el="confluence-person"] .fig{font-size:clamp(var(--type-28),8cqw,var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);}
+.person[data-el="confluence-person"] small{font-size:var(--type-14);}
+.person[data-el="confluence-person"].on{border-color:var(--a1);box-shadow:inset 0 5px var(--a1);}
+.person[data-el="confluence-person"]>.list{width:100%;text-align:left;flex:1;min-height:0;}
+.person[data-el="confluence-person"]>.seat{width:min(68cqw,38cqh);height:min(68cqw,38cqh);}
+.person[data-el="confluence-person"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.person[data-el="confluence-person"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.person[data-el="confluence-person"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.person[data-el="confluence-person"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.person[data-el="confluence-person"]>.name{align-self:stretch;background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4);}
+
+/* Fresh inferred pill: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.pill[data-el="confluence-pill"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.pill[data-el="confluence-pill"] *{box-sizing:border-box;}
+.pill[data-el="confluence-pill"] p,.pill[data-el="confluence-pill"] .name,.pill[data-el="confluence-pill"] .note,.pill[data-el="confluence-pill"] .fig,.pill[data-el="confluence-pill"] .kick{margin:0;}
+.pill[data-el="confluence-pill"]{display:flex;align-items:center;justify-content:center;padding:0;background:none;}
+.pill[data-el="confluence-pill"]>.parts{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);width:100%;min-height:40px;max-height:100%;display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm) var(--pad);border-radius:999px;}
+.pill[data-el="confluence-pill"] .mark{display:grid;place-items:center;width:28px;height:28px;flex:none;border-radius:50%;background:var(--a1);color:var(--a1-on);font-size:var(--type-12);line-height:var(--label-line);font-weight:var(--label-weight);}
+.pill[data-el="confluence-pill"] .name{font-size:clamp(var(--type-14),3.5cqw,var(--type-22));font-weight:var(--name-weight);line-height:var(--name-line);}
+.pill[data-el="confluence-pill"] .note{font-size:var(--type-12);line-height:var(--body-line);min-width:0;}
+.pill[data-el="confluence-pill"].on>.parts{background:var(--a1);color:var(--a1-on);border-color:var(--a1);}
+.pill[data-el="confluence-pill"].line>.parts{background:none;color:var(--ink);border-color:var(--a1);}
+.pill[data-el="confluence-pill"].quiet>.parts{background:var(--n-1);color:var(--ink);border-color:var(--n-2);}
+@container(max-width:520px){.pill[data-el="confluence-pill"] .note{display:none;}
+}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.posmap[data-el="confluence-positioning"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.posmap[data-el="confluence-positioning"]{padding:var(--gap-lg);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);background:linear-gradient(to right,transparent calc(50% - .5px),var(--n-4) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px)),linear-gradient(to bottom,transparent calc(50% - .5px),var(--n-4) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px));}
+.posmap[data-el="confluence-positioning"]>.mark{position:absolute;left:calc(10% + var(--x)/100*80%);bottom:calc(10% + var(--y)/100*80%);transform:translate(-50%,50%);width:clamp(12px,calc(var(--r,18)*.7cqw),80px);aspect-ratio:1;border-radius:50%;background:var(--n-3);color:var(--ink);display:grid;place-items:center;padding:var(--gap-sm);font-size:var(--type-12);}
+.posmap[data-el="confluence-positioning"]>.mark.on{background:var(--a1);color:var(--a1-on);}
+.posmap[data-el="confluence-positioning"]>.axis-x{position:absolute;left:5%;right:5%;bottom:2%;display:flex;justify-content:space-between;font-size:var(--type-12);}
+.posmap[data-el="confluence-positioning"]>.axis-y{position:absolute;top:3%;bottom:10%;left:2%;display:flex;flex-direction:column;justify-content:space-between;font-size:var(--type-12);}
+.posmap[data-el="confluence-positioning"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.posmap[data-el="confluence-positioning"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.posmap[data-el="confluence-positioning"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.posmap[data-el="confluence-positioning"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.plan[data-el="confluence-pricing"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.plans[data-el="confluence-pricing"]{position:relative;container-type:size;display:flex;align-items:stretch;gap:var(--gap);}
+.plans[data-el="confluence-pricing"]>.plan{flex:1;min-width:0;min-height:0;}
+.plan[data-el="confluence-pricing"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap);padding:var(--pad);text-align:center;}
+.plan[data-el="confluence-pricing"]>.name{font-size:clamp(var(--type-16),3.5cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);}
+.plan[data-el="confluence-pricing"]>.note{font-size:var(--type-14);line-height:var(--body-line);}
+.plan[data-el="confluence-pricing"]>.seat{max-height:42%;max-width:70%;aspect-ratio:1;border-radius:50%;}
+.plan[data-el="confluence-pricing"] .price{display:flex;align-items:baseline;gap:var(--gap-sm);}
+.plan[data-el="confluence-pricing"] .fig{font-size:clamp(var(--type-28),8cqw,var(--type-64));font-weight:var(--figure-weight);line-height:var(--figure-line);}
+.plan[data-el="confluence-pricing"] small{font-size:var(--type-14);}
+.plan[data-el="confluence-pricing"].on{border-color:var(--a1);box-shadow:inset 0 5px var(--a1);}
+.plan[data-el="confluence-pricing"]>.list{width:100%;text-align:left;flex:1;min-height:0;}
+.plan[data-el="confluence-pricing"]{padding-top:64px;}
+.plan[data-el="confluence-pricing"]>.tag{position:absolute;left:var(--pad);top:var(--pad);height:1.2em;}
+.plan[data-el="confluence-pricing"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.plan[data-el="confluence-pricing"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.plan[data-el="confluence-pricing"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.plan[data-el="confluence-pricing"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.prose[data-el="confluence-prose"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.prose[data-el="confluence-prose"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm);}
+.prose[data-el="confluence-prose"]>p{margin:0;font-size:clamp(var(--type-14),4.6cqw,var(--type-18));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);overflow-wrap:anywhere;}
+.prose[data-el="confluence-prose"] b{color:var(--a1-8);font-weight:var(--name-weight);}
+.prose[data-el="confluence-prose"].lead>p{font-size:clamp(var(--type-20),5.6cqw,var(--type-32));font-weight:var(--lead-weight);line-height:var(--lead-line);}
+.prose[data-el="confluence-prose"].quiet>p{font-size:clamp(var(--type-12),5cqw,var(--type-16));letter-spacing:var(--afterglow-prose-quiet-track);}
+.prose[data-el="confluence-prose"].cols{display:block;column-count:2;column-gap:var(--gap);}
+.prose[data-el="confluence-prose"].cols>p{margin-bottom:var(--gap);}
+.prose[data-el="confluence-prose"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.prose[data-el="confluence-prose"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.prose[data-el="confluence-prose"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.prose[data-el="confluence-prose"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh inferred pyramid: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.pyramid[data-el="confluence-pyramid"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.pyramid[data-el="confluence-pyramid"] *{box-sizing:border-box;}
+.pyramid[data-el="confluence-pyramid"] p,.pyramid[data-el="confluence-pyramid"] .name,.pyramid[data-el="confluence-pyramid"] .note,.pyramid[data-el="confluence-pyramid"] .fig,.pyramid[data-el="confluence-pyramid"] .kick{margin:0;}
+.pyramid[data-el="confluence-pyramid"]{--levels:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);padding:0;}
+.pyramid[data-el="confluence-pyramid"]:has(>.level:nth-child(3):last-child){--levels:3;}
+.pyramid[data-el="confluence-pyramid"]:has(>.level:nth-child(4):last-child){--levels:4;}
+.pyramid[data-el="confluence-pyramid"]:has(>.level:nth-child(5):last-child){--levels:5;}
+.pyramid[data-el="confluence-pyramid"]>.level{position:relative;container:confluence-level / size;width:calc(var(--level-index)/var(--levels)*94%);flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;padding:var(--gap-sm);background:var(--a1-7);color:var(--page);clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);}
+.pyramid[data-el="confluence-pyramid"] .name{font-size:clamp(var(--type-14),9cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.pyramid[data-el="confluence-pyramid"] .note{font-size:clamp(var(--type-12),4cqw,var(--type-16));line-height:var(--body-line);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(1){--level-index:1;background:var(--a1-9);color:var(--page);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(2){--level-index:2;background:var(--a1-8);color:var(--page);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(3){--level-index:3;background:var(--a1-7);color:var(--page);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(4){--level-index:4;background:var(--a1-3);color:var(--ink);}
+.pyramid[data-el="confluence-pyramid"]>.level:nth-child(5){--level-index:5;background:var(--a1-2);color:var(--ink);}
+@container confluence-level (max-width:240px){.pyramid[data-el="confluence-pyramid"]>.level>.note{display:none;}
+}
+@container confluence-level (max-height:94px){.pyramid[data-el="confluence-pyramid"]>.level>.note{display:none;}
+}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.pyramid[data-el="confluence-pyramid"]>.level{position:relative;background:var(--a1-7);color:var(--ink);}
+.pyramid[data-el="confluence-pyramid"]>.level::before{content:"";position:absolute;inset:2px;background:var(--page);clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);}
+.pyramid[data-el="confluence-pyramid"]>.level>.name,.pyramid[data-el="confluence-pyramid"]>.level>.note{position:relative;z-index:1;}
+.pyramid[data-el="confluence-pyramid"]>.level>.name{color:var(--a2-7);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.quote[data-el="confluence-quote"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.quote[data-el="confluence-quote"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--pad);}
+.quote[data-el="confluence-quote"]>blockquote{margin:0;font-size:clamp(var(--type-20),4.2cqw,var(--type-40));line-height:var(--lead-line);font-weight:var(--lead-weight);}
+.quote[data-el="confluence-quote"]>.by{display:flex;align-items:center;gap:var(--gap);}
+.quote[data-el="confluence-quote"] .seat{width:15%;max-height:80px;aspect-ratio:1;border-radius:50%;}
+.quote[data-el="confluence-quote"] .name{font-size:var(--type-18);font-weight:var(--name-weight);}
+.quote[data-el="confluence-quote"] .note{font-size:var(--type-14);}
+.quote[data-el="confluence-quote"].big>blockquote{font-size:clamp(var(--type-24),min(5.4cqw,8.5cqh),var(--type-48));}
+.quote[data-el="confluence-quote"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.quote[data-el="confluence-quote"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.quote[data-el="confluence-quote"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.quote[data-el="confluence-quote"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.quote[data-el="confluence-quote"]>blockquote{font-weight:var(--title-weight);}
+.quote[data-el="confluence-quote"]>.by>.name{color:var(--a1-7);}
+
+/* Fresh inferred radar: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.radar[data-el="confluence-radar"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.radar[data-el="confluence-radar"] *{box-sizing:border-box;}
+.radar[data-el="confluence-radar"] p,.radar[data-el="confluence-radar"] .name,.radar[data-el="confluence-radar"] .note,.radar[data-el="confluence-radar"] .fig,.radar[data-el="confluence-radar"] .kick{margin:0;}
+.radar[data-el="confluence-radar"]{--radar-d:min(66cqw,66cqh);}
+.radar[data-el="confluence-radar"]::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:var(--radar-d);height:var(--radar-d);background:repeating-radial-gradient(circle,transparent 0 29px,var(--n-3) 29px 30px);border:var(--stroke) solid var(--n-4);border-radius:50%;}
+.radar[data-el="confluence-radar"]>.axis{position:absolute;left:calc(50% + sin(var(--radar-angle))*var(--radar-d)*.61);top:calc(50% - cos(var(--radar-angle))*var(--radar-d)*.61);transform:translate(-50%,-50%);width:20%;font-size:var(--type-12);line-height:var(--label-line);font-weight:var(--label-weight);text-align:center;z-index:2;}
+.radar[data-el="confluence-radar"]>.series{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:var(--radar-d);height:var(--radar-d);}
+.radar[data-el="confluence-radar"]>.series::before{content:"";position:absolute;inset:0;background:color-mix(in srgb,var(--series-color,var(--a1)) 35%,transparent);}
+.radar[data-el="confluence-radar"]>.series>.name{position:absolute;top:calc(100% + 8px);left:calc(var(--series-index,0)*34%);max-width:32%;font-size:var(--type-12);line-height:var(--label-line);white-space:nowrap;color:var(--ink);}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(3 of .axis)):not(:has(>.axis:nth-child(4 of .axis)))>.axis:nth-child(1 of .axis){--radar-angle:0.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(3 of .axis)):not(:has(>.axis:nth-child(4 of .axis)))>.axis:nth-child(2 of .axis){--radar-angle:120.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(3 of .axis)):not(:has(>.axis:nth-child(4 of .axis)))>.axis:nth-child(3 of .axis){--radar-angle:240.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(3 of .axis)):not(:has(>.axis:nth-child(4 of .axis)))>.series::before{clip-path:polygon(calc(50% + 0.000000*var(--v1)/var(--max,100)*48%) calc(50% - 1.000000*var(--v1)/var(--max,100)*48%),calc(50% + 0.866025*var(--v2)/var(--max,100)*48%) calc(50% - -0.500000*var(--v2)/var(--max,100)*48%),calc(50% + -0.866025*var(--v3)/var(--max,100)*48%) calc(50% - -0.500000*var(--v3)/var(--max,100)*48%));}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(4 of .axis)):not(:has(>.axis:nth-child(5 of .axis)))>.axis:nth-child(1 of .axis){--radar-angle:0.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(4 of .axis)):not(:has(>.axis:nth-child(5 of .axis)))>.axis:nth-child(2 of .axis){--radar-angle:90.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(4 of .axis)):not(:has(>.axis:nth-child(5 of .axis)))>.axis:nth-child(3 of .axis){--radar-angle:180.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(4 of .axis)):not(:has(>.axis:nth-child(5 of .axis)))>.axis:nth-child(4 of .axis){--radar-angle:270.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(4 of .axis)):not(:has(>.axis:nth-child(5 of .axis)))>.series::before{clip-path:polygon(calc(50% + 0.000000*var(--v1)/var(--max,100)*48%) calc(50% - 1.000000*var(--v1)/var(--max,100)*48%),calc(50% + 1.000000*var(--v2)/var(--max,100)*48%) calc(50% - 0.000000*var(--v2)/var(--max,100)*48%),calc(50% + 0.000000*var(--v3)/var(--max,100)*48%) calc(50% - -1.000000*var(--v3)/var(--max,100)*48%),calc(50% + -1.000000*var(--v4)/var(--max,100)*48%) calc(50% - -0.000000*var(--v4)/var(--max,100)*48%));}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(5 of .axis)):not(:has(>.axis:nth-child(6 of .axis)))>.axis:nth-child(1 of .axis){--radar-angle:0.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(5 of .axis)):not(:has(>.axis:nth-child(6 of .axis)))>.axis:nth-child(2 of .axis){--radar-angle:72.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(5 of .axis)):not(:has(>.axis:nth-child(6 of .axis)))>.axis:nth-child(3 of .axis){--radar-angle:144.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(5 of .axis)):not(:has(>.axis:nth-child(6 of .axis)))>.axis:nth-child(4 of .axis){--radar-angle:216.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(5 of .axis)):not(:has(>.axis:nth-child(6 of .axis)))>.axis:nth-child(5 of .axis){--radar-angle:288.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(5 of .axis)):not(:has(>.axis:nth-child(6 of .axis)))>.series::before{clip-path:polygon(calc(50% + 0.000000*var(--v1)/var(--max,100)*48%) calc(50% - 1.000000*var(--v1)/var(--max,100)*48%),calc(50% + 0.951057*var(--v2)/var(--max,100)*48%) calc(50% - 0.309017*var(--v2)/var(--max,100)*48%),calc(50% + 0.587785*var(--v3)/var(--max,100)*48%) calc(50% - -0.809017*var(--v3)/var(--max,100)*48%),calc(50% + -0.587785*var(--v4)/var(--max,100)*48%) calc(50% - -0.809017*var(--v4)/var(--max,100)*48%),calc(50% + -0.951057*var(--v5)/var(--max,100)*48%) calc(50% - 0.309017*var(--v5)/var(--max,100)*48%));}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(6 of .axis)):not(:has(>.axis:nth-child(7 of .axis)))>.axis:nth-child(1 of .axis){--radar-angle:0.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(6 of .axis)):not(:has(>.axis:nth-child(7 of .axis)))>.axis:nth-child(2 of .axis){--radar-angle:60.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(6 of .axis)):not(:has(>.axis:nth-child(7 of .axis)))>.axis:nth-child(3 of .axis){--radar-angle:120.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(6 of .axis)):not(:has(>.axis:nth-child(7 of .axis)))>.axis:nth-child(4 of .axis){--radar-angle:180.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(6 of .axis)):not(:has(>.axis:nth-child(7 of .axis)))>.axis:nth-child(5 of .axis){--radar-angle:240.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(6 of .axis)):not(:has(>.axis:nth-child(7 of .axis)))>.axis:nth-child(6 of .axis){--radar-angle:300.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(6 of .axis)):not(:has(>.axis:nth-child(7 of .axis)))>.series::before{clip-path:polygon(calc(50% + 0.000000*var(--v1)/var(--max,100)*48%) calc(50% - 1.000000*var(--v1)/var(--max,100)*48%),calc(50% + 0.866025*var(--v2)/var(--max,100)*48%) calc(50% - 0.500000*var(--v2)/var(--max,100)*48%),calc(50% + 0.866025*var(--v3)/var(--max,100)*48%) calc(50% - -0.500000*var(--v3)/var(--max,100)*48%),calc(50% + 0.000000*var(--v4)/var(--max,100)*48%) calc(50% - -1.000000*var(--v4)/var(--max,100)*48%),calc(50% + -0.866025*var(--v5)/var(--max,100)*48%) calc(50% - -0.500000*var(--v5)/var(--max,100)*48%),calc(50% + -0.866025*var(--v6)/var(--max,100)*48%) calc(50% - 0.500000*var(--v6)/var(--max,100)*48%));}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.axis:nth-child(1 of .axis){--radar-angle:0.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.axis:nth-child(2 of .axis){--radar-angle:51.42857142857143deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.axis:nth-child(3 of .axis){--radar-angle:102.85714285714286deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.axis:nth-child(4 of .axis){--radar-angle:154.28571428571428deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.axis:nth-child(5 of .axis){--radar-angle:205.71428571428572deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.axis:nth-child(6 of .axis){--radar-angle:257.14285714285717deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.axis:nth-child(7 of .axis){--radar-angle:308.57142857142856deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(7 of .axis)):not(:has(>.axis:nth-child(8 of .axis)))>.series::before{clip-path:polygon(calc(50% + 0.000000*var(--v1)/var(--max,100)*48%) calc(50% - 1.000000*var(--v1)/var(--max,100)*48%),calc(50% + 0.781831*var(--v2)/var(--max,100)*48%) calc(50% - 0.623490*var(--v2)/var(--max,100)*48%),calc(50% + 0.974928*var(--v3)/var(--max,100)*48%) calc(50% - -0.222521*var(--v3)/var(--max,100)*48%),calc(50% + 0.433884*var(--v4)/var(--max,100)*48%) calc(50% - -0.900969*var(--v4)/var(--max,100)*48%),calc(50% + -0.433884*var(--v5)/var(--max,100)*48%) calc(50% - -0.900969*var(--v5)/var(--max,100)*48%),calc(50% + -0.974928*var(--v6)/var(--max,100)*48%) calc(50% - -0.222521*var(--v6)/var(--max,100)*48%),calc(50% + -0.781831*var(--v7)/var(--max,100)*48%) calc(50% - 0.623490*var(--v7)/var(--max,100)*48%));}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(1 of .axis){--radar-angle:0.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(2 of .axis){--radar-angle:45.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(3 of .axis){--radar-angle:90.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(4 of .axis){--radar-angle:135.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(5 of .axis){--radar-angle:180.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(6 of .axis){--radar-angle:225.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(7 of .axis){--radar-angle:270.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.axis:nth-child(8 of .axis){--radar-angle:315.0deg;}
+.radar[data-el="confluence-radar"]:has(>.axis:nth-child(8 of .axis)):not(:has(>.axis:nth-child(9 of .axis)))>.series::before{clip-path:polygon(calc(50% + 0.000000*var(--v1)/var(--max,100)*48%) calc(50% - 1.000000*var(--v1)/var(--max,100)*48%),calc(50% + 0.707107*var(--v2)/var(--max,100)*48%) calc(50% - 0.707107*var(--v2)/var(--max,100)*48%),calc(50% + 1.000000*var(--v3)/var(--max,100)*48%) calc(50% - 0.000000*var(--v3)/var(--max,100)*48%),calc(50% + 0.707107*var(--v4)/var(--max,100)*48%) calc(50% - -0.707107*var(--v4)/var(--max,100)*48%),calc(50% + 0.000000*var(--v5)/var(--max,100)*48%) calc(50% - -1.000000*var(--v5)/var(--max,100)*48%),calc(50% + -0.707107*var(--v6)/var(--max,100)*48%) calc(50% - -0.707107*var(--v6)/var(--max,100)*48%),calc(50% + -1.000000*var(--v7)/var(--max,100)*48%) calc(50% - -0.000000*var(--v7)/var(--max,100)*48%),calc(50% + -0.707107*var(--v8)/var(--max,100)*48%) calc(50% - 0.707107*var(--v8)/var(--max,100)*48%));}
+.radar[data-el="confluence-radar"]>.series:nth-child(1 of .series){--series-index:0;--series-color:var(--a1);}
+.radar[data-el="confluence-radar"]>.series:nth-child(2 of .series){--series-index:1;--series-color:var(--a2);}
+.radar[data-el="confluence-radar"]>.series:nth-child(3 of .series){--series-index:2;--series-color:var(--a3);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.radar[data-el="confluence-radar"]::before{border:6px solid var(--page);box-shadow:0 0 0 1px var(--n-3);background-color:var(--page);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.roadmap[data-el="confluence-roadmap"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.roadmap[data-el="confluence-roadmap"]{display:flex;flex-direction:column;gap:var(--gap);padding:var(--gap);}
+.roadmap[data-el="confluence-roadmap"]>.heads{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding-left:20%;font-size:var(--type-14);text-align:center;}
+.roadmap[data-el="confluence-roadmap"]>.lane{position:relative;flex:1;min-height:0;background:var(--n-1);border-bottom:var(--stroke) solid var(--n-3);margin-left:20%;}
+.roadmap[data-el="confluence-roadmap"]>.lane>.name{position:absolute;right:103%;top:30%;font-size:var(--type-14);white-space:nowrap;}
+.roadmap[data-el="confluence-roadmap"] .bar{position:absolute;left:calc(var(--from)/var(--cols)*100%);width:calc((var(--to) - var(--from))/var(--cols)*100%);height:55%;top:22%;background:var(--a1-2-soft);color:var(--ink);border-radius:var(--radius-sm);display:grid;place-items:center;padding:var(--gap-sm);font-size:var(--type-12);}
+.roadmap[data-el="confluence-roadmap"] .bar.on{background:var(--a1);color:var(--a1-on);}
+.roadmap[data-el="confluence-roadmap"] .mile{position:absolute;left:calc(var(--at)/var(--cols)*100%);top:0;bottom:0;border-left:2px solid var(--a2);font-size:var(--type-12);}
+.roadmap[data-el="confluence-roadmap"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.roadmap[data-el="confluence-roadmap"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.roadmap[data-el="confluence-roadmap"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.roadmap[data-el="confluence-roadmap"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.roadmap[data-el="confluence-roadmap"]>.lane{background:var(--page);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);}
+
+/* Fresh inferred sankey: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.sankey[data-el="confluence-sankey"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.sankey[data-el="confluence-sankey"] *{box-sizing:border-box;}
+.sankey[data-el="confluence-sankey"] p,.sankey[data-el="confluence-sankey"] .name,.sankey[data-el="confluence-sankey"] .note,.sankey[data-el="confluence-sankey"] .fig,.sankey[data-el="confluence-sankey"] .kick{margin:0;}
+.sankey[data-el="confluence-sankey"]{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:var(--gap-sm);padding:5% 0 5% 52%;}
+.sankey[data-el="confluence-sankey"]>.source{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:absolute;left:0;top:10%;width:28%;height:80%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap);padding:var(--gap);}
+.sankey[data-el="confluence-sankey"]>.branch{position:relative;flex:var(--v) 1 0;min-height:0;min-width:0;background:var(--n-1);padding:var(--gap-sm);display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);border-left:5px solid var(--a1);}
+.sankey[data-el="confluence-sankey"]>.branch::before{content:"";position:absolute;right:100%;top:0;width:50%;height:100%;background:color-mix(in srgb,var(--a1) 28%,var(--page));clip-path:polygon(0 30%,100% 0,100% 100%,0 70%);}
+.sankey[data-el="confluence-sankey"] .name{font-size:var(--type-16);font-weight:var(--name-weight);line-height:var(--name-line);}
+.sankey[data-el="confluence-sankey"] .fig{font-size:var(--type-24);font-weight:var(--figure-weight);line-height:var(--figure-line);color:var(--a1-8);}
+.sankey[data-el="confluence-sankey"]>.source .fig{color:var(--a1-8);}
+.sankey[data-el="confluence-sankey"] .branch>.branch{flex:var(--v) 1 0;min-width:0;background:var(--a1-2-soft);color:var(--ink);font-size:var(--type-12);padding:var(--gap-sm);}
+.sankey[data-el="confluence-sankey"]>.branch.on{background:var(--a1);color:var(--a1-on);}
+.sankey[data-el="confluence-sankey"]>.branch.on>.fig{color:inherit;}
+.sankey[data-el="confluence-sankey"]>.branch.on::before{background:color-mix(in srgb,var(--a1) 65%,var(--page));}
+.sankey[data-el="confluence-sankey"]>.branch.out{background:var(--n-2);border-color:var(--n-6);}
+.sankey[data-el="confluence-sankey"]>.branch.out::before{background:var(--n-3);}
+
+/* Fresh inferred slope from confluence measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.slope[data-el="confluence-slope"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.slope[data-el="confluence-slope"] *{box-sizing:border-box;}
+.slope[data-el="confluence-slope"] p,.slope[data-el="confluence-slope"] .name,.slope[data-el="confluence-slope"] .note,.slope[data-el="confluence-slope"] .fig{margin:0;}
+.slope[data-el="confluence-slope"]{display:flex;flex-direction:column;gap:var(--gap-sm);padding:var(--gap-sm);}
+.slope[data-el="confluence-slope"]>.heads{height:24px;flex:none;display:flex;justify-content:space-between;padding-left:30%;font-size:var(--type-12);line-height:var(--label-line);}
+.slope[data-el="confluence-slope"]>.pair{position:relative;container:confluence-pair / size;flex:1;min-height:0;min-width:0;border-bottom:var(--stroke) solid var(--n-3);}
+.slope[data-el="confluence-slope"]>.pair>.name{position:absolute;left:0;top:50%;transform:translateY(-50%);width:24%;font-size:var(--type-14);line-height:var(--name-line);font-weight:var(--name-weight);}
+.slope[data-el="confluence-slope"]>.pair>b.a,.slope[data-el="confluence-slope"]>.pair>b.b{position:absolute;transform:translate(-50%,-100%);font-size:var(--type-12);line-height:var(--label-line);font-weight:var(--figure-weight);color:var(--a1-8);white-space:nowrap;z-index:1;}
+.slope[data-el="confluence-slope"]>.pair>b.a{left:36%;top:calc(88% - var(--a)/var(--max,100)*56%);}
+.slope[data-el="confluence-slope"]>.pair>b.b{left:93%;top:calc(88% - var(--b)/var(--max,100)*56%);}
+.slope[data-el="confluence-slope"]>.pair::before{content:"";position:absolute;left:36%;top:calc(88% - var(--a)/var(--max,100)*56%);width:hypot(57cqw,calc((var(--a) - var(--b))/var(--max,100)*56cqh));height:var(--stroke);transform-origin:0 50%;transform:rotate(atan2(calc((var(--a) - var(--b))/var(--max,100)*56cqh),57cqw));background:var(--n-5);}
+.slope[data-el="confluence-slope"]>.pair.on::before{height:3px;background:var(--a1);}
+.slope[data-el="confluence-slope"]>.pair>b.a::after,.slope[data-el="confluence-slope"]>.pair>b.b::after{content:"";position:absolute;left:50%;bottom:-3px;width:5px;height:5px;border-radius:50%;background:var(--a1);transform:translateX(-50%);}
+.slope[data-el="confluence-slope"].dumbbell>.pair>b.a{left:calc(29% + var(--a)/var(--max,100)*65%);top:64%;transform:translate(-50%,-100%);}
+.slope[data-el="confluence-slope"].dumbbell>.pair>b.b{left:calc(29% + var(--b)/var(--max,100)*65%);top:64%;transform:translate(-50%,3px);}
+.slope[data-el="confluence-slope"].dumbbell>.pair>b.b::after{bottom:auto;top:-6px;}
+.slope[data-el="confluence-slope"].dumbbell>.pair::before{left:calc(29% + min(var(--a),var(--b))/var(--max,100)*65%);top:64%;width:calc(abs(var(--b) - var(--a))/var(--max,100)*65%);transform:none;}
+
+/* Fresh inferred sparkline from confluence measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.spark[data-el="confluence-sparkline"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.spark[data-el="confluence-sparkline"] *{box-sizing:border-box;}
+.spark[data-el="confluence-sparkline"] p,.spark[data-el="confluence-sparkline"] .name,.spark[data-el="confluence-sparkline"] .note,.spark[data-el="confluence-sparkline"] .fig{margin:0;}
+.spark[data-el="confluence-sparkline"]{--spark-color:var(--a1);height:100%;min-height:40px;max-height:120px;width:100%;display:flex;justify-content:space-between;align-items:flex-end;padding:0 4px;anchor-scope:all;}
+.spark[data-el="confluence-sparkline"].up{--spark-color:var(--good);}
+.spark[data-el="confluence-sparkline"].down{--spark-color:var(--bad);}
+.spark[data-el="confluence-sparkline"]>span{position:static;width:1px;height:1px;flex:none;margin-bottom:calc(10cqh + var(--v)/var(--max,100)*80cqh);anchor-name:var(--spark-own);border-radius:50%;box-shadow:0 0 0 2px var(--spark-color);}
+.spark[data-el="confluence-sparkline"]>span:nth-child(1){--spark-own:--confluence-spark-1;--spark-prev:--confluence-spark-0;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(2){--spark-own:--confluence-spark-2;--spark-prev:--confluence-spark-1;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(3){--spark-own:--confluence-spark-3;--spark-prev:--confluence-spark-2;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(4){--spark-own:--confluence-spark-4;--spark-prev:--confluence-spark-3;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(5){--spark-own:--confluence-spark-5;--spark-prev:--confluence-spark-4;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(6){--spark-own:--confluence-spark-6;--spark-prev:--confluence-spark-5;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(7){--spark-own:--confluence-spark-7;--spark-prev:--confluence-spark-6;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(8){--spark-own:--confluence-spark-8;--spark-prev:--confluence-spark-7;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(9){--spark-own:--confluence-spark-9;--spark-prev:--confluence-spark-8;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(10){--spark-own:--confluence-spark-10;--spark-prev:--confluence-spark-9;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(11){--spark-own:--confluence-spark-11;--spark-prev:--confluence-spark-10;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(12){--spark-own:--confluence-spark-12;--spark-prev:--confluence-spark-11;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(13){--spark-own:--confluence-spark-13;--spark-prev:--confluence-spark-12;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(14){--spark-own:--confluence-spark-14;--spark-prev:--confluence-spark-13;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(15){--spark-own:--confluence-spark-15;--spark-prev:--confluence-spark-14;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(16){--spark-own:--confluence-spark-16;--spark-prev:--confluence-spark-15;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(17){--spark-own:--confluence-spark-17;--spark-prev:--confluence-spark-16;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(18){--spark-own:--confluence-spark-18;--spark-prev:--confluence-spark-17;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(19){--spark-own:--confluence-spark-19;--spark-prev:--confluence-spark-18;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(20){--spark-own:--confluence-spark-20;--spark-prev:--confluence-spark-19;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(21){--spark-own:--confluence-spark-21;--spark-prev:--confluence-spark-20;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(22){--spark-own:--confluence-spark-22;--spark-prev:--confluence-spark-21;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(23){--spark-own:--confluence-spark-23;--spark-prev:--confluence-spark-22;}
+.spark[data-el="confluence-sparkline"]>span:nth-child(24){--spark-own:--confluence-spark-24;--spark-prev:--confluence-spark-23;}
+.spark[data-el="confluence-sparkline"]>span::before{content:"";position:absolute;left:anchor(var(--spark-prev) center);right:anchor(var(--spark-own) center);top:calc(anchor(var(--spark-prev) center) - .7px);bottom:calc(anchor(var(--spark-own) center) - .7px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--spark-color) calc(50% - .6px) calc(50% + .6px),transparent calc(50% + 1px));}
+.spark[data-el="confluence-sparkline"]>span::after{content:"";position:absolute;left:anchor(var(--spark-prev) center);right:anchor(var(--spark-own) center);top:calc(anchor(var(--spark-own) center) - .7px);bottom:calc(anchor(var(--spark-prev) center) - .7px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--spark-color) calc(50% - .6px) calc(50% + .6px),transparent calc(50% + 1px));}
+.spark[data-el="confluence-sparkline"]>span:first-child::before,.spark[data-el="confluence-sparkline"]>span:first-child::after{content:none;}
+.spark[data-el="confluence-sparkline"].bars{gap:3%;}
+.spark[data-el="confluence-sparkline"].bars>span{flex:1;height:calc(var(--v)/var(--max,100)*80cqh);margin-bottom:10cqh;box-shadow:none;background:var(--spark-color);border-radius:var(--radius-sm) var(--radius-sm) 0 0;}
+.spark[data-el="confluence-sparkline"].bars>span::before,.spark[data-el="confluence-sparkline"].bars>span::after{content:none;}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.steps[data-el="confluence-steps"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.steps[data-el="confluence-steps"]{display:flex;gap:var(--gap-lg);align-items:stretch;padding:var(--gap-sm);}
+.steps[data-el="confluence-steps"]>.step{position:relative;flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--gap-sm);gap:var(--gap-sm);background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);}
+.steps[data-el="confluence-steps"] .mark{width:24%;aspect-ratio:1;display:grid;place-items:center;color:var(--a1);font-size:clamp(var(--type-18),4.8cqw,var(--type-40));font-weight:var(--figure-weight);}
+.steps[data-el="confluence-steps"] .mark>.icon{width:56%;height:56%;}
+.steps[data-el="confluence-steps"] .name{font-size:clamp(var(--type-16),2.7cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.steps[data-el="confluence-steps"] .note{font-size:clamp(var(--type-12),1.7cqw,var(--type-18));line-height:var(--body-line);}
+.steps[data-el="confluence-steps"]>.step:not(:last-child)::after{content:"";position:absolute;right:calc(-1 * var(--gap-lg) / 2 - 10px);top:calc(50% - 10px);width:20px;height:20px;border-radius:50%;background:var(--a1);z-index:2;}
+.steps[data-el="confluence-steps"]>.step:not(:last-child)::before{content:"";position:absolute;right:calc(-1 * var(--gap-lg) / 2 - 4px);top:calc(50% - 4px);width:7px;height:7px;border-right:2px solid var(--a1-on);border-top:2px solid var(--a1-on);transform:rotate(45deg);z-index:3;}
+.steps[data-el="confluence-steps"].col{flex-direction:column;gap:var(--gap);}
+.steps[data-el="confluence-steps"].col>.step{display:grid;grid-template-columns:22% minmax(0,1fr);grid-template-rows:auto auto;align-content:center;text-align:left;min-height:0;padding:2cqh 4cqw;gap:0 3%;}
+.steps[data-el="confluence-steps"].col .mark{grid-row:1 / span 2;width:min(22cqw,33cqh,148px);height:min(22cqw,33cqh,148px);aspect-ratio:1;justify-self:center;align-self:center;}
+.steps[data-el="confluence-steps"].col .name{grid-column:2;font-size:clamp(var(--type-14),2.9cqw,var(--type-20));color:var(--a1-8);}
+.steps[data-el="confluence-steps"].col .note{grid-column:2;font-size:clamp(var(--type-12),2.4cqw,var(--type-16));line-height:var(--body-line);}
+.steps[data-el="confluence-steps"].col>.step:not(:last-child)::after{right:auto;left:calc(50% - 16px);top:auto;bottom:calc(-1 * var(--gap) / 2 - 16px);width:33px;height:33px;border:var(--stroke) solid var(--n-4);}
+.steps[data-el="confluence-steps"].col>.step:not(:last-child)::before{right:auto;left:calc(50% - 5px);top:auto;bottom:calc(-1 * var(--gap) / 2 - 5px);width:10px;height:10px;transform:rotate(135deg);}
+@container (max-height:440px){.steps[data-el="confluence-steps"].col .note{display:none;}
+.steps[data-el="confluence-steps"].col .mark{width:32px;height:32px;font-size:var(--type-20);line-height:var(--label-line);}
+}
+@container (max-height:250px){.steps[data-el="confluence-steps"] .note{font-size:var(--type-12);}
+.steps[data-el="confluence-steps"].col>.step{padding:var(--gap-sm);}
+}
+.steps[data-el="confluence-steps"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.steps[data-el="confluence-steps"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.steps[data-el="confluence-steps"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.steps[data-el="confluence-steps"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+.steps[data-el="confluence-steps"] .mark{color:var(--a1-8);}
+
+/* Fresh inferred swimlane: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.swimlane[data-el="confluence-swimlane"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.swimlane[data-el="confluence-swimlane"] *{box-sizing:border-box;}
+.swimlane[data-el="confluence-swimlane"] p,.swimlane[data-el="confluence-swimlane"] .name,.swimlane[data-el="confluence-swimlane"] .note,.swimlane[data-el="confluence-swimlane"] .fig,.swimlane[data-el="confluence-swimlane"] .kick{margin:0;}
+.swimlane[data-el="confluence-swimlane"]{display:grid;grid-template-columns:none;grid-template-rows:none;grid-auto-columns:minmax(0,1fr);grid-auto-rows:minmax(0,1fr);gap:var(--gap-lg);padding:var(--gap);}
+.swimlane[data-el="confluence-swimlane"]>.node{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;min-height:0;min-width:0;display:grid;place-items:center;text-align:center;padding:var(--gap-sm);font-size:var(--type-14);font-weight:var(--name-weight);line-height:var(--name-line);}
+.swimlane[data-el="confluence-swimlane"]>.node.start,.swimlane[data-el="confluence-swimlane"]>.node.end{border-radius:999px;background:var(--a1);color:var(--a1-on);}
+.swimlane[data-el="confluence-swimlane"]>.node.ask{border:0;border-radius:0;padding:0;background:none;}
+.swimlane[data-el="confluence-swimlane"]>.node.ask>.name{width:100%;height:100%;display:grid;place-items:center;padding:var(--gap);background:var(--page);color:var(--ink);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);}
+.swimlane[data-el="confluence-swimlane"]>.node.to-r::after{content:"";position:absolute;left:100%;top:calc(50% - 6px);width:var(--gap-lg);height:12px;background:var(--a1);clip-path:polygon(0 45%,calc(100% - 8px) 45%,calc(100% - 8px) 0,100% 50%,calc(100% - 8px) 100%,calc(100% - 8px) 55%,0 55%);}
+.swimlane[data-el="confluence-swimlane"]>.node.to-l::after{content:"";position:absolute;right:100%;top:calc(50% - 6px);width:var(--gap-lg);height:12px;background:var(--a1);clip-path:polygon(0 50%,8px 0,8px 45%,100% 45%,100% 55%,8px 55%,8px 100%);}
+.swimlane[data-el="confluence-swimlane"]>.node.to-d::before{content:"";position:absolute;left:calc(50% - 6px);top:100%;height:var(--gap-lg);width:12px;background:var(--a1);clip-path:polygon(45% 0,55% 0,55% calc(100% - 8px),100% calc(100% - 8px),50% 100%,0 calc(100% - 8px),45% calc(100% - 8px));}
+.swimlane[data-el="confluence-swimlane"]>.node.to-u::before{content:"";position:absolute;left:calc(50% - 6px);bottom:100%;height:var(--gap-lg);width:12px;background:var(--a1);clip-path:polygon(45% 8px,0 8px,50% 0,100% 8px,55% 8px,55% 100%,45% 100%);}
+.swimlane[data-el="confluence-swimlane"]{grid-template-columns:repeat(var(--cols),minmax(0,1fr));padding-left:128px;}
+.swimlane[data-el="confluence-swimlane"]>.lane{grid-column:1 / -1;position:relative;margin-left:-112px;z-index:-1;background:var(--n-1);display:flex;align-items:center;padding-left:8px;font-size:var(--type-14);font-weight:var(--label-weight);line-height:var(--label-line);}
+.swimlane[data-el="confluence-swimlane"]>.lane>.name{width:96px;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.swimlane[data-el="confluence-swimlane"]>.node.start,.swimlane[data-el="confluence-swimlane"]>.node.end{border:6px solid var(--page);box-shadow:0 0 0 1px var(--a1);background:var(--a1-7);color:var(--page);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.tablebox[data-el="confluence-table"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.tablebox[data-el="confluence-table"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);padding:var(--gap-sm);display:flex;align-items:center;}
+.tablebox[data-el="confluence-table"]>.table{width:100%;border-collapse:collapse;table-layout:fixed;}
+.tablebox[data-el="confluence-table"] th,.tablebox[data-el="confluence-table"] td{padding:var(--gap-sm);border-bottom:var(--stroke) solid var(--n-3);font-size:clamp(var(--type-12),1.7cqw,var(--type-18));line-height:var(--body-line);overflow-wrap:anywhere;text-align:left;}
+.tablebox[data-el="confluence-table"] th{background:var(--a1);color:var(--a1-on);font-weight:var(--name-weight);}
+.tablebox[data-el="confluence-table"] .num{text-align:right;font-variant-numeric:tabular-nums;}
+.tablebox[data-el="confluence-table"] .pick{background:var(--a1-1-soft);color:var(--ink);}
+.tablebox[data-el="confluence-table"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.tablebox[data-el="confluence-table"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.tablebox[data-el="confluence-table"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.tablebox[data-el="confluence-table"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.tablebox[data-el="confluence-table"] th{background:var(--a1-7);color:var(--page);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.tag[data-el="confluence-tag"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.tag[data-el="confluence-tag"]{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;justify-self:start;flex:none;width:9.5em;height:1.2em;max-width:100%;padding:0;white-space:nowrap;background:var(--a1);color:var(--a1-on);font-size:var(--type-16);line-height:var(--label-line);font-weight:var(--name-weight);}
+.hl[data-el="confluence-tag"]{background:linear-gradient(transparent 55%,var(--a1-2) 55%);color:var(--ink);font-weight:var(--name-weight);container-type:size;}
+
+/* Fresh inferred timeline: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.track[data-el="confluence-timeline"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.track[data-el="confluence-timeline"] *{box-sizing:border-box;}
+.track[data-el="confluence-timeline"] p,.track[data-el="confluence-timeline"] .name,.track[data-el="confluence-timeline"] .note,.track[data-el="confluence-timeline"] .fig,.track[data-el="confluence-timeline"] .kick{margin:0;}
+.track[data-el="confluence-timeline"]{position:relative;display:flex;align-items:center;gap:var(--gap);padding:var(--gap-sm);}
+.track[data-el="confluence-timeline"]::before{content:"";position:absolute;left:var(--gap-sm);right:var(--gap-sm);top:50%;border-top:var(--stroke) solid var(--a1);}
+.track[data-el="confluence-timeline"]>.stop{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm);border-top:4px solid var(--a1);}
+.track[data-el="confluence-timeline"] .kick{font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-8);}
+.track[data-el="confluence-timeline"] .name{font-size:clamp(var(--type-14),2.4cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);}
+.track[data-el="confluence-timeline"] .note{font-size:var(--type-12);line-height:var(--body-line);}
+.track[data-el="confluence-timeline"].alt>.stop{height:48cqh;}
+.track[data-el="confluence-timeline"].alt>.stop:nth-child(odd){transform:translateY(-24cqh);}
+.track[data-el="confluence-timeline"].alt>.stop:nth-child(even){transform:translateY(24cqh);}
+.track[data-el="confluence-timeline"]>.stop.on{background:var(--a1);color:var(--a1-on);}
+.track[data-el="confluence-timeline"]>.stop.on .kick{color:inherit;}
+.track[data-el="confluence-timeline"].col{flex-direction:column;align-items:stretch;}
+.track[data-el="confluence-timeline"].col::before{left:8%;top:var(--gap-sm);bottom:var(--gap-sm);right:auto;border-top:0;border-left:var(--stroke) solid var(--a1);}
+.track[data-el="confluence-timeline"].col>.stop{flex:1;display:grid;grid-template-columns:16% 26% minmax(0,1fr);gap:var(--gap);align-items:center;padding:var(--gap-sm);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.track[data-el="confluence-timeline"]>.stop>.kick{background:var(--a1-7);color:var(--page);border-radius:var(--radius-sm);padding:calc(var(--gap-sm)*.4);}
+.track[data-el="confluence-timeline"]>.stop.on>.kick{background:var(--a2-7);color:var(--page);}
+
+/* Fresh inferred treemap from confluence measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.treemap[data-el="confluence-treemap"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.treemap[data-el="confluence-treemap"] *{box-sizing:border-box;}
+.treemap[data-el="confluence-treemap"] p,.treemap[data-el="confluence-treemap"] .name,.treemap[data-el="confluence-treemap"] .note,.treemap[data-el="confluence-treemap"] .fig{margin:0;}
+.treemap[data-el="confluence-treemap"]{display:flex;gap:var(--gap-sm);padding:0;}
+.treemap[data-el="confluence-treemap"]>.branch{position:relative;flex:var(--v) 1 0;min-width:0;min-height:0;display:flex;flex-direction:column;gap:var(--gap-sm);padding-top:28px;}
+.treemap[data-el="confluence-treemap"]>.branch>.name{position:absolute;left:0;top:0;font-size:var(--type-12);font-weight:var(--label-weight);line-height:var(--label-line);}
+.treemap[data-el="confluence-treemap"] .tile{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:relative;flex:var(--v) 1 0;min-height:0;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:var(--gap-sm);padding:4px var(--gap-sm);}
+.treemap[data-el="confluence-treemap"] .tile.on{background:var(--a1);color:var(--a1-on);}
+.treemap[data-el="confluence-treemap"] .tile>.name{font-size:clamp(var(--type-12),1.5cqw,var(--type-18));font-weight:var(--name-weight);line-height:var(--name-line);}
+.treemap[data-el="confluence-treemap"] .tile>.fig{font-size:clamp(var(--type-14),2cqw,var(--type-24));font-weight:var(--figure-weight);line-height:var(--figure-line);}
+
+/* Fresh inferred venn: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.venn[data-el="confluence-venn"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.venn[data-el="confluence-venn"] *{box-sizing:border-box;}
+.venn[data-el="confluence-venn"] p,.venn[data-el="confluence-venn"] .name,.venn[data-el="confluence-venn"] .note,.venn[data-el="confluence-venn"] .fig,.venn[data-el="confluence-venn"] .kick{margin:0;}
+.venn[data-el="confluence-venn"]{display:flex;align-items:center;justify-content:center;}
+.venn[data-el="confluence-venn"]>.set{position:relative;width:42%;aspect-ratio:1;flex:none;margin-left:-10%;border-radius:50%;border:var(--stroke) solid var(--a1);background:color-mix(in srgb,var(--a1) 16%,var(--page));display:grid;place-items:center;text-align:center;padding:var(--gap);}
+.venn[data-el="confluence-venn"]>.set.on{background:var(--a1);color:var(--a1-on);}
+.venn[data-el="confluence-venn"]>.set:first-child{margin-left:0;}
+.venn[data-el="confluence-venn"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);}
+.venn[data-el="confluence-venn"]>.core{position:absolute;left:42%;right:42%;top:48%;font-size:var(--type-12);line-height:var(--body-line);text-align:center;z-index:3;background:var(--page);color:var(--ink);padding:4px;border-radius:var(--radius-sm);}
+.venn[data-el="confluence-venn"]:has(>.set:nth-child(3 of .set)){display:block;}
+.venn[data-el="confluence-venn"]:has(>.set:nth-child(3 of .set))>.set{position:absolute;width:min(47cqw,60cqh);height:min(47cqw,60cqh);margin:0;display:block;}
+.venn[data-el="confluence-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(1 of .set){left:17%;top:4%;}
+.venn[data-el="confluence-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(2 of .set){left:43%;top:4%;}
+.venn[data-el="confluence-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(3 of .set){left:30%;top:38%;}
+.venn[data-el="confluence-venn"]:has(>.set:nth-child(3 of .set))>.set>.name{position:absolute;left:10%;right:10%;top:14%;font-size:clamp(var(--type-14),2.6cqw,var(--type-24));}
+.venn[data-el="confluence-venn"]:has(>.set:nth-child(3 of .set))>.set:nth-child(3 of .set)>.name{top:auto;bottom:12%;}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.venn[data-el="confluence-venn"]>.set{border:6px solid var(--page);box-shadow:0 0 0 1px var(--a1);}
+.venn[data-el="confluence-venn"]>.set.on{background:var(--a1-7);color:var(--page);}
+
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.versus[data-el="confluence-versus"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.versus[data-el="confluence-versus"]{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch;gap:var(--gap);padding:var(--gap-sm);}
+.versus[data-el="confluence-versus"]>.side{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);padding:var(--pad);display:flex;flex-direction:column;gap:var(--gap);min-width:0;}
+.versus[data-el="confluence-versus"]>.side.on{border-top:7px solid var(--a1);}
+.versus[data-el="confluence-versus"] .name{font-size:clamp(var(--type-18),3cqw,var(--type-32));font-weight:var(--name-weight);}
+.versus[data-el="confluence-versus"] .list{flex:1;min-height:0;}
+.versus[data-el="confluence-versus"]>.vs{align-self:center;color:var(--a1-8);font-size:var(--type-24);font-weight:var(--figure-weight);}
+.versus[data-el="confluence-versus"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.versus[data-el="confluence-versus"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.versus[data-el="confluence-versus"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.versus[data-el="confluence-versus"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Fresh inferred waffle: proportions follow confluence replica panel, circle and rule grammar.
+   Internal member count and available member space control density, never page identity. */
+.waffle[data-el="confluence-waffle"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.waffle[data-el="confluence-waffle"] *{box-sizing:border-box;}
+.waffle[data-el="confluence-waffle"] p,.waffle[data-el="confluence-waffle"] .name,.waffle[data-el="confluence-waffle"] .note,.waffle[data-el="confluence-waffle"] .fig,.waffle[data-el="confluence-waffle"] .kick{margin:0;}
+.waffle[data-el="confluence-waffle"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--gap-sm);padding:var(--gap-sm);}
+.waffle[data-el="confluence-waffle"]>.units{--unit-rows:10;--unit-width:min(90cqw,calc(48cqh*10/var(--unit-rows)));display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px;width:var(--unit-width);height:calc(var(--unit-width)*var(--unit-rows)/10);flex:none;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(10):last-child){--unit-rows:1;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(20):last-child){--unit-rows:2;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(30):last-child){--unit-rows:3;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(40):last-child){--unit-rows:4;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(50):last-child){--unit-rows:5;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(60):last-child){--unit-rows:6;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(70):last-child){--unit-rows:7;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(80):last-child){--unit-rows:8;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(90):last-child){--unit-rows:9;}
+.waffle[data-el="confluence-waffle"]>.units:has(>.u:nth-child(100):last-child){--unit-rows:10;}
+.waffle[data-el="confluence-waffle"] .u{min-width:0;min-height:0;background:var(--n-3);border-radius:3px;}
+.waffle[data-el="confluence-waffle"] .u.on{background:var(--a1);}
+.waffle[data-el="confluence-waffle"].figures .u{border-radius:0;clip-path:polygon(35% 0,65% 0,75% 18%,65% 32%,85% 42%,85% 72%,65% 72%,65% 100%,35% 100%,35% 72%,15% 72%,15% 42%,35% 32%,25% 18%);}
+.waffle[data-el="confluence-waffle"]>.fig{font-size:clamp(var(--type-20),min(8cqw,12cqh),var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);}
+.waffle[data-el="confluence-waffle"]>.name{font-size:clamp(var(--type-12),min(3cqw,8cqh),var(--type-20));font-weight:var(--name-weight);line-height:var(--name-line);}
+.waffle[data-el="confluence-waffle"] small{font-size:var(--type-12);}
+
+.slide{--type-8:8px;--type-10:10px;--type-12:12px;--type-14:14px;--type-16:16px;--type-18:18px;--type-20:20px;--type-22:22px;--type-24:24px;--type-26:26px;--type-28:28px;--type-30:30px;--type-32:32px;--type-36:36px;--type-40:40px;--type-44:44px;--type-48:48px;--type-52:52px;--type-56:56px;--type-60:60px;--type-64:64px;--type-68:68px;--type-72:72px;--type-76:76px;--type-80:80px;--type-84:84px;--type-88:88px;--type-92:92px;--type-96:96px;--type-100:100px;--type-104:104px;--type-108:108px;--type-112:112px;--type-116:116px;--type-120:120px;--type-124:124px;--type-128:128px;--confluence-agenda-name-weight:700;--confluence-agenda-name-line:1.2;--confluence-agenda-name-track:-.05em;--confluence-field-label-weight:700;--confluence-card-track:-.046em;}
+.slide{--page:oklch(0.99 0.003 60);--ink:oklch(0.22 0.015 60);--n-1:oklch(0.97 0.003 60);--n-2:oklch(0.93 0.003 60);--n-3:oklch(0.87 0.003 60);--n-4:oklch(0.79 0.003 60);--n-5:oklch(0.7 0.003 60);--n-6:oklch(0.6 0.003 60);--n-7:oklch(0.5 0.003 60);--n-8:oklch(0.4 0.003 60);--n-9:oklch(0.3 0.003 60);--a1:oklch(0.717438 0.166163 49.210397);--a1-on:oklch(0.22 0.015 60);--a1-1:oklch(0.97 0.10219 49.210397);--a1-2:oklch(0.93 0.109501 49.210397);--a1-3:oklch(0.87 0.120468 49.210397);--a1-4:oklch(0.79 0.135091 49.210397);--a1-5:oklch(0.7 0.151541 49.210397);--a1-6:oklch(0.6 0.162507 49.210397);--a1-7:oklch(0.5 0.144229 49.210397);--a1-8:oklch(0.4 0.125952 49.210397);--a1-9:oklch(0.3 0.107674 49.210397);--a1-1-soft:oklch(0.97 0.056205 49.210397);--a1-2-soft:oklch(0.93 0.060226 49.210397);--a1-3-soft:oklch(0.87 0.066257 49.210397);--a1-4-soft:oklch(0.79 0.0743 49.210397);--a1-5-soft:oklch(0.7 0.083347 49.210397);--a1-6-soft:oklch(0.6 0.089379 49.210397);--a1-7-soft:oklch(0.5 0.079326 49.210397);--a1-8-soft:oklch(0.4 0.069273 49.210397);--a1-9-soft:oklch(0.3 0.05922 49.210397);--a1-1-muted:oklch(0.97 0.022482 49.210397);--a1-2-muted:oklch(0.93 0.02409 49.210397);--a1-3-muted:oklch(0.87 0.026503 49.210397);--a1-4-muted:oklch(0.79 0.02972 49.210397);--a1-5-muted:oklch(0.7 0.033339 49.210397);--a1-6-muted:oklch(0.6 0.035752 49.210397);--a1-7-muted:oklch(0.5 0.03173 49.210397);--a1-8-muted:oklch(0.4 0.027709 49.210397);--a1-9-muted:oklch(0.3 0.023688 49.210397);--a2:oklch(0.52 0.17 258);--a2-on:oklch(0.99 0.003 60);--a2-1:oklch(0.97 0.10455 258);--a2-2:oklch(0.93 0.11203 258);--a2-3:oklch(0.87 0.12325 258);--a2-4:oklch(0.79 0.13821 258);--a2-5:oklch(0.7 0.15504 258);--a2-6:oklch(0.6 0.16626 258);--a2-7:oklch(0.5 0.14756 258);--a2-8:oklch(0.4 0.12886 258);--a2-9:oklch(0.3 0.11016 258);--a2-1-soft:oklch(0.97 0.057503 258);--a2-2-soft:oklch(0.93 0.061617 258);--a2-3-soft:oklch(0.87 0.067788 258);--a2-4-soft:oklch(0.79 0.076016 258);--a2-5-soft:oklch(0.7 0.085272 258);--a2-6-soft:oklch(0.6 0.091443 258);--a2-7-soft:oklch(0.5 0.081158 258);--a2-8-soft:oklch(0.4 0.070873 258);--a2-9-soft:oklch(0.3 0.060588 258);--a2-1-muted:oklch(0.97 0.023001 258);--a2-2-muted:oklch(0.93 0.024647 258);--a2-3-muted:oklch(0.87 0.027115 258);--a2-4-muted:oklch(0.79 0.030406 258);--a2-5-muted:oklch(0.7 0.034109 258);--a2-6-muted:oklch(0.6 0.036577 258);--a2-7-muted:oklch(0.5 0.032463 258);--a2-8-muted:oklch(0.4 0.028349 258);--a2-9-muted:oklch(0.3 0.024235 258);--a3:oklch(0.64 0.12 175);--a3-on:oklch(0.99 0.003 60);--a3-1:oklch(0.97 0.0738 175);--a3-2:oklch(0.93 0.07908 175);--a3-3:oklch(0.87 0.087 175);--a3-4:oklch(0.79 0.09756 175);--a3-5:oklch(0.7 0.10944 175);--a3-6:oklch(0.6 0.11736 175);--a3-7:oklch(0.5 0.10416 175);--a3-8:oklch(0.4 0.09096 175);--a3-9:oklch(0.3 0.07776 175);--a3-1-soft:oklch(0.97 0.04059 175);--a3-2-soft:oklch(0.93 0.043494 175);--a3-3-soft:oklch(0.87 0.04785 175);--a3-4-soft:oklch(0.79 0.053658 175);--a3-5-soft:oklch(0.7 0.060192 175);--a3-6-soft:oklch(0.6 0.064548 175);--a3-7-soft:oklch(0.5 0.057288 175);--a3-8-soft:oklch(0.4 0.050028 175);--a3-9-soft:oklch(0.3 0.042768 175);--a3-1-muted:oklch(0.97 0.016236 175);--a3-2-muted:oklch(0.93 0.017398 175);--a3-3-muted:oklch(0.87 0.01914 175);--a3-4-muted:oklch(0.79 0.021463 175);--a3-5-muted:oklch(0.7 0.024077 175);--a3-6-muted:oklch(0.6 0.025819 175);--a3-7-muted:oklch(0.5 0.022915 175);--a3-8-muted:oklch(0.4 0.020011 175);--a3-9-muted:oklch(0.3 0.017107 175);--a4:oklch(0.56 0.17 305);--a4-on:oklch(0.99 0.003 60);--a4-1:oklch(0.97 0.10455 305);--a4-2:oklch(0.93 0.11203 305);--a4-3:oklch(0.87 0.12325 305);--a4-4:oklch(0.79 0.13821 305);--a4-5:oklch(0.7 0.15504 305);--a4-6:oklch(0.6 0.16626 305);--a4-7:oklch(0.5 0.14756 305);--a4-8:oklch(0.4 0.12886 305);--a4-9:oklch(0.3 0.11016 305);--a4-1-soft:oklch(0.97 0.057503 305);--a4-2-soft:oklch(0.93 0.061617 305);--a4-3-soft:oklch(0.87 0.067788 305);--a4-4-soft:oklch(0.79 0.076016 305);--a4-5-soft:oklch(0.7 0.085272 305);--a4-6-soft:oklch(0.6 0.091443 305);--a4-7-soft:oklch(0.5 0.081158 305);--a4-8-soft:oklch(0.4 0.070873 305);--a4-9-soft:oklch(0.3 0.060588 305);--a4-1-muted:oklch(0.97 0.023001 305);--a4-2-muted:oklch(0.93 0.024647 305);--a4-3-muted:oklch(0.87 0.027115 305);--a4-4-muted:oklch(0.79 0.030406 305);--a4-5-muted:oklch(0.7 0.034109 305);--a4-6-muted:oklch(0.6 0.036577 305);--a4-7-muted:oklch(0.5 0.032463 305);--a4-8-muted:oklch(0.4 0.028349 305);--a4-9-muted:oklch(0.3 0.024235 305);--good:oklch(0.56 0.13 150);--warn:oklch(0.62 0.14 70);--bad:oklch(0.55 0.19 27);}
+.slide.dark{--page:oklch(0.19 0.012 60);--ink:oklch(0.96 0.004 60);--n-1:oklch(0.24 0.012 60);--n-2:oklch(0.29 0.012 60);--n-3:oklch(0.35 0.012 60);--n-4:oklch(0.43 0.012 60);--n-5:oklch(0.52 0.012 60);--n-6:oklch(0.62 0.012 60);--n-7:oklch(0.72 0.012 60);--n-8:oklch(0.82 0.012 60);--n-9:oklch(0.91 0.012 60);--a1:oklch(0.717438 0.166163 49.210397);--a1-on:oklch(0.19 0.012 60);--a1-1:oklch(0.24 0.096707 49.210397);--a1-2:oklch(0.29 0.105846 49.210397);--a1-3:oklch(0.35 0.116813 49.210397);--a1-4:oklch(0.43 0.131435 49.210397);--a1-5:oklch(0.52 0.147885 49.210397);--a1-6:oklch(0.62 0.166163 49.210397);--a1-7:oklch(0.72 0.147885 49.210397);--a1-8:oklch(0.82 0.129607 49.210397);--a1-9:oklch(0.91 0.113157 49.210397);--a1-1-soft:oklch(0.24 0.053189 49.210397);--a1-2-soft:oklch(0.29 0.058215 49.210397);--a1-3-soft:oklch(0.35 0.064247 49.210397);--a1-4-soft:oklch(0.43 0.072289 49.210397);--a1-5-soft:oklch(0.52 0.081337 49.210397);--a1-6-soft:oklch(0.62 0.09139 49.210397);--a1-7-soft:oklch(0.72 0.081337 49.210397);--a1-8-soft:oklch(0.82 0.071284 49.210397);--a1-9-soft:oklch(0.91 0.062236 49.210397);--a1-1-muted:oklch(0.24 0.021276 49.210397);--a1-2-muted:oklch(0.29 0.023286 49.210397);--a1-3-muted:oklch(0.35 0.025699 49.210397);--a1-4-muted:oklch(0.43 0.028916 49.210397);--a1-5-muted:oklch(0.52 0.032535 49.210397);--a1-6-muted:oklch(0.62 0.036556 49.210397);--a1-7-muted:oklch(0.72 0.032535 49.210397);--a1-8-muted:oklch(0.82 0.028514 49.210397);--a1-9-muted:oklch(0.91 0.024895 49.210397);--a2:oklch(0.52 0.17 258);--a2-on:oklch(0.96 0.004 60);--a2-1:oklch(0.24 0.09894 258);--a2-2:oklch(0.29 0.10829 258);--a2-3:oklch(0.35 0.11951 258);--a2-4:oklch(0.43 0.13447 258);--a2-5:oklch(0.52 0.1513 258);--a2-6:oklch(0.62 0.17 258);--a2-7:oklch(0.72 0.1513 258);--a2-8:oklch(0.82 0.1326 258);--a2-9:oklch(0.91 0.11577 258);--a2-1-soft:oklch(0.24 0.054417 258);--a2-2-soft:oklch(0.29 0.05956 258);--a2-3-soft:oklch(0.35 0.065731 258);--a2-4-soft:oklch(0.43 0.073959 258);--a2-5-soft:oklch(0.52 0.083215 258);--a2-6-soft:oklch(0.62 0.0935 258);--a2-7-soft:oklch(0.72 0.083215 258);--a2-8-soft:oklch(0.82 0.07293 258);--a2-9-soft:oklch(0.91 0.063674 258);--a2-1-muted:oklch(0.24 0.021767 258);--a2-2-muted:oklch(0.29 0.023824 258);--a2-3-muted:oklch(0.35 0.026292 258);--a2-4-muted:oklch(0.43 0.029583 258);--a2-5-muted:oklch(0.52 0.033286 258);--a2-6-muted:oklch(0.62 0.0374 258);--a2-7-muted:oklch(0.72 0.033286 258);--a2-8-muted:oklch(0.82 0.029172 258);--a2-9-muted:oklch(0.91 0.025469 258);--a3:oklch(0.64 0.12 175);--a3-on:oklch(0.96 0.004 60);--a3-1:oklch(0.24 0.06984 175);--a3-2:oklch(0.29 0.07644 175);--a3-3:oklch(0.35 0.08436 175);--a3-4:oklch(0.43 0.09492 175);--a3-5:oklch(0.52 0.1068 175);--a3-6:oklch(0.62 0.12 175);--a3-7:oklch(0.72 0.1068 175);--a3-8:oklch(0.82 0.0936 175);--a3-9:oklch(0.91 0.08172 175);--a3-1-soft:oklch(0.24 0.038412 175);--a3-2-soft:oklch(0.29 0.042042 175);--a3-3-soft:oklch(0.35 0.046398 175);--a3-4-soft:oklch(0.43 0.052206 175);--a3-5-soft:oklch(0.52 0.05874 175);--a3-6-soft:oklch(0.62 0.066 175);--a3-7-soft:oklch(0.72 0.05874 175);--a3-8-soft:oklch(0.82 0.05148 175);--a3-9-soft:oklch(0.91 0.044946 175);--a3-1-muted:oklch(0.24 0.015365 175);--a3-2-muted:oklch(0.29 0.016817 175);--a3-3-muted:oklch(0.35 0.018559 175);--a3-4-muted:oklch(0.43 0.020882 175);--a3-5-muted:oklch(0.52 0.023496 175);--a3-6-muted:oklch(0.62 0.0264 175);--a3-7-muted:oklch(0.72 0.023496 175);--a3-8-muted:oklch(0.82 0.020592 175);--a3-9-muted:oklch(0.91 0.017978 175);--a4:oklch(0.56 0.17 305);--a4-on:oklch(0.96 0.004 60);--a4-1:oklch(0.24 0.09894 305);--a4-2:oklch(0.29 0.10829 305);--a4-3:oklch(0.35 0.11951 305);--a4-4:oklch(0.43 0.13447 305);--a4-5:oklch(0.52 0.1513 305);--a4-6:oklch(0.62 0.17 305);--a4-7:oklch(0.72 0.1513 305);--a4-8:oklch(0.82 0.1326 305);--a4-9:oklch(0.91 0.11577 305);--a4-1-soft:oklch(0.24 0.054417 305);--a4-2-soft:oklch(0.29 0.05956 305);--a4-3-soft:oklch(0.35 0.065731 305);--a4-4-soft:oklch(0.43 0.073959 305);--a4-5-soft:oklch(0.52 0.083215 305);--a4-6-soft:oklch(0.62 0.0935 305);--a4-7-soft:oklch(0.72 0.083215 305);--a4-8-soft:oklch(0.82 0.07293 305);--a4-9-soft:oklch(0.91 0.063674 305);--a4-1-muted:oklch(0.24 0.021767 305);--a4-2-muted:oklch(0.29 0.023824 305);--a4-3-muted:oklch(0.35 0.026292 305);--a4-4-muted:oklch(0.43 0.029583 305);--a4-5-muted:oklch(0.52 0.033286 305);--a4-6-muted:oklch(0.62 0.0374 305);--a4-7-muted:oklch(0.72 0.033286 305);--a4-8-muted:oklch(0.82 0.029172 305);--a4-9-muted:oklch(0.91 0.025469 305);--good:oklch(0.74 0.13 150);--warn:oklch(0.80 0.13 75);--bad:oklch(0.70 0.16 25);}
+.slide [data-icon]:empty::after{content:"";display:block;width:100%;height:100%;box-sizing:border-box;border:1.5px dashed currentColor;border-radius:50%;opacity:.7}</style></head><body><section class="slide"><div class="page"><div class="body"><div></div></div></div></section></body></html>

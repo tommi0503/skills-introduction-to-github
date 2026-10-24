@@ -1,0 +1,1 @@
+A lifted circular portrait overlaps each shallow pale-blue glass node. Small accent role capsules sit above the dark names. The root owns its dark plus control; the complete tree owns the vertical stem, rounded horizontal bus and branch drops. Two to four branches preserve the measured226px node and50px inter-node spacing, with a lower extension reserved for optional leaves.

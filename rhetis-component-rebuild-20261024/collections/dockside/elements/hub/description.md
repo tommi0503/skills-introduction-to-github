@@ -1,0 +1,1 @@
+An inset centre and five smaller glass circles sit over one dashed circular connector field. Measured180px/145px diameters and the offset resource positions define the base. Other member counts keep the same radial grammar; optional text-only spokes use the full circle interior rather than another page design. All connecting decoration belongs to this hub.

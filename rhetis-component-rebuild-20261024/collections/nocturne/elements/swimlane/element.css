@@ -1,0 +1,36 @@
+/* No direct replica instance: replica20 circular KPI, replica19 capsule, replica22 panel/rules, replica23 centered copy. */
+.swimlane[data-el="nocturne-swimlane"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.swimlane[data-el="nocturne-swimlane"] *, .swimlane[data-el="nocturne-swimlane"]::before, .swimlane[data-el="nocturne-swimlane"]::after{box-sizing:border-box}
+.swimlane[data-el="nocturne-swimlane"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.swimlane[data-el="nocturne-swimlane"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.swimlane[data-el="nocturne-swimlane"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.swimlane[data-el="nocturne-swimlane"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.swimlane[data-el="nocturne-swimlane"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.swimlane[data-el="nocturne-swimlane"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.swimlane[data-el="nocturne-swimlane"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.swimlane[data-el="nocturne-swimlane"]{isolation:isolate;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));grid-template-rows:repeat(var(--nocturne-flow-rows,3),minmax(0,1fr));gap:var(--gap-lg);padding:var(--gap-sm)}
+.swimlane[data-el="nocturne-swimlane"]>.node{position:relative;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);border:calc(var(--stroke)*3) solid var(--n-4);border-radius:var(--radius);background:var(--n-1);text-align:center;font-size:clamp(var(--type-12),2cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line);--nocturne-flow-r:transparent;--nocturne-flow-d:transparent;--nocturne-flow-l:transparent;--nocturne-flow-u:transparent}
+.swimlane[data-el="nocturne-swimlane"]>.node>.name{font-size:clamp(var(--type-12),2cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--name-line)}
+.swimlane[data-el="nocturne-swimlane"]>.node.start,.swimlane[data-el="nocturne-swimlane"]>.node.end{border-radius:999px;background:var(--a1-1-soft);border-color:var(--a1-7)}
+.swimlane[data-el="nocturne-swimlane"]>.node.ask{border-style:dotted;border-color:var(--a1-7)}
+.swimlane[data-el="nocturne-swimlane"]>.node.to-r{--nocturne-flow-r:var(--n-4)}
+.swimlane[data-el="nocturne-swimlane"]>.node.to-d{--nocturne-flow-d:var(--n-4)}
+.swimlane[data-el="nocturne-swimlane"]>.node.to-l{--nocturne-flow-l:var(--n-4)}
+.swimlane[data-el="nocturne-swimlane"]>.node.to-u{--nocturne-flow-u:var(--n-4)}
+.swimlane[data-el="nocturne-swimlane"]>.node::after{content:'';position:absolute;z-index:-1;inset:calc(0px - var(--gap-lg));pointer-events:none;background:
+ linear-gradient(var(--nocturne-flow-r),var(--nocturne-flow-r)) right center/var(--gap-lg) 2px no-repeat,
+ conic-gradient(from 225deg at 100% 50%,var(--nocturne-flow-r) 0 90deg,transparent 0) right center/12px 12px no-repeat,
+ linear-gradient(var(--nocturne-flow-l),var(--nocturne-flow-l)) left center/var(--gap-lg) 2px no-repeat,
+ conic-gradient(from 45deg at 0 50%,var(--nocturne-flow-l) 0 90deg,transparent 0) left center/12px 12px no-repeat,
+ linear-gradient(var(--nocturne-flow-d),var(--nocturne-flow-d)) center bottom/2px var(--gap-lg) no-repeat,
+ conic-gradient(from -45deg at 50% 100%,var(--nocturne-flow-d) 0 90deg,transparent 0) center bottom/12px 12px no-repeat,
+ linear-gradient(var(--nocturne-flow-u),var(--nocturne-flow-u)) center top/2px var(--gap-lg) no-repeat,
+ conic-gradient(from 135deg at 50% 0,var(--nocturne-flow-u) 0 90deg,transparent 0) center top/12px 12px no-repeat}
+.swimlane[data-el="nocturne-swimlane"]{padding-left:var(--type-112)}
+.swimlane[data-el="nocturne-swimlane"]>.lane{grid-column:1/-1;position:relative;min-height:0;border-bottom:calc(var(--stroke)*2) dotted var(--n-3);background:color-mix(in srgb,var(--n-1) 45%,transparent);z-index:-2}
+.swimlane[data-el="nocturne-swimlane"]>.lane>.name{position:absolute;left:calc(0px - var(--type-112));top:50%;translate:0 -50%;width:calc(var(--type-112) - var(--gap-sm));font-size:clamp(var(--type-12),1.7cqw,var(--type-18));text-align:center}
+.swimlane[data-el="nocturne-swimlane"]:has(>.lane:nth-child(2 of .lane)):not(:has(>.lane:nth-child(3 of .lane))){--nocturne-flow-rows:2}
+.swimlane[data-el="nocturne-swimlane"]:has(>.lane:nth-child(3 of .lane)):not(:has(>.lane:nth-child(4 of .lane))){--nocturne-flow-rows:3}
+.swimlane[data-el="nocturne-swimlane"]:has(>.lane:nth-child(4 of .lane)):not(:has(>.lane:nth-child(5 of .lane))){--nocturne-flow-rows:4}
+.swimlane[data-el="nocturne-swimlane"]:has(>.lane:nth-child(5 of .lane)):not(:has(>.lane:nth-child(6 of .lane))){--nocturne-flow-rows:5}
+

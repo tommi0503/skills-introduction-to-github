@@ -1,0 +1,49 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.card[data-el="confluence-card"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.card[data-el="confluence-card"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;align-items:stretch;}
+.card[data-el="confluence-card"]>.parts{width:100%;min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(var(--gap-sm),4cqw,var(--pad));gap:clamp(var(--gap-sm),2cqh,var(--gap));}
+.card[data-el="confluence-card"]>.parts{justify-content:flex-start;padding:5%;gap:3cqh;}
+.card[data-el="confluence-card"]>.parts>.kick{width:100%;min-height:16%;display:flex;align-items:center;justify-content:center;padding:var(--gap-sm);border-radius:var(--radius-sm);background:var(--a1);color:var(--a1-on);font-size:clamp(var(--type-16),10.7cqw,var(--type-28));font-weight:var(--label-weight);margin:0;}
+.card[data-el="confluence-card"]>.parts>.name{color:var(--a1-8);font-size:clamp(var(--type-14),8.2cqw,var(--type-24));font-weight:var(--name-weight);margin-top:6cqh;line-height:var(--name-line);}
+.card[data-el="confluence-card"]>.parts>.fig{font-size:clamp(var(--type-28),21.5cqw,var(--type-56));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);}
+.card[data-el="confluence-card"]>.parts>.fig:has(br){font-size:clamp(var(--type-18),10cqw,var(--type-24));}
+.card[data-el="confluence-card"]>.parts>.note{width:100%;font-size:clamp(var(--type-12),6.2cqw,var(--type-16));line-height:var(--body-line);border-top:var(--stroke) dashed var(--a1-3);padding-top:7cqh;margin-top:4cqh;}
+.card[data-el="confluence-card"]>.parts>.note p{margin:0 0 3cqh;}
+.card[data-el="confluence-card"]>.parts>.note b{display:block;color:var(--a1-8);font-size:clamp(var(--type-14),8.2cqw,var(--type-20));font-weight:var(--name-weight);}
+.card[data-el="confluence-card"]>.parts>.mark{display:grid;place-items:center;width:min(80px,42cqw,25cqh);height:min(80px,42cqw,25cqh);max-width:42%;max-height:34%;aspect-ratio:1;}
+.card[data-el="confluence-card"]>.parts>.mark>.seat{width:100%;height:100%;aspect-ratio:1;}
+.card[data-el="confluence-card"]>.parts>.mark>.icon{width:56%;height:56%;}
+.card[data-el="confluence-card"].quiet{background:var(--n-1);border-color:var(--n-2);}
+.card[data-el="confluence-card"].on{background:var(--a1);color:var(--a1-on);border-color:var(--a1);}
+.card[data-el="confluence-card"].on>.parts>.name,.card[data-el="confluence-card"].on>.parts>.note,.card[data-el="confluence-card"].on>.parts>.fig{color:inherit;}
+.card[data-el="confluence-card"].line{background:none;border-color:var(--a1);color:var(--ink);}
+.card[data-el="confluence-card"].tone-1{background:var(--a1-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-2{background:var(--a2-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-3{background:var(--a3-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-4{background:var(--a4-1-soft);color:var(--ink);}
+.card[data-el="confluence-card"].tone-5{background:var(--a1-1-soft);color:var(--ink);}
+@container (max-height:420px){.card[data-el="confluence-card"]>.parts{gap:1cqh;}
+.card[data-el="confluence-card"]>.parts>.name{margin-top:2cqh;font-size:var(--type-18);}
+.card[data-el="confluence-card"]>.parts>.note{padding-top:3cqh;margin-top:2cqh;font-size:var(--type-12);}
+.card[data-el="confluence-card"]>.parts>.fig{font-size:var(--type-36);}
+}
+@container (max-height:220px){.card[data-el="confluence-card"]>.parts{padding:var(--gap-sm);gap:var(--gap-sm);}
+.card[data-el="confluence-card"]>.parts>.note{margin-top:0;padding-top:var(--gap-sm);font-size:var(--type-12);}
+.card[data-el="confluence-card"]>.parts>.mark{max-height:32%;}
+.card[data-el="confluence-card"]>.parts>.name{margin-top:0;}
+}
+.card[data-el="confluence-card"]>.parts>.name,.card[data-el="confluence-card"]>.parts>.note b{font-weight:var(--confluence-field-label-weight);}
+.card[data-el="confluence-card"]>.parts>.kick,.card[data-el="confluence-card"]>.parts>.name,.card[data-el="confluence-card"]>.parts>.note b{letter-spacing:var(--confluence-card-track);}
+
+/* The required model icon remains unchanged, centered inside its allotted icon box. */
+.card[data-el="confluence-card"]>.parts>.mark>.icon{display:grid;place-items:center;line-height:var(--label-line)}
+
+/* Mark-only models share three fixed tracks, so long notes never lift a sibling title.
+   Source 03 has both kick and figure and retains its measured layout unchanged. */
+.card[data-el="confluence-card"]>.parts:not(:has(>.fig,>.kick)):has(>.mark){display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:25% 15% 30%;align-content:center;justify-items:center;gap:3cqh;}
+.card[data-el="confluence-card"]>.parts:not(:has(>.fig,>.kick)):has(>.mark)>.mark{grid-column:1;grid-row:1;align-self:center;max-width:100%;max-height:100%;font-size:var(--type-24);}
+.card[data-el="confluence-card"]>.parts:not(:has(>.fig,>.kick)):has(>.mark)>.name{grid-column:1;grid-row:2;align-self:start;width:100%;margin:0;}
+.card[data-el="confluence-card"]>.parts:not(:has(>.fig,>.kick)):has(>.mark)>.note{grid-column:1;grid-row:3;align-self:start;width:100%;margin:0;padding-top:3cqh;}
+.card[data-el="confluence-card"]>.parts>.mark>.seat.icon{width:100%;height:100%;}
+.card[data-el="confluence-card"]>.parts>.mark>.icon:not(.seat){font-size:clamp(var(--type-20),12cqw,var(--type-40));line-height:var(--label-line);}

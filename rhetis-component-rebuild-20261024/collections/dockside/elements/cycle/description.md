@@ -1,0 +1,1 @@
+A centered accent core and a circular dashed route extend hub24 into a genuine cycle. Nodes remain round glass insets; dark arrowheads indicate circulation. Node count controls radial angles inside the same element, while longer stage counts require a larger minimum.

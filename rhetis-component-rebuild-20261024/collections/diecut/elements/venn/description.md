@@ -1,0 +1,1 @@
+Transparent quiet circles overlap as sets, with a compact accent intersection label. The two-set and three-set layouts preserve true circles and readable set names without claiming financial ROI geometry.

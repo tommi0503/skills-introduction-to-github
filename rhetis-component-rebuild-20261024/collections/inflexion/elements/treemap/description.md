@@ -1,0 +1,1 @@
+The new nested area chart uses source-like rounded quiet fields. Branch width and tile height both follow their contract shares, so tile area remains proportional; the primary tile is the only strong fill.

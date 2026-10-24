@@ -1,0 +1,1 @@
+A light technical grid with quiet column headings and a neutral first column. Fine rules, centered text and a softly rounded perimeter match the specification sheet; numeric cells can align to the right.

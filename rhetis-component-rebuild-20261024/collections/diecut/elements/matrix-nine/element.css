@@ -1,0 +1,16 @@
+/* Not present as a matrix contract. White explanatory panels from replica 04 and precise shared axes from replica 13 provide this extension.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.grid9[data-el="diecut-matrix-nine"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.grid9[data-el="diecut-matrix-nine"] *,.grid9[data-el="diecut-matrix-nine"] *::before,.grid9[data-el="diecut-matrix-nine"] *::after{box-sizing:border-box}
+.grid9[data-el="diecut-matrix-nine"] :is(p,h2,blockquote){margin:0}
+
+.grid9[data-el="diecut-matrix-nine"] {container-name:diecut-matrix;display:grid;grid-template-columns:repeat(var(--diecut-matrix-cols),minmax(0,1fr));grid-template-rows:repeat(var(--diecut-matrix-cols),minmax(0,1fr));gap:var(--gap);padding:0 0 30px 36px}
+.grid9[data-el="diecut-matrix-nine"] > .cell{position:relative;min-width:0;min-height:0;container-type:size;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--gap-sm);padding:6%;border-radius:var(--radius-sm);background:var(--n-1);text-align:center}
+.grid9[data-el="diecut-matrix-nine"] > .cell > .name{font-size:clamp(var(--type-14),min(8cqw,18cqh),var(--type-28));line-height:var(--label-line);font-weight:var(--name-weight);word-break:keep-all;overflow-wrap:anywhere}
+.grid9[data-el="diecut-matrix-nine"] > .cell > .note{font-size:clamp(var(--type-12),min(5cqw,10cqh),var(--type-18));line-height:var(--note-line);word-break:keep-all;overflow-wrap:anywhere}
+.grid9[data-el="diecut-matrix-nine"] > .cell.on{background:var(--a1);color:var(--a1-on)}
+.grid9[data-el="diecut-matrix-nine"] > .cell.tone-1{background:var(--a1-2-soft)}.grid9[data-el="diecut-matrix-nine"] > .cell.tone-2{background:var(--a2-2-soft)}.grid9[data-el="diecut-matrix-nine"] > .cell.tone-3{background:var(--n-3)}.grid9[data-el="diecut-matrix-nine"] > .cell.tone-4{background:var(--n-2)}
+.grid9[data-el="diecut-matrix-nine"] > .axis-x{position:absolute;bottom:0;left:36px;right:0;display:flex;align-items:center;justify-content:space-around;height:24px;border-top:var(--stroke) solid var(--ink)}
+.grid9[data-el="diecut-matrix-nine"] > .axis-y{position:absolute;left:0;top:0;bottom:30px;width:30px;display:flex;flex-direction:column-reverse;align-items:center;justify-content:space-around;border-right:var(--stroke) solid var(--ink)}
+.grid9[data-el="diecut-matrix-nine"] > :is(.axis-x,.axis-y) > span{font-size:var(--type-12);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+

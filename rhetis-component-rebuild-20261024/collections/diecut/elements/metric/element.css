@@ -1,0 +1,20 @@
+/* Not present as a standalone metric contract. The circle outline and centered two-level type are measured from the four outcome nodes in replica 03.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.stat[data-el="diecut-metric"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.stat[data-el="diecut-metric"] *,.stat[data-el="diecut-metric"] *::before,.stat[data-el="diecut-metric"] *::after{box-sizing:border-box}
+.stat[data-el="diecut-metric"] :is(p,h2,blockquote){margin:0}
+.stats[data-el="diecut-metric"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.stats[data-el="diecut-metric"] *,.stats[data-el="diecut-metric"] *::before,.stats[data-el="diecut-metric"] *::after{box-sizing:border-box}
+.stats[data-el="diecut-metric"] :is(p,h2,blockquote){margin:0}
+
+.stat[data-el="diecut-metric"]{display:grid;place-items:center;container-name:diecut-stat}
+.stat[data-el="diecut-metric"] > .parts{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:var(--gap-sm);width:min(94cqw,94cqh);height:min(94cqw,94cqh);border:var(--stroke) solid var(--ink);border-radius:50%;padding:8%;container-type:size}
+.stat[data-el="diecut-metric"] .fig{font-size:clamp(var(--type-24),min(30cqw,30cqh),var(--type-88));line-height:var(--figure-line);font-weight:var(--figure-weight);letter-spacing:var(--figure-track);white-space:nowrap}
+.stat[data-el="diecut-metric"] .fig small{font-size:clamp(var(--type-12),min(12cqw,12cqh),var(--type-36));font-weight:var(--label-weight);margin-left:.08em}
+.stat[data-el="diecut-metric"] .name{font-size:clamp(var(--type-12),min(10cqw,10cqh),var(--type-24));line-height:var(--label-line);word-break:keep-all;overflow-wrap:anywhere}
+.stat[data-el="diecut-metric"] .note{font-size:clamp(var(--type-10),min(7cqw,7cqh),var(--type-18));line-height:var(--note-line);color:var(--n-7)}
+.stat[data-el="diecut-metric"].on > .parts{border-color:var(--a1);background:var(--a1);color:var(--a1-on)}
+.stat[data-el="diecut-metric"].on .note{color:inherit}
+.stats[data-el="diecut-metric"]{display:flex;align-items:stretch;gap:var(--gap)}
+.stats[data-el="diecut-metric"] > .stat{flex:1;min-width:0}
+

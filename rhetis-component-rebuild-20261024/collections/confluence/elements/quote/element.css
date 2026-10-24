@@ -1,0 +1,18 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.quote[data-el="confluence-quote"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.quote[data-el="confluence-quote"]{background:var(--page);color:var(--ink);border-radius:var(--radius);border:var(--stroke) solid var(--n-3);display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--pad);}
+.quote[data-el="confluence-quote"]>blockquote{margin:0;font-size:clamp(var(--type-20),4.2cqw,var(--type-40));line-height:var(--lead-line);font-weight:var(--lead-weight);}
+.quote[data-el="confluence-quote"]>.by{display:flex;align-items:center;gap:var(--gap);}
+.quote[data-el="confluence-quote"] .seat{flex:0 0 min(15cqw,80px);width:min(15cqw,80px);height:min(15cqw,80px);max-height:none;aspect-ratio:1;border-radius:50%;}
+.quote[data-el="confluence-quote"] .name{flex:none;white-space:nowrap;font-size:var(--type-18);font-weight:var(--name-weight);}
+.quote[data-el="confluence-quote"] .note{min-width:0;font-size:var(--type-14);}
+.quote[data-el="confluence-quote"].big>blockquote{font-size:clamp(var(--type-24),min(5.4cqw,8.5cqh),var(--type-48));}
+.quote[data-el="confluence-quote"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.quote[data-el="confluence-quote"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.quote[data-el="confluence-quote"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.quote[data-el="confluence-quote"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+/* Inferred from replica03 inset caption bands and replica04 white medallion rims. */
+.quote[data-el="confluence-quote"]>blockquote{font-weight:var(--title-weight);}
+.quote[data-el="confluence-quote"]>.by>.name{color:var(--a1-7);}

@@ -1,0 +1,21 @@
+/* Fresh inferred hierarchy: confluence source panel, circular emphasis and thin rules.
+   The enclosing contract draws every branch, independently of page or sibling identity. */
+.org[data-el="confluence-hierarchy"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);isolation:isolate;}
+.org[data-el="confluence-hierarchy"] *{box-sizing:border-box;}
+.org[data-el="confluence-hierarchy"] .name,.org[data-el="confluence-hierarchy"] .leaf,.org[data-el="confluence-hierarchy"] .item{margin:0;}
+.org[data-el="confluence-hierarchy"]{--branch-count:3;anchor-scope:all;display:flex;align-items:flex-end;gap:var(--gap);padding:0;}
+.org[data-el="confluence-hierarchy"]:has(>.branch:nth-child(2 of .branch)):not(:has(>.branch:nth-child(3 of .branch))){--branch-count:2;}
+.org[data-el="confluence-hierarchy"]:has(>.branch:nth-child(3 of .branch)):not(:has(>.branch:nth-child(4 of .branch))){--branch-count:3;}
+.org[data-el="confluence-hierarchy"]:has(>.branch:nth-child(4 of .branch)):not(:has(>.branch:nth-child(5 of .branch))){--branch-count:4;}
+.org[data-el="confluence-hierarchy"]>.root{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);position:absolute;left:35%;right:35%;top:0;height:25%;display:grid;place-items:center;padding:var(--gap-sm);font-size:clamp(var(--type-18),2.8cqw,var(--type-28));line-height:var(--name-line);font-weight:var(--name-weight);text-align:center;border-bottom:4px solid var(--a1);}
+.org[data-el="confluence-hierarchy"]>.root::after{content:"";position:absolute;left:50%;top:100%;height:12cqh;border-left:var(--stroke) solid var(--a1);}
+.org[data-el="confluence-hierarchy"]::before{content:"";position:absolute;left:calc((100% - (var(--branch-count) - 1)*var(--gap))/var(--branch-count)/2);right:calc((100% - (var(--branch-count) - 1)*var(--gap))/var(--branch-count)/2);top:37%;border-top:var(--stroke) solid var(--a1);}
+.org[data-el="confluence-hierarchy"]>.branch{position:relative;flex:1;min-width:0;min-height:0;height:63%;padding-top:8cqh;display:flex;flex-direction:column;justify-content:flex-start;gap:var(--gap-sm);}
+.org[data-el="confluence-hierarchy"]>.branch::after{content:"";position:absolute;left:50%;top:0;bottom:anchor(var(--branch-end) center);border-left:var(--stroke) solid var(--a1);z-index:-1;}
+.org[data-el="confluence-hierarchy"]>.branch>:last-child{anchor-name:var(--branch-end);}
+.org[data-el="confluence-hierarchy"]>.branch>.node{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);padding:var(--gap-sm);min-height:14%;text-align:center;font-size:clamp(var(--type-14),1.9cqw,var(--type-20));line-height:var(--name-line);font-weight:var(--name-weight);}
+.org[data-el="confluence-hierarchy"]>.branch>.leaf{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-3);border-radius:var(--radius);padding:var(--gap-sm);text-align:center;font-size:var(--type-12);line-height:var(--body-line);}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(1 of .branch){--branch-end:--confluence-org-end-1;}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(2 of .branch){--branch-end:--confluence-org-end-2;}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(3 of .branch){--branch-end:--confluence-org-end-3;}
+.org[data-el="confluence-hierarchy"]>.branch:nth-child(4 of .branch){--branch-end:--confluence-org-end-4;}

@@ -1,0 +1,1 @@
+A thick conic ring surrounds a softly inset light centre. A dark percentage sits below a compact label, with an optional circular direction icon above it. The measured339px disc and249px opening determine the shared geometry; grouped rings preserve independent square proportions at every count and size.

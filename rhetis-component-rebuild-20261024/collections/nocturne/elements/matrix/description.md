@@ -1,0 +1,1 @@
+A matrix of quiet rounded panels uses the source statement outline and source KPI emphasis hierarchy. Axes stay outside the cells, and a single accent ground or a soft rank marks the decision to make.

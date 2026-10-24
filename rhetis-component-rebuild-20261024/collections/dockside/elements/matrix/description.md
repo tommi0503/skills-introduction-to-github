@@ -1,0 +1,1 @@
+This absent element is a genuine two-axis quadrant matrix, with an explicit SWOT variant when axes are absent. White-rimmed inset cells, deep accent labels and restrained notes extend the deck’s glass grammar. SWOT bullets remain nested list contracts; the source15 feature callouts are deliberately not mapped here.

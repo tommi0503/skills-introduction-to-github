@@ -1,0 +1,1 @@
+Replica 14 supplies the low 467 by 95 neutral gradient card with a 36px corner, a 28px accent capsule name and one copy line. Optional media in 16 takes 24.2% of the width; quiet image cards and outlined problem capsules are the genuine quiet and line treatments measured in 05 and 08.

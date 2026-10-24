@@ -1,0 +1,1 @@
+Three glass persona panels use large circular image seats, overlapping accent name capsules, small person icons and compact check rows. The middle profile rises35px while preserving the measured295×401 panel proportions. Longer names wrap inside the same capsule; detail notes reserve their own space above the checklist.

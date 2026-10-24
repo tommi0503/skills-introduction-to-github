@@ -1,0 +1,1 @@
+New proportional bands connect a full-height source field to stacked destination shares. Every band belongs to this one source/branch structure; a drop-off uses a semantic status border and nested splits retain their names.

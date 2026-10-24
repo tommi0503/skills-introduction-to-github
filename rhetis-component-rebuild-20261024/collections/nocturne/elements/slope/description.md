@@ -1,0 +1,1 @@
+Two moments connect with fine measured lines and circular endpoints. The selected change uses the source accent, and the dumbbell variant retains exact values while arranging each comparison on its own row.

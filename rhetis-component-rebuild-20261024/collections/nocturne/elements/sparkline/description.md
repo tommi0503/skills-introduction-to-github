@@ -1,0 +1,1 @@
+An inline trend reduces the same thin connector and round endpoint language to its essentials. The bar variant keeps rounded tips, and semantic good or bad colors carry direction without adding labels.

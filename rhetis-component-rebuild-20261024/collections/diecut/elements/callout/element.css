@@ -1,0 +1,13 @@
+/* Replica 18, 384×42 centered final-action capsule, 26px bold text; no surrounding panel.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.callout[data-el="diecut-callout"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.callout[data-el="diecut-callout"] *,.callout[data-el="diecut-callout"] *::before,.callout[data-el="diecut-callout"] *::after{box-sizing:border-box}
+.callout[data-el="diecut-callout"] :is(p,h2,blockquote){margin:0}
+
+.callout[data-el="diecut-callout"] {flex:none;display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);padding:calc(var(--gap-sm)*.4) calc(var(--gap-sm)*1.6);margin:auto;width:100%;max-width:calc(var(--gap)*45);height:min(100%,calc(var(--gap)*4.6));border-radius:999px;background:var(--a1);color:var(--a1-on)}
+.callout[data-el="diecut-callout"] > p{font-size:clamp(var(--type-14),min(6.771cqw,61.905cqh),var(--type-28));line-height:var(--label-line);font-weight:var(--name-weight);text-align:center;word-break:keep-all;overflow-wrap:anywhere;max-width:100%}
+.callout[data-el="diecut-callout"] > p > b{font-weight:var(--title-weight)}
+.callout[data-el="diecut-callout"] > .icon{flex:none;width:min(7cqw,54cqh);height:min(7cqw,54cqh)}
+@container(max-width:450px){.callout[data-el="diecut-callout"] > p{font-size:clamp(var(--type-12),min(5cqw,40cqh),var(--type-22))}}
+@container(max-height:110px){.callout[data-el="diecut-callout"] > p{font-size:clamp(var(--type-12),min(6.771cqw,61.905cqh),var(--type-28))}}
+

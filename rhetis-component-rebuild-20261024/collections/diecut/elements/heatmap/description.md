@@ -1,0 +1,1 @@
+Quiet cells use thin boundaries and measured accent density, with compact row labels and shared column headers. The calendar variant removes row names and returns to square source-like cells without extra decoration.

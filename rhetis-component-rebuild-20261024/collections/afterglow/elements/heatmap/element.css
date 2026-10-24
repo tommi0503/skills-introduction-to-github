@@ -1,0 +1,29 @@
+/* Fresh inferred heatmap from afterglow measured panel, rule and typography grammar.
+   Data determines each position, area and connection within this element. */
+.heat[data-el="afterglow-heatmap"]{position:relative;container-type:size;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);box-sizing:border-box;isolation:isolate;}
+.heat[data-el="afterglow-heatmap"] *{box-sizing:border-box;}
+.heat[data-el="afterglow-heatmap"] p,.heat[data-el="afterglow-heatmap"] .name,.heat[data-el="afterglow-heatmap"] .note,.heat[data-el="afterglow-heatmap"] .fig{margin:0;}
+.heat[data-el="afterglow-heatmap"]{--heat-rows:3;display:flex;flex-direction:column;gap:4px;justify-content:center;}
+.heat[data-el="afterglow-heatmap"]>.heads,.heat[data-el="afterglow-heatmap"]>.row{display:grid;grid-template-columns:20% repeat(var(--cols),minmax(0,1fr));gap:4px;min-height:0;}
+.heat[data-el="afterglow-heatmap"]>.heads{height:24px;align-items:center;}
+.heat[data-el="afterglow-heatmap"]>.heads::before{content:"";}
+.heat[data-el="afterglow-heatmap"]>.heads>span{font-size:var(--type-12);text-align:center;}
+.heat[data-el="afterglow-heatmap"]>.row{flex:1;align-items:stretch;}
+.heat[data-el="afterglow-heatmap"] .name{font-size:var(--type-14);line-height:var(--name-line);font-weight:var(--name-weight);display:flex;align-items:center;}
+.heat[data-el="afterglow-heatmap"] .cell{display:grid;place-items:center;min-height:0;min-width:0;font-size:var(--type-12);line-height:var(--label-line);background:color-mix(in srgb,var(--a1) calc(var(--v)*.35%),var(--page));border:var(--stroke) solid var(--n-3);color:var(--ink);border-radius:var(--radius-sm);}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(2 of .row)):not(:has(>.row:nth-child(3 of .row))){--heat-rows:2;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(3 of .row)):not(:has(>.row:nth-child(4 of .row))){--heat-rows:3;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(4 of .row)):not(:has(>.row:nth-child(5 of .row))){--heat-rows:4;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(5 of .row)):not(:has(>.row:nth-child(6 of .row))){--heat-rows:5;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(6 of .row)):not(:has(>.row:nth-child(7 of .row))){--heat-rows:6;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(7 of .row)):not(:has(>.row:nth-child(8 of .row))){--heat-rows:7;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(8 of .row)):not(:has(>.row:nth-child(9 of .row))){--heat-rows:8;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(9 of .row)):not(:has(>.row:nth-child(10 of .row))){--heat-rows:9;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(10 of .row)):not(:has(>.row:nth-child(11 of .row))){--heat-rows:10;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(11 of .row)):not(:has(>.row:nth-child(12 of .row))){--heat-rows:11;}
+.heat[data-el="afterglow-heatmap"]:has(>.row:nth-child(12 of .row)):not(:has(>.row:nth-child(13 of .row))){--heat-rows:12;}
+.heat[data-el="afterglow-heatmap"].calendar{--heat-cell:min(calc((100cqw - (var(--cols) - 1)*4px)/var(--cols)),calc((100cqh - 24px - var(--heat-rows)*4px)/var(--heat-rows)));justify-content:center;align-items:center;}
+.heat[data-el="afterglow-heatmap"].calendar>.heads,.heat[data-el="afterglow-heatmap"].calendar>.row{grid-template-columns:repeat(var(--cols),var(--heat-cell));width:max-content;flex:none;}
+.heat[data-el="afterglow-heatmap"].calendar>.heads::before{content:none;}
+.heat[data-el="afterglow-heatmap"].calendar>.row{height:var(--heat-cell);}
+.heat[data-el="afterglow-heatmap"].calendar>.row>.name{display:none;}

@@ -1,0 +1,17 @@
+/* Not present as duration tracks. Source 13 short vertical chart rules and source 03 capsules define named lanes, duration bars and precise milestone ticks.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.roadmap[data-el="diecut-roadmap"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.roadmap[data-el="diecut-roadmap"] *,.roadmap[data-el="diecut-roadmap"] *::before,.roadmap[data-el="diecut-roadmap"] *::after{box-sizing:border-box}
+.roadmap[data-el="diecut-roadmap"] :is(p,h2,blockquote){margin:0}
+
+.roadmap[data-el="diecut-roadmap"] {container-name:diecut-roadmap;display:flex;flex-direction:column;gap:var(--gap-sm)}
+.roadmap[data-el="diecut-roadmap"] > .heads{flex:none;display:flex;padding:0 5% 0 20%;height:40px;align-items:center;border-bottom:var(--stroke) solid var(--ink)}
+.roadmap[data-el="diecut-roadmap"] > .heads > span{flex:1;text-align:center;font-size:clamp(var(--type-12),2cqw,var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line)}
+.roadmap[data-el="diecut-roadmap"] > .lane{position:relative;flex:1;min-height:0}
+.roadmap[data-el="diecut-roadmap"] > .lane::before{content:"";position:absolute;inset:0 5% 0 20%;background:repeating-linear-gradient(to right,var(--n-4) 0 1px,transparent 1px calc(100%/var(--cols)));border-right:var(--stroke) solid var(--n-4)}
+.roadmap[data-el="diecut-roadmap"] > .lane > .name{position:absolute;left:0;top:50%;width:18%;transform:translateY(-50%);font-size:clamp(var(--type-12),2.4cqw,var(--type-24));font-weight:var(--name-weight);line-height:var(--label-line);text-align:right;word-break:keep-all;overflow-wrap:anywhere}
+.roadmap[data-el="diecut-roadmap"] > .lane > .bar{position:absolute;left:calc(20% + var(--from)/var(--cols)*75%);top:20%;width:calc((var(--to) - var(--from))/var(--cols)*75%);height:60%;display:flex;align-items:center;justify-content:center;padding:6px 10px;border:var(--stroke) solid var(--ink);border-radius:999px;background:var(--n-1);font-size:clamp(var(--type-12),min(2cqw,4cqh),var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.roadmap[data-el="diecut-roadmap"] > .lane > .bar.on{border-color:var(--a1);background:var(--a1);color:var(--a1-on)}.roadmap[data-el="diecut-roadmap"] > .lane > .bar.tone-2{background:var(--a2-2-soft)}.roadmap[data-el="diecut-roadmap"] > .lane > .bar.tone-3{background:var(--n-2)}
+.roadmap[data-el="diecut-roadmap"] > .lane > .mile{position:absolute;left:calc(20% + var(--at)/var(--cols)*75%);top:10%;height:80%;width:2px;background:var(--ink)}
+.roadmap[data-el="diecut-roadmap"] > .lane > .mile > span{position:absolute;left:50%;top:calc(100% + 2px);transform:translateX(-50%);width:10cqw;max-width:110px;font-size:var(--type-12);line-height:var(--note-line);text-align:center;word-break:keep-all}
+

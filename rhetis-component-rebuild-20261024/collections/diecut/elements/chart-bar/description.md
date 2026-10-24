@@ -1,0 +1,1 @@
+Plain solid bars sit on fine mechanical gridlines. Values are centered inside each fill and category labels align below the common baseline. The horizontal contract variant preserves the same straight rule, solid block and compact numeric language.

@@ -1,0 +1,1 @@
+A widening stack of pale trapezoids gives each hierarchy level a clear name and supporting note. Accent fills one complete level, maintaining the source distinction between quiet surfaces and decisive emphasis.

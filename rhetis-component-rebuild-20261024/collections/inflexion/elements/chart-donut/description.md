@@ -1,0 +1,1 @@
+This new one-share ring respects the actual donut contract. A single accent arc and quiet remainder use the source’s outlined-circle language, with a clear central figure and name below; the unsupported three-share source pies are not imitated.
