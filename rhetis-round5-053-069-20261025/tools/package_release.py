@@ -7,6 +7,11 @@ ROOT=Path(__file__).resolve().parents[1]
 SIZES=[(12,6),(12,3),(9,4),(8,6),(6,6),(6,3),(4,4),(4,3),(3,3)]
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def text_values(value):
+    if isinstance(value,str):return [value]
+    if isinstance(value,dict):return [s for v in value.values()for s in text_values(v)]
+    if isinstance(value,list):return [s for v in value for s in text_values(v)]
+    return []
 def need(value,message):
     if not value:raise ValueError(message)
 
@@ -117,7 +122,7 @@ def write_pairs(report):
             z.write(ROOT/'runtime.css','runtime.css')
             # Preserve every used font family without shipping unrelated library faces.
             # The canonical 32 supplied font files stay unchanged in source.
-            collection_text='\n'.join(f.read_text()for f in C.rglob('*')if f.is_file()and f.suffix in ['.css','.json'])
+            collection_text='\n'.join(s for f in C.rglob('*')if f.is_file()and f.suffix in ['.css','.json']for s in(text_values(json.loads(f.read_text()))if f.suffix=='.json'else[f.read_text()]))
             faces=[]
             for face in re.findall(r'@font-face\s*\{[^}]+\}',(ROOT/'fonts/fonts.css').read_text()):
                 family=re.search(r"font-family\s*:\s*['\"]([^'\"]+)",face)[1]
