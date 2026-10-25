@@ -1,0 +1,1 @@
+Four tightly spaced series sit inside each cost category. A single hairline vertical axis, small series keys and inside value labels retain the source geometry. Group and series counts adapt without fixture or wording conditions.

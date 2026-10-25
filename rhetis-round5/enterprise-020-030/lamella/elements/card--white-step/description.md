@@ -1,0 +1,1 @@
+An independent white upper-right leaf caption sits below the step kicker, on a continuous19px hairline. Explanatory copy retains its16px rhythm and explicit continuation indents. The surface and typography come from the white source08 steps, independently of the blue source03 cards.

@@ -1,0 +1,1 @@
+A shallow four-column financial grid keeps its source127/1038 aspect ratio and sits vertically centered in a larger slot. Fine horizontal rules, a filled first header cell and one quiet highlighted profit row define the hierarchy. Compact regular figures remain centered; a trailing header fragment can retain the source OCR position without changing the frozen copy.

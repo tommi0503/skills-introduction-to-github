@@ -1,0 +1,122 @@
+/* Replica09:536×141.25; name20px/700 at58/42, note16px at58/74,
+ figure50px/700 at right50/top35;15px source star, bottom hairline, no dotted leader. */
+.stat[data-el="portico-metric"] {
+  container-type: size;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.stats[data-el="portico-metric"] {
+  container-type: size;
+  display: flex;
+  gap: var(--gap-lg);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.stats[data-el="portico-metric"]>.stat {
+  container-type: size;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+.stat[data-el="portico-metric"]>.parts,
+.stats[data-el="portico-metric"]>.stat>.parts {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  align-content: start;
+  column-gap: var(--gap-sm);
+  row-gap: calc(var(--gap-sm)*.5);
+  height: 100%;
+  padding: 29.7345cqh 9.32836cqw var(--gap-sm) 10.8209cqw;
+  border-bottom: var(--stroke) solid var(--n-4);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+.stat[data-el="portico-metric"] .name,
+.stats[data-el="portico-metric"]>.stat .name {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  max-width: 44cqw;
+  margin: 0;
+  min-width: 0;
+  font-size: clamp(var(--type-14),calc(3.731343cqw),var(--type-28));
+  font-weight: var(--figure-weight);
+  line-height: calc(var(--name-line)*1.0769230769);
+  letter-spacing: calc(var(--body-track)*.7);
+  overflow-wrap: anywhere;
+}
+.stat[data-el="portico-metric"] .name>.icon,
+.stats[data-el="portico-metric"]>.stat .name>.icon {
+  position: absolute;
+  left: -1.05em;
+  top: .25em;
+  width: .75em;
+  aspect-ratio: 1;
+}
+.stat[data-el="portico-metric"] .fig,
+.stats[data-el="portico-metric"]>.stat .fig {
+  position: absolute;
+  right: 9.32836cqw;
+  top: 24.77876cqh;
+  white-space: nowrap;
+  margin: 0;
+  font-size: clamp(var(--type-28),calc(min(9.32836cqw,35.39823cqh)),var(--type-80));
+  font-weight: var(--figure-weight);
+  line-height: calc(var(--figure-line)*1.4285714286);
+  letter-spacing: calc(var(--figure-track)*.2);
+  color: var(--a1-7);
+}
+.stat[data-el="portico-metric"] .fig>small,
+.stats[data-el="portico-metric"]>.stat .fig>small {
+  font-size: clamp(var(--type-12),calc(4cqw),var(--type-28));
+  font-weight: var(--body-weight);
+}
+.stat[data-el="portico-metric"] .note,
+.stats[data-el="portico-metric"]>.stat .note {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 44cqw;
+  margin: 0;
+  min-width: 0;
+  font-size: clamp(var(--type-12),calc(2.985075cqw),var(--type-24));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*.875);
+  overflow-wrap: anywhere;
+}
+@container (max-width:450px) {
+  .stat[data-el="portico-metric"]>.parts,.stats[data-el="portico-metric"]>.stat>.parts {
+    grid-template-columns: 1fr;
+    row-gap: var(--gap-sm);
+    padding: var(--pad);
+  }
+  .stat[data-el="portico-metric"] .fig,.stats[data-el="portico-metric"]>.stat .fig {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    font-size: var(--type-32);
+  }
+  .stat[data-el="portico-metric"] .name,.stats[data-el="portico-metric"]>.stat .name {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 100%;
+    font-size: var(--type-16);
+  }
+  .stat[data-el="portico-metric"] .note,.stats[data-el="portico-metric"]>.stat .note {
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 100%;
+    font-size: var(--type-12);
+  }
+  .stat[data-el="portico-metric"] .name>.icon,.stats[data-el="portico-metric"]>.stat .name>.icon {
+    position: static;
+    display: inline-block;
+    margin-right: var(--gap-sm);
+    vertical-align: middle;
+  }
+}

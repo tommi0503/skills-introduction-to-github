@@ -1,0 +1,1 @@
+A source04 profile combining the original portrait placeholder and four key/value attributes. The name remains the profile name, while the attached labels form an owned information grid. Below700px the details stack beside the portrait.

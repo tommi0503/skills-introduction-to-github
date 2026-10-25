@@ -1,0 +1,18 @@
+/* replica04 five70×60 logo seats at105px pitch in a490×60 row.
+   Measured source element. */
+.logos[data-el="filament-logo-group"]{--filament-logos-count:4;--filament-logos-half:2;--filament-logos-gap:calc(var(--gap)*1.75);container-type:size;position:relative;display:flex;flex-wrap:wrap;align-items:center;align-content:center;justify-content:center;gap:var(--filament-logos-gap);width:100%;height:100%;min-width:0;min-height:0}
+.logos[data-el="filament-logo-group"]>.seat.logo{position:relative;isolation:isolate;display:grid;place-items:center;flex:0 0 min(calc((100cqw - (var(--filament-logos-count) - 1)*var(--filament-logos-gap))/var(--filament-logos-count)),calc(100cqh*1.1666666667));width:min(calc((100cqw - (var(--filament-logos-count) - 1)*var(--filament-logos-gap))/var(--filament-logos-count)),calc(100cqh*1.1666666667));height:auto;aspect-ratio:7/6;min-width:0;min-height:0;background:var(--n-2);color:var(--n-7);font-family:var(--font-body);font-size:clamp(var(--type-12),min(4cqw,12cqh),var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track)}
+.logos[data-el="filament-logo-group"]>.seat.logo::after{position:relative;z-index:1;content:attr(data-ph);display:block;text-align:center}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(3):last-child){--filament-logos-count:3;--filament-logos-half:2}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(4):last-child){--filament-logos-count:4;--filament-logos-half:2}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(5):last-child){--filament-logos-count:5;--filament-logos-half:3}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(6):last-child){--filament-logos-count:6;--filament-logos-half:3}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(7):last-child){--filament-logos-count:7;--filament-logos-half:4}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(8):last-child){--filament-logos-count:8;--filament-logos-half:4}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(9):last-child){--filament-logos-count:9;--filament-logos-half:5}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(10):last-child){--filament-logos-count:10;--filament-logos-half:5}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(11):last-child){--filament-logos-count:11;--filament-logos-half:6}
+.logos[data-el="filament-logo-group"]:has(>.seat.logo:nth-child(12):last-child){--filament-logos-count:12;--filament-logos-half:6}
+@container(max-aspect-ratio:3/1){.logos[data-el="filament-logo-group"]>.seat.logo{flex-basis:min(calc((100cqw - (var(--filament-logos-half) - 1)*var(--filament-logos-gap))/var(--filament-logos-half)),calc((100cqh - var(--filament-logos-gap))*.5*1.1666666667));width:min(calc((100cqw - (var(--filament-logos-half) - 1)*var(--filament-logos-gap))/var(--filament-logos-half)),calc((100cqh - var(--filament-logos-gap))*.5*1.1666666667))}}
+@container(max-width:220px){.logos[data-el="filament-logo-group"]>.seat.logo{flex-basis:min(calc((100cqw - var(--filament-logos-gap))*.5),calc((100cqh - (var(--filament-logos-half) - 1)*var(--filament-logos-gap))/var(--filament-logos-half)*1.1666666667));width:min(calc((100cqw - var(--filament-logos-gap))*.5),calc((100cqh - (var(--filament-logos-half) - 1)*var(--filament-logos-gap))/var(--filament-logos-half)*1.1666666667));font-size:var(--type-12)}}
+

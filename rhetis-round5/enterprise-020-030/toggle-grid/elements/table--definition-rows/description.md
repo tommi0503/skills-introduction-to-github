@@ -1,0 +1,1 @@
+A two-row definition table separates the dark36.5% label column from softly filled explanations. Eight-pixel source gaps keep each row independent, with larger centered labels and selective bold wording in the notes.

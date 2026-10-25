@@ -1,0 +1,1 @@
+Two fine dotted area series use the measured fading primary fill and separate ranked strokes. Their connected segments are computed from the complete point sets. A large growth droplet includes a short milestone note below; a smaller reversed-corner retention droplet stays inside the plot. Tiny year labels and the maximum-based scale preserve the source hierarchy.

@@ -1,0 +1,1 @@
+An inverse editorial summary: a small index, a floating white tab, and three lines of white business copy. Source02 provides the tracked small caption and regular18px caption as explicit design parts, rather than a layout-dependent font switch.

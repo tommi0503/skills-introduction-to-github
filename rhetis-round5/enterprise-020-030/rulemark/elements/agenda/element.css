@@ -1,0 +1,70 @@
+/* Replica02:916×259; three248px columns with86px gaps, two110px rows39px apart.
+ 40px/700 index on60px line;14px to18px title/14px right-aligned Latin note, hairline immediately under the index. */
+.agenda[data-el="rulemark-agenda"] {
+  container-type: size;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  grid-auto-rows: 1fr;
+  gap: calc(var(--gap-lg)*.8125) calc(var(--gap-lg)*1.7916666667);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  font-family: var(--font-body);
+  color: inherit;
+}
+.agenda[data-el="rulemark-agenda"]>.entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  align-content: start;
+  row-gap: calc(var(--gap-sm)*1.75);
+  min-width: 0;
+  min-height: 0;
+  padding-bottom: calc(var(--gap-sm)*1.125);
+  position: relative;
+}
+.agenda[data-el="rulemark-agenda"]>.entry>.mark {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  font-size: clamp(var(--type-24),calc(4.366812cqw),var(--type-64));
+  position: relative;
+  font-weight: var(--figure-weight);
+  line-height: calc(var(--figure-line)*1.4285714286);
+  letter-spacing: calc(var(--body-track)*.45);
+}
+.agenda[data-el="rulemark-agenda"]>.entry>.mark::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-bottom: var(--stroke) solid currentColor;
+}
+.agenda[data-el="rulemark-agenda"]>.entry>.name {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: clamp(var(--type-12),calc(1.965066cqw),var(--type-28));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: var(--body-track);
+}
+.agenda[data-el="rulemark-agenda"]>.entry>.note {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  text-align: right;
+  font-size: clamp(var(--type-12),calc(1.528384cqw),var(--type-24));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*0);
+}
+.agenda[data-el="rulemark-agenda"]>.entry>:where(.name,.note,.mark) {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.agenda[data-el="rulemark-agenda"]>.entry.on {
+  background: var(--a1);
+  color: var(--a1-on);
+}

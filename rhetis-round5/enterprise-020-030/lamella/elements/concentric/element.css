@@ -1,0 +1,22 @@
+/* Replica10: three filled bottom-left quarter discs with665/451/246px radii.
+   Labels share a49px left rail; names/figures/notes preserve the small regular-weight hierarchy. */
+.orbit[data-el="lamella-concentric"]{position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);--lamella-orbit-u:min(calc(100cqw / 665),calc(100cqh / 665),1px);--lamella-orbit-d:calc(665 * var(--lamella-orbit-u));--lamella-orbit-x:calc(50cqw - var(--lamella-orbit-d) / 2);--lamella-orbit-y:calc(50cqh - var(--lamella-orbit-d) / 2);--lamella-orbit-n:3}
+.orbit[data-el="lamella-concentric"] *,.orbit[data-el="lamella-concentric"] *::before,.orbit[data-el="lamella-concentric"] *::after{box-sizing:border-box;min-width:0}
+.orbit[data-el="lamella-concentric"]>.ring{position:absolute;isolation:isolate;left:var(--lamella-orbit-x);bottom:var(--lamella-orbit-y);width:calc(var(--lamella-orbit-r) * var(--lamella-orbit-u));height:calc(var(--lamella-orbit-r) * var(--lamella-orbit-u));padding:calc(var(--lamella-orbit-label-y) * var(--lamella-orbit-u)) calc(28 * var(--lamella-orbit-u)) 0 calc(49 * var(--lamella-orbit-u));color:var(--ink);--lamella-orbit-r:665;--lamella-orbit-label-y:91;--lamella-orbit-face:var(--a1-2-soft)}
+.orbit[data-el="lamella-concentric"]>.ring::before{content:"";position:absolute;z-index:-1;inset:0;border-radius:0 100% 0 0;background:var(--lamella-orbit-face)}
+.orbit[data-el="lamella-concentric"]>.ring:nth-child(2){--lamella-orbit-r:451;--lamella-orbit-label-y:92.5;--lamella-orbit-face:var(--a1-3-soft)}
+.orbit[data-el="lamella-concentric"]>.ring:nth-child(3){--lamella-orbit-r:246;--lamella-orbit-label-y:101;--lamella-orbit-face:var(--a1-4-soft)}
+.orbit[data-el="lamella-concentric"]>.ring.on{--lamella-orbit-face:var(--a1);color:var(--a1-on)}
+.orbit[data-el="lamella-concentric"]>.ring>.name{display:block;max-width:min(calc(260 * var(--lamella-orbit-u)),calc(var(--lamella-orbit-r) * .44 * var(--lamella-orbit-u)));margin:0;font-weight:var(--body-weight);font-size:clamp(var(--type-12),calc(15 * var(--lamella-orbit-u)),var(--type-16));line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.orbit[data-el="lamella-concentric"]>.ring>.fig{display:block;max-width:min(calc(260 * var(--lamella-orbit-u)),calc(var(--lamella-orbit-r) * .44 * var(--lamella-orbit-u)));margin:calc(3 * var(--lamella-orbit-u)) 0 0;font-weight:var(--body-weight);font-size:clamp(var(--type-16),calc(18.8 * var(--lamella-orbit-u)),var(--type-20));line-height:var(--label-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.orbit[data-el="lamella-concentric"]>.ring>.note{display:block;max-width:min(calc(260 * var(--lamella-orbit-u)),calc(var(--lamella-orbit-r) * .44 * var(--lamella-orbit-u)));margin:calc(5 * var(--lamella-orbit-u)) 0 0;font-weight:var(--body-weight);font-size:clamp(var(--type-10),calc(11.05 * var(--lamella-orbit-u)),var(--type-12));line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(2):last-child){--lamella-orbit-n:2}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(2):last-child)>.ring:nth-child(2){--lamella-orbit-r:335;--lamella-orbit-label-y:95}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(4):last-child){--lamella-orbit-n:4}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(4):last-child)>.ring{--lamella-orbit-label-y:55}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(4):last-child)>.ring:nth-child(2){--lamella-orbit-r:505}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(4):last-child)>.ring:nth-child(3){--lamella-orbit-r:345}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(4):last-child)>.ring:nth-child(4){--lamella-orbit-r:185;--lamella-orbit-face:var(--a1-4-soft)}
+.orbit[data-el="lamella-concentric"]:has(>.ring:nth-child(4):last-child)>.ring.on{--lamella-orbit-face:var(--a1)}
+@container(max-width:450px){.orbit[data-el="lamella-concentric"]>.ring>.note{line-height:var(--name-line)}}
+@container(max-height:320px){.orbit[data-el="lamella-concentric"]>.ring>.note{display:none}}

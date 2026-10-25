@@ -1,0 +1,1 @@
+A large holeless allocation pie retains the three solid sectors, centered percentage/category pairs and quiet-to-strong fill ranks. Each sector is drawn from its share and cumulative start; ordinary labels follow the sector midpoint, while optional declared coordinates support deliberate label offsets without fixture conditions. Four-category examples test longer Korean labels.

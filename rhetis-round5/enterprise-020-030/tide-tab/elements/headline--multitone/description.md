@@ -1,0 +1,1 @@
+The source08 declaration keeps three independent emphasis roles: heavy ink, primary accent, secondary accent. Explicit semantic classes select the roles; no phrase position or fixture text determines styling.

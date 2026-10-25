@@ -1,0 +1,1 @@
+A source05 three-paragraph testimony with a tracked11px author inside a left-aligned white leaf cap. The final paragraph’s first-line inset is an explicit owned typography class. Opening punctuation is drawn by the quote itself.

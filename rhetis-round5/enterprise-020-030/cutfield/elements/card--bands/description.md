@@ -1,0 +1,1 @@
+Full-width statistic bands from source03. Figure and copy offsets are explicit semantic composition classes, preserving the source’s irregular vertical alignment. Lower-right diagonal reveals belong to each band, not page-position selectors.

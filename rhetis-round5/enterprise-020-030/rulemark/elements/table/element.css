@@ -1,0 +1,29 @@
+/* Replica 05: a 574×400 four-column table, 57px header/rows, two merged three-row groups.
+   Shared thin rules, ink header, pale group cells; geometry scales from the element's own box. */
+.tablebox[data-el="rulemark-table"]{position:relative;box-sizing:border-box;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.tablebox[data-el="rulemark-table"]>.table{width:100%;height:100%;min-width:0;table-layout:fixed;border-collapse:collapse;border-spacing:0;margin:0;color:inherit}
+.tablebox[data-el="rulemark-table"]>.table>thead>tr>th{height:14.25cqh;border:var(--stroke) solid var(--n-4);padding:min(var(--gap-sm),.175cqw);background:var(--ink);color:var(--page);text-align:center;vertical-align:middle;font-size:clamp(var(--type-14),calc(100cqh * .05),var(--type-40));font-weight:var(--figure-weight);line-height:var(--body-line);letter-spacing:calc(var(--body-track) * 1.133333);word-break:keep-all;overflow-wrap:anywhere}
+.tablebox[data-el="rulemark-table"]>.table>tbody>tr>td,
+.tablebox[data-el="rulemark-table"]>.table>tbody>tr>th{border:var(--stroke) solid var(--n-4);padding:min(var(--gap-sm),.175cqw);background:var(--page);color:var(--ink);text-align:center;vertical-align:middle;font-size:clamp(var(--type-12),calc(100cqh * .0425),var(--type-36));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);word-break:keep-all;overflow-wrap:anywhere}
+.tablebox[data-el="rulemark-table"]>.table>tbody>tr>td[rowspan],
+.tablebox[data-el="rulemark-table"]>.table>tbody>tr>th[rowspan]{background:var(--n-1);border-inline-start:0;border-bottom-color:var(--ink)}
+.tablebox[data-el="rulemark-table"]>.table>tbody>tr:last-child>td,
+.tablebox[data-el="rulemark-table"]>.table>tbody>tr:last-child>th{border-bottom-color:var(--ink)}
+.tablebox[data-el="rulemark-table"]>.table>thead>tr>.pick{background:var(--a1);color:var(--a1-on)}
+.tablebox[data-el="rulemark-table"]>.table>tbody>tr>.pick{background:var(--a1-2-soft);color:var(--ink)}
+@container(max-width:900px){
+ .tablebox[data-el="rulemark-table"]>.table>thead>tr>th{font-size:clamp(var(--type-14),calc(100cqh * .05),var(--type-28))}
+ .tablebox[data-el="rulemark-table"]>.table>tbody>tr>td,.tablebox[data-el="rulemark-table"]>.table>tbody>tr>th{font-size:clamp(var(--type-12),calc(100cqh * .0425),var(--type-22))}
+}
+@container(max-width:700px){
+ .tablebox[data-el="rulemark-table"]>.table>thead>tr>th{font-size:clamp(var(--type-14),calc(100cqh * .05),var(--type-24))}
+ .tablebox[data-el="rulemark-table"]>.table>tbody>tr>td,.tablebox[data-el="rulemark-table"]>.table>tbody>tr>th{font-size:clamp(var(--type-12),calc(100cqh * .0425),var(--type-18))}
+}
+@container(max-width:400px){
+ .tablebox[data-el="rulemark-table"]>.table>thead>tr>th{font-size:clamp(var(--type-14),calc(100cqh * .05),var(--type-16))}
+ .tablebox[data-el="rulemark-table"]>.table>tbody>tr>td,.tablebox[data-el="rulemark-table"]>.table>tbody>tr>th{font-size:clamp(var(--type-12),calc(100cqh * .0425),var(--type-12))}
+}
+@container(max-width:240px){
+ .tablebox[data-el="rulemark-table"]>.table>thead>tr>th{font-size:var(--type-14)}
+ .tablebox[data-el="rulemark-table"]>.table>tbody>tr>td,.tablebox[data-el="rulemark-table"]>.table>tbody>tr>th{font-size:var(--type-12)}
+}

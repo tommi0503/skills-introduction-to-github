@@ -1,0 +1,2328 @@
+{
+  "collection": "portico",
+  "generator": "reference/tools/preview.py:sheet",
+  "font_href": "assets/fonts/fonts.css",
+  "expected_fixtures": 60,
+  "source_hashes": {
+    "/workspace/work/rebuild/portico/portico/elements/agenda--ruled-column/element.css": "548ea0c884e2eedb8970a3ad95cb527d0b8e055899671d48bbb79819f77044e6",
+    "/workspace/work/rebuild/portico/portico/elements/agenda--ruled-column/element.json": "436b37b6c894feb2ec88649425734492be75211fadd3c8ec55ecce51d5f1e576",
+    "/workspace/work/rebuild/portico/portico/elements/agenda--ruled-column/fixtures/even-agenda-column.html": "6b91de392a998e4503bae233c574b764d908d1edbe8cbf7e5a6c2c9f3b022808",
+    "/workspace/work/rebuild/portico/portico/elements/agenda--ruled-column/fixtures/odd-agenda-column.html": "80749ce88b02d3cd62a32b514c191b5457a8ca0cfbb8423769e0d020fdf1fe40",
+    "/workspace/work/rebuild/portico/portico/elements/card/element.css": "e07492e7210b3c5932418105fba5a601e838e47638f0652b0189c8d78b936c99",
+    "/workspace/work/rebuild/portico/portico/elements/card/element.json": "eb56370559ff612a599f989e96f5edc56387039098102e8b54095a7b5a841ee7",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-03.html": "0cb71fde995f62255c0cde493fc9a0ba8cee8ce21a8e4c3b131b68eb00ea2639",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-04.html": "b8bc07443540046191b9fa28850c21a4a3c9ff05f179d21ad291af4358c691b7",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-05.html": "f76cf908e1edac8f69d5313c71ab1095560054f8490c1535cdbc3ddfbdf4e389",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-06-base.html": "1038007d6c9ba182d9d03331e6a1536e472d3994396db542af96614aa9dfa02f",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-06-quiet.html": "81b54178ff0b5ed9258cbe755af855924c99d1098da0954482cfb0f198ab5627",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-06.html": "b79b31493924597c493096434322557574eaf78f358cf7025b391eb97574c850",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-07.html": "6a7216dc6e861153229d782585e4c6f72256607b93194441e5803f54cd4ce3cd",
+    "/workspace/work/rebuild/portico/portico/elements/card/fixtures/replica-10.html": "9cde8e9cdcae296f4ce1d7327c497b39f094d375ad4d16eb6d9197e2850acda7",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-growth/element.css": "14de07cbaf872941cced3fc7f9b74f4110879aa3a9025e8563c2723c328e0c7d",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-growth/element.json": "d01e56894f835b1ce46515182233d08692a5ed4c79acd8814f9a4ae53c5e9590",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-growth/fixtures/grouped-extended.html": "fc8bda0180c39f538bce1350b6b33a31de30324bfae50288da784c1d47d4afd7",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-growth/fixtures/replica-09.html": "99b920a4c38d4147dc7607adff6b1380a69e1fcbc04e2f92343adca69c068ed4",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-projection/element.css": "1cb570466cd818c907f74d71287620712f62090d77276cbfcc1669761498f2da",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-projection/element.json": "7da5a4056c391cefb0b5bffe1ed682f4056334d6446a6a31c2ae0e0f162864db",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-projection/fixtures/grouped-extended.html": "c7d6a0ce647fd4421b17543711abd8d27e3b4caf7f7afa64aeb8eeacb2f2377e",
+    "/workspace/work/rebuild/portico/portico/elements/chart-bar--paired-projection/fixtures/replica-13.html": "9b89782e78ea827230c516e3bc29a26b9703857caae46cf7a2e0e1fcbb94c0f2",
+    "/workspace/work/rebuild/portico/portico/elements/chart-donut/element.css": "410b7da41f3c9f3d9ed09fe719c3c5740e65f004a1003ec3ce2945f05b8fd7d5",
+    "/workspace/work/rebuild/portico/portico/elements/chart-donut/element.json": "b38d6aefd70715145df24fb6b4ee6f5b969d03847b84079aaae28a26b9badd67",
+    "/workspace/work/rebuild/portico/portico/elements/chart-donut/fixtures/replica-13-02.html": "cf4facc89f317e44168c5e2dc082db5f71b503bc46e191780ce8897c90b3afdc",
+    "/workspace/work/rebuild/portico/portico/elements/chart-donut/fixtures/replica-13-03.html": "95e10bb2efa2713b7cffd7a41508202ec2af73dbbd163eac8849a8b14b4ae193",
+    "/workspace/work/rebuild/portico/portico/elements/chart-donut/fixtures/replica-13-04.html": "9e6940b5741515ff529bffa2670ed944928535fff6f9dd2921b47e30a0263ae0",
+    "/workspace/work/rebuild/portico/portico/elements/chart-donut/fixtures/replica-13.html": "14e51da0be333f96901aa301d7dbf59c0ef95ed44b4c16863b9644adccbd1526",
+    "/workspace/work/rebuild/portico/portico/elements/chart-donut/fixtures/review-long-name.html": "0899908b60b37169315ac706b3ca5f4ee97c24b1d04b7270230c68c90f5b3d88",
+    "/workspace/work/rebuild/portico/portico/elements/concentric--overlap-ellipses/element.css": "8e85b2325a2b3d1e2efeed1bb0399b88a36940efebe1516e89edf80a2ceba7e9",
+    "/workspace/work/rebuild/portico/portico/elements/concentric--overlap-ellipses/element.json": "d2151c617ded49e0a6818ff004eb93357e01651efd2f7c82f124cca52878f658",
+    "/workspace/work/rebuild/portico/portico/elements/concentric--overlap-ellipses/fixtures/contract-reach.html": "42fe99517001acab30d57a6c23eecdef9602582ec3450d23ed9b91a8fa8279d6",
+    "/workspace/work/rebuild/portico/portico/elements/concentric--overlap-ellipses/fixtures/market-reach.html": "5e02a98ee72515b0290cc088924e3c20629114d70b82209b600b2f9f4dde9dff",
+    "/workspace/work/rebuild/portico/portico/elements/flowchart/element.css": "332a717ffa59f1aca3570a0617ea585be712f0206642e444c733bf7c82b71e87",
+    "/workspace/work/rebuild/portico/portico/elements/flowchart/element.json": "b772164bc693c1a9b1e72b4ccf5fd9c568b8a3421ff8a2108783f745a1207081",
+    "/workspace/work/rebuild/portico/portico/elements/flowchart/fixtures/replica-08.html": "fb1d70dd2db6686c1607e890fa8a03fe82180bd5a0781f318c83748e268f5eff",
+    "/workspace/work/rebuild/portico/portico/elements/flowchart/fixtures/routing-4-nodes-turns.html": "dd723e7d4f70bfeaba15db9e3dc3095779c419c16e753c00427d2ca95ded803b",
+    "/workspace/work/rebuild/portico/portico/elements/headline/element.css": "9ba976ae39f0cc9e45a497c2d5eff3337cbd8bcf7266a16fc3fc84c812db66b1",
+    "/workspace/work/rebuild/portico/portico/elements/headline/element.json": "53bf7a1522720c79852c4d2a58027c5e42efe5dfce527c298aefa8875e8b263a",
+    "/workspace/work/rebuild/portico/portico/elements/headline/fixtures/replica-06.html": "46129d01cfe6542f8c102ea086563a1c7bafb7f1f185823a59fcd0e186d85b3b",
+    "/workspace/work/rebuild/portico/portico/elements/headline/fixtures/replica-07.html": "09dc5c4adffee487f91fb036bcb063425404f0ced4e875b4ebdcc350accdad8e",
+    "/workspace/work/rebuild/portico/portico/elements/headline/fixtures/replica-08.html": "43f3b0ba241cddac64a5aab3117f069ddcf9ea5a9d16d8bdcf5440d8aacc9c55",
+    "/workspace/work/rebuild/portico/portico/elements/headline/fixtures/replica-13.html": "ec199be1a1d97a68b5ff33a2255e73f220f5a98f84d8073293c300e24d0b01a8",
+    "/workspace/work/rebuild/portico/portico/elements/headline/fixtures/statement-long.html": "5c48f2bfe715a9b858f8addec3e484b16ee3ebfa79fecfeb1b28c90fa7e0fa43",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame/element.css": "391d19ea80f4ccfb85c6b8a19730760e3cc0aab5d8210c65728317ff0a07c713",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame/element.json": "da3ffcdb72a250eda69a4b19e9f2e4daa5e39073b16d678054a348fe1fbbc0a1",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame/fixtures/picture-secondary.html": "edec8ffac4f70b72e6cec1736c377dce3cff4190defeaeca5ff4e0409ec86dbc",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame/fixtures/replica-05.html": "1de2583f39407003974f16ee1e5a0cf79a0d431d9def9029b6baa59aebf1b0cf",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame/fixtures/replica-07.html": "1de2583f39407003974f16ee1e5a0cf79a0d431d9def9029b6baa59aebf1b0cf",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame/fixtures/replica-08.html": "1de2583f39407003974f16ee1e5a0cf79a0d431d9def9029b6baa59aebf1b0cf",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame--wide/element.css": "e5492c99b61b89c57ba96a880476b8456dfdb8ccbe84ffc48522733ec1f121b7",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame--wide/element.json": "da3ffcdb72a250eda69a4b19e9f2e4daa5e39073b16d678054a348fe1fbbc0a1",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame--wide/fixtures/logistics-site.html": "a9bec81af706c21f3a0a4d5180d1b6d08d080b0aa5c43e1b040b25d0735d35b6",
+    "/workspace/work/rebuild/portico/portico/elements/image-frame--wide/fixtures/research-workplace.html": "bf63edbeefba2969b8217d62ed340b0f5a6f2104f3a1b22227cd89f6cea19e84",
+    "/workspace/work/rebuild/portico/portico/elements/list/element.css": "b8654402c604f1fddac567f4ea3ed44e4b68b7050f57e93a4695c969a6fbb685",
+    "/workspace/work/rebuild/portico/portico/elements/list/element.json": "27a095c9784e8d43d801af32d8c6808853ad465a2a837c76a2ab5b08f72628b2",
+    "/workspace/work/rebuild/portico/portico/elements/list/fixtures/list-extended.html": "8a70380c37c30e6845c9ed3142f12f3b4e63ad37ad73bc923afec5c82fc32631",
+    "/workspace/work/rebuild/portico/portico/elements/list/fixtures/replica-10.html": "c3d98ea992cb037ff70abf610d3fc92a47622ccd6f01d25ddba526e0b0a600fb",
+    "/workspace/work/rebuild/portico/portico/elements/metric/element.css": "6b306aa36b709be579e03619876c0095183c56866a94c6fb5354e060b9ea80f8",
+    "/workspace/work/rebuild/portico/portico/elements/metric/element.json": "7b76ef1190548ef1cf4ad01b74c3c154b408fdbbf0790f1fb45eba839f7418a7",
+    "/workspace/work/rebuild/portico/portico/elements/metric/fixtures/metric-long.html": "07c1615b9669453713d05b3949ac981742adbae3e099d7be7655d4fc6d6231dc",
+    "/workspace/work/rebuild/portico/portico/elements/metric/fixtures/replica-09.html": "2ff5826d8e1d8b92b7b183cfc334e37278b9cec9117a42066232d0a02290c388",
+    "/workspace/work/rebuild/portico/portico/elements/metric--ask/element.css": "250a7b3c231ff6f409b4ca38244b15c0d72a383b41c85ab53a2c0a0c08e120c5",
+    "/workspace/work/rebuild/portico/portico/elements/metric--ask/element.json": "6d1b5d189f15acb08fc6dcc5852a8d630804a829a8d555dd578b66099dd6bff1",
+    "/workspace/work/rebuild/portico/portico/elements/metric--ask/fixtures/annual-target.html": "c07a6d86174826e850834a2e647cd32dfe6896671597dbcbac11c386e4228490",
+    "/workspace/work/rebuild/portico/portico/elements/metric--ask/fixtures/capital-request.html": "b1577309a5c2ba1f85c3293a7fdbcfb9501eced8245c9f8216e9a7722a15f390",
+    "/workspace/work/rebuild/portico/portico/elements/person/element.css": "6cacf88af7e8023bd44c4b3db806628fa6b92771f8e08b10474c05338260a6ea",
+    "/workspace/work/rebuild/portico/portico/elements/person/element.json": "910ec1b20c7791211cdb7f77420789b373e911dfe6d7ffc482191a71c6ec7a50",
+    "/workspace/work/rebuild/portico/portico/elements/person/fixtures/replica-12.html": "a42362a14c0fabd43bd20b9d4e575c523a1a8f480a9d64d0411f9cb9fe4309fe",
+    "/workspace/work/rebuild/portico/portico/elements/person/fixtures/team-pair.html": "e484b05ab629ac3fddab5fce785de2f2f118fe326d9ef04ee0194d7d552984e3",
+    "/workspace/work/rebuild/portico/portico/elements/person/fixtures/team-trio.html": "23601d6bfe72a8ca7a9153c18f49f8a4b0265a08b18610b1fed2f08018c8835f",
+    "/workspace/work/rebuild/portico/portico/elements/pill/element.css": "8685be6068259029371132d69fabf453a1b16fb528809e002ca70698b994ceff",
+    "/workspace/work/rebuild/portico/portico/elements/pill/element.json": "3b3a08905aee32627e7d4c718d5337794098c4799bfe1c1753f5c2073d93903b",
+    "/workspace/work/rebuild/portico/portico/elements/pill/fixtures/pill-long.html": "ef6cef389867c5d263656efc690ec1e47bdab48491b56fdcfb7e2d1e4eb991ac",
+    "/workspace/work/rebuild/portico/portico/elements/pill/fixtures/pill-quiet.html": "dac93b7c5da540911e6ab58c4e903f48ec034ec76757bd80bd5c1b22c1bcda3b",
+    "/workspace/work/rebuild/portico/portico/elements/pill/fixtures/replica-05.html": "7584275451a482c92a859fb2d9fac4a00ad758233dacaae90acaccbb7efd4414",
+    "/workspace/work/rebuild/portico/portico/elements/positioning/element.css": "7d51f9ca5749205ab316ebe4b666225a0a3bf87112204b5241923299e94654f2",
+    "/workspace/work/rebuild/portico/portico/elements/positioning/element.json": "81edd98af60a1bd1b3778c700eb82e02a9174f555963440a9ac92314520b6ad0",
+    "/workspace/work/rebuild/portico/portico/elements/positioning/fixtures/regional-6-long-logo.html": "f87bebdd459cdfeb820878488c0dda91d2c0319946f89e057928c1effa555e4a",
+    "/workspace/work/rebuild/portico/portico/elements/positioning/fixtures/replica-10.html": "3c48a28fd5ea414aff5eccee74c13059ecad933888bbb326c3191f8db0b74e08",
+    "/workspace/work/rebuild/portico/portico/elements/prose/element.css": "d938c2c69e5b567235bfd27976e494d84ec39ef1de63092dd0216b72d4e92061",
+    "/workspace/work/rebuild/portico/portico/elements/prose/element.json": "1edba8b8b5206d0367be7fe8bf18441ec19e28876d0bc329d562655622e56066",
+    "/workspace/work/rebuild/portico/portico/elements/prose/fixtures/lead-reading.html": "e6986edf9f1f5e2a0e92212d01f38fabfca349a53e98569c6ecfa1a6e5690121",
+    "/workspace/work/rebuild/portico/portico/elements/prose/fixtures/reading-long.html": "49a9fa0b581d9cd7c0c1fe19f5746ff88c23895ae89d273c8a74d9da937b1b9b",
+    "/workspace/work/rebuild/portico/portico/elements/prose/fixtures/replica-06.html": "d93bedeffa42de8ef99ae5b069008161f73ee644ccdedd8c66eab9e0856c0dec",
+    "/workspace/work/rebuild/portico/portico/elements/tag/element.css": "157d249d77588e782ce02a4c336f44517d680f4d1a3fefe13b2082527908f443",
+    "/workspace/work/rebuild/portico/portico/elements/tag/element.json": "af355b7985fbc5036533665cf4968f1a2d71fa82442bca8da91b5dc9538b7dcc",
+    "/workspace/work/rebuild/portico/portico/elements/tag/fixtures/labels-long.html": "3ed30a7be97cccb9795689d5556e466bc8ff9c871b1333d1320a60ce4bd939a8",
+    "/workspace/work/rebuild/portico/portico/elements/tag/fixtures/replica-07.html": "e7c3ccc4a4e65cca6eb23c0fb2082c6311b46cc687ec1e60d66a208d8a42e1d2",
+    "/workspace/work/rebuild/portico/portico/elements/timeline/element.css": "6dc69eab50bf2cf8dd81a2731ff978901c7a9153078b1ac8d4203336beab6353",
+    "/workspace/work/rebuild/portico/portico/elements/timeline/element.json": "a1fb88a2d8149e8c9e8179f4e32973ff9651635f9169188c67689122a8fb37af",
+    "/workspace/work/rebuild/portico/portico/elements/timeline/fixtures/phases-3-long.html": "e518efd3553dedfcd096461c41d759cbba36d82c1cd017683610d7bb44485575",
+    "/workspace/work/rebuild/portico/portico/elements/timeline/fixtures/phases-5.html": "a9962b8d61f47d01ce6b9e467662070b9b3d02726c11591de9bc239e93ff05e9",
+    "/workspace/work/rebuild/portico/portico/elements/timeline/fixtures/phases-alt-3.html": "f8014160a09dce6740908672d01d3f0a83a31a6ec88c2568dfdd15dad46d4136",
+    "/workspace/work/rebuild/portico/portico/elements/timeline/fixtures/phases-col-3.html": "6f67e78faf4918bd149894585bd5ae3870a6d1554f3d9db0dc7843bf460c5f69",
+    "/workspace/work/rebuild/portico/portico/elements/timeline/fixtures/replica-11.html": "e86ba8a734c0854fd786632584b920ba27fef0fa7ae190219137f86b795434b8",
+    "/workspace/work/rebuild/portico/portico/foundation/fixtures/r5-panel-contents-grid-extended.html": "1aa73ef65319742c9428608e87718f984f80e3baa7b183c5f178e46923f7a5c8",
+    "/workspace/work/rebuild/portico/portico/foundation/fixtures/r5-panel-contents-grid.html": "44d91269612cfdf107d414c68e293cda00c597a63c1af1b7205ec084e2e5ad50",
+    "/workspace/work/rebuild/portico/portico/foundation/foundation.css": "b687aab780aaaed56e65330b194c3dafa0a223512eb1e2818f245bc5ea78fd36",
+    "/workspace/work/rebuild/portico/portico/foundation/foundation.json": "1e2d5dfaa8853f8040998c701787ef8447fe2eca892b9e30c61867ead056e184",
+    "/workspace/work/rebuild/portico/portico/kit/css/tokens.css": "3247274a4b119e34893a82f5a7a532a3d382ffa3b496cc56c42184cd215a80b9",
+    "/workspace/work/rebuild/portico/portico/kit/kit.json": "708defd1784a4fc2a7578c29d1d88292d02aedc61af32d3341d9144ad4015929",
+    "/workspace/work/reference/tools/preview.py": "92b0339d1f705734c1171fe26b4d2b022c5995711cbf869168e8b3dc4296ffbc",
+    "/workspace/work/rebuild/contract-round5/type-steps.json": "fe05eeb0b09ab4fe636923a2d0d207a2268c0a97015ff984b796f7d259a015d7",
+    "/workspace/work/reference/contract/palette.json": "8c9154b42efd8e0e0efee4443ebb22c39aadd828586a58b026711ae5bc4bc755",
+    "/workspace/work/rebuild/portico/review/assets/fonts/DoHyeon.woff2": "73d94fffa544880572eb712219595b1d45841bc1e143c94d249474c555826fe3",
+    "/workspace/work/rebuild/portico/review/assets/fonts/Mono.woff2": "a4f186ed13052b6efc88aaf97d7aaf92e24ad44e4bd006ea1a8dee20a21edfa2",
+    "/workspace/work/rebuild/portico/review/assets/fonts/Montserrat.woff2": "e1e0bc905c92d1912216090015e0b0eff9a2e96ba35228592045ade5589ee784",
+    "/workspace/work/rebuild/portico/review/assets/fonts/PV.woff2": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+    "/workspace/work/rebuild/portico/review/assets/fonts/fonts.css": "a72299dae77d8ab705443e0bc3f7c713ba1565f020d8043e9c98c948f31b00f4"
+  },
+  "modes": [
+    {
+      "article_count": 60,
+      "slide_count": 60,
+      "titles": [
+        "foundation / r5-panel-contents-grid-extended",
+        "foundation / r5-panel-contents-grid",
+        "agenda--ruled-column / even-agenda-column",
+        "agenda--ruled-column / odd-agenda-column",
+        "card / replica-03",
+        "card / replica-04",
+        "card / replica-05",
+        "card / replica-06-base",
+        "card / replica-06-quiet",
+        "card / replica-06",
+        "card / replica-07",
+        "card / replica-10",
+        "chart-bar--paired-growth / grouped-extended",
+        "chart-bar--paired-growth / replica-09",
+        "chart-bar--paired-projection / grouped-extended",
+        "chart-bar--paired-projection / replica-13",
+        "chart-donut / replica-13-02",
+        "chart-donut / replica-13-03",
+        "chart-donut / replica-13-04",
+        "chart-donut / replica-13",
+        "chart-donut / review-long-name",
+        "concentric--overlap-ellipses / contract-reach",
+        "concentric--overlap-ellipses / market-reach",
+        "flowchart / replica-08",
+        "flowchart / routing-4-nodes-turns",
+        "headline / replica-06",
+        "headline / replica-07",
+        "headline / replica-08",
+        "headline / replica-13",
+        "headline / statement-long",
+        "image-frame / picture-secondary",
+        "image-frame / replica-05",
+        "image-frame / replica-07",
+        "image-frame / replica-08",
+        "image-frame--wide / logistics-site",
+        "image-frame--wide / research-workplace",
+        "list / list-extended",
+        "list / replica-10",
+        "metric / metric-long",
+        "metric / replica-09",
+        "metric--ask / annual-target",
+        "metric--ask / capital-request",
+        "person / replica-12",
+        "person / team-pair",
+        "person / team-trio",
+        "pill / pill-long",
+        "pill / pill-quiet",
+        "pill / replica-05",
+        "positioning / regional-6-long-logo",
+        "positioning / replica-10",
+        "prose / lead-reading",
+        "prose / reading-long",
+        "prose / replica-06",
+        "tag / labels-long",
+        "tag / replica-07",
+        "timeline / phases-3-long",
+        "timeline / phases-5",
+        "timeline / phases-alt-3",
+        "timeline / phases-col-3",
+        "timeline / replica-11"
+      ],
+      "slides": [
+        {
+          "fixture": "foundation / r5-panel-contents-grid-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "foundation / r5-panel-contents-grid",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "agenda--ruled-column / even-agenda-column",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "agenda--ruled-column / odd-agenda-column",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-06-base",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-06-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "card / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar--paired-growth / grouped-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar--paired-growth / replica-09",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar--paired-projection / grouped-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-bar--paired-projection / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / replica-13-02",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / replica-13-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / replica-13-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "chart-donut / review-long-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "concentric--overlap-ellipses / contract-reach",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "concentric--overlap-ellipses / market-reach",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "flowchart / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "flowchart / routing-4-nodes-turns",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "headline / statement-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / picture-secondary",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame--wide / logistics-site",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "image-frame--wide / research-workplace",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / list-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "list / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / metric-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric / replica-09",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric--ask / annual-target",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "metric--ask / capital-request",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / replica-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / team-pair",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "person / team-trio",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / pill-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "pill / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "positioning / regional-6-long-logo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "positioning / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / lead-reading",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / reading-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "prose / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "tag / labels-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "tag / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / phases-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / phases-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / phases-alt-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / phases-col-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        },
+        {
+          "fixture": "timeline / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": false
+        }
+      ],
+      "size_errors": [],
+      "font_faces": [
+        {
+          "family": "Pretendard Variable",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Do Hyeon",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Nanum Gothic Coding",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        }
+      ],
+      "font_checks": [
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "other",
+          "sample": "01",
+          "descriptor": "normal 700 45.5828px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "ko",
+          "sample": "검수 대상",
+          "descriptor": "normal 650 20.8921px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "우리의 실행 방향",
+          "descriptor": "normal 700 40px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "현장에 쌓인 기록으로 고객의 요구를 이해합니다. 작은 개선을 꾸준히 이어 업무의 정확도와 안내 품질을 높이겠습니다.",
+          "descriptor": "normal 400 28px \"Pretendard Variable\"",
+          "loaded": true
+        }
+      ],
+      "font_load_errors": [],
+      "font_check_errors": [],
+      "fonts_href": "assets/fonts/fonts.css",
+      "icons": 4,
+      "mode": "light",
+      "html_sha256": "e72b54ba9b8a615dd961f2aa7c3b874e63815a3652fef0bb65f1447c4f089a17",
+      "request_failures": [],
+      "http_errors": [],
+      "script_errors": [],
+      "external_requests": []
+    },
+    {
+      "article_count": 60,
+      "slide_count": 60,
+      "titles": [
+        "foundation / r5-panel-contents-grid-extended",
+        "foundation / r5-panel-contents-grid",
+        "agenda--ruled-column / even-agenda-column",
+        "agenda--ruled-column / odd-agenda-column",
+        "card / replica-03",
+        "card / replica-04",
+        "card / replica-05",
+        "card / replica-06-base",
+        "card / replica-06-quiet",
+        "card / replica-06",
+        "card / replica-07",
+        "card / replica-10",
+        "chart-bar--paired-growth / grouped-extended",
+        "chart-bar--paired-growth / replica-09",
+        "chart-bar--paired-projection / grouped-extended",
+        "chart-bar--paired-projection / replica-13",
+        "chart-donut / replica-13-02",
+        "chart-donut / replica-13-03",
+        "chart-donut / replica-13-04",
+        "chart-donut / replica-13",
+        "chart-donut / review-long-name",
+        "concentric--overlap-ellipses / contract-reach",
+        "concentric--overlap-ellipses / market-reach",
+        "flowchart / replica-08",
+        "flowchart / routing-4-nodes-turns",
+        "headline / replica-06",
+        "headline / replica-07",
+        "headline / replica-08",
+        "headline / replica-13",
+        "headline / statement-long",
+        "image-frame / picture-secondary",
+        "image-frame / replica-05",
+        "image-frame / replica-07",
+        "image-frame / replica-08",
+        "image-frame--wide / logistics-site",
+        "image-frame--wide / research-workplace",
+        "list / list-extended",
+        "list / replica-10",
+        "metric / metric-long",
+        "metric / replica-09",
+        "metric--ask / annual-target",
+        "metric--ask / capital-request",
+        "person / replica-12",
+        "person / team-pair",
+        "person / team-trio",
+        "pill / pill-long",
+        "pill / pill-quiet",
+        "pill / replica-05",
+        "positioning / regional-6-long-logo",
+        "positioning / replica-10",
+        "prose / lead-reading",
+        "prose / reading-long",
+        "prose / replica-06",
+        "tag / labels-long",
+        "tag / replica-07",
+        "timeline / phases-3-long",
+        "timeline / phases-5",
+        "timeline / phases-alt-3",
+        "timeline / phases-col-3",
+        "timeline / replica-11"
+      ],
+      "slides": [
+        {
+          "fixture": "foundation / r5-panel-contents-grid-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "foundation / r5-panel-contents-grid",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "agenda--ruled-column / even-agenda-column",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "agenda--ruled-column / odd-agenda-column",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-06-base",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-06-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "card / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar--paired-growth / grouped-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar--paired-growth / replica-09",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar--paired-projection / grouped-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-bar--paired-projection / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / replica-13-02",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / replica-13-03",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / replica-13-04",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "chart-donut / review-long-name",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "concentric--overlap-ellipses / contract-reach",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "concentric--overlap-ellipses / market-reach",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "flowchart / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "flowchart / routing-4-nodes-turns",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / replica-13",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "headline / statement-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / picture-secondary",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame / replica-08",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame--wide / logistics-site",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "image-frame--wide / research-workplace",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / list-extended",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "list / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / metric-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric / replica-09",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric--ask / annual-target",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "metric--ask / capital-request",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / replica-12",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / team-pair",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "person / team-trio",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / pill-quiet",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "pill / replica-05",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "positioning / regional-6-long-logo",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "positioning / replica-10",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / lead-reading",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / reading-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "prose / replica-06",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "tag / labels-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "tag / replica-07",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / phases-3-long",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / phases-5",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / phases-alt-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / phases-col-3",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        },
+        {
+          "fixture": "timeline / replica-11",
+          "layout": [
+            1280,
+            720
+          ],
+          "computed": [
+            1280,
+            720
+          ],
+          "displayed": [
+            640,
+            360
+          ],
+          "dark": true
+        }
+      ],
+      "size_errors": [],
+      "font_faces": [
+        {
+          "family": "Pretendard Variable",
+          "status": "loaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded",
+          "weight": "100 900",
+          "style": "normal"
+        },
+        {
+          "family": "Do Hyeon",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        },
+        {
+          "family": "Nanum Gothic Coding",
+          "status": "unloaded",
+          "weight": "400",
+          "style": "normal"
+        }
+      ],
+      "font_checks": [
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "other",
+          "sample": "01",
+          "descriptor": "normal 700 45.5828px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "650",
+          "style": "normal",
+          "script": "ko",
+          "sample": "검수 대상",
+          "descriptor": "normal 650 20.8921px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "700",
+          "style": "normal",
+          "script": "ko",
+          "sample": "우리의 실행 방향",
+          "descriptor": "normal 700 40px \"Pretendard Variable\"",
+          "loaded": true
+        },
+        {
+          "family": "\"Pretendard Variable\"",
+          "weight": "400",
+          "style": "normal",
+          "script": "ko",
+          "sample": "현장에 쌓인 기록으로 고객의 요구를 이해합니다. 작은 개선을 꾸준히 이어 업무의 정확도와 안내 품질을 높이겠습니다.",
+          "descriptor": "normal 400 28px \"Pretendard Variable\"",
+          "loaded": true
+        }
+      ],
+      "font_load_errors": [],
+      "font_check_errors": [],
+      "fonts_href": "assets/fonts/fonts.css",
+      "icons": 4,
+      "mode": "dark",
+      "html_sha256": "ebe7c1bcd83fd5d44a1c009051f5d7e6b9c7b158d36c67ea9ecb61b93c19f3f1",
+      "request_failures": [],
+      "http_errors": [],
+      "script_errors": [],
+      "external_requests": []
+    }
+  ],
+  "issues": [],
+  "passed": true
+}

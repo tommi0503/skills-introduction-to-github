@@ -1,0 +1,1 @@
+Replica22 supplies the profile composition, transcribed from its own portrait/caption/body measurements. Rectangular portraits lead a small opposite-corner leaf name, a15px role and fine11px biography. Portrait and name keep a common left edge. The group uses its actual member count and compact columns; each member owns its internal size context.

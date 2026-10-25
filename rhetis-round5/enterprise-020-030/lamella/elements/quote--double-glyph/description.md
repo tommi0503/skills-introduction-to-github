@@ -1,0 +1,1 @@
+The source18 right-hand testimonial preserves the overlapping closing quote and literal99 typography as owned glyph parts. Portrait, author tab, role and three-line quote remain one semantic element. The lower-row typography has an explicit source layout class.

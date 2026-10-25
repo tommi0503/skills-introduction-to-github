@@ -1,0 +1,66 @@
+/* Replica04: A quiet left-aligned red text column,16px on360px,22.4px line pitch.
+   Ratios are measured source font/box width; small Korean text floors at12 for legibility. */
+.prose[data-el="filament-prose"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: min(8cqh,var(--gap));
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: var(--a1-8);
+  font-family: var(--font-body);
+}
+.prose[data-el="filament-prose"]>p {
+  margin: 0;
+  font-size: var(--type-16);
+  font-weight: var(--filament-prose-weight);
+  line-height: var(--filament-prose-line);
+  letter-spacing: var(--filament-prose-track);
+  overflow-wrap: anywhere;
+}
+.prose[data-el="filament-prose"]>p>b {
+  font-weight: var(--filament-prose-bold);
+}
+.prose[data-el="filament-prose"].lead>p {
+  font-size: var(--type-18);
+  font-weight: var(--name-weight);
+}
+.prose[data-el="filament-prose"].quiet>p {
+  font-size: clamp(var(--type-12),calc(3.77778cqw),var(--type-24));
+  color: var(--n-7);
+}
+.prose[data-el="filament-prose"].cols {
+  display: block;
+  column-count: 2;
+  column-gap: var(--gap-lg);
+  column-fill: balance;
+}
+.prose[data-el="filament-prose"].cols>p {
+  break-inside: avoid;
+  margin: 0 0 var(--gap);
+  font-size: clamp(var(--type-12),calc(2.57778cqw),var(--type-24));
+}
+@container (max-width:480px) {
+  .prose[data-el="filament-prose"].cols {
+    display: flex;
+    column-count: auto;
+    gap: var(--gap-sm);
+  }
+  .prose[data-el="filament-prose"].cols>p {
+    margin: 0;
+    font-size: var(--type-12);
+  }
+}
+@container (max-height:240px) {
+  .prose[data-el="filament-prose"] {
+    gap: var(--gap-sm);
+  }
+}
+@container (max-height:360px) {
+  .prose[data-el="filament-prose"].quiet>p {
+    font-size: var(--type-12);
+  }
+}

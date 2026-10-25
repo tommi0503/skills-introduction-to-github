@@ -1,0 +1,133 @@
+/* Replica05:281×349 voice column;64px regular opening quote offset19px,
+  187×30 leaf attribution18px/500;11px/16px body,32px paragraph gaps.18 adds90px avatar. */
+.quote[data-el="lamella-quote"] {
+  container-type: size;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: inherit;
+  font-family: var(--font-body);
+  margin: 0;
+}
+.quote[data-el="lamella-quote"]::before {
+  content: "“";
+  order: 0;
+  display: block;
+  flex: none;
+  height: 15.759cqh;
+  margin-left: 6.762cqw;
+  font-size: clamp(var(--type-40),calc(22.776cqw),var(--type-128));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--figure-line)*.9523809524);
+  letter-spacing: var(--figure-track);
+}
+.quote[data-el="lamella-quote"]>.by {
+  order: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-sm);
+  min-width: 0;
+}
+.quote[data-el="lamella-quote"]>.by>.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 66.548cqw;
+  min-height: min(10.676cqw,30px);
+  padding: 0 var(--gap-sm);
+  border-radius: 0 min(10.676cqw,30px) 0 0;
+  background: var(--n-1);
+  color: var(--a1-7);
+  font-size: clamp(var(--type-12),calc(6.406cqw),var(--type-32));
+  font-weight: calc(var(--body-weight)*1.25);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+  overflow-wrap: anywhere;
+}
+.quote[data-el="lamella-quote"]>.by>.note {
+  margin: 0 0 0 6.762cqw;
+  font-size: clamp(var(--type-10),calc(3.9146cqw),var(--type-24));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*.24);
+  overflow-wrap: anywhere;
+}
+.quote[data-el="lamella-quote"]>blockquote {
+  order: 2;
+  margin: 10.029cqh 0 0 6.762cqw;
+  width: 90.7473cqw;
+  font-size: clamp(var(--type-10),calc(min(3.9146cqw,3.152cqh)),var(--type-24));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--body-line)*1.0031347962);
+  letter-spacing: calc(var(--body-track)*.24);
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+.quote[data-el="lamella-quote"]>blockquote>p {
+  margin: 0 0 calc(var(--gap-lg)*.8);
+  font: inherit;
+}
+.quote[data-el="lamella-quote"]>blockquote>p:last-child {
+  margin-bottom: 0;
+}
+.quote[data-el="lamella-quote"]>.by>.seat.avatar {
+  display: grid;
+  place-items: center;
+  order: -1;
+  width: min(32.143cqw,38.298cqh);
+  aspect-ratio: 1;
+  border-radius: 0;
+  background: var(--n-2);
+  color: var(--n-7);
+  font-size: var(--type-12);
+  line-height: var(--label-line);
+}
+.quote[data-el="lamella-quote"]>.by>.seat.avatar::after {
+  content: attr(data-ph);
+}
+.quote[data-el="lamella-quote"]:has(>.by>.seat.avatar)::before {
+  position: absolute;
+  left: 44%;
+  top: 0;
+}
+.quote[data-el="lamella-quote"]:has(>.by>.seat.avatar)>.by {
+  gap: 0;
+}
+.quote[data-el="lamella-quote"]:has(>.by>.seat.avatar)>.by>.seat.avatar {
+  margin-left: 4.286cqw;
+}
+.quote[data-el="lamella-quote"]:has(>.by>.seat.avatar)>.by>.name {
+  margin-top: .357cqw;
+  width: 69.643cqw;
+  font-size: clamp(var(--type-12),calc(5cqw),var(--type-24));
+}
+.quote[data-el="lamella-quote"]:has(>.by>.seat.avatar)>.by>.note {
+  margin-top: 5cqw;
+  font-size: clamp(var(--type-12),calc(4.643cqw),var(--type-24));
+  line-height: calc(var(--body-line)*.6896551724);
+}
+.quote[data-el="lamella-quote"]:has(>.by>.seat.avatar)>blockquote {
+  margin-top: calc(var(--gap-sm)*1.125);
+  font-size: clamp(var(--type-10),calc(min(3.9286cqw,4.681cqh)),var(--type-24));
+}
+.quote[data-el="lamella-quote"].big>blockquote {
+  font-size: clamp(var(--type-24),calc(min(9cqw,11cqh)),var(--type-80));
+}
+@container (min-width:500px) and (max-height:400px) {
+  .quote[data-el="lamella-quote"]>blockquote {
+    font-size: var(--type-12);
+    margin-top: var(--gap);
+  }
+  .quote[data-el="lamella-quote"]>blockquote>p {
+    margin-bottom: var(--gap);
+  }
+  .quote[data-el="lamella-quote"]>.by>.name {
+    font-size: var(--type-16);
+  }
+}

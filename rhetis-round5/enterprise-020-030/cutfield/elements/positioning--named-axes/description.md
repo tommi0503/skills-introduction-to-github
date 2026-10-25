@@ -1,0 +1,1 @@
+A named-axis positioning plot uses three quiet filled circles and a larger dark company circle with a square logo seat. Company labels sit beneath their marks; exact source proportions preserve the crossed axes. Marks use x/y/r data, and longer Korean names and an additional competitor test the responsive layout.

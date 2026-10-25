@@ -1,0 +1,1 @@
+A three-sector ring retains the source30% hole, thin centered value labels and compact multiline category text. Each sector is drawn from its share and cumulative start; ordinary labels follow the sector midpoint, while optional declared coordinates support deliberate label offsets without fixture conditions. Four-category examples test longer Korean labels.

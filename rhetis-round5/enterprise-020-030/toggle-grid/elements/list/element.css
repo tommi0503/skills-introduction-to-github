@@ -1,0 +1,172 @@
+/* Replica03:330×301 gray list,20px/350 on29px lines;30px/20px sides.
+   2 members begin at35px with37px gap;3 begin at26px with29px gap;the1-item source is unsupported. */
+.list[data-el="toggle-grid-list"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: calc(var(--gap-lg)*.8409090909);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  background: var(--n-2);
+  color: var(--ink);
+  font-family: var(--font-body);
+  counter-reset: toggle-grid-item;
+}
+.list[data-el="toggle-grid-list"]>.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(var(--pad)*1.3333333333) 1fr;
+  column-gap: 0;
+  margin-left: 9.091cqw;
+  margin-right: 6.061cqw;
+  min-width: 0;
+  counter-increment: toggle-grid-item;
+}
+.list[data-el="toggle-grid-list"]>.item:first-child {
+  margin-top: 11.628cqh;
+}
+.list[data-el="toggle-grid-list"]>.item::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--gap-sm)*1.5);
+  top: var(--gap-sm);
+  width: var(--type-8);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: currentColor;
+}
+.list[data-el="toggle-grid-list"]>.item>.name {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding-left: calc(var(--gap-sm)*.25);
+  min-width: 0;
+  font-size: clamp(var(--type-12),calc(6.060606cqw),var(--type-28));
+  font-weight: calc(var(--body-weight)*.875);
+  line-height: calc(var(--body-line)*.9797297297);
+  letter-spacing: calc(var(--body-track)*0);
+  overflow-wrap: anywhere;
+}
+.list[data-el="toggle-grid-list"]>.item>.note {
+  grid-column: 2;
+  grid-row: 2;
+  margin: var(--gap-sm) 0 0;
+  padding-left: calc(var(--gap-sm)*.25);
+  min-width: 0;
+  font-size: clamp(var(--type-12),calc(5.151515cqw),var(--type-24));
+  font-weight: calc(var(--body-weight)*.875);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*0);
+  overflow-wrap: anywhere;
+}
+.list[data-el="toggle-grid-list"]:has(>.item:nth-child(3):last-child) {
+  gap: calc(var(--gap-lg)*.6590909091);
+}
+.list[data-el="toggle-grid-list"]:has(>.item:nth-child(3):last-child)>.item:first-child {
+  margin-top: 8.638cqh;
+}
+.list[data-el="toggle-grid-list"].num>.item::before {
+  content: counter(toggle-grid-item,decimal-leading-zero);
+  left: 0;
+  top: 0;
+  width: var(--type-28);
+  aspect-ratio: auto;
+  background: none;
+  border-radius: 0;
+  font-size: var(--type-16);
+  font-weight: var(--figure-weight);
+  line-height: var(--body-line);
+}
+.list[data-el="toggle-grid-list"].check>.item::before {
+  left: 0;
+  top: 0;
+  width: var(--type-8);
+  aspect-ratio: 1 / 1.5;
+  background: none;
+  border: 0;
+  border-right: calc(var(--stroke)*1.5) solid currentColor;
+  border-bottom: calc(var(--stroke)*1.5) solid currentColor;
+  border-radius: 0;
+  transform: translate(38%,16%) rotate(40deg);
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: calc(var(--gap-sm)*.25);
+  height: auto;
+  clip-path: none;
+}
+.list[data-el="toggle-grid-list"].divided>.item {
+  padding-bottom: var(--gap);
+  border-bottom: var(--stroke) solid var(--n-4);
+}
+.list[data-el="toggle-grid-list"]>.item>.mark {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+}
+.list[data-el="toggle-grid-list"]>.item>.mark>.icon {
+  width: 56%;
+  height: 56%;
+}
+.list[data-el="toggle-grid-list"]>.item:has(>.mark)::before {
+  display: none;
+}
+@container (min-width:500px) and (max-height:480px) {
+  .list[data-el="toggle-grid-list"]>.item>.name,.list[data-el="toggle-grid-list"]>.item>.note {
+    font-size: var(--type-12);
+  }
+}
+.list[data-el="toggle-grid-list"].check {
+  gap: calc(var(--gap-sm)*.75);
+  justify-content: flex-start;
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+.list[data-el="toggle-grid-list"].check>.item {
+  flex: none;
+  min-height: 0;
+  grid-template-columns: var(--type-12) 1fr;
+  column-gap: var(--gap-sm);
+  margin: 0;
+  align-items: start;
+}
+.list[data-el="toggle-grid-list"].check>.item:first-child {
+  margin-top: 0;
+}
+.list[data-el="toggle-grid-list"].check>.item>.name {
+  font-size: clamp(var(--type-12),calc(min(3.2cqw,8cqh)),var(--type-18));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  color: inherit;
+  padding: 0;
+}
+.list[data-el="toggle-grid-list"].check>.item>.note {
+  margin: calc(var(--gap-sm)*.25) 0 0;
+  font-size: clamp(var(--type-12),calc(min(2.8cqw,6.5cqh)),var(--type-14));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  color: inherit;
+  padding: 0;
+}
+.list[data-el="toggle-grid-list"].check>.item>.mark {
+  width: var(--type-12);
+  height: var(--type-12);
+}
+@container (max-height:240px) {
+  .list[data-el="toggle-grid-list"].check>.item>.name,.list[data-el="toggle-grid-list"].check>.item>.note {
+    font-size: var(--type-12);
+  }
+}
+@container (max-width:300px) {
+  .list[data-el="toggle-grid-list"].check>.item>.name,.list[data-el="toggle-grid-list"].check>.item>.note {
+    font-size: var(--type-12);
+  }
+}
+.list[data-el="toggle-grid-list"].check>.item>.name,.list[data-el="toggle-grid-list"].check>.item>.note {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}

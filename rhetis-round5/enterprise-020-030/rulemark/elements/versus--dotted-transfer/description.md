@@ -1,0 +1,1 @@
+Replica10 supplies the exact before/after composition: two rectangular 446×383 panels, a50px header, white body with56/51px insets, centered26px title and18px paragraphs. The central75px dotted arrow belongs to the pair. Paragraph content remains paragraphs; no marker is fabricated. Compact containers reduce insets and type while retaining both panels.

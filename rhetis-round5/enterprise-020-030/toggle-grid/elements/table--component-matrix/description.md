@@ -1,0 +1,1 @@
+A compact five-row component table has an accent section header, a29.15% dark label column and lightly filled left-aligned explanations. Its fine rectangular grid and tight typography retain the measured source proportions.

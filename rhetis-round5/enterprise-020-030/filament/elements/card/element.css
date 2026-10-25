@@ -1,0 +1,142 @@
+/* Replica07: service tile178×121, padding14/15, radius12; name25/300, note17/700.
+   The source is the on variant. Quiet/plain treatments are inferred from the same tile. */
+.card[data-el="filament-card"] {
+  container-type: size;
+  position: relative;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background: var(--n-1);
+  color: var(--a1-8);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+}
+.card[data-el="filament-card"]>.parts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--gap-sm);
+  height: 100%;
+  padding: 11.57cqh 8.427cqw;
+}
+.card[data-el="filament-card"] .parts>:where(.kick,.mark,.fig,.name,.note) {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.card[data-el="filament-card"] .name {
+  font-family: var(--filament-service-font),var(--font-body);
+  font-size: clamp(var(--type-18),calc(min(14.045cqw,20.661cqh)),var(--type-64));
+  font-weight: calc(var(--body-weight)*.75);
+  line-height: calc(var(--name-line)*.7538461538);
+  letter-spacing: calc(var(--name-track)*1.6);
+  word-break: keep-all;
+  text-wrap: balance;
+}
+.card[data-el="filament-card"] .note {
+  font-size: clamp(var(--type-12),calc(min(9.551cqw,14.05cqh)),var(--type-32));
+  font-weight: calc(var(--body-weight)*1.75);
+  line-height: var(--label-line);
+  letter-spacing: calc(var(--body-track)*0);
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+.card[data-el="filament-card"] .kick {
+  font-size: clamp(var(--type-12),calc(5.8cqw),var(--type-20));
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+}
+.card[data-el="filament-card"] .fig {
+  font-size: clamp(var(--type-28),calc(min(28cqw,25cqh)),var(--type-80));
+  font-weight: var(--figure-weight);
+  line-height: var(--figure-line);
+  letter-spacing: var(--figure-track);
+}
+.card[data-el="filament-card"] .fig small {
+  font-size: clamp(var(--type-12),calc(8cqw),var(--type-28));
+  font-weight: var(--body-weight);
+}
+.card[data-el="filament-card"] .mark {
+  display: grid;
+  place-items: center;
+  width: min(20cqw,16cqh);
+  aspect-ratio: 1;
+  border: var(--stroke) solid currentColor;
+  border-radius: var(--radius-sm);
+  font-size: clamp(var(--type-14),calc(10cqw),var(--type-32));
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+}
+.card[data-el="filament-card"] .mark>.icon,.card[data-el="filament-card"] .mark>.seat {
+  width: 56%;
+  height: 56%;
+}
+.card[data-el="filament-card"]>.parts:has(>.fig)>.name {
+  font-size: clamp(var(--type-16),calc(min(8cqw,10cqh)),var(--type-32));
+}
+.card[data-el="filament-card"]>.parts:has(>.fig)>.note {
+  font-size: clamp(var(--type-12),calc(min(6cqw,8cqh)),var(--type-24));
+}
+.card[data-el="filament-card"].on {
+  background: var(--a1);
+  color: var(--a1-on);
+}
+.card[data-el="filament-card"].quiet {
+  background: transparent;
+}
+.card[data-el="filament-card"].line {
+  background: transparent;
+  border: var(--stroke) solid var(--a1-7);
+}
+.card[data-el="filament-card"].tone-1 {
+  background: var(--a1);
+  color: var(--a1-on);
+}
+.card[data-el="filament-card"].tone-2 {
+  background: var(--a2);
+  color: var(--a2-on);
+}
+.card[data-el="filament-card"].tone-3 {
+  background: var(--a3-7);
+  color: var(--page);
+}
+.card[data-el="filament-card"].tone-4 {
+  background: var(--a4);
+  color: var(--a4-on);
+}
+.card[data-el="filament-card"].tone-5 {
+  background: var(--n-8);
+  color: var(--page);
+}
+@container (min-width:300px) and (max-height:260px) {
+  .card[data-el="filament-card"]>.parts {
+    gap: var(--gap-sm);
+    padding: var(--pad);
+  }
+  .card[data-el="filament-card"] .name {
+    font-family: var(--filament-service-font),var(--font-body);
+    font-size: clamp(var(--type-16),calc(min(10cqw,16cqh)),var(--type-40));
+  }
+}
+@container (min-height:300px) {
+  .card[data-el="filament-card"]>.parts:has(>.mark),.card[data-el="filament-card"]>.parts:has(>.fig),.card[data-el="filament-card"]>.parts:has(>.kick) {
+    justify-content: flex-start;
+    gap: var(--gap);
+  }
+  .card[data-el="filament-card"] .note {
+    margin-top: auto;
+  }
+}
+@container (min-height:200px) and (max-height:480px) {
+  .card[data-el="filament-card"]>.parts {
+    padding: var(--pad);
+    gap: var(--gap-sm);
+  }
+  .card[data-el="filament-card"] .name {
+    font-size: clamp(var(--type-18),calc(min(14.045cqw,10cqh)),var(--type-40));
+  }
+  .card[data-el="filament-card"] .note {
+    font-size: clamp(var(--type-12),calc(min(9.551cqw,6cqh)),var(--type-24));
+  }
+}

@@ -1,0 +1,1 @@
+Five pairs of sand and secondary bars sit on fine fifth-step rules below a centered title. A fading curved arrow crosses the whole plot and a round summary badge sits at the upper right. Group and series counts adapt without fixture or wording conditions.

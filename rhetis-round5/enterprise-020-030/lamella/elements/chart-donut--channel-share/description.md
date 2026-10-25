@@ -1,0 +1,1 @@
+A channel label sits flush left above a compact97px single-share ring. The ring has a30% central hole, a centered percentage and a quiet neutral track. Three ranked soft fills correspond to the source channels; each independent ring can live inside a panel without a three-item container.

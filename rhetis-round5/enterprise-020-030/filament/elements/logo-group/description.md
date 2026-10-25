@@ -1,0 +1,1 @@
+Five neutral logo openings reproduce the source70:60 face and105px pitch at490×60. Member count determines equal openings; tall allocations wrap into two rows and narrow allocations into two columns. All placeholders keep their numbers centered. The picture material stays neutral; corners, rules and enclosure treatment distinguish this collection.

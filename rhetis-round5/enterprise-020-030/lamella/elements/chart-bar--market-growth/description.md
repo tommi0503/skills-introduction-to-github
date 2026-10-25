@@ -1,0 +1,1 @@
+Five square-ended bars share a fine L-axis and tiny year labels. The measured currency cap stays with the plot, and an actual transparent outlined curved arrow passes behind the soft droplet annotation. The droplet keeps a small label above a large growth figure. Its declared foreground/fill roles support surface context without changing axes or using wording conditions.

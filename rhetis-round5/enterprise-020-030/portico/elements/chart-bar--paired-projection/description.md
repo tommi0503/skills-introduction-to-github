@@ -1,0 +1,1 @@
+A low, broad projection plot uses paired bars, compact category labels, a centered title and a fading rising curved arrow. Its geometry is measured independently of the taller growth chart. Group and series counts adapt without fixture or wording conditions.

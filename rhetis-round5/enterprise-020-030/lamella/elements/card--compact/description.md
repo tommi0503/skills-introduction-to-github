@@ -1,0 +1,1 @@
+Three editorial groups below a compact170px leaf tab and an independent hairline. Each group retains a15px plain subheading and11px explanatory copy. Caption spacing variants reflect the three actual source06 tabs, and compact containers reduce gaps before reducing readable type.

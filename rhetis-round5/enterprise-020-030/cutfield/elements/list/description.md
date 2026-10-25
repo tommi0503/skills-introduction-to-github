@@ -1,0 +1,1 @@
+Transcribed from replica06: independent diagonal arrows preceding two-line copy. Each item owns its arrow; these are not member connectors. Compact cells tighten type and vertical rhythm. The two arrow strokes use accent a1-7; name and note text inherit the reading foreground. Explicit marks, numeric and check variants keep their own semantics.

@@ -1,0 +1,74 @@
+/* Replica02:42.391px company claim on50px line,26px note on28.6px line,11.48px gap.
+   Replica04/06 supply39.474px unboxed claims;13 supplies the two-line larger variant. */
+.headline[data-el="cutfield-headline"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(var(--gap)*.574);
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: var(--a1-7);
+  font-family: var(--font-display),var(--font-body);
+}
+.headline[data-el="cutfield-headline"]>h2 {
+  margin: 0;
+  font-size: clamp(var(--type-36),calc(82.2375cqh),var(--type-40));
+  font-weight: calc(var(--body-weight)*1.375);
+  line-height: calc(var(--title-line)*1.0857142857);
+  letter-spacing: calc(var(--body-track)*1.48148);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.headline[data-el="cutfield-headline"]:has(>.note)>h2 {
+  font-size: clamp(var(--type-40),calc(9.634318cqw),var(--type-44));
+  line-height: calc(var(--title-line)*1.05310);
+  letter-spacing: calc(var(--body-track)*3.23463);
+}
+.headline[data-el="cutfield-headline"]>.note {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(var(--type-12),calc(5.909091cqw),var(--type-52));
+  font-weight: var(--body-weight);
+  line-height: calc(var(--body-line)*.7586206897);
+  letter-spacing: calc(var(--body-track)*.6923076923);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.headline[data-el="cutfield-headline"]>.kick {
+  margin: 0;
+  font-size: clamp(var(--type-12),calc(4.136364cqw),var(--type-20));
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+}
+.headline[data-el="cutfield-headline"]>h2>b {
+  font-weight: calc(var(--body-weight)*1.75);
+}
+.headline[data-el="cutfield-headline"].center {
+  align-items: center;
+  text-align: center;
+}
+.headline[data-el="cutfield-headline"].center>h2 {
+  letter-spacing: calc(var(--body-track)*2.13);
+}
+.headline[data-el="cutfield-headline"].big>h2 {
+  font-size: clamp(var(--type-40),calc(44.26787cqh),var(--type-44));
+  line-height: calc(var(--title-line)*.979595);
+  letter-spacing: calc(var(--body-track)*3.5142);
+}
+.headline[data-el="cutfield-headline"].on {
+  background: var(--a1);
+  color: var(--a1-on);
+  padding: var(--pad);
+}
+.headline[data-el="cutfield-headline"].on>.note,.headline[data-el="cutfield-headline"].on>.kick {
+  color: var(--a1-on);
+}
+@container (max-width:420px) {
+  .headline[data-el="cutfield-headline"]>.note {
+    font-size: var(--type-14);
+  }
+}

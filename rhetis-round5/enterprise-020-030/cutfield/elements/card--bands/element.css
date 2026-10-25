@@ -1,0 +1,13 @@
+/* Replica03:640×240 bands;figure100/300 at42/85,copy x275. Source second/third keep independent raised/balanced offsets. */
+.card[data-el="cutfield-card--bands"]{container-type:size;position:relative;width:100%;height:100%;min-width:0;min-height:0;background:var(--page);color:var(--ink);font-family:var(--font-body);}
+.card[data-el="cutfield-card--bands"].primary{background:var(--a1);color:var(--a1-on);}
+.card[data-el="cutfield-card--bands"].secondary{background:var(--a2);color:var(--a2-on);}
+.card[data-el="cutfield-card--bands"]>.parts{position:relative;width:100%;height:100%;}
+.card[data-el="cutfield-card--bands"] .fig{position:absolute;left:6.5625cqw;top:35.416667cqh;margin:0;font-size:clamp(var(--type-28),calc(min(15.625cqw,41.666667cqh)),var(--type-192));font-weight:calc(var(--figure-weight)*1.2);line-height:calc(var(--figure-line)*.952380952);letter-spacing:calc(var(--body-track)*.18);}
+.card[data-el="cutfield-card--bands"] .name{position:absolute;left:42.96875cqw;right:4%;top:40.833333cqh;margin:0;font-size:clamp(var(--type-12),calc(min(2.65625cqw,7.083333cqh)),var(--type-32));font-weight:var(--name-weight);line-height:var(--body-line);letter-spacing:calc(var(--body-track)*1.058823529);overflow-wrap:anywhere;}
+.card[data-el="cutfield-card--bands"] .note{position:absolute;left:42.96875cqw;right:4%;top:51.25cqh;margin:0;font-size:clamp(var(--type-12),calc(min(2.65625cqw,7.083333cqh)),var(--type-32));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:calc(var(--body-track)*1.058823529);overflow-wrap:anywhere;}
+.card[data-el="cutfield-card--bands"].raised .fig{top:26.25cqh;}.card[data-el="cutfield-card--bands"].raised .name{top:31.25cqh;}.card[data-el="cutfield-card--bands"].raised .note{top:42.083333cqh;}
+.card[data-el="cutfield-card--bands"].balanced .fig{top:27.916667cqh;}.card[data-el="cutfield-card--bands"].balanced .name{top:33.333333cqh;}.card[data-el="cutfield-card--bands"].balanced .note{top:43.75cqh;}
+.card[data-el="cutfield-card--bands"]::after{content:"";position:absolute;right:0;bottom:0;width:min(6.25cqw,40px);height:min(6.25cqw,40px);background:var(--a1);clip-path:polygon(100% 0,100% 100%,0 100%);}
+.card[data-el="cutfield-card--bands"].primary::after{background:var(--a2);}.card[data-el="cutfield-card--bands"].secondary::after{background:var(--a1-9);}
+@container(max-width:420px){.card[data-el="cutfield-card--bands"] .fig{font-size:clamp(var(--type-24),13cqw,var(--type-64));left:4%;}.card[data-el="cutfield-card--bands"] .name,.card[data-el="cutfield-card--bands"] .note{left:38cqw;right:6%;}.card[data-el="cutfield-card--bands"] .name{top:22cqh;}.card[data-el="cutfield-card--bands"] .note{top:40cqh;}.card[data-el="cutfield-card--bands"] .fig{top:24cqh;}}

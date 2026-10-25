@@ -1,0 +1,13 @@
+# 요소별 출처
+
+| 폴더 | replica 페이지 |
+|---|---|
+| card | 07 |
+| headline | 05·06 |
+| headline--future | 06 |
+| image-frame | 03·04·05 |
+| image-frame--wide | 02 |
+| logo-group | 04 |
+| prose | 02·04·05·06·08 |
+| table | 03·08 |
+| tag | 04 |

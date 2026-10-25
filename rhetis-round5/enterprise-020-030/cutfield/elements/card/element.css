@@ -1,0 +1,278 @@
+/* Replica05:268×268 chamfer card,28px cut,28/34/26px insets.
+   Actual source54px/250 mark,18px/650 name,16px/1.45 note; source03 true-figure mode owns its face. */
+.card[data-el="cutfield-card"] {
+  container-type: size;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  --cutfield-card-face: var(--page);
+  --cutfield-card-ink: var(--ink);
+}
+.card[data-el="cutfield-card"]::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--cutfield-card-face);
+  clip-path: polygon(0 0,100% 0,100% calc(100% - var(--cutfield-card-cut)),calc(100% - var(--cutfield-card-cut)) 100%,0 100%);
+}
+.card[data-el="cutfield-card"]>.parts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 61.194cqh 8.955cqw 9.701cqh 10.448cqw;
+  color: var(--cutfield-card-ink);
+}
+.card[data-el="cutfield-card"] .parts>:where(.name,.note,.kick,.fig) {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.card[data-el="cutfield-card"] .mark {
+  position: absolute;
+  left: 10.448cqw;
+  top: 12.687cqh;
+  display: grid;
+  place-items: center;
+  font-size: clamp(var(--type-28),calc(20.149cqw),var(--type-80));
+  font-weight: calc(var(--body-weight) * 0.625);
+  line-height: calc(var(--figure-line) * 0.9523809524);
+  letter-spacing: calc(var(--figure-track) * 1.5873015873);
+}
+.card[data-el="cutfield-card"] .name {
+  flex: none;
+  font-size: clamp(var(--type-14),calc(min(6.7164cqw,6.7164cqh)),var(--type-40));
+  font-weight: var(--name-weight);
+  line-height: calc(var(--name-line) * 0.9230769231);
+  letter-spacing: var(--name-track);
+  word-break: keep-all;
+  text-wrap: balance;
+}
+.card[data-el="cutfield-card"] .note {
+  margin-top: 3.731cqh;
+  font-size: clamp(var(--type-12),calc(min(5.9701cqw,5.9701cqh)),var(--type-28));
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track) * 0.875);
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+.card[data-el="cutfield-card"] .kick {
+  position: absolute;
+  left: 10.448cqw;
+  top: 12.687cqh;
+  font-size: clamp(var(--type-12),calc(4.478cqw),var(--type-20));
+  font-weight: var(--label-weight);
+  line-height: var(--label-line);
+  letter-spacing: var(--label-track);
+}
+.card[data-el="cutfield-card"] .mark:has(>.icon),.card[data-el="cutfield-card"] .mark:has(>.seat) {
+  width: 30.303cqw;
+  height: 30.303cqw;
+  max-width: 90px;
+  max-height: 90px;
+}
+.card[data-el="cutfield-card"] .mark>.icon {
+  width: 56%;
+  height: 56%;
+}
+.card[data-el="cutfield-card"] .mark>.seat {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  font-size: var(--type-16);
+}
+.card[data-el="cutfield-card"]>.parts:not(:has(>.mark)):not(:has(>.fig)) {
+  padding: 28.261cqh 7.398cqw 9.701cqh 9.439cqw;
+}
+.card[data-el="cutfield-card"] .parts:not(:has(>.mark)):not(:has(>.fig))>.name,.card[data-el="cutfield-card"] .parts:not(:has(>.mark)):not(:has(>.fig))>.note {
+  font-size: clamp(var(--type-14),calc(min(4.337cqw,9.239cqh)),var(--type-32));
+  line-height: var(--body-line);
+}
+.card[data-el="cutfield-card"] .parts:has(>.mark>.icon)>.kick,.card[data-el="cutfield-card"] .parts:has(>.mark>.seat)>.kick {
+  top: auto;
+  bottom: 8.014cqh;
+}
+.card[data-el="cutfield-card"] .fig {
+  font-size: clamp(var(--type-32),calc(min(15.625cqw,41.667cqh)),var(--type-128));
+  font-weight: calc(var(--body-weight) * 0.75);
+  line-height: var(--figure-line);
+  letter-spacing: var(--figure-track);
+}
+.card[data-el="cutfield-card"] .fig>small {
+  font-size: clamp(var(--type-14),calc(3.125cqw),var(--type-28));
+  margin-left: var(--gap-sm);
+  font-weight: var(--body-weight);
+}
+.card[data-el="cutfield-card"]>.parts:has(>.fig) {
+  display: grid;
+  grid-template-columns: calc(36.40625cqw - var(--gap)) minmax(0,1fr);
+  grid-template-rows: auto auto;
+  column-gap: var(--gap);
+  row-gap: calc(var(--gap-sm)*.16875);
+  align-content: start;
+  padding: 31.25cqh 7.8125cqw 10cqh 6.5625cqw;
+}
+.card[data-el="cutfield-card"] .parts:has(>.fig)>.fig {
+  position: absolute;
+  left: 6.5625cqw;
+  top: 26.25cqh;
+  line-height: calc(var(--figure-line)*.9523809524);
+  letter-spacing: calc(var(--body-track)*.18);
+}
+.card[data-el="cutfield-card"] .parts:has(>.fig)>.name {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  font-size: clamp(var(--type-14),calc(2.65625cqw),var(--type-24));
+  line-height: var(--body-line);
+  letter-spacing: calc(var(--body-track)*1.0588235294);
+}
+.card[data-el="cutfield-card"] .parts:has(>.fig)>.note {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  margin-top: 0;
+  font-size: clamp(var(--type-12),calc(2.65625cqw),var(--type-24));
+  letter-spacing: calc(var(--body-track)*1.0588235294);
+}
+.card[data-el="cutfield-card"]>.parts:has(>.fig):has(>.kick) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-sm);
+  padding: var(--pad);
+}
+.card[data-el="cutfield-card"] .parts:has(>.fig):has(>.kick)>.fig,.card[data-el="cutfield-card"] .parts:has(>.fig):has(>.kick)>.kick {
+  position: static;
+  align-self: flex-start;
+}
+.card[data-el="cutfield-card"].on {
+  --cutfield-card-face: var(--a1);
+  --cutfield-card-ink: var(--a1-on);
+}
+.card[data-el="cutfield-card"].quiet {
+  --cutfield-card-face: var(--n-3);
+  --cutfield-card-ink: var(--ink);
+}
+.card[data-el="cutfield-card"].tone-1 {
+  --cutfield-card-face: var(--a1-9);
+  --cutfield-card-ink: var(--page);
+}
+.card[data-el="cutfield-card"].tone-2 {
+  --cutfield-card-face: var(--a2);
+  --cutfield-card-ink: var(--a2-on);
+}
+.card[data-el="cutfield-card"].tone-3 {
+  --cutfield-card-face: var(--a3-7);
+  --cutfield-card-ink: var(--page);
+}
+.card[data-el="cutfield-card"].tone-4 {
+  --cutfield-card-face: var(--a4);
+  --cutfield-card-ink: var(--a4-on);
+}
+.card[data-el="cutfield-card"].tone-5 {
+  --cutfield-card-face: var(--n-8);
+  --cutfield-card-ink: var(--page);
+}
+.card[data-el="cutfield-card"].line::before {
+  background: var(--n-4);
+}
+.card[data-el="cutfield-card"].line::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: var(--stroke);
+  background: var(--page);
+  clip-path: polygon(0 0,100% 0,100% calc(100% - var(--cutfield-card-cut)),calc(100% - var(--cutfield-card-cut)) 100%,0 100%);
+}
+.card[data-el="cutfield-card"]>.parts:has(>.mark>.icon),.card[data-el="cutfield-card"]>.parts:has(>.mark>.seat) {
+  padding-top: 49cqh;
+}
+.card[data-el="cutfield-card"]>.parts:has(>.mark>.icon)>.note,.card[data-el="cutfield-card"]>.parts:has(>.mark>.seat)>.note {
+  font-size: clamp(var(--type-12),calc(min(5.724cqw,3.8cqh)),var(--type-24));
+}
+@container (max-aspect-ratio:4/5) and (min-height:500px) {
+  .card[data-el="cutfield-card"] .parts:has(>.mark>.icon)>.mark>.icon {
+    width: 100%;
+    height: 100%;
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.mark>.seat)>.mark>.seat {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
+  }
+  .card[data-el="cutfield-card"]>.parts:has(>.mark>.icon)::before,.card[data-el="cutfield-card"]>.parts:has(>.mark>.seat)::before {
+    content: "";
+    position: absolute;
+    left: 6.397306cqw;
+    right: 6.397306cqw;
+    top: 46.944444cqh;
+    border-top: var(--stroke) solid currentColor;
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.mark>.icon),.card[data-el="cutfield-card"] .parts:has(>.mark>.seat) {
+    padding-top: 49.03cqh;
+    padding-left: 6.397cqw;
+    padding-right: 6.397cqw;
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.mark>.icon)>.mark,.card[data-el="cutfield-card"] .parts:has(>.mark>.seat)>.mark {
+    top: 34.722222cqh;
+    left: 11.784512cqw;
+    width: min(30.30303cqw,12.5cqh,90px);
+    height: auto;
+    aspect-ratio: 9/7;
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.mark>.icon)>.name,.card[data-el="cutfield-card"] .parts:has(>.mark>.seat)>.name {
+    font-size: clamp(var(--type-24),calc(min(16.604377cqw,6.849306cqh)),var(--type-64));
+    font-weight: var(--body-weight);
+    letter-spacing: calc(var(--body-track)*3.2);
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.mark>.icon)>.note,.card[data-el="cutfield-card"] .parts:has(>.mark>.seat)>.note {
+    margin-top: 5.556cqh;
+    font-size: clamp(var(--type-14),calc(5.724cqw),var(--type-24));
+    font-weight: var(--name-weight);
+    letter-spacing: calc(var(--body-track)*1.0588235294);
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.mark>.icon)>.kick,.card[data-el="cutfield-card"] .parts:has(>.mark>.seat)>.kick {
+    left: 8.418cqw;
+    top: auto;
+    bottom: 8.014cqh;
+    font-size: clamp(var(--type-12),calc(4.714cqw),var(--type-18));
+    font-weight: var(--body-weight);
+    line-height: var(--body-line);
+    letter-spacing: calc(var(--body-track)*1.2857142857);
+  }
+}
+@container (max-width:420px) {
+  .card[data-el="cutfield-card"]>.parts:has(>.fig) {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-sm);
+    padding: var(--pad);
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.fig)>.fig {
+    position: static;
+    order: 0;
+    align-self: flex-start;
+    font-size: clamp(var(--type-32),calc(12cqw),var(--type-64));
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.fig)>.name {
+    order: 1;
+    align-self: flex-start;
+    font-size: var(--type-16);
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.fig)>.note {
+    order: 2;
+    font-size: var(--type-12);
+  }
+  .card[data-el="cutfield-card"] .parts:has(>.fig):has(>.kick) {
+    padding-top: calc(var(--pad) * 2);
+  }
+}

@@ -1,0 +1,1 @@
+Source02 is two independent five-row agenda columns, without connectors. Each column is a complete agenda under the eight-entry limit; explicit marks preserve the original odd/even numbering and page reading order. Root dimensions574×565 and618×565 share source48/22 typography and74px inset through combined width/height ratios.

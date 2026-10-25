@@ -1,0 +1,1 @@
+Three square allocation surfaces use a clear label over two lines of compact business copy. The pale panel has a larger tightly tracked label, the middle panel a quiet neutral label, and the strong panel inherits the accent contrast pair. Sizes derive from the356×108 source20 panes.

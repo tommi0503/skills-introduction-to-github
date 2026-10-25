@@ -1,0 +1,1 @@
+A bare20px/500 body statement on30px lines; source03 uses the25px big variant. The heading is transferred as an element, independent of page placement. Ratios follow the source heading box. Emphasis, centred and statement-size variants retain the same typography and material. Small cells tighten gaps and let the heading wrap without losing its name.

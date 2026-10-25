@@ -1,0 +1,1 @@
+A full-width12px licensing leaf tab over a311px neutral rectangular body. Five compact label/description groups follow the source12 rhythm, with a larger lead line allowed inside a paragraph. The caption’s compact tracking is independent of the source12 first panel’s10px tracked style.

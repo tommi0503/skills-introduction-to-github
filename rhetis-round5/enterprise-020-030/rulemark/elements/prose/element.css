@@ -1,0 +1,76 @@
+/* Replica07: Two columns of unboxed notice text,18px with28.44px line pitch. The source only has the cols variant; the plain base is inferred.
+   Ratios are measured source font/box width; small Korean text floors at12 for legibility. */
+.prose[data-el="rulemark-prose"] {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: min(8cqh,var(--gap));
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.prose[data-el="rulemark-prose"]>p {
+  margin: 0;
+  font-size: clamp(var(--type-12),calc(1.95865cqw),var(--type-32));
+  font-weight: var(--rulemark-prose-weight);
+  line-height: var(--rulemark-prose-line);
+  letter-spacing: var(--rulemark-prose-track);
+  overflow-wrap: anywhere;
+}
+.prose[data-el="rulemark-prose"]>p>b {
+  font-weight: var(--rulemark-prose-bold);
+}
+.prose[data-el="rulemark-prose"].lead>p {
+  font-size: clamp(var(--type-14),calc(2.20348cqw),var(--type-36));
+  font-weight: var(--lead-weight);
+}
+.prose[data-el="rulemark-prose"].quiet>p {
+  font-size: clamp(var(--type-12),calc(1.66485cqw),var(--type-24));
+  color: var(--n-7);
+}
+.prose[data-el="rulemark-prose"].cols {
+  display: block;
+  column-count: 2;
+  column-gap: calc(var(--gap-lg) * 1.0208333333);
+  column-fill: auto;
+}
+.prose[data-el="rulemark-prose"].cols>p {
+  break-inside: avoid;
+  margin: 0 0 var(--gap);
+  font-size: clamp(var(--type-12),calc(1.95865cqw),var(--type-24));
+  margin-bottom: calc(var(--gap-sm) * 0.6388888889);
+  letter-spacing: calc(var(--body-track) * 1.037037037);
+}
+@container (max-width:480px) {
+  .prose[data-el="rulemark-prose"].cols {
+    display: flex;
+    column-count: auto;
+    gap: var(--gap-sm);
+  }
+  .prose[data-el="rulemark-prose"].cols>p {
+    margin: 0;
+    font-size: var(--type-12);
+  }
+}
+@container (max-height:240px) {
+  .prose[data-el="rulemark-prose"] {
+    gap: var(--gap-sm);
+  }
+}
+@container (max-height:360px) {
+  .prose[data-el="rulemark-prose"].quiet>p {
+    font-size: var(--type-12);
+  }
+}
+.prose[data-el="rulemark-prose"].cols>p span {
+  white-space: nowrap;
+}
+@container (max-width:700px) {
+  .prose[data-el="rulemark-prose"].cols>p span {
+    white-space: normal;
+  }
+}

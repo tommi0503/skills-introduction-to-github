@@ -1,0 +1,1 @@
+Paired gray and dark columns share category names, horizontal quarter-step rules and values above the bars. Two compact keys sit inside the upper-left plot region. Group and series counts adapt without fixture or wording conditions.
