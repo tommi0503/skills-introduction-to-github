@@ -1,0 +1,1 @@
+Rounded accent columns and a dotted upper trend share one plot and one set of year labels. Open circle markers sit above the bar series, with short values above the circles and values inside the columns. The line is drawn by each point connector, and retains its ratio when the slot changes.

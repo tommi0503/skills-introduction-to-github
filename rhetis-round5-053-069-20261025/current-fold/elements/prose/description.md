@@ -1,0 +1,1 @@
+Observed on page 04. Paragraphs preserve their reading order, inline emphasis and supported lead, quiet or column arrangements. The internal spacing and placement are owned by this element rather than a surrounding page. Type uses bounded container-relative sizing, with shared weight and line-height roles.

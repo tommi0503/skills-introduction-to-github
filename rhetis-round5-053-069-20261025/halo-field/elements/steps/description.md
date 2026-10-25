@@ -1,0 +1,1 @@
+Observed on page 09. Sequential steps group their marks, headings and notes inside one complete process. Six contiguous right chevrons with labels alternating above and below the band; gray progression and final accent member. Type uses bounded container-relative sizing, with shared weight and line-height roles.

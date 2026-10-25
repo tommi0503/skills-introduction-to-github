@@ -1,0 +1,1 @@
+Observed on page 02: four rounded information cards in a two-by-two grid. Each entry owns its light surface, 11px source corner radii, vertical accent rule, part label, heading and supporting list. The group owns the contrasting neutral backdrop visible through the 15px source gutters. A fifth entry uses three columns without adding a phantom card.

@@ -1,0 +1,1 @@
+Observed on page 11. A central hub and its surrounding named nodes share one owned connector field. Center circle 197×197 at 543,278, four quiet business boxes 417×168 at 102/762 ×203/384. Type uses bounded container-relative sizing, with shared weight and line-height roles.

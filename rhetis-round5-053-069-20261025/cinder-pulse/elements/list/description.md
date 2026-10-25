@@ -1,0 +1,1 @@
+Four white rounded intersection rows use a full black circular marker, a bold short name and a normal-weight description. The six-pixel row gap and the measured twenty-eight-pixel and one-hundred-thirty-pixel text columns preserve the original alignment.

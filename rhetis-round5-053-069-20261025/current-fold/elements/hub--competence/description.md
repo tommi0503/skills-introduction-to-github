@@ -1,0 +1,1 @@
+The source13 hub has a206px central disc and six116px icon medallions, three on each side, with separate18px headings and16px notes. Dotted angled links connect every medallion toward the centre; the complete hub owns all six members and links. A single fitted container unit preserves circles and relative coordinates, including the source’s small right-caption overhang.

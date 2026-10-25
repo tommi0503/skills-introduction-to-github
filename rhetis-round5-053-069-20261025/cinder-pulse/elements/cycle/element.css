@@ -1,0 +1,24 @@
+/* Source15:1140×444; central168px circle at486/137 uses22px type. Six116px cycle-orbit nodes use18px labels/28px icons. Outside324×133 cards own18px accent steps,22px/500 names and16px/23.2 notes. */
+.cycle[data-el="cinder-pulse-cycle"]{position:relative;container-type:size;min-width:0;min-height:0;height:100%;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}
+.cycle[data-el="cinder-pulse-cycle"] *{box-sizing:border-box;min-width:0;margin:0}
+.cycle[data-el="cinder-pulse-cycle"]>.diagram{position:relative;width:min(100%,calc(100cqh*1140/444));aspect-ratio:1140/444;container-type:size;isolation:isolate;--cinder-cycle-count:6}
+.cycle[data-el="cinder-pulse-cycle"] .diagram::before{content:"";position:absolute;left:35.482456%;top:12.274775%;width:28.859649%;aspect-ratio:1;border:1px solid var(--n-3);border-radius:50%;z-index:0}
+.cycle[data-el="cinder-pulse-cycle"] .core{position:absolute;left:42.631579%;top:30.855856%;width:14.736842%;aspect-ratio:1;border-radius:50%;background:var(--a1);color:var(--a1-on);display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(var(--type-10),calc(100cqw*22/1140),var(--type-24));font-weight:var(--name-weight);line-height:calc(var(--body-line)*.966666667);z-index:2}
+.cycle[data-el="cinder-pulse-cycle"] .node{position:absolute;inset:0;--cinder-cycle-index:0;--cinder-cycle-rows:round(up,calc(var(--cinder-cycle-count)/2),1);--cinder-cycle-col:round(down,calc(var(--cinder-cycle-index)/var(--cinder-cycle-rows)),1);--cinder-cycle-row:mod(var(--cinder-cycle-index),var(--cinder-cycle-rows));--cinder-cycle-angle:calc(-90deg + var(--cinder-cycle-index)*360deg/var(--cinder-cycle-count));pointer-events:none}
+.cycle[data-el="cinder-pulse-cycle"] .node::before{content:"";position:absolute;left:calc(var(--cinder-cycle-col)*71.578947cqw);top:calc(var(--cinder-cycle-row)*69.81982cqh/(var(--cinder-cycle-rows) - 1));width:28.421053cqw;height:29.954955cqh;background:var(--n-1);border:1px solid var(--n-3);border-radius:clamp(var(--radius-sm),calc(100cqw*8/1140),var(--radius));z-index:0}
+.cycle[data-el="cinder-pulse-cycle"] .cycle-orbit{position:absolute;left:calc(50% + cos(var(--cinder-cycle-angle))*14.385965cqw);top:calc(50% + sin(var(--cinder-cycle-angle))*36.936937cqh);transform:translate(-50%,-50%);width:10.175439cqw;aspect-ratio:1;border-radius:50%;background:var(--n-1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.350877cqw;z-index:1}
+.cycle[data-el="cinder-pulse-cycle"] .cycle-orbit>.icon{display:block;width:24.137931%;height:24.137931%;flex:none;color:var(--ink)}
+.cycle[data-el="cinder-pulse-cycle"] .cycle-orbit>.name{font-size:clamp(var(--type-8),calc(100cqw*18/1140),var(--type-18));font-weight:var(--name-weight);line-height:calc(var(--body-line)*.966666667);text-align:center}
+.cycle[data-el="cinder-pulse-cycle"] .heading{position:absolute;left:calc(var(--cinder-cycle-col)*71.578947cqw + 2.280702cqw);top:calc(var(--cinder-cycle-row)*69.81982cqh/(var(--cinder-cycle-rows) - 1) + 5.630631cqh);width:25.438596cqw;font-size:clamp(var(--type-10),calc(100cqw*22/1140),var(--type-24));font-weight:calc(var(--body-weight)*1.25);line-height:calc(var(--body-line)*.966666667);z-index:1}
+.cycle[data-el="cinder-pulse-cycle"] .heading>.kick{font-size:clamp(var(--type-8),calc(100cqw*18/1140),var(--type-18));font-weight:inherit;color:var(--a1-7)}
+.cycle[data-el="cinder-pulse-cycle"] .node>.note{position:absolute;left:calc(var(--cinder-cycle-col)*71.578947cqw + 2.192982cqw);top:calc(var(--cinder-cycle-row)*69.81982cqh/(var(--cinder-cycle-rows) - 1) + 14.63964cqh);width:24.561404cqw;font-size:clamp(var(--type-8),calc(100cqw*16/1140),var(--type-16));font-weight:var(--body-weight);line-height:calc(var(--body-line)*.966666667);color:var(--n-7);z-index:1}
+.cycle[data-el="cinder-pulse-cycle"] .diagram:has(>.node:nth-child(3 of .node):last-child){--cinder-cycle-count:3}
+.cycle[data-el="cinder-pulse-cycle"] .diagram:has(>.node:nth-child(4 of .node):last-child){--cinder-cycle-count:4}
+.cycle[data-el="cinder-pulse-cycle"] .diagram:has(>.node:nth-child(5 of .node):last-child){--cinder-cycle-count:5}
+.cycle[data-el="cinder-pulse-cycle"] .diagram:has(>.node:nth-child(6 of .node):last-child){--cinder-cycle-count:6}
+.cycle[data-el="cinder-pulse-cycle"] .node:nth-child(1 of .node){--cinder-cycle-index:0}
+.cycle[data-el="cinder-pulse-cycle"] .node:nth-child(2 of .node){--cinder-cycle-index:1}
+.cycle[data-el="cinder-pulse-cycle"] .node:nth-child(3 of .node){--cinder-cycle-index:2}
+.cycle[data-el="cinder-pulse-cycle"] .node:nth-child(4 of .node){--cinder-cycle-index:3}
+.cycle[data-el="cinder-pulse-cycle"] .node:nth-child(5 of .node){--cinder-cycle-index:4}
+.cycle[data-el="cinder-pulse-cycle"] .node:nth-child(6 of .node){--cinder-cycle-index:5}

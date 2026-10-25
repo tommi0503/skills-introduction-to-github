@@ -1,0 +1,72 @@
+{
+  "scope": "Read-only cross-audit across seven collection maps, actual element folders, fixtures and scoped CSS; only this report written. No git, no source edits.",
+  "counts": {
+    "folders": 142,
+    "fixtures": 351,
+    "maps": 7,
+    "pieGroups": 6,
+    "derivedValues": 101,
+    "svg": 0
+  },
+  "checks": {
+    "contractIDAndRoot": "checked all142folders and map roots",
+    "scope": "all normal CSS selector branches scoped; explicit nested dependencies allowed",
+    "pie": "all6slice groups total100 and cumulative --start where supplied; named-v projection checked",
+    "line": "all101 next/prev values checked; --pN equals child pt --v checked",
+    "generic": "no unreferenced folders found",
+    "svgMarkup": 0
+  },
+  "issues": [
+    {
+      "kind": "foreignContractRootAsLocalPart",
+      "family": "concentric",
+      "reservedRoot": ".orbit",
+      "owner": "hub--clover",
+      "locations": [
+        {
+          "file": "scanline-rise-review/map.json#scanline-rise-16-hub--clover-177",
+          "class": "orbit",
+          "owner": "hub",
+          "ancestor": "scanline-rise-hub--clover",
+          "text": ""
+        },
+        {
+          "file": "scanline-rise/elements/hub--clover/fixtures/replica-16.html",
+          "class": "orbit",
+          "owner": "hub",
+          "ancestor": "scanline-rise-hub--clover",
+          "text": ""
+        },
+        {
+          "file": "scanline-rise/elements/hub--clover/fixtures/long-notes.html",
+          "class": "orbit",
+          "owner": "hub",
+          "ancestor": "scanline-rise-hub--clover",
+          "text": ""
+        }
+      ],
+      "css": "scanline-rise/elements/hub--clover/element.css:4",
+      "evidence": "Hub decoration uses <div class=\"orbit\"></div> without nested data-el; .orbit is concentric root in README contract table. Re-read confirmed persistence.",
+      "recommendation": "Rename the private ring part consistently in CSS, fixture2 and canonical map markup; do not change design geometry."
+    }
+  ],
+  "normalExceptions": [
+    {
+      "kind": "sameFamilyRootMembers",
+      "evidence": "stat/stats, plan/plans, person/people, donut/donuts within their own contract families are legal, including repeated members."
+    },
+    {
+      "kind": "explicitNestedDependencies",
+      "file": "current-fold/elements/chart-bar--combo/element.css",
+      "evidence": "Selectors for current-fold-legend/current-fold-tag remain descendants of current-fold-chart-bar--combo and have explicit nested data-el. They are legal nested dependencies."
+    },
+    {
+      "kind": "pieEndPoint",
+      "evidence": "Last line point --next equals its own --v; validated as terminal zero-length segment, not a missing next point."
+    },
+    {
+      "kind": "sourceOnlyFolder",
+      "evidence": "Folders are retained only when map observed instances or explicit native/fixture nested data-el reference them; contained_by person instances are retained for traceable source crops."
+    }
+  ]
+}

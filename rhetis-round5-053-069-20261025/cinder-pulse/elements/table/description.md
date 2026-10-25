@@ -1,0 +1,1 @@
+A compact body-only organization table uses fourteen-pixel text, minimum fifty-one-pixel rows and four measured unequal columns. Fine horizontal rules and a tinted final total row organize the departments.

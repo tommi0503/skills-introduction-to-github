@@ -1,0 +1,1 @@
+A compact KPI face pairs its large figure with a lower heading and inline symbolic icon. The source part positions, type sizes and surfaces are measured from page11; one fitted unit preserves media proportions and scales the owned geometry within the received box.

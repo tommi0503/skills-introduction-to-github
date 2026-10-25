@@ -1,0 +1,1 @@
+A205px square gradient brand field sits beside a243px capsule heading and three ruled outcome lines in a511×205 case-study card. The brand field owns its icon and one- or two-line28px figure, while the final supporting line is bold and accented. A single fitted unit preserves the square and the measured internal coordinates across supported boxes.

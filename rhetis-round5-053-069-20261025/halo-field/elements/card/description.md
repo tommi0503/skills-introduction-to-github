@@ -1,0 +1,1 @@
+A tall white goal card with a soft rectangular shadow and26px rounded corners. A colored kicker and bold title lead into a fine accent rule, followed by larger body copy and two smaller dotted-rule notes. A small line icon sits in the upper right corner.

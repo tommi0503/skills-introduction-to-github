@@ -1,0 +1,1 @@
+A wide picture frame extracted from replica 06. The source 675.66:375 ratio and proportionate 26 px rounded corners remain centered in every grid slot. A neutral n-3 placeholder distinguishes the image area from the n-1 page field.

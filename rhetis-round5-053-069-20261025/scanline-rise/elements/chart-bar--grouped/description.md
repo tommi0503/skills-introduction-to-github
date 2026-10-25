@@ -1,0 +1,1 @@
+Paired pale and strong rounded columns rise from one shared baseline inside their own softly rounded neutral plotting surface. Four horizontal rules and quarter labels retain the original inset geometry.

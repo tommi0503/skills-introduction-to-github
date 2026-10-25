@@ -1,0 +1,1 @@
+Observed on page 11. Two translucent filled continuous area series with fine ridges and value labels; six equal years. Filled regions and all connections belong to one areas root containing both series. Container-relative geometry and bounded type respond to the received box; shared palette roles supply the foregrounds and fills.

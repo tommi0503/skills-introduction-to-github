@@ -1,0 +1,1 @@
+Four rising neutral stage cards share a bottom edge. Each owns its stage mark, accent bar, year, normal-weight phase name and bullet notes. The orange chevrons rise with the sequence and preserve their source stroke silhouette.

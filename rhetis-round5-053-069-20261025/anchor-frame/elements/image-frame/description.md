@@ -1,0 +1,1 @@
+Observed on page 01. The frame owns its image placeholder, framing edges and optional caption. Thin accent editable-frame outline with square resize handles, and a neutral picture placeholder occupying only part of the frame. Container-relative dimensions scale the internal arrangement, while text uses the shared type roles.

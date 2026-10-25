@@ -1,0 +1,1 @@
+Two shallow comparison panels pair a title cap with icon seats and labels. Full compound-owned bidirectional arrows connect the work roles, and every vertical measurement scales from the complete source box.

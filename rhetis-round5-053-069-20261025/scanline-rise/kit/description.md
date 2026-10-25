@@ -1,0 +1,1 @@
+Centered two-line titles and a compact dark capsule head a system of flat accent caption bands, pale body panels and small circular pictograms. Fine node links and clean table rules keep diagrams exact. The measured page field, source header-to-body proportions and restrained lower ribbon are preserved in the foundation; extensions use the same caption-and-panel construction.

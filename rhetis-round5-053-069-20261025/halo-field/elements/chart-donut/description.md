@@ -1,0 +1,1 @@
+Upper-half performance arcs use thick rounded strokes and a large central number. A small open dot and dotted leader connect each gauge to its centered two-line annotation. The source three-gauge composition retains individual circles and scales its typography with the available diameter.

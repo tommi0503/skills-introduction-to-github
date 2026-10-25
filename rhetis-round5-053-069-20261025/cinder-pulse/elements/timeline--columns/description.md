@@ -1,0 +1,1 @@
+Three ascending chronological columns share a common baseline. Each neutral column owns its accent step cap, period heading, year and bullet notes; the increasing heights are part of this timeline design.

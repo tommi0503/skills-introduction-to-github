@@ -1,0 +1,1 @@
+Observed on page 11. The frame owns its image placeholder, framing edges and optional caption. Gray 6 px rounded device frame,196×390, radius 28 px and neutral screen placeholder. Container-relative dimensions scale the internal arrangement, while text uses the shared type roles.

@@ -1,0 +1,1 @@
+Contiguous quarter chevrons sit above neutral notes with the original sixty-five-unit horizontal inset. Three rendered note lines extend slightly beyond their neutral face, and the complete element includes that visible ink.

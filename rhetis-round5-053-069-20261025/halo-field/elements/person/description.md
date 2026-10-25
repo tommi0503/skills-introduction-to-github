@@ -1,0 +1,1 @@
+The source14 profile places a158.48×245 portrait beside a role, name and supporting note in a377.333×401 card. Its36px asterisk and name rule retain their measured positions, while one fitted inner canvas preserves the portrait ratio for single-person and grouped allocations. Longer biographies occupy the note row without moving the name or media.

@@ -1,0 +1,1 @@
+Observed source 06: four 85 px medallion rows distributed within 628×422. The source 81 px circular marks, 44 px icons, 20 px names and 16 px notes retain their measured positions. Unmarked extensions use a separate first-line marker grid rather than the large medallion geometry.

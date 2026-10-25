@@ -1,0 +1,1 @@
+The source04 closing pairs a16px role at y22 with a48px handwritten signature beginning150px to its right. It is a prose closing rather than a quotation, and its ownership includes the full72px signature line. A fitted unit preserves the spacing while bounded type accommodates longer role labels.

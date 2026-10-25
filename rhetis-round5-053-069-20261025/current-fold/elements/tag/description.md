@@ -1,0 +1,1 @@
+Observed on pages 08,11. Inline highlighting preserves the surrounding text rhythm, while the compact label mode owns its own small face. Its own painted parts include rounded marks or label ends. Shared typography and spacing roles control the text hierarchy and the gaps between its own parts.

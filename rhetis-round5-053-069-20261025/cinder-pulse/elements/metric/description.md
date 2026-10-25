@@ -1,0 +1,1 @@
+A bare baseline row pairs a normal-weight twenty-pixel label with a twenty-four-pixel accent figure. The original two-space gap follows the actual label width, so a shorter label naturally places its figure further left; both fonts also respect the row height.

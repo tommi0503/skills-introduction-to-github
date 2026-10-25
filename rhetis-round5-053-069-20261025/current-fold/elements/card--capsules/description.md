@@ -1,0 +1,1 @@
+A portrait proportion information card has a circular medallion, centered title and three independently owned white capsules below its note. The source part positions, type sizes and surfaces are measured from page10; one fitted unit preserves media proportions and scales the owned geometry within the received box.

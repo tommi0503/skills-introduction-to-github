@@ -1,0 +1,1 @@
+Observed on page 06. The complete cycle owns its repeated nodes, their circular arrangement and their connecting path. Three 160 px white value discs on a thin circular motion path, subtle accent arrowheads, paired Korean/English labels; central core is visibly empty. Type uses bounded container-relative sizing, with shared weight and line-height roles.

@@ -1,0 +1,1 @@
+Observed source 11:1139×79 neutral concluding strip, left-aligned 21 px sentence with its actual bold lead-in. Inline emphasis and an optional icon follow callout.sentence@1. Source 07/09/12 have centered 23 px sentences and remain explicitly unexpressible because the contract has no centered presentation variant.

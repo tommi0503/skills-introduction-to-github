@@ -1,0 +1,1 @@
+Two neutral circles share an exact accent intersection. A dotted connector leads from their core to an owned lower tray of three named principles; the tray and connector remain part of this single relationship.

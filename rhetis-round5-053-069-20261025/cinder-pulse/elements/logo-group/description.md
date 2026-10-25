@@ -1,0 +1,1 @@
+Observed on page 18. Repeated empty logo seats preserve a consistent grid and the spacing between marks. The internal spacing and placement are owned by this element rather than a surrounding page. Container-relative dimensions scale the internal arrangement, while text uses the shared type roles.

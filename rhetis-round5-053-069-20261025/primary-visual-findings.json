@@ -1,0 +1,32 @@
+[
+  {
+    "paths": [
+      "rise-block-review/sheets/callout-dark.png",
+      "rise-block-review/sheets/callout-light.png"
+    ],
+    "finding": "The mandatory media-stack seat is flex-stretched into a wide band by foundation.stack. Repair the general media-stack geometry, preserve the fixture DOM, and rerender all dependent sheets.",
+    "status": "fix applied; pending verification"
+  },
+  {
+    "paths": [
+      "rise-block-review/sheets/list-dark.png",
+      "rise-block-review/sheets/list-light.png"
+    ],
+    "finding": "List markers are detached above vertically centered name/note blocks. Align marker with first name line in the element CSS; review all seven list families.",
+    "status": "assigned for repair"
+  },
+  {
+    "collection": "corner-signal",
+    "leaf": "logo-group",
+    "finding": "Light and dark inferred logo seats used the same neutral as the page and disappeared visually.",
+    "correction": "Use palette neutral --n-3 for both-mode gray placeholders, keeping the own-child chamfer and spacing.",
+    "requiresFinalRender": true
+  },
+  {
+    "collection": "halo-field",
+    "leaf": "headline",
+    "finding": "The source .stack > .headline declares an accent bottom rule omitted by the first element rewrite.",
+    "correction": "The element now draws its own rule at the native 44px heading boundary, without a stack/page selector.",
+    "requiresFinalRender": true
+  }
+]

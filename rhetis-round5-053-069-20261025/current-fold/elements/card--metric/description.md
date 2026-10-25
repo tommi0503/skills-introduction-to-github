@@ -1,0 +1,1 @@
+A wide metric card leads with a64px figure and smaller inline unit above its heading and supporting note. The source part positions, type sizes and surfaces are measured from page16; one fitted unit preserves media proportions and scales the owned geometry within the received box.

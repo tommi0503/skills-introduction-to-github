@@ -1,0 +1,1 @@
+Six small labeled circles sit on a thin neutral ring around a smaller central success figure. Two columns of soft cards explain the stages with a smaller accent step prefix, a larger title and two-line notes. Measured orbit type is eighteen pixels and central type is twenty-two pixels.

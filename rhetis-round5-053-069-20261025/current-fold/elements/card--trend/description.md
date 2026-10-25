@@ -1,0 +1,1 @@
+A compact trend card combines a numeric figure with its trend icon, heading and short explanatory note. The source part positions, type sizes and surfaces are measured from page10; one fitted unit preserves media proportions and scales the owned geometry within the received box.

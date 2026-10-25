@@ -1,0 +1,1 @@
+Observed on page 07. Sequential events keep their date or mark, heading and supporting copy attached to the same event. Four chronological date-banner cards. Type uses bounded container-relative sizing, with shared weight and line-height roles.

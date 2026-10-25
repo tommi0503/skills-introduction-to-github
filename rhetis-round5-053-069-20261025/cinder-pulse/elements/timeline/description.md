@@ -1,0 +1,1 @@
+Four evenly spaced history lanes share a thick horizontal line and outlined circular points. Accent date capsules precede centered phase names and open bullet notes; a range capsule extends only for a multi-year period.

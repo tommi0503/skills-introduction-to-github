@@ -1,0 +1,1 @@
+Three overlapping circles retain their distinct neutral fills, the central accent lens and four labeled intersections. The set labels sit inside their original outer lobes, never in a substitute central circle.

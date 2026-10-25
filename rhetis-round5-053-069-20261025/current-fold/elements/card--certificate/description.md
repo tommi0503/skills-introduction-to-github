@@ -1,0 +1,1 @@
+A tall certificate card separates its compact heading and note from a158×210 portrait document seat. The source part positions, type sizes and surfaces are measured from page15; one fitted unit preserves media proportions and scales the owned geometry within the received box.

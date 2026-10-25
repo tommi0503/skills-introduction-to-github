@@ -1,0 +1,1 @@
+A three-by-three dotted logo wall has70px square image placeholders and independently editable18px bold captions below them. A single fitted unit preserves the square and the measured24px/43px/99px vertical positions for image, index and caption. The six-member fixture repeats the same captioned tiles in two rows, without inheriting the foundation seat’s centering layout.

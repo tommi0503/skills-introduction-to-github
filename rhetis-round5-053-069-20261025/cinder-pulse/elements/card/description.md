@@ -1,0 +1,1 @@
+Observed on page 14: a 369×215 neutral product panel has its title at(29,28), body at(28,70) and a 313×40 white customer strip at(28,153). Two separate notes preserve the source’s descriptive and customer-text functions. Rounded panels and compact typography fit the received box using its own part proportions.
