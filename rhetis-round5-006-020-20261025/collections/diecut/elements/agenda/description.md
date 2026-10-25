@@ -1,0 +1,1 @@
+Ten light-weight indices sit above two long fine tracks with centered solid dots and compact labels below. A bounded contents frame preserves the original five-per-row geometry and keeps the block slightly above the optical center of larger allocations.

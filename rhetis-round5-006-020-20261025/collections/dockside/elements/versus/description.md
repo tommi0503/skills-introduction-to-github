@@ -1,0 +1,1 @@
+Two measured317×475 glass panels face one dark circular double-chevron. Accent header capsules, square image seats and quiet divided checklists preserve the original challenge-to-solution comparison. The highlighted side adds only a shallow accent wash. Panels without images release the same interior space to their lists.

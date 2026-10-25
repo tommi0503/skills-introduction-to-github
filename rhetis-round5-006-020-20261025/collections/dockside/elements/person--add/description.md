@@ -1,0 +1,1 @@
+Three rounded persona panes with round portraits and overlapping name capsules; the middle profile rises slightly and an explicitly present add control sits on one pane. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

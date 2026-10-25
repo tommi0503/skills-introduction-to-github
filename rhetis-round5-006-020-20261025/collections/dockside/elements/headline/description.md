@@ -1,0 +1,1 @@
+A full accent band reproduces replica11 with a left-aligned22px statement and a small dark round control at the right edge. Additional headline hierarchy uses the same band, corner radius and optical spacing; center, big and on variants retain clear reading order.

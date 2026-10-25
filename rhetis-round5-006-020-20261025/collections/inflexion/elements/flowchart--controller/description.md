@@ -1,0 +1,1 @@
+Seven controller nodes and disconnected routed return branches, with no line through a node. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

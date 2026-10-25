@@ -1,0 +1,1 @@
+Replica 14 supplies the exact 610 by 499 positioning board, with dotted axes at its centre, 61px comparison circles and a 105px primary circle. Positions are supplied only through the contract x and y values; comparison and primary circles share a stable diameter in each slot.

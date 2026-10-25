@@ -1,0 +1,20 @@
+/* Replica 08, 410×156.75 recommendation copy with ruled 23px heading and 18px body; quiet source 07/09 and lead 17/19.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.prose[data-el="diecut-prose"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.prose[data-el="diecut-prose"] *,.prose[data-el="diecut-prose"] *::before,.prose[data-el="diecut-prose"] *::after{box-sizing:border-box}
+.prose[data-el="diecut-prose"] :is(p,h2,blockquote){margin:0}
+
+.prose[data-el="diecut-prose"] {display:flex;flex-direction:column;justify-content:center;gap:calc(var(--gap-sm)*.3);word-break:keep-all;overflow-wrap:anywhere}
+.prose[data-el="diecut-prose"] > p{font-size:clamp(var(--type-12),min(4.39cqw,11.483cqh),var(--type-28));flex:none;line-height:var(--body-line)}
+.prose[data-el="diecut-prose"] > p > b{font-weight:var(--name-weight)}
+.prose[data-el="diecut-prose"] > p:has(>b:only-child){font-size:clamp(var(--type-16),min(5.61cqw,14.673cqh),var(--type-36));margin-bottom:clamp(var(--gap-sm),2.9cqw,var(--gap));padding-bottom:calc(var(--gap-sm)*.6);width:78.29%;border-bottom:var(--stroke) solid var(--ink)}
+.prose[data-el="diecut-prose"].quiet > p{font-size:clamp(var(--type-12),min(4.286cqw,18cqh),var(--type-22));color:var(--ink)}
+.prose[data-el="diecut-prose"].lead > p{font-size:clamp(var(--type-16),min(5.652cqw,40cqh),var(--type-36));line-height:var(--body-line);text-align:center}
+.prose[data-el="diecut-prose"].cols{display:block;column-count:2;column-gap:var(--gap);padding-top:var(--gap)}
+.prose[data-el="diecut-prose"].cols > p{font-size:clamp(var(--type-12),min(2.6cqw,5.5cqh),var(--type-24));break-inside:avoid;margin-bottom:var(--gap-sm)}
+@container(max-width:400px){.prose[data-el="diecut-prose"].cols{column-count:1}.prose[data-el="diecut-prose"].lead > p{font-size:clamp(var(--type-16),min(5.652cqw,28cqh),var(--type-26))}}
+@container(max-height:150px){.prose[data-el="diecut-prose"] {gap:0}.prose[data-el="diecut-prose"] > p{font-size:clamp(var(--type-12),min(4.39cqw,10cqh),var(--type-20))}.prose[data-el="diecut-prose"] > p:has(>b:only-child){font-size:clamp(var(--type-14),min(5.61cqw,14cqh),var(--type-24));margin-bottom:calc(var(--gap-sm)*.4);padding-bottom:calc(var(--gap-sm)*.2)}.prose[data-el="diecut-prose"].lead > p{font-size:clamp(var(--type-16),min(5.652cqw,40cqh),var(--type-32))}}
+.prose[data-el="diecut-prose"]:has(>p:only-child):not(:has(br)):not(.quiet):not(.lead)>p{font-size:clamp(var(--type-12),min(4.894cqw,70cqh),var(--type-32))}
+.prose[data-el="diecut-prose"].quiet:not(:has(br))>p{font-size:var(--type-14)}
+.prose[data-el="diecut-prose"] .icon{display:inline-block;width:1em;height:1em;vertical-align:-.12em}
+

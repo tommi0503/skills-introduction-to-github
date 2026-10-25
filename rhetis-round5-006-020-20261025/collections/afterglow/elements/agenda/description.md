@@ -1,0 +1,1 @@
+Five evenly spaced outlined circles with centered English names, a thin100px divider and a small Korean subtitle. Circle diameter is160px at the source scale; reduced member counts retain the same circular grammar.

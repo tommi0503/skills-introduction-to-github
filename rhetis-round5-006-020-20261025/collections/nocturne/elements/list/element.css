@@ -1,0 +1,35 @@
+/* Replica 22 supplies list.divided:1052x372,3px outline,radius25,84px rows,34px regular copy and2px dotted rules. Default markers are new. */
+.list[data-el="nocturne-list"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.list[data-el="nocturne-list"] *, .list[data-el="nocturne-list"]::before, .list[data-el="nocturne-list"]::after{box-sizing:border-box}
+.list[data-el="nocturne-list"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.list[data-el="nocturne-list"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.list[data-el="nocturne-list"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.list[data-el="nocturne-list"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.list[data-el="nocturne-list"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.list[data-el="nocturne-list"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.list[data-el="nocturne-list"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.list[data-el="nocturne-list"]{display:flex;flex-direction:column;align-self:center;justify-self:center;width:100%;max-width:1052px;height:auto;aspect-ratio:1052/372;max-height:100%;padding:calc(var(--pad)*.642857) 0 calc(var(--pad)*.428571);border:calc(var(--stroke)*3) solid var(--n-4);border-radius:calc(var(--radius)*1.5625);background:var(--n-1);counter-reset:nocturne-item;list-style:none;margin:0;--nocturne-list-n:4}
+.list[data-el="nocturne-list"]:has(>.item>.note){aspect-ratio:1052/520}
+.list[data-el="nocturne-list"]>.item{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;padding:0 7.224335% 0 calc(7.224335% + var(--gap));counter-increment:nocturne-item}
+.list[data-el="nocturne-list"]>.item>.name{font-size:clamp(var(--type-12),min(3.250478cqw,calc(40.47619cqh/var(--nocturne-list-n))),var(--type-36));font-weight:var(--body-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.list[data-el="nocturne-list"]>.item>.note{font-size:clamp(var(--type-12),1.7cqw,var(--type-18));margin-top:calc(var(--gap-sm)/4)}
+.list[data-el="nocturne-list"]>.item:has(>.note)>.name{font-size:clamp(var(--type-12),min(2.3cqw,calc(28cqh/var(--nocturne-list-n))),var(--type-24))}
+.list[data-el="nocturne-list"]>.item::before{content:'';position:absolute;left:7.224335%;top:50%;translate:0 -50%;width:6px;height:6px;border:calc(var(--stroke)*2) solid var(--a1-7);border-radius:50%}
+.list[data-el="nocturne-list"]>.item>.mark{position:absolute;left:7.224335%;top:50%;translate:0 -50%;display:flex;align-items:center;justify-content:center;width:clamp(14px,4cqw,28px);height:clamp(14px,4cqw,28px);border:var(--stroke) solid var(--n-4);border-radius:50%;color:var(--a1-7)}
+.list[data-el="nocturne-list"]>.item>.mark>.icon{width:56%;height:56%}
+.list[data-el="nocturne-list"]>.item:has(>.mark)::before{content:none}
+.list[data-el="nocturne-list"].divided>.item{padding:0 7.224335%;text-align:center}
+.list[data-el="nocturne-list"].divided>.item::before{content:none}
+.list[data-el="nocturne-list"].divided>.item:not(:last-child)::after{content:'';position:absolute;left:7.224335%;right:7.224335%;bottom:0;border-bottom:calc(var(--stroke)*2) dotted var(--n-3)}
+.list[data-el="nocturne-list"].num>.item::before{content:counter(nocturne-item);display:flex;align-items:center;justify-content:center;width:clamp(14px,4cqw,28px);height:clamp(14px,4cqw,28px);border:var(--stroke) solid var(--n-4);font-size:clamp(var(--type-12),2.4cqw,var(--type-20));font-weight:var(--label-weight);line-height:var(--label-line)}
+.list[data-el="nocturne-list"].check>.item::before{width:10px;height:6px;border:0;border-left:calc(var(--stroke)*2) solid var(--a1-7);border-bottom:calc(var(--stroke)*2) solid var(--a1-7);border-radius:0;transform:rotate(-45deg)}
+.list[data-el="nocturne-list"]:has(>.item:nth-child(2):last-child){--nocturne-list-n:2}
+.list[data-el="nocturne-list"]:has(>.item:nth-child(3):last-child){--nocturne-list-n:3}
+.list[data-el="nocturne-list"]:has(>.item:nth-child(4):last-child){--nocturne-list-n:4}
+.list[data-el="nocturne-list"]:has(>.item:nth-child(5):last-child){--nocturne-list-n:5}
+.list[data-el="nocturne-list"]:has(>.item:nth-child(6):last-child){--nocturne-list-n:6}
+.list[data-el="nocturne-list"]:has(>.item:nth-child(7):last-child){--nocturne-list-n:7}
+.list[data-el="nocturne-list"]:has(>.item:nth-child(8):last-child){--nocturne-list-n:8}
+.list[data-el="nocturne-list"].num>.item,.list[data-el="nocturne-list"]>.item:has(>.mark){padding-inline-start:calc(7.224335% + clamp(14px,4cqw,28px) + var(--gap-sm))}
+@container(max-height:240px){.list[data-el="nocturne-list"] .note{display:none}}
+.list[data-el="nocturne-list"].start{align-self:start}

@@ -1,0 +1,1 @@
+A broad glass detail row with a pale order marker, inset media, a blue caption capsule, a long two-line explanation and a round confirmation mark. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

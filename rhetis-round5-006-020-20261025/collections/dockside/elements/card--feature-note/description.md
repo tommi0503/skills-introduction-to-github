@@ -1,0 +1,1 @@
+An airy feature caption capsule with a three-line note and a small inset media tile at the outer side; the right variant mirrors alignment without changing the design. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

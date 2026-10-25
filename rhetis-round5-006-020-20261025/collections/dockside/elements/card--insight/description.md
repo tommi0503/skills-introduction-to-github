@@ -1,0 +1,1 @@
+An inset glass insight card with a full-width accent header, small square media, centered bold heading and left-aligned three-line note. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

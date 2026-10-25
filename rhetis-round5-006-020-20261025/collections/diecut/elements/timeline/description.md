@@ -1,0 +1,1 @@
+Thin full-height column rules support a stepped sequence of rightward arrows. Light stage labels cross small accent disks, with two-line phase names and technical notes below. Alternating and vertical variants retain ownership of the entire track.

@@ -1,0 +1,1 @@
+A conversational Q/A card with a blue question capsule, a pale answer bubble, two named speaker medallions and explicit read-status icons. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

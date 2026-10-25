@@ -1,0 +1,1 @@
+Eight solid dark bars share a fine horizontal grid with a rising black line and circular observations. Compact values sit inside the bars and above each point, while period labels align below the common baseline. One component owns both series and their shared axis.

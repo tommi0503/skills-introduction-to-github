@@ -1,0 +1,1 @@
+Replica 19 supplies the 170px full-width concluding sentence with its 31px carrying clause and 17px supporting lines. It is one semantic paragraph, not the unrelated split banners seen elsewhere; the collection maps those banners to gaps.

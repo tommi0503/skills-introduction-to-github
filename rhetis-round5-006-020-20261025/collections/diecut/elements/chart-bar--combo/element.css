@@ -1,0 +1,55 @@
+/* Replica 05, 544.8×470.8 plot: eight black bars plus an overlaid connected series.
+   One chart owns all axes, bars, points and complete connection geometry. */
+
+.bars[data-el="diecut-chart-bar--combo"] {position:relative;width:100%;height:100%;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);--diecut-combo-n:8;--max:150;anchor-scope:all}
+.bars[data-el="diecut-chart-bar--combo"] *,.bars[data-el="diecut-chart-bar--combo"] *::before,.bars[data-el="diecut-chart-bar--combo"] *::after{box-sizing:border-box}
+.bars[data-el="diecut-chart-bar--combo"] > .plot{position:absolute;left:7.489%;right:0;top:3.781%;bottom:5.947%;container-type:size;isolation:isolate}
+.bars[data-el="diecut-chart-bar--combo"] > .plot::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to top,var(--n-4) 0 1px,transparent 1px calc(100%/3));border-block:var(--stroke) solid var(--n-4);z-index:-1}
+.bars[data-el="diecut-chart-bar--combo"] .bar{position:absolute;left:calc((var(--diecut-combo-i) + .1984)/var(--diecut-combo-n)*100%);bottom:0;width:calc(.6032/var(--diecut-combo-n)*100%);height:calc(var(--v)/var(--max)*100%);background:var(--n-9);color:var(--page)}
+.bars[data-el="diecut-chart-bar--combo"] .bar > b{position:absolute;left:0;right:0;top:2.12cqh;text-align:center;font-size:clamp(var(--type-10),min(3.571cqw,4.235cqh),var(--type-28));font-weight:var(--body-weight);line-height:1;white-space:nowrap}
+.bars[data-el="diecut-chart-bar--combo"] .bar > span{position:absolute;left:-35%;right:-35%;top:calc(100% + 1.176cqh);text-align:center;color:var(--ink);font-size:clamp(var(--type-10),min(3.571cqw,4.235cqh),var(--type-24));font-weight:var(--body-weight);line-height:1.15;white-space:nowrap}
+.bars[data-el="diecut-chart-bar--combo"] .bar.on{background:var(--a1);color:var(--a1-on)}
+.bars[data-el="diecut-chart-bar--combo"] .line{position:absolute;inset:0;container-type:size;display:flex;align-items:flex-end;justify-content:space-around;anchor-scope:all}
+.bars[data-el="diecut-chart-bar--combo"] .line > .pt{position:static;flex:none;width:1px;height:1px;margin-bottom:calc(var(--v)/var(--max)*100cqh);anchor-name:var(--diecut-combo-own);border-radius:50%;background:var(--ink);box-shadow:0 0 0 clamp(2px,.893cqw,6px) var(--ink)}
+.bars[data-el="diecut-chart-bar--combo"] .line > .pt > b{position:absolute;left:anchor(var(--diecut-combo-own) center);top:max(-3cqh,calc(anchor(var(--diecut-combo-own) top) - 2.6cqh - 1em));transform:translateX(-50%);font-size:clamp(var(--type-10),min(3.571cqw,4.235cqh),var(--type-28));font-weight:var(--body-weight);line-height:1;white-space:nowrap}
+.bars[data-el="diecut-chart-bar--combo"] .line > .pt::before{content:"";position:absolute;left:anchor(var(--diecut-combo-prev) center);right:anchor(var(--diecut-combo-own) center);top:calc(anchor(var(--diecut-combo-prev) top) - .75px);bottom:calc(anchor(var(--diecut-combo-own) top) - .75px);background:linear-gradient(to top right,transparent calc(50% - 1px),var(--ink) calc(50% - .75px),var(--ink) calc(50% + .75px),transparent calc(50% + 1px))}
+.bars[data-el="diecut-chart-bar--combo"] .line > .pt::after{content:"";position:absolute;left:anchor(var(--diecut-combo-prev) center);right:anchor(var(--diecut-combo-own) center);top:calc(anchor(var(--diecut-combo-own) top) - .75px);bottom:calc(anchor(var(--diecut-combo-prev) top) - .75px);background:linear-gradient(to bottom right,transparent calc(50% - 1px),var(--ink) calc(50% - .75px),var(--ink) calc(50% + .75px),transparent calc(50% + 1px))}
+.bars[data-el="diecut-chart-bar--combo"] .line > .pt:first-child::before,.bars[data-el="diecut-chart-bar--combo"] .line > .pt:first-child::after{content:none}
+.bars[data-el="diecut-chart-bar--combo"] > .axis{position:absolute;inset:0;pointer-events:none}
+.bars[data-el="diecut-chart-bar--combo"] > .axis > .tick{position:absolute;left:0;width:6%;top:calc(3.781% + (1 - var(--q))*90.272% - .6em);font-size:clamp(var(--type-10),min(3.304cqw,3.824cqh),var(--type-24));line-height:1.2;font-weight:var(--body-weight);text-align:right}
+.bars[data-el="diecut-chart-bar--combo"] > .axis > .tick:nth-child(1)::before{counter-reset:v var(--max);content:counter(v)}.bars[data-el="diecut-chart-bar--combo"] > .axis > .tick:nth-child(2)::before{counter-reset:v calc(var(--max)*2/3);content:counter(v)}.bars[data-el="diecut-chart-bar--combo"] > .axis > .tick:nth-child(3)::before{counter-reset:v calc(var(--max)/3);content:counter(v)}.bars[data-el="diecut-chart-bar--combo"] > .axis > .tick:nth-child(4)::before{content:"0"}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(1 of .bar){--diecut-combo-i:0}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(1){--diecut-combo-own:--diecut-combo-pt-1;--diecut-combo-prev:--diecut-combo-pt-0}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(2 of .bar){--diecut-combo-i:1}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(2){--diecut-combo-own:--diecut-combo-pt-2;--diecut-combo-prev:--diecut-combo-pt-1}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(3 of .bar){--diecut-combo-i:2}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(3){--diecut-combo-own:--diecut-combo-pt-3;--diecut-combo-prev:--diecut-combo-pt-2}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(4 of .bar){--diecut-combo-i:3}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(4){--diecut-combo-own:--diecut-combo-pt-4;--diecut-combo-prev:--diecut-combo-pt-3}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(5 of .bar){--diecut-combo-i:4}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(5){--diecut-combo-own:--diecut-combo-pt-5;--diecut-combo-prev:--diecut-combo-pt-4}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(6 of .bar){--diecut-combo-i:5}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(6){--diecut-combo-own:--diecut-combo-pt-6;--diecut-combo-prev:--diecut-combo-pt-5}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(7 of .bar){--diecut-combo-i:6}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(7){--diecut-combo-own:--diecut-combo-pt-7;--diecut-combo-prev:--diecut-combo-pt-6}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(8 of .bar){--diecut-combo-i:7}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(8){--diecut-combo-own:--diecut-combo-pt-8;--diecut-combo-prev:--diecut-combo-pt-7}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(9 of .bar){--diecut-combo-i:8}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(9){--diecut-combo-own:--diecut-combo-pt-9;--diecut-combo-prev:--diecut-combo-pt-8}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(10 of .bar){--diecut-combo-i:9}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(10){--diecut-combo-own:--diecut-combo-pt-10;--diecut-combo-prev:--diecut-combo-pt-9}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(11 of .bar){--diecut-combo-i:10}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(11){--diecut-combo-own:--diecut-combo-pt-11;--diecut-combo-prev:--diecut-combo-pt-10}
+.bars[data-el="diecut-chart-bar--combo"] .bar:nth-child(12 of .bar){--diecut-combo-i:11}
+.bars[data-el="diecut-chart-bar--combo"] .line>.pt:nth-child(12){--diecut-combo-own:--diecut-combo-pt-12;--diecut-combo-prev:--diecut-combo-pt-11}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(2 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:2}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(3 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:3}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(4 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:4}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(5 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:5}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(6 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:6}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(7 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:7}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(8 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:8}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(9 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:9}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(10 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:10}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(11 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:11}
+.bars[data-el="diecut-chart-bar--combo"] > .plot:has(>.bar:nth-child(12 of .bar):nth-last-child(1 of .bar)){--diecut-combo-n:12}

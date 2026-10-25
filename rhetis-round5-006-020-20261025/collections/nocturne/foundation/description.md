@@ -1,0 +1,1 @@
+Dark open stages with restrained corner illumination, a reusable centered spotlight frame, small opposing brand furniture, centered typography and a twelve-by-six allocation grid. A flush edge-media layout accommodates independent pale full-height tiles. Seat aspect variants handle wide, tall, round and device imagery.

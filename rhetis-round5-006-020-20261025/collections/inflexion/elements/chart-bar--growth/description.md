@@ -1,0 +1,1 @@
+Four square gradient columns, inside final value, broad curved growth arrow and baseline. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

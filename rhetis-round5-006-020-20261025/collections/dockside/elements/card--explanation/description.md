@@ -1,0 +1,1 @@
+A shallow pale explanation panel with a floating check capsule over its top edge and a three-line inset note. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

@@ -1,0 +1,1 @@
+Two broad rounded issue-and-resolution rows with blue caption capsules, vertical rules and a central double-chevron transition; both rows and their connector have one owner. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

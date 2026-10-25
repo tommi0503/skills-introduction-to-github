@@ -1,0 +1,19 @@
+/* Replica 03, 250×54 dark company-information capsule; .on from 03/05 and .quiet from 19.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.pill[data-el="diecut-pill"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.pill[data-el="diecut-pill"] *,.pill[data-el="diecut-pill"] *::before,.pill[data-el="diecut-pill"] *::after{box-sizing:border-box}
+.pill[data-el="diecut-pill"] :is(p,h2,blockquote){margin:0}
+
+.pill[data-el="diecut-pill"] {display:grid;place-items:center}
+.pill[data-el="diecut-pill"] > .parts{position:relative;display:flex;align-items:center;justify-content:center;gap:var(--gap-sm);width:min(100%,calc(var(--gap)*30));height:min(100cqh,21.6cqw,calc(var(--gap)*4));padding:0 var(--gap-sm);min-width:0;min-height:0;container-type:size;border-radius:999px;background:var(--n-9);color:var(--page)}
+.pill[data-el="diecut-pill"] > .parts > .name{min-width:0;font-family:var(--font-body);font-size:clamp(var(--type-12),min(11cqw,44.444cqh),var(--type-26));font-weight:var(--body-weight);line-height:var(--label-line);white-space:nowrap;letter-spacing:var(--label-track)}
+.pill[data-el="diecut-pill"] > .parts > .note{font-size:clamp(var(--type-12),min(6cqw,28cqh),var(--type-16));font-weight:var(--body-weight);line-height:var(--label-line);white-space:nowrap}
+.pill[data-el="diecut-pill"] > .parts > .mark{display:flex;align-items:center;justify-content:center;flex:none;width:min(11.2cqw,52cqh);height:min(11.2cqw,52cqh)}
+.pill[data-el="diecut-pill"] > .parts > .mark > .icon{display:block;width:100%;height:100%}
+.pill[data-el="diecut-pill"].on > .parts{background:var(--a1);color:var(--a1-on);height:min(100cqh,21.6cqw,calc(var(--gap)*4))}
+.pill[data-el="diecut-pill"].on > .parts > .name{font-size:clamp(var(--type-12),min(22cqw,62cqh),var(--type-30));font-weight:var(--name-weight)}
+.pill[data-el="diecut-pill"].quiet > .parts{background:var(--n-1);color:var(--ink)}
+.pill[data-el="diecut-pill"].quiet > .parts > .name{font-size:clamp(var(--type-12),min(15cqw,58cqh),var(--type-30));font-weight:var(--label-weight)}
+.pill[data-el="diecut-pill"].line > .parts{background:var(--page);color:var(--ink);border:var(--stroke) solid var(--n-4)}
+@container(max-width:350px){.pill[data-el="diecut-pill"] > .parts > .note{display:none}.pill[data-el="diecut-pill"] > .parts{gap:calc(var(--gap-sm)*.6)}}
+

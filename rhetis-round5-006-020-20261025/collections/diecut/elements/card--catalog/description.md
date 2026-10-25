@@ -1,0 +1,1 @@
+An upright white catalogue panel places a broad image crop above a bold compact product title and several close-set lines of technical explanation. Rounded outer corners contrast with the rectangular media seat.

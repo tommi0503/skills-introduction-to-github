@@ -1,0 +1,1 @@
+A white upright project-field card with a broad accent header, centered field label and large value, followed by a dashed divider and smaller labeled details. Date values use a smaller two-line figure while retaining their semantic figure role.

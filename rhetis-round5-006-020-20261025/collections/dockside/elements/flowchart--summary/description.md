@@ -1,0 +1,1 @@
+Three framed icon-summary input nodes converge through a broad double arrow into a circular image-and-caption output emblem. One graph owns every connected member. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

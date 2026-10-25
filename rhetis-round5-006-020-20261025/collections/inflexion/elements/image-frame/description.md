@@ -1,0 +1,1 @@
+Replica 04 supplies an unembellished square picture seat, 168 by 168. The seat follows its allocated box instead of acquiring decorative framing; portrait and avatar seats retain their own proportions.

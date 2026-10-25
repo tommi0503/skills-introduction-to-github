@@ -1,0 +1,1 @@
+A keyword heading inside a broad translucent ring, surrounded by a dashed orbit and a small round plus control. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

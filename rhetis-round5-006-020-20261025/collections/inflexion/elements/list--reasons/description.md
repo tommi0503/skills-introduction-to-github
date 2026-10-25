@@ -1,0 +1,1 @@
+Two selection reasons pairing capsules and supporting statements within dotted horizontal rules. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

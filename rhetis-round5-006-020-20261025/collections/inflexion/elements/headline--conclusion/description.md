@@ -1,0 +1,1 @@
+Measured 30px source hierarchy preserved as a dedicated heading design. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

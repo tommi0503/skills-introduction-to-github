@@ -1,0 +1,20 @@
+/* Replica 05, 480×129.594 title-and-subtitle block; big wordmark from 03/07 and centered ruled heading from 18.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.headline[data-el="diecut-headline"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.headline[data-el="diecut-headline"] *,.headline[data-el="diecut-headline"] *::before,.headline[data-el="diecut-headline"] *::after{box-sizing:border-box}
+.headline[data-el="diecut-headline"] :is(p,h2,blockquote){margin:0}
+
+.headline[data-el="diecut-headline"] {display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:0}
+.headline[data-el="diecut-headline"] > h2{flex:none;font-size:clamp(var(--type-18),min(8.333cqw,71.429cqh),var(--type-56));font-family:var(--font-display);font-weight:var(--title-weight);line-height:var(--body-line);letter-spacing:var(--title-track);word-break:keep-all;overflow-wrap:anywhere}
+.headline[data-el="diecut-headline"] > h2 > b{font-weight:var(--title-weight);background:linear-gradient(transparent 58%,var(--a1-2-soft) 58%)}
+.headline[data-el="diecut-headline"] > .kick{flex:none;font-size:clamp(var(--type-12),3.4cqw,var(--type-24));font-weight:var(--label-weight);line-height:var(--label-line);margin-bottom:var(--gap-sm)}
+.headline[data-el="diecut-headline"] > .note{flex:none;font-size:clamp(var(--type-12),min(4.583cqw,45cqh),var(--type-32));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);margin-top:clamp(var(--gap-sm),2.5cqw,var(--gap-lg));word-break:keep-all;overflow-wrap:anywhere}
+.headline[data-el="diecut-headline"].big > h2{font-size:clamp(var(--type-24),min(12.727cqw,71.429cqh),var(--type-76));font-weight:var(--weight-body);line-height:var(--body-line)}
+.headline[data-el="diecut-headline"].big > h2:has(>br){font-size:clamp(var(--type-20),min(12cqw,43.478cqh),var(--type-72));line-height:var(--title-line)}
+.headline[data-el="diecut-headline"].center{text-align:center}
+.headline[data-el="diecut-headline"].center > h2{display:flex;align-items:center;justify-content:center;gap:calc(var(--gap-sm)*.6);width:min(100%,652px);margin-inline:auto;font-size:clamp(var(--type-16),min(3.988cqw,71.429cqh),var(--type-26));font-weight:var(--name-weight);line-height:var(--body-line);white-space:nowrap}
+.headline[data-el="diecut-headline"].center > h2::before,.headline[data-el="diecut-headline"].center > h2::after{content:'';flex:1;min-width:0;height:var(--stroke);background:var(--ink)}
+.headline[data-el="diecut-headline"].on{background:var(--a1);color:var(--a1-on);border-radius:var(--radius);padding:var(--pad)}
+.headline[data-el="diecut-headline"].on > h2 > b{color:inherit;background:none;text-decoration:underline;text-underline-offset:.15em}
+@container(max-height:140px){.headline[data-el="diecut-headline"] > .kick{display:none}.headline[data-el="diecut-headline"] > .note{font-size:clamp(var(--type-12),min(4.583cqw,22cqh),var(--type-22));margin-top:var(--gap-sm)}}
+

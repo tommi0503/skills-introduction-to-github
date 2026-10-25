@@ -1,0 +1,1 @@
+A compact parent capsule and white list feed a thin shared trunk and four circular metric branches. The complete hierarchy owns every connector; circles keep a real diameter rather than stretching with the slot.

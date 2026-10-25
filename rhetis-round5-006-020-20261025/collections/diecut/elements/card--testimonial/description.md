@@ -1,0 +1,1 @@
+An accent capsule floats above a white rounded testimonial card. A centered multi-line solution name occupies a fixed optical middle band; an italic quotation follows beneath it with a clear, consistent gap.

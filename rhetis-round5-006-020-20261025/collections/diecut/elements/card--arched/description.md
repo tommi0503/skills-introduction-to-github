@@ -1,0 +1,1 @@
+A very tall white feature column has a smooth arched crown and square foot. An image or outline icon sits above a bold two-line name, a compact centered explanation and a large light-weight index near the bottom.

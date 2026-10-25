@@ -1,0 +1,1 @@
+A glass folder with a stepped top notch, a pill-shaped tab caption, a small toggle and an inset wide media window. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

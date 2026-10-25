@@ -1,0 +1,11 @@
+/* Replica 08: Measured16px muted running copy is vertically balanced inside its slot.
+   Newly authored ratios; no page selectors or prior stylesheet layers. */
+.prose[data-el="dockside-prose"]{position:relative;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);font-size:var(--type-16);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.prose[data-el="dockside-prose"] *{box-sizing:border-box;min-width:0}
+.prose[data-el="dockside-prose"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:0}
+.prose[data-el="dockside-prose"]>p{margin:0;font-size:var(--type-16);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7);overflow-wrap:anywhere}
+.prose[data-el="dockside-prose"]>p>b{font-weight:var(--name-weight);color:var(--ink)}
+.prose[data-el="dockside-prose"].quiet>p{font-size:var(--type-14)}.prose[data-el="dockside-prose"].lead>p{font-size:var(--type-24);line-height:var(--lead-line)}.prose[data-el="dockside-prose"].lead>p>b{color:var(--a1-7)}
+.prose[data-el="dockside-prose"].cols{display:block;column-count:2;column-gap:var(--gap-lg);align-content:center}.prose[data-el="dockside-prose"].cols>p{break-inside:avoid;margin-bottom:var(--gap)}
+@container(max-width:450px){.prose[data-el="dockside-prose"].lead>p{font-size:var(--type-20)}.prose[data-el="dockside-prose"].cols{column-count:1}}
+@container(max-height:150px){.prose[data-el="dockside-prose"].lead>p{font-size:var(--type-18)}}

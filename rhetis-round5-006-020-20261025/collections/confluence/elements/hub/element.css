@@ -1,0 +1,37 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.hub[data-el="confluence-hub"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.hub[data-el="confluence-hub"]{padding:0;}
+.hub[data-el="confluence-hub"]::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:var(--stroke) solid var(--n-3);}
+.hub[data-el="confluence-hub"]::after{content:"";position:absolute;top:0;bottom:0;left:50%;border-left:var(--stroke) solid var(--n-3);}
+.hub[data-el="confluence-hub"]>.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34%;aspect-ratio:1;z-index:1;border:clamp(8px,1.57cqw,17px) solid var(--page);border-radius:50%;background:var(--a1-7);color:var(--page);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2%;padding:5%;box-shadow:0 8px 12px color-mix(in srgb,var(--n-6) 18%,transparent);}
+.hub[data-el="confluence-hub"]>.core>.mark{position:absolute;top:-10%;left:31%;width:39%;aspect-ratio:1;}
+.hub[data-el="confluence-hub"]>.core>.mark>.seat{width:100%;height:100%;aspect-ratio:1;}
+.hub[data-el="confluence-hub"]>.core>.name{font-size:clamp(var(--type-28),5.55cqw,var(--type-64));font-weight:var(--name-weight);line-height:calc(var(--figure-line)*.9523809524);letter-spacing:var(--name-track);}
+.hub[data-el="confluence-hub"]>.core>.name b{color:var(--a2-2);font-weight:inherit;}
+.hub[data-el="confluence-hub"]>.core>.kick{color:var(--a2-2);font-size:clamp(var(--type-8),.84cqw,var(--type-12));font-weight:var(--label-weight);letter-spacing:var(--label-track-latin);}
+.hub[data-el="confluence-hub"]>.core>.note{font-size:clamp(var(--type-10),1.3cqw,var(--type-16));line-height:calc(var(--body-line)*.8333333333);color:var(--a1-1);}
+.hub[data-el="confluence-hub"]>.spoke{position:absolute;width:31%;height:42%;display:flex;flex-direction:column;justify-content:center;gap:2%;padding:0;}
+.hub[data-el="confluence-hub"]>.spoke>.mark{width:23%;aspect-ratio:1;color:var(--a1);}
+.hub[data-el="confluence-hub"] .mark>.icon{display:block;width:100%;height:100%;}
+.hub[data-el="confluence-hub"]>.spoke>.name{font-size:clamp(var(--type-18),3.7cqw,var(--type-40));font-weight:var(--name-weight);line-height:calc(var(--name-line)*.88);letter-spacing:var(--name-track);}
+.hub[data-el="confluence-hub"]>.spoke>.name b{color:var(--a2-7);}
+.hub[data-el="confluence-hub"]>.spoke>.note{font-size:clamp(var(--type-12),1.3cqw,var(--type-16));color:var(--n-7);line-height:calc(var(--body-line)*.9);}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(2 of .spoke)>.name b,.hub[data-el="confluence-hub"]>.spoke:nth-child(3 of .spoke)>.name b{color:var(--a1-7);}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(2){left:4.4%;top:2.1%;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(3){left:67.6%;top:2.1%;text-align:right;align-items:flex-end;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(4){left:4.4%;top:58.8%;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(5){left:67.6%;top:58.8%;text-align:right;align-items:flex-end;}
+.hub[data-el="confluence-hub"]>.core>.icon{position:absolute;left:22.5%;top:22.5%;display:block;width:55%;height:55%;}
+.hub[data-el="confluence-hub"]:has(>.spoke:nth-child(5 of .spoke))>.core{width:26%;padding:3%;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(6){left:35%;top:0%;height:18%;text-align:center;align-items:center;}
+.hub[data-el="confluence-hub"]>.spoke:nth-child(7){left:35%;top:82%;height:18%;text-align:center;align-items:center;}
+@container (max-height:400px){.hub[data-el="confluence-hub"]>.core>.kick,.hub[data-el="confluence-hub"]>.core>.note{display:none;}
+.hub[data-el="confluence-hub"]>.spoke>.note{font-size:var(--type-12);}
+}
+.hub[data-el="confluence-hub"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.hub[data-el="confluence-hub"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.hub[data-el="confluence-hub"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.hub[data-el="confluence-hub"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+
+.hub[data-el="confluence-hub"]>.spoke:nth-child(n+6)>.name{font-size:clamp(var(--type-18),3cqw,var(--type-32));}

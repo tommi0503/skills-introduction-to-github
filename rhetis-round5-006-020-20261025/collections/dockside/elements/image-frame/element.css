@@ -1,0 +1,10 @@
+/* Replica 06: A light inset rim and softly rounded inner corner frame a single nearly square image seat.
+   Newly authored ratios; no page selectors or prior stylesheet layers. */
+.frame[data-el="dockside-image-frame"]{position:relative;min-width:0;min-height:0;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);font-size:var(--type-16);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.frame[data-el="dockside-image-frame"] *{box-sizing:border-box;min-width:0}
+.frame[data-el="dockside-image-frame"]{width:100%;height:100%;max-width:314px;max-height:310px;align-self:center;justify-self:center;display:grid;place-items:center;padding:0;border:0;background:none;box-shadow:none}
+.frame[data-el="dockside-image-frame"]>.seat{position:relative;inset:auto;display:grid;place-items:center;width:min(100cqw,101.29cqh);height:min(98.73cqw,100cqh);border:2px solid var(--page);border-radius:calc(var(--radius)*1.1);aspect-ratio:1}
+.frame[data-el="dockside-image-frame"]>.seat.avatar{width:min(90cqw,90cqh);height:min(90cqw,90cqh);aspect-ratio:1;border-radius:50%}
+.frame[data-el="dockside-image-frame"]>.seat.portrait{width:min(90cqw,72cqh);height:min(112.5cqw,90cqh);aspect-ratio:4/5}
+.frame[data-el="dockside-image-frame"]>.seat.logo,.frame[data-el="dockside-image-frame"]>.seat.icon{width:min(90cqw,90cqh);height:min(90cqw,90cqh);aspect-ratio:1}
+@container(max-width:300px){.frame[data-el="dockside-image-frame"]>.seat{border-radius:var(--radius-sm)}}

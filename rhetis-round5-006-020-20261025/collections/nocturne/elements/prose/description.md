@@ -1,0 +1,1 @@
+Centered running copy measured from replica 23: a three-pixel horizontal rule is followed by a generous gap and two lines of thirty-two-pixel copy. The first emphasized clause uses the display weight. The quiet state comes directly from the smaller gray introduction on replica 19; columns and lead retain the same unboxed typography.

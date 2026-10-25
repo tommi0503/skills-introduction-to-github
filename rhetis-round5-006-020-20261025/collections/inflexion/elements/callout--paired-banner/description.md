@@ -1,0 +1,1 @@
+Two independent captions on a full-width gradient band with outer rules. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

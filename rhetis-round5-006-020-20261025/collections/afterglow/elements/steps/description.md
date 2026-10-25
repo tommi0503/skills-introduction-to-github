@@ -1,0 +1,1 @@
+A downward sequence of three white rounded panels, with82px outline icons at left,18px names and16px descriptions. Adjacent steps are connected by accent circular chevron badges drawn by this element.

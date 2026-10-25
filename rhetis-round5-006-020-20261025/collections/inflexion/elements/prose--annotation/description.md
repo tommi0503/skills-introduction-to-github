@@ -1,0 +1,1 @@
+Compact supporting paragraphs with a measured 17px native hierarchy, calm line spacing, optional right alignment and accent-weight inline phrases. The typography scales down proportionally while keeping every sentence readable.

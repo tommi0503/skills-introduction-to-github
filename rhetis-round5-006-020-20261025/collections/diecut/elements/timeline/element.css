@@ -1,0 +1,41 @@
+/* Replica 15, 1280×720 six-column descending project timeline: 48px step-down, 42px accent disk, 30px indices, 19px names and 14px notes.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.track[data-el="diecut-timeline"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.track[data-el="diecut-timeline"] *,.track[data-el="diecut-timeline"] *::before,.track[data-el="diecut-timeline"] *::after{box-sizing:border-box}
+.track[data-el="diecut-timeline"] :is(p,h2,blockquote){margin:0}
+
+.track[data-el="diecut-timeline"] {container-name:diecut-track;display:flex;isolation:isolate}
+.track[data-el="diecut-timeline"] > .stop{position:relative;flex:1;min-width:0;min-height:0;container-type:size;--diecut-track-i:0}
+.track[data-el="diecut-timeline"] > .stop::before{content:'';position:absolute;left:0;top:0;bottom:0;width:var(--stroke);background:var(--n-4);z-index:-1}
+.track[data-el="diecut-timeline"] > .stop::after{content:'';position:absolute;left:0;width:99%;top:calc(33.194% + var(--diecut-track-i)*6.667% - 8px);height:16px;background:var(--ink);clip-path:polygon(0 42.1875%,98.82% 42.1875%,95.36% 15.625%,96.2% 0,100% 50%,96.2% 100%,95.36% 84.375%,98.82% 57.8125%,0 57.8125%)}
+.track[data-el="diecut-timeline"] > .stop > .kick{position:absolute;left:26.25%;width:70.313%;top:calc(26.667% + var(--diecut-track-i)*6.667%);font-size:clamp(var(--type-14),min(14.063cqw,4.167cqh),var(--type-40));font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--diecut-step-track);white-space:nowrap;isolation:isolate}
+.track[data-el="diecut-timeline"] > .stop > .kick::before{content:'';position:absolute;left:19.333%;top:-7.143%;height:100%;aspect-ratio:1;border-radius:50%;background:var(--a1-2-soft);z-index:-1}
+.track[data-el="diecut-timeline"] > .stop > .name{position:absolute;left:3.75%;right:3.75%;top:calc(37.222% + var(--diecut-track-i)*6.667%);font-size:clamp(var(--type-12),min(8.906cqw,2.639cqh),var(--type-28));font-weight:var(--label-weight);line-height:var(--body-line);text-align:center;word-break:keep-all}
+.track[data-el="diecut-timeline"] > .stop > .note{position:absolute;left:3.75%;right:3.75%;top:calc(47.083% + var(--diecut-track-i)*6.667%);font-size:clamp(var(--type-10),min(6.563cqw,1.944cqh),var(--type-20));font-weight:var(--body-weight);line-height:var(--diecut-track-note-line);text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.track[data-el="diecut-timeline"] > .stop.on > .name{font-weight:var(--name-weight);text-decoration:underline;text-decoration-color:var(--a1);text-underline-offset:.25em}
+.track[data-el="diecut-timeline"].alt > .stop::after{top:calc(50% - 8px)}
+.track[data-el="diecut-timeline"].alt > .stop > .kick{top:38%}
+.track[data-el="diecut-timeline"].alt > .stop > .name{top:55%}
+.track[data-el="diecut-timeline"].alt > .stop > .note{top:69%}
+.track[data-el="diecut-timeline"].alt > .stop:nth-child(even) > .kick{top:52%}
+.track[data-el="diecut-timeline"].alt > .stop:nth-child(even) > .name{top:25%}
+.track[data-el="diecut-timeline"].alt > .stop:nth-child(even) > .note{top:7%}
+.track[data-el="diecut-timeline"].col{flex-direction:column}
+.track[data-el="diecut-timeline"].col > .stop{width:100%;height:auto;flex:1}
+.track[data-el="diecut-timeline"].col > .stop::before{left:22%;top:0;bottom:0;background:var(--ink)}
+.track[data-el="diecut-timeline"].col > .stop::after{top:calc(100% - 10px);left:calc(22% - 6px);width:12px;height:12px;clip-path:polygon(0 0,50% 65%,100% 0,100% 35%,50% 100%,0 35%)}
+.track[data-el="diecut-timeline"].col > .stop:last-child::after{content:none}
+.track[data-el="diecut-timeline"].col > .stop > .kick{top:20%;left:0;width:20%;font-size:clamp(var(--type-12),min(4cqw,20cqh),var(--type-24));text-align:center}
+.track[data-el="diecut-timeline"].col > .stop > .kick::before{left:30%;top:0;height:100%;aspect-ratio:1}
+.track[data-el="diecut-timeline"].col > .stop > .name{left:28%;right:2%;top:12%;text-align:left;font-size:clamp(var(--type-14),min(4cqw,18cqh),var(--type-24))}
+.track[data-el="diecut-timeline"].col > .stop > .note{left:28%;right:2%;top:46%;text-align:left;font-size:clamp(var(--type-10),min(3cqw,13cqh),var(--type-18))}
+@container diecut-track (max-width:650px){.track[data-el="diecut-timeline"]:not(.col) > .stop > .note{font-size:var(--type-10)}}
+
+.track[data-el="diecut-timeline"] > .stop:nth-child(1){--diecut-track-i:0}
+.track[data-el="diecut-timeline"] > .stop:nth-child(2){--diecut-track-i:1}
+.track[data-el="diecut-timeline"] > .stop:nth-child(3){--diecut-track-i:2}
+.track[data-el="diecut-timeline"] > .stop:nth-child(4){--diecut-track-i:3}
+.track[data-el="diecut-timeline"] > .stop:nth-child(5){--diecut-track-i:4}
+.track[data-el="diecut-timeline"] > .stop:nth-child(6){--diecut-track-i:5}
+.track[data-el="diecut-timeline"] > .stop:nth-child(7){--diecut-track-i:6}
+.track[data-el="diecut-timeline"] > .stop:nth-child(8){--diecut-track-i:7}

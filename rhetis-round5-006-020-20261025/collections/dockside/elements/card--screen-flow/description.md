@@ -1,0 +1,1 @@
+A rounded inset application panel with a raised flat caption strip, wide device placeholder and a two-line explanatory note. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

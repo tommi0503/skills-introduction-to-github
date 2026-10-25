@@ -1,0 +1,1 @@
+A glass statistic card with two overlapping filled annotation circles, dashed tangents and a small comparison capsule; the printed percentages carry the values. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

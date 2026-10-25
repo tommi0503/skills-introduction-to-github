@@ -1,0 +1,1 @@
+A low white rounded product panel keeps a two-line model name and four compact specification lines at left, a tall square-edged image crop at right, and an optional small accent capsule beside the second name line.

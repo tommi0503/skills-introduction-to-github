@@ -1,0 +1,1 @@
+Before-and-after stacks use adjacent pale and dark rectangular segments on short fine vertical rules. Labels stay outside the plot while values sit at segment centers. The vertical and percentage variants reuse the same fill sequence and squared geometry.

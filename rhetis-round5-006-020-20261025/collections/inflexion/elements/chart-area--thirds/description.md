@@ -1,0 +1,1 @@
+Four-point filled area with three equal y divisions and max-derived tick labels. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

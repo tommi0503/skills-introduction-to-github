@@ -1,0 +1,1 @@
+A two-line accent team block anchors left and right profile branches on one soft glass field. Each branch has a circular portrait overlapping its left edge, a short role capsule and a dark name. Rounded orthogonal curves join every branch to the centre; count-aware placement retains those curves for two to six members. Text-only branches keep the same panel and capsule grammar.

@@ -1,0 +1,1 @@
+Two widely separated process columns pair bold centered names, floating-capsule system panels and seven-item checklists. A transparent proportional frame preserves the broad mechanical gap and keeps every comparison detail attached to its own side.

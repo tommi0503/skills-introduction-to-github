@@ -1,0 +1,1 @@
+Full-width gradient banner with icon, left conclusion and right supporting copy. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

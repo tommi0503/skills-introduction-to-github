@@ -1,0 +1,1 @@
+Measured16px muted running copy is vertically balanced inside its slot. A strong inline phrase carries restrained dark emphasis; lead, quiet and two-column variants change reading hierarchy while keeping the same tracking and calm line spacing. No action controls or editorial rules are invented inside prose.

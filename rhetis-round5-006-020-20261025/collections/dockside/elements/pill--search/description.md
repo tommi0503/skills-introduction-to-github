@@ -1,0 +1,1 @@
+A broad pale search capsule with a leading lightbulb icon, an independently scoped circular notification count, a muted single-line search topic and a small dark keyword action. The editable badge belongs to its leading-mark anchor rather than an icon glyph.

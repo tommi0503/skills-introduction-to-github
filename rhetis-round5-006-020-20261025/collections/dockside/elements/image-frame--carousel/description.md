@@ -1,0 +1,1 @@
+A broad rounded media carousel with a lower caption shelf, pale outlined keyword capsules, a round forward control and five pagination dots. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

@@ -1,0 +1,1 @@
+Seven equal stages follow an open rounded return loop. Small numbered accent discs sit on the track; dotted vertical stems end in tiny dots above upright stage names. The entire loop, markers and stems belong to one process element without a fictitious center core.

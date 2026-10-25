@@ -1,0 +1,1 @@
+A single concluding sentence measured from replica 20. Three separated dots introduce a light-weight centered sentence with a deliberate gap. The marker run and copy scale as one compact unit; an optional icon replaces the dots in a small outlined circle with a correctly sized icon seat.

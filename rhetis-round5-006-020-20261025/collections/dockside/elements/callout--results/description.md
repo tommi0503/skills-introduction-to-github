@@ -1,0 +1,1 @@
+A low glass results band with a compact leading accent capsule and a two-line explanatory sentence at the right. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

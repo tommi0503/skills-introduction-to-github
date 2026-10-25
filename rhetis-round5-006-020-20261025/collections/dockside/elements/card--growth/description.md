@@ -1,0 +1,1 @@
+A glass statistic card with a floating capsule, overlapping growth bars, a bent annotation leader and a two-line footnote. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

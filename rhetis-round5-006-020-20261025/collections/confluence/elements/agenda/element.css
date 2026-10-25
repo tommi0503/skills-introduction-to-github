@@ -1,0 +1,20 @@
+/* Fresh component: confluence replica 02–04, measured 17px panels, inset header bands and circular medallions.
+   Ratios are relative to this component; no page or fixture selector is used. */
+.agenda[data-el="confluence-agenda"]{position:relative;container-type:size;min-width:0;min-height:0;box-sizing:border-box;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);font-size:clamp(var(--type-12),1.6cqw,var(--type-20));color:var(--ink);isolation:isolate;}
+.agenda[data-el="confluence-agenda"]:has(>.entry:nth-child(4)){--agenda-rows:2;}
+.agenda[data-el="confluence-agenda"]:has(>.entry:nth-child(7)){--agenda-rows:3;}
+.agenda[data-el="confluence-agenda"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:6.5% 2.5%;--agenda-rows:1;padding-top:calc(13cqh / var(--agenda-rows));}
+.agenda[data-el="confluence-agenda"]>.entry{position:relative;min-height:0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8%;background:var(--page);border-radius:var(--radius);padding:8% 6%;box-shadow:0 7px 8px color-mix(in srgb,var(--n-6) 13%,transparent);}
+.agenda[data-el="confluence-agenda"] .mark{position:absolute;top:-13%;width:15.3%;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;border:7px solid var(--page);background:var(--a2);color:var(--a2-on);font-size:clamp(var(--type-12),1.65cqw,var(--type-20));font-weight:var(--label-weight);}
+.agenda[data-el="confluence-agenda"]>.entry:nth-child(even) .mark{background:var(--a1);color:var(--a1-on);}
+.agenda[data-el="confluence-agenda"] .name{font-size:clamp(var(--type-16),2.93cqw,var(--type-36));font-weight:var(--name-weight);line-height:var(--name-line);}
+.agenda[data-el="confluence-agenda"] .note{width:100%;border-top:var(--stroke) solid var(--n-3);padding-top:5%;font-size:clamp(var(--type-12),1.2cqw,var(--type-16));line-height:calc(var(--body-line)*.8);}
+@container (max-width:720px){.agenda[data-el="confluence-agenda"] .mark{border-width:4px;}
+.agenda[data-el="confluence-agenda"] .name{font-size:var(--type-18);}
+.agenda[data-el="confluence-agenda"] .note{font-size:var(--type-12);}
+}
+.agenda[data-el="confluence-agenda"] .tone-1{--series-color:var(--a1);--series-on:var(--a1-on);}
+.agenda[data-el="confluence-agenda"] .tone-2{--series-color:var(--a2);--series-on:var(--a2-on);}
+.agenda[data-el="confluence-agenda"] .tone-3{--series-color:var(--a3);--series-on:var(--a3-on);}
+.agenda[data-el="confluence-agenda"] .tone-4{--series-color:var(--a4);--series-on:var(--a4-on);}
+.agenda[data-el="confluence-agenda"] .name{font-weight:var(--confluence-agenda-name-weight);line-height:var(--confluence-agenda-name-line);letter-spacing:var(--confluence-agenda-name-track);}

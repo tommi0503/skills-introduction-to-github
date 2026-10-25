@@ -1,0 +1,1 @@
+A centered compact22px section heading above a quiet14px supporting line. The original source caption hierarchy remains separate from the larger display headings.

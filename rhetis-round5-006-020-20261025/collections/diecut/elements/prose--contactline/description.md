@@ -1,0 +1,1 @@
+A single regular-weight contact line keeps the telephone and email together on one baseline. A bounded text measure centers inside the assigned space without stretching its type beyond the original reading size.

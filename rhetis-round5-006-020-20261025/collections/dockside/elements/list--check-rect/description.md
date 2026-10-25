@@ -1,0 +1,1 @@
+Four rectangular glass check rows measured from replica 11. The plate uses a 10px corner, a 2px pale rim, a 24px circular tick and an 18px regular label. This design is independent from the capsule check list in replica 04. Each item owns one editable name; two to six items share the available height. Minimums reserve enough room for the supplied labels.

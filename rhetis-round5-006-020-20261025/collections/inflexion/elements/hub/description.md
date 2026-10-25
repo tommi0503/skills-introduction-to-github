@@ -1,0 +1,1 @@
+Replica 09 supplies the entire half-orbit: one central 239 by 295 picture, three icon/text spokes, the curved relationship line and all numbered discs. Its measured box is the owner of every connector. Narrow boxes turn the spokes into a vertical reading order rather than stretching their circles.

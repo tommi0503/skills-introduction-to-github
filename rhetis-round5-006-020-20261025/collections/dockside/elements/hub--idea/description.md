@@ -1,0 +1,1 @@
+A four-member radial idea overview with a low solid accent core, cropped concentric dashed decoration and dark caption cards; the complete connected composition is one element. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

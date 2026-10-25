@@ -1,0 +1,1 @@
+Three phase header capsules owning all nine milestone events, icons and dotted separators. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

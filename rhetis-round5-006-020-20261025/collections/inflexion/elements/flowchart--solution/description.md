@@ -1,0 +1,1 @@
+Asymmetric accent panel with two intersecting inputs, dotted output arrow and lower summary. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

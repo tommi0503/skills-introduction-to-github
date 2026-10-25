@@ -1,0 +1,1 @@
+A centered two-line introduction and a compact contact paragraph share a single thin vertical rule between them. The text stays upright and the rule belongs to the complete enquiry block, rather than decorating an unrelated neighboring element.

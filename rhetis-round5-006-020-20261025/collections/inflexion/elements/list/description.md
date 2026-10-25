@@ -1,0 +1,1 @@
+Replica 19 supplies the quiet 15px career bullets. The numbered driver list in 07 adds its measured 33px disc and dotted bridge; the icon-marked explainer in 10 uses the contract mark slot. Four short items can form the two-column budget list measured in 20.

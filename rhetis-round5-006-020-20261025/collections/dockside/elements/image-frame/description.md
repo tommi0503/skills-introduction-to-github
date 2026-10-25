@@ -1,0 +1,1 @@
+A light inset rim and softly rounded inner corner frame a single nearly square image seat. The base is measured from the314-by310 photo inset of replica06; portrait, avatar and logo seat shapes keep their semantic aspect ratios inside the same rim. There are no captions, controls or connector rules borrowed from surrounding scenes.

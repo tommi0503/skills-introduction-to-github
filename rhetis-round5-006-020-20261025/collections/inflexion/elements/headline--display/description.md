@@ -1,0 +1,1 @@
+A top-aligned31px presentation statement with a1.55 line ratio, accented inline phrases and a clean two-line hierarchy. The measured native source is replica07; narrow slots reduce the font proportionally while full-size source headings retain their intended weight and line breaks.

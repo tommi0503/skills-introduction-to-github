@@ -1,0 +1,1 @@
+A tiny circular notification count with a centered14px numeral. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

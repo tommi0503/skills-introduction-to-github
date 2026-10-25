@@ -1,0 +1,1 @@
+A single rising area with a one-pixel accent edge and small circular data points. Transparent-to-accent fill follows adjacent point values. Optional point annotations draw three rising silhouette arrows owned by this chart.

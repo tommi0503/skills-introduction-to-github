@@ -1,0 +1,1 @@
+A single capsule measured from replica 19: a sixty-five-pixel maximum height, a two-pixel outline, fully rounded ends and a centered twenty-eight-pixel label. The capsule hugs its own content while its internal dimensions scale down together; optional status and mark parts remain inline.

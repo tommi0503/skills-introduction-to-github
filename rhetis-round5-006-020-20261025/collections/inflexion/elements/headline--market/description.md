@@ -1,0 +1,1 @@
+A two-line31px market lead with measured tight line spacing, a strongly accented opening clause and top-aligned typography. Responsive type preserves the source hierarchy without forcing neighboring elements into its box.

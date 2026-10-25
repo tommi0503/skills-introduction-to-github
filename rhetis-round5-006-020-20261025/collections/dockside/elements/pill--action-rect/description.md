@@ -1,0 +1,1 @@
+A compact dark rectangular action control with a small corner radius, centered label and trailing chevron. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

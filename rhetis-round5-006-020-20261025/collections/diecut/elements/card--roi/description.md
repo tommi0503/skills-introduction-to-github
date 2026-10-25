@@ -1,0 +1,1 @@
+A fine unfilled ellipse tilts diagonally around upright explanatory copy. A small accent number circle touches its upper-left arc; a bold centered name sits above a two-line note. Each card owns one ellipse and can overlap neighboring cards through a foundation row layout.

@@ -1,0 +1,1 @@
+Two narrow tall image crops bracket a compact two-line certificate label. The center text stays clear of both marks, with the registration name and supporting qualification sharing the same restrained weight.

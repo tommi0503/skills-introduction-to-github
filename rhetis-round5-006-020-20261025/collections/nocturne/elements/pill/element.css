@@ -1,0 +1,22 @@
+/* Replica 19: single 65px capsule, 2px border, 28px/550 label and30px side padding. */
+.pill[data-el="nocturne-pill"]{position:relative;container-type:size;box-sizing:border-box;min-width:0;min-height:0;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.pill[data-el="nocturne-pill"] *, .pill[data-el="nocturne-pill"]::before, .pill[data-el="nocturne-pill"]::after{box-sizing:border-box}
+.pill[data-el="nocturne-pill"] :is(.name,.note,.kick,.fig){margin:0;overflow-wrap:anywhere}
+.pill[data-el="nocturne-pill"] .name{font-size:clamp(var(--type-14),3cqw,var(--type-28));font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.pill[data-el="nocturne-pill"] .note{font-size:clamp(var(--type-12),2cqw,var(--type-18));line-height:var(--lead-line);color:var(--n-7)}
+.pill[data-el="nocturne-pill"] .kick{font-size:clamp(var(--type-12),2cqw,var(--type-18));font-weight:var(--label-weight);line-height:var(--label-line);color:var(--a1-7)}
+.pill[data-el="nocturne-pill"] .fig{font-family:var(--font-display);font-size:clamp(var(--type-16),5cqw,var(--type-48));font-weight:var(--figure-weight);line-height:var(--figure-line);letter-spacing:var(--figure-track);font-variant-numeric:tabular-nums}
+.pill[data-el="nocturne-pill"] .icon{display:inline-flex;align-items:center;justify-content:center;width:var(--type-28);height:var(--type-28);flex:none}
+.pill[data-el="nocturne-pill"] small{margin:0;color:inherit;font-size:var(--type-14)}
+.pill[data-el="nocturne-pill"]{display:grid;place-items:center;--nocturne-pill-h:min(100cqh,65px);color:var(--ink)}
+.pill[data-el="nocturne-pill"]>.parts{display:flex;align-items:center;justify-content:center;gap:calc(var(--nocturne-pill-h)*.16);max-width:100%;width:max-content;height:var(--nocturne-pill-h);padding:0 calc(var(--nocturne-pill-h)*.461538);border:calc(var(--stroke)*2) solid var(--n-5);border-radius:999px;background:var(--n-2);text-align:center}
+.pill[data-el="nocturne-pill"] .name{font-size:clamp(var(--type-12),calc(var(--nocturne-pill-h)*.430769),var(--type-28));font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track);white-space:nowrap}
+.pill[data-el="nocturne-pill"] .note{font-size:clamp(var(--type-12),calc(var(--nocturne-pill-h)*.23),var(--type-16));white-space:nowrap}
+.pill[data-el="nocturne-pill"] .mark{display:flex;align-items:center;justify-content:center;width:calc(var(--nocturne-pill-h)*.5);height:calc(var(--nocturne-pill-h)*.5);flex:none;border:var(--stroke) solid var(--n-4);border-radius:50%;color:var(--a1-7)}
+.pill[data-el="nocturne-pill"] .mark>.icon{width:56%;height:56%}
+.pill[data-el="nocturne-pill"].on>.parts{background:var(--a1);border-color:var(--a1-7);color:var(--a1-on)}
+.pill[data-el="nocturne-pill"].on :is(.mark,.note){color:var(--a1-on)}
+.pill[data-el="nocturne-pill"].quiet>.parts{border-color:var(--n-3);background:var(--n-1)}
+.pill[data-el="nocturne-pill"].line>.parts{background:transparent}
+@container(max-width:240px){.pill[data-el="nocturne-pill"] .note{display:none}}
+

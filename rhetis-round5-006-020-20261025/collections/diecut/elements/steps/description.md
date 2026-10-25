@@ -1,0 +1,1 @@
+A continuous narrow neutral band carries large light stage indices, joined by sharp accent chevrons. Below it each stage keeps an open heading and technical note; the vertical variant rotates the same owned sequence.

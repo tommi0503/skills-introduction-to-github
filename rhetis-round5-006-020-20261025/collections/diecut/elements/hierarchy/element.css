@@ -1,0 +1,19 @@
+/* Replica 03, 645×436 single-level business tree: 345×191 parent panel, 47px branches and four 150px outlined circles.
+   Source dimensions are converted to local box/member ratios; no legacy CSS is imported. */
+.org[data-el="diecut-hierarchy"]{position:relative;box-sizing:border-box;min-width:0;min-height:0;width:100%;height:100%;container-type:size;color:var(--ink);font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track)}
+.org[data-el="diecut-hierarchy"] *,.org[data-el="diecut-hierarchy"] *::before,.org[data-el="diecut-hierarchy"] *::after{box-sizing:border-box}
+.org[data-el="diecut-hierarchy"] :is(p,h2,blockquote){margin:0}
+
+.org[data-el="diecut-hierarchy"] {container-name:diecut-org;display:grid;grid-template-columns:repeat(var(--diecut-org-n),minmax(0,1fr));grid-template-rows:65.596% 34.404%;column-gap:2.326%;isolation:isolate}
+.org[data-el="diecut-hierarchy"]::before{content:'';position:absolute;left:calc((100% - 2.326% * (var(--diecut-org-n) - 1)) / (2 * var(--diecut-org-n)));right:calc((100% - 2.326% * (var(--diecut-org-n) - 1)) / (2 * var(--diecut-org-n)));top:54.817%;height:var(--stroke);background:var(--ink);z-index:-1}
+.org[data-el="diecut-hierarchy"]::after{content:'';position:absolute;left:50%;top:43.807%;height:11.01%;width:var(--stroke);background:var(--ink);z-index:-1}
+.org[data-el="diecut-hierarchy"] > .root{position:absolute;top:0;left:23.721%;width:53.488%;height:43.807%;display:grid;grid-template-rows:21.99% 72.251%;gap:5.759%;min-width:0;min-height:0}
+.org[data-el="diecut-hierarchy"] > .branch{grid-row:2;position:relative;justify-self:center;width:min(100%,34.404cqh);height:min(34.404cqh,calc((100cqw - 2.326cqw * (var(--diecut-org-n) - 1)) / var(--diecut-org-n)));border:var(--stroke) solid var(--ink);border-radius:50%;background:var(--page)}
+.org[data-el="diecut-hierarchy"] > .branch.on{background:var(--a1);color:var(--a1-on);border-color:transparent}
+.org[data-el="diecut-hierarchy"] > .branch::before{content:'';position:absolute;left:50%;bottom:100%;height:10.779cqh;width:var(--stroke);background:var(--ink);z-index:-1}
+.org[data-el="diecut-hierarchy"] > .branch > .node{position:absolute;left:4%;right:4%;top:29.333%;text-align:center;font-size:clamp(var(--type-12),min(3.566cqw,5.275cqh),var(--type-32));font-weight:var(--body-weight);line-height:var(--body-line);word-break:keep-all}
+.org[data-el="diecut-hierarchy"] > .branch > .leaf{position:absolute;left:4%;right:4%;top:49.333%;text-align:center;font-size:clamp(var(--type-14),min(4.341cqw,6.422cqh),var(--type-40));font-weight:var(--name-weight);line-height:var(--body-line);word-break:keep-all;overflow-wrap:anywhere}
+@container diecut-org (max-width:500px){.org[data-el="diecut-hierarchy"] > .root{left:15%;width:70%}.org[data-el="diecut-hierarchy"] > .branch > .node{font-size:var(--type-12)}.org[data-el="diecut-hierarchy"] > .branch > .leaf{font-size:var(--type-14)}}
+.org[data-el="diecut-hierarchy"]:has(>.branch:nth-child(3):last-child){--diecut-org-n:2}
+.org[data-el="diecut-hierarchy"]:has(>.branch:nth-child(4):last-child){--diecut-org-n:3}
+.org[data-el="diecut-hierarchy"]:has(>.branch:nth-child(5):last-child){--diecut-org-n:4}

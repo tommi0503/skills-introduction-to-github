@@ -1,0 +1,1 @@
+Four separated feature bands with floating numbered circles; one accent row is highlighted while the remaining rows retain quiet glass surfaces. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.

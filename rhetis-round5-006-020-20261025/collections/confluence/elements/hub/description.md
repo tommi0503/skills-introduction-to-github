@@ -1,0 +1,1 @@
+A central367px circular hub inside a thick white ring connects four surrounding goals with horizontal and vertical rules. Each outer goal pairs a76px outline icon with a40px name and14px supporting note.

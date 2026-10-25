@@ -1,0 +1,1 @@
+Three-share solid pie with data-driven cumulative angles and all sector values. This source-derived design uses proportional member geometry, responsive type, semantic palette slots and independent light/dark verification.

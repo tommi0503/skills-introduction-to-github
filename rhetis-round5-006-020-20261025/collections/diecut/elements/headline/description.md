@@ -1,0 +1,1 @@
+A clear SUITE heading with a calm subtitle and source-derived line spacing. Big headings use a thin wordmark voice, centered headings sit between fine rules, and the accent-ground variant keeps readable paired ink.

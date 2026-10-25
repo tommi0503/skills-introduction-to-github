@@ -1,0 +1,1 @@
+Pale horizontal problem rows with an editable prefix capsule, generated two-digit numbering, a bold middle title and a thin divider before the note. Source geometry is converted to proportional layout and bounded container-relative typography. Smaller allocations retain the figure/name and running note. Palette roles supply all fills and strokes.
