@@ -24,3 +24,5 @@
 python tools/build_review_pdfs.py
 python tools/verify_review_pdfs.py
 ```
+
+[게시된 PDF 실제 재다운로드 검증](download-verification.json) · [대표 화면 직접 검수](visual-review.json)
