@@ -1,0 +1,1 @@
+A slender circular ring surrounds a large figure and an optional inner name. The ring remains circular at every aspect ratio. Rows use a quiet ordinal neutral scale with the final primary accent, while long names remain inside the available inner width.

@@ -1,0 +1,1 @@
+A precise editing-selection language: hairline rectangular borders, four compact corner handles, large circular marks and heavy sans-serif headings. Open page areas and repeated modular spacing keep attention on one clear accent.

@@ -1,0 +1,1 @@
+Source page11: five circular icon stations follow a thin closed capsule return track. Small overlapping step labels sit beneath the icons, compact descriptions sit inside the loop and directional arrows connect consecutive stations while side arrows preserve the return direction.

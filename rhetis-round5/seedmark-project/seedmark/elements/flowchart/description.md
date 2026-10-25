@@ -1,0 +1,1 @@
+Source page 06: equal solution nodes each own a dark top capsule, a small overlaid label, a dashed vertical stem and an outlined explanation box. One common rule connects every solution capsule behind the nodes.

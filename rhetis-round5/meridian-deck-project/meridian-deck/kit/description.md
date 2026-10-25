@@ -1,0 +1,1 @@
+A measured corporate language of fine framing rules, large circular medallions, shallow capsules, neutral supporting planes and one clear accent. Compact typography, open connectors and carefully centred marks create a calm, deliberate rhythm.

@@ -1,0 +1,1 @@
+Source page02: an eleven-entry contents list flows down two columns. Small numbered markers sit35px before25px titles, regular rules separate rows and an ink rule opens each column. Two-line business titles remain centered inside each row at compact sizes.

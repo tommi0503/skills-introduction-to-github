@@ -1,0 +1,25 @@
+/* Round five: Source page 17: five timeline stops own capsule photo placeholders and action notes; separate duration bands span one or several stops and phase chips sit on the lower tick track. Bands and phases are explicit owned timeline parts. */
+.track[data-el="seedmark-timeline"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}.track[data-el="seedmark-timeline"] *{box-sizing:border-box}.track[data-el="seedmark-timeline"] :is(p,h2,h3){margin:0}.track[data-el="seedmark-timeline"] .icon{display:inline-flex;flex:none;width:32px;height:32px}.track[data-el="seedmark-timeline"] .icon svg{width:100%;height:100%}
+.track[data-el="seedmark-timeline"] {display:grid;grid-template-columns:repeat(var(--count),minmax(0,1fr));gap:0}
+.track[data-el="seedmark-timeline"] .stop{grid-row:1;position:relative;min-width:0;border-left:1px solid var(--n-2);padding:0;display:block}
+.track[data-el="seedmark-timeline"] .stop>.frame{position:absolute;left:4.5%;top:4.0201%;width:90%;height:30.402%}
+.track[data-el="seedmark-timeline"] .stop>.name{font-size:var(--type-18)}
+.track[data-el="seedmark-timeline"] .stop>.note{font-size:clamp(var(--type-10),1.53cqw,var(--type-28));line-height:var(--body-line);position:absolute;left:10.3%;right:7.2%;top:60.0503%;word-break:keep-all}
+.track[data-el="seedmark-timeline"] .bands{position:absolute;left:.9%;right:.9%;top:39.196%;height:15.075%;display:grid;grid-template-columns:repeat(var(--count),minmax(0,1fr));gap:2.1cqw}
+.track[data-el="seedmark-timeline"] .band{grid-column:calc(var(--from) + 1) / span var(--span);background:var(--n-1);border-radius:var(--radius);display:flex;justify-content:center;align-items:center;font-size:clamp(var(--type-10),1.62cqw,var(--type-28));line-height:var(--label-line);text-align:center;padding:calc(var(--gap-sm)/2)}.track[data-el="seedmark-timeline"] .band.on{background:var(--ink);color:var(--page)}
+.track[data-el="seedmark-timeline"] .phases{position:absolute;left:0;right:0;bottom:0;height:calc(var(--gap-sm)*13/6);display:grid;grid-template-columns:repeat(var(--count),minmax(0,1fr));align-items:center;background:repeating-linear-gradient(90deg,var(--n-3) 0 2px,transparent 2px 5px);background-size:100% 50%;background-position:center;background-repeat:no-repeat}
+.track[data-el="seedmark-timeline"] .phase{grid-column:calc(var(--from) + 1) / span var(--span);justify-self:center;min-width:8.45cqw;text-align:center;font-size:clamp(var(--type-8),1.08cqw,var(--type-20));line-height:var(--label-line);border:1px solid var(--ink);border-radius:var(--radius-sm);background:var(--page);padding:calc(var(--gap-sm)/3) calc(var(--gap-sm)/1.2)}
+
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(2):last-of-type){--count:2}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(3):last-of-type){--count:3}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(4):last-of-type){--count:4}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(5):last-of-type){--count:5}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(6):last-of-type){--count:6}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(7):last-of-type){--count:7}
+
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(2 of .stop)):not(:has(>.stop:nth-child(3 of .stop))){--count:2}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(3 of .stop)):not(:has(>.stop:nth-child(4 of .stop))){--count:3}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(4 of .stop)):not(:has(>.stop:nth-child(5 of .stop))){--count:4}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(5 of .stop)):not(:has(>.stop:nth-child(6 of .stop))){--count:5}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(6 of .stop)):not(:has(>.stop:nth-child(7 of .stop))){--count:6}
+.track[data-el="seedmark-timeline"]:has(>.stop:nth-child(7 of .stop)):not(:has(>.stop:nth-child(8 of .stop))){--count:7}

@@ -1,0 +1,1 @@
+Source page08: three linked one-share rings contain a bold competitor label and a small outlined keyword badge. On page12 the numeric form enlarges the percent figure and uses a plain revenue-source label; the ring always retains its actual share and80-percent inner diameter.

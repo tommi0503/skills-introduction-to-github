@@ -1,0 +1,2 @@
+Fine rounded outlines contain a centred information block. Icon-and-kicker cards place a small ink circle across the upper edge of the surface, with the full circle reserved inside the root. A thin title rule separates the heading from the note. Figure cards use shared fixed tracks so adjacent headings begin together; quiet text cards use a compact two-column block and a lower rule. Accent and numbered tone variants retain the same geometry.
+ A heading-only name-and-kick material aligns at the top; it does not invent a body to centre around.

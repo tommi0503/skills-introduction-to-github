@@ -1,0 +1,1 @@
+The opening sentence is bracketed by typographic quote marks, followed by a letter-sized passage and a restrained signature. All three levels come from replica04; compact boxes retain the quotation and author while removing the secondary letter passage.

@@ -1,0 +1,1 @@
+Three stacked pale stage rows with broad square stage labels, a heading and explanatory copy to the right. Labels progress from the primary accent through the secondary plum role to a deep neutral, each with its own contrasting foreground. Downward triangular notches inherit the corresponding stage fill and remain attached to their owning row.

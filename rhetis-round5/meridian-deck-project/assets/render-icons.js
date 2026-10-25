@@ -1,0 +1,1 @@
+(()=>{const draw=()=>lucide.createIcons({nameAttr:'data-icon',attrs:{width:'100%',height:'100%','stroke-width':1.5}});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',draw);else draw();})();

@@ -1,0 +1,1 @@
+Nine entries form three measured columns, each row resting on a fine rule. A small accent index precedes a steady neutral heading and a quieter explanatory line. Highlighted entries use a pale accent surface rather than a separate badge.

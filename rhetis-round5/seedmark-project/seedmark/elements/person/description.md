@@ -1,0 +1,1 @@
+Source page19: a circular190px portrait with a pale thick ring precedes a28px name,13px role and short17px career list. The featured leader has a larger236px portrait and a taller profile while keeping the text baseline aligned with colleagues.

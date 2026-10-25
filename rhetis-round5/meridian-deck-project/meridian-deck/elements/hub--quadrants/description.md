@@ -1,0 +1,1 @@
+Four large circular accent labels surround a central round photograph, with ruled copy registers extending outward on either side. This four-quadrant arrangement is distinct from the three-spoke side-caption hub.

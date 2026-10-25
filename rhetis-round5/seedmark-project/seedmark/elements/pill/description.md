@@ -1,0 +1,1 @@
+An ink capsule contains a centred name and note; line and quiet variants replace its fill with a page or neutral surface. A textual mark occupies a small outlined badge at the capsule crown, entirely within the allotted box. Icon marks stay in the normal row. Wide slots become one line, while tall capsules put the supporting note beneath the name.

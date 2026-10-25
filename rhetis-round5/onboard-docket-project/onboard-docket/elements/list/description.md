@@ -1,0 +1,1 @@
+Numbered split capsules reproduce the54px rows of replica07. Their filled name bays alternate accent roles while the note continues on the pale capsule. The divided variant removes the capsule and uses inset rules and a restrained dot.

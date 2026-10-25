@@ -1,0 +1,1 @@
+A lower semicircular track carries4round icon members around a partly cropped central keyword disc. Capsule names with numbered end badges and external explanatory notes are owned by the same relation graph.

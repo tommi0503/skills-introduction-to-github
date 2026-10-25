@@ -1,0 +1,1 @@
+A single triangular envelope is divided into equal-height levels with narrow white seams. Every boundary continues the same sloping edge instead of creating a stack of unrelated trapezoids. Deeper tiers become quieter as their area grows.

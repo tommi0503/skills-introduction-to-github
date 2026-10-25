@@ -1,0 +1,1 @@
+Source page03: vertically repeated outline capsules share a left overlapping dark icon, a compact bold label and a wider explanation. The emphasized final capsule has an ink outline; a short dotted line links the two members.

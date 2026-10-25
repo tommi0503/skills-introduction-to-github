@@ -1,0 +1,1 @@
+A thin accent path connects the actual equally spaced data points, including descending and flat pairs. Open circular marks, optional figures and a separate axis-label register retain their own hierarchy. One continuous neutral baseline is drawn by the chart from the first point centre to the last; a container size never selects a different chart design.

@@ -1,0 +1,1 @@
+A bare neutral left-aligned heading from source05, set in a heavy sans serif with generous 1.6 leading. It has no capsule, frame or coloured surface; its near-black text remains distinct from the collection's accent headings.

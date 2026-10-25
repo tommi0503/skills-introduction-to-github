@@ -1,0 +1,1 @@
+A connected seven-step line overlays two pale reference columns of independent, unspecified scale. The root owns a compact corner caption, public maximum-derived ticks, all line values, labels and both private background columns. Reference heights are measured graphical percentages and are not asserted production data.

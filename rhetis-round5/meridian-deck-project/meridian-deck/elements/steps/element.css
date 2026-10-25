@@ -1,0 +1,17 @@
+/* Replica 28: Joined chevron headings create one continuous ordered sequence. */
+.steps[data-el="meridian-deck-steps"]{position:relative;container-type:size;box-sizing:border-box;display:flex;gap:0;min-width:0;min-height:0;font-family:var(--font-body);color:var(--ink)}
+.steps[data-el="meridian-deck-steps"] *{box-sizing:border-box}
+.steps[data-el="meridian-deck-steps"]>.step{position:relative;flex:1;min-width:0;min-height:0;display:grid;grid-template-rows:13.42% minmax(0,1fr);row-gap:var(--gap-sm);padding-right:var(--gap-sm)}
+.steps[data-el="meridian-deck-steps"]>.step:last-child{padding-right:0}
+.steps[data-el="meridian-deck-steps"]>.step>.name{position:relative;margin:0;margin-right:calc(-6% - var(--gap-sm));display:flex;align-items:center;justify-content:center;padding:0 var(--gap);text-align:center;background:var(--n-1);color:var(--n-7);font-size:clamp(var(--type-12),calc(1.44cqw),var(--type-16));font-weight:var(--body-weight);line-height:var(--name-line);clip-path:polygon(0 0,94% 0,100% 50%,94% 100%,0 100%,6% 50%);z-index:1}
+.steps[data-el="meridian-deck-steps"]>.step:first-child>.name{clip-path:polygon(0 0,94% 0,100% 50%,94% 100%,0 100%)}
+.steps[data-el="meridian-deck-steps"]>.step:last-child>.name{margin-right:0}
+.steps[data-el="meridian-deck-steps"]>.step:nth-child(2)>.name{background:var(--n-7);color:var(--page)}
+.steps[data-el="meridian-deck-steps"]>.step:nth-child(3)>.name{background:var(--n-9);color:var(--page)}
+.steps[data-el="meridian-deck-steps"]>.step:last-child>.name,.steps[data-el="meridian-deck-steps"]>.step.on>.name{background:var(--a1);color:var(--a1-on)}
+.steps[data-el="meridian-deck-steps"]>.step>.mark{position:absolute;left:var(--gap-sm);top:0;color:var(--n-7);font-size:var(--type-12)}
+.steps[data-el="meridian-deck-steps"]>.step>.note{min-height:0;margin:0;padding:var(--gap);background:var(--n-1);font-size:clamp(var(--type-10),calc(1.25cqw),var(--type-14));line-height:var(--body-line)}
+.steps[data-el="meridian-deck-steps"]>.step>.note>[data-el]{width:100%;height:25%;margin-bottom:var(--gap-sm)}
+.steps[data-el="meridian-deck-steps"]>.step>.note>[data-el="meridian-deck-delta--vertical"],.steps[data-el="meridian-deck-steps"]>.step>.note>[data-el="meridian-deck-hierarchy"]{width:65%;height:52%;margin:auto}
+.steps[data-el="meridian-deck-steps"]>.step>.mark>.icon{display:block;width:24px;height:24px}
+@container(max-width:650px){.steps[data-el="meridian-deck-steps"]>.step>.note{padding:var(--gap-sm)}.steps[data-el="meridian-deck-steps"]>.step>.name{padding:calc(var(--gap-sm)/2);font-size:var(--type-12)}}

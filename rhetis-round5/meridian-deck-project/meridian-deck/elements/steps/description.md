@@ -1,0 +1,1 @@
+Joined chevron headings create one continuous ordered sequence. Each heading owns a quiet rectangular note panel below, which may contain independent nested business components. The vertical variant owns its downward connectors and retains the same heading-and-note distinction.

@@ -1,0 +1,1 @@
+One rounded department capsule sits over three equal-width neutral team capsules in a compact vertical stack. The source proportions are37/179 high at0,56,99 and142/179; a fine stem is owned by the hierarchy and reaches the first team. A quiet department uses the secondary accent role. Labels are single centred business names with regular16px source typography.

@@ -1,0 +1,1 @@
+Source page 21: one filled pie owns all shares, their cumulative start values, icons and values. Equal radial separators and independently centered share labels preserve the whole-to-part relationship.

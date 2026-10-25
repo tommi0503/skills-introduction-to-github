@@ -1,0 +1,1 @@
+Source page 09: a routed technical flow with two left input/explanation boxes, a neutral central store group above a dark summary capsule, and two right output/explanation boxes. The single owner draws the three actual interconnecting routes; store nodes are nested pill-store dependencies.

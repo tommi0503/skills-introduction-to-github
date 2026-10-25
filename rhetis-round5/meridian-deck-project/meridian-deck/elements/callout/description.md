@@ -1,0 +1,1 @@
+A broad accent band holds one centred concluding sentence with a stronger phrase. An optional icon sits beside the sentence, sized as a restrained companion. The shared small radius and spare spacing connect it to the measured header strips.

@@ -1,0 +1,14 @@
+/* Round five: Source page03: vertically repeated outline capsules share a left overlapping dark icon, a compact bold label and a wider explanation. The emphasized final capsule has an ink outline; a short dotted line links the two members. */
+.steps[data-el="seedmark-steps--mission"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}.steps[data-el="seedmark-steps--mission"] *{box-sizing:border-box}.steps[data-el="seedmark-steps--mission"] :is(p,h2,h3){margin:0}.steps[data-el="seedmark-steps--mission"] .icon{display:inline-flex;flex:none;width:32px;height:32px}.steps[data-el="seedmark-steps--mission"] .icon svg{width:100%;height:100%}
+.steps[data-el="seedmark-steps--mission"] {display:grid;grid-template-rows:repeat(var(--count),minmax(0,1fr));gap:9.677%;width:100%;height:auto;max-height:100%;aspect-ratio:582/279;align-self:start}
+.steps[data-el="seedmark-steps--mission"] .step{position:relative;min-width:0;min-height:0}.steps[data-el="seedmark-steps--mission"] .step:before{content:'';position:absolute;inset:0 0 0 4.296%;border:var(--stroke) solid var(--n-3);border-radius:999px}.steps[data-el="seedmark-steps--mission"] .step.on:before{border-color:var(--ink)}
+.steps[data-el="seedmark-steps--mission"] .mark{position:absolute;left:0;top:50%;transform:translateY(-50%);width:9.106cqw;height:9.106cqw;border-radius:50%;background:var(--ink);color:var(--page);display:flex;align-items:center;justify-content:center}.steps[data-el="seedmark-steps--mission"] .mark .icon{width:50%;height:50%}
+.steps[data-el="seedmark-steps--mission"] .name{position:absolute;left:12.715%;top:50%;transform:translateY(-50%);width:24.055%;font-size:clamp(var(--type-14),4.295cqw,var(--type-44));font-weight:var(--name-weight);line-height:var(--name-line)}
+.steps[data-el="seedmark-steps--mission"] .note{position:absolute;left:36.94%;width:60.14%;top:50%;transform:translateY(-50%);font-size:clamp(var(--type-12),2.92cqw,var(--type-28));line-height:var(--body-line);word-break:keep-all}
+
+.steps[data-el="seedmark-steps--mission"]:has(>.step:nth-child(2)):not(:has(>.step:nth-child(3))){--count:2}
+.steps[data-el="seedmark-steps--mission"]:has(>.step:nth-child(3)):not(:has(>.step:nth-child(4))){--count:3}
+.steps[data-el="seedmark-steps--mission"]:has(>.step:nth-child(4)):not(:has(>.step:nth-child(5))){--count:4}
+.steps[data-el="seedmark-steps--mission"]:has(>.step:nth-child(5)):not(:has(>.step:nth-child(6))){--count:5}
+.steps[data-el="seedmark-steps--mission"]:has(>.step:nth-child(6)):not(:has(>.step:nth-child(7))){--count:6}
+.steps[data-el="seedmark-steps--mission"] .step:not(:last-child):after{content:"";position:absolute;left:50%;top:100%;height:9.677cqh;border-left:2px dotted var(--n-3)}

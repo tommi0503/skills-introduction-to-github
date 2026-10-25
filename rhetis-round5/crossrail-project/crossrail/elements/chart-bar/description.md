@@ -1,0 +1,1 @@
+Solid structural columns compare values on a light ruled plot. A single selected value gains a restrained outline capsule. The horizontal form reserves its label and value margins inside the same root.

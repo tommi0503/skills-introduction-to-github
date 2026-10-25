@@ -1,0 +1,1 @@
+Source pages 13,14,20: period groups own two narrow rounded bars with an invariant series identity. Every category retains both observations, its shared label and the inset vertical legend. The compact and finance forms reserve the actual source chart header/footer proportions.

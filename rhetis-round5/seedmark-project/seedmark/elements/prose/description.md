@@ -1,0 +1,1 @@
+Source page03: an eight-line introductory paragraph uses17px type over465px width with30px leading. The quiet source label is a separate12px single-line caption. Width and height jointly bound long paragraph typography at shallow sizes.

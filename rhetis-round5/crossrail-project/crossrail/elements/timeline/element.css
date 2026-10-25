@@ -1,0 +1,24 @@
+/* Source: replica/slide_28.html — Outline date capsules sit on one thin continuous time axis. */
+.track[data-el="crossrail-timeline"]{box-sizing:border-box;container-type:size;position:relative;min-width:0;min-height:0;font-family:var(--font-body);font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink);display:flex;gap:var(--gap);isolation:isolate}
+.track[data-el="crossrail-timeline"]::before{content:"";position:absolute;inset:49.1% 0 auto;border-top:1px solid var(--n-4);z-index:-1}
+.track[data-el="crossrail-timeline"] .stop{position:relative;flex:1;min-width:0;box-sizing:border-box;padding:65cqh var(--gap-sm) 0 var(--gap)}
+.track[data-el="crossrail-timeline"] .stop::before{content:"";position:absolute;left:0;top:49.1cqh;bottom:3cqh;border-left:1px solid var(--n-4)}
+.track[data-el="crossrail-timeline"] .stop::after{content:"";position:absolute;left:0;bottom:3cqh;width:6px;height:6px;transform:translate(-50%,50%);border-radius:50%;background:var(--a1-7)}
+.track[data-el="crossrail-timeline"] .kick{box-sizing:border-box;position:absolute;left:0;right:0;top:35.5cqh;height:13.6cqh;margin:0;padding:0 var(--gap);display:flex;align-items:center;justify-content:flex-start;background:var(--a1-7);color:var(--page);font-size:var(--type-26);font-weight:var(--label-weight);line-height:var(--label-line);letter-spacing:var(--label-track)}
+.track[data-el="crossrail-timeline"] .name{display:block;margin:0;font-size:var(--type-26);font-weight:var(--name-weight);line-height:var(--name-line);letter-spacing:var(--name-track)}
+.track[data-el="crossrail-timeline"] .note{margin:var(--gap-sm) 0 0;font-size:var(--type-18);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--n-7)}
+.track[data-el="crossrail-timeline"] .stop.on .kick{background:var(--a2-7)}
+.track[data-el="crossrail-timeline"].alt .stop:nth-child(even){padding-top:0}
+.track[data-el="crossrail-timeline"].alt .stop:nth-child(even)::before{top:3cqh;bottom:50.9cqh}
+.track[data-el="crossrail-timeline"].alt .stop:nth-child(even)::after{top:3cqh;bottom:auto;transform:translate(-50%,-50%)}
+.track[data-el="crossrail-timeline"].alt .stop:nth-child(even) .kick{top:49.1cqh}
+.track[data-el="crossrail-timeline"].col{flex-direction:column;gap:var(--gap-sm);padding-left:var(--gap-lg)}
+.track[data-el="crossrail-timeline"].col::before{left:calc(var(--gap-lg)/2);right:auto;top:0;bottom:0;border-top:0;border-left:1px solid var(--n-4)}
+.track[data-el="crossrail-timeline"].col .stop{display:grid;grid-template-columns:24% minmax(0,1fr);grid-template-rows:auto 1fr;gap:calc(var(--gap-sm)/2) var(--gap);padding:0;align-content:center}
+.track[data-el="crossrail-timeline"].col .stop::before{display:none}
+.track[data-el="crossrail-timeline"].col .stop::after{left:calc(var(--gap-lg)/-2);top:50%;bottom:auto;transform:translate(-50%,-50%)}
+.track[data-el="crossrail-timeline"].col .kick{position:static;grid-column:1;grid-row:1/3;height:auto;min-height:var(--gap-lg);align-self:center;font-size:var(--type-22)}
+.track[data-el="crossrail-timeline"].col .name{grid-column:2;grid-row:1}
+.track[data-el="crossrail-timeline"].col .note{grid-column:2;grid-row:2;margin-top:0}
+@container(max-width:800px){.track[data-el="crossrail-timeline"] .name,.track[data-el="crossrail-timeline"] .kick{font-size:var(--type-20)}.track[data-el="crossrail-timeline"] .note{font-size:var(--type-14)}.track[data-el="crossrail-timeline"] .stop{padding-left:var(--gap-sm)}}
+@container(max-height:450px){.track[data-el="crossrail-timeline"] .name,.track[data-el="crossrail-timeline"] .kick{font-size:var(--type-22)}.track[data-el="crossrail-timeline"] .note{font-size:var(--type-14);margin-top:calc(var(--gap-sm)/2)}}

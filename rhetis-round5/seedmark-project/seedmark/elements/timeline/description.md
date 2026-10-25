@@ -1,0 +1,1 @@
+Source page 17: five timeline stops own capsule photo placeholders and action notes; separate duration bands span one or several stops and phase chips sit on the lower tick track. Bands and phases are explicit owned timeline parts.

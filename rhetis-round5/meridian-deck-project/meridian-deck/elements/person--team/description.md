@@ -1,0 +1,1 @@
+Four team profiles use equal-width rectangular landscape photographs over a department/name register and a short ruled role description. Their fixed source proportions distinguish this team row from the single tall executive portrait.

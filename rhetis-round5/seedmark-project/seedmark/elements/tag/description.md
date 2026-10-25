@@ -1,0 +1,1 @@
+Source page 03: a small outlined rounded label with centered text. A responsive host contains the visible intrinsic label, allowing long wording to wrap inside the allocated host while preserving the normal 94-by-26 label.

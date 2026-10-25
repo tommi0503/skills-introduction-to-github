@@ -1,0 +1,1 @@
+A restrained profile column gives the photograph the largest share, followed by an accent name and quiet role copy separated by a thin rule when required. Portrait and circular seats keep their own proportions; multi-person rows share aligned photo and name registers.

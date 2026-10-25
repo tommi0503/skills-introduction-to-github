@@ -1,0 +1,869 @@
+{
+  "schema": "rhetis.round5-support-organization/1",
+  "page": 9,
+  "collection": "onboard-docket",
+  "bbox": [
+    132,
+    256,
+    1016,
+    373
+  ],
+  "contract": "network.graph@1",
+  "leaf": "network--organization",
+  "sourceMarkup": "<div class=\"network\" data-el=\"onboard-docket-network--organization\" style=\"grid-column:1 / span 12;grid-row:1 / span 6\"><div class=\"node chief\" style=\"--x:50.00000;--y:5.49598\"><b class=\"name\">CEO : 김미리</b></div><div class=\"node officer coo\" style=\"--x:24.40945;--y:31.36729\"><b class=\"name\">COO</b></div><div class=\"node officer cfo\" style=\"--x:73.81890;--y:31.36729\"><b class=\"name\">CFO</b></div><div class=\"node department\" style=\"--x:5.90551;--y:56.97051\"><div class=\"org\" data-el=\"onboard-docket-hierarchy--teams\"><div class=\"root\"><b class=\"name\">부서 1</b></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 1</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 2</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 3</b></div></div></div></div><div class=\"node department\" style=\"--x:27.95276;--y:56.97051\"><div class=\"org quiet\" data-el=\"onboard-docket-hierarchy--teams\"><div class=\"root\"><b class=\"name\">부서 2</b></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 1</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 2</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 3</b></div></div></div></div><div class=\"node department\" style=\"--x:50.00000;--y:56.97051\"><div class=\"org\" data-el=\"onboard-docket-hierarchy--teams\"><div class=\"root\"><b class=\"name\">부서 3</b></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 1</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 2</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 3</b></div></div></div></div><div class=\"node department\" style=\"--x:72.04724;--y:56.97051\"><div class=\"org quiet\" data-el=\"onboard-docket-hierarchy--teams\"><div class=\"root\"><b class=\"name\">부서 4</b></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 1</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 2</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 3</b></div></div></div></div><div class=\"node department\" style=\"--x:94.09449;--y:56.97051\"><div class=\"org\" data-el=\"onboard-docket-hierarchy--teams\"><div class=\"root\"><b class=\"name\">부서 5</b></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 1</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 2</b></div></div><div class=\"branch\"><div class=\"node\"><b class=\"name\">팀 3</b></div></div></div></div><div class=\"link\" style=\"--x1:50.00000;--y1:5.49598;--x2:24.40945;--y2:31.36729\"></div><div class=\"link\" style=\"--x1:50.00000;--y1:5.49598;--x2:73.81890;--y2:31.36729\"></div><div class=\"link\" style=\"--x1:24.40945;--y1:31.36729;--x2:5.90551;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:24.40945;--y1:31.36729;--x2:27.95276;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:24.40945;--y1:31.36729;--x2:50.00000;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:24.40945;--y1:31.36729;--x2:72.04724;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:24.40945;--y1:31.36729;--x2:94.09449;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:73.81890;--y1:31.36729;--x2:5.90551;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:73.81890;--y1:31.36729;--x2:27.95276;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:73.81890;--y1:31.36729;--x2:50.00000;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:73.81890;--y1:31.36729;--x2:72.04724;--y2:56.97051\"></div><div class=\"link\" style=\"--x1:73.81890;--y1:31.36729;--x2:94.09449;--y2:56.97051\"></div></div>",
+  "data": {
+    "nodes": 8,
+    "links": 12,
+    "departments": 5,
+    "teamsPerDepartment": 3,
+    "logicalLinks": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ]
+    ]
+  },
+  "dependencies": [
+    "hierarchy--teams"
+  ],
+  "instances": [
+    {
+      "id": "p09-network-organization",
+      "page": 9,
+      "leaf": "network--organization",
+      "contractLeaf": "network",
+      "bbox": [
+        132,
+        256,
+        1016,
+        373
+      ],
+      "use": "base",
+      "fixture": "elements/network--organization/fixtures/organization-eight.html",
+      "design": "An eight-node organization network has one accent CEO capsule, two dark executive capsules and five department ports across one shared lower bus. Two rounded orthogonal buses own all twelve explicit reporting links, with complete CEO/executive/department stems. Each department embeds a separate three-team hierarchy; its own root name is also the network node label, so no text is duplicated. Source coordinates are converted from a 1016×373 owner into box-relative percentages."
+    },
+    {
+      "id": "p09-department-teams-1",
+      "page": 9,
+      "leaf": "hierarchy--teams",
+      "contractLeaf": "hierarchy",
+      "bbox": [
+        132,
+        450,
+        120,
+        179
+      ],
+      "parentId": "p09-network-organization",
+      "use": "base",
+      "fixture": "elements/hierarchy--teams/fixtures/three-teams.html",
+      "design": "One 120×37 department pill and three 120×37 team pills at local y 56/99/142; a single fine stem joins the department to the first team."
+    },
+    {
+      "id": "p09-department-teams-2",
+      "page": 9,
+      "leaf": "hierarchy--teams",
+      "contractLeaf": "hierarchy",
+      "bbox": [
+        356,
+        450,
+        120,
+        179
+      ],
+      "parentId": "p09-network-organization",
+      "use": "same-as:9",
+      "fixture": "elements/hierarchy--teams/fixtures/three-teams.html",
+      "design": "One 120×37 department pill and three 120×37 team pills at local y 56/99/142; a single fine stem joins the department to the first team."
+    },
+    {
+      "id": "p09-department-teams-3",
+      "page": 9,
+      "leaf": "hierarchy--teams",
+      "contractLeaf": "hierarchy",
+      "bbox": [
+        580,
+        450,
+        120,
+        179
+      ],
+      "parentId": "p09-network-organization",
+      "use": "same-as:9",
+      "fixture": "elements/hierarchy--teams/fixtures/three-teams.html",
+      "design": "One 120×37 department pill and three 120×37 team pills at local y 56/99/142; a single fine stem joins the department to the first team."
+    },
+    {
+      "id": "p09-department-teams-4",
+      "page": 9,
+      "leaf": "hierarchy--teams",
+      "contractLeaf": "hierarchy",
+      "bbox": [
+        804,
+        450,
+        120,
+        179
+      ],
+      "parentId": "p09-network-organization",
+      "use": "same-as:9",
+      "fixture": "elements/hierarchy--teams/fixtures/three-teams.html",
+      "design": "One 120×37 department pill and three 120×37 team pills at local y 56/99/142; a single fine stem joins the department to the first team."
+    },
+    {
+      "id": "p09-department-teams-5",
+      "page": 9,
+      "leaf": "hierarchy--teams",
+      "contractLeaf": "hierarchy",
+      "bbox": [
+        1028,
+        450,
+        120,
+        179
+      ],
+      "parentId": "p09-network-organization",
+      "use": "same-as:9",
+      "fixture": "elements/hierarchy--teams/fixtures/three-teams.html",
+      "design": "One 120×37 department pill and three 120×37 team pills at local y 56/99/142; a single fine stem joins the department to the first team."
+    }
+  ],
+  "fixtures": {
+    "network--organization": [
+      "organization-eight.html",
+      "organization-long.html"
+    ],
+    "hierarchy--teams": [
+      "three-teams.html",
+      "three-teams-long.html"
+    ]
+  },
+  "notes": [
+    "The department label occurs only in the nested hierarchy root.name; network node has no duplicate text.",
+    "12 numeric links retain all CEO/executive/department relationships. Shared orthogonal geometry is drawn once by the complete network owner; individual links are semantic records.",
+    "Original connector ports have small source offsets from capsule centres, retained in owner geometry. Team connections belong only to hierarchy--teams.",
+    "No map, assembly, shared foundation, kit or other existing element was modified."
+  ],
+  "nativeProof": {
+    "viewport": [
+      1016,
+      373
+    ],
+    "diagnostics": {
+      "root": [
+        0,
+        0,
+        1016,
+        373
+      ],
+      "outside": [],
+      "clipped": [],
+      "overlaps": [],
+      "fonts": [
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        },
+        {
+          "family": "\"Noto Sans KR\"",
+          "declared": true,
+          "loaded": true
+        }
+      ],
+      "chips": [],
+      "contrast": [
+        {
+          "tag": "B",
+          "class": "name",
+          "text": "CEO : 김미리",
+          "box": [
+            419,
+            0,
+            178,
+            41
+          ],
+          "ink": [
+            466.59,
+            8.09,
+            82.8,
+            24
+          ],
+          "color": "rgb(255, 255, 255)",
+          "background": [
+            67,
+            131,
+            230
+          ],
+          "ratio": 3.73,
+          "threshold": 4.5,
+          "gradient": false,
+          "foregroundRGB": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "tag": "B",
+          "class": "name",
+          "text": "부서 1",
+          "box": [
+            39.99,
+            202.09,
+            39.97,
+            20.8
+          ],
+          "ink": [
+            39.99,
+            200.09,
+            39.97,
+            24
+          ],
+          "color": "rgb(255, 255, 255)",
+          "background": [
+            67,
+            131,
+            230
+          ],
+          "ratio": 3.73,
+          "threshold": 4.5,
+          "gradient": false,
+          "foregroundRGB": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "tag": "B",
+          "class": "name",
+          "text": "부서 3",
+          "box": [
+            488.01,
+            202.09,
+            39.97,
+            20.8
+          ],
+          "ink": [
+            488.01,
+            200.09,
+            39.97,
+            24
+          ],
+          "color": "rgb(255, 255, 255)",
+          "background": [
+            67,
+            131,
+            230
+          ],
+          "ratio": 3.73,
+          "threshold": 4.5,
+          "gradient": false,
+          "foregroundRGB": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "tag": "B",
+          "class": "name",
+          "text": "부서 5",
+          "box": [
+            936.01,
+            202.09,
+            39.97,
+            20.8
+          ],
+          "ink": [
+            936.01,
+            200.09,
+            39.97,
+            24
+          ],
+          "color": "rgb(255, 255, 255)",
+          "background": [
+            67,
+            131,
+            230
+          ],
+          "ratio": 3.73,
+          "threshold": 4.5,
+          "gradient": false,
+          "foregroundRGB": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "outsideComponent": [],
+      "outsideParts": []
+    },
+    "measurements": [
+      {
+        "el": "onboard-docket-network--organization",
+        "text": "CEO : 김미리\nCOO\nCFO\n부서 1\n팀 1\n팀 2\n팀 3\n부서 2\n팀 1\n팀 2\n팀 3\n부서 3\n팀 1\n팀 2\n팀 3\n부서 4\n팀 1\n팀 2\n팀 3\n부서 5\n팀 1\n팀 2\n팀 3",
+        "bbox": [
+          0,
+          0,
+          1016,
+          373
+        ]
+      },
+      {
+        "el": null,
+        "text": "CEO : 김미리",
+        "bbox": [
+          419,
+          0,
+          178,
+          41
+        ]
+      },
+      {
+        "el": null,
+        "text": "COO",
+        "bbox": [
+          167,
+          97.984375,
+          162,
+          38
+        ]
+      },
+      {
+        "el": null,
+        "text": "CFO",
+        "bbox": [
+          669,
+          97.984375,
+          162,
+          38
+        ]
+      },
+      {
+        "el": "onboard-docket-hierarchy--teams",
+        "text": "부서 1\n팀 1\n팀 2\n팀 3",
+        "bbox": [
+          -0.0078125,
+          194,
+          119.984375,
+          179
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 1",
+        "bbox": [
+          47.4453125,
+          258.09375,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 2",
+        "bbox": [
+          47.4453125,
+          301.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 3",
+        "bbox": [
+          47.4453125,
+          344.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": "onboard-docket-hierarchy--teams",
+        "text": "부서 2\n팀 1\n팀 2\n팀 3",
+        "bbox": [
+          224.0078125,
+          194,
+          119.984375,
+          179
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 1",
+        "bbox": [
+          271.4609375,
+          258.09375,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 2",
+        "bbox": [
+          271.4609375,
+          301.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 3",
+        "bbox": [
+          271.4609375,
+          344.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": "onboard-docket-hierarchy--teams",
+        "text": "부서 3\n팀 1\n팀 2\n팀 3",
+        "bbox": [
+          448.0078125,
+          194,
+          119.984375,
+          179
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 1",
+        "bbox": [
+          495.4609375,
+          258.09375,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 2",
+        "bbox": [
+          495.4609375,
+          301.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 3",
+        "bbox": [
+          495.4609375,
+          344.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": "onboard-docket-hierarchy--teams",
+        "text": "부서 4\n팀 1\n팀 2\n팀 3",
+        "bbox": [
+          672.0078125,
+          194,
+          119.984375,
+          179
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 1",
+        "bbox": [
+          719.4609375,
+          258.09375,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 2",
+        "bbox": [
+          719.4609375,
+          301.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 3",
+        "bbox": [
+          719.4609375,
+          344.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": "onboard-docket-hierarchy--teams",
+        "text": "부서 5\n팀 1\n팀 2\n팀 3",
+        "bbox": [
+          896.0078125,
+          194,
+          119.984375,
+          179
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 1",
+        "bbox": [
+          943.4609375,
+          258.09375,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 2",
+        "bbox": [
+          943.4609375,
+          301.078125,
+          25.0625,
+          20.796875
+        ]
+      },
+      {
+        "el": null,
+        "text": "팀 3",
+        "bbox": [
+          943.4609375,
+          344.078125,
+          25.0625,
+          20.796875
+        ]
+      }
+    ],
+    "comparison": "sheets/network--organization-replica.png",
+    "render": "sheets/network--organization-source-native.png",
+    "comparisonSHA256": "db56033fec3bee736a2a48bf15177a285a184b905b8188757446c6ee9ddb9d2d",
+    "generatedAtUTC": "2026-10-25T05:02:54Z",
+    "sourceFingerprint": "b49ffd2833bfb0790e756aa414557367dfae2cbc350297ef594cbf995ca5658f"
+  },
+  "review": {
+    "status": "SOURCE FROZEN: two support element folders only; root integrates map and assembly.",
+    "minimum": {
+      "network--organization": [
+        8,
+        3
+      ],
+      "hierarchy--teams": [
+        2,
+        2
+      ]
+    },
+    "sourceMeasurements": {
+      "owner": [
+        132,
+        256,
+        1016,
+        373
+      ],
+      "ceo": [
+        551,
+        256,
+        178,
+        41
+      ],
+      "coo": [
+        299,
+        354,
+        162,
+        38
+      ],
+      "cfo": [
+        801,
+        354,
+        162,
+        38
+      ],
+      "departmentX": [
+        132,
+        356,
+        580,
+        804,
+        1028
+      ],
+      "departmentY": 450,
+      "departmentSize": [
+        120,
+        37
+      ],
+      "teamsLocalY": [
+        56,
+        99,
+        142
+      ],
+      "teamsSize": [
+        120,
+        37
+      ],
+      "teamOwner": [
+        120,
+        179
+      ],
+      "font": {
+        "family": "Noto Sans KR",
+        "size": 16,
+        "weight": 400
+      },
+      "upperBus": [
+        380,
+        318,
+        521,
+        39
+      ],
+      "lowerBus": [
+        189,
+        415,
+        900,
+        39
+      ],
+      "busRadius": 14,
+      "lineWidth": 1
+    },
+    "decisions": [
+      "The eight-node topology and twelve logical links are preserved. The network owns the coalesced executive and department bus routes; five nested org elements own only their own department-to-team stems.",
+      "Department node labels are the nested hierarchy root names; no duplicated department text or additional network nodes are introduced.",
+      "The role-specific organization design retains its eight-node reporting topology and normalized port data; new fixtures vary business labels, not the topology.",
+      "Four-pixel CEO and eight-pixel executive gaps in the independent source drawing are closed to produce genuinely connected reporting routes. Capsule geometry and source port offsets are retained.",
+      "Name size uses both component width and height, capped at the source16px and floored at12px. A wide shallow box therefore reduces text rather than letting it cross a department component boundary.",
+      "The original source palette has four white-on-blue small-text candidates at3.73:1; these are disclosed separately. Official-palette light and dark sheets have zero contrast candidates."
+    ],
+    "visualReview": [
+      "Both modes, both fixtures, every admitted grid size reviewed; 60 final native cells total.",
+      "Final hierarchy minimum2x2 and network minimum8x3 plus all wider/shorter admitted cells reviewed directly.",
+      "Immutable replica09 crop and exact1016x373 rendered source markup compared side by side."
+    ],
+    "checks": {
+      "hierarchy--teams": {
+        "sourceFingerprint": "acb48a9035e3335326a0ddfec7cd8ab05c12caf2bf83675ca69d1ed59315a100",
+        "cells": 40,
+        "modes": {
+          "light": {
+            "outside": 0,
+            "clipped": 0,
+            "overlaps": 0,
+            "contrast": 0,
+            "outsideComponent": 0,
+            "outsideParts": 0
+          },
+          "dark": {
+            "outside": 0,
+            "clipped": 0,
+            "overlaps": 0,
+            "contrast": 0,
+            "outsideComponent": 0,
+            "outsideParts": 0
+          }
+        },
+        "rendererVersion": "round5-design-folders-1",
+        "sourceFilesSHA256": {
+          "onboard-docket/elements/hierarchy--teams/description.md": "10cc428266c023fc6ace8f1462cc598cc89784638e0a196b9fe73adb9e1ea337",
+          "onboard-docket/elements/hierarchy--teams/element.css": "b24e8ab513d823e5251bec8db8dcf7977f29a1df4ef7af2c457d2fec9eee0a7b",
+          "onboard-docket/elements/hierarchy--teams/element.json": "71b238e38bc71643dd31b4afb7c7c290bc5bf30d9fba483f67c28a07c2f6c7be",
+          "onboard-docket/elements/hierarchy--teams/fixtures/three-teams-long.html": "006058496045c0ade5e0a70bff047f148b1bdee4ba629ee8c9231284419cb9d1",
+          "onboard-docket/elements/hierarchy--teams/fixtures/three-teams.html": "57e197b429a31414811a5049739efc5b0d9d3dccd78c374d26a2ba5297afa6ea"
+        },
+        "sheetSHA256": {
+          "light": "a09b0fdb6a800cd11c59905f118b025ea0613032846b136b62a8af92a6b56a24",
+          "dark": "372a0a7cda863a6834af00a8d694c2eff4f1a639cd9a5b9deecafab763238fb8"
+        },
+        "fontFailures": 0
+      },
+      "network--organization": {
+        "sourceFingerprint": "b49ffd2833bfb0790e756aa414557367dfae2cbc350297ef594cbf995ca5658f",
+        "cells": 20,
+        "modes": {
+          "light": {
+            "outside": 0,
+            "clipped": 0,
+            "overlaps": 0,
+            "contrast": 0,
+            "outsideComponent": 0,
+            "outsideParts": 0
+          },
+          "dark": {
+            "outside": 0,
+            "clipped": 0,
+            "overlaps": 0,
+            "contrast": 0,
+            "outsideComponent": 0,
+            "outsideParts": 0
+          }
+        },
+        "rendererVersion": "round5-design-folders-1",
+        "sourceFilesSHA256": {
+          "onboard-docket/elements/network--organization/description.md": "0048ee9bc832a08ad2e91da971e1fc8a9c7088b5e7efd224685283dcaf33e71d",
+          "onboard-docket/elements/network--organization/element.css": "056467b0acd0a9b76cdcefc057889d27e862e1b6cac947bc17af145cd5d189b3",
+          "onboard-docket/elements/network--organization/element.json": "245aaf041cd297140415223b3b2aa13ecc9e2b9cbe25393c39c0c427ed511ac5",
+          "onboard-docket/elements/network--organization/fixtures/organization-eight.html": "00cca7751a64f57a6e6d6bbb4ce4e22b6cd66436a8a333270fa2ca0fdddaa50f",
+          "onboard-docket/elements/network--organization/fixtures/organization-long.html": "5ba8d6c7be1340bb5d6fd1fe5d3a5578eb69c9dbbb4f559d6b2ee9d1e37e761a"
+        },
+        "sheetSHA256": {
+          "light": "5b794ba45b6af84f7f13a56ff7954c6f78e1b2b25efe0a91c192d2d6aa8c9681",
+          "dark": "d65fd0affcef322b0e8e2d141d6a82530da574d6b56524b13c8c3b30c30505e1"
+        },
+        "fontFailures": 0
+      }
+    },
+    "audit": {
+      "staticErrors": 0,
+      "contractsErrors": 0,
+      "sixCharacterCopyOverlaps": 0
+    }
+  }
+}

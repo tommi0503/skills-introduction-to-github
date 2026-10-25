@@ -1,0 +1,1 @@
+Four overlapping topic circles sit inside a broad rounded outline. Each owns its two-line keyword, subtitle, dotted downward leader, short caption and pale detail tile; the shared outline and all leaders are drawn by this sequence.

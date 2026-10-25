@@ -1,0 +1,1 @@
+A perimeter relation graph: four round endpoint nodes sit on a thin rectangular track, an independent dark circular core sits inside, and external titles and notes face outward. It does not invent radial spokes or directional arrows.

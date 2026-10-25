@@ -1,0 +1,1 @@
+A broad pale paper card measured from replica18, with a narrow coloured title column, a short vertical rule, and a larger explanation column. The surface stays open and rounded at every receiving size.

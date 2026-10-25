@@ -1,0 +1,1 @@
+Source page 02: an oversized two-line contents heading uses64px then60px type, a selection-style highlighter on its second line, and a28px secondary label below. Its450-by220 hierarchy differs from the body statement heading.

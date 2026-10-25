@@ -1,0 +1,1 @@
+Source page15: three plain-weight statements sit beside dark circular icons, divided by long neutral rules. Plain dot lists are also observed in page19 careers; check lists are a source10 dependency for short pricing conditions.

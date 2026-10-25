@@ -1,0 +1,35 @@
+/* Round five: Source page 14: a neutral filled area over genuine equal-step values, fine horizontal guides and a reserved lower axis strip. */
+.areas[data-el="seedmark-chart-area"]{position:relative;min-width:0;min-height:0;box-sizing:border-box;container-type:size;font-family:var(--font-body);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}.areas[data-el="seedmark-chart-area"] *{box-sizing:border-box}.areas[data-el="seedmark-chart-area"] :is(p,h2,h3){margin:0}.areas[data-el="seedmark-chart-area"] .icon{display:inline-flex;flex:none;width:32px;height:32px}.areas[data-el="seedmark-chart-area"] .icon svg{width:100%;height:100%}.areas[data-el="seedmark-chart-area"] {display:flex;flex-direction:column}
+.areas[data-el="seedmark-chart-area"] .series{position:relative;flex:1;min-height:0;margin:9.39cqh 6.45cqw 18.78cqh;display:grid;grid-template-columns:repeat(var(--count),minmax(0,1fr));grid-template-rows:1fr;container-type:size;anchor-scope:all;background:repeating-linear-gradient(to top,var(--n-3) 0 1px,transparent 1px 33.333%)}
+.areas[data-el="seedmark-chart-area"] .pt{position:static;grid-row:1;grid-column:var(--i);align-self:start;justify-self:center;width:0;height:0;margin-top:calc(100cqh*(1 - var(--v)/var(--max)));anchor-name:var(--self)}
+.areas[data-el="seedmark-chart-area"] .pt:before{content:'';position:absolute;left:anchor(var(--prev) center);right:anchor(var(--self) center);top:calc(anchor(var(--prev) center) - 100cqh);bottom:0;background:var(--ink);clip-path:polygon(0 100cqh,100% calc(100% - 100cqh*var(--v)/var(--max)),100% calc(100% - 100cqh*var(--v)/var(--max) + 2px),0 calc(100cqh + 2px))}
+.areas[data-el="seedmark-chart-area"] .pt:first-child:before{display:none}.areas[data-el="seedmark-chart-area"] .pt:after{content:'';position:absolute;left:anchor(var(--self) center);top:anchor(var(--self) center);width:7px;height:7px;border-radius:50%;background:var(--ink);transform:translate(-50%,-50%)}
+.areas[data-el="seedmark-chart-area"] .pt>b{position:absolute;left:anchor(var(--self) center);top:anchor(var(--self) center);transform:translate(-50%,-115%);font-size:var(--type-12);font-weight:var(--figure-weight);line-height:var(--label-line)}
+.areas[data-el="seedmark-chart-area"] .pt>span{position:absolute;left:anchor(var(--self) center);top:calc(100% + var(--gap-sm));transform:translateX(-50%);font-size:clamp(var(--type-8),3.55cqw,var(--type-20));line-height:var(--label-line);white-space:nowrap}
+.areas[data-el="seedmark-chart-area"] .pt>.at{position:absolute;left:calc(var(--at)*1%);bottom:0;height:85%;border-left:3px dotted var(--ink)}.areas[data-el="seedmark-chart-area"] .pt>.at>.name{position:absolute;left:0;bottom:100%;transform:translate(-50%,-25%);background:var(--page);font-size:var(--type-12);line-height:var(--label-line);padding:calc(var(--gap-sm)/3) calc(var(--gap-sm)/2);border:1px solid var(--ink);border-radius:var(--radius-sm)}
+.areas[data-el="seedmark-chart-area"] .pt:before{background:var(--n-4);clip-path:polygon(0 100cqh,100% calc(100% - 100cqh*var(--v)/var(--max)),100% 100%,0 100%)}.areas[data-el="seedmark-chart-area"] .pt:nth-child(1){--i:1;--self:--sm-point-1;--prev:--sm-point-0;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(2){--i:2;--self:--sm-point-2;--prev:--sm-point-1;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(3){--i:3;--self:--sm-point-3;--prev:--sm-point-2;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(4){--i:4;--self:--sm-point-4;--prev:--sm-point-3;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(5){--i:5;--self:--sm-point-5;--prev:--sm-point-4;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(6){--i:6;--self:--sm-point-6;--prev:--sm-point-5;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(7){--i:7;--self:--sm-point-7;--prev:--sm-point-6;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(8){--i:8;--self:--sm-point-8;--prev:--sm-point-7;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(9){--i:9;--self:--sm-point-9;--prev:--sm-point-8;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(10){--i:10;--self:--sm-point-10;--prev:--sm-point-9;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(11){--i:11;--self:--sm-point-11;--prev:--sm-point-10;}
+.areas[data-el="seedmark-chart-area"] .pt:nth-child(12){--i:12;--self:--sm-point-12;--prev:--sm-point-11;}
+
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(1):last-child){--count:1}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(2):last-child){--count:2}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(3):last-child){--count:3}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(4):last-child){--count:4}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(5):last-child){--count:5}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(6):last-child){--count:6}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(7):last-child){--count:7}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(8):last-child){--count:8}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(9):last-child){--count:9}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(10):last-child){--count:10}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(11):last-child){--count:11}
+:is(.lines,.areas)[data-el="seedmark-chart-area"]:has(>.series>.pt:nth-child(12):last-child){--count:12}
+.areas[data-el="seedmark-chart-area"] .axis{position:absolute;left:6.45%;right:6.45%;bottom:2%;display:flex;justify-content:space-between;font-size:clamp(var(--type-8),3.55cqw,var(--type-20));line-height:var(--label-line)}

@@ -1,0 +1,1 @@
+A white editing canvas with a compact upper rail, Latin kicker and heavy title. A twelve-by-six body grid carries elements; square numbered seats and restrained corner furniture are owned by this page foundation.

@@ -1,0 +1,1 @@
+Source page 13: a bold achievement figure and its parenthesized label occupy the left third; a supporting paragraph starts near the figure top in the wider right column. One long rule closes the row near its bottom.

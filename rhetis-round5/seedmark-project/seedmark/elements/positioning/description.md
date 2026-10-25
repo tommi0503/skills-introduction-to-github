@@ -1,0 +1,1 @@
+Two crossing neutral axes sit on a quiet rounded ground. Competitors are small neutral marks with names beneath; the focal organisation is an ink capsule with its name inside. A dense six-member chart uses smaller markers in narrow containers while preserving the supplied coordinates.

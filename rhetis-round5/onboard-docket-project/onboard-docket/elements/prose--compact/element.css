@@ -1,0 +1,20 @@
+/* Replica12: independent dense neutral body,14px/400 and −0.7px tracking.
+   The540px upper passage uses24.5px leading; the300px lower passage uses23.8px.
+   Short grid slots reduce the actual text scale, preserving the original scale at171px height. */
+.prose[data-el="onboard-docket-prose--compact"]{
+ container-type:size;container-name:od-compact-copy;display:flex;flex-direction:column;justify-content:flex-start;
+ gap:calc(var(--gap)*1.225);min-width:0;min-height:0;color:var(--ink)
+}
+.prose[data-el="onboard-docket-prose--compact"]>p{
+ margin:0;font-size:clamp(var(--type-12),4.67cqw,var(--type-14));font-weight:var(--body-weight);
+ line-height:var(--onboard-docket-compact-line);letter-spacing:var(--body-track);overflow-wrap:anywhere
+}
+.prose[data-el="onboard-docket-prose--compact"]>p>b{font-weight:var(--onboard-docket-value-weight)}
+@container od-compact-copy (max-width:360px){
+ .prose[data-el="onboard-docket-prose--compact"]>p{line-height:var(--onboard-docket-letter-line)}
+}
+@container od-compact-copy (max-height:150px){
+ .prose[data-el="onboard-docket-prose--compact"]>p{
+  font-size:var(--type-12);line-height:var(--onboard-docket-compact-short-line)
+ }
+}

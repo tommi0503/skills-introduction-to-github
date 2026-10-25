@@ -1,0 +1,1 @@
+A single-line capsule centres the optical mass of its mark, name and optional note. Neutral, accent, quiet and outlined states preserve the same compact geometry. Long labels step down within their own container rather than changing a neighbouring component.

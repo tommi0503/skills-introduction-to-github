@@ -1,0 +1,1 @@
+Source page 09: one cylindrical data store with an elliptical top, a white side wall and an attached dark caption capsule. The root retains one labelled store; foundation groups multiple independent stores.

@@ -1,0 +1,10 @@
+/* Replica 04: Plain explanatory paragraphs retain measured line spacing with restrained inline emphasis. */
+.prose[data-el="meridian-deck-prose"]{box-sizing:border-box;position:relative;min-width:0;min-height:0;container-type:size;font-family:var(--font-body);font-size:var(--type-20);font-weight:var(--body-weight);line-height:var(--body-line);letter-spacing:var(--body-track);color:var(--ink)}.prose[data-el="meridian-deck-prose"] *{box-sizing:border-box}.prose[data-el="meridian-deck-prose"] .icon{display:inline-block;width:48px;height:48px}.prose[data-el="meridian-deck-prose"]{display:flex;flex-direction:column;justify-content:center;gap:var(--gap);padding:var(--gap-sm) var(--gap)}.prose[data-el="meridian-deck-prose"]>p{margin:0;font-size:clamp(var(--type-14),3.4cqw,var(--type-18));font-weight:var(--body-weight);line-height:var(--body-line);color:var(--n-7);overflow-wrap:anywhere}.prose[data-el="meridian-deck-prose"]>p>b{font-weight:var(--name-weight);color:var(--a1-7)}.prose[data-el="meridian-deck-prose"].lead>p{font-size:clamp(var(--type-18),4.1cqw,var(--type-24))}.prose[data-el="meridian-deck-prose"].quiet>p{font-size:clamp(var(--type-12),2.9cqw,var(--type-16))}.prose[data-el="meridian-deck-prose"].cols{display:block;columns:2;column-gap:var(--gap-lg)}.prose[data-el="meridian-deck-prose"].cols>p{break-inside:avoid;margin:0 0 var(--gap)}
+@container (max-width:600px){.prose[data-el="meridian-deck-prose"].cols>p{font-size:var(--type-14)}}
+@container (max-height:180px){.prose[data-el="meridian-deck-prose"]>p{font-size:var(--type-14)}.prose[data-el="meridian-deck-prose"].quiet>p{font-size:var(--type-12)}}
+.prose[data-el="meridian-deck-prose"]{padding:0}
+.prose[data-el="meridian-deck-prose"]{gap:var(--gap-sm)}
+.prose[data-el="meridian-deck-prose"].lead>p{font-size:clamp(var(--type-18),4.1cqw,var(--type-20))}
+@container(max-height:65px){.prose[data-el="meridian-deck-prose"].quiet>p{font-size:var(--type-12);line-height:var(--name-line)}}
+
+.prose[data-el="meridian-deck-prose"]:has(>p>b:only-child)>p{font-size:var(--type-16)}.prose[data-el="meridian-deck-prose"]>p>b:only-child{font-size:var(--type-18);font-weight:var(--title-weight)}

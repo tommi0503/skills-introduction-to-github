@@ -1,0 +1,1 @@
+Plain neutral paragraphs preserve the generous 1.65 leading and slightly tight tracking of source05. The lead variant is a smaller neutral follow-up, while quiet passages use the secondary 14px scale. The optional columns arrangement moves the actual paragraph children into two columns and returns them to one column at narrow widths.

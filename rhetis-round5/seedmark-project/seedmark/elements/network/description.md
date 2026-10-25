@@ -1,0 +1,1 @@
+Source page 18: an explicit network with heterogeneous box footprints and individually routed edge segments. Node x/y/w/h are semantic graph bounds; link endpoints express actual adjacency without a page selector.

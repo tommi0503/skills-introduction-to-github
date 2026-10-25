@@ -1,0 +1,3 @@
+A measured white canvas uses a deep upper rail, fine edge rules, generous inset typography, and optional inverse fields. Responsive foundation panels own ruled heading strips, enclosing rectangles, divided columns, comparison header arrows and multi-element layouts. These are compositions of independent contract elements rather than scene-sized element roots.
+
+The side-heading composition reserves a simultaneous full-height body beside the page heading. It is derived from the white sheet source geometry98–622, rather than forcing these sheets below a conventional heading. The body remains a12×6 grid.

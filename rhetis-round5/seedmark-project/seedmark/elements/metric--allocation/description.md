@@ -1,0 +1,1 @@
+Source page 21: a large allocation percent precedes a compact bold use-and-budget label on the same line; a full-width explanatory paragraph sits below. An optional closing rule separates vertically repeated allocation statements.

@@ -1,0 +1,1 @@
+Rounded white paper on a neutral field, an accent role rail and ruled numbered heading. Reusable tabbed schedule panels, horizontal KPI panels, a full-width heading band and a vertical picture-group header are measured from sources11/16/17/19. Portrait and dense-content page variants preserve source furniture placement; seat role classes supply crop shape.
