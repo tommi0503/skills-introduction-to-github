@@ -16,3 +16,7 @@
 |confluence|3|[소스](collections/confluence/)|[ZIP](confluence.zip)|
 
 PDF·소스의 검증 기록은 `publication-verification.json`과 `element-review-pdfs/`에 있습니다. 이 게시에는 소스 ZIP과 검수 PDF가 포함됩니다. 전체 검수 ZIP·원본 대비 PNG 묶음의 추가 게시는 별도 상태로 관리합니다.
+
+## 전체 소스 ZIP
+
+[이미지·PDF·폰트 등 바이너리를 제외한 소스 ZIP 다운로드](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-round5-006-020-20261025/source-bundle/rhetis-round5-006-020-source.zip) · [구성과 검증](source-bundle/README.md)
