@@ -45,3 +45,6 @@ python tools/package_release.py
 `tools/merge_maps.py`와 이전 Round4 보정 스크립트는 이번 지도에 실행하지 않습니다. 이전 증거는 `round5/round4-evidence/`에 따로 보존합니다.
 
 루트에 남은 Round4 검수 JSON과 `round5/round4-evidence/`는 이력입니다. 최종 판단에는 `static-audit.json`, `fixture-text-audit.json`, `furniture-audit.json`, `round5/cross-audit.json`, `verification.json`, `primary-visual-review.json` 및 각 컬렉션의 `audits/`를 사용합니다.
+
+
+[전체 요소 PDF 검수 시트 — 7개 컬렉션](pdfs/README.md)
