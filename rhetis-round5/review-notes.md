@@ -20,3 +20,7 @@
 표현 불가는 Seedmark20 단일 누적 막대와 Meridian14의15점 면 차트, 두 건뿐이다. GAPS.md에 이유와 필요한 마크업 확장을 기록했다. 일반 타이포·패널·페이지 도형을 GAP으로 버리지 않았다.
 
 불변 replica711개 파일 해시 검사 차이0,1280×720 페이지와3840×720 비교 PNG 검사 통과, 실제 모든 PNG 크기·SHA는 integration-png-manifest.json에 있다. ZIP은 최상위 폴더·허용 확장자·CRC·로컬 의존성·manifest를 검사한다. 게시 및 실제 재다운로드 결과는 publication-verification.json에 별도로 기록하며, 게시 전에는 완료로 간주하지 않는다.
+
+## 추가 요청: PDF와 소스 전용 ZIP
+
+최종 크기 시트의 원래 PNG IDAT 압축 스트림을 PDF image stream에 그대로 넣었다. 개별10권은 총398페이지(요소318·foundation/panel80), 통합1권은 같은398페이지다. 모든 페이지의 원본 PNG 압축 픽셀·크기와 PDF image stream·MediaBox·배치 영역을 대조해 손실·잘림·비율 변경0을 검증했다. source-only ZIP은 css/html/js/json/md/py/txt만 허용하고 이미지·PDF·폰트·압축파일을 제외했다. 게시된 source-only ZIP의 실제 공개 재다운로드 바이트/SHA/CRC 일치도 확인했다.

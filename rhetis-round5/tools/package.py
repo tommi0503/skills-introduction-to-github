@@ -16,7 +16,7 @@ ROOT=Path(__file__).resolve().parents[1]
 PROJECTS=[('069','vectorbox',12),('072','seedmark',21),('073','crossrail',30),('074','meridian-deck',30),('078','onboard-docket',19)]
 ALLOWED={'.css','.json','.md','.html'}
 MAX_REVIEW=100_000_000
-RELEASE='https://github.com/tommi0503/skills-introduction-to-github/releases/download/rhetis-round5-20261025'
+DOWNLOAD='https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-round5/deliverables'
 H=lambda b:hashlib.sha256(b).hexdigest()
 J=lambda v:json.dumps(v,ensure_ascii=False,indent=2).encode()
 E=lambda s:html.escape(str(s),quote=True)
@@ -75,8 +75,8 @@ def zoom(src,label,title=None):return f'<a class="zoomable" href="{E(src)}" data
 def tile(src,title,links=''):
  return f'<article class="tile" data-search="{E(title.lower())}"><h3>{E(title)}</h3><a class="zoomable" href="{E(src)}" data-title="{E(title)}"><img class="thumb" loading="lazy" src="{E(src)}" alt="{E(title)}"></a><div class="links">{links}</div></article>'
 def project_html(root,k,offline=False):
- P=project(root,k);m=readjson(P/'map.json');ls=leaves(root,k);obs={i['leaf']for i in mapped(m)};back=''if offline else'<a href="../index.html">전체 컬렉션</a>';download=''if offline else f'<a href="{RELEASE}/{k}.zip">컬렉션 ZIP</a><a href="{RELEASE}/{k}-review.zip">검수 ZIP</a>'
- links=back+download+'<a href="map.json">지도</a><a href="GAPS.md">잔여 GAP</a><a href="round5-report.md">ROUND5 보고</a><a href="review-notes.md">검수 기록</a><a href="design-language.md">디자인 언어</a><a href="ORIGINS.md">실제 출처</a>'
+ P=project(root,k);m=readjson(P/'map.json');ls=leaves(root,k);obs={i['leaf']for i in mapped(m)};back=''if offline else'<a href="../index.html">전체 컬렉션</a>';download=''if offline else f'<a href="{DOWNLOAD}/{k}.zip">컬렉션 ZIP</a><a href="{DOWNLOAD}/{k}-review.zip">검수 ZIP</a>'
+ links=back+download+'<a href="library-light.pdf">Light PDF</a><a href="library-dark.pdf">Dark PDF</a>'+'<a href="map.json">지도</a><a href="GAPS.md">잔여 GAP</a><a href="round5-report.md">ROUND5 보고</a><a href="review-notes.md">검수 기록</a><a href="design-language.md">디자인 언어</a><a href="ORIGINS.md">실제 출처</a>'
  body=f'<header><nav>{links}</nav><h1>{E(k)} · ROUND5</h1><p>이미지를 열어100%·확대·드래그 이동으로 검토합니다.</p><div class="summary"><span>{len(pages(m))}페이지</span><span>{len(ls)}개 실제 디자인</span><span>{len(obs)}개 직접 원형</span></div><nav><a href="library-light.html">라이트 전체 시트</a><a href="library-dark.html">다크 전체 시트</a><a href="#assembly">페이지 비교</a></nav></header><main><h2>반응형 디자인 시트</h2><input id="search" class="search" placeholder="디자인 폴더 검색" aria-label="디자인 검색"><div class="grid">'
  for leaf in ls:
   o=origin(root,k,leaf);r=f'sheets/{leaf}-replica.png';extra=zoom(f'sheets/{leaf}-light.png','Light')+zoom(f'sheets/{leaf}-dark.png','Dark')+(zoom(r,'원형 비교')if leaf in obs else'')+f'<a href="{k}/elements/{leaf}/element.css">CSS</a><a href="{k}/elements/{leaf}/element.json">계약</a>'
@@ -97,12 +97,12 @@ def library_html(root,k,mode):
 def root_html(root):
  count=sum(len(leaves(root,k))for _,k,_ in PROJECTS);body=f'<header><h1>Rhetis 디자인 라이브러리 · ROUND5</h1><p>{len(PROJECTS)}개 덱의{sum(n for _,_,n in PROJECTS)}페이지에서 실제로 관측한{count}개 독립 디자인입니다.</p><nav><a href="README.md">읽는 방법</a><a href="ORIGINS.md">실제 디자인 출처</a><a href="integration-verification.md">최종 통합 검증</a><a href="deliverables/SHA256SUMS">ZIP SHA256</a></nav></header><main><div class="grid">'
  for deck,k,n in PROJECTS:
-  first=pages(readjson(project(root,k)/'map.json'))[0];body+=tile(f'{k}-project/reassembled/slide_{first}.png',f'{k} · 덱{deck} / {n}페이지 / {len(leaves(root,k))}디자인',f'<a href="{k}-project/index.html">검수 미리보기</a><a href="{RELEASE}/{k}.zip">컬렉션 ZIP</a><a href="{RELEASE}/{k}-review.zip">검수 ZIP</a>')
+  first=pages(readjson(project(root,k)/'map.json'))[0];body+=tile(f'{k}-project/reassembled/slide_{first}.png',f'{k} · 덱{deck} / {n}페이지 / {len(leaves(root,k))}디자인',f'<a href="{k}-project/index.html">검수 미리보기</a><a href="{DOWNLOAD}/{k}.zip">컬렉션 ZIP</a><a href="{DOWNLOAD}/{k}-review.zip">검수 ZIP</a><a href="{DOWNLOAD}/{k}-library-light.pdf">Light PDF</a><a href="{DOWNLOAD}/{k}-library-dark.pdf">Dark PDF</a>')
  return frame('Rhetis ROUND5',body+'</div></main>')
 def readme(root):
- t='# Rhetis 디자인 라이브러리 · ROUND5\n\n[전체 미리보기](index.html) · [실제 폴더별 출처](ORIGINS.md) · [최종 통합 검증](integration-verification.md)\n\n|덱|컬렉션|페이지|실제 디자인|컬렉션 ZIP|검수 ZIP|\n|---|---|---:|---:|---|---|\n'
- for deck,k,n in PROJECTS:t+=f'|{deck}|[{k}]({k}-project/index.html)|{n}|{len(leaves(root,k))}|[다운로드]({RELEASE}/{k}.zip)|[다운로드]({RELEASE}/{k}-review.zip)|\n'
- return t+'''\n검수 ZIP은 크기 제한으로 같은 저장소의 `rhetis-round5-20261025` Release에 원본 그대로 게시한다. 소스·미리보기·컬렉션 ZIP은 API 커밋으로 보존한다.
+ t='# Rhetis 디자인 라이브러리 · ROUND5\n\n[전체 미리보기](index.html) · [실제 폴더별 출처](ORIGINS.md) · [최종 통합 검증](integration-verification.md)\n\n|덱|컬렉션|페이지|실제 디자인|컬렉션 ZIP|검수 ZIP|Light PDF|Dark PDF|\n|---|---|---:|---:|---|---|---|---|\n'
+ for deck,k,n in PROJECTS:t+=f'|{deck}|[{k}]({k}-project/index.html)|{n}|{len(leaves(root,k))}|[다운로드]({DOWNLOAD}/{k}.zip)|[다운로드]({DOWNLOAD}/{k}-review.zip)|[PDF]({DOWNLOAD}/{k}-library-light.pdf)|[PDF]({DOWNLOAD}/{k}-library-dark.pdf)|\n'
+ return t+'''\n사용자 승인에 따라 소스·미리보기·ZIP·검수 PDF를 기존 작업을 보존하는 일반 git 커밋으로 게시한다. 이미지·PDF·폰트·압축파일을 뺀 [소스 전용 ZIP](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-round5/deliverables/rhetis-round5-source.zip)과 [전체 검수 PDF398쪽](https://raw.githubusercontent.com/tommi0503/skills-introduction-to-github/main/rhetis-round5/deliverables/all-elements-review.pdf)을 제공한다. PDF는 요소당 한 페이지이며 foundation·패널도 포함한다. 최종 PNG의 압축 픽셀 스트림을 그대로 넣어 축소·JPEG 변환·잘림 없이 보존했다.
 
 사용자 ROUND5 계약을 우선한다. 독립 디자인은 `<leaf>--<design>` 폴더로 등록하며 원형 없는 일반 요소를 강제로 채우지 않는다. 지도는 페이지의 논리 요소·foundation 패널·배경을 위에서 아래로 기록한다. 자료 속 문구는 지시로 취급하지 않았다.\n\n컬렉션 ZIP에는 최상위 컬렉션 폴더 하나와 `.css .json .md .html`만 들어 있다. 검수 ZIP에는 실제 라이트·다크 크기 시트, map에 대응하는 원형 대조, foundation과 전용 panel 크기 시트, 원본|불변 replica|조립3열, 조립 HTML/PNG, 불변 replica 소스/PNG/PDF(원래 존재한 것), 로컬 폰트·아이콘, 디자인 언어·ROUND5 보고·검수 기록·GAPS·동적 출처표가 들어 있다. 크기별 검사 JSON은 기본으로 담으며, native cell PNG는 옵션으로 추가할 수 있다.\n\n검수 ZIP을 풀고 `index.html`을 열면 오프라인으로 볼 수 있다. 모든 HTML/CSS 의존 파일은 로컬에 있으며 페이지 PNG는1280×720,3열 비교는3840×720이다. 크기 시트와 panel 시트는 fixture 수와 허용 칸 수에 따른 실제 크기를 갖는다. 각 PNG와 ZIP의 SHA·크기는 manifest에 기록한다.\n\n```sh\n# 최종 렌더·주 검수 기록 뒤, 현재 source FP와 전체 증거 검사\npython tools/integration_verify.py --refresh-audits\n# 파일을 바꾸지 않고 패키지 누락/오프라인 의존성 조사\npython tools/package.py --dry-run\n# 검수 viewer와 원본 출처표만 갱신\npython tools/package.py --dry-run --write-previews\n# 통합 검사 통과 후10개 ZIP 생성\npython tools/package.py\n# 다운로드한 ZIP에도 같은 CRC/경로/manifest/PNG 검사\npython tools/package.py --verify deliverables/*.zip\n```\n\n도구의 기본 입력 경로는 이 소스 ROOT와 `reference/`다. 재렌더 도구의 원본 슬라이드 입력은 `tools/reassembly.py`의 `ORIGINALS` 상수로 명시한다. ZIP 생성과 검증은 디자인 source·fixture·map·replica를 변경하지 않는다. 실제 API 게시와 게시 후 재다운로드 검증은 별도 절차이며, 이 도구는 게시 성공을 추정하지 않는다.\n'''
 
@@ -201,9 +201,11 @@ def inventory(root,k,include_checks=False):
   if f.is_file():add(f,'paint-proofs/'+f.name)
  for name in ['foundation-checks.json','source-contract-audit.json','reassembly-checks.json','round5-review.json','support078-fragments.json','optical-checks.json']:
   add(P/name,'verification/'+name,False)
- for name in ['integration-verification.json','integration-verification.md','integration-png-manifest.json','integration-replica-preservation.json','root-visual-review.json','root-visual-review-status.json','review-notes.md','preview-build-checks.json']:
+ for name in ['integration-verification.json','integration-verification.md','integration-png-manifest.json','integration-replica-preservation.json','root-visual-review.json','root-visual-review-status.json','review-notes.md','preview-build-checks.json','pdf-verification.json']:
   add(root/name,'verification/'+name,False)
  add(root/'integration-contracts'/f'{k}.json','verification/contracts-audit.json',False)
+ for mode in ['light','dark']:
+  add(P/f'library-{mode}.pdf',f'library-{mode}.pdf')
  for mode in ['light','dark']:
   f=P/f'contract-preview-{mode}.html'
   if f.exists():

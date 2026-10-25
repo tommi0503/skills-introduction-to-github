@@ -1,6 +1,6 @@
 # ROUND5 최종 통합 검증
 
-상태: `verified-with-recorded-candidates` · 2026-10-25T06:51:09.687950+00:00
+상태: `verified-with-recorded-candidates` · 2026-10-25T07:48:21.600396+00:00
 
 실제 존재하는 디자인 폴더와 현재 지도·fixture·최소 칸에서 동적으로 집계했다. 이전 고정 개수/일반 요소/모범 fixture 의무를 적용하지 않는다.
 

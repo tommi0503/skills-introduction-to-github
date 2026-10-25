@@ -24,8 +24,7 @@ def inventory():
   if any(x in EXCLUDE for x in rel.parts):continue
   # REST Git blob rejects these large review archives; preserve exact bytes as
   # assets on this same repository's Round5 release. Small collection ZIPs commit normally.
-  if rel.parts[0]=='deliverables'and p.name.endswith('-review.zip'):continue
-  if p.suffix in {'.tmp','.pyc','.log'} or p.name in {'api-blob-cache.json','api-publication.json','STATE.md'}:continue
+  if p.suffix in {'.tmp','.pyc','.log'} or p.name in {'api-blob-cache.json','api-publication.json','release-publication.json','STATE.md'}:continue
   # Sources, immutable replicas/assets, canonical matrices, comparisons, previews,
   # review notes, all ten archives. Exclude old temporary functional probes.
   if rel.parts[0]=='tools' and ('integration-functional' in str(rel) or p.name.startswith('anchor-probe')):continue
