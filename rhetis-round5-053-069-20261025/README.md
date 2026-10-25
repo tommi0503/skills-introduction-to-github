@@ -48,3 +48,6 @@ python tools/package_release.py
 
 
 [전체 요소 PDF 검수 시트 — 7개 컬렉션](pdfs/README.md)
+
+
+[이미지·PDF·폰트를 제외한 소스 ZIP](rhetis-round5-053-069-20261025-source-only.zip) · [포함 범위와 검증 정보](SOURCE-ONLY.md)
