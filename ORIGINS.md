@@ -1,0 +1,34 @@
+# 요소별 출처
+
+| 폴더 | replica 페이지 |
+|---|---|
+| architecture--columns | 09 |
+| card | 03·04·08·11·12·13 |
+| card--allocation | 20 |
+| card--compact | 06 |
+| card--driver | 21 |
+| card--licensing | 12 |
+| card--summary | 02 |
+| card--white-step | 08 |
+| chart-area--adoption-growth | 17 |
+| chart-bar--financial-combo | 21 |
+| chart-bar--market-growth | 11 |
+| chart-donut--allocation-pie | 20 |
+| chart-donut--allocation-ring | 14 |
+| chart-donut--channel-share | 14 |
+| concentric | 10 |
+| headline | 10·14·17·20·22 |
+| headline--white-tab | 07 |
+| image-frame | 07 |
+| person | 22 |
+| person--details | 04 |
+| positioning--competitive-field | 15 |
+| prose | 07·14·22·23 |
+| prose--calculation | 10 |
+| quote | 05·18 |
+| quote--double-glyph | 18 |
+| quote--tracked-author | 05 |
+| roadmap | 19 |
+| table | 16 |
+| table--financial-summary | 21 |
+| tag | 21 |
